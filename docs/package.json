@@ -21,6 +21,7 @@
     "@nuxt/image": "catalog:",
     "@nuxt/ui": "catalog:",
     "@nuxtjs/mcp-toolkit": "catalog:",
+    "@nuxtjs/i18n": "catalog:",
     "@nuxtjs/mdc": "catalog:",
     "@nuxtjs/robots": "catalog:",
     "@nuxtjs/sitemap": "catalog:",

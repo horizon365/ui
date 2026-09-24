@@ -21,7 +21,7 @@ export default defineMcpTool({
   async handler({ search }) {
     const event = useEvent()
 
-    const composables = await queryCollection(event, 'docs')
+    const composables = await queryCollection(event, 'docs_en')
       .where('path', 'LIKE', '/docs/composables/%')
       .where('extension', '=', 'md')
       .select('path', 'title', 'description')

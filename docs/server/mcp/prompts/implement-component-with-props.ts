@@ -19,7 +19,7 @@ export default defineMcpPrompt({
     const kebabName = kebabCase(normalizedName)
 
     // Get component documentation
-    const page = await queryCollection(event, 'docs')
+    const page = await queryCollection(event, 'docs_en')
       .where('path', 'LIKE', `%/components/${kebabName}`)
       .where('extension', '=', 'md')
       .select('id', 'title', 'description', 'path', 'category', 'links')

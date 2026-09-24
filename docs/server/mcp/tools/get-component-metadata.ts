@@ -30,7 +30,7 @@ export default defineMcpTool({
     const kebabName = kebabCase(normalizedName)
 
     // Get basic component info without documentation content
-    const page = await queryCollection(event, 'docs')
+    const page = await queryCollection(event, 'docs_en')
       .where('path', 'LIKE', `%/components/${kebabName}`)
       .where('extension', '=', 'md')
       .select('id', 'title', 'description', 'path', 'category', 'links')

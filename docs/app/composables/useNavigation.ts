@@ -155,6 +155,7 @@ export const useNavigation = (navigation: Ref<ContentNavigationItem[] | undefine
   const releases = useReleases()
   // the section glyphs follow the applied icon pack
   const studioIcons = useStudioIcons()
+  const { locale } = useI18n()
 
   const rootNavigation = computed(() =>
     navigation.value?.[0]?.children?.map(item => processNavigationItem(item)) as ContentNavigationItem[]
@@ -164,12 +165,19 @@ export const useNavigation = (navigation: Ref<ContentNavigationItem[] | undefine
     rootNavigation.value?.map(item => filterChildrenByFramework(item, framework.value, studioIcons))
   )
 
+  // Strip the i18n locale prefix (`/zh`, `/ja`, ...) so the section slug and
+  // content path stay locale-agnostic. `en` has no prefix in
+  // `prefix_except_default`, so the route path is already `/docs/...`.
+
   const navigationByCategory = computed(() => {
     const route = useRoute()
 
     // The section is the first segment under /docs, read from the path so
-    // docs pages outside the catch-all (releases) resolve it too.
-    const slug = route.path.split('/')[2] as string
+    // docs pages outside the catch-all (releases) resolve it too. Strip the
+    // locale prefix first so `/zh/docs/components` yields the same `slug`
+    // (`components`) as the English `/docs/components`.
+    const stripped = stripLocalePath(route.path, locale.value)
+    const slug = stripped.split('/')[2] as string
 
     // The releases section's pages are GitHub releases, not content files.
     if (slug === 'releases') {
@@ -187,7 +195,10 @@ export const useNavigation = (navigation: Ref<ContentNavigationItem[] | undefine
       ?.flatMap(item => filterChildrenByFramework(item, fwk, studioIcons)?.children)
       .filter(item => !item?.to) ?? []
 
-    const index = flattenNavigation.findIndex(item => item?.path === path)
+    // `path` here is the route's content path (locale-agnostic), so it lines
+    // up with the English navigation returned by `/api/navigation.json`.
+    const normalizedPath = stripLocalePath(path, locale.value)
+    const index = flattenNavigation.findIndex(item => item?.path === normalizedPath)
     if (index === -1) {
       return [undefined, undefined]
     }
@@ -196,7 +207,8 @@ export const useNavigation = (navigation: Ref<ContentNavigationItem[] | undefine
   }
 
   function findBreadcrumb(path: string) {
-    const breadcrumb = findPageBreadcrumb(navigation?.value, path, { indexAsChild: true })
+    const normalizedPath = stripLocalePath(path, locale.value)
+    const breadcrumb = findPageBreadcrumb(navigation?.value, normalizedPath, { indexAsChild: true })
 
     return mapContentNavigation(breadcrumb).map(({ icon, ...link }) => link)
   }
@@ -208,4 +220,16 @@ export const useNavigation = (navigation: Ref<ContentNavigationItem[] | undefine
     findSurround,
     findBreadcrumb
   }
+}
+
+// Strip the i18n locale prefix from a route path. `en` (the default locale)
+// has no prefix under `prefix_except_default`, so the path is returned as-is.
+// Exported as a free function so other code paths can reuse the same logic
+// without instantiating the full composable.
+export function stripLocalePath(path: string, locale: string): string {
+  if (locale === 'en') return path
+  const prefix = `/${locale}`
+  if (path === prefix) return '/'
+  if (path.startsWith(`${prefix}/`)) return path.slice(prefix.length)
+  return path
 }

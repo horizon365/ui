@@ -3,6 +3,8 @@ const route = useRoute()
 const { desktopLinks } = useHeader()
 const { open } = useChat()
 const { track } = useAnalytics()
+const { locale, locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
 
 // The module route caches nuxt.com's stats for an hour, shared with /team
 // under one key so the payload only rides once.
@@ -19,6 +21,25 @@ function toggleChat() {
   }
   open.value = !open.value
 }
+
+// Items for the language dropdown: each entry routes to the switchLocalePath
+// URL for that locale, which preserves the current route's slug under the new
+// locale prefix (e.g. /docs/components/button ↔ /zh/docs/components/button).
+interface LocaleOption { code: 'en' | 'zh' | 'ja' | 'ko' | 'fr' | 'de' | 'nl' | 'es', name: string }
+
+const languageItems = computed(() => {
+  const list = locales.value as LocaleOption[]
+  return list.map(l => ({
+    label: l.name,
+    icon: l.code === locale.value ? 'i-lucide-check' : undefined,
+    to: switchLocalePath(l.code)
+  }))
+})
+
+const currentLocaleName = computed(() => {
+  const list = locales.value as LocaleOption[]
+  return list.find(l => l.code === locale.value)?.name || locale.value
+})
 </script>
 
 <!-- eslint-disable vue/no-template-shadow -->
@@ -48,6 +69,21 @@ function toggleChat() {
              and hydrates it when the chunk lands. Not on idle, which would
              defer every mount, and the mobile menu mounts this cluster again -->
       <LazyThemeStudioPresetPicker />
+
+      <!-- Language switcher: `prefix_except_default` keeps `en` at `/...`
+           and routes other locales to `/{code}/...` while preserving the
+           current route's slug via `useSwitchLocalePath`. -->
+      <UDropdownMenu
+        :items="languageItems"
+        :ui="{ content: 'min-w-40' }"
+      >
+        <UButton
+          color="neutral"
+          variant="ghost"
+          icon="i-lucide-languages"
+          :aria-label="`Language: ${currentLocaleName}`"
+        />
+      </UDropdownMenu>
 
       <UTooltip text="Open on GitHub" class="hidden lg:flex" ignore-non-keyboard-focus>
         <UButton

@@ -7,7 +7,7 @@ export default defineMcpResource({
   async handler(uri: URL) {
     const event = useEvent()
 
-    const components = await queryCollection(event, 'docs')
+    const components = await queryCollection(event, 'docs_en')
       .where('path', 'LIKE', '%/components/%')
       .where('extension', '=', 'md')
       .select('path', 'title', 'description', 'category', 'keywords')

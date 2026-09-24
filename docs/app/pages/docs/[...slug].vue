@@ -1,17 +1,41 @@
 <script setup lang="ts">
-import { kebabCase } from 'scule'
 import type { ContentNavigationItem } from '@nuxt/content'
+import type { Collections } from '@nuxt/content'
 
 const isDev = import.meta.dev
 
 const route = useRoute()
 const { framework } = useFrameworks()
+const { locale } = useI18n()
 
 definePageMeta({
   layout: 'docs'
 })
 
-const { data: page } = await useAsyncData(kebabCase(route.path), () => queryCollection('docs').path(route.path).first())
+// i18n `prefix_except_default` keeps `en` at `/docs/...` and prefixes every
+// other locale (`/zh/docs/...`). Strip the prefix to get the content stem
+// shared across all `docs_{locale}` collections.
+const contentPath = computed(() => {
+  const path = route.path.replace(/\/$/, '')
+  if (locale.value === 'en') return path
+  // strip the leading `/{locale}` segment; keep the rest (incl. `/docs/...`)
+  return path.replace(`/${locale.value}`, '') || '/'
+})
+
+const { data: page } = await useAsyncData(
+  `docs-${locale.value}-${contentPath.value}`,
+  async () => {
+    const collection = `docs_${locale.value}` as keyof Collections
+    let content = await queryCollection(collection).path(contentPath.value).first()
+    // Fallback to the default locale when the translation is missing, so a
+    // not-yet-translated page still renders instead of 404ing.
+    if (!content && locale.value !== 'en') {
+      content = await queryCollection('docs_en').path(contentPath.value).first()
+    }
+    return content
+  },
+  { watch: [locale] }
+)
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }

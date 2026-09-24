@@ -53,35 +53,69 @@ const Page = z.object({
   sitemap
 })
 
-export const collections = {
-  index: defineCollection({
+// Schema for the docs collection (components + getting-started). Shared by all
+// language collections so query results have the same shape across locales.
+const DocsSchema = z.object({
+  category: z.enum(['layout', 'form', 'element', 'navigation', 'data', 'overlay', 'dashboard', 'page', 'chat', 'content', 'editor', 'color-mode', 'i18n']).optional(),
+  keywords: z.array(z.string()).optional(),
+  index: z.boolean().optional(),
+  framework: z.enum(['nuxt', 'vue']).optional(),
+  navigation: z.object({
+    title: z.string().optional(),
+    badge: z.string().optional()
+  }),
+  links: z.array(Button),
+  // External navigation entries (e.g. the Figma page): the sidebar link
+  // points at `to` instead of the page's own path.
+  to: z.string().optional(),
+  target: z.string().optional(),
+  // an entry that links out is not a page to index
+  sitemap: defineSitemapSchema({ z, name: 'docs', filter: entry => !entry.to })
+})
+
+// Locales supported by the docs site. `en` is the default and has no URL prefix;
+// every other locale is served under `/{code}/...` by `@nuxtjs/i18n`
+// (`strategy: 'prefix_except_default'`).
+const LOCALES = ['en', 'zh', 'ja', 'ko', 'fr', 'de', 'nl', 'es'] as const
+
+// Per-locale docs collection. `source.prefix: '/docs'` keeps the content stem
+// `/docs/...` regardless of language, so the catch-all page can strip the
+// locale prefix and reuse one slug for every `docs_{locale}` collection.
+function docsCollection(locale: string) {
+  return defineCollection({
     type: 'page',
-    source: 'index.yml',
+    source: {
+      include: `${locale}/docs/**/*`,
+      prefix: '/docs'
+    },
+    schema: DocsSchema
+  })
+}
+
+// Per-locale landing-page collection. The home page reads `.first()` so we do
+// not need a prefix; the page resolves it by locale-aware query.
+function indexCollection(locale: string) {
+  return defineCollection({
+    type: 'page',
+    source: `${locale}/index.yml`,
     schema: Page
-  }),
-  docs: defineCollection({
-    type: 'page',
-    source: [{
-      include: 'docs/**/*'
-    }],
-    schema: z.object({
-      category: z.enum(['layout', 'form', 'element', 'navigation', 'data', 'overlay', 'dashboard', 'page', 'chat', 'content', 'editor', 'color-mode', 'i18n']).optional(),
-      keywords: z.array(z.string()).optional(),
-      index: z.boolean().optional(),
-      framework: z.enum(['nuxt', 'vue']).optional(),
-      navigation: z.object({
-        title: z.string().optional(),
-        badge: z.string().optional()
-      }),
-      links: z.array(Button),
-      // External navigation entries (e.g. the Figma page): the sidebar link
-      // points at `to` instead of the page's own path.
-      to: z.string().optional(),
-      target: z.string().optional(),
-      // an entry that links out is not a page to index
-      sitemap: defineSitemapSchema({ z, name: 'docs', filter: entry => !entry.to })
-    })
-  }),
+  })
+}
+
+// Build the per-locale collections. The resulting object has keys
+// `docs_en`, `docs_zh`, ..., `index_en`, `index_zh`, ...
+const i18nCollections = Object.fromEntries(
+  LOCALES.flatMap(locale => [
+    [`docs_${locale}`, docsCollection(locale)],
+    [`index_${locale}`, indexCollection(locale)]
+  ])
+)
+
+export const collections = {
+  ...i18nCollections,
+  // Collections below are intentionally NOT translated in this iteration.
+  // Visiting `/{locale}/blog/...` still resolves via i18n routing and falls
+  // back to the English content; the collections stay single-source.
   showcase: defineCollection({
     type: 'page',
     source: 'showcase.yml',

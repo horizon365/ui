@@ -1,17 +1,26 @@
 <script setup lang="ts">
+import type { Collections } from '@nuxt/content'
+
 const props = defineProps<{
   category: string
 }>()
 
-const { data: components } = await useAsyncData(`components-${props.category}`, () => {
-  return queryCollection('docs')
-    .where('path', 'LIKE', '/docs/components/%')
-    .where('extension', '=', 'md')
-    .where('category', '=', props.category)
-    .where('index', 'IS NULL')
-    .select('path', 'title', 'description')
-    .all()
-})
+const { locale } = useI18n()
+
+const { data: components } = await useAsyncData(
+  `components-${props.category}-${locale.value}`,
+  () => {
+    const collection = `docs_${locale.value}` as keyof Collections
+    return queryCollection(collection)
+      .where('path', 'LIKE', '/docs/components/%')
+      .where('extension', '=', 'md')
+      .where('category', '=', props.category)
+      .where('index', 'IS NULL')
+      .select('path', 'title', 'description')
+      .all()
+  },
+  { watch: [locale] }
+)
 </script>
 
 <template>

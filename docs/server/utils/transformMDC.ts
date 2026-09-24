@@ -834,7 +834,7 @@ export async function transformMDC(event: H3Event, doc: Document): Promise<Docum
     const category = node[1]?.category
     if (!category) continue
 
-    const components = await queryCollection(event, 'docs')
+    const components = await queryCollection(event, 'docs_en')
       .where('path', 'LIKE', '/docs/components/%')
       .where('extension', '=', 'md')
       .where('index', 'IS NULL')

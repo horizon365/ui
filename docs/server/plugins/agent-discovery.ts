@@ -19,7 +19,7 @@ export default defineNitroPlugin((nitroApp) => {
   // the frontmatter, the canonical links, the resources block and the trailer
   // all come from the module.
   nitroApp.hooks.hook('agent-discovery:index', async (event, index) => {
-    const page = await queryCollection(event, 'index').first() as any
+    const page = await queryCollection(event, 'index_en').first() as any
 
     index.title = page?.title || index.title
     index.description = page?.description

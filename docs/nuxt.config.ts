@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@nuxtjs/sitemap',
     '@nuxt/content',
+    '@nuxtjs/i18n',
     '@nuxt/image',
     '@nuxtjs/mcp-toolkit',
     'nuxt-agent-discovery',
@@ -233,7 +234,14 @@ export default defineNuxtConfig({
         '/api/locales.json',
         '/api/module.json'
       ],
-      crawlLinks: true
+      crawlLinks: true,
+      // Locale-prefixed pages (`/zh/...`, `/ja/...`, ...) render at request
+      // time (SSR) instead of being prerendered: crawling them would multiply
+      // the prerender work by the number of locales and exhaust the build
+      // heap (OOM). SSR output is unaffected.
+      ignore: [
+        /^\/(zh|ja|ko|fr|de|nl|es)(\/|$)/
+      ]
     }
   },
 
@@ -403,6 +411,27 @@ export default defineNuxtConfig({
     families: [
       { name: 'Public Sans', provider: 'fontsource', weights: [400, 500, 600, 700], global: true },
       { name: 'Geist Mono', provider: 'fontsource', weights: [400], global: true }
+    ]
+  },
+
+  // i18n: `en` is default (no URL prefix), other locales live under
+  // `/{code}/...`. The docs site translates index.yml + docs/** into 7
+  // non-English languages (zh/ja/ko/fr/de/nl/es); missing translations fall
+  // back to the English collection at query time.
+  i18n: {
+    strategy: 'prefix_except_default',
+    defaultLocale: 'en',
+    baseUrl: 'https://ui.nuxt.com',
+    detectBrowserLanguage: false,
+    locales: [
+      { code: 'en', name: 'English', language: 'en-US', dir: 'ltr' },
+      { code: 'zh', name: '简体中文', language: 'zh-Hans', dir: 'ltr' },
+      { code: 'ja', name: '日本語', language: 'ja-JP', dir: 'ltr' },
+      { code: 'ko', name: '한국어', language: 'ko-KR', dir: 'ltr' },
+      { code: 'fr', name: 'Français', language: 'fr-FR', dir: 'ltr' },
+      { code: 'de', name: 'Deutsch', language: 'de-DE', dir: 'ltr' },
+      { code: 'nl', name: 'Nederlands', language: 'nl-NL', dir: 'ltr' },
+      { code: 'es', name: 'Español', language: 'es-ES', dir: 'ltr' }
     ]
   },
 

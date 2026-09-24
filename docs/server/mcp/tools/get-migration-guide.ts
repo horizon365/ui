@@ -12,7 +12,7 @@ export default defineMcpTool({
   async handler() {
     const event = useEvent()
 
-    const page = await queryCollection(event, 'docs')
+    const page = await queryCollection(event, 'docs_en')
       .where('path', '=', '/docs/getting-started/migration')
       .where('extension', '=', 'md')
       .select('title', 'description', 'path')

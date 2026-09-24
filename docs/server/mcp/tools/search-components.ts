@@ -23,7 +23,7 @@ export default defineMcpTool({
   async handler({ category, search }) {
     const event = useEvent()
 
-    let query = queryCollection(event, 'docs')
+    let query = queryCollection(event, 'docs_en')
       .where('path', 'LIKE', '/docs/components/%')
       .where('extension', '=', 'md')
       .where('index', 'IS NULL')

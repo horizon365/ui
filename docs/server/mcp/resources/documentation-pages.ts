@@ -7,7 +7,7 @@ export default defineMcpResource({
   async handler(uri: URL) {
     const event = useEvent()
 
-    const pages = await queryCollection(event, 'docs').all()
+    const pages = await queryCollection(event, 'docs_en').all()
 
     // an entry with its own `to` (Figma) links out, there is no page to read
     const result = pages.filter(doc => !doc.to).map(doc => ({
