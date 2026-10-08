@@ -1,0 +1,26 @@
+title: 직관적인 Vue UI 라이브러리
+description: "Nuxt UI는 무료, 오픈 소스 Vue 컴포넌트 라이브러리입니다: 125+ 액세스 가능한 TypeScript 컴포넌트는 Reka UI 및 Tailwind CSS를 기반으로 구축되었으며 Nuxt 및 모든 Vue 앱을 위한 것입니다."
+navigation: false
+hero:
+  lead: 원제 : The Intuitive
+  accent: Vue UI 도서관
+  breakLine: true
+  description: Reka UI 및 Tailwind CSS를 기반으로 구축 된 액세스 가능한 유형의 구성 요소.기본적으로 아름답고 아이콘, 글꼴, 색상 모드, i18n 및 타이포그래피가 이미 유선으로 제공됩니다.
+  links:
+    - label: 시작하기
+      to: /docs/getting-started/installation/nuxt
+      class: nuxt-only
+      color: neutral
+      variant: solid
+      size: lg
+    - label: 시작하기
+      to: /docs/getting-started/installation/vue
+      class: vue-only
+      color: neutral
+      variant: solid
+      size: lg
+    - label: 125개 이상의 구성 요소 탐색
+      to: /docs/components
+      color: neutral
+      variant: soft
+      size: lg

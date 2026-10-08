@@ -1,0 +1,26 @@
+title: 直观的Vue UI库
+description: "Nuxt UI是一个免费的开源Vue组件库：125+可访问的TypeScript组件构建在Reka UI和Tailwind CSS上，适用于Nuxt和任何Vue应用程序。"
+navigation: false
+hero:
+  lead: 直观的
+  accent: Vue UI库
+  breakLine: true
+  description: 基于Reka UI和Tailwind CSS构建的可访问的类型化组件。默认情况下很漂亮，已经连接了图标、字体、颜色模式、i18 n和排版。
+  links:
+    - label: 开始
+      to: /docs/getting-started/installation/nuxt
+      class: nuxt-only
+      color: neutral
+      variant: solid
+      size: lg
+    - label: 开始
+      to: /docs/getting-started/installation/vue
+      class: vue-only
+      color: neutral
+      variant: solid
+      size: lg
+    - label: 浏览125+组件
+      to: /docs/components
+      color: neutral
+      variant: soft
+      size: lg

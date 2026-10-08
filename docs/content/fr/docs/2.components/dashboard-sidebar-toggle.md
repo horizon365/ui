@@ -1,0 +1,111 @@
+---
+title: DashboardsidebarToggle
+description: 'Un bouton pour basculer la barre latérale sur mobile.'
+category: dashboard
+links:
+  - label: bouton
+    to: /docs/components/button
+    icon: i-simple-icons-nuxtdotjs
+  - label: GitHub à
+    icon: i-simple-icons-github
+    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardSidebarToggle.vue
+---
+
+@@ph000@utilisation
+
+Le composant DashboardSidebarToggle est utilisé par les composants [DashboardNavbar](/docs/components/dashboard-navbar) et [DashboardSidebar](/docs/components/dashboard-sidebar).
+
+Il est automatiquement affiché sur mobile pour basculer la barre latérale,**vous n'avez pas à l'ajouter manuellement **.
+
+::component-code
+---
+Caché:
+  @@classe 11
+Props:
+  classe: 'lg: flex'
+---
+::
+
+Il étend le [Button](/docs/components/button) composant, de sorte que vous pouvez passer n'importe quelle propriété telle que `color`,`variant`,`size`, etc.
+
+::component-code
+---
+Caché:
+  @@classe 19
+ignorer:
+  @@20@variété
+Props:
+  Étiquette:"subtil"
+  classe: 'lg: flex'
+---
+::
+
+::note
+Le bouton par défaut est `color="neutral"` et `variant="ghost"`.
+::
+
+@@ph023@@Exemples
+
+### Dans `toggle` slot
+
+Même si ce composant s'affiche automatiquement sur mobile, vous pouvez utiliser l'emplacement `toggle` des composants [DashboardNavbar](/docs/components/dashboard-navbar) et [DashboardSidebar/docs/components/dashboard-sidebar)pour personnaliser le bouton.
+
+::code-group
+
+```vue [layouts/dashboard.vue]{4-6}
+<template>
+  <UDashboardGroup>
+    <UDashboardSidebar>
+      <template #toggle>
+        <UDashboardSidebarToggle variant="subtle" />
+      </template>
+    </UDashboardSidebar>
+
+    <slot />
+  </UDashboardGroup>
+</template>
+```
+
+```vue [pages/index.vue]{11-13}
+<script setup lang="ts">
+definePageMeta({
+  layout: 'dashboard'
+})
+</script>
+
+<template>
+  <UDashboardPanel>
+    <template #header>
+      <UDashboardNavbar title="Home">
+        <template #toggle>
+          <UDashboardSidebarToggle variant="subtle" />
+        </template>
+      </UDashboardNavbar>
+    </template>
+  </UDashboardPanel>
+</template>
+```
+
+::
+
+::tip
+Lors de l'utilisation de la prop `toggle-side` des composants `DashboardSidebar` et `DashboardNavbar`, le bouton s'affichera sur le côté spécifié.
+::
+
+@@P2000@@été
+
+@@ph071@@props
+
+Composants-props
+
+::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
+Ce composant prend également en charge tous les attributs HTML natifs `<button>`.
+::
+
+@@ph073@thème
+
+Composant-thème
+
+@changement@changement@changement.fr
+
+Composant-changelog
