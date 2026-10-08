@@ -35,8 +35,11 @@ export default defineNuxtConfig({
   },
 
   $production: {
+    // Allow the build-time site URL to be overridden via `NUXT_PUBLIC_SITE_URL`,
+    // e.g. for local previews of the production bundle (`npx serve .output/public`).
+    // Falls back to the production domain when the env var is unset (Vercel deploys).
     site: {
-      url: 'https://ui.nuxt.com'
+      url: process.env.NUXT_PUBLIC_SITE_URL || 'https://nuxt-ui.js.cn'
     }
   },
 
