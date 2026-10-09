@@ -227,25 +227,32 @@ export default defineNuxtConfig({
     experimental: {
       asyncContext: true
     },
-    prerender: {
-      routes: [
-        '/',
-        '/docs/getting-started',
-        '/openapi.json',
-        '/api/countries.json',
-        '/api/phone-codes.json',
-        '/api/locales.json',
-        '/api/module.json'
-      ],
-      crawlLinks: true,
-      // Locale-prefixed pages (`/zh/...`, `/ja/...`, ...) render at request
-      // time (SSR) instead of being prerendered: crawling them would multiply
-      // the prerender work by the number of locales and exhaust the build
-      // heap (OOM). SSR output is unaffected.
-      ignore: [
-        /^\/(zh|ja|ko|fr|de|nl|es)(\/|$)/
-      ]
-    }
+    // SKIP_PRERENDER=1 disables route prerendering entirely — pages render
+    // on-demand via the serverless function (Vercel) instead. Needed when the
+    // build OOMs: content (1574 files) + component-meta parsing + CSS transform
+    // already saturate the heap before prerender even starts. Env unset = original
+    // behavior (crawl English routes, SSR locale-prefixed ones).
+    prerender: process.env.SKIP_PRERENDER
+      ? false
+      : {
+          routes: [
+            '/',
+            '/docs/getting-started',
+            '/openapi.json',
+            '/api/countries.json',
+            '/api/phone-codes.json',
+            '/api/locales.json',
+            '/api/module.json'
+          ],
+          crawlLinks: true,
+          // Locale-prefixed pages (`/zh/...`, `/ja/...`, ...) render at request
+          // time (SSR) instead of being prerendered: crawling them would multiply
+          // the prerender work by the number of locales and exhaust the build
+          // heap (OOM). SSR output is unaffected.
+          ignore: [
+            /^\/(zh|ja|ko|fr|de|nl|es)(\/|$)/
+          ]
+        }
   },
 
   vite: {
