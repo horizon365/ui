@@ -17,16 +17,16 @@ links:
 
 ## 使用法
 
-`v-model`ディレクティブを使用して、InputNumberの値を制御します。
+InputNumberの値を制御するには`v-model`ディレクティブを使用します。
 
 ::component-code
 ---
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue 5
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
 ---
 ::
 
@@ -34,109 +34,109 @@ links:
 
 ::component-code
 ---
-無視
-  -  defaultValue
-小道具
-  defaultValue 5
+ignore:
+  - defaultValue
+props:
+  defaultValue: 5
 ---
 ::
 
 ::note
-このコンポーネントは[`@internationalized/number`](https://react-spectrum.adobe.com/internationalized/number/index.html)パッケージに依存しており、ロケールや番号システム間で数値をフォーマットして解析するためのユーティリティを提供しています。
+このコンポーネントは[`@internationalized/number`](https://react-spectrum.adobe.com/internationalized/number/index.html)パッケージに依存しています。
 ::
 
-###  Min/Max
+### Min/Max
 
-`min`および`max` propsを使用して、InputNumberの最小値と最大値を設定します。
+`min`と`max`プロパティを使用して、InputNumberの最小値と最大値を設定します。
 
 ::component-code
 ---
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue 5
-  分0
-  最高10
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  min: 0
+  max: 10
 ---
 ::
 
-### ステップ
+### Step
 
 `step`プロパティを使用して、InputNumberのステップ値を設定します。
 
 ::component-code
 ---
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue 5
-  ステップ2
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  step: 2
 ---
 ::
 
-### オリエンテーション
+### Orientation
 
 `orientation`プロパティを使用して、InputNumberの向きを変更します。
 
 ::component-code
 ---
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue 5
-  オリエンテーション垂直
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  orientation: vertical
 ---
 ::
 
-### プレースホルダー
+### Placeholder
 
-プレースホルダーテキストを設定するには、`placeholder`プロパティを使用します。
+`placeholder`プロパティを使用してプレースホルダーテキストを設定します。
 
 ::component-code
 ---
-小道具
-  プレースホルダー '数字を入力'
+props:
+  placeholder: 'Enter a number'
 ---
 ::
 
-### カラー
+### Color
 
-`color`プロパティを使用して、InputNumberがフォーカスされたときにリングの色を変更します。
+InputNumberにフォーカスしたときにリングの色を変更するには、`color`プロパティを使用します。
 
 ::component-code
 ---
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue 5
-  色ニュートラル
-  ハイライト真
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  color: neutral
+  highlight: true
 ---
 ::
 
-### バリアント
+### Variant
 
 `variant`プロパティを使用して、InputNumberのバリアントを変更します。
 
 ::component-code
 ---
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue 5
-  バリアント：微妙
-  色ニュートラル
-  ハイライトfalse
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  variant: subtle
+  color: neutral
+  highlight: false
 ---
 ::
 
@@ -146,129 +146,129 @@ links:
 
 ::component-code
 ---
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue 5
-  サイズXL
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  size: xl
 ---
 ::
 
 ### 無効
 
-`disabled`プロパティを使用して、InputNumberを無効にします。
+`disabled`プロパティを使用してInputNumberを無効にします。
 
 ::component-code
 ---
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue 5
-  無効true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  disabled: true
 ---
 ::
 
-### 増分/減分
+### Increment/Decrement
 
-`increment`および`decrement` propsを使用して、任意の[ Button ](/docs/components/button) propsで増減ボタンをカスタマイズします。デフォルトは`{ variant: 'link' }`{lang="ts-type"}です。
+[Button](/docs/components/button) propsでインクリメント/デクリメントボタンをカスタマイズするには、`increment`と`decrement` propsを使用します。デフォルトは`{ variant: 'link' }`xph18xです。
 
 ::component-code
 ---
-きれい真
-無視
-  -  modelValue
-  -  increment.size
-  -  increment.color
-  -  increment.variant
-  -  decrement.size
-  -  decrement.color
-  -  decrement.variant
-外部
-  -  modelValue
-小道具
-  modelValue 5
-  インクリメント
-    色ニュートラル
-    バリアント固体
-    サイズXS
-  減少：
-    色ニュートラル
-    バリアント固体
-    サイズXS
+prettier: true
+ignore:
+  - modelValue
+  - increment.size
+  - increment.color
+  - increment.variant
+  - decrement.size
+  - decrement.color
+  - decrement.variant
+external:
+  - modelValue
+props:
+  modelValue: 5
+  increment:
+    color: neutral
+    variant: solid
+    size: xs
+  decrement:
+    color: neutral
+    variant: solid
+    size: xs
 ---
 ::
 
-### 増分/減分アイコン
+### Increment/Decrementアイコン
 
-`increment-icon`および`decrement-icon` propsを使用して、[ Icon ](/docs/components/icon)ボタンをカスタマイズします。デフォルトは`i-lucide-plus`/`i-lucide-minus`です。
+`increment-icon`と`decrement-icon`プロップを使用して、ボタン[Icon](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-plus`/`i-lucide-minus`です。
 
 ::component-code
 ---
-きれい真
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue 5
-  incrementIcon 'i—lucide—arrow—right'
-  decrementIcon 'i—lucide—arrow—left'
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  incrementIcon: 'i-lucide-arrow-right'
+  decrementIcon: 'i-lucide-arrow-left'
 ---
 ::
 
 ## 例
 
-### 十進形式
+###  10進数形式
 
-`format-options`プロパティを使用して、値の形式をカスタマイズします。
+`format-options`プロパティを使用して、値のフォーマットをカスタマイズします。
 
 ::component-example
 ---
-名前'入力番号10進数の例'
+name: 'input-number-decimal-example'
 ---
 ::
 
 ### パーセンテージ形式
 
-値の形式をカスタマイズするには、`format-options`と`style: 'percent'`を使用します。
+値のフォーマットをカスタマイズするには、`format-options`プロパティを`style: 'percent'`とともに使用します。
 
 ::component-example
 ---
-名前'入力数パーセントの例'
+name: 'input-number-percentage-example'
 ---
 ::
 
 ### 通貨フォーマット付き
 
-値の形式をカスタマイズするには、`style: 'currency'`とともに`format-options`を使用します。
+値のフォーマットをカスタマイズするには、`style: 'currency'`とともに`format-options`プロパティを使用します。
 
 ::component-example
 ---
-名前'入力番号通貨の例'
+name: 'input-number-currency-example'
 ---
 ::
 
 ### ボタンなし
 
-`increment`と`decrement` propsを使用して、ボタンの表示を制御できます。
+`increment`と`decrement`の小道具を使用して、ボタンの表示を制御できます。
 
 ::component-example
 ---
-名前'入力番号のないボタンの例'
+name: 'input-number-without-buttons-example'
 ---
 ::
 
-###  FormField内
+### FormField内
 
-[ FormField ](/docs/components/form-field)コンポーネント内のInputNumberを使用して、ラベル、ヘルプテキスト、必須インジケータなどを表示できます。
+[FormField](/docs/components/form-field)コンポーネント内のInputNumberを使用して、ラベル、ヘルプテキスト、必須インジケータなどを表示できます。
 
 ::component-example
 ---
-名前'入力番号フォームフィールドの例'
+name: 'input-number-form-field-example'
 ---
 ::
 
@@ -278,29 +278,29 @@ links:
 
 ::component-example
 ---
-name '入力番号スロット例'
+name: 'input-number-slots-example'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
-このコンポーネントは、すべてのネイティブ`<input>` HTML属性もサポートします。
+このコンポーネントはすべてのネイティブ`<input>` HTML属性もサポートします。
 ::
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-###  Expose
+### Expose
 
 テンプレート参照を介してコンポーネントにアクセスする場合、以下を使用できます：
 
@@ -308,10 +308,10 @@ component—emits
 | ---- | ---- |
 | `inputRef`{lang="ts-type"}| `Ref<HTMLInputElement \| null>`{lang="ts-type"}|
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

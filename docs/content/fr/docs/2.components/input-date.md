@@ -1,5 +1,5 @@
 ---
-title: inputé
+title: Inputées
 description: 'Un composant d'entrée pour la sélection de la date.'
 category: form
 keywords:
@@ -15,20 +15,20 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputDate.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Utilisez la directive `v-model` pour contrôler la date sélectionnée.
+Utilisez la directive `v-model` pour contrôler la date choisie.
 
 ::component-code
 ---
-Cast:
-  Étiquette: DateValue
-ignorer:
-  - modèleValeur
-Extérieur:
-  - modèleValeur
-Props:
-  Modèle:[2022, 2, 3]
+cast:
+  modelValue: DateValue
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: [2022, 2, 3]
 ---
 ::
 
@@ -36,94 +36,94 @@ Utilisez la prop `default-value` pour définir la valeur initiale lorsque vous n
 
 ::component-code
 ---
-Cast:
-  valeur: DateValue
-ignorer:
-  @@@ph005@@defaultValue
-Extérieure:
-  @@ph006@@valeur défaillante
-Props:
-  valeur par défaut:[2022, 2, 6]
+cast:
+  defaultValue: DateValue
+ignore:
+  - defaultValue
+external:
+  - defaultValue
+props:
+  defaultValue: [2022, 2, 6]
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::note{to="/docs/getting-started/integrations/i18n/nuxt#locale"}
-Ce composant utilise le paquet `@internationalized/date` pour la mise en forme locale. Le format de date est déterminé par la prop `locale` du composant App.
+Ce composant utilise le package `@internationalized/date` pour le formatage local. Le format de date est déterminé par la prop `locale` du composant App.
 :::
 
 #vue
 :::note{to="/docs/getting-started/integrations/i18n/vue#locale"}
-Ce composant utilise le paquet `@internationalized/date` pour la mise en forme locale. Le format de date est déterminé par la prop `locale` du composant App.
+Ce composant utilise le package `@internationalized/date` pour le formatage local. Le format de date est déterminé par la prop `locale` du composant App.
 :::
 ::
 
-@@111@Rangée
+### Rangée
 
 Utilisez la prop `range` pour sélectionner une plage de dates.
 
 ::component-code
 ---
-Étiquette: true
-Cast:
-  Étiquette: DateRange
-Ignorer:
-  @@ph013@rangée
+prettier: true
+cast:
+  modelValue: DateRange
+ignore:
+  - range
   - modelValue.start
   - modelValue.end
-Extérieur:
-  - modelValeur
-Props:
-  Rang: vrai
-  Modèle:
-    début:[2022, 2, 3]
-    fin: [2022, 2, 20]
+external:
+  - modelValue
+props:
+  range: true
+  modelValue:
+    start: [2022, 2, 3]
+    end: [2022, 2, 20]
 ---
 ::
 
-### couleur
+### Couleur
 
-Utilisez la prop `color` pour changer la couleur de la date d'entrée.
+Utilisez le prop `color` pour changer la couleur de la date d'entrée.
 
 ::component-code
 ---
-Props:
-  Couleur: Neutre
-  Highlights: vrai
+props:
+  color: neutral
+  highlight: true
 ---
 ::
 
-@@@P019@@Variant
+### Variant
 
-Utilisez la prop `variant` pour modifier la variante de la date d'entrée.
+Utilisez la prop `variant` pour changer la variante de la date d'entrée.
 
 ::component-code
 ---
-Props:
-  Variante: subtile
+props:
+  variant: subtle
 ---
 ::
 
-@@ph021@@Size
+### Size
 
 Utilisez la prop `size` pour modifier la taille de la date d'entrée.
 
 ::component-code
 ---
-Props:
-  Taille: XL
+props:
+  size: xl
 ---
 ::
 
-@@23@Icon
+### Icône
 
-Utilisez le prop `icon` pour afficher un [Icon](/docs/components/icon) à l'intérieur de la Date d'entrée.
+Utilisez la prop `icon` pour afficher un [Icon](/docs/components/icon) à l'intérieur de la date d'entrée.
 
 ::component-code
 ---
-Props:
-  icon: 'i-lucide-calendrier'
+props:
+  icon: 'i-lucide-calendar'
 ---
 ::
 
@@ -131,22 +131,22 @@ Props:
 Utilisez les accessoires `leading` et `trailing` pour définir la position de l'icône ou les accessoires `leading-icon` et `trailing-icon` pour définir une icône différente pour chaque position.
 ::
 
-### Séparateur Icône
+### Separateur Icône
 
-Utilisez la prop `separator-icon` pour changer le [Icon](/docs/components/icon) du séparateur de plage.
+Utilisez la prop `separator-icon` pour modifier le [Icon](/docs/components/icon) du séparateur de plage.
 
 ::component-code
 ---
-ignorer:
-  @@ph040@rangée
-Props:
-  Rang: vrai
-  séparateurIcône:'i-lucide-arrow-right'
+ignore:
+  - range
+props:
+  range: true
+  separatorIcon: 'i-lucide-arrow-right'
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.minus`.
 :::
@@ -157,95 +157,95 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 :::
 ::
 
-### Avatar
+### Avatars
 
-Utilisez le prop `avatar` pour afficher un [Avatar](/docs/components/avatar) à l'intérieur de la date d'entrée.
+Utilisez la prop `avatar` pour afficher un [Avatar](/docs/components/avatar) à l'intérieur de la date d'entrée.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  - avatar.chargement
-Props:
-  Avatar:
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
     src: 'https://github.com/vuejs.png'
-    Étiquette: Lazy
-  Étiquette: MD
-  Étiquette: Outline
+    loading: lazy
+  size: md
+  variant: outline
 ---
 ::
 
-### désactivé
+### Désactivé
 
 Utilisez la prop `disabled` pour désactiver la date d'entrée.
 
 ::component-code
 ---
-Props:
-  handicapés: vrai
+props:
+  disabled: true
 ---
 ::
 
-@@ph054@exemples
+## Exemples
 
-### Avec des dates non disponibles
+### Avec dates non disponibles
 
-Utilisez la prop `is-date-unavailable` avec une fonction pour marquer des dates spécifiques comme indisponibles.
+Utilisez le prop `is-date-unavailable` avec une fonction pour marquer des dates spécifiques comme indisponibles.
 
 ::component-example
 ---
-name: 'input-date-unavailable-dates-exemple'
+name: 'input-date-unavailable-dates-example'
 ---
 ::
 
 ### Avec les dates min/max
 
-Utilisez les accessoires `min-value` et `max-value` pour limiter les dates.
+Utilisez les props `min-value` et `max-value` pour limiter les dates.
 
 ::component-example
 ---
-nom: 'input-date-min-max-dates-exemple'
+name: 'input-date-min-max-dates-example'
 ---
 ::
 
 ### Comme sélecteur de date
 
-Utilisez un composant [Calendrier ](/docs/components/calendar) et un composant [Popover](/docs/components/popover) pour créer un sélecteur de date.
+Utilisez un composant [Calendar](/docs/components/calendar) et un composant [Popover](/docs/components/popover) pour créer un sélecteur de date.
 
 ::component-example
 ---
-nom: 'input-date-date-picker-exemple'
+name: 'input-date-date-picker-example'
 ---
 ::
 
-### En tant que sélecteur de plage de dates
+### As un sélecteur de plage de dates
 
-Utilisez un composant [Calendrier ](/docs/components/calendar) et un composant [Popover](/docs/components/popover) pour créer un sélecteur de plage de dates.
+Utilisez un composant [Calendar](/docs/components/calendar) et un composant [Popover](/docs/components/popover) pour créer un sélecteur de plage de dates.
 
 ::component-example
 ---
-nom: 'input-date-date-range-picker-example'
+name: 'input-date-date-range-picker-example'
 ---
 ::
 
-@@ph078@api
+## API équipement
 
-@@779@@référencement
+### Props
 
-Composants-props
+:component-props
 
-@@ph080@@réseaux sociaux
+### Slots
 
-Composants slots
+:component-slots
 
-@081@081@081
+### Emis
 
-Composants émetteurs
+:component-emits
 
-@@ph082@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changelog @changelog
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

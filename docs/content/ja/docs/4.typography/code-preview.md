@@ -11,14 +11,14 @@ links:
 
 ## 使用法
 
-任意のコンテンツを`code-preview`コンポーネントでラップして、`code`スロットを使用してソースコードと一緒にライブプレビューを表示します。
+`code`スロットを使用してソースコードと一緒にライブプレビューを表示するには、`code-preview`コンポーネントで任意のコンテンツをラップします。
 
 ::code-preview{class="[&>div]:*:my-0 [&>div]:*:w-full" label="プレビュー"}
 
 ::code-preview{class="[&>div]:*:my-0"}
 `inline code`
 
-#コード
+#code
 
 ```mdc
 `inline code`
@@ -26,7 +26,7 @@ links:
 
 ::
 
-#コード
+#code
 
 ````mdc
 ::code-preview
@@ -41,20 +41,20 @@ links:
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props {prose}
+:component-props{prose}
 
 ### スロット
 
-component—slots {prose}
+:component-slots{prose}
 
-## テーマ
+## Theme
 
-component—theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

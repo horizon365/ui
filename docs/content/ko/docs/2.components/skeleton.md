@@ -10,26 +10,26 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Skeleton.vue
 ---
 
-##  사용
+## Usage
 
 뼈대 컴포넌트를 있는 그대로 사용하여 자리 표시자를 표시합니다.
 
-:component-example {name="skeleton-example"}
+:component-example{name="skeleton-example"}
 
-##  API
+## API 사용
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### Slots
 
-:구성요소 - 슬롯
+:component-slots
 
-##  테마
+## Theme 테마
 
-:구성요소 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

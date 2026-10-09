@@ -9,78 +9,78 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Callout.vue
 ---
 
-## 使用情况
+## 用法
 
-在`callout`组件的默认插槽中使用markdown，为您的内容添加醒目的上下文。
+在`callout`组件的默认插槽中使用markdown为内容添加醒目的上下文。
 
 ::component-code{slug="callout" prose}
 ---
-道具：
-  class：'w-full my-0'
-隐藏：
+props:
+  class: 'w-full my-0'
+hide:
   - class
-插槽：
-  默认值：这是一个`callout`，完全支持**markdown**。
+slots:
+  default: This is a `callout` with full **markdown** support.
 ---
 ::
 
 ### Icon
 
-使用`icon`道具在内容旁边显示图标。
+使用`icon` prop在内容旁边显示图标。
 
 ::component-code{slug="callout" prose}
 ---
-道具：
-  图标：i-lucide-square-play
-  class：'w-full my-0'
-隐藏：
+props:
+  icon: i-lucide-square-play
+  class: 'w-full my-0'
+hide:
   - class
-插槽：
-  默认值：这是一个带有图标的`callout`。
+slots:
+  default: This is a `callout` with an icon.
 ---
 ::
 
 ### Color
 
-使用`color`道具更改屏幕的颜色。
+使用`color`道具来改变屏幕的颜色。
 
 ::component-code{slug="callout" prose}
 ---
-忽略：
+ignore:
   - icon
-道具：
-  图标：i-lucide-信息
-  颜色：信息
-  class：'w-full my-0'
-隐藏：
-  班级
-插槽：
-  default：这是一个带有自定义颜色的`callout`。
+props:
+  icon: i-lucide-info
+  color: info
+  class: 'w-full my-0'
+hide:
+  - class
+slots:
+  default: This is a `callout` with a custom color.
 ---
 ::
 
 ### Link
 
-您可以从[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)组件（如`to`和`target`）传递任何属性，以使该对象成为链接。
+您可以传递[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)组件的任何属性（如`to`和`target`），以使`target`成为一个链接。
 
 ::component-code{slug="callout" prose}
 ---
-隐藏：
-  班级
-忽略：
+hide:
+  - class
+ignore:
   - icon
   - target
-道具：
-  图标：i-lucide-square-play
-  到：'/docs/getting-started/installation/nuxt'
-  颜色：中性
-  class：'w-full my-0'
-插槽：
-  default：了解如何在项目中安装`@nuxt/ui`。
+props:
+  icon: i-lucide-square-play
+  to: '/docs/getting-started/installation/nuxt'
+  color: neutral
+  class: 'w-full my-0'
+slots:
+  default: Learn how to install `@nuxt/ui` in your project.
 ---
 ::
 
-## Shortcuts
+## 快捷方式
 
 您还可以使用带有预定义图标和颜色的`note`、`tip`、`warning`和`caution`快捷方式。
 
@@ -106,7 +106,7 @@ links:
 
 :::
 
-#代码
+#code
 
 ```mdc
 ::note
@@ -132,16 +132,16 @@ This action cannot be undone.
 
 ### Props
 
-：组件-道具{prose}
+:component-props{prose}
 
 ### Slots
 
-：组件插槽{prose}
+:component-slots{prose}
 
 ## Theme
 
-：组件主题{prose}
+:component-theme{prose}
 
-## 变更日志
+## Changelog
 
-：component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

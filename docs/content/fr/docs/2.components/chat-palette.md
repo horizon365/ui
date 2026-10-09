@@ -8,9 +8,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatPalette.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Le composant ChatPalette est un enveloppeur de mise en page structuré qui organise [ChatMessages/docs/components/chat-messages) dans une zone de contenu défilable et [ChatPrompt](/docs/components/chat-prompt) dans une section inférieure fixe, créant ainsi des interfaces chatbot cohérentes pour les modaux, les diapositives ou les tiroirs.
+Le composant ChatPalette est un enveloppeur de mise en page structuré qui organise [ChatMessages](/docs/components/chat-messages) dans une zone de contenu déroulable et [ChatPrompt](/docs/components/chat-prompt) dans une section inférieure fixe, créant ainsi des interfaces chatbot cohérentes pour les modaux, les diapositives ou les tiroirs.
 
 ```vue{2,8}
 <template>
@@ -24,57 +24,57 @@ Le composant ChatPalette est un enveloppeur de mise en page structuré qui organ
 </template>
 ```
 
-@@ph020@exemples
+## Exemples
 
 ::tip{to="/docs/components/chat"}
-Consultez la page d'aperçu **Chat** pour connaître les instructions d'installation, la configuration du serveur et les exemples d'utilisation.
+Consultez la page d'aperçu **Chat** pour les instructions d'installation, la configuration du serveur et les exemples d'utilisation.
 ::
 
-### Dans un Modal
+### Dans un modal
 
-Vous pouvez utiliser le composant ChatPalette dans le contenu d'un [Modal](/docs/components/modal).
+Vous pouvez utiliser le composant ChatPalette à l'intérieur du contenu d'un [Modal](/docs/components/modal).
 
 ::component-example
 ---
-Collapse: vrai
+collapse: true
 iframe:
-  Hauteur: 500px
-iframeMobile: vrai
-dépassement: true
-nom: 'chat-palette-modal-exemple'
+  height: 500px;
+iframeMobile: true
+overflowHidden: true
+name: 'chat-palette-modal-example'
 ---
 ::
 
-### Dans le contenu
+### Dans ContentSearch
 
-Vous pouvez utiliser le composant ChatPalette conditionnellement dans le contenu de [ContentSearch](/docs/components/content-search) pour afficher une interface de chatbot lorsqu 'un utilisateur sélectionne un élément.
+Vous pouvez utiliser le composant ChatPalette conditionnellement à l'intérieur du contenu de [ContentSearch](/docs/components/content-search) pour afficher une interface de chatbot lorsqu 'un utilisateur sélectionne un élément.
 
 ::component-example
 ---
-Collapse: vrai
-Iframe:
-  Hauteur: 500px
-iframeMobile: vrai
-dépassement: true
-nom: 'chat-palette-content-search-example'
+collapse: true
+iframe:
+  height: 500px;
+iframeMobile: true
+overflowHidden: true
+name: 'chat-palette-content-search-example'
 ---
 ::
 
 
-@@ph033@@api
+## api
 
-@@ph034@@props
+### Props
 
-Composants-props
+:component-props
 
 ### Slots
 
-Composants slots
+:component-slots
 
-@@ph036@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

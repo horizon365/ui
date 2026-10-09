@@ -13,257 +13,257 @@ links:
 Este componente sólo está disponible cuando el módulo `@nuxt/content` está instalado.
 ::
 
-@@pH001@@El uso
+## Servicio
 
-Utilice el prop `links` con el `page?.body?.toc?.links`{lang="ts-type"} que obtiene al buscar una página.
+Utilice el prop `links` con el `page?.body?.toc?.links`{lang="ts-type"} que se obtiene al buscar una página.
 
 ::component-example
 ---
-Nombre: 'content-toc-ejemplo'
-Props:
-  Categoría: w-full
+name: 'content-toc-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-@@005@Título del artículo
+### Nombre
 
 Utilice el prop `title` para cambiar el título de la tabla de contenidos.
 
 ::component-code{prefix="content"}
 ---
-Categoría: true
-Colapso: Verdad
-Escondido:
-  @007@clase
-Ignora:
-  @080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externo:
-  @000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externalidades:
-  @@@P2010@@ContentTocLink []
-Props:
-  Título:"En esta página"
-  Categoría: w-full
-  izquierda:
-  - id: el uso
-    Profundidad: 2
-    Categoría: Usos
-    niños:
-    - id: título
-      Profundidad: 3
-      Texto: título
-    - id: el color
-      Profundidad: 3
-      Categoría: Color
-    @@P2014@@id: resaltado
-      Profundidad: 3
-      Categoría: Highlight
-    - id:'highlight-color'(en inglés)
-      Profundidad: 3
-      Categoría: Highlight Color
-    - id:'variante destacada'
-      Profundidad: 3
-      Categoría: Highlight Variant
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  title: 'On this page'
+  class: 'w-full'
+  links:
+  - id: usage
+    depth: 2
+    text: Usage
+    children:
+    - id: title
+      depth: 3
+      text: Title
+    - id: color
+      depth: 3
+      text: Color
+    - id: highlight
+      depth: 3
+      text: Highlight
+    - id: 'highlight-color'
+      depth: 3
+      text: Highlight Color
+    - id: 'highlight-variant'
+      depth: 3
+      text: Highlight Variant
 ---
 ::
 
-@17@color
+### color (Edición española)
 
 Utilice el prop `color` para cambiar el color de los enlaces.
 
 ::component-code{prefix="content"}
 ---
-Categoría: true
-Colapso: Verdad
-Escondido:
-  @1919@clase
-Ignora:
-  @@20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externo:
-  @@21@enlaces
-Externalidades:
-  @@222@@ContentTocLink []
-Props:
-  Categoría:"Neutral"
-  Categoría: w-full
-  izquierda:
-    - id: el uso
-      Profundidad: 2
-      Categoría: Usos
-      niños:
-        - id: título
-          Profundidad: 3
-          Texto: título
-        - id: el color
-          Profundidad: 3
-          Categoría: Color
-        @@2016@@id: resaltado
-          Profundidad: 3
-          Categoría: Highlight
-        - id:'highlight-color'(en inglés)
-          Profundidad: 3
-          Categoría: Highlight Color
-        - id:'variante destacada'
-          Profundidad: 3
-          Categoría: Highlight Variant
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  color: 'neutral'
+  class: 'w-full'
+  links:
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
+        - id: highlight
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
 ---
 ::
 
-@@29@highlight (Edición española)
+### Resaltado
 
-Utilice el prop `highlight` para mostrar un borde resaltado para el elemento activo.
+Utilice el accesorio `highlight` para mostrar un borde resaltado para el elemento activo.
 
 ::component-code{prefix="content"}
 ---
-Categoría: true
-Colapso: Verdad
-Escondido:
-  @@301@clase
-Ignora:
-  @@2003@enlaces
-Externo:
-  @@33@enlaces
-Externalidades:
-  @@@P24@@ContentTocLink []
-Props:
-  Destacado: Verdadero
-  Categoría: w-full
-  izquierda:
-    - id: el uso
-      Profundidad: 2
-      Categoría: Usos
-      niños:
-        - id: título
-          Profundidad: 3
-          Texto: Título
-        - id: el color
-          Profundidad: 3
-          Categoría: Color
-        @@P038@@id: resaltado
-          Profundidad: 3
-          Categoría: Highlight
-        - id:'highlight-color'(en inglés)
-          Profundidad: 3
-          Categoría: Highlight Color
-        - id:'variante destacada'
-          Profundidad: 3
-          Categoría: Highlight Variant
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  highlight: true
+  class: 'w-full'
+  links:
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
+        - id: highlight
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
 ---
 ::
 
-### Resalte el color
+### Highlight Color (Edición española)
 
-Utilice el `highlight-color` prop para cambiar el color del resaltado. Por defecto a la `color` prop.
+Utilice el prop `highlight-color` para cambiar el color del resaltado. Por defecto, el prop `color`.
 
 ::component-code{prefix="content"}
 ---
-Categoría: true
-Colapso: Verdad
-Escondido:
-  @444@clase
-Ignora:
-  @@45000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @46@highlight
-Externo:
-  @@47@enlaces
-Externalidades:
-  - ContentTocLink []
-Props:
-  Destacado: Verdadero
-  highlightColor: "Neutral"(Edición española)
-  Categoría: w-full
-  izquierda:
-    - id: el uso
-      Profundidad: 2
-      Categoría: Usos
-      niños:
-        - id: título
-          Profundidad: 3
-          Texto: Título
-        - id: el color
-          Profundidad: 3
-          Categoría: Color
-        @@P052@@id: resaltado
-          Profundidad: 3
-          Categoría: Highlight
-        - id:'highlight-color'(en inglés)
-          Profundidad: 3
-          Categoría: Highlight Color
-        - id:'variante destacada'
-          Profundidad: 3
-          Categoría: Highlight Variant
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+  - highlight
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  highlight: true
+  highlightColor: 'neutral'
+  class: 'w-full'
+  links:
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
+        - id: highlight
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
 ---
 ::
 
-### Highlight Variante: badge{label="4.6+" class="align-text-top"}
+### Variante de resaltado: badge{label="4.6+" class="align-text-top"}
 
 Utilice el prop `highlight-variant` para cambiar el estilo del resaltado. Predeterminados a `straight`.
 
 ::component-code{prefix="content"}
 ---
-Categoría: true
-Colapso: Verdad
-Escondido:
-  @@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Ignora:
-  @@pH060@enlaces
-  @@pH061@highlight
-Externo:
-  @@2006@enlaces
-Externalidades:
-  @@@P2006@@ContentTocLink []
-Props:
-  Destacado: Verdadero
-  highlightColor: 'primario'
-  HighlightVariant: 'circuito'
-  Categoría: w-full
-  izquierda:
-    - id: el uso
-      Profundidad: 2
-      Categoría: Usos
-      niños:
-        - id: título
-          Profundidad: 3
-          Texto: título
-        - id: el color
-          Profundidad: 3
-          Categoría: Color
-        @@P067@@id: resaltado
-          Profundidad: 3
-          Categoría: Highlight
-        - id:'highlight-color'(en inglés)
-          Profundidad: 3
-          Categoría: Highlight Color
-        - id:'variante destacada'
-          Profundidad: 3
-          Categoría: Highlight Variant
-    - id: ejemplos
-      Profundidad: 2
-      Texto: Ejemplos
-      niños:
-        - id: within a page
-          Profundidad: 3
-          Texto: Dentro de una página
-    @@pH072@@id: api
-      Profundidad: 2
-      Categoría: API
-      niños:
-        @@pH073@@id: Props (Edición española)
-          Profundidad: 3
-          Categoría: Props
-        - id: las ranuras
-          Profundidad: 3
-          Categoría: Slots
-        - id: emisiones
-          Profundidad: 3
-          Categoría: Emits
-    - id: el tema
-      Profundidad: 2
-      Texto: tema
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+  - highlight
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  highlight: true
+  highlightColor: 'primary'
+  highlightVariant: 'circuit'
+  class: 'w-full'
+  links:
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
+        - id: highlight
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
+    - id: examples
+      depth: 2
+      text: Examples
+      children:
+        - id: within-a-page
+          depth: 3
+          text: Within a Page
+    - id: api
+      depth: 2
+      text: API
+      children:
+        - id: props
+          depth: 3
+          text: Props
+        - id: slots
+          depth: 3
+          text: Slots
+        - id: emits
+          depth: 3
+          text: Emits
+    - id: theme
+      depth: 2
+      text: Theme
 ---
 ::
 
-@777@Ejemplos
+## Ejemplos
 
 ### Dentro de una página
 
@@ -298,24 +298,24 @@ if (!page.value) {
 </template>
 ```
 
-@@pH107 @@ Español
+## API (Versión)
 
-@108@108@108@108
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
-@109@109@109
+### Slots
 
-Componentes de slots
+:component-slots
 
-@100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@111 @@ Temas
+## Temas
 
-Componente Tema
+:component-theme
 
-@112@Changelog
+## Changelog (Edición española)
 
-por: component-changelog {prefix="content"}
+:component-changelog{prefix="content"}

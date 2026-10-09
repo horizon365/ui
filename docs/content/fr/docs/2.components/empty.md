@@ -11,7 +11,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Empty.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
 Utilisez le composant vide pour afficher un état d'espace réservé lorsqu 'il n'y a pas de contenu à afficher.
 
@@ -19,211 +19,211 @@ Utilisez le composant vide pour afficher un état d'espace réservé lorsqu 'il 
 
 :::u-empty
 ---
-Icône: i-lucide-file
-Titre: Aucun projet trouvé
-Description: Il semble que vous n'ayez ajouté aucun projet. Créez-en un pour commencer.
-Actions:
+icon: i-lucide-file
+title: No projects found
+description: It looks like you haven't added any projects. Create one to get started.
+actions:
   - icon: i-lucide-plus
-    Étiquette: Créer Nouveau
+    label: Create new
   - icon: i-lucide-refresh-cw
-    Étiquette: Refresh
-    Couleur: Neutre
-    Variante: subtile
+    label: Refresh
+    color: neutral
+    variant: subtle
 ---
 :::
 
 ::
 
-@@ph003@titre
+### Titre
 
 Utilisez la prop `title` pour définir le titre de l'état vide.
 
 ::component-code
 ---
-Props:
-  Titre: Aucun projet trouvé
+props:
+  title: No projects found
 ---
 ::
 
-@@P005@Description
+### Description
 
 Utilisez la prop `description` pour définir la description de l'état vide.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph007@titre
-Props:
-  Titre: Aucun projet trouvé
-  Description: Il semble que vous n'ayez ajouté aucun projet. Créez-en un pour commencer.
+prettier: true
+ignore:
+  - title
+props:
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
 ---
 ::
 
-@@008@Icon
+### Icône
 
-Utilisez la prop `icon` pour définir l'icône de l'état vide.
+Utilisez le prop `icon` pour définir l'icône de l'état vide.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph010@titre
-  @@ph011@description
-Props:
-  Icône: i-lucide-file
-  Titre: Aucun projet trouvé
-  Description: Il semble que vous n'ayez ajouté aucun projet. Créez-en un pour commencer.
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  icon: i-lucide-file
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
 ---
 ::
 
-@12@avatar
+### Avatars
 
-Utilisez la prop `avatar` pour définir l'avatar de l'état vide.
+Utilisez le prop `avatar` pour définir l'avatar de l'état vide.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@pha14@icon
-  @@ph015@titre
-  @@ph016@description
-Props:
-  avatar. src: 'https://github.com/nuxt.png'
-  Titre: Aucun projet trouvé
-  Description: Il semble que vous n'ayez ajouté aucun projet. Créez-en un pour commencer.
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+props:
+  avatar.src: 'https://github.com/nuxt.png'
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
 ---
 ::
 
 ### Chargement: badge{label="4.10+" class="align-text-top"}
 
-Utilisez le prop `loading` pour afficher une icône de chargement à la place de l'icône. La mise en page reste identique, de sorte que vous pouvez basculer entre les états de chargement et de vide sans changement de mise en page.
+Utilisez la prop `loading` pour afficher une icône de chargement à la place de l'icône. La mise en page reste identique, de sorte que vous pouvez basculer entre les états de chargement et vide sans changement de mise en page.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@2020@icon
-  @@21@titre
-  @@ph022@description
-Props:
-  Icône: i-lucide-file
-  Chargement: vrai
-  Titre: Chargement de projets
-  Description: Veuillez patienter pendant que nous récupérons vos projets.
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+props:
+  icon: i-lucide-file
+  loading: true
+  title: Loading projects
+  description: Please wait while we fetch your projects.
 ---
 ::
 
 ### Icône de chargement: badge{label="4.10+" class="align-text-top"}
 
-Utilisez la prop `loading-icon` pour personnaliser l'icône de chargement. Par défaut,`i-lucide-loader-circle`.
+Utilisez la prop `loading-icon` pour personnaliser l'icône de chargement. Par défaut, `i-lucide-loader-circle`.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@27@icon
-  @@28@titre
-  @@ph029@description
-  - chargement
-Props:
-  Icône: i-lucide-file
-  Chargement: vrai
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - loading
+props:
+  icon: i-lucide-file
+  loading: true
   loadingIcon: 'i-lucide-loader'
-  Titre: Chargement de projets
-  Description: Veuillez patienter pendant que nous récupérons vos projets.
+  title: Loading projects
+  description: Please wait while we fetch your projects.
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.loading`.
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` sous la touche `ui.icons.loading`.
+Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` sous la clé `ui.icons.loading`.
 :::
 ::
 
-@@P035@Actions
+### Actions
 
 Utilisez la prop `actions` pour ajouter des actions [Button](/docs/components/button) à l'état vide.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph041@icon
-  @@ph042@titre
-  @@ph043@description
-  @@44@actions
-Props:
-  Icône: i-lucide-file
-  Titre: Aucun projet trouvé
-  Description: Il semble que vous n'ayez ajouté aucun projet. Créez-en un pour commencer.
-  Actions:
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - actions
+props:
+  icon: i-lucide-file
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
+  actions:
     - icon: i-lucide-plus
-      Étiquette: Créer Nouveau
+      label: Create new
     - icon: i-lucide-refresh-cw
-      Étiquette: Refresh
-      Couleur: Neutre
-      Variante: subtile
+      label: Refresh
+      color: neutral
+      variant: subtle
 ---
 ::
 
-@@@700@Variant
+### Variant
 
-Utilisez la prop `variant` pour changer la variante de l'état vide.
+Utilisez le prop `variant` pour changer la variante de l'état vide.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph049@icon
-  @@ph050@titre
-  @@ph051@@description
-  @@502@actions
-Props:
-  Variante: nue
-  Icône: i-lucide-bell
-  Titre: Pas de notification
-  Vous êtes tous rattrapés. Nouvelles notifications apparaîtront ici.
-  Actions:
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - actions
+props:
+  variant: naked
+  icon: i-lucide-bell
+  title: No notifications
+  description: You're all caught up. New notifications will appear here.
+  actions:
     - icon: i-lucide-refresh-cw
-      Étiquette: Refresh
-      Couleur: Neutre
-      Variante: subtile
+      label: Refresh
+      color: neutral
+      variant: subtle
 ---
 ::
 
-@@500@Size
+### Size équivalent
 
 Utilisez la prop `size` pour modifier la taille de l'état vide.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph056@icon
-  @@ph057@titre
-  @@ph058@description
-  @@59@actions
-Props:
-  Taille: XL
-  Icône: i-lucide-bell
-  Titre: Pas de notification
-  Vous êtes tous rattrapés. Nouvelles notifications apparaîtront ici.
-  Actions:
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - actions
+props:
+  size: xl
+  icon: i-lucide-bell
+  title: No notifications
+  description: You're all caught up. New notifications will appear here.
+  actions:
     - icon: i-lucide-refresh-cw
-      Étiquette: Refresh
-      Couleur: Neutre
-      Variante: subtile
+      label: Refresh
+      color: neutral
+      variant: subtle
 ---
 ::
 
-@@ph061@@Exemples
+## Exemples
 
 ### Avec slots
 
@@ -231,25 +231,25 @@ Utilisez les slots disponibles pour créer un état vide plus complexe.
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'empty-slots-exemple'
+collapse: true
+name: 'empty-slots-example'
 ---
 ::
 
-@@ph063@@api
+## API
 
-@@ph064@@props
+### Props
 
-Composants-props
+:component-props
 
-### série
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph066@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

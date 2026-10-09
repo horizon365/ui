@@ -11,81 +11,81 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Badge.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice la ranura predeterminada para establecer la etiqueta de la insignia.
 
 ::component-code
 ---
-Los slots:
-  Categoría: Badge
+slots:
+  default: Badge
 ---
 ::
 
-@0001@etiqueta
+### Label
 
-Utilice el prop `label` para establecer la etiqueta de la insignia.
+Utilice el accesorio `label` para establecer la etiqueta de la insignia.
 
 ::component-code
 ---
-Props:
-  Categoría: Badge
+props:
+  label: Badge
 ---
 ::
 
-@000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### color (Edición española)
 
-Utilice el prop `color` para cambiar el color de la insignia.
+Utilice el accesorio `color` para cambiar el color de la insignia.
 
 ::component-code
 ---
-Props:
-  Color: Neutral
-Los slots:
-  Categoría: Badge
+props:
+  color: neutral
+slots:
+  default: Badge
 ---
 ::
 
-@@500@Variante
+### Variante
 
-Utilice los props `variant` para cambiar la variante de la insignia.
+Utilice los accesorios `variant` para cambiar la variante de la insignia.
 
 ::component-code
 ---
-Props:
-  Color: Neutro
-  Categoría: Outline
-Los slots:
-  Categoría: Badge
+props:
+  color: neutral
+  variant: outline
+slots:
+  default: Badge
 ---
 ::
 
-@0007@Nombre
+### Tamaño
 
-Utilice el prop `size` para cambiar el tamaño de la insignia.
+Utilice el accesorio `size` para cambiar el tamaño de la insignia.
 
 ::component-code
 ---
-Props:
-  Tamaño: XL
-Los slots:
-  Categoría: Badge
+props:
+  size: xl
+slots:
+  default: Badge
 ---
 ::
 
-@009@Icon
+### Icon
 
 Utilice el prop `icon` para mostrar un [Icon](/docs/components/icon) dentro de la insignia.
 
 ::component-code
 ---
-Props:
-  Archivo de la etiqueta: i-lucide-rocket
-  Tamaño: MD
-  Color: Primario
-  Variante: Sólido
-Los slots:
-  Categoría: Badge
+props:
+  icon: i-lucide-rocket
+  size: md
+  color: primary
+  variant: solid
+slots:
+  default: Badge
 ---
 ::
 
@@ -93,66 +93,66 @@ Utilice los accesorios `leading` y `trailing` para establecer la posición del i
 
 ::component-code
 ---
-Props:
-  Icono: i-lucide-arrow-right
-  Tamaño: MD
-Los slots:
-  Categoría: Badge
+props:
+  trailingIcon: i-lucide-arrow-right
+  size: md
+slots:
+  default: Badge
 ---
 ::
 
-@19@avatar
+### Avatar en Español
 
-Utilice el prop `avatar` para mostrar un [Avatar](/docs/components/avatar) dentro de la insignia.
+Utilice el prop `avatar` para mostrar un [Avatar](xph066) dentro de la insignia.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  - avatar.carga
-Props:
-  El avatar:
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
     src: 'https://github.com/nuxt.png'
-    Categoría: Lazy
-  Tamaño: MD
-  Color: Neutro
-  Categoría: Outline
-Los slots:
-  Default:|
+    loading: lazy
+  size: md
+  color: neutral
+  variant: outline
+slots:
+  default: |
 
-    El Badge
+    Badge
 ---
 ::
 
-@26@Ejemplos
+## Ejemplos
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+### x`class`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-Utilice el prop `class` para anular los estilos de base de la insignia.
+Utilice el accesorio `class` para anular los estilos base de la insignia.
 
 ::component-code
 ---
-Props:
-  Archivo de la etiqueta: font-bold round-full
-Los slots:
-  Categoría: Badge
+props:
+  class: 'font-bold rounded-full'
+slots:
+  default: Badge
 ---
 ::
 
-@@pH030@@pH0300
+## API (Edición española)
 
-@@301@Propuestas
+### Accesorios
 
-Componentes Props
+:component-props
 
-@@322@322@322@332@322@322@332@332@332@332@332@332@332@33222@3322222222333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
+### Slots (Edición española)
 
-Componentes de slots
+:component-slots
 
-@@333@@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@changelog @changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

@@ -5,16 +5,16 @@ description: 'ステップを横断して単一のポップオーバーを再固
 
 ## 使用法
 
-自動インポートされた`useTour`コンポーザーを使用して、アンカーがステップ間を移動する単一の[ Popover ](/docs/components/popover)でガイドツアーを駆動します。コンポーザーはステップ状態を所有し、各ステップの`target`を`<UPopover>`にバインドして`reference`に分解します。コンテンツとナビゲーションを完全に制御しながら
+自動インポートされた`useTour`コンポーザーを使用して、ステップ間でアンカーが移動する単一の[Popover](/docs/components/popover)を使用してガイド付きツアーを実行します。コンポーザーはステップ状態を所有し、各ステップの`target`を`<UPopover>`にバインドする`reference`に解決しますが、コンテンツとナビゲーションは完全に制御できます。
 
 ::component-example
 ---
-崩壊真
-名前'use—tour—example'
+collapse: true
+name: 'use-tour-example'
 ---
 ::
 
-各ステップはpopoverがアンカーする`target`を必要とします。CSSセレクタ、要素、仮想要素を受け入れます`getBoundingClientRect`が付いているもの`title`
+各ステップには、ポップオーバーがアンカーする`target`が必要です。CSSセレクタ、要素、仮想要素（`getBoundingClientRect`を持つもの）、またはそれらのいずれかを返すref/ゲッターを受け入れます。`null`を渡してステップをビューポートの中心に固定します。ステップ上の他のフィールド（`title`、`body`、`side`、...）はそのまま渡され、`current`経由で利用できます。
 
 ```vue
 <script setup lang="ts">
@@ -40,11 +40,11 @@ const tour = useTour([
 </template>
 ```
 
--  Popoverのreactive `reference` prop上に構築されているので、アクティブなステップが変更されたときにpopoverがスムーズに再配置されます。
-- ステップがアクティブになると、アクティブなターゲットが自動的に表示されます。
-- コンテンツを自分でレンダリングするため、メンテナンスする必要がある追加のテーマやロケールはありません。
+- ポップオーバーのリアクティブ`reference`プロパティ上に構築されているため、アクティブなステップが変更されたときにポップオーバーがスムーズに再配置されます。
+- ステップがアクティブになると、アクティブなターゲットが自動的にビューにスクロールされます。
+- コンテンツを自分でレンダリングするので、メンテナンスする追加のテーマやロケールはありません。
 
-##  API
+## API
 
 `useTour(steps, options?)`{lang="ts-type"}
 
@@ -53,17 +53,17 @@ const tour = useTour([
 ::field-group
 
   ::field{name="steps" type="MaybeRefOrGetter<TourStep[]>" required}
-  ツアーステップのリスト。静的配列、`ref`、リアクティブステップのゲッターです。
+  ツアーステップのリスト。静的配列、`ref`、またはリアクティブステップのゲッターです。
 
     ::collapsible
 
       ::field-group
         ::field{name="target" type="MaybeRefOrGetter<string | ReferenceElement | null | undefined>"}
-        ステップがアンカーされる要素。CSSセレクター `'#id'`、`'.class'`、または`#id`として解決された裸のID、要素、仮想要素、またはそれを返すref/ゲッターを受け付けます。ビューポートのステップを中心にするには、`null`を使用します。
+        ステップがアンカーされる要素。CSSセレクター `'#id'` `'.class'`、または`#id`として解決された裸のID、要素、仮想要素、またはそれを返すref/getterを受け付けます。ビューポートでステップを中心にするには`null`を使用します。
         ::
 
         ::field{name="[key: string]" type="any"}
-        追加のフィールド`title``body``side`は、`current`を介して渡されます。
+        追加のフィールド`title` `body` `side`は`current`経由で渡されます。
         ::
       ::
     ::
@@ -91,7 +91,7 @@ const tour = useTour([
   ::
 ::
 
-### リターン
+### 戻る
 
 ::field-group
 
@@ -108,7 +108,7 @@ const tour = useTour([
   ::
 
   ::field{name="reference" type="ComputedRef<ReferenceElement | undefined>"}
-  現在のステップの解決済みアンカーを`<UPopover :reference>`に渡します。
+  `<UPopover :reference>`に渡す現在のステップの解決済みアンカー。
   ::
 
   ::field{name="total" type="ComputedRef<number>"}

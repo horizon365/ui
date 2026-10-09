@@ -13,9 +13,11 @@ links:
     icon: i-simple-icons-github
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/CheckboxGroup.vue
 ---
+
+
 ## 用法
 
-使用 `v-model` 指令控制 CheckboxGroup 的值，或在不需控制其状态时使用 `default-value` 属性设置初始值。
+使用`v-model`指令来控制CheckboxGroup的值，或使用`default-value` prop在不需要控制其状态时设置初始值。
 
 ::component-code
 ---
@@ -38,7 +40,7 @@ props:
 
 ### 项目
 
-使用 `items` 属性传入字符串或数字数组：
+使用`items` prop作为字符串或数字的数组：
 
 ::component-code
 ---
@@ -59,13 +61,13 @@ props:
 ---
 ::
 
-你也可以传入包含以下属性的对象数组：
+您也可以传递具有下列属性的物件数组：
 
 - `label?: string`{lang="ts-type"}
 - `description?: string`{lang="ts-type"}
 - [`value?: string`{lang="ts-type"}](#value-key)
 - `disabled?: boolean`{lang="ts-type"}
-- [`icon?: string`{lang="ts-type"}](#indicator)
+058x-059x-056x-057x-058x-056x-057x-058x
 - `class?: any`{lang="ts-type"}
 - `ui?: { item?: ClassNameValue, container?: ClassNameValue, base?: ClassNameValue, 'indicator'?: ClassNameValue, icon?: ClassNameValue, wrapper?: ClassNameValue, label?: ClassNameValue, description?: ClassNameValue }`{lang="ts-type"}
 
@@ -96,12 +98,12 @@ props:
 ::
 
 ::caution
-使用对象时，需要在 `v-model` 指令或 `default-value` 属性中引用对象的 `value` 属性。
+使用对象时，需要在`v-model`指令或`default-value` prop中引用对象的`value`属性。
 ::
 
-### 值键
+### 值密钥
 
-你可以使用 `value-key` 属性更改用于设置值的属性。默认为 `value`。
+您可以通过使用`value-key` prop.xml将用于设置值的属性更改为`value`。
 
 ::component-code
 ---
@@ -131,9 +133,9 @@ props:
 ---
 ::
 
-### 图例
+### Legend
 
-使用 `legend` 属性设置 CheckboxGroup 的图例。
+使用`legend`属性设置CheckboxGroup的图例。
 
 ::component-code
 ---
@@ -154,9 +156,9 @@ props:
 ---
 ::
 
-### 颜色
+### Color
 
-使用 `color` 属性更改 CheckboxGroup 的颜色。
+使用`color`属性更改CheckboxGroup的颜色。
 
 ::component-code
 ---
@@ -186,9 +188,9 @@ props:
 ---
 ::
 
-### 变体
+### Variant
 
-使用 `variant` 属性更改 CheckboxGroup 的变体。
+使用`variant` prop更改CheckboxGroup的变量。
 
 ::component-code
 ---
@@ -231,9 +233,9 @@ props:
 ---
 ::
 
-### 尺寸
+### Size
 
-使用 `size` 属性更改 CheckboxGroup 的尺寸。
+使用`size`属性更改CheckboxGroup的大小。
 
 ::component-code
 ---
@@ -262,7 +264,7 @@ props:
 
 ### 方向
 
-使用 `orientation` 属性更改 CheckboxGroup 的方向。默认为 `vertical`。
+使用`orientation`属性将CheckboxGroup.xml的方向更改为`vertical`。
 
 ::component-code
 ---
@@ -291,10 +293,10 @@ props:
 
 ### 指示器
 
-使用 `indicator` 属性更改指示器的位置或将其隐藏。默认为 `start`。
+使用`indicator`道具更改位置或隐藏指示器. `start`。
 
 ::note
-当指示器可见时，项目的 `icon` 会替换对勾；当指示器为 `hidden` 时，图标会显示在标签上方。
+当指示器可见时，项目的`icon`将替换复选标记，当项目的`hidden`时，项目的`icon`将显示在标签上方。
 ::
 
 ::component-code
@@ -340,7 +342,7 @@ props:
 
 ### 禁用
 
-使用 `disabled` 属性禁用 CheckboxGroup。
+使用`disabled`属性禁用CheckboxGroup。
 
 ::component-code
 ---
@@ -363,22 +365,22 @@ props:
 
 ## API
 
-### 属性
+### Props
 
 :component-props
 
-### 插槽
+### Slots
 
 :component-slots
 
-### 事件
+### Emits
 
 :component-emits
 
-## 主题
+## Theme
 
 :component-theme
 
-## 更新日志
+## Changelog
 
 :component-changelog

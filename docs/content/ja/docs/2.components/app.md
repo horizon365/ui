@@ -9,15 +9,15 @@ links:
 
 ## 使用法
 
-このコンポーネントはReka UI [ ConfigProvider ](https://reka-ui.com/docs/utilities/config-provider)を実装し、すべてのコンポーネントにグローバル設定を提供します。
+このコンポーネントはReka UI [ConfigProvider](https://reka-ui.com/docs/utilities/config-provider)を実装し、すべてのコンポーネントにグローバル設定を提供します。
 
-- すべてのプリミティブがグローバルな読み取り方向を継承できるようにします。
+- すべてのプリミティブがグローバル読み取り方向を継承できるようにする。
 - ボディロック設定時のスクロールボディの動作変更を有効にします。
-- レイアウトシフトを防ぐためのより多くのコントロール。
+- レイアウトシフトを防ぐための多くのコントロール。
 
-また、[ ToastProvider ](https://reka-ui.com/docs/components/toast#provider)と[ TooltipProvider ](https://reka-ui.com/docs/components/tooltip#provider)を使用して、グローバルなトーストとツールチップ、プログラムモーダルとスライドオーバーを提供しています。
+また、[ToastProvider](https://reka-ui.com/docs/components/toast#provider)と[TooltipProvider](https://reka-ui.com/docs/components/tooltip#provider)を使用して、グローバルトーストとツールチップ、プログラマティックモーダルとスライドオーバーを提供します。
 
-アプリケーション全体を`app.vue`ファイルにAppコンポーネントでラップします。
+`app.vue`ファイルのAppコンポーネントでアプリケーション全体をラップします。
 
 ```vue [app.vue]
 <template>
@@ -39,16 +39,16 @@ links:
 :::
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

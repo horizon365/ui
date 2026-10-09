@@ -12,70 +12,70 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Stepper.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Verwenden Sie die Stepper-Komponente, um eine Liste der Elemente in einem Stepper anzuzeigen.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
-  @@001@Klasse
-Ignoriert:
-  @@ph002@@gmail.de
-  @@003@Klasse
-Außen:
-  @@ph004@gmail.de
-Externe Personen:
-  - StepperItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Items:
-    - title:'Adresse'
-      Beschreibung: 'Fügen Sie hier Ihre Adresse hinzu'
-      Das I-Lucide-Haus
-    - title:'Versand'
-      Beschreibung: 'Wählen Sie Ihre bevorzugte Versandmethode'
-      Icon: 'I-Lucide-Truck'(englisch)
-    - title:'Checkout'(siehe unten)
-      Beschreibung: 'Bestätigen Sie Ihre Bestellung'
-  Klasse: "W-voll"
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - StepperItem[]
+props:
+  items:
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
+  class: 'w-full'
 ---
 ::
 
-@@ph009@gmail.de
+### Items Bearbeiten
 
-Verwenden Sie `items` prop als Array von Objekten mit den folgenden Eigenschaften:
+Verwenden Sie die `items`-prop als Array von Objekten mit den folgenden Eigenschaften:
 
-`title?: string``title?: string`{lang="ts-type"}
-`description?: AvatarProps`{lang="ts-type"}`description?: AvatarProps`{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}
-`content?: string``content?: string``content?: string`{lang="ts-type"}
-`icon?: string`PH0221{lang="ts-type"}
-`value?: string | number``value?: string | number``value?: string | number`{lang="ts-type"}
-`disabled?: boolean`{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}
-[`slot?: string`))))))))PH03434@@@@PH03434@@@@@@@PH03444444444@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`class?: any``class?: any`{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}
-`ui?: { item?: ClassNameValue, container?: ClassNameValue, trigger?: ClassNameValue, indicator?: ClassNameValue, icon?: ClassNameValue, separator?: ClassNameValue, wrapper?: ClassNameValue, title?: ClassNameValue, description?: ClassNameValue }``ui?: { item?: ClassNameValue, container?: ClassNameValue, trigger?: ClassNameValue, indicator?: ClassNameValue, icon?: ClassNameValue, separator?: ClassNameValue, wrapper?: ClassNameValue, title?: ClassNameValue, description?: ClassNameValue }``ui?: { item?: ClassNameValue, container?: ClassNameValue, trigger?: ClassNameValue, indicator?: ClassNameValue, icon?: ClassNameValue, separator?: ClassNameValue, wrapper?: ClassNameValue, title?: ClassNameValue, description?: ClassNameValue }``ui?: { item?: ClassNameValue, container?: ClassNameValue, trigger?: ClassNameValue, indicator?: ClassNameValue, icon?: ClassNameValue, separator?: ClassNameValue, wrapper?: ClassNameValue, title?: ClassNameValue, description?: ClassNameValue }``ui?: { item?: ClassNameValue, container?: ClassNameValue, trigger?: ClassNameValue, indicator?: ClassNameValue, icon?: ClassNameValue, separator?: ClassNameValue, wrapper?: ClassNameValue, title?: ClassNameValue, description?: ClassNameValue }`{lang="ts-type"}PH04040@@@@@@@@@@@@@PH0404040@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+- `title?: string`{lang="ts-type"} (nicht)
+- `description?: AvatarProps`{lang="ts-type"} (nicht vorhanden)
+- `content?: string`{lang="ts-type"} (nicht vorhanden)
+- `icon?: string`{lang="ts-type"} (nicht vorhanden)
+- `value?: string | number`{lang="ts-type"} (nicht vorhanden)
+- `disabled?: boolean`{lang="ts-type"} (englisch)
+- [`slot?: string`{lang="ts-type"}](#with-custom-slot) )
+- `class?: any`{lang="ts-type"} (nicht vorhanden)
+- `ui?: { item?: ClassNameValue, container?: ClassNameValue, trigger?: ClassNameValue, indicator?: ClassNameValue, icon?: ClassNameValue, separator?: ClassNameValue, wrapper?: ClassNameValue, title?: ClassNameValue, description?: ClassNameValue }`{lang="ts-type"} (nicht vorhanden)
 
 ::component-code
 ---
-Ignoriert:
-  @@ph042@@gmail.de
-  @@ph043@gmail.de
-Außen:
-  @@ph044@gmail.de
-Externe Typen:
-  - StepperItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Items:
-    - title:'Adresse'
-      Beschreibung: 'Fügen Sie Ihre Adresse hier hinzu'
-      Das I-Lucide-Haus
-    - title:'Versand'
-      Beschreibung: 'Wählen Sie Ihre bevorzugte Versandmethode'
-      Icon: 'I-Lucide-Truck'(englisch)
-    - title:'Checkout'(siehe unten)
-      Beschreibung: 'Bestätigen Sie Ihre Bestellung'
-  Klasse: "W-voll"
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - StepperItem[]
+props:
+  items:
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
+  class: 'w-full'
 ---
 ::
 
@@ -83,176 +83,176 @@ Props:
 Klicken Sie auf die Elemente, um durch die Schritte zu navigieren.
 ::
 
-@@ph049@gmail.de
+### Farbe
 
-Verwenden Sie die `color` prop, um die Farbe des Steppers zu ändern.
+Verwenden Sie die `color`-Stütze, um die Farbe des Steppers zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph051 @ Inhalt
-  @@ph052@gmail.de
-  @@53@Klasse
-Außen:
-  @@ph054@gmail.de
-Externe Personen:
-  - StepperItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Farbe: neutral
-  Items:
-    - title:'Adresse'
-      Beschreibung: 'Fügen Sie Ihre Adresse hier hinzu'
-      Das I-Lucide-Haus
-    - title:'Versand'
-      Beschreibung: 'Wählen Sie Ihre bevorzugte Versandmethode'
-      Icon: 'I-Lucide-Truck'(englisch)
-    - title:'Checkout'(siehe unten)
-      Beschreibung: 'Bestätigen Sie Ihre Bestellung'
-  Klasse: "W-voll"
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - StepperItem[]
+props:
+  color: neutral
+  items:
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
+  class: 'w-full'
 ---
 ::
 
-@@599@059@059@0000000000000000000
+x101xSize
 
-Verwenden Sie die `size` prop, um die Größe des Steppers zu ändern.
+Verwenden Sie die `size`-Prop, um die Größe des Steppers zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@@@@@@@@@ph061@@@content
-  - Artikel
-  @@@@@@class063@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@class@class@class@class
-Außen:
-  @@ph064@gmail.de
-Externe Typen:
-  - StepperItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Größe: XL
-  Items:
-    - title:'Adresse'
-      Beschreibung: 'Fügen Sie Ihre Adresse hier hinzu'
-      Das I-Lucide-Haus
-    - title:'Versand'
-      Beschreibung: 'Wählen Sie Ihre bevorzugte Versandmethode'
-      Icon: 'I-Lucide-Truck'(englisch)
-    - title:'Checkout'(siehe unten)
-      Beschreibung: 'Bestätigen Sie Ihre Bestellung'
-  Klasse: "W-voll"
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - StepperItem[]
+props:
+  size: xl
+  items:
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
+  class: 'w-full'
 ---
 ::
 
-@@ph069@@Orientierung
+### Orientation Übersetzung
 
-Verwenden Sie `orientation` prop, um die Ausrichtung des Stepper. Defaults auf `horizontal` zu ändern.
+Verwenden Sie die `orientation`-prop, um die Ausrichtung des Stepper. Defaults auf `horizontal` zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@@@@@@@@@@ph072@@@content
-  @@@ph073@gmail.de
-  @@@@@@@class074@class@class@class074@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclassclass@class@class@class@class@class@class@class@class@class@class@class@class@class@class
-Außen:
-  @@ph075@gmail.de
-Externe Typen:
-  - StepperItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Ausrichtung: Vertikal
-  Items:
-    - title:'Adresse'
-      Beschreibung: 'Fügen Sie Ihre Adresse hier hinzu'
-      Das I-Lucide-Haus
-    - title:'Versand'
-      Beschreibung: 'Wählen Sie Ihre bevorzugte Versandmethode'
-      Icon: 'I-Lucide-Truck'(englisch)
-    - title:'Checkout'(siehe unten)
-      Beschreibung: 'Bestätigen Sie Ihre Bestellung'
-  Klasse: "W-voll"
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - StepperItem[]
+props:
+  orientation: vertical
+  items:
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
+  class: 'w-full'
 ---
 ::
 
-### disabled
+### Disabled (englisch)
 
-Verwenden Sie die `disabled` prop, um die Navigation durch die Schritte zu deaktivieren.
+Verwenden Sie die `disabled`-Prop, um die Navigation durch die Schritte zu deaktivieren.
 
 ::component-code
 ---
-Ignoriert:
-  @@@@@@@@@@@@@@@@@@@@@@@@ph082@@@@@@content
-  @@ph083@gmail.de
-  @@@@@@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@class@class@classclassclassclass@classclass@class@class@class@class@class@class@class@class@class@class@class@class@c
-Außen:
-  @@@@@@@@@@@ph085@gmail.de
-Externe Personen:
-  - StepperItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Behindert: Wahr
-  Items:
-    @@ph087@title:'Adresse'
-      Beschreibung: 'Fügen Sie Ihre Adresse hier hinzu'
-      Das I-Lucide-Haus
-    - title:'Versand'
-      Beschreibung: 'Wählen Sie Ihre bevorzugte Versandmethode'
-      Icon: 'I-Lucide-Truck'(englisch)
-    - title:'Checkout'(siehe unten)
-      Beschreibung: 'Bestätigen Sie Ihre Bestellung'
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - StepperItem[]
+props:
+  disabled: true
+  items:
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
 ---
 ::
 
 ::note{to="#with-controls"}
-Dies kann hilfreich sein, wenn Sie die Navigation mit Steuerelementen erzwingen möchten.
+Dies kann nützlich sein, wenn Sie die Navigation mit Steuerelementen erzwingen möchten.
 ::
 
-@@ph090@@Beispiele
+## Examples [Bearbeiten]
 
-### Mit Kontrollen
+### With Steuerung
 
 Sie können zusätzliche Steuerelemente für den Stepper mithilfe von Tasten hinzufügen.
 
-: component-beispiel {name="stepper-with-controls-example"}
+:component-example{name="stepper-with-controls-example"}
 
-### Control Aktives Element
+### Control Aktiver Eintrag
 
-Sie können das aktive Element steuern, indem Sie die `default-value` prop oder die `v-model` Direktive mit der `value` des Elements verwenden.
+Sie können das aktive Element steuern, indem Sie die `default-value` prop oder die `v-model` Direktive mit dem `value` des Elements verwenden.
 
-: component-beispiel {name="stepper-model-value-example"}
+:component-example{name="stepper-model-value-example"}
 
 ::tip
-Verwenden Sie `value-key` prop, um den Schlüssel zu ändern, mit dem Elemente übereinstimmen, wenn ein `v-model` oder `default-value` bereitgestellt wird.
+Verwenden Sie die `value-key`-Prop, um den Schlüssel zu ändern, der für die Übereinstimmung mit Elementen verwendet wird, wenn ein `v-model` oder `default-value` bereitgestellt wird.
 ::
 
-### Mit Inhalt Slot
+### With Inhalts-Slot
 
 Verwenden Sie den `#content`-Slot, um den Inhalt jedes Elements anzupassen.
 
-: component-example {name="stepper-content-slot-example"}
+:component-example{name="stepper-content-slot-example"}
 
-### Mit benutzerdefinierten Steckplatz
+### Mit benutzerdefiniertem Slot
 
 Verwenden Sie die `slot`-Eigenschaft, um ein bestimmtes Element anzupassen.
 
 Sie haben Zugriff auf folgende Slots:
 
-`#{{ item.slot }}`PH10999@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+- `#{{ item.slot }}`{lang="ts-type"} (englisch)
 
-: component-example {name="stepper-custom-slot-example"}
+:component-example{name="stepper-custom-slot-example"}
 
-@1111@bpb
+## API Bearbeiten
 
-@@@@@@@@ph112@props
+### Props (englisch)
 
-Komponenten Props
+:component-props
 
-### Slots
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-@@@@@@@114@Emits
+### Emits (nicht)
 
-Komponenten emittieren
+:component-emits
 
-### Aufdecken
+### Expose (englisch)
 
-Sie können auf die typisierte Komponenteninstanz über [`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref) zugreifen.
+Sie können auf die typisierte Komponenteninstanz mit [`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref) zugreifen.
 
 ```vue
 <script setup lang="ts">
@@ -268,15 +268,15 @@ Dies gibt Ihnen Zugang zu den folgenden:
 
 | Vorname| Typen|
 | ---- | ---- |
-| @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##########################################################################################################################|{lang="ts-type"}|
-| {lang="ts-type"}|@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
-| {lang="ts-type"}|{lang="ts-type"}|
-| {lang="ts-type"}| {lang="ts-type"}|
+| `next`{lang="ts-type"} Bearbeiten| `() => void`{lang="ts-type"} nicht|
+| `prev`{lang="ts-type"} Bearbeiten| `() => void`{lang="ts-type"} nicht|
+| `hasNext`{lang="ts-type"} (nicht)| `Ref<boolean>`{lang="ts-type"} (nicht)|
+| `hasPrev`{lang="ts-type"} (nicht)| `Ref<boolean>`{lang="ts-type"}|
 
-@@146@Einsteigertipps
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph147@@changelog (auf Englisch)
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

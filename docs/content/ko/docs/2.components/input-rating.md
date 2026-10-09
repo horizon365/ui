@@ -1,6 +1,6 @@
 ---
 title: InputRating (입력 등급)
-description: 사용자로부터 등급을 표시하고 수집하는 구성 요소입니다.
+description: 사용자로부터 등급을 표시하고 수집하는 구성요소입니다.
 category: form
 keywords:
   - star rating
@@ -14,223 +14,223 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputRating.vue
 ---
 
-##  사용
+## Usage
 
-`v-model` 지시문을 사용하여 InputRating 구성 요소의 등급 값을 제어합니다.
+`v-model` 지시어를 사용하여 InputRating 구성 요소의 등급 값을 제어합니다.
 
 ::component-code
 ---
-외부:
-  - modelValue - modelValue 이미지
-소품 :
-  ModelValue: 3 모델
+external:
+  - modelValue
+props:
+  modelValue: 3
 ---
 ::
 
-상태를 제어할 필요가 없을 때는 `default-value`prop을 사용하여 초기값을 설정합니다.
+상태를 제어할 필요가 없을 때 `default-value` prop을 사용하여 초기값을 설정합니다.
 
 ::component-code
 ---
-무시하기:
-  - defaultValue - 
-소품 :
+ignore:
+  - defaultValue
+props:
   defaultValue: 3
 ---
 ::
 
-###  스텝
+### Step (### Step)
 
-`step`prop을 사용하여 각 별의 세분성을 제어합니다. 절반 별 등급을 허용하려면 `0.5`로 설정합니다.
+`step` 소품을 사용하여 각 별의 세분화를 제어합니다. 절반 별 등급을 허용하려면 `0.5`로 설정합니다.
 
 ::component-code
 ---
-무시하기:
-  - defaultValue - 
-소품 :
-  단계: 0.5
+ignore:
+  - defaultValue
+props:
+  step: 0.5
   defaultValue: 3.5
 ---
 ::
 
-###  길이
+### Length 길이
 
-`length`prop을 사용하여 별 수를 설정합니다. 기본값은 `5`입니다.
+`length` 소품을 사용하여 별 수를 설정합니다. 기본값은 `5`입니다.
 
 ::component-code
 ---
-무시하기:
-  - defaultValue - defaultValue
-소품 :
-  길이 : 10
-  단계: 0.5
-  defaultValue : 7.5
+ignore:
+  - defaultValue
+props:
+  length: 10
+  step: 0.5
+  defaultValue: 7.5
 ---
 ::
 
-###  삭제 가능
+### 지우기 가능
 
-`clearable`prop을 사용하여 사용자가 현재 선택한 값을 눌러 등급을 지울 수 있도록 합니다. 기본값은 `false`입니다.
+`clearable` 소품을 사용하여 사용자가 현재 선택한 값을 클릭하여 등급을 지울 수 있도록 합니다. 기본값은 `false`입니다.
 
 ::component-code
 ---
-무시하기:
-  - defaultValue - defaultValue
-소품 :
-  클리어 가능: true
+ignore:
+  - defaultValue
+props:
+  clearable: true
   defaultValue: 3
 ---
 ::
 
-### Hoverable @ 호버러블
+### Hoverable 사용 가능
 
-`hoverable`prop을 사용하여 별 위에 마우스를 놓을 때 등급이 값을 미리 볼 수 있는지 여부를 제어합니다. 기본값은 `false`입니다.
+`hoverable` 소품을 사용하여 별 위에 마우스를 놓을 때 등급이 값을 미리 볼지 여부를 제어합니다. 기본값은 `false`입니다.
 
 ::component-code
 ---
-무시하기:
-  - defaultValue - defaultValue
-소품 :
-  hoverable : true : ~
+ignore:
+  - defaultValue
+props:
+  hoverable: true
   defaultValue: 3
 ---
 ::
 
-###  아이콘
+### Icon 이미지
 
-`icon`prop을 사용하여 별에 사용할 아이콘을 사용자 정의합니다. 기본값은 `i-lucide-star`입니다.
+`icon` 소품을 사용하여 별에 사용할 아이콘을 사용자 정의합니다. 기본값은 `i-lucide-star`입니다.
 
 ::component-code
 ---
-무시하기:
-  -  defaultValue
-소품 :
-  아이콘 : i-lucide-heart
-  defaultValue: 4 개
+ignore:
+  - defaultValue
+props:
+  icon: 'i-lucide-heart'
+  defaultValue: 4
 ---
 ::
 
 ::framework-only
-#nuxt #nuxt
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-기본 별 아이콘을 전체적으로 사용자 지정할 수 있습니다 `app.config.ts`under`ui.icons.star`key.
+`ui.icons.star` 키 아래에서 `app.config.ts`의 기본 별 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-기본 별 아이콘을 전체적으로 사용자 정의할 수 있습니다 `vite.config.ts`under`ui.icons.star`key.
+`ui.icons.star` 키 아래에서 `vite.config.ts`의 기본 별 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
 ### 빈 아이콘
 
-`empty-icon`prop 을 사용하여 빈 별에 사용할 아이콘을 사용자 정의합니다. 제공되지 않은 경우에는 `icon`와 같은 아이콘을 사용합니다.
+`empty-icon` 소품을 사용하여 빈 별에 사용할 아이콘을 사용자 정의합니다. 제공되지 않으면 `icon`와 동일한 아이콘을 사용합니다.
 
 ::component-code
 ---
-무시하기:
-  - defaultValue - defaultValue
-소품 :
+ignore:
+  - defaultValue
+props:
   emptyIcon: 'i-lucide-circle'
-  아이콘: 'i-lucide-circle-check'
+  icon: 'i-lucide-circle-check'
   defaultValue: 3
 ---
 ::
 
-###  색상
+### Color 이미지
 
-`color`prop을 사용하여 채워진 별의 색상을 변경합니다.
+`color` 소품을 사용하여 채워진 별의 색상을 변경합니다.
 
 ::component-code
 ---
-무시하기:
-  - defaultValue - defaultValue
-소품 :
-  색상: 중립
-  defaultValue: 4 개
+ignore:
+  - defaultValue
+props:
+  color: neutral
+  defaultValue: 4
 ---
 ::
 
-###  크기
+### Size
 
-`size`prop 을 사용하여 별의 크기를 변경합니다.
+`size` Prop을 사용하여 별의 크기를 변경합니다.
 
 ::component-code
 ---
-무시하기:
-  - defaultValue - defaultValue
-프로젝트:
-  크기 (Size):
-    -  xs
-    -  sm
-    -  md
-    -  lg
-    -  xl
-소품 :
-  크기: xl
-  defaultValue : 4
+ignore:
+  - defaultValue
+items:
+  size:
+    - xs
+    - sm
+    - md
+    - lg
+    - xl
+props:
+  size: xl
+  defaultValue: 4
 ---
 ::
 
-###  방향
+### 방향 성
 
-`orientation`prop을 사용하여 등급 방향을 변경합니다. 기본값은 `horizontal`입니다.
+`orientation` 소품을 사용하여 등급 방향을 변경합니다. 기본값은 `horizontal`입니다.
 
 ::component-code
 ---
-무시하기:
-  - defaultValue - defaultValue
-소품 :
-  방향: 수직
-  defaultValue : 4
+ignore:
+  - defaultValue
+props:
+  orientation: vertical
+  defaultValue: 4
 ---
 ::
 
-###  비활성 화
+### Disabled 사용 안 함
 
-`disabled`prop을 사용하여 InputRating 구성 요소를 비활성화합니다. 비활성화하면 구성 요소의 불투명도(75%)가 감소하고 `not-allowed` 커서가 나타나 대화형이 아니라는 것을 나타냅니다.
+`disabled` 소품을 사용하여 InputRating 구성 요소를 비활성화합니다. 비활성화하면 구성 요소의 불투명도(75%)가 줄어들고 `not-allowed` 커서가 나타나 상호 작용이 아니라는 것을 나타냅니다.
 
 ::component-code
 ---
-무시하기:
-  - defaultValue - defaultValue
-소품 :
-  사용 안 함:true
+ignore:
+  - defaultValue
+props:
+  disabled: true
   defaultValue: 3
 ---
 ::
 
-### 읽기 전용
+### ReadOnly 읽기 전용
 
-사용자 상호 작용을 허용하지 않고 등급을 표시하려면 `readonly`prop을 사용합니다. `disabled`와는 달리 정상적인 모양(전체 불투명도, 기본 커서)을 유지합니다. 변경할 수 없지만 정상적으로 보이는 등급을 표시하려면 사용합니다.
+`readonly` 소품을 사용하면 사용자 상호 작용을 허용하지 않고 등급을 표시할 수 있습니다. `disabled`와 달리 정상적인 모양(전체 불투명도, 기본 커서)을 유지합니다. 변경할 수 없지만 정상적으로 보이는 등급을 표시하려는 경우에 사용합니다.
 
 ::component-code
 ---
-무시하기:
-  - defaultValue - defaultValue
-소품 :
-  읽기 전용: true
-  defaultValue : 4.5
+ignore:
+  - defaultValue
+props:
+  readonly: true
+  defaultValue: 4.5
 ---
 ::
 
-##  API
+## API 파일
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### 슬롯
 
-:컴포넌트 - 슬롯
+:component-slots
 
-### Emits @ 에미츠
+### Emits
 
-:구성요소 - 방사
+:component-emits
 
-##  테마
+## Theme 테마
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

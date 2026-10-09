@@ -10,13 +10,13 @@ links:
 
 ## 使用法
 
-PageAsideコンポーネントは、[`lg` breakpoint ](https://tailwindcss.com/docs/breakpoints)から始まるだけ表示されるスティッキー `<aside>`要素です。
+PageAsideコンポーネントは、[`lg`ブレークポイント](https://tailwindcss.com/docs/breakpoints)からのみ表示されるスティッキーな`<aside>`要素です。
 
 ::tip{to="/docs/getting-started/theme/css-variables#header"}
-PageAsideコンポーネントは、`--ui-header-height` CSS変数を使用して、自身を`Header`の下に正しく配置します。
+PageAsideコンポーネントはCSS変数`--ui-header-height`を使用して`Header`の下に正しく位置します。
 ::
 
-[ Page ](/docs/components/page)コンポーネントの`left`または`right`スロット内で使用します。
+[Page](/docs/components/page)コンポーネントの`left`または`right`スロット内で使用します。
 
 ```vue {4}
 <template>
@@ -31,7 +31,7 @@ PageAsideコンポーネントは、`--ui-header-height` CSS変数を使用し�
 ## 例
 
 ::note
-これらの例では[ Nuxt Content ](https://content.nuxt.com)を使用していますが、コンポーネントは任意のコンテンツ管理システムと統合できます。
+これらの例は[Nuxt Content](https://content.nuxt.com)を使用していますが、コンポーネントは任意のコンテンツ管理システムと統合できます。
 ::
 
 ### レイアウト内
@@ -62,20 +62,20 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 この例では、`ContentNavigation`コンポーネントを使用して、`app.vue`に注入されたナビゲーションを表示します。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

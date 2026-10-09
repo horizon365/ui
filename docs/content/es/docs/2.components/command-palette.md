@@ -20,261 +20,261 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/CommandPalette.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice la directiva `v-model` para controlar el valor de la CommandPalette o la prop `default-value` para establecer el valor inicial cuando no necesite controlar su estado.
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
-  @@autofocus
-Ignora:
-  @@F004@grupos
-  - modelValue (Edición española)
-  @06@clase
-Externo:
-  @@0007@grupos
-  - modelValue (Edición española)
-Externalidades:
-  @@@P2009@@CommandPaletteGroup []
-Categoría:! p-0
-Props:
-  Categoría:{}
-  Autoenfoque: Falso
-  Grupos:
-    - id:'usuarios'
-      Etiqueta: "Usuarios"
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - groups
+  - modelValue
+  - class
+external:
+  - groups
+  - modelValue
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  modelValue: {}
+  autofocus: false
+  groups:
+    - id: 'users'
+      label: 'Users'
       items:
-        - label:'Benjamin Canac'(Edición española)
-          Nombre: benjamincanac
-          El avatar:
+        - label: 'Benjamin Canac'
+          suffix: 'benjamincanac'
+          avatar:
             src: 'https://github.com/benjamincanac.png'
-            Categoría: Lazy
-        - label:'Hugo Richard'(Edición española)
-          Sufijo: "HugoRCD"
-          El avatar:
+            loading: lazy
+        - label: 'Hugo Richard'
+          suffix: 'HugoRCD'
+          avatar:
             src: 'https://github.com/HugoRCD.png'
-            Categoría: Lazy
-        - label:'Sébastien Chopin'
-          Sufijo: "Atinux"
-          El avatar:
+            loading: lazy
+        - label: 'Sébastien Chopin'
+          suffix: 'atinux'
+          avatar:
             src: 'https://github.com/atinux.png'
-            Categoría: Lazy
-        - label:'Romain Hamel'(Edición española)
-          Sufijo: "Romhml"
-          El avatar:
+            loading: lazy
+        - label: 'Romain Hamel'
+          suffix: 'romhml'
+          avatar:
             src: 'https://github.com/romhml.png'
-            Categoría: Lazy
-        Archivo de la etiqueta: Sandro Circi
-          Sufijo: 'sandros94'
-          El avatar:
+            loading: lazy
+        - label: 'Sandro Circi'
+          suffix: 'sandros94'
+          avatar:
             src: 'https://github.com/sandros94.png'
-            Categoría: Lazy
-        - label:'Jakub Michálek'(en español)
-          Archivo de la etiqueta: J-Michalek
-          El avatar:
+            loading: lazy
+        - label: 'Jakub Michálek'
+          suffix: 'J-Michalek'
+          avatar:
             src: 'https://github.com/J-Michalek.png'
-            Categoría: Lazy
-        - label:'Alex'(Edición española)
-          Sufijo: "hywax"
-          El avatar:
+            loading: lazy
+        - label: 'Alex'
+          suffix: 'hywax'
+          avatar:
             src: 'https://github.com/hywax.png'
-            Categoría: Lazy
-        - label:'Maxime Pauvert'(Edición española)
-          Sufijo: "MaximePvrt"
-          El avatar:
+            loading: lazy
+        - label: 'Maxime Pauvert'
+          suffix: 'maximepvrt'
+          avatar:
             src: 'https://github.com/maximepvrt.png'
-            Categoría: Lazy
-  Clase: 'flex-1 h-80'
+            loading: lazy
+  class: 'flex-1 h-80'
 ---
 ::
 
 ::tip{to="#control-selected-items"}
-También puede utilizar el evento `@update:model-value` para escuchar el (los) elemento (s) seleccionado (s).
+También puede utilizar el evento `@update:model-value` para escuchar el elemento seleccionado.
 ::
 
-@@21@Grupos
+Xph067xGrupos
 
-El componente CommandPalette filtra los grupos y clasifica los comandos coincidentes por relevancia a medida que los usuarios escriben. Proporciona resultados de búsqueda dinámicos e instantáneos para un descubrimiento eficiente de comandos. Utilice el prop `groups` como una matriz de objetos con las siguientes propiedades:
+El componente CommandPalette filtra los grupos y clasifica los comandos coincidentes por relevancia a medida que los usuarios escriben. Proporciona resultados de búsqueda dinámicos e instantáneos para un descubrimiento eficiente de comandos. Use el prop `groups` como una matriz de objetos con las siguientes propiedades:
 
-@@
-@@
-@@
-@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@
-@@
+- xx`id: string`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`label?: string`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`slot?: string`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ::caution
-Debe proporcionar un `id` para cada grupo, de lo contrario, el grupo será ignorado.
+Debe proporcionar un `id` para cada grupo de lo contrario el grupo será ignorado.
 ::
 
-Cada grupo contiene un array de objetos que definen los comandos. Cada elemento puede tener las siguientes propiedades:
+Cada grupo contiene una matriz `items` de objetos que definen los comandos. Cada elemento puede tener las siguientes propiedades:
 
-@@
-@@
-@@@ph060@@@ph061@@@ph062
-@@
-@@
-@@@ph069@@@ph070@@@ph071
-@@
-@@
-@@ph078@@@ph079@@@ph080
-@@
-@@@ph084@@@@ph086@@@@ph085@@@ph090@@@ph087@@@@ph0888@@@@ph089
-@@
-@@
-@@
-@100@@101@102
-@@@ph103@@@ph104
+- x`prefix?: string`x{lang="ts-type"}
+- x`label?: string`x{lang="ts-type"}
+- x`suffix?: string`x{lang="ts-type"}
+- x`icon?: string`x{lang="ts-type"}
+- x`avatar?: AvatarProps`x{lang="ts-type"}
+- x`chip?: ChipProps`x{lang="ts-type"}
+- x`kbds?: string[] | KbdProps[]`x{lang="ts-type"}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- x`active?: boolean`x{lang="ts-type"}
+- x`loading?: boolean`x{lang="ts-type"}
+- x`disabled?: boolean`x{lang="ts-type"}
+- x[x`slot?: string`x{lang="ts-type"}x](x#with-custom-slotx)
+- x`placeholder?: string`x{lang="ts-type"}
+- x`children?: CommandPaletteItem[]`x{lang="ts-type"} (Edición española)
+- x`onSelect?: (e: Event) => void`x{lang="ts-type"}
+- x`class?: any`x{lang="ts-type"} (Edición española)
+- x`ui?: { item?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLeadingChipSize?: ClassNameValue, itemLeadingChip?: ClassNameValue, itemLabel?: ClassNameValue, itemLabelPrefix?: ClassNameValue, itemLabelBase?: ClassNameValue, itemLabelSuffix?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingKbds?: ClassNameValue, itemTrailingKbdsSize?: ClassNameValue, itemTrailingHighlightedIcon?: ClassNameValue, itemTrailingIcon?: ClassNameValue }`x{lang="ts-type"}
 
-Puede pasar cualquier propiedad del componente [Link](/docs/components/link#props) como `to`,`target`, etc.
+Puede pasar cualquier propiedad desde el componente [Link](/docs/components/link#props) como `to`, `target`, etc.
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
+collapse: true
+hide:
   - autofocus
-Ignora:
-  @@113@grupos
-  @114 @ Modelo
-  @115 @ clase
-Externo:
-  @@116@grupos
-  @117@117@117
-Externalidades:
-  - CommandPaletteGroup [en inglés]
-Categoría:! p-0
-Props:
-  Categoría:{}
-  Autoenfoque: Falso
-  Grupos:
-    - id:'usuarios'
-      Etiqueta: "Usuarios"
-      Items:
-        - label:'Benjamin Canac'(Edición española)
-          Nombre: benjamincanac
-          El avatar:
+ignore:
+  - groups
+  - modelValue
+  - class
+external:
+  - groups
+  - modelValue
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  modelValue: {}
+  autofocus: false
+  groups:
+    - id: 'users'
+      label: 'Users'
+      items:
+        - label: 'Benjamin Canac'
+          suffix: 'benjamincanac'
+          avatar:
             src: 'https://github.com/benjamincanac.png'
-            Categoría: Lazy
-        - label:'Hugo Richard'(Edición española)
-          Sufijo: "HugoRCD"
-          El avatar:
+            loading: lazy
+        - label: 'Hugo Richard'
+          suffix: 'HugoRCD'
+          avatar:
             src: 'https://github.com/HugoRCD.png'
-            Categoría: Lazy
-        - label:'Sébastien Chopin'
-          Sufijo: "Atinux"
-          El avatar:
+            loading: lazy
+        - label: 'Sébastien Chopin'
+          suffix: 'atinux'
+          avatar:
             src: 'https://github.com/atinux.png'
-            Categoría: Lazy
-        - label:'Romain Hamel'(Edición española)
-          Sufijo: "Romhml"
-          El avatar:
+            loading: lazy
+        - label: 'Romain Hamel'
+          suffix: 'romhml'
+          avatar:
             src: 'https://github.com/romhml.png'
-            Categoría: Lazy
-        Artículo siguiente- : Sandro Circi
-          Sufijo: 'sandros94'
-          El avatar:
+            loading: lazy
+        - label: 'Sandro Circi'
+          suffix: 'sandros94'
+          avatar:
             src: 'https://github.com/sandros94.png'
-            Categoría: Lazy
-        - label:'Jakub Michálek'(Edición española)
-          Archivo de la etiqueta: J-Michalek
-          El avatar:
+            loading: lazy
+        - label: 'Jakub Michálek'
+          suffix: 'J-Michalek'
+          avatar:
             src: 'https://github.com/J-Michalek.png'
-            Categoría: Lazy
-        - label:'Alex'(Edición española)
-          Sufijo: "hywax"
-          El avatar:
+            loading: lazy
+        - label: 'Alex'
+          suffix: 'hywax'
+          avatar:
             src: 'https://github.com/hywax.png'
-            Categoría: Lazy
-        - label:'Maxime Pauvert'
-          Sufijo: "MaximePvrt"
-          El avatar:
+            loading: lazy
+        - label: 'Maxime Pauvert'
+          suffix: 'maximepvrt'
+          avatar:
             src: 'https://github.com/maximepvrt.png'
-            Categoría: Lazy
-  Categoría: flex-1
+            loading: lazy
+  class: 'flex-1'
 ---
 ::
 
 ::tip{to="#with-children-in-items"}
-Cada elemento puede tomar un array de objetos con las siguientes propiedades para crear submenús:
+Cada elemento puede tomar una matriz `children` de objetos con las siguientes propiedades para crear submenús:
 ::
 
-@130@1300 años
+### Multiplicación
 
 Utilice el prop `multiple` para permitir múltiples selecciones.
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
-  - autofocus (Edición española)
-Ignora:
-  @@313@grupos
-  - modelValue (Edición española)
-  @135 @@ Multiplicación
-  @136 @ clase
-Externo:
-  @137 @ Grupos
-  - modelValue (Edición española)
-Externalidades:
-  - CommandPaletteGroup [en inglés]
-Categoría:! p-0
-Props:
-  Multiplicación: True
-  Autoenfoque: Falso
-  Modelos: []
-  Grupos:
-    - id:'usuarios'
-      Etiqueta: "Usuarios"
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - groups
+  - modelValue
+  - multiple
+  - class
+external:
+  - groups
+  - modelValue
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  multiple: true
+  autofocus: false
+  modelValue: []
+  groups:
+    - id: 'users'
+      label: 'Users'
       items:
-        - label:'Benjamin Canac'(Edición española)
-          Nombre: benjamincanac
-          El avatar:
+        - label: 'Benjamin Canac'
+          suffix: 'benjamincanac'
+          avatar:
             src: 'https://github.com/benjamincanac.png'
-            Categoría: Lazy
-        Archivo de la etiqueta: 'Hugo Richard'
-          Sufijo: "HugoRCD"
-          El avatar:
+            loading: lazy
+        - label: 'Hugo Richard'
+          suffix: 'HugoRCD'
+          avatar:
             src: 'https://github.com/HugoRCD.png'
-            Categoría: Lazy
-        - label:'Sébastien Chopin'
-          Sufijo: "Atinux"
-          El avatar:
+            loading: lazy
+        - label: 'Sébastien Chopin'
+          suffix: 'atinux'
+          avatar:
             src: 'https://github.com/atinux.png'
-            Categoría: Lazy
-        - label:'Romain Hamel'(Edición española)
-          Sufijo: "Romhml"
-          El avatar:
+            loading: lazy
+        - label: 'Romain Hamel'
+          suffix: 'romhml'
+          avatar:
             src: 'https://github.com/romhml.png'
-            Categoría: Lazy
-        Artículo siguiente- : Sandro Circi
-          Sufijo: 'sandros94'
-          El avatar:
+            loading: lazy
+        - label: 'Sandro Circi'
+          suffix: 'sandros94'
+          avatar:
             src: 'https://github.com/sandros94.png'
-            Categoría: Lazy
-        - label:'Jakub Michálek'(Edición española)
-          Archivo de la etiqueta: J-Michalek
-          El avatar:
+            loading: lazy
+        - label: 'Jakub Michálek'
+          suffix: 'J-Michalek'
+          avatar:
             src: 'https://github.com/J-Michalek.png'
-            Categoría: Lazy
-        - label:'Alex'(Edición española)
-          Sufijo: "hywax"
-          El avatar:
+            loading: lazy
+        - label: 'Alex'
+          suffix: 'hywax'
+          avatar:
             src: 'https://github.com/hywax.png'
-            Categoría: Lazy
-        Archivo de la etiqueta: Maxime Pauvert
-          Sufijo: "MaximePvrt"
-          El avatar:
+            loading: lazy
+        - label: 'Maxime Pauvert'
+          suffix: 'maximepvrt'
+          avatar:
             src: 'https://github.com/maximepvrt.png'
-            Categoría: Lazy
-  Categoría: Flex-1
+            loading: lazy
+  class: 'flex-1'
 ---
 ::
 
 ::caution
-Asegúrese de pasar un array a la directiva `default-value` o a la directiva `v-model`.
+Asegúrese de pasar una matriz a la prop `default-value` o a la directiva `v-model`.
 ::
 
 ### Placeholder (Edición española)
@@ -283,108 +283,108 @@ Utilice el prop `placeholder` para cambiar el texto del marcador de posición.
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
+collapse: true
+hide:
   - autofocus
-Ignora:
-  @154 @ clase
-  @155 @ Grupos
-Externo:
-  @156 @ Grupos
-Externalidades:
-  - CommandPaletteGroup (en inglés)
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
-  marcador de posición:'Buscar una app...'
-  Grupos:
-    - id:'aplicaciones'
-      Items:
-        - label:'Calendario'
-          icono: 'i-lucide-calendar'
-        - label:'Música'
+ignore:
+  - class
+  - groups
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  placeholder: 'Search an app...'
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
           icon: 'i-lucide-music'
-        - label:"Los mapas"
-          icono: 'i-lucide-map'
-  Categoría: Flex-1
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
-### Tamaño: badge{label="4.4+" class="align-text-top"}
+Tamaño: badge{label="4.4+" class="align-text-top"}
 
 Utilice el prop `size` para cambiar el tamaño de la CommandPalette.
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
+collapse: true
+hide:
   - autofocus
-Ignora:
-  @166 @ clase
-  @@167@grupos
-Externo:
-  @168 @ Grupos
-Externalidades:
-  - CommandPaletteGroup [en inglés]
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
-  Tamaño:"XL"
-  Grupos:
-    - id:'aplicaciones'
-      Items:
-        - label:'Calendario'
-          icono: 'i-lucide-calendar'
-        - label:'Música'
+ignore:
+  - class
+  - groups
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  size: 'xl'
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
           icon: 'i-lucide-music'
-        - label:'Mapas'(Edición española)
-          icono: 'i-lucide-map'
-  Categoría: flex-1
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
-@174 @ Icono
+### Icon
 
 Utilice el prop `icon` para personalizar la entrada [Icon](/docs/components/icon).
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
+collapse: true
+hide:
   - autofocus
-Ignora:
-  @2018@clase
-  @@1833@grupos
-Externo:
-  @@184@grupos
-Externalidades:
-  - CommandPaletteGroup [en inglés]
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
-  Icono: 'i-lucide-box'
-  Grupos:
-    - id:'aplicaciones'
-      Items:
-        - label:'Calendario'
-          icono: 'i-lucide-calendar'
-        - label:"La música"
+ignore:
+  - class
+  - groups
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  icon: 'i-lucide-box'
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
           icon: 'i-lucide-music'
-        - label:'Mapas'(Edición española)
-          icono: 'i-lucide-map'
-  Categoría: Flex-1
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.search`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.search`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.search`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.search`.
 :::
 ::
 
@@ -394,253 +394,253 @@ Utilice el prop `selected-icon` para personalizar el elemento seleccionado [Icon
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
+collapse: true
+hide:
   - autofocus
-Ignora:
-  @@202@grupos
-  @@pH203@modelValue (Edición española)
-  @@204@multiple
-  @205@clase
-Externo:
-  @206@grupos
-  @2017@modelValoración
-Externalidades:
-  @208@208@2008 [en línea]
-Categoría:! p-0
-Props:
-  Multiplicación: True
-  Autoenfoque: Falso
-  Modelación:
-    - label:'Benjamin Canac'(Edición española)
-      Nombre: benjamincanac
-      El avatar:
+ignore:
+  - groups
+  - modelValue
+  - multiple
+  - class
+external:
+  - groups
+  - modelValue
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  multiple: true
+  autofocus: false
+  modelValue:
+    - label: 'Benjamin Canac'
+      suffix: 'benjamincanac'
+      avatar:
         src: 'https://github.com/benjamincanac.png'
-        Categoría: Lazy
-  Icono seleccionado: 'i-lucide-circle-check'
-  Grupos:
-    - id:'usuarios'
-      Etiqueta: "Usuarios"
-      Items:
-        - label:'Benjamin Canac'(Edición española)
-          Nombre: benjamincanac
-          El avatar:
+        loading: lazy
+  selectedIcon: 'i-lucide-circle-check'
+  groups:
+    - id: 'users'
+      label: 'Users'
+      items:
+        - label: 'Benjamin Canac'
+          suffix: 'benjamincanac'
+          avatar:
             src: 'https://github.com/benjamincanac.png'
-            Categoría: Lazy
-        - label:'Hugo Richard'(Edición española)
-          Sufijo: "HugoRCD"
-          El avatar:
+            loading: lazy
+        - label: 'Hugo Richard'
+          suffix: 'HugoRCD'
+          avatar:
             src: 'https://github.com/HugoRCD.png'
-            Categoría: Lazy
-        - label:'Sébastien Chopin'
-          Sufijo: "Atinux"
-          El avatar:
+            loading: lazy
+        - label: 'Sébastien Chopin'
+          suffix: 'atinux'
+          avatar:
             src: 'https://github.com/atinux.png'
-            Categoría: Lazy
-        - label:'Romain Hamel'(Edición española)
-          Sufijo: "Romhml"
-          El avatar:
+            loading: lazy
+        - label: 'Romain Hamel'
+          suffix: 'romhml'
+          avatar:
             src: 'https://github.com/romhml.png'
-            Categoría: Lazy
-        Archivo de la etiqueta: Sandro Circi
-          Sufijo: 'sandros94'
-          El avatar:
+            loading: lazy
+        - label: 'Sandro Circi'
+          suffix: 'sandros94'
+          avatar:
             src: 'https://github.com/sandros94.png'
-            Categoría: Lazy
-        - label:'Jakub Michálek'(Edición española)
-          Archivo de la etiqueta: J-Michalek
-          El avatar:
+            loading: lazy
+        - label: 'Jakub Michálek'
+          suffix: 'J-Michalek'
+          avatar:
             src: 'https://github.com/J-Michalek.png'
-            Categoría: Lazy
-        - label:'Alex'(Edición española)
-          Sufijo: "hywax"
-          El avatar:
+            loading: lazy
+        - label: 'Alex'
+          suffix: 'hywax'
+          avatar:
             src: 'https://github.com/hywax.png'
-            Categoría: Lazy
-        - label:'Maxime Pauvert'(Edición española)
-          Sufijo: "MaximePvrt"
-          El avatar:
+            loading: lazy
+        - label: 'Maxime Pauvert'
+          suffix: 'maximepvrt'
+          avatar:
             src: 'https://github.com/maximepvrt.png'
-            Categoría: Lazy
-  Categoría: Flex-1
+            loading: lazy
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#Nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.check`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.check`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.check`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.check`.
 :::
 ::
 
-### Trailing Icon (Edición española)
+XPH467XTrailing Icon de seguridad
 
-Utilice el prop `trailing-icon` para personalizar el [Icon](/docs/components/icon) cuando un elemento tiene hijos.
+Utilice el prop `trailing-icon` para personalizar el elemento final [Icon](/docs/components/icon) cuando un elemento tiene hijos.
 
 ::component-code
 ---
-Colapso: Verdad
-Categoría: true
-Escondido:
+collapse: true
+prettier: true
+hide:
   - autofocus
-Ignora:
-  @@231@grupos
-  @232@clase
-Externo:
-  @@2333@grupos
-Externalidades:
-  @234@@CommandPaletteGroup (en inglés)
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
-  Icono: 'i-lucide-arrow-right'
-  Grupos:
-    - id:'acciones'
-      Items:
-        - label:'Compartir'.
-          icono: 'i-lucide-share'
-          niños:
-            - label:'Correo electrónico'
+ignore:
+  - groups
+  - class
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  trailingIcon: 'i-lucide-arrow-right'
+  groups:
+    - id: 'actions'
+      items:
+        - label: 'Share'
+          icon: 'i-lucide-share'
+          children:
+            - label: 'Email'
               icon: 'i-lucide-mail'
-            - label:'Copiar'(Edición española)
-              Icono: 'i-lucide-copy'
-            - label:'Enlace'
-              icono: 'i-lucide-link'
-  Categoría: flex-1
+            - label: 'Copy'
+              icon: 'i-lucide-copy'
+            - label: 'Link'
+              icon: 'i-lucide-link'
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.chevronRight`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.chevronRight`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.chevronRight`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.chevronRight`.
 :::
 ::
 
-@@2444@@Cargando
+### Carga
 
-Utilice el prop `loading` para mostrar un icono de carga en el CommandPalette.
+Utilice el accesorio `loading` para mostrar un icono de carga en la paleta de comandos.
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
+collapse: true
+hide:
   - autofocus
-Ignora:
-  @247 @ clase
-  @@248@grupos
-Externo:
-  @@249@grupos
-Externalidades:
-  - CommandPaletteGroup [en inglés]
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
-  Carga: Verdad
-  Grupos:
-    - id:'aplicaciones'
-      Items:
-        - label:'Calendario'
-          icono: 'i-lucide-calendar'
-        - label:"La música"
+ignore:
+  - class
+  - groups
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  loading: true
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
           icon: 'i-lucide-music'
-        - label:"Los mapas"
-          icono: 'i-lucide-map'
-  Categoría: flex-1
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
-### Loading Icon
+### Loading Icon (en inglés)
 
-Use the `loading-icon` prop to customize the loading icon. Default to `i-lucide-loader-circle`.
+Utilice el prop `loading-icon` para personalizar el icono de carga.
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
+collapse: true
+hide:
   - autofocus
-Ignora:
-  @259 @ clase
-  @260@grupos
-Externo:
-  @@261@grupos
-Externalidades:
-  @@262@CommandPaletteGroup [en]
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
-  Carga: Verdad
-  LoadingIcon: 'i-lucide-loader'(en inglés)
-  Grupos:
-    - id:'aplicaciones'
-      Items:
-        - label:'Calendario'
-          icono: 'i-lucide-calendar'
-        - label:"La música"
+ignore:
+  - class
+  - groups
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
           icon: 'i-lucide-music'
-        - label:"Mapas"(Edición española)
-          icono: 'i-lucide-map'
-  Categoría: flex-1
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#Nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.loading`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.loading`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.loading`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.loading`.
 :::
 ::
 
-@271 @ Cerrar
+### Cerrar
 
-Utilice el `close` prop para mostrar un [Button](/docs/components/button) para descartar el CommandPalette.
+Utilice el prop `close` para mostrar un [Button](/docs/components/button) para descartar el CommandPalette.
 
 ::tip
-Se emitirá un evento `update:open` cuando se haga clic en el botón de cierre.
+Se emitirá un evento `update:open` cuando se haga clic en el botón Cerrar.
 ::
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
+collapse: true
+hide:
   - autofocus
-Ignora:
-  @279@clase
-  @280@grupos
-  @281@Cerrar
-Externo:
-  @@282@grupos
-Externalidades:
-  - CommandPaletteGroup []
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
-  Cerrado: Verdad
-  Grupos:
-    - id:'aplicaciones'
-      Items:
-        - label:'Calendario'
-          icono: 'i-lucide-calendar'
-        - label:'Música'
+ignore:
+  - class
+  - groups
+  - close
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  close: true
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
           icon: 'i-lucide-music'
-        - label:"Los mapas"
-          icono: 'i-lucide-map'
-  Categoría: flex-1
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
@@ -648,36 +648,36 @@ Puede pasar cualquier propiedad del componente [Button](/docs/components/button)
 
 ::component-code
 ---
-Colapso: Verdad
-Categoría: true
-Escondido:
+collapse: true
+prettier: true
+hide:
   - autofocus
-Ignora:
-  - close.color (en inglés)
-  - close.variante
-  @@295@grupos
-  @296 @ clase
-Externo:
-  @@297@grupos
-Externalidades:
-  @@298@CommandPaletteGroup [en]
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
-  Cerrado:
-    Color: Primario
-    Categoría: Outline
-    Categoría:"Round-full"
-  Grupos:
-    - id:'aplicaciones'
+ignore:
+  - close.color
+  - close.variant
+  - groups
+  - class
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  close:
+    color: primary
+    variant: outline
+    class: 'rounded-full'
+  groups:
+    - id: 'apps'
       items:
-        - label:'Calendario'
-          icono: 'i-lucide-calendar'
-        - label:'Música'
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
           icon: 'i-lucide-music'
-        - label:"Los mapas"
-          icono: 'i-lucide-map'
-  Categoría: Flex-1
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
@@ -687,184 +687,184 @@ Utilice el prop `close-icon` para personalizar el botón de cierre [Icon](/docs/
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
+collapse: true
+hide:
   - autofocus
-Ignora:
-  @311@clase
-  @312 @ Grupos
-  @313@Cerrar
-Externo:
-  @@314@grupos
-Externalidades:
-  - CommandPaletteGroup []
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
-  Cerrado: Verdad
-  Icono: 'i-lucide-arrow-right'
-  Grupos:
-    - id:'aplicaciones'
+ignore:
+  - class
+  - groups
+  - close
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  close: true
+  closeIcon: 'i-lucide-arrow-right'
+  groups:
+    - id: 'apps'
       items:
-        - label:'Calendario'
-          icono: 'i-lucide-calendar'
-        - label:'Música'
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
           icon: 'i-lucide-music'
-        - label:'Mapas'
-          icono: 'i-lucide-map'
-  Categoría: Flex-1
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.close`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.close`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.close`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.close`.
 :::
 ::
 
-@@2424@Regresar
+### Atrás
 
-Utilice el prop `back` para personalizar u ocultar el botón Atrás (con el valor `false`) que se muestra al navegar por un submenú.
+Utilice el accesorio `back` para personalizar u ocultar el botón Atrás (con el valor `false`) que se muestra al navegar por un submenú.
 
 Puede pasar cualquier propiedad del componente [Button](/docs/components/button) para personalizarlo.
 
 ::component-code
 ---
-Colapso: Verdad
-Categoría: true
-Escondido:
+collapse: true
+prettier: true
+hide:
   - autofocus
-Ignora:
-  - back.color (en inglés)
-  @@3333@grupos
-  @334@clase
-Externo:
-  @@335@grupos
-Externalidades:
-  - CommandPaletteGroup []
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
-  Atrás:
-    Color: Primario
-  Grupos:
-    - id:'acciones'
+ignore:
+  - back.color
+  - groups
+  - class
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  back:
+    color: primary
+  groups:
+    - id: 'actions'
       items:
-        - label:'Compartir'.
-          icono: 'i-lucide-share'
-          niños:
-            - label:'Correo electrónico'
+        - label: 'Share'
+          icon: 'i-lucide-share'
+          children:
+            - label: 'Email'
               icon: 'i-lucide-mail'
-            - label:'Copiar'(Edición española)
-              Icono: 'i-lucide-copy'
-            - label:'Enlace'
-              icono: 'i-lucide-link'
-  Categoría: Flex-1
+            - label: 'Copy'
+              icon: 'i-lucide-copy'
+            - label: 'Link'
+              icon: 'i-lucide-link'
+  class: 'flex-1'
 ---
 ::
 
-### Atrás Icono
+### Back Icono de
 
-Utilice el prop `back-icon` para personalizar el botón de retroceso [Icon](/docs/components/icon).
+Utilice el accesorio `back-icon` para personalizar el botón de retroceso [Icon](/docs/components/icon).
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
+collapse: true
+hide:
   - autofocus
-Ignora:
-  @@F350@clase
-  @351 @ Grupos
-  @352 @ de nuevo
-Externo:
-  @@353@grupos
-Externalidades:
-  - CommandPaletteGroup []
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
-  Atrás: Verdad
-  backIcon: 'i-lucide-house'(en inglés)
-  Grupos:
-    - id:'acciones'
+ignore:
+  - class
+  - groups
+  - back
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  back: true
+  backIcon: 'i-lucide-house'
+  groups:
+    - id: 'actions'
       items:
-        - label:'Compartir'.
-          icono: 'i-lucide-share'
-          niños:
-            - label:'Correo electrónico'
+        - label: 'Share'
+          icon: 'i-lucide-share'
+          children:
+            - label: 'Email'
               icon: 'i-lucide-mail'
-            - label:'Copiar'(Edición española)
-              Icono: 'i-lucide-copy'
-            - label:'Enlace'
-              icono: 'i-lucide-link'
-  Categoría: flex-1
+            - label: 'Copy'
+              icon: 'i-lucide-copy'
+            - label: 'Link'
+              icon: 'i-lucide-link'
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#Nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.arrowLeft`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.arrowLeft`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.arrowLeft`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.arrowLeft`.
 :::
 ::
 
-@@364@@desactivado
+### Desactivado
 
 Utilice el prop `disabled` para desactivar el CommandPalette.
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
+collapse: true
+hide:
   - autofocus
-Ignora:
-  @367 @ Grupos
-  @368@clase
-Externo:
-  @369@grupos
-Externalidades:
-  - CommandPaletteGroup [en]
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
-  Discapacidad: Verdadero
-  Grupos:
-    - id:'aplicaciones'
+ignore:
+  - groups
+  - class
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  disabled: true
+  groups:
+    - id: 'apps'
       items:
-        - label:'Calendario'
-          icono: 'i-lucide-calendar'
-        - label:"La música"
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
           icon: 'i-lucide-music'
-        - label:"Mapas"(Edición española)
-          icono: 'i-lucide-map'
-  Categoría: flex-1
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
-@375@Ejemplos
+## Ejemplos
 
 ### Control artículo (s) seleccionado (s)
 
-Puede controlar los elementos seleccionados utilizando la directiva `default-value` o `v-model`, utilizando el campo `onSelect` en cada elemento o utilizando el evento `@update:model-value`.
+Puede controlar los elementos seleccionados mediante la prop `default-value` o la directiva `v-model`, mediante el campo `onSelect` en cada elemento o mediante el evento `@update:model-value`.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre del archivo: 'command-palette-select-example'
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
+collapse: true
+name: 'command-palette-select-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
@@ -872,93 +872,93 @@ Props:
 Utilice la prop `value-key` para seleccionar un campo de un elemento que se utilizará como valor en lugar del objeto en sí. Use la prop `by` para comparar objetos por un campo en lugar de por referencia.
 ::
 
-### Término de búsqueda de control
+### Control términos de búsqueda
 
-Utilice la directiva `v-model:search-term` para controlar el término de búsqueda.
+Utiliza la directiva `v-model:search-term` para controlar el término de búsqueda.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'command-palette-search-term-example'
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
+collapse: true
+name: 'command-palette-search-term-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
-En este ejemplo se utiliza el evento `@update:model-value` para restablecer el término de búsqueda cuando se selecciona un elemento.
+Este ejemplo utiliza el evento `@update:model-value` para restablecer el término de búsqueda cuando se selecciona un elemento.
 ::
 
 ### Con niños en artículos
 
-Puede crear menús jerárquicos utilizando la propiedad `children` en los elementos. Cuando un elemento tiene hijos, mostrará automáticamente un icono de chevron y habilitará la navegación en un submenú.
+Puede crear menús jerárquicos mediante la propiedad `children` en items. Cuando un elemento tiene hijos, mostrará automáticamente un icono de chevron y habilitará la navegación en un submenú.
 
 ::component-example
 ---
-Colapso: Verdad
-Categoría: true
-Nombre del archivo: 'command-palette-items-children-example'
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
+collapse: true
+prettier: true
+name: 'command-palette-items-children-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
 Al navegar en un submenú:
 - El término de búsqueda se restablece
-- Aparece un botón de retroceso en la entrada
+- A botón de retroceso aparece en la entrada
 - Puede volver al grupo anterior pulsando la tecla: kbd{value="backspace"}
 ::
 
-### Con artículos recuperados
+### Con elementos recuperados
 
 Puede obtener elementos de una API y usarlos en el CommandPalette.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'command-palette-fetch-example'
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
+collapse: true
+name: 'command-palette-fetch-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
-Este ejemplo utiliza `useLazyFetch` con `server: false` para obtener datos en el cliente sin bloquear el renderizado inicial. El estado de carga comprueba el estado de `pending` y `idle` para mostrar un indicador de carga antes y durante la búsqueda.
+Este ejemplo utiliza `useLazyFetch` con `server: false` para obtener datos en el cliente sin bloquear el renderizado inicial. El estado de carga comprueba el estado de `pending` y `idle` para mostrar un indicador de carga antes y durante la extracción.
 ::
 
 ### Con el filtro ignorar
 
-Puede establecer el campo `ignoreFilter` a `true` en un grupo para desactivar la búsqueda interna y utilizar su propia lógica de búsqueda.
+Puede establecer el campo `ignoreFilter` en `true` en un grupo para desactivar la búsqueda interna y usar su propia lógica de búsqueda.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre del archivo: 'command-palette-ignore-filter-example'
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
+collapse: true
+name: 'command-palette-ignore-filter-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
-Este ejemplo utiliza [`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced) para desacreditar las llamadas a la API. El estado de carga comprueba el estado de `pending` y `idle` para mostrar un indicador de carga antes y durante la recuperación.
+Este ejemplo utiliza [`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced) para desacreditar las llamadas de la API. El estado de carga comprueba el estado de `pending` y `idle` para mostrar un indicador de carga antes y durante la búsqueda.
 ::
 
-### Con artículos post-filtrados
+### Con elementos post-filtrados
 
-Puede usar el campo `postFilter` en un grupo para filtrar elementos después de que se haya realizado la búsqueda.
+Puede utilizar el campo `postFilter` en un grupo para filtrar elementos después de que se haya realizado la búsqueda.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre del archivo: 'command-palette-post-filter-example'
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
+collapse: true
+name: 'command-palette-post-filter-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
@@ -966,7 +966,7 @@ Props:
 Comience a escribir para ver los elementos con mayor nivel aparecen.
 ::
 
-### Con búsqueda personalizada de fusibles
+### With búsqueda personalizada de fusibles
 
 Puede utilizar el prop `fuse` para anular las opciones de [useFuse](https://vueuse.org/integrations/useFuse) que por defecto es:
 
@@ -986,21 +986,21 @@ Puede utilizar el prop `fuse` para anular las opciones de [useFuse](https://vueu
 El `fuseOptions` son las opciones de [Fuse.js](https://www.fusejs.io/), el `resultLimit` es el número máximo de resultados a devolver y el `matchAllWhenSearchEmpty` es un booleano para que coincida con todos los elementos cuando el término de búsqueda está vacío.
 ::
 
-Por ejemplo, puede establecer `{ fuseOptions: { includeMatches: true } }`{lang="ts-type"} para resaltar el término de búsqueda en los elementos.
+Por ejemplo, puede configurar `{ fuseOptions: { includeMatches: true } }`{lang="ts-type"} para resaltar el término de búsqueda en los elementos.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre del archivo: 'command-palette-fuse-example'
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
+collapse: true
+name: 'command-palette-fuse-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
-### Con virtualización: badge{label="4.1+" class="align-text-top"}
+###  Con virtualización: badge{label="4.1+" class="align-text-top"}
 
-Utilice la prop `virtualize` para habilitar la virtualización de listas grandes como un booleano o un objeto con opciones como `{ estimateSize: 32, overscan: 12 }`.
+Utilice el prop `virtualize` para habilitar la virtualización de listas grandes como un booleano o un objeto con opciones como `{ estimateSize: 32, overscan: 12 }`.
 
 ::warning{to="https://github.com/unovue/reka-ui/issues/1885" target="_blank"}
 Cuando está habilitado, todos los grupos se aplanan en una sola lista debido a una limitación de Reka UI.
@@ -1008,71 +1008,71 @@ Cuando está habilitado, todos los grupos se aplanan en una sola lista debido a 
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'command-palette-virtualize-example'
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
+collapse: true
+name: 'command-palette-virtualize-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ### Dentro de un Popover
 
-Puede usar el componente CommandPalette dentro del contenido de un [Popover](/docs/components/popover).
+Puede utilizar el componente CommandPalette dentro del contenido de un [Popover](/docs/components/popover).
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'popover-command-palette-example'
-Props:
-  Autoenfoque: Falso
+collapse: true
+name: 'popover-command-palette-example'
+props:
+  autofocus: false
 ---
 ::
 
-### Dentro de un Modal
+### Dentro de un modal
 
-Puede usar el componente CommandPalette dentro del contenido de un [Modal](/docs/components/modal).
+Puede utilizar el componente CommandPalette dentro del contenido de un [Modal](/docs/components/modal).
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'modal-command-palette-example'
-Props:
-  Autoenfoque: Falso
+collapse: true
+name: 'modal-command-palette-example'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
-Este ejemplo utiliza `useLazyFetch` con `immediate: false` para obtener datos solo cuando se abre el Modal.
+Este ejemplo usa `useLazyFetch` con `immediate: false` para obtener datos solo cuando se abre el Modal.
 ::
 
 ### Dentro de un cajón
 
-Puede utilizar el componente CommandPalette dentro del contenido de un [Drawer](/docs/components/drawer).
+Puede usar el componente CommandPalette dentro del contenido de un [Drawer](/docs/components/drawer).
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'drawer-command-palette-exemple'
-Props:
-  Autoenfoque: Falso
+collapse: true
+name: 'drawer-command-palette-example'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
-En este ejemplo se utiliza `useLazyFetch` con `immediate: false` para obtener datos sólo cuando se abre el cajón.
+Este ejemplo utiliza `useLazyFetch` con `immediate: false` para obtener datos solo cuando se abre el cajón.
 ::
 
-### Listen estado abierto
+### Listen en estado abierto
 
-Cuando se utiliza el prop `close`, se puede escuchar el evento `update:open` cuando se hace clic en el botón.
+Cuando se utiliza el accesorio `close`, puede escuchar el evento `update:open` cuando se hace clic en el botón.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'command-palette-open-example'
-Props:
-  Autoenfoque: Falso
+collapse: true
+name: 'command-palette-open-example'
+props:
+  autofocus: false
 ---
 ::
 
@@ -1082,66 +1082,66 @@ Esto puede ser útil cuando se utiliza el CommandPalette dentro de un [`Modal`](
 
 ### Con ranura de pie de página
 
-Utilice la ranura `#footer` para agregar contenido personalizado en la parte inferior de la paleta de comandos, como ayuda de atajos de teclado o acciones adicionales.
+Utilice la ranura `#footer` para agregar contenido personalizado en la parte inferior de la paleta de comandos, como la ayuda de atajos de teclado o acciones adicionales.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre del archivo: 'command-palette-footer-slot-example'
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
+collapse: true
+name: 'command-palette-footer-slot-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
-### Con ranura personalizada
+### Con slot personalizado
 
 Utilice la propiedad `slot` para personalizar un elemento o grupo específico.
 
 Tendrás acceso a las siguientes slots:
 
-@@ph470@@@ph471@@@ph472 @
-@@@ph473@@@@ph474@@@ph475 @
-@@@ph476@@@ph477@@@ph478
-@@ph480@@@ph481
+- x`#{{ item.slot }}`xx{lang="ts-type"} (Edición española)
+- x`#{{ item.slot }}-leading`xx{lang="ts-type"} (Edición española)
+- x`#{{ item.slot }}-label`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- x`#{{ item.slot }}-trailing`x{lang="ts-type"} (Edición española)
 
-@@ph482@@@ph483@@@ph484 @
-@@@ph485@@@ph486@@@ph487
-@@ph488@@@ph489@@@ph490 @
-@@@ph491@@@@ph492@@@ph493 @
+- x`#{{ group.slot }}`xxx{lang="ts-type"}
+- xx`#{{ group.slot }}-leading`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- x`#{{ group.slot }}-label`xx{lang="ts-type"} (Edición española)
+- x`#{{ group.slot }}-trailing`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre del archivo: 'command-palette-custom-slot-example'
-Categoría:! p-0
-Props:
-  Autoenfoque: Falso
+collapse: true
+name: 'command-palette-custom-slot-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::tip{to="#slots"}
-También puede utilizar las ranuras `#item`,`#item-leading`,`#item-label` y `#item-trailing` para personalizar todos los artículos.
+También puede usar las ranuras `#item`, `#item-leading`, `#item-label` y `#item-trailing` para personalizar todos los artículos.
 ::
 
-@@pH498
+## API (Versión)
 
-@499 @ Propuestas
+### Props
 
-Componentes Props
+:component-props
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots (Edición española)
 
-Componentes de slots
+:component-slots
 
-@501@@Emisiones
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@502 @@ Proyecto
+## Theme
 
-Componente Tema
+:component-theme
 
-@503@@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

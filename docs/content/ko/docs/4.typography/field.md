@@ -9,16 +9,16 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Field.vue
 ---
 
-##  사용
+## Usage
 
 내용에 표시할 필드, 소품 또는 매개 변수.
 
 ::code-preview
 ::field{name="name" type="string" required class="w-full"}
-`description`는 prop로 설정하거나 기본 슬롯에 전체 **markdown**support를 설정할 수 있습니다.
+`description`는 prop로 설정하거나 **markdown**를 완벽하게 지원하는 기본 슬롯에 설정할 수 있습니다.
 ::
 
-# 코드
+#code
 
 ```mdc
 ::field{name="name" type="string" required}
@@ -28,20 +28,20 @@ The `description` can be set as prop or in the default slot with full **markdown
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props (### Props)
 
-: component-props {prose}
+:component-props{prose}
 
-###  슬롯
+### Slots
 
-: component-slots {prose}
+:component-slots{prose}
 
-##  테마
+## Theme 테마
 
-:component-theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## 변경 로그
 
-: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

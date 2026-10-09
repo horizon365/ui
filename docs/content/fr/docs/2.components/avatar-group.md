@@ -12,132 +12,132 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/AvatarGroup.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
 Enveloppez plusieurs [Avatar](/docs/components/avatar) dans un AvatarGroup pour les empiler.
 
 ::component-code
 ---
-Étiquette: true
-Slots:
-  Default:|
+prettier: true
+slots:
+  default: |
 
-    @@@ 005 @
-    @@@ 006 @
-    @@@ 007 @
+    <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" />
+    <UAvatar src="https://github.com/HugoRCD.png" alt="Hugo Richard" />
+    <UAvatar src="https://github.com/atinux.png" alt="Sébastien Chopin" />
 ---
-: u-avatar {src="https://github.com/benjamincanac.png" alt="Benjamin Canac"}
-: u-avatar {src="https://github.com/HugoRCD.png" alt="Hugo Richard"}
-: u-avatar {src="https://github.com/atinux.png" alt="Sébastien Chopin"}
+:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac"}
+:u-avatar{src="https://github.com/HugoRCD.png" alt="Hugo Richard"}
+:u-avatar{src="https://github.com/atinux.png" alt="Sébastien Chopin"}
 ::
 
-@@ph011@@Size
+### taille
 
-Utilisez la prop `size` pour modifier la taille de tous les avatars.
+Utilisez le prop `size` pour modifier la taille de tous les avatars.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Taille: XL
-Slots:
-  Default:|
+prettier: true
+props:
+  size: xl
+slots:
+  default: |
 
-    @@
-    @@
-    @@
+    <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy" />
+    <UAvatar src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy" />
+    <UAvatar src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy" />
 ---
-: u-avatar {src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
-: u-avatar {src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
-: u-avatar {src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
+:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
+:u-avatar{src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
+:u-avatar{src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
 ::
 
-@@ph019@max
+### max
 
 Utilisez la prop `max` pour limiter le nombre d'avatars affichés. Le reste est affiché comme un avatar `+X`.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Max: deux
-Slots:
-  Default:|
+prettier: true
+props:
+  max: 2
+slots:
+  default: |
 
-    @@@ 22 @
-    @@@ 23 @
-    @@@ 24 @
+    <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy" />
+    <UAvatar src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy" />
+    <UAvatar src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy" />
 ---
-: u-avatar {src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
-: u-avatar {src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
-: u-avatar {src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
+:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
+:u-avatar{src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
+:u-avatar{src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
 ::
 
-### Couleur: badge{label="4.8+" class="align-text-top"}
+Couleur: badge{label="4.8+" class="align-text-top"}
 
 Utilisez le prop `color` pour changer la couleur de tous les avatars.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Couleur: primaire
-Slots:
-  Défaut:|
+prettier: true
+props:
+  color: primary
+slots:
+  default: |
 
-    @@@ 031 @
-    @@@ 032 @
-    @@@@ 33 @
+    <UAvatar alt="Benjamin Canac" />
+    <UAvatar alt="Hugo Richard" />
+    <UAvatar alt="Sébastien Chopin" />
 ---
-: u-avatar {alt="Benjamin Canac"}
-: u-avatar {alt="Hugo Richard"}
-: u-avatar {alt="Sébastien Chopin"}
+:u-avatar{alt="Benjamin Canac"}
+:u-avatar{alt="Hugo Richard"}
+:u-avatar{alt="Sébastien Chopin"}
 ::
 
-@@ph037@exemples
+## exemples
 
 ### Avec tooltip
 
 Enveloppez chaque avatar avec un [Tooltip](/docs/components/tooltip) pour afficher une infobulle en survol.
 
-: exemple de composant {name="avatar-group-tooltip-example"}
+:component-example{name="avatar-group-tooltip-example"}
 
-### Avec puce
+### Avec chip
 
 Enveloppez chaque avatar avec un [Chip](/docs/components/chip) pour afficher une puce autour de l'avatar.
 
-: exemple de composant {name="avatar-group-chip-example"}
+:component-example{name="avatar-group-chip-example"}
 
-### Avec lien
+### Avec le lien
 
-Enveloppez chaque avatar avec un [Link](/docs/components/link) pour les rendre cliquables.
+Envelopper chaque avatar avec un [Link](/docs/components/link) pour les rendre cliquables.
 
-: exemple de composant {name="avatar-group-link-example"}
+:component-example{name="avatar-group-link-example"}
 
-### Avec masque
+### avec masque
 
 Enveloppez un avatar avec un masque CSS pour l'afficher avec une forme personnalisée.
 
-: exemple de composant {name="avatar-group-mask-example"}
+:component-example{name="avatar-group-mask-example"}
 
 ::warning
-Le `chip` prop ne fonctionne pas correctement lors de l'utilisation d'un masque. Des puces peuvent être coupées en fonction de la forme du masque.
+Le prop `chip` ne fonctionne pas correctement lors de l'utilisation d'un masque. Des copeaux peuvent être coupés en fonction de la forme du masque.
 ::
 
-@@ph059 @@ réponse
+## api
 
-@@ph060@@props
+### Projets
 
-Composants-props
+:component-props
 
-@@ph061@@réglages
+### Slots électroniques
 
-Composants slots
+:component-slots
 
-@@ph062@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changelog @changelog
+## Changelog
 
-Composant-changelog
+:component-changelog

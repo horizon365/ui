@@ -15,115 +15,115 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputDate.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice la directiva `v-model` para controlar la fecha seleccionada.
 
 ::component-code
 ---
-Cast:
-  Categoría: DateValue
-Ignora:
-  - modelValoración
-Externo:
-  - modelValue (Edición española)
-Props:
-  Valor de la imagen: [2022, 2, 3]
+cast:
+  modelValue: DateValue
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: [2022, 2, 3]
 ---
 ::
 
-Utilice la prop `default-value` para establecer el valor inicial cuando no necesite controlar su estado.
+Utilice el prop `default-value` para establecer el valor inicial cuando no necesite controlar su estado.
 
 ::component-code
 ---
-Cast:
-  Valoración: DateValue
-Ignora:
-  @@pH005@@defaultValue
-Externo:
-  @@pH006@defaultValue (en inglés)
-Props:
+cast:
+  defaultValue: DateValue
+ignore:
+  - defaultValue
+external:
+  - defaultValue
+props:
   defaultValue: [2022, 2, 6]
 ---
 ::
 
 ::framework-only
-#Nuxidad
+#nuxt
 :::note{to="/docs/getting-started/integrations/i18n/nuxt#locale"}
 Este componente utiliza el paquete `@internationalized/date` para el formato local. El formato de fecha está determinado por la prop `locale` del componente App.
 :::
 
-#vista
+#vue
 :::note{to="/docs/getting-started/integrations/i18n/vue#locale"}
 Este componente utiliza el paquete `@internationalized/date` para el formato local. El formato de fecha está determinado por la prop `locale` del componente App.
 :::
 ::
 
-@111@1111
+### Rango en
 
 Utilice el prop `range` para seleccionar un rango de fechas.
 
 ::component-code
 ---
-Categoría: true
-Cast:
-  Categoría: DateRange
-Ignora:
-  @@13000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+prettier: true
+cast:
+  modelValue: DateRange
+ignore:
+  - range
   - modelValue.start
   - modelValue.end
-Externo:
-  @@P016@modelValue (Edición española)
-Props:
-  Rango: Verdad
-  Modelación:
-    Inicio: [2022, 2, 3]
-    Año:[2022, 2, 20]
+external:
+  - modelValue
+props:
+  range: true
+  modelValue:
+    start: [2022, 2, 3]
+    end: [2022, 2, 20]
 ---
 ::
 
-@17@color
+### Color (Edición)
 
 Utilice el prop `color` para cambiar el color de la fecha de entrada.
 
 ::component-code
 ---
-Props:
-  Color: Neutral
-  Destacado: Verdadero
+props:
+  color: neutral
+  highlight: true
 ---
 ::
 
-@19@Variación
+### Variante
 
 Utilice el prop `variant` para cambiar la variante de la fecha de entrada.
 
 ::component-code
 ---
-Props:
-  Variación: Sutil
+props:
+  variant: subtle
 ---
 ::
 
-@@21@2012
+### Tamaño
 
 Utilice el prop `size` para cambiar el tamaño de la fecha de entrada.
 
 ::component-code
 ---
-Props:
-  Tamaño: xl
+props:
+  size: xl
 ---
 ::
 
-@@23@Icon
+### Icon
 
 Utilice el prop `icon` para mostrar un [Icon](/docs/components/icon) dentro de la fecha de entrada.
 
 ::component-code
 ---
-Props:
-  icono: 'i-lucide-calendar'
+props:
+  icon: 'i-lucide-calendar'
 ---
 ::
 
@@ -133,45 +133,45 @@ Utilice los accesorios `leading` y `trailing` para establecer la posición del i
 
 ### Separador Icono
 
-Utilice el prop `separator-icon` para cambiar el [Icon](/docs/components/icon) del separador de rango.
+Utilice la prop `separator-icon` para cambiar el [Icon](/docs/components/icon) del separador de rango.
 
 ::component-code
 ---
-Ignora:
-  @@40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Rango: Verdad
-  separatorIcono: 'i-lucide-arrow-right'
+ignore:
+  - range
+props:
+  range: true
+  separatorIcon: 'i-lucide-arrow-right'
 ---
 ::
 
 ::framework-only
-#Nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.minus`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
 Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.minus`.
 :::
 ::
 
-@@40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Avatar en Español
 
 Utilice el prop `avatar` para mostrar un [Avatar](/docs/components/avatar) dentro de la fecha de entrada.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  - avatar.carga
-Props:
-  El avatar:
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
     src: 'https://github.com/vuejs.png'
-    Categoría: Lazy
-  Tamaño: MD
-  Categoría: Outline
+    loading: lazy
+  size: md
+  variant: outline
 ---
 ::
 
@@ -181,71 +181,71 @@ Utilice el prop `disabled` para desactivar la fecha de entrada.
 
 ::component-code
 ---
-Props:
-  Discapacidad: Verdadero
+props:
+  disabled: true
 ---
 ::
 
-@@P054@Ejemplos
+## Ejemplos
 
-### Con fecha no disponible
+### Con fechas no disponibles
 
-Utilice el prop `is-date-unavailable` con una función para marcar fechas específicas como no disponibles.
+Utilice el accesorio `is-date-unavailable` con una función para marcar fechas específicas como no disponibles.
 
 ::component-example
 ---
-Nombre: 'input-date-unavailable-dates-example'
+name: 'input-date-unavailable-dates-example'
 ---
 ::
 
 ### Con fechas min/max
 
-Utilice los props `min-value` y `max-value` para limitar las fechas.
+Utilice los accesorios `min-value` y `max-value` para limitar las fechas.
 
 ::component-example
 ---
-Nombre: 'input-date-min-max-dates-ejemplo'
+name: 'input-date-min-max-dates-example'
 ---
 ::
 
-### Como selector de fecha
+### Como un selector de fechas
 
-Utilice un [Calendar](/docs/components/calendar) y un [Popover](/docs/components/popover) para crear un selector de fechas.
+Utilice un componente [Calendar](/docs/components/calendar) y un componente [Popover](/docs/components/popover) para crear un selector de fecha.
 
 ::component-example
 ---
-Nombre: 'input-date-date-picker-example'
+name: 'input-date-date-picker-example'
 ---
 ::
 
-### Como un selector de rango de fecha
+### As un selector de rango de fechas
 
-Utilice un [Calendar](/docs/components/calendar) y un [Popover](/docs/components/popover) para crear un selector de rango de fechas.
+Utilice un componente [Calendar](/docs/components/calendar) y un componente [Popover](/docs/components/popover) para crear un selector de rango de fechas.
 
 ::component-example
 ---
-Nombre: 'input-date-date-range-picker-example'
+name: 'input-date-date-range-picker-example'
 ---
 ::
 
-@@78800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## API (Edición española)
 
-@@70000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
-@800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots
 
-Componentes de slots
+:component-slots
 
-@081@081@081
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@082@@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@083@Changelog (Edición española)
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

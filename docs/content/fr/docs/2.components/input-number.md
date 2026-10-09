@@ -1,5 +1,5 @@
 ---
-title: Inputnuméro
+title: InputNuméro
 description: Une entrée pour des valeurs numériques avec une plage personnalisable.
 category: form
 keywords:
@@ -15,18 +15,18 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputNumber.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Utilisez la directive `v-model` pour contrôler la valeur de l'InputNumber.
+Utilisez la directive `v-model` pour contrôler la valeur du numéro d'entrée.
 
 ::component-code
 ---
-Ignorer:
-  - modèleValeur
-Extérieur:
-  - modèleValeur
-Props:
-  Modèle: 5
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
 ---
 ::
 
@@ -34,91 +34,91 @@ Utilisez la prop `default-value` pour définir la valeur initiale lorsque vous n
 
 ::component-code
 ---
-ignorer:
-  @@@ph005@@defaultValue
-Props:
-  Défaut: 5
+ignore:
+  - defaultValue
+props:
+  defaultValue: 5
 ---
 ::
 
 ::note
-Ce composant s'appuie sur le paquet `@internationalized/number`](https://react-spectrum.adobe.com/internationalized/number/index.html) qui fournit des utilitaires pour le formatage et l'analyse des numéros à travers les régions locales et les systèmes de numérotation.
+Ce composant s'appuie sur le paquet [`@internationalized/number`](https://react-spectrum.adobe.com/internationalized/number/index.html) qui fournit des utilitaires pour le formatage et l'analyse des numéros à travers les paramètres locaux et les systèmes de numérotation.
 ::
 
-@ Min/Max
+### Min/Max
 
-Utilisez les accessoires `min` et `max` pour définir les valeurs minimales et maximales du Numéro d'entrée.
+Utilisez les accessoires `min` et `max` pour définir les valeurs minimales et maximales du numéro d'entrée.
 
 ::component-code
 ---
-Ignorer:
-  - modelValeur
-Extérieure:
-  - modèleValeur
-Props:
-  Modèle: 5
-  min: 0 à
-  Max: 10 à
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  min: 0
+  max: 10
 ---
 ::
 
-@@ph016@étape
+### étape
 
-Utilisez la prop `step` pour définir la valeur de pas du numéro d'entrée.
+Utilisez la prop `step` pour définir la valeur de l'étape du numéro d'entrée.
 
 ::component-code
 ---
-ignorer:
-  - modelValeur
-Extérieur:
-  - modèleValeur
-Props:
-  Modèle: 5
-  Étape: 2
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  step: 2
 ---
 ::
 
-### Référencement
+### Définition
 
 Utilisez la prop `orientation` pour modifier l'orientation du numéro d'entrée.
 
 ::component-code
 ---
-ignorer:
-  - modèleValeur
-Extérieure:
-  - modelValeur
-Props:
-  Modèle: 5
-  Orientation: verticale
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  orientation: vertical
 ---
 ::
 
-@24@@Placeholder
+### Placeholder électronique
 
 Utilisez la prop `placeholder` pour définir un texte d'espace réservé.
 
 ::component-code
 ---
-Props:
-  placeholder: "Entrez un numéro"
+props:
+  placeholder: 'Enter a number'
 ---
 ::
 
-@@26@couleur
+### couleur
 
-Utilisez la prop `color` pour changer la couleur de l'anneau lorsque le numéro d'entrée est focalisé.
+Utilisez le prop `color` pour changer la couleur de la bague lorsque le numéro d'entrée est focalisé.
 
 ::component-code
 ---
-Ignorer:
-  - modèleValeur
-Extérieur:
-  - modèleValeur
-Props:
-  Modèle: 5
-  Couleur: Neutre
-  Highlights: vrai
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  color: neutral
+  highlight: true
 ---
 ::
 
@@ -128,99 +128,99 @@ Utilisez la prop `variant` pour modifier la variante du numéro d'entrée.
 
 ::component-code
 ---
-ignorer:
-  - modèleValeur
-Extérieur:
-  - modelValeur
-Props:
-  Modèle: 5
-  Variante: subtile
-  Couleur: Neutre
-  Étiquette: false
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  variant: subtle
+  color: neutral
+  highlight: false
 ---
 ::
 
-@@ph034@@Size
+### Size
 
 Utilisez la prop `size` pour modifier la taille du numéro d'entrée.
 
 ::component-code
 ---
-ignorer:
-  - modelValeur
-Extérieure:
-  - modelValeur
-Props:
-  Modèle: 5
-  Taille: XL
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  size: xl
 ---
 ::
 
-### désactivé
+### Désactivé
 
 Utilisez la prop `disabled` pour désactiver le numéro d'entrée.
 
 ::component-code
 ---
-Ignorer:
-  - modèleValeur
-Extérieure:
-  - modèleValeur
-Props:
-  Modèle: 5
-  handicapés: vrai
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  disabled: true
 ---
 ::
 
-### incrément/décrémenter
+### Increment/Décroissance
 
 Utilisez les accessoires `increment` et `decrement` pour personnaliser les boutons d'incrémentation et de décrémentation avec n'importe quel accessoire [Button](/docs/components/button).
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  - modèleValeur
-  - incrément.size
+prettier: true
+ignore:
+  - modelValue
+  - increment.size
   - increment.color
-  - incrément.variant
+  - increment.variant
   - decrement.size
   - decrement.color
   - decrement.variant
-Extérieure:
-  - modèleValeur
-Props:
-  Modèle: 5
-  Accroissement:
-    Couleur: Neutre
-    Variante: solide
-    Taille: XS
-  décrété:
-    Couleur: Neutre
-    Variante: solide
-    Taille: XS
+external:
+  - modelValue
+props:
+  modelValue: 5
+  increment:
+    color: neutral
+    variant: solid
+    size: xs
+  decrement:
+    color: neutral
+    variant: solid
+    size: xs
 ---
 ::
 
-### Icônes d'incrément/décrément
+### Increment/Decrement Icons (Icônes de décrément)
 
 Utilisez les accessoires `increment-icon` et `decrement-icon` pour personnaliser les boutons [Icon](/docs/components/icon).
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  - modèleValeur
-Extérieur:
-  - modèleValeur
-Props:
-  Modèle: 5
-  Icône:'i-lucide-arrow-right'
-  Icône: i-lucide-arrow-left
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  incrementIcon: 'i-lucide-arrow-right'
+  decrementIcon: 'i-lucide-arrow-left'
 ---
 ::
 
-@@ph070@exemples
+## Exemples
 
 ### Avec format décimal
 
@@ -228,17 +228,17 @@ Utilisez la prop `format-options` pour personnaliser le format de la valeur.
 
 ::component-example
 ---
-name: 'input-number-decimal-exemple'
+name: 'input-number-decimal-example'
 ---
 ::
 
-### Avec format de pourcentage
+### Avec pourcentage
 
 Utilisez la prop `format-options` avec `style: 'percent'` pour personnaliser le format de la valeur.
 
 ::component-example
 ---
-name: 'input-number-pourcentage-exemple'
+name: 'input-number-percentage-example'
 ---
 ::
 
@@ -248,7 +248,7 @@ Utilisez la prop `format-options` avec `style: 'currency'` pour personnaliser le
 
 ::component-example
 ---
-name: 'input-number-currency-exemple'
+name: 'input-number-currency-example'
 ---
 ::
 
@@ -258,35 +258,35 @@ Vous pouvez utiliser les props `increment` et `decrement` pour contrôler la vis
 
 ::component-example
 ---
-name: 'input-number-without-buttons-exemple'
+name: 'input-number-without-buttons-example'
 ---
 ::
 
-### Dans un champ de formulaire
+### Dans un FormField
 
 Vous pouvez utiliser le numéro d'entrée dans un composant [FormField](/docs/components/form-field) pour afficher une étiquette, un texte d'aide, un indicateur requis, etc.
 
 ::component-example
 ---
-name: 'entrée-numéro-form-champ-exemple'
+name: 'input-number-form-field-example'
 ---
 ::
 
 ### Avec slots
 
-Utilisez les emplacements `#increment` et `#decrement` pour personnaliser les boutons.
+Utilisez les fentes `#increment` et `#decrement` pour personnaliser les boutons.
 
 ::component-example
 ---
-nom: 'input-number-slots-exemple'
+name: 'input-number-slots-example'
 ---
 ::
 
-@@P090@@écrivain
+## API
 
-@@ph091@@props
+### Props
 
-Composants-props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
 Ce composant prend également en charge tous les attributs HTML natifs `<input>`.
@@ -294,24 +294,24 @@ Ce composant prend également en charge tous les attributs HTML natifs `<input>`
 
 ### Slots
 
-Composants slots
+:component-slots
 
-### émissions
+### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph095@@exposé
+### Expose à
 
 Lorsque vous accédez au composant via une référence de modèle, vous pouvez utiliser les éléments suivants:
 
 | nom| type|
 | ---- | ---- |
-| @@|@@|
+| `inputRef`x{lang="ts-type"}| `Ref<HTMLInputElement \| null>`x{lang="ts-type"}|
 
-@@ph100@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changelog 101
+## Changelog
 
-Composant-changelog
+:component-changelog

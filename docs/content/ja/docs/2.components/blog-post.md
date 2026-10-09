@@ -8,142 +8,142 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/BlogPost.vue
 ---
 
-## 使用 法
+## 使用法
 
-BlogPost コンポーネント は 、 タイトル 、 説明 、 画像 など の カスタマイズ 可能 な コンテンツ を 含む`<article>`要素 を 柔軟 に 表示 する 方法 を 提供 し ます 。
+BlogPostコンポーネントは、タイトル、説明、画像などのカスタマイズ可能なコンテンツを含む`<article>`要素を柔軟に表示する方法を提供します。
 
 ::code-preview
 
 ::u-blog-post
 ---
-title “ Nuxt Icon v1 の 紹介 ”
-説明 ： ' Discover Nuxt Icon v1 - Nuxt プロジェクト の ため の モダン で 汎用 性 の 高い カスタマイズ 可能 な アイコンソリューション です 。
-画像 ： ' https//nuxt.com/assets/blog/nuxt-icon/cover.png '
-日 付 2024 - 11 - 25
-著者 ：
-  - name アンソニー · フー
-    説明 antfu7
-    アバター
-      srchttps://github.com/antfu.png
-      読み込み 怠惰
-    次 へhttps://github.com/antfu
-    ターゲット _blank
-“ https//nuxt.com/blog/nuxt-icon-v1 - 0 ”
-ターゲット ' _blank '
-クラス ' w-96 '
+title: 'Introducing Nuxt Icon v1'
+description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
+date: 2024-11-25
+authors:
+  - name: Anthony Fu
+    description: antfu7
+    avatar:
+      src: https://github.com/antfu.png
+      loading: lazy
+    to: https://github.com/antfu
+    target: _blank
+to: 'https://nuxt.com/blog/nuxt-icon-v1-0'
+target: '_blank'
+class: 'w-96'
 ---
 ::
 
 ::
 
 ::tip{to="/docs/components/blog-posts"}
-`BlogPosts`コンポーネント を 使用 し て 、 複数 の ブログ 投稿 を レスポンシブ グリッド レイアウト で 表示 し ます 。
+`BlogPosts`コンポーネントを使用して、複数のブログ投稿をレスポンシブグリッドレイアウトで表示します。
 ::
 
-### タイトル
+### Title
 
-`title`プロップ を 使用 し て 、 BlogPost の タイトル を 表示 し ます 。
+`title`プロパティを使用してBlogPostのタイトルを表示します。
 
 ::component-code
 ---
-きれい 真
-隠す
-  - クラス
-小道具
-  title “ Nuxt Icon v1 の 紹介 ”
-  クラス ' w-96 '
+prettier: true
+hide:
+  - class
+props:
+  title: 'Introducing Nuxt Icon v1'
+  class: 'w-96'
 ---
 ::
 
-### 説明
+### Description
 
-`description`プロ パティ を 使用 し て 、 BlogPost の 説明 を 表示 し ます 。
+BlogPostの説明を表示するには`description`プロパティを使用します。
 
 ::component-code
 ---
-きれい 真
-隠す
-  - クラス
-無視
+prettier: true
+hide:
+  - class
+ignore:
   - title
-小道具
-  title “ Nuxt Icon v1 の 紹介 ”
-  説明 ： ' Discover Nuxt Icon v1 - Nuxt プロジェクト の ため の モダン で 汎用 性 の 高い カスタマイズ 可能 な アイコンソリューション です 。
-  クラス ' w-96 '
+props:
+  title: 'Introducing Nuxt Icon v1'
+  description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+  class: 'w-96'
 ---
 ::
 
 ### Date
 
-`date`プロ パティ を 使用 し て 、 BlogPost の 日付 を 表示 し ます 。
+BlogPostの日付を表示するには、`date`プロパティを使用します。
 
 ::tip
-日付 は 自動的 に[現在 の ロケール](/docs/getting-started/integrations/i18n/nuxt#locale)に フォーマット さ れ ます 。`Date`オブジェクト また は 文字 列 を 渡す こと が でき ます 。
+日付は自動的に[current locale](/docs/getting-started/integrations/i18n/nuxt#locale)にフォーマットされます。`Date`オブジェクトまたは文字列を渡すことができます。
 ::
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-小道具
-  title「Nuxt Icon v1の紹介」
-  説明：'Discover Nuxt Icon v1—Nuxtプロジェクトのためのモダンで汎用性の高いカスタマイズ可能なアイコンソリューションです。
-  日付2024—11—25
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Introducing Nuxt Icon v1'
+  description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+  date: 2024-11-25
+  class: 'w-96'
 ---
 ::
 
 ### バッジ
 
-`badge` propを使用して、BlogPostに[ Badge ](/docs/components/badge)を表示します。
+`badge`プロパティを使用して、BlogPostに[Badge](/docs/components/badge)を表示します。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-小道具
-  title「Nuxt Icon v1の紹介」
-  説明：'Discover Nuxt Icon v1—Nuxtプロジェクトのためのモダンで汎用性の高いカスタマイズ可能なアイコンソリューションです。
-  badge：'Release'
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Introducing Nuxt Icon v1'
+  description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+  badge: 'Release'
+  class: 'w-96'
 ---
 ::
 
-[ Badge ](/docs/components/badge#props)コンポーネントから任意のプロパティを渡してカスタマイズできます。
+[Badge](/docs/components/badge#props)コンポーネントの任意のプロパティを渡してカスタマイズできます。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-  -  badge.label
-  メール：info @ badge.color
-  -  badge.variant
-小道具
-  title「Nuxt Icon v1の紹介」
-  説明：'Discover Nuxt Icon v1—Nuxtプロジェクトのためのモダンで汎用性の高いカスタマイズ可能なアイコンソリューションです。
-  バッジ
-    label：'Release'
-    色プライマリ
-    バリアント固体
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - badge.label
+  - badge.color
+  - badge.variant
+props:
+  title: 'Introducing Nuxt Icon v1'
+  description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+  badge:
+    label: 'Release'
+    color: primary
+    variant: solid
+  class: 'w-96'
 ---
 ::
 
-###  Image
+### Image
 
-`image`プロパティを使用して、BlogPostに画像を表示します。
+BlogPostに画像を表示するには、`image`プロパティを使用します。
 
 ::note
 [`@nuxt/image`](https://image.nuxt.com/get-started/installation)がインストールされている場合、ネイティブの`img`タグの代わりに`<NuxtImg>`コンポーネントが使用されます。
@@ -151,25 +151,25 @@ title “ Nuxt Icon v1 の 紹介 ”
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-  -  date
-小道具
-  title「Nuxt Icon v1の紹介」
-  説明：'Discover Nuxt Icon v1—Nuxtプロジェクトのためのモダンで汎用性の高いカスタマイズ可能なアイコンソリューションです。
-  画像'https//nuxt.com/assets/blog/nuxt—icon/cover.png'
-  日付2024—11—25
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - date
+props:
+  title: 'Introducing Nuxt Icon v1'
+  description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+  image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
+  date: 2024-11-25
+  class: 'w-96'
 ---
 ::
 
-### 著者
+### Authors
 
-`authors` propを使用して、BlogPostに[ User ](/docs/components/user)のリストを次のプロパティを持つオブジェクトの配列として表示します。
+`authors`プロパティを使用して、BlogPostに[User](/docs/components/user)のリストを次のプロパティを持つオブジェクトの配列として表示します。
 
 - `name?: string`{lang="ts-type"}
 - `description?: string`{lang="ts-type"}
@@ -178,181 +178,181 @@ title “ Nuxt Icon v1 の 紹介 ”
 - `size?: UserProps['size']`{lang="ts-type"}
 - `orientation?: UserProps['orientation']`{lang="ts-type"}
 
-[ Link ](/docs/components/link#props)コンポーネントから、`to`、`target`などのプロパティを渡すことができます。
+[Link](/docs/components/link#props)コンポーネントから、`to`、`target`などの任意のプロパティを渡すことができます。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-外部
-  - 著者
-externalTypes
-  -  UserProps []
-無視
-  -  title
-  - 説明
-  -  date
-  -  image
-  - 著者
-小道具
-  title “ Nuxt Icon v1 の 紹介 ”
-  説明 ： ' Discover Nuxt Icon v1 - Nuxt プロジェクト の ため の モダン で 汎用 性 の 高い カスタマイズ 可能 な アイコンソリューション です 。
-  画像 ' https//nuxt.com/assets/blog/nuxt-icon/cover.png '
-  日 付 2024 - 11 - 25
-  著者 ：
-    - name アンソニー · フー
-      説明 antfu7
-      アバター
-        srchttps://github.com/antfu.png
-        読み込み 怠惰
-      次 へhttps://github.com/antfu
-      ターゲット _blank
-  クラス ' w-96 '
+prettier: true
+hide:
+  - class
+external:
+  - authors
+externalTypes:
+  - UserProps[]
+ignore:
+  - title
+  - description
+  - date
+  - image
+  - authors
+props:
+  title: 'Introducing Nuxt Icon v1'
+  description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+  image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
+  date: 2024-11-25
+  authors:
+    - name: Anthony Fu
+      description: antfu7
+      avatar:
+        src: https://github.com/antfu.png
+        loading: lazy
+      to: https://github.com/antfu
+      target: _blank
+  class: 'w-96'
 ---
 ::
 
-`authors`prop が 複数 の アイテム を 持つ 場合 、[AvatarGroup](/docs/components/avatar-group)コンポーネント が 使用 さ れ ます 。
+`authors`プロパティが複数のアイテムを持つ場合、[AvatarGroup](/docs/components/avatar-group)コンポーネントが使用されます。
 
 ::component-code
 ---
-きれい 真
-隠す
-  - クラス
-外部
-  - 著者
-externalTypes
-  - UserProps [ ]
-無視
+prettier: true
+hide:
+  - class
+external:
+  - authors
+externalTypes:
+  - UserProps[]
+ignore:
   - title
-  - 説明
+  - description
   - date
   - image
-  - 著者
-小道具
-  title “ Nuxt Icon v1 の 紹介 ”
-  説明 ： ' Discover Nuxt Icon v1 - Nuxt プロジェクト の ため の モダン で 汎用 性 の 高い カスタマイズ 可能 な アイコンソリューション です 。
-  画像 ' https//nuxt.com/assets/blog/nuxt-icon/cover.png '
-  日 付 2024 - 11 - 25
-  著者 ：
-    - name アンソニー · フー
-      説明 antfu7
-      アバター
-        srchttps://github.com/antfu.png
-        読み込み 怠惰
-      次 へhttps://github.com/antfu
-      ターゲット _blank
-    - name ベンジャミン · カナック
-      説明 benjamincanac
-      アバター
-        srchttps://github.com/benjamincanac.png
-        読み込み 怠惰
-      次 へhttps://github.com/benjamincanac
-      ターゲット _blank
-  クラス ' w-96 '
+  - authors
+props:
+  title: 'Introducing Nuxt Icon v1'
+  description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+  image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
+  date: 2024-11-25
+  authors:
+    - name: Anthony Fu
+      description: antfu7
+      avatar:
+        src: https://github.com/antfu.png
+        loading: lazy
+      to: https://github.com/antfu
+      target: _blank
+    - name: Benjamin Canac
+      description: benjamincanac
+      avatar:
+        src: https://github.com/benjamincanac.png
+        loading: lazy
+      to: https://github.com/benjamincanac
+      target: _blank
+  class: 'w-96'
 ---
 ::
 
-### リンク
+### Link
 
-[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)コンポーネント から 、`to`、`target`、`rel`など の プロ パティ を 渡す こと が でき ます 。
+`to`、`target`、`rel`など、[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)コンポーネントから任意のプロパティを渡すことができます。
 
 ::component-code
 ---
-きれい 真
-隠す
-  - クラス
-無視
+prettier: true
+hide:
+  - class
+ignore:
   - title
-  - 説明
+  - description
   - date
   - image
-  - ターゲット
-小道具
-  title “ Nuxt Icon v1 の 紹介 ”
-  説明 ： ' Discover Nuxt Icon v1 - Nuxt プロジェクト の ため の モダン で 汎用 性 の 高い カスタマイズ 可能 な アイコンソリューション です 。
-  画像 ' https//nuxt.com/assets/blog/nuxt-icon/cover.png '
-  日 付 2024 - 11 - 25
-  “ https//nuxt.com/blog/nuxt-icon-v1 - 0 ”
-  ターゲット _blank
-  クラス ' w-96 '
+  - target
+props:
+  title: 'Introducing Nuxt Icon v1'
+  description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+  image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
+  date: 2024-11-25
+  to: 'https://nuxt.com/blog/nuxt-icon-v1-0'
+  target: _blank
+  class: 'w-96'
 ---
 ::
 
-### バリアント
+### Variant
 
-`variant`プロ パティ を 使用 し て BlogPost の スタイル を 変更 し ます 。
+`variant`プロパティを使用してBlogPostのスタイルを変更します。
 
 ::component-code
 ---
-きれい 真
-隠す
-  - クラス
-無視
+prettier: true
+hide:
+  - class
+ignore:
   - title
-  - 説明
+  - description
   - date
   - image
-  - へ
-  - ターゲット
-小道具
-  title「Nuxt Icon v1の紹介」
-  説明：'Discover Nuxt Icon v1—Nuxtプロジェクトのためのモダンで汎用性の高いカスタマイズ可能なアイコンソリューションです。
-  画像'https//nuxt.com/assets/blog/nuxt—icon/cover.png'
-  日付2024—11—25
-  「https//nuxt.com/blog/nuxt—icon—v1—0」
-  ターゲット_blank
-  バリアント：裸
-  クラス'w—96'
+  - to
+  - target
+props:
+  title: 'Introducing Nuxt Icon v1'
+  description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+  image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
+  date: 2024-11-25
+  to: 'https://nuxt.com/blog/nuxt-icon-v1-0'
+  target: _blank
+  variant: naked
+  class: 'w-96'
 ---
 ::
 
 ::note
-スタイルは、`to` propまたは`image`を提供するかによって異なります。
+`to`プロップまたは`image`を提供することで、スタイリングは異なります。
 ::
 
-### オリエンテーション
+### Orientation
 
 BlogPostの向きを変更するには、`orientation`プロパティを使用します。デフォルトは`vertical`です。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-  -  date
-  -  image
-  - へ
-  - ターゲット
-小道具
-  title「Nuxt Icon v1の紹介」
-  説明：'Discover Nuxt Icon v1—Nuxtプロジェクトのためのモダンで汎用性の高いカスタマイズ可能なアイコンソリューションです。
-  画像'https//nuxt.com/assets/blog/nuxt—icon/cover.png'
-  日付2024—11—25
-  「https//nuxt.com/blog/nuxt—icon—v1—0」
-  ターゲット_blank
-  オリエンテーション水平
-  variantアウトライン
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - date
+  - image
+  - to
+  - target
+props:
+  title: 'Introducing Nuxt Icon v1'
+  description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+  image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
+  date: 2024-11-25
+  to: 'https://nuxt.com/blog/nuxt-icon-v1-0'
+  target: _blank
+  orientation: horizontal
+  variant: outline
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

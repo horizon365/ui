@@ -5,7 +5,7 @@ keywords:
   - disclosure
   - expand
 links:
-  - label: Collapsif
+  - label: Collapsible
     icon: i-custom-reka-ui
     to: https://reka-ui.com/docs/components/collapsible
   - label: GitHub à
@@ -13,143 +13,143 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Collapsible.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Utilisez un [Button](/docs/components/button) ou tout autre composant dans l'emplacement par défaut de l'appareil pliable.
+Utilisez un [Button](/docs/components/button) ou tout autre composant dans l'emplacement par défaut du pliable.
 
-Ensuite, utilisez l'emplacement `#content` pour ajouter le contenu affiché lorsque le Repliable est ouvert.
+Ensuite, utilisez l'emplacement `#content` pour ajouter le contenu affiché lorsque le pliable est ouvert.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph006@classe
-Props:
-  classe: 'flex flex-col gap-2 w-48'
-Slots:
-  Défaut:|
+prettier: true
+ignore:
+  - class
+props:
+  class: 'flex flex-col gap-2 w-48'
+slots:
+  default: |
 
-    @@@ 007 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
 
-  contenu:|
+  content: |
 
-    @@@ 008 @
+    <Placeholder class="h-48" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
+:u-button{label="ouvert" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
 
-#contenu
-par placeholder{class="h-48"}
+#content
+:placeholder{class="h-48"}
 ::
 
-@@111@111@1111
+### Démontage
 
-Utilisez la prop `unmount-on-hide` pour empêcher le contenu d'être démonté lorsque le pliable est réduit. Par défaut à `true`.
+Utilisez la prop `unmount-on-hide` pour empêcher que le contenu ne soit démonté lorsque le pliable est réduit.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@classe
-Props:
-  Défaut: False
-  classe: 'flex flex-col gap-2 w-48'
-Slots:
-  Default:|
+prettier: true
+ignore:
+  - class
+props:
+  unmountOnHide: false
+  class: 'flex flex-col gap-2 w-48'
+slots:
+  default: |
 
-    @@
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
 
-  contenu:|
+  content: |
 
-    @@@@ 016 @
+    <Placeholder class="h-48" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
+:u-button{label="ouvert" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
 
-#contenu
-par placeholder{class="h-48"}
+#content
+:placeholder{class="h-48"}
 ::
 
 ::note
 Vous pouvez inspecter le DOM pour voir le contenu rendu.
 ::
 
-### désactivé
+### Désactivé
 
-Utilisez le prop `disabled` pour désactiver le pliable.
+Utilisez le prop `disabled` pour désactiver le repliable.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph021@classe
-Props:
-  classe: 'flex flex-col gap-2 w-48'
-  handicapés: vrai
-Slots:
-  Défaut:|
+prettier: true
+ignore:
+  - class
+props:
+  class: 'flex flex-col gap-2 w-48'
+  disabled: true
+slots:
+  default: |
 
-    @@@ 22 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
 
-  contenu:|
+  content: |
 
-    @@@ 23 @
+    <Placeholder class="h-48" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
+:u-button{label="ouvert" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
 
-#contenu
-par placeholder{class="h-48"}
+#content
+:placeholder{class="h-48"}
 ::
 
-@@ph026@exemples
+## exemples
 
-### Contrôle état ouvert
+### Control état ouvert
 
 Vous pouvez contrôler l'état ouvert en utilisant la prop `default-open` ou la directive `v-model:open`.
 
 ::component-example
 ---
-nom: 'collapsible-open-example'
+name: 'collapsible-open-example'
 ---
 ::
 
 ::note
-Dans cet exemple, en utilisant [`defineShortcuts`](/docs/composables/define-shortcuts), vous pouvez basculer le rétractable en appuyant sur: kbd{value="O"}.
+Dans cet exemple, en tirant parti de [`defineShortcuts`](/docs/composables/define-shortcuts), vous pouvez basculer le rétractable en appuyant sur: kbd{value="O"}.
 ::
 
 ::tip
-Cela vous permet de déplacer le déclencheur en dehors du pliable ou de le supprimer complètement.
+Cela vous permet de déplacer le déclencheur en dehors du pliable ou de le retirer complètement.
 ::
 
-### Avec icône tournante
+### Avec icône rotative
 
 Voici un exemple avec une icône tournante dans le bouton qui indique l'état ouvert du pliable.
 
 ::component-example
 ---
-nom: 'collapsible-icon-example'
+name: 'collapsible-icon-example'
 ---
 ::
 
-@@ph037@api
+## API
 
-@@ph038@@props
+### Props
 
-Composants-props
+:component-props
 
-@@ph039@@Slots
+### Slots
 
-Composants slots
+:component-slots
 
-### émissions
+### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph041@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

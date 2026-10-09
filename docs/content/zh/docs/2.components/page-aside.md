@@ -8,15 +8,15 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageAside.vue
 ---
 
-## 使用情况
+## 用法
 
-PageAside组件是一个粘性的`<aside>`元素，仅从[`lg`断点](https://tailwindcss.com/docs/breakpoints)开始显示。
+PageAside组件是一个粘滞的`<aside>`元素，仅从[`lg`断点](https://tailwindcss.com/docs/breakpoints)开始显示。
 
 ::tip{to="/docs/getting-started/theme/css-variables#header"}
-PageAside组件使用`--ui-header-height`CSS变量将其自身正确定位在`Header`下方。
+PageAside组件使用`--ui-header-height` CSS变量将自身正确定位在`Header`下方。
 ::
 
-在[Page](/docs/components/page)组件的`left`或`right`插槽中使用：
+请在[Page](/docs/components/page)组件的`left`或`right`插槽内使用该软件：
 
 ```vue {4}
 <template>
@@ -28,15 +28,15 @@ PageAside组件使用`--ui-header-height`CSS变量将其自身正确定位在`He
 </template>
 ```
 
-## 示例
+示例
 
 ::note
 虽然这些示例使用[Nuxt Content](https://content.nuxt.com)，但这些组件可以与任何内容管理系统集成。
 ::
 
-### 布局内
+### 在布局内
 
-使用布局中的PageAside组件显示导航：
+在布局中使用PageAside组件可显示导航：
 
 ```vue [layouts/docs.vue]{9-13}
 <script setup lang="ts">
@@ -59,23 +59,23 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 ```
 
 ::note
-在本例中，我们使用`ContentNavigation`组件来显示注入到`app.vue`中的导航。
+在本例中，我们使用`ContentNavigation`组件来显示`app.vue`中注入的导航。
 ::
 
-## API
+## 应用程序接口
 
-### Props
+### 道具
 
-：组件-支柱
+:component-props
 
-### Slots
+x插槽
 
-：组件插槽
+:component-slots
 
-## Theme
+## 主题
 
-：组件主题
+:component-theme
 
-## Changelog
+## 更改日志
 
-：组件更改日志
+:component-changelog

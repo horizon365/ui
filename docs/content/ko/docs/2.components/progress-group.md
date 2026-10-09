@@ -15,173 +15,173 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ProgressGroup.vue
 ---
 
-##  사용
+## Usage
 
 ProgressGroup 구성 요소를 사용하여 여러 값을 단일 진행률 막대의 세그먼트로 표시합니다.
 
 ::component-code
 ---
-축소: true
-무시하기:
-  -  items
-  -  max
-  -  클래스
-외부:
-  - items 항목
+collapse: true
+ignore:
+  - items
+  - max
+  - class
+external:
+  - items
 externalTypes:
-  -  ProgressGroupItem []
-소품 :
-  최대 : 128
-  항목:
-    - label: '시스템'
-      값: 24
-      색상: Neutral
-      아이콘: i-lucide-cog
-    - label: '앱'
-      값 : 8
-      색상 : "error"
-      아이콘: 'i-lucide-app-window'
-    - label: '문서'
-      값 : 12
-      색상 : "warning"
-      아이콘: 'i-lucide-file'
-    - label: '멀티미디어'
-      값: 42
-      색상: "성공"
-      아이콘: i-lucide-film
-  클래스: 'w-96'
+  - ProgressGroupItem[]
+props:
+  max: 128
+  items:
+    - label: 'System'
+      value: 24
+      color: 'neutral'
+      icon: 'i-lucide-cog'
+    - label: 'Apps'
+      value: 8
+      color: 'error'
+      icon: 'i-lucide-app-window'
+    - label: 'Documents'
+      value: 12
+      color: 'warning'
+      icon: 'i-lucide-file'
+    - label: 'Multimedia'
+      value: 42
+      color: 'success'
+      icon: 'i-lucide-film'
+  class: 'w-96'
 ---
 ::
 
-###  프로젝트
+### Items 이미지
 
-`items`prop을 다음과 같은 속성을 가진 객체의 배열로 사용합니다.
+`items` Prop을 다음 속성을 가진 오브젝트 배열로 사용합니다.
 
 - `label?: string`{lang="ts-type"}
--  @ `icon?: string` @ @ {lang="ts-type"}
-- `value?: number`{lang="ts-type"} @
--  @ [ @ @ `color?: "primary" | "secondary" | "success" | "info" | "warning" | "error" | "neutral" | (string & {})` @ {lang="ts-type"} @ ]( @ #with-custom-colors @ )
--  @ `slot?: string` @ {lang="ts-type"}
+- `icon?: string`{lang="ts-type"} Xph037x{lang="ts-type"}
+- `value?: number`{lang="ts-type"} (- `value?: number`{lang="ts-type"})
+- [`color?: "primary" | "secondary" | "success" | "info" | "warning" | "error" | "neutral" | (string & {})`{lang="ts-type"}](#with-custom-colors)
+- `slot?: string`{lang="ts-type"}
 - `class?: any`{lang="ts-type"}
 - `ui?: { segment?: ClassNameValue, indicator?: ClassNameValue, item?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingDot?: ClassNameValue, itemLabel?: ClassNameValue, itemTrailing?: ClassNameValue }`{lang="ts-type"}
 
 ::component-code
 ---
-축소: true
-무시하기:
-  -  items
-  -  클래스
-외부:
-  -  items
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
 externalTypes:
-  -  ProgressGroupItem []
-소품 :
-  프로젝트:
-    - label: '계산'
-      값: 42
-      색상 : primary
-    - label: '스토리지'
-      값: 18
-      색상 : "info"
-    - label: '대역폭'
-      값: 9
-      색상 : "warning"
-  클래스: 'W-96'
+  - ProgressGroupItem[]
+props:
+  items:
+    - label: 'Compute'
+      value: 42
+      color: 'primary'
+    - label: 'Storage'
+      value: 18
+      color: 'info'
+    - label: 'Bandwidth'
+      value: 9
+      color: 'warning'
+  class: 'w-96'
 ---
 ::
 
 ::note
-`icon`가 없는 항목은 대신 목록에 색상 점을 가져옵니다.
+`icon`가 없는 항목은 대신 목록에서 색상 점을 얻습니다.
 ::
 
-###  Max
+### Max 파일
 
-`max`prop을 사용하여 모든 항목의 합계를 설정합니다. 기본값은 `100`입니다.
+`max` prop을 사용하여 모든 항목의 합을 설정합니다. 기본값은 `100`입니다.
 
 ::component-code
 ---
-축소: true
-무시하기:
-  -  items
-  -  클래스
-외부:
-  - items 프로젝트
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
 externalTypes:
-  -  ProgressGroupItem []
-소품 :
-  최대 : 512
-  프로젝트:
-    - label: '사용됨'
-      값 : 128
-      색상 : primary
-    - label: '예약됨'
-      값: 64
-      색상: Neutral
-  클래스: 'W-96'
+  - ProgressGroupItem[]
+props:
+  max: 512
+  items:
+    - label: 'Used'
+      value: 128
+      color: 'primary'
+    - label: 'Reserved'
+      value: 64
+      color: 'neutral'
+  class: 'w-96'
 ---
 ::
 
 ::note
-값은 `0`와 `max` 사이에서 클램프되며, `max` 이상의 세그먼트는 비례적으로 트랙을 공유합니다.
+값은 `0`와 `max` 사이에서 클램프되고, `max`보다 많은 세그먼트는 비례적으로 트랙을 공유합니다.
 ::
 
-###  상태
+### status 상태
 
-`status`prop을 사용하여 막대 위에 합계 값을 표시합니다.
+`status` Prop을 사용하여 막대 위에 합계된 값을 표시합니다.
 
 ::component-code
 ---
-축소: true
-무시하기:
-  -  items
-  -  클래스
-외부:
-  -  items
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
 externalTypes:
-  -  ProgressGroupItem []
-소품 :
-  상태 : true
-  최대 : 128
-  항목:
-    - label: '시스템'
-      값: 24
-      색상 : Neutral
-    - label: '앱'
-      값 : 8
-      색상 : "error"
-    - label: '멀티미디어'
-      값: 42
-      색상: "성공"
-  클래스: 'w-96'
+  - ProgressGroupItem[]
+props:
+  status: true
+  max: 128
+  items:
+    - label: 'System'
+      value: 24
+      color: 'neutral'
+    - label: 'Apps'
+      value: 8
+      color: 'error'
+    - label: 'Multimedia'
+      value: 42
+      color: 'success'
+  class: 'w-96'
 ---
 ::
 
 ::tip
-상태는 막대의 끝을 추적하며, 대신 전체 너비를 가로 질러 `:ui="{ status: 'w-full' }"`를 사용합니다.
+상태는 막대의 끝을 추적하고, 대신 전체 너비를 가로 질러 `:ui="{ status: 'w-full' }"`를 사용합니다.
 ::
 
-###  색상
+### Color 색상
 
-`color`prop 을 사용하여 자체 설정되지 않은 모든 세그먼트의 색상을 변경합니다.
+`color` Prop을 사용하여 자체 설정되지 않은 모든 세그먼트의 색상을 변경합니다.
 
 ::component-code
 ---
-축소: true
-무시하기:
-  -  items
-  -  클래스
-외부:
-  -  items
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
 externalTypes:
-  -  ProgressGroupItem []
-소품 :
-  색상: 중립
-  항목:
-    - label: '읽기'
-      값: 42
-    - label: '쓰기'
-      값: 18
-  클래스: 'w-96'
+  - ProgressGroupItem[]
+props:
+  color: neutral
+  items:
+    - label: 'Read'
+      value: 42
+    - label: 'Write'
+      value: 18
+  class: 'w-96'
 ---
 ::
 
@@ -189,109 +189,109 @@ externalTypes:
 이 소품과 각 아이템의 `color` 모두 CSS 색상 값을 허용하며, 이는 테마 외부의 팔레트에 유용합니다.
 ::
 
-###  크기
+### Size 크기
 
-`size`prop을 사용하여 ProgressGroup의 크기를 변경합니다.
-
-::component-code
----
-축소: true
-무시하기:
-  -  items
-  -  클래스
-외부:
-  -  items
-externalTypes:
-  -  ProgressGroupItem []
-소품 :
-  크기: xl
-  프로젝트:
-    - label: '읽기'
-      값 : 42
-      색상 : primary
-    - label: '쓰기'
-      값: 18
-      색상 : "info"
-  클래스: 'W-96'
----
-::
-
-###  방향
-
-`orientation`prop을 사용하여 ProgressGroup.Default의 방향을 `horizontal`로 변경합니다.
+`size` prop 를 사용하여 ProgressGroup 의 크기를 변경합니다.
 
 ::component-code
 ---
-축소: true
-무시하기:
-  - items @ 항목
-  -  클래스
-외부:
-  -  items
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
 externalTypes:
-  -  ProgressGroupItem []
-소품 :
-  방향: 세로
-  항목:
-    - label: '읽기'
-      값: 42
-      색상 : primary
-    - label: '쓰기'
-      값: 18
-      색상 : "info"
-  클래스: H-48
+  - ProgressGroupItem[]
+props:
+  size: xl
+  items:
+    - label: 'Read'
+      value: 42
+      color: 'primary'
+    - label: 'Write'
+      value: 18
+      color: 'info'
+  class: 'w-96'
 ---
 ::
 
-##  예제
+### 방향
 
-###  상태 슬롯 포함
+`orientation` prop을 사용하여 ProgressGroup.Defaults의 방향을 `horizontal`로 변경합니다.
 
-`#status` 슬롯을 사용하여 합계 백분율을 자신의 콘텐츠로 바꿉니다.
+::component-code
+---
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  orientation: vertical
+  items:
+    - label: 'Read'
+      value: 42
+      color: 'primary'
+    - label: 'Write'
+      value: 18
+      color: 'info'
+  class: 'h-48'
+---
+::
+
+## examples 예제
+
+### With 상태 슬롯
+
+`#status` 슬롯을 사용하여 합산 백분율을 자신의 콘텐츠로 바꿉니다.
 
 ::component-example
 ---
-축소: true
-name: progress-group-status-example 진행 그룹-상태-예제
+collapse: true
+name: progress-group-status-example
 ---
 ::
 
-###  아이템 슬롯 포함
+### 항목 슬롯 포함
 
-`#item-label` 및 `#item-trailing` 슬롯을 사용하여 각 항목이 표시하는 내용을 변경합니다. 둘 다 `item`, 해당 `index` 및 `percent`를 받습니다.
+`#item-label` 및 `#item-trailing` 슬롯을 사용하여 각 항목이 표시하는 내용을 변경합니다. 둘 다 `item`, `index` 및 `percent`를 수신합니다.
 
 ::component-example
 ---
-축소: true
-이름: progress-group-item-example
+collapse: true
+name: progress-group-item-example
 ---
 ::
 
-### 사용자 정의 색상
+### 사용자 정의 색상 사용
 
 각 항목에 CSS 색상을 지정하여 테마 팔레트 외부에서 분석을 작성합니다.
 
 ::component-example
 ---
-축소: true
-이름: progress-group-custom-color-example
+collapse: true
+name: progress-group-custom-color-example
 ---
 ::
 
-##  API
+## API 파일
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### Slots
 
-:컴포넌트 - 슬롯
+:component-slots
 
-##  테마
+## Theme 테마
 
-:구성요소 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

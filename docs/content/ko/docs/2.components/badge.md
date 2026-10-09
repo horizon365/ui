@@ -11,148 +11,148 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Badge.vue
 ---
 
-##  사용
+## Usage
 
 기본 슬롯을 사용하여 배지의 레이블을 설정합니다.
 
 ::component-code
 ---
-슬롯 :
-  기본 값: 배지
+slots:
+  default: Badge
 ---
 ::
 
-###  레이블
+### Label 태그
 
-`label`prop을 사용하여 배지의 레이블을 설정합니다.
+`label` prop 을 사용하여 배지의 레이블을 설정합니다.
 
 ::component-code
 ---
-소품 :
-  상표: Badge
+props:
+  label: Badge
 ---
 ::
 
-###  색상
+### Color 이미지
 
-`color`prop을 사용하여 배지 색상을 변경합니다.
+`color` prop을 사용하여 배지의 색상을 변경합니다.
 
 ::component-code
 ---
-소품 :
-  색상: 중립
-슬롯 :
-  기본 값: 배지
+props:
+  color: neutral
+slots:
+  default: Badge
 ---
 ::
 
-###  변형
+### Variant
 
-`variant`props 를 사용하여 배지의 변형을 변경합니다.
+`variant` props를 사용하여 Badge의 변형을 변경합니다.
 
 ::component-code
 ---
-소품 :
-  색상: 중립
-  변형: 윤곽선
-슬롯 :
-  기본값: 배지
+props:
+  color: neutral
+  variant: outline
+slots:
+  default: Badge
 ---
 ::
 
-###  크기
+### Size 크기
 
-`size`prop을 사용하여 배지 크기를 변경합니다.
+`size` Prop을 사용하여 배지의 크기를 변경합니다.
 
 ::component-code
 ---
-소품 :
-  크기: xl
-슬롯 :
-  기본값: 배지
+props:
+  size: xl
+slots:
+  default: Badge
 ---
 ::
 
-###  Icon
+### Icon 이미지
 
-`icon`prop을 사용하여 배지 내부에 [Icon](/docs/components/icon)를 표시합니다.
+`icon` prop을 사용하여 배지 내부에 [Icon](/docs/components/icon)를 표시합니다.
 
 ::component-code
 ---
-소품 :
-  아이콘 : i-lucide-rocket
-  크기: MD
-  색상: 기본
-  변형: 솔리드
-슬롯 :
-  기본값: 배지
+props:
+  icon: i-lucide-rocket
+  size: md
+  color: primary
+  variant: solid
+slots:
+  default: Badge
 ---
 ::
 
-`leading` 및 `trailing`props를 사용하여 아이콘 위치를 설정하거나 `leading-icon` 및 `trailing-icon`props를 사용하여 각 위치에 대해 다른 아이콘을 설정합니다.
+`leading` 및 `trailing` 소품을 사용하여 아이콘 위치를 설정하거나 `leading-icon` 및 `trailing-icon` 소품을 사용하여 각 위치에 대해 다른 아이콘을 설정합니다.
 
 ::component-code
 ---
-소품 :
-  trailingIcon: i-lucide-arrow-right 이미지
-  크기: MD
-슬롯 :
-  기본값: 배지
+props:
+  trailingIcon: i-lucide-arrow-right
+  size: md
+slots:
+  default: Badge
 ---
 ::
 
-###  Avatar
+### 아바타
 
-`avatar`prop을 사용하여 배지 내부에 [Avatar](/docs/components/avatar)를 표시합니다.
+`avatar` prop을 사용하여 배지 내부에 [Avatar](/docs/components/avatar)를 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  - avatar.loading - avatar.loading (으)로 이동
-소품 :
-  아바타 (Avatar):
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
     src: 'https://github.com/nuxt.png'
-    로드: Lazy
-  크기: md
-  색상: 중립
-  변형: 윤곽선
-슬롯 :
-  기본값 :|
+    loading: lazy
+  size: md
+  color: neutral
+  variant: outline
+slots:
+  default: |
 
-    배지 (Badge)
+    Badge
 ---
 ::
 
-##  예제
+## 예제
 
-### `class`prop
+### `class` 소품
 
-`class`prop 을 사용하여 배지의 기본 스타일을 재정의합니다.
+`class` prop을 사용하여 배지의 기본 스타일을 재정의합니다.
 
 ::component-code
 ---
-소품 :
-  class: 'font-bold rounded-full' (글꼴 굵게 둥근 모양)
-슬롯 :
-  기본값: 배지
+props:
+  class: 'font-bold rounded-full'
+slots:
+  default: Badge
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### Slots
 
-:구성요소 - 슬롯
+:component-slots
 
-##  테마
+## Theme 테마
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

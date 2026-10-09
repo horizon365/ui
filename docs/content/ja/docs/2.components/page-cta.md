@@ -10,30 +10,30 @@ links:
 
 ## 使用法
 
-PageCTAコンポーネントは、デフォルトスロットにイラストを使用してページ内のCTAを柔軟に表示する方法を提供します。
+PageCTAコンポーネントは、デフォルトスロットにイラストを使用してページ内のアクション喚起を柔軟に表示する方法を提供します。
 
 ::code-preview
 
 ::u-page-c-t-a
 ---
-タイトル：「素晴らしいコミュニティに信頼され支えられている」
-説明：'最新のTailwind CSSをプレビューし、Nuxt UIを使い始めましょう。'
-オリエンテーション水平
-リンク
-  -  label '始める'
-    色'中立'
-  -  label '詳細を見る'
-    色'中立'
-    バリアント：'微妙'
-    trailingIcon 'i—lucide—arrow—right'
+title: 'Trusted and supported by our amazing community'
+description: 'Preview the latest Tailwind CSS and get started with Nuxt UI.'
+orientation: horizontal
+links:
+  - label: 'Get started'
+    color: 'neutral'
+  - label: 'Learn more'
+    color: 'neutral'
+    variant: 'subtle'
+    trailingIcon: 'i-lucide-arrow-right'
 ---
 
-img {src="https://picsum.photos/640/616" width="320" height="308" alt="Illustration" class="w-full rounded-lg"}
+:img{src="https://picsum.photos/640/616" width="320" height="308" alt="Illustration" class="w-full rounded-lg"}
 ::
 
 ::
 
-[ PageSection ](/docs/components/page-section)コンポーネント内で使用するか、ページ内で直接使用します。
+[PageSection](/docs/components/page-section)コンポーネント内またはページ内で直接使用します。
 
 ```vue {4,8-10}
 <template>
@@ -52,89 +52,89 @@ img {src="https://picsum.photos/640/616" width="320" height="308" alt="Illustrat
 ```
 
 ::tip
-`px-0`および`rounded-none`クラスを使用して、モバイルでページの端をCTAで埋めるようにします。
+`px-0`および`rounded-none`クラスを使用して、モバイルでCTAをページの端に埋めるようにします。
 ::
 
-### タイトル
+### Title
 
 `title`プロパティを使用して、CTAのタイトルを設定します。
 
 ::component-code{slug="page-CTA"}
 ---
-小道具
-  タイトル：「素晴らしいコミュニティに信頼され支えられている」
+props:
+  title: 'Trusted and supported by our amazing community'
 ---
 ::
 
-### 説明
+### Description
 
 `description`プロパティを使用して、CTAの説明を設定します。
 
 ::component-code{slug="page-CTA"}
 ---
-きれい真
-無視
-  -  title
-小道具
-  タイトル：「素晴らしいコミュニティに信頼され支えられている」
-  説明：「私たちは強固で永続的なパートナーシップを築いてきました。彼らの信頼は私たちの原動力であり、成功を共有するために推進します。
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Trusted and supported by our amazing community'
+  description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
 ---
 ::
 
-### リンク
+### Links
 
-`links`プロパティを使用して、説明の下に[ Button ](/docs/components/button)のリストを表示します。
+`links`プロパティを使用して、[Button](/docs/components/button)のリストを説明の下に表示します。
 
 ::component-code{slug="page-CTA"}
 ---
-きれい真
-外部
-  - リンク
-externalTypes
-  -  ButtonProps []
-無視
-  -  title
-  - 説明
-  - リンク
-小道具
-  タイトル：「素晴らしいコミュニティに信頼され支えられている」
-  説明：「私たちは強固で永続的なパートナーシップを築いてきました。彼らの信頼は私たちの原動力であり、成功を共有するために推進します。
-  リンク
-    -  label '始める'
-      色'ニュートラル'
-    -  label '詳細を見る'
-      色'中立'
-      バリアント：'微妙'
-      trailingIcon 'i—lucide—arrow—right'
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Trusted and supported by our amazing community'
+  description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
+  links:
+    - label: 'Get started'
+      color: 'neutral'
+    - label: 'Learn more'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
 ---
 ::
 
-### バリアント
+### Variant
 
-`variant`プロパティを使用して、CTAのスタイルを変更します。
+`variant`プロパティを使用してCTAのスタイルを変更します。
 
 ::component-code{slug="page-CTA"}
 ---
-きれい真
-外部
-  - リンク
-externalTypes
-  -  ButtonProps []
-無視
-  -  title
-  - 説明
-  - リンク
-小道具
-  タイトル：「素晴らしいコミュニティに信頼され支えられている」
-  説明：「私たちは強固で永続的なパートナーシップを築いてきました。彼らの信頼は私たちの原動力であり、成功を共有するために推進します。
-  バリアントソフト
-  リンク
-    -  label '始める'
-      色'中立'
-    -  label '詳細を見る'
-      色'ニュートラル'
-      バリアント：'微妙'
-      trailingIcon 'i—lucide—arrow—right'
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Trusted and supported by our amazing community'
+  description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
+  variant: soft
+  links:
+    - label: 'Get started'
+      color: 'neutral'
+    - label: 'Learn more'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
 ---
 ::
 
@@ -142,91 +142,91 @@ externalTypes
 `solid`バリアントを使用して色を反転させる場合、`light`または`dark`クラスを`links`スロットに適用できます。
 ::
 
-### オリエンテーション
+### Orientation
 
 `orientation`プロパティを使用して、デフォルトスロットの向きを変更します。デフォルトは`vertical`です。
 
 ::component-code{slug="page-CTA"}
 ---
-きれい真
-外部
-  - リンク
-externalTypes
-  -  ButtonProps []
-無視
-  -  title
-  - 説明
-  - リンク
-小道具
-  タイトル：「素晴らしいコミュニティに信頼され支えられている」
-  説明：「私たちは強固で永続的なパートナーシップを築いてきました。彼らの信頼は私たちの原動力であり、成功を共有するために推進します。
-  オリエンテーション水平
-  リンク
-    -  label '始める'
-      色'中立'
-    -  label '詳細を見る'
-      色'ニュートラル'
-      バリアント：'微妙'
-      trailingIcon 'i—lucide—arrow—right'
-スロット
-  デフォルト|
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Trusted and supported by our amazing community'
+  description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
+  orientation: horizontal
+  links:
+    - label: 'Get started'
+      color: 'neutral'
+    - label: 'Learn more'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
     <img src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy" />
 ---
 
-img {src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
+:img{src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
 ::
 
-### リバース
+### Reverse
 
-`reverse`プロパティを使用して、デフォルトスロットの向きを反転させます。
+`reverse`プロパティを使用して、デフォルトスロットの向きを逆にします。
 
 ::component-code{slug="page-CTA"}
 ---
-きれい真
-外部
-  - リンク
-externalTypes
-  -  ButtonProps []
-無視
-  -  title
-  - 説明
-  - リンク
-小道具
-  タイトル：「素晴らしいコミュニティに信頼され支えられている」
-  説明：「私たちは強固で永続的なパートナーシップを築いてきました。彼らの信頼は私たちの原動力であり、成功を共有するために推進します。
-  オリエンテーション水平
-  逆真
-  リンク
-    -  label '始める'
-      色'ニュートラル'
-    -  label '詳細を見る'
-      色'ニュートラル'
-      バリアント：'微妙'
-      trailingIcon 'i—lucide—arrow—right'
-スロット
-  デフォルト|
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Trusted and supported by our amazing community'
+  description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
+  orientation: horizontal
+  reverse: true
+  links:
+    - label: 'Get started'
+      color: 'neutral'
+    - label: 'Learn more'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
     <img src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy" />
 ---
 
-img {src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
+:img{src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props {slug="page-CTA"}
+:component-props{slug="page-CTA"}
 
 ### スロット
 
-component—slots {slug="page-CTA"}
+:component-slots{slug="page-CTA"}
 
-## テーマ
+## Theme
 
-component—theme {slug="page-CTA"}
+:component-theme{slug="page-CTA"}
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

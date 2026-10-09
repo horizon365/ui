@@ -9,15 +9,15 @@ links:
 
 ## 使用法
 
-Mainコンポーネントは`<main>`要素をレンダリングし、[ Header ](/docs/components/header)コンポーネントと連携して、ビューポートの使用可能な高さまで拡張されるフルハイトレイアウトを作成します。
+Mainコンポーネントは`<main>`要素をレンダリングし、[Header](/docs/components/header)コンポーネントと連携してビューポートの使用可能な高さまで拡張するフルハイトレイアウトを作成します。
 
 ::tip{to="/docs/getting-started/theme/css-variables#header"}
-MainコンポーネントはCSS変数`--ui-header-height`を使用して、自身を`Header`の下に正しく配置します。
+MainコンポーネントはCSS変数`--ui-header-height`を使用して、`Header`の下に正しく配置します。
 ::
 
 ## 例
 
-### 内`app.vue`
+### x`app.vue`内
 
 `app.vue`またはレイアウトでMainコンポーネントを使用します。
 
@@ -37,20 +37,20 @@ MainコンポーネントはCSS変数`--ui-header-height`を使用して、自�
 </template>
 ```
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

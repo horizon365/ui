@@ -13,74 +13,74 @@ links:
 
 ## 使用法
 
-Linkコンポーネントは[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)[`custom`](https://router.vuejs.org/api/interfaces/RouterLinkProps.html#Properties-custom) propを使用したラッパーです。いくつかの追加の小道具を提供します。
+Linkコンポーネントは[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)を[`custom`](https://router.vuejs.org/api/interfaces/RouterLinkProps.html#Properties-custom) propを使用したラッパーです。いくつかの追加の小道具を提供します
 
-- `inactive-class` propは、リンクが非アクティブなときにクラスを設定し、`active-class`はアクティブなときに使用されます。
-- `exact`は、リンクがアクティブで、ルートが現在のルートとまったく同じ場合、`active-class`でスタイルを設定します。
-- `exact-query`と`exact-hash`は、リンクがアクティブで、クエリまたはハッシュが現在のクエリまたはハッシュとまったく同じ場合に`active-class`でスタイルを設定します。
-  - を使用して、リンクがアクティブで、クエリが現在のクエリに部分的に一致する場合に`active-class`でスタイルを設定します。
+- `inactive-class`プロパティはリンクがアクティブなときにクラスを設定します。
+- `exact`は、リンクがアクティブで、ルートが現在のルートとまったく同じ場合に`active-class`でstyleするためのプロパティです。
+- `exact-query`と`exact-hash`は、リンクがアクティブで、クエリまたはハッシュが現在のクエリまたはハッシュとまったく同じである場合、`active-class`でスタイルを維持します。
+  - x`exact-query="partial"`を使用して、リンクがアクティブで、クエリが現在のクエリと部分的に一致する場合、`active-class`でスタイルを設定します。
 
-この背景にある動機は、Nuxt 2/Vue 2でNuxtLinkと同じAPIを提供することです。Vue 2 ](https://router.vuejs.org/guide/migration/#removal-of-the-exact-prop-in-router-link) guideのVue Router [ migrationを参照してください。
+この背景にある動機は、Nuxt 2/Vue 2でNuxtLinkと同じAPIを提供することです。Vue 2](https://router.vuejs.org/guide/migration/#removal-of-the-exact-prop-in-router-link)ガイドのVue Router [migrationで詳しく読むことができます。
 
 ::note
-[`Breadcrumb`](/docs/components/breadcrumb)[`Button`](/docs/components/button)[`ContextMenu`](/docs/components/context-menu)[`DropdownMenu`](/docs/components/dropdown-menu)および[`NavigationMenu`](/docs/components/navigation-menu)コンポーネント。
+[`Breadcrumb`](/docs/components/breadcrumb)、[`Button`](/docs/components/button)、[`ContextMenu`](/docs/components/context-menu)、[`DropdownMenu`](/docs/components/dropdown-menu)、[`NavigationMenu`/docs/components/navigation-menu)コンポーネントで使用される。
 ::
 
-### タグ
+### Tag
 
-`Link`コンポーネントは、`to` propが提供されている場合に`<a>`タグをレンダリングします。`<button>`タグをレンダリングします。`as` propを使用してフォールバックタグを変更できます。
+`Link`コンポーネントは、`to`プロパティが指定されているときに`<a>`タグをレンダリングします。そうでないときは`<button>`タグをレンダリングします。`as`プロパティを使用してフォールバックタグを変更できます。
 
 ::component-code
 ---
-小道具
-  ''
-  として'ボタン'
-スロット
-  デフォルトリンク
----
-::
-
-::note
-`to` propを変更することで、レンダリングされたHTMLを検査できます。
-::
-
-### スタイル
-
-デフォルトでは、リンクにはデフォルトのアクティブスタイルと非アクティブスタイルがあります。[#them ](#theme)セクションを確認してください。
-
-::component-code
----
-小道具
-  to：/docs/components/link
-スロット
-  デフォルトリンク
+props:
+  to: ''
+  as: 'button'
+slots:
+  default: Link
 ---
 ::
 
 ::note
-`to` propを変更して、アクティブ状態と非アクティブ状態を確認してみてください。
+`to`プロパティを変更することで、レンダリングされたHTMLを調べることができます。
 ::
 
-`raw`プロパティを使用してこの動作をオーバーライドし、`class`、`active-class`、`inactive-class`を使用して独自のスタイルを指定できます。
+### Style
+
+デフォルトでは、リンクにはデフォルトのアクティブスタイルと非アクティブスタイルがあります。[ #theme](#theme)セクションを確認してください。
 
 ::component-code
 ---
-無視
-  -  raw
-小道具
-  raw true
-  to：/docs/components/link
-  activeClass 'font—bold'
-  inactiveClass 'text—muted'
-スロット
-  デフォルトリンク
+props:
+  to: /docs/components/link
+slots:
+  default: Link
+---
+::
+
+::note
+`to`プロパティを変更してアクティブ状態と非アクティブ状態を確認してください。
+::
+
+`raw`プロパティを使用してこの動作をオーバーライドし、`class`、`active-class`、`inactive-class`を使用して独自のスタイルを提供できます。
+
+::component-code
+---
+ignore:
+  - raw
+props:
+  raw: true
+  to: /docs/components/link
+  activeClass: 'font-bold'
+  inactiveClass: 'text-muted'
+slots:
+  default: Link
 ---
 
 リンク
 ::
 
 ::callout{icon="i-simple-icons-visualstudiocode"}
-[ Tailwind CSS IntelliSense ](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)`active-class`および`inactive-class` propsの自動補完を取得したい場合は、`.vscode/settings.json`に以下の設定を追加できます。
+VSCode用に[Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)拡張を使用しており、`active-class`と`inactive-class`プロパティの自動補完を取得したい場合は、`.vscode/settings.json`に以下の設定を追加できます：
 
 ```json [.vscode/settings.json]
 {
@@ -92,9 +92,9 @@ Linkコンポーネントは[`<NuxtLink>`](https://nuxt.com/docs/api/components/
 ```
 ::
 
-###  Locale badge {label="4.7+" class="align-text-top"}
+### Locale badge{label="4.7+" class="align-text-top"}
 
-Linkコンポーネントは、インストール時に自動的に[`@nuxtjs/i18n`](https://i18n.nuxtjs.org/)と統合されます。内部リンクは、手動でラップする必要なく、`$localePath`ヘルパーを使用して自動的にローカライズされます。
+Linkコンポーネントはインストール時に自動的に[`@nuxtjs/i18n`xph14xhttps://i18n.nuxtjs.org/)に統合されます。内部リンクは手動でラップする必要なく`$localePath`ヘルパーを使用して自動的にローカライズされます。
 
 ```vue
 <template>
@@ -104,36 +104,36 @@ Linkコンポーネントは、インストール時に自動的に[`@nuxtjs/i18
 ```
 
 ::tip
-必要に応じて、`localePath()`または`localeRoute()`を手動で使用できます。
+必要に応じて`localePath()`または`localeRoute()`を手動で使用できます。
 ::
 
 ::note{to="/docs/getting-started/integrations/i18n/nuxt#dynamic-locale"}
 Nuxt UIの国際化について詳しくはこちら。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
 ::component-props
 ---
-無視
-  - カスタム
+ignore:
+  - custom
 ---
 ::
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attributes" target="_blank"}
-このコンポーネントは、すべてのネイティブ`<a>` HTML属性もサポートします。
+このコンポーネントはすべてのネイティブ`<a>` HTML属性もサポートします。
 ::
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

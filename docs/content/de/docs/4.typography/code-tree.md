@@ -9,7 +9,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodeTree.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Wickeln Sie Ihre Codeblöcke mit einer `code-tree`-Komponente in einer bestimmten Reihenfolge ein, um eine Baumansicht Ihrer Dateien anzuzeigen.
 
@@ -91,16 +91,16 @@ Look at the [Nuxt 4 documentation](https://nuxt.com/docs/getting-started/introdu
 Make sure to install the dependencies:
 
 ```bash
-@@070@npm
+# npm Bearbeiten
 NPM installieren
 
-# pnpm
+# pnpm (englisch)
 Pnpm installieren
 
-@@@ph072@garn
+# yarn (englisch)
 Yarn installieren
 
-@@@@@@bun
+# bun
 Gute Installation
 ```
 
@@ -109,16 +109,16 @@ Gute Installation
 Start the development server on `http://localhost:3000`:
 
 ```bash
-@@81@@npm
-npm Run Dev Bearbeiten
+# npm
+npm run dev ausführen
 
-@@@@@@pnpm
+# pnpm
 Pnpm Run Dev Bearbeiten
 
-@@@@@@@@@@ph083@@garn
-von Yarn Dev
+# yarn ist
+von YARN DEV
 
-@@@@@@84@bun
+# bun
 Lauf dev
 ```
 
@@ -127,33 +127,33 @@ Lauf dev
 Build the application for production:
 
 ```bash
-@@@92@npm
-npm run erstellen
+# npm Bearbeiten
+npm run bauen
 
-@@@pnpm@pnpm
+# pnpm
 pnpm run bauen
 
-@@ph094@@gmail.de
-Yarn bauen
+# yarn ist
+Yard bauen
 
-@@95@bun
+# bun (nicht)
 Run Build erstellen
 ```
 
 Locally preview production build:
 
 ```bash
-@@101@npm
+# npm
 npm run vorschau
 
-@@102@pnpm
+# pnpm
 Pnpm Run Vorschau
 
-@@ph103@@gmail.de
+XPH103XYARN (englisch)
 Vorschau YARN
 
-@@104@bun
-Vorschau Run Preview
+# bun
+Lauf Preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
@@ -161,7 +161,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 ::
 
-#Der Code
+#code
 
 ::code-collapse{class="[&>div>pre]:rounded-t-none [&>div]:my-0"}
 
@@ -194,17 +194,17 @@ default export defineAppConfig ({Dateiendung})
 ```
 
 ```vue [app/app.vue]
-@@@@@@122 @
-  @@@@123
-    @@@@@@@124
-  @@@@125
-@@@@126
+x122x Bearbeiten
+  X123x Bearbeiten
+    x124x Bearbeiten
+  X125x Bearbeiten
+x126x Bearbeiten
 ```
 
 ```json [package.json]
 {
   "name":"nuxt-app",
-  „ privat ": wahr,
+  "privat": wahr,
   "Typ":"Modul",
   „ Schriftstücke ":
     „ build ": „ nuxt build",
@@ -233,11 +233,11 @@ default export defineAppConfig ({Dateiendung})
 ```
 
 ````md [README.md]
-# Nuxt 4 Minimal Starter
+# Nuxt 4 Minimal Starter (englisch)
 
-Schauen Sie sich die [Nuxt 4 documentation](https://nuxt.com/docs/getting-started/introduction) an, um mehr zu erfahren.
+Schauen Sie sich die [Nuxt 4-Dokumentation ](https://nuxt.com/docs/getting-started/introduction) an, um mehr zu erfahren.
 
-@@141@Einbaustrahler
+## Setup (englisch)
 
 Stellen Sie sicher, dass Sie die Abhängigkeiten installieren:
 
@@ -255,9 +255,9 @@ yarn install
 bun install
 ```
 
-## Entwicklungsserver
+## Development Server (englisch)
 
-Starten Sie den Entwicklungsserver unter `http://localhost:3000`:
+Starten Sie den Entwicklungsserver auf `http://localhost:3000`:
 
 ```bash
 # npm
@@ -307,7 +307,7 @@ yarn preview
 bun run preview
 ```
 
-Weitere Informationen finden Sie in der [deployment](https://nuxt.com/docs/getting-started/deployment).
+Weitere Informationen finden Sie in der [deployment-Dokumentation ](https://nuxt.com/docs/getting-started/deployment).
 ````
 
 ::
@@ -318,23 +318,23 @@ Weitere Informationen finden Sie in der [deployment](https://nuxt.com/docs/getti
 ::
 
 ::note{to="/docs/typography/code#code-blocks"}
-Wie die Komponente `ProsePre` behandelt die Komponente `CodeTree` Dateinamen, Symbole und Kopierknopf.
+Wie die `ProsePre`-Komponente verarbeitet die `CodeTree` Dateinamen, Symbole und Kopierschaltflächen.
 ::
 
-@@207@btw
+## API Bearbeiten
 
-@@@@@@@@ph208@@props
+### Props (englisch)
 
-: component-props {prose}
+:component-props{prose}
 
-### Spielautomaten
+### Slots (englisch)
 
-: component-slots {prose}
+:component-slots{prose}
 
-@@ph212@@gmail.de
+## Theme Bearbeiten
 
-: component-theme {prose}
+:component-theme{prose}
 
-@@ph214@@changelog (auf Englisch)
+## Changelog (englisch)
 
-: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

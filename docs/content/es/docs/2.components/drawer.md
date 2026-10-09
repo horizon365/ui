@@ -14,7 +14,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Drawer.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice un [Button](/docs/components/button) o cualquier otro componente en la ranura predeterminada del cajón.
 
@@ -22,269 +22,269 @@ A continuación, utilice la ranura `#content` para añadir el contenido que se m
 
 ::component-code
 ---
-Categoría: true
-Los slots:
-  Default:|
+prettier: true
+slots:
+  default: |
 
-    @@ 006 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Contenido:|
+  content: |
 
-    @@@ 007 @
+    <Placeholder class="h-48 m-4" />
 ---
 
-El botón {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Abiertos" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#Contenido
-por: placeholder{class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-También puede utilizar las ranuras `#header`{lang="ts-type"},`#body`{lang="ts-type"} y `#footer`{lang="ts-type"} para personalizar el contenido del cajón.
+También puede utilizar las ranuras `#header`{lang="ts-type"}, `#body`{lang="ts-type"} y `#footer`{lang="ts-type"} para personalizar el contenido del cajón.
 
-@16@Título
+### Nombre
 
 Utilice el prop `title` para establecer el título de la cabecera del cajón.
 
 ::component-code
 ---
-Categoría: true
-Props:
-  Título:"Cuchillo con título"
-Los slots:
-  Default:|
+prettier: true
+props:
+  title: 'Drawer with title'
+slots:
+  default: |
 
-    @@@ 18 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  cuerpo:|
+  body: |
 
-    @@@ 19 @
+    <Placeholder class="h-48" />
 ---
 
-Botón {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Abiertos" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#Cuerpo
-por placeholder{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
-@@222@Descripción
+### Descripción
 
 Utilice el prop `description` para establecer la descripción de la cabecera del cajón.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @24@title
-Props:
-  Título:"Dibujo con descripción"
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit".
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Drawer with description'
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+slots:
+  default: |
 
-    @@ 25
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  cuerpo:|
+  body: |
 
-    @@ 26 @
+    <Placeholder class="h-48" />
 ---
 
-por: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Abiertos" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#Cuerpo
-por placeholder{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
 ### Cerrar: badge{label="4.10+" class="align-text-top"}
 
-Utilice el prop `close` para mostrar un botón de cierre en el cajón. Predeterminados a `false`.
+Utilice el soporte `close` para mostrar un botón de cierre en el cajón.
 
 Puede pasar cualquier propiedad del componente [Button](/docs/components/button) para personalizarlo.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@37@título
-  - close.color (en inglés)
-  - close.variante
-Props:
-  Título:"Botón de cierre"
-  Cerrado:
-    Color: Primario
-    Categoría: Outline
-    Categoría:"Round-full"
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+  - close.color
+  - close.variant
+props:
+  title: 'Drawer with close button'
+  close:
+    color: primary
+    variant: outline
+    class: 'rounded-full'
+slots:
+  default: |
 
-    @@ 40 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  cuerpo:|
+  body: |
 
-    @@@ 41 @
+    <Placeholder class="h-48" />
 ---
 
-Botón {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Abiertos" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#Cuerpo
-por placeholder{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
-### Cerrar Icono: badge{label="4.10+" class="align-text-top"}
+### Cerrar icono: badge{label="4.10+" class="align-text-top"}
 
 Utilice el prop `close-icon` para personalizar el botón de cierre [Icon](/docs/components/icon).
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@52@título
-Props:
-  Título:"Botón de cierre"
-  Siguiente: True
-  Icono: 'i-lucide-arrow-right'
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Drawer with close button'
+  close: true
+  closeIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
-    @@@ 53 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  cuerpo:|
+  body: |
 
-    @@@ 54 @
+    <Placeholder class="h-48" />
 ---
 
-by: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Abiertos" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#Cuerpo
-by placeholder{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
-@057@@The Director
+### Dirección
 
-Utilice el prop `direction` para controlar la dirección del cajón. Predeterminados a `bottom`.
+Utilice el prop `direction` para controlar la dirección del cajón.
 
 ::component-code
 ---
-Categoría: true
-Props:
-  The answer: "Right"
-Los slots:
-  Default:|
+prettier: true
+props:
+  direction: 'right'
+slots:
+  default: |
 
-    @@@ 060 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Contenido:|
+  content: |
 
-    by <Placeholder class="min-w-96 min-h-96 size-full m-4" />
+    <Placeholder class="min-w-96 min-h-96 size-full m-4" />
 ---
 
-El botón {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Abiertos" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#of content
-por: placeholder{class="min-w-96 min-h-96 size-full m-4"}
+#content
+:placeholder{class="min-w-96 min-h-96 size-full m-4"}
 ::
 
-@064@@Indeed
+### Inset (Edición española)
 
-Utilice el prop `inset` para insertar el cajón desde los bordes.
+Utilice el accesorio `inset` para insertar el cajón desde los bordes.
 
 ::component-code
 ---
-Categoría: true
-Props:
-  Dirección:"Derecha"
-  Inserción: True
-Los slots:
-  Default:|
+prettier: true
+props:
+  direction: 'right'
+  inset: true
+slots:
+  default: |
 
-    @@@ 66 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Contenido:|
+  content: |
 
-    @@pf067 @
+    <Placeholder class="min-w-96 min-h-96 size-full m-4" />
 ---
 
-El botón {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Abiertos" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#of content
-por @ph069
+#content
+:placeholder{class="min-w-96 min-h-96 size-full m-4"}
 ::
 
-@070000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Handle (Edición española)
 
-Utilice el prop `handle` para controlar si el cajón tiene un mango o no. Por defecto a `true`.
+Utilice el accesorio `handle` para controlar si el cajón tiene un mango o no. Por defecto `true`.
 
 ::component-code
 ---
-Categoría: true
-Props:
-  Manejo: Falso
-Los slots:
-  Default:|
+prettier: true
+props:
+  handle: false
+slots:
+  default: |
 
-    @@pf073 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Contenido:|
+  content: |
 
-    @@pf074 @
+    <Placeholder class="h-48 m-4" />
 ---
 
-Botón {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Abiertos" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#Contenido
-por @ph076
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-### Sólo se maneja
+### Handle sólo
 
-Utilice el prop `handle-only` para permitir que el cajón sea arrastrado por el mango.
+Utilice el accesorio `handle-only` para permitir que el cajón sea arrastrado por el mango.
 
 ::component-code
 ---
-Categoría: true
-Props:
-  Vía: true
-Los slots:
-  Default:|
+prettier: true
+props:
+  handleOnly: true
+slots:
+  default: |
 
-    @@pf079 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Contenido:|
+  content: |
 
-    @@ 080 @
+    <Placeholder class="h-48 m-4" />
 ---
 
-Botón {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Abiertos" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#of content
-por @ph082
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-@083@@espanol
+### Superpuesto
 
-Utilice el prop `overlay` para controlar si el cajón tiene una superposición o no. Por defecto a `true`.
+Utilice el prop `overlay` para controlar si el cajón tiene una superposición o no. Por defecto `true`.
 
 ::component-code
 ---
-Categoría: true
-Props:
-  Reseña: False
-Los slots:
-  Default:|
+prettier: true
+props:
+  overlay: false
+slots:
+  default: |
 
-    @@@ 086 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Contenido:|
+  content: |
 
-    @@pf087 @
+    <Placeholder class="h-48 m-4" />
 ---
 
-Botón {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Abiertos" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#Contenido
-por @ph089
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-@@P2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Modal (Edición española)
 
 Utilice el prop `modal` para controlar si el cajón bloquea la interacción con el contenido externo.
 
@@ -294,28 +294,28 @@ Cuando `modal` se establece en `false`, la superposición se deshabilita automá
 
 ::component-code
 ---
-Categoría: true
-Props:
-  Modalidad: Falso
-Los slots:
-  Default:|
+prettier: true
+props:
+  modal: false
+slots:
+  default: |
 
-    @@@ 095
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Contenido:|
+  content: |
 
-    @@pf096 @
+    <Placeholder class="h-48 m-4" />
 ---
 
-El botón {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Abiertos" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#Contenido
-por @ph098
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-@099@@descalificación
+### Dismissible
 
-Utilice el prop `dismissible` para controlar si el cajón es descartable al hacer clic fuera de él o al presionar escape.
+Utilice el accesorio `dismissible` para controlar si el cajón es descartable al hacer clic fuera de él o al presionar escape.
 
 ::note
 Se emitirá un evento `close:prevent` cuando el usuario intente cerrarlo.
@@ -327,35 +327,35 @@ Puede combinar `modal: false` con `dismissible: false` para hacer que el fondo d
 
 ::component-example
 ---
-Categoría: true
-Nombre: 'desconocido-ejemplo'
+prettier: true
+name: 'drawer-dismissible-example'
 ---
 ::
 
-### Escala de fondo
+### Scale en segundo plano
 
-Utilice el prop `should-scale-background` para escalar el fondo cuando el cajón está abierto, creando un efecto de profundidad visual. Puede configurar el prop `set-background-color-on-scale` en `false` para evitar cambiar el color de fondo.
+Utilice el accesorio `should-scale-background` para escalar el fondo cuando el cajón está abierto, creando un efecto de profundidad visual. Puede configurar el accesorio `set-background-color-on-scale` en `false` para evitar cambiar el color de fondo.
 
 ::component-code
 ---
-Categoría: true
-Props:
-  shouldScaleBackground: verdad
-  setBackgroundColorOnScale: verdad
-Los slots:
-  Default:|
+prettier: true
+props:
+  shouldScaleBackground: true
+  setBackgroundColorOnScale: true
+slots:
+  default: |
 
-    @@pH109 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Contenido:|
+  content: |
 
-    @@ 110 @
+    <Placeholder class="h-48 m-4" />
 ---
 
-Botón {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Abiertos" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#of content
-por @ph112 @
+#content
+:placeholder{class="h-screen m-4"}
 ::
 
 ::warning
@@ -388,14 +388,14 @@ export default defineNuxtConfig({
 
 ## Ejemplos
 
-### Estado abierto de control
+### Control en estado abierto
 
-Puede controlar el estado abierto utilizando la directiva `default-open` o la directiva `v-model:open`.
+Puede controlar el estado abierto utilizando la prop `default-open` o la directiva `v-model:open`.
 
 ::component-example
 ---
-Categoría: true
-Nombre: 'drawer-open-example'
+prettier: true
+name: 'drawer-open-example'
 ---
 ::
 
@@ -407,25 +407,25 @@ En este ejemplo, aprovechando [`defineShortcuts`](/docs/composables/define-short
 Esto le permite mover el gatillo fuera del cajón o eliminarlo por completo.
 ::
 
-### Caja de respuesta
+### Cajón responsivo
 
-Puede renderizar un componente [Modal](/docs/components/modal) en el escritorio y un cajón en el móvil, por ejemplo.
+Por ejemplo, puede renderizar un componente [Modal](/docs/components/modal) en el escritorio y un cajón en el móvil.
 
 ::component-example
 ---
-Categoría: true
-Nombre: 'drawer-responsive-example'
+prettier: true
+name: 'drawer-responsive-example'
 ---
 ::
 
-### Anidado de cajones
+### Cajas anidadas
 
-Puede anidar cajones uno dentro del otro utilizando el prop.`nested`.
+Puede anidar cajones uno dentro del otro utilizando el accesorio `nested`.
 
 ::component-example
 ---
-Categoría: true
-Nombre: 'drawer-nided-example'
+prettier: true
+name: 'drawer-nested-example'
 ---
 ::
 
@@ -435,45 +435,45 @@ Utilice la ranura `#footer` para añadir contenido después del cuerpo del cajó
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre: 'drawer-footer-slot-example'
+prettier: true
+collapse: true
+name: 'drawer-footer-slot-example'
 ---
 ::
 
-### Con paleta de comandos
+### With paleta de comandos
 
 Puede utilizar un componente [CommandPalette](/docs/components/command-palette) dentro del contenido del cajón.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'drawer-command-palette-example'
+collapse: true
+name: 'drawer-command-palette-example'
 ---
 ::
 
 ::note
-En este ejemplo se utiliza `useLazyFetch` con `immediate: false` para obtener datos sólo cuando se abre el cajón.
+Este ejemplo utiliza `useLazyFetch` con `immediate: false` para obtener datos sólo cuando se abre el cajón.
 ::
 
-@161
+## API (Edición española)
 
-@162@2016
+### Props
 
-Componentes Props
+:component-props
 
-@@163@163@163
+### Slots en línea
 
-Componentes de slots
+:component-slots
 
-@164@1644
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@165 @@ Proyecto
+## Theme (Edición española)
 
-Componente Tema
+:component-theme
 
-by ## Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

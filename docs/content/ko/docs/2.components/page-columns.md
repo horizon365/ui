@@ -1,5 +1,5 @@
 ---
-title: PageColumns (페이지 열)
+title: PageColumns 페이지열
 description: '컨텐츠를 나란히 구성하기 위한 반응형 다중 열 레이아웃 시스템.'
 category: page
 links:
@@ -8,32 +8,32 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageColumns.vue
 ---
 
-##  사용
+## Usage
 
-PageColumns 구성 요소는 응답형 다중 열 레이아웃으로 콘텐츠를 표시합니다. [PageCard](/docs/components/page-cardPH04@@ 구성 요소 또는 다른 요소와 잘 작동하며 모바일의 단일 열에서 큰 화면의 여러 열로 조정됩니다.
+PageColumns 구성 요소는 응답형 다중 열 레이아웃으로 내용을 표시합니다. [PageCard](/docs/components/page-cardxph04x 구성 요소 또는 기타 요소에서 잘 작동하며 모바일의 단일 열에서 큰 화면의 여러 열로 조정됩니다.
 
 ::component-example
 ---
-축소: true
-이름: 'page-columns-example'
-클래스: P-8
+collapse: true
+name: 'page-columns-example'
+class: 'p-8'
 ---
 ::
 
-##  API
+## API 파일
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### Slots
 
-:컴포넌트 - 슬롯
+:component-slots
 
-##  테마
+## Theme 테마
 
-:구성요소 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

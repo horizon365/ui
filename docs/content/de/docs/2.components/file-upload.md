@@ -1,5 +1,5 @@
 ---
-title: File-Upload hinzufügen
+title: File-Upload Bearbeiten
 description: 'Ein Eingabeelement zum Hochladen von Dateien.'
 category: form
 keywords:
@@ -12,346 +12,346 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/FileUpload.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Verwenden Sie die `v-model`-Direktive, um den Wert von FileUpload zu steuern.
-
-::component-code
----
-Ignoriert:
-  - modellWert
-  @@003@Klasse
-Außen:
-  - modellWert
-Props:
-  Modellwert: Null
-  Klasse: 'w-96 min-h-48'
----
-::
-
-@@ph005@mehrfache
-
-Verwenden Sie `multiple` prop, um mehrere Dateien auszuwählen.
+Verwenden Sie die `v-model`-Direktive, um den Wert des FileUpload zu steuern.
 
 ::component-code
 ---
-Ignoriert:
-  @@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@class@class@c
-Props:
-  Anzahl: true
-  Bezeichnung: W-96 Min-H-48
+ignore:
+  - modelValue
+  - class
+external:
+  - modelValue
+props:
+  modelValue: null
+  class: 'w-96 min-h-48'
 ---
 ::
 
-### Dropzone
+### Mehrfach
 
-Verwenden Sie `dropzone` prop, um den absetzbaren Bereich zu aktivieren/deaktivieren. Standardmäßig `true`.
+Verwenden Sie die `multiple`-prop, um mehrere Dateien auszuwählen.
 
 ::component-code
 ---
-Ignoriert:
-  @@11@Klasse
-Props:
-  Dropzone: falsch
-  Bezeichnung: W-96 Min-H-48
+ignore:
+  - class
+props:
+  multiple: true
+  class: 'w-96 min-h-48'
 ---
 ::
 
-### Interaktiv
+### Dropzone (englisch)
 
-Verwenden Sie `interactive` prop, um den anklickbaren Bereich zu aktivieren/deaktivieren. Standardmäßig `true`.
+Verwenden Sie die `dropzone`-prop, um den absetzbaren Bereich zu aktivieren/deaktivieren. Standardmäßig `true`.
+
+::component-code
+---
+ignore:
+  - class
+props:
+  dropzone: false
+  class: 'w-96 min-h-48'
+---
+::
+
+### Interactive (englisch)
+
+Verwenden Sie die `interactive`-Prop, um den anklickbaren Bereich zu aktivieren/deaktivieren. Standardmäßig `true`.
 
 ::tip{to="#with-files-bottom-slot"}
-Dies kann nützlich sein, wenn Sie eine `Button` Komponente in den `#actions` Slot einfügen.
+Dies kann nützlich sein, wenn Sie eine `Button`-Komponente in den `#actions`-Steckplatz hinzufügen.
 ::
 
 ::component-code
 ---
-Ignoriert:
-  @@@@@17@17@17
-Props:
-  Aktion: FALSE
-  Klasse: 'w-96 min-h-48'
+ignore:
+  - class
+props:
+  interactive: false
+  class: 'w-96 min-h-48'
 ---
 ::
 
-@@ph018@accept | nicht
+### AcceptBearbeiten
 
-Verwenden Sie `accept` prop, um die zulässigen Dateitypen für die Eingabe anzugeben. Geben Sie eine kommagetrennte Liste von [MIME-Typen ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types) oder Dateierweiterungen (z. B.`image/png,application/pdf,.jpg`) an.
+Verwenden Sie die `accept`-prop, um die zulässigen Dateitypen für die Eingabe anzugeben. Geben Sie eine durch Kommas getrennte Liste von [MIME-Typen ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types) oder Dateierweiterungen (z. B. `image/png,application/pdf,.jpg`) an. Standardmäßig `*` (alle Dateitypen).
 
 ::component-code
 ---
-Ignoriert:
-  @@ph026@accepts
-  @@ph027@gmail.de
-Props:
-  accept: 'Bild/*'
-  Klasse: 'w-96 min-h-48'
+ignore:
+  - accept
+  - class
+props:
+  accept: 'image/*'
+  class: 'w-96 min-h-48'
 ---
 ::
 
-@@@@@@@@@@ph028@@label.de
+### Label ist
 
-Verwenden Sie `label` prop, um das Label des FileUpload festzulegen.
+Verwenden Sie die `label`-Prop, um das Label des FileUpload festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @30@Klasse
-Props:
-  Label: "Hier können Sie Ihr Bild einfügen"
-  Klasse: 'w-96 min-h-48'
+prettier: true
+ignore:
+  - class
+props:
+  label: 'Drop your image here'
+  class: 'w-96 min-h-48'
 ---
 ::
 
-@@ph031 @ Beschreibung
+xph069 Beschreibung
 
-Verwenden Sie `description` prop, um die Beschreibung des FileUpload festzulegen.
+Verwenden Sie die `description`-Prop, um die Beschreibung des FileUpload festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph033@@aufkleber
-  @@34@Klasse
-Props:
-  Label: "Hier können Sie Ihr Bild einfügen"
-  Beschreibung: 'SVG, PNG, JPG oder GIF (max. 2MB)'
-  Klasse: 'w-96 min-h-48'
+prettier: true
+ignore:
+  - label
+  - class
+props:
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96 min-h-48'
 ---
 ::
 
-@@ph035@@gmail.de
+### Icon (englisch)
 
-Verwenden Sie `icon` prop, um das Symbol des FileUpload. Defaults auf `i-lucide-upload` zu setzen.
+Verwenden Sie die `icon`-Prop, um das Symbol des FileUpload. Defaults auf `i-lucide-upload` zu setzen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph038@@bmg-aufkleber
-  @@ph039 @ Beschreibung
-  @@ph040@class
-Props:
-  Icon: 'I-Lucide-Bild'
-  Label: "Hier können Sie Ihr Bild einfügen"
-  Beschreibung: 'SVG, PNG, JPG oder GIF (max. 2MB)'
-  Bezeichnung: W-96 Min-H-48
+prettier: true
+ignore:
+  - label
+  - description
+  - class
+props:
+  icon: 'i-lucide-image'
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96 min-h-48'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.upload` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.upload` Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.upload` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter der `ui.icons.upload`-Taste anpassen.
 :::
 ::
 
-@@@@@45@gmail.de
+### Color Bearbeiten
 
-Verwenden Sie `color` prop, um die Farbe des FileUpload zu ändern.
+Verwenden Sie die `color`-Prop, um die Farbe des FileUpload zu ändern.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph047@@aufkleber
-  @@ph048@beschreibung
-  @@@@@@49@class
-Props:
-  Farbe: neutral
-  Highlight: Wahr
-  Label: "Hier können Sie Ihr Bild einfügen"
-  Beschreibung: 'SVG, PNG, JPG oder GIF (max. 2MB)'
-  Bezeichnung: W-96 Min-H-48
+prettier: true
+ignore:
+  - label
+  - description
+  - class
+props:
+  color: neutral
+  highlight: true
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96 min-h-48'
 ---
 ::
 
 ::note
-`highlight` prop wird hier verwendet, um den Fokuszustand anzuzeigen. Es wird intern verwendet, wenn ein Validierungsfehler auftritt.
+Die `highlight`-prop wird hier verwendet, um den Fokuszustand anzuzeigen. Es wird intern verwendet, wenn ein Validierungsfehler auftritt.
 ::
 
-@@ph051@@@Variantentabelle
+### Variant Bearbeiten
 
-Verwenden Sie `variant` prop, um die Variante des FileUploads zu ändern.
+Verwenden Sie die `variant`-prop, um die Variante des FileUpload zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@53@Klasse
-Props:
-  Variante: Knopf
+ignore:
+  - class
+props:
+  variant: button
 ---
 ::
 
-@@@@@544@@554@54@54@54@54@54@54@54@@@54@@@54@@@54@@@54@@54@@@54@@@54@54@54@54@54@@54@54@@554@@54@54@54@54@54@54@54@554@54@@554@@554@@@554@@@54@@5554@@@@@@55554@@@@@@@@@@55554@@@@@@@@@@@@@55554@@@@@@@@@@@@@@55554@@@@@@@@@@@@@@@@@@@555554@@@@@@@@@@@@
+### Size
 
-Verwenden Sie `size` prop, um die Größe des FileUpload zu ändern.
+Verwenden Sie die `size`-Prop, um die Größe des FileUpload zu ändern.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph056@@aufkleber
-  @@ph057@beschreibung
-  @@@@@@58@000000000000000000000000000000000000000000000000000
-Props:
-  Größe: XL
-  Variante: Bereich
-  Label: "Hier können Sie Ihr Bild einfügen"
-  Beschreibung: 'SVG, PNG, JPG oder GIF (max. 2MB)'
+prettier: true
+ignore:
+  - label
+  - description
+  - class
+props:
+  size: xl
+  variant: area
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
 ---
 ::
 
-@@@@@599@@gmail.de
+### Layout (Englisch)
 
-Verwenden Sie `layout` prop, um zu ändern, wie die Dateien im FileUpload. Defaults auf `grid` angezeigt werden.
+Verwenden Sie die `layout`-prop, um zu ändern, wie die Dateien im FileUpload. Defaults auf `grid` angezeigt werden.
 
 ::warning
-Diese Requisite funktioniert nur, wenn `variant``area`.
+Diese Prop funktioniert nur, wenn `variant` `area` ist.
 ::
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph064@@aufkleber
-  @@ph065@beschreibung
-  @@ph066@@mehrfache
-  @@@@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@c
+prettier: true
+ignore:
+  - label
+  - description
+  - multiple
+  - class
   - ui.base
-Props:
-  Layout: Aufzählung
-  Vielfach: wahr
-  Label: "Bilder hier einfügen"
-  Beschreibung: 'SVG, PNG, JPG oder GIF (max. 2MB)'
-  Klasse: W-96
-  ui: ist
-    Bezeichnung: min-h-48
+props:
+  layout: list
+  multiple: true
+  label: 'Drop your images here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96'
+  ui:
+    base: 'min-h-48'
 ---
 ::
 
-@@ph069@@Einwurf
+### Position (Englisch)
 
-Verwenden Sie `position` prop, um die Position der Dateien in FileUpload. Defaults auf `outside` zu ändern.
+Verwenden Sie die `position`-prop, um die Position der Dateien in der Datei Upload. Defaults auf `outside` zu ändern.
 
 ::warning
-Diese Requisite funktioniert nur, wenn `variant``area` ist und wenn `layout``list` ist.
+Diese Prop funktioniert nur, wenn `variant` `area` und `layout` `list` ist.
 ::
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@@ph076@@aufkleber
-  @@ph077@beschreibung
-  @@@ph078@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache-fache-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e
-  @@ph079@@aufräumen
-  @@80@Klasse
+prettier: true
+ignore:
+  - label
+  - description
+  - multiple
+  - layout
+  - class
   - ui.base
-Props:
-  Position: Innen
-  Layout: Liste
-  Vielfach: wahr
-  Label: "Bilder hier einfügen"
-  Beschreibung: 'SVG, PNG, JPG oder GIF (max. 2MB)'
-  Klasse: W-96
-  ui: ist
-    Bezeichnung: min-h-48
+props:
+  position: inside
+  layout: list
+  multiple: true
+  label: 'Drop your images here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96'
+  ui:
+    base: 'min-h-48'
 ---
 ::
 
-@@ph082@@@Beispiele
+## Beispiele
 
-### Mit Formularvalidierung
+### With Formular Validierung
 
-Sie können den FileUpload innerhalb eines [Form](/docs/components/form) und [FormField](/docs/components/form-field) Komponenten verwenden, um die Validierung und Fehlerbehandlung durchzuführen.
+Sie können den FileUpload innerhalb einer [Form](/docs/components/form)-und [FormField](/docs/components/form-field)-Komponente verwenden, um die Validierung und Fehlerbehandlung zu verwalten.
 
 ::component-example
 ---
-Schöner: wahr
-Einsturz: wahr
-Name: 'Datei-Upload-Form-Validierungsbeispiel'
+prettier: true
+collapse: true
+name: 'file-upload-form-validation-example'
 ---
 ::
 
-### Mit Default-Slot
+### Mit Default Slot
 
-Sie können den Standard-Slot verwenden, um Ihre eigene FileUpload-Komponente zu erstellen.
+Sie können den Standardslot verwenden, um Ihre eigene FileUpload-Komponente zu erstellen.
 
 ::component-example
 ---
-Schöner: wahr
-Einsturz: wahr
-Datei-Upload-Default-Slot-Beispiel
+prettier: true
+collapse: true
+name: 'file-upload-default-slot-example'
 ---
 ::
 
-### Mit Datei-Boden-Slot
+### With files-bottom slot (Datei-Boden-Steckplatz)
 
-Sie können den `files-bottom`-Slot verwenden, um einen [Button](/docs/components/button) unter der Dateiliste hinzuzufügen, um beispielsweise alle Dateien zu entfernen.
+Sie können den `files-bottom`-Steckplatz verwenden, um einen [Button](/docs/components/button) unter der Dateiliste hinzuzufügen, um beispielsweise alle Dateien zu entfernen.
 
 ::component-example
 ---
-Schöner: wahr
-Einsturz: wahr
-Datei-Upload-Files-Bottom-Slot-Beispiel
+prettier: true
+collapse: true
+name: 'file-upload-files-bottom-slot-example'
 ---
 ::
 
 ::note{to="#interactive"}
-Der `interactive` prop wird in diesem Beispiel auf `false` gesetzt, um den standardmäßig anklickbaren Bereich zu verhindern.
+Die `interactive`-Prop ist in diesem Beispiel auf `false` gesetzt, um den standardmäßig anklickbaren Bereich zu verhindern.
 ::
 
-### Mit Datei-Top-Slot
+### With files-top slot (Datei-Top-Steckplatz)
 
-Sie können den `files-top`-Slot verwenden, um einen [Button](/docs/components/button) über der Dateiliste hinzuzufügen, um beispielsweise neue Dateien hinzuzufügen.
+Sie können den `files-top`-Steckplatz verwenden, um einen [Button](/docs/components/button) über der Dateiliste hinzuzufügen, um beispielsweise neue Dateien hinzuzufügen.
 
 ::component-example
 ---
-Schöner: wahr
-Einsturz: wahr
-Datei-Upload-Files-Top-Slot-Beispiel
+prettier: true
+collapse: true
+name: 'file-upload-files-top-slot-example'
 ---
 ::
 
-@@107@bpb
+## API ist
 
-@@@@@@@@@@@@@@@ph108@@props
+### Props (englisch)
 
-Komponenten-Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
-Diese Komponente unterstützt auch alle nativen `<input>` HTML-Attribute.
+Diese Komponente unterstützt auch alle nativen `<input>`-HTML-Attribute.
 ::
 
-### Slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@@@@@@@111@emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-### Aufdecken
+### Expose Bearbeiten
 
 Beim Zugriff auf die Komponente über eine Template-Referenz können Sie Folgendes verwenden:
 
-| Vorname| Typen|
+| Vorname| Typ|
 | ---- | ---- |
-| @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@###################################################################################################################|
-| {lang="ts-type"}|{lang="ts-type"}|
+| `inputRef`{lang="ts-type"} (englisch)| `Ref<HTMLInputElement \| null>`{lang="ts-type"} (englisch)|
+| `dropzoneRef`{lang="ts-type"} (englisch)| `Ref<HTMLDivElement \| null>`{lang="ts-type"} (englisch)|
 
-@@121@Einsteiger-Tipp
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph122@@changelog @ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

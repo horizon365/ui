@@ -8,105 +8,105 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageLinks.vue
 ---
 
-## 사용
+## Usage
 
-PageLinks   구성   요소 를   사용 하 여   링크   목록 을   표시 할   수   있 습니다 .
+PageLinks 구성 요소를 사용하여 링크 목록을 표시할 수 있습니다.
 
 ::component-code
 ---
-축소 :   true
-상품명   :   True
-무시 하 기 :
-  - 링크
-외부 :
-  - 링크
-externalTypes :
-  - PageLink [ ]
-소품   :
-  링크 :
-    - label :   ' 이   페이지   편집 '
-      아이콘   :   i - lucide - file - pen
-      대상   :https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
-    - label :   ' Star   on   GitHub '
-      아이콘   :   i - lucide - star
-      대상   :https://github.com/nuxt/ui
-    - label :   ' Releases '
-      아이콘   :   i - lucide - rocket
-      대상   :https://github.com/nuxt/ui/releases
+collapse: true
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageLink[]
+props:
+  links:
+    - label: 'Edit this page'
+      icon: i-lucide-file-pen
+      to: https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
+    - label: 'Star on GitHub'
+      icon: i-lucide-star
+      to: https://github.com/nuxt/ui
+    - label: 'Releases'
+      icon: i-lucide-rocket
+      to: https://github.com/nuxt/ui/releases
 ---
 ::
 
 ### 링크
 
-`links`prop 을   다음 과   같 은   속성 을   가진   객체 의   배열 로   사용 합니다 .
+`links` prop을 다음 속성을 가진 오브젝트 배열로 사용합니다.
 
-- `label: string` {lang="ts-type"}
+- `label: string`{lang="ts-type"}
 - `icon?: string`{lang="ts-type"}
--  @ `class?: any` @ @ {lang="ts-type"} @
-- `ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkLeadingIcon?: ClassNameValue }`{lang="ts-type"}
+- `class?: any`{lang="ts-type"} - {lang="ts-type"}
+- `ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkLeadingIcon?: ClassNameValue }`{lang="ts-type"} Xph033x{lang="ts-type"}
 
-당신 은  [Link](/docs/components/link#props)  구성   요소 에서   모든   속성 을   전달   할   수   있 습니다  `to`,  `target`  등 .
+[Link](/docs/components/link#props) 구성 요소(예: `to`, `target` 등)에서 모든 속성을 전달할 수 있습니다.
 
 ::component-code
 ---
-상품명   :   True
-무시 하 기 :
-  - 링크
-외부 :
-  - 링크
-externalTypes :
-  - PageLink [ ]
-소품   :
-  링크 :
-    - label :   ' 이   페이지   편집 '
-      아이콘   :   i - lucide - file - pen
-      대상   :https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
-    - label :   ' Star   on   GitHub '
-      아이콘   :   i - lucide - star
-      대상   :https://github.com/nuxt/ui
-    - label :   ' Releases '
-      아이콘   :   i - lucide - rocket
-      대상 :https://github.com/nuxt/ui/releases
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageLink[]
+props:
+  links:
+    - label: 'Edit this page'
+      icon: i-lucide-file-pen
+      to: https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
+    - label: 'Star on GitHub'
+      icon: i-lucide-star
+      to: https://github.com/nuxt/ui
+    - label: 'Releases'
+      icon: i-lucide-rocket
+      to: https://github.com/nuxt/ui/releases
 ---
 ::
 
 ### 제목
 
-`title`prop   을   사용 하 여   링크   위 에   제목 을   표시 합니다 .
+`title` Prop을 사용하여 링크 위에 제목을 표시합니다.
 
 ::component-code
 ---
-상품명   :   True
-무시 하 기 :
-  - 링크
-외부 :
-  - 링크
-externalTypes :
-  - PageLink [ ]
-소품   :
-  사진 :   " Community "
-  링크 :
-    - label :   ' 이   페이지   편집 '
-      아이콘   :   i - lucide - file - pen
-      대상 :https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
-    - label :   ' Star   on   GitHub '
-      아이콘   :   i - lucide - star
-      대상   :https://github.com/nuxt/ui
-    - label :   ' Releases '
-      아이콘   :   i - lucide - rocket
-      대상   :https://github.com/nuxt/ui/releases
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageLink[]
+props:
+  title: 'Community'
+  links:
+    - label: 'Edit this page'
+      icon: i-lucide-file-pen
+      to: https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
+    - label: 'Star on GitHub'
+      icon: i-lucide-star
+      to: https://github.com/nuxt/ui
+    - label: 'Releases'
+      icon: i-lucide-rocket
+      to: https://github.com/nuxt/ui/releases
 ---
 ::
 
-## 예제
+## 예
 
 ::note
-이러 한   예 에서 는  [Nuxt   Content](https://content.nuxt.com)를   사용 하 지만   모든   컨텐츠   관리   시스템 과   통합 할   수   있 습니다 .
+이러한 예제에서는 [Nuxt Content](https://content.nuxt.com)를 사용하지만 구성 요소는 모든 콘텐츠 관리 시스템과 통합 할 수 있습니다.
 ::
 
-###   한   페이지   내 에서
+### 페이지 안에서
 
-ContentToc   구성   요소 의  `bottom`슬롯 에   있 는   PageLinks   구성   요소 를   사용 하 여   목차   아래 에   링크   목록 을   표시 합니다 .
+ContentToc 구성 요소의 `bottom` 슬롯에 있는 PageLinks 구성 요소를 사용하여 목차 아래에 링크 목록을 표시합니다.
 
 ```vue [pages/\[...slug\\].vue]{48-52}
 <script setup lang="ts">
@@ -170,18 +170,18 @@ const links = computed<PageLink[]>(() => [{
 
 ## API
 
-### Props
+### Props (### Props)
 
-: 컴포넌트   -   소품
+:component-props
 
-### 슬롯
+### Slots
 
-:컴포넌트 - 슬롯
+:component-slots
 
-##  테마
+## Theme (## 테마)
 
-:구성요소 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

@@ -1,43 +1,43 @@
 ---
 title: Gebraucht
-description: 'Ein Composable, um Toast-Benachrichtigungen in Ihrer App anzuzeigen.'
+description: 'Ein Composable zum Anzeigen von Toastbenachrichtigungen in Ihrer App.'
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Verwenden Sie das automatisch importierte `useToast` composable, um [Toast](/docs/components/toast) Benachrichtigungen anzuzeigen.
+Verwenden Sie das automatisch importierte `useToast` composable, um [Toast](/docs/components/toast)-Benachrichtigungen anzuzeigen.
 
 ::component-example
 ---
-Name: 'Use-Toast-Beispiel'
+name: 'use-toast-example'
 ---
 ::
 
-- Das `useToast` composable verwendet Nuxts `useState`, um den Toastzustand zu verwalten und die Reaktivität in Ihrer gesamten Anwendung sicherzustellen.
-- Ein Maximum von 5 Toasts wird standardmäßig angezeigt. Wenn ein neuer Toast hinzugefügt wird, der diese Grenze überschreitet, wird der älteste Toast automatisch entfernt. Ändern Sie ihn mit dem `toaster.max` prop auf der [`App`](/docs/components/app#props) Komponente.
-- Beim Entfernen eines Toast gibt es eine Verzögerung von 200 ms, bevor er tatsächlich aus dem Zustand entfernt wird, was Exit-Animationen ermöglicht.
+- Das `useToast` composable verwendet Nuxts `useState`, um den Toast-Status zu verwalten und die Reaktivität in Ihrer gesamten Anwendung sicherzustellen.
+- Ein Maximum von 5 Toasts werden standardmäßig gleichzeitig angezeigt. Wenn ein neuer Toast hinzugefügt wird, der dieses Limit überschreitet, wird der älteste Toast automatisch entfernt. Ändern Sie ihn mit der `toaster.max`-Prop auf der Komponente [`App`](/docs/components/app#props).
+- Wenn Sie einen Toast entfernen, gibt es eine Verzögerung von 200 ms, bevor er tatsächlich aus dem Status entfernt wird, was Exit-Animationen ermöglicht.
 
 ::warning
-Stellen Sie sicher, dass Sie Ihre App mit der Komponente [`App`]() umwickeln, die unsere Komponente [`Toaster`](https://github.com/nuxt/ui/blob/v4/src/runtime/components/Toaster.vue) Komponente verwendet, die die Komponente [`ToastProvider`https://reka-ui.com/docs/components/toast#providerhttps://reka-ui.com/docs/components/toast#providerPH03@PH03@PH03@PH0)verwendet. Komponenten von Reka UI.
+Stellen Sie sicher, dass Sie Ihre App mit der Komponente [`App`](/docs/components/app) umwickeln, die unsere Komponente [`Toaster`](https://github.com/nuxt/ui/blob/v4/src/runtime/components/Toaster.vue) verwendet, die die Komponente [`ToastProvider`](]() von Reka UI verwendet.
 ::
 
 ::tip{to="/docs/components/toast"}
-Erfahren Sie, wie Sie das Aussehen und Verhalten von Toasts in der Komponentendokumentation **Toast** anpassen.
+Erfahren Sie, wie Sie das Aussehen und Verhalten von Toasts in der Dokumentation der **Toast**-Komponente anpassen können.
 ::
 
-@@@@@@b34@b34.de
+## API (Englisch)
 
-{lang="ts-type"}
+`useToast()`{lang="ts-type"} (nicht)
 
-Das `useToast` composable bietet Methoden zur globalen Verwaltung von Toastbenachrichtigungen.
+Das `useToast` composable bietet Methoden zur globalen Verwaltung von Toast-Benachrichtigungen.
 
-@@ph038@@add ()
+### add () Bearbeiten
 
-{lang="ts-type"}
+`add(toast: Partial<Toast>): Toast`{lang="ts-type"} nicht
 
 Fügen Sie eine neue Toast-Benachrichtigung hinzu.
 
-#### Parameter
+#### Parameters (englisch)
 
 ::field-group
 
@@ -52,7 +52,7 @@ Fügen Sie eine neue Toast-Benachrichtigung hinzu.
         ::
 
         ::field{name="open" type="boolean"}
-        Ob der Toast offen ist. Defaults zu `true`.
+        Ob der Toast offen ist. Standardmäßig `true`.
         ::
 
         ::field{name="title" type="string | VNode | (() => VNode)"}
@@ -68,19 +68,19 @@ Fügen Sie eine neue Toast-Benachrichtigung hinzu.
         ::
 
         ::field{name="avatar" type="AvatarProps"}
-        Siehe [Avatar](/docs/components/avatar#props).
+        Der Avatar, der im Toast angezeigt wird. Siehe [Avatar](/docs/components/avatar#propsx.
         ::
 
         ::field{name="color" type="string"}
-        Die Farbe des Toast. Defaults auf `primary`.
+        Die Farbe des Toast. Standardmäßig `primary`.
         ::
 
         ::field{name="orientation" type="'horizontal' | 'vertical'"}
-        Die Orientierung zwischen dem Inhalt und den Aktionen. Standardmäßig `vertical`.
+        Die Orientierung zwischen dem Inhalt und den Aktionen. Standardmäßig ist `vertical`.
         ::
 
         ::field{name="close" type="boolean | Omit<ButtonProps, LinkPropsKeys>"}
-        Anpassen oder Ausblenden der Schaltfläche Schließen (mit `false`-Wert). Standardmäßig auf `true`.
+        Anpassen oder Ausblenden der Schaltfläche Schließen (mit dem Wert `false`). Standardmäßig `true`.
         ::
 
         ::field{name="closeIcon" type="string"}
@@ -88,15 +88,15 @@ Fügen Sie eine neue Toast-Benachrichtigung hinzu.
         ::
 
         ::field{name="actions" type="ButtonProps[]"}
-        Siehe [Button](/docs/components/button#props).
+        Die Aktionen, die im toast angezeigt werden. Siehe [Button](/docs/components/button#props).
         ::
 
         ::field{name="progress" type="boolean | Pick<ProgressProps, 'color' | 'ui'>"}
-        Anpassen oder Ausblenden des Fortschrittsbalkens (mit `false`-Wert). Standardmäßig auf `true`.
+        Anpassen oder Ausblenden des Fortschrittsbalkens (mit dem Wert `false`). Standardmäßig `true`.
         ::
 
         ::field{name="duration" type="number"}
-        Die Dauer in Millisekunden, bevor der Toast automatisch geschlossen wird. Standardmäßig auf `5000`. Auf `0` gesetzt, um den Toast offen zu halten, bis er manuell geschlossen wird. Kann auch global auf der Komponente [`App`](/docs/components/app) eingestellt werden.
+        Die Dauer in Millisekunden vor dem automatischen Schließen des Toast. Standardmäßig auf `5000`. Auf `0` gesetzt, um den Toast offen zu halten, bis er manuell geschlossen wird. Kann auch global auf der Komponente [`App`](/docs/components/app) eingestellt werden.
         ::
 
         ::field{name="onClick" type="(toast: Toast) => void"}
@@ -104,7 +104,7 @@ Fügen Sie eine neue Toast-Benachrichtigung hinzu.
         ::
 
         ::field{name="onUpdateOpen" type="(open: boolean) => void"}
-        Eine Callback-Funktion, die aufgerufen wird, wenn sich der Status des Toasts öffnet. Nützlich, um eine Aktion auszuführen, wenn der Toast geschlossen wird (abgelaufen oder abgewiesen).
+        Eine Callback-Funktion, die aufgerufen wird, wenn sich der Status des Toast Open ändert. Nützlich, um eine Aktion auszuführen, wenn der Toast geschlossen wird (abgelaufen oder abgewiesen).
         ::
 
         ::field{name="type" type="'foreground' | 'background'"}
@@ -112,14 +112,14 @@ Fügen Sie eine neue Toast-Benachrichtigung hinzu.
         ::
 
         ::field{name="as" type="any"}
-        Das Element oder die Komponente, die der Toast als. Defaults zu `li` rendert
+        Das Element oder die Komponente, die der Toast als. Defaults rendert `li`.
         ::
       ::
     ::
   ::
 ::
 
-**Returns:** Das komplette `Toast` Objekt, das hinzugefügt wurde.
+**Gibt zurück: ** Das komplette `Toast`-Objekt, das hinzugefügt wurde.
 
 ```vue
 <script setup lang="ts">
@@ -135,13 +135,13 @@ function showToast() {
 </script>
 ```
 
-@@ph083@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@ph083@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@update@upda
+### update ()(Deutsche Ausgabe)
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+`update(id: string | number, toast: Omit<Partial<Toast>, 'id'>): void`{lang="ts-type"} (nicht)
 
 Aktualisiert eine vorhandene Toast-Benachrichtigung.
 
-#### Parameter
+#### Parameters (englisch)
 
 ::field-group
   ::field{name="id" type="string | number" required}
@@ -149,7 +149,7 @@ Aktualisiert eine vorhandene Toast-Benachrichtigung.
   ::
 
   ::field{name="toast" type="Omit<Partial<Toast>, 'id'>" required}
-  Das `id` kann nicht geändert werden, der Toast wird wieder geöffnet und `duration` wird zurückgesetzt, wenn Sie es nicht erneut übergeben.
+  Das `id` kann nicht geändert werden, der Toast wird erneut geöffnet, und `duration` wird zurückgesetzt, wenn Sie es nicht erneut übergeben.
   ::
 ::
 
@@ -166,13 +166,13 @@ function updateToast(id: string | number) {
 </script>
 ```
 
-@@ph102@remove ()
+### remove () Bearbeiten
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##################################################################################################################
+`remove(id: string | number): void`{lang="ts-type"} nicht
 
-Löscht eine Toastbenachrichtigung.
+Löscht eine Toast-Benachrichtigung.
 
-#### Parameter
+#### Parameters Bearbeiten
 
 ::field-group
   ::field{name="id" type="string | number" required}
@@ -190,11 +190,11 @@ function removeToast(id: string | number) {
 </script>
 ```
 
-### clear ()
+### clear ()(nicht verfügbar)
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+`clear(): void`{lang="ts-type"} (englisch)
 
-Löschen Sie alle Toast-Benachrichtigungen.
+Löscht alle Toast-Benachrichtigungen.
 
 ```vue
 <script setup lang="ts">
@@ -206,9 +206,9 @@ function clearAllToasts() {
 </script>
 ```
 
-@@@@@@@127@@tutaste
+### toasts (Für Deutschland)
 
-{lang="ts-type"}
+`toasts: Ref<Toast[]>`{lang="ts-type"} (nicht)
 
 Ein reaktives Array mit allen aktuellen Toast-Benachrichtigungen.
 

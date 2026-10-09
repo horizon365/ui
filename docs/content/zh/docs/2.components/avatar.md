@@ -10,99 +10,99 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Avatar.vue
 ---
 
-## 使用情况
+## 用法
 
-当安装了[`@nuxt/image`](https://github.com/nuxt/image)时，头像使用`<NuxtImg>`组件，否则返回到`img`。
+如果安装了[`@nuxt/image`](https://github.com/nuxt/image)，则Avatar将使用`<NuxtImg>`组件，否则将回退到`img`。
 
 ::component-code
 ---
-忽略：
+ignore:
   - src
-道具：
-  src：'https：//github.com/benjamincanac.png'
+props:
+  src: 'https://github.com/benjamincanac.png'
 ---
 ::
 
 ::note
-您可以从HTML`<img>`元素传递任何属性，如`alt`、`loading`等。
+您可以从HTML `<img>`元素传递任何属性，例如`alt`、`loading`等。
 ::
 
 ::tip
-要选择退出`@nuxt/image`，请使用`as`属性：`:as="{ img: 'img' }"`。
+要退出`@nuxt/image`，请使用`as`道具：`:as="{ img: 'img' }"`。
 ::
 
-### Src
+### 来源
 
-使用`src`prop设置图像URL。
+使用`src`属性设置图像URL。
 
 ::component-code
 ---
-忽略：
+ignore:
   - loading
-道具：
-  来源：'https：//github.com/benjamincanac.png'
-  加载：惰性
+props:
+  src: 'https://github.com/benjamincanac.png'
+  loading: lazy
 ---
 ::
 
-### Size
+大小
 
-使用`size`道具设置头像的大小。
+使用`size`道具设置头像的尺寸。
 
 ::component-code
 ---
-忽略：
+ignore:
   - src
   - loading
-道具：
-  来源：'https：//github.com/benjamincanac.png'
-  尺寸：xl
-  加载：惰性
+props:
+  src: 'https://github.com/benjamincanac.png'
+  size: xl
+  loading: lazy
 ---
 ::
 
 ::note
-根据`size`属性自动设置`<img>`元素的`width`和`height`。
+`<img>`元素的`width`和`height`是根据`size`属性自动设置的。
 ::
 
-### Icon
+### 图标
 
-使用`icon`道具显示回退[Icon](/docs/components/icon)。
+使用`icon`属性显示回退[Icon](/docs/components/icon).
 
 ::component-code
 ---
-道具：
-  图标：'i-lucide-image'
-  尺寸：md
+props:
+  icon: 'i-lucide-image'
+  size: md
 ---
 ::
 
-### Text
+文本格式
 
-使用`text`道具显示回退文本。
+使用`text`属性显示备用文本。
 
 ::component-code
 ---
-道具：
-  文本：'+1'
-  尺寸：md
+props:
+  text: '+1'
+  size: md
 ---
 ::
 
-### Alt
+### Alt选项卡
 
-当未提供图标或文本时，`alt`属性的**initials**将用作回退。
+如果未提供图标或文本，则使用`alt`属性的**initials**作为备用。
 
 ::component-code
 ---
-道具：
-  替代：'本杰明·卡纳'
-  尺寸：md
+props:
+  alt: 'Benjamin Canac'
+  size: md
 ---
 ::
 
 ::note
-`alt`属性将作为`alt`属性传递给`img`元素。
+`alt`属性作为`alt`属性传递给`img`元素。
 ::
 
 颜色：徽章
@@ -111,9 +111,9 @@ links:
 
 ::component-code
 ---
-道具类：
-  颜色：原色
-  替代：'本杰明·卡纳'
+props:
+  color: primary
+  alt: 'Benjamin Canac'
 ---
 ::
 
@@ -123,16 +123,16 @@ links:
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  来源：
-  正在载入
-- 芯片.插图
-道具：
-  来源：'https：//github.com/benjamincanac.png'
-  加载：惰性
-  芯片：
-    插图：true
+prettier: true
+ignore:
+  - src
+  - loading
+  - chip.inset
+props:
+  src: 'https://github.com/benjamincanac.png'
+  loading: lazy
+  chip:
+    inset: true
 ---
 ::
 
@@ -140,30 +140,30 @@ links:
 
 ### 带工具提示
 
-您可以使用[Tooltip](/docs/components/tooltip)组件，在鼠标器游标停留在虚拟人偶上时显示工具提示。
+您可以使用[Tooltip](/docs/components/tooltip)组件，在将鼠标器游标置于虚拟人偶上时显示工具提示。
 
-：组件示例{name="avatar-tooltip-example"}
+:component-example{name="avatar-tooltip-example"}
 
-带掩码
+### 带掩码
 
 您可以使用CSS遮色片，以自订形体（而非简单的圆形）来显示“虚拟人偶”。
 
-：组件示例{name="avatar-mask-example"}
+:component-example{name="avatar-mask-example"}
 
-美国石油学会
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes" target="_blank"}
-此组件还支持所有本机`<img>`HTML属性。
+此组件还支持所有原生`<img>` HTML属性。
 ::
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

@@ -14,79 +14,79 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Checkbox.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice la directiva `v-model` para controlar el estado marcado de la casilla de verificación.
 
 ::component-code
 ---
-Ignora:
-  - modelValoración
-Externo:
-  - modelValue (Edición española)
-Props:
-  Valoración: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: true
 ---
 ::
 
-Utilice la prop `default-value` para establecer el valor inicial cuando no necesite controlar su estado.
+Utilice el prop `default-value` para establecer el valor inicial cuando no necesite controlar su estado.
 
 ::component-code
 ---
-Ignora:
-  @@pH005@@defaultValue
-Props:
-  Valoración: True
+ignore:
+  - defaultValue
+props:
+  defaultValue: true
 ---
 ::
 
 ### Indeterminado
 
-Utilice el valor `indeterminate` en la directiva `v-model` o `default-value` para establecer la casilla de verificación en un estado indeterminado ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes).
+Utilice el valor `indeterminate` en la directiva `v-model` o en la prop `default-value` para establecer la casilla de verificación en un estado determinado ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes).
 
 ::component-code
 ---
-Ignora:
-  @@pH014@defaultValue (en inglés)
-Props:
-  defaultValue: 'indeterminado'
+ignore:
+  - defaultValue
+props:
+  defaultValue: 'indeterminate'
 ---
 ::
 
 ### Icono indeterminado
 
-Utilice el prop `indeterminate-icon` para personalizar el icono indeterminado. Predeterminados a `i-lucide-minus`.
+Utilice el prop `indeterminate-icon` para personalizar el icono indeterminado.
 
 ::component-code
 ---
-Ignora:
-  @@pH018@defaultValue (en inglés)
-Props:
-  defaultValue: 'indeterminado'
-  indeterminadoIcono: 'i-lucide-plus'
+ignore:
+  - defaultValue
+props:
+  defaultValue: 'indeterminate'
+  indeterminateIcon: 'i-lucide-plus'
 ---
 ::
 
 ::framework-only
-#Nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono a nivel mundial en su `app.config.ts` bajo la tecla `ui.icons.minus`.
+Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.minus`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
 Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.minus`.
 :::
 ::
 
-@@23@etiqueta
+### Label
 
 Utilice el prop `label` para establecer la etiqueta de la casilla de verificación.
 
 ::component-code
 ---
-Props:
-  Archivo de la etiqueta: check me
+props:
+  label: Check me
 ---
 ::
 
@@ -94,109 +94,109 @@ Cuando se utiliza el prop `required`, se añade un asterisco junto a la etiqueta
 
 ::component-code
 ---
-Ignora:
-  @@26@etiqueta
-Props:
-  Requerido: Verdadero
-  Archivo de la etiqueta: check me
+ignore:
+  - label
+props:
+  required: true
+  label: Check me
 ---
 ::
 
-@27@Descripción
+### Descripción
 
-Utilice la `description` prop para establecer la descripción de la casilla de verificación.
+Utilice el prop `description` para establecer la descripción de la casilla de verificación.
 
 ::component-code
 ---
-Ignora:
-  @@29@etiqueta
-Props:
-  Archivo de la etiqueta: check me
-  Descripción:"Esto es una casilla de verificación".
+ignore:
+  - label
+props:
+  label: Check me
+  description: 'This is a checkbox.'
 ---
 ::
 
-@@pH030@Icon
+### Icon
 
-Use the `icon` prop to set the icon of the checkbox when it is checked.
+Utilice el prop `icon` para establecer el icono de la casilla de verificación cuando esté marcada.
 
 ::component-code
 ---
-Ignora:
-  @@pH033@etiqueta
-  @@pH034@defaultValue (en inglés)
-Props:
-  Icono: 'i-lucide-heart'(en inglés)
-  Valoración: true
-  Archivo de la etiqueta: check me
+ignore:
+  - label
+  - defaultValue
+props:
+  icon: 'i-lucide-heart'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
 ::framework-only
-#Nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.check`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.check`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.check`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.check`.
 :::
 ::
 
-@@pH039@color
+### Color (Edición española)
 
-Utilice el prop `color` para cambiar el color de la casilla de verificación.
+Utilice el accesorio `color` para cambiar el color de la casilla de verificación.
 
 ::component-code
 ---
-Ignora:
-  @@pH041@etiqueta
-  @@pH042@defaultValue (en inglés)
-Props:
-  Color: Neutral
-  Valoración: true
-  Archivo de la etiqueta: check me
+ignore:
+  - label
+  - defaultValue
+props:
+  color: neutral
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-@@43@Variante
+### Variante
 
 Utilice el prop `variant` para cambiar la variante de la casilla de verificación.
 
 ::component-code
 ---
-Ignora:
-  @@pH045@etiqueta
-  @@pH046@defaultValue (en inglés)
-Props:
-  Categoría:"Primary"
-  Variación:"tarjeta"
-  Valoración: True
-  Archivo de la etiqueta: check me
+ignore:
+  - label
+  - defaultValue
+props:
+  color: 'primary'
+  variant: 'card'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-@477@477
+### Tamaño
 
-Utilice el prop `size` para cambiar el tamaño de la casilla de verificación.
+Utilice el accesorio `size` para cambiar el tamaño de la casilla de verificación.
 
 ::component-code
 ---
-Ignora:
-  @@pH049@etiqueta
-  @@pH050@@defaultValue
-Props:
-  Tamaño: XL
-  Variación: Listado
-  Valoración: true
-  Archivo de la etiqueta: check me
+ignore:
+  - label
+  - defaultValue
+props:
+  size: xl
+  variant: list
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-@@501@Indicador
+### Indicador
 
-Utilice el prop `indicator` para cambiar la posición u ocultar el indicador. Predeterminados a `start`.
+Utilice el prop `indicator` para cambiar la posición u ocultar el indicador.
 
 ::note
 Cuando `indicator` es `hidden`, el icono se muestra encima de la etiqueta en su lugar.
@@ -204,56 +204,56 @@ Cuando `indicator` es `hidden`, el icono se muestra encima de la etiqueta en su 
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH056@etiqueta
-  @@57@icon
-  @@pH058@@defaultValue
-Props:
-  Categoría:"Hidden"
-  Variación:"tarjeta"
-  Icono: 'i-lucide-heart'(en inglés)
-  Valoración: true
-  Archivo de la etiqueta: check me
+prettier: true
+ignore:
+  - label
+  - icon
+  - defaultValue
+props:
+  indicator: 'hidden'
+  variant: 'card'
+  icon: 'i-lucide-heart'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-@@59@@desactivado
+### Disabled
 
 Utilice el prop `disabled` para desactivar la casilla de verificación.
 
 ::component-code
 ---
-Ignora:
-  @@pH061@etiqueta
-Props:
-  Discapacidad: Verdadero
-  Archivo de la etiqueta: check me
+ignore:
+  - label
+props:
+  disabled: true
+  label: Check me
 ---
 ::
 
-@@pH062
+## API (Edición española)
 
-@@pH063@@Propuestas
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-Este componente también soporta todos los atributos HTML nativos `<button>`.
+Este componente también soporta todos los atributos HTML `<button>` nativos.
 ::
 
-@@P065@@Escenarios
+### Slots
 
-Componentes de slots
+:component-slots
 
-@666@@Emisiones
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@067@@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@@changelog
+## Changelog (en inglés)
 
-Categoría: component-changelog
+:component-changelog

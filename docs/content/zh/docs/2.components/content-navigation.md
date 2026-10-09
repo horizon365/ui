@@ -10,240 +10,240 @@ links:
 ---
 
 ::warning{to="/docs/getting-started/integrations/content"}
-此组件仅在安装了`@nuxt/content`模块时可用。
+此组件仅在安装`@nuxt/content`模块时可用。
 ::
 
 ## 用法
 
-将`navigation`属性与获取应用程序导航时获得的`navigation`{lang="ts-type"}值配合使用。
+使用`navigation` prop和`navigation`{lang="ts-type"}值来获取应用的导航。
 
 ::component-example
 ---
-名称：'内容导航示例'
-类别：'h-96溢出-y-自动'
-overflowHidden：真的
-道具：
-  类别：'w-完整'
+name: 'content-navigation-example'
+class: 'h-96 overflow-y-auto'
+overflowHidden: true
+props:
+  class: 'w-full'
 ---
 ::
 
-类型：
+### Type
 
-将`type`属性设定为`single`，一次只允许开启一个项目。预设值为`multiple`。
+将`type`属性设置为`single`，以允许一次只打开一个项目。将其设置为`multiple`。
 
 ::component-code{prefix="content"}
 ---
-更漂亮：真的
-收阖：true
-外部：
-  导航功能
-外部类型：
-  - ContentNavigationLink[]内容导航链接
-项目名称：
-  字体：
-  - '单个'
-  - '多个'
-隐藏：
-  班级
-  导航功能
-道具：
-  类别：'w-完整'
-  类型：'single'
-  导航：
-    - title：“指南”
-      图标：“i-lucide-书本-打开”
-      路径：'#开始使用'
-      孩子们：
-        - title：“简介”
-          路径：'#introduction'
-          活动：true
-        - title：“安装”
-          路径：'#installation'
-    - title：“可合成内容”
-      图标：“i-lucide-数据库”
-      路径：'#composables'
-      孩子们：
-        - title：'定义快捷方式'
-          路径：'#定义捷径'
-        - title：'使用模式'
-          路径：'#usemodal'
+prettier: true
+collapse: true
+external:
+  - navigation
+externalTypes:
+  - ContentNavigationLink[]
+items:
+  type:
+  - 'single'
+  - 'multiple'
+hide:
+  - class
+  - navigation
+props:
+  class: 'w-full'
+  type: 'single'
+  navigation:
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+        - title: 'Introduction'
+          path: '#introduction'
+          active: true
+        - title: 'Installation'
+          path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
+        - title: 'defineShortcuts'
+          path: '#defineshortcuts'
+        - title: 'useModal'
+          path: '#usemodal'
 ---
 ::
 
-彩色的
+### Color
 
-使用`color`道具更改导航链接的颜色。
+使用`color`属性更改导航链接的颜色。
 
 ::component-code{prefix="content"}
 ---
-更漂亮：真的
-收阖：true
-外部：
-  导航功能
-外部类型：
-  - ContentNavigationLink[]内容导航链接
-隐藏：
-  班级
-  导航功能
-道具：
-  类别：'w-完整'
-  颜色：“中性”
-  导航：
-    - title：“指南”
-      图标：“i-lucide-书本-打开”
-      路径：'#开始使用'
-      孩子们：
-      标题：“简介”
-        路径：'#简介'
-        活动：true
-      标题：“安装”
-        路径：'#installation'
-    - title：“可合成内容”
-      图标：“i-lucide-数据库”
-      路径：'#composables'
-      孩子们：
-      - title：'定义快捷方式'
-        路径：'#定义捷径'
-      - title：'使用模态'
-        路径：'#usemodal'
+prettier: true
+collapse: true
+external:
+  - navigation
+externalTypes:
+  - ContentNavigationLink[]
+hide:
+  - class
+  - navigation
+props:
+  class: 'w-full'
+  color: 'neutral'
+  navigation:
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
+      - title: 'defineShortcuts'
+        path: '#defineshortcuts'
+      - title: 'useModal'
+        path: '#usemodal'
 ---
 ::
 
-### 变体
+### Variant
 
-使用`variant`道具更改导航链接的变体。
+使用`variant` prop更改导航链接的变体。
 
 ::component-code{prefix="content"}
 ---
-更漂亮：真的
-收阖：true
-外部：
-  导航功能
-外部类型：
-  - ContentNavigationLink[]内容导航链接
-隐藏：
-  班级
-  导航功能
-项目名称：
-  变体：
-  - '链接'
-  '药丸'
-道具：
-  类别：'w-完整'
-  变体：'link'
-  导航：
-    @@标题：“指南”
-      图标：“i-lucide-书本-打开”
-      路径：'#开始使用'
-      孩子们：
-      标题：“简介”
-        路径：'#introduction'
-        活动：true
-      标题：“安装”
-        路径：'#installation'
-    - title：“可合成内容”
-      图标：“i-lucide-数据库”
-      路径：'#composables'
-      孩子们：
-      - title：'定义快捷方式'
-        路径：'#定义捷径'
-      - title：“使用模态”
-        路径：'#usemodal'
+prettier: true
+collapse: true
+external:
+  - navigation
+externalTypes:
+  - ContentNavigationLink[]
+hide:
+  - class
+  - navigation
+items:
+  variant:
+  - 'link'
+  - 'pill'
+props:
+  class: 'w-full'
+  variant: 'link'
+  navigation:
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
+      - title: 'defineShortcuts'
+        path: '#defineshortcuts'
+      - title: 'useModal'
+        path: '#usemodal'
 ---
 ::
 
-醒目提示
+### 亮点
 
-使用`highlight`道具显示活动链接的高亮边框。
+使用`highlight` prop为活动链接显示高亮边框。
 
 使用`highlight-color`属性更改边框的颜色。默认为`color`属性。
 
 ::component-code{prefix="content"}
 ---
-更漂亮：真的
-收阖：true
-外部：
-  导航功能
-外部类型：
-  - ContentNavigationLink[]内容导航链接
-隐藏：
-  班级
-  导航功能
-道具：
-  类别：'w-完整'
-  高亮显示：真
-  highlightColor：“主要”
-  颜色：'主要'
-  变体：“pill”
-  导航：
-    - title：“指南”
-      图标：“i-lucide-书本-打开”
-      路径：'#开始使用'
-      孩子们：
-      标题：“简介”
-        路径：'#introduction'
-        活动：true
-      标题：“安装”
-        路径：'#installation'
-    - title：“可合成内容”
-      图标：“i-lucide-数据库”
-      路径：'#composables'
-      孩子们：
-      - title：'定义快捷方式'
-        路径：'#定义捷径'
-      - title：'使用模态'
-        路径：'#usemodal'
+prettier: true
+collapse: true
+external:
+  - navigation
+externalTypes:
+  - ContentNavigationLink[]
+hide:
+  - class
+  - navigation
+props:
+  class: 'w-full'
+  highlight: true
+  highlightColor: 'primary'
+  color: 'primary'
+  variant: 'pill'
+  navigation:
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
+      - title: 'defineShortcuts'
+        path: '#defineshortcuts'
+      - title: 'useModal'
+        path: '#usemodal'
 ---
 ::
 
-### 结尾图标
+### 拖尾图标
 
-使用`trailing-icon`属性可自定义具有子项的项的尾部[Icon](/docs/components/icon)。默认值为`i-lucide-chevron-down`。
+使用`trailing-icon`属性可以自定义具有子项. `i-lucide-chevron-down`的项目的尾随[Icon](/docs/components/icon)。
 
 ::component-code{prefix="content"}
 ---
-更漂亮：真的
-收阖：true
-外部：
-  导航功能
-外部类型：
-  - ContentNavigationLink[]内容导航链接
-隐藏：
-  班级
-  导航功能
-道具：
-  类别：'w-完整'
-  尾部图标：'i-透明箭头向上'
-  导航：
-    @@标题：“指南”
-      图标：“i-lucide-书本-打开”
-      路径：'#开始使用'
-      孩子们：
-      标题：“简介”
-        路径：'#introduction'
-        活动：true
-      标题：“安装”
-        路径：'#installation'
-    - title：“可合成内容”
-      图标：“i-lucide-数据库”
-      路径：'#composables'
-      孩子们：
-      - title：'定义快捷方式'
-        路径：'#定义捷径'
-      “使用模式”
-        路径：'#usemodal'
+prettier: true
+collapse: true
+external:
+  - navigation
+externalTypes:
+  - ContentNavigationLink[]
+hide:
+  - class
+  - navigation
+props:
+  class: 'w-full'
+  trailingIcon: 'i-lucide-arrow-up'
+  navigation:
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
+      - title: 'defineShortcuts'
+        path: '#defineshortcuts'
+      - title: 'useModal'
+        path: '#usemodal'
 ---
 ::
 
 ::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`ui.icons.chevronDown`键下的`app.config.ts`中全局自定义此图标。
+你可以在你的`app.config.ts`中的`ui.icons.chevronDown`键下全局自定义这个图标。
 ::
 
-示例
+## 示例
 
 ### 在布局中
 
-在布局中使用[PageAside](/docs/components/page-aside)组件内的ContentNavigation组件可以显示页面导航：
+使用布局中[PageAside](/docs/components/page-aside)组件内的ContentNavigation组件来显示页面的导航：
 
 ```vue [layouts/docs.vue]{11}
 <script setup lang="ts">
@@ -265,9 +265,9 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 </template>
 ```
 
-### 在标题中
+### 在标头内
 
-使用[Header](/docs/components/header)组件的`content`插槽内的ContentNavigation组件，可在移动的上显示页面导航：
+使用[Header](/docs/components/header)组件的`content`插槽中的ContentNavigation组件，在移动的上显示页面导航：
 
 ```vue [components/Header.vue]{9-11}
 <script setup lang="ts">
@@ -285,24 +285,24 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 </template>
 ```
 
-## 活性成分
+## API
 
-### 道具
+### Props
 
-：组件-支柱
+:component-props
 
-### 插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-### 排放
+### Emits
 
-：组件发射
+:component-emits
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志{prefix="content"}
+:component-changelog{prefix="content"}

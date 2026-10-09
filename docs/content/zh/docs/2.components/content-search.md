@@ -13,35 +13,35 @@ links:
 ---
 
 ::warning{to="/docs/getting-started/integrations/content"}
-此组件仅在安装了`@nuxt/content`模块时可用。
+此组件仅在安装`@nuxt/content`模块时可用。
 ::
 
 ## 用法
 
-内容搜索组件使用内置的[`@nuxt/content`](https://content.nuxt.com)搜索支持来扩展[CommandPalette](PH07)component，导航分组和颜色模式命令，同时支持客户端[Fuse.js](https://www.fusejs.io/)过滤和服务器端[FTS5全文搜索](https://www.sqlite.org/fts5.html)。您可以传递任何CommandPalette属性，例如`icon`、`placeholder`等。
+ContentSearch组件扩展了[CommandPalette](/docs/components/command-palette)组件，内置了[`@nuxt/content`](https://content.nuxt.com)搜索支持，导航分组和颜色模式命令。它同时支持客户端[Fuse.js](https://www.fusejs.io/)过滤和服务器端[FTS 5完整-text search](https://www.sqlite.org/fts5.html)。您可以传递任何Command属性，如`icon`、`placeholder`等。
 
 ::component-example
 ---
-iframe：
-  高度：500 px;
-iframeMobile：真的
-overflowHidden：真的
-资料来源：错误
-名称：'内容搜索示例'
+iframe:
+  height: 500px;
+iframeMobile: true
+overflowHidden: true
+source: false
+name: 'content-search-example'
 ---
 ::
 
 ::note
-您可以按下：kbd{value="meta"}：kbd{value="K" class="ms-px"}、使用[ContentSearchButton](/docs/components/content-search-button)组件或使用`useContentSearch`可组合：`const { open } = useContentSearch()`{lang="ts"}来开启[命令调色盘]。
+您可以通过按：kbd{value="meta"}：kbd{value="K" class="ms-px"}、使用[ContentSearchButton](/docs/components/content-search-button)组件或使用`useContentSearch`组合：`const { open } = useContentSearch()`{lang="ts"}来打开CommandButton。
 ::
 
 ::tip
-建议您将`ContentSearch`组件包装在[ClientOnly](https://nuxt.com/docs/api/components/client-only)组件中，这样就不会在服务器上呈现该组件。
+建议将`ContentSearch`组件包装在[ClientOnly](https://nuxt.com/docs/api/components/client-only)组件中，这样它就不会呈现在服务器上。
 ::
 
-导航功能
+### 导航
 
-将`navigation`属性与[`queryCollectionNavigation`](https://content.nuxt.com/docs/utils/query-collection-navigation)配合使用，可按节对搜索结果进行分组：
+将`navigation`属性与[`queryCollectionNavigation`](https://content.nuxt.com/docs/utils/query-collection-navigation)一起使用，可以按部分对搜索结果进行分组：
 
 ```vue [app.vue] {2, 9}
 <script setup lang="ts">
@@ -59,9 +59,9 @@ const { data: navigation } = await useAsyncData('navigation', () => queryCollect
 </template>
 ```
 
-文件夹
+### 文件
 
-将`files`属性与[`queryCollectionSearchSections`](https://content.nuxt.com/docs/utils/query-collection-search-sections)配合使用，以便预先加载所有搜索节，并使用客户端[Fuse.js](https://www.fusejs.io/)筛选：
+使用`files` prop和[`queryCollectionSearchSections`](https://content.nuxt.com/docs/utils/query-collection-search-sections)预先加载所有搜索部分，并使用客户端[Fuse.js](https://www.fusejs.io/)过滤：
 
 ```vue [app.vue] {4-8, 16}
 <script setup lang="ts">
@@ -88,15 +88,15 @@ const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSe
 ```
 
 ::tip
-使用`fuse`属性配置传递给底层[CommandPalette](/docs/components/command-palette)的[useFuse](https://vueuse.org/integrations/useFuse)选项，例如`resultLimit`（默认值为`12`）和`fuseOptions.threshold`（默认值为`0.1`）。
+使用`fuse`属性配置[useFuse](https://vueuse.org/integrations/useFuse)传递到底层[CommandPalette](/docs/components/command-palette)的选项，如`resultLimit`（默认`12`）和`fuseOptions.threshold`（默认`0.1`）。
 ::
 
-### 搜索：徽章{label="4.8+" class="align-text-top"}
+### 搜索：badge{label="4.8+" class="align-text-top"}
 
-将`search`属性与[`useSearchCollection`](https://content.nuxt.com/docs/utils/use-search-collection)搭配使用，以进行服务器端[FTS5全文查找搜寻](https://www.sqlite.org/fts5.html)搭配反白显示的程式码片段，而非客户端筛选：
+将`search` prop与[`useSearchCollection`](https://content.nuxt.com/docs/utils/use-search-collection)配合使用，以进行服务器端[FTS 5全文搜索](https://www.sqlite.org/fts5.html)，突出显示片段，而不是客户端筛选：
 
 ::warning
-需要`@nuxt/content`v3.14以上版本。
+需要`@nuxt/content` v3.14+。
 ::
 
 ```vue [app.vue] {4-7, 24-25}
@@ -132,16 +132,16 @@ watch(open, (value) => {
 ```
 
 ::tip
-传递`search-status`，以便在索引准备就绪后，组件可以自动重新触发搜索。使用`search-delay`（默认为`100ms`）可控制在触发搜索之前必须暂停键入的时间。`fuse.resultLimit`选项可限制所有组（搜索结果、链接、主题等）中返回的总结果。
+传递`search-status`，以便组件可以在索引准备就绪后自动重新触发搜索。使用`search-delay`（默认`100ms`）控制在搜索触发前必须暂停输入的时间。`fuse.resultLimit`选项限制所有组（搜索结果，链接，主题等）返回的总结果。
 ::
 
 ::note
-当使用`search`属性时，您不需要传递`files`。该组件在每次击键时调用异步搜索函数，而不是Fuse.js。结果将自动映射并按导航进行分组，并突出显示代码段。与`files`方法不同的是，`files`方法会预先加载所有搜索部分，并允许您在键入之前浏览导航项。`search`属性仅在输入查询后返回结果。
+当使用`search` prop时，您不需要传递`files`。组件在每个子目录上调用fixc搜索函数，而不是Fuse.js。结果会自动映射并按导航进行分组，并突出显示片段。与`files`方法不同，`search` prop只在输入查询后返回结果。`files`方法预先加载所有搜索部分，并允许您在输入前浏览导航项。
 ::
 
-### 快捷方式
+### php
 
-使用`shortcut`属性可更改[defineShortcuts](/docs/composables/define-shortcuts)中用于打开内容搜索组件的快捷方式。默认为`meta_k`（：kbd{value="meta"}：kbd{value="K"}）。
+使用`shortcut`属性将[defineShortcuts](/docs/composables/define-shortcuts)中用于打开ContentSearch组件的快捷方式. png更改为`meta_k`（：kbd{value="meta"}：kbd{value="K"}）。
 
 ```vue [app.vue]{5}
 <template>
@@ -157,7 +157,7 @@ watch(open, (value) => {
 
 ### 链接
 
-使用`links`属性在命令调板顶部添加一组快速访问链接：
+使用`links` prop在命令面板顶部添加一组快速访问链接：
 
 ```vue [app.vue] {21}
 <script setup lang="ts">
@@ -187,9 +187,9 @@ const links = [{
 </template>
 ```
 
-### 彩色模式
+### 颜色模式
 
-默认情况下，一组命令将被添加到命令调色板中，以便您可以在亮模式和暗模式之间切换。只有当`colorMode`未被强制用于特定页面时，此操作才会生效，这可以通过`definePageMeta`来实现：
+默认情况下，一组命令会被添加到命令面板中，这样你就可以在亮暗模式之间切换。这只会在特定页面中不强制`colorMode`的情况下生效，这可以通过`definePageMeta`来实现：
 
 ```vue [pages/index.vue]
 <script setup lang="ts">
@@ -199,7 +199,7 @@ definePageMeta({
 </script>
 ```
 
-您可以将`color-mode`属性设定为`false`来停用此行为：
+您可以通过将`color-mode`属性设置为`false`来禁用此行为：
 
 ```vue [app.vue]{5}
 <template>
@@ -213,32 +213,32 @@ definePageMeta({
 </template>
 ```
 
-## 活性成分
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-### 插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-发射性
+### Emits
 
-：组件发射
+:component-emits
 
-暴露
+### Expose
 
 通过模板引用访问组件时，可以使用以下命令：
 
 | 名称|类型|
 | ---- | ---- |
-| 233号，235号|236号线|
+| `commandPaletteRef`{lang="ts-type"}| `Ref<InstanceType<typeof UCommandPalette> \| null>`{lang="ts-type"}|
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：component-changelog{prefix="content"}
+:component-changelog{prefix="content"}

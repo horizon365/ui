@@ -8,11 +8,11 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageBody.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
 Le composant PageBody enveloppe votre contenu principal et ajoute un rembourrage pour un espacement cohérent.
 
-Utilisez-le à l'intérieur de l'emplacement par défaut du composant [Page](/docs/components/page), après le composant [PageHeader](/docs/components/page-header):
+Utilisez-le dans l'emplacement par défaut du composant [Page](/docs/components/page), après le composant [PageHeaderxph006/docs/components/page-header):
 
 ```vue {5}
 <template>
@@ -24,7 +24,7 @@ Utilisez-le à l'intérieur de l'emplacement par défaut du composant [Page](/do
 </template>
 ```
 
-@@ph018@exemples
+## exemples
 
 ::note
 Bien que ces exemples utilisent [Nuxt Content](https://content.nuxt.com), les composants peuvent être intégrés à n'importe quel système de gestion de contenu.
@@ -74,20 +74,20 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 Dans cet exemple, nous utilisons le composant [`ContentRenderer`](https://content.nuxt.com/docs/components/content-renderer) de `@nuxt/content` pour rendre le contenu de la page.
 ::
 
-@@ph065@@api
+## api
 
-@@ph066@@props
+### Prophérique
 
-Composants-props
+:component-props
 
-@@ph067@@réseaux sociaux
+### Slots électroniques
 
-Composants slots
+:component-slots
 
-@@ph068@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

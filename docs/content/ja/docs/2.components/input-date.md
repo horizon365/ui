@@ -17,18 +17,18 @@ links:
 
 ## 使用法
 
-`v-model`ディレクティブを使用して、選択した日付を制御します。
+`v-model`ディレクティブを使用して選択した日付を制御します。
 
 ::component-code
 ---
-キャスト
-  modelValue DateValue
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue [2022 2 3]
+cast:
+  modelValue: DateValue
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: [2022, 2, 3]
 ---
 ::
 
@@ -36,14 +36,14 @@ links:
 
 ::component-code
 ---
-キャスト
-  defaultValue DateValue
-無視
-  -  defaultValue
-外部
-  -  defaultValue
-小道具
-  defaultValue [2022 2 6]
+cast:
+  defaultValue: DateValue
+ignore:
+  - defaultValue
+external:
+  - defaultValue
+props:
+  defaultValue: [2022, 2, 6]
 ---
 ::
 
@@ -59,49 +59,49 @@ links:
 :::
 ::
 
-### 範囲
+### Range
 
 `range`プロパティを使用して、日付の範囲を選択します。
 
 ::component-code
 ---
-きれい真
-キャスト
-  modelValue DateRange
-無視
-  -  range
-  -  modelValue.start
-  -  modelValue.end
-外部
-  -  modelValue
-小道具
-  範囲真
-  modelValue
-    開始[2022年2月3日]
-    終了[2022年2月20日]
+prettier: true
+cast:
+  modelValue: DateRange
+ignore:
+  - range
+  - modelValue.start
+  - modelValue.end
+external:
+  - modelValue
+props:
+  range: true
+  modelValue:
+    start: [2022, 2, 3]
+    end: [2022, 2, 20]
 ---
 ::
 
-### カラー
+### Color
 
 `color`プロパティを使用して、InputDateの色を変更します。
 
 ::component-code
 ---
-小道具
-  色ニュートラル
-  ハイライト真
+props:
+  color: neutral
+  highlight: true
 ---
 ::
 
-### バリアント
+### Variant
 
 `variant`プロパティを使用して、InputDateのバリアントを変更します。
 
 ::component-code
 ---
-小道具
-  バリアント：微妙
+props:
+  variant: subtle
 ---
 ::
 
@@ -111,141 +111,141 @@ links:
 
 ::component-code
 ---
-小道具
-  サイズXL
+props:
+  size: xl
 ---
 ::
 
-### アイコン
+### Icon
 
-`icon` propを使用して、[ Icon ](/docs/components/icon)をInputDate内に表示します。
+`icon`プロパティを使用して、[Icon](/docs/components/icon)をInputDate内に表示します。
 
 ::component-code
 ---
-小道具
-  アイコン'i—lucide—calendar'
+props:
+  icon: 'i-lucide-calendar'
 ---
 ::
 
 ::note
-アイコンの位置を設定するには`leading`および`trailing` propsを使用し、位置ごとに異なるアイコンを設定するには`leading-icon`および`trailing-icon` propsを使用します。
+アイコンの位置を設定するには`leading`と`trailing`のプロップを使用し、位置ごとに異なるアイコンを設定するには`leading-icon`と`trailing-icon`のプロップを使用します。
 ::
 
-### セパレータアイコン
+### Separatorアイコン
 
-`separator-icon`プロパティを使用して、範囲区切り文字の[ Icon ](/docs/components/icon)を変更します。デフォルトは`i-lucide-minus`です。
+`separator-icon`プロパティを使用して、範囲区切り文字の[Icon](/docs/components/icon)を変更します。デフォルトは`i-lucide-minus`です。
 
 ::component-code
 ---
-無視
-  - 範囲
-小道具
-  範囲真
-  separatorIcon 'i—lucide—arrow—right'
+ignore:
+  - range
+props:
+  range: true
+  separatorIcon: 'i-lucide-arrow-right'
 ---
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.minus`キーの下の`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`app.config.ts`の`ui.icons.minus`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.minus`キーの下の`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`vite.config.ts`の`ui.icons.minus`キーでグローバルにカスタマイズできます。
 :::
 ::
 
 ### アバター
 
-`avatar` propを使用して、[ Avatar ](/docs/components/avatar)をInputDate内に表示します。
+`avatar`プロパティを使用して、[Avatar](/docs/components/avatar)をInputDate内に表示します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  avatar.ローディング
-小道具
-  アバター
-    http//github.com/vuejs.png/
-    読み込み怠惰
-  サイズMD
-  variantアウトライン
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
+    src: 'https://github.com/vuejs.png'
+    loading: lazy
+  size: md
+  variant: outline
 ---
 ::
 
 ### 無効
 
-`disabled`プロパティを使用して、InputDateを無効にします。
+`disabled`プロパティを使用してInputDateを無効にします。
 
 ::component-code
 ---
-小道具
-  無効true
+props:
+  disabled: true
 ---
 ::
 
-## 例
+## サンプル
 
 ### 利用できない日付
 
-`is-date-unavailable` propを関数とともに使用して、特定の日付を利用できないとマークします。
+`is-date-unavailable`プロパティを使用して、特定の日付を使用できないとしてマークします。
 
 ::component-example
 ---
-名前'入力日付unavailable—date—example'
+name: 'input-date-unavailable-dates-example'
 ---
 ::
 
-### 最小/最大日付
+### 最小/最大日付付き
 
-`min-value`と`max-value` propsを使用して日付を制限します。
+`min-value`と`max-value`の小道具を使用して日付を制限します。
 
 ::component-example
 ---
-名前'input—date—min—max—dates—example'
+name: 'input-date-min-max-dates-example'
 ---
 ::
 
 ### 日付ピッカーとして
 
-[ Calendar ](/docs/components/calendar)[ Popover ](/docs/components/popover)コンポーネントを使用して、日付ピッカーを作成します。
+日付ピッカーを作成するには、[Calendar](/docs/components/calendar)と[Popoverv](/docs/components/popover)コンポーネントを使用します。
 
 ::component-example
 ---
-名前'入力日付日付ピッカー例'
+name: 'input-date-date-picker-example'
 ---
 ::
 
 ### 日付範囲ピッカーとして
 
-[ Calendar ](/docs/components/calendar)と[ Popover ](/docs/components/popover)コンポーネントを使用して、日付範囲ピッカーを作成します。
+日付範囲ピッカーを作成するには、[Calendar](/docs/components/calendar)と[Popover](/docs/components/popover)コンポーネントを使用します。
 
 ::component-example
 ---
-名前'入力—日付—範囲—ピッカーの例'
+name: 'input-date-date-range-picker-example'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-##  Theme
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

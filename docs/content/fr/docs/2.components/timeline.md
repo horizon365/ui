@@ -10,319 +10,319 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Timeline.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
 Utilisez le composant Timeline pour afficher une liste d'éléments dans une timeline.
 
 ::component-code
 ---
-Collapse: vrai
-Caché:
-  @@ph001@classe
-  @@ph002@@valeur défaillante
-ignorer:
-  @@ph003@articles
-  @@ph004@classe
-  @@@ph005@@defaultValue
-Extérieure:
-  @@ph006@articles
-Extérieurs:
-  @@007@@heure []
-Props:
-  Valeur défaite: 2
+collapse: true
+hide:
+  - class
+  - defaultValue
+ignore:
+  - items
+  - class
+  - defaultValue
+external:
+  - items
+externalTypes:
+  - TimelineItem[]
+props:
+  defaultValue: 2
   items:
-    - date:'15 mars 2025'
-      Titre original: Project Kickoff
-      Description: 'Lancement du projet avec alignement d'équipe. Configurer les jalons du projet et les ressources allouées.'
-      Étiquette: i-lucide-rocket
-    - date:'22 mars 2025'
-      Titre: Phase de design
-      Description: 'Ateliers de recherche et de conception utilisateurs.Création de wireframes et de prototypes pour les tests utilisateurs'.
-      Icon: i-lucide-palette
-    - date:'29 mars 2025'
-      Titre: Sprint de développement
-      Description: 'Développement frontend et backend. Fonctionnalités de base implémentées et intégrées aux API.'
-      Icône: i-lucide-code.
-    - date:'Apr 5 2025'
-      Titre: Test & Déploiement
-      Description: 'Tests d'assurance qualité et optimisation des performances. Déploiement de l'application en production.'
-      Icône: i-lucide-check-circle
-  Catégorie: W-96
+    - date: 'Mar 15, 2025'
+      title: 'Project Kickoff'
+      description: 'Kicked off the project with team alignment. Set up project milestones and allocated resources.'
+      icon: 'i-lucide-rocket'
+    - date: 'Mar 22 2025'
+      title: 'Design Phase'
+      description: 'User research and design workshops. Created wireframes and prototypes for user testing.'
+      icon: 'i-lucide-palette'
+    - date: 'Mar 29 2025'
+      title: 'Development Sprint'
+      description: 'Frontend and backend development. Implemented core features and integrated with APIs.'
+      icon: 'i-lucide-code'
+    - date: 'Apr 5 2025'
+      title: 'Testing & Deployment'
+      description: 'QA testing and performance optimization. Deployed the application to production.'
+      icon: 'i-lucide-check-circle'
+  class: 'w-96'
 ---
 ::
 
-@@ph012@articles
+### Éléments
 
-Utilisez le `items` prop comme un tableau d'objets avec les propriétés suivantes:
+Utilisez le prop `items` comme un tableau d'objets avec les propriétés suivantes:
 
-@@
-@@
-@@
-@@
-@@
-@@
-@@
-@@
-@@
+- x`date?: string`xx{lang="ts-type"}
+- x`title?: string`x{lang="ts-type"}
+- x`description?: AvatarProps`x{lang="ts-type"}
+- x`icon?: string`x{lang="ts-type"}
+- x`avatar?: AvatarProps`x{lang="ts-type"}
+- xx`value?: string | number`xx{lang="ts-type"}
+Xph055xx[x`slot?: string`x{lang="ts-type"}x](x#with-custom-slotx)
+- x`class?: any`xx{lang="ts-type"}
+- xx`ui?: { item?: ClassNameValue, container?: ClassNameValue, indicator?: ClassNameValue, separator?: ClassNameValue, wrapper?: ClassNameValue, date?: ClassNameValue, title?: ClassNameValue, description?: ClassNameValue }`xx{lang="ts-type"}
 
 ::component-code
 ---
-Ignorer:
-  @@ph045@articles
-  @@ph046@classe
+ignore:
+  - items
+  - class
   - defaultValue
-Extérieur:
-  @@ph048@articles
-Extérieurs:
-  @@449@@449@449@449@449@449@449@449@449@49@449@449@49@49@449@49@49@49@49@49@49@49@49@49@49@49@49@49@49@49@49@49@49@49@49@49@49@49@499@4999@4999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
-Props:
-  Valeur défaite: 2
+external:
+  - items
+externalTypes:
+  - TimelineItem[]
+props:
+  defaultValue: 2
   items:
-    - date:'15 mars 2025'
-      Titre original: Project Kickoff
-      Description: 'Lancement du projet avec alignement d'équipe. Configurer les jalons du projet et les ressources allouées.'
-      Étiquette: i-lucide-rocket
-    - date:'22 mars 2025'
-      Titre: Phase de design
-      Description: 'Ateliers de recherche et de conception utilisateurs.Création de wireframes et de prototypes pour les tests utilisateurs'.
-      Icon: i-lucide-palette
-    - date:'29 mars 2025'
-      Titre: Sprint de développement
-      Description: 'Développement frontend et backend. Fonctionnalités de base implémentées et intégrées aux API.'
-      Icône: i-lucide-code.
-    - date:'Apr 5 2025'
-      Titre: Test & Déploiement
-      Description: 'Tests d'assurance qualité et optimisation des performances. Déploiement de l'application en production.'
-      Icône: i-lucide-check-circle
-  Catégorie: W-96
+    - date: 'Mar 15, 2025'
+      title: 'Project Kickoff'
+      description: 'Kicked off the project with team alignment. Set up project milestones and allocated resources.'
+      icon: 'i-lucide-rocket'
+    - date: 'Mar 22 2025'
+      title: 'Design Phase'
+      description: 'User research and design workshops. Created wireframes and prototypes for user testing.'
+      icon: 'i-lucide-palette'
+    - date: 'Mar 29 2025'
+      title: 'Development Sprint'
+      description: 'Frontend and backend development. Implemented core features and integrated with APIs.'
+      icon: 'i-lucide-code'
+    - date: 'Apr 5 2025'
+      title: 'Testing & Deployment'
+      description: 'QA testing and performance optimization. Deployed the application to production.'
+      icon: 'i-lucide-check-circle'
+  class: 'w-96'
 ---
 ::
 
-### couleur
+### Couleur
 
-Utilisez la prop `color` pour modifier la couleur des éléments actifs dans une chronologie.
+Utilisez la prop `color` pour changer la couleur des éléments actifs dans une timeline.
 
 ::component-code
 ---
-Ignorer:
-  @@556@éléments
-  @@ph057@classe
+ignore:
+  - items
+  - class
   - defaultValue
-Extérieure:
-  @@59@@éléments
-Extérieurs:
-  @@@P060@@TimelineItem [réf. nécessaire]
-Props:
-  Couleur: Neutre
-  Valeur défaite: 2
+external:
+  - items
+externalTypes:
+  - TimelineItem[]
+props:
+  color: neutral
+  defaultValue: 2
   items:
-    - date:'15 mars 2025'
-      Titre original: Project Kickoff
-      Description: 'Lancement du projet avec alignement d'équipe. Configurer les jalons du projet et les ressources allouées.'
-      Étiquette: i-lucide-rocket
-    - date:'22 mars 2025'
-      Titre: Phase de design
-      Description: 'Ateliers de recherche et de conception utilisateurs.Création de wireframes et de prototypes pour les tests utilisateurs'.
-      Icon: i-lucide-palette
-    - date:'29 mars 2025'
-      Titre: Sprint de développement
-      Description: 'Développement frontend et backend. Fonctionnalités de base implémentées et intégrées aux API.'
-      Icône: i-lucide-code
-    - date:'Apr 5 2025'
-      Titre: Test & Déploiement
-      Description: 'Tests d'assurance qualité et optimisation des performances. Déploiement de l'application en production.'
-      Icône: i-lucide-check-circle
-  Catégorie: W-96
+    - date: 'Mar 15, 2025'
+      title: 'Project Kickoff'
+      description: 'Kicked off the project with team alignment. Set up project milestones and allocated resources.'
+      icon: 'i-lucide-rocket'
+    - date: 'Mar 22 2025'
+      title: 'Design Phase'
+      description: 'User research and design workshops. Created wireframes and prototypes for user testing.'
+      icon: 'i-lucide-palette'
+    - date: 'Mar 29 2025'
+      title: 'Development Sprint'
+      description: 'Frontend and backend development. Implemented core features and integrated with APIs.'
+      icon: 'i-lucide-code'
+    - date: 'Apr 5 2025'
+      title: 'Testing & Deployment'
+      description: 'QA testing and performance optimization. Deployed the application to production.'
+      icon: 'i-lucide-check-circle'
+  class: 'w-96'
 ---
 ::
 
-@@pH065@série
+### Size
 
-Utilisez la prop `size` pour modifier la taille de la chronologie.
+Utilisez la prop `size` pour modifier la taille de la timeline.
 
 ::component-code
 ---
-Ignorer:
-  @@ph067@articles
-  @@ph068@classe
+ignore:
+  - items
+  - class
   - defaultValue
-Extérieure:
-  @@ph070@articles
-Extérieurs:
-  @@701@@TimelineItem [réf. nécessaire]
-Props:
-  Taille: XS
-  Valeur défaite: 2
+external:
+  - items
+externalTypes:
+  - TimelineItem[]
+props:
+  size: xs
+  defaultValue: 2
   items:
-    - date:'15 mars 2025'
-      Titre original: Project Kickoff
-      Description: 'Lancement du projet avec alignement d'équipe. Configurer les jalons du projet et les ressources allouées.'
-      Étiquette: i-lucide-rocket
-    - date:'22 mars 2025'
-      Titre: Phase de design
-      Description: 'Ateliers de recherche et de conception utilisateurs.Création de wireframes et de prototypes pour les tests utilisateurs'.
-      Icon: i-lucide-palette
-    - date:'29 mars 2025'
-      Titre: Sprint de développement
-      Description: 'Développement frontend et backend. Fonctionnalités de base implémentées et intégrées aux API.'
-      Icône: i-lucide-code
-    - date:'Apr 5 2025'
-      Titre: Test & Déploiement
-      Description: 'Tests d'assurance qualité et optimisation des performances. Déploiement de l'application en production.'
-      Icône: i-lucide-check-circle
-  Catégorie: W-96
+    - date: 'Mar 15, 2025'
+      title: 'Project Kickoff'
+      description: 'Kicked off the project with team alignment. Set up project milestones and allocated resources.'
+      icon: 'i-lucide-rocket'
+    - date: 'Mar 22 2025'
+      title: 'Design Phase'
+      description: 'User research and design workshops. Created wireframes and prototypes for user testing.'
+      icon: 'i-lucide-palette'
+    - date: 'Mar 29 2025'
+      title: 'Development Sprint'
+      description: 'Frontend and backend development. Implemented core features and integrated with APIs.'
+      icon: 'i-lucide-code'
+    - date: 'Apr 5 2025'
+      title: 'Testing & Deployment'
+      description: 'QA testing and performance optimization. Deployed the application to production.'
+      icon: 'i-lucide-check-circle'
+  class: 'w-96'
 ---
 ::
 
-### Référencement
+### Orientation
 
-Utilisez la prop `orientation` pour changer l'orientation de la timeline. Par défaut à `vertical`.
+Utilisez la prop `orientation` pour modifier l'orientation de la timeline. Par défaut à `vertical`.
 
 ::component-code
 ---
-ignorer:
-  @@779@articles
-  @@ph080@classe
+ignore:
+  - items
+  - class
   - defaultValue
-Extérieur:
-  @@ph082@articles
-Extérieurs:
-  @@883@@heure []
-Props:
-  Orientation: « horizontale »
-  Valeur défaite: 2
+external:
+  - items
+externalTypes:
+  - TimelineItem[]
+props:
+  orientation: 'horizontal'
+  defaultValue: 2
   items:
-    - date:'15 mars 2025'
-      Titre original: Project Kickoff
-      Description: "Lancement du projet avec l'alignement de l'équipe."
-      Étiquette: i-lucide-rocket
-    - date:'22 mars 2025'
-      Titre: Phase de design
-      Description: 'Ateliers de recherche et de conception utilisateurs'.
-      Icon: i-lucide-palette
-    - date:'29 mars 2025'
-      Titre: Sprint de développement
-      Description: Développement frontend et backend.
-      Icône: i-lucide-code
-    - date:'Apr 5 2025'
-      Titre: Test & Déploiement
-      Description: 'Tests QA et optimisation des performances.'
-      Icône: i-lucide-check-circle
-  Catégorie: w-full
-classe: « overflow-x-auto »
+    - date: 'Mar 15, 2025'
+      title: 'Project Kickoff'
+      description: 'Kicked off the project with team alignment.'
+      icon: 'i-lucide-rocket'
+    - date: 'Mar 22 2025'
+      title: 'Design Phase'
+      description: 'User research and design workshops.'
+      icon: 'i-lucide-palette'
+    - date: 'Mar 29 2025'
+      title: 'Development Sprint'
+      description: 'Frontend and backend development.'
+      icon: 'i-lucide-code'
+    - date: 'Apr 5 2025'
+      title: 'Testing & Deployment'
+      description: 'QA testing and performance optimization.'
+      icon: 'i-lucide-check-circle'
+  class: 'w-full'
+class: 'overflow-x-auto'
 ---
 ::
 
-@@888@rétroactions
+### Reverse
 
 Utilisez la prop inverse pour inverser la direction de la timeline.
 
 ::component-code
 ---
-ignorer:
-  @@ph089@articles
-  @@ph090@classe
+ignore:
+  - items
+  - class
   - defaultValue
-Extérieure:
-  @@ph092@articles
-Extérieurs:
-  @@P093@@TimelineItem [réf. nécessaire]
-Props:
-  Revers: vrai
-  Modèle: 2
-  Orientation: "Vertical"
+external:
+  - items
+externalTypes:
+  - TimelineItem[]
+props:
+  reverse: true
+  modelValue: 2
+  orientation: 'vertical'
   items:
-    - date:'15 mars 2025'
-      Titre original: Project Kickoff
-      Description: "Lancement du projet avec l'alignement de l'équipe."
-      Étiquette: i-lucide-rocket
-    - date:'22 mars 2025'
-      Titre: Phase de design
-      Description: 'Ateliers de recherche et de conception utilisateurs'.
-      Icon: i-lucide-palette
-    - date:'29 mars 2025'
-      Titre: Sprint de développement
-      Description: Développement frontend et backend.
-      Icône: i-lucide-code
-    - date:'Apr 5 2025'
-      Titre: Test & Déploiement
-      Description: 'Tests QA et optimisation des performances.'
-      Icône: i-lucide-check-circle
-  Catégorie: w-full
-classe: 'overflow-x-auto'
+    - date: 'Mar 15, 2025'
+      title: 'Project Kickoff'
+      description: 'Kicked off the project with team alignment.'
+      icon: 'i-lucide-rocket'
+    - date: 'Mar 22 2025'
+      title: 'Design Phase'
+      description: 'User research and design workshops.'
+      icon: 'i-lucide-palette'
+    - date: 'Mar 29 2025'
+      title: 'Development Sprint'
+      description: 'Frontend and backend development.'
+      icon: 'i-lucide-code'
+    - date: 'Apr 5 2025'
+      title: 'Testing & Deployment'
+      description: 'QA testing and performance optimization.'
+      icon: 'i-lucide-check-circle'
+  class: 'w-full'
+class: 'overflow-x-auto'
 ---
 ::
 
-@@ph098@exemples
+## Exemples
 
-### Contrôle élément actif
+### Control item actif
 
-Vous pouvez contrôler l'élément actif à l'aide de la prop `default-value` ou de la directive `v-model` avec la directive `value` de l'élément.
+Vous pouvez contrôler l'élément actif à l'aide de la prop `default-value` ou de la directive `v-model` avec le `value` de l'élément.
 
-: composant-exemple {name="timeline-model-value-example" prettier}
+:component-example{name="timeline-model-value-example" prettier}
 
 ::tip
 Utilisez la prop `value-key` pour modifier la clé utilisée pour faire correspondre les éléments lorsqu 'un `v-model` ou `default-value` est fourni.
 ::
 
-### Avec événement sélectionné
+### With sélectionner l'événement
 
 Vous pouvez ajouter un écouteur `@select` pour rendre les éléments cliquables.
 
 ::note
-La fonction handler reçoit les `Event` et `TimelineItem` comme premier et deuxième arguments respectivement.
+La fonction handler reçoit les valeurs `Event` et `TimelineItem` comme premier et deuxième arguments respectivement.
 ::
 
 ::component-example
 ---
-Étiquette: true
-nom: 'timeline-select-exemple'
+prettier: true
+name: 'timeline-select-example'
 ---
 ::
 
 ### Avec disposition alternative
 
-Utilisez la prop `ui` pour créer une chronologie avec une disposition alternée.
+Utilisez le prop `ui` pour créer une chronologie avec une disposition alternée.
 
-: composant {name="timeline-alternating-layout-example" prettier}
+:component-example{name="timeline-alternating-layout-example" prettier}
 
-### Avec slot custom
+### With slot personnalisé
 
 Utilisez la propriété `slot` pour personnaliser un élément spécifique.
 
 Vous aurez accès aux slots suivants:
 
-@@
-@@
-@@
-@@
+- x`#{{ item.slot }}-indicator`x{lang="ts-type"}
+- x`#{{ item.slot }}-date`x{lang="ts-type"}
+- x`#{{ item.slot }}-title`{lang="ts-type"}
+- x`#{{ item.slot }}-description`x{lang="ts-type"}
 
-: composant {name="timeline-custom-slot-example" prettier}
+:component-example{name="timeline-custom-slot-example" prettier}
 
 ### Avec slots
 
 Utilisez les emplacements disponibles pour créer une chronologie plus complexe.
 
-: composant {name="timeline-slots-example" prettier}
+:component-example{name="timeline-slots-example" prettier}
 
-@@ph132@api
+## API
 
-@@ph133@@props
+### Props
 
-Composants-props
+:component-props
 
-@@ph134@@réglages
+### Slots
 
-Composants slots
+:component-slots
 
-@@P135@@émissions
+### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph136@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement137
+## Changelog
 
-Composant-changelog
+:component-changelog

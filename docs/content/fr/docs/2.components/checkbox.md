@@ -14,18 +14,18 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Checkbox.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Utilisez la directive `v-model` pour contrôler l'état coché de la case à cocher.
 
 ::component-code
 ---
-Ignorer:
-  - modèleValeur
-Extérieure:
-  - modèleValeur
-Props:
-  Modèle: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: true
 ---
 ::
 
@@ -33,42 +33,42 @@ Utilisez la prop `default-value` pour définir la valeur initiale lorsque vous n
 
 ::component-code
 ---
-ignorer:
-  @@@ph005@@defaultValue
-Props:
-  valeur: true
+ignore:
+  - defaultValue
+props:
+  defaultValue: true
 ---
 ::
 
-### Indéterminé
+### indéterminé
 
-Utilisez la valeur `indeterminate` dans la directive `v-model` ou `default-value` prop pour définir la case à cocher à un état indéterminé ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes).
+Utilisez la valeur `indeterminate` de la directive `v-model` ou de la prop `default-value` pour définir la case à cocher sur un state](xph023) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ::component-code
 ---
-ignorer:
-  @@ph014@@defaultValue
-Props:
-  defaultValue: 'indéterminé'
+ignore:
+  - defaultValue
+props:
+  defaultValue: 'indeterminate'
 ---
 ::
 
 ### Icône indéterminée
 
-Utilisez la prop `indeterminate-icon` pour personnaliser l'icône indéterminée. Par défaut à `i-lucide-minus`.
+Utilisez la prop `indeterminate-icon` pour personnaliser l'icône indéterminée. Par défaut, `i-lucide-minus`.
 
 ::component-code
 ---
-ignorer:
+ignore:
   - defaultValue
-Props:
-  defaultValue: 'indéterminé'
-  indéterminéIcône:'i-lucide-plus'
+props:
+  defaultValue: 'indeterminate'
+  indeterminateIcon: 'i-lucide-plus'
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.minus`.
 :::
@@ -79,14 +79,14 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 :::
 ::
 
-@@ph023@étiquette
+### étiquette
 
-Utilisez la prop `label` pour définir l'étiquette de la case à cocher.
+Utilisez le prop `label` pour définir l'étiquette de la case à cocher.
 
 ::component-code
 ---
-Props:
-  Étiquette: check me
+props:
+  label: Check me
 ---
 ::
 
@@ -94,46 +94,46 @@ Lorsque vous utilisez le prop `required`, un astérisque est ajouté à côté d
 
 ::component-code
 ---
-Ignorer:
-  @@ph026@label
-Props:
-  Requis: Vrai
-  Étiquette: check me
+ignore:
+  - label
+props:
+  required: true
+  label: Check me
 ---
 ::
 
-@@27@description
+### Description
 
 Utilisez la prop `description` pour définir la description de la case à cocher.
 
 ::component-code
 ---
-ignorer:
-  @29@label
-Props:
-  Étiquette: check me
-  Description: "Ceci est une case à cocher."
+ignore:
+  - label
+props:
+  label: Check me
+  description: 'This is a checkbox.'
 ---
 ::
 
-### Icon
+### Icône
 
-Utilisez la prop `icon` pour définir l'icône de la case à cocher lorsqu 'elle est cochée. Par défaut à `i-lucide-check`.
+Utilisez la prop `icon` pour définir l'icône de la case à cocher lorsqu 'elle est cochée. Par défaut `i-lucide-check`.
 
 ::component-code
 ---
-Ignorer:
-  @@pH033@@label
-  - valeur défaillante
-Props:
-  Icône: i-lucide-heart
-  valeur: true
-  Étiquette: check me
+ignore:
+  - label
+  - defaultValue
+props:
+  icon: 'i-lucide-heart'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.check`.
 :::
@@ -144,116 +144,116 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 :::
 ::
 
-@@pH039@@couleur
+### Couleur
 
-Utilisez la prop `color` pour changer la couleur de la case à cocher.
+Utilisez le prop `color` pour changer la couleur de la case à cocher.
 
 ::component-code
 ---
-ignorer:
-  @@ph041@@label
+ignore:
+  - label
   - defaultValue
-Props:
-  Couleur: Neutre
-  valeur: true
-  Étiquette: check me
+props:
+  color: neutral
+  defaultValue: true
+  label: Check me
 ---
 ::
 
 ### Variant
 
-Utilisez la prop `variant` pour modifier la variante de la case à cocher.
+Utilisez le prop `variant` pour modifier la variante de la case à cocher.
 
 ::component-code
 ---
-ignorer:
-  @@ph045@label
-  - valeur défaillante
-Props:
-  Couleur: Primaire
-  Variante: carte
-  valeur: true
-  Étiquette: check me
+ignore:
+  - label
+  - defaultValue
+props:
+  color: 'primary'
+  variant: 'card'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-@@ph047@@Size
+### Size
 
-Utilisez la prop `size` pour modifier la taille de la case à cocher.
+Utilisez le prop `size` pour modifier la taille de la case à cocher.
 
 ::component-code
 ---
-ignorer:
-  @@ph049@label
-  - valeur défaillante
-Props:
-  Taille: XL
-  Variante: liste
-  valeur: true
-  Étiquette: check me
+ignore:
+  - label
+  - defaultValue
+props:
+  size: xl
+  variant: list
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-### indicateur
+### Indicateur
 
-Utilisez la prop `indicator` pour modifier la position ou masquer l'indicateur. Par défaut à `start`.
+Utilisez la prop `indicator` pour modifier la position ou masquer l'indicateur. Par défaut, `start`.
 
 ::note
-Lorsque `indicator` est `hidden`, l'icône est affichée au-dessus de l'étiquette.
+Lorsque `indicator` est `hidden`, l'icône est affichée au-dessus de l'étiquette à la place.
 ::
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph056@label
-  @@57@icon
+prettier: true
+ignore:
+  - label
+  - icon
   - defaultValue
-Props:
-  Référence:"Hidden"
-  Variante: carte
-  Icône: i-lucide-heart
-  valeur: true
-  Étiquette: check me
+props:
+  indicator: 'hidden'
+  variant: 'card'
+  icon: 'i-lucide-heart'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-### désactivé
+### Désactivé
 
-Utilisez la prop `disabled` pour désactiver la case à cocher.
+Utilisez le prop `disabled` pour désactiver la case à cocher.
 
 ::component-code
 ---
-ignorer:
-  @@ph061@label
-Props:
-  handicapés: vrai
-  Étiquette: check me
+ignore:
+  - label
+props:
+  disabled: true
+  label: Check me
 ---
 ::
 
-@@ph062 @ réponse
+## API
 
-@@ph063@@props
+### Props équipements
 
-Composants-props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
 Ce composant prend également en charge tous les attributs HTML natifs `<button>`.
 ::
 
-### série
+### Slots
 
-Composants slots
+:component-slots
 
-@@666@émissions
+### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph067@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

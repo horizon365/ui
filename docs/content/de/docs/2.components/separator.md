@@ -14,138 +14,138 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Separator.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Verwenden Sie die Separator-Komponente unverändert, um Inhalte zu trennen.
 
 ::component-code
 ---
-Klasse: 'P-8'
+class: 'p-8'
 ---
 ::
 
-@@ph001@@Orientierung
+### Orientierung
 
-Verwenden Sie `orientation` prop, um die Ausrichtung des Separator. Defaults auf `horizontal` zu ändern.
+Verwenden Sie die `orientation`-prop, um die Ausrichtung des Separators zu ändern. Standardmäßig auf `horizontal`.
 
 ::component-code
 ---
-Ignoriert:
-  @@004@Klasse
-Klasse: 'P-8'
-Props:
-  Ausrichtung: Vertikal
-  Klasse: H-48
+ignore:
+  - class
+class: 'p-8'
+props:
+  orientation: vertical
+  class: 'h-48'
 ---
 ::
 
-@@ph005@@bmg-aufsatz
+### Label ist
 
 Verwenden Sie die `label` prop, um ein Etikett in der Mitte des Separators anzuzeigen.
 
 ::component-code
 ---
-Klasse: 'P-8'
-Props:
-  Ausstellung: „ Hello World "
+class: 'p-8'
+props:
+  label: 'Hello World'
 ---
 ::
 
 ### Position: badge{label="4.8+" class="align-text-top"}
 
-Verwenden Sie `position` prop, um die Position des Inhalts des Separators zu ändern. Defaults zu `center`.
+Verwenden Sie die `position`-prop, um die Position des Inhalts des Separators zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@11@Klasse
-Klasse: 'P-8'
-Props:
-  Position: Beginn
-  Ausstellung: "Hello World"
+ignore:
+  - class
+class: 'p-8'
+props:
+  position: start
+  label: 'Hello World'
 ---
 ::
 
-@@ph012@@gmail.de
+### Icon (nicht)
 
-Verwenden Sie das `icon` prop, um ein Symbol in der Mitte des Separators anzuzeigen.
+Verwenden Sie die `icon` prop, um ein Symbol in der Mitte des Separators anzuzeigen.
 
 ::component-code
 ---
-Klasse: 'P-8'
-Props:
-  Icon: 'i-simple-icons-nuxtdotjs'(I-einfach-Ikonen-Nuxtdotjs)
+class: 'p-8'
+props:
+  icon: 'i-simple-icons-nuxtdotjs'
 ---
 ::
 
-@@@@@Avatar@Avatar@@@Avatar@Avatar@@@Avatar@@@Avatar@@@Avatar@@@Avatar@Avatar@@@Avatar@@Avatar@@@Avatar@@@Avatar@@Avatar@@@Avatar@@@Avatar@@@Avatar@@@Avatar@@Avatar@Avatar@Avatar@@@Avatar@@@Avatar@@@Avatar@@@@@@@@@Avatar@@@@@@@@@Avatar@@@@@@@Avatar@@@@@@@@@@@@@Avatar@@@@@@@@@@@@@@Avatar@@@@@@@@@@@@@@@@@@@@@Avatarar@@@@@@@@@@@@@@@@@@@@@@@
+### Avatar (englisch)
 
-Verwenden Sie die `avatar` prop, um einen Avatar in der Mitte des Separators anzuzeigen.
+Verwenden Sie die `avatar`-Prop, um einen Avatar in der Mitte des Separators anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Klasse: 'P-8'
-Ignoriert:
-  - avatar.loading (nicht verfügbar)
-Props:
-  Avatare sind:
-    src: 'https://github.com/nuxt.png'(auf Englisch)
-    Aufladung: Lazy
+prettier: true
+class: 'p-8'
+ignore:
+  - avatar.loading
+props:
+  avatar:
+    src: 'https://github.com/nuxt.png'
+    loading: lazy
 ---
 ::
 
-@@@@@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17
+### Farbe
 
-Verwenden Sie `color` prop, um die Farbe des Separators. Defaults auf `neutral` zu ändern.
+Verwenden Sie die `color`-prop, um die Farbe des Separators zu ändern. Standardmäßig ist `neutral`.
 
 ::component-code
 ---
-Klasse: 'P-8'
-Props:
-  Farbe: Primär
-  Typ: solide
+class: 'p-8'
+props:
+  color: primary
+  type: solid
 ---
 ::
 
-@@ph020@@gmail.de
+### type ist ein
 
-Verwenden Sie `type` prop, um den Typ des Separator. Defaults auf `solid` zu ändern.
+Verwenden Sie die `type`-prop, um den Typ des Separator. Defaults auf `solid` zu ändern.
 
 ::component-code
 ---
-Klasse: 'P-8'
-Props:
-  Typ: gestrichelt
+class: 'p-8'
+props:
+  type: dashed
 ---
 ::
 
-@@ph023 @ Größe
+### Size
 
-Verwenden Sie `size` prop, um die Größe des Separator. Defaults auf `xs` zu ändern.
+Verwenden Sie die `size` prop, um die Größe des Separators zu ändern. Standardmäßig auf `xs`.
 
 ::component-code
 ---
-Klasse: 'P-8'
-Props:
-  Größe: lg
+class: 'p-8'
+props:
+  size: lg
 ---
 ::
 
-## api
+## API (Englisch)
 
-@@@ph027@@Props
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
-@@ph028@@slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph029@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph030@@changelog @@@ changelog @@@ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

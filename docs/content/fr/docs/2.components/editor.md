@@ -10,16 +10,16 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Editor.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Le composant Éditeur offre une puissante expérience d'édition de texte enrichi construite sur [TipTap](https://tiptap.dev/). Il prend en charge plusieurs formats de contenu (JSON, HTML, Markdown), barres d'outils personnalisables, réorganisation de blocs par glisser-déposer, commandes slash, mentions, sélecteur d'emoji et architecture extensible pour ajouter des fonctionnalités personnalisées.
+Le composant Éditeur offre une puissante expérience d'édition de texte enrichi construite sur [TipTap](https://tiptap.dev/). Il prend en charge plusieurs formats de contenu (JSON, HTML, Markdown), des barres d'outils personnalisables, glisser-déposer réorganisation de blocs, slash commandes, mentions, sélecteur d'emoji, et l'architecture extensible pour ajouter des fonctionnalités personnalisées.
 
 ::component-example
 ---
-Source: Faux
-Élevé: True
-nom: 'exemple éditeur'
-class: 'relative h-176 overflow-y-auto! p-0 rounded-b-md'
+source: false
+elevated: true
+name: 'editor-example'
+class: 'relative h-176 overflow-y-auto !p-0 rounded-b-md'
 ---
 ::
 
@@ -47,87 +47,87 @@ export default defineNuxtConfig({
 ```
 ::
 
-@@24@contenu
+### Contenu
 
 Utilisez la directive `v-model` pour contrôler la valeur de l'Éditeur.
 
 ::component-code
 ---
-Élevé: True
-Étiquette: true
-Collapse: vrai
-Ignorer:
+elevated: true
+prettier: true
+collapse: true
+ignore:
   - modelValue.type
   - modelValue.content
-  @@ph028@classe
-Extérieur:
-  - modèleValeur
-Catégorie: P-8
-Props:
-  Modèle:
-    Catégorie:"Doc"
-    contenu:
-      - type:'en-tête'
-        Attractions:
-          Niveau: 1
-        contenu:
-          - type:'texte'
-            Étiquette:"Hello World"
-      - type:'paragraphe'
-        contenu:
-          - type:'texte'
-            Texte: "Ceci est un"
-          - type:'texte'
-            Marques:
-              - type:'gras'
-            Étiquette: rich text
-          - type:'texte'
-            Texte: "Editeur".
-  classe: 'w-full min-h-21'
+  - class
+external:
+  - modelValue
+class: 'p-8'
+props:
+  modelValue:
+    type: 'doc'
+    content:
+      - type: 'heading'
+        attrs:
+          level: 1
+        content:
+          - type: 'text'
+            text: 'Hello World'
+      - type: 'paragraph'
+        content:
+          - type: 'text'
+            text: 'This is a '
+          - type: 'text'
+            marks:
+              - type: 'bold'
+            text: 'rich text'
+          - type: 'text'
+            text: ' editor.'
+  class: 'w-full min-h-21'
 ---
 ::
 
 ### Type de contenu
 
-L'éditeur détecte automatiquement le format de contenu basé sur le type `v-model`: les chaînes sont traitées comme `html`{lang="ts-type"} et les objets comme `json`{lang="ts-type"}.
+L'éditeur détecte automatiquement le format de contenu en fonction du type `v-model`: les chaînes sont traitées comme `html`{lang="ts-type"} et les objets comme `json`{lang="ts-type"}.
 
-Vous pouvez définir explicitement le format en utilisant le prop `content-type`:`json`{lang="ts-type"},`html`{lang="ts-type"}, ou `markdown`{lang="ts-type"}.
+Vous pouvez définir explicitement le format à l'aide de la prop `content-type`: `json`{lang="ts-type"}, `html`{lang="ts-type"} ou xph074{lang="ts-type"}.
 
 ::component-code
 ---
-Élevé: True
-Étiquette: true
-ignorer:
-  - modèleValeur
+elevated: true
+prettier: true
+ignore:
+  - modelValue
   - contentType
-  @@ph052@classe
-Extérieur:
-  - modèleValeur
-Catégorie: P-8
-Props:
-  Modèle:|
-    <h1>Bonjour Monde
-    <p>Ceci est un <strong>texte riche </strong> editor.</p>
-  Type de contenu: 'html'
-  classe: 'w-full min-h-21'
+  - class
+external:
+  - modelValue
+class: 'p-8'
+props:
+  modelValue: |
+    <h1>Hello World</h1>
+    <p>This is a <strong>rich text</strong> editor.</p>
+  contentType: 'html'
+  class: 'w-full min-h-21'
 ---
 ::
 
-@@ph060@@Résultats
+### Extensions
 
 L'éditeur inclut les extensions suivantes par défaut:
 
-- [**StarterKit**](#starter-kit)-Fonctionnalités d'édition de base (gras, italique, titres, listes, etc.))
-- [**Placeholder**](#placeholder)-Afficher le texte de l'espace réservé (lorsque l'espace réservé est fourni)
+- [**StarterKit**](#starter-kit)-Fonctions d'édition de base (gras, italique, en-têtes, listes, etc.)
+- [**Placeholder**](#placeholder)-Afficher le texte de l'espace réservé (lorsque la prop de l'espace réservé est fournie)
 - **Image**-Insérer et afficher des images
-- **Mention**-Ajouter @ mentionne le support
-- **Markdown**-analyse et sérialisation du markdown (lorsque le type de contenu est markdown)
+- **Mention**-Add @ mentions support
+- **Markdown**-Analyse et sérialisation du markdown (lorsque le type de contenu est markdown)
 
 ::note
-Chaque extension intégrée peut être configurée à l'aide de son prop correspondant (`starter-kit`,`placeholder`,`image`,`mention`,`markdown`) pour personnaliser son comportement avec les options TipTap.
+Chaque extension intégrée peut être configurée à l'aide de son prop correspondant (`starter-kit`, `placeholder`, `image`, `mention`, `markdown`) pour personnaliser son comportement avec les options TipTap.
 ::
 
-Vous pouvez utiliser la prop `extensions` pour ajouter des extensions TipTap supplémentaires afin d'améliorer les capacités de l'éditeur:
+You can use the `extensions` prop to add additional TipTap extensions to enhance the Editor's capabilities:
 
 ```vue
 <script setup lang="ts">
@@ -154,32 +154,32 @@ const value = ref('<h1>Hello World</h1>\n')
 Consultez l'exemple de téléchargement d'image pour créer des extensions TipTap personnalisées.
 ::
 
-### Placeholder
+### Placeholder électronique
 
-Utilisez la prop `placeholder` pour définir un texte d'espace réservé qui s'affiche dans les paragraphes vides.
+Utilisez la prop `placeholder` pour définir un texte réservé qui s'affiche dans les paragraphes vides.
 
 ::component-code
 ---
-Élevé: True
-Étiquette: true
-ignorer:
-  - modèleValeur
+elevated: true
+prettier: true
+ignore:
+  - modelValue
   - contentType
-  @@ph114@@placeholder
-  @@classe 115
-Extérieur:
-  - modelValeur
-Catégorie: P-8
-Props:
-  Modèle:''
-  placeholder: "Commencez à écrire..."
-  classe: 'w-full min-h-7'
+  - placeholder
+  - class
+external:
+  - modelValue
+class: 'p-8'
+props:
+  modelValue: ''
+  placeholder: 'Start writing...'
+  class: 'w-full min-h-7'
 ---
 ::
 
 ::note
-Le prop `placeholder` accepte une chaîne ou un objet avec [PlaceholderOptions](https://tiptap.dev/docs/editor/extensions/functionality/placeholder) et une propriété additionnelle `mode`:
-- `everyLine`: Affiche l'espace réservé sur chaque ligne vide lorsqu 'elle est focalisée (par défaut).
+La prop `placeholder` accepte une chaîne ou un objet avec [PlaceholderOptions](https://tiptap.dev/docs/editor/extensions/functionality/placeholder) et une propriété `mode` supplémentaire:
+- `everyLine`: Affiche l'espace réservé sur chaque ligne vide lorsque la mise au point (par défaut).
 - `firstLine`: Affiche l'espace réservé uniquement sur la première ligne lorsque l'éditeur est vide.
 
 ```vue
@@ -200,12 +200,12 @@ Par défaut, les espaces réservés apparaissent uniquement sur les nœuds vides
 ::
 
 ::callout{icon="i-custom-tiptap" to="https://tiptap.dev/docs/editor/extensions/functionality/placeholder" target="_blank"}
-En savoir plus sur l'extension Placeholder dans la documentation de TipTap.
+En savoir plus sur l'extension Placeholder dans la documentation de TipTap .
 ::
 
 ### Kit de démarrage
 
-Utilisez le prop `starter-kit` pour configurer l'extension TipTap StarterKit intégrée qui inclut des fonctionnalités d'éditeur courantes telles que gras, italique, en-têtes, listes, citations de bloc, blocs de code, etc.
+Utilisez le prop `starter-kit` pour configurer l'extension TipTap StarterKit intégrée qui inclut des fonctionnalités d'éditeur courantes telles que gras , italique , en-têtes , listes , citations de bloc , blocs de code , etc.
 
 ```vue
 <script setup lang="ts">
@@ -233,51 +233,51 @@ const value = ref('<h1>Hello World</h1>\n')
 ```
 
 ::tip
-Définissez `starter-kit` à `false` pour un éditeur de texte brut. Il conserve les nœuds essentiels (paragraphe, texte, historique) et désactive toutes les fonctionnalités de mise en forme telles que gras, italique, titres, listes, code, blockquote, liens et règles horizontales.
+Définissez `starter-kit` sur `false` pour un éditeur de texte brut . Il conserve les nœuds essentiels (paragraphe , texte , historique) et désactive toutes les fonctionnalités de mise en forme telles que gras , italique , en-têtes , listes , code , blockquote , liens et règles horizontales .
 ::
 
 ::callout{icon="i-custom-tiptap" to="https://tiptap.dev/docs/editor/extensions/functionality/starterkit" target="_blank"}
-En savoir plus sur l'extension StarterKit dans la documentation TipTap.
+En savoir plus sur l'extension StarterKit dans la documentation TipTap .
 ::
 
-@167@167@167@167
+### Handlers
 
-Lorsque vous ajoutez une propriété `kind` à un élément [EditorToolbar](/docs/components/editor-toolbar) ou [EditorSuggestionMenu](/docs/components/editor-suggestion-menu), le gestionnaire correspondant exécute la commande TipTap et gère son état.(actifs, handicapés, etc.).
+Lorsque vous ajoutez une propriété `kind` à un élément [EditorToolbar](/docs/components/editor-toolbar) ou [EditorSuggestionMenuxph220/docs/components/editor-suggestion-menuxph2222x , le gestionnaire correspondant exécute la commande TipTap et gère son état (actif , désactivé , etc.) .
 
-#### Gestionnaires par défaut
+#### Default gestionnaires
 
-Le composant Éditeur fournit ces gestionnaires par défaut, que vous pouvez référencer dans la barre d'outils ou les éléments de menu de suggestion en utilisant la propriété `kind`:
+Le composant Éditeur fournit ces gestionnaires par défaut , que vous pouvez référencer dans la barre d'outils ou les éléments de menu de suggestion à l'aide de la propriété `kind` :
 
 | Handler était| Description| Utilisation|
 |---------|-------------|-------|
-| @@ph181 @| Basculer les marques de texte (gras, italique, grève, code, soulignement)| Nécessite la propriété `mark` dans l'article|
-| @@ph182@| Définir l'alignement du texte (gauche , centre , droite , justifier)| Nécessite la propriété`align`dans l'élément|
-| @@| Toggle niveaux de titre (1 - 6)| Nécessite la propriété`level`dans l'élément|
-| @@ph188@@@ph189| Ajouter , éditer ou supprimer des liens| Indiquer l'URL si elle n'est pas fournie|
-| @@| Insérer images| Indiquer l'URL si elle n'est pas fournie|
-| @@| Toggle blockquotes à||
-| @@| Toggle bullet listes| Gestion des conversions liste|
-| @@| Toggle listes ordonnées| Gestion des conversions liste|
-| @@| Toggle listes de tâches| Gestion des conversions liste|
-| @@| Toggle blocs de code||
-| @@| Insérer des règles horizontales||
-| @@| Format de paragraphe||
-| @@| Undo dernier changement||
-| @@ph208@@@ph209@| Redo dernier changement undone||
-| @@| Supprimer tout formatage| Fonctionne avec sélection ou position|
-| @@| Dupliquer le noeud| Nécessite la propriété`pos`dans l'élément|
-| @@| Découvrez Node| Nécessite la propriété`pos`dans l'élément|
-| @@| Déplacer un node vers le haut| Nécessite la propriété`pos`dans l'article|
-| @@| Déplacer un noeud vers le bas| Nécessite la propriété`pos`dans l'élément|
-| @@| Menu de suggestions Trigger| Insérer le caractère`/`|
-| @@227@@229| Menu Trigger mentionné| Insérer le caractère`@`|
-| @@| Déclencheur Emoji Picker| Insérer le caractère`:`|
+| `mark`x{lang="ts-type"}| Basculer les marques de texte (gras , italique , grève , code , soulignement)| Nécessite la propriété `mark` dans l'item|
+| `textAlign`x{lang="ts-type"}| Définir l'alignement du texte (gauche , centre , droite , justifier)| Nécessite la propriété `align` dans l'item|
+| `heading`{lang="ts-type"}| Toggle niveaux de titre (1 - 6)| Nécessite la propriété `level` dans item|
+| `link`x{lang="ts-type"}| Ajouter , éditer ou supprimer des liens| Indiquer l'URL si elle n'est pas fournie|
+| `image`x{lang="ts-type"}| Insérer des images| Indiquer l'URL si elle n'est pas fournie|
+| `blockquote`x{lang="ts-type"}| Toggle blockquotes à||
+| `bulletList`{lang="ts-type"}| Toggle bullet listes| Gestion des conversions liste|
+| `orderedList`x{lang="ts-type"}| Toggle listes ordonnées| Gestion des conversions liste|
+| `taskList`x{lang="ts-type"}| Toggle listes de tâches| Gestion des conversions liste|
+| `codeBlock`x{lang="ts-type"}| Toggle blocs de code||
+| `horizontalRule`x{lang="ts-type"}| Insérer des règles horizontales||
+| `paragraph`x{lang="ts-type"}| Format de paragraphe||
+| `undo`x{lang="ts-type"}| Undo dernier changement||
+| `redo`x{lang="ts-type"}| Redo dernier changement undone||
+| `clearFormatting`{lang="ts-type"}| Supprimer tout formatage| Fonctionne avec sélection ou position|
+| `duplicate`x{lang="ts-type"}| Dupliquer le noeud| Nécessite la propriété `pos` dans l'item|
+| `delete`{lang="ts-type"}| Découvrez Node| Nécessite la propriété `pos` dans item|
+| `moveUp`x{lang="ts-type"}| Déplacer un node vers le haut| Nécessite la propriété `pos` dans l'item|
+| `moveDown`x{lang="ts-type"}| Déplacer un noeud vers le bas| Nécessite la propriété `pos` dans l'item|
+| `suggestion`{lang="ts-type"}| Menu de suggestion Trigger| Insérer le caractère `/`|
+| `mention`x{lang="ts-type"}| Menu Trigger mentionné| Insérer le caractère `@`|
+| `emoji`{lang="ts-type"}| Déclencheur Emoji Picker| Insérer le caractère `:`|
 
 ::warning
-Les gestionnaires`taskList`et`textAlign`ne fonctionnent que lorsque leurs extensions respectives sont installées , car ils ne sont pas inclus dans l'Éditeur par défaut .
+Les gestionnaires `taskList` et `textAlign` ne fonctionnent que lorsque leurs extensions respectives sont installées, car ils ne sont pas inclus dans l'Éditeur par défaut.
 ::
 
-Voici comment utiliser les gestionnaires par défaut dans la barre d'outils ou les éléments de menu de suggestion :
+Voici comment utiliser les gestionnaires par défaut dans la barre d'outils ou les éléments de menu de suggestion:
 
 ```vue
 <script setup lang="ts">
@@ -306,9 +306,9 @@ const items: EditorToolbarItem[] = [
 </template>
 ```
 
-#### Gestionnaire personnalisé
+#### Gestionnaires personnalisés
 
-Utilisez la prop`handlers`pour étendre ou remplacer les gestionnaires par défaut . Les gestionnaires personnalisés sont fusionnés avec les gestionnaires par défaut , vous pouvez donc ajouter de nouvelles actions ou modifier le comportement existant .
+Utilisez la prop `handlers` pour étendre ou remplacer les gestionnaires par défaut. Les gestionnaires personnalisés sont fusionnés avec les gestionnaires par défaut, vous pouvez donc ajouter de nouvelles actions ou modifier le comportement existant.
 
 Chaque gestionnaire implémente l'interface `EditorHandler`{lang="ts-type"}:
 
@@ -362,65 +362,65 @@ const items = [
 Consultez l'exemple de téléchargement d'image pour une implémentation complète avec des gestionnaires personnalisés.
 ::
 
-@@ph307@exemples
+## Exemples
 
 ::callout{icon="i-simple-icons-github" to="https://github.com/nuxt-ui-templates/editor" target="_blank"}
-Consultez le code source de notre **Editor template** sur GitHub pour un exemple réel.
+Découvrez le code source de notre **Editor templataph355x sur GitHub pour un exemple réel.
 ::
 
 ### Avec barre d'outils
 
-Vous pouvez utiliser le composant [EditorToolbar](/docs/components/editor-toolbar) pour ajouter une barre d'outils `fixed`,`bubble` ou `floating` à l'Éditeur avec des actions de mise en forme courantes.
+Vous pouvez utiliser le composant [EditorToolbar](/docs/components/editor-toolbar) pour ajouter une barre d'outils `fixed`, `bubble` ou `floating` à l'Éditeur avec des actions de mise en forme courantes.
 
 ::component-example
 ---
-Élevé: True
-Collapse: vrai
-Étiquette: true
-nom: 'éditeur-toolbar-exemple'
-Catégorie: P-8
+elevated: true
+collapse: true
+prettier: true
+name: 'editor-toolbar-example'
+class: 'p-8'
 ---
 ::
 
-### Avec poignée de drag
+### Avec poignée de traînée
 
 Vous pouvez utiliser le composant [EditorDragHandle](/docs/components/editor-drag-handle) pour ajouter une poignée glissable pour réorganiser les blocs.
 
 ::component-example
 ---
-Élevé: True
-Collapse: vrai
-Étiquette: true
-nom: 'éditeur-drag-handle-example'
-Catégorie: P-8
+elevated: true
+collapse: true
+prettier: true
+name: 'editor-drag-handle-example'
+class: 'p-8'
 ---
 ::
 
-### Avec menu de suggestion
+### Avec menu de suggestions
 
 Vous pouvez utiliser le composant [EditorSuggestionMenu](/docs/components/editor-suggestion-menu) pour ajouter des commandes slash pour une mise en forme et des insertions rapides.
 
 ::component-example
 ---
-Élevé: True
-Collapse: vrai
-Étiquette: true
-nom: 'rédacteur-suggestion-menu-exemple'
-Catégorie: P-8
+elevated: true
+collapse: true
+prettier: true
+name: 'editor-suggestion-menu-example'
+class: 'p-8'
 ---
 ::
 
-### Avec menu mention
+### Avec menu de mention
 
 Vous pouvez utiliser le composant [EditorMentionMenu](/docs/components/editor-mention-menu) pour ajouter des mentions @ pour marquer des utilisateurs ou des entités.
 
 ::component-example
 ---
-Élevé: True
-Collapse: vrai
-Étiquette: true
-nom: 'rédacteur-mention-menu-exemple'
-Catégorie: P-8
+elevated: true
+collapse: true
+prettier: true
+name: 'editor-mention-menu-example'
+class: 'p-8'
 ---
 ::
 
@@ -430,11 +430,11 @@ Vous pouvez utiliser le composant [EditorEmojiMenu](/docs/components/editor-emoj
 
 ::component-example
 ---
-Élevé: True
-Collapse: vrai
-Étiquette: true
-nom: 'emoji-menu-exemple'
-Catégorie: P-8
+elevated: true
+collapse: true
+prettier: true
+name: 'editor-emoji-menu-example'
+class: 'p-8'
 ---
 ::
 
@@ -446,9 +446,9 @@ Cet exemple montre comment créer une fonctionnalité de téléchargement d'imag
 
 ::component-example
 ---
-Prévision: Faux
-Collapse: vrai
-nom: 'éditeur-image-upload-node'
+preview: false
+collapse: true
+name: 'editor-image-upload-node'
 ---
 ::
 
@@ -456,10 +456,10 @@ nom: 'éditeur-image-upload-node'
 
 ::component-example
 ---
-Prévision: Faux
-Collapse: vrai
-Étiquette:'ts'
-nom: 'éditeur-image-upload-extension'
+preview: false
+collapse: true
+lang: 'ts'
+name: 'editor-image-upload-extension'
 ---
 ::
 
@@ -467,11 +467,11 @@ nom: 'éditeur-image-upload-extension'
 
 ::component-example
 ---
-Élevé: True
-Collapse: vrai
-Étiquette: true
-nom: 'éditeur-image-upload-exemple'
-classe: '! p-0'
+elevated: true
+collapse: true
+prettier: true
+name: 'editor-image-upload-example'
+class: '!p-0'
 ---
 ::
 
@@ -479,9 +479,9 @@ classe: '! p-0'
 En savoir plus sur la création d'extensions personnalisées dans la documentation TipTap.
 ::
 
-### Avec l'achèvement AI
+### Avec complétion IA
 
-Cet exemple montre comment ajouter des fonctionnalités alimentées par l'IA à l'éditeur en utilisant le [Vercel AI SDK](https://ai-sdk.dev/), en particulier le [`useCompletion`](composable pour les complétions de texte en streaming, combiné avec le [Vercel AI Gateway](https://vercel.com/ai-gateway) pour accéder aux modèles d'IA via un point de terminaison centralisé. Il comprend des actions d'autocomplétion de texte fantôme et de transformation de texte (correction de grammaire, extension, réduction, simplification, traduction, etc.).
+Cet exemple montre comment ajouter des fonctionnalités alimentées par l'IA à l'éditeur à l'aide du SDK](https://ai-sdk.dev/) `useCompletion`xph45xxph45xxph45x) composable pour les complétions de texte en streaming, combiné avec la passerelle [Vercel AI Gateway](https://vercel.com/ai-gateway) pour accéder aux modèles d'IA via un point de terminaison centralisé. Il comprend l'autocomplétion de texte fantôme et la transformation de texte des actions (corriger la grammaire, étendre, réduire, simplifier, traduire, etc.).
 
 ::note
 Vous devez d'abord installer ces dépendances pour utiliser cet exemple:
@@ -508,14 +508,14 @@ bun add ai @ai-sdk/gateway @ai-sdk/vue
 
 ::
 
-1. Créez une extension TipTap personnalisée qui gère les suggestions de texte fantôme en ligne:
+1. Créer une extension TipTap personnalisée qui gère les suggestions de texte fantôme en ligne:
 
 ::component-example
 ---
-Prévision: Faux
-Collapse: vrai
-nom: 'éditeur-complétion-extension'
-Étiquette:'ts'
+preview: false
+collapse: true
+name: 'editor-completion-extension'
+lang: 'ts'
 ---
 ::
 
@@ -523,15 +523,15 @@ nom: 'éditeur-complétion-extension'
 
 ::component-example
 ---
-Prévision: Faux
-Collapse: vrai
-nom: 'éditeur-utilisation-réalisation'
-nom de fichier: 'useEditorCompletion'
-Étiquette:'ts'
+preview: false
+collapse: true
+name: 'editor-use-completion'
+filename: 'useEditorCompletion'
+lang: 'ts'
 ---
 ::
 
-3. Créer un point de terminaison API serveur pour gérer les demandes d'achèvement en utilisant [](https://ai-sdk.dev/docs/reference/ai-sdk-core/stream-text#streamtext):
+3. Créer un point de terminaison API serveur pour gérer les demandes d'achèvement en utilisant [xph489](https://ai-sdk.dev/docs/reference/ai-sdk-core/stream-text#streamtext):
 
 ::code-collapse
 
@@ -605,11 +605,11 @@ CRITICAL RULES:
 
 ::component-example
 ---
-Élevé: True
-Collapse: vrai
-Étiquette: true
-name: 'rédacteur-exemple'
-classe: '! p-0'
+elevated: true
+collapse: true
+prettier: true
+name: 'editor-completion-example'
+class: '!p-0'
 ---
 ::
 
@@ -618,39 +618,39 @@ L'extension de complétion peut être configurée avec `autoTrigger: true` pour 
 ::
 
 ::callout{icon="i-simple-icons-vercel" to="https://ai-sdk.dev/" target="_blank"}
-En savoir plus sur le SDK Vercel AI et les fournisseurs disponibles.
+En savoir plus sur Vercel AI SDK et les fournisseurs disponibles.
 ::
 
-@449 @@ référencement
+## API
 
-@@ph450@@props
+### Props
 
-Composants-props
+:component-props
 
 ### Slots
 
-Composants slots
+:component-slots
 
-### émissions
+### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph453@@exposé
+### Exposer
 
 Lorsque vous accédez au composant via une référence de modèle, vous pouvez utiliser les éléments suivants:
 
 | nom| type|
 | ---- | ---- |
-| @@|@@|
+| `editor`x{lang="ts-type"}| `Ref<Editor \| undefined>`x{lang="ts-type"}|
 
 ::callout{icon="i-custom-tiptap" to="https://tiptap.dev/docs/editor/api/editor" target="_blank"}
 L'instance de l'éditeur exposée est l'API TipTap Editor. Consultez la documentation TipTap pour connaître toutes les méthodes et propriétés disponibles.
 ::
 
-@@ph458@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@@changement459
+## Changelog
 
-Composant-changelog
+:component-changelog

@@ -8,9 +8,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PricingPlans.vue
 ---
 
-## 使用情况
+## 用法
 
-PricingPlans组件提供了一种灵活的布局，可使用默认插槽或`plans`属性显示[PricingPlan](/docs/components/pricing-plan)组件的列表。
+PricingPlans组件提供了一个灵活的布局，可以使用默认插槽或`plans`属性显示[PricingPlan](/docs/components/pricing-plan)组件的列表。
 
 ```vue {2,8}
 <template>
@@ -25,200 +25,200 @@ PricingPlans组件提供了一种灵活的布局，可使用默认插槽或`plan
 ```
 
 ::tip
-网格列将根据计划的数量自动计算，这与`plans`属性以及默认插槽一起使用。
+网格列将根据计划的数量自动计算，这适用于`plans`道具，但也适用于默认插槽。
 ::
 
-计划
+### 计划
 
 使用`plans`属性作为具有[PricingPlan](/docs/components/pricing-plan#props)组件属性的对象数组。
 
 ::component-code
 ---
-收阖：true
-忽略：
-  计划
-外部：
-  计划
-外部类型：
-  - 定价计划属性[]
-道具：
-  计划：
-    独奏曲
-      description：“专为独立黑客量身定制。”
-      售价：“$249”
-      特点：
-        - '一个开发人员'
-        - '终身访问'
-      按钮：
-        标签：“立即购买”
-    启动中
-      description：'最适合小型团队。'
-      售价：四百九十九元
-      特点：
-        - '最多5名开发人员'
-        - '全部在独奏中'
-      按钮：
-        标签：“立即购买”
-- 组织机构
-      description：'适合大型团队和组织。'
-      售价：“$999”
-      特点：
-        - '最多20名开发人员'
-        - '启动中所有内容'
-      按钮：
-        标签：“立即购买”
+collapse: true
+ignore:
+  - plans
+external:
+  - plans
+externalTypes:
+  - PricingPlanProps[]
+props:
+  plans:
+    - title: Solo
+      description: 'Tailored for indie hackers.'
+      price: '$249'
+      features:
+        - 'One developer'
+        - 'Lifetime access'
+      button:
+        label: 'Buy now'
+    - title: Startup
+      description: 'Best suited for small teams.'
+      price: '$499'
+      features:
+        - 'Up to 5 developers'
+        - 'Everything in Solo'
+      button:
+        label: 'Buy now'
+    - title: Organization
+      description: 'Ideal for larger teams and organizations.'
+      price: '$999'
+      features:
+        - 'Up to 20 developers'
+        - 'Everything in Startup'
+      button:
+        label: 'Buy now'
 ---
 ::
 
-定位
+### 定向
 
-使用`orientation`属性更改定价计划的方向。默认为`horizontal`。
+使用`orientation`属性将PricingPlans. xml的方向更改为`horizontal`。
 
 ::component-code
 ---
-收阖：true
-隐藏：
-  班级
-忽略：
-  计划
-外部：
-  计划
-外部类型：
-  - 定价计划属性[]
-道具：
-  方向：垂直
-  计划：
-    独奏曲
-      description：“专为独立黑客量身定制。”
-      售价：“$249”
-      特点：
-        - '一个开发人员'
-        - '终身访问'
-      按钮：
-        标签：“立即购买”
-    启动中
-      description：'最适合小型团队。'
-      售价：四百九十九元
-      特点：
-        - '最多5名开发人员'
-        - '全部在独奏中'
-      按钮：
-        标签：“立即购买”
-    组织机构
-      description：'适合大型团队和组织。'
-      售价：“$999”
-      特点：
-        - '最多20名开发人员'
-        - '启动中所有内容'
-      按钮：
-        标签：“立即购买”
-  类：'w-完整'
+collapse: true
+hide:
+  - class
+ignore:
+  - plans
+external:
+  - plans
+externalTypes:
+  - PricingPlanProps[]
+props:
+  orientation: vertical
+  plans:
+    - title: Solo
+      description: 'Tailored for indie hackers.'
+      price: '$249'
+      features:
+        - 'One developer'
+        - 'Lifetime access'
+      button:
+        label: 'Buy now'
+    - title: Startup
+      description: 'Best suited for small teams.'
+      price: '$499'
+      features:
+        - 'Up to 5 developers'
+        - 'Everything in Solo'
+      button:
+        label: 'Buy now'
+    - title: Organization
+      description: 'Ideal for larger teams and organizations.'
+      price: '$999'
+      features:
+        - 'Up to 20 developers'
+        - 'Everything in Startup'
+      button:
+        label: 'Buy now'
+  class: 'w-full'
 ---
 ::
 
 ::tip
-当使用`plans`道具而不是默认插槽时，平面图的`orientation`将自动反转，`horizontal`将变为`vertical`，反之亦然。
+当使用`plans`道具而不是默认插槽时，计划的`orientation`会自动反转，`horizontal`到`vertical`，反之亦然。
 ::
 
-### 紧凑
+### 紧凑型
 
-在缩放其中一个平面图以获得更好的视觉平衡时，使用`compact`道具来减少平面图之间的填充。
+使用`compact`道具来减少平面之间的填充，当其中一个平面被缩放时，以获得更好的视觉平衡。
 
 ::component-code
 ---
-收阖：true
-忽略：
-  计划
-  紧凑型
-外部：
-  计划
-外部类型：
-  - PricingPlan属性[]
-类别：'p-8'
-道具：
-  压缩：true
-  计划：
-    独奏曲
-      description：“专为独立黑客量身定制。”
-      售价：“$249”
-      特点：
-        - '一个开发人员'
-        - '终身访问'
-      按钮：
-        标签：“立即购买”
-    启动中
-      description：'最适合小型团队。'
-      售价：四百九十九元
-      比例：真
-      特点：
-        - '最多5名开发人员'
-        “一切尽在独奏”
-      按钮：
-        标签：“立即购买”
-    组织机构
-      description：'适合大型团队和组织。'
-      售价：“$999”
-      特点：
-        - '最多20名开发人员'
-        - '启动中一切'
-      按钮：
-        标签：'立即购买'
+collapse: true
+ignore:
+  - plans
+  - compact
+external:
+  - plans
+externalTypes:
+  - PricingPlanProps[]
+class: 'p-8'
+props:
+  compact: true
+  plans:
+    - title: Solo
+      description: 'Tailored for indie hackers.'
+      price: '$249'
+      features:
+        - 'One developer'
+        - 'Lifetime access'
+      button:
+        label: 'Buy now'
+    - title: Startup
+      description: 'Best suited for small teams.'
+      price: '$499'
+      scale: true
+      features:
+        - 'Up to 5 developers'
+        - 'Everything in Solo'
+      button:
+        label: 'Buy now'
+    - title: Organization
+      description: 'Ideal for larger teams and organizations.'
+      price: '$999'
+      features:
+        - 'Up to 20 developers'
+        - 'Everything in Startup'
+      button:
+        label: 'Buy now'
 ---
 ::
 
-比例尺
+### Scale
 
-在缩放其中一个平面图以获得更好的视觉平衡时，使用`scale`道具调整平面图之间的间距。
+使用`scale`道具来调整平面之间的间距，当其中一个平面被缩放以获得更好的视觉平衡时。
 
 ::component-code
 ---
-收阖：true
-忽略：
-  计划
-  比例尺
-外部：
-  计划
-外部类型：
-- 定价计划属性[]
-类别：'p-8'
-道具：
-  比例：真
-  计划：
-    独奏曲
-      description：“专为独立黑客量身定制。”
-      售价：“$249”
-      特点：
-        - '一个开发人员'
-        - '终身访问'
-      按钮：
-        标签：“立即购买”
-    启动中
-      description：'最适合小型团队。'
-      售价：四百九十九元
-      比例：真
-      特点：
-        - '最多5名开发人员'
-        - '全部在独奏中'
-      按钮：
-        标签：“立即购买”
-    组织机构
-      description：'适合大型团队和组织。'
-      售价：“$999”
-      特点：
-        - '最多20名开发人员'
-        - '启动中所有内容'
-      按钮，您可以：
-        标签：“立即购买”
+collapse: true
+ignore:
+  - plans
+  - scale
+external:
+  - plans
+externalTypes:
+  - PricingPlanProps[]
+class: 'p-8'
+props:
+  scale: true
+  plans:
+    - title: Solo
+      description: 'Tailored for indie hackers.'
+      price: '$249'
+      features:
+        - 'One developer'
+        - 'Lifetime access'
+      button:
+        label: 'Buy now'
+    - title: Startup
+      description: 'Best suited for small teams.'
+      price: '$499'
+      scale: true
+      features:
+        - 'Up to 5 developers'
+        - 'Everything in Solo'
+      button:
+        label: 'Buy now'
+    - title: Organization
+      description: 'Ideal for larger teams and organizations.'
+      price: '$999'
+      features:
+        - 'Up to 20 developers'
+        - 'Everything in Startup'
+      button:
+        label: 'Buy now'
 ---
 ::
 
-示例
+## 示例
 
 ::note
 虽然这些示例使用[Nuxt Content](https://content.nuxt.com)，但这些组件可以与任何内容管理系统集成。
 ::
 
-### 在页面内
+### 页面内
 
 在页面中使用PricingPlans组件创建定价页面：
 
@@ -241,23 +241,23 @@ const { data: plans } = await useAsyncData('plans', () => queryCollection('plans
 ```
 
 ::note
-在本例中，使用`queryCollection`从`@nuxt/content`模块中获取`plans`。
+在本例中，`plans`是使用`queryCollection`从`@nuxt/content`模块中获取的。
 ::
 
-## 活性成分
+## API
 
 ### Props
 
-：组件-支柱
+:component-props
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

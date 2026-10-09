@@ -1,5 +1,5 @@
 ---
-description: '無限スクロールコンテンツを作成するためのコンポーネント。'
+description: '無限スクロールコンテンツを作成するコンポーネント。'
 category: data
 keywords:
   - ticker
@@ -17,9 +17,9 @@ links:
 
 ::component-code
 ---
-きれい真
-スロット
-  デフォルト|
+prettier: true
+slots:
+  default: |
 
     <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
@@ -28,29 +28,29 @@ links:
     <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
 ---
-u—icon {name="i-simple-icons-github" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-discord" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-x" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-instagram" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-linkedin" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-instagram" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-linkedin" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-facebook" class="size-10 shrink-0"}
 ::
 
 ::tip
 アニメーションは、ユーザーが縮小したい場合に自動的に無効になり、コンテンツは静的に表示されます。
 ::
 
-### 一時停止
+### ホバーで一時停止
 
-`pause-on-hover`プロパティを使用して、ユーザーがコンテンツにカーソルを合わせたときにアニメーションを一時停止します。
+`pause-on-hover`プロパティを使用して、ユーザがコンテンツにカーソルを合わせたときにアニメーションを一時停止します。
 
 ::component-code
 ---
-きれい真
-小道具
-  pauseOnHover true
-スロット
-  デフォルト|
+prettier: true
+props:
+  pauseOnHover: true
+slots:
+  default: |
 
     <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
@@ -59,25 +59,25 @@ u—icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
     <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
 ---
-u—icon {name="i-simple-icons-github" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-discord" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-x" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-instagram" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-linkedin" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-instagram" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-linkedin" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-facebook" class="size-10 shrink-0"}
 ::
 
-### リバース
+### Reverse
 
 `reverse`プロパティを使用して、アニメーションの方向を逆にします。
 
 ::component-code
 ---
-きれい真
-小道具
-  逆真
-スロット
-  デフォルト|
+prettier: true
+props:
+  reverse: true
+slots:
+  default: |
 
     <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
@@ -86,26 +86,26 @@ u—icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
     <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
 ---
-u—icon {name="i-simple-icons-github" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-discord" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-x" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-instagram" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-linkedin" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-instagram" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-linkedin" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-facebook" class="size-10 shrink-0"}
 ::
 
-### オリエンテーション
+### Orientation
 
-スクロール方向を変更するには、`orientation`プロパティを使用します。
+`orientation`プロパティを使用してスクロール方向を変更します。
 
 ::component-code
 ---
-きれい真
-クラス'h—96'
-小道具
-  オリエンテーション'垂直'
-スロット
-  デフォルト|
+prettier: true
+class: 'h-96'
+props:
+  orientation: 'vertical'
+slots:
+  default: |
 
     <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
@@ -114,12 +114,12 @@ u—icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
     <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
 ---
-u—icon {name="i-simple-icons-github" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-discord" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-x" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-instagram" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-linkedin" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-instagram" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-linkedin" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-facebook" class="size-10 shrink-0"}
 ::
 
 ### リピート
@@ -128,11 +128,11 @@ u—icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
 
 ::component-code
 ---
-きれい真
-小道具
-  繰り返します6
-スロット
-  デフォルト|
+prettier: true
+props:
+  repeat: 6
+slots:
+  default: |
 
     <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
@@ -141,12 +141,12 @@ u—icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
     <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
 ---
-u—icon {name="i-simple-icons-github" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-discord" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-x" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-instagram" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-linkedin" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-instagram" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-linkedin" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-facebook" class="size-10 shrink-0"}
 ::
 
 ### オーバーレイ
@@ -155,11 +155,11 @@ u—icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
 
 ::component-code
 ---
-きれい真
-小道具
-  オーバーレイfalse
-スロット
-  デフォルト|
+prettier: true
+props:
+  overlay: false
+slots:
+  default: |
 
     <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
@@ -168,12 +168,12 @@ u—icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
     <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
 ---
-u—icon {name="i-simple-icons-github" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-discord" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-x" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-instagram" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-linkedin" class="size-10 shrink-0"}
-u—icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-instagram" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-linkedin" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-facebook" class="size-10 shrink-0"}
 ::
 
 ## 例
@@ -184,11 +184,11 @@ u—icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
 
 ::component-example{label="With Items"}
 ---
-きれい真
-名前：マーキー·ティスモニアルズ
-崩壊真
-overflowHidden true
-クラス'px—0'
+prettier: true
+name: 'marquee-testimonials'
+collapse: true
+overflowHidden: true
+class: 'px-0'
 ---
 ::
 
@@ -198,28 +198,28 @@ overflowHidden true
 
 ::component-example{label="スクリーンショット付き"}
 ---
-きれい真
-名前'marquee—screenshots'
-崩壊真
-overflowHidden true
-クラス'！p—0'
+prettier: true
+name: 'marquee-screenshots'
+collapse: true
+overflowHidden: true
+class: '!p-0'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

@@ -8,9 +8,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatMessages.vue
 ---
 
-##  사용
+## Usage
 
-ChatMessages 컴포넌트는 [ChatMessage](/docs/components/chat-message) 컴포넌트의 목록을 표시하며, 기본 슬롯이나 `messages`prop을 사용합니다.
+ChatMessages 구성 요소는 기본 슬롯 또는 `messages` prop를 사용하여 [ChatMessage](xph04x) 구성 요소 목록을 표시합니다.
 
 ```vue {2,8}
 <template>
@@ -27,344 +27,344 @@ ChatMessages 컴포넌트는 [ChatMessage](/docs/components/chat-message) 컴포
 ::callout{icon="i-lucide-rocket"}
 이 구성 요소는 다음과 같은 기능을 가진 AI 챗봇을 위해 특별히 제작되었습니다.This component is purpose-built for AI chatbots with features like:
 
--  로딩 시 초기 스크롤 ([`shouldScrollToBottom`](#should-scroll-to-bottom)).
--  새로운 메시지가 도착할 때 지속적으로 스크롤 다운 ([`shouldAutoScroll`](#should-auto-scroll)).
--  스크롤할 때 "자동 스크롤" 버튼이 나타나 사용자가 최신 메시지로 다시 이동할 수 있습니다 ([`autoScroll`](#auto-scroll)).
--  비서가 처리하는 동안 부하 표시기가 표시됩니다 ([`status`](#status)).
-- 제출된 메시지는 뷰포트의 맨 위로 스크롤되고 마지막 사용자 메시지의 높이는 동적으로 조정됩니다.
+- 로드 시 초기 스크롤 ([`shouldScrollToBottom`](#should-scroll-to-bottom)).
+- 새 메시지가 도착하면 계속 아래로 스크롤합니다 ([`shouldAutoScroll`](#should-auto-scroll)).
+- 스크롤할 때 자동 스크롤 버튼이 나타나 사용자가 최신 메시지([`autoScroll`](#auto-scroll))로 다시 이동할 수 있습니다.
+보조 장치가 처리하는 동안 - A 로드 표시기가 표시됩니다([`status`](#status)).
+- Submitted 메시지는 뷰포트의 맨 위로 스크롤되고 마지막 사용자 메시지의 높이가 동적으로 조정됩니다.
 ::
 
-###  메시지
+### Message 정보
 
-`messages`prop을 사용하여 채팅 메시지 목록을 표시합니다.
+`messages` prop를 사용하여 채팅 메시지 목록을 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-외부:
-  -  메시지
-무시하기:
-  -  메시지
-숨기기 (Hide):
-  -  shouldScrollToBottom
-축소: true
-클래스: 'overflow-y-auto'
-소품 :
-  메시지:
+prettier: true
+external:
+  - messages
+ignore:
+  - messages
+hide:
+  - shouldScrollToBottom
+collapse: true
+class: 'overflow-y-auto'
+props:
+  messages:
     - id: '6045235a-a435-46b8-989d-2df38ca2eb47'
-      역할: 사용자
-      부품 :
-        - type: '텍스트'
-          사진: "hello, how are you?"
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Hello, how are you?'
     - id: '7a92b3c1-d5f8-4e76-b8a9-3c1e5fb2e0d8'
-      역할: 도우미
-      부품 :
-        - type: '텍스트'
-          문자: "잘 지내고 있습니다, 물어봐 주셔서 감사합니다! 오늘 어떻게 도와 드릴까요?"
+      role: assistant
+      parts:
+        - type: 'text'
+          text: 'I am doing well, thank you for asking! How can I assist you today?'
     - id: '9c84d6a7-8b23-4f12-a1d5-e7f3b9c05e2a'
-      역할: 사용자
-      부품 :
-        - type: '텍스트'
-          문자: "도쿄의 현재 날씨는 어떻습니까?"
+      role: user
+      parts:
+        - type: 'text'
+          text: 'What is the current weather in Tokyo?'
     - id: 'b2e5f8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
-      역할: 도우미
-      부품 :
-        - type: '텍스트'
-          텍스트 (Text)"최신 자료에 따르면 도쿄는 현재 24°C(75°F) 정도의 맑은 날씨를 경험하고 있습니다. 맑은 하늘이 있는 아름다운 날입니다."
-  shouldScrollToBottom : false
+      role: assistant
+      parts:
+        - type: 'text'
+          text: "Based on the latest data, Tokyo is currently experiencing sunny weather with temperatures around 24°C (75°F). It's a beautiful day with clear skies."
+  shouldScrollToBottom: false
 ---
 ::
 
-###  상태
+### 상태
 
-`status`prop을 사용하여 도우미가 처리 중일 때 시각적 표시기를 표시합니다.
+도우미가 처리 중일 때 `status` 소품을 사용하여 시각적 표시기를 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-외부:
-  -  메시지
-무시하기:
-  -  메시지
-  -  status
-숨기기 (Hide):
-  -  shouldScrollToBottom
-클래스: 'overflow-y-auto'
-소품 :
-  상태: 'submitted'
-  메시지 :
+prettier: true
+external:
+  - messages
+ignore:
+  - messages
+  - status
+hide:
+  - shouldScrollToBottom
+class: 'overflow-y-auto'
+props:
+  status: 'submitted'
+  messages:
     - id: '6045235a-a435-46b8-989d-2df38ca2eb47'
-      역할: 사용자
-      부품 :
-        - type: '텍스트'
-          사진: "hello, how are you?"
-  shouldScrollToBottom : false
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Hello, how are you?'
+  shouldScrollToBottom: false
 ---
 ::
 
 ::note
-다음은 AI SDK `useChat`composable의 다양한 상태에 대한 세부 정보입니다.
+다음은 AI SDK `useChat` 컴포블 가능 상태의 다양한 세부 정보입니다.
 
-- `submitted` : 메시지가 API로 전송되었으며 응답 스트림이 시작될 때까지 기다리고 있습니다.
-- `streaming` 응답이 API에서 활발하게 스트리밍되어 데이터 청크를 수신합니다.
-- `ready` : 전체 응답이 수신되고 처리되었으며 새 사용자 메시지를 제출할 수 있습니다.
-- `error` : API 요청 중 오류가 발생하여 성공적으로 완료되지 않았습니다.
+- `submitted` : 메시지가 API로 전송되었으며 응답 스트림의 시작을 기다리고 있습니다.
+- `streaming`: 응답이 API에서 활발하게 스트리밍되어 데이터 청크를 수신합니다.
+- `ready` : 전체 응답을 수신하고 처리했으며 새 사용자 메시지를 제출할 수 있습니다.
+- `error`: API 요청 중에 오류가 발생하여 성공적으로 완료되지 않습니다.
 ::
 
-###  사용자
+### User 사용자
 
-`user`prop을 사용하여 [ChatMessage](/docs/components/chat-messageprops를 `user`messages에 변경합니다. 기본값은 다음과 같습니다.
+`user` prop을 사용하여 `user` 메시지에 대한 [ChatMessage](xph14xxph15x prop을 변경합니다. 기본값은 다음과 같습니다.
 
 - `side: 'right'`{lang="ts-type"}
 - `variant: 'soft'`{lang="ts-type"}
 
 ::component-code
 ---
-상품명 : True
-외부:
-  -  메시지
-무시하기:
-  - 메시지
-  - avatar . src
-  - avatar . loading  - avatar . loading
-숨기 기 (Hide) :
+prettier: true
+external:
+  - messages
+ignore:
+  - messages
+  - avatar.src
+  - avatar.loading
+hide:
   - shouldScrollToBottom
-축소 :   true
-항목 :
+collapse: true
+items:
   user.variant:
     - solid
     - outline
-    - subtle  @  미묘 한
+    - subtle
     - soft
-    - 알몸
+    - naked
   user.side:
     - left
-    - 오른쪽
-클래스 :   ' overflow - y - auto '
-소품   :
-  사용 자 :
-    측면   :   왼쪽
-    변형 : 본체
-    아바타 (Avatar) :
-      src   :https://github.com/benjamincanac.png
-      로드 : Lazy
-  메시지   :
+    - right
+class: 'overflow-y-auto'
+props:
+  user:
+    side: left
+    variant: solid
+    avatar:
+      src: https://github.com/benjamincanac.png
+      loading: lazy
+  messages:
     - id: '6045235a-a435-46b8-989d-2df38ca2eb47'
-      역할: 사용자
-      부품 :
-        - type: '텍스트'
-          사진: "hello, how are you?"
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Hello, how are you?'
     - id: '7a92b3c1-d5f8-4e76-b8a9-3c1e5fb2e0d8'
-      역할: 도우미
-      부품 :
-        - type: '텍스트'
-          문자: "잘 지내고 있습니다, 물어봐 주셔서 감사합니다! 오늘 어떻게 도와 드릴까요?"
+      role: assistant
+      parts:
+        - type: 'text'
+          text: 'I am doing well, thank you for asking! How can I assist you today?'
     - id: '9c84d6a7-8b23-4f12-a1d5-e7f3b9c05e2a'
-      역할: 사용자
-      부품 :
-        - type: '텍스트'
-          문자: "도쿄의 현재 날씨는 어떻습니까?"
+      role: user
+      parts:
+        - type: 'text'
+          text: 'What is the current weather in Tokyo?'
     - id: 'b2e5f8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
-      역할: 도우미
-      부품 :
-        - type: '텍스트'
-          텍스트 (Text)"최신 자료에 따르면 도쿄는 현재 24°C(75°F) 정도의 맑은 날씨를 경험하고 있습니다. 맑은 하늘이 있는 아름다운 날입니다."
-  shouldScrollToBottom : false
+      role: assistant
+      parts:
+        - type: 'text'
+          text: "Based on the latest data, Tokyo is currently experiencing sunny weather with temperatures around 24°C (75°F). It's a beautiful day with clear skies."
+  shouldScrollToBottom: false
 ---
 ::
 
-###  보조
+### Assistant 지원
 
-`assistant`prop을 사용하여 [ChatMessage](/docs/components/chat-message)props를 `assistant` 메시지로 변경합니다. 기본값은:
+`assistant` prop을 사용하여 ](/docs/components/chat-message) prop을 `assistant` 메시지에 대한 [ChatMessagexph178) prop을 변경합니다. 기본값은 다음과 같습니다.
 
-- `side: 'left'`{lang="ts-type"}
+- `side: 'left'`{lang="ts-type"} - {lang="ts-type"} (- `side: 'left'`{lang="ts-type"}) / `side: 'left'`{lang="ts-type"} / - `side: 'left'`{lang="ts-type"} / {lang="ts-type"} / - {lang="ts-type"} / xph181`side: 'left'`{lang="ts-type"}
 - `variant: 'naked'`{lang="ts-type"}
 
 ::component-code
 ---
-상품명 : True
-외부:
-  -  메시지
-무시하기:
-  -  메시지
-  - avatar.icon 이미지
-  - assistant.actions @지원 작업
-숨기기 (Hide):
-  - shouldScrollToBottom 이미지
-축소: true
-항목:
+prettier: true
+external:
+  - messages
+ignore:
+  - messages
+  - avatar.icon
+  - assistant.actions
+hide:
+  - shouldScrollToBottom
+collapse: true
+items:
   assistant.variant:
-    -  솔리드
-    - outline 소개
-    - subtle @ 미묘한
-    -  soft
-    -  벌거벗 은
+    - solid
+    - outline
+    - subtle
+    - soft
+    - naked
   assistant.side:
-    -  왼쪽
-    -  오른쪽
-클래스: 'overflow-y-auto'
-소품 :
-  보조 항목:
-    측면 : 왼쪽
-    변형: 외곽 선
-    아바타 (Avatar):
-      아이콘: i-lucide-bot
-    작업:
-      - label: '클립보드로 복사'
-        아이콘 : i-lucide-copy
-  메시지:
+    - left
+    - right
+class: 'overflow-y-auto'
+props:
+  assistant:
+    side: left
+    variant: outline
+    avatar:
+      icon: i-lucide-bot
+    actions:
+      - label: 'Copy to clipboard'
+        icon: i-lucide-copy
+  messages:
     - id: '6045235a-a435-46b8-989d-2df38ca2eb47'
-      역할: 사용자
-      부품 :
-        - type: '텍스트'
-          사진: "hello, how are you?"
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Hello, how are you?'
     - id: '7a92b3c1-d5f8-4e76-b8a9-3c1e5fb2e0d8'
-      역할: 도우미
-      부품 :
-        - type: '텍스트'
-          문자: "잘 지내고 있습니다, 물어봐 주셔서 감사합니다! 오늘 어떻게 도와 드릴까요?"
+      role: assistant
+      parts:
+        - type: 'text'
+          text: 'I am doing well, thank you for asking! How can I assist you today?'
     - id: '9c84d6a7-8b23-4f12-a1d5-e7f3b9c05e2a'
-      역할: 사용자
-      부품 :
-        - type: '텍스트'
-          문자: "도쿄의 현재 날씨는 어떻습니까?"
+      role: user
+      parts:
+        - type: 'text'
+          text: 'What is the current weather in Tokyo?'
     - id: 'b2e5f8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
-      역할: 도우미
-      부품 :
-        - type: '텍스트'
-          텍스트 (Text)"최신 자료에 따르면 도쿄는 현재 24°C(75°F) 정도의 맑은 날씨를 경험하고 있습니다. 맑은 하늘이 있는 아름다운 날입니다."
-  shouldScrollToBottom : false
+      role: assistant
+      parts:
+        - type: 'text'
+          text: "Based on the latest data, Tokyo is currently experiencing sunny weather with temperatures around 24°C (75°F). It's a beautiful day with clear skies."
+  shouldScrollToBottom: false
 ---
 ::
 
-###  자동 스크롤
+### Auto 스크롤
 
-`auto-scroll`prop을 사용하여 채팅 맨 위로 스크롤할 때 표시되는 자동 스크롤 단추(`false` 값)를 사용자 정의하거나 숨깁니다. 기본값은 다음과 같습니다.
+`auto-scroll` 소품을 사용하여 채팅 맨 위로 스크롤할 때 표시되는 자동 스크롤 단추(`false` 값)를 사용자 정의하거나 숨깁니다. 기본값은 다음과 같습니다.
 
-- `color: 'neutral'` {lang="ts-type"}
-- `variant: 'outline'` {lang="ts-type"}
+- `color: 'neutral'`{lang="ts-type"} (- `color: 'neutral'`{lang="ts-type"})
+- `variant: 'outline'`{lang="ts-type"}
 
-[Button](/docs/components/button) 구성 요소에서 임의의 속성을 전달하여 사용자 지정할 수 있습니다.
+[Button](/docs/components/button) 구성 요소의 모든 속성을 전달하여 사용자 정의할 수 있습니다.
 
 ::component-code
 ---
-상품명 : True
-축소: true
-외부:
-  -  메시지
-무시하기:
-  -  메시지
-  -  autoScrolll. color
-  - autoScrolll.variant - autoScrolll.variant
-  - shouldScrollToBottom 이미지
-클래스: 'overflow-y-auto max-h -[341px]static'
-소품 :
-  자동 스크롤:
-    색상: 중립
-    변형: 윤곽선
-  shouldScrollToBottom : false
-  메시지:
+prettier: true
+collapse: true
+external:
+  - messages
+ignore:
+  - messages
+  - autoScroll.color
+  - autoScroll.variant
+  - shouldScrollToBottom
+class: 'overflow-y-auto max-h-[341px] static'
+props:
+  autoScroll:
+    color: neutral
+    variant: outline
+  shouldScrollToBottom: false
+  messages:
     - id: '6045235a-a435-46b8-989d-2df38ca2eb47'
-      역할: 사용자
-      부품 :
-        - type: '텍스트'
-          사진: "hello, how are you?"
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Hello, how are you?'
     - id: '7a92b3c1-d5f8-4e76-b8a9-3c1e5fb2e0d8'
-      역할: 도우미
-      부품 :
-        - type: '텍스트'
-          문자: "잘하고 있습니다, 물어봐 주셔서 감사합니다! 오늘 어떻게 도와 드릴까요?"
+      role: assistant
+      parts:
+        - type: 'text'
+          text: 'I am doing well, thank you for asking! How can I assist you today?'
     - id: '9c84d6a7-8b23-4f12-a1d5-e7f3b9c05e2a'
-      역할: 사용자
-      부품 :
-        - type: '텍스트'
-          문자: "도쿄의 현재 날씨는 어떻습니까?"
+      role: user
+      parts:
+        - type: 'text'
+          text: 'What is the current weather in Tokyo?'
     - id: 'b2e5f8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
-      역할: 도우미
-      부품 :
-        - type: '텍스트'
-          텍스트 (Text)"최신 데이터에 따르면 도쿄는 현재 기온이 24°C(75°F) 정도로 맑은 날씨를 경험하고 있으며 맑은 하늘이 있는 아름다운 날이다. 나머지 주에 대한 예보에 따르면 목요일에 비가 내릴 가능성이 약간 있으며 주말까지는 기온이 28°C로 점차 상승하고 습도가 65% 정도로 적당하다. 그리고 바람의 속도는 남동쪽에서 8km/h로 가볍습니다. 대기질은 42로 좋습니다. 자외선 지수가 7로 높기 때문에 야외에서 시간을 보낼 계획이라면 자외선 차단제를 바르는 것이 좋습니다. 일출은 오전 5시 24분, 일몰은 6시 됩니다. 오후 48시, 도쿄는 오늘 약 13시간 24분의 일광을 제공하고 있습니다. 달은 현재 빛나는 거대한 단계에 있습니다."
+      role: assistant
+      parts:
+        - type: 'text'
+          text: "Based on the latest data, Tokyo is currently experiencing sunny weather with temperatures around 24°C (75°F). It's a beautiful day with clear skies. The forecast for the rest of the week shows a slight chance of rain on Thursday, with temperatures gradually rising to 28°C by the weekend. Humidity levels are moderate at around 65%, and wind speeds are light at 8 km/h from the southeast. Air quality is good with an index of 42. The UV index is high at 7, so it's recommended to wear sunscreen if you're planning to spend time outdoors. Sunrise was at 5:24 AM and sunset will be at 6:48 PM, giving Tokyo approximately 13 hours and 24 minutes of daylight today. The moon is currently in its waxing gibbous phase."
     - id: 'c3e5f8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
-      역할: 사용자
-      부품 :
-        - type: 'text' 형식
-          사진: "Could you recommend some popular tourist attractions in Kyoto?"
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Can you recommend some popular tourist attractions in Kyoto?'
     - id: 'd4f5g8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
-      역할: 도우미
-      부품 :
-        - type: '텍스트'
-          텍스트 (Text) 교토는 아름다운 절, 전통 찻집, 정원으로 유명하다. 몇몇 인기 명소에는 금각지가 포함된다.(금관) 거울 연못에 비친 아름다운 금빛 잎 외관, 산을 휘감고 있는 수천 개의 주홍색 토리오 문이 있는 푸시미 이나리 신사, 우뚝 솟은 줄기가 다른 세상의 분위기를 조성하는 아라시야마 대나무 숲, 키요미즈데라 사원은 도시의 전경을 제공하는 언덕 위에 자리잡고 있으며, 전통적인 목조 마키야 집들이 줄지어 있는 좁은 돌로 포장된 거리를 지나 저녁 약속에 서둘러 가는 것을 볼 수 있는 역사적인 Gion 지구에 자리잡고 있다.'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: 'Kyoto is known for its beautiful temples, traditional tea houses, and gardens. Some popular attractions include Kinkaku-ji (Golden Pavilion) with its stunning gold leaf exterior reflecting in the mirror pond, Fushimi Inari Shrine with its thousands of vermilion torii gates winding up the mountainside, Arashiyama Bamboo Grove where towering stalks create an otherworldly atmosphere, Kiyomizu-dera Temple perched on a hillside offering panoramic views of the city, and the historic Gion district where you might spot geisha hurrying to evening appointments through narrow stone-paved streets lined with traditional wooden machiya houses.'
 ---
 ::
 
-### 자동 스크롤 아이콘
+### Auto 스크롤 아이콘
 
-`auto-scroll-icon`prop을 사용하여 자동 스크롤 버튼 [Icon](/docs/components/icon)로 사용자 지정합니다. 기본값은 `i-lucide-arrow-down`입니다.
+`auto-scroll-icon` 소품을 사용하여 자동 스크롤 단추 [Icon](/docs/components/icon)를 사용자 정의합니다. 기본값은 `i-lucide-arrow-down`입니다.
 
 ::component-code
 ---
-상품명 : True
-축소: true
-외부:
-  -  메시지
-무시하기:
-  -  메시지
-  -  autoScrolll. color
-  -  autoScrolll. variant
-  -  shouldScrollToBottom
-클래스: 'overflow-y-auto max-h -[341px]static'
-소품 :
+prettier: true
+collapse: true
+external:
+  - messages
+ignore:
+  - messages
+  - autoScroll.color
+  - autoScroll.variant
+  - shouldScrollToBottom
+class: 'overflow-y-auto max-h-[341px] static'
+props:
   autoScrollIcon: 'i-lucide-chevron-down'
-  shouldScrollToBottom : false
-  메시지:
+  shouldScrollToBottom: false
+  messages:
     - id: '6045235a-a435-46b8-989d-2df38ca2eb47'
-      역할: 사용자
-      부품 :
-        - type: '텍스트'
-          사진: "hello, how are you?"
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Hello, how are you?'
     - id: '7a92b3c1-d5f8-4e76-b8a9-3c1e5fb2e0d8'
-      역할: 도우미
-      부품 :
-        - type: '텍스트'
-          문자: "잘하고 있습니다, 물어봐 주셔서 감사합니다! 오늘 어떻게 도와 드릴까요?"
+      role: assistant
+      parts:
+        - type: 'text'
+          text: 'I am doing well, thank you for asking! How can I assist you today?'
     - id: '9c84d6a7-8b23-4f12-a1d5-e7f3b9c05e2a'
-      역할: 사용자
-      부품 :
-        - type: '텍스트'
-          문자: "도쿄의 현재 날씨는 어떻습니까?"
+      role: user
+      parts:
+        - type: 'text'
+          text: 'What is the current weather in Tokyo?'
     - id: 'b2e5f8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
-      역할: 도우미
-      부품 :
-        - type: '텍스트'
-          텍스트 (Text)"최신 데이터에 따르면 도쿄는 현재 기온이 24°C(75°F) 정도로 맑은 날씨를 경험하고 있으며 맑은 하늘이 있는 아름다운 날이다. 나머지 주에 대한 예보에 따르면 목요일에 비가 내릴 가능성이 약간 있으며 주말까지는 기온이 28°C로 점차 상승하고 습도가 65% 정도로 적당하다. 그리고 바람의 속도는 남동쪽에서 8km/h로 가볍습니다. 대기질은 42로 좋습니다. 자외선 지수가 7로 높기 때문에 야외에서 시간을 보낼 계획이라면 자외선 차단제를 바르는 것이 좋습니다. 일출은 오전 5시 24분, 일몰은 6시 됩니다. 오후 48시, 도쿄는 오늘 약 13시간 24분의 일광을 제공하고 있습니다. 달은 현재 빛나는 거대한 단계에 있습니다."
+      role: assistant
+      parts:
+        - type: 'text'
+          text: "Based on the latest data, Tokyo is currently experiencing sunny weather with temperatures around 24°C (75°F). It's a beautiful day with clear skies. The forecast for the rest of the week shows a slight chance of rain on Thursday, with temperatures gradually rising to 28°C by the weekend. Humidity levels are moderate at around 65%, and wind speeds are light at 8 km/h from the southeast. Air quality is good with an index of 42. The UV index is high at 7, so it's recommended to wear sunscreen if you're planning to spend time outdoors. Sunrise was at 5:24 AM and sunset will be at 6:48 PM, giving Tokyo approximately 13 hours and 24 minutes of daylight today. The moon is currently in its waxing gibbous phase."
     - id: 'c3e5f8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
-      역할: 사용자
-      부품 :
-        - type: '텍스트'
-          사진: "Can you recommend some popular tourist attractions in Kyoto?"
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Can you recommend some popular tourist attractions in Kyoto?'
     - id: 'd4f5g8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
-      역할: 도우미
-      부품 :
-        - type: '텍스트'
-          텍스트 (Text) 교토는 아름다운 절, 전통 찻집, 정원으로 유명하다. 몇몇 인기 명소에는 금각지가 포함된다.(금관) 거울 연못에 비친 아름다운 금빛 잎 외관, 산을 휘감고 있는 수천 개의 주홍색 토리오 문이 있는 푸시미 이나리 신사, 우뚝 솟은 줄기가 다른 세상의 분위기를 조성하는 아라시야마 대나무 숲, 키요미즈데라 사원은 도시의 전경을 제공하는 언덕 위에 자리잡고 있으며, 전통적인 목조 마키야 집들이 줄지어 있는 좁은 돌로 포장된 거리를 지나 저녁 약속에 서둘러 가는 것을 볼 수 있는 역사적인 Gion 지구에 자리잡고 있다.'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: 'Kyoto is known for its beautiful temples, traditional tea houses, and gardens. Some popular attractions include Kinkaku-ji (Golden Pavilion) with its stunning gold leaf exterior reflecting in the mirror pond, Fushimi Inari Shrine with its thousands of vermilion torii gates winding up the mountainside, Arashiyama Bamboo Grove where towering stalks create an otherworldly atmosphere, Kiyomizu-dera Temple perched on a hillside offering panoramic views of the city, and the historic Gion district where you might spot geisha hurrying to evening appointments through narrow stone-paved streets lined with traditional wooden machiya houses.'
 ---
 ::
 
 ::framework-only
-#nuxt 코드
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.arrowDown` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.arrowDown` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.arrowDown` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.arrowDown` 키 아래의 `vite.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-###  자동으로 스크롤해야 합니다.
+### Should 자동 스크롤
 
-`should-auto-scroll`prop을 사용하여 메시지가 스트리밍되는 동안 연속 자동 스크롤을 활성화/비활성화합니다. 기본값은 `false`입니다.
+메시지가 스트리밍되는 동안 `should-auto-scroll` Prop을 사용하여 연속 자동 스크롤을 활성화/비활성화합니다. 기본값은 `false`입니다.
 
 ```vue
 <template>
@@ -372,9 +372,9 @@ ChatMessages 컴포넌트는 [ChatMessage](/docs/components/chat-message) 컴포
 </template>
 ```
 
-###  아래로 스크롤해야 합니다.
+### 아래로 스크롤해야 합니다.
 
-`should-scroll-to-bottom`prop을 사용하여 구성 요소가 마운트될 때 아래쪽 자동 스크롤을 활성화/비활성화합니다. 기본값은 `true`입니다.
+구성 요소가 마운트될 때 `should-scroll-to-bottom` 소품을 사용하여 아래쪽 자동 스크롤을 활성화/비활성화합니다. 기본값은 `true`입니다.
 
 ```vue
 <template>
@@ -382,36 +382,36 @@ ChatMessages 컴포넌트는 [ChatMessage](/docs/components/chat-message) 컴포
 </template>
 ```
 
-##  예
+## 예제
 
 ::tip{to="/docs/components/chat"}
-**Chat**Overview 페이지에서 설치 지침, 서버 설정 및 사용 예를 확인하십시오.
+**Chat** 개요 페이지에서 설치 지침, 서버 설정 및 사용법 예를 확인하십시오.
 ::
 
 ### LED 슬롯 포함
 
-`#indicator`슬롯을 사용하여 [`ChatShimmer`](/docs/components/chat-shimmer)effect로 로드 표시기를 사용자 지정합니다.
+`#indicator` 슬롯을 사용하여 [`ChatShimmer`](/docs/components/chat-shimmer) 효과로 로드 표시기를 사용자 정의합니다.
 
 ::component-example
 ---
-이름: 'chat-messages-indicator-slot-example'
-클래스: 'overflow-y-auto'
-축소: true
+name: 'chat-messages-indicator-slot-example'
+class: 'overflow-y-auto'
+collapse: true
 ---
 ::
 
-##  API
+## API
 
-### Props 이미지
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### 슬롯
 
-:컴포넌트 - 슬롯
+:component-slots
 
 ::tip
-ChatMessages 내부의 [`ChatMessage`](/docs/components/chat-message#slots) 구성 요소의 모든 슬롯을 사용할 수 있으며 자동으로 전달되므로 `messages`prop을 사용할 때 개별 메시지를 사용자 정의 할 수 있습니다.
+ChatMessages 내에서 [`ChatMessage`](/docs/components/chat-message#slots) 구성 요소의 모든 슬롯을 사용할 수 있으며, `messages` prop을 사용할 때 개별 메시지를 사용자 정의 할 수 있도록 자동으로 전달됩니다.
 
 ```vue{7-15}
 <script setup lang="ts">
@@ -435,18 +435,18 @@ import { isTextUIPart } from 'ai'
 ```
 ::
 
-###  노출
+### exose 소개
 
 템플릿 참조를 통해 컴포넌트에 액세스하는 경우 다음을 사용할 수 있습니다.
 
 | 이름 Name| 유형 (Type)|
 | ---- | ---- |
-| `registerMessageRef(id: string, element: ComponentPublicInstance \| null)`{lang="ts-type"}| `void` @ {lang="ts-type"}|
+| `registerMessageRef(id: string, element: ComponentPublicInstance \| null)`{lang="ts-type"} (`registerMessageRef(id: string, element: ComponentPublicInstance \| null)`{lang="ts-type"})| `void`{lang="ts-type"}|
 
-##  테마
+## Theme (## 테마)
 
-:구성요소 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

@@ -1,6 +1,6 @@
 ---
 title: Páginas
-description: 'Un diseño de lista vertical para mostrar contenido en un formato apilado.'
+description: 'Un diseño de lista vertical para mostrar el contenido en un formato apilado.'
 category: page
 links:
   - label: GitHub también
@@ -8,46 +8,46 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageList.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente PageList proporciona una forma flexible de mostrar contenido en un diseño de lista vertical. Es perfecto para crear listas apiladas de componentes [PageCard](/docs/components/page-card) o cualquier otro elemento, con divisores opcionales entre elementos.
-
-::component-example
----
-Colapso: Verdad
-Nombre: 'pagina-lista-ejemplo'
-Props:
-  Categoría: w-full
----
-::
-
-@@005@Divider
-
-Utilice el prop `divide` para añadir un divisor entre cada elemento hijo.
+Es perfecto para crear listas apiladas de componentes [PageCard](/docs/components/page-card) o de cualquier otro elemento, con divisores opcionales entre elementos.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'pagina-lista-divido-ejemplo'
-Props:
-  Categoría: w-full
+collapse: true
+name: 'page-list-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-@@pH007
+### Divide (Edición española)
 
-@080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Utilice el prop `divide` para agregar un divisor entre cada elemento hijo.
 
-Componentes Props
+::component-example
+---
+collapse: true
+name: 'page-list-divide-example'
+props:
+  class: 'w-full'
+---
+::
 
-@000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## API (Edición española)
 
-Componentes de slots
+### Props (Edición española)
 
-@100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+:component-props
 
-Componente Tema
+### Slots (Edición española)
 
-@111@Changelog
+:component-slots
 
-Categoría: component-changelog
+## Temas
+
+:component-theme
+
+## Changelog (Edición española)
+
+:component-changelog

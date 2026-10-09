@@ -9,7 +9,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Accordion.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Utilisez les composants `accordion` et `accordion-item` pour afficher un [Accordion](/docs/components/accordion) dans votre contenu.
 
@@ -17,8 +17,8 @@ Utilisez les composants `accordion` et `accordion-item` pour afficher un [Accord
 
 :::accordion
 ---
-Valeur défaillante:
-  @@ph007 @ 1
+defaultValue:
+  - '1'
 ---
 
 ::accordion-item{label="Nuxt UI est-il gratuit à utiliser?" icon="i-lucide-circle-help"}
@@ -61,25 +61,25 @@ Yes! Nuxt UI is used in production by thousands of applications with extensive t
 
 ::
 
-@@ph036@api
+## API
 
-@@ph037@@props
+### Props
 
-: composant-props {prose}
+:component-props{prose}
 
-@@ph039@@Slots
+### Slots
 
-: composant-slots {prose}
+:component-slots{prose}
 
-@@ph041@thème
+## Thème
 
 ::component-theme{prose}
 ---
-supplémentaire:
-  @@ph042@accordéon
+extra:
+  - accordionItem
 ---
 ::
 
-@changelog @changelog
+## Changelog
 
-: composant-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

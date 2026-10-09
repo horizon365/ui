@@ -9,14 +9,14 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Kbd.vue
 ---
 
-## 使用情况
+## 用法
 
-使用`kbd`组件可在内容中显示[Kbd](/docs/components/kbd)。
+使用`kbd`组件在内容中显示[Kbd](/docs/components/kbd)。
 
 ::code-preview{class="[&>div]:*:my-0"}
-：kbd{value="meta"}：kbd{value="K"}
+:kbd{value="meta"} :kbd{value="K"}
 
-#代码
+#code
 
 ```mdc
 :kbd{value="meta"} :kbd{value="K"}
@@ -28,16 +28,16 @@ links:
 
 ### Props
 
-：组件-道具{prose}
+:component-props{prose}
 
-### Slots
+### 老虎机
 
-：组件插槽{prose}
+:component-slots{prose}
 
 ## Theme
 
-：component-theme{prose}
+:component-theme{prose}
 
 ## Changelog
 
-：component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

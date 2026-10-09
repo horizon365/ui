@@ -11,78 +11,78 @@ links:
 
 ## 使用法
 
-`callout`コンポーネントのデフォルトスロットでmarkdownを使用して、コンテンツに目を引くコンテキストを追加します。
+コンテンツに目を引くコンテキストを追加するには、`callout`コンポーネントのデフォルトスロットでmarkdownを使用します。
 
 ::component-code{slug="callout" prose}
 ---
-小道具
-  クラス'w—full my—0'
-隠す
-  - クラス
-スロット
-  デフォルトこれは`callout`で、** markdown **を完全にサポートしています。
+props:
+  class: 'w-full my-0'
+hide:
+  - class
+slots:
+  default: This is a `callout` with full **markdown** support.
 ---
 ::
 
-### アイコン
+### Icon
 
 `icon`プロパティを使用して、コンテンツの横にアイコンを表示します。
 
 ::component-code{slug="callout" prose}
 ---
-小道具
-  アイコンi—lucide square—play
-  クラス'w—full my—0'
-隠す
-  - クラス
-スロット
-  defaultこれは`callout`にアイコン付きです。
+props:
+  icon: i-lucide-square-play
+  class: 'w-full my-0'
+hide:
+  - class
+slots:
+  default: This is a `callout` with an icon.
 ---
 ::
 
-### カラー
+### Color
 
 `color`プロパティを使用して、コールアウトの色を変更します。
 
 ::component-code{slug="callout" prose}
 ---
-無視
-  - アイコン
-小道具
-  アイコンi—lucide—info
-  色info
-  クラス'w—full my—0'
-隠す
-  - クラス
-スロット
-  defaultこれはカスタムカラーの`callout`です。
+ignore:
+  - icon
+props:
+  icon: i-lucide-info
+  color: info
+  class: 'w-full my-0'
+hide:
+  - class
+slots:
+  default: This is a `callout` with a custom color.
 ---
 ::
 
-### リンク
+### Link
 
-[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)コンポーネントから任意のプロパティを渡して、コールアウトをリンクにすることができます。
+[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)コンポーネントの任意のプロパティ（`to`や`target`など）を渡して、コールアウトをリンクにすることができます。
 
 ::component-code{slug="callout" prose}
 ---
-隠す
-  - クラス
-無視
-  - アイコン
-  - ターゲット
-小道具
-  アイコンi—lucide square—play
-  '/docs/getting—started/installation/nuxt'
-  色ニュートラル
-  クラス'w—full my—0'
-スロット
-  defaultプロジェクトに`@nuxt/ui`をインストールする方法を学びます。
+hide:
+  - class
+ignore:
+  - icon
+  - target
+props:
+  icon: i-lucide-square-play
+  to: '/docs/getting-started/installation/nuxt'
+  color: neutral
+  class: 'w-full my-0'
+slots:
+  default: Learn how to install `@nuxt/ui` in your project.
 ---
 ::
 
 ## ショートカット
 
-また、`note`、`tip`、`warning`、および`caution`のショートカットを、定義済みのアイコンと色で使用することもできます。
+`note`、`tip`、`warning`、`caution`ショートカットを定義済みのアイコンと色で使用することもできます。
 
 ::code-preview
 
@@ -106,7 +106,7 @@ links:
 
 :::
 
-#コード
+#code
 
 ```mdc
 ::note
@@ -128,20 +128,20 @@ This action cannot be undone.
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props {prose}
+:component-props{prose}
 
 ### スロット
 
-component—slots {prose}
+:component-slots{prose}
 
 ## テーマ
 
-component—theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

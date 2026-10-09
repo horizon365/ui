@@ -15,808 +15,808 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/NavigationMenu.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice el componente NavigationMenu para mostrar una lista de enlaces horizontal o verticalmente.
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
-  @001@clase
-Ignora:
-  @@2002@artículos
-Externo:
-  @@pH000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externalidades:
-  @@@P2004@@NavegaciónMenuItem []
-Props:
-  Items:
-    - label: Guía
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - NavigationMenuItem[]
+props:
+  items:
+    - label: Guide
       icon: i-lucide-book-open
-      Inicio/docs/Getting-started
-      niños:
-        - label: Introducción
-          Descripción: Componentes totalmente diseñados y personalizables para Nuxt.
-          Vía: i-lucide-house
-        - label: Instalación
-          Descripción: Aprenda a instalar y configurar la interfaz de usuario de Nuxt en su aplicación.
+      to: /docs/getting-started
+      children:
+        - label: Introduction
+          description: Fully styled and customizable components for Nuxt.
+          icon: i-lucide-house
+        - label: Installation
+          description: Learn how to install and configure Nuxt UI in your application.
           icon: i-lucide-cloud-download
-        - label:'Iconos'(Edición española)
-          icono: 'i-lucide-smile'
-          No tienes nada que hacer,@ nuxt/icon se encargará de ello automáticamente.
-        - label:"Los colores"
+        - label: 'Icons'
+          icon: 'i-lucide-smile'
+          description: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+        - label: 'Colors'
           icon: 'i-lucide-swatch-book'
-          Descripción:'Elige un color primario y un color neutro de tu tema CSS Tailwind.'
-        - label:'El tema'
-          icono: 'i-lucide-cog'
-          Descripción:'Puede personalizar los componentes utilizando los accesorios `class`/`ui` o en su app.config.ts'.
+          description: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+        - label: 'Theme'
+          icon: 'i-lucide-cog'
+          description: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
     - label: Composables
-      Icono: i-lucide-database
-      Archivo: /docs/composables
-      niños:
-        - label: defineAtajos
+      icon: i-lucide-database
+      to: /docs/composables
+      children:
+        - label: defineShortcuts
           icon: i-lucide-file-text
-          Descripción: Define atajos para tu aplicación.
-          Archivo: /docs/composables/define-shortcuts
+          description: Define shortcuts for your application.
+          to: /docs/composables/define-shortcuts
         - label: useOverlay
           icon: i-lucide-file-text
-          Descripción: Muestra un modal/slideover dentro de tu aplicación.
-          Archivo: /docs/composables/use-overlay
-        - label: useToast (Edición española)
+          description: Display a modal/slideover within your application.
+          to: /docs/composables/use-overlay
+        - label: useToast
           icon: i-lucide-file-text
-          Descripción: Mostrar un brindis dentro de su aplicación.
-          en: /docs/composables/use-toast
-    - label: Componentes
-      Icono: i-lucide-box
-      Archivo: /docs/components
-      Activo: Verdadero
-      niños:
-        - label: Enlace
+          description: Display a toast within your application.
+          to: /docs/composables/use-toast
+    - label: Components
+      icon: i-lucide-box
+      to: /docs/components
+      active: true
+      children:
+        - label: Link
           icon: i-lucide-file-text
-          Descripción: Utiliza NuxtLink con superpoderes.
-          En: /docs/componentes/enlace
+          description: Use NuxtLink with superpowers.
+          to: /docs/components/link
         - label: Modal
           icon: i-lucide-file-text
-          Descripción: Muestra un modal dentro de tu aplicación.
-          Inicio/docs/componentes/modal
-        - label: NavegaciónMenú
+          description: Display a modal within your application.
+          to: /docs/components/modal
+        - label: NavigationMenu
           icon: i-lucide-file-text
-          Descripción: Muestra una lista de enlaces.
-          /docs/componentes/menú de navegación
-        - label: Paginación
+          description: Display a list of links.
+          to: /docs/components/navigation-menu
+        - label: Pagination
           icon: i-lucide-file-text
-          Descripción: Muestra una lista de páginas.
-          /docs/componentes/paginación
+          description: Display a list of pages.
+          to: /docs/components/pagination
         - label: Popover
           icon: i-lucide-file-text
-          Description: Muestra un diálogo no modal que flota alrededor de un elemento de activación.
-          /docs/componentes/popover
-        - label: el progreso
+          description: Display a non-modal dialog that floats around a trigger element.
+          to: /docs/components/popover
+        - label: Progress
           icon: i-lucide-file-text
-          Descripción : Muestra una barra horizontal para indicar la progresión de la tarea .
-          /docs/componentes/progreso
-    - label : GitHub (Edición española)
-      icon : i-simple - icons-github
-      Categoría : 6K
-      Dos :https://github.com/nuxt/ui
-      Nombre : _ blank
-    - label : ayuda
-      icon : i-lucide - circle-help
-      Discapacitados : Verdadero
-  clase : ' w-full justify-center '
+          description: Show a horizontal bar to indicate task progression.
+          to: /docs/components/progress
+    - label: GitHub
+      icon: i-simple-icons-github
+      badge: 6k
+      to: https://github.com/nuxt/ui
+      target: _blank
+    - label: Help
+      icon: i-lucide-circle-help
+      disabled: true
+  class: 'w-full justify-center'
 ---
 ::
 
-@@26000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Artículos
 
-Utilice el prop`items`como una matriz de objetos con las siguientes propiedades :
+Utilice el prop `items` como una matriz de objetos con las siguientes propiedades:
 
-@@
-@@
-@@
-@@
-[`chip?: boolean | ChipProps`{lang="ts-type"}](PH0444)
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@
-@@
-@@
-@@
-@@ph070@@@ph071@@@ph072
-@@
-@@ph076 @@@@ph077
-[`slot?: string`{lang="ts-type"}](#with-custom-slot)
-@@ph086@@@ph087@@@ph088 @
-@@@ph089@@@@ph090@@@ph091
-@@
-@@
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`badge?: string | number | BadgeProps`xx{lang="ts-type"}
+- x[x`chip?: boolean | ChipProps`x{lang="ts-type"}x](x#with-chip-in-itemsx)
+- x[x`tooltip?: TooltipProps`x{lang="ts-type"}x](x#with-tooltip-in-itemsx)
+- x[x`popover?: PopoverProps`x{lang="ts-type"}](x#with-popover-in-itemsx)
+- x`trailingIcon?: string`x{lang="ts-type"}
+- x`type?: 'label' | 'trigger' | 'link'`x{lang="ts-type"}
+- x`defaultOpen?: boolean`x{lang="ts-type"} (Edición española)
+- x`open?: boolean`x{lang="ts-type"}
+- x`value?: string`x{lang="ts-type"}
+- x`disabled?: boolean`x{lang="ts-type"}
+- x[x`slot?: string`x{lang="ts-type"}x](#with-custom-slotx)
+- x`onSelect?: (e: Event) => void`x{lang="ts-type"} (Edición española)
+- x`children?: NavigationMenuChildItem[]`x{lang="ts-type"} (Edición española)
+- x`class?: any`x{lang="ts-type"}
+- x`ui?: { linkLeadingAvatarSize?: ClassNameValue, linkLeadingAvatar?: ClassNameValue, linkLeadingIcon?: ClassNameValue, linkLeadingChipSize?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkTrailing?: ClassNameValue, linkTrailingBadgeSize?: ClassNameValue, linkTrailingBadge?: ClassNameValue, linkTrailingIcon?: ClassNameValue, label?: ClassNameValue, link?: ClassNameValue, content?: ClassNameValue, childList?: ClassNameValue, childLabel?: ClassNameValue, childItem?: ClassNameValue, childLink?: ClassNameValue, childLinkIcon?: ClassNameValue, childLinkWrapper?: ClassNameValue, childLinkLabel?: ClassNameValue, childLinkLabelExternalIcon?: ClassNameValue, childLinkDescription?: ClassNameValue }`x{lang="ts-type"}
 
-Puede pasar cualquier propiedad del componente [Link](/docs/components/link#props) como `to`,`target`, etc.
+Puede pasar cualquier propiedad del componente [Link](/docs/components/link#props) como `to`, `target`, etc.
 
 ::component-code
 ---
-Colapso: Verdad
-Ignora:
-  @104@puntos
-  @5000@clase
-Externo:
-  @106@puntos
-Externalidades:
-  - NavigationMenuItem []
-Props:
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - NavigationMenuItem[]
+props:
   items:
-    - label: Guía
-      Icono: i-lucide-book-open
-      Inicio/docs/Getting-started
-      niños:
-        - label: Introducción
-          Descripción: Componentes totalmente diseñados y personalizables para Nuxt.
-          Vía: i-lucide-house
-        - label: Instalación
-          Descripción: Aprenda a instalar y configurar la interfaz de usuario de Nuxt en su aplicación.
+    - label: Guide
+      icon: i-lucide-book-open
+      to: /docs/getting-started
+      children:
+        - label: Introduction
+          description: Fully styled and customizable components for Nuxt.
+          icon: i-lucide-house
+        - label: Installation
+          description: Learn how to install and configure Nuxt UI in your application.
           icon: i-lucide-cloud-download
-        - label:'Iconos'(Edición española)
-          icono: 'i-lucide-smile'
-          No tienes nada que hacer,@ nuxt/icon se encargará de ello automáticamente.
-        - label:'Los colores'
+        - label: 'Icons'
+          icon: 'i-lucide-smile'
+          description: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+        - label: 'Colors'
           icon: 'i-lucide-swatch-book'
-          Descripción:'Elige un color primario y un color neutro de tu tema CSS Tailwind.'
-        - label:'El tema'
-          icono: 'i-lucide-cog'
-          Descripción:'Puede personalizar los componentes utilizando los accesorios `class`/`ui` o en su app.config.ts'.
-    - label: Componentes
-      Icono: i-lucide-database
-      Archivo: /docs/composables
-      niños:
-        - label: defineAtajos
+          description: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+        - label: 'Theme'
+          icon: 'i-lucide-cog'
+          description: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+    - label: Composables
+      icon: i-lucide-database
+      to: /docs/composables
+      children:
+        - label: defineShortcuts
           icon: i-lucide-file-text
-          Descripción: Define atajos para tu aplicación.
-          Archivo: /docs/composables/define-shortcuts
+          description: Define shortcuts for your application.
+          to: /docs/composables/define-shortcuts
         - label: useOverlay
           icon: i-lucide-file-text
-          Descripción: Muestra un modal/slideover dentro de tu aplicación.
-          Archivo: /docs/composables/use-overlay
-        - label: useToast (Edición española)
+          description: Display a modal/slideover within your application.
+          to: /docs/composables/use-overlay
+        - label: useToast
           icon: i-lucide-file-text
-          Descripción: Mostrar un brindis dentro de su aplicación.
-          en: /docs/composables/use-toast
-    - label: Componentes
-      Icono: i-lucide-box
-      Archivo: /docs/components
-      Activo: Verdadero
-      niños:
-        - label: Enlace
+          description: Display a toast within your application.
+          to: /docs/composables/use-toast
+    - label: Components
+      icon: i-lucide-box
+      to: /docs/components
+      active: true
+      children:
+        - label: Link
           icon: i-lucide-file-text
-          Descripción: Utiliza NuxtLink con superpoderes.
-          En: /docs/componentes/enlace
-        - label: Diseño
+          description: Use NuxtLink with superpowers.
+          to: /docs/components/link
+        - label: Modal
           icon: i-lucide-file-text
-          Descripción: Muestra un modal dentro de tu aplicación.
-          Inicio/docs/componentes/modal
-        - label: NavegaciónMenú
+          description: Display a modal within your application.
+          to: /docs/components/modal
+        - label: NavigationMenu
           icon: i-lucide-file-text
-          Descripción: Muestra una lista de enlaces.
-          /docs/componentes/menú de navegación
-        - label: Paginación
+          description: Display a list of links.
+          to: /docs/components/navigation-menu
+        - label: Pagination
           icon: i-lucide-file-text
-          Descripción: Muestra una lista de páginas.
-          /docs/componentes/paginación
-        - label: Popover (Edición española)
+          description: Display a list of pages.
+          to: /docs/components/pagination
+        - label: Popover
           icon: i-lucide-file-text
-          Description : Muestra un diálogo no modal que flota alrededor de un elemento de activación .
-          /docs/componentes/popover
-        - label : el progreso
-          icon : i-lucide - file-text
-          Descripción : Muestra una barra horizontal para indicar la progresión de la tarea .
-          /docs/componentes/progreso
-    - etiqueta : GitHub
-      icon : i-simple - icons-github
-      Categoría : 6K
-      Dos :https://github.com/nuxt/ui
-      Nombre : _ blank
-    - label : ayuda
-      icon : i-lucide - circle-help
-      Discapacitados : Verdadero
-  clase : ' w-full justify-center '
+          description: Display a non-modal dialog that floats around a trigger element.
+          to: /docs/components/popover
+        - label: Progress
+          icon: i-lucide-file-text
+          description: Show a horizontal bar to indicate task progression.
+          to: /docs/components/progress
+    - label: GitHub
+      icon: i-simple-icons-github
+      badge: 6k
+      to: https://github.com/nuxt/ui
+      target: _blank
+    - label: Help
+      icon: i-lucide-circle-help
+      disabled: true
+  class: 'w-full justify-center'
 ---
 ::
 
 ::note
-También puede pasar un array de arrays a la prop`items`para mostrar grupos de elementos .
+También puede pasar una matriz de matrices al soporte `items` para mostrar grupos de elementos.
 ::
 
 ::tip
-Cada elemento puede tomar un array`children`de objetos con las siguientes propiedades para crear submenús :
+Cada elemento puede tomar una matriz `children` de objetos con las siguientes propiedades para crear submenús:
 
-@131@@@132@
-@133@@@134@
-@135@@@136@
-@137@@138@
-@@pH139@
+- x`label: string` (Edición española)
+- x`description?: string` (Edición española)
+- x`icon?: string` (Edición española)
+- x`onSelect?: (e: Event) => void`
+- x`class?: any`
 
 ::
 
-@@141@Orientación
+### Orientación
 
-Utilice el prop`orientation`para cambiar la orientación del menú de navegación .
+Utilice el prop `orientation` para cambiar la orientación del menú de navegación.
 
 ::note
-Si la orientación es`vertical`, un[Accordion](/docs/components/accordion)componente se utiliza para mostrar cada grupo . Se puede controlar el estado abierto de cada elemento utilizando el`open`y`defaultOpen`propiedades y cambiar el comportamiento utilizando el[`collapsible`](/docs/components/accordion#collapsible)y[`type`](/docs/components/accordion#multiple).
+Cuando la orientación es `vertical`, se utiliza un componente [Accordion](/docs/components/accordion) para mostrar cada grupo. Puede controlar el estado abierto de cada elemento mediante las propiedades `open` y `defaultOpen` y cambiar el comportamiento mediante los accesorios [`collapsible`ph274/docs/components/accordion#collapsible) y xph2777x`type`](](/docs/components/accordion#multiple).
 ::
 
 ::note
-Cuando la orientación es `vertical` y el menú no es `collapsed`, los niños se representan recursivamente como elementos, por lo que `ui.link` los estiliza.`ui.childLink` solo se aplica al `content` mostrado en la orientación `horizontal` y al [](#with-popover-in-items) cuando `collapsed`.
+Cuando la orientación es `vertical` y el menú no es `collapsed`, los elementos secundarios se representan recursivamente como elementos, por lo que `ui.link` los estiliza. `ui.childLink` solo se aplica al `content` mostrado en la orientación `horizontal` y al [popover](#with-popover-in-items) cuando `collapsed`.
 ::
 
 ::component-code
 ---
-Colapso: Verdad
-Ignora:
-  @171@artículos
-  @@2002@clase
-Externo:
-  @@173@artículos
-Externalidades:
-  @@174@@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174 []
-Props:
-  Categoría:"Vertical"
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - NavigationMenuItem[][]
+props:
+  orientation: 'vertical'
   items:
-    - -etiqueta: Enlaces
-        Categoría:'Label'
-      - label: Guía
-        Icono: i-lucide-book-open
-        niños:
-          - label: Introducción
-            Descripción: Componentes totalmente diseñados y personalizables para Nuxt.
-            Vía: i-lucide-house
-          - label: Instalación
-            Descripción: Aprenda a instalar y configurar la interfaz de usuario de Nuxt en su aplicación.
+    - - label: Links
+        type: 'label'
+      - label: Guide
+        icon: i-lucide-book-open
+        children:
+          - label: Introduction
+            description: Fully styled and customizable components for Nuxt.
+            icon: i-lucide-house
+          - label: Installation
+            description: Learn how to install and configure Nuxt UI in your application.
             icon: i-lucide-cloud-download
-          - label:'Iconos'(Edición española)
-            icono: 'i-lucide-smile'
-            No tienes nada que hacer,@ nuxt/icon se encargará de ello automáticamente.
-          - label:'Los colores'
+          - label: 'Icons'
+            icon: 'i-lucide-smile'
+            description: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+          - label: 'Colors'
             icon: 'i-lucide-swatch-book'
-            Descripción:'Elige un color primario y un color neutro de tu tema CSS Tailwind.'
-          - label:'El tema'
-            icono: 'i-lucide-cog'
-            Descripción:'Puede personalizar los componentes utilizando los accesorios `class`/`ui` o en su app.config.ts'.
-      - label: Componentes
-        Icono: i-lucide-database
-        niños:
-          - label: defineAtajos
+            description: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+          - label: 'Theme'
+            icon: 'i-lucide-cog'
+            description: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+      - label: Composables
+        icon: i-lucide-database
+        children:
+          - label: defineShortcuts
             icon: i-lucide-file-text
-            Descripción: Define atajos para tu aplicación.
-            Archivo: /docs/composables/define-shortcuts
+            description: Define shortcuts for your application.
+            to: /docs/composables/define-shortcuts
           - label: useOverlay
             icon: i-lucide-file-text
-            Descripción: Muestra un modal/slideover dentro de tu aplicación.
-            Archivo: /docs/composables/use-overlay
-          - label: useToast (Edición española)
+            description: Display a modal/slideover within your application.
+            to: /docs/composables/use-overlay
+          - label: useToast
             icon: i-lucide-file-text
-            Descripción: Mostrar un brindis dentro de su aplicación.
-            en: /docs/composables/use-toast
-      - label: Componentes
-        Icono: i-lucide-box
-        Archivo: /docs/components
-        Categoría: Trigger
-        Activo: Verdadero
-        por defecto: true
-        niños:
-          - label: Enlace
+            description: Display a toast within your application.
+            to: /docs/composables/use-toast
+      - label: Components
+        icon: i-lucide-box
+        to: /docs/components
+        type: 'trigger'
+        active: true
+        defaultOpen: true
+        children:
+          - label: Link
             icon: i-lucide-file-text
-            Descripción: Utiliza NuxtLink con superpoderes.
-            En: /docs/componentes/enlace
-          - label: Modal (Edición española)
+            description: Use NuxtLink with superpowers.
+            to: /docs/components/link
+          - label: Modal
             icon: i-lucide-file-text
-            Descripción: Muestra un modal dentro de tu aplicación.
-            Inicio/docs/componentes/modal
-          - label: NavegaciónMenú
+            description: Display a modal within your application.
+            to: /docs/components/modal
+          - label: NavigationMenu
             icon: i-lucide-file-text
-            Descripción: Muestra una lista de enlaces.
-            /docs/componentes/menú de navegación
-          - label: Paginación
+            description: Display a list of links.
+            to: /docs/components/navigation-menu
+          - label: Pagination
             icon: i-lucide-file-text
-            Descripción: muestra una lista de páginas.
-            /docs/componentes/paginación
-          - label: Popover (Edición española)
+            description: Display a list of pages.
+            to: /docs/components/pagination
+          - label: Popover
             icon: i-lucide-file-text
-            Description: Muestra un diálogo no modal que flota alrededor de un elemento de activación.
-            /docs/componentes/popover
-          - label: el progreso
-            icon : i-lucide - file-text
-            Descripción : Muestra una barra horizontal para indicar la progresión de la tarea .
-            /docs/componentes/progreso
-    - - etiqueta : GitHub
-        icon : i-simple - icons-github
-        Categoría : 6K
-        Dos :https://github.com/nuxt/ui
-        Nombre : _ blank
-      - label : ayuda
-        icon : i-lucide - circle-help
-        Discapacitados : Verdadero
-  clase : ' datos - [ orientación = vertical ] : w - 48 '
+            description: Display a non-modal dialog that floats around a trigger element.
+            to: /docs/components/popover
+          - label: Progress
+            icon: i-lucide-file-text
+            description: Show a horizontal bar to indicate task progression.
+            to: /docs/components/progress
+    - - label: GitHub
+        icon: i-simple-icons-github
+        badge: 6k
+        to: https://github.com/nuxt/ui
+        target: _blank
+      - label: Help
+        icon: i-lucide-circle-help
+        disabled: true
+  class: 'data-[orientation=vertical]:w-48'
 ---
 ::
 
 ::note
-Los grupos estarán espaciados cuando la orientación sea`horizontal`y separados cuando la orientación sea`vertical`.
+Los grupos estarán espaciados cuando la orientación sea `horizontal` y separados cuando la orientación sea `vertical`.
 ::
 
 ### Colapsado
 
-En la orientación`vertical`, utilice el prop`collapsed`para contraer el menú de navegación , esto puede ser útil en una barra lateral , por ejemplo .
+En la orientación `vertical`, utilice el prop `collapsed` para contraer el menú de navegación, esto puede ser útil en una barra lateral, por ejemplo.
 
 ::note
-Puede utilizar los accesorios[`tooltip`](#with-tooltip-in-items)y[`popover`](#with-popover-in-items)para mostrar más información sobre los elementos colapsados .
+Puede utilizar los accesorios [`tooltip`](#with-tooltip-in-items) y [`popover`](#with-popover-in-items) para mostrar más información sobre los elementos colapsados.
 ::
 
 ::component-code
 ---
-Colapso : Verdad
-Ignora :
-  @212@artículos
-  @@213@orientación
-  @214@clase
-Externo :
-  @215@artículos
-Externalidades :
-  @@2016@@2016@2016@2016@2016@2016@2016@2016@@2016@2016@@2016@2016@@2016@2016@@2016@@2016@2016@2016@@2016@2016@@2016@2016@2001116
+collapse: true
+ignore:
+  - items
+  - orientation
+  - class
+external:
+  - items
+externalTypes:
+  - NavigationMenuItem[][]
 items:
-  ToolTip:
-    @217@@verdad
-    @218@false
-  Popover:
-    @219@@verdad
-    @220@false
-Props:
-  Colapsado: Cierto
-  Tooltip: Falso
-  Popover: Falso
-  Categoría:"Vertical"
-  Items:
-    - -etiqueta: Enlaces
-        Categoría:'Label'
-      - label: Dirección
-        Icono: i-lucide-book-open
-        niños:
-          - label Introducción
-            Descripción: Componentes totalmente diseñados y personalizables para Nuxt.
-            Vía: i-lucide-house
-          - label: Instalación
-            Descripción: Aprenda a instalar y configurar la interfaz de usuario de Nuxt en su aplicación.
+  tooltip:
+    - true
+    - false
+  popover:
+    - true
+    - false
+props:
+  collapsed: true
+  tooltip: false
+  popover: false
+  orientation: 'vertical'
+  items:
+    - - label: Links
+        type: 'label'
+      - label: Guide
+        icon: i-lucide-book-open
+        children:
+          - label: Introduction
+            description: Fully styled and customizable components for Nuxt.
+            icon: i-lucide-house
+          - label: Installation
+            description: Learn how to install and configure Nuxt UI in your application.
             icon: i-lucide-cloud-download
-          - label:'Iconos'(Edición española)
-            icono: 'i-lucide-smile'
-            No tienes nada que hacer,@ nuxt/icon se encargará de ello automáticamente.
-          - label:'Los colores'
+          - label: 'Icons'
+            icon: 'i-lucide-smile'
+            description: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+          - label: 'Colors'
             icon: 'i-lucide-swatch-book'
-            Descripción:'Elige un color primario y un color neutro de tu tema CSS Tailwind.'
-          - label:'El tema'
-            icono: 'i-lucide-cog'
-            Descripción:'Puede personalizar los componentes utilizando los accesorios `class`/`ui` o en su app.config.ts'.
-      - label: Componentes
-        Icono: i-lucide-database
-        niños:
-          - label: defineAtajos
+            description: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+          - label: 'Theme'
+            icon: 'i-lucide-cog'
+            description: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+      - label: Composables
+        icon: i-lucide-database
+        children:
+          - label: defineShortcuts
             icon: i-lucide-file-text
-            Descripción: Define atajos para tu aplicación.
-            Archivo: /docs/composables/define-shortcuts
+            description: Define shortcuts for your application.
+            to: /docs/composables/define-shortcuts
           - label: useOverlay
             icon: i-lucide-file-text
-            Descripción: Muestra un modal/slideover dentro de tu aplicación.
-            Archivo: /docs/composables/use-overlay
-          - label: useToast (Edición española)
+            description: Display a modal/slideover within your application.
+            to: /docs/composables/use-overlay
+          - label: useToast
             icon: i-lucide-file-text
-            Descripción: Muestra un brindis dentro de tu aplicación.
-            en: /docs/composables/use-toast
-      - label: Componentes
-        Icono: i-lucide-box
-        Archivo: /docs/components
-        Activo: Verdadero
-        niños:
-          - label: Enlace
+            description: Display a toast within your application.
+            to: /docs/composables/use-toast
+      - label: Components
+        icon: i-lucide-box
+        to: /docs/components
+        active: true
+        children:
+          - label: Link
             icon: i-lucide-file-text
-            Descripción: Utiliza NuxtLink con superpoderes.
-            En: /docs/componentes/enlace
-          - label: Modal (Edición española)
+            description: Use NuxtLink with superpowers.
+            to: /docs/components/link
+          - label: Modal
             icon: i-lucide-file-text
-            Descripción: Muestra un modal dentro de tu aplicación.
-            Inicio/docs/componentes/modal
-          - label: NavegaciónMenú
+            description: Display a modal within your application.
+            to: /docs/components/modal
+          - label: NavigationMenu
             icon: i-lucide-file-text
-            Descripción: Muestra una lista de enlaces.
-            /docs/componentes/menú de navegación
-          - label: Paginación
+            description: Display a list of links.
+            to: /docs/components/navigation-menu
+          - label: Pagination
             icon: i-lucide-file-text
-            Descripción: Muestra una lista de páginas.
-            /docs/componentes/paginación
+            description: Display a list of pages.
+            to: /docs/components/pagination
           - label: Popover
             icon: i-lucide-file-text
-            Description: Muestra un diálogo no modal que flota alrededor de un elemento de activación.
-            /docs/componentes/popover
-          - label: el progreso
+            description: Display a non-modal dialog that floats around a trigger element.
+            to: /docs/components/popover
+          - label: Progress
             icon: i-lucide-file-text
-            Descripción : Muestra una barra horizontal para indicar la progresión de la tarea .
-            /docs/componentes/progreso
-    - - etiqueta : GitHub
-        icon : i-simple - icons-github
-        Categoría : 6K
-        Dos :https://github.com/nuxt/ui
-        Nombre : _ blank
-      - label : ayuda
-        icon : i-lucide - circle-help
-        Discapacidad : Verdadero
+            description: Show a horizontal bar to indicate task progression.
+            to: /docs/components/progress
+    - - label: GitHub
+        icon: i-simple-icons-github
+        badge: 6k
+        to: https://github.com/nuxt/ui
+        target: _blank
+      - label: Help
+        icon: i-lucide-circle-help
+        disabled: true
 ---
 ::
 
-@@243@highlight (Edición española)
+### Destacado
 
-Utilice el prop`highlight`para mostrar un borde resaltado para el elemento activo .
+Utilice el accesorio `highlight` para mostrar un borde resaltado para el elemento activo.
 
-Utilice el`highlight-color`prop para cambiar el color del borde . Por defecto a la`color`prop .
+Utilice el prop `highlight-color` para cambiar el color del borde. Por defecto es el prop `color`.
 
 ::component-code
 ---
-Colapso : Verdad
-Categoría : true
-Ignora :
-  @247@artículos
-  @248@clase
-Externo :
-  @249@artículos
-Externalidades :
-  @@2500@@25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props :
-  Destacado : Verdadero
-  highlightColor : ' primario '
-  Categoría:"Horizontal"
+collapse: true
+prettier: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - NavigationMenuItem[][]
+props:
+  highlight: true
+  highlightColor: 'primary'
+  orientation: 'horizontal'
   items:
-    - -etiqueta: Guía
+    - - label: Guide
         icon: i-lucide-book-open
-        niños:
-          - label: Introducción
-            Descripción: Componentes totalmente diseñados y personalizables para Nuxt.
-            Vía: i-lucide-house
-          - label: Instalación
-            Descripción: Aprenda a instalar y configurar la interfaz de usuario de Nuxt en su aplicación.
+        children:
+          - label: Introduction
+            description: Fully styled and customizable components for Nuxt.
+            icon: i-lucide-house
+          - label: Installation
+            description: Learn how to install and configure Nuxt UI in your application.
             icon: i-lucide-cloud-download
-          - label:'Iconos'(Edición española)
-            icono: 'i-lucide-smile'
-            No tienes nada que hacer,@ nuxt/icon se encargará de ello automáticamente.
-          - label:'Los colores'
+          - label: 'Icons'
+            icon: 'i-lucide-smile'
+            description: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+          - label: 'Colors'
             icon: 'i-lucide-swatch-book'
-            Descripción:'Elige un color primario y un color neutro de tu tema CSS Tailwind.'
-          - label:'El tema'
-            icono: 'i-lucide-cog'
-            Descripción:'Puede personalizar los componentes utilizando los accesorios `class`/`ui` o en su app.config.ts'.
+            description: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+          - label: 'Theme'
+            icon: 'i-lucide-cog'
+            description: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
       - label: Composables
-        Icono: i-lucide-database
-        niños:
-          - label: defineAtajos
+        icon: i-lucide-database
+        children:
+          - label: defineShortcuts
             icon: i-lucide-file-text
-            Descripción: Define atajos para tu aplicación.
-            Archivo: /docs/composables/define-shortcuts
-          - label: Superpuesto
+            description: Define shortcuts for your application.
+            to: /docs/composables/define-shortcuts
+          - label: useOverlay
             icon: i-lucide-file-text
-            Descripción: Muestra un modal/slideover dentro de tu aplicación.
-            Archivo: /docs/composables/use-overlay
-          - label: useToast (Edición española)
+            description: Display a modal/slideover within your application.
+            to: /docs/composables/use-overlay
+          - label: useToast
             icon: i-lucide-file-text
-            Descripción: Muestra un brindis dentro de tu aplicación.
-            en: /docs/composables/use-toast
-      - label: Componentes
-        Icono: i-lucide-box
-        Archivo: /docs/components
-        Activo: Verdadero
-        por defecto: true
-        niños:
-          - label: Enlace
+            description: Display a toast within your application.
+            to: /docs/composables/use-toast
+      - label: Components
+        icon: i-lucide-box
+        to: /docs/components
+        active: true
+        defaultOpen: true
+        children:
+          - label: Link
             icon: i-lucide-file-text
-            Descripción: Utiliza NuxtLink con superpoderes.
-            En: /docs/componentes/enlace
-          - label: Diseño
+            description: Use NuxtLink with superpowers.
+            to: /docs/components/link
+          - label: Modal
             icon: i-lucide-file-text
-            Descripción: Muestra un modal dentro de tu aplicación.
-            Inicio/docs/componentes/modal
-          - label: NavegaciónMenú
-            icon : i-lucide - file-text
-            Descripción : Muestra una lista de enlaces .
-            /docs/componentes/menú de navegación
-          - label : Paginación
-            icon : i-lucide - file-text
-            Descripción : muestra una lista de páginas .
-            /docs/componentes/paginación
-          - label : Popover
-            icon : i-lucide - file-text
-            Description : Muestra un diálogo no modal que flota alrededor de un elemento de activación .
-            /docs/componentes/popover
-          - label : el progreso
-            icon : i-lucide - file-text
-            Descripción : Muestra una barra horizontal para indicar la progresión de la tarea .
-            /docs/componentes/progreso
-    - - etiqueta : GitHub
-        icon : i-simple - icons-github
-        Categoría : 6K
-        Dos :https://github.com/nuxt/ui
-        Nombre : _ blank
-      - label : ayuda
-        icon : i-lucide - circle-help
-        Discapacidad : Verdadero
-  class : ' datos - [ orientation = horizontal ] : border-b border-default datos - [ orientation = horizontal ] : w-full datos - [ orientation = vertical ] : w - 48 '
+            description: Display a modal within your application.
+            to: /docs/components/modal
+          - label: NavigationMenu
+            icon: i-lucide-file-text
+            description: Display a list of links.
+            to: /docs/components/navigation-menu
+          - label: Pagination
+            icon: i-lucide-file-text
+            description: Display a list of pages.
+            to: /docs/components/pagination
+          - label: Popover
+            icon: i-lucide-file-text
+            description: Display a non-modal dialog that floats around a trigger element.
+            to: /docs/components/popover
+          - label: Progress
+            icon: i-lucide-file-text
+            description: Show a horizontal bar to indicate task progression.
+            to: /docs/components/progress
+    - - label: GitHub
+        icon: i-simple-icons-github
+        badge: 6k
+        to: https://github.com/nuxt/ui
+        target: _blank
+      - label: Help
+        icon: i-lucide-circle-help
+        disabled: true
+  class: 'data-[orientation=horizontal]:border-b border-default data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-48'
 ---
 ::
 
 ::note
-En este ejemplo , la clase`border-b`se aplica para mostrar un borde en la orientación`horizontal`, esto no se hace de forma predeterminada para que pueda tener una pizarra limpia para trabajar .
+En este ejemplo, la clase `border-b` se aplica para mostrar un borde en la orientación `horizontal`, esto no se hace de forma predeterminada para que pueda tener una pizarra limpia para trabajar.
 ::
 
 ::caution
-En la orientación de `vertical`, el prop de `highlight` solo resalta el borde de los niños activos.
+En la orientación `vertical`, el soporte `highlight` solo resalta el borde de los niños activos.
 ::
 
-@276@color en español
+### Color (Edición)
 
 Utilice el prop `color` para cambiar el color del menú de navegación.
 
 ::component-code
 ---
-Colapso: Verdad
-Ignora:
-  @278@artículos
-  @279@clase
-Externo:
-  @280000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externalidades:
-  @@281@@281@281@281@281@281@281@281@281@281@281@281@281@281@281@281@281@281@2011 []
-Props:
-  Color: Neutral
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - NavigationMenuItem[][]
+props:
+  color: neutral
   items:
-    - -etiqueta: Guía
-        Icono: i-lucide-book-open
-        Inicio/docs/Getting-started
+    - - label: Guide
+        icon: i-lucide-book-open
+        to: /docs/getting-started
       - label: Composables
-        Icono: i-lucide-database
-        Archivo: /docs/composables
-      - label: Componentes
-        Icono: i-lucide-box
-        Archivo: /docs/components
-        Activo: Verdadero
-    - -etiqueta: GitHub
-        icon : i-simple - icons-github
-        Categoría : 6K
-        Dos :https://github.com/nuxt/ui
-        Nombre : _ blank
-  Categoría : w-full
+        icon: i-lucide-database
+        to: /docs/composables
+      - label: Components
+        icon: i-lucide-box
+        to: /docs/components
+        active: true
+    - - label: GitHub
+        icon: i-simple-icons-github
+        badge: 6k
+        to: https://github.com/nuxt/ui
+        target: _blank
+  class: 'w-full'
 ---
 ::
 
-@@286@Variación
+### Variant (Edición española)
 
-Utilice el prop`variant`para cambiar la variante del menú de navegación .
+Utilice el prop `variant` para cambiar la variante del menú de navegación.
 
 ::component-code
 ---
-Colapso : Verdad
-Ignora :
-  @288@artículos
-  @289@clase
-Externo :
-  @290@artículos
-Externalidades :
-  @@291@@291@291@291@291@291@@291@291@291@@291@@291@291@291@291@291@291@291@291@291@291@291@291@291@291@291@291@291@2910000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props :
-  Color : Neutro
-  Variación : Link
-  Destacado : Falso
-  Items :
-    - - etiqueta : Guía
-        Icono : i-lucide - book-open
-        Inicio/docs/Getting-started
-      - label : Composables
-        Icono : i-lucide - database
-        Archivo :/docs/composables
-      - label : Componentes
-        Icono : i-lucide - box
-        Archivo :/docs/components
-        Activo : Verdadero
-    - - etiqueta : GitHub
-        icon : i-simple - icons-github
-        Categoría : 6K
-        Dos :https://github.com/nuxt/ui
-        Nombre : _ blank
-  Categoría : w-full
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - NavigationMenuItem[][]
+props:
+  color: neutral
+  variant: link
+  highlight: false
+  items:
+    - - label: Guide
+        icon: i-lucide-book-open
+        to: /docs/getting-started
+      - label: Composables
+        icon: i-lucide-database
+        to: /docs/composables
+      - label: Components
+        icon: i-lucide-box
+        to: /docs/components
+        active: true
+    - - label: GitHub
+        icon: i-simple-icons-github
+        badge: 6k
+        to: https://github.com/nuxt/ui
+        target: _blank
+  class: 'w-full'
 ---
 ::
 
 ::note
-El`highlight`prop cambia el`pill`variante de estilo de elemento activo . Pruébelo para ver la diferencia .
+El prop `highlight` cambia el estilo de elemento activo variante `pill`. Pruébalo para ver la diferencia.
 ::
 
-### Trailing Icon (Edición española)
+XPH653xTrailing Icono de diseño
 
-Utilice el prop`trailing-icon`para personalizar el[Icon](/docs/components/icon)de cada elemento .
+Utilice el prop `trailing-icon` para personalizar el final [Icon](/docs/components/icon) de cada elemento. Por defecto `i-lucide-chevron-down`. Este icono sólo se muestra cuando un elemento tiene hijos.
 
 ::tip
-También puede establecer un icono para un elemento específico mediante la propiedad`trailingIcon`en el objeto elemento .
+También puede establecer un icono para un elemento específico mediante la propiedad `trailingIcon` en el objeto elemento.
 ::
 
 ::component-code
 ---
-Colapso : Verdad
-Ignora :
-  @306@artículos
-  @307@clase
-Externo :
-  @308@artículos
-Externalidades :
-  - NavigationMenuItem [ ]
-Props :
-  TrailingIcono : ' i-lucide - arrow-down '
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - NavigationMenuItem[]
+props:
+  trailingIcon: 'i-lucide-arrow-down'
   items:
-    - label: Guía
-      Icono: i-lucide-book-open
-      Inicio/docs/Getting-started
-      niños:
-        - label: Introducción
-          Descripción: Componentes totalmente diseñados y personalizables para Nuxt.
-          Vía: i-lucide-house
-        - label: Instalación
-          Descripción: Aprenda a instalar y configurar la interfaz de usuario de Nuxt en su aplicación.
+    - label: Guide
+      icon: i-lucide-book-open
+      to: /docs/getting-started
+      children:
+        - label: Introduction
+          description: Fully styled and customizable components for Nuxt.
+          icon: i-lucide-house
+        - label: Installation
+          description: Learn how to install and configure Nuxt UI in your application.
           icon: i-lucide-cloud-download
-        - label:'Iconos'(Edición española)
-          icono: 'i-lucide-smile'
-          No tienes nada que hacer,@ nuxt/icon se encargará de ello automáticamente.
-        - label:'Los colores'
+        - label: 'Icons'
+          icon: 'i-lucide-smile'
+          description: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+        - label: 'Colors'
           icon: 'i-lucide-swatch-book'
-          Descripción:'Elige un color primario y un color neutro de tu tema CSS Tailwind.'
-        - label:'Temas'
-          icono: 'i-lucide-cog'
-          Descripción:'Puede personalizar los componentes utilizando los accesorios `class`/`ui` o en su app.config.ts'.
-    - label: Componentes
-      Icono: i-lucide-database
-      Archivo: /docs/composables
-      niños:
-        - label: defineAtajos
+          description: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+        - label: 'Theme'
+          icon: 'i-lucide-cog'
+          description: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+    - label: Composables
+      icon: i-lucide-database
+      to: /docs/composables
+      children:
+        - label: defineShortcuts
           icon: i-lucide-file-text
-          Descripción: Define atajos para tu aplicación.
-          Archivo: /docs/composables/define-shortcuts
-        - label: Superpuesto
+          description: Define shortcuts for your application.
+          to: /docs/composables/define-shortcuts
+        - label: useOverlay
           icon: i-lucide-file-text
-          Descripción: Muestra un modal/slideover dentro de tu aplicación.
-          Archivo: /docs/composables/use-overlay
-        - label: useToast (Edición española)
+          description: Display a modal/slideover within your application.
+          to: /docs/composables/use-overlay
+        - label: useToast
           icon: i-lucide-file-text
-          Descripción: Muestra un brindis dentro de tu aplicación.
-          en: /docs/composables/use-toast
-    - label: Componentes
-      Icono: i-lucide-box
-      Archivo: /docs/components
-      Activo: Verdadero
-      niños:
-        - label: Enlace
+          description: Display a toast within your application.
+          to: /docs/composables/use-toast
+    - label: Components
+      icon: i-lucide-box
+      to: /docs/components
+      active: true
+      children:
+        - label: Link
           icon: i-lucide-file-text
-          Descripción: Utiliza NuxtLink con superpoderes.
-          En: /docs/componentes/enlace
-        - label: Modal (Edición española)
+          description: Use NuxtLink with superpowers.
+          to: /docs/components/link
+        - label: Modal
           icon: i-lucide-file-text
-          Descripción: Muestra un modal dentro de tu aplicación.
-          Inicio/docs/componentes/modal
-        - label: NavegaciónMenú
+          description: Display a modal within your application.
+          to: /docs/components/modal
+        - label: NavigationMenu
           icon: i-lucide-file-text
-          Descripción: Muestra una lista de enlaces.
-          /docs/componentes/menú de navegación
-        - label: Paginación
+          description: Display a list of links.
+          to: /docs/components/navigation-menu
+        - label: Pagination
           icon: i-lucide-file-text
-          Descripción: Muestra una lista de páginas.
-          /docs/componentes/paginación
+          description: Display a list of pages.
+          to: /docs/components/pagination
         - label: Popover
           icon: i-lucide-file-text
-          Description: Muestra un diálogo no modal que flota alrededor de un elemento de activación.
-          /docs/componentes/popover
-        - label: el progreso
+          description: Display a non-modal dialog that floats around a trigger element.
+          to: /docs/components/popover
+        - label: Progress
           icon: i-lucide-file-text
-          Descripción: Muestra una barra horizontal para indicar la progresión de la tarea.
-          /docs/componentes/progreso
-  clase: 'w-full justify-center'
+          description: Show a horizontal bar to indicate task progression.
+          to: /docs/components/progress
+  class: 'w-full justify-center'
 ---
 ::
 
 ::framework-only
-#Nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.chevronDown`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.chevronDown`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.chevronDown`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.chevronDown`.
 :::
 ::
 
-@333@Arreaza
+### Flecha
 
-Utilice la prop `arrow` para mostrar una flecha en el contenido del menú de navegación cuando los elementos tienen hijos.
+Utilice el accesorio `arrow` para mostrar una flecha en el contenido del menú de navegación cuando los elementos tienen hijos.
 
 ::component-code
 ---
-Colapso: Verdad
-Ignora:
-  @335@artículos
-  @336 @@ Arreaza
-  @337 @ clase
-Externo:
-  @338@artículos
-Externalidades:
-  - NavigationMenuItem []
-Props:
-  Arrow: Verdad
-  Items:
-    - label: Edición española
-      Icono: i-lucide-book-open
-      Inicio/docs/Getting-started
-      niños:
-        - label: Introducción
-          Descripción: Componentes totalmente diseñados y personalizables para Nuxt.
-          Vía: i-lucide-house
-        - label: Instalación
-          Descripción: Aprenda a instalar y configurar la interfaz de usuario de Nuxt en su aplicación.
+collapse: true
+ignore:
+  - items
+  - arrow
+  - class
+external:
+  - items
+externalTypes:
+  - NavigationMenuItem[]
+props:
+  arrow: true
+  items:
+    - label: Guide
+      icon: i-lucide-book-open
+      to: /docs/getting-started
+      children:
+        - label: Introduction
+          description: Fully styled and customizable components for Nuxt.
+          icon: i-lucide-house
+        - label: Installation
+          description: Learn how to install and configure Nuxt UI in your application.
           icon: i-lucide-cloud-download
-        - label:'Iconos'(Edición española)
-          icono: 'i-lucide-smile'
-          No tienes nada que hacer,@ nuxt/icon se encargará de ello automáticamente.
-        - label:'Los colores'
+        - label: 'Icons'
+          icon: 'i-lucide-smile'
+          description: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+        - label: 'Colors'
           icon: 'i-lucide-swatch-book'
-          Descripción:'Elige un color primario y un color neutro de tu tema CSS Tailwind.'
-        - label:'El tema'
-          icono: 'i-lucide-cog'
-          Descripción:'Puede personalizar los componentes utilizando los accesorios `class`/`ui` o en su app.config.ts'.
+          description: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+        - label: 'Theme'
+          icon: 'i-lucide-cog'
+          description: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
     - label: Composables
-      Icono: i-lucide-database
-      Archivo: /docs/composables
-      niños:
-        - label: defineAtajos
+      icon: i-lucide-database
+      to: /docs/composables
+      children:
+        - label: defineShortcuts
           icon: i-lucide-file-text
-          Descripción: Define atajos para tu aplicación.
-          Archivo: /docs/composables/define-shortcuts
-        - label: Superpuesto
+          description: Define shortcuts for your application.
+          to: /docs/composables/define-shortcuts
+        - label: useOverlay
           icon: i-lucide-file-text
-          Descripción: Muestra un modal/slideover dentro de tu aplicación.
-          Archivo: /docs/composables/use-overlay
+          description: Display a modal/slideover within your application.
+          to: /docs/composables/use-overlay
         - label: useToast
           icon: i-lucide-file-text
-          Descripción: Muestra un brindis dentro de tu aplicación.
-          en: /docs/composables/use-toast
-    - label: Componentes
-      Icono: i-lucide-box
-      Archivo: /docs/components
-      Activo: Verdadero
-      niños:
-        - label: Enlace
+          description: Display a toast within your application.
+          to: /docs/composables/use-toast
+    - label: Components
+      icon: i-lucide-box
+      to: /docs/components
+      active: true
+      children:
+        - label: Link
           icon: i-lucide-file-text
-          Descripción: Utiliza NuxtLink con superpoderes.
-          En: /docs/componentes/enlace
-        - label: Diseño
+          description: Use NuxtLink with superpowers.
+          to: /docs/components/link
+        - label: Modal
           icon: i-lucide-file-text
-          Descripción: Muestra un modal dentro de tu aplicación.
-          Inicio/docs/componentes/modal
-        - label: NavegaciónMenú
+          description: Display a modal within your application.
+          to: /docs/components/modal
+        - label: NavigationMenu
           icon: i-lucide-file-text
-          Descripción: Muestra una lista de enlaces.
-          /docs/componentes/menú de navegación
-        - label: Paginación
+          description: Display a list of links.
+          to: /docs/components/navigation-menu
+        - label: Pagination
           icon: i-lucide-file-text
-          Descripción: muestra una lista de páginas.
-          /docs/componentes/paginación
+          description: Display a list of pages.
+          to: /docs/components/pagination
         - label: Popover
           icon: i-lucide-file-text
-          Description: Muestra un diálogo no modal que flota alrededor de un elemento de activación.
-          /docs/componentes/popover
-        - label: el progreso
+          description: Display a non-modal dialog that floats around a trigger element.
+          to: /docs/components/popover
+        - label: Progress
           icon: i-lucide-file-text
-          Descripción: Muestra una barra horizontal para indicar la progresión de la tarea.
-          /docs/componentes/progreso
-  clase: 'w-full justify-center'
+          description: Show a horizontal bar to indicate task progression.
+          to: /docs/components/progress
+  class: 'w-full justify-center'
 ---
 ::
 
@@ -824,166 +824,166 @@ Props:
 La flecha está animada para seguir el elemento activo.
 ::
 
-### Orientación del contenido
+### Orientación de contenido
 
-Utilice el prop `content-orientation` para cambiar la orientación del contenido.
+Utilice el accesorio `content-orientation` para cambiar la orientación del contenido.
 
 ::warning
-Esto sólo funciona cuando `orientation` es `horizontal`.
+Este accesorio solo funciona cuando `orientation` es `horizontal`.
 ::
 
 ::component-code
 ---
-Colapso: Verdad
-Ignora:
-  @363@artículos
-  @364 @@ Dirección
-  @365@clase
-Externo:
-  @366@artículos
-Externalidades:
-  - NavigationMenuItem []
-Props:
-  Arrow: Verdad
-  Categoría:"Vertical"
+collapse: true
+ignore:
+  - items
+  - arrow
+  - class
+external:
+  - items
+externalTypes:
+  - NavigationMenuItem[]
+props:
+  arrow: true
+  contentOrientation: 'vertical'
   items:
-    - label: Dirección
+    - label: Guide
       icon: i-lucide-book-open
-      Inicio/docs/Getting-started
-      niños:
-        - label: Introducción
-          Descripción: Componentes totalmente diseñados y personalizables para Nuxt.
-          Vía: i-lucide-house
-        - label: Instalación
-          Descripción: Aprenda a instalar y configurar la interfaz de usuario de Nuxt en su aplicación.
+      to: /docs/getting-started
+      children:
+        - label: Introduction
+          description: Fully styled and customizable components for Nuxt.
+          icon: i-lucide-house
+        - label: Installation
+          description: Learn how to install and configure Nuxt UI in your application.
           icon: i-lucide-cloud-download
-        - label:'Iconos'(Edición española)
-          icono: 'i-lucide-smile'
-          No tienes nada que hacer,@ nuxt/icon se encargará de ello automáticamente.
-    - label: Componentes
-      Icono: i-lucide-database
-      Archivo: /docs/composables
-      niños:
-        - label: defineAtajos
+        - label: 'Icons'
+          icon: 'i-lucide-smile'
+          description: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    - label: Composables
+      icon: i-lucide-database
+      to: /docs/composables
+      children:
+        - label: defineShortcuts
           icon: i-lucide-file-text
-          Descripción: Define atajos para tu aplicación.
-          Archivo: /docs/composables/define-shortcuts
+          description: Define shortcuts for your application.
+          to: /docs/composables/define-shortcuts
         - label: useOverlay
           icon: i-lucide-file-text
-          Descripción: Muestra un modal/slideover dentro de tu aplicación.
-          Archivo: /docs/composables/use-overlay
-        - label: useToast (Edición española)
+          description: Display a modal/slideover within your application.
+          to: /docs/composables/use-overlay
+        - label: useToast
           icon: i-lucide-file-text
-          Descripción: Muestra un brindis dentro de tu aplicación.
-          en: /docs/composables/use-toast
-    - label: Componentes
-      Icono: i-lucide-box
-      Archivo: /docs/components
-      Activo: Verdadero
-      niños:
-        - label: Enlace
+          description: Display a toast within your application.
+          to: /docs/composables/use-toast
+    - label: Components
+      icon: i-lucide-box
+      to: /docs/components
+      active: true
+      children:
+        - label: Link
           icon: i-lucide-file-text
-          Descripción: Utiliza NuxtLink con superpoderes.
-          En: /docs/componentes/enlace
+          description: Use NuxtLink with superpowers.
+          to: /docs/components/link
         - label: Modal
           icon: i-lucide-file-text
-          Descripción: Muestra un modal dentro de tu aplicación.
-          Inicio/docs/componentes/modal
-        - label: NavegaciónMenú
+          description: Display a modal within your application.
+          to: /docs/components/modal
+        - label: NavigationMenu
           icon: i-lucide-file-text
-          Descripción: Muestra una lista de enlaces.
-          /docs/componentes/menú de navegación
-        - label: Paginación
+          description: Display a list of links.
+          to: /docs/components/navigation-menu
+        - label: Pagination
           icon: i-lucide-file-text
-          Descripción: Muestra una lista de páginas.
-          /docs/componentes/paginación
-  clase: 'w-full justify-center'
+          description: Display a list of pages.
+          to: /docs/components/pagination
+  class: 'w-full justify-center'
 ---
 ::
 
-@381@unmount
+### Unmount (Edición española)
 
-Utilice el prop `unmount-on-hide` para controlar el comportamiento de desmontaje del contenido.
+Utilice el accesorio `unmount-on-hide` para controlar el comportamiento de desmontaje del contenido.
 
 ::component-code
 ---
-Colapso: Verdad
-Ignora:
-  @384@artículos
-  @385 @@ Arreaza
-  @386 @ clase
-Externo:
-  @387@artículos
-Externalidades:
-  - NavigationMenuItem []
-Props:
-  Desconocido: Falso
+collapse: true
+ignore:
+  - items
+  - arrow
+  - class
+external:
+  - items
+externalTypes:
+  - NavigationMenuItem[]
+props:
+  unmountOnHide: false
   items:
-    - label: Guía
+    - label: Guide
       icon: i-lucide-book-open
-      Inicio/docs/Getting-started
-      niños:
-        - label: Introducción
-          Descripción: Componentes totalmente diseñados y personalizables para Nuxt.
-          Vía: i-lucide-house
-        - label: Instalación
-          Descripción: Aprenda a instalar y configurar la interfaz de usuario de Nuxt en su aplicación.
+      to: /docs/getting-started
+      children:
+        - label: Introduction
+          description: Fully styled and customizable components for Nuxt.
+          icon: i-lucide-house
+        - label: Installation
+          description: Learn how to install and configure Nuxt UI in your application.
           icon: i-lucide-cloud-download
-        - label:'Iconos'(Edición española)
-          icono: 'i-lucide-smile'
-          No tienes nada que hacer,@ nuxt/icon se encargará de ello automáticamente.
-        - label:'Los colores'
+        - label: 'Icons'
+          icon: 'i-lucide-smile'
+          description: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+        - label: 'Colors'
           icon: 'i-lucide-swatch-book'
-          Descripción:'Elige un color primario y un color neutro de tu tema CSS Tailwind.'
-        - label:'Proyecto'
-          icono: 'i-lucide-cog'
-          Descripción:'Puede personalizar los componentes utilizando los accesorios `class`/`ui` o en su app.config.ts'.
-    - label: Componentes
-      Icono: i-lucide-database
-      Archivo: /docs/composables
-      niños:
-        - label: defineAtajos
+          description: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+        - label: 'Theme'
+          icon: 'i-lucide-cog'
+          description: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+    - label: Composables
+      icon: i-lucide-database
+      to: /docs/composables
+      children:
+        - label: defineShortcuts
           icon: i-lucide-file-text
-          Descripción: Define atajos para tu aplicación.
-          Archivo: /docs/composables/define-shortcuts
-        - label: Superpuesto
+          description: Define shortcuts for your application.
+          to: /docs/composables/define-shortcuts
+        - label: useOverlay
           icon: i-lucide-file-text
-          Descripción: Muestra un modal/slideover dentro de tu aplicación.
-          Archivo: /docs/composables/use-overlay
-        - label: useToast (Edición española)
+          description: Display a modal/slideover within your application.
+          to: /docs/composables/use-overlay
+        - label: useToast
           icon: i-lucide-file-text
-          Descripción: Muestra un brindis dentro de tu aplicación.
-          en: /docs/composables/use-toast
-    - label: Componentes
-      Icono: i-lucide-box
-      Archivo: /docs/components
-      Activo: Verdadero
-      niños:
-        - label: Enlace
+          description: Display a toast within your application.
+          to: /docs/composables/use-toast
+    - label: Components
+      icon: i-lucide-box
+      to: /docs/components
+      active: true
+      children:
+        - label: Link
           icon: i-lucide-file-text
-          Descripción: Utiliza NuxtLink con superpoderes.
-          En: /docs/componentes/enlace
-        - label: Modal (Edición española)
+          description: Use NuxtLink with superpowers.
+          to: /docs/components/link
+        - label: Modal
           icon: i-lucide-file-text
-          Descripción: Muestra un modal dentro de tu aplicación.
-          Inicio/docs/componentes/modal
-        - label: NavegaciónMenú
+          description: Display a modal within your application.
+          to: /docs/components/modal
+        - label: NavigationMenu
           icon: i-lucide-file-text
-          Descripción: Muestra una lista de enlaces.
-          /docs/componentes/menú de navegación
-        - label: Paginación
+          description: Display a list of links.
+          to: /docs/components/navigation-menu
+        - label: Pagination
           icon: i-lucide-file-text
-          Descripción: muestra una lista de páginas.
-          /docs/componentes/paginación
-        - label: Popover (Edición española)
+          description: Display a list of pages.
+          to: /docs/components/pagination
+        - label: Popover
           icon: i-lucide-file-text
-          Description: Muestra un diálogo no modal que flota alrededor de un elemento de activación.
-          /docs/componentes/popover
-        - label: el progreso
+          description: Display a non-modal dialog that floats around a trigger element.
+          to: /docs/components/popover
+        - label: Progress
           icon: i-lucide-file-text
-          Descripción: Muestra una barra horizontal para indicar la progresión de la tarea.
-          /docs/componentes/progreso
-  clase: 'w-full justify-center'
+          description: Show a horizontal bar to indicate task progression.
+          to: /docs/components/progress
+  class: 'w-full justify-center'
 ---
 ::
 
@@ -991,243 +991,243 @@ Props:
 Puede inspeccionar el DOM para ver el contenido de cada elemento que se representa.
 ::
 
-@408 Ejemplos
+## Ejemplos
 
 ### Control elemento activo
 
-Puede controlar los elementos activos utilizando la prop `default-value` o la directiva `v-model` con la directiva `value` del elemento. Si no se proporciona `value`, el valor predeterminado es `item-${index}` para los elementos de nivel superior o `item-${level}-${index}` para los elementos anidados.
+Puede controlar los elementos activos utilizando la directiva `default-value` o la directiva `v-model` con la directiva `value` del elemento. Si no se proporciona `value`, el valor predeterminado es `item-${index}` para elementos de nivel superior o `item-${level}-${index}` para elementos anidados.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'navigación-menu-model-valor-ejemplo'
+collapse: true
+name: 'navigation-menu-model-value-example'
 ---
 ::
 
 ::tip
-Utilice el prop `value-key` para cambiar la clave utilizada para hacer coincidir los elementos cuando se proporciona un `v-model` o `default-value`.
+Utilice el accesorio `value-key` para cambiar la clave utilizada para hacer coincidir los elementos cuando se proporciona un `v-model` o `default-value`.
 ::
 
 ::note
-En este ejemplo, aprovechando [`defineShortcuts`](/docs/composables/define-shortcuts), puede cambiar el elemento activo presionando: kbd{value="1"},: kbd{value="2"}, o: kbd{value="3"}.
+En este ejemplo, aprovechando [`defineShortcuts`](/docs/composables/define-shortcuts), puede cambiar el elemento activo pulsando: kbd{value="1"},: kbd{value="2"} o: kbd{value="3"}.
 ::
 
-### Con información sobre herramientas en elementos
+### With tooltip en los elementos
 
-Cuando la orientación es `vertical` y el menú es `collapsed`, puede establecer la propiedad `tooltip` en `true` para mostrar una [Tooltip](/docs/components/tooltip) alrededor de los elementos con su etiqueta, pero también puede usar la propiedad `tooltip` en cada elemento para anular la información de herramientas predeterminada. En la orientación, puede utilizar la propiedad `tooltip` en cada elemento para mostrar un [Tooltip](/docs/components/tooltip) alrededor de los elementos.
+Cuando la orientación es `vertical` y el menú es `collapsed`, puede configurar el prop `tooltip` en `true` para mostrar un [Tooltip](/docs/components/tooltip) alrededor de los elementos con su etiqueta, pero también puede usar la propiedad `tooltip` en cada elemento para anular la información sobre herramientas predeterminada. Puede utilizar la propiedad `tooltip` en cada elemento para mostrar un [Tooltip](/docs/components/tooltip) alrededor de los elementos.
 
 ::note
-La propiedad `tooltip` de un elemento siempre mostrará una información sobre herramientas, independientemente de la propiedad global `tooltip`.
+La propiedad `tooltip` de un elemento siempre mostrará una información sobre herramientas, independientemente de la prop.
 ::
 
-Puede pasar cualquier propiedad del componente [Tooltip](/docs/components/tooltip) globalmente o en cada elemento.
+Puede pasar cualquier propiedad del componente [Tooltip](/docs/components/tooltip) de forma global o en cada elemento.
 
 ::component-code
 ---
-Colapso: Verdad
-Ignora:
-  @449@artículos
-  @@F450@clase
-Externo:
-  @451@artículos
-Externalidades:
-  - NavigationMenuItem [][]
-Items:
-  ToolTip:
-    @@pH453@verdad
-    @454 @ Falso
-Props:
-  tooltip: Verdad
-  Colapsado: Cierto
-  Categoría:"Vertical"
-  Items:
-    - -etiqueta: Enlaces
-        Categoría:'Label'
-      - label: Dirección
-        Icono: i-lucide-book-open
-        niños:
-          - label: Introducción
-            Descripción: Componentes totalmente diseñados y personalizables para Nuxt.
-            Vía: i-lucide-house
-          - label: Instalación
-            Descripción: Aprenda a instalar y configurar la interfaz de usuario de Nuxt en su aplicación.
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - NavigationMenuItem[][]
+items:
+  tooltip:
+    - true
+    - false
+props:
+  tooltip: true
+  collapsed: true
+  orientation: 'vertical'
+  items:
+    - - label: Links
+        type: 'label'
+      - label: Guide
+        icon: i-lucide-book-open
+        children:
+          - label: Introduction
+            description: Fully styled and customizable components for Nuxt.
+            icon: i-lucide-house
+          - label: Installation
+            description: Learn how to install and configure Nuxt UI in your application.
             icon: i-lucide-cloud-download
-          - label:'Iconos'(Edición española)
-            icono: 'i-lucide-smile'
-            No tienes nada que hacer,@ nuxt/icon se encargará de ello automáticamente.
-          - label:'Los colores'
+          - label: 'Icons'
+            icon: 'i-lucide-smile'
+            description: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+          - label: 'Colors'
             icon: 'i-lucide-swatch-book'
-            Descripción:'Elige un color primario y un color neutro de tu tema CSS Tailwind.'
-          - label:'El tema'
-            icono: 'i-lucide-cog'
-            Descripción:'Puede personalizar los componentes utilizando los accesorios `class`/`ui` o en su app.config.ts'.
-      - label: Componentes
-        Icono: i-lucide-database
-        niños:
-          - label: defineAtajos
+            description: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+          - label: 'Theme'
+            icon: 'i-lucide-cog'
+            description: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+      - label: Composables
+        icon: i-lucide-database
+        children:
+          - label: defineShortcuts
             icon: i-lucide-file-text
-            Descripción: Define atajos para tu aplicación.
-            Archivo: /docs/composables/define-shortcuts
+            description: Define shortcuts for your application.
+            to: /docs/composables/define-shortcuts
           - label: useOverlay
             icon: i-lucide-file-text
-            Descripción: Muestra un modal/slideover dentro de tu aplicación.
-            Archivo: /docs/composables/use-overlay
-          - label: useToast (Edición española)
+            description: Display a modal/slideover within your application.
+            to: /docs/composables/use-overlay
+          - label: useToast
             icon: i-lucide-file-text
-            Descripción: Muestra un brindis dentro de tu aplicación.
-            en: /docs/composables/use-toast
-      - label: Componentes
-        Icono: i-lucide-box
-        Archivo: /docs/components
-        Activo: Verdadero
-        niños:
-          - label: Enlace
+            description: Display a toast within your application.
+            to: /docs/composables/use-toast
+      - label: Components
+        icon: i-lucide-box
+        to: /docs/components
+        active: true
+        children:
+          - label: Link
             icon: i-lucide-file-text
-            Descripción: Utiliza NuxtLink con superpoderes.
-            En: /docs/componentes/enlace
-          - label: Modal (Edición española)
+            description: Use NuxtLink with superpowers.
+            to: /docs/components/link
+          - label: Modal
             icon: i-lucide-file-text
-            Descripción: Muestra un modal dentro de tu aplicación.
-            Inicio/docs/componentes/modal
-          - label: NavegaciónMenú
+            description: Display a modal within your application.
+            to: /docs/components/modal
+          - label: NavigationMenu
             icon: i-lucide-file-text
-            Descripción : Muestra una lista de enlaces .
-            /docs/componentes/menú de navegación
-          - label : Paginación
-            icon : i-lucide - file-text
-            Descripción : Muestra una lista de páginas .
-            /docs/componentes/paginación
-          - label : Popover (Edición española)
-            icon : i-lucide - file-text
-            Description : Muestra un diálogo no modal que flota alrededor de un elemento de activación .
-            /docs/componentes/popover
-          - label : el progreso
-            icon : i-lucide - file-text
-            Descripción : Muestra una barra horizontal para indicar la progresión de la tarea .
-            /docs/componentes/progreso
-    - - etiqueta : GitHub
-        icon : i-simple - icons-github
-        Categoría : 6K
-        Dos :https://github.com/nuxt/ui
-        Nombre : _ blank
-        ToolTip :
-          texto : ' Abierto en GitHub '
-          kbd :
-            @476@60000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-      - label : ayuda
-        icon : i-lucide - circle-help
-        Discapacitados: Verdadero
+            description: Display a list of links.
+            to: /docs/components/navigation-menu
+          - label: Pagination
+            icon: i-lucide-file-text
+            description: Display a list of pages.
+            to: /docs/components/pagination
+          - label: Popover
+            icon: i-lucide-file-text
+            description: Display a non-modal dialog that floats around a trigger element.
+            to: /docs/components/popover
+          - label: Progress
+            icon: i-lucide-file-text
+            description: Show a horizontal bar to indicate task progression.
+            to: /docs/components/progress
+    - - label: GitHub
+        icon: i-simple-icons-github
+        badge: 6k
+        to: https://github.com/nuxt/ui
+        target: _blank
+        tooltip:
+          text: 'Open on GitHub'
+          kbds:
+            - 6k
+      - label: Help
+        icon: i-lucide-circle-help
+        disabled: true
 ---
 ::
 
-### Con popover en los elementos
+### Con popover en artículos
 
-Cuando la orientación es `vertical` y el menú es `collapsed`, puede configurar el `popover` prop a `true` para mostrar un [Popover](/docs/components/popover) alrededor de los elementos con sus hijos, pero también puede usar la propiedad `popover` en cada elemento para anular el popover predeterminado.
+Cuando la orientación es `vertical` y el menú es `collapsed`, puede configurar el prop `popover` en `true` para mostrar un [Popover](x/docs/components/popover) alrededor de los elementos con sus hijos, pero también puede usar la propiedad `popover` en cada elemento para anular el popover predeterminado.
 
 ::note
-La propiedad `popover` de un elemento siempre mostrará un popover independientemente de la propiedad global `popover`.
+La propiedad `popover` de un elemento siempre mostrará un popover independientemente del prop global `popover`.
 ::
 
 Puede pasar cualquier propiedad del componente [Popover](/docs/components/popover) globalmente o en cada elemento.
 
 ::component-code
 ---
-Colapso: Verdad
-Ignora:
-  @494@artículos
-  - orientación
-  @496@clase
-Externo:
-  @497@artículos
-Externalidades:
-  - NavigationMenuItem [][]
+collapse: true
+ignore:
+  - items
+  - orientation
+  - class
+external:
+  - items
+externalTypes:
+  - NavigationMenuItem[][]
 items:
-  Popover:
-    @499@@verdad
-    @500@false
-Props:
-  Popover: Verdad
-  Colapsado: Cierto
-  Categoría:"Vertical"
-  Items:
-    - -etiqueta: Enlaces
-        Categoría:'Label'
-      - label: Edición española
-        Icono: i-lucide-book-open
-        niños:
-          - label: Introducción
-            Descripción: Componentes totalmente diseñados y personalizables para Nuxt.
-            Vía: i-lucide-house
-          - label: Instalación
-            Descripción: Aprenda a instalar y configurar la interfaz de usuario de Nuxt en su aplicación.
+  popover:
+    - true
+    - false
+props:
+  popover: true
+  collapsed: true
+  orientation: 'vertical'
+  items:
+    - - label: Links
+        type: 'label'
+      - label: Guide
+        icon: i-lucide-book-open
+        children:
+          - label: Introduction
+            description: Fully styled and customizable components for Nuxt.
+            icon: i-lucide-house
+          - label: Installation
+            description: Learn how to install and configure Nuxt UI in your application.
             icon: i-lucide-cloud-download
-          - label:'Iconos'(Edición española)
-            icono: 'i-lucide-smile'
-            No tienes nada que hacer,@ nuxt/icon se encargará de ello automáticamente.
-          - label:'Los colores'
+          - label: 'Icons'
+            icon: 'i-lucide-smile'
+            description: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+          - label: 'Colors'
             icon: 'i-lucide-swatch-book'
-            Descripción:'Elige un color primario y un color neutro de tu tema CSS Tailwind.'
-          - label:"El tema"
-            icono: 'i-lucide-cog'
-            Descripción:'Puede personalizar los componentes utilizando los accesorios `class`/`ui` o en su app.config.ts'.
-      - label: Componentes
-        Icono: i-lucide-database
-        Popover:
-          Vía:"Click"
-        niños:
-          - label: defineAtajos
+            description: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+          - label: 'Theme'
+            icon: 'i-lucide-cog'
+            description: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+      - label: Composables
+        icon: i-lucide-database
+        popover:
+          mode: 'click'
+        children:
+          - label: defineShortcuts
             icon: i-lucide-file-text
-            Descripción: Define atajos para tu aplicación.
-            Archivo: /docs/composables/define-shortcuts
+            description: Define shortcuts for your application.
+            to: /docs/composables/define-shortcuts
           - label: useOverlay
             icon: i-lucide-file-text
-            Descripción: Muestra un modal/slideover dentro de tu aplicación.
-            Archivo: /docs/composables/use-overlay
-          - label: useToast (Edición española)
+            description: Display a modal/slideover within your application.
+            to: /docs/composables/use-overlay
+          - label: useToast
             icon: i-lucide-file-text
-            Descripción: Muestra un brindis dentro de tu aplicación.
-            en: /docs/composables/use-toast
-      - label: Componentes
-        Icono: i-lucide-box
-        Archivo: /docs/components
-        Activo: Verdadero
-        niños:
-          - label: Enlace
+            description: Display a toast within your application.
+            to: /docs/composables/use-toast
+      - label: Components
+        icon: i-lucide-box
+        to: /docs/components
+        active: true
+        children:
+          - label: Link
             icon: i-lucide-file-text
-            Descripción: Utiliza NuxtLink con superpoderes.
-            En: /docs/componentes/enlace
-          - label: Modal (Edición española)
+            description: Use NuxtLink with superpowers.
+            to: /docs/components/link
+          - label: Modal
             icon: i-lucide-file-text
-            Descripción: Muestra un modal dentro de tu aplicación.
-            Inicio/docs/componentes/modal
-          - label: NavegaciónMenú
+            description: Display a modal within your application.
+            to: /docs/components/modal
+          - label: NavigationMenu
             icon: i-lucide-file-text
-            Descripción : Muestra una lista de enlaces .
-            /docs/componentes/menú de navegación
-          - label : Paginación
-            icon : i-lucide - file-text
-            Descripción : muestra una lista de páginas .
-            /docs/componentes/paginación
-          - label : Popover (Edición española)
-            icon : i-lucide - file-text
-            Description : Muestra un diálogo no modal que flota alrededor de un elemento de activación .
-            /docs/componentes/popover
-          - label : el progreso
-            icon : i-lucide - file-text
-            Descripción : Muestra una barra horizontal para indicar la progresión de la tarea .
-            /docs/componentes/progreso
-    - - etiqueta : GitHub
-        icon : i-simple - icons-github
-        Categoría : 6K
-        Dos :https://github.com/nuxt/ui
-        Nombre : _ blank
-        ToolTip :
-          texto : ' Abierto en GitHub '
-          kbd :
-            @225@6k
-      - label : ayuda
-        icon : i-lucide - circle-help
-        Discapacidad: Verdadero
+            description: Display a list of links.
+            to: /docs/components/navigation-menu
+          - label: Pagination
+            icon: i-lucide-file-text
+            description: Display a list of pages.
+            to: /docs/components/pagination
+          - label: Popover
+            icon: i-lucide-file-text
+            description: Display a non-modal dialog that floats around a trigger element.
+            to: /docs/components/popover
+          - label: Progress
+            icon: i-lucide-file-text
+            description: Show a horizontal bar to indicate task progression.
+            to: /docs/components/progress
+    - - label: GitHub
+        icon: i-simple-icons-github
+        badge: 6k
+        to: https://github.com/nuxt/ui
+        target: _blank
+        tooltip:
+          text: 'Open on GitHub'
+          kbds:
+            - 6k
+      - label: Help
+        icon: i-lucide-circle-help
+        disabled: true
 ---
 ::
 
@@ -1235,72 +1235,72 @@ Props:
 Puede utilizar la ranura `#content` para personalizar el contenido del popover en la orientación `vertical`.
 ::
 
-### Con chip en artículos: badge{label="4.5+" class="align-text-top"}
+### Con chip en los artículos: badge{label="4.5+" class="align-text-top"}
 
 Utilice la propiedad `chip` para mostrar un [Chip](/docs/components/chip) alrededor del icono de los elementos, puede pasar cualquiera de sus accesorios.
 
 ::component-code
 ---
-Colapso: Verdad
-Ignora:
-  @@353@artículos
-  @534@clase
-Externo:
-  @535@artículos
-Externalidades:
-  - NavigationMenuItem [][]
-Props:
-  Colapsado: Verdadero
-  Categoría:"Vertical"
-  Items:
-    - -etiqueta: Guía
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - NavigationMenuItem[][]
+props:
+  collapsed: true
+  orientation: 'vertical'
+  items:
+    - - label: Guide
         icon: i-lucide-book-open
-        El chip:
-          Color: El error
-      - label: Componentes
-        Icono: i-lucide-database
-        El chip:
-          Categoría: Info
-          El texto: 3
-      - label : Componentes
-        Icono : i-lucide - box
-        Archivo :/docs/components
-        Activo : Verdadero
-        Chips : Verdad
-    - - etiqueta : GitHub
-        icon : i-simple - icons-github
-        Dos :https://github.com/nuxt/ui
-        Nombre : _ blank
-      - label : ayuda
-        icon : i-lucide - circle-help
-        Discapacitados : Verdadero
+        chip:
+          color: error
+      - label: Composables
+        icon: i-lucide-database
+        chip:
+          color: info
+          text: 3
+      - label: Components
+        icon: i-lucide-box
+        to: /docs/components
+        active: true
+        chip: true
+    - - label: GitHub
+        icon: i-simple-icons-github
+        to: https://github.com/nuxt/ui
+        target: _blank
+      - label: Help
+        icon: i-lucide-circle-help
+        disabled: true
 ---
 ::
 
 ### Con barra de pestañas inferior
 
-Utilice el prop`ui`para transformar el menú de navegación en una barra de pestañas inferior de estilo móvil con iconos y etiquetas pequeñas , similar a YouTube o Instagram .
+Utilice el accesorio `ui` para transformar el menú de navegación en una barra de pestañas inferior de estilo móvil con iconos y etiquetas pequeñas, similar a YouTube o Instagram.
 
 ::component-example
 ---
-Colapso : Verdad
-Nombre : ' navigación-menu - bottom-tab - bar-ejemplo '
+collapse: true
+name: 'navigation-menu-bottom-tab-bar-example'
 ---
 ::
 
 ### Con etiquetas colapsadas
 
-Utilice el prop`ui`para mostrar una etiqueta debajo de cada icono cuando se colapsa .
+Utilice el soporte `ui` para mostrar una etiqueta debajo de cada icono cuando se colapsa.
 
 ::component-example
 ---
-Colapso : Verdad
-Nombre : ' navigación-menu - collapsed-label - example '
+collapse: true
+name: 'navigation-menu-collapsed-label-example'
 ---
 ::
 
 ::tip
-También puede hacer esto globalmente a través del`app.config.ts`usando[`compoundVariants`](/docs/getting-started/theme/components#compound-variants):
+También puede hacer esto globalmente a través del `app.config.ts` usando [`compoundVariants`](/docs/getting-started/theme/components#compound-variants):
 
 ```ts [app/app.config.ts]
 export default defineAppConfig({
@@ -1323,71 +1323,71 @@ export default defineAppConfig({
 
 ### Con ranura personalizada
 
-Utilice la propiedad`slot`para personalizar un elemento específico .
+Utilice la propiedad `slot` para personalizar un elemento específico.
 
-Tendrás acceso a los siguientes slots :
+Tendrás acceso a los siguientes slots:
 
-@@570@@571@@572
-@@573@@574@@575
-@@576@@577@@578
-{lang="ts-type"}{lang="ts-type"}
-@582@@583@584
+- x`#{{ item.slot }}`x{lang="ts-type"}
+- x`#{{ item.slot }}-leading`x{lang="ts-type"}
+- x`#{{ item.slot }}-label`x{lang="ts-type"}
+- x`#{{ item.slot }}-trailing`x{lang="ts-type"}
+- x`#{{ item.slot }}-content`x{lang="ts-type"}
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre del archivo: 'navigation-menu-custom-slot-example'
+collapse: true
+name: 'navigation-menu-custom-slot-example'
 ---
 ::
 
 ::tip{to="#slots"}
-También puede utilizar las ranuras `#item`,`#item-leading`,`#item-label`,`#item-trailing` y `#item-content` para personalizar todos los artículos.
+También puede utilizar las ranuras `#item`, `#item-leading`, `#item-label`, `#item-trailing` y `#item-content` para personalizar todos los artículos.
 ::
 
 ### Con ranura trasera
 
-Utilice la ranura `#item-trailing` o la propiedad `slot`(`#{{ item.slot }}-trailing`) para agregar un [DropdownMenu](/docs/components/dropdown-menu) que aparece en el hover, similar a Notion o Linear.
+Utilice la ranura `#item-trailing` o la propiedad `slot` (`#{{ item.slot }}-trailing`) para agregar un Menuxx](/docs/components/dropdown-menu) que aparece en el hover, similar a Notion o Linear.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'navigación-menu-trailing-slot-example'
+collapse: true
+name: 'navigation-menu-trailing-slot-example'
 ---
 ::
 
 ### Con ranura de contenido
 
-Utilice la ranura `#item-content` o la propiedad `slot`(`#{{ item.slot }}-content`) para personalizar el contenido de un elemento específico.
+Utilice la ranura `#item-content` o la propiedad `slot` (`#{{ item.slot }}-content`) para personalizar el contenido de un elemento específico.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'navigation-menu-content-slot-example'
+collapse: true
+name: 'navigation-menu-content-slot-example'
 ---
 ::
 
 ::note
-En este ejemplo, añadimos la clase `sm:w-(--reka-navigation-menu-viewport-width)` en la `viewport` para tener un ancho dinámico.
+En este ejemplo, añadimos la clase `sm:w-(--reka-navigation-menu-viewport-width)` en el `viewport` para tener un ancho dinámico.
 ::
 
-@@pH604
+## API
 
-@500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Accesorios
 
-Componentes Props
+:component-props
 
-@606@espanol
+### Slots
 
-Componentes de slots
+:component-slots
 
 ### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Theme
 
-Componente Tema
+:component-theme
 
-@600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

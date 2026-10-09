@@ -8,11 +8,11 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardToolbar.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Die DashboardToolbar-Komponente wird verwendet, um eine Symbolleiste unter der Komponente [DashboardNavbar](/docs/components/dashboard-navbar) anzuzeigen.
 
-Verwenden Sie es innerhalb des `header`-Schlitzes der [DashboardPanel](/docs/components/dashboard-panel) Komponente:
+Verwenden Sie es innerhalb des `header`-Steckplatzes der [DashboardPanel](/docs/components/dashboard-panel)-Komponente:
 
 ```vue [pages/index.vue]{9-13}
 <script setup lang="ts">
@@ -32,36 +32,36 @@ definePageMeta({
 </template>
 ```
 
-Verwenden Sie die `left`,`default` und `right` Slots, um die Symbolleiste anzupassen.
+Verwenden Sie die `left`, `default` und `right` Steckplätze, um die Symbolleiste anzupassen.
 
 ::component-example
 ---
-Schöner: wahr
-Name: 'Dashboard-Toolbar-Beispiel'
-Klasse: '! px-0! pt-0'
-Props:
-  Klasse: "W-voll"
+prettier: true
+name: 'dashboard-toolbar-example'
+class: '!px-0 !pt-0'
+props:
+  class: 'w-full'
 ---
 ::
 
 ::note
-In diesem Beispiel verwenden wir die Komponente [NavigationMenu](/docs/components/navigation-menu), um einige Links zu rendern.
+In diesem Beispiel verwenden wir die Komponente [NavigationMenu](/docs/components/navigation-menu), um einige Links darzustellen.
 ::
 
-@@@@@@b34@b34.de
+## API (englisch)
 
-@@ph035@@gmail.de
+### Props (englisch)
 
-Komponenten-Props
+:component-props
 
-@@ph036@gmail.de
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph037@@gmail.de
+## Theme (englisch)
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph038@@changelog @@@ changelog @@@ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

@@ -13,40 +13,40 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Switch.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice la directiva `v-model` para controlar el estado comprobado del switch.
 
 ::component-code
 ---
-Ignora:
-  - modelValoración
-Externo:
-  - modelValue (Edición española)
-Props:
-  Valoración: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: true
 ---
 ::
 
-Utilice la prop `default-value` para establecer el valor inicial cuando no necesite controlar su estado.
+Utilice el prop `default-value` para establecer el valor inicial cuando no necesite controlar su estado.
 
 ::component-code
 ---
-Ignora:
-  @@pH005@@defaultValue
-Props:
-  Valoración: true
+ignore:
+  - defaultValue
+props:
+  defaultValue: true
 ---
 ::
 
-@0006@etiqueta
+### Label
 
 Utilice el prop `label` para establecer la etiqueta del interruptor.
 
 ::component-code
 ---
-Props:
-  Archivo de la etiqueta: check me
+props:
+  label: Check me
 ---
 ::
 
@@ -54,159 +54,159 @@ Cuando se utiliza el prop `required`, se añade un asterisco junto a la etiqueta
 
 ::component-code
 ---
-Ignora:
-  @@pH009@etiqueta
-Props:
-  Requerido: Verdadero
-  Archivo de la etiqueta: check me
+ignore:
+  - label
+props:
+  required: true
+  label: Check me
 ---
 ::
 
-@@pH010@Descripción
+### Descripción
 
 Utilice el prop `description` para establecer la descripción del Switch.
 
 ::component-code
 ---
-Ignora:
-  @@pH012@etiqueta
-Props:
-  Archivo de la etiqueta: check me
-  Descripción:"Esto es una casilla de verificación".
+ignore:
+  - label
+props:
+  label: Check me
+  description: 'This is a checkbox.'
 ---
 ::
 
-@@pH013@Icon
+### Icon
 
-Utilice los props `checked-icon` y `unchecked-icon` para configurar los iconos del Switch cuando esté marcado y desmarcado.
+Utilice los accesorios `checked-icon` y `unchecked-icon` para configurar los iconos del conmutador cuando esté marcado y desmarcado.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @160000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @@pH017@defaultValue (en inglés)
-Props:
-  no checkIcono: 'i-lucide-x'
+prettier: true
+ignore:
+  - label
+  - defaultValue
+props:
+  uncheckedIcon: 'i-lucide-x'
   checkedIcon: 'i-lucide-check'
-  Valoración: True
-  Archivo de la etiqueta: check me
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-@@18000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Cargando
 
-Usa el prop `loading` para mostrar un icono de carga en el Switch.
+Utilice el accesorio `loading` para mostrar un icono de carga en el Switch.
 
 ::component-code
 ---
-Ignora:
-  @200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @@pH021@@defaultValue
-Props:
-  Carga: Verdad
-  Valoración: true
-  Archivo de la etiqueta: check me
+ignore:
+  - label
+  - defaultValue
+props:
+  loading: true
+  defaultValue: true
+  label: Check me
 ---
 ::
 
 ### Icono de carga
 
-Utilice el prop `loading-icon` para personalizar el icono de carga. Prevalue a `i-lucide-loader-circle`.
+Utilice el prop `loading-icon` para personalizar el icono de carga.
 
 ::component-code
 ---
-Ignora:
-  @@25@etiqueta
-  @@pH026@defaultValue (en inglés)
-Props:
-  Carga: Verdad
-  LoadingIcon: 'i-lucide-loader'(en inglés)
-  Valoración: True
-  Archivo de la etiqueta: check me
+ignore:
+  - label
+  - defaultValue
+props:
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
 ::framework-only
-#Nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.loading`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.loading`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.loading`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.loading`.
 :::
 ::
 
-@@31@color
+### Color (Edición)
 
-Utilice el prop `color` para cambiar el color del interruptor.
-
-::component-code
----
-Ignora:
-  @@pH033@etiqueta
-  @@pH034@defaultValue (en inglés)
-Props:
-  Color: Neutral
-  Valoración: true
-  Archivo de la etiqueta: check me
----
-::
-
-@350@Tamaño
-
-Utilice el prop `size` para cambiar el tamaño del interruptor.
+Utilice el accesorio `color` para cambiar el color del Switch.
 
 ::component-code
 ---
-Ignora:
-  @37@etiqueta
-  @@pH038@defaultValue (en inglés)
-Props:
-  Tamaño: xl
-  Valoración: True
-  Archivo de la etiqueta: check me
+ignore:
+  - label
+  - defaultValue
+props:
+  color: neutral
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-@@pH039@@desactivado
+### Tamaño
 
-Utilice el prop `disabled` para desactivar el interruptor.
+Utilice el prop `size` para cambiar el tamaño del Switch.
 
 ::component-code
 ---
-Ignora:
-  @@pH041@etiqueta
-Props:
-  Discapacidad: Verdadero
-  Archivo de la etiqueta: check me
+ignore:
+  - label
+  - defaultValue
+props:
+  size: xl
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-@2014@@Apid
+### Desactivado
 
-@@40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Utilice el accesorio `disabled` para desactivar el Switch.
 
-Componentes Props
+::component-code
+---
+ignore:
+  - label
+props:
+  disabled: true
+  label: Check me
+---
+::
+
+## API (Edición española)
+
+### Props (accesorios)
+
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-This component also supports all native `<button>` HTML attributes.
+Este componente también admite todos los atributos HTML nativos de `<button>`.
 ::
 
-@@45000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots en línea
 
-Componentes de slots
+:component-slots
 
-@@46000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@477@themes
+## Temas
 
-Componente Tema
+:component-theme
 
-@@40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

@@ -5,44 +5,44 @@ description: 'トースト通知をアプリに表示するためのコンポー
 
 ## 使用法
 
-自動インポートされた`useToast`を使用して、[ Toast ](/docs/components/toast)通知を表示します。
+自動インポートされた`useToast`コンポーザーを使用して、[Toast](/docs/components/toast)通知を表示します。
 
 ::component-example
 ---
-名前'use—toast—example'
+name: 'use-toast-example'
 ---
 ::
 
-- `useToast` composableはNuxtの`useState`を使用してトースト状態を管理し、アプリケーション全体の反応性を確保します。
-- デフォルトでは、一度に最大5個のトーストが表示されます。この制限を超える新しいトーストを追加すると、最も古いトーストが自動的に削除されます。[`App`](/docs/components/app#props)コンポーネントの`toaster.max` propで変更します。
-- トーストを削除すると、実際に状態から削除されるまでに200msの遅延があり、終了アニメーションを可能にします。
+-  `useToast`コンポーザブルはNuxtの`useState`を使用してトースト状態を管理し、アプリケーション全体の反応性を確保します。
+- Aはデフォルトでは一度に最大5個のトーストを表示します。この制限を超える新しいトーストを追加すると、最も古いトーストは自動的に削除されます。[`App`](/docs/components/app#props)コンポーネントの`toaster.max`プロパティで変更します。
+- トーストを削除すると、実際に状態から削除されるまでに200 msの遅延があり、終了アニメーションを可能にします。
 
 ::warning
-[`App`](/docs/components/app)コンポーネントでアプリをラップしてください。このコンポーネントは[`Toaster`](https://github.com/nuxt/ui/blob/v4/src/runtime/components/Toaster.vue)コンポーネントで、[`ToastProvider`](https://reka-ui.com/docs/components/toast#provider)))コンポーネントを使用します。Reka UIのコンポーネントです。
+[`App`](/docs/components/app)コンポーネントは、Reka UIの[`ToastProvider`](https://reka-ui.com/docs/components/toast#provider)コンポーネントを使用する[`Toaster`](https://github.com/nuxt/ui/blob/v4/src/runtime/components/Toaster.vue)コンポーネントを使用しています。
 ::
 
 ::tip{to="/docs/components/toast"}
-トーストの外観と動作をカスタマイズする方法については、** Toast **コンポーネントのドキュメントを参照してください。
+トーストの外観と動作をカスタマイズする方法については、**Toast**コンポーネントのドキュメントを参照してください。
 ::
 
-##  API
+## API
 
 `useToast()`{lang="ts-type"}
 
-`useToast`コンポーザブルは、トースト通知をグローバルに管理するメソッドを提供します。
+`useToast`コンポーザブルはトースト通知をグローバルに管理するメソッドを提供します。
 
-###  add
+### add
 
 `add(toast: Partial<Toast>): Toast`{lang="ts-type"}
 
 新しいトースト通知を追加します。
 
-#### パラメータ
+#### パラメーター
 
 ::field-group
 
   ::field{name="toast" type="Partial<Toast>" required}
-  以下のプロパティを持つ部分的な`Toast`オブジェクト
+  以下のプロパティを持つ部分的な`Toast`オブジェクト：
 
     ::collapsible
 
@@ -68,7 +68,7 @@ description: 'トースト通知をアプリに表示するためのコンポー
         ::
 
         ::field{name="avatar" type="AvatarProps"}
-        トーストに表示されるアバター。[ Avatar ](/docs/components/avatar#props)を参照。
+        トーストに表示されるアバター。[Avatar](/docs/components/avatar#props)を参照。
         ::
 
         ::field{name="color" type="string"}
@@ -88,7 +88,7 @@ description: 'トースト通知をアプリに表示するためのコンポー
         ::
 
         ::field{name="actions" type="ButtonProps[]"}
-        トーストに表示されるアクション。[ Button ](/docs/components/button#props)を参照してください。
+        トーストに表示されるアクション。[Button](/docs/components/button#props)を参照。
         ::
 
         ::field{name="progress" type="boolean | Pick<ProgressProps, 'color' | 'ui'>"}
@@ -96,7 +96,7 @@ description: 'トースト通知をアプリに表示するためのコンポー
         ::
 
         ::field{name="duration" type="number"}
-        トーストが自動的に閉じるまでの時間をミリ秒単位で指定します。デフォルトは`5000`です。トーストが手動で閉じるまで開いたままにするには`0`に設定します。[`App`](/docs/components/app)コンポーネントにグローバルに設定することもできます。
+        トーストが自動クローズされるまでの長さ（ミリ秒単位）。デフォルトは`5000`です。手動でクローズされるまでトーストを開いたままにするには`0`に設定します。[`App`](/docs/components/app)コンポーネントでグローバルに設定することもできます。
         ::
 
         ::field{name="onClick" type="(toast: Toast) => void"}
@@ -108,7 +108,7 @@ description: 'トースト通知をアプリに表示するためのコンポー
         ::
 
         ::field{name="type" type="'foreground' | 'background'"}
-        支援技術がトーストをどのようにアナウンスするか。ユーザーが直接操作した結果ではないトーストには`background`を使用してください。
+        支援技術がトーストをアナウンスする方法。ユーザーが直接操作した結果ではないトーストには`background`を使用してください。
         ::
 
         ::field{name="as" type="any"}
@@ -119,7 +119,7 @@ description: 'トースト通知をアプリに表示するためのコンポー
   ::
 ::
 
-**戻り値**追加された完全な`Toast`オブジェクト。
+** Returns：**追加された完全な`Toast`オブジェクト。
 
 ```vue
 <script setup lang="ts">
@@ -135,7 +135,7 @@ function showToast() {
 </script>
 ```
 
-###  update
+### update
 
 `update(id: string | number, toast: Omit<Partial<Toast>, 'id'>): void`{lang="ts-type"}
 
@@ -149,7 +149,7 @@ function showToast() {
   ::
 
   ::field{name="toast" type="Omit<Partial<Toast>, 'id'>" required}
-  更新するプロパティを持つ部分的な`Toast`オブジェクト。`id`は変更できず、トーストは再開され、再度渡さない限り`duration`はリセットされます。
+  更新するプロパティを持つ部分的な`Toast`オブジェクト。`id`は変更できず、トーストは再開され、`duration`は再度渡さない限りリセットされます。
   ::
 ::
 
@@ -166,7 +166,7 @@ function updateToast(id: string | number) {
 </script>
 ```
 
-###  remove
+### remove
 
 `remove(id: string | number): void`{lang="ts-type"}
 
@@ -190,7 +190,7 @@ function removeToast(id: string | number) {
 </script>
 ```
 
-###  clear
+### clear
 
 `clear(): void`{lang="ts-type"}
 

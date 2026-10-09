@@ -13,50 +13,50 @@ links:
 이 구성요소는 `@nuxt/content` 모듈이 설치된 경우에만 사용할 수 있습니다.
 ::
 
-##  사용
+## Usage
 
-페이지 서라운드를 가져올 때 얻은 `surround`{lang="ts-type"} 값과 함께 `surround`prop을 사용합니다.
+페이지 서라운드를 가져올 때 얻은 `surround`{lang="ts-type"} 값과 함께 `surround` prop을 사용합니다.
 
 ::component-example
 ---
-이름: 'content-surround-example'
-소품 :
-  클래스: 'w-full'
+name: 'content-surround-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-###  Prev/다음
+### Prev/다음
 
-`prev-icon` 및 `next-icon`props를 사용하여 [Icon](/docs/components/icon) 버튼을 사용자 지정합니다.
+`prev-icon` 및 `next-icon` 소품을 사용하여 [Icon](/docs/components/icon) 버튼을 사용자 정의합니다.
 
 ::component-code{prefix="content"}
 ---
-상품명 : True
-축소: true
-무시하기:
-  - surround @ @ @ surround
-외부:
-  -  surround
+prettier: true
+collapse: true
+ignore:
+  - surround
+external:
+  - surround
 externalTypes:
-  -  ContentSurroundLink []
-소품 :
+  - ContentSurroundLink[]
+props:
   prevIcon: 'i-lucide-chevron-left'
-  nextIcon: 'i-lucide-chevron-right'에 해당되는 글 1건
-  surround : 주변
-  -  title: ContentSearchButton
-    경로: /docs/components/content-search-button
-    stem : docs/2.components/content-search-button / 문서 검색 버튼
-    ContentSearch 모달을 여는 미리 스타일된 Button입니다.A pre-styled Button to open the ContentSearch modal.
+  nextIcon: 'i-lucide-chevron-right'
+  surround:
+  - title: ContentSearchButton
+    path: /docs/components/content-search-button
+    stem: docs/2.components/content-search-button
+    description: A pre-styled Button to open the ContentSearch modal.
   - title: ContentToc
-    경로 : /docs/components/content-toc
-    줄기: docs/2.components/content-toc
-    설명: 사용자 지정 가능한 슬롯이 있는 스티커 카탈로그입니다.
+    path: /docs/components/content-toc
+    stem: docs/2.components/content-toc
+    description: A sticky Table of Contents with customizable slots.
 ---
 ::
 
-##  예제
+## 예
 
-###  한 페이지 내에서
+### 페이지 안에
 
 페이지의 ContentSurround 구성 요소를 사용하여 이전 및 다음 링크를 표시합니다.
 
@@ -89,20 +89,20 @@ if (!page.value) {
 </template>
 ```
 
-##  API
+## API 파일
 
-### Props 이미지
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### Slots
 
-:구성요소 - 슬롯
+:component-slots
 
-##  테마
+## Theme 테마
 
-:구성요소 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-: component-changelog{prefix="content"}
+:component-changelog{prefix="content"}

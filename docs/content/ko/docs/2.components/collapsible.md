@@ -1,5 +1,5 @@
 ---
-description: 내용의 가시성을 전환하는 축소 가능한 요소입니다.
+description: 내용의 가시성을 전환하기 위한 축소 가능한 요소.
 category: element
 keywords:
   - disclosure
@@ -13,143 +13,143 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Collapsible.vue
 ---
 
-##  사용
+## Usage
 
-[Button](/docs/components/button) 또는 Collapsible의 기본 슬롯에 있는 다른 구성 요소를 사용합니다.
+축소 가능의 기본 슬롯에 [Button](/docs/components/button) 또는 다른 구성 요소를 사용합니다.
 
-그런 다음 `#content`슬롯을 사용하여 Collapsible이 열려 있을 때 표시되는 내용을 추가합니다.
+그런 다음 `#content` 슬롯을 사용하여 축소 가능이 열려 있을 때 표시된 내용을 추가합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  클래스
-소품 :
-  클래스: 'flex-col gap - 2 w-48'
-슬롯 :
-  기본값 :|
+prettier: true
+ignore:
+  - class
+props:
+  class: 'flex flex-col gap-2 w-48'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
 
-  컨텐츠 :|
+  content: |
 
     <Placeholder class="h-48" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
+:u-button{label="열기 (Open)" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
 
-#content 내용
-: placeholder{class="h-48"}
+#content
+:placeholder{class="h-48"}
 ::
 
-### 마운트 해제
+### Unmount 마운트 해제
 
-Collapsible이 축소될 때 컨텐츠가 마운트 해제되지 않도록 하려면 `unmount-on-hide`prop을 사용합니다. 기본값은 `true`입니다.
+축소 가능이 축소될 때 내용이 마운트 해제되지 않도록 하려면 `unmount-on-hide` 소품을 사용합니다. 기본값은 `true`입니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  클래스
-소품 :
-  unmountOnHide : false
-  클래스: 'flex-col gap - 2 w-48'
-슬롯 :
-  기본 값:|
+prettier: true
+ignore:
+  - class
+props:
+  unmountOnHide: false
+  class: 'flex flex-col gap-2 w-48'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
 
-  컨텐츠 :|
+  content: |
 
     <Placeholder class="h-48" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
+:u-button{label="열기 (Open)" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
 
-#content 내용
-: placeholder{class="h-48"}
+#content
+:placeholder{class="h-48"}
 ::
 
 ::note
-DOM을 검사하여 렌더링되는 콘텐츠를 볼 수 있습니다.
+DOM을 검사하여 렌더링되는 콘텐츠를 확인할 수 있습니다.
 ::
 
-###  비활성 화
+### 비활성 화
 
-`disabled`prop 을 사용하여 Collapsible 을 비활성화합니다.
+`disabled` Prop을 사용하여 Collapsible을 비활성화합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  class
-소품 :
-  클래스: 'flex-col gap - 2 w-48'
-  사용 안 함:true
-슬롯 :
-  기본 값:|
+prettier: true
+ignore:
+  - class
+props:
+  class: 'flex flex-col gap-2 w-48'
+  disabled: true
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
 
-  컨텐츠 :|
+  content: |
 
     <Placeholder class="h-48" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
+:u-button{label="열기 (Open)" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
 
-#content 내용
-: placeholder{class="h-48"}
+#content
+:placeholder{class="h-48"}
 ::
 
-##  예제
+## 예제
 
-###  열린 상태 제어
+### Control 오픈 상태
 
-`default-open`prop 또는 `v-model:open` 지시문을 사용하여 열린 상태를 제어할 수 있습니다.
+`default-open` prop 또는 `v-model:open` 지시문을 사용하여 개방 상태를 제어할 수 있습니다.
 
 ::component-example
 ---
-'collapsible-open-example' 이라는 표현이 있습니다.
+name: 'collapsible-open-example'
 ---
 ::
 
 ::note
-이 예에서는 [`defineShortcuts`](/docs/composables/define-shortcuts)를 사용하여 Collapsible을 전환할 수 있습니다. kbd{value="O"} 키를 눌러 Collapsible을 전환할 수 있습니다.
+이 예제에서는 [`defineShortcuts`](/docs/composables/define-shortcuts)를 사용하여 :kbd{value="O"}를 눌러 축소 가능을 토글할 수 있습니다.
 ::
 
 ::tip
-이렇게 하면 트리거를 축소 가능 밖으로 이동하거나 완전히 제거할 수 있습니다.
+이렇게 하면 트리거를 축소 가능 외부로 이동하거나 완전히 제거할 수 있습니다.
 ::
 
-### 회전 아이콘
+### 회전 아이콘 포함
 
-다음은 축소 가능의 열린 상태를 나타내는 단추에 회전 아이콘이 있는 예입니다.
+다음은 축소 가능의 열린 상태를 나타내는 버튼에 회전 아이콘이 있는 예입니다.
 
 ::component-example
 ---
-이름: "collapsible-icon-example"
+name: 'collapsible-icon-example'
 ---
 ::
 
-##  API
+## API 사용
 
-### Props 이미지
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### 슬롯
 
-:구성요소 - 슬롯
+:component-slots
 
-###  Emits
+### Emits 파일
 
-:구성요소 - 방출
+:component-emits
 
-##  테마
+## Theme 테마
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

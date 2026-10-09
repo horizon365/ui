@@ -5,19 +5,19 @@ description: 'スクロール可能な要素にスクロールシャドウ効果
 
 ## 使用法
 
-自動インポートされた`useScrollShadow`コンポーザブルを使用して、スクロール可能な要素のエッジにフェードシャドウを適用し、スクロール方向により多くのコンテンツが使用可能であることを示します。
+自動インポートされた`useScrollShadow`コンポーザーを使用して、スクロール可能な要素のエッジにフェードシャドウを適用し、スクロール方向により多くのコンテンツが利用可能であることを示します。
 
 ::component-example
 ---
-名前'use—scroll—shadow—example'
+name: 'use-scroll-shadow-example'
 ---
 ::
 
--  CSS `mask-image`を使用して、要素をオーバーレイするのではなくエッジでコンテンツをフェードするため、どんな背景でも動作します。
-- 要素がオーバーフローしているかどうかを自動的に検出し、必要なときにのみシャドウを適用します。
-- 垂直方向と水平方向の両方に対応しています。
+-  CSS `mask-image`を使用して、要素をオーバーレイするのではなくエッジでコンテンツをフェードします。
+- 要素のオーバーフローを自動的に検出し、必要なときにのみシャドウを適用する。
+- 垂直方向と水平方向の両方に対応。
 
-##  API
+## API
 
 `useScrollShadow(element, options?)`{lang="ts-type"}
 
@@ -47,12 +47,12 @@ description: 'スクロール可能な要素にスクロールシャドウ効果
   ::
 ::
 
-### リターン
+### 戻る
 
 ::field-group
 
   ::field{name="style" type="ComputedRef<CSSProperties | undefined>"}
-  スクロール可能な要素を`:style`でバインドするリアクティブなスタイルオブジェクトです。シャドウがアクティブな場合は`maskImage`、それ以外の場合は`undefined`を含みます。
+  スクロール可能な要素を`:style`でバインドするためのリアクティブなスタイルオブジェクトです。shadowsがアクティブな場合は`maskImage`、それ以外の場合は`undefined`を含みます。
   ::
 
   ::field{name="isOverflowing" type="ComputedRef<boolean>"}

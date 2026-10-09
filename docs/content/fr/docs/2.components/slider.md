@@ -12,16 +12,16 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Slider.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Utilisez la directive `v-model` pour contrôler la valeur du curseur.
 
 ::component-code
 ---
-Extérieure:
-  - modèleValeur
-Props:
-  Modèle: 50
+external:
+  - modelValue
+props:
+  modelValue: 50
 ---
 ::
 
@@ -29,60 +29,60 @@ Utilisez la prop `default-value` pour définir la valeur initiale lorsque vous n
 
 ::component-code
 ---
-Ignorer:
-  @@ph004@@valeur défaillante
-Props:
-  Défaut: 50
+ignore:
+  - defaultValue
+props:
+  defaultValue: 50
 ---
 ::
 
 ::tip
 Utilisez `aria-label` ou `aria-labelledby` pour nommer un seul curseur de pouce, ils sont transférés au pouce qui est l'élément avec le rôle `slider`.
 
-Les pouces d'un curseur à plusieurs pouces sont nommés par leur position afin qu 'ils puissent être distingués,`Minimum`/`Maximum` pour deux pouces et `Value n of m` pour trois ou plus. Ces noms sont conservés, et un `aria-label` nomme le curseur dans son ensemble par un rôle `group` sur la racine au lieu d'être répété sur chaque pouce.
+Les pouces d'un curseur à plusieurs pouces sont nommés par leur position afin qu 'ils puissent être distingués, `Minimum`/`Maximum` pour deux pouces et `Value n of m` pour trois ou plus. Ces noms sont conservés, et un `aria-label` nomme le curseur dans son ensemble par un rôle `group` sur la racine au lieu d'être répété sur chaque pouce.
 ::
 
-@ Min/Max
+### Min/Max
 
-Utilisez les accessoires `min` et `max` pour définir les valeurs minimales et maximales du Slider. Defaults sur `0` et `100`.
+Utilisez les props `min` et `max` pour définir les valeurs minimales et maximales du curseur. Defaults sur `0` et `100`.
 
 ::component-code
 ---
-ignorer:
+ignore:
   - defaultValue
-Props:
-  min: 0 à
-  Max: à 50
-  Défaut: 50
+props:
+  min: 0
+  max: 50
+  defaultValue: 50
 ---
 ::
 
-@@ph019@étape
+### Step étape
 
 Utilisez la prop `step` pour définir la valeur d'incrément du Slider. Defaults à `1`.
 
 ::component-code
 ---
-Ignorer:
+ignore:
   - defaultValue
-Props:
-  Étape: 10
-  Défaut: 50
+props:
+  step: 10
+  defaultValue: 50
 ---
 ::
 
-@@223@multiple
+### Multiple équivalent
 
 Utilisez la directive `v-model` ou la prop `default-value` avec un tableau de valeurs pour créer un curseur de plage.
 
 ::component-code
 ---
-ignorer:
-  - modelValeur
-Extérieur:
-  - modelValeur
-Props:
-  Modèle:[25, 75]
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: [25, 75]
 ---
 ::
 
@@ -90,117 +90,117 @@ Utilisez le prop `min-steps-between-thumbs` pour limiter la distance minimale en
 
 ::component-code
 ---
-Ignorer:
-  - modèleValeur
-Extérieure:
-  - modèleValeur
-Props:
-  Modèle:[25, 50, 75]
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: [25, 50, 75]
   minStepsBetweenThumbs: 10
 ---
 ::
 
-### Référencement
+### Définition
 
 Utilisez la prop `orientation` pour changer l'orientation du curseur. Defaults à `horizontal`.
 
 ::component-code
 ---
-ignorer:
-  - valeur défaillante
-  @@classe 35
-Props:
-  Orientation: verticale
-  Défaut: 50
-  Catégorie: H-48
----
-::
-
-@@pH036@couleur
-
-Utilisez la prop `color` pour changer la couleur du curseur.
-
-::component-code
----
-Ignorer:
+ignore:
   - defaultValue
-Props:
-  Couleur: Neutre
-  Défaut: 50
+  - class
+props:
+  orientation: vertical
+  defaultValue: 50
+  class: 'h-48'
 ---
 ::
 
-@@pH039@@Size
+### Couleur
 
-Utilisez la prop `size` pour modifier la taille du curseur.
+Use the `color` prop to change the color of the slider.
 
 ::component-code
 ---
-Ignorer:
+ignore:
   - defaultValue
-Props:
-  Taille: XL
-  Défaut: 50
+props:
+  color: neutral
+  defaultValue: 50
 ---
 ::
 
-@@ph042@Tooltip
+### Size
 
-Utilisez le prop `tooltip` pour afficher un [Tooltip](/docs/components/tooltip) autour des pouces du curseur avec la valeur actuelle. Vous pouvez le définir sur `true` pour le comportement par défaut ou passer un objet pour le personnaliser avec n'importe quelle propriété du composant [tipTool]().
-
-::component-code
----
-Ignorer:
-  - valeur défaillante
-  @@ph054@tooltip
-Props:
-  Défaut: 50
-  Tooltip: vrai
----
-::
-
-### désactivé
-
-Utilisez la prop `disabled` pour désactiver le curseur.
+Utilisez le prop `size` pour modifier la taille du curseur.
 
 ::component-code
 ---
-ignorer:
+ignore:
   - defaultValue
-Props:
-  handicapés: vrai
-  Valeur défaillante: 50
+props:
+  size: xl
+  defaultValue: 50
 ---
 ::
 
-### Résolu
+### Tooltip écrit
+
+Utilisez la prop `tooltip` pour afficher un [Tooltip](/docs/components/tooltip) autour des pouces du curseur avec la valeur actuelle. Vous pouvez le définir sur `true` pour le comportement par défaut ou passer un objet pour le personnaliser avec n'importe quelle propriété du composant [Tooltip](/docs/components/tooltip#props).
+
+::component-code
+---
+ignore:
+  - defaultValue
+  - tooltip
+props:
+  defaultValue: 50
+  tooltip: true
+---
+::
+
+### Désactivé
+
+Utilisez le prop `disabled` pour désactiver le curseur.
+
+::component-code
+---
+ignore:
+  - defaultValue
+props:
+  disabled: true
+  defaultValue: 50
+---
+::
+
+### Inverté
 
 Utilisez le prop `inverted` pour inverser visuellement le curseur.
 
 ::component-code
 ---
-ignorer:
-  @@ph060@@valeur défaillante
-Props:
-  Inversé: vrai
-  Défauts: 25
+ignore:
+  - defaultValue
+props:
+  inverted: true
+  defaultValue: 25
 ---
 ::
 
-@@ph061@@api
+## API
 
-@@ph062@@props
+### Props
 
-Composants-props
+:component-props
 
-### émissions
+### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph064@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changelog @changelog
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

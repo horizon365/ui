@@ -7,7 +7,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Container.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice la ranura predeterminada para centrar y restringir el ancho de su contenido.
 
@@ -17,26 +17,26 @@ Su ancho máximo está controlado por la variable CSS `--ui-container`.
 
 ::component-example
 ---
-nombre: 'container-ejemplo'
-Props:
-  Categoría: w-full
+name: 'container-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-@2002
+## API (Edición española)
 
-@@pH000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props (Edición española)
 
-Componentes Props
+:component-props
 
-@@pH004@@esencias
+### Slots
 
-Componentes de slots
+:component-slots
 
-@@005@@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@changelog @changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

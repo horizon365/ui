@@ -16,44 +16,44 @@ links:
 
 ::component-code
 ---
-崩壊真
-隠す
-  - クラス
-  -  defaultValue
-無視
-  - アイテム
-  - クラス
-  -  defaultValue
-外部
-  - アイテム
-externalTypes
-  -  TimelineItem []
-小道具
-  defaultValue 2
-  アイテム
-    -  date '2025年3月15日'
-      title「プロジェクト·キックオフ」
-      説明'チーム調整でプロジェクトを開始しました。プロジェクトのマイルストーンと割り当てられたリソースを設定します。'
-      アイコン'i—lucide—rocket'
-    -  date 'Mar 22 2025'
-      title「デザインフェーズ」
-      説明：'ユーザーリサーチとデザインワークショップ。ユーザーテストのためのワイヤーフレームとプロトタイプを作成。'
-      アイコン'i—lucide—palette'
-    -  date '2025年3月29日'
-      title「開発スプリント」
-      description 'フロントエンドとバックエンドの開発。コア機能を実装し、APIと統合しました。'
-      アイコン'i—lucide—code'
-    -  date 'Apr 5 2025'
-      title 'テスト&デプロイメント'
-      説明：'QAテストとパフォーマンス最適化。アプリケーションを本番環境にデプロイしました。
-      アイコン'i—lucide—check—circle'
-  クラス'w—96'
+collapse: true
+hide:
+  - class
+  - defaultValue
+ignore:
+  - items
+  - class
+  - defaultValue
+external:
+  - items
+externalTypes:
+  - TimelineItem[]
+props:
+  defaultValue: 2
+  items:
+    - date: 'Mar 15, 2025'
+      title: 'Project Kickoff'
+      description: 'Kicked off the project with team alignment. Set up project milestones and allocated resources.'
+      icon: 'i-lucide-rocket'
+    - date: 'Mar 22 2025'
+      title: 'Design Phase'
+      description: 'User research and design workshops. Created wireframes and prototypes for user testing.'
+      icon: 'i-lucide-palette'
+    - date: 'Mar 29 2025'
+      title: 'Development Sprint'
+      description: 'Frontend and backend development. Implemented core features and integrated with APIs.'
+      icon: 'i-lucide-code'
+    - date: 'Apr 5 2025'
+      title: 'Testing & Deployment'
+      description: 'QA testing and performance optimization. Deployed the application to production.'
+      icon: 'i-lucide-check-circle'
+  class: 'w-96'
 ---
 ::
 
 ### アイテム
 
-`items` propを、次のプロパティを持つオブジェクトの配列として使用します。
+`items`プロパティを次のプロパティを持つオブジェクトの配列として使用します。
 
 - `date?: string`{lang="ts-type"}
 - `title?: string`{lang="ts-type"}
@@ -67,72 +67,72 @@ externalTypes
 
 ::component-code
 ---
-無視
-  - アイテム
-  - クラス
-  -  defaultValue
-外部
-  - アイテム
-externalTypes
-  -  TimelineItem []
-小道具
-  defaultValue 2
-  アイテム
-    -  date '2025年3月15日'
-      title「プロジェクト·キックオフ」
-      説明'チーム調整でプロジェクトを開始しました。プロジェクトのマイルストーンと割り当てられたリソースを設定します。'
-      アイコン'i—lucide—rocket'
-    -  date 'Mar 22 2025'
-      title「デザインフェーズ」
-      説明：'ユーザーリサーチとデザインワークショップ。ユーザーテストのためのワイヤーフレームとプロトタイプを作成。'
-      アイコン'i—lucide—palette'
-    -  date 'Mar 29 2025'
-      title「開発スプリント」
-      description 'フロントエンドとバックエンドの開発。コア機能を実装し、APIと統合しました。'
-      アイコン'i—lucide—code'
-    -  date 'Apr 5 2025'
-      title 'テスト&デプロイメント'
-      説明：'QAテストとパフォーマンス最適化。アプリケーションを本番環境にデプロイしました。
-      アイコン'i—lucide—check—circle'
-  クラス'w—96'
+ignore:
+  - items
+  - class
+  - defaultValue
+external:
+  - items
+externalTypes:
+  - TimelineItem[]
+props:
+  defaultValue: 2
+  items:
+    - date: 'Mar 15, 2025'
+      title: 'Project Kickoff'
+      description: 'Kicked off the project with team alignment. Set up project milestones and allocated resources.'
+      icon: 'i-lucide-rocket'
+    - date: 'Mar 22 2025'
+      title: 'Design Phase'
+      description: 'User research and design workshops. Created wireframes and prototypes for user testing.'
+      icon: 'i-lucide-palette'
+    - date: 'Mar 29 2025'
+      title: 'Development Sprint'
+      description: 'Frontend and backend development. Implemented core features and integrated with APIs.'
+      icon: 'i-lucide-code'
+    - date: 'Apr 5 2025'
+      title: 'Testing & Deployment'
+      description: 'QA testing and performance optimization. Deployed the application to production.'
+      icon: 'i-lucide-check-circle'
+  class: 'w-96'
 ---
 ::
 
-### カラー
+### Color
 
-`color`プロパティを使用して、タイムライン内のアクティブなアイテムの色を変更します。
+`color`プロパティを使用して、タイムラインのアクティブなアイテムの色を変更します。
 
 ::component-code
 ---
-無視
-  - アイテム
-  - クラス
-  -  defaultValue
-外部
-  - アイテム
-externalTypes
-  -  TimelineItem []
-小道具
-  色ニュートラル
-  defaultValue 2
-  アイテム
-    -  date '2025年3月15日'
-      title「プロジェクト·キックオフ」
-      説明'チーム調整でプロジェクトを開始しました。プロジェクトのマイルストーンと割り当てられたリソースを設定します。'
-      アイコン'i—lucide—rocket'
-    -  date 'Mar 22 2025'
-      title「デザインフェーズ」
-      説明：'ユーザーリサーチとデザインワークショップ。ユーザーテストのためのワイヤーフレームとプロトタイプを作成。'
-      アイコン'i—lucide—palette'
-    -  date '2025年3月29日'
-      title「開発スプリント」
-      description 'フロントエンドとバックエンドの開発。コア機能を実装し、APIと統合しました。'
-      アイコン'i—lucide—code'
-    -  date 'Apr 5 2025'
-      title 'テスト&デプロイメント'
-      説明：'QAテストとパフォーマンス最適化。アプリケーションを本番環境にデプロイしました。
-      アイコン'i—lucide—check—circle'
-  クラス'w—96'
+ignore:
+  - items
+  - class
+  - defaultValue
+external:
+  - items
+externalTypes:
+  - TimelineItem[]
+props:
+  color: neutral
+  defaultValue: 2
+  items:
+    - date: 'Mar 15, 2025'
+      title: 'Project Kickoff'
+      description: 'Kicked off the project with team alignment. Set up project milestones and allocated resources.'
+      icon: 'i-lucide-rocket'
+    - date: 'Mar 22 2025'
+      title: 'Design Phase'
+      description: 'User research and design workshops. Created wireframes and prototypes for user testing.'
+      icon: 'i-lucide-palette'
+    - date: 'Mar 29 2025'
+      title: 'Development Sprint'
+      description: 'Frontend and backend development. Implemented core features and integrated with APIs.'
+      icon: 'i-lucide-code'
+    - date: 'Apr 5 2025'
+      title: 'Testing & Deployment'
+      description: 'QA testing and performance optimization. Deployed the application to production.'
+      icon: 'i-lucide-check-circle'
+  class: 'w-96'
 ---
 ::
 
@@ -142,153 +142,153 @@ externalTypes
 
 ::component-code
 ---
-無視
-  - アイテム
-  - クラス
-  -  defaultValue
-外部
-  - アイテム
-externalTypes
-  -  TimelineItem []
-小道具
-  サイズXS
-  defaultValue 2
-  アイテム
-    -  date '2025年3月15日'
-      title「プロジェクト·キックオフ」
-      説明'チーム調整でプロジェクトを開始しました。プロジェクトのマイルストーンと割り当てられたリソースを設定します。'
-      アイコン'i—lucide—rocket'
-    -  date 'Mar 22 2025'
-      title「デザインフェーズ」
-      説明：'ユーザーリサーチとデザインワークショップ。ユーザーテストのためのワイヤーフレームとプロトタイプを作成。'
-      アイコン'i—lucide—palette'
-    -  date 'Mar 29 2025'
-      title「開発スプリント」
-      description 'フロントエンドとバックエンドの開発。コア機能を実装し、APIと統合しました。'
-      アイコン'i—lucide—code'
-    -  date 'Apr 5 2025'
-      title 'テスト&デプロイメント'
-      説明：'QAテストとパフォーマンス最適化。アプリケーションを本番環境にデプロイしました。
-      アイコン'i—lucide—check—circle'
-  クラス'w—96'
+ignore:
+  - items
+  - class
+  - defaultValue
+external:
+  - items
+externalTypes:
+  - TimelineItem[]
+props:
+  size: xs
+  defaultValue: 2
+  items:
+    - date: 'Mar 15, 2025'
+      title: 'Project Kickoff'
+      description: 'Kicked off the project with team alignment. Set up project milestones and allocated resources.'
+      icon: 'i-lucide-rocket'
+    - date: 'Mar 22 2025'
+      title: 'Design Phase'
+      description: 'User research and design workshops. Created wireframes and prototypes for user testing.'
+      icon: 'i-lucide-palette'
+    - date: 'Mar 29 2025'
+      title: 'Development Sprint'
+      description: 'Frontend and backend development. Implemented core features and integrated with APIs.'
+      icon: 'i-lucide-code'
+    - date: 'Apr 5 2025'
+      title: 'Testing & Deployment'
+      description: 'QA testing and performance optimization. Deployed the application to production.'
+      icon: 'i-lucide-check-circle'
+  class: 'w-96'
 ---
 ::
 
-### オリエンテーション
+### Orientation
 
 タイムラインの向きを変更するには、`orientation`プロパティを使用します。デフォルトは`vertical`です。
 
 ::component-code
 ---
-無視
-  - アイテム
-  - クラス
-  -  defaultValue
-外部
-  - アイテム
-externalTypes
-  -  TimelineItem []
-小道具
-  オリエンテーション'水平'
-  defaultValue 2
-  アイテム
-    -  date '2025年3月15日'
-      title「プロジェクト·キックオフ」
-      説明：'チームアライメントでプロジェクトを開始しました。
-      アイコン'i—lucide—rocket'
-    -  date 'Mar 22 2025'
-      title「デザインフェーズ」
-      説明：「ユーザーリサーチとデザインワークショップ」
-      アイコン'i—lucide—palette'
-    -  date '2025年3月29日'
-      title「開発スプリント」
-      説明：'フロントエンドとバックエンドの開発'
-      アイコン'i—lucide—code'
-    -  date 'Apr 5 2025'
-      title 'テスト&デプロイメント'
-      説明：QAテストとパフォーマンス最適化
-      アイコン'i—lucide—check—circle'
-  クラス'w—full'
-クラス'overflow—x—auto'
+ignore:
+  - items
+  - class
+  - defaultValue
+external:
+  - items
+externalTypes:
+  - TimelineItem[]
+props:
+  orientation: 'horizontal'
+  defaultValue: 2
+  items:
+    - date: 'Mar 15, 2025'
+      title: 'Project Kickoff'
+      description: 'Kicked off the project with team alignment.'
+      icon: 'i-lucide-rocket'
+    - date: 'Mar 22 2025'
+      title: 'Design Phase'
+      description: 'User research and design workshops.'
+      icon: 'i-lucide-palette'
+    - date: 'Mar 29 2025'
+      title: 'Development Sprint'
+      description: 'Frontend and backend development.'
+      icon: 'i-lucide-code'
+    - date: 'Apr 5 2025'
+      title: 'Testing & Deployment'
+      description: 'QA testing and performance optimization.'
+      icon: 'i-lucide-check-circle'
+  class: 'w-full'
+class: 'overflow-x-auto'
 ---
 ::
 
-### リバース
+### Reverse
 
 逆プロパティを使用して、タイムラインの方向を逆にします。
 
 ::component-code
 ---
-無視
-  - アイテム
-  - クラス
-  -  defaultValue
-外部
-  - アイテム
-externalTypes
-  -  TimelineItem []
-小道具
-  逆真
-  modelValue 2
-  オリエンテーション'垂直'
-  アイテム
-    -  date '2025年3月15日'
-      title「プロジェクト·キックオフ」
-      説明：'チームアライメントでプロジェクトを開始しました。
-      アイコン'i—lucide—rocket'
-    -  date 'Mar 22 2025'
-      title「デザインフェーズ」
-      説明：「ユーザーリサーチとデザインワークショップ」
-      アイコン'i—lucide—palette'
-    -  date '2025年3月29日'
-      title「開発スプリント」
-      説明：'フロントエンドとバックエンドの開発'
-      アイコン'i—lucide—code'
-    -  date 'Apr 5 2025'
-      title 'テスト&デプロイメント'
-      説明：QAテストとパフォーマンス最適化
-      アイコン'i—lucide—check—circle'
-  クラス'w—full'
-クラス'overflow—x—auto'
+ignore:
+  - items
+  - class
+  - defaultValue
+external:
+  - items
+externalTypes:
+  - TimelineItem[]
+props:
+  reverse: true
+  modelValue: 2
+  orientation: 'vertical'
+  items:
+    - date: 'Mar 15, 2025'
+      title: 'Project Kickoff'
+      description: 'Kicked off the project with team alignment.'
+      icon: 'i-lucide-rocket'
+    - date: 'Mar 22 2025'
+      title: 'Design Phase'
+      description: 'User research and design workshops.'
+      icon: 'i-lucide-palette'
+    - date: 'Mar 29 2025'
+      title: 'Development Sprint'
+      description: 'Frontend and backend development.'
+      icon: 'i-lucide-code'
+    - date: 'Apr 5 2025'
+      title: 'Testing & Deployment'
+      description: 'QA testing and performance optimization.'
+      icon: 'i-lucide-check-circle'
+  class: 'w-full'
+class: 'overflow-x-auto'
 ---
 ::
 
 ## 例
 
-###  Controlアクティブ項目
+###  Controlアクティブなアイテム
 
-`default-value` propを使用するか、`v-model`ディレクティブを使用して、アクティブなアイテムを制御できます。`value`が指定されていない場合、デフォルトでインデックスになります。
+`default-value`プロパティを使用するか、`v-model`ディレクティブを使用してアイテムの`value`を指定してアクティブなアイテムを制御できます。`value`が指定されない場合、デフォルトでインデックスになります。
 
-component—example {name="timeline-model-value-example" prettier}
+:component-example{name="timeline-model-value-example" prettier}
 
 ::tip
-`v-model`または`default-value`が指定された場合に、アイテムにマッチするために使用されるキーを変更するには、`value-key` propを使用します。
+`value-key`プロパティを使用して、`v-model`または`default-value`が指定されたときにアイテムにマッチするキーを変更します。
 ::
 
-### 特定イベント付き
+### With selectイベント
 
-`@select`リスナーを追加して、アイテムをクリック可能にすることができます。
+`@select`リスナーを追加して、項目をクリック可能にできます。
 
 ::note
-ハンドラ関数は、それぞれ第1引数として`Event`と`TimelineItem`を受け取ります。
+ハンドラ関数は、それぞれ第1引数として`Event`と第2引数として`TimelineItem`を受け取ります。
 ::
 
 ::component-example
 ---
-きれい真
-name 'timeline—select—example'
+prettier: true
+name: 'timeline-select-example'
 ---
 ::
 
-### 交互レイアウト付き
+### 交互レイアウト
 
 `ui`プロパティを使用して、レイアウトを交互にするタイムラインを作成します。
 
-component—example {name="timeline-alternating-layout-example" prettier}
+:component-example{name="timeline-alternating-layout-example" prettier}
 
 ### カスタムスロット付き
 
-特定の項目をカスタマイズするには、`slot`プロパティを使用します。
+`slot`プロパティを使用して特定のアイテムをカスタマイズします。
 
 以下のスロットにアクセスできます：
 
@@ -297,32 +297,32 @@ component—example {name="timeline-alternating-layout-example" prettier}
 - `#{{ item.slot }}-title`{lang="ts-type"}
 - `#{{ item.slot }}-description`{lang="ts-type"}
 
-component—example {name="timeline-custom-slot-example" prettier}
+:component-example{name="timeline-custom-slot-example" prettier}
 
 ### スロット付き
 
 利用可能なスロットを使用して、より複雑なタイムラインを作成。
 
-component—example {name="timeline-slots-example" prettier}
+:component-example{name="timeline-slots-example" prettier}
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

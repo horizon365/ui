@@ -1,6 +1,6 @@
 ---
 title: Chatmessage
-description: 'Afficher un message de chat avec une icône, un avatar et des actions.'
+description: 'Affichez un message de chat avec une icône, un avatar et des actions.'
 category: chat
 links:
   - label: GitHub à
@@ -8,7 +8,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatMessage.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Le composant ChatMessage rend un élément `<article>` pour un message de chat `user` ou `assistant`.
 
@@ -16,178 +16,178 @@ Le composant ChatMessage rend un élément `<article>` pour un message de chat `
 
 ::u-chat-message
 ---
-Parts:
-  - type:« texte »
-    ID: « 1 »
-    texte: 'Bonjour! Dites-moi plus sur la création de chatbots IA avec Nuxt UI.'
-Étiquette:"Right"
-Étiquette:"soft"
-Rôle:"Utilisateur"
-ID: « 1 »
-Avatar:
+parts:
+  - type: 'text'
+    id: '1'
+    text: 'Hello! Tell me more about building AI chatbots with Nuxt UI.'
+side: 'right'
+variant: 'soft'
+role: 'user'
+id: '1'
+avatar:
   src: 'https://github.com/benjamincanac.png'
-  Étiquette: Lazy
+  loading: lazy
 ---
 ::
 
 ::
 
 ::tip{to="/docs/components/chat-messages"}
-Utilisez le composant `ChatMessages` pour afficher une liste de messages de discussion.
+Utilisez le composant `ChatMessages` pour afficher une liste de messages de chat.
 ::
 
-@@ph006@parts
+### pièces
 
-Utilisez la prop `parts` pour afficher le contenu du message en utilisant le format AI SDK.
+Utilisez le prop `parts` pour afficher le contenu du message à l'aide du format AI SDK.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph008@parts
-  @@pH009@rôle
-  @@ph010@id.
-Props:
-  Parts:
-    - type:'texte'
-      ID: « 1 »
-      texte: 'Bonjour! Dites-moi plus sur la création de chatbots IA avec Nuxt UI.'
-  Rôle:"Utilisateur"
-  ID: « 1 »
+prettier: true
+ignore:
+  - parts
+  - role
+  - id
+props:
+  parts:
+    - type: 'text'
+      id: '1'
+      text: 'Hello! Tell me more about building AI chatbots with Nuxt UI.'
+  role: 'user'
+  id: '1'
 ---
 ::
 
 ::note
-Le prop `parts` est le format recommandé pour le SDK d'IA. Chaque partie a un `type`(par exemple,'texte') et le contenu correspondant. Le composant ChatMessage prend également en charge le prop `content` obsolète pour la compatibilité ascendante.
+Le prop `parts` est le format recommandé pour le SDK d'IA. Chaque partie a un `type` (par exemple 'text') et le contenu correspondant. Le composant ChatMessage prend également en charge le prop `content` obsolète pour la compatibilité descendante.
 ::
 
-@@ph015
+### Side
 
 Utilisez le prop `side` pour afficher le message à gauche ou à droite.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph017@parts
-  @@@ph018@rôle
-  @@ph019@id.
-Props:
-  Étiquette:"Right"
-  Parts:
-    - type:'texte'
-      ID: « 1 »
-      texte: 'Bonjour! En savoir plus sur la création de chatbots IA avec Nuxt UI.'
-  Rôle:"Utilisateur"
-  ID: « 1 »
+prettier: true
+ignore:
+  - parts
+  - role
+  - id
+props:
+  side: 'right'
+  parts:
+    - type: 'text'
+      id: '1'
+      text: 'Hello! Tell me more about building AI chatbots with Nuxt UI.'
+  role: 'user'
+  id: '1'
 ---
 ::
 
 ::note
-Lorsque vous utilisez le composant [`ChatMessages`](/docs/components/chat-messages), le prop `side` est défini sur `left` pour les messages `assistant` et `right` pour les messages `user`.
+Lorsque vous utilisez le composant [`ChatMessages`](/docs/components/chat-messages), la prop `side` est définie sur `left` pour les messages `assistant` et `right` pour les messages `user`.
 ::
 
 ### Variant
 
-Utilisez la prop `variant` pour modifier le style du message.
+Utilisez la prop `variant` pour changer le style du message.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph033@parts
-  @@pH034@rôle
-  @@pH035@@id.
-Props:
-  Étiquette:"soft"
-  Parts:
-    - type:'texte'
-      ID: « 1 »
-      texte: 'Bonjour! En savoir plus sur la création de chatbots IA avec Nuxt UI.'
-  Rôle:"Utilisateur"
-  ID: « 1 »
+prettier: true
+ignore:
+  - parts
+  - role
+  - id
+props:
+  variant: 'soft'
+  parts:
+    - type: 'text'
+      id: '1'
+      text: 'Hello! Tell me more about building AI chatbots with Nuxt UI.'
+  role: 'user'
+  id: '1'
 ---
 ::
 
 ::note
-Lorsque vous utilisez le [`ChatMessages`](/docs/components/chat-messages) composant, le `variant` prop est réglé à `naked` pour `assistant` messages et `soft` pour `user` messages.
+Lors de l'utilisation du composant [`ChatMessages`](/docs/components/chat-messages), la prop `variant` est définie sur `naked` pour les messages `assistant` et `soft` pour les messages `user`.
 ::
 
-### couleur: badge{label="4.8+" class="align-text-top"}
+Couleur: badge{label="4.8+" class="align-text-top"}
 
 Utilisez la prop `color` pour changer la couleur du message.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph050@parts
-  @@501@rôle
-  @@ph052@id.
-Props:
-  Étiquette:"soft"
-  Couleur: Primaire
+prettier: true
+ignore:
+  - parts
+  - role
+  - id
+props:
+  variant: 'soft'
+  color: 'primary'
   parts:
-    - type:'texte'
-      ID: « 1 »
-      texte: 'Bonjour! En savoir plus sur la création de chatbots IA avec Nuxt UI.'
-  Rôle:"Utilisateur"
-  ID: « 1 »
+    - type: 'text'
+      id: '1'
+      text: 'Hello! Tell me more about building AI chatbots with Nuxt UI.'
+  role: 'user'
+  id: '1'
 ---
 ::
 
 ### Icon
 
-Utilisez le prop `icon` pour afficher un composant [Icon](/docs/components/icon) à côté du message.
+Utilisez la prop `icon` pour afficher un composant [Icon](/docs/components/icon) à côté du message.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph060@parts
-  @@ph061@côté
+prettier: true
+ignore:
+  - parts
+  - side
   - variant
-  @@pH063@rôle
-  @@ph064@id.
-Props:
-  Icône: i-lucide-user
-  Étiquette:"soft"
-  Étiquette:"Right"
-  Parts:
-    - type:'texte'
-      ID: « 1 »
-      texte: 'Bonjour! En savoir plus sur la création de chatbots IA avec Nuxt UI.'
-  Rôle:"Utilisateur"
-  ID: « 1 »
+  - role
+  - id
+props:
+  icon: i-lucide-user
+  variant: 'soft'
+  side: 'right'
+  parts:
+    - type: 'text'
+      id: '1'
+      text: 'Hello! Tell me more about building AI chatbots with Nuxt UI.'
+  role: 'user'
+  id: '1'
 ---
 ::
 
-@@ph066@avatar
+### Avatar
 
-Utilisez le prop `avatar` pour afficher un composant [Avatar](/docs/components/avatar) à côté du message
+Utilisez la prop `avatar` pour afficher un composant [Avatar](/docs/components/avatar) à côté du message.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph072@parts
-  @@ph073@côté
-  @@74@@variété
-  @@75@rôle
-  @@ph076@id.
-  - avatar.chargement
-Props:
-  Avatar:
+prettier: true
+ignore:
+  - parts
+  - side
+  - variant
+  - role
+  - id
+  - avatar.loading
+props:
+  avatar:
     src: 'https://github.com/benjamincanac.png'
-    Étiquette: Lazy
-  Étiquette:"soft"
-  Étiquette:"Right"
-  Parts:
-    - type:'texte'
-      ID: « 1 »
-      texte: 'Bonjour! En savoir plus sur la création de chatbots IA avec Nuxt UI.'
-  Rôle:"Utilisateur"
-  ID: « 1 »
+    loading: lazy
+  variant: 'soft'
+  side: 'right'
+  parts:
+    - type: 'text'
+      id: '1'
+      text: 'Hello! Tell me more about building AI chatbots with Nuxt UI.'
+  role: 'user'
+  id: '1'
 ---
 ::
 
@@ -195,72 +195,72 @@ Vous pouvez également utiliser le prop `avatar.icon` pour afficher une icône e
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph080@parts
-  @@ph081@rôle
-  @@ph082@id.
-Props:
-  Avatar:
-    Icône: i-lucide-bot
+prettier: true
+ignore:
+  - parts
+  - role
+  - id
+props:
+  avatar:
+    icon: i-lucide-bot
   parts:
-    - type:'texte'
-      ID: « 1 »
-      texte: Nuxt UI offre plusieurs fonctionnalités pour créer des chatbots IA, notamment les composants ChatMessage, ChatMessages et ChatPrompt. Les meilleures pratiques comprennent l'utilisation de la classe Chat du SDK AI, la mise en œuvre d'un style de message approprié avec des variantes et l'utilisation des actions intégrées pour les interactions de message. Les composants sont entièrement personnalisables avec un support thématique et un design réactif.
-  Rôle:"assistant"
-  ID: « 1 »
+    - type: 'text'
+      id: '1'
+      text: 'Nuxt UI offers several features for building AI chatbots including the ChatMessage, ChatMessages, and ChatPrompt components. Best practices include using the Chat class from AI SDK, implementing proper message styling with variants, and utilizing the built-in actions for message interactions. The components are fully customizable with theming support and responsive design.'
+  role: 'assistant'
+  id: '1'
 ---
 ::
 
-@@884@Actions
+### Actions
 
-Utilisez la prop `actions` pour afficher les actions en dessous du message qui seront affichées lorsque vous survolez le message.
+Utilisez le prop `actions` pour afficher les actions en dessous du message qui s'afficheront lorsque vous survolerez le message.
 
 ::component-code
 ---
-Étiquette: true
-Extérieur:
-  @@ph086@actions
-Extérieurs:
-  - ButtonProps [réf. nécessaire]
-ignorer:
-  @@ph088@parts
-  @@ph089@actions
-  @@pH090@rôle
-  @@ph091@id.
-Props:
-  Actions:
-    - label:'Copier dans le presse-papiers'
-      Icône: i-lucide-copy
+prettier: true
+external:
+  - actions
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - parts
+  - actions
+  - role
+  - id
+props:
+  actions:
+    - label: 'Copy to clipboard'
+      icon: i-lucide-copy
   parts:
-    - type:'texte'
-      ID: « 1 »
-      texte: Nuxt UI offre plusieurs fonctionnalités pour créer des chatbots IA, notamment les composants ChatMessage, ChatMessages et ChatPrompt. Les meilleures pratiques comprennent l'utilisation de la classe Chat du SDK AI, la mise en œuvre d'un style de message approprié avec des variantes et l'utilisation des actions intégrées pour les interactions de message. Les composants sont entièrement personnalisables avec un support thématique et un design réactif.
-  Rôle:"Utilisateur"
-  ID: « 1 »
+    - type: 'text'
+      id: '1'
+      text: 'Nuxt UI offers several features for building AI chatbots including the ChatMessage, ChatMessages, and ChatPrompt components. Best practices include using the Chat class from AI SDK, implementing proper message styling with variants, and utilizing the built-in actions for message interactions. The components are fully customizable with theming support and responsive design.'
+  role: 'user'
+  id: '1'
 ---
 ::
 
-@@ph094@exemples
+## Examples of
 
 ::tip{to="/docs/components/chat"}
-Consultez la page d'aperçu **Chat** pour connaître les instructions d'installation, la configuration du serveur et les exemples d'utilisation.
+Consultez la page d'aperçu **Chat** pour les instructions d'installation, la configuration du serveur et les exemples d'utilisation.
 ::
 
-@@ph097@@api
+## API écrit
 
-@@ph098@@props
+### Props
 
-Composants-props
+:component-props
 
-@@ph099@@réseaux sociaux
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph100@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changelog 101
+## Changelog
 
-Composant-changelog
+:component-changelog

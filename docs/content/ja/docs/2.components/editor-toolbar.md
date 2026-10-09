@@ -11,30 +11,30 @@ links:
 ## 使用法
 
 EditorToolbarコンポーネントは、アクティブな状態をエディターコンテンツと自動的に同期する書式設定ボタンのツールバーを表示します。`@tiptap/vue-3/menus`パッケージを使用して、3つのレイアウトモードをサポートします。
-- `fixed`{lang="ts-type"}（常に表示）
-- `bubble`{lang="ts-type"}（テキスト選択に表示されます）
-- `floating`{lang="ts-type"}（空行に表示されます）
+- `fixed`{lang="ts-type"}常に表示
+- `bubble`{lang="ts-type"}（テキスト選択に表示）
+- `floating`{lang="ts-type"}（空行に表示）
 
 ::caution
-エディタインスタンスにアクセスするには、[ Editor ](/docs/components/editor)コンポーネントのデフォルトスロット内で使用する必要があります。
+エディタインスタンスにアクセスするには、[Editor](/docs/components/editor)コンポーネントのデフォルトスロット内で使用する必要があります。
 ::
 
 ::component-example
 ---
-昇格：true
-崩壊真
-名前'editor—tool—example'
-クラス'p—8'
+elevated: true
+collapse: true
+name: 'editor-toolbar-example'
+class: 'p-8'
 ---
 ::
 
 ::callout{icon="i-custom-tiptap"}
-バブルレイアウトとフローティングレイアウトは、TipTapの[ BubbleMenu ](https://tiptap.dev/docs/editor/extensions/functionality/bubble-menu)と[ FloatingMenu ](https://tiptap.dev/docs/editor/extensions/functionality/floatingmenu)を使用しています。
+バブルレイアウトとフローティングレイアウトは、TipTapの[BubbleMenu](https://tiptap.dev/docs/editor/extensions/functionality/bubble-menu)と[Floating Menu](https://tiptap.dev/docs/editor/extensions/functionality/floatingmenu)拡張を使用します。
 ::
 
 ### アイテム
 
-`items` propを、次のプロパティを持つオブジェクトの配列として使用します。
+`items`プロパティを次のプロパティを持つオブジェクトの配列として使用します。
 
 - `label?: string`{lang="ts-type"}
 - `icon?: string`{lang="ts-type"}
@@ -53,14 +53,14 @@ EditorToolbarコンポーネントは、アクティブな状態をエディタ�
 - `items?: EditorToolbarItem[] | EditorToolbarItem[][]`{lang="ts-type"}
 - `class?: any`{lang="ts-type"}
 
-[ Button ](/docs/components/button#props)コンポーネントから、`color`、`variant`、`size`などの任意のプロパティを渡すことができます。
+[Button](/docs/components/button#props)コンポーネントから、`color`、`variant`、`size`などの任意のプロパティを渡すことができます。
 
 ::component-example
 ---
-昇格：真
-崩壊真
-名前'editor—tool—items—example'
-クラス'p—8'
+elevated: true
+collapse: true
+name: 'editor-toolbar-items-example'
+class: 'p-8'
 ---
 ::
 
@@ -69,33 +69,33 @@ EditorToolbarコンポーネントは、アクティブな状態をエディタ�
 ::
 
 ::tip
-各項目は、`items` propと同じプロパティを持つオブジェクトの`items`配列を取り、[ DropdownMenu ](/docs/components/dropdown-menu)を作成できます。
+各アイテムは、`items`プロパティと同じプロパティを持つオブジェクトの`items`配列を取り、[DropdownMenu](/docs/components/dropdown-menu)を作成できます。
 ::
 
-### レイアウト
+### Layout
 
-ツールバーの表示方法を変更するには、`layout`プロパティを使用します。デフォルトは`fixed`{lang="ts-type"}です。
+`layout`プロパティを使用して、ツールバーの表示方法を変更します。デフォルトは`fixed`{lang="ts-type"}です。
 
 ::component-example
 ---
-昇格：真
-崩壊真
-名前'editor—tool—layout—example'
-クラス'p—8'
-オプション
-  -  name layout
-    labelレイアウト
-    デフォルトバブル
-    アイテム
-      - 固定
-      - バブル
-      -  floating
+elevated: true
+collapse: true
+name: 'editor-toolbar-layout-example'
+class: 'p-8'
+options:
+  - name: layout
+    label: Layout
+    default: bubble
+    items:
+      - fixed
+      - bubble
+      - floating
 ---
 ::
 
-### オプション
+### Options
 
-`bubble`{lang="ts-type"}または`floating`{lang="ts-type"}レイアウトを使用する場合、`options`プロパティを使用して、[ Floating UI options ](https://floating-ui.com/docs/computeposition#options)を使用して位置決めの動作をカスタマイズします。
+`bubble`{lang="ts-type"}または`floating`{lang="ts-type"}レイアウトを使用する場合は、`options`プロパティを使用して、[Floating UIオプション](https://floating-ui.com/docs/computeposition#options)を使用して位置決めの動作をカスタマイズします。
 
 ```vue
 <template>
@@ -115,9 +115,9 @@ EditorToolbarコンポーネントは、アクティブな状態をエディタ�
 </template>
 ```
 
-###  Should Show
+### 表示するべき
 
-`bubble`{lang="ts-type"}または`floating`{lang="ts-type"}レイアウトを使用する場合は、`should-show`プロパティを使用してツールバーが表示されるタイミングを制御します。この関数はエディタの状態に関するコンテキストを受け取り、ブール値を返します。
+`bubble`{lang="ts-type"}または`floating`{lang="ts-type"}レイアウトを使用する場合は、`should-show`プロパティを使用してツールバーの表示を制御します。この関数はエディタの状態に関するコンテキストを受け取り、真偽値を返します。
 
 ```vue
 <template>
@@ -141,28 +141,28 @@ EditorToolbarコンポーネントは、アクティブな状態をエディタ�
 
 ### 画像ツールバー付き
 
-`should-show`プロパティを使用して、特定のノードタイプにのみ表示されるコンテキスト固有のツールバーを作成します。この例では、画像が選択されたときにのみ表示されるダウンロードおよび削除アクションを含む`bubble`ツールバーを示しています。
+`should-show`プロパティを使用して、特定のノードタイプにのみ表示されるコンテキスト固有のツールバーを作成します。この例では、画像が選択されたときにのみ表示されるダウンロードと削除アクションを持つ`bubble`ツールバーを示しています。
 
 ::component-example
 ---
-昇格：true
-崩壊真
-名前'editor—tool—image—example'
-クラス'p—8'
+elevated: true
+collapse: true
+name: 'editor-toolbar-image-example'
+class: 'p-8'
 ---
 ::
 
-### リンクポップオーバー付き
+### Withリンクポップオーバー
 
-この例では、ツールバーアイテムの`slot`プロパティと[ Popover ](/docs/components/popover)コンポーネントを使用してカスタムリンクポップオーバーを作成する方法を示します。
+この例では、ツールバーアイテムの`slot`プロパティと[Popover](/docs/components/popover)コンポーネントを使用してカスタムリンクポップオーバーを作成する方法を示します。
 
-1. [ Popover ](/docs/components/popover)をラップするVueコンポーネントを作成します。
+1. リンク編集機能付きの[Popover](/docs/components/popover)をラップするVueコンポーネントを作成します。
 
 ::component-example
 ---
-プレビュー false
-崩壊真
-名前'editor—link—popover'
+preview: false
+collapse: true
+name: 'editor-link-popover'
 ---
 ::
 
@@ -170,27 +170,27 @@ EditorToolbarコンポーネントは、アクティブな状態をエディタ�
 
 ::component-example
 ---
-昇格：true
-崩壊真
-名前'editor—tool—custom—slot—example'
-クラス'p—8'
+elevated: true
+collapse: true
+name: 'editor-toolbar-custom-slot-example'
+class: 'p-8'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

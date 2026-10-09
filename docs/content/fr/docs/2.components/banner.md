@@ -10,69 +10,69 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Banner.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-@@ph001@titre
+### Titre
 
-Utilisez la prop `title` pour afficher un titre sur la bannière.
-
-::component-code
----
-Étiquette: true
-classe: '! p-0'
-Props:
-  Le titre: « Ceci est une bannière avec un message important.»
----
-::
-
-@@ph003@icône
-
-Utilisez la prop `icon` pour afficher une icône sur la bannière.
+Utilisez le prop `title` pour afficher un titre sur la bannière.
 
 ::component-code
 ---
-Étiquette: true
-classe: '! p-0'
-ignorer:
-  @@ph005@titre
-Props:
-  Icône: i-lucide-info
-  Le titre: « Ceci est une bannière avec une icône.»
+prettier: true
+class: '!p-0'
+props:
+  title: 'This is a banner with an important message.'
 ---
 ::
 
-@@pH006@couleur
+### icône
 
-Utilisez la prop `color` pour changer la couleur de la bannière.
+Utilisez le prop `icon` pour afficher une icône sur la bannière.
 
 ::component-code
 ---
-Étiquette: true
-classe: '! p-0'
-ignorer:
-  @@pH008@icon
-  @@ph009@titre
-Props:
-  Couleur: "Neutre"
-  Icône: i-lucide-info
-  Le titre: « Ceci est une bannière avec une icône.»
+prettier: true
+class: '!p-0'
+ignore:
+  - title
+props:
+  icon: i-lucide-info
+  title: 'This is a banner with an icon.'
 ---
 ::
 
-@@ph010@fermer
+### couleur
 
-Utilisez le prop `close` pour afficher un bouton [](/docs/components/button) pour rejeter la bannière.
+Utilisez le prop `color` pour changer la couleur de la bannière.
+
+::component-code
+---
+prettier: true
+class: '!p-0'
+ignore:
+  - icon
+  - title
+props:
+  color: 'neutral'
+  icon: i-lucide-info
+  title: 'This is a banner with an icon.'
+---
+::
+
+### Fermer
+
+Utilisez la prop `close` pour afficher un [Button](/docs/components/button) pour rejeter la bannière.
 
 ::tip
-Un événement `close` sera émis lorsque le bouton de fermeture est cliqué.
+Un événement `close` sera émis lorsque le bouton Fermer est cliqué.
 ::
 
 ::component-example
 ---
 iframe:
-  style: 'hauteur: 48px;'
-dépassement: true
-nom: 'exemple de bannière'
+  style: 'height: 48px;'
+overflowHidden: true
+name: 'banner-example'
 ---
 #code
 
@@ -85,26 +85,26 @@ nom: 'exemple de bannière'
 ::
 
 ::note
-Une fois fermé,`banner-${id}` sera stocké dans le stockage local pour l'empêcher d'être affiché à nouveau.: br Pour l'exemple ci-dessus,`banner-example` sera stocké dans le stockage local.
+Une fois fermé, `banner-${id}` sera stocké dans le stockage local pour l'empêcher de s'afficher à nouveau.: br Pour l'exemple ci-dessus, `banner-example` sera stocké dans le stockage local.
 ::
 
 ::caution
-Pour conserver l'état rejeté à travers les rechargements de page, vous devez spécifier un `id` prop. Sans un `id` explicite, la bannière ne sera cachée que pour la session en cours et réapparaîtra lors du rechargement de page.
+Pour conserver l'état rejeté à travers les rechargements de page, vous devez spécifier une prop. `id` Sans un `id` explicite, la bannière ne sera cachée que pour la session en cours et réapparaîtra lors du rechargement de page.
 ::
 
-### Fermer Icône
+### Fermer l'icône
 
-Utilisez le prop `close-icon` pour personnaliser le bouton de fermeture [Icon](/docs/components/icon).
+Utilisez la prop `close-icon` pour personnaliser le bouton de fermeture [Icon](/docs/components/icon).
 
 ::component-example
 ---
-Iframe:
-  style: 'hauteur: 48px;'
-dépassement: true
-nom: 'exemple de bannière'
-Props:
-  title: 'Ceci est une bannière fermable avec une icône de fermeture personnalisée.'
-  Icône:'i-lucide-x-circle'
+iframe:
+  style: 'height: 48px;'
+overflowHidden: true
+name: 'banner-example'
+props:
+  title: 'This is a closable banner with a custom close icon.'
+  closeIcon: 'i-lucide-x-circle'
 ---
 #code
 
@@ -121,7 +121,7 @@ Props:
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.close`.
 :::
@@ -132,29 +132,29 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 :::
 ::
 
-@@ph047@@Actions
+### Actions
 
-Utilisez le prop `actions` pour ajouter des actions [Button](/docs/components/button) à la bannière.
+Utilisez la prop `actions` pour ajouter des actions [Button](/docs/components/button) à la bannière.
 
 ::component-code
 ---
-Étiquette: true
-classe: '! p-0'
-Ignorer:
-  @@P053@titre
-  @@54@actions
+prettier: true
+class: '!p-0'
+ignore:
+  - title
+  - actions
   - variant
-Extérieure:
-  @@56@actions
-Extérieurs:
-  - ButtonProps [réf. nécessaire]
-Props:
-  Titre: "Ceci est une bannière avec des actions."
+external:
+  - actions
+externalTypes:
+  - ButtonProps[]
+props:
+  title: 'This is a banner with actions.'
   actions:
     - label: Action 1
-      Étiquette: Outline
+      variant: outline
     - label: Action 2
-      i-lucide-arrow-right
+      trailingIcon: i-lucide-arrow-right
 ---
 ::
 
@@ -162,23 +162,23 @@ Props:
 Les boutons d'action par défaut sont `color="neutral"` et `size="xs"`. Vous pouvez personnaliser ces valeurs en les transmettant directement à chaque bouton d'action.
 ::
 
-@@ph062@lien
+### Link équipé
 
-Vous pouvez transmettre n'importe quelle propriété du composant [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) comme `to`,`target`,`rel`, etc.
+Vous pouvez passer n'importe quelle propriété du composant [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) telle que `to`, `target`, `rel`, etc.
 
 ::component-code
 ---
-Étiquette: true
-classe: '! p-0'
-dépassement: true
-Ignorer:
-  @@ph071@titre
-  @722@cible
-Props:
-  à:'https://nuxtlabs.com/'
-  cible: _blanc
-  title: 'NuxtLabs rejoint Vercel!'
-  Couleur: Primaire
+prettier: true
+class: '!p-0'
+overflowHidden: true
+ignore:
+  - title
+  - target
+props:
+  to: 'https://nuxtlabs.com/'
+  target: '_blank'
+  title: 'NuxtLabs is joining Vercel!'
+  color: 'primary'
 ---
 ::
 
@@ -186,7 +186,7 @@ Props:
 Le composant `NuxtLink` héritera de tous les autres attributs que vous passez au composant `User`.
 ::
 
-@@ph075@@Exemples
+## Exemples
 
 ### Dans `app.vue`
 
@@ -210,24 +210,24 @@ Utilisez le composant Bannière dans votre `app.vue` ou dans une mise en page:
 </template>
 ```
 
-@@ph096@@api
+## API
 
-@@ph097@@props
+### Props
 
-Composants-props
+:component-props
 
-@@ph098@@réseaux sociaux
+### Slots
 
-Composants slots
+:component-slots
 
-@099@@émetteur
+### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph100@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changelog 101
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

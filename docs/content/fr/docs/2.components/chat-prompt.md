@@ -11,61 +11,61 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatPrompt.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Le composant ChatPrompt rend un élément `<form>` et étend le composant [Textarea](/docs/components/textarea) afin que vous puissiez passer n'importe quelle propriété telle que `icon`,`placeholder`,`autofocus`, etc.
+Le composant ChatPrompt rend un élément `<form>` et étend le composant [Textarea](/docs/components/textarea) afin que vous puissiez passer n'importe quelle propriété telle que `icon`, `placeholder`, `autofocus`, etc.
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'chat-prompt-exemple'
+collapse: true
+name: 'chat-prompt-example'
 ---
 ::
 
 ::note
 Le ChatPrompt gère les événements suivants:
 
-- Le formulaire est soumis lorsque l'utilisateur appuie sur: kbd{value="enter"} ou lorsque l'utilisateur clique sur le bouton soumettre. Définissez le `submit-on-enter` prop à `false` pour soumettre avec: kbd{value="ctrl"}+: kbd{value="enter"}(ou: kbd{value="cmd"}+: kbd{value="enter"} sous macOS) à la place, permettant à: kbd{value="enter"} d'insérer une nouvelle ligne.
-- La zone de texte est floue lorsque: kbd{value="escape"} est pressé et émet un événement `close`.
+- Le formulaire est soumis lorsque l'utilisateur appuie sur: kbd{value="enter"} ou lorsque l'utilisateur clique sur le bouton soumettre. Définissez la prop `submit-on-enter` sur `false` pour soumettre avec: kbd{value="ctrl"} +: kbd{value="enter"} (ou: kbd{value="cmd"} +: kbd{value="enter"} sur macOS) à la place, permettant à: kbd{value="enter"} d'insérer un saut de ligne.
+- La zone de texte est floue lorsque: kbd{value="escape"} est appuyé et émet un événement `close`.
 ::
 
-@@21@@Variant
+### Variant
 
 Utilisez la prop `variant` pour changer le style de l'invite. Defaults à `outline`.
 
 ::component-code
 ---
-Caché:
+hide:
   - autofocus
-Props:
-  Étiquette:"soft"
-  Autofocus: Faux
+props:
+  variant: 'soft'
+  autofocus: false
 ---
 ::
 
-@@ph025@exemples
+## exemples
 
 ::tip{to="/docs/components/chat"}
-Consultez la page d'aperçu **Chat** pour connaître les instructions d'installation, la configuration du serveur et les exemples d'utilisation.
+Consultez la page d'aperçu **Chat** pour les instructions d'installation, la configuration du serveur et les exemples d'utilisation.
 ::
 
 ### Avec un éditeur: badge{label="4.10+" class="align-text-top"}
 
-Composez les emplacements `#header`,`#body` et `#footer` pour créer une invite riche: fichiers joints, un [Editor](/docs/components/editor) avec `@` mentions et `/` commandes via [EditorMentionMenu](/docs/components/editor-mention-menu), et un sélecteur de mode.
+Composez les emplacements `#header`, `#body` et `#footer` pour créer une invite riche: pièces jointes, un [Editor](xph047) avec des mentions `@` et des commandes `/` via xEditorMentionMenu](xph051), et un sélecteur de mode.
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'chat-prompt-editor-example'
-classe: 'justifie-centre'
+collapse: true
+name: 'chat-prompt-editor-example'
+class: 'justify-center'
 ---
 ::
 
 ::note
-L'emplacement `#body` remplace la zone de texte interne et expose les gestionnaires `submit` et `close`, de sorte que vous pouvez câbler les raccourcis clavier de l'éditeur au formulaire. Lorsqu 'un menu de mention est ouvert, appuyer sur: kbd{value="enter"} sélectionne l'élément en surbrillance au lieu de soumettre.
+L'emplacement `#body` remplace le textarea interne et expose les gestionnaires `submit` et `close`, de sorte que vous pouvez câbler les raccourcis clavier de l'éditeur au formulaire. Quand un menu de mention est ouvert, appuyez sur: kbd{value="enter"} pour sélectionner l'élément en surbrillance au lieu de soumettre.
 ::
 
-### Comme page d'accueil
+### As page d'accueil
 
 Vous pouvez également l'utiliser dans votre page d'accueil de l'interface de chat.
 
@@ -102,36 +102,36 @@ async function onSubmit() {
 </template>
 ```
 
-@@ph080@api
+## api
 
-@@ph081@@props
+### Props équipement
 
-Composants-props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attributes" target="_blank"}
 Ce composant prend également en charge tous les attributs HTML natifs `<textarea>`.
 ::
 
-@@ph083@@réseaux sociaux
+### Slots
 
-Composants slots
+:component-slots
 
-@084@émissions
+### Emis
 
-Composants émetteurs
+:component-emits
 
-@@ph085@@exposé
+### expose
 
 Lorsque vous accédez au composant via une référence de modèle, vous pouvez utiliser les éléments suivants:
 
 | nom| type|
 | ---- | ---- |
-| @@|@@|
+| `textareaRef`{lang="ts-type"}| `Ref<HTMLTextAreaElement \| null>`x{lang="ts-type"}|
 
-@@ph090@thème
+## Theme
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

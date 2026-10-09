@@ -1,5 +1,5 @@
 ---
-title: ページカード
+title: PageCard
 description: 'タイトル、説明、およびオプションのリンクを表示するスタイル付きのカードコンポーネント。'
 category: page
 links:
@@ -16,120 +16,120 @@ PageCardコンポーネントは、デフォルトスロットにイラストを
 
 ::u-page-card
 ---
-title 'テールウィンドCSS'
-説明：'Nuxt UIは最新のTailwind CSSと統合され、大幅な改善をもたらします。
-アイコン'i—simple—icons—tailwindcss'
-クラス'w—96'
+title: 'Tailwind CSS'
+description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+icon: 'i-simple-icons-tailwindcss'
+class: 'w-96'
 ---
 
-img {src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
 ::
 
 ::
 
 ::tip
-[ PageGrid ](/docs/components/page-grid)[ PageColumns ](/docs/components/page-columns)または[ PageList ](/docs/components/page-list)コンポーネントを使用して、複数のPageCardを表示します。
+複数のPageCardを表示するには、[PageGrid](/docs/components/page-grid)、[PageColumns](/docs/components/page-columns)または[PageList](/docs/components/page-list)コンポーネントを使用します。
 ::
 
-### タイトル
+### Title
 
-`title` propを使ってカードのタイトルを設定します。
+`title`プロパティを使用してカードのタイトルを設定します。
 
 ::component-code
 ---
-隠す
-  - クラス
-小道具
-  title 'テールウィンドCSS'
-  クラス'w—96'
+hide:
+  - class
+props:
+  title: 'Tailwind CSS'
+  class: 'w-96'
 ---
 ::
 
-### 説明
+### Description
 
-`description`プロパティを使用して、カードの説明を設定します。
+`description`プロパティを使用してカードの説明を設定します。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-小道具
-  title 'テールウィンドCSS'
-  説明：'Nuxt UIは最新のTailwind CSSと統合され、大幅な改善をもたらします。
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  class: 'w-96'
 ---
 ::
 
-### アイコン
+### Icon
 
-`icon`プロパティを使用して、カードのアイコンを設定します。
+`icon`プロパティを使用してカードのアイコンを設定します。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-小道具
-  title 'テールウィンドCSS'
-  説明：'Nuxt UIは最新のTailwind CSSと統合され、大幅な改善をもたらします。
-  アイコン'i—simple—icons—tailwindcss'
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  icon: 'i-simple-icons-tailwindcss'
+  class: 'w-96'
 ---
 ::
 
-### リンク
+### Link
 
-[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)コンポーネントから、`to`、`target`、`rel`などのプロパティを渡すことができます。
+`to`、`target`、`rel`など、[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)コンポーネントから任意のプロパティを渡すことができます。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-  - アイコン
-  - ターゲット
-小道具
-  title 'テールウィンドCSS'
-  説明：'Nuxt UIは最新のTailwind CSSと統合され、大幅な改善をもたらします。
-  アイコン'i—simple—icons—tailwindcss'
-  へ'https//tailwindcss.com/blog/tailwindcss—v4'
-  ターゲット_blank
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - target
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  icon: 'i-simple-icons-tailwindcss'
+  to: 'https://tailwindcss.com/blog/tailwindcss-v4'
+  target: _blank
+  class: 'w-96'
 ---
 ::
 
-### バリアント
+### Variant
 
-`variant`プロパティを使用して、カードのスタイルを変更します。
+`variant`プロパティを使用してカードのスタイルを変更します。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-  - アイコン
-  - へ
-  - ターゲット
-小道具
-  title 'テールウィンドCSS'
-  説明：'Nuxt UIは最新のTailwind CSSと統合され、大幅な改善をもたらします。
-  アイコン'i—simple—icons—tailwindcss'
-  宛先'https//tailwindcss.com/blog/tailwindcss—v4'
-  ターゲット_blank
-  バリアントソフト
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - to
+  - target
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  icon: 'i-simple-icons-tailwindcss'
+  to: 'https://tailwindcss.com/blog/tailwindcss-v4'
+  target: _blank
+  variant: soft
+  class: 'w-96'
 ---
 ::
 
@@ -137,119 +137,119 @@ img {src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
 `solid`バリアントを使用して色を反転させる場合、`light`または`dark`クラスを`links`スロットに適用できます。
 ::
 
-### オリエンテーション
+### Orientation
 
 `orientation`プロパティを使用して、デフォルトスロットの向きを変更します。デフォルトは`vertical`です。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-  - 説明
-  - アイコン
-小道具
-  title 'テールウィンドCSS'
-  説明：'Nuxt UIは最新のTailwind CSSと統合され、大幅な改善をもたらします。
-  アイコン'i—simple—icons—tailwindcss'
-  オリエンテーション水平
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+  - description
+  - icon
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  icon: 'i-simple-icons-tailwindcss'
+  orientation: horizontal
+slots:
+  default: |
 
     <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
 ---
 
-img {src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
 ::
 
-### リバース
+### Reverse
 
-`reverse`プロパティを使用して、デフォルトスロットの向きを反転させます。
+`reverse`プロパティを使用して、デフォルトスロットの向きを逆にします。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-  - 説明
-  - アイコン
-小道具
-  title 'テールウィンドCSS'
-  説明：'Nuxt UIは最新のTailwind CSSと統合され、大幅な改善をもたらします。
-  アイコン'i—simple—icons—tailwindcss'
-  オリエンテーション水平
-  逆真
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+  - description
+  - icon
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  icon: 'i-simple-icons-tailwindcss'
+  orientation: horizontal
+  reverse: true
+slots:
+  default: |
 
     <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
 ---
 
-img {src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
 ::
 
 ### ハイライト
 
-`highlight`と`highlight-color` propsを使用して、カードの周りにハイライトされた境界線を表示します。
+`highlight`と`highlight-color`の小道具を使用して、カードの周りのハイライトされた境界線を表示します。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-  - アイコン
-  - オリエンテーション
-小道具
-  title 'テールウィンドCSS'
-  説明：'Nuxt UIは最新のTailwind CSSと統合され、大幅な改善をもたらします。
-  アイコン'i—simple—icons—tailwindcss'
-  オリエンテーション水平
-  ハイライト真
-  highlightColor 'primary'
-スロット
-  デフォルト|
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - orientation
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  icon: 'i-simple-icons-tailwindcss'
+  orientation: horizontal
+  highlight: true
+  highlightColor: 'primary'
+slots:
+  default: |
 
     <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
 ---
 
-img {src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
 ::
 
-###  Spotlight
+### Spotlight
 
-`spotlight`および`spotlight-color` propsを使用して、マウスカーソルに沿ってスポットライト効果を表示し、ホバー時に境界線を強調表示します。
+`spotlight`と`spotlight-color`の小道具を使用して、マウスカーソルに沿ってスポットライト効果を表示し、ホバー時に境界線を強調表示します。
 
 ::note
-`to` propを使用すると、スポットライトエフェクトはホバーエフェクトを引き継ぎます。`outline`バリアントと一緒に使用するのがベストです。
+スポットライトエフェクトは`to`のプロップを使用しているときにホバーエフェクトを引き継ぎます。`outline`のバリアントと一緒に使用するのが最善です。
 ::
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-  - アイコン
-  - オリエンテーション
-小道具
-  title 'テールウィンドCSS'
-  説明：'Nuxt UIは最新のTailwind CSSと統合され、大幅な改善をもたらします。
-  アイコン'i—simple—icons—tailwindcss'
-  オリエンテーション水平
-  スポットライト真
-  spotlightColor 'primary'
-スロット
-  デフォルト|
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - orientation
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  icon: 'i-simple-icons-tailwindcss'
+  orientation: horizontal
+  spotlight: true
+  spotlightColor: 'primary'
+slots:
+  default: |
 
     <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
 ---
 
-img {src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
 ::
 
 ::tip
@@ -262,36 +262,36 @@ CSS変数`--spotlight-color`と`--spotlight-size`を使用して色とサイズ�
 ```
 ::
 
-## 例
+## サンプル
 
 ### 証言として
 
-`header``footer`スロットの[ User ](/docs/components/user)コンポーネントを使用して、カードを推薦状のように見せます。
+`header`または`footer`スロットの[User](/docs/components/user)コンポーネントを使用して、カードを証言のように見せます。
 
 ::component-example
 ---
-名前'ページカード証言例'
+name: 'page-card-testimonial-example'
 ---
 ::
 
 ::tip{to="/docs/components/page-columns"}
-`PageColumns`コンポーネントを使用して、複数列レイアウトで複数のPageCardを表示できます。
+`PageColumns`コンポーネントを使用して、複数のPageCardを複数列レイアウトで表示できます。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

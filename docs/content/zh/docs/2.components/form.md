@@ -11,229 +11,229 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Form.vue
 ---
 
-## 使用情况
+## 用法
 
-使用表单组件可使用支持[Standard Schema](https://github.com/standard-schema/standard-schema)的任何验证库验证表单数据，如[Valibot](https://github.com/fabian-hiller/valibot)、[Zod]()、[Regle](https://github.com/victorgarciaesgi/regle)、[Yup](https://github.com/jquense/yup)、[Joi](https://github.com/hapijs/joi)或[Superstruct](https://github.com/ianstormtaylor/superstruct)或您自己的验证逻辑。
+使用Form组件可以使用任何支持[标准Schema](https://github.com/standard-schema/standard-schema)的验证库验证表单数据，例如[Valibot](https://github.com/fabian-hiller/valibot)、[Zod](https://github.com/colinhacks/zod)、[Regle](https://github.com/victorgarciaesgi/regle)、[Yup](https://github.com/jquense/yup)、[Joi](https://github.com/hapijs/joi)或[Superstruct](https://github.com/ianstormtaylor/superstruct)或您自己的验证逻辑。
 
-它与[FormField](/docs/components/form-field)组件配合使用，自动在表单元素周围显示错误消息。
+它与[FormField](/docs/components/form-field)组件一起工作，自动在表单元素周围显示错误消息。
 
 ### Schema验证
 
 它需要两个道具：
 
-- `state` -一个保持窗体状态的反应对象。
-- `schema` -任何[Standard Schema](https://github.com/standard-schema/standard-schema)或[Superstruct](PH0444)。
+- `state`-一个反应对象，保存表单的状态。
+- `schema`-任何[标准架构a](https://github.com/standard-schema/standard-schema)或[Superstruct](https://github.com/ianstormtaylor/superstruct)。
 
 ::warning
-**默认情况下不包含验证库**，请确保您**安装了所需的验证库**。
+**默认不包含验证库**，请确保**安装您需要的**。
 ::
 
 ::tabs{class="gap-0"}
   ::component-example{label="瓦利博特"}
   ---
-  name：'form-example-valibot'
-  道具：
-    类别：'W-60'
+  name: 'form-example-valibot'
+  props:
+    class: 'w-60'
   ---
   ::
 
   ::component-example{label="佐德"}
   ---
-  名称：'form-example-zod'
-  道具：
-    类别：'W-60'
+  name: 'form-example-zod'
+  props:
+    class: 'w-60'
   ---
   ::
 
   ::component-example{label="雷格勒"}
   ---
-  name：'form-example-regle'
-  道具：
-    类别：'W-60'
+  name: 'form-example-regle'
+  props:
+    class: 'w-60'
   ---
   ::
 
   ::component-example{label="是的"}
   ---
-  name：'form-example-yup'
-  道具：
-    类别：'W-60'
+  name: 'form-example-yup'
+  props:
+    class: 'w-60'
   ---
   ::
 
   ::component-example{label="Joi"}
   ---
-  name：'form-example-joi'
-  道具：
-    类别：'W-60'
+  name: 'form-example-joi'
+  props:
+    class: 'w-60'
   ---
   ::
 
   ::component-example{label="Superstruct"}
   ---
-  名称：'form-example-superstruct'
-  道具：
-    类别：'W-60'
+  name: 'form-example-superstruct'
+  props:
+    class: 'w-60'
   ---
   ::
 ::
 
-### Custom validation
+### 自定义验证
 
-使用`validate`prop应用您自己的验证逻辑。
+使用`validate` prop应用您自己的验证逻辑。
 
 验证函数必须返回具有以下属性的错误列表：
 
-- `message` -要显示的错误消息。
-- `name` -要将错误发送到的`FormField`的`name`。
+- `message`-要显示的错误消息。
+- `name`-`FormField`的`name`发送错误。
 
 ::tip
-它可以与`schema`prop一起使用，以处理复杂的用例。
+它可以与`schema` prop一起使用，以处理复杂的用例。
 ::
 
 ::component-example
 ---
-name：'form-example-basic'
-道具：
-  类别：'W-60'
+name: 'form-example-basic'
+props:
+  class: 'w-60'
 ---
 ::
 
 ### 错误报告
 
-错误将使用其`name`属性与相应的[FormField](/docs/components/form-field)匹配。`email`字段上的错误显示为`<FormField name="email">`{lang="vue"}。
+使用`name`属性将错误与相应的[FormField](/docs/components/form-field)匹配。`email`字段上的错误显示为`<FormField name="email">`{lang="vue"}。
 
-嵌套字段使用点表示法匹配。类似`{ user: z.object({ email: z.string() }) }`{lang="ts"}的架构将应用于`<FormField name="user.email">`{lang="vue"}。
+嵌套字段使用点表示法匹配。类似`{ user: z.object({ email: z.string() }) }`{lang="ts"}的模式将应用于`<FormField name="user.email">`{lang="vue"}。
 
 ::warning
-数组项上的错误在其名称中包含索引（例如：`tags.0`，`tags.1`），并且仅通过`name`无法匹配`<FormField name="tags">`{lang="vue"}。请使用带有正则表达式（如`/^tags\..+/`{lang="ts"}）的`error-pattern`prop来捕获它们。这对于像[InputTags@@这样的组件尤其有用](/docs/components/input-tags)。
+数组项上的错误包括其名称中的索引（例如`tags.0`，`tags.1`），并且不会单独通过`name`匹配`<FormField name="tags">`{lang="vue"}。使用`error-pattern`属性和正则表达式（如`/^tags\..+/`{lang="ts"}）来捕获它们。这对于[InputTags](/docs/components/input-tags)等组件特别有用。
 ::
 
 ::component-example
 ---
-name：'form-example-error-pattern'
-道具：
-  类别：'w-60'
+name: 'form-example-error-pattern'
+props:
+  class: 'w-60'
 ---
 ::
 
 ### 输入事件
 
-当输入发出`input`、`change`或`blur`事件时，表单组件会自动触发验证。
+Form组件在输入发出`input`、`change`或`blur`事件时自动触发验证。
 
-- 在您键入**时，**会在`input`上进行验证。
-- 当您**提交到一个值**时，将发生对`change`的验证。
-- 当输入**失去焦点**时，会在`blur`上进行验证。
+-  `input`上的验证在您键入**时发生**。
+-  `change`上的验证发生在您**提交值e**时。
+当输入**失去焦点**时，`blur`上的验证发生。
 
-您可以使用`validate-on`属性来控制验证发生的时间。
+您可以使用`validate-on` prop控制验证何时发生。
 
 ::tip
-表单总是在提交时进行验证。
+表单始终在提交时生效。
 ::
 
 ::component-example{label="默认"}
 ---
-资料来源：错误
-名称：'表单范例元素'
-可选项：
-  - name：'验证日期'
-    标签：“生效日期”
-    项目名称：
-    - '输入'
-    - '更改'
-    "模糊“
-    默认值：
-    - '输入'
-    - '更改'
-- 模糊
-    多个：真
+source: false
+name: 'form-example-elements'
+options:
+  - name: 'validate-on'
+    label: 'validate-on'
+    items:
+    - 'input'
+    - 'change'
+    - 'blur'
+    default:
+    - 'input'
+    - 'change'
+    - 'blur'
+    multiple: true
 ---
 ::
 
 ::tip
-您可以使用`useFormField`可组合项在您自己的组件中实现它。
+您可以使用`useFormField`组合在自己的组件中实现此功能。
 ::
 
-### 错误事件
+### Error事件
 
-您可以侦听`@error`事件来处理错误。此事件在表单被提交时触发，并且包含一个`FormError`对象数组，该数组包含下列字段：
+您可以侦听`@error`事件来处理错误。此事件在表单提交时触发，包含一个`FormError`对象数组，该数组具有以下字段：
 
-- `id` -输入的`id`。
-- `name` -`FormField`中的`name`
-- `message` -要显示的错误消息。
+- `id`-输入的`id`。
+- `name`-`FormField`的`name`
+- `message`-要显示的错误消息。
 
-下面是一个在提交表单后将焦点放在第一个输入元素上并显示错误的示例：
+下面是一个例子，它关注表单提交后第一个带有错误的输入元素：
 
 ::component-example
 ---
-名称：'错误时的表单示例'
-收阖：true
-道具：
-  类别：'w-60'
+name: 'form-example-on-error'
+collapse: true
+props:
+  class: 'w-60'
 ---
 ::
 
-### HTML5验证：徽标{label="4.5+" class="align-text-top"}
+### HTML 5验证：badge{label="4.5+" class="align-text-top"}
 
-以编程方式调用`form.submit()`时，表单组件会在提交前自动触发本机HTML5验证。
+当以编程方式调用`form.submit()`时，Form组件会在提交之前自动触发原生HTML5验证。
 
 ::note
-当提交按钮在表单元素之外（如在模式页脚中）时，这一点特别有用。
+当提交按钮位于表单元素之外时，例如在模态页脚中，这一点特别有用。
 ::
 
 ::component-example
 ---
-名称：'表单范例html5验证'
-道具类：
-  类别：'w-60'
+name: 'form-example-html5-validation'
+props:
+  class: 'w-60'
 ---
 ::
 
-### 巢状表单
+### 嵌套表单
 
-使用`nested`属性可嵌套多个表单组件并链接其验证函数。在这种情况下，验证父表单将自动验证其中的所有其他表单。
+使用`nested`属性嵌套多个表单组件并链接它们的验证函数。在这种情况下，验证父表单将自动验证其中的所有其他表单。
 
-嵌套窗体直接继承其父级的状态，因此不需要为它们定义单独的状态。可以使用`name`属性将嵌套属性定位到父级状态中。
+嵌套的表单直接继承父表单的状态，所以你不需要为它们定义一个单独的状态。你可以使用`name` prop在父表单的状态中指定一个嵌套的属性。
 
-可根据用户输入动态增加字段：
+它可用于根据用户输入动态添加字段：
 
 ::component-example
 ---
-收阖：true
-名称：'表单范例巢状'
+collapse: true
+name: 'form-example-nested'
 ---
 ::
 
-或验证列表输入：
+或者验证列表输入：
 
 ::component-example
 ---
-收阖：true
-名称：'表单范例巢状清单'
+collapse: true
+name: 'form-example-nested-list'
 ---
 ::
 
-## 活性成分
+## API
 
-### 道具
+### Props
 
-：组件-支柱
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attributes" target="_blank"}
-此组件还支持所有本机`<form>`HTML属性。
+此组件还支持所有原生`<form>` HTML属性。
 ::
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-发射量
+### Emits
 
-：组件发射
+:component-emits
 
-暴露
+### 曝光
 
-您可以使用[`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref)来存取具型别的元件实体。
+您可以使用[`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref)访问类型化的组件实例。
 
 ```vue
 <script setup lang="ts">
@@ -249,22 +249,22 @@ const form = useTemplateRef('form')
 
 | 名称|类型|
 | ---- | ---- |
-| 154小时，161小时|`Promise<void>`{lang="ts-type"}<br><div class="text-toned mt-1"><p>触发表单提交并进行HTML5验证</p></div>|
-| 171号公路|`Promise<T>`{lang="ts-type"}<br><div class="text-toned mt-1"><p>触发表单验证。除非`opts.silent`设为true，否则将引发任何错误。</p></div>|
-|`clear(path?: keyof T \| RegExp)`华氏度180度|`void`<br><div class="text-toned mt-1"><p>清除与特定路径相关的表单错误。如果未提供路径，则清除所有表单错误。</p></div>|
-| 188号公路|`FormErrorWithId[]`{lang="ts-type"}<br><div class="text-toned mt-1"><p>撷取与特定路径相关的表单错误。如果未提供路径，则传回所有表单错误。</p></div>|
-| 197年12月19日|`void`<br><div class="text-toned mt-1"><p>设定指定路径的表单错误。如果未提供路径，则覆写所有错误。</p></div>|
-|`errors`{lang="ts-type"}{lang="ts-type"}| `Ref<FormErrorWithId[]>`{lang="ts-type"}<br><div class="text-toned mt-1"><p>包含验证错误的数组参照。使用它来存取或操作错误信息。</p></div>{lang="ts-type"}|
-| 207号，209号|208小时210小时|
-| 214号线|`Ref<boolean>`{lang="ts-type"}`true`（如果用户至少更新了一个表单域）。|
-| 216号线218号线|`ReadonlySet<DeepReadonly<keyof T>>`{lang="ts-type"}跟踪已被用户修改的域。|
-| 222小时|`ReadonlySet<DeepReadonly<keyof T>>`{lang="ts-type"}跟踪用户与之交互的字段。|
-| 224小时226小时|`ReadonlySet<DeepReadonly<keyof T>>`{lang="ts-type"}追踪使用者模糊的字段。|
+| `submit()`{lang="ts-type"}| `Promise<void>`{lang="ts-type"} <br> <div class="text-toned mt-1"><p>通过HTML5验证触发表单提交。</p></div>|
+| `validate(opts: { name?: keyof T \| (keyof T)[], silent?: boolean, nested?: boolean, transform?: boolean })`{lang="ts-type"}| `Promise<T>`{lang="ts-type"} <br> <div class="text-toned mt-1"><p>触发表单验证。除非`opts.silent`设置为true，否则将引发任何错误。</p></div>|
+| `clear(path?: keyof T \| RegExp)`{lang="ts-type"}| `void` <br> <div class="text-toned mt-1"><p>清除与特定路径关联的表单错误。如果未提供路径，则清除所有表单错误。</p></div>|
+| `getErrors(path?: keyof T \| RegExp)`{lang="ts-type"}| `FormErrorWithId[]`{lang="ts-type"} <br> <div class="text-toned mt-1"><p>检索与特定路径关联的表单错误。如果未提供路径，则返回所有表单错误。</p></div>|
+| `setErrors(errors: FormError[], name?: keyof T \| RegExp)`{lang="ts-type"}| `void` <br> <div class="text-toned mt-1"><p>设置给定路径的表单错误。如果未提供路径，则覆盖所有错误。</p></div>|
+| `errors`{lang="ts-type"}| `Ref<FormErrorWithId[]>`{lang="ts-type"} <br> <div class="text-toned mt-1"><p>对包含验证错误的数组的引用。使用此引用可访问或操作错误信息。</p></div>|
+| `disabled`{lang="ts-type"}| `Ref<boolean>`{lang="ts-type"}|
+| `dirty`{lang="ts-type"}| `Ref<boolean>`{lang="ts-type"} `true`如果用户至少更新了一个表单字段。|
+| `dirtyFields`{lang="ts-type"}| `ReadonlySet<DeepReadonly<keyof T>>`{lang="ts-type"}跟踪已被用户修改的字段。|
+| `touchedFields`{lang="ts-type"}| `ReadonlySet<DeepReadonly<keyof T>>`{lang="ts-type"}跟踪用户与之交互的字段。|
+| `blurredFields`{lang="ts-type"}| `ReadonlySet<DeepReadonly<keyof T>>`{lang="ts-type"}跟踪用户模糊的字段。|
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

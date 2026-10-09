@@ -3,25 +3,25 @@ title: Userescrollshadow
 description: 'Un componente para aplicar efectos de sombra de desplazamiento en cualquier elemento desplazable.'
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice el componente de importación automática `useScrollShadow` para aplicar sombras de desvanecimiento en los bordes de un elemento desplazable, lo que indica que hay más contenido disponible en la dirección de desplazamiento.
 
 ::component-example
 ---
-Nombre: 'use-scroll-shadow-example'
+name: 'use-scroll-shadow-example'
 ---
 ::
 
 - Utiliza CSS `mask-image` para desvanecer el contenido en los bordes en lugar de superponer elementos, por lo que funciona en cualquier fondo.
-- Detecta automáticamente si el elemento está desbordado y solo aplica sombras cuando es necesario.
-- Soporta orientaciones tanto verticales como horizontales.
+- Detecta automáticamente si el elemento está desbordado y solo aplica sombras cuando sea necesario.
+-  Soporta orientaciones tanto verticales como horizontales.
 
-@@pH006
+## API (Edición española)
 
-@@
+`useScrollShadow(element, options?)`xx{lang="ts-type"} (Edición española)
 
-@@pH009@@Parámetros
+### Parámetros
 
 ::field-group
 
@@ -40,33 +40,33 @@ Nombre: 'use-scroll-shadow-example'
         ::
 
         ::field{name="orientation" type="MaybeRefOrGetter<'vertical' | 'horizontal'>" default="'vertical'"}
-        La dirección del desplazamiento para aplicar sombras.
+        La dirección de desplazamiento para aplicar sombras.
         ::
       ::
     ::
   ::
 ::
 
-@@P0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Regresar
 
 ::field-group
 
   ::field{name="style" type="ComputedRef<CSSProperties | undefined>"}
-  Un objeto de estilo reactivo para enlazar en el elemento desplazable con `:style`. Contiene `maskImage` cuando las sombras están activas,`undefined` en caso contrario.
+  Un objeto de estilo reactivo para enlazar en el elemento desplazable con `:style`. Contiene `maskImage` cuando las sombras están activas, `undefined` de lo contrario.
   ::
 
   ::field{name="isOverflowing" type="ComputedRef<boolean>"}
-  Si el contenido del elemento sobrepasa su área visible.
+  Si el contenido del elemento excede su área visible.
   ::
 
   ::field{name="arrivedState" type="{ top: boolean, bottom: boolean, left: boolean, right: boolean }"}
-  Estado de llegada de desplazamiento reactivo de [`useScroll`](https://vueuse.org/core/useScroll/).
+  Estado de llegada de desplazamiento reactivo desde [`useScroll`](https://vueuse.org/core/useScroll/).
   ::
 ::
 
-@@pH019@Ejemplos
+## Ejemplos
 
-@200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Horizontal
 
 Utilice la opción `orientation` para contenedores desplazables horizontalmente:
 

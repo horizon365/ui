@@ -11,14 +11,14 @@ links:
 navigation.badge: New
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Utilisez le composant Splitter pour afficher une liste de panneaux redimensionnables séparés par des poignées glissables.
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'splitter-exemple'
+collapse: true
+name: 'splitter-example'
 ---
 ::
 
@@ -26,109 +26,109 @@ nom: 'splitter-exemple'
 Le Splitter remplit la hauteur de son conteneur, alors assurez-vous qu 'un élément parent en définit un.
 ::
 
-@@ph001@@éléments
+### Éléments
 
 Utilisez le prop `items` comme un tableau d'objets avec les propriétés suivantes:
 
-@@
-@@
-@@
-@@
-@@
-@@
-@@
-@@
-@@
-@@
-@@
+Xph007xxx`defaultSize?: number`xxxxph000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+- x`minSize?: number`x{lang="ts-type"}
+- x`maxSize?: number`xx{lang="ts-type"}
+- x`collapsible?: boolean`xx{lang="ts-type"}
+- x`collapsedSize?: number`xx{lang="ts-type"}
+- x`sizeUnit?: '%' | 'px'`xx{lang="ts-type"}
+- x`order?: number`x{lang="ts-type"}
+- x`id?: string`x{lang="ts-type"}
+- x`slot?: string`xx{lang="ts-type"}
+- x`class?: any`x{lang="ts-type"}
+- x`ui?: { panel?: ClassNameValue }`xx{lang="ts-type"}
 
 Utilisez la touche `slot` pour remplir le contenu d'un panneau et la touche `class` pour le styliser. Les éléments sans touche `slot` retombent dans un emplacement `panel-{index}`. Les tailles sont des pourcentages par défaut, définissez `sizeUnit: 'px'` sur un élément pour les valeurs de pixels.
 
 ::caution
-Lors du rendu sur le serveur, définissez le prop `id` et donnez `defaultSize` à tous les éléments ou à aucun. Les identifiants sont générés automatiquement sinon et le serveur et le client peuvent être en désaccord, ce qui rompt la mise en page sur l'hydratation. Un élément sans un `defaultSize` retombe à une part égale sur le serveur, donc mélanger les deux fait sauter les panneaux une fois hydratés. Les tailles de pixels sont mesurées sur le client et changent toujours un peu.
+Lors du rendu sur le serveur, définissez le prop `id` et donnez `defaultSize` à tous les éléments ou à aucun. Les identifiants sont générés automatiquement sinon et le serveur et le client peuvent être en désaccord, ce qui rompt la disposition sur l'hydratation. Un élément sans `defaultSize` retombe à une part égale sur le serveur, donc mélanger les deux fait sauter les panneaux une fois hydratés. Les tailles de pixels sont mesurées sur le client et changent toujours un peu.
 ::
 
 ::component-code
 ---
-Collapse: vrai
-Catégorie: H-96
-Étiquette: true
-Ignorer:
-  @@ph044@articles
-  @@ph045 @ désolé
-Extérieure:
-  @@ph046@articles
-Extérieurs:
-  @@447@splitteur []
-Props:
+collapse: true
+class: 'h-96'
+prettier: true
+ignore:
+  - items
+  - id
+external:
+  - items
+externalTypes:
+  - SplitterItem[]
+props:
   id: 'splitter-items'
   items:
-    - slot:'side-bar'(en anglais)
-      minuscule: 15
-      Maxime: 40
-      Défaut: 25
+    - slot: 'sidebar'
+      minSize: 15
+      maxSize: 40
+      defaultSize: 25
       class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
-    - slot:« principal »
-      Défauts: 75
+    - slot: 'main'
+      defaultSize: 75
       class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
-Slots:
-  Étiquette: sidebar
-  Étiquette: Main
+slots:
+  sidebar: Sidebar
+  main: Main
 ---
 
-#épaule
+#sidebar
 sidebar
 
-#principale
+#main
 principaux
 ::
 
-### Référencement
+### Définition
 
-Utilisez la prop `orientation` pour changer la direction du séparateur. Par défaut à `horizontal`.
+Utilisez la prop `orientation` pour changer la direction du séparateur. Par défaut, `horizontal`.
 
 ::component-code
 ---
-Collapse: vrai
-Catégorie: H-96
-Étiquette: true
-Ignorer:
-  @@ph053@articles
-  @@ph054@réponse
-Extérieure:
-  @@505@articles
-Extérieurs:
-  @@556@splitteur []
-Props:
+collapse: true
+class: 'h-96'
+prettier: true
+ignore:
+  - items
+  - id
+external:
+  - items
+externalTypes:
+  - SplitterItem[]
+props:
   id: 'splitter-orientation'
-  Orientation: "Vertical"
+  orientation: 'vertical'
   items:
-    - slot:« première »
+    - slot: 'first'
       class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
-    - slot:'deuxième'
+    - slot: 'second'
       class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
-Slots:
-  Première: First
-  Deuxième: Deuxième
+slots:
+  first: First
+  second: Second
 ---
 
-#Première
+#first
 First one
 
-#deuxième
+#second
 Deuxième
 ::
 
-@@ph059@exemples
+## Exemples
 
-### Avec panneau repliable
+### Avec panneau pliable
 
-Définissez `collapsible: true` sur un élément pour le laisser s'effondrer au-delà de son `minSize`, et utilisez `collapsedSize` pour garder une partie du panneau visible lorsqu 'il est effondré. L'emplacement du panneau expose `collapsed`,`collapse` et `expand` afin que vous puissiez le contrôler par programmation, et le `collapse`, Les événements `expand` et `resize` se déclenchent avec l'index du panneau.
+Définissez `collapsible: true` sur un élément pour le laisser s'effondrer au-delà de son `minSize`, et utilisez `collapsedSize` pour garder une partie du panneau visible lorsqu 'il est effondré. L'emplacement du panneau expose `collapsed`, `collapse` et `expand` afin que vous puissiez le contrôler par programmation, et les événements `collapse`, `expand` et `resize` se déclenchent avec l'index du panneau.
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'splitter-foldable-exemple'
+collapse: true
+name: 'splitter-collapsible-example'
 ---
 ::
 
@@ -138,25 +138,25 @@ Installer un `Splitter` à l'intérieur d'un panneau pour créer des mises en pa
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'splitter-nested-exemple'
+collapse: true
+name: 'splitter-nested-example'
 ---
 ::
 
 ### Avec poignée personnalisée
 
-Utilisez le `ui` prop pour le restyler, par exemple comme un diviseur visible pour les mises en page affleurantes, et le `resize-handle` fente pour rendre le contenu à l'intérieur comme une poignée.
+Utilisez le prop `ui` pour le restyler, par exemple en tant que diviseur visible pour les mises en page affleurantes, et le slot `resize-handle` pour rendre le contenu à l'intérieur comme une poignée.
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'splitter-custom-handle-example'
+collapse: true
+name: 'splitter-custom-handle-example'
 ---
 ::
 
-### Avec persévérance
+### avec persistance
 
-Fournissez un `auto-save-id` pour conserver la mise en page à `localStorage` et la restaurer au rechargement.
+Fournissez un `auto-save-id` pour conserver la disposition sur `localStorage` et la restaurer lors du rechargement.
 
 ```vue
 <template>
@@ -166,24 +166,24 @@ Fournissez un `auto-save-id` pour conserver la mise en page à `localStorage` et
 </template>
 ```
 
-@@P085 @@ référencement
+## API
 
-@@ph086@@props
+### Props équipements
 
-Composants-props
+:component-props
 
-@@ph087@@réseaux sociaux
+### Slots
 
-Composants slots
+:component-slots
 
-@@888@émissions
+### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph089@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

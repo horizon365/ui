@@ -9,16 +9,16 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodePreview.vue
 ---
 
-##  사용
+## Usage
 
-`code-preview` 구성 요소로 모든 콘텐츠를 래핑하여 `code` 슬롯을 사용하여 소스 코드와 함께 라이브 미리보기를 표시합니다.
+`code-preview` 구성 요소를 사용하여 `code` 슬롯을 사용하여 소스 코드와 함께 라이브 미리 보기를 표시합니다.
 
 ::code-preview{class="[&>div]:*:my-0 [&>div]:*:w-full" label="미리보기"}
 
 ::code-preview{class="[&>div]:*:my-0"}
-`inline code`
+`inline code` 이미지
 
-# 코드
+#code
 
 ```mdc
 `inline code`
@@ -26,7 +26,7 @@ links:
 
 ::
 
-# 코드
+#code
 
 ````mdc
 ::code-preview
@@ -41,20 +41,20 @@ links:
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props 코드
 
-: component-props {prose}
+:component-props{prose}
 
-###  슬롯
+### Slots
 
-: component-slots {prose}
+:component-slots{prose}
 
-##  테마
+## Theme (## 테마)
 
-:component-theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## 변경 로그
 
-: component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

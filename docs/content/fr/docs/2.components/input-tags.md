@@ -14,19 +14,19 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputTags.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
 Utilisez la directive `v-model` pour contrôler la valeur des InputTags.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  - modèleValeur
-Extérieur:
-  - modèleValeur
-Props:
-  valeur: ['Vue ']
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
 ---
 ::
 
@@ -34,110 +34,110 @@ Utilisez la prop `default-value` pour définir la valeur initiale lorsque vous n
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@@ph005@@defaultValue
-Props:
-  defaultValue: ['Vue ']
+prettier: true
+ignore:
+  - defaultValue
+props:
+  defaultValue: ['Vue']
 ---
 ::
 
-### Placeholder
+### Référencement
 
 Utilisez la prop `placeholder` pour définir un texte d'espace réservé.
 
 ::component-code
 ---
-Props:
-  placeholder: 'Entrez les tags...'
+props:
+  placeholder: 'Enter tags...'
 ---
 ::
 
-### Max Longueur
+### max longueur
 
 Utilisez la prop `max-length` pour définir le nombre maximum de caractères autorisés dans une balise.
 
 ::component-code
 ---
-Props:
-  Maxime: 4
+props:
+  maxLength: 4
 ---
 ::
 
-### couleur
+### Couleur
 
-Utilisez la prop `color` pour changer la couleur de l'anneau lorsque les InputTags sont focalisés.
+Utilisez le prop `color` pour changer la couleur de l'anneau lorsque les InputTags sont focalisés.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  - modèleValeur
-Extérieure:
-  - modèleValeur
-Props:
-  valeur: ['Vue ']
-  Couleur: Neutre
-  Highlights: vrai
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  color: neutral
+  highlight: true
 ---
 ::
 
 ::note
-Le `highlight` prop est utilisé ici pour afficher l'état de mise au point. Il est utilisé en interne lorsqu 'une erreur de validation se produit.
+La prop `highlight` est utilisée ici pour afficher l'état de mise au point. Il est utilisé en interne lorsqu 'une erreur de validation se produit.
 ::
 
-@@P015@@Variétés
+### Variants
 
-Utilisez la prop `variant` pour modifier l'apparence des InputTags.
+Utilisez le prop `variant` pour changer l'apparence des InputTags.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  - modèleValeur
-Extérieure:
-  - modelValeur
-Props:
-  valeur: ['Vue ']
-  Variante: subtile
-  Couleur: Neutre
-  Étiquette: false
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  variant: subtle
+  color: neutral
+  highlight: false
 ---
 ::
 
-@@ph019@@série
+### tailles
 
-Utilisez la prop `size` pour ajuster la taille des InputTags.
+Utilisez le prop `size` pour ajuster la taille des InputTags.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  - modèleValeur
-Extérieur:
-  - modèleValeur
-Props:
-  valeur: ['Vue ']
-  Taille: XL
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  size: xl
 ---
 ::
 
-@@23@Icon
+### icône
 
-Utilisez le prop `icon` pour afficher un [Icon](/docs/components/icon) à l'intérieur des InputTags.
+Utilisez la prop `icon` pour afficher un [Icon](/docs/components/icon) à l'intérieur des InputTags.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  - modèleValeur
-Extérieure:
-  - modèleValeur
-Props:
-  valeur: ['Vue ']
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
   icon: 'i-lucide-search'
-  Étiquette: MD
-  Étiquette: Outline
+  size: md
+  variant: outline
 ---
 ::
 
@@ -145,47 +145,47 @@ Props:
 Utilisez les accessoires `leading` et `trailing` pour définir la position de l'icône ou les accessoires `leading-icon` et `trailing-icon` pour définir une icône différente pour chaque position.
 ::
 
-### Avatar
+### Avatars
 
-Utilisez le prop `avatar` pour afficher un [Avatar](/docs/components/avatar) à l'intérieur des InputTags.
+Utilisez la prop `avatar` pour afficher un [Avatar](/docs/components/avatar) à l'intérieur des InputTags.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  - modèleValeur
+prettier: true
+ignore:
+  - modelValue
   - avatar.loading
-Extérieure:
-  by - modelValue
-Props:
-  valeur: ['Vue ']
-  Avatar:
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  avatar:
     src: 'https://github.com/vuejs.png'
-    Étiquette: Lazy
-  Étiquette: MD
-  Étiquette: Outline
+    loading: lazy
+  size: md
+  variant: outline
 ---
 ::
 
-### Delete Icône
+### Delete icône
 
-Utilisez le prop `delete-icon` pour personnaliser la suppression [Icon](/docs/components/icon) dans les balises.
+Utilisez la prop `delete-icon` pour personnaliser la suppression [Icon](/docs/components/icon) dans les balises.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  - modèleValeur
-Extérieure:
-  - modèleValeur
-Props:
-  valeur: ['Vue ']
-  Icône:'i-lucide-trash'
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  deleteIcon: 'i-lucide-trash'
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.close`.
 :::
@@ -196,44 +196,44 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 :::
 ::
 
-@@57@chargement
+### Chargement
 
-Utilisez la prop `loading` pour afficher une icône de chargement sur les InputTags.
+Utilisez le prop `loading` pour afficher une icône de chargement sur les InputTags.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  - modèleValeur
-Extérieur:
-  - modèleValeur
-Props:
-  valeur: ['Vue ']
-  Chargement: vrai
-  Traînée: Faux
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  loading: true
+  trailing: false
 ---
 ::
 
-### Icône de chargement
+### Loading Icône
 
-Utilisez la prop `loading-icon` pour personnaliser l'icône de chargement. Par défaut,`i-lucide-loader-circle`.
+Utilisez la prop `loading-icon` pour personnaliser l'icône de chargement. Par défaut, `i-lucide-loader-circle`.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  - modèleValeur
-Extérieur:
-  - modèleValeur
-Props:
-  valeur: ['Vue ']
-  Chargement: vrai
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  loading: true
   loadingIcon: 'i-lucide-loader'
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.loading`.
 :::
@@ -244,65 +244,65 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 :::
 ::
 
-### désactivé
+### Disabled
 
-Utilisez la prop `disabled` pour désactiver les InputTags.
+Utilisez le prop `disabled` pour désactiver les InputTags.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  - modèleValeur
-Extérieur:
-  - modèleValeur
-Props:
-  valeur: ['Vue ']
-  handicapés: vrai
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  disabled: true
 ---
 ::
 
-@@ph074@exemples
+## Exemples
 
-### Dans un champ de format
+### Dans un champ FormField
 
 Vous pouvez utiliser les InputTags dans un composant [FormField](/docs/components/form-field) pour afficher une étiquette, un texte d'aide, un indicateur requis, etc.
 
 ::component-example
 ---
-nom: 'input-tags-form-field-example'
+name: 'input-tags-form-field-example'
 ---
 ::
 
-@@ph080@api
+## API
 
-@@ph081@@props
+### Props
 
-Composants-props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
 Ce composant prend également en charge tous les attributs HTML natifs `<input>`.
 ::
 
-@@ph083@@réseaux sociaux
+### Slots
 
-Composants slots
+:component-slots
 
-@084@émissions
+### Emis
 
-Composants émetteurs
+:component-emits
 
-@085@08500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Expose à
 
 Lorsque vous accédez au composant via une référence de modèle, vous pouvez utiliser les éléments suivants:
 
 | nom| type|
 | ---- | ---- |
-| @@|@@|
+| `inputRef`x{lang="ts-type"}| `Ref<HTMLInputElement \| null>`x{lang="ts-type"}|
 
-@@ph090@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

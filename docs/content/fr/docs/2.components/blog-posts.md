@@ -8,9 +8,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/BlogPosts.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Le composant BlogPosts fournit une disposition flexible pour afficher une liste de composants[BlogPost](/docs/components/blog-post)en utilisant soit l'emplacement par défaut , soit le prop`posts`.
+Le composant BlogPosts fournit une disposition flexible pour afficher une liste de composants [BlogPost](/docs/components/blog-post) en utilisant soit l'emplacement par défaut, soit le prop `posts`.
 
 ```vue {2,8}
 <template>
@@ -24,72 +24,72 @@ Le composant BlogPosts fournit une disposition flexible pour afficher une liste 
 </template>
 ```
 
-@@ph017@Posts
+### Posts
 
-Utilisez le prop`posts`comme un tableau d'objets avec les propriétés du composant[BlogPost](/docs/components/blog-post#props).
+Utilisez la prop `posts` comme un tableau d'objets avec les propriétés du composant [BlogPost](/docs/components/blog-post#props).
 
 ::component-code
 ---
-Collapse : vrai
-ignorer :
-  @@23@posts
-Extérieure :
-  @@24@posts
-Extérieurs :
-  @@25@@BlogPostProps [ résumé ]
-Props :
-  Posts :
-    - title : Icône Nuxt v1
-      Découvrez Nuxt Icon v1 !
-      image :https://nuxt.com/assets/blog/nuxt-icon/cover.png
-      Date : 2024 - 11 - 25
-    - titre : Nuxt 3.14
-      Description : ' Nuxt 3.14 est sorti ! '
-      image :https://nuxt.com/assets/blog/v3.14.png
-      Date : 2024 - 11 - 04
-    - titre : Nuxt 3.13
-      Description : ' Nuxt 3.13 est sorti ! '
-      image :https://nuxt.com/assets/blog/v3.13.png
-      Date : 2024 - 08 - 22
+collapse: true
+ignore:
+  - posts
+external:
+  - posts
+externalTypes:
+  - BlogPostProps[]
+props:
+  posts:
+    - title: Nuxt Icon v1
+      description: 'Discover Nuxt Icon v1!'
+      image: https://nuxt.com/assets/blog/nuxt-icon/cover.png
+      date: 2024-11-25
+    - title: Nuxt 3.14
+      description: 'Nuxt 3.14 is out!'
+      image: https://nuxt.com/assets/blog/v3.14.png
+      date: 2024-11-04
+    - title: Nuxt 3.13
+      description: 'Nuxt 3.13 is out!'
+      image: https://nuxt.com/assets/blog/v3.13.png
+      date: 2024-08-22
 ---
 ::
 
-@@29@@Référencement
+### Définition
 
-Utilisez la prop`orientation`pour modifier l'orientation des BlogPosts . Defaults à`horizontal`.
+Utilisez la prop `orientation` pour changer l'orientation des BlogPosts. Defaults à `horizontal`.
 
 ::component-code
 ---
-Collapse : vrai
-Ignorer :
-  @@ph032@posts
-Extérieur :
-  @@ph033@posts
-Extérieurs :
-  - BlogPostProps [ réf . nécessaire ]
-Props :
-  Orientation : verticale
-  Posts :
-    - title : Icône Nuxt v1
-      Découvrez Nuxt Icon v1 !
-      image :https://nuxt.com/assets/blog/nuxt-icon/cover.png
-      Date : 2024 - 11 - 25
-    - titre : Nuxt 3.14
-      Description : ' Nuxt 3.14 est sorti ! '
-      image :https://nuxt.com/assets/blog/v3.14.png
-      Date : 2024 - 11 - 04
-    - titre : Nuxt 3.13
-      Description : ' Nuxt 3.13 est sorti ! '
-      image :https://nuxt.com/assets/blog/v3.13.png
-      Date : 2024 - 08 - 22
+collapse: true
+ignore:
+  - posts
+external:
+  - posts
+externalTypes:
+  - BlogPostProps[]
+props:
+  orientation: vertical
+  posts:
+    - title: Nuxt Icon v1
+      description: 'Discover Nuxt Icon v1!'
+      image: https://nuxt.com/assets/blog/nuxt-icon/cover.png
+      date: 2024-11-25
+    - title: Nuxt 3.14
+      description: 'Nuxt 3.14 is out!'
+      image: https://nuxt.com/assets/blog/v3.14.png
+      date: 2024-11-04
+    - title: Nuxt 3.13
+      description: 'Nuxt 3.13 is out!'
+      image: https://nuxt.com/assets/blog/v3.13.png
+      date: 2024-08-22
 ---
 ::
 
 ::tip
-Lorsque vous utilisez le prop`posts`au lieu de l'emplacement par défaut , le`orientation`des messages est automatiquement inversé , de`horizontal`à`vertical`et vice versa .
+Lorsque vous utilisez le prop `posts` au lieu de l'emplacement par défaut, le `orientation` des postes est automatiquement inversé, `horizontal` à `vertical` et vice versa.
 ::
 
-@@ph042@Exemples
+## Exemples
 
 ::note
 Bien que ces exemples utilisent [Nuxt Content](https://content.nuxt.com), les composants peuvent être intégrés à n'importe quel système de gestion de contenu.
@@ -125,27 +125,27 @@ const { data: posts } = await useAsyncData('posts', () => queryCollection('posts
 ```
 
 ::note
-Dans cet exemple, les `posts` sont récupérés en utilisant `queryCollection` du module `@nuxt/content`.
+Dans cet exemple, les `posts` sont récupérés à l'aide de `queryCollection` à partir du module `@nuxt/content`.
 ::
 
 ::tip
 La propriété `to` est remplacée ici puisque `@nuxt/content` utilise la propriété `path`.
 ::
 
-@@ph078@api
+## API
 
-@@779@@référencement
+### Props équipements
 
-Composants-props
+:component-props
 
-@@ph080@@réseaux sociaux
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph081@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changelog @changelog
+## Changelog
 
-Composant-changelog
+:component-changelog

@@ -7,7 +7,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Page.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Die Komponente Seite hilft Ihnen beim Erstellen von Layouts mit optionalen linken und rechten Spalten. Sie eignet sich perfekt zum Erstellen von Dokumentationswebsites und anderen inhaltsorientierten Seiten.
 
@@ -25,15 +25,15 @@ Die Komponente Seite hilft Ihnen beim Erstellen von Layouts mit optionalen linke
 Die Seite wird als zentriertes, einspaltiges Layout angezeigt, wenn keine Slots angegeben sind.
 ::
 
-@@ph010@@Beispiele
+## Examples (Beispiele)
 
 ::note
-Während in diesen Beispielen [Nuxt Content](https://content.nuxt.com) verwendet wird, können die Komponenten in jedes Content-Management-System integriert werden.
+Während diese Beispiele [Nuxt Content](https://content.nuxt.com) verwenden, können die Komponenten in jedes Content Management System integriert werden.
 ::
 
-### Innerhalb eines Layouts
+### In einem Layout
 
-Verwenden Sie die Komponente Seite in einem Layout mit dem `left`-Slot, um eine Navigation anzuzeigen:
+Verwenden Sie die Komponente Seite in einem Layout mit dem Steckplatz `left`, um eine Navigation anzuzeigen:
 
 ```vue [layouts/docs.vue] {9-13}
 <script setup lang="ts">
@@ -56,10 +56,10 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 ```
 
 ::note
-In diesem Beispiel verwenden wir die Komponente `ContentNavigation`, um die in `app.vue` eingefügte Navigation anzuzeigen.
+In diesem Beispiel verwenden wir die `ContentNavigation`-Komponente, um die in `app.vue` eingespeiste Navigation anzuzeigen.
 ::
 
-### Innerhalb einer Seite
+### innerhalb einer Seite
 
 Verwenden Sie die Komponente Seite in einer Seite mit dem `right`-Slot, um ein Inhaltsverzeichnis anzuzeigen:
 
@@ -100,23 +100,23 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 ```
 
 ::note
-In diesem Beispiel verwenden wir die Komponente `ContentToc`, um das Inhaltsverzeichnis anzuzeigen.
+In diesem Beispiel verwenden wir die `ContentToc`-Komponente, um das Inhaltsverzeichnis anzuzeigen.
 ::
 
-## api
+## API (englisch)
 
-@@@@@@@@@@@ph077@@props
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
-### Slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@@@@@@@@ph079@@theme
+## Theme (englisch)
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph080@@changelog @@@ changelog
+## Changelog (deutsch)
 
-Das Component-Changelog
+:component-changelog

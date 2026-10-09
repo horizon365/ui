@@ -8,7 +8,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageHeader.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 El componente PageHeader muestra un encabezado para su página.
 
@@ -24,93 +24,93 @@ El componente PageHeader muestra un encabezado para su página.
 </template>
 ```
 
-@180000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Nombre
 
 Utilice el prop `title` para mostrar un título en el encabezado.
 
 ::component-code
 ---
-Escondido:
-  @200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Categoría: PageHeader
-  Categoría: w-full
+hide:
+  - class
+props:
+  title: 'PageHeader'
+  class: 'w-full'
 ---
 ::
 
-@@21@Descripción
+### Descripción
 
 Utilice el prop `description` para mostrar una descripción en el encabezado.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@23@título
-Escondido:
-  @@24@clase
-Props:
-  Categoría: PageHeader
-  Descripción:'Un encabezado de página responsive con título, descripción y acciones.'
-  Categoría: w-full
+prettier: true
+ignore:
+  - title
+hide:
+  - class
+props:
+  title: 'PageHeader'
+  description: 'A responsive page header with title, description and actions.'
+  class: 'w-full'
 ---
 ::
 
-@@25@@Encabezamiento
+### Categoría
 
 Utilice el prop `headline` para mostrar un titular en el encabezado.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @27@title
-  @@ph028@descripción
-Escondido:
-  @@29@clase
-Props:
-  Categoría: PageHeader
-  Descripción:'Un encabezado de página responsive con título, descripción y acciones.'
-  Categoría:"Componentes"
-  Categoría: w-full
+prettier: true
+ignore:
+  - title
+  - description
+hide:
+  - class
+props:
+  title: 'PageHeader'
+  description: 'A responsive page header with title, description and actions.'
+  headline: 'Components'
+  class: 'w-full'
 ---
 ::
 
-@@pH030@@enlaces
+### Enlaces
 
 Utilice el prop `links` para mostrar una lista de [Button](/docs/components/button) en el encabezado.
 
 ::component-code
 ---
-Categoría: true
-Externo:
-  @36@enlaces
-Externalidades:
-  @@@P37@@P37@@P37@@P37@@@P37@@P37@@P37@@P37@P37@@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37)
-Ignora:
-  @38@title
-  @@ph039@descripción
-  @400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @@401@enlaces
-Escondido:
-  @@42@clase
-Props:
-  Categoría: PageHeader
-  Descripción:'Un encabezado de página responsive con título, descripción y acciones.'
-  Categoría:"Componentes"
-  izquierda:
-    - label:'GitHub'(en inglés)
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - headline
+  - links
+hide:
+  - class
+props:
+  title: 'PageHeader'
+  description: 'A responsive page header with title, description and actions.'
+  headline: 'Components'
+  links:
+    - label: 'GitHub'
       icon: i-simple-icons-github
-      a: 'https://github.com/nuxt/ui/tree/v4/src/runtime/components/PageHeader.vue'
-      Nombre: '_blanco'
-  Categoría: w-full
+      to: 'https://github.com/nuxt/ui/tree/v4/src/runtime/components/PageHeader.vue'
+      target: '_blank'
+  class: 'w-full'
 ---
 ::
 
-@@44@Ejemplos
+## Ejemplos
 
 ::note
-Si bien estos ejemplos utilizan [Nuxt Content](https://content.nuxt.com), los componentes se pueden integrar con cualquier sistema de gestión de contenido.
+Si bien estos ejemplos utilizan [Nuxt Content](xph088), los componentes se pueden integrar con cualquier sistema de gestión de contenido.
 ::
 
 ### Dentro de una página
@@ -158,20 +158,20 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 </template>
 ```
 
-@@pH090@@pH0000
+## API (Edición española)
 
-@091@091@0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
-@@P2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots en línea
 
-Componentes de slots
+:component-slots
 
-@093@@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@@changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

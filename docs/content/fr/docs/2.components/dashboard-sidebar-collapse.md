@@ -11,20 +11,20 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardSidebarCollapse.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Le composant DashboardSidebarCollapse est utilisé pour réduire/développer le [DashboardSidebar](/docs/components/dashboard-sidebar) composant **lorsque son `collapsible` prop est réglé **.
+Le composant DashboardSidebarCollapse est utilisé pour réduire/développer le composant [DashboardSidebar](/docs/components/dashboard-sidebar) ** lorsque sa prop `collapsible` est set**.
 
-Composants de code
+:component-code
 
-Il étend le [Button](/docs/components/button) composant, de sorte que vous pouvez passer n'importe quelle propriété telle que `color`,`variant`,`size`, etc.
+Il étend le composant [Button](/docs/components/button), de sorte que vous pouvez passer n'importe quelle propriété telle que `color`, `variant`, `size`, etc.
 
 ::component-code
 ---
-ignorer:
-  @@P015@@variant
-Props:
-  Étiquette:"subtil"
+ignore:
+  - variant
+props:
+  variant: 'subtle'
 ---
 ::
 
@@ -32,11 +32,11 @@ Props:
 Le bouton par défaut est `color="neutral"` et `variant="ghost"`.
 ::
 
-@@ph018@exemples
+## exemples
 
-### Dans `header`
+### Dans le slot `header`
 
-Vous pouvez mettre ce composant dans l'emplacement `header` du composant [DashboardSidebar](/docs/components/dashboard-sidebar) et utiliser le prop `collapsed` pour masquer la partie gauche de l'en-tête par exemple:
+Vous pouvez mettre ce composant dans l'emplacement `header` du composant [DashboardSidebar](/docs/components/dashboard-sidebar) et utiliser la prop `collapsed` pour masquer la partie gauche de l'en-tête par exemple:
 
 ```vue [layouts/dashboard.vue]{4-8}
 <template>
@@ -54,9 +54,9 @@ Vous pouvez mettre ce composant dans l'emplacement `header` du composant [Dashbo
 </template>
 ```
 
-### Dans `leading`
+### Dans le slot `leading`
 
-Vous pouvez mettre ce composant dans l'emplacement `leading` du composant [DashboardNavbar](/docs/components/dashboard-navbar) pour l'afficher avant le titre par exemple:
+Vous pouvez placer ce composant dans l'emplacement `leading` du composant [DashboardNavbar](/docs/components/dashboard-navbar) pour l'afficher avant le titre par exemple:
 
 ```vue [pages/index.vue]{11-13}
 <script setup lang="ts">
@@ -78,20 +78,20 @@ definePageMeta({
 </template>
 ```
 
-@@ph068@api
+## api
 
-@@ph069@@props
+### Projets
 
-Composants-props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
 Ce composant prend également en charge tous les attributs HTML natifs `<button>`.
 ::
 
-@@ph071@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

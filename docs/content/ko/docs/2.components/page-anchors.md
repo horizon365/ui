@@ -8,87 +8,87 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageAnchors.vue
 ---
 
-## 사용
+## Usage
 
-PageAnchors   구성   요소 를   사용 하 여   링크   목록 을   표시 합니다 .
-
-::component-code
----
-축소 :   true
-상품명   :   True
-무시 하 기 :
-  - 링크
-외부 :
-  - 링크
-externalTypes :
-  - PageAnchor [ ]
-소품   :
-  링크 :
-    - label :   ' 문서 '
-      아이콘 :   i - lucide - book - open
-      to :  /docs/getting - started   시작
-    - label :   ' 구성   요소 '
-      아이콘 :   i - lucide - box
-      대상 :  /docs/components
-    - label :   ' Figma   Kit '
-      아이콘 :   i - simple - icons - figma
-      대상 :https://go.nuxt.com/figma-ui
-      target :   _ blank   대상
-    - label :   ' Releases '
-      아이콘 :   i - simple - icons - github
-      대상 :https://github.com/nuxt/ui/releases
-      target: _blank 대상
----
-::
-
-###  링크
-
-`links`prop을 다음과 같은 속성을 가진 객체의 배열로 사용합니다.
-
-- `label: string`{lang="ts-type"}
-- `icon?: string`{lang="ts-type"}
--  @ `class?: any` @ @ {lang="ts-type"} @
-- `ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkLeading?: ClassNameValue, linkLeadingIcon?: ClassNameValue }` {lang="ts-type"}
-
-당신은 [Link](/docs/components/link#props) 구성 요소에서 모든 속성을 전달 할 수 있습니다 `to`, `target` 등.
+PageAnchors 구성 요소를 사용하여 링크 목록을 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  링크
-외부:
-  -  링크
+collapse: true
+prettier: true
+ignore:
+  - links
+external:
+  - links
 externalTypes:
-  -  PageAnchor []
-소품 :
-  링크:
-    - label: '문서'
-      아이콘: i-lucide-book-open
-      to: /docs/getting-started 시작
-    - label: '구성 요소'
-      아이콘: i-lucide-box
-      대상: /docs/components
+  - PageAnchor[]
+props:
+  links:
+    - label: 'Documentation'
+      icon: i-lucide-book-open
+      to: /docs/getting-started
+    - label: 'Components'
+      icon: i-lucide-box
+      to: /docs/components
     - label: 'Figma Kit'
-      아이콘: i-simple-icons-figma
-      대상   :https://go.nuxt.com/figma-ui
-      target :   _ blank   대상
-    - label :   ' Releases '
-      아이콘 :   i - simple - icons - github
-      대상 :https://github.com/nuxt/ui/releases
-      target :   _ blank   대상
+      icon: i-simple-icons-figma
+      to: https://go.nuxt.com/figma-ui
+      target: _blank
+    - label: 'Releases'
+      icon: i-simple-icons-github
+      to: https://github.com/nuxt/ui/releases
+      target: _blank
 ---
 ::
 
-##   예
+### 링크 링크
+
+`links` prop을 다음과 같은 속성을 가진 오브젝트 배열로 사용합니다.
+
+- `label: string`{lang="ts-type"} (- `label: string`{lang="ts-type"})
+- `icon?: string`{lang="ts-type"} - {lang="ts-type"}
+- `class?: any`{lang="ts-type"} - {lang="ts-type"}
+- `ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkLeading?: ClassNameValue, linkLeadingIcon?: ClassNameValue }`{lang="ts-type"}의 발음을 - `ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkLeading?: ClassNameValue, linkLeadingIcon?: ClassNameValue }`{lang="ts-type"}
+
+[Link](/docs/components/link#props) 구성 요소(예: `to`, `target` 등)에서 모든 속성을 전달할 수 있습니다.
+
+::component-code
+---
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageAnchor[]
+props:
+  links:
+    - label: 'Documentation'
+      icon: i-lucide-book-open
+      to: /docs/getting-started
+    - label: 'Components'
+      icon: i-lucide-box
+      to: /docs/components
+    - label: 'Figma Kit'
+      icon: i-simple-icons-figma
+      to: https://go.nuxt.com/figma-ui
+      target: _blank
+    - label: 'Releases'
+      icon: i-simple-icons-github
+      to: https://github.com/nuxt/ui/releases
+      target: _blank
+---
+::
+
+## 예제
 
 ::note
-이러 한   예 에서 는  [Nuxt   Content](https://content.nuxt.com)를   사용 하 지만   모든   컨텐츠   관리   시스템 과   통합 할   수   있 습니다 .
+이러한 예제에서는 [Nuxt Content](https://content.nuxt.com)를 사용하지만 구성 요소는 모든 콘텐츠 관리 시스템과 통합 할 수 있습니다.
 ::
 
-###   레이아웃   내 에서
+### 레이아웃 내부
 
-[PageAside](/docs/components/page-aside)  구성   요소   안 에   PageAnchors   구성   요소 를   사용 하 여   탐색   위 에   링크   목록 을   표시 합니다 .
+[PageAside](/docs/components/page-aside) 구성 요소 안에 있는 PageAnchors 구성 요소를 사용하여 탐색 위에 링크 목록을 표시합니다.
 
 ```vue [layouts/docs.vue]{35}
 <script setup lang="ts">
@@ -137,18 +137,18 @@ const links: PageAnchor[] = [{
 
 ## API
 
-### Props   이미지
+### Props (### Props)
 
-: 컴포넌트   -   소품
+:component-props
 
-### 슬롯
+### Slots
 
-: 컴포넌트   -   슬롯
+:component-slots
 
-## 테마
+## Theme 테마
 
-: 구성 요소   -   주제
+:component-theme
 
-## Changelog
+## 변경 로그
 
-: component - changelog   구성 요소   변경   로그
+:component-changelog

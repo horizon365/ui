@@ -14,246 +14,246 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Checkbox.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Verwenden Sie die `v-model`-Direktive, um den Status der Checkbox zu kontrollieren.
+Verwenden Sie die `v-model`-Direktive, um den Status der Checkbox zu steuern.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: true
 ---
 ::
 
-Verwenden Sie `default-value` prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
+Verwenden Sie die `default-value`-prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - defaultValue
-Props:
-  DefaultValue: true ist wahr
+props:
+  defaultValue: true
 ---
 ::
 
-@@ph006@undefinierbar
+xph017unbestimmt
 
-Verwenden Sie den `indeterminate`-Wert in der `v-model`-Richtlinie oder `default-value` prop, um das Kontrollkästchen auf einen [unbestimmten Zustand ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) zu setzen.
+Verwenden Sie den Wert `indeterminate` in der Direktive `v-model` oder `default-value` prop, um das Kontrollkästchen auf [indeterminate state](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) zu setzen.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - defaultValue
-Props:
-  defaultValue: 'unbestimmt'
+props:
+  defaultValue: 'indeterminate'
 ---
 ::
 
-@@ph015@undefiniertes Icon
+### Indeterminate Icon (unbestimmtes Icon)
 
-Verwenden Sie `indeterminate-icon` prop, um das unbestimmte Symbol anzupassen. Standardmäßig `i-lucide-minus`.
+Verwenden Sie die `indeterminate-icon`-prop, um das unbestimmte Symbol anzupassen. Standardmäßig `i-lucide-minus`.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - defaultValue
-Props:
-  defaultValue: 'unbestimmt'
-  indeterminateIcon: 'i-lucide-plus'(unbestimmt)
+props:
+  defaultValue: 'indeterminate'
+  indeterminateIcon: 'i-lucide-plus'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.minus` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.minus` Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.minus` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.minus` Schlüssel anpassen.
 :::
 ::
 
-@@ph023@@abbauseite
+### Label ist
 
-Verwenden Sie `label` prop, um die Beschriftung der Checkbox festzulegen.
+Verwenden Sie die `label`-prop, um die Beschriftung der Checkbox festzulegen.
 
 ::component-code
 ---
-Props:
-  Markiert: Check Me
+props:
+  label: Check me
 ---
 ::
 
-Bei Verwendung von `required` prop wird neben dem Etikett ein Sternchen hinzugefügt.
+Wenn Sie die `required`-Prop verwenden, wird neben dem Etikett ein Sternchen hinzugefügt.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph026@@aufkleber
-Props:
-  erforderlich: true
-  Titel: Check Me
+ignore:
+  - label
+props:
+  required: true
+  label: Check me
 ---
 ::
 
-@@ph027@@Beschreibung
+### Beschreibung
 
-Verwenden Sie `description` prop, um die Beschreibung der Checkbox festzulegen.
+Verwenden Sie die `description`-prop, um die Beschreibung der Checkbox festzulegen.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph029@@aufkleber
-Props:
-  Titel: Check Me
-  Beschreibung: 'Dies ist eine Checkbox.'
+ignore:
+  - label
+props:
+  label: Check me
+  description: 'This is a checkbox.'
 ---
 ::
 
-@@ph030@@gmail.de
+### Icon Übersetzung
 
-Verwenden Sie `icon` prop, um das Symbol des Kontrollkästchens zu setzen, wenn es aktiviert ist. Standardmäßig auf `i-lucide-check`.
+Verwenden Sie die `icon`-prop, um das Symbol der Checkbox festzulegen, wenn es aktiviert ist. Standardmäßig `i-lucide-check`.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph033@@aufkleber
+ignore:
+  - label
   - defaultValue
-Props:
-  I-Lucide-Heart (englisch)
-  DefaultValue: true ist wahr
-  Titel: Check Me
+props:
+  icon: 'i-lucide-heart'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.check` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter der `ui.icons.check`-Taste.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.check` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.check` Schlüssel anpassen.
 :::
 ::
 
-@@@@@399@bmg-ng-ng.de
+### Farbe
 
-Verwenden Sie `color` prop, um die Farbe des Kontrollkästchens zu ändern.
-
-::component-code
----
-Ignoriert:
-  @@ph041@@aufkleber
-  - defaultValue
-Props:
-  Farbe: neutral
-  DefaultValue: true ist wahr
-  Titel: Check Me
----
-::
-
-@@ph043@@Variantentabelle
-
-Verwenden Sie `variant` prop, um die Variante des Checkboxes zu ändern.
+Verwenden Sie die `color`-Prop, um die Farbe des Kontrollkästchens zu verändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph045@@aufkleber
+ignore:
+  - label
   - defaultValue
-Props:
-  Farbe: "Primär"
-  Variante: „ Karte "
-  DefaultWert: true
-  Titel: Check Me
+props:
+  color: neutral
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-@@ph047 @ Größe
+### Variant Bearbeiten
 
-Verwenden Sie `size` prop, um die Größe des Kontrollkästchens zu ändern.
+Verwenden Sie die `variant`-Prop, um die Variante des Kontrollkästchens zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph049@@aufkleber
+ignore:
+  - label
   - defaultValue
-Props:
-  Größe: XL
-  Variante: Liste
-  DefaultValue: true ist wahr
-  Titel: Check Me
+props:
+  color: 'primary'
+  variant: 'card'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-### Indikator
+xph107 Größe
 
-Verwenden Sie `indicator` prop, um die Position zu ändern oder den Indikator auszublenden. Standardmäßig `start`.
+Verwenden Sie die `size`-Prop, um die Größe des Kontrollkästchens zu ändern.
+
+::component-code
+---
+ignore:
+  - label
+  - defaultValue
+props:
+  size: xl
+  variant: list
+  defaultValue: true
+  label: Check me
+---
+::
+
+### Indicator (Englisch)
+
+Verwenden Sie die `indicator`-Stütze, um die Position zu ändern oder den Indikator auszublenden. Standardmäßig `start`.
 
 ::note
-Wenn `indicator``hidden` ist, wird stattdessen das Symbol über dem Etikett angezeigt.
+Wenn `indicator` `hidden` ist, wird stattdessen das Symbol über dem Label angezeigt.
 ::
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph056@@aufkleber
-  @@ph057@@gmail.de
+prettier: true
+ignore:
+  - label
+  - icon
   - defaultValue
-Props:
-  Anzeige: "Versteckt"
-  Variante: „ Karte "
-  I-Lucide-Heart (englisch)
-  DefaultValue: true ist wahr
-  Titel: Check Me
+props:
+  indicator: 'hidden'
+  variant: 'card'
+  icon: 'i-lucide-heart'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-@@ph059@@disabled
+### Disabled (nicht verfügbar)
 
-Verwenden Sie `disabled` prop, um die Checkbox zu deaktivieren.
+Verwenden Sie die `disabled`-Prop, um die Checkbox zu deaktivieren.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph061@@aufkleber
-Props:
-  Behindert: Wahr
-  Titel: Check Me
+ignore:
+  - label
+props:
+  disabled: true
+  label: Check me
 ---
 ::
 
-## api
+## API Bearbeiten
 
-### Props
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
 Diese Komponente unterstützt auch alle nativen `<button>` HTML-Attribute.
 ::
 
-### Slots
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-@@@@@@@@@@@@emits
+### Emits (nicht)
 
-Komponenten emittieren
+:component-emits
 
-## Thema
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph068@@changelog @@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

@@ -9,9 +9,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Tabs.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-Utilice los componentes `tabs` y `tabs-item` para mostrar [Tabs](/docs/components/tabs) en su contenido.
+Utilice los componentes `tabs` y `tabs-item` para mostrar [Tabs](/docs/components/tabs) en el contenido.
 
 ::code-preview{class="[&>div]:*:my-0"}
 
@@ -37,7 +37,7 @@ Lorem velit voluptate ex reprensit ullamco et culpa.
 
 :::
 
-#Código
+#code
 
 ````mdc
 ::tabs
@@ -65,25 +65,25 @@ Lorem velit voluptate ex reprehenderit ullamco et culpa.
 
 ::
 
-@@pH034
+## API (Edición española)
 
-@@35000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Propciones
 
-Artículo siguienteCOMPONENTES {prose}
+:component-props{prose}
 
-@@37@@espanol
+### Slots (Edición española)
 
-Componentes: {prose}
+:component-slots{prose}
 
-@@pH039@@Proyecto
+## Temas
 
 ::component-theme{prose}
 ---
-Extras:
-  @400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+extra:
+  - tabsItem
 ---
 ::
 
-@@changelog
+## Changelog (Edición española)
 
-por: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

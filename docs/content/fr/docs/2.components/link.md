@@ -11,76 +11,76 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Link.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Le composant Link est un wrapper autour de [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) en utilisant le [`custom`](https://router.vuejs.org/api/interfaces/RouterLinkProps.html#Properties-customprop.
+Le composant Link est un wrapper autour de [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) en utilisant la prop. [xph002](https://router.vuejs.org/api/interfaces/RouterLinkProps.html#Properties-custom).
 
-- `inactive-class` prop pour définir une classe lorsque le lien est inactif,`active-class` est utilisé lorsqu 'il est actif.
-- `exact` prop pour styliser avec `active-class` lorsque le lien est actif et que l'itinéraire est exactement le même que l'itinéraire actuel.
-- `exact-query` et `exact-hash` props pour styliser avec `active-class` lorsque le lien est actif et que la requête ou le hachage est exactement le même que la requête ou le hachage actuel.
-  - utilisez `exact-query="partial"` pour styliser avec `active-class` lorsque le lien est actif et que la requête correspond partiellement à la requête en cours.
+- `inactive-class` prop pour définir une classe quand le lien est inactif, `active-class` est utilisé quand il est actif.
+- `exact` prop à style avec `active-class` lorsque le lien est actif et que l'itinéraire est exactement le même que l'itinéraire actuel.
+Les props - `exact-query` et `exact-hash` sont stylisés avec `active-class` lorsque le lien est actif et que la requête ou le hachage est exactement le même que la requête ou le hachage en cours.
+  -  utilise `exact-query="partial"` pour styliser avec `active-class` lorsque le lien est actif et que la requête correspond partiellement à la requête actuelle.
 
-L'intérêt de cette solution est de fournir la même API que NuxtLink dans Nuxt 2/Vue 2. Vous pouvez en savoir plus sur la migration du routeur Vue [du guide Vue 2](https://router.vuejs.org/guide/migration/#removal-of-the-exact-prop-in-router-link).
+L'intérêt de cette approche est de fournir la même API que NuxtLink dans Nuxt 2/Vue 2. Vous pouvez en savoir plus à ce sujet dans le guide Vue Router [migration de Vue 2](xph026).
 
 ::note
-Il est utilisé par le `Breadcrumb`](/docs/components/breadcrumb),[`Button`](/docs/components/button),[`ContextMenu`](/docs/components/context-menu),[`DropdownMenu`](/docs/components/dropdown-menu) et [`NavigationMenu`](/docs/components/navigation-menu).
+Il est utilisé par les composants [`Breadcrumb`](/docs/components/breadcrumb), [`Button`](/docs/components/button), [`ContextMenu`](xph043), [`DropdownMenu`](/docs/components/dropdown-menu) et [x`NavigationMenu`/docs/components/navigation-menu).
 ::
 
-@@pH053@@Tag
+### Télécharger
 
-Le `Link` composants rend un `<a>` tag lorsqu 'un `to` prop est fourni, sinon il rend un `<button>` tag.
+Le composant `Link` rend une balise `<a>` lorsqu 'un prop `to` est fourni, sinon il rend une balise `<button>`.
 
 ::component-code
 ---
-Props:
-  à:"
-  Étiquette:"bouton"
-Slots:
-  Défaut: Link
+props:
+  to: ''
+  as: 'button'
+slots:
+  default: Link
 ---
 ::
 
 ::note
-Vous pouvez inspecter le HTML rendu en changeant le `to` prop.
+Vous pouvez inspecter le HTML rendu en changeant la prop. `to`.
 ::
 
-@@ph060@stylisme
+### Style
 
 Par défaut, le lien a des styles actifs et inactifs par défaut, consultez la section [#theme](#theme).
 
 ::component-code
 ---
-Props:
-  à:/docs/composants/link
-Slots:
-  by default: Link
+props:
+  to: /docs/components/link
+slots:
+  default: Link
 ---
 ::
 
 ::note
-Essayez de changer la prop `to` pour voir les états actif et inactif.
+Essayez de changer le prop `to` pour voir les états actif et inactif.
 ::
 
-Vous pouvez remplacer ce comportement en utilisant la prop `raw` et fournir vos propres styles en utilisant `class`,`active-class` et `inactive-class`.
+Vous pouvez remplacer ce comportement en utilisant la prop `raw` et fournir vos propres styles en utilisant `class`, `active-class` et `inactive-class`.
 
 ::component-code
 ---
-ignorer:
-  @@ph070@raw
-Props:
-  Raw: vrai
-  à:/docs/composants/link
-  Classe d'utilisateur: font-bold
+ignore:
+  - raw
+props:
+  raw: true
+  to: /docs/components/link
+  activeClass: 'font-bold'
   inactiveClass: 'text-muted'
-Slots:
-  Défaut: Link
+slots:
+  default: Link
 ---
 
 Lien
 ::
 
 ::callout{icon="i-simple-icons-visualstudiocode"}
-Si vous utilisez l'extension [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) pour VSCode et que vous souhaitez obtenir l'autocomplétion pour les props `active-class` et `inactive-class`, vous pouvez ajouter les paramètres suivants à votre `.vscode/settings.json`:
+Si vous utilisez l'extension [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) pour VSCode et que vous souhaitez obtenir la complétion automatique pour les props `active-class` et `inactive-class`, vous pouvez ajouter les paramètres suivants à votre `.vscode/settings.json`:
 
 ```json [.vscode/settings.json]
 {
@@ -94,7 +94,7 @@ Si vous utilisez l'extension [Tailwind CSS IntelliSense](https://marketplace.vis
 
 ### Locale: badge{label="4.7+" class="align-text-top"}
 
-Le composant Link s'intègre automatiquement avec `@nuxtjs/i18n`](https://i18n.nuxtjs.org/) lorsqu 'il est installé. Les liens internes sont automatiquement localisés à l'aide de l'assistant `$localePath` sans nécessiter d'emballage manuel.
+Le composant Link s'intègre automatiquement avec [`@nuxtjs/i18n`](https://i18n.nuxtjs.org/) lorsqu 'il est installé. Les liens internes sont automatiquement localisés à l'aide de l'assistant `$localePath` sans nécessiter d'emballage manuel.
 
 ```vue
 <template>
@@ -111,14 +111,14 @@ Vous pouvez toujours utiliser manuellement `localePath()` ou `localeRoute()` si 
 En savoir plus sur l'internationalisation dans Nuxt UI.
 ::
 
-@@ph102@api
+## API
 
-@@ph103@@props
+### Props équipements
 
 ::component-props
 ---
-Ignorer:
-  -  custom
+ignore:
+  - custom
 ---
 ::
 
@@ -126,14 +126,14 @@ Ignorer:
 Ce composant prend également en charge tous les attributs HTML natifs `<a>`.
 ::
 
-@@ph106@@réglages
+### Slots
 
-Composants slots
+:component-slots
 
-@107@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

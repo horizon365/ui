@@ -11,48 +11,48 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/User.vue
 ---
 
-## 使用情况
+## 用法
 
-### 姓名
+### 名称
 
-使用`name`属性显示用户的名称。
+使用`name`属性显示用户名。
 
 ::component-code
 ---
-道具：
-  姓名：“无名氏”
+props:
+  name: 'John Doe'
 ---
 ::
 
-说明：
+### 说明
 
-使用`description`属性显示用户的说明。
+使用`description`属性显示用户的描述。
 
 ::component-code
 ---
-道具：
-  姓名：“无名氏”
-  描述：“软件工程师”
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
 ---
 ::
 
-虚拟人偶
+### 头像
 
-使用`avatar`道具来显示[Avatar](/docs/components/avatar)组件。
+使用`avatar`道具显示[Avatar](/docs/components/avatar)组件。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  姓名
-  说明：
-道具：
-  姓名：“无名氏”
-  描述：“软件工程师”
-  头像：
-    如果您是一个注册用户，请登录
-    加载：惰性
-    图标：i-lucide图像
+prettier: true
+ignore:
+  - name
+  - description
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
+  avatar:
+    src: 'https://i.pravatar.cc/150?u=john-doe'
+    loading: lazy
+    icon: i-lucide-image
 ---
 ::
 
@@ -60,47 +60,47 @@ links:
 
 ::component-props
 ---
-名称：头像
-忽略：
-  尺寸：
-- 的版本
+name: Avatar
+ignore:
+  - size
+  - as
 ---
 ::
 
 ::
 
-芯片，芯片
+### 芯片
 
-使用`chip`道具来显示[芯片](组件。
+使用`chip`道具显示[Chip](/docs/components/chip)组件。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  姓名
-  描述：
-  - 虚拟形象. src
-项目名称：
+prettier: true
+ignore:
+  - name
+  - description
+  - avatar.src
+items:
   chip.color:
-    主要的
-    第二个
-    成功了！
-    @@信息
-    警告：
-    发生错误
-- 中性
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
   chip.position:
-    - 左上角
-    - 右上角
-    - 左下角
-    - 右下角
-道具类：
-  姓名：“无名氏”
-  描述：“软件工程师”
-  虚拟角色.src：'https：//i.pravatar.cc/150？u = john-doe'
-  芯片：
-    颜色：'主要'
-    位置：右上
+    - top-left
+    - top-right
+    - bottom-left
+    - bottom-right
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
+  avatar.src: 'https://i.pravatar.cc/150?u=john-doe'
+  chip:
+    color: 'primary'
+    position: top-right
 ---
 ::
 
@@ -108,72 +108,72 @@ links:
 
 ::component-props
 ---
-产品名称：芯片
-忽略：
-  如图所示
-  尺寸
-- 独立
+name: Chip
+ignore:
+  - as
+  - size
+  - standalone
 ---
 ::
 
 ::
 
-尺寸
+### Size
 
 使用`size`道具更改用户头像和文本的大小。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  姓名
-  描述：
-  - 化身. src
-  芯片
-道具：
-  姓名：“无名氏”
-  描述：“软件工程师”
-  虚拟角色.src：'https：//i.pravatar.cc/150？u = john-doe'
-  芯片：真
-  尺寸：xl
+prettier: true
+ignore:
+  - name
+  - description
+  - avatar.src
+  - chip
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
+  avatar.src: 'https://i.pravatar.cc/150?u=john-doe'
+  chip: true
+  size: xl
 ---
 ::
 
-方向
+### 方向
 
-使用`orientation`道具更改方向。默认为`horizontal`。
+使用`orientation`道具将方向. px更改为`horizontal`。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  - 化身. src
-道具：
-  方向：'垂直'
-  姓名：“无名氏”
-  描述：“软件工程师”
-  虚拟角色.src：'https：//i.pravatar.cc/150？u = john-doe'
+prettier: true
+ignore:
+  - avatar.src
+props:
+  orientation: 'vertical'
+  name: 'John Doe'
+  description: 'Software Engineer'
+  avatar.src: 'https://i.pravatar.cc/150?u=john-doe'
 ---
 ::
 
-链接
+### Link
 
-您可以从[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)组件传递任何属性，例如`to`、`target`、`rel`等。
+您可以从[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)组件传递任何属性，如`to`、`target`、`rel`等。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  姓名
-  描述
-  虚拟形象. src
-  目标值
-道具：
-  发送至：“https：//github.com/benjamincanac”
-  目的：'_blank'
-  姓名：“本杰明·卡纳克”
-  描述：“软件工程师”
-  虚拟角色.src：“https：//github.com/benjamincanac.png”
+prettier: true
+ignore:
+  - name
+  - description
+  - avatar.src
+  - target
+props:
+  to: 'https://github.com/benjamincanac'
+  target: '_blank'
+  name: 'Benjamin Canac'
+  description: 'Software Engineer'
+  avatar.src: 'https://github.com/benjamincanac.png'
 ---
 ::
 
@@ -181,20 +181,20 @@ links:
 `NuxtLink`组件将继承您传递给`User`组件的所有其他属性。
 ::
 
-活性成分
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

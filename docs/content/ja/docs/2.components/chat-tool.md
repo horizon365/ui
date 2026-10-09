@@ -17,57 +17,57 @@ ChatToolコンポーネントは、「コンポーネントの検索」や「ド
 
 ::component-example
 ---
-崩壊真
-きれい真
-名前'chat—tool—example'
+collapse: true
+prettier: true
+name: 'chat-tool-example'
 ---
 ::
 
-### テキスト
+### Text
 
 `text`プロパティを使用して、ツールステータステキストを設定します。
 
 ::component-code
 ---
-隠す
-  - クラス
-小道具
-  text '検索されたコンポーネント'
-  クラス'w—60'
+hide:
+  - class
+props:
+  text: 'Searched components'
+  class: 'w-60'
 ---
 ::
 
-### サフィックス
+### Suffix
 
-`suffix`プロパティを使用して、メインラベルの後にセカンダリテキストを表示します。
+メインラベルの後にセカンダリテキストを表示するには、`suffix`プロパティを使用します。
 
 ::component-code
 ---
-隠す
-  - クラス
-無視
-  - テキスト
-小道具
-  text '読み込みコンポーネント'
-  サフィックス'ボタン'
-  クラス'w—60'
+hide:
+  - class
+ignore:
+  - text
+props:
+  text: 'Reading component'
+  suffix: 'Button'
+  class: 'w-60'
 ---
 ::
 
 ### ストリーミング
 
-`streaming`プロパティを使用して、ツールがアクティブに実行されていることを示します。テキストにはキラキラアニメーションが表示されます。
+`streaming`プロパティを使用して、ツールがアクティブに実行されていることを示します。
 
 ::component-code
 ---
-隠す
-  - クラス
-無視
-  - テキスト
-小道具
-  ストリーミング真
-  text 'コンポーネントの検索...'
-  クラス'w—60'
+hide:
+  - class
+ignore:
+  - text
+props:
+  streaming: true
+  text: 'Searching components...'
+  class: 'w-60'
 ---
 ::
 
@@ -75,228 +75,228 @@ ChatToolコンポーネントは、「コンポーネントの検索」や「ド
 `@nuxt/ui/utils/ai`の`isToolStreaming`ユーティリティを使用して、ツール部品がまだ実行中かどうかを確認します。ツールがユーザーの承認を待っているときに`false`を返します。
 ::
 
-###  Shimmer
+### Shimmer
 
-ストリーミング時、トリガーラベルは[`ChatShimmer`](/docs/components/chat-shimmer)コンポーネントを使用します。`shimmer` propを使用して、`duration`と`spread`をカスタマイズします。
+ストリーミング時、トリガーラベルは[`ChatShimmer`](/docs/components/chat-shimmer)コンポーネントを使用します。`shimmer`プロパティを使用して`duration`と`spread`をカスタマイズします。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  - テキスト
-小道具
-  ストリーミング真
-  text 'コンポーネントの検索...'
-  シマー
-    期間2
-    スプレッド2
-  クラス'w—60'
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+props:
+  streaming: true
+  text: 'Searching components...'
+  shimmer:
+    duration: 2
+    spread: 2
+  class: 'w-60'
 ---
 ::
 
-### アイコン
+### Icon
 
-`icon` propを使用して、[ Icon ](/docs/components/icon)コンポーネントをトリガーの横に表示します。
+`icon`プロパティを使用して、[Icon](/docs/components/icon)コンポーネントをトリガーの横に表示します。
 
 ::component-code
 ---
-隠す
-  - クラス
-無視
-  - テキスト
-小道具
-  アイコンi—lucide—search
-  text '検索されたコンポーネント'
-  クラス'w—60'
+hide:
+  - class
+ignore:
+  - text
+props:
+  icon: i-lucide-search
+  text: 'Searched components'
+  class: 'w-60'
 ---
 ::
 
-### ローディング
+### Loading
 
-`loading` propを使用して読み込みインジケータを表示します。`loading-icon` propを使用して読み込みアイコンをカスタマイズします。
+`loading`プロパティを使用して読み込みインジケータを表示します。`loading-icon`プロパティを使用して読み込みアイコンをカスタマイズします。
 
 ::component-code
 ---
-隠す
-  - クラス
-無視
-  - テキスト
-小道具
-  読み込み真
-  text 'コンポーネントの検索...'
-  クラス'w—60'
+hide:
+  - class
+ignore:
+  - text
+props:
+  loading: true
+  text: 'Searching components...'
+  class: 'w-60'
 ---
 ::
 
-###  Loadingアイコン
+### Loading Icon
 
-読み込みアイコンをカスタマイズするには、`loading-icon`プロパティを使用します。デフォルトは`i-lucide-loader-circle`です。
+`loading-icon`プロパティを使用してロードアイコンをカスタマイズします。デフォルトは`i-lucide-loader-circle`です。
 
 ::component-code
 ---
-隠す
-  - クラス
-無視
-  - テキスト
-小道具
-  読み込み真
-  loadingIcon 'i—lucide—loader'
-  text 'コンポーネントの検索...'
-  クラス'w—60'
+hide:
+  - class
+ignore:
+  - text
+props:
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  text: 'Searching components...'
+  class: 'w-60'
 ---
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.loading`キーの下の`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`app.config.ts`の`ui.icons.loading`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.loading`キーの下の`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`vite.config.ts`の`ui.icons.loading`キーでグローバルにカスタマイズできます。
 :::
 ::
 
-###  Chevron
+### Chevron
 
-`chevron` propを使用して、シェブロンアイコンの位置を変更します。
+`chevron`プロパティを使用して、シェブロンアイコンの位置を変更します。
 
 ::note
-`chevron`が`icon`で`leading`に設定されている場合、アイコンはホバーと開いたときにシェブロンと入れ替わります。
+`chevron`が`icon`で`leading`に設定されている場合、アイコンはホバーと開いたときにシェブロンと切り替わります。
 ::
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  - テキスト
-小道具
-  シェブロン：リーディング
-  アイコンi—lucide—search
-  text '検索されたコンポーネント'
-  クラス'w—60'
-スロット
-  デフォルト|
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+props:
+  chevron: leading
+  icon: i-lucide-search
+  text: 'Searched components'
+  class: 'w-60'
+slots:
+  default: |
 
-    ツール出力内容
+    Tool output content
 ---
 ::
 
-### シェブロンアイコン
+### Chevronアイコン
 
-`chevron-icon` propを使用して、chevron [ Icon ](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-chevron-down`です。
+`chevron-icon`プロパティを使用して、シェブロン[Icon](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-chevron-down`です。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  - テキスト
-小道具
-  chevronIcon 'i—lucide—arrow—down'
-  text '検索されたコンポーネント'
-  クラス'w—60'
-スロット
-  デフォルト|
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+props:
+  chevronIcon: 'i-lucide-arrow-down'
+  text: 'Searched components'
+  class: 'w-60'
+slots:
+  default: |
 
-    ツール出力内容
+    Tool output content
 ---
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.chevronDown`キーの下の`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`app.config.ts`の`ui.icons.chevronDown`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.chevronDown`キーの下の`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`vite.config.ts`の`ui.icons.chevronDown`キーでグローバルにカスタマイズできます。
 :::
 ::
 
-### バリアント
+### Variant
 
-ビジュアルスタイルを変更するには、`variant`プロパティを使用します。デフォルトは`inline`です。
-
-::component-code
----
-きれい真
-隠す
-  - クラス
-無視
-  - テキスト
-  - アイコン
-小道具
-  バリアントカード
-  text '検索されたコンポーネント'
-  アイコンi—lucide—search
-  シェブロントレーリング
-  クラス'w—60'
-スロット
-  デフォルト|
-
-    ツール出力内容
----
-::
-
-### アクションbadge {label="4.10+" class="align-text-top"}
-
-`actions` propを使用して、[ Button ](/docs/components/button)のリストをトリガーの下に表示します。これは、実行前にユーザーの確認が必要なツールに便利です。
+`variant`プロパティを使用してビジュアルスタイルを変更します。デフォルトは`inline`です。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  - テキスト
-  - アイコン
-  - バリアント
-  - アクション
-小道具
-  アクション
-    -  label '承認'
-    -  label 'Deny'
-      色ニュートラル
-      バリアントソフト
-  text 'ターミナルコマンドを実行'
-  バリアントカード
-  アイコンi—lucide—terminal
-  クラス'w—60'
-スロット
-  デフォルト|
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+  - icon
+props:
+  variant: card
+  text: 'Searched components'
+  icon: i-lucide-search
+  chevron: trailing
+  class: 'w-60'
+slots:
+  default: |
 
-    $pnpm実行lint
+    Tool output content
 ---
 ::
 
-## 例
+### Actions badge{label="4.10+" class="align-text-top"}
+
+`actions`プロパティを使用して、トリガーの下に[Button](/docs/components/button)のリストを表示します。
+
+::component-code
+---
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+  - icon
+  - variant
+  - actions
+props:
+  actions:
+    - label: 'Approve'
+    - label: 'Deny'
+      color: neutral
+      variant: soft
+  text: 'Run terminal command'
+  variant: card
+  icon: i-lucide-terminal
+  class: 'w-60'
+slots:
+  default: |
+
+    $ pnpm run lint
+---
+::
+
+## サンプル
 
 ::tip{to="/docs/components/chat"}
-インストール手順、サーバー設定、使用例については、** Chat **概要ページをご覧ください。
+インストール手順、サーバーのセットアップ、使用例については、**Chat**の概要ページをご覧ください。
 ::
 
-### 承認フロー付き：badge {label="4.10+" class="align-text-top"}
+### 承認フロー付きbadge{label="4.10+" class="align-text-top"}
 
-`actions` propを使用して、[ AI SDK ](https://ai-sdk.dev/docs/agents/tool-approvals)を使用してツール承認フローを構築します。ツールパートが`approval-requested`状態にある場合、承認アクションと拒否アクションを表示し、`addToolApprovalResponse`で応答します。
+`actions`プロパティを使用して、[AI SDK](https://ai-sdk.dev/docs/agents/tool-approvals)を使用してツール承認フローを構築します。ツールパーツが`approval-requested`ステートの場合、承認および拒否アクションを表示し、`addToolApprovalResponse`で応答します。
 
 ::component-example
 ---
-崩壊真
-きれい真
-名前'チャットツール承認例'
+collapse: true
+prettier: true
+name: 'chat-tool-approval-example'
 ---
 ::
 
 ::tip
-`@nuxt/ui/utils/ai`から`isToolApprovalPending`ユーティリティを使用して保留中の承認を検出します。`isToolStreaming`はこの状態で`false`を返します。
+`@nuxt/ui/utils/ai`の`isToolApprovalPending`ユーティリティを使用して保留中の承認を検出します。`isToolStreaming`はこの状態で`false`を返します。
 
 ```vue
 <script setup lang="ts">
@@ -322,24 +322,24 @@ const { messages, addToolApprovalResponse } = useChat({
 ```
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-###  Emits
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

@@ -12,164 +12,164 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ColorPicker.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Verwenden Sie die `v-model`-Direktive, um den Wert des ColorPickers zu steuern.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: '#00C16A'
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: '#00C16A'
 ---
 ::
 
-Verwenden Sie `default-value` prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
+Verwenden Sie die `default-value`-prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - defaultValue
-Props:
-  DefaultValue: '#00BCD4'(Standardwert: #00BCD4)
+props:
+  defaultValue: '#00BCD4'
 ---
 ::
 
 ### RGB-Format
 
-Verwenden Sie `format` prop, um den Wert `rgb` des ColorPickers festzulegen.
+Verwenden Sie die `format`-Prop, um den `rgb`-Wert des ColorPickers festzulegen.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-  @@ph010@@format
-Außen:
-  - modellWert
-Props:
-  Dateiformat: RGB
-  modellWert: 'rgb (0, 193, 106)'
+ignore:
+  - modelValue
+  - format
+external:
+  - modelValue
+props:
+  format: rgb
+  modelValue: 'rgb(0, 193, 106)'
 ---
 ::
 
-### HSL-Format
+### HSL Format Bearbeiten
 
-Verwenden Sie `format` prop, um den Wert `hsl` des ColorPickers festzulegen.
+Verwenden Sie die `format`-Prop, um den `hsl`-Wert des ColorPickers festzulegen.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-  @@ph016@@format
-Außen:
-  - modellWert
-Props:
-  Format: HSL
-  modellWert: 'hsl (153, 100%, 37.8%)'
+ignore:
+  - modelValue
+  - format
+external:
+  - modelValue
+props:
+  format: hsl
+  modelValue: 'hsl(153, 100%, 37.8%)'
 ---
 ::
 
-### CMYK-Format
+### CMYK Format Bearbeiten
 
-Verwenden Sie `format` prop, um den Wert `cmyk` des ColorPickers festzulegen.
+Verwenden Sie die `format`-Prop, um den `cmyk`-Wert des ColorPickers festzulegen.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-  @@ph022@@format Bearbeiten
-Außen:
-  - modellWert
-Props:
-  Dateiformat: cmyk
-  modellWert: 'cmyk (100%, 0%, 45.08%, 24.31%)'
+ignore:
+  - modelValue
+  - format
+external:
+  - modelValue
+props:
+  format: cmyk
+  modelValue: 'cmyk(100%, 0%, 45.08%, 24.31%)'
 ---
 ::
 
 ### CIELab Format (englisch)
 
-Verwenden Sie `format` prop, um den Wert `lab` des ColorPickers festzulegen.
+Verwenden Sie die `format`-Prop, um den `lab`-Wert des ColorPickers festzulegen.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-  @@ph028@@format
-Außen:
-  - modellWert
-Props:
-  Dateiendung: Lab
-  modellWert: 'labor (68.88%-60.41% 32. 55%)'
+ignore:
+  - modelValue
+  - format
+external:
+  - modelValue
+props:
+  format: lab
+  modelValue: 'lab(68.88% -60.41% 32.55%)'
 ---
 ::
 
-### Throttle (@ Throttle) Bearbeiten
+### Throttle ist ein
 
-Verwenden Sie `throttle` prop, um den Throttle-Wert des ColorPickers einzustellen.
+Verwenden Sie die `throttle` prop, um den Drosselwert des ColorPicker einzustellen.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Schlagzahl: 100
-  Modellwert: '#00C16A'
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  throttle: 100
+  modelValue: '#00C16A'
 ---
 ::
 
-@@ph034@@Größe
+### size
 
-Verwenden Sie `size` prop, um die Größe des ColorPickers einzustellen.
+Verwenden Sie die `size`-Prop, um die Größe des ColorPickers einzustellen.
 
 ::component-code
 ---
-Props:
-  Größe: XL
+props:
+  size: xl
 ---
 ::
 
-### disabled @ disabled
+### Disabled (nicht verfügbar)
 
-Verwenden Sie `disabled` prop, um den ColorPicker zu deaktivieren.
+Verwenden Sie die `disabled`-Prop, um den ColorPicker zu deaktivieren.
 
 ::component-code
 ---
-Props:
-  Behindert: Wahr
+props:
+  disabled: true
 ---
 ::
 
 ## Beispiele
 
-### Wie ein Farbwähler
+### As ein Farbwähler
 
 Verwenden Sie eine [Button](/docs/components/button) und eine [Popover](/docs/components/popover) Komponente, um eine Farbauswahl zu erstellen.
 
 ::component-example
 ---
-Bezeichnung: color-picker-chooser-example.
+name: 'color-picker-chooser-example'
 ---
 ::
 
-@@048@gbt-gbt.de
+## API Bearbeiten
 
-@@ph049@@@gmail.de
+### Props für
 
-Komponenten Props
+:component-props
 
-@@ph050@emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-@@ph051@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph052@@changelog @@@ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

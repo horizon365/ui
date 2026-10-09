@@ -11,14 +11,14 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/locale/LocaleSelect.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Le composant LocaleSelect étend le composant [SelectMenu](/docs/components/select-menu), afin que vous puissiez passer n'importe quelle propriété telle que `color`,`variant`,`size`, etc.
+Le composant LocaleSelect étend le composant [SelectMenu](/docs/components/select-menu), de sorte que vous pouvez passer n'importe quelle propriété telle que `color`, `variant`, `size`, etc.
 
 ::framework-only
-#numérique
+#nuxt
 ::note{to="/docs/getting-started/integrations/i18n/nuxt"}
-Ce composant est destiné à être utilisé avec le système **i18n**. En savoir plus à ce sujet dans le guide.
+Ce composant est destiné à être utilisé avec le système **i18n**. En savoir plus à ce sujet dans le manuel.
 ::
 
 #vue
@@ -32,13 +32,13 @@ Ce composant est destiné à être utilisé avec le système **i18n**. En savoir
 Cela peut entraîner un affichage différent, par exemple, Microsoft Edge sous Windows affiche le code ISO 3166 - 1 alpha-2 à la place, car aucune icône de drapeau n'est fournie avec les polices du système d'exploitation.
 ::
 
-@@P012@@Région
+### Locaux
 
-Utilisez le prop `locales` avec un tableau de paramètres locaux de `@nuxt/ui/locale`.
+Utilisez le prop `locales` avec un tableau de locales de `@nuxt/ui/locale`.
 
 ::component-example
 ---
-nom: 'locale-select-example'
+name: 'locale-select-example'
 ---
 ::
 
@@ -59,7 +59,7 @@ const locale = ref('en')
 ### Localisation dynamique
 
 ::framework-only
-#numérique
+#nuxt
 ::div
 Vous pouvez l'utiliser avec Nuxt i18n:
 
@@ -106,12 +106,12 @@ const { locale, setLocale } = useI18n()
 
 ::
 
-@@pH058@@api
+## api
 
-@@509@@propriété
+### Props
 
-Composants-props
+:component-props
 
-@changelog @changelog
+## Changelog
 
-: composant-changelog {prefix="locale"}
+:component-changelog{prefix="locale"}

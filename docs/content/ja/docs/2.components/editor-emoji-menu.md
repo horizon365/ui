@@ -10,27 +10,27 @@ links:
 
 ## 使用法
 
-EditorEmojiMenuコンポーネントは、エディタで`:`文字を入力すると、絵文字候補のメニューを表示し、選択した絵文字を挿入します。`@tiptap/extension-emoji`パッケージと一緒に動作し、絵文字サポートを提供します。
+EditorEmojiMenuコンポーネントは、エディタで`:`文字を入力すると、絵文字候補のメニューを表示し、選択した絵文字を挿入します。絵文字サポートを提供するために`@tiptap/extension-emoji`パッケージと一緒に動作します。
 
 ::note
-TipTapの[ Suggestion ](https://tiptap.dev/docs/editor/api/utilities/suggestion))ユーティリティの上に構築された`useEditorMenu` composableを使用して、入力時に項目をフィルタリングし、キーボードナビゲーション（矢印キー、入力して選択、エスケープして閉じる）をサポートします。
+TipTapの[ Suggestion](https://tiptap.dev/docs/editor/api/utilities/suggestion)ユーティリティ上に構築された`useEditorMenu`コンポーザブルを使用して、入力時に項目をフィルタリングし、キーボードナビゲーション（矢印キー、Enterから選択、エスケープから閉じる）をサポートします。
 ::
 
 ::caution
-エディタインスタンスにアクセスするには、[ Editor ](/docs/components/editor)コンポーネントのデフォルトスロット内で使用する必要があります。
+エディタインスタンスにアクセスするには、[Editor](/docs/components/editor)コンポーネントのデフォルトスロット内で使用する必要があります。
 ::
 
 ::component-example
 ---
-昇格：true
-崩壊真
-名前'editor—emoji—menu—example'
-クラス'p—8'
+elevated: true
+collapse: true
+name: 'editor-emoji-menu-example'
+class: 'p-8'
 ---
 ::
 
 ::warning
-`@tiptap/extension-emoji`パッケージはデフォルトではインストールされていませんので、別途インストールする必要があります。
+`@tiptap/extension-emoji`パッケージはデフォルトではインストールされていません。
 ::
 
 ::callout{icon="i-custom-tiptap" to="https://tiptap.dev/docs/editor/extensions/nodes/emoji" target="_blank"}
@@ -39,7 +39,7 @@ TipTapの[ Suggestion ](https://tiptap.dev/docs/editor/api/utilities/suggestion)
 
 ### アイテム
 
-`items` propを、次のプロパティを持つオブジェクトの配列として使用します。
+`items`プロパティを次のプロパティを持つオブジェクトの配列として使用します。
 
 - `name: string`{lang="ts-type"}
 - `emoji: string`{lang="ts-type"}
@@ -50,10 +50,10 @@ TipTapの[ Suggestion ](https://tiptap.dev/docs/editor/api/utilities/suggestion)
 
 ::component-example
 ---
-昇格：真
-崩壊真
-名前'editor—emoji—menu—items—example'
-クラス'p—8'
+elevated: true
+collapse: true
+name: 'editor-emoji-menu-items-example'
+class: 'p-8'
 ---
 ::
 
@@ -61,7 +61,7 @@ TipTapの[ Suggestion ](https://tiptap.dev/docs/editor/api/utilities/suggestion)
 `items`プロパティに配列の配列を渡して、項目の分離グループを作成することもできます。
 ::
 
-###  Char
+### Char
 
 トリガー文字を変更するには、`char`プロパティを使用します。デフォルトは`:`{lang="ts-type"}です。
 
@@ -73,9 +73,9 @@ TipTapの[ Suggestion ](https://tiptap.dev/docs/editor/api/utilities/suggestion)
 </template>
 ```
 
-### 提案：badge {label="4.7+" class="align-text-top"}
+### 提案badge{label="4.7+" class="align-text-top"}
 
-`suggestion` propを使用して、TipTapの[ Suggestion ](https://tiptap.dev/docs/editor/api/utilities/suggestion#settings)に一致する挙動をカスタマイズします。
+`suggestion`プロパティを使用して、TipTapの[ Suggestionマッチ動作](https://tiptap.dev/docs/editor/api/utilities/suggestion#settings)をカスタマイズします。
 
 これは、デフォルトの空白プレフィックスを必要とせず、トリガー文字が他の文字の直後に開く場合に便利です。
 
@@ -93,9 +93,9 @@ TipTapの[ Suggestion ](https://tiptap.dev/docs/editor/api/utilities/suggestion)
 </template>
 ```
 
-### オプション
+### Options
 
-`options` propを使用して、[ Floating UI options ](https://floating-ui.com/docs/computeposition#options)を使用して位置決めの動作をカスタマイズします。
+`options`プロパティを使用して、[Floating UIオプション](https://floating-ui.com/docs/computeposition#options)を使用して位置決めの動作をカスタマイズします。
 
 ```vue
 <template>
@@ -112,16 +112,16 @@ TipTapの[ Suggestion ](https://tiptap.dev/docs/editor/api/utilities/suggestion)
 </template>
 ```
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

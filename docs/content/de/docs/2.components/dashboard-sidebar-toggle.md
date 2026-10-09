@@ -11,44 +11,44 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardSidebarToggle.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Die Komponente DashboardSidebarToggle wird von den Komponenten [DashboardNavbar](/docs/components/dashboard-navbar) und [DashboardSidebar](/docs/components/dashboard-sidebar) verwendet.)
+Die Komponente DashboardSidebarToggle wird von den Komponenten [DashboardNavbar](/docs/components/dashboard-navbar) und [DashboardSidebar](/docs/components/dashboard-sidebar) verwendet.
 
-Es wird automatisch auf dem Handy angezeigt, um die Seitenleiste umzuschalten,**Sie müssen es nicht manuell hinzufügen **.
+Es wird automatisch auf dem Handy angezeigt, um die Sidebar umzuschalten, **Sie müssen es nicht manuell hinzufügen **.
 
 ::component-code
 ---
-Hide:
-  @@11@Klasse
-Props:
-  Klasse: lg: flex
+hide:
+  - class
+props:
+  class: 'lg:flex'
 ---
 ::
 
-Es erweitert die Komponente [Button](/docs/components/button), so dass Sie jede Eigenschaft wie `color`,`variant`,`size` usw. übergeben können.
+Es erweitert die [Button](/docs/components/button)-Komponente, sodass Sie jede Eigenschaft wie `color`, `variant`, `size` usw. übergeben können.
 
 ::component-code
 ---
-Hide:
-  @@ph019@class
-Ignoriert:
-  @@ph020@@variantenreich
-Props:
-  Variante: "Unterwürfig"
-  Klasse: 'lg: flex'
+hide:
+  - class
+ignore:
+  - variant
+props:
+  variant: 'subtle'
+  class: 'lg:flex'
 ---
 ::
 
 ::note
-Die Schaltfläche ist standardmäßig auf `color="neutral"` und `variant="ghost"`.
+Die Standardeinstellungen sind `color="neutral"` und `variant="ghost"`.
 ::
 
-@@ph023@@Beispiele
+## Examples [Bearbeiten]
 
-@@ph024@@@@ph025 @@@ innerhalb @@ ph025 @ slot
+### Innerhalb des `toggle` Steckplatzes
 
-Auch wenn diese Komponente automatisch auf dem Handy angezeigt wird, können Sie den `toggle`-Slot der Komponenten [DashboardNavbar](/docs/components/dashboard-navbar) und [DashboardSidebar](/docs/components/dashboard-sidebar) verwenden, um den Button anzupassen.
+Auch wenn diese Komponente automatisch auf dem Handy angezeigt wird, können Sie den `toggle`-Steckplatz der Komponenten [DashboardNavbar](/docs/components/dashboard-navbar) und [DashboardSidebar](/docs/components/dashboard-sidebar) verwenden, um die Schaltfläche anzupassen.
 
 ::code-group
 
@@ -89,23 +89,23 @@ definePageMeta({
 ::
 
 ::tip
-Bei Verwendung der `toggle-side` prop der Komponenten `DashboardSidebar` und `DashboardNavbar` wird die Schaltfläche auf der angegebenen Seite angezeigt.
+Bei Verwendung der `toggle-side`-Prop der Komponenten `DashboardSidebar` und `DashboardNavbar` wird die Schaltfläche auf der angegebenen Seite angezeigt.
 ::
 
-## api
+## API (englisch)
 
-@@@@@@@@@@@ph071@@props
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
 Diese Komponente unterstützt auch alle nativen `<button>` HTML-Attribute.
 ::
 
-@@@@@@@@@ph073@theme
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph074@@changelog @@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

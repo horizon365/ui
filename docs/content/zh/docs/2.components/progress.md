@@ -14,96 +14,96 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Progress.vue
 ---
 
-## 使用情况
+## 用法
 
 使用`v-model`指令控制Progress的值。
 
 ::component-code
 ---
-外部：
-  - 模型值
-道具：
-  型号值：50
+external:
+  - modelValue
+props:
+  modelValue: 50
 ---
 ::
 
 ::note
-使用[`ProgressGroup`](/docs/components/progress-group)组件可将单个条形图拆分为多个段，这些段的总和为一个总和。
+使用[`ProgressGroup`](/docs/components/progress-group)组件可以将单个条形分割为多个段，这些段的总和为一个总数。
 ::
 
-### 最大
+### Max
 
-使用`max`道具设置进度的最大值。
+使用`max` prop设置Progress的最大值。
 
 ::component-code
 ---
-外部的：
-  - modelValue（型号值）
-道具：
-  型号值：3
-  最大值：4
+external:
+  - modelValue
+props:
+  modelValue: 3
+  max: 4
 ---
 ::
 
-使用带有字符串数组的`max`道具可在条形下显示活动步骤，Progress的最大值为数组的长度。
+使用`max`道具和字符串数组来显示条形图下的活动步骤，进度的最大值是数组的长度。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 最大值
-外部：
-- 模型值
-道具：
-  型号值：3
-  最大值：
-    - '正在等待...'
-    - '复制中...'
-    - '正在迁移...'
-    - '正在部署...'
-    "好了!"
+prettier: true
+ignore:
+  - max
+external:
+  - modelValue
+props:
+  modelValue: 3
+  max:
+    - 'Waiting...'
+    - 'Cloning...'
+    - 'Migrating...'
+    - 'Deploying...'
+    - 'Done!'
 ---
 ::
 
-状态
+### 状态
 
 使用`status`道具在进度条上方显示当前进度值。
 
 ::component-code
 ---
-外部：
-- 模型值
-道具：
-  型号值：50
-  状态：真
+external:
+  - modelValue
+props:
+  modelValue: 50
+  status: true
 ---
 ::
 
 ::tip
-状态会追踪长条图的结尾，请使用`:ui="{ status: 'w-full' }"`让它横跨整个长度。
+状态跟踪条的末端，使用`:ui="{ status: 'w-full' }"`使其跨越整个宽度。
 ::
 
-不确定
+### 不确定
 
-如果未设置`v-model`或值为`null`，则"进度"将变为_indeterminate_。进度条将以`carousel`的形式显示，但您可以使用[`animation`](#animation)属性对其进行更改。
+如果未设置`v-model`或该值为`null`，则进度变为_indeterminate_。进度条的动画显示为`carousel`，但您可以使用[`animation`](#animation)属性对其进行更改。
 
 ::component-code
 ---
-外部：
-  - 模型值
-道具：
-  模型值：空
+external:
+  - modelValue
+props:
+  modelValue: null
 ---
 ::
 
-动画
+### 动画
 
-使用`animation`道具可将进度的动画更改为反向旋转、摆动条或弹性条。默认为`carousel`。
+使用`animation`道具将进度的动画更改为反向旋转木马、摆动条或弹性条。将进度更改为`carousel`。
 
 ::component-code
 ---
-道具：
-  动画：摆动
+props:
+  animation: swing
 ---
 ::
 
@@ -111,76 +111,76 @@ links:
 当用户喜欢减少运动时，动画自动禁用，不确定条显示为全宽脉冲。
 ::
 
-定位
+### 定向
 
-使用`orientation`道具来变更进度的方向。预设为`horizontal`。
+使用`orientation`道具将Progress.dll的方向更改为`horizontal`。
 
 ::component-code
 ---
-忽略：
-  班级
-道具：
-  方向：垂直
-  类别：'h-48'
+ignore:
+  - class
+props:
+  orientation: vertical
+  class: 'h-48'
 ---
 ::
 
-彩色的
+### Color
 
 使用`color`道具更改进度的颜色。
 
 ::component-code
 ---
-道具：
-  颜色：中性
+props:
+  color: neutral
 ---
 ::
 
 ::tip
-此属性还接受主题外调色板的任何CSS颜色值。
+这个道具也接受任何CSS颜色值的调色板以外的主题。
 ::
 
-尺寸
+### Size
 
-使用`size`道具更改进度的大小。
+使用`size`属性更改进度的大小。
 
 ::component-code
 ---
-道具：
-  尺寸：xl
+props:
+  size: xl
 ---
 ::
 
-倒置的
+### 倒置
 
-使用`inverted`道具以可视化方式反转进度。
+使用`inverted`道具来直观地反转进度。
 
 ::component-code
 ---
-道具：
-  反转：true
-  型号值：25
+props:
+  inverted: true
+  modelValue: 25
 ---
 ::
 
-美国石油学会
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽
+### 老虎机
 
-：组件插槽
+:component-slots
 
-发射器
+### 发射
 
-：组件发射
+:component-emits
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

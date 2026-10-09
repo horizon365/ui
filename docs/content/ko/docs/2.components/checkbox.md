@@ -6,7 +6,7 @@ keywords:
   - check
   - boolean
 links:
-  - label: 확인 란
+  - label: 체크박스
     icon: i-custom-reka-ui
     to: https://reka-ui.com/docs/components/checkbox
   - label: Github (GitHub)
@@ -14,246 +14,246 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Checkbox.vue
 ---
 
-##  사용
+## Usage
 
-`v-model` 지시문을 사용하여 체크 박스의 체크 상태를 제어합니다.
+`v-model` 지시어를 사용하여 체크 박스의 선택된 상태를 제어합니다.
 
 ::component-code
 ---
-무시하기:
-  - modelValue - modelValue 이미지
-외부:
-  - modelValue - modelValue 이미지
-소품 :
-  modelValue: true 모델
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: true
 ---
 ::
 
-상태를 제어할 필요가 없을 때는 `default-value`prop을 사용하여 초기값을 설정합니다.
+상태를 제어할 필요가 없을 때 `default-value` prop을 사용하여 초기 값을 설정합니다.
 
 ::component-code
 ---
-무시하기:
-  - defaultValue - defaultValue
-소품 :
-  defaultValue : true : true
+ignore:
+  - defaultValue
+props:
+  defaultValue: true
 ---
 ::
 
-### 확실하지 않음
+### indeterminate 불확정
 
-`v-model` 지시어 또는 `default-value`prop의 `indeterminate` 값을 사용하여 체크 상자를 [indeterminate state](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes)로 설정합니다.
+`v-model` 지시어 또는 `default-value` prop의 `indeterminate` 값을 사용하여 Checkbox를 [indeterminate state](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes)로 설정합니다.
 
 ::component-code
 ---
-무시하기:
-  -  defaultValue
-소품 :
-  defaultValue : 'indeterminate'
+ignore:
+  - defaultValue
+props:
+  defaultValue: 'indeterminate'
 ---
 ::
 
-###  불확실한 아이콘
+### 미정 아이콘
 
-`indeterminate-icon`prop을 사용하여 불확실한 아이콘을 사용자 정의합니다. 기본값은 `i-lucide-minus`입니다.
+`indeterminate-icon` 소품을 사용하여 불확정 아이콘을 사용자 정의합니다. 기본값은 `i-lucide-minus`입니다.
 
 ::component-code
 ---
-무시하기:
-  -  defaultValue
-소품 :
-  defaultValue: 'indeterminate' 오류
-  indeterminateIcon: 'i-lucide-plus'에 대한 의견
+ignore:
+  - defaultValue
+props:
+  defaultValue: 'indeterminate'
+  indeterminateIcon: 'i-lucide-plus'
 ---
 ::
 
 ::framework-only
-#nuxt 코드
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.minus` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.minus` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.minus` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.minus` 키 아래의 `vite.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-###  레이블
+### Label 태그
 
-`label`prop을 사용하여 체크 상자의 레이블을 설정합니다.
+`label` prop을 사용하여 체크 상자의 레이블을 설정합니다.
 
 ::component-code
 ---
-소품 :
-  레이블 : Check Me
+props:
+  label: Check me
 ---
 ::
 
-`required`prop을 사용할 때 레이블 옆에 별표가 추가됩니다.
+`required` 소품을 사용할 때 레이블 옆에 별표가 추가됩니다.
 
 ::component-code
 ---
-무시하기:
-  -  label
-소품 :
+ignore:
+  - label
+props:
   required: true
-  레이블 : Check Me
+  label: Check me
 ---
 ::
 
-###  설명
+### Description
 
-`description`prop을 사용하여 확인란에 대한 설명을 설정합니다.
+`description` prop을 사용하여 Checkbox에 대한 설명을 설정합니다.
 
 ::component-code
 ---
-무시하기:
-  -  label
-소품 :
-  레이블 : Check Me
-  사진: "This is a checkbox"
+ignore:
+  - label
+props:
+  label: Check me
+  description: 'This is a checkbox.'
 ---
 ::
 
-###  아이콘
+### Icon
 
-체크 상자 아이콘을 설정하려면 `icon`prop을 사용합니다. 기본값은 `i-lucide-check`입니다.
+`icon` prop을 사용하여 체크 박스 아이콘을 설정합니다. 기본값은 `i-lucide-check`입니다.
 
 ::component-code
 ---
-무시하기:
-  -  label
-  - defaultValue - defaultValue
-소품 :
-  아이콘 : i-lucide-heart
-  defaultValue : true : true
-  레이블 : Check Me
+ignore:
+  - label
+  - defaultValue
+props:
+  icon: 'i-lucide-heart'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
 ::framework-only
-#nuxt #nuxt
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.check` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.check` 키 아래의 `app.config.ts` 내에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.check` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.check` 키 아래의 `vite.config.ts` 내에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-###  색상
+### Color 색상
 
-`color`prop을 사용하여 체크 상자의 색상을 변경합니다.
-
-::component-code
----
-무시하기:
-  -  label
-  - defaultValue - defaultValue
-소품 :
-  색상: 중립
-  defaultValue : true : true
-  레이블 : Check Me
----
-::
-
-###  변형
-
-`variant`prop 을 사용하여 체크박스의 변형을 변경합니다.
+`color` Prop을 사용하여 체크 상자의 색상을 변경합니다.
 
 ::component-code
 ---
-무시하기:
-  -  label
-  - defaultValue - defaultValue
-소품 :
-  색상 : primary
-  variant: '카드'
-  defaultValue : true : true
-  레이블 : Check Me
+ignore:
+  - label
+  - defaultValue
+props:
+  color: neutral
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-###  크기
+### Variant
 
-`size`prop을 사용하여 체크 상자의 크기를 변경합니다.
+`variant` Prop을 사용하여 Checkbox의 변형을 변경합니다.
 
 ::component-code
 ---
-무시하기:
-  -  label
-  - defaultValue - defaultValue
-소품 :
-  크기: xl
-  변형: 리스트
-  defaultValue : true : true
-  레이블 : Check Me
+ignore:
+  - label
+  - defaultValue
+props:
+  color: 'primary'
+  variant: 'card'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-###  지표
+### Size
 
-위치를 변경하거나 표시기를 숨기려면 `indicator`prop을 사용합니다. 기본값은 `start`입니다.
+`size` Prop을 사용하여 Checkbox의 크기를 변경합니다.
+
+::component-code
+---
+ignore:
+  - label
+  - defaultValue
+props:
+  size: xl
+  variant: list
+  defaultValue: true
+  label: Check me
+---
+::
+
+### 표시기
+
+`indicator` 소품을 사용하여 위치를 변경하거나 표시기를 숨깁니다. 기본값은 `start`입니다.
 
 ::note
-`indicator`가 `hidden`일 때 아이콘이 레이블 위에 표시됩니다.
+`indicator`가 `hidden`인 경우 아이콘이 대신 레이블 위에 표시됩니다.
 ::
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  label
-  -  아이콘
-  - defaultValue - defaultValue
-소품 :
-  사진: "hidden"
-  variant: '카드'
-  아이콘 : i-lucide-heart
-  defaultValue : true : true
-  레이블 : Check Me
+prettier: true
+ignore:
+  - label
+  - icon
+  - defaultValue
+props:
+  indicator: 'hidden'
+  variant: 'card'
+  icon: 'i-lucide-heart'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-###  비활성 화
+### 비활성 화 됨
 
-`disabled`prop을 사용하여 확인란을 비활성화합니다.
+`disabled` prop을 사용하여 Checkbox를 비활성화합니다.
 
 ::component-code
 ---
-무시하기:
-  -  label
-소품 :
-  사용 안 함:true
-  레이블 : Check Me
+ignore:
+  - label
+props:
+  disabled: true
+  label: Check me
 ---
 ::
 
-##  API
+## API 파일
 
-###  Props
+### Props 코드
 
-:컴포넌트 - 소품
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-이 컴포넌트는 모든 네이티브 `<button>`HTML 속성을 지원합니다.
+이 구성 요소는 모든 기본 `<button>` HTML 속성을 지원합니다.
 ::
 
-###  슬롯
+### 슬롯
 
-:구성요소 - 슬롯
+:component-slots
 
-###  Emits
+### Emits
 
-:구성요소 - 방사
+:component-emits
 
-##  테마
+## Theme 테마
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

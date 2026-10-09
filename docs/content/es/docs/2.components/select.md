@@ -5,7 +5,7 @@ keywords:
   - dropdown
   - picker
 links:
-  - label: Seleccionado
+  - label: Seleccione
     icon: i-custom-reka-ui
     to: https://reka-ui.com/docs/components/select
   - label: GitHub también
@@ -13,466 +13,466 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Select.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice la directiva `v-model` para controlar el valor de Select o la prop `default-value` para establecer el valor inicial cuando no necesite controlar su estado.
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @003@clase
-Ignora:
-  - modelValue (Edición española)
-  @@0005@artículos
-  @06@clase
-Externo:
-  @0007@artículos
-  - modelValue (Edición española)
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  Items:
-    @000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @@P011@En proceso
-    @12012 @@ Trabajo
-  Categoría: W-48
+prettier: true
+hide:
+  - class
+ignore:
+  - modelValue
+  - items
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-@13@130 puntos
+xf023xArtículos
 
-Utilice la prop `items` como una matriz de cadenas, números o booleanos:
+Utilice el prop `items` como una matriz de cadenas, números o booleanos:
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@P015@modelValue (Edición española)
-  @@16000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @17@clase
-Externo:
-  @180000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @@P2019@modelValue (Edición española)
-Props:
-  Archivo de la etiqueta: 'Backlog'
+prettier: true
+ignore:
+  - modelValue
+  - items
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
   items:
-    @200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @@21@@todo
-    @@222@En proceso
-    @@23@230 años
-  Categoría: W-48
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 También puede pasar una matriz de objetos con las siguientes propiedades:
 
-@@
-[`value?: string`{lang="ts-type"}#value-key)
-[`type?: "label" | "separator" | "item"`](#with-items-type)
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@
-@@
-@@@ph068@@@ph069@@@ph070
+- xx`label?: string`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`disabled?: boolean`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ::component-code
 ---
-Ignora:
-  - modelValue (Edición española)
-  @@2007@artículos
-  @073@clase
-Externo:
-  @@70000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @@P075@modelValue (Edición española)
-Externalidades:
-  @@776@@SelectItem [en inglés]
-Props:
-  Archivo de la etiqueta: 'backlog'
+ignore:
+  - modelValue
+  - items
+  - class
+external:
+  - items
+  - modelValue
+externalTypes:
+  - SelectItem[]
+props:
+  modelValue: 'backlog'
   items:
-    - label:'Lista de pedidos'
-      Nombre: Backlog
-    - label:"Todo"
-      Nombre: "Todo"
-    - label:"En proceso"
-      valor: 'en_progreso'
-    - label:"Hecho"
-      Valoración:"DONE"
-  Categoría: W-48
+    - label: 'Backlog'
+      value: 'backlog'
+    - label: 'Todo'
+      value: 'todo'
+    - label: 'In Progress'
+      value: 'in_progress'
+    - label: 'Done'
+      value: 'done'
+  class: 'w-48'
 ---
 ::
 
 ::caution
-Cuando se utilizan objetos, es necesario hacer referencia a la propiedad `value` del objeto en la directiva `v-model` o en la prop.
+Cuando se usan objetos, es necesario hacer referencia a la propiedad `value` del objeto en la directiva `v-model` o en la prop. `default-value`.
 ::
 
-También puede pasar un array de arrays al prop `items` para mostrar grupos separados de elementos.
+También puede pasar una matriz de matrices al soporte `items` para mostrar grupos separados de elementos.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  - modelValue (Edición española)
-  @086 @ Artículos
-  @087 @ clase
-Externo:
-  @@888@artículos
-  @@pH089@modelValue (Edición española)
-Props:
-  Categoría:"Apple"
-  Items:
-    - (Edición española)
-      @@pH091@@banana
-      @@pH092@@blueberry
-      @@pH093@@Aveyores.es
-      @@Pineapple (en inglés)
-    - -La berenjena
-      @096@broccoli
-      @@pH097@@Carotón
-      @098@@espanol
-      @099@@leek
-  Categoría: W-48
----
-::
-
-### Value Key
-
-Puede cambiar la propiedad que se utiliza para establecer el valor utilizando la prop.`value-key`.
-
-::component-code
----
-Ignora:
-  @@pH103@modelValue (Edición española)
-  @104@ValueKey
-  @500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @@clase106
-Externo:
-  @107@puntos
-  - modelValue (Edición española)
-Externalidades:
-  @109@109@109@109@109@109@109@109)
-Props:
-  Archivo de la etiqueta: 'backlog'
-  ValueKey: 'id'
+prettier: true
+ignore:
+  - modelValue
+  - items
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Apple'
   items:
-    - label:'Lista de pedidos'
-      Nombre: Backlog
-    - label:"Todo"
-      Nombre: "Todo"
-    - label:"En proceso"
-      id: 'en_progreso'
-    - label:"Hecho"
-      Nombre: "Hecho"
-  Categoría: W-48
+    - - Apple
+      - Banana
+      - Blueberry
+      - Grapes
+      - Pineapple
+    - - Aubergine
+      - Broccoli
+      - Carrot
+      - Courgette
+      - Leek
+  class: 'w-48'
 ---
 ::
 
-@@114@114
+### Value Clave de seguridad
 
-Utilice el prop `multiple` para permitir selecciones múltiples, los elementos seleccionados estarán separados por una coma en el disparador.
+Puede cambiar la propiedad que se utiliza para establecer el valor mediante el uso de la prop. `value-key`.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @116@116@116
-  @117@artículos
-  @118@multiples
-  @119 @ clase
-Externo:
-  @120@artículos
-  @121@121@121
-Props:
-  Modelación:
-    @@222@Backlog (Edición española)
-    @123 @ todo
-  Multiplicación: True
-  Items:
-    @124@124@124
-    @125 @ todo
-    - En proceso
-    @127
-  Categoría: W-48
+ignore:
+  - modelValue
+  - valueKey
+  - items
+  - class
+external:
+  - items
+  - modelValue
+externalTypes:
+  - SelectItem[]
+props:
+  modelValue: 'backlog'
+  valueKey: 'id'
+  items:
+    - label: 'Backlog'
+      id: 'backlog'
+    - label: 'Todo'
+      id: 'todo'
+    - label: 'In Progress'
+      id: 'in_progress'
+    - label: 'Done'
+      id: 'done'
+  class: 'w-48'
+---
+::
+
+### Multiplicación
+
+Utilice el prop `multiple` para permitir múltiples selecciones, los elementos seleccionados estarán separados por una coma en el disparador.
+
+::component-code
+---
+prettier: true
+ignore:
+  - modelValue
+  - items
+  - multiple
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue:
+    - Backlog
+    - Todo
+  multiple: true
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 ::caution
-Asegúrese de pasar un array a la directiva `default-value` o a la directiva `v-model`.
+Asegúrese de pasar una matriz a la prop `default-value` o a la directiva `v-model`.
 ::
 
-@@P130@Placeholder (Edición española)
+### Placeholder (Edición española)
 
 Utilice el prop `placeholder` para establecer un texto de marcador de posición.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@132@artículos
-  @333@clase
-Externo:
-  @@134@artículos
-Props:
-  marcador de posición:'Select status'
+prettier: true
+ignore:
+  - items
+  - class
+external:
+  - items
+props:
+  placeholder: 'Select status'
   items:
-    @135@@Palibrio
-    @136@all of
-    - En proceso
-    @138@138
-  Categoría: W-48
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-@139 @ Contenido
+### Contenido
 
-Utilice el prop `content` para controlar cómo se representa el contenido Select, como su `align` o `side`, por ejemplo.
+Utilice la prop `content` para controlar cómo se representa el contenido Select, como su `align` o `side`, por ejemplo.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@143@artículos
-  - modelValor
-  @145 @ clase
-Externo:
-  @146 @ puntos
-  - modelValue (Edición española)
-Items:
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+items:
   content.align:
-    @148 @ Inicio
-    @@149 @ Centro Español
-    @F150 @@ Inicio
+    - start
+    - center
+    - end
   content.side:
-    @151 @@ derecho
-    @252@izquierda
-    @153 @@ Inicio
-    @F154 @ abajo
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  Contenido:
-    Alineación: Centro
-    Categoría: Bottom
-    Desplazamiento: 8
+    - right
+    - left
+    - top
+    - bottom
+props:
+  modelValue: 'Backlog'
+  content:
+    align: center
+    side: bottom
+    sideOffset: 8
   items:
-    @@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @156 @ todo
-    - En proceso
-    @158
-  Categoría: W-48
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 ::note
-Estas opciones solo se aplican cuando `content.position` es `popper`(predeterminado).
+Estas opciones solo se aplican cuando `content.position` es `popper` (predeterminado).
 ::
 
-### Posición: badge{label="4.7+" class="align-text-top"}
+Ubicación: badge{label="4.7+" class="align-text-top"}
 
 Utilice el prop `content.position` para controlar cómo se posiciona el contenido Select en relación con el disparador. Predeterminado a `popper`, que posiciona el contenido como otros popovers. Configurarlo en `item-aligned` para alinear el contenido con el elemento seleccionado (similar a un menú nativo de macOS).
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @166 @ artículos
-  - modelValue (Edición española)
-  @168@clase
-Externo:
-  @169 @ artículos
-  - modelValue (Edición española)
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
 items:
   content.position:
-    -  artículo alineado
-    @2017@popper
-Props:
-  Categoría:"Todo"
-  Contenido:
-    Categoría: item-aligned
-  Items:
-    @@173@@Retraso
-    @174 @ todo
-    - En proceso
-    @176
-  Categoría: W-48
+    - item-aligned
+    - popper
+props:
+  modelValue: 'Todo'
+  content:
+    position: item-aligned
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-@F177@Flecha
+XPH280xFlecha
 
-Utilice el prop `arrow` para mostrar una flecha en el Select.
+Utilice el accesorio `arrow` para mostrar una flecha en el Select.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @179@artículos
-  - modèleValeur
-  @181@clase
-  @2018@Arreaza
-Externo:
-  @@183@1833
-  - modelValue (Edición española)
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  Arrow: Verdad
-  Items:
-    @185@1850 años
-    @186 @ todo
-    - En proceso
-    @188
-  Categoría: W-48
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+  - arrow
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  arrow: true
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-@P189@color
+Xph302xColor (Edición española)
 
-Utilice el prop `color` para cambiar el color del anillo cuando el selector está enfocado.
+Utilice el accesorio `color` para cambiar el color del anillo cuando el selector está enfocado.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@191@artículos
-  - modelValue (Edición española)
-  @@clase193
-Externo:
-  @194@artículos
-  - modelValue (Edición española)
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  Color: Neutral
-  Destacado: Verdadero
-  Items:
-    @1966@@Retraso
-    @197@todo
-    - En proceso
-    @199 @
-  Categoría: W-48
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  color: neutral
+  highlight: true
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 ::note
-El `highlight` prop se utiliza aquí para mostrar el estado de enfoque. Se utiliza internamente cuando se produce un error de validación.
+El prop `highlight` se utiliza aquí para mostrar el estado de enfoque. Se utiliza internamente cuando se produce un error de validación.
 ::
 
-@201@Variación
+### Variante
 
 Utilice el prop `variant` para cambiar la variante del Select.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@203@artículos
-  @@P204@modelValue (Edición española)
-  @205@clase
-Externo:
-  @206@artículos
-  @2017@modelValoración
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  Color: Neutral
-  Variación: Sutil
-  Destacado: Falso
-  Items:
-    @@208@2008
-    @2009@todo
-    @@210@En proceso
-    @211 @
-  Categoría: W-48
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  color: neutral
+  variant: subtle
+  highlight: false
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-@212 @ Tamaño
+### Tamaño
 
-Utilice el prop `size` para cambiar el tamaño del Select.
+Utilice el prop `size` para cambiar el tamaño de la selección.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@214@artículos
-  - modelValue (Edición española)
-  @216@clase
-Externo:
-  @217@artículos
-  - modelValue (Edición española)
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  Tamaño: XL
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  size: xl
   items:
-    @@219@219@219@219
-    @220@todo
-    @@221@En proceso
-    @222@2222@222@222
-  Categoría: W-48
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-@223@Icon
+### Icon
 
 Utilice el prop `icon` para mostrar un [Icon](/docs/components/icon) dentro del Select.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @229@artículos
-  - modelValue (Edición española)
-  @231@clase
-Externo:
-  @232@artículos
-  @@P233@modelValue (Edición española)
-Props:
-  Archivo de la etiqueta: 'Backlog'
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
   icon: 'i-lucide-search'
-  Tamaño: MD
-  Items:
-    @@234@234@234@234
-    @235@@todo
-    @236@En proceso
-    @237
-  Categoría: W-48
+  size: md
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-### Trailing Icon (en inglés)
+### Trailing Icono de diseño
 
-Utilice el prop `trailing-icon` para personalizar el [Icon](/docs/components/icon).
+Utilice el prop `trailing-icon` para personalizar el [Icon](/docs/components/icon) final.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @245@artículos
-  - modelValue (Edición española)
-  @247 @ clase
-Externo:
-  @248@artículos
-  @249@modelValue (Edición española)
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  TrailingIcono: 'i-lucide-arrow-down'
-  Tamaño: MD
-  Items:
-    @250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @251@todo
-    @@252@En desarrollo
-    @@253@2535
-  Categoría: W-48
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  trailingIcon: 'i-lucide-arrow-down'
+  size: md
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 ::framework-only
-#Nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.chevronDown`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.chevronDown`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.chevronDown`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.chevronDown`.
 :::
 ::
 
@@ -482,132 +482,132 @@ Utilice el prop `selected-icon` para personalizar el icono cuando se selecciona 
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @261@artículos
-  @262@262@262@262@262@262@262@262@262@262@262@262@262@262@262@262@262@26262@262@26262@26262@2662@262666@266666666@266662@266662@26666666666666666@226666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
-  @263@clase
-Externo:
-  @264@artículos
-  @265 @ Modelo
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  Icono: 'i-lucide-flame'
-  Tamaño: MD
-  Items:
-    @266@266@266@266@2666@2666@2666
-    @267@todo
-    @@268@En proceso
-    @269
-  Categoría: W-48
----
-::
-
-::framework-only
-#Nuxidad
-:::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.check`.
-:::
-
-#vista
-:::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.check`.
-:::
-::
-
-@274@AvatarEditar
-
-Utilice el prop `avatar` para mostrar un [Avatar](/docs/components/avatar) dentro de la selección.
-
-::component-code
----
-Categoría: true
-Ignora:
-  @280000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+prettier: true
+ignore:
+  - items
   - modelValue
-  @282@clase
-  - avatar.carga
-Externo:
-  @284@artículos
-  - modelValue (Edición española)
-Props:
-  Categoría:'Nuxt'
-  El avatar:
-    src: 'https://github.com/nuxt.png'
-    Categoría: Lazy
-  Items:
-    @286 @@ Nuxt
-    - NuxtHub (en inglés)
-    - NuxtLabs (en inglés)
-    - Módulos Nuxt
-    - Comunidad Nuxt
-  Categoría: W-48
----
-::
-
-@@291@Cargando
-
-Utilice el prop `loading` para mostrar un icono de carga en el Select.
-
-::component-code
----
-Categoría: true
-Ignora:
-  @@293@artículos
-  @@P294@modelValue (Edición española)
-  @295@clase
-Externo:
-  @296@artículos
-  @@P297@modelValue (Edición española)
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  Carga: Verdad
-  Trayectoria: Falso
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  selectedIcon: 'i-lucide-flame'
+  size: md
   items:
-    @298@298@298
-    @299@@todo
-    - En proceso
-    @301
-  Categoría: W-48
----
-::
-
-### Loading icon
-
-Utilice el prop `loading-icon` para personalizar el icono de carga. Por defecto a `i-lucide-loader-circle`.
-
-::component-code
----
-Categoría: true
-Ignora:
-  @305 @ artículos
-  - modelValue (Edición española)
-  @307@clase
-Externo:
-  @308@artículos
-  @@pH309@modelValue (Edición española)
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  Carga: Verdad
-  LoadingIcon: 'i-lucide-loader'(en inglés)
-  items:
-    @310@Backlog en Español
-    @311 @ Todo
-    - En proceso
-    @313
-  Categoría: W-48
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 ::framework-only
-#Nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.loading`.
+Puede personalizar este icono de forma global en su XPH449X bajo la tecla XPH450X.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.loading`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.check`.
+:::
+::
+
+### Avatar en Español
+
+Utilice el prop `avatar` para mostrar un [Avatar](/docs/components/avatar) dentro del Select.
+
+::component-code
+---
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+  - avatar.loading
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Nuxt'
+  avatar:
+    src: 'https://github.com/nuxt.png'
+    loading: lazy
+  items:
+    - Nuxt
+    - NuxtHub
+    - NuxtLabs
+    - Nuxt Modules
+    - Nuxt Community
+  class: 'w-48'
+---
+::
+
+### Cargando
+
+Utilice el accesorio `loading` para mostrar un icono de carga en el Select.
+
+::component-code
+---
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  loading: true
+  trailing: false
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
+---
+::
+
+### Icono de carga
+
+Utilice el prop `loading-icon` para personalizar el icono de carga.
+
+::component-code
+---
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
+---
+::
+
+::framework-only
+#nuxt
+:::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.loading`.
+:::
+
+#vue
+:::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.loading`.
 :::
 ::
 
@@ -617,73 +617,73 @@ Utilice el prop `disabled` para desactivar el Select.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @320@artículos
-  @@ph321@@marcador de posición
-  @222@clase
-Externo:
-  @323@artículos
-Props:
-  Discapacitados: Verdadero
-  marcador de posición:'Select status'
-  Items:
-    @@2424@2424@2424
-    @2500@todo
-    @@P326@En proceso
-    @@27@277
-  Categoría: W-48
+prettier: true
+ignore:
+  - items
+  - placeholder
+  - class
+external:
+  - items
+props:
+  disabled: true
+  placeholder: 'Select status'
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-@328 Ejemplos
+## Ejemplos
 
-### Con el tipo de elementos
+### Con tipo de elementos
 
 Puede utilizar la propiedad `type` con `separator` para mostrar un separador entre elementos o `label` para mostrar una etiqueta.
 
 ::component-code
 ---
-Colapso: Verdad
-Ignora:
-  @@P333@modelValue (Edición española)
-  @@334@artículos
-  @335 @ clase
-Externo:
-  @336@artículos
-  - modelValue (Edición española)
-Externalidades:
-  @@338@@SelectItem [en inglés]
-Props:
-  Categoría:"Apple"
-  Items:
-    - tipo:'etiqueta'
-      Categoría:"Frutas"
-    @P340@Apple en Español
-    @@pH341@@Banana
-    @342@blueberry
-    @@343@343@343
-    @Pineapple 344@@Pineapple
-    - tipo:'separador'
-    - tipo:'etiqueta'
-      Categoría:"Vegetales"
-    @347@@Albacete
-    @348@broccoli
-    @349@Carroza
-    @350@@courgette
-    @351@leek
-  Categoría: W-48
+collapse: true
+ignore:
+  - modelValue
+  - items
+  - class
+external:
+  - items
+  - modelValue
+externalTypes:
+  - SelectItem[]
+props:
+  modelValue: 'Apple'
+  items:
+    - type: 'label'
+      label: 'Fruits'
+    - Apple
+    - Banana
+    - Blueberry
+    - Grapes
+    - Pineapple
+    - type: 'separator'
+    - type: 'label'
+      label: 'Vegetables'
+    - Aubergine
+    - Broccoli
+    - Carrot
+    - Courgette
+    - Leek
+  class: 'w-48'
 ---
 ::
 
-### Con icono en los elementos
+### Con icono en elementos
 
-Puede utilizar la propiedad `icon` para mostrar un [Icon](/docs/components/icon) dentro de los elementos.
+Puede usar la propiedad `icon` para mostrar un [Icon](/docs/components/icon) dentro de los elementos.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre del archivo: 'select-items-icon-example'
+collapse: true
+name: 'select-items-icon-example'
 ---
 ::
 
@@ -701,8 +701,8 @@ Puede utilizar la propiedad `avatar` para mostrar un [Avatar](/docs/components/a
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'select-items-avatar-ejemplo'
+collapse: true
+name: 'select-items-avatar-example'
 ---
 ::
 
@@ -720,8 +720,8 @@ Puede utilizar la propiedad `chip` para mostrar un [Chip](/docs/components/chip)
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'select-items-chip-example'
+collapse: true
+name: 'select-items-chip-example'
 ---
 ::
 
@@ -729,13 +729,13 @@ Nombre: 'select-items-chip-example'
 En este ejemplo, la ranura `#leading` se utiliza para mostrar el chip seleccionado.
 ::
 
-### Estado abierto de control
+### Control estado abierto
 
-Puede controlar el estado abierto utilizando la prop `default-open` o la directiva `v-model:open`.
+Puede controlar el estado abierto usando la prop `default-open` o la directiva `v-model:open`.
 
 ::component-example
 ---
-Nombre: 'select-open-example'
+name: 'select-open-example'
 ---
 ::
 
@@ -743,44 +743,44 @@ Nombre: 'select-open-example'
 En este ejemplo, aprovechando [`defineShortcuts`](/docs/composables/define-shortcuts), puede alternar el Select pulsando: kbd{value="O"}.
 ::
 
-### Con icono rotativo
+### Con icono giratorio
 
 Aquí hay un ejemplo con un icono giratorio que indica el estado abierto del Select.
 
 ::component-example
 ---
-Nombre: 'select-icon-example'
+name: 'select-icon-example'
 ---
 ::
 
-### Con artículos recuperados
+### Con elementos recuperados
 
 Puede obtener elementos de una API y usarlos en el Select.
 
 ::component-example
 ---
-Nombre del archivo: 'select-fetch-example'
-Colapso: Verdad
+name: 'select-fetch-example'
+collapse: true
 ---
 ::
 
 ::note
-Este ejemplo utiliza `useLazyFetch` con `immediate: false` para obtener datos solo cuando se abre el menú, evitando llamadas innecesarias a la API al cargar la página.
+Este ejemplo usa `useLazyFetch` con `immediate: false` para obtener datos solo cuando se abre el menú, evitando llamadas innecesarias a la API al cargar la página.
 ::
 
 ### Con desplazamiento infinito: badge{label="4.4+" class="align-text-top"}
 
-Puede usar el [`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/) composable para cargar más datos a medida que el usuario se desplaza.
+Puede utilizar el composable [`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/) para cargar más datos a medida que el usuario se desplaza.
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Destacados:
-  @395 @ 41 años
-  @396 @ 51
-Desconocido: true
-Nombre: 'select-infinite-scroll-example'
+prettier: true
+collapse: true
+highlights:
+  - 41
+  - 51
+overflowHidden: true
+name: 'select-infinite-scroll-example'
 ---
 ::
 
@@ -788,14 +788,14 @@ Nombre: 'select-infinite-scroll-example'
 Este ejemplo utiliza `useLazyFetch` con `immediate: false`, por lo que los datos solo se cargan a medida que el usuario se desplaza.
 ::
 
-### Con el ancho de contenido completo
+### Con ancho completo de contenido
 
 Puede ampliar el contenido a todo el ancho de sus elementos añadiendo la clase `min-w-fit` en la ranura `ui.content`.
 
 ::component-example
 ---
-Nombre del archivo: 'select-content-width-example'
-Colapso: Verdad
+name: 'select-content-width-example'
+collapse: true
 ---
 ::
 
@@ -815,37 +815,37 @@ export default defineAppConfig({
 ```
 ::
 
-@414
+## API (Edición española)
 
-@415@Propuestas
+### Props (Edición española)
 
-Componentes Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-Este componente también soporta todos los atributos HTML nativos `<button>`.
+Este componente también admite todos los atributos HTML nativos de `<button>`.
 ::
 
-@417@417@417
+### Slots en línea
 
-Componentes de slots
+:component-slots
 
-@418@@Emisiones
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@419@@Exposicion
+### Exposición
 
 Al acceder al componente a través de una referencia de plantilla, puede utilizar lo siguiente:
 
 | Nombre| Tipo|
 | ---- | ---- |
-| @200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000| @@|
-| @@|@@|
+| `triggerRef`x{lang="ts-type"} (Edición española)| `Ref<HTMLButtonElement \| null>`x{lang="ts-type"}|
+| `viewportRef`xx{lang="ts-type"} (Edición española)| `Ref<HTMLDivElement \| null>`xx{lang="ts-type"} (Edición española)|
 
-@@2828 @ El tema
+## Temas
 
-Componente Tema
+:component-theme
 
-@229@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

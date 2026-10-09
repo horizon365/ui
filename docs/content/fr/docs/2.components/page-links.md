@@ -8,105 +8,105 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageLinks.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Utilisez le composant PageLinks pour afficher une liste de liens .
-
-::component-code
----
-Collapse : vrai
-Étiquette : true
-Ignorer :
-  @@ph001@liens
-Extérieur :
-  @@ph002@liens
-Extérieurs :
-  @@@P300@@@P3000 [ ]
-Props :
-  à gauche :
-    - label : ' Modifier cette page '
-      Icône : i-lucide - file-pen
-      Deux :https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
-    - label : ' Star sur GitHub '
-      Étiquette : i-lucide - star
-      Deux :https://github.com/nuxt/ui
-    - label : " Découverte "
-      Étiquette : i-lucide - rocket
-      Deux :https://github.com/nuxt/ui/releases
----
-::
-
-@@ph007@lien
-
-Utilisez le`links`prop comme un tableau d'objets avec les propriétés suivantes :
-
-@@
-@@
-@@
-@@
-
-Vous pouvez passer n'importe quelle propriété du composant[Link](/docs/components/link#props)comme`to`,`target`, etc.
+Utilisez le composant PageLinks pour afficher une liste de liens.
 
 ::component-code
 ---
-Étiquette : true
-Ignorer :
-  @@227@liens
-Extérieur :
-  @28@@liens
-Extérieurs :
-  @@229@@liaison [ ]
-Props :
-  à gauche :
-    - label : ' Modifier cette page '
-      Icône : i-lucide - file-pen
-      Deux :https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
-    - label : ' Star sur GitHub '
-      Étiquette : i-lucide - star
-      Deux :https://github.com/nuxt/ui
-    - label : " Découverte "
-      Étiquette : i-lucide - rocket
-      Deux :https://github.com/nuxt/ui/releases
+collapse: true
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageLink[]
+props:
+  links:
+    - label: 'Edit this page'
+      icon: i-lucide-file-pen
+      to: https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
+    - label: 'Star on GitHub'
+      icon: i-lucide-star
+      to: https://github.com/nuxt/ui
+    - label: 'Releases'
+      icon: i-lucide-rocket
+      to: https://github.com/nuxt/ui/releases
 ---
 ::
 
-@@ph033@titre
+### Liens
 
-Utilisez la prop`title`pour afficher un titre au-dessus des liens .
+Utilisez le prop `links` comme un tableau d'objets avec les propriétés suivantes:
+
+- x`label: string`x{lang="ts-type"}
+- x`icon?: string`x{lang="ts-type"}
+- x`class?: any`x{lang="ts-type"}
+- x`ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkLeadingIcon?: ClassNameValue }`xx{lang="ts-type"}
+
+Vous pouvez passer n'importe quelle propriété du composant [Link](/docs/components/link#props) telle que `to`, `target`, etc.
 
 ::component-code
 ---
-Étiquette : true
-ignorer :
-  @@ph035@liens
-Extérieure :
-  @@ph036@liens
-Extérieurs :
-  @@P337@@P337 [ réf . nécessaire ]
-Props :
-  Titre : " Communauté "
-  à gauche :
-    - label : ' Modifier cette page '
-      Icône : i-lucide - file-pen
-      Deux :https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
-    - label : ' Star sur GitHub '
-      Étiquette : i-lucide - star
-      Deux :https://github.com/nuxt/ui
-    - label : " Découverte "
-      Étiquette : i-lucide - rocket
-      Deux :https://github.com/nuxt/ui/releases
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageLink[]
+props:
+  links:
+    - label: 'Edit this page'
+      icon: i-lucide-file-pen
+      to: https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
+    - label: 'Star on GitHub'
+      icon: i-lucide-star
+      to: https://github.com/nuxt/ui
+    - label: 'Releases'
+      icon: i-lucide-rocket
+      to: https://github.com/nuxt/ui/releases
 ---
 ::
 
-@@ph041@@Exemples
+### Titre
+
+Utilisez le prop `title` pour afficher un titre au-dessus des liens.
+
+::component-code
+---
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageLink[]
+props:
+  title: 'Community'
+  links:
+    - label: 'Edit this page'
+      icon: i-lucide-file-pen
+      to: https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
+    - label: 'Star on GitHub'
+      icon: i-lucide-star
+      to: https://github.com/nuxt/ui
+    - label: 'Releases'
+      icon: i-lucide-rocket
+      to: https://github.com/nuxt/ui/releases
+---
+::
+
+## Exemples
 
 ::note
-Bien que ces exemples utilisent[Nuxt Content](https://content.nuxt.com), les composants peuvent être intégrés à n'importe quel système de gestion de contenu .
+Bien que ces exemples utilisent [Nuxt Content](https://content.nuxt.com), les composants peuvent être intégrés à n'importe quel système de gestion de contenu.
 ::
 
-### Dans une page
+### Au sein d'une page
 
-Utilisez le composant PageLinks dans l'emplacement`bottom`du composant ContentToc pour afficher une liste de liens sous la table des matières .
+Utilisez le composant PageLinks dans l'emplacement `bottom` du composant ContentToc pour afficher une liste de liens sous la table des matières.
 
 ```vue [pages/\[...slug\\].vue]{48-52}
 <script setup lang="ts">
@@ -168,20 +168,20 @@ const links = computed<PageLink[]>(() => [{
 </template>
 ```
 
-@@ph107@api
+## API
 
-@@ph108@props
+### Props
 
-Composants-props
+:component-props
 
-@@ph109@@Slots
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph110@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@111@changements
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

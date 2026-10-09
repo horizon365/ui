@@ -9,16 +9,16 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Steps.vue
 ---
 
-##  사용
+## Usage
 
 단계 구성요소로 제목을 줄바꿈하여 단계 목록을 표시합니다.
 
-`level`prop을 사용하여 단계에 사용할 머리글을 정의합니다.
+`level` prop을 사용하여 단계에 사용할 제목을 정의합니다.
 
 :::code-preview{class="[&>div]:*:w-full"}
 ::steps{level="4"}
 
-####  Nuxt UI 모듈을 `nuxt.config.ts` 에 추가합니다.
+#### x`nuxt.config.ts`에 Nuxt UI 모듈 추가
 
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
@@ -26,13 +26,13 @@ export default defineNuxtConfig({
 })
 ```
 
-####  당신의 CSS에서 Tailwind CSS를 가져오기
+#### Import 당신의 CSS에 Tailwind CSS
 
 ```css [app/assets/css/main.css]
 @import "tailwindcss";
 ```
 
-####  개발 서버 시작
+#### 개발 서버를 시작합니다.
 
 ```bash
 npm run dev
@@ -40,7 +40,7 @@ npm run dev
 
 ::
 
-# 코드
+#code
 
 ````mdc
 ::steps{level="4"}
@@ -70,20 +70,20 @@ npm 실행 dev
 
 :::
 
-##  API
+## API
 
-### Props 이미지
+### Props 코드
 
-: component-props {prose}
+:component-props{prose}
 
-###  슬롯
+### Slots
 
-: component-slots {prose}
+:component-slots{prose}
 
-##  테마
+## Theme 테마
 
-:component-theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## 변경 로그
 
-: component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

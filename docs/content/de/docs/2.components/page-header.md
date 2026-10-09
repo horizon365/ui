@@ -8,11 +8,11 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageHeader.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Die PageHeader-Komponente zeigt einen Header für Ihre Seite.
 
-Verwenden Sie es innerhalb des Standardsteckplatzes der Komponente [Page](/docs/components/page) vor der Komponente [PageBody](/docs/components/page-body)::
+Verwenden Sie es innerhalb des Standardsteckplatzes der Komponente [Page](/docs/components/page), bevor die Komponente [PageBody](/docs/components/page-body):
 
 ```vue {3}
 <template>
@@ -24,96 +24,96 @@ Verwenden Sie es innerhalb des Standardsteckplatzes der Komponente [Page](/docs/
 </template>
 ```
 
-@@ph018@title
+### Titel
 
-Verwenden Sie `title` prop, um einen Titel im Header anzuzeigen.
-
-::component-code
----
-Hide:
-  @@ph020@@class
-Props:
-  Überschrift:"PageHeader"
-  Klasse: "W-voll"
----
-::
-
-@@ph021@@Beschreibung
-
-Verwenden Sie `description` prop, um eine Beschreibung im Header anzuzeigen.
+Verwenden Sie die `title`-Prop, um einen Titel im Header anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph023@title
-Hide:
-  @@ph024@gmail.de
-Props:
-  Überschrift:"PageHeader"
-  description: 'Ein responsiver Seitenkopf mit Titel, Beschreibung und Aktionen.'
-  Klasse: "W-voll"
+hide:
+  - class
+props:
+  title: 'PageHeader'
+  class: 'w-full'
 ---
 ::
 
-@@ph025@Überschrift
+### Beschreibung
 
-Verwenden Sie `headline` prop, um eine Überschrift im Header anzuzeigen.
+Verwenden Sie die `description`-Prop, um eine Beschreibung im Header anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph027@title
-  @@ph028@beschreibung
-Hide:
-  @@ph029@gmail.de
-Props:
-  Überschrift:"PageHeader"
-  description: 'Ein responsiver Seitenkopf mit Titel, Beschreibung und Aktionen.'
-  Überschrift:"Komponenten"
-  Klasse: "W-voll"
+prettier: true
+ignore:
+  - title
+hide:
+  - class
+props:
+  title: 'PageHeader'
+  description: 'A responsive page header with title, description and actions.'
+  class: 'w-full'
 ---
 ::
 
-@@@@@@@@300@@Links
+### Überschrift
 
-Verwenden Sie `links` prop, um eine Liste von [Button](/docs/components/button) im Header anzuzeigen.
+Verwenden Sie die `headline`-Prop, um eine Überschrift in der Kopfzeile anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Außen:
-  @@@@@36@@links
-Externe Typen:
-  @@ph037@buttonprops [Bearbeiten | Quelltext bearbeiten]
-Ignoriert:
-  @@@@@@38@title
-  @@ph039 @ Beschreibung
-  @@ph040@headline @@ Überschrift
-  @@@@41@@@links
-Hide:
-  @@ph042@gmail.de
-Props:
-  Überschrift:"PageHeader"
-  description: 'Ein responsiver Seitenkopf mit Titel, Beschreibung und Aktionen.'
-  Überschrift:"Komponenten"
-  Linke:
-    - label:'GitHub'(auf Englisch)
-      Icon: I-Simple-Icons-GitHub
-      https://github.com/nuxt/ui/tree/v4/src/runtime/components/PageHeader.vue
-      Ziel: _blank
-  Klasse: "W-voll"
+prettier: true
+ignore:
+  - title
+  - description
+hide:
+  - class
+props:
+  title: 'PageHeader'
+  description: 'A responsive page header with title, description and actions.'
+  headline: 'Components'
+  class: 'w-full'
 ---
 ::
 
-@@ph044@@Beispiele
+### Links (Englisch)
+
+Verwenden Sie die `links`-Prop, um eine Liste von [Button](/docs/components/button) im Header anzuzeigen.
+
+::component-code
+---
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - headline
+  - links
+hide:
+  - class
+props:
+  title: 'PageHeader'
+  description: 'A responsive page header with title, description and actions.'
+  headline: 'Components'
+  links:
+    - label: 'GitHub'
+      icon: i-simple-icons-github
+      to: 'https://github.com/nuxt/ui/tree/v4/src/runtime/components/PageHeader.vue'
+      target: '_blank'
+  class: 'w-full'
+---
+::
+
+## Beispiele
 
 ::note
-Während diese Beispiele [Nuxt Content](https://content.nuxt.com) verwenden, können die Komponenten in jedes Content-Management-System integriert werden.
+Während diese Beispiele [Nuxt Content](https://content.nuxt.com) verwenden, können die Komponenten in jedes Content Management System integriert werden.
 ::
 
-### Innerhalb einer Seite
+### innerhalb einer Seite
 
 Verwenden Sie die PageHeader-Komponente in einer Seite, um die Kopfzeile der Seite anzuzeigen:
 
@@ -158,20 +158,20 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 </template>
 ```
 
-@@900@bpb
+## API (englisch)
 
-@@ph091@@@props
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
-@@ph092@@slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph093@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph094@@changelog @@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

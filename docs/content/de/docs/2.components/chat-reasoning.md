@@ -11,16 +11,16 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatReasoning.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Die ChatReasoning-Komponente rendert einen zusammenklappbaren Block, der KI-Argumentation oder Denkinhalte anzeigt. Es öffnet sich automatisch während des Streamings und schließt sich danach automatisch.
 
 ::component-example
 ---
-Einsturz: wahr
-Schöner: wahr
-Chat-Reasoning-Beispiel
-Klasse: 'h-[252px]'(nicht vorhanden)
+collapse: true
+prettier: true
+name: 'chat-reasoning-example'
+class: 'h-[252px]'
 ---
 ::
 
@@ -28,85 +28,85 @@ Klasse: 'h-[252px]'(nicht vorhanden)
 Der Body-Inhalt verwendet das `useScrollShadow` composable, um beim Überlaufen Fade-Schatten anzuwenden.
 ::
 
-@@ph002@@text @ Übersetzung
+### Text Übersetzung
 
-Verwenden Sie `text` prop, um den logischen Inhalt festzulegen. Der Text wird im zusammenklappbaren Körper angezeigt.
+Verwenden Sie die prop `text`, um den logischen Inhalt festzulegen. Der Text wird innerhalb des zusammenklappbaren Körpers angezeigt.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@004@Klasse
-Props:
-  Text: "Der Benutzer fragt nach Vue Komponenten..."
-  Bezeichnung: W-60
+prettier: true
+hide:
+  - class
+props:
+  text: 'The user is asking about Vue components...'
+  class: 'w-60'
 ---
 ::
 
-@@ph005@streaming@ph005@@streaming@@@streaming@ph005@@@streaming@@streaming@@streaming@@streaming@streaming@streaming@streaming@@streaming@streaming@streaming@@streaming@streaming@@streaming@@streaming@@streaming@@streaming@@streaming@streaming@streaming@streaming@streaming@@streaming@streaming@@streaming@@@streaming-streaming@@@@@@streamingstreaming@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@streamingstreaming
+### Streaming (englisch)
 
-Verwenden Sie `streaming` prop, um aktives Denken anzuzeigen. Die Komponente öffnet sich automatisch, wenn das Streaming beginnt, und schließt sich automatisch, wenn es endet.
+Verwenden Sie die prop `streaming`, um aktives Denken anzuzeigen. Die Komponente öffnet sich automatisch, wenn das Streaming beginnt, und schließt sich automatisch, wenn es endet.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@class@class@c
-Ignoriert:
-  @@ph008@@text
-Props:
-  Streaming: Richtig
-  Text: "Der Benutzer fragt nach Vue Komponenten..."
-  Bezeichnung: W-60
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+props:
+  streaming: true
+  text: 'The user is asking about Vue components...'
+  class: 'w-60'
 ---
 ::
 
 ::tip
-Verwenden Sie das Utility `isPartStreaming` von `@nuxt/ui/utils/ai`, um festzustellen, ob ein Teil gerade gestreamt wird.
+Verwenden Sie das Dienstprogramm `isPartStreaming` von `@nuxt/ui/utils/ai`, um zu bestimmen, ob ein Teil gerade gestreamt wird.
 ::
 
-@@ph011@@schimmer
+### Shimmer Bearbeiten
 
-Beim Streamen verwendet das Trigger-Label die Komponente [`ChatShimmer`](/docs/components/chat-shimmer). Verwenden Sie die `shimmer` prop, um ihre `duration` und `spread`.
+Beim Streamen verwendet das Trigger-Label die Komponente [`ChatShimmer`](/docs/components/chat-shimmer). Verwenden Sie die `shimmer`-Prop, um die `duration` und `spread` anzupassen.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@ph020@@class
-Ignoriert:
-  @@ph021@@text
-Props:
-  Streaming: Richtig
-  Text: "Der Benutzer fragt nach Vue Komponenten..."
-  Shimmer:
-    Dauer: 2
-    Verbreitung: 2
-  Klasse: W-60
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+props:
+  streaming: true
+  text: 'The user is asking about Vue components...'
+  shimmer:
+    duration: 2
+    spread: 2
+  class: 'w-60'
 ---
 ::
 
-@@ph022@@@Ikonen-Seite
+### Icon (englisch)
 
-Verwenden Sie die `icon` prop, um eine [Icon](/docs/components/icon) Komponente neben dem Trigger anzuzeigen.
+Verwenden Sie die `icon`-Prop, um eine [Icon](/docs/components/icon)-Komponente neben dem Auslöser anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@@@@@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@class@classclass@class@classclass@classclassclassclass@classclassclass@class@class@class@class@class@class@class@class@class@class@class@c
-Ignoriert:
-  @@ph029@@text @@@ Übersetzung
-Props:
-  Bezeichnung: i-Lucide-Brain
-  Text: "Der Benutzer fragt nach Vue Komponenten..."
-  Klasse: W-60
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+props:
+  icon: i-lucide-brain
+  text: 'The user is asking about Vue components...'
+  class: 'w-60'
 ---
 ::
 
-@@ph030@@chvron
+### Chevron Bearbeiten
 
-Verwenden Sie die `chevron` prop, um die Position des Chevron-Symbols zu ändern.
+Verwenden Sie die `chevron`-Prop, um die Position des Chevron-Symbols zu ändern.
 
 ::note
 Wenn `chevron` auf `leading` mit einem `icon` gesetzt ist, wechselt das Symbol mit dem Chevron auf Hover und wenn es geöffnet ist.
@@ -114,73 +114,73 @@ Wenn `chevron` auf `leading` mit einem `icon` gesetzt ist, wechselt das Symbol m
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@35@Klasse
-Ignoriert:
-  @@ph036@@text @ Übersetzung
-Props:
-  Chevron: Führung
-  Bezeichnung: i-Lucide-Brain
-  Text: "Der Benutzer fragt nach Vue Komponenten..."
-  Klasse: W-60
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+props:
+  chevron: leading
+  icon: i-lucide-brain
+  text: 'The user is asking about Vue components...'
+  class: 'w-60'
 ---
 ::
 
-@@ph037@@chevron Icon (nicht bekannt)
+### Chevron Icon (englisch)
 
-Verwenden Sie die `chevron-icon` prop, um den Chevron [Icon](/docs/components/icon). Defaults auf `i-lucide-chevron-down`.
+Verwenden Sie die `chevron-icon`-Prop, um den chevron [Icon](/docs/components/icon). Defaults auf `i-lucide-chevron-down`.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@@@@444@Klasse
-Ignoriert:
-  @@ph045@@text @ Übersetzung
-Props:
-  chevronIcon: 'i-lucide-arrow-down'(deutsch: 'i-lucide-arrow-down')
-  Text: "Der Benutzer fragt nach Vue Komponenten..."
-  Bezeichnung: W-60
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+props:
+  chevronIcon: 'i-lucide-arrow-down'
+  text: 'The user is asking about Vue components...'
+  class: 'w-60'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.chevronDown` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.chevronDown` Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.chevronDown` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.chevronDown` Schlüssel anpassen.
 :::
 ::
 
-@@ph050@@Beispiele
+## Examples [Bearbeiten]
 
 ::tip{to="/docs/components/chat"}
 Auf der Übersichtsseite **Chat** finden Sie Installationsanweisungen, Server-Setup und Anwendungsbeispiele.
 ::
 
-@@@@@@553@@bpb
+## API Bearbeiten
 
-@@ph054@@gmail.de
+### Props Bearbeiten
 
-Komponenten Props
+:component-props
 
-@@ph055@gmail.de
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph056@@emits
+### Emits (nicht)
 
-Komponenten emittieren
+:component-emits
 
-@@ph057@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph058@@changelog @@@ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

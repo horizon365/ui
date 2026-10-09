@@ -18,20 +18,20 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputTime.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
 Utilisez la directive `v-model` pour contrôler l'heure sélectionnée.
 
 ::component-code
 ---
-Cast:
-  Étiquette: TimeValue
-Ignorer:
-  - modèleValeur
-Extérieur:
-  - modèleValeur
-Props:
-  Modèle:[12, 30, 0]
+cast:
+  modelValue: TimeValue
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: [12, 30, 0]
 ---
 ::
 
@@ -39,117 +39,117 @@ Utilisez la prop `default-value` pour définir la valeur initiale lorsque vous n
 
 ::component-code
 ---
-Cast:
-  valeur: TimeValue
-ignorer:
-  @@@ph005@@defaultValue
-Extérieur:
-  @@ph006@@valeur défaillante
-Props:
-  valeur par défaut:[9, 45, 0]
+cast:
+  defaultValue: TimeValue
+ignore:
+  - defaultValue
+external:
+  - defaultValue
+props:
+  defaultValue: [9, 45, 0]
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::note{to="/docs/getting-started/integrations/i18n/nuxt#locale"}
-Ce composant utilise le paquet `@internationalized/date` pour la mise en forme locale. Le format de temps est déterminé par la prop `locale` du composant App.
+Ce composant utilise le package `@internationalized/date` pour le formatage local. Le format de l'heure est déterminé par la prop `locale` du composant App.
 :::
 
 #vue
 :::note{to="/docs/getting-started/integrations/i18n/vue#locale"}
-Ce composant utilise le paquet `@internationalized/date` pour la mise en forme locale. Le format de temps est déterminé par la prop `locale` du composant App.
+Ce composant utilise le package `@internationalized/date` pour le formatage local. Le format de l'heure est déterminé par la prop `locale` du composant App.
 :::
 ::
 
-@@111@Rangée
+### Rangée
 
-Utilisez la prop `range` pour activer la sélection de plage de temps avec les heures de début et de fin.
+Utilisez le prop `range` pour activer la sélection de plage de temps avec les heures de début et de fin.
 
 ::component-code
 ---
-Étiquette: true
-Cast:
-  Modèle: TimeRangeValue
-Ignorer:
-  @@ph013@rangée
+prettier: true
+cast:
+  modelValue: TimeRangeValue
+ignore:
+  - range
   - modelValue.start
   - modelValue.end
-Extérieure:
-  - modelValeur
-Props:
-  Rang: vrai
-  Modèle:
-    Début:[9, 0, 0]
-    Résultat:[17, 30, 0]
+external:
+  - modelValue
+props:
+  range: true
+  modelValue:
+    start: [9, 0, 0]
+    end: [17, 30, 0]
 ---
 ::
 
-### Cycle de l'heure
+### Heure Cycle
 
 Utilisez la prop `hour-cycle` pour changer le cycle d'heure de l'InputTime. Defaults à `12`.
 
 ::component-code
 ---
-Cast:
-  valeur: TimeValue
-ignorer:
+cast:
+  defaultValue: TimeValue
+ignore:
   - hourCycle
   - defaultValue
-Extérieur:
+external:
   - defaultValue
-Props:
-  cycle: 24
-  valeur par défaut:[16, 30, 0]
+props:
+  hourCycle: 24
+  defaultValue: [16, 30, 0]
 ---
 ::
 
-@@23@couleur
+### couleur
 
-Utilisez la prop `color` pour changer la couleur de l'InputTime.
+Utilisez le prop `color` pour changer la couleur de l'InputTime.
 
 ::component-code
 ---
-Props:
-  Couleur: Neutre
-  Highlights: vrai
+props:
+  color: neutral
+  highlight: true
 ---
 ::
 
 ::note
-Le `highlight` prop est utilisé ici pour afficher l'état de mise au point. Il est utilisé en interne lorsqu 'une erreur de validation se produit.
+La prop `highlight` est utilisée ici pour afficher l'état de mise au point. Il est utilisé en interne lorsqu 'une erreur de validation se produit.
 ::
 
-@@26@Variant
+### Variant
 
-Utilisez la prop `variant` pour modifier la variante de l'InputTime.
+Utilisez le prop `variant` pour changer la variante de l'InputTime.
 
 ::component-code
 ---
-Props:
-  Variante: subtile
+props:
+  variant: subtle
 ---
 ::
 
-@@28@Size
+### Size
 
-Utilisez la prop `size` pour modifier la taille de l'InputTime.
+Utilisez le prop `size` pour modifier la taille de l'InputTime.
 
 ::component-code
 ---
-Props:
-  Taille: XL
+props:
+  size: xl
 ---
 ::
 
-### Icon
+### icône
 
-Utilisez le prop `icon` pour afficher un [Icon](/docs/components/icon) à l'intérieur de l'InputTime.
+Utilisez la prop `icon` pour afficher un [Icon](/docs/components/icon) à l'intérieur de l'InputTime.
 
 ::component-code
 ---
-Props:
-  Icône: i-lucide-clock
+props:
+  icon: 'i-lucide-clock'
 ---
 ::
 
@@ -157,22 +157,22 @@ Props:
 Utilisez les accessoires `leading` et `trailing` pour définir la position de l'icône ou les accessoires `leading-icon` et `trailing-icon` pour définir une icône différente pour chaque position.
 ::
 
-### Séparateur Icône
+### Séparateur icône
 
-Utilisez la prop `separator-icon` pour changer le [Icon](/docs/components/icon) du séparateur de plage.
+Utilisez la prop `separator-icon` pour modifier le [Icon](/docs/components/icon) du séparateur de plage.
 
 ::component-code
 ---
-ignorer:
-  @@ph047@rangé
-Props:
-  Rang: vrai
-  séparateurIcône:'i-lucide-arrow-right'
+ignore:
+  - range
+props:
+  range: true
+  separatorIcon: 'i-lucide-arrow-right'
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.minus`.
 :::
@@ -183,65 +183,65 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 :::
 ::
 
-@@ph052@avatar
+### Avatars
 
 Utilisez la prop `avatar` pour afficher un [Avatar](/docs/components/avatar) à l'intérieur de l'InputTime.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  - avatar.chargement
-Props:
-  Avatar:
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
     src: 'https://github.com/vuejs.png'
-    Étiquette: Lazy
-  Étiquette: MD
-  Étiquette: Outline
+    loading: lazy
+  size: md
+  variant: outline
 ---
 ::
 
-### désactivé
+### Désactivé
 
-Utilisez la prop `disabled` pour désactiver l'InputTime.
+Utilisez le prop `disabled` pour désactiver InputTime.
 
 ::component-code
 ---
-Props:
-  handicapés: vrai
+props:
+  disabled: true
 ---
 ::
 
-@@ph061@@Exemples
+## Exemples
 
-### Dans un champ de format
+### Dans un FormField
 
-Vous pouvez utiliser le composant InputTime dans un [FormField](/docs/components/form-field) pour afficher une étiquette, un texte d'aide, un indicateur requis, etc.
+Vous pouvez utiliser l'InputTime dans un composant [FormField](/docs/components/form-field) pour afficher une étiquette, un texte d'aide, un indicateur requis, etc.
 
 ::component-example
 ---
-nom: 'input-time-form-field-example'
+name: 'input-time-form-field-example'
 ---
 ::
 
-@@ph067@@api
+## API
 
-@@ph068@@props
+### Props
 
-Composants-props
+:component-props
 
-@@ph069@@réseaux sociaux
+### Slots
 
-Composants slots
+:component-slots
 
-@@70000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Emis
 
-Composants émetteurs
+:component-emits
 
-@@ph071@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

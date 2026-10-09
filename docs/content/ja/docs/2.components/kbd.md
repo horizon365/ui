@@ -17,124 +17,124 @@ links:
 
 ::component-code
 ---
-スロット
-  デフォルトK
+slots:
+  default: K
 ---
 ::
 
-### 値
+### Value
 
-`value`プロパティを使用して、Kbdの値を設定します。
+`value`プロパティを使用してKbdの値を設定します。
 
 ::component-code
 ---
-小道具
-  値K
+props:
+  value: K
 ---
 ::
 
-[`useKbd`](https://github.com/nuxt/ui/blob/v4/src/runtime/composables/useKbd.ts)を経由する`value` propに特別なキーを渡すことができます。たとえば、`meta`はmacOSでは`⌘`、他のプラットフォームでは`Ctrl`として表示されます。
+`value`プロパティには、[`useKbd`](https://github.com/nuxt/ui/blob/v4/src/runtime/composables/useKbd.ts)コンポーザブルを通る特殊なキーを渡すことができます。例えば、`meta`キーはmacOSでは`⌘`、他のプラットフォームでは`Ctrl`と表示されます。
 
 ::component-code
 ---
-小道具
-  値メタ
-アイテム
-  値
-    - メタ
-    -  win
-    - コマンド
-    - シフト
-    -  ctrl
-    - オプション
-    -  alt
-    - エントリー
-    - 削除
-    -  backspace
-    - エスケープ
-    - タブ
-    -  capslock
-    -  arrowup
-    -  arrowright
-    -  arrowdown
-    -  arrowleft
-    -  pageup
-    -  pagedown
-    -  home
-    -  end
+props:
+  value: meta
+items:
+  value:
+    - meta
+    - win
+    - command
+    - shift
+    - ctrl
+    - option
+    - alt
+    - enter
+    - delete
+    - backspace
+    - escape
+    - tab
+    - capslock
+    - arrowup
+    - arrowright
+    - arrowdown
+    - arrowleft
+    - pageup
+    - pagedown
+    - home
+    - end
 ---
 ::
 
-### カラー
+### Color
 
 `color`プロパティを使用してKbdの色を変更します。
 
 ::component-code
 ---
-小道具
-  色ニュートラル
-スロット
-  デフォルトK
+props:
+  color: neutral
+slots:
+  default: K
 ---
 ::
 
-### バリアント
+### Variant
 
 `variant`プロパティを使用して、Kbdのバリアントを変更します。
 
 ::component-code
 ---
-小道具
-  色ニュートラル
-  バリアント固体
-スロット
-  デフォルトK
+props:
+  color: neutral
+  variant: solid
+slots:
+  default: K
 ---
 ::
 
 ### サイズ
 
-`size`プロパティを使用して、Kbdのサイズを変更します。
+`size`プロパティを使用してKbdのサイズを変更します。
 
 ::component-code
 ---
-小道具
-  サイズLG
-スロット
-  デフォルトK
+props:
+  size: lg
+slots:
+  default: K
 ---
 ::
 
 ## 例
 
-### `class` prop
+### `class`プロップ
 
 `class`プロパティを使用して、バッジの基本スタイルを上書きします。
 
 ::component-code
 ---
-小道具
-  クラス'font—bold rounded—full'
-  バリアント：微妙
-スロット
-  デフォルトK
+props:
+  class: 'font-bold rounded-full'
+  variant: subtle
+slots:
+  default: K
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

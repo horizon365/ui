@@ -1,5 +1,5 @@
 ---
-title: Contentsearch
+title: ContentSearch
 description: 'Une CommandPalette prête à l'emploi à ajouter à votre documentation.'
 category: content
 framework: nuxt
@@ -13,26 +13,26 @@ links:
 ---
 
 ::warning{to="/docs/getting-started/integrations/content"}
-Ce composant n'est disponible que lorsque le module `@nuxt/content` est installé.
+Ce composant est uniquement disponible lorsque le module `@nuxt/content` est installé.
 ::
 
-@@ph001@utilisation
+## Utilisation
 
-Le composant ContentSearch étend le composant [CommandPalette](/docs/components/command-palette) avec un support de recherche intégré [`@nuxt/content`](), Il prend en charge à la fois le filtrage côté client [Fuse.js](https://www.fusejs.io/) et la recherche côté serveur [FTS5 en texte intégral ]( Vous pouvez passer n'importe quelle propriété CommandPalette telle que `icon`,`placeholder`, etc.
+Le composant ContentSearch étend le composant [CommandPalette](/docs/components/command-palette) avec un support de recherche intégré [`@nuxt/content`](https://content.nuxt.com), Il prend en charge à la fois le filtrage côté client [Fuse.js](https://www.fusejs.io/) et le filtrage côté serveur [FTS5 full-text search](https://www.sqlite.org/fts5.html). Vous pouvez passer n'importe quelle propriété CommandPalette telle que `icon`, `placeholder`, etc.
 
 ::component-example
 ---
 iframe:
-  Hauteur: 500px
-iframeMobile: vrai
-dépassement: true
-Source: Faux
-nom: 'content-search-example'
+  height: 500px;
+iframeMobile: true
+overflowHidden: true
+source: false
+name: 'content-search-example'
 ---
 ::
 
 ::note
-Vous pouvez ouvrir la CommandPalette en appuyant sur: kbd{value="meta"}: kbd{value="K" class="ms-px"}, en utilisant le [ContentSearchButton](/docs/components/content-search-button) ou en utilisant le composable `useContentSearch`:`const { open } = useContentSearch()`{lang="ts"}.
+Vous pouvez ouvrir la CommandPalette en appuyant sur: kbd{value="meta"}: kbd{value="K" class="ms-px"}, en utilisant le composant [ContentSearchButton](xph0333) ou en utilisant le composable `useContentSearch`: `const { open } = useContentSearch()`{lang="ts"}.
 ::
 
 ::tip
@@ -41,7 +41,7 @@ Il est recommandé d'envelopper le composant `ContentSearch` dans un composant [
 
 ### Navigation
 
-Utilisez le prop `navigation` avec [`queryCollectionNavigation`](https://content.nuxt.com/docs/utils/query-collection-navigation) pour regrouper les résultats de la recherche par section:
+Utilisez la prop `navigation` avec [`queryCollectionNavigation`](https://content.nuxt.com/docs/utils/query-collection-navigation) pour regrouper les résultats de recherche par section:
 
 ```vue [app.vue] {2, 9}
 <script setup lang="ts">
@@ -59,9 +59,9 @@ const { data: navigation } = await useAsyncData('navigation', () => queryCollect
 </template>
 ```
 
-@@57@@fichiers
+### Files
 
-Utilisez le prop `files` avec [`queryCollectionSearchSections`](https://content.nuxt.com/docs/utils/query-collection-search-sections) pour charger toutes les sections de recherche à l'avance et utilisez le filtrage côté client [Fuse.js](https://www.fusejs.io/):
+Utilisez la prop `files` avec [`queryCollectionSearchSections`](xhttps://content.nuxt.com/docs/utils/query-collection-search-sections) pour charger toutes les sections de recherche à l'avance et utilisez le filtrage côté client [Fuse.js](xph074):
 
 ```vue [app.vue] {4-8, 16}
 <script setup lang="ts">
@@ -88,12 +88,12 @@ const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSe
 ```
 
 ::tip
-Utilisez la prop `fuse` pour configurer les options [](https://vueuse.org/integrations/useFuse) passées au [CommandPalette]() comme `resultLimit`(par défaut) et `fuseOptions.threshold`(par défaut).
+Utilisez la prop `fuse` pour configurer les options [useFuse](https://vueuse.org/integrations/useFuse) passées au sous-jacent [CommandPalette](/docs/components/command-paletteph11x, telles que `resultLimit` (par défaut `12`) et `fuseOptions.threshold` (par défaut `0.1`).
 ::
 
-### Rechercher: badge{label="4.8+" class="align-text-top"}
+### Recherche: badge{label="4.8+" class="align-text-top"}
 
-Utilisez le prop `search` avec [`useSearchCollection`](https://content.nuxt.com/docs/utils/use-search-collection) pour la recherche en texte intégral côté serveur [FTS5 ](https://www.sqlite.org/fts5.html) avec des extraits surlignés au lieu du filtrage côté client:
+Utilisez la prop `search` avec [`useSearchCollection`](https://content.nuxt.com/docs/utils/use-search-collection) pour la recherche côté serveur [FTS5 en texte intégral](xph122) avec des extraits surlignés au lieu du filtrage côté client:
 
 ::warning
 Nécessite `@nuxt/content` v3.14 +.
@@ -132,16 +132,16 @@ watch(open, (value) => {
 ```
 
 ::tip
-Passez `search-status` pour que le composant puisse automatiquement relancer la recherche une fois que l'index est prêt. Utilisez `search-delay`(par défaut `100ms`) pour contrôler la durée de pause de la saisie avant le déclenchement de la recherche. L'option `fuse.resultLimit` limite le total des résultats renvoyés dans tous les groupes (résultats de recherche, liens, thème, etc.).
+Passez `search-status` pour que le composant puisse automatiquement relancer la recherche une fois que l'index est prêt. Utilisez `search-delay` (par défaut `100ms`) pour contrôler la durée de pause de la saisie avant le déclenchement de la recherche. L'option `fuse.resultLimit` plafonne le total des résultats renvoyés dans tous les groupes (résultats de recherche, liens, thème, etc.).
 ::
 
 ::note
-Lorsque vous utilisez le prop `search`, vous n'avez pas besoin de passer `files`. Le composant appelle la fonction de recherche asynchrone sur chaque touche au lieu de Fuse.js. Les résultats sont automatiquement mappés et regroupés par navigation avec des extraits surlignés. Contrairement à l'approche `files` qui charge toutes les sections de recherche à l'avance et vous permet de parcourir les éléments de navigation avant de taper, Le `search` prop ne renvoie des résultats qu 'après la saisie d'une requête.
+Lorsque vous utilisez la prop `search`, vous n'avez pas besoin de passer `files`. Le composant appelle la fonction de recherche asynchrone sur chaque touche au lieu de Fuse.js. Les résultats sont automatiquement mappés et regroupés par navigation avec des extraits surlignés. Contrairement à l'approche `files` qui charge toutes les sections de recherche à l'avance et vous permet de parcourir les éléments de navigation avant de taper, la prop `search` ne renvoie les résultats qu 'après la saisie d'une requête.
 ::
 
 ### raccourci
 
-Utilisez la prop `shortcut` pour modifier le raccourci utilisé dans [defineShortcuts]() pour ouvrir le composant ContentSearch. Par défaut à `meta_k`(: kbd{value="meta"}: kbd{value="K"}).
+Utilisez la prop `shortcut` pour modifier le raccourci utilisé dans [defineShortcuts](/docs/composables/define-shortcuts) pour ouvrir le composant ContentSearch. Defaults à `meta_k` (: kbd{value="meta"}: kbd{value="K"}).
 
 ```vue [app.vue]{5}
 <template>
@@ -155,7 +155,7 @@ Utilisez la prop `shortcut` pour modifier le raccourci utilisé dans [defineShor
 </template>
 ```
 
-@@ph176@référencement
+### Liens
 
 Utilisez la prop `links` pour ajouter un groupe de liens d'accès rapide en haut de la palette de commandes:
 
@@ -187,9 +187,9 @@ const links = [{
 </template>
 ```
 
-### Mode Couleur
+XPH213XColor mode
 
-Par défaut, un groupe de commandes sera ajouté à la palette de commandes afin que vous puissiez basculer entre le mode clair et le mode sombre. Cela ne prendra effet que si le `colorMode` n'est pas forcé dans une page spécifique qui peut être réalisée via `definePageMeta`:
+Par défaut, un groupe de commandes sera ajouté à la palette de commandes afin que vous puissiez basculer entre le mode clair et sombre. Cela ne prendra effet que si le `colorMode` n'est pas forcé dans une page spécifique, ce qui peut être réalisé via `definePageMeta`:
 
 ```vue [pages/index.vue]
 <script setup lang="ts">
@@ -213,32 +213,32 @@ Vous pouvez désactiver ce comportement en définissant la prop `color-mode` sur
 </template>
 ```
 
-@228 @@ référencement
+## API
 
-@@229@229@229@229
+### Props équipement
 
-Composants-props
+:component-props
 
-@@ph230@@Slots
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph231@@émissions
+### Emis
 
-Composants émetteurs
+:component-emits
 
-@@ph232@@exposé
+### Expose à
 
 Lorsque vous accédez au composant via une référence de modèle, vous pouvez utiliser les éléments suivants:
 
 | nom| type|
 | ---- | ---- |
-| @@|@@|
+| `commandPaletteRef`{lang="ts-type"}| `Ref<InstanceType<typeof UCommandPalette> \| null>`x{lang="ts-type"}|
 
-@@ph237@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@238@changements
+## Changelog écrit
 
-: composant-changelog {prefix="content"}
+:component-changelog{prefix="content"}

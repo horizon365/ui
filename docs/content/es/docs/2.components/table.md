@@ -16,90 +16,90 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Table.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente Table está construido sobre[TanStack Table v8](https://tanstack.com/table/v8)y está alimentado por el[useVueTable](https://tanstack.com/table/v8/docs/framework/vue/vue-table#usevuetable)componible para proporcionar una API flexible y totalmente segura para tipos .
+El componente Table está construido sobre la tabla [TanStack Table v8](https://tanstack.com/table/v8) y está alimentado por el componente componible [useVueTable](https://tanstack.com/table/v8/docs/framework/vue/vue-table#usevuetable) para proporcionar una API flexible y totalmente segura para tipos.
 
-Representa sus datos como filas y columnas y admite la clasificación , el filtrado , la paginación , la selección de filas , la expansión , la agrupación , la fijación y la virtualización , por lo que puede crear todo , desde una simple tabla de datos hasta una cuadrícula de datos con todas las funciones .
+Representa sus datos como filas y columnas y admite la clasificación, el filtrado, la paginación, la selección de filas, la expansión, la agrupación, la fijación y la virtualización, por lo que puede crear todo, desde una simple tabla de datos hasta una cuadrícula de datos con todas las funciones.
 
 ::component-example
 ---
-fuente : FALSO
-Nombre : ' table-ejemplo '
-Categoría : ! p - 0
+source: false
+name: 'table-example'
+class: '!p-0'
 ---
 ::
 
 ::callout{icon="i-simple-icons-github" to="https://github.com/nuxt/ui/tree/v4/docs/app/components/content/examples/table/TableExample.vue" aria-label="Ver código fuente"}
-Este ejemplo muestra el caso de uso más común del componente`Table`. Echa un vistazo al código fuente en GitHub .
+Este ejemplo muestra el caso de uso más común del componente `Table`. Echa un vistazo al código fuente en GitHub.
 ::
 
-@111@datos
+### Información
 
-Utilice el prop`data`como una matriz de objetos , las columnas se generarán en función de las claves de los objetos .
+Utilice el prop `data` como una matriz de objetos, las columnas se generarán en función de las claves de los objetos.
 
 ::component-code
 ---
-Categoría : true
-Colapso : Verdad
-Categoría : ! p - 0
-Ignora :
-  @@pH013@datos
-  @@F014@clase
-Externo :
-  @@pH015@datos
-Props :
-  Datos :
-    - id : ' 4600 ' (Edición española)
-      Fecha : ' 2024 - 03 - 11T15 : 30 : 00 '
-      Categoría : " Pagado "
-      por correo electrónico : James Anderson@example.com'
-      Cantidad : 594
-    - id : ' 4599 ' (en español)
-      Fecha : ' 2024 - 03 - 11T10 : 10 : 00 '
-      Categoría : " Failed "
-      Correo electrónico : ' mia . white@example.com'
-      Cantidad : 276
-    - id : ' 4598 ' (en español)
-      Fecha : ' 2024 - 03 - 11T08 : 50 : 00 '
-      Estado : " Reembolsado "
-      por correo electrónico : ' william . brown@example.com'
-      Cantidad : 315
-    - id : ' 4597 ' (en español)
-      Fecha : ' 2024 - 03 - 10T19 : 45 : 00 '
-      Categoría : " Pagado "
-      por correo electrónico : emma . davis@example.com'
-      Cantidad : 529
-    - id : ' 4596 ' (en español)
-      Fecha : ' 2024 - 03 - 10T15 : 55 : 00 '
-      Categoría : " Pagado "
-      por correo electrónico : ' ethan . harris@example.com'
-      Cantidad : 639
-  Categoría : Flex - 1
+prettier: true
+collapse: true
+class: '!p-0'
+ignore:
+  - data
+  - class
+external:
+  - data
+props:
+  data:
+    - id: '4600'
+      date: '2024-03-11T15:30:00'
+      status: 'paid'
+      email: 'james.anderson@example.com'
+      amount: 594
+    - id: '4599'
+      date: '2024-03-11T10:10:00'
+      status: 'failed'
+      email: 'mia.white@example.com'
+      amount: 276
+    - id: '4598'
+      date: '2024-03-11T08:50:00'
+      status: 'refunded'
+      email: 'william.brown@example.com'
+      amount: 315
+    - id: '4597'
+      date: '2024-03-10T19:45:00'
+      status: 'paid'
+      email: 'emma.davis@example.com'
+      amount: 529
+    - id: '4596'
+      date: '2024-03-10T15:55:00'
+      status: 'paid'
+      email: 'ethan.harris@example.com'
+      amount: 639
+  class: 'flex-1'
 ---
 ::
 
-@@21@columnas
+### columnas
 
-Utilice el prop`columns`como una matriz de objetos[ColumnDef](https://tanstack.com/table/v8/docs/api/core/column-def)con propiedades como :
+Utilice el prop `columns` como una matriz de objetos [ColumnDef](https://tanstack.com/table/v8/docs/api/core/column-def) con propiedades como:
 
-- `accessorKey`: [ La clave del objeto fila que se utilizará al extraer el valor de la columna . ]{class="text-muted"}
-- `header`: [ El encabezado a mostrar para la columna . Si se pasa una cadena , se puede usar como valor predeterminado para el ID de columna . Si se pasa una función , se pasará un objeto props para el encabezado y debe devolver el valor de encabezado renderizado (el tipo exacto depende del adaptador que se esté utilizando) . ]{class="text-muted"}
-- [`footer`](#with-column-footer): [ El pie de página que se mostrará para la columna .
-- `cell`:[La celda para mostrar cada fila de la columna. Si se pasa una función, se pasará un objeto props para la celda y debe devolver el valor de celda renderizado (el tipo exacto depende del adaptador que se use).]{class="text-muted"}
-- `meta`:[Propiedades adicionales para la columna.]{class="text-muted"}
-  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    - `td`:[Las clases que se aplican al elemento `td`.]{class="text-muted"}
-    - `th`:[Las clases a aplicar al elemento `th`.]{class="text-muted"}
-  @@
-    - `td`:[El estilo a aplicar al elemento `td`.]{class="text-muted"}
-    - `th`:[El estilo a aplicar al elemento `th`.]{class="text-muted"}
-  - [`colspan`](#with-column-span)
-    - `td`:[El atributo colspan se aplicará al elemento `td`.]{class="text-muted"}
-  - [`rowspan`](#with-column-span)
-    - `td`:[El atributo rowspan que se aplicará al elemento `td`.]{class="text-muted"}
+- `accessorKey`:[La clave del objeto fila que se utilizará al extraer el valor de la columna.] {class="text-muted"}
+- x`header`:[El encabezado a mostrar para la columna. Si se pasa una cadena, se puede usar como valor predeterminado para el ID de columna. Si se pasa una función, se pasará un objeto props para el encabezado y debe devolver el valor de encabezado renderizado (el tipo exacto depende del adaptador que se esté utilizando).] {class="text-muted"}
+- [x`footer`](#with-column-footer):[El pie de página que se mostrará para la columna. Funciona exactamente como el encabezado, pero se muestra debajo de la tabla.] {class="text-muted"}
+- x`cell`: Si se pasa una función, se pasará un objeto props para la celda y debería devolver el valor de celda renderizado (el tipo exacto depende del adaptador que se use).] {class="text-muted"}
+- `meta`:[Propiedades adicionales para la columna.] {class="text-muted"}
+  - `class`:
+    - `td`:[Las clases a aplicar al elemento `td`.] {class="text-muted"}
+    - `th`:[Las clases a aplicar al elemento `th`.] {class="text-muted"}
+  - x`style`:
+    - `td`:[El estilo a aplicar al elemento `td`.] {class="text-muted"}
+    - `th`:[El estilo a aplicar al elemento `th`.] {class="text-muted"}
+  - x[`colspan`x](#with-column-spanx)
+    - `td`:[El atributo colspan que se aplicará al elemento `td`.] {class="text-muted"}
+  - [x`rowspan`x](x#with-column-spanx):
+    - `td`:[El atributo rowspan que se aplicará al elemento `td`.] {class="text-muted"}
 
-Para renderizar componentes u otros elementos HTML, debe usar la función Vue [`h` dentro de los accesorios `header` y `cell`. Esto es diferente de otros componentes que usan ranuras, pero permite más flexibilidad.
+Para renderizar componentes u otros elementos HTML, debe usar la función Vue [`h`](https://vuejs.org/api/render-function.html#h) dentro de los accesorios `header` y `cell`.
 
 ::tip{to="#with-slots" aria-label="Columnas con slots"}
 También puede usar ranuras para personalizar el encabezado y las celdas de datos de la tabla.
@@ -107,13 +107,13 @@ También puede usar ranuras para personalizar el encabezado y las celdas de dato
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Categoría:! p-0
-Nombre: 'table-columns-example'
-Destacados:
-  @@509@53
-  @095 @ 108
+prettier: true
+collapse: true
+class: '!p-0'
+name: 'table-columns-example'
+highlights:
+  - 53
+  - 108
 ---
 ::
 
@@ -121,179 +121,179 @@ Destacados:
 Al renderizar componentes con `h`, puede utilizar la función `resolveComponent` o importar desde `#components`.
 ::
 
-@999 @@ Proyecto
+### Meta
 
 Utilice el prop `meta` como un objeto ([TableMeta](https://tanstack.com/table/v8/docs/api/core/table#meta)) para pasar propiedades como:
 
-@@@pH105
-  - `tr`:[Las clases que se aplican al elemento `tr`.]{class="text-muted"}
-@111@112 @
-  - `tr`:[El estilo a aplicar al elemento `tr`.]{class="text-muted"}
+- x`class`:
+  - `tr`:[Las clases a aplicar al elemento `tr`.] {class="text-muted"}
+- x`style`:
+  - `tr`:[El estilo a aplicar al elemento `tr`.] {class="text-muted"}
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre: 'table-meta-ejemplo'
-Categoría:! p-0
-Destacados:
-  @117@127
-  @118 @ 140
+prettier: true
+collapse: true
+name: 'table-meta-example'
+class: '!p-0'
+highlights:
+  - 128
+  - 140
 ---
 ::
 
-@@119@Cargando
+### Cargando
 
 Utilice el prop `loading` para mostrar un estado de carga, el prop `loading-color` para cambiar su color y el prop `loading-animation` para cambiar su animación.
 
 ::component-code
 ---
-Categoría: true
-Colapso: Verdad
-Categoría:! p-0
-Ignora:
-  @123 @ datos
-  @124 @ clase
-Externo:
-  @@pH125 @ información
-Props:
-  Carga: Verdad
-  LoadingColor: primario
-  Animación: Carusel
-  Datos:
-    - id : ' 4600 ' (Edición española)
-      Fecha : ' 2024 - 03 - 11T15 : 30 : 00 '
-      Categoría : " Pagado "
-      por correo electrónico : James Anderson@example.com'
-      Cantidad : 594
-    - id : ' 4599 ' (en español)
-      Fecha : ' 2024 - 03 - 11T10 : 10 : 00 '
-      Categoría : " Failed "
-      Correo electrónico : ' mia . white@example.com'
-      Cantidad : 276
-    - id : ' 4598 ' (en español)
-      Fecha : ' 2024 - 03 - 11T08 : 50 : 00 '
-      Estado : " Reembolsado "
-      por correo electrónico : ' william . brown@example.com'
-      Cantidad : 315
-    - id : ' 4597 ' (en español)
-      Fecha : ' 2024 - 03 - 10T19 : 45 : 00 '
-      Categoría : " Pagado "
-      por correo electrónico : emma . davis@example.com'
-      Cantidad : 529
-    - id : ' 4596 ' (en español)
-      Fecha : ' 2024 - 03 - 10T15 : 55 : 00 '
-      Categoría : " Pagados "
-      por correo electrónico : ' ethan . harris@example.com'
-      Cantidad : 639
-  Categoría : flex - 1
+prettier: true
+collapse: true
+class: '!p-0'
+ignore:
+  - data
+  - class
+external:
+  - data
+props:
+  loading: true
+  loadingColor: primary
+  loadingAnimation: carousel
+  data:
+    - id: '4600'
+      date: '2024-03-11T15:30:00'
+      status: 'paid'
+      email: 'james.anderson@example.com'
+      amount: 594
+    - id: '4599'
+      date: '2024-03-11T10:10:00'
+      status: 'failed'
+      email: 'mia.white@example.com'
+      amount: 276
+    - id: '4598'
+      date: '2024-03-11T08:50:00'
+      status: 'refunded'
+      email: 'william.brown@example.com'
+      amount: 315
+    - id: '4597'
+      date: '2024-03-10T19:45:00'
+      status: 'paid'
+      email: 'emma.davis@example.com'
+      amount: 529
+    - id: '4596'
+      date: '2024-03-10T15:55:00'
+      status: 'paid'
+      email: 'ethan.harris@example.com'
+      amount: 639
+  class: 'flex-1'
 ---
 ::
 
 ::tip
-La animación de carga se desactiva automáticamente cuando el usuario prefiere un movimiento reducido , la barra se muestra como un pulso de ancho completo en su lugar .
+La animación de carga se desactiva automáticamente cuando el usuario prefiere un movimiento reducido, la barra se muestra como un pulso de ancho completo en su lugar.
 ::
 
-@131@@sticky
+### Sticky
 
-Utilice el prop`sticky`para hacer que el encabezado o pie de página sea pegajoso .
+Utilice el accesorio `sticky` para hacer que el encabezado o pie de página se pegue.
 
 ::component-code
 ---
-Categoría : true
-Colapso : Verdad
-Categoría : ! p - 0
-Ignora :
-  @@pH133@información
-  @134@clase
-Externo :
-  @@pH135@datos
-items :
-  Sticky :
-    @@pH136@verdad
-    @@F137@Falso
-Props :
-  Sticky : Verdad
-  Datos :
-    - id : ' 4600 ' (Edición española)
-      Fecha : ' 2024 - 03 - 11T15 : 30 : 00 '
-      Categoría : " Pagados "
-      por correo electrónico : James Anderson@example.com'
-      Cantidad : 594
-    - id : ' 4599 ' (en español)
-      Fecha : ' 2024 - 03 - 11T10 : 10 : 00 '
-      Categoría : " Failed "
-      Correo electrónico : ' mia . white@example.com'
-      Cantidad : 276
-    - id : ' 4598 ' (en español)
-      Fecha : ' 2024 - 03 - 11T08 : 50 : 00 '
-      Estado : " Reembolsado "
-      por correo electrónico : ' william . brown@example.com'
-      Cantidad : 315
-    - id : ' 4597 ' (en español)
-      Fecha : ' 2024 - 03 - 10T19 : 45 : 00 '
-      Categoría : " Pagados "
-      por correo electrónico : emma . davis@example.com'
-      Cantidad : 529
-    - id : ' 4596 ' (en español)
-      Fecha : ' 2024 - 03 - 10T15 : 55 : 00 '
-      Categoría : " Pagados "
-      por correo electrónico : ' ethan . harris@example.com'
-      Cantidad : 639
-    - id : ' 4595 ' (en español)
-      Fecha : ' 2024 - 03 - 10T15 : 55 : 00 '
-      Categoría : " Pagados "
-      por correo electrónico : ' ethan . harris@example.com'
-      Cantidad : 639
-    - id : ' 4594 ' (en español)
-      Fecha : ' 2024 - 03 - 10T15 : 55 : 00 '
-      Categoría : " Pagado "
-      por correo electrónico : ' ethan . harris@example.com'
-      Cantidad : 639
-  clase : ' flex - 1 max-h - [ 312px ] '
+prettier: true
+collapse: true
+class: '!p-0'
+ignore:
+  - data
+  - class
+external:
+  - data
+items:
+  sticky:
+    - true
+    - false
+props:
+  sticky: true
+  data:
+    - id: '4600'
+      date: '2024-03-11T15:30:00'
+      status: 'paid'
+      email: 'james.anderson@example.com'
+      amount: 594
+    - id: '4599'
+      date: '2024-03-11T10:10:00'
+      status: 'failed'
+      email: 'mia.white@example.com'
+      amount: 276
+    - id: '4598'
+      date: '2024-03-11T08:50:00'
+      status: 'refunded'
+      email: 'william.brown@example.com'
+      amount: 315
+    - id: '4597'
+      date: '2024-03-10T19:45:00'
+      status: 'paid'
+      email: 'emma.davis@example.com'
+      amount: 529
+    - id: '4596'
+      date: '2024-03-10T15:55:00'
+      status: 'paid'
+      email: 'ethan.harris@example.com'
+      amount: 639
+    - id: '4595'
+      date: '2024-03-10T15:55:00'
+      status: 'paid'
+      email: 'ethan.harris@example.com'
+      amount: 639
+    - id: '4594'
+      date: '2024-03-10T15:55:00'
+      status: 'paid'
+      email: 'ethan.harris@example.com'
+      amount: 639
+  class: 'flex-1 max-h-[312px]'
 ---
 ::
 
 ## Ejemplos
 
-### Con acciones en fila
+### Con acciones de fila
 
-Puede agregar una nueva columna que renderice un componente[DropdownMenu](/docs/components/dropdown-menu)dentro del`cell`para renderizar acciones de fila .
+Puede agregar una nueva columna que renderice un componente [DropdownMenu](/docs/components/dropdown-menu) dentro del `cell` para renderizar acciones de fila.
 
 ::component-example
 ---
-Categoría : true
-Colapso : Verdad
-Nombre : ' table-row - actions-example '
-Destacados :
-  @152@115 años
-  @153@141
-Categoría : ! p - 0
+prettier: true
+collapse: true
+name: 'table-row-actions-example'
+highlights:
+  - 115
+  - 141
+class: '!p-0'
 ---
 ::
 
 ### Con filas ampliables
 
-Puede agregar una nueva columna que renderice un[Button](/docs/components/button)componente dentro del`cell`para alternar el estado expandible de una fila utilizando la Tabla TanStack[Expanding APIshttps://tanstack.com/table/v8/docs/api/features/expanding).
+Puede agregar una nueva columna que renderice un componente [Button](/docs/components/button) dentro del `cell` para alternar el estado expandible de una fila utilizando la tabla TanStack [Expanding APIs](xph292).
 
 ::caution
-Es necesario definir la ranura`#expanded`para renderizar el contenido expandido que recibirá la fila como parámetro .
+Es necesario definir la ranura `#expanded` para renderizar el contenido expandido que recibirá la fila como parámetro.
 ::
 
 ::component-example
 ---
-Categoría : true
-Colapso : Verdad
-Nombre : ' table-row - expansionable-ejemplo '
-Destacado :
-  @165@165 años
-  @166@166
-Categoría : ! p - 0
+prettier: true
+collapse: true
+name: 'table-row-expandable-example'
+highlights:
+  - 55
+  - 72
+class: '!p-0'
 ---
 ::
 
 ::tip
-Puede utilizar el prop `expanded` para controlar el estado expandible de las filas (puede enlazarse con `v-model`).
+Puede usar el prop `expanded` para controlar el estado expandible de las filas (se puede vincular con `v-model`).
 ::
 
 ::note
@@ -302,45 +302,45 @@ También puede agregar esta acción al componente [`DropdownMenu`](/docs/compone
 
 ### Con filas agrupadas
 
-Puede agrupar filas en función de un valor de columna dado y mostrar/ocultar subfilas a través de algún botón agregado a la celda utilizando la tabla TanStack [Agrupación APIs](https://tanstack.com/table/v8/docs/api/features/grouping).
+Puede agrupar filas en función de un valor de columna dado y mostrar/ocultar subfilas a través de algún botón agregado a la celda utilizando la tabla de TanStack [Grouping APIs](https://tanstack.com/table/v8/docs/api/features/grouping).
 
-#### Puntos importantes
+####  Partes importantes
 
-* Añadir `grouping` prop con una matriz de identificadores de columna que desea agrupar por.
-* Añadir `grouping-options` prop. Debe incluir `getGroupedRowModel`, puede importarlo desde `@tanstack/vue-table` o implementar el suyo.
-* Expandir filas a través del método `row.toggleExpanded()` en cualquier celda de la fila. Tenga en cuenta que también conmuta la ranura `#expanded`.
-* Use `aggregateFn` en la definición de columna para definir cómo agregar las filas.
-El renderizador de * `agregatedCell` en la definición de columna solo funciona si no hay un renderizador de `cell`.
+* Añadir prop `grouping` con una matriz de identificadores de columna que desea agrupar por.
+Debe incluir `getGroupedRowModel`, puede importarlo desde `@tanstack/vue-table` o implementar el suyo propio.
+* Expandir filas a través del método `row.toggleExpanded()` en cualquier celda de la fila. Tenga en cuenta que también alterna la ranura `#expanded`.
+* Use `aggregateFn` en definición de columna para definir cómo agregar las filas.
+El renderizador * `agregatedCell` en la definición de columna solo funciona si no hay un renderizador `cell`.
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre: 'table-grouped-rows-example'
-Destacados:
-  @195 @ 157
-  @196@160
-Categoría:! p-0
+prettier: true
+collapse: true
+name: 'table-grouped-rows-example'
+highlights:
+  - 157
+  - 160
+class: '!p-0'
 ---
 ::
 
-### Con fijación de fila: badge{label="4.6+" class="align-text-top"}
+### Con fijación de filas: badge{label="4.6+" class="align-text-top"}
 
-Puede agregar una columna que renderice un [Button](/docs/components/button) componente dentro del `cell` para alternar el estado de fijación de una fila usando la tabla TanStack [Row Pinning APIs](https://tanstack.com/table/v8/docs/api/features/row-pinning). Las filas ancladas permanecerán en la parte superior o inferior de la tabla independientemente de la clasificación o el filtrado.
+Puede agregar una columna que renderice un componente [Button](/docs/components/button) dentro del `cell` para alternar el estado de fijación de una fila utilizando la tabla TanStack [Row Pinning APIs](xph350).
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre del archivo: 'table-row-pinning-example'
-Desconocido: true
-Destacado:
-  @208@2019
-  @209@109
-  @210@160
-  @111@165
-  @212 @ 168
-Categoría:! p-0
+prettier: true
+collapse: true
+name: 'table-row-pinning-example'
+overflowHidden: true
+highlights:
+  - 91
+  - 107
+  - 160
+  - 165
+  - 168
+class: '!p-0'
 ---
 ::
 
@@ -348,29 +348,29 @@ Categoría:! p-0
 Puede utilizar el prop `row-pinning` para controlar el estado de fijación de las filas (se puede vincular con `v-model`).
 ::
 
-### Con selección de fila
+### Con selección de filas
 
-Puede agregar una nueva columna que represente un [Checkbox](/docs/components/checkbox) dentro del componente `header` y `cell` para seleccionar filas utilizando la Tabla TanStack [Row Selection APIs](https://tanstack.com/table/v8/docs/api/features/row-selection).
+Puede agregar una nueva columna que renderice un componente [Checkbox](/docs/components/checkbox) dentro de los `header` y `cell` para seleccionar filas utilizando la tabla TanStack [Row Selection APIs](xph376).
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre: 'table-row-selection-example'
-Destacados:
-  @226@250
-  @227 @ 227
-Categoría:! p-0
+prettier: true
+collapse: true
+name: 'table-row-selection-example'
+highlights:
+  - 55
+  - 72
+class: '!p-0'
 ---
 ::
 
 ::tip
-Puede utilizar la prop `row-selection` para controlar el estado de selección de las filas (puede enlazarse con `v-model`).
+Puede usar el prop `row-selection` para controlar el estado de selección de las filas (puede vincularse con `v-model`).
 ::
 
-### Con evento de selección de fila
+### With selección de fila
 
-Puede agregar un `@select` listener para hacer clic en las filas con o sin una columna de casilla de verificación.
+Puede agregar un oyente `@select` para hacer clic en las filas con o sin una columna de casilla de verificación.
 
 ::note
 La función handler recibe la instancia `Event` y `TableRow` como el primer y segundo argumento, respectivamente.
@@ -378,13 +378,13 @@ La función handler recibe la instancia `Event` y `TableRow` como el primer y se
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre del archivo: 'table-row-select-event-example'
-Destacado:
-  @234@125
-  @235 @ 131
-Categoría:! p-0
+prettier: true
+collapse: true
+name: 'table-row-select-event-example'
+highlights:
+  - 124
+  - 131
+class: '!p-0'
 ---
 ::
 
@@ -392,9 +392,9 @@ Categoría:! p-0
 Puede utilizar esto para navegar a una página, abrir un modal o incluso para seleccionar la fila manualmente.
 ::
 
-### Con evento del menú contextual fila
+### With row del menú contextual
 
-Puede agregar un `@contextmenu` listener para hacer clic derecho en las filas y envolver la tabla en un [ContextMenu](/docs/components/context-menu) componente para mostrar acciones de fila, por ejemplo.
+Puede agregar un oyente `@contextmenu` para hacer clic derecho en las filas y envolver la tabla en un componente [ContextMenu](/docs/components/context-menu) para mostrar acciones de fila, por ejemplo.
 
 ::note
 La función handler recibe la instancia `Event` y `TableRow` como el primer y segundo argumento, respectivamente.
@@ -402,57 +402,57 @@ La función handler recibe la instancia `Event` y `TableRow` como el primer y se
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre: 'table-row-context-menu-event-example'
-Destacados:
-  @244@134
-  @245@175
-Categoría:! p-0
+prettier: true
+collapse: true
+name: 'table-row-context-menu-event-example'
+highlights:
+  - 133
+  - 173
+class: '!p-0'
 ---
 ::
 
-### With evento de desplazamiento de fila
+### With row hover evento
 
-Puede agregar un `@hover` para hacer que las filas sean flotantes y usar un [Popover](/docs/components/popover) o un [Tooltip](/docs/components/tooltip) para mostrar los detalles de la fila, por ejemplo.
+Puede agregar un oyente `@hover` para hacer que las filas se puedan mover y usar un componente [Popover](/docs/components/popover) o un componente [Tooltip](/docs/components/tooltip) para mostrar los detalles de la fila, por ejemplo.
 
 ::note
-La función handler recibe las instancias `Event` y `TableRow` como el primer y segundo argumento respectivamente.
+La función handler recibe la instancia `Event` y `TableRow` como el primer y segundo argumento, respectivamente.
 ::
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre: 'table-row-hover-event-example'
-Destacados:
-  @258@129
-  @259@152
-Categoría:! p-0
+prettier: true
+collapse: true
+name: 'table-row-hover-event-example'
+highlights:
+  - 129
+  - 152
+class: '!p-0'
 ---
 ::
 
 ::note
-Este ejemplo es similar al Popover [con el siguiente ejemplo de cursor ](/docs/components/popover#with-following-cursor) y utiliza un [`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced) para evitar que el Popover se abra y cierre demasiado rápido al mover el cursor de una fila a otra.
+Este ejemplo es similar al Popover [ con el siguiente cursor example](/docs/components/popover#with-following-cursor) y utiliza un [`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced) para evitar que el Popover se abra y cierre demasiado rápido al mover el cursor de una fila a otra.
 ::
 
-### Con pie de columna
+### Con pie de columna.
 
 Puede agregar una propiedad `footer` a la definición de columna para representar un pie de página para la columna.
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre del archivo: 'table-column-foote-example'
-Destacado:
-  @271@100
-  @272@112
-Categoría:! p-0
+prettier: true
+collapse: true
+name: 'table-column-footer-example'
+highlights:
+  - 100
+  - 112
+class: '!p-0'
 ---
 ::
 
-### Con amplitud de columna
+### With column span (en español)
 
 Puede usar las propiedades `colspan` y `rowspan` de la columna `meta` para combinar celdas. Estas propiedades aceptan un valor estático o una función que recibe la celda y devuelve el valor de intervalo.
 
@@ -462,46 +462,46 @@ Cuando se usa `rowspan`, las celdas que son "absorbidas" por el espacio de una f
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre: 'table-column-span-example'
-Categoría:! p-0
+prettier: true
+collapse: true
+name: 'table-column-span-example'
+class: '!p-0'
 ---
 ::
 
-### Con clasificación de columnas
+### Con ordenación de columnas
 
-Puede actualizar una columna `header` para representar un [Button](/docs/components/button) componente dentro del `header` para alternar el estado de clasificación utilizando la tabla TanStack [Sorting APIs](https://tanstack.com/table/v8/docs/api/features/sorting).
+Puede actualizar una columna `header` para representar un componente [Button](/docs/components/button) dentro del `header` para alternar el estado de clasificación utilizando la tabla de TanStack [Sorting APIs](xph482).
 
-Esto pone `aria-sort` en el `<th>` para que los lectores de pantalla puedan leer el estado de ordenación actual de la columna: `none`,`ascending` o `descending`. El `Button` mantiene el control que lo cambia.
+Esto coloca `aria-sort` en el `<th>` para que los lectores de pantalla puedan leer el estado de clasificación actual de la columna: `none`, `ascending` o `descending`.
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre: 'table-column-example'.
-Destacado:
-  @298@298
-  @299 @ 106
-Categoría:! p-0
+prettier: true
+collapse: true
+name: 'table-column-sorting-example'
+highlights:
+  - 90
+  - 106
+class: '!p-0'
 ---
 ::
 
 ::tip
-Puede utilizar el prop `sorting` para controlar el estado de clasificación de las columnas (se puede enlazar con `v-model`).
+Puede utilizar el soporte `sorting` para controlar el estado de clasificación de las columnas (se puede vincular con `v-model`).
 ::
 
 También puede crear un componente reutilizable para hacer que cualquier encabezado de columna sea clasificable.
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre: 'table-column-sorting-reusable-example'
-Destacados:
-  @2011@115
-  @303@166
-Categoría:! p-0
+prettier: true
+collapse: true
+name: 'table-column-sorting-reusable-example'
+highlights:
+  - 115
+  - 166
+class: '!p-0'
 ---
 ::
 
@@ -511,108 +511,108 @@ En este ejemplo, utilizamos una función para definir el encabezado de columna, 
 
 ### Con fijación de columna
 
-Puede actualizar una columna `header` para representar un [Button](/docs/components/button) componente dentro del `header` para alternar el estado de fijación utilizando la tabla TanStack [Column Pinning APIs](https://tanstack.com/table/v8/docs/api/features/column-pinning).
+Puede actualizar una columna `header` para representar un componente [Button](/docs/components/button) dentro del `header` para alternar el estado de fijación utilizando la tabla TanStack [Column Pinning APIs](xph520).
 
 ::note
-Una columna anclada se convertirá en pegajosa en el lado izquierdo o derecho de la tabla. Cuando se utiliza la fijación de columnas, debe definir valores explícitos para las columnas para garantizar el manejo adecuado del ancho de columna, especialmente con múltiples columnas ancladas.
+Cuando se utiliza la fijación de columnas, debe definir valores `size` explícitos para sus columnas para garantizar un manejo adecuado del ancho de columna, especialmente con varias columnas ancladas.
 ::
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Desconocido: true
-Nombre: 'table-column-pinning-example'
-Destacados:
-  @108 @ 108
-  @126 @ 127
-Categoría:! p-0 overflow-clip
+prettier: true
+collapse: true
+overflowHidden: true
+name: 'table-column-pinning-example'
+highlights:
+  - 108
+  - 126
+class: '!p-0 overflow-clip'
 ---
 ::
 
 ::tip
-Puede utilizar el prop `column-pinning` para controlar el estado de fijación de las columnas (se puede vincular con `v-model`).
+Puede utilizar el soporte `column-pinning` para controlar el estado de fijación de las columnas (se puede vincular con `v-model`).
 ::
 
 ### Con visibilidad de columna
 
-Puede usar un componente [DropdownMenu](/docs/components/dropdown-menu) para alternar la visibilidad de las columnas utilizando la Tabla TanStack [Column Visibility APIs](https://tanstack.com/table/v8/docs/api/features/column-visibility).
+Puede utilizar un componente [DropdownMenu](/docs/components/dropdown-menu) para alternar la visibilidad de las columnas utilizando la tabla TanStack [Column Visibility APIs](xph542).
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre: 'table-column-visibilidad-ejemplo'
-Destacado:
-  @29@121
-  @300@146
-Categoría:! p-0
+prettier: true
+collapse: true
+name: 'table-column-visibility-example'
+highlights:
+  - 121
+  - 146
+class: '!p-0'
 ---
 ::
 
 ::tip
-Puede utilizar el prop `column-visibility` para controlar el estado de visibilidad de las columnas (se puede enlazar con `v-model`).
+Puede utilizar el soporte `column-visibility` para controlar el estado de visibilidad de las columnas (se puede vincular con `v-model`).
 ::
 
 ### Con filtros de columna
 
-Puede utilizar un componente [Input](/docs/components/input) para filtrar por columna las filas utilizando la Tabla TanStack [Column Filtring APIs](https://tanstack.com/table/v8/docs/api/features/column-filtering).
+Puede usar un componente [Input](/docs/components/input) para filtrar las filas por columna utilizando el Filtrado de columnas de la tabla TanStack [Column APIs](xph562).
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre: 'table-column-filters-example'
-Destacados:
-  @342 @ 123
-  @343@124
-Categoría:! p-0
+prettier: true
+collapse: true
+name: 'table-column-filters-example'
+highlights:
+  - 123
+  - 128
+class: '!p-0'
 ---
 ::
 
 ::tip
-Puede usar la prop `column-filters` para controlar el estado de los filtros de las columnas (se puede vincular con `v-model`).
+Puede usar el prop `column-filters` para controlar el estado de los filtros de las columnas (se puede vincular con `v-model`).
 ::
 
-### Con filtros globales
+### Con filtro global
 
 Puede utilizar un componente [Input](/docs/components/input) para filtrar las filas utilizando la tabla TanStack [Global Filtering APIs](https://tanstack.com/table/v8/docs/api/features/global-filtering).
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre del archivo: 'table-global-filter-example'
-Categoría:! p-0
-Destacados:
-  @116 @ 115
+prettier: true
+collapse: true
+name: 'table-global-filter-example'
+class: '!p-0'
+highlights:
+  - 116
 ---
 ::
 
 ::tip
-Puede utilizar el prop `global-filter` para controlar el estado del filtro global (puede enlazarse con `v-model`).
+Puede usar el accesorio `global-filter` para controlar el estado del filtro global (puede vincularse con `v-model`).
 ::
 
 ### Con paginación
 
-Puede utilizar un componente [Pagination](/docs/components/pagination) para controlar el estado de paginación utilizando el [Pagination APIs](https://tanstack.com/table/v8/docs/api/features/pagination).
+Puede utilizar un componente [Pagination](/docs/components/pagination) para controlar el estado de paginación mediante el APIs](https://tanstack.com/table/v8/docs/api/features/pagination) de [Pagination.
 
-Hay diferentes enfoques de paginación como se explica en [Pagination Guide](https://tanstack.com/table/v8/docs/guide/pagination#pagination-guide). En este ejemplo, utilizamos la paginación del lado del cliente, por lo que necesitamos pasar manualmente la función `getPaginationRowModel()`{lang="ts-type"}.
+Hay diferentes enfoques de paginación como se explica en la Guía de paginación ](https://tanstack.com/table/v8/docs/guide/pagination#pagination-guide). En este ejemplo, utilizamos la paginación del lado del cliente, por lo que necesitamos pasar manualmente la función `getPaginationRowModel()`{lang="ts-type"}.
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre: 'table-paginación-ejemplo'
-Categoría:! p-0
-Destacado:
-  @373@203
-  @@2017 @ 2017
+prettier: true
+collapse: true
+name: 'table-pagination-example'
+class: '!p-0'
+highlights:
+  - 204
+  - 209
 ---
 ::
 
 ::tip
-Puede utilizar el prop `pagination` para controlar el estado de paginación (puede enlazarse con `v-model`).
+Puede usar el prop `pagination` para controlar el estado de paginación (puede vincularse con `v-model`).
 ::
 
 ### Con datos recuperados
@@ -621,64 +621,64 @@ Puede obtener datos de una API y usarlos en la tabla.
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre del archivo: 'table-fetch-example'
-Destacado:
-  @378 @ 15 años
-  @@279@26
-Categoría:! p-0
+prettier: true
+collapse: true
+name: 'table-fetch-example'
+highlights:
+  - 15
+  - 26
+class: '!p-0'
 ---
 ::
 
 ::note
-Este ejemplo utiliza `useLazyFetch` con `server: false` para obtener datos del cliente sin bloquear el renderizado inicial. El estado de carga comprueba el estado de `pending` y `idle` para mostrar un indicador de carga antes y durante la búsqueda.
+Este ejemplo utiliza `useLazyFetch` con `server: false` para obtener datos en el cliente sin bloquear el renderizado inicial. El estado de carga comprueba el estado de `pending` y `idle` para mostrar un indicador de carga antes y durante la extracción.
 ::
 
-### Con desplazamiento infinito
+### Con desplazamiento infinito.
 
-Si utiliza la paginación del lado del servidor, puede utilizar el [`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/#useinfinitescroll) componible para cargar más datos a medida que el usuario se desplaza.
+Si utiliza la paginación del lado del servidor, puede utilizar el composable [`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/#useinfinitescroll) para cargar más datos a medida que el usuario se desplaza.
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Destacado:
-  @390@70
-  @391 @ 83
-Desconocido: true
-Nombre: 'table-infinite-scroll-example'
-Categoría:! p-0
+prettier: true
+collapse: true
+highlights:
+  - 72
+  - 83
+overflowHidden: true
+name: 'table-infinite-scroll-example'
+class: '!p-0'
 ---
 ::
 
 ::note
-Este ejemplo utiliza `useLazyFetch` con `server: false` para obtener datos del cliente sin bloquear el renderizado inicial. El estado de carga comprueba el estado de `pending` y `idle` para mostrar un indicador de carga antes y durante la búsqueda. Las páginas adicionales se cargan a medida que el usuario se desplaza.
+Este ejemplo utiliza `useLazyFetch` con `server: false` para obtener datos en el cliente sin bloquear el renderizado inicial. El estado de carga comprueba el estado de `pending` y `idle` para mostrar un indicador de carga antes y durante la extracción.
 ::
 
 ### Con arrastrar y soltar
 
-Puede utilizar el [`useSortable`](https://vueuse.org/integrations/useSortable/) componible de [](https://vueuse.org/integrations/README.html) para habilitar la funcionalidad de arrastrar y soltar en la tabla. para proporcionar una experiencia de arrastrar y soltar sin problemas.
+Puede utilizar el composable [`useSortable`](https://vueuse.org/integrations/useSortable/) de [`@vueuse/integrations`](https://vueuse.org/integrations/README.html) para habilitar la funcionalidad de arrastrar y soltar en la tabla. Esta integración envuelve [Sortable.js](xph6667x) para proporcionar una experiencia de arrastrar y soltar sin problemas.
 
 ::note
-Dado que la referencia de tabla no expone el elemento tbody, agregue una clase única a través de la prop `:ui` para dirigirlo con `useSortable`(por ejemplo,`:ui="{ tbody: 'my-table-tbody' }"`).
+Dado que la referencia de tabla no expone el elemento tbody, agregue una clase única a través del prop `:ui` para dirigirlo con `useSortable` (por ejemplo, `:ui="{ tbody: 'my-table-tbody' }"`).
 ::
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Destacados:
-  @414 @ 81
-  @415@84
-Nombre: 'table-drag-and-drop-example'
-Categoría:! p-0
+prettier: true
+collapse: true
+highlights:
+  - 81
+  - 83
+name: 'table-drag-and-drop-example'
+class: '!p-0'
 ---
 ::
 
 ### Con virtualización: badge{label="4.1+" class="align-text-top"}
 
-Utilice el prop `virtualize` para habilitar la virtualización de grandes conjuntos de datos como un booleano o un objeto con opciones como `{ estimateSize: 65, overscan: 12 }`. También puede pasar otras opciones virtuales [](https://tanstack.com/virtual/latest/docs/api/virtualizer#optional-options) para personalizar el comportamiento de virtualización. para mantener visible el encabezado o el pie de página mientras se desplaza por grandes conjuntos de datos.
+Utilice el prop `virtualize` para habilitar la virtualización de grandes conjuntos de datos como un booleano o un objeto con opciones como `{ estimateSize: 65, overscan: 12 }`. También puede pasar otras opciones [TanStack Virtual ](https://tanstack.com/virtual/latest/docs/api/virtualizer#optional-options) para personalizar el comportamiento de virtualización. El prop `sticky` funciona en combinación con `virtualize` para mantener el encabezado o pie de página visible mientras se desplaza por grandes conjuntos de datos.
 
 ::warning
 Fijación de filas no es compatible cuando la virtualización está habilitada.
@@ -686,84 +686,84 @@ Fijación de filas no es compatible cuando la virtualización está habilitada.
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Desconocido: true
-Nombre del archivo: 'table-virtualize-example'
-Categoría:! p-0
+prettier: true
+collapse: true
+overflowHidden: true
+name: 'table-virtualize-example'
+class: '!p-0'
 ---
 ::
 
 ::note
-Se requiere una restricción de altura en la tabla para que la virtualización funcione correctamente (por ejemplo,`class="h-[400px]"`).
+Se requiere una restricción de altura en la tabla para que la virtualización funcione correctamente (por ejemplo, `class="h-[400px]"`).
 ::
 
-### Con el elemento de desplazamiento externo: badge{label="4.10+" class="align-text-top"}
+### Con elemento de desplazamiento externo: badge{label="4.10+" class="align-text-top"}
 
-Pase una función `getScrollElement` en el prop `virtualize` para virtualizar contra un contenedor de desplazamiento antepasado en lugar de la propia raíz de la tabla. Establezca `scrollMargin` al desplazamiento de la tabla desde el inicio del elemento de desplazamiento (por ejemplo, la altura del contenido por encima de él), por lo que un encabezado y el cuerpo de la tabla comparten una sola barra de desplazamiento.
+Pase una función `getScrollElement` en el prop `virtualize` para virtualizar contra un contenedor de desplazamiento antepasado en lugar de la propia raíz de la tabla. Establezca `scrollMargin` al desplazamiento de la tabla desde el inicio del elemento de desplazamiento (por ejemplo, la altura del contenido sobre él), por lo que un encabezado y el cuerpo de la tabla comparten una sola barra de desplazamiento.
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Desconocido: true
-Nombre: 'table-external-scroll-example'
-Categoría:! p-0
+prettier: true
+collapse: true
+overflowHidden: true
+name: 'table-external-scroll-example'
+class: '!p-0'
 ---
 ::
 
 ::note
-En este modo, la raíz de la tabla `overflow` es `visible` y el contenedor externo posee desplazamiento en ambos ejes, así que dale `overflow-auto`(no solo `overflow-y-auto`) para mantener tablas anchas horizontalmente desplazables.
+En este modo, el `overflow` de la raíz de la tabla es `visible` y el contenedor externo posee desplazamiento en ambos ejes, así que dale `overflow-auto` (no solo `overflow-y-auto`) para mantener tablas anchas desplazables horizontalmente.
 ::
 
-### Con datos de árbol
+### Con árbol de datos
 
-Puede utilizar la prop `get-sub-rows` para mostrar datos jerárquicos (árbol) en la tabla.
-Por ejemplo, si los objetos de datos tienen una matriz `children`, establezca `:get-sub-rows="row => row.children"` para habilitar filas expandibles.
+Puede usar el prop `get-sub-rows` para mostrar datos jerárquicos (árbol) en la tabla.
+Por ejemplo, si los objetos de datos tienen una matriz `children`, configure `:get-sub-rows="row => row.children"` para habilitar filas expandibles.
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Destacados:
-  @441 @ 175
-Nombre del archivo: 'table-tree-data-example'
-Categoría:! p-0
+prettier: true
+collapse: true
+highlights:
+  - 175
+name: 'table-tree-data-example'
+class: '!p-0'
 ---
 ::
 
-### Con ranuras
+### con ranuras
 
 Puede usar ranuras para personalizar el encabezado y las celdas de datos de la tabla.
 
-Utilice la ranura `#<column>-header` para personalizar el encabezado de una columna. Tendrá acceso a las propiedades `column`,`header` y `table` en el ámbito de la ranura.
+Utilice la ranura `#<column>-header` para personalizar el encabezado de una columna. Tendrá acceso a las propiedades `column`, `header` y `table` en el ámbito de la ranura.
 
-Utilice la ranura `#<column>-cell` para personalizar la celda de una columna. Tendrá acceso a las propiedades `cell`,`column`,`getValue`,`renderValue`,`row` y `table` en el ámbito de la ranura.
+Utilice la ranura `#<column>-cell` para personalizar la celda de una columna. Tendrá acceso a las propiedades `cell`, `column`, `getValue`, `renderValue`, `row` y `table` en el ámbito de ranura.
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre: 'table-slots-example'
-Categoría:! p-0
+prettier: true
+collapse: true
+name: 'table-slots-example'
+class: '!p-0'
 ---
 ::
 
-@454
+## API (Edición española)
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table#attributes" target="_blank"}
-Este componente también soporta todos los atributos HTML nativos `<table>`.
+Este componente también admite todos los atributos HTML nativos de `<table>`.
 ::
 
-@457@espanol
+### Slots
 
-Componentes de slots
+:component-slots
 
-@458@@Exposicion
+### Expose
 
 Puede acceder a la instancia de componente escrito utilizando [`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref).
 
@@ -781,13 +781,13 @@ Esto le dará acceso a lo siguiente:
 
 | Nombre| Tipo|
 | ---- | ---- |
-| @@pH473 @|@474 @@ 476 @|
-| @@pH477 @@@ pH483 @|@@@@@@@@@PH488{lang="ts-type"}https://tanstack.com/table/v8/docs/api/core/table#table-api)|
+| `tableRef`x{lang="ts-type"}| `Ref<HTMLTableElement \| null>`x{lang="ts-type"} (Edición española)|
+| `tableApi`x{lang="ts-type"} (Edición española)| xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx|
 
-@485@@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@486@Changelog en Español
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

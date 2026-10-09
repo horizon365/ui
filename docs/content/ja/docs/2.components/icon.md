@@ -21,14 +21,14 @@ links:
 
 ::component-code
 ---
-小道具
-  名前'i—lucide電球'
-  クラス'サイズ—5'
+props:
+  name: 'i-lucide-lightbulb'
+  class: 'size-5'
 ---
 ::
 
 ::note
-<https://iconify.design>コレクションから任意の名前を使用できます。<https://icones.js.org>で簡単に閲覧するか、[`search-icons`](/docs/getting-started/ai/mcp#available-tools) MCPツールを使用してAIアシスタントから直接検索します。
+<https://iconify.design>コレクションから任意の名前を使用できます。<https://icones.js.org>で簡単に参照するか、[`search-icons`](/docs/getting-started/ai/mcp#available-tools) MCPツールを使用してAIアシスタントから直接検索してください。
 ::
 
 ::framework-only
@@ -40,13 +40,13 @@ links:
 
 ## 例
 
-###  SVG
+### SVG
 
-`name` propにVueコンポーネントを渡すこともできます。
+`name`プロパティにVueコンポーネントを渡すこともできます：
 
 ::component-example
 ---
-名前'icon—svg—example'
+name: 'icon-svg-example'
 ---
 ::
 
@@ -62,12 +62,12 @@ import IconLightbulb from '~icons/lucide/lightbulb'
 </template>
 ```
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
-##  Changelog
+## 変更履歴
 
-component—changelog
+:component-changelog

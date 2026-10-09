@@ -8,22 +8,22 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/EditorDragHandle.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Le composant EditorDragHandle fournit une fonctionnalité de glisser-déposer pour réorganiser les blocs de l'éditeur à l'aide du paquet `@tiptap/extension-drag-handle-vue-3`.
+Le composant EditorDragHandle fournit une fonctionnalité de glisser-déposer pour réorganiser les blocs de l'éditeur à l'aide du package `@tiptap/extension-drag-handle-vue-3`.
 
 ::caution
-Il doit être utilisé dans l'emplacement par défaut d'un composant [Editor](/docs/components/editor) pour avoir accès à l'instance de l'éditeur.
+Il doit être utilisé à l'intérieur de l'emplacement par défaut d'un composant [Editor](/docs/components/editor) pour avoir accès à l'instance de l'éditeur.
 ::
 
-Il étend le [Button](/docs/components/button) composant, de sorte que vous pouvez passer n'importe quelle propriété telle que `color`,`variant`,`size`, etc.
+Il étend le composant [Button](/docs/components/button), de sorte que vous pouvez passer n'importe quelle propriété telle que `color`, `variant`, `size`, etc.
 
 ::component-example
 ---
-Collapse: vrai
-Élevé: True
-nom: 'éditeur-drag-handle-example'
-Catégorie: P-8
+collapse: true
+elevated: true
+name: 'editor-drag-handle-example'
+class: 'p-8'
 ---
 ::
 
@@ -31,7 +31,7 @@ Catégorie: P-8
 En savoir plus sur l'extension Drag Handle dans la documentation de TipTap.
 ::
 
-@@ph013@@Icon
+### Icon
 
 Utilisez le prop `icon` pour personnaliser l'icône de la poignée de glissement.
 
@@ -44,7 +44,7 @@ Utilisez le prop `icon` pour personnaliser l'icône de la poignée de glissement
 ```
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.drag`.
 :::
@@ -55,9 +55,9 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 :::
 ::
 
-@@26@options
+### options
 
-Utilisez le prop `options` pour personnaliser le comportement de positionnement à l'aide des options d'interface utilisateur flottante ](https://floating-ui.com/docs/computeposition#options).
+Utilisez la prop `options` pour personnaliser le comportement de positionnement à l'aide des options d'interface utilisateur flottante ](https://floating-ui.com/docs/computeposition#options).
 
 ::note
 Le décalage est automatiquement calculé pour centrer la poignée pour les petits blocs et l'aligner sur le dessus pour les blocs plus grands.
@@ -76,60 +76,60 @@ Le décalage est automatiquement calculé pour centrer la poignée pour les peti
 </template>
 ```
 
-@@ph044@exemples
+## Exemples
 
-### Avec menu déroulant
+### With menu déroulant
 
-Utilisez l'emplacement par défaut pour ajouter un [DropdownMenu](/docs/components/dropdown-menu) avec des actions au niveau des blocs comme dupliquer, supprimer, déplacer vers le haut/vers le bas ou transformer des blocs en différents types.
+Utilisez l'emplacement par défaut pour ajouter un menu [x/docs/components/dropdown-menu) avec des actions au niveau du bloc comme dupliquer, supprimer, déplacer vers le haut/vers le bas ou transformer des blocs en différents types.
 
 Écoutez l'événement `@node-change` pour suivre le nœud actuellement en survol et sa position, puis utilisez `editor.chain().setMeta('lockDragHandle', open).run()`{lang="ts-type"} pour verrouiller la position de la poignée pendant que le menu est ouvert.
 
 ::component-example
 ---
-Élevé: True
-Collapse: vrai
-name: 'éditeur-drag-handle-drop-menu-exemple'
-Catégorie: P-8
+elevated: true
+collapse: true
+name: 'editor-drag-handle-dropdown-menu-example'
+class: 'p-8'
 ---
 ::
 
 ::note
-Cet exemple utilise l'utilitaire `mapEditorItems` de `@nuxt/ui/utils/editor` pour mapper automatiquement les types de gestionnaires (tels que `duplicate`,`delete`,`moveUp`, etc.) à leurs commandes d'éditeur correspondantes avec une gestion d'état appropriée.
+Cet exemple utilise l'utilitaire `mapEditorItems` de `@nuxt/ui/utils/editor` pour mapper automatiquement les types de gestionnaires (comme `duplicate`, `delete`, `moveUp`, etc.) à leurs commandes d'éditeur correspondantes avec une gestion d'état appropriée.
 ::
 
-### Avec menu de suggestions
+### Avec menu suggestions
 
-Utilisez l'emplacement par défaut pour ajouter un [Button](/docs/components/button) à côté de la poignée de glisser pour ouvrir le [EditorSuggestionMenu](/docs/components/editor-suggestion-menu).
+Utilisez l'emplacement par défaut pour ajouter un [Button](/docs/components/button) à côté de la poignée de glissement pour ouvrir le menu [EditorSuggestionMenu](/docs/components/editor-suggestion-menu).
 
-Appelez la fonction `onClick` pour obtenir la position actuelle du nœud, puis utilisez `handlers.suggestion?.execute(editor, { pos: node?.pos }).run()`{lang="ts-type"} pour insérer de nouveaux blocs à cette position.
+Appelez la fonction slot `onClick` pour obtenir la position actuelle du nœud, puis utilisez `handlers.suggestion?.execute(editor, { pos: node?.pos }).run()`{lang="ts-type"} pour insérer de nouveaux blocs à cette position.
 
 ::component-example
 ---
-Élevé: True
-Collapse: vrai
-name: 'éditeur-drag-handle-suggestion-menu-exemple'
-classe: '! p-0'
+elevated: true
+collapse: true
+name: 'editor-drag-handle-suggestion-menu-example'
+class: '!p-0'
 ---
 ::
 
-@@P2000@@été
+## API
 
-@@ph071@@props
+### Props
 
-Composants-props
+:component-props
 
-@@772@@réseau
+### Slots
 
-Composants slots
+:component-slots
 
-@@773@@émetteur
+### Emis
 
-Composants émetteurs
+:component-emits
 
-@@ph074@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

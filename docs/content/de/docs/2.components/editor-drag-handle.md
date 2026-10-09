@@ -1,5 +1,5 @@
 ---
-title: Herausgeber DragHandle
+title: Herausgeber: DragHandle
 description: Ein ziehbares Handle zum Neuordnen und Auswählen von Blöcken im Editor.
 category: editor
 links:
@@ -8,22 +8,22 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/EditorDragHandle.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Die EditorDragHandle-Komponente bietet eine Drag-and-Drop-Funktion zum Neuordnen von Editorblöcken mit dem @@@-Paket.
+Die EditorDragHandle-Komponente bietet Drag-and-Drop-Funktionen zum Umordnen von Editorblöcken mit dem Paket `@tiptap/extension-drag-handle-vue-3`.
 
 ::caution
-Es muss innerhalb eines [Editor](/docs/components/editor) Komponenten-Standardsteckplatz verwendet werden, um Zugriff auf die Editorinstanz zu haben.
+Es muss innerhalb eines [Editor](/docs/components/editor)-Komponentensteckplatzes verwendet werden, um Zugriff auf die Editorinstanz zu haben.
 ::
 
-Es erweitert die Komponente [Button](/docs/components/button), so dass Sie jede Eigenschaft wie `color`,`variant`,`size` usw. übergeben können.
+Es erweitert die Komponente [Button](/docs/components/button), so dass Sie jede Eigenschaft wie `color`, `variant`, `size` usw. übergeben können.
 
 ::component-example
 ---
-Einsturz: wahr
-Höhe: wahr
-Name: 'Editor-Drag-Handle-Beispiel'
-Klasse: 'P-8'
+collapse: true
+elevated: true
+name: 'editor-drag-handle-example'
+class: 'p-8'
 ---
 ::
 
@@ -31,9 +31,9 @@ Klasse: 'P-8'
 Erfahren Sie mehr über die Drag Handle-Erweiterung in der TipTap-Dokumentation.
 ::
 
-@@ph013@@Icon-Seite
+### Icon (englisch)
 
-Verwenden Sie das `icon` prop, um das Drag Handle-Symbol anzupassen.
+Verwenden Sie die `icon`-Prop, um das Drag Handle-Symbol anzupassen.
 
 ```vue
 <template>
@@ -44,20 +44,20 @@ Verwenden Sie das `icon` prop, um das Drag Handle-Symbol anzupassen.
 ```
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.drag` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter der `ui.icons.drag`-Taste anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.drag` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.drag` Schlüssel anpassen.
 :::
 ::
 
-@@ph026@Optionen
+### Options (englisch)
 
-Verwenden Sie `options` prop, um das Positionierungsverhalten mit [Floating-UI-Optionen ](https://floating-ui.com/docs/computeposition#options) anzupassen.
+Verwenden Sie die `options`-Prop, um das Positionierungsverhalten mit [Floating UI-Optionen ](https://floating-ui.com/docs/computeposition#options) anzupassen.
 
 ::note
 Der Versatz wird automatisch berechnet, um den Griff für kleine Blöcke zu zentrieren und für größere Blöcke nach oben auszurichten.
@@ -76,60 +76,60 @@ Der Versatz wird automatisch berechnet, um den Griff für kleine Blöcke zu zent
 </template>
 ```
 
-@@ph044@@Beispiele
+## Examples (Beispiele)
 
-### Mit Dropdown-Menü
+### Mit dem Dropdown-Menü
 
-Verwenden Sie den Standard-Slot, um ein [DropdownMenu](/docs/components/dropdown-menu) mit Aktionen auf Blockebene wie Duplizieren, Löschen, Aufwärts-/Abwärtsbewegen oder Transformieren von Blöcken in verschiedene Typen hinzuzufügen.
+Verwenden Sie den Standardsteckplatz, um ein [DropdownMenu](/docs/components/dropdown-menu) mit Aktionen auf Blockebene wie Duplizieren, Löschen, Aufwärts-/Abwärtsbewegen oder Transformieren von Blöcken in verschiedene Typen hinzuzufügen.
 
-Hören Sie sich das `@node-change`-Ereignis an, um den aktuell schwebenden Knoten und seine Position zu verfolgen, und verwenden Sie dann `editor.chain().setMeta('lockDragHandle', open).run()`{lang="ts-type"}, um die Handle-Position zu sperren, während das Menü geöffnet ist.
+Hören Sie sich das `@node-change`-Ereignis an, um den derzeit schwebenden Knoten und seine Position zu verfolgen, und verwenden Sie dann `editor.chain().setMeta('lockDragHandle', open).run()`{lang="ts-type"}, um die Handle-Position zu sperren, während das Menü geöffnet ist.
 
 ::component-example
 ---
-Höhe: wahr
-Einsturz: wahr
-Name: 'Editor-Drag-Handle-Dropdown-Menu-Beispiel'
-Klasse: 'P-8'
+elevated: true
+collapse: true
+name: 'editor-drag-handle-dropdown-menu-example'
+class: 'p-8'
 ---
 ::
 
 ::note
-In diesem Beispiel wird das Dienstprogramm `mapEditorItems` von `@nuxt/ui/utils/editor` verwendet, um Handlertypen (wie `duplicate`,`delete`,`moveUp`, etc.) automatisch den entsprechenden Editorbefehlen mit korrekter Zustandsverwaltung zuzuordnen.
+In diesem Beispiel wird das Dienstprogramm `mapEditorItems` von `@nuxt/ui/utils/editor` verwendet, um Handlertypen (wie `duplicate`, `delete`, `moveUp` usw.) automatisch den entsprechenden Editorbefehlen mit korrekter Zustandsverwaltung zuzuordnen.
 ::
 
-### Mit Vorschlagsmenü
+### Mit Vorschlagsmenu
 
-Verwenden Sie den Standard-Steckplatz, um ein [Button](/docs/components/button) neben dem Drag Handle hinzuzufügen, um das [EditorSuggestionMenu](/docs/components/editor-suggestion-menu) zu öffnen.
+Verwenden Sie den Standardsteckplatz, um einen [Button](/docs/components/button) neben dem Ziehpunkt hinzuzufügen, um den [EditorSuggestionMenu](/docs/components/editor-suggestion-menu) zu öffnen.
 
-Rufen Sie die Funktion `onClick` slot auf, um die aktuelle Knotenposition zu erhalten, und verwenden Sie dann `handlers.suggestion?.execute(editor, { pos: node?.pos }).run()`{lang="ts-type"}, um neue Blöcke an dieser Position einzufügen.
+Rufen Sie die Slot-Funktion `onClick` auf, um die aktuelle Knotenposition zu ermitteln, und verwenden Sie dann `handlers.suggestion?.execute(editor, { pos: node?.pos }).run()`{lang="ts-type"}, um neue Blöcke an dieser Position einzufügen.
 
 ::component-example
 ---
-Höhe: wahr
-Einsturz: wahr
-Name: 'Editor-Drag-Handle-Vorschlag-Menü-Beispiel'
-Klasse: '! p-0'
+elevated: true
+collapse: true
+name: 'editor-drag-handle-suggestion-menu-example'
+class: '!p-0'
 ---
 ::
 
-## api
+## API (Englisch)
 
-@@@@@@@@@@@ph071@@props
+### Props (englisch)
 
-Komponenten-Props
+:component-props
 
-### Slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@@ph073@@@emits
+### Emits (nicht)
 
-Komponenten emittieren
+:component-emits
 
-@@@@@@@@@ph074@theme
+## Theme (englisch)
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph075@@changelog @ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

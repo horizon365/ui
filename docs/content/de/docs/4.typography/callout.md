@@ -9,80 +9,80 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Callout.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Verwenden Sie Markdown im Standard-Slot der `callout`-Komponente, um Ihren Inhalten einen auffälligen Kontext hinzuzufügen.
 
 ::component-code{slug="callout" prose}
 ---
-Props:
-  Klasse: 'w-voll my-0'
-Hide:
-  @@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@
-Die Slots:
-  default: Dies ist ein `callout` mit vollem **markdown** support.
+props:
+  class: 'w-full my-0'
+hide:
+  - class
+slots:
+  default: This is a `callout` with full **markdown** support.
 ---
 ::
 
-@@@@@@@@@@@@@@@@@@Icony
+### Icon (nicht)
 
-Verwenden Sie das `icon` prop, um ein Symbol neben dem Inhalt anzuzeigen.
+Verwenden Sie die `icon`-Prop, um ein Symbol neben dem Inhalt anzuzeigen.
 
 ::component-code{slug="callout" prose}
 ---
-Props:
-  I-Lucide-Square-Play (englisch)
-  Klasse: 'w-voll my-0'
-Hide:
-  @@@008@0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Slots auf:
-  default: Dies ist ein `callout` mit einem Icon.
+props:
+  icon: i-lucide-square-play
+  class: 'w-full my-0'
+hide:
+  - class
+slots:
+  default: This is a `callout` with an icon.
 ---
 ::
 
-@@@@@10@100@100@100@100@100@100@10@10@10@10@10@10@@10@10@10@@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@@100@@@@@100000@@@@@@@@@@@@@1000000000@@@@@@@@@@@@@@@@@@@@@@@10000000000@@@@@@@@@@@@@@@@@@@
+### Color (englisch)
 
-Verwenden Sie `color` prop, um die Farbe des Callouts zu ändern.
+Verwenden Sie die `color`-Prop, um die Farbe des Callouts zu ändern.
 
 ::component-code{slug="callout" prose}
 ---
-Ignoriert:
-  @@@@@@@@@@icon.de
-Props:
-  Bildnachweis: i-lucide-info
-  Farbe: Info
-  Klasse: 'w-voll mein-0'
-Hide:
-  @@13@Klasse
-Slots auf:
-  default: Dies ist ein `callout` mit einer benutzerdefinierten Farbe.
+ignore:
+  - icon
+props:
+  icon: i-lucide-info
+  color: info
+  class: 'w-full my-0'
+hide:
+  - class
+slots:
+  default: This is a `callout` with a custom color.
 ---
 ::
 
-@@@@@15@Link
+### Link Bearbeiten
 
-Sie können jede Eigenschaft von der [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) Komponente wie `to` und `target` übergeben, um die Callout einen Link zu machen.
+Sie können jede Eigenschaft der Komponente [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) übergeben, z. B. `to` und `target`, um die Beschriftung zu einem Link zu machen.
 
 ::component-code{slug="callout" prose}
 ---
-Hide:
-  @@ph023@class
-Ignoriert:
-  @@ph024@@gmail.de
-  @@ph025@@zielgruppe
-Props:
-  I-Lucide-Square-Play (englisch)
-  zu: '/docs/getting-started/installation/nuxt'
-  Farbe: neutral
-  Klasse: 'w-voll my-0'
-Die Slots:
-  default: Lernen Sie, wie Sie `@nuxt/ui` in Ihrem Projekt installieren.
+hide:
+  - class
+ignore:
+  - icon
+  - target
+props:
+  icon: i-lucide-square-play
+  to: '/docs/getting-started/installation/nuxt'
+  color: neutral
+  class: 'w-full my-0'
+slots:
+  default: Learn how to install `@nuxt/ui` in your project.
 ---
 ::
 
-@@ph027@Kurzfassungen
+## Kurzfassungen
 
-Sie können auch die `note`,`tip`,`warning` und `caution` Shortcuts mit vordefinierten Icons und Farben verwenden.
+Sie können auch die `note`, `tip`, `warning` und `caution` Verknüpfungen mit vordefinierten Symbolen und Farben verwenden.
 
 ::code-preview
 
@@ -101,12 +101,12 @@ Seien Sie vorsichtig mit dieser Aktion, da dies zu unerwarteten Ergebnissen füh
 ::
 
 ::caution{class="w-full my-0"}
-Diese Aktion kann nicht ungeschehen gemacht werden.
+Diese Aktion kann nicht rückgängig gemacht werden.
 ::
 
 :::
 
-#Der Code
+#code
 
 ```mdc
 ::note
@@ -128,20 +128,20 @@ This action cannot be undone.
 
 ::
 
-@@ph049@@api
+## API (Englisch)
 
-@@@@@@@@ph050@@props
+### Props (englisch)
 
-: component-props {prose}
+:component-props{prose}
 
-@@ph052@gmail.de
+### Slots Bearbeiten
 
-: component-slots {prose}
+:component-slots{prose}
 
-@@ph054@gmail.de
+## Theme Bearbeiten
 
-: component-theme {prose}
+:component-theme{prose}
 
-@@ph056@@changelog @@changelog
+## Changelog (englisch)
 
-: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

@@ -12,31 +12,31 @@ links:
 デフォルトのスロットを使用して、コンテンツの幅を中央にして制限します。
 
 ::tip{to="/docs/getting-started/theme/css-variables#container"}
-最大幅はCSS変数`--ui-container`によって制御されます。
+最大幅はCSS変数`--ui-container`で制御されます。
 ::
 
 ::component-example
 ---
-name 'コンテナ例'
-小道具
-  クラス'w—full'
+name: 'container-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

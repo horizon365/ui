@@ -8,7 +8,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardToolbar.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
 Le composant DashboardToolbar est utilisé pour afficher une barre d'outils sous le composant [DashboardNavbar](/docs/components/dashboard-navbar).
 
@@ -32,15 +32,15 @@ definePageMeta({
 </template>
 ```
 
-Utilisez les emplacements `left`,`default` et `right` pour personnaliser la barre d'outils.
+Utilisez les emplacements `left`, `default` et `right` pour personnaliser la barre d'outils.
 
 ::component-example
 ---
-Étiquette: true
-nom: dashboard-toolbar-exemple
-classe: '! px-0! pt-0'
-Props:
-  Catégorie: w-full
+prettier: true
+name: 'dashboard-toolbar-example'
+class: '!px-0 !pt-0'
+props:
+  class: 'w-full'
 ---
 ::
 
@@ -48,20 +48,20 @@ Props:
 Dans cet exemple, nous utilisons le composant [NavigationMenu](/docs/components/navigation-menu) pour rendre certains liens.
 ::
 
-@@ph034@@api
+## api
 
-@@@ph035@@props
+### Props
 
-Composants-props
+:component-props
 
-@@ph036@@réglages
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph037@thème
+## thème
 
-Composant-thème
+:component-theme
 
-@changelog 38
+xph05xChangelog
 
-Composant-changelog
+:component-changelog

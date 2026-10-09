@@ -9,14 +9,14 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Icon.vue
 ---
 
-##  사용
+## Usage
 
-`icon` 구성 요소를 사용하여 콘텐츠에 [Icon](/docs/components/icon)를 표시합니다.
+`icon` 구성 요소를 사용하여 콘텐츠에 [Iconxph03x/docs/components/icon)를 표시합니다.
 
 ::code-preview
-: icon{name="i-simple-icons-nuxtdotjs"}
+:icon{name="i-simple-icons-nuxtdotjs"}
 
-# 코드
+#code
 
 ```mdc
 :icon{name="i-simple-icons-nuxtdotjs"}
@@ -24,16 +24,16 @@ links:
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props (### Props)
 
-: component-props {prose}
+:component-props{prose}
 
-##  테마
+## Theme (## Theme)
 
-:component-theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## 변경 로그
 
-: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

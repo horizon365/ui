@@ -11,18 +11,18 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/color-mode/ColorModeSwitch.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Le composant ColorModeSwitch étend le composant [Switch](/docs/components/switch), afin que vous puissiez passer n'importe quelle propriété telle que `color`,`size`, etc.
+Le composant ColorModeSwitch étend le composant [Switch](/docs/components/switch), de sorte que vous pouvez passer n'importe quelle propriété telle que `color`, `size`, etc.
 
-: composant code {prefix="color-mode"}
+:component-code{prefix="color-mode"}
 
-@@ph008@exemples
+## Exemples
 
-### Avec des icônes personnalisées
+### With custom icons
 
 ::framework-only
-#numérique
+#nuxt
 ::div
 
 Utilisez le `app.config.ts` pour personnaliser l'icône avec la propriété `ui.icons`:
@@ -68,12 +68,12 @@ export default defineConfig({
 
 ::
 
-@@ph043@@api
+## api
 
-@@444@propriété
+### Props
 
-Composants-props
+:component-props
 
-@changement@changement@changement@changement.com
+## Changelog écrit
 
-: composant-changelog {prefix="color-mode"}
+:component-changelog{prefix="color-mode"}

@@ -11,25 +11,25 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/color-mode/ColorModeButton.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Die ColorModeButton-Komponente erweitert die Komponente [Button](/docs/components/button), so dass Sie jede Eigenschaft wie `color`,`variant`,`size`, etc. übergeben können
+Die ColorModeButton-Komponente erweitert die Komponente [Button](/docs/components/button), sodass Sie jede Eigenschaft wie `color`, `variant`, `size` usw. übergeben können.
 
-: component-code {prefix="color-mode"}
+:component-code{prefix="color-mode"}
 
 ::note
-Die Schaltfläche ist standardmäßig auf `color="neutral"` und `variant="ghost"`.
+Die Standardeinstellung für die Schaltfläche lautet `color="neutral"` und `variant="ghost"`.
 ::
 
-@@ph011@@Beispiele
+## Examples (Beispiele)
 
-@@ph012@@mit benutzerdefinierten Icons
+### With benutzerdefinierte Icons
 
 ::framework-only
-#nuxt sein
+#nuxt
 ::div
 
-Verwenden Sie `app.config.ts`, um das Symbol mit der `ui.icons`-Eigenschaft anzupassen:
+Verwenden Sie die `app.config.ts`, um das Symbol mit der Eigenschaft `ui.icons` anzupassen:
 
 ```ts [app/app.config.ts]
 export default defineAppConfig({
@@ -44,9 +44,9 @@ export default defineAppConfig({
 
 ::
 
-#Ansehen
+#vue
 ::div
-Verwenden Sie `vite.config.ts`, um das Symbol mit der `ui.icons`-Eigenschaft anzupassen:
+Verwenden Sie die `vite.config.ts`, um das Symbol mit der Eigenschaft `ui.icons` anzupassen:
 
 ```ts [vite.config.ts]
 import { defineConfig } from 'vite'
@@ -72,16 +72,16 @@ export default defineConfig({
 
 ::
 
-## api
+## API (englisch)
 
-@@@@@@@@@@ph047@@props
+### Props (nicht)
 
-Komponenten-Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-Diese Komponente unterstützt auch alle nativen `<button>` HTML-Attribute.
+Diese Komponente unterstützt auch alle nativen `<button>`-HTML-Attribute.
 ::
 
-@@ph049@@changelog @@changelog
+## Changelog (englisch)
 
-: component-changelog {prefix="color-mode"}
+:component-changelog{prefix="color-mode"}

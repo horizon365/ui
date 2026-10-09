@@ -14,223 +14,223 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputRating.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Verwenden Sie die `v-model`-Direktive, um den Bewertungswert der InputRating-Komponente zu steuern.
+Verwenden Sie die `v-model`-Direktive, um den Ratingwert der Komponente InputRating zu steuern.
 
 ::component-code
 ---
-Außen:
-  - modellWert
-Props:
-  Modellgröße: 3
+external:
+  - modelValue
+props:
+  modelValue: 3
 ---
 ::
 
-Verwenden Sie `default-value` prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
+Verwenden Sie die `default-value`-prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
 
 ::component-code
 ---
-Ignoriert:
-  - defaultValue (nicht vorhanden)
-Props:
-  Defaultwert: 3
----
-::
-
-@@ph005@Schritt
-
-Verwenden Sie `step` prop, um die Granularität jedes Sterns zu steuern. Setzen Sie es auf `0.5`, um Halbsterne-Bewertungen zuzulassen.
-
-::component-code
----
-Ignoriert:
-  - defaultValue (nicht vorhanden)
-Props:
-  Schritt: 0.5
-  Fehlerwert: 3,5
----
-::
-
-@@ph009@@Länge
-
-Verwenden Sie `length` prop, um die Anzahl der Sterne festzulegen.
-
-::component-code
----
-Ignoriert:
+ignore:
   - defaultValue
-Props:
-  Dauer: 10
-  Schritt: 0.5
-  Fehlerwert: 7.5
+props:
+  defaultValue: 3
 ---
 ::
 
-### Klarstellung
+### step-### step
 
-Verwenden Sie `clearable` prop, damit Benutzer die Bewertung löschen können, indem Sie auf den aktuell ausgewählten Wert klicken. Standardmäßig auf `false`.
+Verwenden Sie die `step`-prop, um die Granularität jedes Sterns zu steuern. Setzen Sie sie auf `0.5`, um Halbsterne-Bewertungen zu ermöglichen.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - defaultValue
-Props:
-  Klarstellung: true
-  Defaultwert: 3
+props:
+  step: 0.5
+  defaultValue: 3.5
 ---
 ::
 
-@@ph017@@gmail.de
+### Length ist
 
-Verwenden Sie `hoverable` prop, um zu steuern, ob die Bewertung den Wert anzeigt, wenn Sie über die Sterne schweben.
-
-::component-code
----
-Ignoriert:
-  - defaultValue (@ Fehlerwert)
-Props:
-  unwahr: true
-  Defaultwert: 3
----
-::
-
-@@ph021@@@Icon-Seite
-
-Verwenden Sie `icon` prop, um das Symbol für stars. Defaults auf `i-lucide-star` anzupassen.
+Verwenden Sie die `length`-prop, um die Anzahl der Sterne einzustellen. Standardmäßig ist `5`.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - defaultValue
-Props:
-  I-Lucide-Heart (englisch)
-  Defaultwert: 4
+props:
+  length: 10
+  step: 0.5
+  defaultValue: 7.5
+---
+::
+
+### Clearable.de Bearbeiten
+
+Verwenden Sie die `clearable`-Prop, um Benutzern zu ermöglichen, die Bewertung durch Klicken auf den aktuell ausgewählten Wert zu löschen.
+
+::component-code
+---
+ignore:
+  - defaultValue
+props:
+  clearable: true
+  defaultValue: 3
+---
+::
+
+### Hoverable Bearbeiten
+
+Verwenden Sie die `hoverable`-prop, um zu steuern, ob die Bewertung den Wert beim Schweben über den Sternen anzeigt.
+
+::component-code
+---
+ignore:
+  - defaultValue
+props:
+  hoverable: true
+  defaultValue: 3
+---
+::
+
+### Icon (englisch)
+
+Verwenden Sie die `icon`-Prop, um das Symbol für Sterne anzupassen. Standardmäßig ist `i-lucide-star`.
+
+::component-code
+---
+ignore:
+  - defaultValue
+props:
+  icon: 'i-lucide-heart'
+  defaultValue: 4
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können das Standardsternsymbol global in Ihrem `app.config.ts` unter `ui.icons.star` key anpassen.
+Sie können das Standardsternsymbol global in Ihrem `app.config.ts` unter der `ui.icons.star`-Taste anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können das Standardsternsymbol global in Ihrem `vite.config.ts` unter `ui.icons.star` Schlüssel anpassen.
+Sie können das Standardsternsymbol global in Ihrem `vite.config.ts` unter der `ui.icons.star`-Taste anpassen.
 :::
 ::
 
-@@ph029@@leeres Icon
+### Empty Icon (nicht vorhanden)
 
-Verwenden Sie das `empty-icon` prop, um das Symbol für leere Sterne anzupassen. Wenn nicht angegeben, verwendet es dasselbe Symbol wie `icon`.
+Verwenden Sie die `empty-icon`-prop, um das Symbol für leere Sterne. If nicht zur Verfügung gestellt, verwendet das gleiche Symbol wie `icon`.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - defaultValue
-Props:
-  emptyIcon: 'i-lucide-circle'(I-luzide-Kreis)
-  Icon: 'i-lucide-circle-check'(I-luzide-Kreis-Check)
-  Defaultwert: 3
+props:
+  emptyIcon: 'i-lucide-circle'
+  icon: 'i-lucide-circle-check'
+  defaultValue: 3
 ---
 ::
 
-@@@@@333@33@33@33@33@33@@33@33@@33@@33@@@33@@@@33@@@@33@3@@@@33@@@@33@3@@@@33@3@@3@@@33@3@@@@33@3@@3@3@3@@@33@@@@@333@@3@@@33@3@@@@33@@@@33@@3@@@@@333@@@@3@@@@@@333@@@@@@333@@@@@@@@@@@@@3333@@@@@@@@@@@@@@@@@@333333@@@@@@@@@@@@@@@@@@@@@@@@33333333@@
+### Color (englisch)
 
-Verwenden Sie die `color` prop, um die Farbe der gefüllten Sterne zu ändern.
+Verwenden Sie die `color`-Prop, um die Farbe der gefüllten Sterne zu ändern.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - defaultValue
-Props:
-  Farbe: neutral
-  Defaultwert: 4
+props:
+  color: neutral
+  defaultValue: 4
 ---
 ::
 
-@@ph036 @ Größe
+### Size
 
-Verwenden Sie `size` prop, um die Größe der Sterne zu ändern.
+Verwenden Sie die `size`-Prop, um die Größe der Sterne zu ändern.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - defaultValue
-Items:
-  Größe:
-    @@@@39@xxx
-    @@ph040@@sm
-    @@041@md
-    @@ph042@@lg
-    @@ph043@@xl
-Props:
-  Größe: XL
-  Defaultwert: 4
+items:
+  size:
+    - xs
+    - sm
+    - md
+    - lg
+    - xl
+props:
+  size: xl
+  defaultValue: 4
 ---
 ::
 
-@@ph044@Orientierung
+### Orientierung
 
-Verwenden Sie `orientation` prop, um die Ausrichtung der Bewertung zu ändern. Standardmäßig auf `horizontal`.
-
-::component-code
----
-Ignoriert:
-  - defaultValue (nicht vorhanden)
-Props:
-  Ausrichtung: Vertikal
-  Defaultwert: 4
----
-::
-
-@@ph048@disabled @ disabled
-
-Wenn deaktiviert, hat die Komponente eine reduzierte Deckkraft (75%) und zeigt einen `not-allowed` Cursor an, um anzuzeigen, dass sie nicht interaktiv ist.
+Verwenden Sie die `orientation` prop, um die Ausrichtung der Bewertung zu ändern. Standardmäßig auf `horizontal`.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - defaultValue
-Props:
-  Behindert: Wahr
-  Defaultwert: 3
+props:
+  orientation: vertical
+  defaultValue: 4
 ---
 ::
 
-@@ph052@readonly (nicht übersetzt)
+### Disabled (englisch)
 
-Verwenden Sie `readonly` prop, um eine Bewertung ohne Benutzerinteraktion anzuzeigen. Im Gegensatz zu `disabled` behält es das normale Aussehen bei (volle Deckkraft, Standard-Cursor). Verwenden Sie es, wenn Sie eine Bewertung anzeigen möchten, die nicht geändert werden kann, aber normal aussehen sollte.
+Wenn deaktiviert, hat die Komponente eine reduzierte Deckkraft (75%) und zeigt einen `not-allowed`-Cursor an, um anzuzeigen, dass sie nicht interaktiv ist.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - defaultValue
-Props:
-  Readonly: wahr
-  Fehlerwert: 4.5
+props:
+  disabled: true
+  defaultValue: 3
 ---
 ::
 
-@@@@@@565@@bmw
+### Readonly (englisch)
 
-@@@ph057@@props
+Verwenden Sie die `readonly`-Prop, um eine Bewertung anzuzeigen, ohne die Benutzerinteraktion zuzulassen. Im Gegensatz zu `disabled` behält sie das normale Erscheinungsbild bei (volle Deckkraft, Standard-Cursor). Verwenden Sie diese Funktion, wenn Sie eine Bewertung anzeigen möchten, die nicht geändert werden kann, aber normal aussehen sollte.
 
-Komponenten-Props
+::component-code
+---
+ignore:
+  - defaultValue
+props:
+  readonly: true
+  defaultValue: 4.5
+---
+::
 
-@@ph058@gmail.de
+## API Bearbeiten
 
-Die Komponenten-Slots
+### Props (englisch)
 
-@@ph059@@emits
+:component-props
 
-Komponenten emittieren
+### Slots (englisch)
 
-@@ph060@@gmail.de
+:component-slots
 
-Das Komponenten-Theme
+### Emits (nicht)
 
-## Changelog @@ Changelog @@@ Changelog
+:component-emits
 
-Das Component-Changelog
+## Theme Bearbeiten
+
+:component-theme
+
+## Changelog (englisch)
+
+:component-changelog

@@ -9,101 +9,101 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Prompt.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Verwenden Sie die `prompt` Komponente, um eine vorgefertigte AI-Eingabeaufforderung anzuzeigen, die Benutzer in ihre Zwischenablage kopieren oder direkt in ihrer IDE öffnen können. Die `description` prop wird als sichtbare Beschriftung angezeigt, während der Standard-Slot den Eingabeaufforderungstext enthält, der kopiert wird.
-
-::component-code{slug="prompt" prose}
----
-Props:
-  Beschreibung: Erstellen Sie ein Dashboard-Layout mit Nuxt UI.
-  Klasse: 'w-voll mein-0'
-Hide:
-  @@003@Klasse
-Slots auf:
-  Default:|
-    Sie sind ein Nuxt UI expert. Help mir bauen ein dashboard-layout mit einer zusammenklappbaren sidebar und eine klebrige top navbar.
-
-    Forderungen:
-    - Verwendung `UDashboardPanel`,`UDashboardSidebar`, und `UDashboardNavbar`
-    - Verwenden Sie semantische Farb-Token wie `bg-elevated` und `text-muted` für die Thematisierung
-    - Die Seitenleiste sollte Navigationslinks mit Symbolen enthalten, die `UNavigationMenu` verwenden
-    - Die Navigationsleiste sollte einen Breadcrumb, eine Suchschaltfläche und ein Dropdown-Menü für Benutzer anzeigen
-    - Das Layout muss vollständig responsiv sein und die Seitenleiste auf dem Handy zusammenklappen
----
-::
-
-@@ph015@@gmail.de
-
-Verwenden Sie das `icon` prop, um ein Symbol neben der Beschreibung anzuzeigen.
+Verwenden Sie die `prompt`-Komponente, um eine vorgefertigte KI-Eingabeaufforderung anzuzeigen, die Benutzer in ihre Zwischenablage kopieren oder direkt in ihrer IDE öffnen können. Die `description`-Prop wird als sichtbare Beschriftung angezeigt, während der Standard-Slot den Eingabeaufforderungstext enthält, der kopiert wird.
 
 ::component-code{slug="prompt" prose}
 ---
-Ignoriert:
-  @@ph017@beschreibung
-Hide:
-  @@@@@18@18@18
-Props:
-  description: Erstellen Sie ein Formular mit Validierung.
-  I-Lucide-File-Pen-Line (englisch)
-  Klasse: 'w-voll my-0'
-Die Slots:
-  Default:|
-    Erstellen Sie ein Registrierungsformular mit Nuxt UI mit Zod-Schemavalidierung.
+props:
+  description: Build a dashboard layout with Nuxt UI.
+  class: 'w-full my-0'
+hide:
+  - class
+slots:
+  default: |
+    You are a Nuxt UI expert. Help me build a dashboard layout with a collapsible sidebar and a sticky top navbar.
 
-    Anforderungen:
-    - Use `UForm` mit einem Zod-Schema zur Validierung
-    - Add `UFormField` umschließt jede Eingabe: Name (`UInput`), E-Mail (`UInput` type email), Rolle (`USelect` mit Optionen Admin, Editor, Viewer)
-    - Include ein submit `UButton` mit Ladezustand
-    - Inline-Fehlermeldungen unterhalb jedes Feldes anzeigen
-    - Bei erfolgreicher Einreichung, zeigen Sie eine `UToast` Benachrichtigung
+    Requirements:
+    - Use `UDashboardPanel`, `UDashboardSidebar`, and `UDashboardNavbar`
+    - Use semantic color tokens like `bg-elevated` and `text-muted` for theming
+    - The sidebar should include navigation links with icons using `UNavigationMenu`
+    - The navbar should display a breadcrumb, a search button, and a user dropdown menu
+    - The layout must be fully responsive and collapse the sidebar on mobile
 ---
 ::
 
-@@ph031@@Aktion
+### Icon Bearbeiten
 
-Verwenden Sie `actions` prop, um zusätzliche Schaltflächen anzuzeigen. Die Schaltfläche `copy` wird immer angezeigt. Die verfügbaren Aktionen sind `cursor`,`windsurf` und `claude`.
+Verwenden Sie die `icon` prop, um ein Symbol neben der Beschreibung anzuzeigen.
 
 ::component-code{slug="prompt" prose}
 ---
-Ignoriert:
-  @@ph037@beschreibung
-  @@@@@@@@@@icon______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-Hide:
-  @@@@@@399@@class
-Props:
-  Beschreibung: Fügen Sie einen Farbmodus hinzu.
-  I-Lucide-Sonne-Mond
-  Aktionen:
-    @@ph040@@cursor |
-    @@ph041@@@claude
-  Klasse: 'w-voll mein-0'
-Die Slots:
-  Default:|
-    Fügen Sie meiner Nuxt-App einen Farbmodus-Umschalter hinzu.
+ignore:
+  - description
+hide:
+  - class
+props:
+  description: Create a form with validation.
+  icon: i-lucide-file-pen-line
+  class: 'w-full my-0'
+slots:
+  default: |
+    Create a registration form using Nuxt UI with Zod schema validation.
 
-    Anforderungen:
-    - Verwenden Sie `useColorMode` von `@nuxtjs/color-mode`, um den aktuellen Modus zu verwalten
-    - Render ein `UButton` mit `variant="ghost"`, dass Zyklen zwischen `light`,`dark` und `system` auf Klick
-    - Aktualisieren Sie das Tastensymbol dynamisch: `i-lucide-sun` für Licht,`i-lucide-moon` für Dunkelheit,`i-lucide-monitor` für System
-    - Fügen Sie einen Tooltip mit `UTooltip` hinzu, der den aktuellen aktiven Modus anzeigt
+    Requirements:
+    - Use `UForm` with a Zod schema for validation
+    - Add `UFormField` wrapping each input: name (`UInput`), email (`UInput` type email), role (`USelect` with options Admin, Editor, Viewer)
+    - Include a submit `UButton` with loading state
+    - Display inline error messages below each field
+    - On successful submit, show a `UToast` notification
 ---
 ::
 
-@@@@@@57@@bpb
+### Actions Bearbeiten
 
-@@@@@@@@@@@@ph058@@@props
+Verwenden Sie die `actions`-Prop, um zusätzliche Tasten anzuzeigen. Die `copy`-Schaltfläche wird immer angezeigt. Die verfügbaren Aktionen sind `cursor`, `windsurf` und `claude`.
 
-: component-props {prose}
+::component-code{slug="prompt" prose}
+---
+ignore:
+  - description
+  - icon
+hide:
+  - class
+props:
+  description: Add a color mode toggle.
+  icon: i-lucide-sun-moon
+  actions:
+    - cursor
+    - claude
+  class: 'w-full my-0'
+slots:
+  default: |
+    Add a color mode toggle to my Nuxt app.
 
-### Slots
+    Requirements:
+    - Use `useColorMode` from `@nuxtjs/color-mode` to manage the current mode
+    - Render a `UButton` with `variant="ghost"` that cycles between `light`, `dark`, and `system` on click
+    - Update the button icon dynamically: `i-lucide-sun` for light, `i-lucide-moon` for dark, `i-lucide-monitor` for system
+    - Add a tooltip using `UTooltip` that shows the current active mode
+---
+::
 
-: component-slots {prose}
+## API (englisch)
 
-@@ph062@@theme@@theme@@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@@theme@theme@theme@theme@@theme@theme@theme@theme@theme@theme@theme@theme@the
+### Props (englisch)
 
-: component-theme {prose}
+:component-props{prose}
 
-@@ph064@@changelog @@changelog
+### Slots Bearbeiten
 
-: component-changelog {prefix="prose"}
+:component-slots{prose}
+
+## Theme Bearbeiten
+
+:component-theme{prose}
+
+## Changelog (englisch)
+
+:component-changelog{prefix="prose"}

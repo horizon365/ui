@@ -1,6 +1,6 @@
 ---
 title: Prosebadge
-description: 'Zeigen Sie Versionsnummern, Statusbezeichnungen und Tags in Ihren Inhalten an.'
+description: 'Zeigen Sie Versionsnummern, Statusbeschriftungen und Tags innerhalb Ihrer Inhalte an.'
 category: components
 navigation.title: Badge
 links:
@@ -9,17 +9,17 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Badge.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Verwenden Sie Markdown im Standard-Slot der Komponente `badge`, um ein [Badge](/docs/components/badge) in Ihrem Inhalt anzuzeigen.
+Verwenden Sie Markdown im Standard-Slot der `badge`-Komponente, um ein [Badge](/docs/components/badge) in Ihrem Inhalt anzuzeigen.
 
 ::code-preview
 
 :::badge
-@@006@0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+**v4.0.0**
 :::
 
-#Der Code
+#code
 
 ```mdc
 ::badge
@@ -29,20 +29,20 @@ Verwenden Sie Markdown im Standard-Slot der Komponente `badge`, um ein [Badge](/
 
 ::
 
-@@@@@@api
+## API (Englisch)
 
-@@ph014@@@props
+### Props (nicht)
 
-: component-props {prose}
+:component-props{prose}
 
-### Slots
+### Slots (englisch)
 
-: component-slots {prose}
+:component-slots{prose}
 
-@@ph018@@gmail.de
+## Theme (englisch)
 
-: component-theme {prose}
+:component-theme{prose}
 
-@@ph020@@changelog @@changelog
+## Changelog (englisch)
 
-: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

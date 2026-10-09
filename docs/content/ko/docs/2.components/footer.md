@@ -7,36 +7,36 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Footer.vue
 ---
 
-##  사용
+## Usage
 
 Footer 구성 요소는 `<footer>` 요소를 렌더링합니다.
 
-`left``default` 및 `right` 슬롯을 사용하여 바닥글을 사용자 정의합니다.
+`left`, `default` 및 `right` 슬롯을 사용하여 바닥글을 사용자 정의할 수도 있습니다.
 
 ::component-example
 ---
-상품명 : True
-축소: true
-이름: 'footer-example'
-클래스: "!p-0"
-소품 :
-  클래스 : 'w-full'
+prettier: true
+collapse: true
+name: 'footer-example'
+class: '!p-0'
+props:
+  class: 'w-full'
 ---
 ::
 
 ::note
-이 예제에서는 [NavigationMenu](/docs/components/navigation-menu) 구성요소를 사용하여 중앙에 바닥글 링크를 렌더링합니다.
+이 예제에서는 [NavigationMenu](/docs/components/navigation-menu) 구성 요소를 사용하여 중앙에 바닥글 링크를 렌더링합니다.
 ::
 
 ::tip{to="/docs/components/footer-columns"}
-`FooterColumns` 구성 요소를 사용하여 `top` 슬롯 내에 링크 목록을 표시할 수 있습니다.
+`FooterColumns` 구성 요소를 사용하여 `top` 슬롯 내부에 링크 목록을 표시할 수 있습니다.
 ::
 
-##  예
+## 예
 
-### Within`app.vue` @ 내부 `app.vue`
+### x내부 `app.vue`
 
-`app.vue` 또는 레이아웃에서 Footer 구성 요소를 사용하십시오:
+`app.vue` 또는 레이아웃에서 Footer 구성 요소 사용:
 
 ```vue [app.vue]{32-67}
 <script setup lang="ts">
@@ -113,20 +113,20 @@ const items: NavigationMenuItem[] = [{
 이 예제에서는 [Separator](/docs/components/separator) 구성 요소를 사용하여 바닥글 위에 테두리를 추가합니다.
 ::
 
-##  API
+## API
 
-###  Props
+### Props 코드 코드
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### Slots
 
-:구성요소 - 슬롯
+:component-slots
 
-##  테마
+## Theme (## Theme)
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

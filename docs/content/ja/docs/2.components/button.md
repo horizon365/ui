@@ -17,207 +17,207 @@ links:
 
 ::component-code
 ---
-スロット
-  デフォルトボタン
+slots:
+  default: Button
 ---
 ::
 
-### ラベル
+### Label
 
-`label`プロパティを使用して、ボタンのラベルを設定します。
+`label`プロパティを使用してButtonのラベルを設定します。
 
 ::component-code
 ---
-小道具
-  ラベルボタン
+props:
+  label: Button
 ---
 ::
 
-### カラー
+### Color
 
 `color`プロパティを使用してボタンの色を変更します。
 
 ::component-code
 ---
-小道具
-  色ニュートラル
-スロット
-  デフォルトボタン
+props:
+  color: neutral
+slots:
+  default: Button
 ---
 ::
 
-### バリアント
+### Variant
 
-`variant`プロパティを使用して、Buttonのバリアントを変更します。
+`variant`プロパティを使用してButtonのバリアントを変更します。
 
 ::component-code
 ---
-小道具
-  色ニュートラル
-  variantアウトライン
-スロット
-  デフォルトボタン
+props:
+  color: neutral
+  variant: outline
+slots:
+  default: Button
 ---
 ::
 
 ### サイズ
 
-`size`プロパティを使用してボタンのサイズを変更します。
+ボタンのサイズを変更するには、`size`プロパティを使用します。
 
 ::component-code
 ---
-小道具
-  サイズXL
-スロット
-  デフォルトボタン
+props:
+  size: xl
+slots:
+  default: Button
 ---
 ::
 
-### アイコン
+### Icon
 
-`icon` propを使用して、[ Icon ](/docs/components/icon)をButton内に表示します。
+`icon`プロパティを使用して、Button内に[Icon](/docs/components/icon)を表示します。
 
 ::component-code
 ---
-小道具
-  アイコンi—lucideロケット
-  サイズMD
-  色プライマリ
-  バリアント固体
-スロット
-  デフォルトボタン
+props:
+  icon: i-lucide-rocket
+  size: md
+  color: primary
+  variant: solid
+slots:
+  default: Button
 ---
 ::
 
-アイコンの位置を設定するには`leading`と`trailing` propsを使用し、位置ごとに異なるアイコンを設定するには`leading-icon`と`trailing-icon` propsを使用します。
+アイコンの位置を設定するには`leading`と`trailing`の小道具を使用し、位置ごとに異なるアイコンを設定するには`leading-icon`と`trailing-icon`の小道具を使用します。
 
 ::component-code
 ---
-小道具
-  trailingIcon i—lucide—arrow—right
-  サイズMD
-スロット
-  デフォルト ボタン
+props:
+  trailingIcon: i-lucide-arrow-right
+  size: md
+slots:
+  default: Button
 ---
 ::
 
-`label`は オプション で 、 アイコン のみ の ボタン として 使用 でき ます 。
+`label`をプロップまたはスロットとして使用することはオプションであるため、ボタンをアイコンのみのボタンとして使用できます。
 
 ::component-code
 ---
-小道具
-  アイコン i-lucide-search
-  サイズ MD
-  色 プライマリ
-  バリアント 固体
+props:
+  icon: i-lucide-search
+  size: md
+  color: primary
+  variant: solid
 ---
 ::
 
 ### アバター
 
-`avatar`prop を 使用 し て 、 ボタン 内 に[Avatar](/docs/components/avatar)を 表示 し ます 。
+`avatar`プロパティを使用して、ボタン内の[Avatar](/docs/components/avatar)を表示します。
 
 ::component-code
 ---
-きれい 真
-無視
+prettier: true
+ignore:
   - avatar.loading
-小道具
-  アバター
-    https//github.com/nuxt.png
-    読み込み 怠惰
-  サイズ MD
-  色 ニュートラル
-  variant アウトライン
-スロット
-  デフォルト|
+props:
+  avatar:
+    src: 'https://github.com/nuxt.png'
+    loading: lazy
+  size: md
+  color: neutral
+  variant: outline
+slots:
+  default: |
 
-    ボタン
+    Button
 ---
 ::
 
-`label`は オプション です ので 、 アバター 専用 の ボタン として 使用 でき ます 。
+`label`をプロップまたはスロットとして使用することはオプションですので、Buttonをアバター専用のボタンとして使用できます。
 
 ::component-code
 ---
-きれい 真
-無視
-  - avatar . ローディング
-小道具
-  アバター
-    https//github.com/nuxt.png
-    読み込み 怠惰
-  サイズ MD
-  色 ニュートラル
-  variant アウトライン
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
+    src: 'https://github.com/nuxt.png'
+    loading: lazy
+  size: md
+  color: neutral
+  variant: outline
 ---
 ::
 
-### リンク
+### Link
 
-[Link](/docs/components/link#props)コンポーネント から 、`to`、`target`など の プロ パティ を 渡す こと が でき ます 。
+[Link](/docs/components/link#props)コンポーネントから、`to`、`target`などの任意のプロパティを渡すことができます。
 
 ::component-code
 ---
-無視
-  - ターゲット
-小道具
-  次 へhttps://github.com/nuxt/ui
-  ターゲット_blank
-スロット
-  デフォルトボタン
+ignore:
+  - target
+props:
+  to: https://github.com/nuxt/ui
+  target: _blank
+slots:
+  default: Button
 ---
 ::
 
-Buttonがリンクの場合、または`active` propを使用する場合、`active-color`および`active-variant` propを使用してアクティブ状態をカスタマイズできます。
+Buttonがリンクの場合、または`active`プロパティを使用する場合、`active-color`と`active-variant`プロパティを使用してアクティブな状態をカスタマイズできます。
 
 ::component-code
 ---
-きれい真
-無視
-  - カラー
-  - バリアント
-アイテム
-  activeColor
-    - プライマリ
-    - セカンダリ
-    - 成功
-    -  info
-    -  warning
-    - エラー
-    - ニュートラル
-  activeVariant
-    - ソリッド
-    - アウトライン
-    - ソフト
-    - 微妙
-    - ゴースト
-    -  link
-小道具
-  アクティブtrue
-  色ニュートラル
-  variantアウトライン
-  activeColorプライマリ
-  activeVariant固体
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - color
+  - variant
+items:
+  activeColor:
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
+  activeVariant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+    - link
+props:
+  active: true
+  color: neutral
+  variant: outline
+  activeColor: primary
+  activeVariant: solid
+slots:
+  default: |
 
-    ボタン
+    Button
 ---
 
 ボタン
 ::
 
-`active-class`および`inactive-class` propsを使用して、アクティブ状態をカスタマイズすることもできます。
+`active-class`および`inactive-class`プロパティを使用してアクティブ状態をカスタマイズすることもできます。
 
 ::component-code
 ---
-小道具
-  アクティブtrue
-  activeClass 'font—bold'
-  inactiveClass 'font—light'
-スロット
-  デフォルトボタン
+props:
+  active: true
+  activeClass: 'font-bold'
+  inactiveClass: 'font-light'
+slots:
+  default: Button
 ---
 
 ボタン
@@ -243,40 +243,40 @@ export default defineAppConfig({
 ```
 ::
 
-### ローディング
+### Loading
 
-`loading`プロパティを使用して、読み込み中のアイコンを表示し、ボタンを無効にします。
+`loading`プロパティを使用してロードアイコンを表示し、Buttonを無効にします。
 
 ::component-code
 ---
-小道具
-  読み込み真
-  トレーリングfalse
-スロット
-  デフォルトボタン
+props:
+  loading: true
+  trailing: false
+slots:
+  default: Button
 ---
 ボタン
 ::
 
-`loading-auto` promiseが保留中の間、ロードアイコンを自動的に表示するには、`loading-auto` promiseを使用します。
+`@click` Promiseが保留中の間、ロードアイコンを自動的に表示するには、`loading-auto`プロパティを使用します。
 
-component—example {name="button-loading-auto-example"}
+:component-example{name="button-loading-auto-example"}
 
-これは[ Form ](/docs/components/form)コンポーネントでも動作します。
+これは[Form](/docs/components/form)コンポーネントでも動作します。
 
-component—example {name="button-loading-auto-form-example"}
+:component-example{name="button-loading-auto-form-example"}
 
-###  Loadingアイコン
+### Loading Icon
 
-読み込みアイコンをカスタマイズするには、`loading-icon`プロパティを使用します。デフォルトは`i-lucide-loader-circle`です。
+`loading-icon`プロパティを使用して、ロードアイコンをカスタマイズします。デフォルトは`i-lucide-loader-circle`です。
 
 ::component-code
 ---
-小道具
-  読み込み真
-  loadingIcon 'i—lucide—loader'
-スロット
-  デフォルトボタン
+props:
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+slots:
+  default: Button
 ---
 ボタン
 ::
@@ -284,92 +284,92 @@ component—example {name="button-loading-auto-form-example"}
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.loading`キーの`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは、`app.config.ts`の`ui.icons.loading`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.loading`キーの`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`vite.config.ts`の`ui.icons.loading`キーでグローバルにカスタマイズできます。
 :::
 ::
 
 ### 無効
 
-`disabled`プロパティを使用してボタンを無効にします。
+`disabled`プロパティを使用してButtonを無効にします。
 
 ::component-code
 ---
-小道具
-  無効true
-スロット
-  デフォルトボタン
+props:
+  disabled: true
+slots:
+  default: Button
 ---
 
 ボタン
 ::
 
-## 例
+## サンプル
 
-### `class` prop
+### `class`プロップ
 
-`class`プロパティを使用して、Buttonの基本スタイルを上書きします。
-
-::component-code
----
-小道具
-  クラス'font—bold rounded—full'
-スロット
-  デフォルトボタン
----
-::
-
-### `ui` prop
-
-`ui`プロパティを使用して、Buttonのスロットスタイルをオーバーライドします。
+ボタンの基本スタイルをオーバーライドするには、`class`プロパティを使用します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  ui
-  - カラー
-  - バリアント
-  - アイコン
-小道具
-  アイコンi—lucideロケット
-  色ニュートラル
-  variantアウトライン
-  UI
-    leadingIcon 'テキストプライマリ'
-スロット
-  デフォルト|
-
-    ボタン
+props:
+  class: 'font-bold rounded-full'
+slots:
+  default: Button
 ---
 ::
 
-##  API
+### `ui`プロップ
 
-###  Props
+ボタンのスロットスタイルをオーバーライドするには、`ui`プロパティを使用します。
 
-component—props
+::component-code
+---
+prettier: true
+ignore:
+  - ui
+  - color
+  - variant
+  - icon
+props:
+  icon: i-lucide-rocket
+  color: neutral
+  variant: outline
+  ui:
+    leadingIcon: 'text-primary'
+slots:
+  default: |
+
+    Button
+---
+::
+
+## API
+
+### Props
+
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-このコンポーネントは、すべてのネイティブ`<button>` HTML属性もサポートします。
+このコンポーネントはすべてのネイティブ`<button>` HTML属性もサポートします。
 ::
 
 ::callout{icon="i-simple-icons-github" to="https://github.com/nuxt/ui/blob/v4/src/runtime/components/Link.vue#L13"}
-`Button`コンポーネントは、`Link`コンポーネントを拡張しています。ソースコードはGitHubで確認してください。
+`Button`コンポーネントは`Link`コンポーネントを拡張したものです。ソースコードはGitHubで確認してください。
 ::
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

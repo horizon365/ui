@@ -12,11 +12,11 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/FooterColumns.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 El componente FooterColumns representa una lista de columnas para mostrar en el pie de página.
 
-Utilícelo en la ranura `top` del componente [Footer](/docs/components/footer):
+Úselo en la ranura `top` del componente [Footer](/docs/components/footer):
 
 ```vue {3-7}
 <template>
@@ -30,46 +30,46 @@ Utilícelo en la ranura `top` del componente [Footer](/docs/components/footer):
 </template>
 ```
 
-@@17@columnas
+### columnas
 
 Utilice el prop `columns` como una matriz de objetos con las siguientes propiedades:
 
-@@
-@@
+- xx`label: string`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`children?: FooterColumnLink[]`xx{lang="ts-type"}
 
-Cada columna contiene un array de objetos que definen los enlaces. Cada enlace puede tener las siguientes propiedades:
+Cada columna contiene una matriz `children` de objetos que definen los vínculos. Cada vínculo puede tener las siguientes propiedades:
 
-@@
-@@
-@@
-@@
+- xx`label?: string`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`icon?: string`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xxx`class?: any`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkLeadingIcon?: ClassNameValue }`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-Puede pasar cualquier propiedad del componente [Link](/docs/components/link#props) como `to`,`target`, etc.
+Puede pasar cualquier propiedad del componente [Link](/docs/components/link#props) como `to`, `target`, etc.
 
 ::component-example
 ---
-Categoría: true
-Nombre: 'foot-columns-ejemplo'
-Categoría: P-8
-Props:
-  Categoría: w-full
+prettier: true
+name: 'footer-columns-example'
+class: 'p-8'
+props:
+  class: 'w-full'
 ---
 ::
 
-@@444@4444 años
+## API (Edición española)
 
-@@45000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Accesorios
 
-Componentes Props
+:component-props
 
-@@46000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots (Edición española)
 
-Componentes de slots
+:component-slots
 
-@477@themes
+## Temas
 
-Componente Tema
+:component-theme
 
-@@40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

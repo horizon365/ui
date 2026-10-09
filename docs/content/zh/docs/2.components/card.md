@@ -11,137 +11,137 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Card.vue
 ---
 
-## 使用情况
+## 用法
 
 使用`header`、`default`和`footer`插槽向卡中添加内容。
 
 ::component-code
 ---
-更漂亮：真的
-隐藏：
-  班级
-道具：
-  类别：'w-完整'
-插槽：
-  标题：|
+prettier: true
+hide:
+  - class
+props:
+  class: 'w-full'
+slots:
+  header: |
 
-<Placeholder class="h-8" />的
+    <Placeholder class="h-8" />
 
-  默认值：|
+  default: |
 
-<Placeholder class="h-32" />的
+    <Placeholder class="h-32" />
 
-  页尾：|
+  footer: |
 
-<Placeholder class="h-8" />的
+    <Placeholder class="h-8" />
 ---
 
-#信头
-：占位符{class="h-8"}
+#header
+:placeholder{class="h-8"}
 
-#默认值
-：占位符{class="h-32"}
+#default
+:placeholder{class="h-32"}
 
-#页脚
-：占位符{class="h-8"}
+#footer
+:placeholder{class="h-8"}
 ::
 
-标题：徽章
+### 标题：badge{label="4.7+" class="align-text-top"}
 
-使用`title`道具来设定卡片标题。
+使用`title`属性设置卡片标题。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  班级
-道具：
-  title：'带标题的卡'
-  类别：'w-完整'
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - class
+props:
+  title: 'Card with title'
+  class: 'w-full'
+slots:
+  default: |
 
-<Placeholder class="h-32" />的
+    <Placeholder class="h-32" />
 ---
 
-#默认值
-：占位符{class="h-32"}
+#default
+:placeholder{class="h-32"}
 ::
 
-说明：徽章
+### 说明：badge{label="4.7+" class="align-text-top"}
 
-使用`description`道具设置卡标题的说明。
+使用`description`属性设置卡的标题的描述。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 标题
-  班级
-道具：
-  title：'带说明的卡片'
-  描述：“痛苦的人是痛苦的，奉献的人是快乐的。”
-  类别：'w-完整'
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - title
+  - class
+props:
+  title: 'Card with description'
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  class: 'w-full'
+slots:
+  default: |
 
-    022号
+    <Placeholder class="h-32" />
 ---
 
-#默认值
-：占位符{class="h-32"}
+#default
+:placeholder{class="h-32"}
 ::
 
-### 变体
+### Variant
 
-使用`variant`道具来变更卡片的变体。
+使用`variant`道具来改变卡牌的变体。
 
 ::component-code
 ---
-更漂亮：真的
-隐藏：
-  班级
-道具：
-  变体：细微
-  类别：'w-完整'
-插槽：
-  标题：|
+prettier: true
+hide:
+  - class
+props:
+  variant: subtle
+  class: 'w-full'
+slots:
+  header: |
 
-    027号
+    <Placeholder class="h-8" />
 
-  默认值：|
+  default: |
 
-    028号
+    <Placeholder class="h-32" />
 
-  页尾：|
+  footer: |
 
-    029号
+    <Placeholder class="h-8" />
 ---
 
-#信头
-：占位符{class="h-8"}
+#header
+:placeholder{class="h-8"}
 
-#默认值
-：占位符{class="h-32"}
+#default
+:placeholder{class="h-32"}
 
-#页脚
-：占位符{class="h-8"}
+#footer
+:placeholder{class="h-8"}
 ::
 
-活性成分
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

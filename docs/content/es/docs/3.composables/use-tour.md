@@ -1,20 +1,20 @@
 ---
-title: The Usetour
+title: Usos
 description: 'Un componente para construir visitas guiadas volviendo a anclar un solo Popover a través de los pasos.'
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-Utilice el auto-importado `useTour` componible para conducir una visita guiada con un solo [Popover](/docs/components/popover) cuyo ancla se mueve entre los pasos. El componible posee el estado del paso y resuelve el `target` de cada paso en un `reference` que se une a `<UPopover>`, mientras usted mantiene el control total sobre el contenido y la navegación.
+Utilice el componente `useTour` autoimportado para conducir una visita guiada con un solo [Popover](/docs/components/popover) cuyo ancla se mueve entre los pasos. El componente posee el estado del paso y resuelve el `target` de cada paso en un `reference` que se une a `<UPopover>`, mientras mantiene el control total sobre el contenido y la navegación.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'use-tour-example'
+collapse: true
+name: 'use-tour-example'
 ---
 ::
 
-Cada paso requiere un `target` al que el popover se ancla. Acepta un selector CSS, un elemento, un elemento virtual (cualquier cosa con `getBoundingClientRect`), o un ref/getter que devuelve uno de esos. Pass `null` para anclar el paso al centro de la ventana gráfica.(`title`,`body`,`side`,...) se pasa a través de intacto y disponible a través de `current`.
+Acepta un selector CSS, un elemento, un elemento virtual (cualquier cosa con `getBoundingClientRect`) o un ref/getter que devuelve uno de esos. Pase `null` para anclar el paso al centro de la ventana. Cualquier otro campo en un paso (`title`, `body`, `side`,...) se pasa intacto y está disponible a través de `current`.
 
 ```vue
 <script setup lang="ts">
@@ -40,13 +40,13 @@ const tour = useTour([
 </template>
 ```
 
-- Construido sobre el prop reactivo `reference` del Popover, por lo que el popover se reposiciona suavemente cuando cambia el paso activo.
+- Construido sobre la hélice reactiva `reference` del Popover, por lo que el popover se reposiciona suavemente cuando cambia el paso activo.
 - El objetivo activo se desplaza a la vista automáticamente cuando un paso se activa.
-- Dado que usted mismo procesa el contenido, no hay un tema o una configuración regional adicional que mantener.
+- Dado que usted mismo procesa el contenido, no hay ningún tema o configuración regional adicional que mantener.
 
-@@pH043
+## API (Edición española)
 
-@@
+`useTour(steps, options?)`xx{lang="ts-type"} (Edición española)
 
 ### Parámetros
 
@@ -59,11 +59,11 @@ const tour = useTour([
 
       ::field-group
         ::field{name="target" type="MaybeRefOrGetter<string | ReferenceElement | null | undefined>"}
-        Acepta un selector CSS (`'#id'`,`'.class'`, o un id desnudo resuelto como `#id`), un elemento, un elemento virtual o un ref/getter que devuelve uno. Use `null` para centrar el paso en la ventana.
+        Acepta un selector CSS (`'#id'`, `'.class'`, o un id desnudo resuelto como `#id`), un elemento, un elemento virtual, o un ref/getter que devuelve uno.
         ::
 
         ::field{name="[key: string]" type="any"}
-        Cualquier campo adicional (`title`,`body`,`side`,...) se pasa a través y disponible a través de `current`.
+        Cualquier campo adicional (`title`, `body`, `side`,...) se pasa a través y disponible a través de `current`.
         ::
       ::
     ::
@@ -91,7 +91,7 @@ const tour = useTour([
   ::
 ::
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Regresar
 
 ::field-group
 
@@ -108,7 +108,7 @@ const tour = useTour([
   ::
 
   ::field{name="reference" type="ComputedRef<ReferenceElement | undefined>"}
-  El ancla resuelto para el paso actual, para pasar a `<UPopover :reference>`.
+  El ancla resuelta para el paso actual, para pasar a `<UPopover :reference>`.
   ::
 
   ::field{name="total" type="ComputedRef<number>"}
@@ -128,7 +128,7 @@ const tour = useTour([
   ::
 
   ::field{name="next" type="() => void"}
-  Ir al siguiente paso. Loops o termina al final dependiendo de la opción `loop`
+  Loops o termina al final dependiendo de la opción `loop`.
   ::
 
   ::field{name="prev" type="() => void"}

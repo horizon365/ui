@@ -7,7 +7,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Page.vue
 ---
 
-##  사용
+## Usage
 
 Page 구성 요소는 왼쪽 및 오른쪽 열을 선택적으로 사용하여 레이아웃을 만들 수 있도록 도와줍니다. 문서 사이트 및 기타 내용 중심 페이지를 작성하는 데 적합합니다.
 
@@ -22,18 +22,18 @@ Page 구성 요소는 왼쪽 및 오른쪽 열을 선택적으로 사용하여 �
 ```
 
 ::tip
-슬롯이 지정되지 않은 경우 페이지는 중앙에 있는 단일 열 레이아웃으로 표시됩니다.
+슬롯이 지정되지 않은 경우 페이지가 중앙에 있는 단일 열 레이아웃으로 표시됩니다.
 ::
 
-##  예
+## examples 예제
 
 ::note
-이러한 예에서는 [Nuxt Content](https://content.nuxt.com)를 사용하지만 모든 컨텐츠 관리 시스템과 구성 요소를 통합할 수 있습니다.
+이러한 예제에서는 [Nuxt Content](https://content.nuxt.com)를 사용하지만 구성 요소는 모든 콘텐츠 관리 시스템과 통합 할 수 있습니다.
 ::
 
-###  레이아웃 내에서
+### 레이아웃 내에서
 
-`left`slot이 있는 레이아웃에서 Page 구성 요소를 사용하여 탐색 표시:
+`left` 슬롯이 있는 레이아웃에서 페이지 구성 요소를 사용하여 탐색을 표시합니다.
 
 ```vue [layouts/docs.vue] {9-13}
 <script setup lang="ts">
@@ -59,9 +59,9 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 이 예제에서는 `ContentNavigation` 구성 요소를 사용하여 `app.vue`에 주입된 탐색을 표시합니다.
 ::
 
-###  페이지 내에서
+### 페이지 안에서
 
-`right`slot이 있는 페이지에서 Page 구성 요소를 사용하여 목차를 표시합니다.
+`right` 슬롯이 있는 페이지에서 페이지 구성 요소를 사용하여 목차를 표시합니다.
 
 ```vue [pages/\[...slug\\].vue]{29-31}
 <script setup lang="ts">
@@ -103,20 +103,20 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 이 예제에서는 `ContentToc` 구성 요소를 사용하여 목차를 표시합니다.
 ::
 
-##  API
+## API
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### Slots
 
-:구성요소 - 슬롯
+:component-slots
 
-##  테마
+## Theme 테마
 
-:구성요소 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

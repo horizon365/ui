@@ -9,7 +9,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodeCollapse.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Envuelva el bloque de código con un componente `code-collapse` para mostrar un bloque de código plegable.
 
@@ -42,7 +42,7 @@ Envuelva el bloque de código con un componente `code-collapse` para mostrar un 
 
 ::
 
-#El Código
+#code
 
 ````mdc
 ::code-collapse
@@ -75,20 +75,20 @@ Envuelva el bloque de código con un componente `code-collapse` para mostrar un 
 
 ::
 
-@@pH032@@Apid (en inglés)
+## API (Edición española)
 
-@@333@333@333@333
+### Props (Edición española)
 
-Artículo siguienteComponentes {prose}
+:component-props{prose}
 
-@@35000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots (Edición española)
 
-Componentes: {prose}
+:component-slots{prose}
 
-@37@@tema
+## Temas
 
-Artículo siguiente{prose}
+:component-theme{prose}
 
-@@changelog
+xph06xChangelog (Edición española)
 
-por: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

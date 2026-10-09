@@ -10,9 +10,9 @@ links:
 
 ## 使用法
 
-DashboardNavbarコンポーネントは、[ DashboardSidebar ](/docs/components/dashboard-sidebar)コンポーネントと統合されたレスポンシブナビゲーションバーです。ダッシュボードレイアウトでレスポンシブナビゲーションを有効にするモバイルトグルボタンが含まれています。
+DashboardNavbarコンポーネントは、[DashboardSidebar](/docs/components/dashboard-sidebar)コンポーネントと統合されたレスポンシブナビゲーションバーです。ダッシュボードレイアウトでレスポンシブナビゲーションを有効にするモバイルトグルボタンが含まれています。
 
-[ DashboardPanel ](/docs/components/dashboard-panel)コンポーネントの`header`スロット内で使用します。
+[DashboardPanel](/docs/components/dashboard-panel)コンポーネントの`header`スロット内で使用します。
 
 ```vue [pages/index.vue]{9-11}
 <script setup lang="ts">
@@ -30,101 +30,101 @@ definePageMeta({
 </template>
 ```
 
-ナバーをカスタマイズするには、`left`、`default`、および`right`スロットを使用します。
+navbarをカスタマイズするには、`left`、`default`、`right`スロットを使用します。
 
 ::component-example
 ---
-きれい真
-名前'dashboard—navbar—example'
-クラス'！px—0！pt—0'
-小道具
-  クラス'w—full'
+prettier: true
+name: 'dashboard-navbar-example'
+class: '!px-0 !pt-0'
+props:
+  class: 'w-full'
 ---
 ::
 
 ::note
-この例では、右スロットの[ Tabs ](/docs/components/tabs)コンポーネントを使用してタブを表示しています。
+この例では、右スロットの[Tabs](/docs/components/tabs)コンポーネントを使用してタブを表示します。
 ::
 
-### タイトル
+### Title
 
 `title`プロパティを使用して、ナビバーのタイトルを設定します。
 
 ::component-code
 ---
-隠す
-  - クラス
-小道具
-  title「ダッシュボード」
-  クラス'w—full'
-クラス'！px—0！pt—0'
+hide:
+  - class
+props:
+  title: 'Dashboard'
+  class: 'w-full'
+class: '!px-0 !pt-0'
 ---
 ::
 
-### アイコン
+### Icon
 
 `icon`プロパティを使用して、ナビバーのアイコンを設定します。
 
 ::component-code
 ---
-隠す
-  - クラス
-無視
-  -  title
-小道具
-  title「ダッシュボード」
-  アイコン'i—lucide—house'
-  クラス'w—full'
-クラス'！px—0！pt—0'
+hide:
+  - class
+ignore:
+  - title
+props:
+  title: 'Dashboard'
+  icon: 'i-lucide-house'
+  class: 'w-full'
+class: '!px-0 !pt-0'
 ---
 ::
 
-### トグル
+### Toggle
 
-`toggle`プロパティを使用して、[ DashboardSidebar ](/docs/components/dashboard-sidebar)コンポーネントを開くモバイルに表示されるトグルボタンをカスタマイズします。
+`toggle`プロパティを使用して、[DashboardSidebar](/docs/components/dashboard-sidebar)コンポーネントを開くモバイルに表示されるトグルボタンをカスタマイズします。
 
-[ Button ](/docs/components/button)コンポーネントから任意のプロパティを渡してカスタマイズできます。
+[Button](/docs/components/button)コンポーネントの任意のプロパティを渡してカスタマイズできます。
 
 ::component-example
 ---
-iframe true
-iframeモバイルtrue
-overflowHidden true
-名前'dashboard—navbar—toggle—example'
-小道具
-  クラス'w—full'
+iframe: true
+iframeMobile: true
+overflowHidden: true
+name: 'dashboard-navbar-toggle-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-### トグル側
+### Toggle側
 
 トグルボタンの側面を変更するには、`toggle-side`プロパティを使用します。デフォルトは`right`です。
 
 ::component-example
 ---
-iframe true
-iframeモバイルtrue
-overflowHidden true
-名前'dashboard—navbar—toggle—side—example'
-小道具
-  クラス'w—full'
+iframe: true
+iframeMobile: true
+overflowHidden: true
+name: 'dashboard-navbar-toggle-side-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

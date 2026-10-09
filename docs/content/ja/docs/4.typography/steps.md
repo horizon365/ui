@@ -18,7 +18,7 @@ links:
 :::code-preview{class="[&>div]:*:w-full"}
 ::steps{level="4"}
 
-#### `nuxt.config.ts`にNuxt UIモジュールを追加します。
+####  `nuxt.config.ts`にNuxt UIモジュールを追加
 
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
@@ -26,7 +26,7 @@ export default defineNuxtConfig({
 })
 ```
 
-####  CSSにTailwind CSSをインポート
+#### Tailwind CSSをCSSにインポート
 
 ```css [app/assets/css/main.css]
 @import "tailwindcss";
@@ -40,7 +40,7 @@ npm run dev
 
 ::
 
-#コード
+#code
 
 ````mdc
 ::steps{level="4"}
@@ -70,20 +70,20 @@ npm run dev
 
 :::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props {prose}
+:component-props{prose}
 
 ### スロット
 
-component—slots {prose}
+:component-slots{prose}
 
-## テーマ
+## Theme
 
-component—theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

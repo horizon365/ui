@@ -15,144 +15,144 @@ links:
 ---
 
 
-@@ph000@utilisation
+## Utilisation
 
 Utilisez la directive `v-model` pour contrôler la valeur du CheckboxGroup ou la prop `default-value` pour définir la valeur initiale lorsque vous n'avez pas besoin de contrôler son état.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  - modèleValeur
-  @@ph004@articles
-Extérieur:
-  @@ph005@articles
-  - modèleValeur
-Props:
-  Modélisation:
-    - « Réseau »
+prettier: true
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+props:
+  modelValue:
+    - 'System'
   items:
-    - « Réseau »
-    - "éclairage"
-    - "Désolé"
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-@111@111@1111
+### Éléments
 
-Utilisez le `items` prop comme un tableau de chaînes ou de nombres:
+Utilisez le prop `items` comme un tableau de chaînes ou de nombres:
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  - modèleValeur
-  @@ph014@articles
-Extérieur:
-  @@ph015@articles
-  - modelValeur
-Props:
-  Modélisation:
-    - « Réseau »
+prettier: true
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+props:
+  modelValue:
+    - 'System'
   items:
-    - « Système »
-    - 'Lumière '
-    - « Sombre »
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
 Vous pouvez également passer un tableau d'objets avec les propriétés suivantes:
 
-@@
-@@
-@@
-@@
-[`icon?: string`{lang="ts-type"}](#indicator)
-@@
-@@
+- x`label?: string`xx{lang="ts-type"}
+- x`description?: string`x{lang="ts-type"}
+Xph043xx[x`value?: string`{lang="ts-type"}x](#value-keyx)
+- x`disabled?: boolean`x{lang="ts-type"}
+Xph053xxx[x`icon?: string`x{lang="ts-type"}x](x#indicatorx)
+- x`class?: any`xx{lang="ts-type"}
+- x`ui?: { item?: ClassNameValue, container?: ClassNameValue, base?: ClassNameValue, 'indicator'?: ClassNameValue, icon?: ClassNameValue, wrapper?: ClassNameValue, label?: ClassNameValue, description?: ClassNameValue }`xx{lang="ts-type"}
 
 ::component-code
 ---
-Ignorer:
-  - modèleValeur
-  @@ph051@articles
-Extérieure:
-  @@502@articles
-  - modèleValeur
-Extérieurs:
-  - CheckboxGroupItem [réf. nécessaire]
-Props:
-  Modélisation:
-    - 'système '
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+externalTypes:
+  - CheckboxGroupItem[]
+props:
+  modelValue:
+    - 'system'
   items:
-    - label:'Système'
-      Description: 'Correspond aux paramètres de votre appareil.'
-      Valeur: 'Système'
-    - label:"Lumière"
-      Description: "Utilisez toujours le thème de la lumière."
-      Étiquette:'light'
-    - label:« Sombre »
-      Description: "Utilisez toujours le thème sombre."
-      Catégorie:"Dark"
+    - label: 'System'
+      description: 'Matches your device settings.'
+      value: 'system'
+    - label: 'Light'
+      description: 'Always uses the light theme.'
+      value: 'light'
+    - label: 'Dark'
+      description: 'Always uses the dark theme.'
+      value: 'dark'
 ---
 ::
 
 ::caution
-Lorsque vous utilisez des objets, vous devez faire référence à la propriété `value` de l'objet dans la directive `v-model` ou dans la propriété `default-value`.
+Lorsque vous utilisez des objets, vous devez faire référence à la propriété `value` de l'objet dans la directive `v-model` ou la prop `default-value`.
 ::
 
-### Clé de valeur
+Clé ### Value
 
-Vous pouvez modifier la propriété utilisée pour définir la valeur en utilisant la propriété `value-key`.
+Vous pouvez modifier la propriété qui est utilisée pour définir la valeur en utilisant la prop. `value-key`.
 
 ::component-code
 ---
-ignorer:
-  - modèleValeur
-  @@ph066@éléments
+ignore:
+  - modelValue
+  - items
   - valueKey
-Extérieur:
-  @@ph068@articles
-  - modèleValeur
-Extérieurs:
-  - CheckboxGroupItem [réf. nécessaire]
-Props:
-  Modèle:
-    - 'éclairage '
+external:
+  - items
+  - modelValue
+externalTypes:
+  - CheckboxGroupItem[]
+props:
+  modelValue:
+    - 'light'
   valueKey: 'id'
   items:
-    - label:'Système'
-      Description: 'Correspond aux paramètres de votre appareil.'
-      ID: « Système »
-    - label:« Lumière »
-      Description: "Utilisez toujours le thème de la lumière."
-      Étiquette:"light"
-    - label:« Sombre »
-      Description: "Toujours utiliser le thème sombre."
-      Étiquette:"Dark"
+    - label: 'System'
+      description: 'Matches your device settings.'
+      id: 'system'
+    - label: 'Light'
+      description: 'Always uses the light theme.'
+      id: 'light'
+    - label: 'Dark'
+      description: 'Always uses the dark theme.'
+      id: 'dark'
 ---
 ::
 
-@@75@Légende
+XPH120xLégende
 
-Utilisez la prop `legend` pour définir la légende du groupe de contrôle.
+Utilisez la prop `legend` pour définir la légende du groupe de checkbox.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
+prettier: true
+ignore:
   - defaultValue
-  @@ph078@articles
-Extérieur:
-  @@779@articles
-Props:
-  Légende:"Thème"
-  Valeur défaillante:
-    - « Système »
+  - items
+external:
+  - items
+props:
+  legend: 'Theme'
+  defaultValue:
+    - 'System'
   items:
-    - « Réseau »
-    - "éclairage"
-    - 'Noir '
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
@@ -162,225 +162,225 @@ Utilisez la prop `color` pour changer la couleur du groupe de checkbox.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  - valeur défaillante
-  @@ph087@articles
-Extérieur:
-  @@888@articles
-items:
-  Couleur:
-    @@ph089@primaire
-    @@ph090@secondaire
-    - réussite
-    @@ph092@info
-    @@pH093@référencement
-    @@F094@erreur
-    @@ph095@neutre
-Props:
-  Couleur: Neutre
-  Valeur défaillante:
-    - « Système »
-  items:
-    - « Système »
-    - 'Lumière '
-    - "Désolé"
----
-::
-
-@@P100@@Variant
-
-Utilisez la prop `variant` pour modifier la variante du groupe de contrôle.
-
-::component-code
----
-Étiquette: true
-ignorer:
+prettier: true
+ignore:
   - defaultValue
-  @@ph103@articles
-Extérieur:
-  @@ph104@articles
-Extérieurs:
-  - CheckboxGroupItem [réf. nécessaire]
+  - items
+external:
+  - items
 items:
-  Couleur:
-    @@ph106@primaire
-    - secondaire
-    @@808@réussite
-    @@ph109@info
-    @@ph110@avertissement
-    @@ph111@erreur
-    @@ph112@neutre
-  Variante:
-    @@ph113@liste
-    @@ph114@carte
-    @@P115@Télécharger
-Props:
-  Couleur: Primaire
-  Variante: carte
-  Valeur défaillante:
-    - 'système '
+  color:
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
+props:
+  color: neutral
+  defaultValue:
+    - 'System'
   items:
-    - label:'Système'
-      Valeur: 'Système'
-      Description: 'Correspond aux paramètres de votre appareil.'
-    - label:« Lumière »
-      Étiquette:'light'
-      Description: "Utilisez toujours le thème de la lumière."
-    - label:« Sombre »
-      Catégorie:"Dark"
-      Description: "Utilisez toujours le thème sombre."
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-@@ph120@size
+### Variant
 
-Utilisez la prop `size` pour modifier la taille du groupe de checkboxs.
+Utilisez la prop `variant` pour modifier la variante du groupe de checkbox.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  - valeur défaillante
-  @@ph123@articles
-Extérieure:
-  @@ph124@articles
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+externalTypes:
+  - CheckboxGroupItem[]
 items:
-  Variante:
-    @@ph125@liste
-    @@ph126@carte
-    @@ph127@table
-Props:
-  Taille: "XL"
-  Variante: « liste »
-  Valeur défaillante:
-    - « Système »
+  color:
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
+  variant:
+    - list
+    - card
+    - table
+props:
+  color: 'primary'
+  variant: 'card'
+  defaultValue:
+    - 'system'
   items:
-    - « Système »
-    - 'Lumière '
-    - « Noir »
+    - label: 'System'
+      value: 'system'
+      description: 'Matches your device settings.'
+    - label: 'Light'
+      value: 'light'
+      description: 'Always uses the light theme.'
+    - label: 'Dark'
+      value: 'dark'
+      description: 'Always uses the dark theme.'
 ---
 ::
 
-### Référencement
+### Size
 
-Utilisez la prop `orientation` pour modifier l'orientation de la CheckboxGroup. Defaults à `vertical`.
+Utilisez la prop `size` pour modifier la taille du groupe de checkbox.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  - valeur défaillante
-  @@ph136@articles
-Extérieur:
-  @@ph137@articles
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
 items:
-  Variante:
-    @@ph138@liste
-    @@ph139@carte
-    - téléchargement
-Props:
-  Orientation: « horizontale »
-  Variante: « liste »
-  Valeur défaillante:
-    - « Système »
+  variant:
+    - list
+    - card
+    - table
+props:
+  size: 'xl'
+  variant: 'list'
+  defaultValue:
+    - 'System'
   items:
-    - « Système »
-    - 'Lumière '
-    - « Sombre »
+    - 'System'
+    - 'Light'
+    - 'Dark'
+---
+::
+
+### Orientation
+
+Utilisez la prop `orientation` pour modifier l'orientation du groupe CheckboxGroup. Defaults à `vertical`.
+
+::component-code
+---
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+items:
+  variant:
+    - list
+    - card
+    - table
+props:
+  orientation: 'horizontal'
+  variant: 'list'
+  defaultValue:
+    - 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
 ### indicateur
 
-Utilisez la prop `indicator` pour modifier la position ou masquer l'indicateur. Par défaut à `start`.
+Utilisez la prop `indicator` pour modifier la position ou masquer l'indicateur. Par défaut, `start`.
 
 ::note
-Le `icon` d'un article remplace la coche lorsque l'indicateur est visible, et s'affiche au-dessus de l'étiquette lorsqu 'il est `hidden`.
+L'étiquette `icon` d'un article remplace la coche lorsque l'indicateur est visible, et s'affiche au-dessus de l'étiquette lorsqu 'elle est `hidden`.
 ::
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  - valeur défaillante
-  @@ph151@articles
-Extérieure:
-  @@ph152@@articles
-Extérieurs:
-  - CheckboxGroupItem [réf. nécessaire]
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+externalTypes:
+  - CheckboxGroupItem[]
 items:
-  indicateur:
-    @@ph154@départ
-    @@ph155@fin
-    @@ph156@cachée
-  Variante:
-    @@ph157@liste
-    @@ph158@carte
-    @@ph159@table
-Props:
-  Étiquette:"Hidden"
-  Orientation: « horizontale »
-  Variété:"table"
-  Valeur défaillante:
-    - « Système »
+  indicator:
+    - start
+    - end
+    - hidden
+  variant:
+    - list
+    - card
+    - table
+props:
+  indicator: 'hidden'
+  orientation: 'horizontal'
+  variant: 'table'
+  defaultValue:
+    - 'System'
   items:
-    - label:'Système'
-      Icône: i-lucide-monitor
-      Valeur: 'Système'
-      Catégorie: W-20
-    - label:« Lumière »
-      Icône: i-lucide-sun
-      Catégorie: W-20
-      Catégorie:"Light"
-    - label:« Sombre »
-      Icône: i-lucide-moon
-      Catégorie: W-20
-      Catégorie:"Dark"
+    - label: 'System'
+      icon: 'i-lucide-monitor'
+      value: 'System'
+      class: 'w-20'
+    - label: 'Light'
+      icon: 'i-lucide-sun'
+      class: 'w-20'
+      value: 'Light'
+    - label: 'Dark'
+      icon: 'i-lucide-moon'
+      class: 'w-20'
+      value: 'Dark'
 ---
 ::
 
-### désactivé
+### Désactivé
 
 Utilisez la prop `disabled` pour désactiver le CheckboxGroup.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph166@@valeur par défaut
-  @@ph167@articles
-Extérieur:
-  @@ph168@articles
-Props:
-  handicapés: vrai
-  Valeur défaillante:
-    - « Système »
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+props:
+  disabled: true
+  defaultValue:
+    - 'System'
   items:
-    - 'Système '
-    - 'Lumière '
-    - "Découverte"
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-@@ph173@api
+## API
 
-@@ph174@@props
+### Props équipements
 
-Composants-props
+:component-props
 
-@@ph175@@réglages
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph176@@émissions
+### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph177@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@change178 @ changement
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

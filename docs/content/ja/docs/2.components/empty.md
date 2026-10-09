@@ -19,207 +19,207 @@ links:
 
 :::u-empty
 ---
-アイコンi—lucide—file
-titleプロジェクトが見つかりません
-説明プロジェクトを追加していないようです。作成して始めましょう。
-アクション
-  -  icon i—lucide—plus
-    label新規作成
-  - アイコンi—lucide—refresh—cw
-    ラベルリフレッシュ
-    色ニュートラル
-    バリアント：微妙
+icon: i-lucide-file
+title: No projects found
+description: It looks like you haven't added any projects. Create one to get started.
+actions:
+  - icon: i-lucide-plus
+    label: Create new
+  - icon: i-lucide-refresh-cw
+    label: Refresh
+    color: neutral
+    variant: subtle
 ---
 :::
 
 ::
 
-### タイトル
+### Title
 
 `title`プロパティを使用して、空の状態のタイトルを設定します。
 
 ::component-code
 ---
-小道具
-  titleプロジェクトが見つかりません
+props:
+  title: No projects found
 ---
 ::
 
-### 説明
+### Description
 
 `description`プロパティを使用して、空の状態の説明を設定します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  titleプロジェクトが見つかりません
-  説明プロジェクトを追加していないようです。作成して始めましょう。
+prettier: true
+ignore:
+  - title
+props:
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
 ---
 ::
 
-### アイコン
+### Icon
 
 `icon`プロパティを使用して、空の状態のアイコンを設定します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-  - 説明
-小道具
-  アイコンi—lucide—file
-  titleプロジェクトが見つかりません
-  説明プロジェクトを追加していないようです。作成して始めましょう。
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  icon: i-lucide-file
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
 ---
 ::
 
 ### アバター
 
-空の状態のアバターを設定するには、`avatar`プロパティを使用します。
+`avatar`プロパティを使用して、空の状態のアバターを設定します。
 
 ::component-code
 ---
-きれい真
-無視
-  - アイコン
-  -  title
-  - 説明
-小道具
-  avatar.src 'https//github.com/nuxt.png'
-  titleプロジェクトが見つかりません
-  説明プロジェクトを追加していないようです。作成して始めましょう。
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+props:
+  avatar.src: 'https://github.com/nuxt.png'
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
 ---
 ::
 
-### 読み込みbadge {label="4.10+" class="align-text-top"}
+### Loading badge{label="4.10+" class="align-text-top"}
 
-`loading`プロパティを使用して、アイコンの代わりにロードアイコンを表示します。レイアウトは同じであるため、レイアウトシフトなしにロード状態と空状態を切り替えることができます。
+`loading`プロパティを使用して、アイコンの代わりにロードアイコンを表示します。レイアウトは同じままなので、レイアウトシフトなしにロード状態と空状態を切り替えることができます。
 
 ::component-code
 ---
-きれい真
-無視
-  - アイコン
-  -  title
-  - 説明
-小道具
-  アイコンi—lucide—file
-  読み込み真
-  titleプロジェクトの読み込み
-  説明：プロジェクトを取得するまでお待ちください。
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+props:
+  icon: i-lucide-file
+  loading: true
+  title: Loading projects
+  description: Please wait while we fetch your projects.
 ---
 ::
 
-###  Loading Icon badge {label="4.10+" class="align-text-top"}
+### Loading Icon badge{label="4.10+" class="align-text-top"}
 
-読み込みアイコンをカスタマイズするには、`loading-icon`プロパティを使用します。デフォルトは`i-lucide-loader-circle`です。
+`loading-icon`プロパティを使用してロードアイコンをカスタマイズします。デフォルトは`i-lucide-loader-circle`です。
 
 ::component-code
 ---
-きれい真
-無視
-  - アイコン
-  -  title
-  - 説明
-  - ローディング
-小道具
-  アイコンi—lucide—file
-  読み込み真
-  loadingIcon 'i—lucide—loader'
-  titleプロジェクトの読み込み
-  説明：プロジェクトを取得するまでお待ちください。
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - loading
+props:
+  icon: i-lucide-file
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  title: Loading projects
+  description: Please wait while we fetch your projects.
 ---
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.loading`キーの下の`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`app.config.ts`の`ui.icons.loading`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.loading`キーの下の`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`vite.config.ts`の`ui.icons.loading`キーでグローバルにカスタマイズできます。
 :::
 ::
 
-### アクション
+### Actions
 
-`actions` propを使用して、空の状態に[ Button ](/docs/components/button)アクションを追加します。
+`actions`プロパティを使用して、[Button](/docs/components/button)アクションを空の状態に追加します。
 
 ::component-code
 ---
-きれい真
-無視
-  - アイコン
-  -  title
-  - 説明
-  - アクション
-小道具
-  アイコンi—lucide—file
-  titleプロジェクトが見つかりません
-  説明プロジェクトを追加していないようです。作成して始めましょう。
-  アクション
-    -  icon i—lucide—plus
-      label新規作成
-    -  icon i—lucide—refresh—cw
-      ラベルリフレッシュ
-      色ニュートラル
-      バリアント：微妙
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - actions
+props:
+  icon: i-lucide-file
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
+  actions:
+    - icon: i-lucide-plus
+      label: Create new
+    - icon: i-lucide-refresh-cw
+      label: Refresh
+      color: neutral
+      variant: subtle
 ---
 ::
 
-### バリアント
+### Variant
 
 `variant`プロパティを使用して、空の状態のバリアントを変更します。
 
 ::component-code
 ---
-きれい真
-無視
-  - アイコン
-  -  title
-  - 説明
-  - アクション
-小道具
-  バリアント：裸
-  アイコンi—lucide—bell
-  title通知なし
-  説明あなたはすべて巻き込まれました。新しい通知がここに表示されます。
-  アクション
-    - アイコンi—lucide—refresh—cw
-      ラベルリフレッシュ
-      色ニュートラル
-      バリアント：微妙
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - actions
+props:
+  variant: naked
+  icon: i-lucide-bell
+  title: No notifications
+  description: You're all caught up. New notifications will appear here.
+  actions:
+    - icon: i-lucide-refresh-cw
+      label: Refresh
+      color: neutral
+      variant: subtle
 ---
 ::
 
 ### サイズ
 
-`size`プロパティを使用して、空の状態のサイズを変更します。
+`size`プロパティを使用して空の状態のサイズを変更します。
 
 ::component-code
 ---
-きれい真
-無視
-  - アイコン
-  -  title
-  - 説明
-  - アクション
-小道具
-  サイズXL
-  アイコンi—lucide—bell
-  title通知なし
-  説明あなたはすべて巻き込まれました。新しい通知がここに表示されます。
-  アクション
-    -  icon i—lucide—refresh—cw
-      ラベルリフレッシュ
-      色ニュートラル
-      バリアント：微妙
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - actions
+props:
+  size: xl
+  icon: i-lucide-bell
+  title: No notifications
+  description: You're all caught up. New notifications will appear here.
+  actions:
+    - icon: i-lucide-refresh-cw
+      label: Refresh
+      color: neutral
+      variant: subtle
 ---
 ::
 
@@ -231,25 +231,25 @@ titleプロジェクトが見つかりません
 
 ::component-example
 ---
-崩壊真
-名前'empty—slots—example'
+collapse: true
+name: 'empty-slots-example'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

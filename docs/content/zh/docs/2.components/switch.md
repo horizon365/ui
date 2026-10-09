@@ -13,200 +13,200 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Switch.vue
 ---
 
-## 使用情况
+## 用法
 
-使用`v-model`指令可控制Switch的选中状态。
-
-::component-code
----
-忽略：
-  - 模型值
-外部：
-  - 模型值
-道具：
-  模型值：true
----
-::
-
-当您不需要控制其状态时，请使用`default-value`属性来设定初始值。
+使用`v-model`指令控制Switch的选中状态。
 
 ::component-code
 ---
-忽略：
-  - 默认值
-道具类：
-  默认值：真
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: true
 ---
 ::
 
-标签
-
-使用`label`道具设置交换机的标签。
+当不需要控制其状态时，使用`default-value`属性设置初始值。
 
 ::component-code
 ---
-道具：
-  label：检查我
+ignore:
+  - defaultValue
+props:
+  defaultValue: true
 ---
 ::
 
-使用`required`道具时，会在标签旁边添加一个星号。
+### Label
+
+使用`label`属性设置Switch的标签。
 
 ::component-code
 ---
-忽略：
-  标签
-道具：
-  必填项：true
-  label：检查我
+props:
+  label: Check me
 ---
 ::
 
-说明：
-
-使用`description`属性设置交换机的说明。
+当使用`required`属性时，标签旁边会添加一个星号。
 
 ::component-code
 ---
-忽略：
-  标签
-道具：
-  label：检查我
-  description：'这是一个复选框。'
+ignore:
+  - label
+props:
+  required: true
+  label: Check me
 ---
 ::
 
-### 图标
+### 说明
 
-使用`checked-icon`和`unchecked-icon`道具设置选中和未选中时的交换机图标。
+使用`description` prop设置Switch的描述。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标签
-  - 默认值
-道具：
-  未选中图标：“i-lucide-x”
-  选中图标：“i-lucide-选中”
-  默认值：真
-  label：检查我
+ignore:
+  - label
+props:
+  label: Check me
+  description: 'This is a checkbox.'
 ---
 ::
 
-正在载入
+### Icon
+
+使用`checked-icon`和`unchecked-icon`道具设置选中和未选中Switch的图标。
+
+::component-code
+---
+prettier: true
+ignore:
+  - label
+  - defaultValue
+props:
+  uncheckedIcon: 'i-lucide-x'
+  checkedIcon: 'i-lucide-check'
+  defaultValue: true
+  label: Check me
+---
+::
+
+### 加载中
 
 使用`loading`道具在交换机上显示加载图标。
 
 ::component-code
 ---
-忽略：
-  标签
-  - 默认值
-道具：
-  载入：true
-  默认值：真
-  label：检查我
+ignore:
+  - label
+  - defaultValue
+props:
+  loading: true
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-### Loading（加载）图标
+### 加载图标
 
-使用`loading-icon`属性来自订载入图标。预设为`i-lucide-loader-circle`。
+使用`loading-icon`道具自定义加载图标. `i-lucide-loader-circle`。
 
 ::component-code
 ---
-忽略：
-  标签
-  - 默认值
-道具：
-  载入：true
-  加载图标："i-lucide加载程序"
-  默认值：真
-  label：检查我
+ignore:
+  - label
+  - defaultValue
+props:
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`app.config.ts`的`ui.icons.loading`键下全局自定此图标。
+您可以在`ui.icons.loading`键下的`app.config.ts`中全局自定义此图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`vite.config.ts`的`ui.icons.loading`键下全局自定此图标。
+你可以在你的`vite.config.ts`中的`ui.icons.loading`键下全局自定义这个图标。
 :::
 ::
 
-彩色的
+### Color
 
-使用`color`道具更改交换机的颜色。
+使用`color`道具更改Switch的颜色。
 
 ::component-code
 ---
-忽略：
-  标签
-  - 默认值
-道具：
-  颜色：中性
-  默认值：真
-  label：检查我
+ignore:
+  - label
+  - defaultValue
+props:
+  color: neutral
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-尺寸
+### Size
 
-使用`size`道具更改交换机的大小。
+使用`size`属性更改Switch的大小。
 
 ::component-code
 ---
-忽略：
-  标签
-  - 默认值
-道具：
-  尺寸：xl
-  默认值：真
-  label：检查我
+ignore:
+  - label
+  - defaultValue
+props:
+  size: xl
+  defaultValue: true
+  label: Check me
 ---
 ::
 
 ### 已禁用
 
-使用`disabled`道具禁用交换机。
+使用`disabled` prop禁用Switch。
 
 ::component-code
 ---
-忽略：
-  标签
-道具：
-  已禁用：true
-  label：检查我
+ignore:
+  - label
+props:
+  disabled: true
+  label: Check me
 ---
 ::
 
-活性成分
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-此组件还支持所有本机`<button>`HTML属性。
+此组件还支持所有原生`<button>` HTML属性。
 ::
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-发射器
+### Emits
 
-：组件发射
+:component-emits
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

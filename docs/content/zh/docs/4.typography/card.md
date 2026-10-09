@@ -9,27 +9,27 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Card.vue
 ---
 
-## 使用情况
+## 用法
 
-在`card`组件的默认插槽中使用markdown来突出显示您的内容。
+在`card`组件的默认插槽中使用markdown来突出显示内容。
 
-使用`title`、`icon`和`color`道具进行自定义。您也可以从[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)或[`<RouterLink>`](https://router.vuejs.org/api/interfaces/RouterLinkProps.html)组件传递任何属性。
+使用`title`、`icon`和`color`道具进行自定义。您还可以传递来自[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)或[`<RouterLink>`](https://router.vuejs.org/api/interfaces/RouterLinkProps.html)组件的任何属性。
 
 ::component-code{slug="card" prose}
 ---
-隐藏：
+hide:
   - class
-忽略：
+ignore:
   - target
-道具：
-  类别：'my-0 w-96'
-  标题：启动
-  图标：i-lucide用户
-  颜色：原色
-  至：'https：nuxt.lemonsqueezy.com'
-  目的：'_blank'
-插槽：
-  default：最适合小型团队，初创公司和最多5名开发人员的机构。
+props:
+  class: 'my-0 w-96'
+  title: Startup
+  icon: i-lucide-users
+  color: primary
+  to: 'https://nuxt.lemonsqueezy.com'
+  target: '_blank'
+slots:
+  default: Best suited for small teams, startups and agencies with up to 5 developers.
 ---
 
 最适合小型团队，初创公司和最多5名开发人员的机构。
@@ -39,16 +39,16 @@ links:
 
 ### Props
 
-：组件-道具{prose}
+:component-props{prose}
 
-### Slots
+### 老虎机
 
-：组件插槽{prose}
+:component-slots{prose}
 
 ## Theme
 
-：组件主题{prose}
+:component-theme{prose}
 
 ## Changelog
 
-：component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

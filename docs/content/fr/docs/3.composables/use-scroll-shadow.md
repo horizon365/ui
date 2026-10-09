@@ -3,25 +3,25 @@ title: utilisateurscrollshadow
 description: 'Un composable pour appliquer des effets d'ombre de défilement sur n'importe quel élément défilable.'
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Utilisez le composable `useScrollShadow` à importation automatique pour appliquer des ombres de fondu sur les bords d'un élément défilable, indiquant que davantage de contenu est disponible dans la direction de défilement.
+Utilisez le composable `useScrollShadow` importé automatiquement pour appliquer des ombres de fondu sur les bords d'un élément défilant, indiquant que plus de contenu est disponible dans la direction de défilement.
 
 ::component-example
 ---
-nom: 'use-scroll-shadow-exemple'
+name: 'use-scroll-shadow-example'
 ---
 ::
 
-- Utilise CSS `mask-image` pour fondre le contenu sur les bords plutôt que de superposer les éléments, de sorte qu 'il fonctionne sur n'importe quel arrière-plan.
-- Détecte automatiquement si l'élément est débordé et n'applique des ombres que si nécessaire
-- Prend en charge les orientations verticales et horizontales
+- Utilise le CSS `mask-image` pour fondre le contenu sur les bords plutôt que de superposer les éléments, de sorte qu 'il fonctionne sur n'importe quel arrière-plan.
+- Détecte automatiquement si l'élément déborde et n'applique des ombres que si nécessaire.
+- Supporte les orientations verticales et horizontales.
 
-@@ph006 @@ réponse
+## api
 
-@@
+`useScrollShadow(element, options?)`x{lang="ts-type"}
 
-@@ph009@paramètres
+### Paramètres
 
 ::field-group
 
@@ -47,12 +47,12 @@ nom: 'use-scroll-shadow-exemple'
   ::
 ::
 
-@@P10@retour
+### retour
 
 ::field-group
 
   ::field{name="style" type="ComputedRef<CSSProperties | undefined>"}
-  Un objet de style réactif à lier sur l'élément défilable avec `:style`. Contient `maskImage` lorsque les ombres sont actives,`undefined` sinon.
+  Un objet de style réactif à lier sur l'élément déroulant avec `:style`. Contient `maskImage` lorsque les ombres sont actives, `undefined` autrement.
   ::
 
   ::field{name="isOverflowing" type="ComputedRef<boolean>"}
@@ -60,15 +60,15 @@ nom: 'use-scroll-shadow-exemple'
   ::
 
   ::field{name="arrivedState" type="{ top: boolean, bottom: boolean, left: boolean, right: boolean }"}
-  État d'arrivée du défilement réactif de [`useScroll`](https://vueuse.org/core/useScroll/).
+  État d'arrivée de défilement réactif de [`useScroll`](https://vueuse.org/core/useScroll/).
   ::
 ::
 
-@@ph019@exemples
+## exemples
 
-@200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### horizontale
 
-Utilisez l'option `orientation` pour les conteneurs défilables horizontalement:
+Utilisez l'option `orientation` pour les conteneurs déroulants horizontalement:
 
 ```vue
 <script setup lang="ts">

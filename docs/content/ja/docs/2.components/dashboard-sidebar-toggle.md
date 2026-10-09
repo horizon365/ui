@@ -13,42 +13,42 @@ links:
 
 ## 使用法
 
-DashboardSidebarToggleコンポーネントは、[ DashboardNavbar ](/docs/components/dashboard-navbar)および[ DashboardSidebar ](/docs/components/dashboard-sidebar)コンポーネントで使用されます。
+DashboardSidebarToggleコンポーネントは、[DashboardNavbar](/docs/components/dashboard-navbar)および[DashboardSidebar](/docs/components/dashboard-sidebar)コンポーネントで使用されます。
 
-サイドバーを切り替えるにはモバイル上で自動的に表示されますが、**は手動で追加する必要はありません。
+サイドバーを切り替えるにはモバイル上で自動的に表示されますが、**x**を手動で追加する必要はありません。
 
 ::component-code
 ---
-隠す
-  - クラス
-小道具
-  クラス'lg flex'
+hide:
+  - class
+props:
+  class: 'lg:flex'
 ---
 ::
 
-[ Button ](/docs/components/button)コンポーネントを拡張しているので、`color`、`variant`、`size`などのプロパティを渡すことができます。
+[Button](/docs/components/button)コンポーネントを拡張するため、`color`、`variant`、`size`などの任意のプロパティを渡すことができます。
 
 ::component-code
 ---
-隠す
-  - クラス
-無視
-  - バリアント
-小道具
-  バリアント：'微妙'
-  クラス'lg flex'
+hide:
+  - class
+ignore:
+  - variant
+props:
+  variant: 'subtle'
+  class: 'lg:flex'
 ---
 ::
 
 ::note
-ボタンのデフォルトは`color="neutral"`および`variant="ghost"`です。
+ボタンのデフォルトは`color="neutral"`と`variant="ghost"`です。
 ::
 
-## 例
+## サンプル
 
-### 内`toggle`スロット
+### x`toggle`スロット内
 
-このコンポーネントはモバイルで自動的に表示されますが、[ DashboardNavbar ](/docs/components/dashboard-navbar)および[ DashboardSidebar ](/docs/components/dashboard-sidebar)コンポーネントの`toggle`スロットを使用してボタンをカスタマイズできます。
+このコンポーネントはモバイルで自動的に表示されますが、[DashboardNavbar](/docs/components/dashboard-navbar)および[DashboardSidebar](/docs/components/dashboard-sidebar)コンポーネントの`toggle`スロットを使用してボタンをカスタマイズできます。
 
 ::code-group
 
@@ -89,23 +89,23 @@ definePageMeta({
 ::
 
 ::tip
-`DashboardSidebar`と`DashboardNavbar`コンポーネントの`toggle-side`プロパティを使用すると、指定された側にボタンが表示されます。
+`DashboardSidebar`および`DashboardNavbar`コンポーネントの`toggle-side`プロパティを使用すると、指定された側にボタンが表示されます。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-このコンポーネントは、すべてのネイティブ`<button>` HTML属性もサポートします。
+このコンポーネントはすべてのネイティブ`<button>` HTML属性もサポートします。
 ::
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

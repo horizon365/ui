@@ -11,81 +11,81 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Badge.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
 Utilisez l'emplacement par défaut pour définir l'étiquette du badge.
 
 ::component-code
 ---
-Slots:
-  Défaut: Badge
+slots:
+  default: Badge
 ---
 ::
 
-@@ph001@étiquette
+### étiquette
 
-Utilisez la prop `label` pour définir l'étiquette du badge.
+Utilisez le prop `label` pour définir l'étiquette du badge.
 
 ::component-code
 ---
-Props:
-  Étiquette: badge
+props:
+  label: Badge
 ---
 ::
 
-@@pH003@couleur
+### couleur
 
-Utilisez le prop `color` pour changer la couleur de l'insigne.
+Utilisez le prop `color` pour changer la couleur du badge.
 
 ::component-code
 ---
-Props:
-  Couleur: Neutre
-Slots:
-  Défaut: Badge
+props:
+  color: neutral
+slots:
+  default: Badge
 ---
 ::
 
-@@005@@Variant
+### Variant
 
-Utilisez les accessoires `variant` pour modifier la variante du badge.
+Utilisez les accessoires `variant` pour changer la variante du badge.
 
 ::component-code
 ---
-Props:
-  Couleur: Neutre
-  Étiquette: Outline
-Slots:
-  Défaut: Badge
+props:
+  color: neutral
+  variant: outline
+slots:
+  default: Badge
 ---
 ::
 
-@@ph007@série
+### taille
 
-Utilisez la prop `size` pour modifier la taille de l'insigne.
+Utilisez le prop `size` pour changer la taille du badge.
 
 ::component-code
 ---
-Props:
-  Taille: XL
-Slots:
-  Défaut: Badge
+props:
+  size: xl
+slots:
+  default: Badge
 ---
 ::
 
-@@ph009@icône
+### Icône
 
-Utilisez le prop `icon` pour afficher une [Icon](/docs/components/icon) à l'intérieur du badge.
+Utilisez la prop `icon` pour afficher un [Icon](/docs/components/icon) à l'intérieur du badge.
 
 ::component-code
 ---
-Props:
-  Étiquette: i-lucide-rocket
-  Taille: MD
-  Couleur: Primaire
-  Variante: solide
-Slots:
-  Défaut: Badge
+props:
+  icon: i-lucide-rocket
+  size: md
+  color: primary
+  variant: solid
+slots:
+  default: Badge
 ---
 ::
 
@@ -93,66 +93,66 @@ Utilisez les accessoires `leading` et `trailing` pour définir la position de l'
 
 ::component-code
 ---
-Props:
-  Icône: i-lucide-arrow-right
-  Étiquette: MD
-Slots:
-  Défaut: Badge
+props:
+  trailingIcon: i-lucide-arrow-right
+  size: md
+slots:
+  default: Badge
 ---
 ::
 
-@19@avatar
+### Avatars
 
-Utilisez le prop `avatar` pour montrer un [Avatar](/docs/components/avatar) à l'intérieur du badge.
+Utilisez la prop `avatar` pour afficher un [Avatar](xph066) à l'intérieur du badge.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  - avatar.chargement
-Props:
-  Avatar:
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
     src: 'https://github.com/nuxt.png'
-    Étiquette: Lazy
-  Étiquette: MD
-  Couleur: Neutre
-  Étiquette: Outline
-Slots:
-  Défaut:|
+    loading: lazy
+  size: md
+  color: neutral
+  variant: outline
+slots:
+  default: |
 
-    badge à
+    Badge
 ---
 ::
 
-@@ph026@exemples
+## exemples
 
-@@
+### x`class` prop
 
-Utilisez la prop `class` pour remplacer les styles de base du badge.
+Utilisez le prop `class` pour remplacer les styles de base du badge.
 
 ::component-code
 ---
-Props:
-  classe: 'font-bold rounded-full'
-Slots:
-  Défaut: Badge
+props:
+  class: 'font-bold rounded-full'
+slots:
+  default: Badge
 ---
 ::
 
-@@ph030@@api
+## api
 
-@@ph031@@props
+### Props
 
-Composants-props
+:component-props
 
-@@ph032@@réglages
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph033@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changelog @changelog
+## Changelog
 
-Composant-changelog
+:component-changelog

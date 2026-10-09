@@ -16,102 +16,102 @@ PricingPlanコンポーネントは、タイトル、説明、価格、機能な
 
 ::u-pricing-plan
 ---
-title 'ソロ'
-説明：'ブートストラッパーとインディーハッカーのために'
-価格'$249'
-割引'$199'
-billing—cycle '/month'
-バッジ'人気のある'
-特徴
-  - '一人の開発者
-  - '無制限のプロジェクト'
-  - 'GitHubリポジトリへのアクセス'
-  - '無制限のパッチ&マイナーアップデート'
-  - '生涯アクセス'
-ボタン
-  ラベル'今すぐ購入'
-クラス'w—96'
+title: 'Solo'
+description: 'For bootstrappers and indie hackers.'
+price: '$249'
+discount: '$199'
+billing-cycle: '/month'
+badge: 'Most popular'
+features:
+  - 'One developer'
+  - 'Unlimited projects'
+  - 'Access to GitHub repository'
+  - 'Unlimited patch & minor updates'
+  - 'Lifetime access'
+button:
+  label: 'Buy now'
+class: 'w-96'
 ---
 ::
 
 ::
 
 ::tip{to="/docs/components/pricing-plans"}
-`PricingPlans`コンポーネントを使用して、レスポンシブなグリッドレイアウトで複数の料金プランを表示します。
+`PricingPlans`コンポーネントを使用して、レスポンシブなグリッドレイアウトで複数の価格プランを表示します。
 ::
 
-### タイトル
+### Title
 
 `title`プロパティを使用してPricingPlanのタイトルを設定します。
 
 ::component-code
 ---
-無視
-  - クラス
-小道具
-  title 'ソロ'
-  クラス'w—96'
+ignore:
+  - class
+props:
+  title: 'Solo'
+  class: 'w-96'
 ---
 ::
 
-### 説明
+### Description
 
-`description`プロパティを使用して、PricingPlanの説明を設定します。
+`description`プロパティを使用してPricingPlanの説明を設定します。
 
 ::component-code
 ---
-隠す
-  - クラス
-無視
-  -  title
-小道具
-  title 'ソロ'
-  説明：'ブートストラッパーとインディーハッカーのために'
-  クラス'w—96'
+hide:
+  - class
+ignore:
+  - title
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  class: 'w-96'
 ---
 ::
 
 ### バッジ
 
-`badge`プロップを使用して、PricingPlanのタイトルの横に[ Badge ](/docs/components/badge)を表示します。
+`badge`プロパティを使用して、PricingPlanのタイトルの横に[Badge](/docs/components/badge)を表示します。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-小道具
-  title 'ソロ'
-  説明：'ブートストラッパーとインディーハッカーのために'
-  バッジ'人気のある'
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  badge: 'Most popular'
+  class: 'w-96'
 ---
 ::
 
-[ Badge ](/docs/components/badge#props)コンポーネントから任意のプロパティを渡してカスタマイズできます。
+[Badge](/docs/components/badge#props)コンポーネントの任意のプロパティを渡してカスタマイズできます。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-  -  badge.label
-  -  badge.color
-  -  badge.variant
-小道具
-  title 'ソロ'
-  説明：'ブートストラッパーとインディーハッカーのために'
-  バッジ
-    ラベル'最も人気のある'
-    色'ニュートラル'
-    バリアント'固体'
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - badge.label
+  - badge.color
+  - badge.variant
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  badge:
+    label: 'Most popular'
+    color: 'neutral'
+    variant: 'solid'
+  class: 'w-96'
 ---
 ::
 
@@ -121,100 +121,100 @@ billing—cycle '/month'
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-小道具
-  title 'ソロ'
-  説明：'ブートストラッパーとインディーハッカーのために'
-  価格'$249'
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  class: 'w-96'
 ---
 ::
 
 ### 割引
 
-`discount`プロップを使用して、元の価格と一緒に表示される割引価格を設定しますこれはストライクスルーで表示されます。
+`discount`プロップを使用して、元の価格（ストライクスルーで表示されます）と一緒に表示される割引価格を設定します。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-小道具
-  title 'ソロ'
-  説明：'ブートストラッパーとインディーハッカーのために'
-  価格'$249'
-  割引'$199'
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  discount: '$199'
+  class: 'w-96'
 ---
 ::
 
-### 請求
+### Billing
 
-PricingPlanの請求情報を表示するには、`billing-cycle`および/または`billing-period` propsを使用します。
+`billing-cycle`および/または`billing-period`小道具を使用して、PricingPlanの請求情報を表示します。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-小道具
-  title 'ソロ'
-  説明：'ブートストラッパーとインディーハッカーのために'
-  価格'$9'
-  billingCycle '/month'
-  billingPeriod：「毎年請求」
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$9'
+  billingCycle: '/month'
+  billingPeriod: 'billed annually'
+  class: 'w-96'
 ---
 ::
 
-### 特徴
+### 機能
 
-`features`プロパティを文字列の配列として使用して、PricingPlanに機能のリストを表示します。
+PricingPlanに機能のリストを表示するには、`features`プロパティを文字列の配列として使用します。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-  - 価格
-  - 機能
-小道具
-  title 'ソロ'
-  説明：'ブートストラッパーとインディーハッカーのために'
-  価格'$249'
-  特徴
-    - '開発者1名
-    - '無制限のプロジェクト'
-    - 'GitHubリポジトリへのアクセス'
-    - '無制限のパッチ&マイナーアップデート'
-    - '生涯アクセス'
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - price
+  - features
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - 'One developer'
+    - 'Unlimited projects'
+    - 'Access to GitHub repository'
+    - 'Unlimited patch & minor updates'
+    - 'Lifetime access'
+  class: 'w-96'
 ---
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.success`キーの下の`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`app.config.ts`の`ui.icons.success`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.success`キーの下の`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`vite.config.ts`の`ui.icons.success`キーでグローバルにカスタマイズできます。
 :::
 ::
 
@@ -225,200 +225,200 @@ PricingPlanの請求情報を表示するには、`billing-cycle`および/ま�
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-外部
-  - 特徴
-externalTypes
-  -  PricingPlanFeature []
-無視
-  -  title
-  - 説明
-  - 価格
-  - 特徴
-小道具
-  title 'ソロ'
-  説明：'ブートストラッパーとインディーハッカーのために'
-  価格'$249'
-  特徴
-    -  title '一人の開発者'
-      アイコンi—lucide—user
-    -  title '無制限プロジェクト'
-      アイコンi—lucide—infinity
-    -  title 'GitHubリポジトリへのアクセス'
-      アイコンi—lucide—github
-    -  title '無制限のパッチ&マイナーアップデート'
-      アイコンi—lucide—resh—cw
-    -  title '生涯アクセス'
-      アイコンi—lucide—clock
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+external:
+  - features
+externalTypes:
+  - PricingPlanFeature[]
+ignore:
+  - title
+  - description
+  - price
+  - features
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - title: 'One developer'
+      icon: i-lucide-user
+    - title: 'Unlimited projects'
+      icon: i-lucide-infinity
+    - title: 'Access to GitHub repository'
+      icon: i-lucide-github
+    - title: 'Unlimited patch & minor updates'
+      icon: i-lucide-refresh-cw
+    - title: 'Lifetime access'
+      icon: i-lucide-clock
+  class: 'w-96'
 ---
 ::
 
-### ボタン
+### Button
 
-PricingPlanの下部にボタンを表示するには、[ Button ](/docs/components/button)コンポーネントの任意のプロパティを`button` propを使用します。
+PricingPlanの下部にボタンを表示するには、[Button](/docs/components/button)コンポーネントの任意のプロパティを指定して`button`プロパティを使用します。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-  - 価格
-  - 機能
-小道具
-  title 'ソロ'
-  説明：'ブートストラッパーとインディーハッカーのために'
-  価格'$249'
-  特徴
-    - '開発者1名
-    - '無制限のプロジェクト'
-    - 'GitHubリポジトリへのアクセス'
-    - '無制限のパッチ&マイナーアップデート'
-    - '生涯アクセス'
-  ボタン
-    ラベル'今すぐ購入'
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - price
+  - features
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - 'One developer'
+    - 'Unlimited projects'
+    - 'Access to GitHub repository'
+    - 'Unlimited patch & minor updates'
+    - 'Lifetime access'
+  button:
+    label: 'Buy now'
+  class: 'w-96'
 ---
 ::
 
 ::tip
-`onClick`フィールドを使用して、プラン購入をトリガーするクリックハンドラーを追加します。
+`onClick`項目を使用して、プラン購入をトリガーするクリックハンドラーを追加します。
 ::
 
-### バリアント
+### Variant
 
 `variant`プロパティを使用して、PricingPlanのバリアントを変更します。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-  - 価格
-  - 機能
-  -  button.label
-小道具
-  title 'ソロ'
-  説明：'ブートストラッパーとインディーハッカーのために'
-  価格'$249'
-  特徴
-    - '開発者1名
-    - '無制限プロジェクト'
-    - 'GitHubリポジトリへのアクセス'
-    - '無制限のパッチ&マイナーアップデート'
-    - '生涯アクセス'
-  ボタン
-    ラベル'今すぐ購入'
-  バリアント：'微妙'
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - price
+  - features
+  - button.label
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - 'One developer'
+    - 'Unlimited projects'
+    - 'Access to GitHub repository'
+    - 'Unlimited patch & minor updates'
+    - 'Lifetime access'
+  button:
+    label: 'Buy now'
+  variant: 'subtle'
+  class: 'w-96'
 ---
 ::
 
-### オリエンテーション
+### Orientation
 
-PricingPlanの向きを変更するには、`orientation`プロパティを使用します。デフォルトは`vertical`です。
+`orientation`プロパティを使用してPricingPlanの向きを変更します。デフォルトは`vertical`です。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-  - 価格
-  - 機能
-  -  button.label
-小道具
-  title 'ソロ'
-  説明：'ブートストラッパーとインディーハッカーのために'
-  価格'$249'
-  特徴
-    - '開発者1名
-    - '無制限のプロジェクト'
-    - 'GitHubリポジトリへのアクセス'
-    - '生涯アクセス'
-  ボタン
-    ラベル'今すぐ購入'
-  オリエンテーション水平
-  variant 'outline'
-  クラス'w—full'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - price
+  - features
+  - button.label
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - 'One developer'
+    - 'Unlimited projects'
+    - 'Access to GitHub repository'
+    - 'Lifetime access'
+  button:
+    label: 'Buy now'
+  orientation: horizontal
+  variant: 'outline'
+  class: 'w-full'
 ---
 ::
 
-### タグライン
+### Tagline
 
 `tagline`プロパティを使用して、価格の上にタグラインテキストを表示します。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-  - 価格
-  - 機能
-  -  button.label
-  - オリエンテーション
-小道具
-  title 'ソロ'
-  説明：'ブートストラッパーとインディーハッカーのために'
-  価格'$249'
-  特徴
-    - '開発者1名
-    - '無制限のプロジェクト'
-    - 'GitHubリポジトリへのアクセス'
-    - '生涯アクセス'
-  ボタン
-    ラベル'今すぐ購入'
-  オリエンテーション水平
-  キャッチコピーは「一度払えば永遠に所有する」
-  クラス'w—full'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - price
+  - features
+  - button.label
+  - orientation
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - 'One developer'
+    - 'Unlimited projects'
+    - 'Access to GitHub repository'
+    - 'Lifetime access'
+  button:
+    label: 'Buy now'
+  orientation: horizontal
+  tagline: 'Pay once, own it forever'
+  class: 'w-full'
 ---
 ::
 
-### 利用規約
+### Terms
 
-`terms`プロパティを使用して、価格以下の条件を表示します。
+`terms`プロパティを使用して、価格以下の用語を表示します。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-  - 価格
-  - 機能
-  -  button.label
-  - オリエンテーション
-  - タグライン
-小道具
-  title 'ソロ'
-  説明：'ブートストラッパーとインディーハッカーのために'
-  価格'$249'
-  特徴
-    - '開発者1名
-    - '無制限のプロジェクト'
-    - 'GitHubリポジトリへのアクセス'
-    - '生涯アクセス'
-  ボタン
-    ラベル'今すぐ購入'
-  オリエンテーション水平
-  キャッチコピーは「一度払えば永遠に所有する」
-  用語：'利用可能な請求書と領収書。'
-  クラス'w—full'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - price
+  - features
+  - button.label
+  - orientation
+  - tagline
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - 'One developer'
+    - 'Unlimited projects'
+    - 'Access to GitHub repository'
+    - 'Lifetime access'
+  button:
+    label: 'Buy now'
+  orientation: horizontal
+  tagline: 'Pay once, own it forever'
+  terms: 'Invoices and receipts available.'
+  class: 'w-full'
 ---
 ::
 
@@ -428,54 +428,54 @@ PricingPlanの向きを変更するには、`orientation`プロパティを使�
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-  - 価格
-  - 機能
-  -  button.label
-小道具
-  title 'ソロ'
-  説明：'ブートストラッパーとインディーハッカーのために'
-  価格'$249'
-  特徴
-    - '開発者1名
-    - '無制限のプロジェクト'
-    - 'GitHubリポジトリへのアクセス'
-    - '無制限のパッチ&マイナーアップデート'
-    - '生涯アクセス'
-  ボタン
-    ラベル'今すぐ購入'
-  ハイライト真
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - price
+  - features
+  - button.label
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - 'One developer'
+    - 'Unlimited projects'
+    - 'Access to GitHub repository'
+    - 'Unlimited patch & minor updates'
+    - 'Lifetime access'
+  button:
+    label: 'Buy now'
+  highlight: true
+  class: 'w-96'
 ---
 ::
 
-### スケール
+### Scale
 
-`scale`プロパティを使用して、PricingPlanを他のものよりも大きくします。
+`scale`プロパティを使用して、PricingPlanを他よりも大きくします。
 
 ::note{to="/docs/components/pricing-plans#scale"}
-PricingPlansの`scale`の例を見て、それだけではデモンストレーションが難しいので、どのように動作するかを確認してください。
+PricingPlansの`scale`の例をチェックして、それだけではデモンストレーションするのは難しいので、どのように動作するかを確認してください。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

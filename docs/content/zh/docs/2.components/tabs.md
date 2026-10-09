@@ -14,107 +14,107 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Tabs.vue
 ---
 
-## 使用情况
+## 用法
 
-使用“选项卡”组件可以在选项卡中显示项目列表.
+使用选项卡组件可以在选项卡中显示项列表。
 
 ::component-example
 ---
-收阖：true
-更漂亮：真的
-名称：'选项卡示例'
-道具：
-  类别：'w-完整'
+collapse: true
+prettier: true
+name: 'tabs-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-项目
+### 项目
 
-使用`items`属性作为具有下列属性的对象数组：
+使用`items` prop作为具有以下属性的对象数组：
 
-005号机
-006年7月8日
-009年10月11日
-我的天啊！
-我的天啊！
-我的天啊！
-021、022、023、
-我的天啊！
-我的天啊！
-我的天啊！
+- `label?: string`{lang="ts-type"}
+- `icon?: string`{lang="ts-type"}
+- `avatar?: AvatarProps`{lang="ts-type"}
+- `badge?: string | number | BadgeProps`{lang="ts-type"}
+- `content?: string`{lang="ts-type"}
+- `value?: string | number`{lang="ts-type"}
+- `disabled?: boolean`{lang="ts-type"}
+- [`slot?: string`{lang="ts-type"}](#with-custom-slot)
+- `class?: any`{lang="ts-type"}
+- `ui?: { trigger?: ClassNameValue, leadingIcon?: ClassNameValue, leadingAvatar?: ClassNameValue, leadingAvatarSize?: ClassNameValue, label?: ClassNameValue, trailingBadge?: ClassNameValue, trailingBadgeSize?: ClassNameValue, content?: ClassNameValue }`{lang="ts-type"}
 
 ::component-code
 ---
-忽略：
-  项目
-  班级
-外部：
-  项目名称
-外部类型：
-  - 选项卡项目[]
-道具：
-  项目名称：
-    @@标签：账号
-      图标：“i-lucide-用户”
-      content：'这是帐户内容。'
-- 标签：密码
-      图标：“i-lucide锁”
-      content：'这是密码内容。'
-  类别：'w-完整'
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  items:
+    - label: Account
+      icon: 'i-lucide-user'
+      content: 'This is the account content.'
+    - label: Password
+      icon: 'i-lucide-lock'
+      content: 'This is the password content.'
+  class: 'w-full'
 ---
 ::
 
-内容
+### 内容
 
-将`content`属性设置为`false`以呈现不带任何面板的触发器。默认设置为`true`。
+将`content`属性设置为`false`以在没有任何面板的情况下呈现触发器。将`true`属性设置为`true`。
 
 ::component-code
 ---
-忽略：
-  内容
-  个项目
-  班级
-外部：
-- 个项目
-外部类型：
-  - 选项卡项目[]
-道具：
-  内容：错误
-  项目名称：
-    @@标签：账号
-      图标："i-lucide-用户"
-      content：'这是帐户内容。'
-- 标签：密码
-      图标："i-lucide锁"
-      content：'这是密码内容。'
-  类别：'w-完整'
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  content: false
+  items:
+    - label: Account
+      icon: 'i-lucide-user'
+      content: 'This is the account content.'
+    - label: Password
+      icon: 'i-lucide-lock'
+      content: 'This is the password content.'
+  class: 'w-full'
 ---
 ::
 
 ### 卸载
 
-使用`unmount-on-hide`道具可防止在折叠选项卡时卸载内容。默认为`true`。
+使用`unmount-on-hide`属性来防止在折叠标签时卸载内容。将其替换为`true`。
 
 ::component-code
 ---
-忽略：
-  内容
-  项目数
-  班级
-外部：
-- 个项目
-外部类型：
-  - 选项卡项目[]
-道具：
-  隐藏时卸载：假
-  项目名称：
-    @标签：账号
-      图标："i-lucide-用户"
-      content：'这是帐户内容。'
-- 标签：密码
-      图标："i-lucide锁"
-      content：'这是密码内容。'
-  类别：'w-完整'
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  unmountOnHide: false
+  items:
+    - label: Account
+      icon: 'i-lucide-user'
+      content: 'This is the account content.'
+    - label: Password
+      icon: 'i-lucide-lock'
+      content: 'This is the password content.'
+  class: 'w-full'
 ---
 ::
 
@@ -122,181 +122,181 @@ links:
 您可以检查DOM以查看呈现的每个项的内容。
 ::
 
-颜色
+### Color
 
-使用`color`道具更改选项卡的颜色。
-
-::component-code
----
-忽略：
-  内容
-  项目数
-  班级
-外部的：
-  项目数
-外部类型：
-  - 选项卡项目[]
-道具：
-  颜色：中性
-  内容：错误
-  项目名称：
-    @标签：账号
-- 标签：密码
-  类别：'w-完整'
----
-::
-
-### 变体
-
-使用`variant`道具更改选项卡的变体。
+使用`color`属性更改选项卡的颜色。
 
 ::component-code
 ---
-忽略：
-  内容
-  项目数
-  班级
-外部的：
-  项目数
-外部类型：
-  - 选项卡项目[]
-道具：
-  颜色：中性
-  变体：链接
-  内容：错误
-  项目名称：
-    @@标签：账号
-- 标签：密码
-  类别：'w-完整'
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  color: neutral
+  content: false
+  items:
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
-尺寸
+### Variant
 
-使用`size`道具更改制表符的大小。
+使用`variant` prop来更改选项卡的变体。
 
 ::component-code
 ---
-忽略：
-  内容
-  项目数
-  班级
-外部：
-  项目数
-外部类型：
-  - 选项卡项目[]
-道具：
-  尺寸：md
-  变体：丸剂
-  内容：错误
-  项目名称：
-    @标签：账号
-- 标签：密码
-  类别：'w-完整'
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  color: neutral
+  variant: link
+  content: false
+  items:
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
-方向
+### Size
 
-使用`orientation`道具更改制表符的方向。默认为`horizontal`。
+使用`size`属性来更改选项卡的大小。
 
 ::component-code
 ---
-忽略：
-  内容
-  项目数
-  班级
-外部：
-  项目数
-外部类型：
-  - 选项卡项目[]
-道具：
-  方向：垂直
-  变体：丸剂
-  内容：错误
-  项目名称：
-    @标签：账号
-- 标签：密码
-  类别：'w-完整'
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  size: md
+  variant: pill
+  content: false
+  items:
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
-示例：
+### 定向
 
-### 控制活动项目
+使用`orientation`道具将Tabs.xml.的方向更改为`horizontal`。
 
-您可以使用`default-value`属性或`v-model`指示词搭配项目的`value`来控制使用中的项目。如果未提供`value`，则会预设为索引**做为字串**。
+::component-code
+---
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  orientation: vertical
+  variant: pill
+  content: false
+  items:
+    - label: Account
+    - label: Password
+  class: 'w-full'
+---
+::
 
-：组件示例{name="tabs-model-value-example"}
+## 示例
+
+### Control活动项目
+
+您可以通过使用`default-value` prop或`v-model`指令与项目的`value`来控制活动项目。如果没有提供`value`，则默认为索引**作为字符串**。
+
+:component-example{name="tabs-model-value-example"}
 
 ::tip
-当提供`v-model`或`default-value`时，使用`value-key`属性更改用于匹配项目的密钥。
+当提供`v-model`或`default-value`时，使用`value-key`属性更改用于匹配项的键。
 ::
 
-### 使用路线查询
+### 带路由查询
 
-您可以使用URL查询参数来控制作用中的项目，并将`route.query.tab`当做项目的`value`。
+您可以通过URL查询参数控制活动项目，使用`route.query.tab`作为项目的`value`。
 
-：组件示例{name="tabs-route-query-example"}
+:component-example{name="tabs-route-query-example"}
 
-### 使用内容插槽
+### 带内容插槽
 
 使用`#content`插槽自定义每个项目的内容。
 
-：组件示例{name="tabs-content-slot-example"}
+:component-example{name="tabs-content-slot-example"}
 
-### 使用底部选项卡栏
+### 带底部选项卡栏
 
-使用`ui`道具将选项卡转换为带有图标和小标签的移动风格底部选项卡栏，类似于YouTube或Instagram。
+使用`ui`道具将标签转换为带有图标和小标签的移动风格底部标签栏，类似于YouTube或Instagram。
 
 ::component-example
 ---
-收阖：true
-名称：'标签-底部-标签-栏-示例'
+collapse: true
+name: 'tabs-bottom-tab-bar-example'
 ---
 ::
 
-### 使用自定义插槽
+### 带自定义插槽
 
-使用`slot`属性可自定义特定项目。
+使用`slot`属性自定义特定项。
 
 您将可以访问以下插槽：
 
-124小时125小时126小时
+- `#{{ item.slot }}`{lang="ts-type"}
 
 ::component-example
 ---
-收阖：true
-名称：'标签-自定义-插槽-示例'
+collapse: true
+name: 'tabs-custom-slot-example'
 ---
 ::
 
-## 活性成分
+## API
 
-### 道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽数
+### Slots
 
-：组件插槽
+:component-slots
 
-### 排放量
+### 发射
 
-：组件发射
+:component-emits
 
-暴露
+### 曝光
 
 通过模板引用访问组件时，可以使用以下命令：
 
 | 名称|类型|
 | ---- | ---- |
-| 134号公路|133小时135小时|
+| `triggersRef`{lang="ts-type"}| `Ref<ComponentPublicInstance[]>`{lang="ts-type"}|
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

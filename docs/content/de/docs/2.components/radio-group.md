@@ -6,7 +6,7 @@ keywords:
   - radio buttons
   - single choice
 links:
-  - label: Die Radiogruppe
+  - label: Radiogruppe
     icon: i-custom-reka-ui
     to: https://reka-ui.com/docs/components/radio-group
   - label: GitHub
@@ -14,82 +14,82 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/RadioGroup.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Verwenden Sie die Direktive `v-model`, um den Wert der RadioGroup zu steuern, oder die Direktive `default-value` prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
+Verwenden Sie die `v-model`-Direktive, um den Wert der RadioGroup zu steuern, oder die `default-value`-prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  - modellWert
-  @@ph004@gmail.de
-Außen:
-  @@@ph005@gmail.de
-  - modellWert
-Props:
-  Modellbezeichnung: "System"
-  Items:
-    - "System"
-    @@ph008 @@'Licht'
-    @@ph009 @@'dunkel'
+prettier: true
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-@@ph010@gmail.de
+### Items Bearbeiten
 
-Verwenden Sie `items` prop als Array von Strings oder Zahlen:
+Verwenden Sie die `items`-prop als Array von Strings oder Zahlen:
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  - modellWert
-  @@ph013@gmail.de
-Außen:
-  @@ph014@gmail.de
-  - modellWert
-Props:
-  Modellbezeichnung: "System"
-  Items:
+prettier: true
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'System'
+  items:
     - 'System'
-    - 'Licht'
-    @@ph018 @@'dunkel'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
 Sie können auch ein Array von Objekten mit den folgenden Eigenschaften übergeben:
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@PH02020@@@@@@@@@PH0202020@@@@@@@@@@@PH02021
-`description?: string``description?: string`{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}
-- [`value?: string`{lang="ts-type"}]()
-@@@@@@@@@@@@@@@@@@@@@@PH0333@@@@@@@@@@@@@@PH03333@@@@@@@@@@@@@@@PH0334{lang="ts-type"}{lang="ts-type"}PH03334@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-- [`icon?: string`{lang="ts-type"}]()
-`class?: any`PH0444 @@
-`ui?: { item?: ClassNameValue, container?: ClassNameValue, base?: ClassNameValue, 'indicator'?: ClassNameValue, wrapper?: ClassNameValue, label?: ClassNameValue, icon?: ClassNameValue, description?: ClassNameValue }``ui?: { item?: ClassNameValue, container?: ClassNameValue, base?: ClassNameValue, 'indicator'?: ClassNameValue, wrapper?: ClassNameValue, label?: ClassNameValue, icon?: ClassNameValue, description?: ClassNameValue }``ui?: { item?: ClassNameValue, container?: ClassNameValue, base?: ClassNameValue, 'indicator'?: ClassNameValue, wrapper?: ClassNameValue, label?: ClassNameValue, icon?: ClassNameValue, description?: ClassNameValue }``ui?: { item?: ClassNameValue, container?: ClassNameValue, base?: ClassNameValue, 'indicator'?: ClassNameValue, wrapper?: ClassNameValue, label?: ClassNameValue, icon?: ClassNameValue, description?: ClassNameValue }`{lang="ts-type"}
+- `label?: string`{lang="ts-type"} (nicht vorhanden)
+- `description?: string`{lang="ts-type"} (nicht vorhanden)
+04.04.2018 00:43:44:45 00:46:46:46
+- `disabled?: boolean`{lang="ts-type"} (nicht vorhanden)
+05.05.2017 00:55 - 05.05.2018 00:55:55 00:55:56
+- `class?: any`{lang="ts-type"} (nicht vorhanden)
+- `ui?: { item?: ClassNameValue, container?: ClassNameValue, base?: ClassNameValue, 'indicator'?: ClassNameValue, wrapper?: ClassNameValue, label?: ClassNameValue, icon?: ClassNameValue, description?: ClassNameValue }`{lang="ts-type"} (nicht vorhanden)
 
 ::component-code
 ---
-Ignoriert:
-  - modellwert
-  @@ph049@gmail.de
-Außen:
-  @@@ph050@gmail.de
-  - modellWert
-Externe Personen:
-  - RadioGroupItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Modellwert: 'System'
-  Items:
-    - label:'System'
-      Beschreibung: "Entspricht Ihren Geräteeinstellungen."
-      Wert: "System"
-    - label:'Licht'
-      Beschreibung: "Verwendet immer das Lichtthema."
-      Wert: „ Licht "
-    - label:'Dunkle'
-      Beschreibung: "Verwendet immer das dunkle Thema."
-      Wert: "dunkel"
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+externalTypes:
+  - RadioGroupItem[]
+props:
+  modelValue: 'system'
+  items:
+    - label: 'System'
+      description: 'Matches your device settings.'
+      value: 'system'
+    - label: 'Light'
+      description: 'Always uses the light theme.'
+      value: 'light'
+    - label: 'Dark'
+      description: 'Always uses the dark theme.'
+      value: 'dark'
 ---
 ::
 
@@ -97,246 +97,246 @@ Props:
 Wenn Sie Objekte verwenden, müssen Sie auf die `value`-Eigenschaft des Objekts in der `v-model`-Direktive oder der `default-value`-Prop verweisen.
 ::
 
-### Wertschlüssel
+### value Schlüssel
 
-Sie können die Eigenschaft ändern, die zum Festlegen des Werts verwendet wird, indem Sie `value-key` prop. Defaults zu `value` verwenden.
+Sie können die Eigenschaft ändern, die zum Festlegen des Werts verwendet wird, indem Sie die `value-key`-Prop verwenden.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-  @@ph063@gmail.de
+ignore:
+  - modelValue
+  - items
   - valueKey
-Außen:
-  @@ph065@gmail.de
-  - modellWert
-Externe Personen:
-  - RadioGroupItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Modellwert: "Licht"
-  Schlüsselwort:'id'
-  Items:
-    - label:'System'
-      Beschreibung: "Entspricht Ihren Geräteeinstellungen."
-      ID: „ System "(System)
-    - label:'Licht'
-      Beschreibung: 'Verwendet immer das Lichtthema.'
-      ID: "Licht"
-    - label:'Dunkle'
-      Beschreibung: 'Verwendet immer das dunkle Thema.'
-      Titel: "Dark"
+external:
+  - items
+  - modelValue
+externalTypes:
+  - RadioGroupItem[]
+props:
+  modelValue: 'light'
+  valueKey: 'id'
+  items:
+    - label: 'System'
+      description: 'Matches your device settings.'
+      id: 'system'
+    - label: 'Light'
+      description: 'Always uses the light theme.'
+      id: 'light'
+    - label: 'Dark'
+      description: 'Always uses the dark theme.'
+      id: 'dark'
 ---
 ::
 
-### Legende
+### Legend Bearbeiten
 
-Verwenden Sie `legend` prop, um die Legende der RadioGroup zu setzen.
-
-::component-code
----
-Schöner: wahr
-Ignoriert:
-  - defaultValue (nicht vorhanden)
-  @@ph074@gmail.de
-Außen:
-  @@ph075@gmail.de
-Props:
-  Zitat von » Theme «
-  DefaultValue: 'System'(Systemfehler)
-  Items:
-    - 'System'(auf Englisch)
-    - 'Licht'
-    @@ph078 @@'dunkel'
----
-::
-
-@@@ph079@@gmail.de
-
-Verwenden Sie die `color` prop, um die Farbe der RadioGroup zu ändern.
+Verwenden Sie die `legend` prop, um die Legende der RadioGroup zu setzen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
+prettier: true
+ignore:
   - defaultValue
-  @@@ph082@@gmail.de
-Außen:
-  @@ph083@gmail.de
-Props:
-  Farbe: neutral
-  DefaultValue: 'System'(Systemfehler)
-  Items:
-    @@ph084 @@"System"
-    @@ph085 @@'Licht'
-    @@ph086 @@'dunkel'
----
-::
-
-@@@@@@@@@@@@@@@@@@ph087@@@@@@Variant
-
-Verwenden Sie `variant` prop, um die Variante der RadioGroup zu ändern.
-
-::component-code
----
-Schöner: wahr
-Ignoriert:
-  @@ph089@defaultvalue (nicht vorhanden)
-  @@ph090@gmail.de
-Außen:
-  @@ph091@@gmail.de
-Externe Personen:
-  - RadioGroupItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Farbe: "Primär"
-  Variante: „ Karte "
-  DefaultValue: 'System'(Systemfehler)
-  Items:
-    - label:'System'
-      Wert: "System"
-      Beschreibung: 'Entspricht Ihren Geräteeinstellungen.'
-    - label:'Licht'
-      Wert: „ Licht "
-      Beschreibung: 'Verwendet immer das Lichtthema.'
-    - label:'Dunkle'
-      Wert: "dunkel"
-      Beschreibung: 'Verwendet immer das dunkle Thema.'
----
-::
-
-### Größe
-
-Verwenden Sie die `size` prop, um die Größe der RadioGroup zu ändern.
-
-::component-code
----
-Schöner: wahr
-Ignoriert:
-  @@ph098@defaultvalue (nicht vorhanden)
-  @@ph099@gmail.de
-Außen:
-  @@@ph100@gmail.de
-Props:
-  Größe:'xl'
-  Variante: „ Liste "
-  DefaultValue: 'System'(Systemfehler)
-  Items:
+  - items
+external:
+  - items
+props:
+  legend: 'Theme'
+  defaultValue: 'System'
+  items:
     - 'System'
-    - 'Licht'
-    @@ph103 @@'dunkel'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-@@104@Orientierung
+### Color Bearbeiten
 
-Verwenden Sie `orientation` prop, um die Ausrichtung der RadioGroup. Defaults auf `vertical` zu ändern.
+Verwenden Sie die `color`-Prop, um die Farbe der RadioGroup zu ändern.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  - defaultValue (nicht vorhanden)
-  @@@@@@@108@108@108@108@108@108@108@108@108@108@108@108@108@108@100@1000@108@108@10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Außen:
-  @@ph109@gmail.de
-Props:
-  Orientierung: "horizontal"
-  Variante: „ Liste "
-  DefaultValue: 'System'(Systemfehler)
-  Items:
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+props:
+  color: neutral
+  defaultValue: 'System'
+  items:
     - 'System'
-    - 'Licht'
-    - "Dunkel"
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-### Indikator
+### Variant Bearbeiten
 
-Verwenden Sie `indicator` prop, um die Position zu ändern oder den Indikator auszublenden. Standardmäßig `start`.
+Verwenden Sie die `variant`-Prop, um die Variante der RadioGroup zu ändern.
+
+::component-code
+---
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+externalTypes:
+  - RadioGroupItem[]
+props:
+  color: 'primary'
+  variant: 'card'
+  defaultValue: 'system'
+  items:
+    - label: 'System'
+      value: 'system'
+      description: 'Matches your device settings.'
+    - label: 'Light'
+      value: 'light'
+      description: 'Always uses the light theme.'
+    - label: 'Dark'
+      value: 'dark'
+      description: 'Always uses the dark theme.'
+---
+::
+
+### Size
+
+Verwenden Sie die `size`-Prop, um die Größe der RadioGroup zu ändern.
+
+::component-code
+---
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+props:
+  size: 'xl'
+  variant: 'list'
+  defaultValue: 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
+---
+::
+
+### Orientierung
+
+Verwenden Sie die `orientation`-prop, um die Ausrichtung der RadioGroup. Defaults auf `vertical` zu ändern.
+
+::component-code
+---
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+props:
+  orientation: 'horizontal'
+  variant: 'list'
+  defaultValue: 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
+---
+::
+
+### Indicator (Englisch)
+
+Verwenden Sie die `indicator`-Stütze, um die Position zu ändern oder den Indikator auszublenden. Standardmäßig `start`.
 
 ::note
-Das `icon` eines Elements wird nur angezeigt, wenn `indicator` über dem Etikett `hidden` steht, da ein Radio kein Symbol in seinem Indikator hat.
+Der `icon` eines Elements wird nur angezeigt, wenn `indicator` `hidden` ist, über dem Etikett, da ein Radio kein Symbol in seinem Indikator hat.
 ::
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
+prettier: true
+ignore:
   - defaultValue
-  - Artikel
-Außen:
-  - Artikel
-Externe Typen:
-  - RadioGroupItem [Bearbeiten | Quelltext bearbeiten]
-Items:
-  Indikator:
-    @@@@@@123@startup
-    @@124@Ende
-    @@@ph125@hidden
-  Variante:
-    @@126@Einladungskarten
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#####################################################################################################################################################################################################
-    @@@@@@@128@table
-Props:
-  Anzeige: "Versteckt"
-  Orientierung: "horizontal"
-  Variante: „ Tisch "
-  DefaultValue: 'System'(Systemfehler)
-  Items:
-    - label:'System'
-      Icon: 'i-lucide-monitor'(Symbol: 'i-lucide-monitor')
-      Wert: "System"
-      Klasse: W-20
-    - label:'Licht'
-      Bildnachweis: i-lucide-sun
-      Wert: „ Licht "
-      Klasse: W-20
-    - label:'Dunkle'
-      I-Lucide-Moon (englisch)
-      Wert: "dunkel"
-      Klasse: W-20
+  - items
+external:
+  - items
+externalTypes:
+  - RadioGroupItem[]
+items:
+  indicator:
+    - start
+    - end
+    - hidden
+  variant:
+    - list
+    - card
+    - table
+props:
+  indicator: 'hidden'
+  orientation: 'horizontal'
+  variant: 'table'
+  defaultValue: 'System'
+  items:
+    - label: 'System'
+      icon: 'i-lucide-monitor'
+      value: 'System'
+      class: 'w-20'
+    - label: 'Light'
+      icon: 'i-lucide-sun'
+      value: 'Light'
+      class: 'w-20'
+    - label: 'Dark'
+      icon: 'i-lucide-moon'
+      value: 'Dark'
+      class: 'w-20'
 ---
 ::
 
-### disabled @ disabled
+### Disabled (nicht verfügbar)
 
-Verwenden Sie die `disabled` prop, um die RadioGroup zu deaktivieren.
+Verwenden Sie die `disabled`-Prop, um die RadioGroup zu deaktivieren.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
+prettier: true
+ignore:
   - defaultValue
-  @@ph135@gmail.de
-Außen:
-  - Artikel
-Props:
-  Behindert: Wahr
-  DefaultValue: 'System'(Systemfehler)
-  Items:
-    - 'System'(auf Englisch)
-    - 'Licht'
-    @@139 @@"Die Wahrheit"
+  - items
+external:
+  - items
+props:
+  disabled: true
+  defaultValue: 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-@@140@bmg14
+## API
 
-@@@@@@@@141@@141@141@@@141@@@141@@141@@@141@@@141@@@141@1@@@@141@@@@141@@@@141@@@@141@@@@141@@141@@141@@141@1@@141@@@@1441@@@@@141@@@@141@@@@@@141@@@@@@@@14141@@@@@@@@@@@@@@@@@@@@@@@@1414141@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+### Props (englisch)
 
-Komponenten-Props
+:component-props
 
-### Spielautomaten
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-@@@@@@@143@Emits143@Emits143@Emits143@Emits143@Emits143@Emits143@Emits143@Emits143@Emits143@Emits143@Emits143@Emits143@Emits143@Emitts143@Emitts143@@Emitts143@Emitts143@@Emitts143@Emitts143
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-@@144@Einsteigertipps
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph145@@changelog (auf Englisch)
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

@@ -8,32 +8,32 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageCTA.vue
 ---
 
-## 使用情况
+## 用法
 
-PageCTA组件提供了一种灵活的方式，可以在页面中显示行动号召，并在默认位置显示插图。
+PageCTA组件提供了一种灵活的方式来显示页面中的行动号召，并在默认槽中显示插图。
 
 ::code-preview
 
 ::u-page-c-t-a
 ---
-title："受到我们令人惊叹的社区的信任和支持"
-description：'预览最新的Tailwind CSS并开始使用Nuxt UI。'
-方向：水平
-链接：
-  - label：'开始使用'
-    颜色：'中性'
-  - label：'了解更多'
-    颜色："中性"
-    变体："细微"
-    尾部图标：'i-透明箭头-右'
+title: 'Trusted and supported by our amazing community'
+description: 'Preview the latest Tailwind CSS and get started with Nuxt UI.'
+orientation: horizontal
+links:
+  - label: 'Get started'
+    color: 'neutral'
+  - label: 'Learn more'
+    color: 'neutral'
+    variant: 'subtle'
+    trailingIcon: 'i-lucide-arrow-right'
 ---
 
-：img{src="https://picsum.photos/640/616" width="320" height="308" alt="Illustration" class="w-full rounded-lg"}
+:img{src="https://picsum.photos/640/616" width="320" height="308" alt="Illustration" class="w-full rounded-lg"}
 ::
 
 ::
 
-在[PageSection](/docs/components/page-section)组件中使用它，或直接在您的页面中使用：
+在[PageSection](/docs/components/page-section)组件中使用它，或者直接在页面中使用它：
 
 ```vue {4,8-10}
 <template>
@@ -52,89 +52,89 @@ description：'预览最新的Tailwind CSS并开始使用Nuxt UI。'
 ```
 
 ::tip
-使用`px-0`和`rounded-none`类使CTA填充移动设备上的页面边缘。
+使用`px-0`和`rounded-none`类使CTA填充移动的上的页面边缘。
 ::
 
-标题：
+### 标题
 
 使用`title`道具设置CTA的标题。
 
 ::component-code{slug="page-CTA"}
 ---
-道具：
-  title："受到我们令人惊叹的社区的信任和支持"
+props:
+  title: 'Trusted and supported by our amazing community'
 ---
 ::
 
-说明：
+### 说明
 
-使用`description`道具设置CTA的描述。
+使用`description`属性设置CTA的描述。
 
 ::component-code{slug="page-CTA"}
 ---
-更漂亮：真的
-忽略：
-  标题
-道具：
-  title："受到我们令人惊叹的社区的信任和支持"
-  描述："我们建立了牢固、持久的合作关系。他们的信任是我们的动力，推动我们走向共同的成功。"
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Trusted and supported by our amazing community'
+  description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
 ---
 ::
 
-链接
+### Links
 
-使用`links`属性在描述下显示[按钮](/docs/components/button的列表。
+使用`links`属性在描述下显示[Button](/docs/components/button)的列表。
 
 ::component-code{slug="page-CTA"}
 ---
-更漂亮：真的
-外部：
-  链接
-外部类型：
-  - 按钮属性[]
-忽略：
-  标题
-  描述：
-  链接
-道具：
-  title："受到我们令人惊叹的社区的信任和支持"
-  描述：“我们建立了牢固、持久的合作关系。他们的信任是我们的动力，推动我们走向共同的成功。”
-  链接：
-    - label：'开始使用'
-      颜色：'中性'
-    - label：'了解更多信息'
-      颜色：“中性”
-      变体：“细微”
-      尾部图标：'i-透明箭头-右'
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Trusted and supported by our amazing community'
+  description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
+  links:
+    - label: 'Get started'
+      color: 'neutral'
+    - label: 'Learn more'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
 ---
 ::
 
-### 变体
+### Variant
 
 使用`variant`道具更改CTA的样式。
 
 ::component-code{slug="page-CTA"}
 ---
-更漂亮：真的
-外部：
-  链接
-外部类型：
-  - 按钮属性[]
-忽略：
-  标题
-  描述
-  链接
-道具：
-  title：“受到我们令人惊叹的社区的信任和支持”
-  描述：“我们建立了牢固、持久的合作关系。他们的信任是我们的动力，推动我们走向共同的成功。”
-  变体：软
-  链接：
-    - 标签：“开始使用”
-      颜色：“中性”
-    - label：'了解更多'
-      颜色：“中性”
-      变体：“细微”
-      尾部图标：'i-透明箭头-右'
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Trusted and supported by our amazing community'
+  description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
+  variant: soft
+  links:
+    - label: 'Get started'
+      color: 'neutral'
+    - label: 'Learn more'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
 ---
 ::
 
@@ -142,91 +142,91 @@ description：'预览最新的Tailwind CSS并开始使用Nuxt UI。'
 当使用`solid`变体来反转颜色时，您可以将`light`或`dark`类应用于`links`插槽。
 ::
 
-方向
+### 方向
 
-使用`orientation`道具更改默认插槽的方向。默认为`vertical`。
+使用`orientation`属性将默认的slot. px的方向更改为`vertical`。
 
 ::component-code{slug="page-CTA"}
 ---
-更漂亮：真的
-外部：
-  链接
-外部类型：
-  按钮属性[]
-忽略：
-  标题：
-  描述：
-  链接
-道具：
-  title：“受到我们令人惊叹的社区的信任和支持”
-  描述：“我们建立了牢固、持久的合作关系。他们的信任是我们的动力，推动我们走向共同的成功。”
-  方向：水平
-  链接：
-    - 标签：“开始使用”
-      颜色：“中性”
-    - label：'了解更多'
-      颜色：“中性”
-      变体：“细微”
-      尾部图标：'i-透明箭头-右'
-插槽：
-  默认值：|
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Trusted and supported by our amazing community'
+  description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
+  orientation: horizontal
+  links:
+    - label: 'Get started'
+      color: 'neutral'
+    - label: 'Learn more'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
-    066号
+    <img src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy" />
 ---
 
-：img{src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
+:img{src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
 ::
 
-反向
+### 反向
 
 使用`reverse`道具反转默认插槽的方向。
 
 ::component-code{slug="page-CTA"}
 ---
-更漂亮：真的
-外部：
-  链接
-外部类型：
-  - 按钮属性[]
-忽略：
-  标题：
-  描述：
-  链接
-道具：
-  title：“受到我们令人惊叹的社区的信任和支持”
-  描述：“我们建立了牢固、持久的合作关系。他们的信任是我们的动力，推动我们走向共同的成功。”
-  方向：水平
-  反转：真
-  链接：
-    - 标签：“开始使用”
-      颜色：“中性”
-    - label：'了解更多'
-      颜色：'中性'
-      变体：“细微”
-      尾部图标：'i-透明箭头-右'
-插槽：
-  默认值：|
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Trusted and supported by our amazing community'
+  description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
+  orientation: horizontal
+  reverse: true
+  links:
+    - label: 'Get started'
+      color: 'neutral'
+    - label: 'Learn more'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
     <img src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy" />
 ---
 
-：img{src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
+:img{src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
 ::
 
 ## API
 
 ### Props
 
-：组件-道具{slug="page-CTA"}
+:component-props{slug="page-CTA"}
 
 ### Slots
 
-：组件插槽{slug="page-CTA"}
+:component-slots{slug="page-CTA"}
 
 ## Theme
 
-：组件主题{slug="page-CTA"}
+:component-theme{slug="page-CTA"}
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

@@ -13,292 +13,292 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ContextMenu.vue
 ---
 
-##  사용
+## Usage
 
 ContextMenu의 기본 슬롯에서 원하는 것을 사용하고 마우스 오른쪽 버튼을 클릭하여 메뉴를 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-축소: true
-무시하기:
-  -  items
-  -  ui. content
-외부:
-  -  items
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
 externalTypes:
-  - ContextMenuItem[] []
-소품 :
-  항목:
-    -  - label: 모양
-        1차 하위 항목:
-          - label: 시스템
-            아이콘: i-lucide-monitor
-          - label: 빛
-            아이콘 : i-lucide-sun
-          - label: 어두운
-            아이콘 : i-lucide-moon
-    -  - label: 사이드바 표시
-        kbds :
-          -  meta
-          -  s
-      - label: 도구 모음 표시
-        kbds :
-          -  shift
-          -  meta
-          -  d
-      - label: 핀 탭 축소
-        사용 안 함:true
-    - label: 페이지 새로 고침
-      - label: 쿠키 삭제 및 새로 고침
-      - label: 캐시 지우기 및 새로 고침
-      - type: 구분 기호
-      - label: 개발자
-        1차 하위 항목:
-          -  - label: 출처 보기
+  - ContextMenuItem[][]
+props:
+  items:
+    - - label: Appearance
+        children:
+          - label: System
+            icon: i-lucide-monitor
+          - label: Light
+            icon: i-lucide-sun
+          - label: Dark
+            icon: i-lucide-moon
+    - - label: Show Sidebar
+        kbds:
+          - meta
+          - s
+      - label: Show Toolbar
+        kbds:
+          - shift
+          - meta
+          - d
+      - label: Collapse Pinned Tabs
+        disabled: true
+    - - label: Refresh the Page
+      - label: Clear Cookies and Refresh
+      - label: Clear Cache and Refresh
+      - type: separator
+      - label: Developer
+        children:
+          - - label: View Source
               kbds:
-                -  meta
-                -  shift
-                -  u
-            - label: 개발자 도구
+                - meta
+                - shift
+                - u
+            - label: Developer Tools
               kbds:
-                -  옵션
-                -  meta
-                -  i
-            - label: 요소 검사
+                - option
+                - meta
+                - i
+            - label: Inspect Elements
               kbds:
-                -  옵션
-                -  meta
-                -  c
-          -  - label: JavaScript 콘솔
+                - option
+                - meta
+                - c
+          - - label: JavaScript Console
               kbds:
-                -  옵션
-                -  meta
-                -  j
-슬롯 :
-  기본값 :|
+                - option
+                - meta
+                - j
+slots:
+  default: |
 
     <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
-      여기를 마우스 오른쪽 단추로 클릭합니다.
+      Right click here
     </div>
 ---
 
-: div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"} [여기를 오른쪽 클릭]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
-###  프로젝트
+### Items 이미지
 
-`items`prop을 다음과 같은 속성을 가진 객체의 배열로 사용합니다.
+`items` prop을 다음과 같은 속성을 가진 오브젝트 배열로 사용합니다.
 
--  @ `label?: string` @ {lang="ts-type"}
--  @ `icon?: string` @ {lang="ts-type"}
-- `avatar?: AvatarProps` {lang="ts-type"}
-- `kbds?: string[] | KbdProps[]`{lang="ts-type"}
--  @ [ @ @ `type?: "link" | "label" | "separator" | "checkbox"` @ {lang="ts-type"} @ ]( @ #with-checkbox-items @ )
--  @ [ @ @ `color?: "error" | "primary" | "secondary" | "success" | "info" | "warning" | "neutral"` @ ]( @ #with-color-items @ ) @
--  [ @ `checked?: boolean` @ {lang="ts-type"} @ ]( @ #with-checkbox-items ) @
--  @ `disabled?: boolean` @ {lang="ts-type"} @
--  [ @ `slot?: string` @ {lang="ts-type"} @ ]( @ #with-custom-slot @ )
-- `onSelect?: (e: Event) => void`{lang="ts-type"}
--  [ @ `onUpdateChecked?: (checked: boolean) => void` @ {lang="ts-type"} @ ]( @ #with-checkbox-items ) @
+- `label?: string`{lang="ts-type"} (- `label?: string`{lang="ts-type"})
+- `icon?: string`{lang="ts-type"}
+- `avatar?: AvatarProps`{lang="ts-type"} (- `avatar?: AvatarProps`{lang="ts-type"})
+- `kbds?: string[] | KbdProps[]`{lang="ts-type"} (- `kbds?: string[] | KbdProps[]`{lang="ts-type"})
+- [`type?: "link" | "label" | "separator" | "checkbox"`{lang="ts-type"}](#with-checkbox-items)
+- [`color?: "error" | "primary" | "secondary" | "success" | "info" | "warning" | "neutral"`{lang="ts-type"}](#with-color-items)
+- [`checked?: boolean`{lang="ts-type"}](#with-checkbox-items)
+- `disabled?: boolean`{lang="ts-type"} (- `disabled?: boolean`{lang="ts-type"})
+- [`slot?: string`{lang="ts-type"}](#with-custom-slot)
+- `onSelect?: (e: Event) => void`{lang="ts-type"} - {lang="ts-type"}
+- [`onUpdateChecked?: (checked: boolean) => void`{lang="ts-type"}](xph 17 x)
 - `children?: ContextMenuItem[] | ContextMenuItem[][]`{lang="ts-type"}
-- `class?: any` {lang="ts-type"}
+- `class?: any`{lang="ts-type"}
 - `ui?: { item?: ClassNameValue, label?: ClassNameValue, separator?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLabel?: ClassNameValue, itemLabelExternalIcon?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingIcon?: ClassNameValue, itemTrailingKbds?: ClassNameValue, itemTrailingKbdsSize?: ClassNameValue }`{lang="ts-type"}
 
-당신은 [Link](/docs/components/link#props) 구성 요소에서 모든 속성을 전달 할 수 있습니다 `to`, `target` 등.
+[Link](/docs/components/link#props) 구성 요소에서 `to`, `target` 등의 모든 속성을 전달할 수 있습니다.
 
 ::component-code
 ---
-상품명 : True
-축소: true
-무시하기:
-  -  items
-  -  ui. content
-외부:
-  -  items
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
 externalTypes:
-  - ContextMenuItem[] []
-소품 :
-  항목:
-    -  - label: 모양
-        1차 하위 항목:
-          - label: 시스템
-            아이콘: i-lucide-monitor
-          - label: 빛
-            아이콘 : i-lucide-sun
-          - label: 어두운
-            아이콘 : i-lucide-moon
-    -  - label: 사이드바 표시
+  - ContextMenuItem[][]
+props:
+  items:
+    - - label: Appearance
+        children:
+          - label: System
+            icon: i-lucide-monitor
+          - label: Light
+            icon: i-lucide-sun
+          - label: Dark
+            icon: i-lucide-moon
+    - - label: Show Sidebar
         kbds:
-          -  meta
-          -  s
-      - label: 도구 모음 표시
+          - meta
+          - s
+      - label: Show Toolbar
         kbds:
-          -  shift
-          -  meta
-          -  d
-      - label: 핀 탭 축소
-        사용 안 함:true
-    - label: 페이지 새로 고침
-      - label: 쿠키 삭제 및 새로 고침
-      - label: 캐시 지우기 및 새로 고침
-      - type: 구분 기호
-      - label: 개발자
-        1차 하위 항목:
-          -  - label: 출처 보기
+          - shift
+          - meta
+          - d
+      - label: Collapse Pinned Tabs
+        disabled: true
+    - - label: Refresh the Page
+      - label: Clear Cookies and Refresh
+      - label: Clear Cache and Refresh
+      - type: separator
+      - label: Developer
+        children:
+          - - label: View Source
               kbds:
-                -  meta
-                -  shift
-                -  u
-            - label: 개발자 도구
+                - meta
+                - shift
+                - u
+            - label: Developer Tools
               kbds:
-                -  옵션
-                -  meta
-                -  i
-            - label: 요소 검사
+                - option
+                - meta
+                - i
+            - label: Inspect Elements
               kbds:
-                -  옵션
-                -  meta
-                -  c
-          -  - label: JavaScript 콘솔
+                - option
+                - meta
+                - c
+          - - label: JavaScript Console
               kbds:
-                -  옵션
-                -  meta
-                -  j
+                - option
+                - meta
+                - j
   ui:
-    모델 번호:w-48
-슬롯 :
-  기본값 :|
+    content: 'w-48'
+slots:
+  default: |
 
     <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
-      여기를 마우스 오른쪽 단추로 클릭합니다.
+      Right click here
     </div>
 ---
 
-: div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"} [여기를 오른쪽 클릭]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
 ::note
-배열 배열을 `items`prop에 전달하여 개별 항목 그룹을 만들 수도 있습니다.
+배열 배열을 `items` prop에 전달하여 개별 항목 그룹을 만들 수도 있습니다.
 ::
 
 ::tip
-각 항목은 `items`prop과 같은 속성을 가진 `children` 배열을 사용하여 `open`, `defaultOpen` 및 `content` 속성을 사용하여 제어할 수 있는 중첩 메뉴를 만들 수 있습니다.
+각 항목은 `items` prop과 동일한 속성을 가진 객체의 `children` 배열을 취하여 `open`, `defaultOpen` 및 `content` 속성을 사용하여 제어 할 수있는 중첩 메뉴를 만들 수 있습니다.
 ::
 
-###  사이즈
+### Size
 
-`size`prop을 사용하여 ContextMenu의 크기를 변경합니다.
+`size` prop을 사용하여 ContextMenu의 크기를 변경합니다.
 
 ::component-code
 ---
-상품명 : True
-축소: true
-무시하기:
-  -  items
-  -  ui. content
-외부:
-  -  items
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
 externalTypes:
-  -  ContextMenuItem []
-소품 :
-  크기: xl
-  프로젝트:
-    - label: 시스템
-      아이콘: i-lucide-monitor
-    - label: 빛
-      아이콘 : i-lucide-sun
-    - label: 어두운
-      아이콘 : i-lucide-moon
+  - ContextMenuItem[]
+props:
+  size: xl
+  items:
+    - label: System
+      icon: i-lucide-monitor
+    - label: Light
+      icon: i-lucide-sun
+    - label: Dark
+      icon: i-lucide-moon
   ui:
-    모델 번호:w-48
-슬롯 :
-  기본 값:|
+    content: 'w-48'
+slots:
+  default: |
 
     <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
-      여기를 마우스 오른쪽 단추로 클릭합니다.
+      Right click here
     </div>
 ---
 
-: div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"} [여기를 오른쪽 클릭]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
-### Modal @ 모달
+### Modal 모델
 
-`modal`prop을 사용하여 ContextMenu가 외부 콘텐츠와의 상호 작용을 차단할지 여부를 제어합니다. 기본값은 `true`입니다.
+`modal` Prop을 사용하여 ContextMenu가 외부 내용과의 상호 작용을 차단할지 여부를 제어합니다. 기본값은 `true`입니다.
 
 ::component-code
 ---
-상품명 : True
-축소: true
-무시하기:
-  -  items
-  -  ui. content
-외부:
-  -  items
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
 externalTypes:
-  -  ContextMenuItem []
-소품 :
-  모달: false
-  프로젝트:
-    - label: 시스템
-      아이콘: i-lucide-monitor
-    - label: 빛
-      아이콘 : i-lucide-sun
-    - label: 어두운
-      아이콘 : i-lucide-moon
+  - ContextMenuItem[]
+props:
+  modal: false
+  items:
+    - label: System
+      icon: i-lucide-monitor
+    - label: Light
+      icon: i-lucide-sun
+    - label: Dark
+      icon: i-lucide-moon
   ui:
-    모델 번호:w-48
-슬롯 :
-  기본값 :|
+    content: 'w-48'
+slots:
+  default: |
 
     <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
-      여기를 마우스 오른쪽 단추로 클릭합니다.
+      Right click here
     </div>
 ---
 
-: div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"} [여기를 오른쪽 클릭]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
 
-###  비활성 화
+### 비활성 화 됨
 
-`disabled`prop 을 사용하여 ContextMenu 를 비활성화합니다.
+`disabled` prop 를 사용하여 ContextMenu 를 비활성화합니다.
 
 ::component-code
 ---
-상품명 : True
-축소: true
-무시하기:
-  -  items
-  -  ui. content
-외부:
-  -  items
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
 externalTypes:
-  -  ContextMenuItem []
-소품 :
-  사용 안 함:true
-  프로젝트:
-    - label: 시스템
-      아이콘: i-lucide-monitor
-    - label: 빛
-      아이콘 : i-lucide-sun
-    - label: 어두운
-      아이콘 : i-lucide-moon
+  - ContextMenuItem[]
+props:
+  disabled: true
+  items:
+    - label: System
+      icon: i-lucide-monitor
+    - label: Light
+      icon: i-lucide-sun
+    - label: Dark
+      icon: i-lucide-moon
   ui:
-    모델 번호:w-48
-슬롯 :
-  기본값 :|
+    content: 'w-48'
+slots:
+  default: |
 
     <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
-      여기를 마우스 오른쪽 단추로 클릭합니다.
-    </div> @
+      Right click here
+    </div>
 ---
 
-: div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"} [여기를 오른쪽 클릭]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
-##  예
+## examples 예제
 
 ### 체크박스 항목 포함
 
@@ -306,51 +306,51 @@ externalTypes:
 
 ::component-example
 ---
-축소: true
-name: 'context-menu-checkbox-items-example' 컨텍스트 메뉴-체크박스-항목-예
+collapse: true
+name: 'context-menu-checkbox-items-example'
 ---
 ::
 
 ::note
-항목의 `checked` 상태에 대한 반응성을 보장하기 위해 `items` 배열을 `computed` 내에 래핑하는 것이 좋습니다.
+항목의 `checked` 상태에 대 한 반응성을 보장 하려면 `computed` 내에서 `items` 배열을 래핑 하는 것이 좋습니다.
 ::
 
-###  컬러 아이템 포함
+### With 색상 항목
 
 `color` 속성을 사용하여 특정 항목을 색상으로 강조 표시할 수 있습니다.
 
 ::component-example
 ---
-축소: true
-이름: 'context-menu-color-items-example'
+collapse: true
+name: 'context-menu-color-items-example'
 ---
 ::
 
 ### 사용자 지정 슬롯 포함
 
-`slot` 등록 정보를 사용하여 특정 항목을 사용자 정의합니다.
+`slot` 속성을 사용하여 특정 항목을 사용자 정의합니다.
 
 다음과 같은 슬롯에 액세스할 수 있습니다.
 
-- `#{{ item.slot }}` {lang="ts-type"}
-- `#{{ item.slot }}-leading` {lang="ts-type"}
-- `#{{ item.slot }}-label` {lang="ts-type"}
-- `#{{ item.slot }}-trailing` {lang="ts-type"}
+- `#{{ item.slot }}`{lang="ts-type"}
+- `#{{ item.slot }}-leading`{lang="ts-type"}
+- `#{{ item.slot }}-label`{lang="ts-type"}
+- `#{{ item.slot }}-trailing`{lang="ts-type"}
 
 ::component-example
 ---
-축소: true
-이름: 'context-menu-custom-slot-example'
+collapse: true
+name: 'context-menu-custom-slot-example'
 ---
 ::
 
 ::tip{to="#slots"}
-또한 `#item`, `#item-leading``#item-label` 및 `#item-trailing` 슬롯을 사용하여 모든 항목을 사용자 정의 할 수 있습니다.
+또한 `#item`, `#item-leading`, `#item-label` 및 `#item-trailing` 슬롯을 사용하여 모든 항목을 사용자 정의할 수 있습니다.
 ::
 
-###  바로 가기 추출
+### 추출 바로 가기
 
-[extractShortcuts](/docs/composables/extract-shortcuts) 유틸리티를 사용하여 `kbds` 등록 정보가 있는 메뉴 항목에서 바로 가기를 자동으로 정의합니다. 바로 가기를 재귀적으로 추출하여 @@defineShortcuts](/docs/composables/define-shortcutsPH22@와 호환되는 객체를 반환합니다.
+[extractShortcut](/docs/composables/extract-shortcuts) 유틸리티를 사용하여 `kbds` 등록 정보를 사용하여 메뉴 항목에서 바로 가기를 자동으로 정의합니다. 이 유틸리티는 재귀적으로 바로 가기를 추출하고 [defineShortcut](/docs/composables/define-shortcuts)와 호환되는 객체를 반환합니다.
 
 ```vue
 <script setup lang="ts">
@@ -413,27 +413,27 @@ defineShortcuts(extractShortcuts(items))
 ```
 
 ::note
-이예에서 는: kbd {value="meta"}: kbd {value="S" class="ms-px"},: kbd {value="shift"}: kbd {value="meta" class="ms-px"}: kbd {value="D" class="ms-px"},:kbd {value="option"}{value="meta" class="ms-px"}: kbd {value="meta" class="ms-px"}{value="U" class="ms-px"},: kbd {value="option"}: kbd {value="meta" class="ms-px"}: kbd {value="meta" class="ms-px"}:kbd {value="I" class="ms-px"},: kbd {value="option"}: kbd {value="meta" class="ms-px"}: kbd {value="C" class="ms-px"} 및: kbd {value="option"}:kbd {value="meta" class="ms-px"}: kbd {value="J" class="ms-px"} 는 해당항목 의 `select` 함수 를 트리거합니다.
+이 예제에서는 :kbd{value="meta"}:kbd{value="S" class="ms-px"}, :kbd{value="shift"}:kbd{value="meta" class="ms-px"}:kbd{value="D" class="ms-px"}, :kbd{value="option"}:kbd{value="meta" class="ms-px"}:kbd{value="U" class="ms-px"}, :kbd{value="option"}:kbd{value="option"}:kbdxph42x:kbd{value="meta" class="ms-px"}:kbd{value="U" class="ms-px"}:kbd{value="U" class="ms-px"}:kbd{value="option"}, :kbd{value="option"}:kbdxph42x:kbdxph42x:kbdxph4x:kbdxph4x:kbdxph4x:kbd{value="option"}:kbdxph4x:kbdxph4x:kbdxph4x:
 ::
 
-##  API
+## API 사용
 
-### Props ###  프로프스
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### 슬롯
 
-:구성요소 - 슬롯
+:component-slots
 
-###  에미츠
+### Emits 사용자
 
-:구성요소 - 방출
+:component-emits
 
-##  테마
+## 테마
 
-:구성요소 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

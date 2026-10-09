@@ -17,170 +17,170 @@ ChatReasoningコンポーネントは、AIの推論や思考コンテンツを�
 
 ::component-example
 ---
-崩壊真
-きれい真
-名前'チャット推論例'
-クラス'h—[252px]'
+collapse: true
+prettier: true
+name: 'chat-reasoning-example'
+class: 'h-[252px]'
 ---
 ::
 
 ::note{to="/docs/composables/use-scroll-shadow"}
-本文コンテンツは`useScrollShadow`コンポーザブルを使用して、オーバーフロー時にフェードシャドウを適用します。
+ボディコンテンツは`useScrollShadow`コンポーザーを使用してオーバーフロー時にフェードシャドウを適用します。
 ::
 
-### テキスト
+### Text
 
-`text`プロパティを使用して推論内容を設定します。テキストは折りたたみ可能な本文の中に表示されます。
+`text`プロパティを使用して推論内容を設定します。テキストは折りたたみ可能なボディ内に表示されます。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-小道具
-  text：'ユーザーはVueコンポーネントについて尋ねています...'
-  クラス'w—60'
+prettier: true
+hide:
+  - class
+props:
+  text: 'The user is asking about Vue components...'
+  class: 'w-60'
 ---
 ::
 
 ### ストリーミング
 
-アクティブな推論を示すには`streaming`プロパティを使用します。コンポーネントはストリーミング開始時に自動的に開き、終了時に自動的に閉じます。
+`streaming`プロパティを使用してアクティブな推論を示します。コンポーネントはストリーミング開始時に自動的に開き、終了時に自動的に閉じます。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  - テキスト
-小道具
-  ストリーミングtrue
-  text：'ユーザーがVueコンポーネントについて尋ねています...'
-  クラス'w—60'
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+props:
+  streaming: true
+  text: 'The user is asking about Vue components...'
+  class: 'w-60'
 ---
 ::
 
 ::tip
-`@nuxt/ui/utils/ai`の`isPartStreaming`ユーティリティを使用して、部品が現在ストリーミングされているかどうかを判断します。
+`@nuxt/ui/utils/ai`の`isPartStreaming`ユーティリティを使用して、部品が現在ストリーミング中かどうかを判断します。
 ::
 
-###  Shimmer
+### シマー
 
-ストリーミング時、トリガーラベルは[`ChatShimmer`](/docs/components/chat-shimmer)コンポーネントを使用します。`shimmer` propを使用して、`duration`と`spread`をカスタマイズします。
+ストリーミング時、トリガーラベルは[`ChatShimmer`](/docs/components/chat-shimmer)コンポーネントを使用します。`shimmer`プロパティを使用して`duration`と`spread`をカスタマイズします。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  - テキスト
-小道具
-  ストリーミングtrue
-  text：'ユーザーはVueコンポーネントについて尋ねています...'
-  シマー
-    期間2
-    スプレッド2
-  クラス'w—60'
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+props:
+  streaming: true
+  text: 'The user is asking about Vue components...'
+  shimmer:
+    duration: 2
+    spread: 2
+  class: 'w-60'
 ---
 ::
 
-### アイコン
+### Icon
 
-`icon` propを使用して、[ Icon ](/docs/components/icon)コンポーネントをトリガーの横に表示します。
+`icon`プロパティを使用して、[Icon](/docs/components/icon)コンポーネントをトリガーの横に表示します。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  - テキスト
-小道具
-  アイコンi—lucide—brain
-  text：'ユーザーがVueコンポーネントについて尋ねています...'
-  クラス'w—60'
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+props:
+  icon: i-lucide-brain
+  text: 'The user is asking about Vue components...'
+  class: 'w-60'
 ---
 ::
 
-### シェブロン
+### Chevron
 
-`chevron` propを使用して、シェブロンアイコンの位置を変更します。
+chevronアイコンの位置を変更するには、`chevron`プロパティを使用します。
 
 ::note
-`chevron`が`icon`で`leading`に設定されている場合、アイコンはホバー時と開いたときにシェブロンと入れ替わります。
+`chevron`が`icon`で`leading`に設定されている場合、アイコンはホバーと開いたときにシェブロンと切り替わります。
 ::
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  - テキスト
-小道具
-  シェブロン：リーディング
-  アイコンi—lucide—brain
-  text：'ユーザーがVueコンポーネントについて尋ねています...'
-  クラス'w—60'
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+props:
+  chevron: leading
+  icon: i-lucide-brain
+  text: 'The user is asking about Vue components...'
+  class: 'w-60'
 ---
 ::
 
-### シェブロンアイコン
+### Chevronアイコン
 
-`chevron-icon` propを使用して、chevron [ Icon ](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-chevron-down`です。
+`chevron-icon`プロパティを使用して、シェブロン[Icon](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-chevron-down`です。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  - テキスト
-小道具
-  chevronIcon 'i—lucide—arrow—down'
-  text：'ユーザーがVueコンポーネントについて尋ねています...'
-  クラス'w—60'
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+props:
+  chevronIcon: 'i-lucide-arrow-down'
+  text: 'The user is asking about Vue components...'
+  class: 'w-60'
 ---
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.chevronDown`キーの下の`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`app.config.ts`の`ui.icons.chevronDown`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.chevronDown`キーの下の`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`vite.config.ts`の`ui.icons.chevronDown`キーでグローバルにカスタマイズできます。
 :::
 ::
 
 ## 例
 
 ::tip{to="/docs/components/chat"}
-インストール手順、サーバー設定、使用例については、** Chat **概要ページをご覧ください。
+インストール手順、サーバーのセットアップ、使用例については、**Chat**の概要ページをご覧ください。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

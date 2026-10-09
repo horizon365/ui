@@ -16,115 +16,115 @@ links:
 
 ::component-code
 ---
-きれい真
-スロット
-  デフォルト|
+prettier: true
+slots:
+  default: |
 
     <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-u—button {icon="i-lucide-mail" color="neutral" variant="subtle"}
+:u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
-### カラー
+### Color
 
-`color`プロパティを使用して、チップの色を変更します。
+`color`プロップを使用してチップの色を変更します。
 
 ::component-code
 ---
-きれい真
-小道具
-  色ニュートラル
-スロット
-  デフォルト|
+prettier: true
+props:
+  color: neutral
+slots:
+  default: |
 
     <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-uボタン{icon="i-lucide-mail" color="neutral" variant="subtle"}
+:u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
 ### サイズ
 
-`size`プロパティを使用して、チップのサイズを変更します。
+`size`プロパティを使用してチップのサイズを変更します。
 
 ::component-code
 ---
-きれい真
-小道具
-  サイズ3xl
-スロット
-  デフォルト|
+prettier: true
+props:
+  size: 3xl
+slots:
+  default: |
 
     <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-uボタン{icon="i-lucide-mail" color="neutral" variant="subtle"}
+:u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
-### テキスト
+### Text
 
-`text` propを使用して、チップのテキストを設定します。
+`text`プロパティを使用してチップのテキストを設定します。
 
 ::component-code
 ---
-きれい真
-小道具
-  テキスト5
-  サイズ3xl
-スロット
-  デフォルト|
+prettier: true
+props:
+  text: 5
+  size: 3xl
+slots:
+  default: |
 
     <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-uボタン{icon="i-lucide-mail" color="neutral" variant="subtle"}
+:u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
-### ポジション
+### Position
 
-`position` propを使用して、チップの位置を変更します。
+`position`プロップを使用してチップの位置を変更します。
 
 ::component-code
 ---
-きれい真
-小道具
-  位置'左下'
-スロット
-  デフォルト|
+prettier: true
+props:
+  position: 'bottom-left'
+slots:
+  default: |
 
     <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-u—button {icon="i-lucide-mail" color="neutral" variant="subtle"}
+:u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
-### インセット
+### Inset
 
-`inset`プロパティを使用して、コンポーネント内のチップを表示します。これは丸みを帯びたコンポーネントを扱う場合に便利です。
+`inset`プロパティを使用して、コンポーネント内のChipを表示します。これは丸みを帯びたコンポーネントを扱う場合に便利です。
 
 ::component-code
 ---
-きれい真
-小道具
-  インセットtrue
-スロット
-  デフォルト|
+prettier: true
+props:
+  inset: true
+slots:
+  default: |
 
     <UAvatar src="https://github.com/benjamincanac.png" loading="lazy" />
 ---
-u—avatar {src="https://github.com/benjamincanac.png" loading="lazy"}
+:u-avatar{src="https://github.com/benjamincanac.png" loading="lazy"}
 ::
 
 ### スタンドアロン
 
-Chipをインラインで表示するには、`inset` propと一緒に`standalone` propを使用します。
+Chipをインラインで表示するには、`inset`プロパティと一緒に`standalone`プロパティを使用します。
 
 ::component-code
 ---
-小道具
-  スタンドアロン本当
-  インセットtrue
+props:
+  standalone: true
+  inset: true
 ---
 ::
 
 ::note
-[`CommandPalette`](/docs/components/command-palette)[`InputMenu`](/docs/components/input-menu)[`Select`](/docs/components/select)または[`SelectMenu`](/docs/components/select-menu)コンポーネントなどです。
+例えば、[`CommandPalette`](/docs/components/command-palette)、[`InputMenu`](/docs/components/input-menu)、[`Select`](/docs/components/select)、[`SelectMenu`](/docs/components/select-menu)コンポーネントではこのように使用されます。
 ::
 
 ## 例
@@ -133,30 +133,30 @@ Chipをインラインで表示するには、`inset` propと一緒に`standalon
 
 `show` propを使用してチップの可視性を制御できます。
 
-component—example {name="chip-show-example"}
+:component-example{name="chip-show-example"}
 
 ::note
 この例では、チップはステータスごとに色を持ち、ステータスが`offline`でない場合に表示されます。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

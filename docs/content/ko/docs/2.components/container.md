@@ -7,36 +7,36 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Container.vue
 ---
 
-##  사용
+## Usage
 
 기본 슬롯을 사용하여 컨텐츠의 너비를 중심에 놓고 제한합니다.
 
 ::tip{to="/docs/getting-started/theme/css-variables#container"}
-최대 너비는 `--ui-container`CSS 변수에 의해 제어됩니다.
+최대 너비는 `--ui-container` CSS 변수에 의해 제어됩니다.
 ::
 
 ::component-example
 ---
-이름: "container-example"
-소품 :
-  클래스 : 'w-full'
+name: 'container-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-##  API
+## API 파일
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### 슬롯
 
-:컴포넌트 - 슬롯
+:component-slots
 
-##  테마
+## Theme 테마
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## Changelog 파일
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

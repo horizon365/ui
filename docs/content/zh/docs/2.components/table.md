@@ -16,90 +16,90 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Table.vue
 ---
 
-## 使用情况
+## 用法
 
-表组件构建在[TanStack表v8](https://tanstack.com/table/v8)之上，并由[useVueTable](https://tanstack.com/table/v8/docs/framework/vue/vue-table#usevuetable)提供支持，可组合以提供灵活且完全类型安全的API。
+Table组件构建在[TanStack Table v8](https://tanstack.com/table/v8)之上，并由[useVueTable](https://tanstack.com/table/v8/docs/framework/vue/vue-table#usevuetable)组合提供支持，以提供灵活且完全类型安全的API。
 
-它将数据呈现为行和列，并支持排序、筛选、分页、行选择、扩展、分组、锁定和虚拟化，因此您可以构建从简单数据表到功能齐全的数据网格的所有内容。
+它将您的数据呈现为行和列，并支持排序，过滤，分页，行选择，扩展，分组，固定和虚拟化，因此您可以构建从简单的数据表到功能齐全的数据网格的一切。
 
 ::component-example
 ---
-资料来源：错误
-名称：'table-example'
-类："! p-0"
+source: false
+name: 'table-example'
+class: '!p-0'
 ---
 ::
 
 ::callout{icon="i-simple-icons-github" to="https://github.com/nuxt/ui/tree/v4/docs/app/components/content/examples/table/TableExample.vue" aria-label="查看源代码"}
-这个例子演示了`Table`组件最常见的用例。请查看GitHub上的源代码。
+此示例演示了`Table`组件的最常见用例。请查看GitHub上的源代码。
 ::
 
-数据
+### Data
 
-将`data`属性用作对象数组时，将根据对象的键生成列。
+使用`data` prop作为对象数组，列将根据对象的键生成。
 
 ::component-code
 ---
-更漂亮：真的
-收阖：true
-类："! p-0"
-忽略：
-- 数据
-  班级
-外部：
-- 数据
-道具：
-  数据类型：
-    "4600"是我的手机号码
-      日期：'2024年3月11日15时30分'
-      状态："已付"
-      电子邮件："詹姆斯.安德森@www.example.com"
-      数量：594
-    "4599"是我的手机号码
-      日期：'2024年3月11日10时10分'
-      状态：'失败'
-      电子邮件："mia. white@www.example.com"
-      数量：276
-    "4598"是我的手机号码
-      日期：'2024年3月11日08：50：00'
-      状态：'已退款'
-      电子邮件："威廉.布朗@www.example.com"
-      数量：315
-    "4597"是我的手机号码
-      日期：'2024年3月10日19时45分'
-      状态："已付"
-      电子邮件："emma. davis@www.example.com"
-      总数：529
-    "4596"是我的手机号码
-      日期：'2024年3月10日15时55分'
-      状态：“已付”
-      电子邮件：“ethan. example.com”
-      金额：639
-  类别：'flex-1'
+prettier: true
+collapse: true
+class: '!p-0'
+ignore:
+  - data
+  - class
+external:
+  - data
+props:
+  data:
+    - id: '4600'
+      date: '2024-03-11T15:30:00'
+      status: 'paid'
+      email: 'james.anderson@example.com'
+      amount: 594
+    - id: '4599'
+      date: '2024-03-11T10:10:00'
+      status: 'failed'
+      email: 'mia.white@example.com'
+      amount: 276
+    - id: '4598'
+      date: '2024-03-11T08:50:00'
+      status: 'refunded'
+      email: 'william.brown@example.com'
+      amount: 315
+    - id: '4597'
+      date: '2024-03-10T19:45:00'
+      status: 'paid'
+      email: 'emma.davis@example.com'
+      amount: 529
+    - id: '4596'
+      date: '2024-03-10T15:55:00'
+      status: 'paid'
+      email: 'ethan.harris@example.com'
+      amount: 639
+  class: 'flex-1'
 ---
 ::
 
 ### 列
 
-使用`columns`属性做为[ColumnDef](https://tanstack.com/table/v8/docs/api/core/column-def)物件的数组，其属性如下：
+使用`columns` prop作为[ColumnDef](https://tanstack.com/table/v8/docs/api/core/column-def)对象的数组，其属性如下：
 
 - `accessorKey`：[提取列的值时要使用的行对象的键。]{class="text-muted"}
-- `header`：[要为列显示的标题。如果传递字符串，它可以用作列ID的默认值。如果传递函数，它将被传递标题的props对象，并且应该返回呈现的标题值（确切的类型取决于所使用的适配器）。]{class="text-muted"}
-- [`footer`](#with-column-footer)：[要为该列显示的页脚。其作用与页眉完全相同，但显示在表的下面。]{class="text-muted"}
-- `cell`：[要显示列的每一行的单元格。如果传递函数，则会传递该单元格的props对象，并应返回呈现的单元格值（确切类型取决于所使用的适配器）。]{class="text-muted"}
-- `meta`：[该列的附加属性。]{class="text-muted"}
+- `header`：[要为列显示的标题。如果传递字符串，则可以将其用作列ID的默认值。如果传递函数，则会传递标题的props对象，并应返回呈现的标题值（确切类型取决于所使用的适配器）。]{class="text-muted"}
+- [`footer`](#with-column-footer)：[要为列显示的页脚。与页眉完全相同，但显示在表下。]{class="text-muted"}
+- `cell`：[显示列的每一行的单元格。如果传递一个函数，它将被传递一个单元格的props对象，并且应该返回呈现的单元格值（确切的类型取决于所使用的适配器）。]{class="text-muted"}
+- `meta`：[列的额外属性。]{class="text-muted"}
   - `class`：
-    - `td`：[要应用于`td`元素的类。]{class="text-muted"}
-    - `th`：[要应用于`th`元素的类。]{class="text-muted"}
+    - `td`：[应用于`td`元素的类。]{class="text-muted"}
+    - `th`：[应用于`th`元素的类。]{class="text-muted"}
   - `style`：
-    - `td`：[要应用于`td`元素的样式。]{class="text-muted"}
-    - `th`：[要套用至`th`元素的样式。]{class="text-muted"}
+    - `td`：[应用于`td`元素的样式。]{class="text-muted"}
+    - `th`：[应用于`th`元素的样式。]{class="text-muted"}
   - [`colspan`](#with-column-span)：
-    - `td`：[要套用至`td`元素的colspan属性。]{class="text-muted"}
+    - `td`：[应用于`td`元素的colspan属性。]{class="text-muted"}
   - [`rowspan`](#with-column-span)：
-    - `td`：[要套用至`td`元素的数据列范围属性。]{class="text-muted"}
+    - `td`：[应用于`td`元素的rowspan属性。]{class="text-muted"}
 
-若要呈现组件或其他HTML元素，您需要在`header`和`cell`属性中使用Vue[`h`函数](https://vuejs.org/api/render-function.html#h)。这与其他使用插槽的组件不同，但具有更大的灵活性。
+要渲染组件或其他HTML元素，需要在`header`和`cell` props中使用Vue [`h`函数](https://vuejs.org/api/render-function.html#h)。这与其他使用插槽的组件不同，但允许更大的灵活性。
 
 ::tip{to="#with-slots" aria-label="带插槽的表列"}
 您也可以使用插槽自订表格的信头和数据储存格。
@@ -107,507 +107,507 @@ links:
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-类：“！p-0”
-名称：'表格-栏-范例'
-亮点：
-  第五十三章
-  第一百零八章
+prettier: true
+collapse: true
+class: '!p-0'
+name: 'table-columns-example'
+highlights:
+  - 53
+  - 108
 ---
 ::
 
 ::note
-使用`h`呈现组件时，可以使用`resolveComponent`函数或从`#components`导入。
+使用`h`渲染组件时，可以使用`resolveComponent`函数或从`#components`导入。
 ::
 
-元数据
+### Meta
 
-使用`meta`属性做为物件（[TableMeta](https://tanstack.com/table/v8/docs/api/core/table#meta)）来传递属性，例如：
+使用`meta` prop作为对象（[TableMeta](https://tanstack.com/table/v8/docs/api/core/table#meta)）来传递属性，如：
 
 - `class`：
-  - `tr`：[要应用于`tr`元素的类。]{class="text-muted"}
-111、112、
-  - `tr`：[要套用至`tr`元素的样式。]{class="text-muted"}
+  - `tr`：[应用于`tr`元素的类。] {class="text-muted"}
+- `style`：
+  - `tr`：[应用于`tr`元素的样式。] {class="text-muted"}
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'数据表中继范例'
-类：“！p-0”
-亮点：
-  128岁
-- @140
+prettier: true
+collapse: true
+name: 'table-meta-example'
+class: '!p-0'
+highlights:
+  - 128
+  - 140
 ---
 ::
 
-正在加载
+### 加载中
 
-使用`loading`道具可显示加载状态，使用`loading-color`道具可更改其颜色，使用`loading-animation`道具可更改其动画。
+使用`loading` prop显示加载状态，使用`loading-color` prop更改其颜色，使用`loading-animation` prop更改其动画。
 
 ::component-code
 ---
-更漂亮：真的
-收阖：true
-类：“！p-0”
-忽略：
-- 数据
-  124班
-外部：
-- 数据
-道具：
-  载入：true
-  加载颜色：主色
-  加载动画：轮播
-  数据类型：
-    4600，我的手机号是
-      日期：'2024年3月11日15时30分'
-      状态：“已付”
-      电子邮件：“詹姆斯.安德森@ example.com”
-      数量：594
-    4599号手机
-      日期：'2024年3月11日10时10分'
-      状态：“失败”
-      电子邮件：“mia.白色”example.com
-      数量：276
-    4598，我的手机号是
-      日期：'2024年3月11日08：50：00'
-      状态：'已退款'
-      电子邮件：“威廉.布朗@ example.com”
-      数量：315
-    4597号手机
-      日期：'2024年3月10日19时45分'
-      状态：'已付'
-      电子邮件：“emma. example.com”
-      金额：529
-    4596，我的手机号码是
-      日期：'2024年3月10日15时55分'
-      状态：“已付”
-      电子邮件：“ethan. example.com”
-      金额：639
-  类别：'flex-1'
+prettier: true
+collapse: true
+class: '!p-0'
+ignore:
+  - data
+  - class
+external:
+  - data
+props:
+  loading: true
+  loadingColor: primary
+  loadingAnimation: carousel
+  data:
+    - id: '4600'
+      date: '2024-03-11T15:30:00'
+      status: 'paid'
+      email: 'james.anderson@example.com'
+      amount: 594
+    - id: '4599'
+      date: '2024-03-11T10:10:00'
+      status: 'failed'
+      email: 'mia.white@example.com'
+      amount: 276
+    - id: '4598'
+      date: '2024-03-11T08:50:00'
+      status: 'refunded'
+      email: 'william.brown@example.com'
+      amount: 315
+    - id: '4597'
+      date: '2024-03-10T19:45:00'
+      status: 'paid'
+      email: 'emma.davis@example.com'
+      amount: 529
+    - id: '4596'
+      date: '2024-03-10T15:55:00'
+      status: 'paid'
+      email: 'ethan.harris@example.com'
+      amount: 639
+  class: 'flex-1'
 ---
 ::
 
 ::tip
-当用户偏好减少运动时，加载动画自动禁用，条形显示为全宽脉冲。
+当用户喜欢减少运动时，加载动画会自动禁用，栏显示为全宽脉冲。
 ::
 
-### 粘性
+### Sticky
 
 使用`sticky`属性使页眉或页脚具有粘性。
 
 ::component-code
 ---
-更漂亮：真的
-收阖：true
-类：“！p-0”
-忽略：
-- 数据
-  班级
-外部：
-- 数据
-项目名称：
-  粘性：
-    真的
-    不对
-道具：
-  粘滞：true
-  数据类型：
-    “4600”是我的手机号码
-      日期：'2024年3月11日15时30分'
-      状态：“已付”
-      电子邮件：“詹姆斯.安德森@ example.com”
-      数量：594
-    4599号手机
-      日期：'2024年3月11日10时10分'
-      状态：“失败”
-      电子邮件：“mia.白色”example.com
-      数量：276
-    4598，我的手机号是
-      日期：'2024年3月11日08：50：00'
-      状态：'已退款'
-      电子邮件：“威廉.布朗@ example.com”
-      数量：315
-    4597号手机
-      日期：'2024年3月10日19时45分'
-      状态：“已付”
-      电子邮件：“emma. example.com”
-      金额：529
-    4596，我的手机号是
-      日期：'2024年3月10日15时55分'
-      状态：“已付”
-      电子邮件：“ethan. example.com”
-      金额：639
-    4595号手机
-      日期：'2024年3月10日15时55分'
-      状态：“已付”
-      电子邮件：“ethan. example.com”
-      金额：639
-    4594，我的手机号是
-      日期：'2024年3月10日15时55分'
-      状态：“已付”
-      电子邮件：“ethan. example.com”
-      金额：639
-  类别：'flex-1最大值-小时-[312像素]'
+prettier: true
+collapse: true
+class: '!p-0'
+ignore:
+  - data
+  - class
+external:
+  - data
+items:
+  sticky:
+    - true
+    - false
+props:
+  sticky: true
+  data:
+    - id: '4600'
+      date: '2024-03-11T15:30:00'
+      status: 'paid'
+      email: 'james.anderson@example.com'
+      amount: 594
+    - id: '4599'
+      date: '2024-03-11T10:10:00'
+      status: 'failed'
+      email: 'mia.white@example.com'
+      amount: 276
+    - id: '4598'
+      date: '2024-03-11T08:50:00'
+      status: 'refunded'
+      email: 'william.brown@example.com'
+      amount: 315
+    - id: '4597'
+      date: '2024-03-10T19:45:00'
+      status: 'paid'
+      email: 'emma.davis@example.com'
+      amount: 529
+    - id: '4596'
+      date: '2024-03-10T15:55:00'
+      status: 'paid'
+      email: 'ethan.harris@example.com'
+      amount: 639
+    - id: '4595'
+      date: '2024-03-10T15:55:00'
+      status: 'paid'
+      email: 'ethan.harris@example.com'
+      amount: 639
+    - id: '4594'
+      date: '2024-03-10T15:55:00'
+      status: 'paid'
+      email: 'ethan.harris@example.com'
+      amount: 639
+  class: 'flex-1 max-h-[312px]'
 ---
 ::
 
-示例
+## 示例
 
 ### 使用行操作
 
-您可以在`cell`内新增一个可呈现[DropdownMenu](/docs/components/dropdown-menu)组件的栏，以呈现列动作。
+您可以添加一个新列，在`cell`中呈现[DropdownMenu](/docs/components/dropdown-menu)组件，以呈现行操作。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'表格-列-动作-范例'
-亮点：
-  115分
-  141号
-类：“！p-0”
+prettier: true
+collapse: true
+name: 'table-row-actions-example'
+highlights:
+  - 115
+  - 141
+class: '!p-0'
 ---
 ::
 
-### 使用可展开的列
+### 具有可扩展行
 
-您可以加入新的数据行，以在`cell`内呈现[Button](/docs/components/button)元件，以使用TanStack数据表切换数据列的可展开状态[Expanding APIs](https://tanstack.com/table/v8/docs/api/features/expanding)。
+您可以添加一个新列，在`cell`中呈现[Button](/docs/components/button)组件，以使用TanStack Table [ Expanding APIs](https://tanstack.com/table/v8/docs/api/features/expanding)切换行的可扩展状态。
 
 ::caution
-您需要定义`#expanded`槽来呈现将接收行作为参数的展开内容。
+您需要定义`#expanded`插槽来呈现扩展的内容，它将接收行作为参数。
 ::
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'表格列可扩充范例'
-亮点：
-  165分55秒
-  72岁
-类：“！p-0”
+prettier: true
+collapse: true
+name: 'table-row-expandable-example'
+highlights:
+  - 55
+  - 72
+class: '!p-0'
 ---
 ::
 
 ::tip
-您可以使用`expanded`属性来控制列的可展开状态（可以与`v-model`系结）。
+您可以使用`expanded`属性来控制行的可扩展状态（可以与`v-model`绑定）。
 ::
 
 ::note
-您也可以将此动作加入[`DropdownMenu`](/docs/components/dropdown-menu)元件的`actions`栏中。
+您还可以将此操作添加到`actions`列中的[`DropdownMenu`](/docs/components/dropdown-menu)组件。
 ::
 
-### 使用分组行
+### 具有分组行
 
-您可以根据给定的列值对行进行分组，并使用TanStack表通过添加到单元格中的某个按钮显示/隐藏子行[Grouping APIs](https://tanstack.com/table/v8/docs/api/features/grouping)。
+您可以根据给定的列值对行进行分组，并使用TanStack Table [API Is](https://tanstack.com/table/v8/docs/api/features/grouping)通过添加到单元格的一些按钮显示/隐藏子行。
 
-重要部件：
+#### 重要部件
 
-* Add`grouping`属性，该属性包含要作为分组依据列ID数组。
-* Add`grouping-options`属性它必须包括`getGroupedRowModel`，您可以从`@tanstack/vue-table`导入它或实现您自己属性
-* 通过`row.toggleExpanded()`方法在行的任意单元格上展开行。请记住，它也会切换`#expanded`槽。
+* 添加`grouping` prop，其中包含要分组的列ID数组。
+* 添加`grouping-options` prop。它必须包含`getGroupedRowModel`，您可以从`@tanstack/vue-table`导入或实现自己的prop。
+* 通过`row.toggleExpanded()`方法在行的任何单元格上扩展行。记住，它也切换`#expanded`插槽。
 * 在列定义上使用`aggregateFn`来定义如何聚合行。
-只有在没有`cell`呈现器时，列定义上* `agregatedCell`呈现器才起作用
+列定义上的* `agregatedCell`渲染器仅在没有`cell`渲染器的情况下有效。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'表格分组行示例'
-亮点：
-  157分
-- 小时160小时
-类：“！p-0”
+prettier: true
+collapse: true
+name: 'table-grouped-rows-example'
+highlights:
+  - 157
+  - 160
+class: '!p-0'
 ---
 ::
 
-### 使用行锁定：标记{label="4.6+" class="align-text-top"}
+### 行固定：badge{label="4.6+" class="align-text-top"}
 
-可以添加一个在`cell`内呈现[Button](/docs/components/button)组件的列，以使用TanStack表[Row Pinning APIs](https://tanstack.com/table/v8/docs/api/features/row-pinning)切换行的锁定状态。锁定的行将保留在表的顶部或底部，而不管是排序还是筛选。
+您可以在`cell`内添加一个呈现[Button](/docs/components/button)组件的列，以使用TanStack表[行固定API ](https://tanstack.com/table/v8/docs/api/features/row-pinning)切换行的固定状态。无论排序或筛选如何，固定的行都将位于表的顶部或底部。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'表行固定示例'
-overflowHidden：真的
-亮点：
-  91号
-  107号
-  PH210160
-  165分
-  168度
-类：“！p-0”
+prettier: true
+collapse: true
+name: 'table-row-pinning-example'
+overflowHidden: true
+highlights:
+  - 91
+  - 107
+  - 160
+  - 165
+  - 168
+class: '!p-0'
 ---
 ::
 
 ::tip
-您可以使用`row-pinning`属性来控制数据列的固定状态（可以使用`v-model`来系结）。
+您可以使用`row-pinning`属性来控制行的固定状态（可以使用`v-model`绑定）。
 ::
 
-### 使用行选择
+### 带行选择
 
-您可以新增一个新数据行，在`header`和`cell`内呈现[Checkbox](/docs/components/checkbox)元件，以使用TanStack数据表[Row Selection API](https://tanstack.com/table/v8/docs/api/features/row-selection)来选取数据列。
+您可以添加一个新列，在`header`和`cell`中呈现[Checkbox](/docs/components/checkbox)组件，以使用TanStack Table [ Row Selection API ](https://tanstack.com/table/v8/docs/api/features/row-selection)选择行。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'表格-行-选择-示例'
-亮点：
-  226分55秒
-  72岁
-类：“！p-0”
+prettier: true
+collapse: true
+name: 'table-row-selection-example'
+highlights:
+  - 55
+  - 72
+class: '!p-0'
 ---
 ::
 
 ::tip
-您可以使用`row-selection`属性来控制列的选取状态（可以与`v-model`系结）。
+您可以使用`row-selection`属性来控制行的选择状态（可以与`v-model`绑定）。
 ::
 
-### 使用行选择事件
+### 带有行选择事件
 
-您可以添加`@select`侦听器，以使行可单击（无论是否带有复选框列）。
+您可以添加一个`@select`侦听器，使行可单击，无论是否有复选框列。
 
 ::note
-行程常式函数会分别接收`Event`和`TableRow`实体做为第一个和第二个参数。
+handler函数分别接收`Event`和`TableRow`实例作为第一个和第二个参数。
 ::
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'表格-列-选取-事件-范例'
-亮点：
-  124号
-  131号
-类：“！p-0”
+prettier: true
+collapse: true
+name: 'table-row-select-event-example'
+highlights:
+  - 124
+  - 131
+class: '!p-0'
 ---
 ::
 
 ::tip
-您可以使用它来导航到页面、打开模式，甚至手动选择行。
+您可以使用它来导航到一个页面，打开一个模式，甚至手动选择行。
 ::
 
-### With行上下文菜单事件
+### 带有行上下文菜单事件
 
-例如，您可以添加`@contextmenu`侦听器以使行可右键单击，并将表包装在[ContextMenu](/docs/components/context-menu)组件中以显示行操作.
+例如，您可以添加`@contextmenu`侦听器以使行可右键单击，并将Table包装在[ContextMenu](/docs/components/context-menu)组件中以显示行操作。
 
 ::note
-行程常式函数会分别接收`Event`和`TableRow`实体做为第一个和第二个参数。
+handler函数分别接收`Event`和`TableRow`实例作为第一个和第二个参数。
 ::
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'表格-列-内容-功能表-事件-范例'
-亮点：
-  133号
-  173度
-类：“！p-0”
+prettier: true
+collapse: true
+name: 'table-row-context-menu-event-example'
+highlights:
+  - 133
+  - 173
+class: '!p-0'
 ---
 ::
 
-### 使用行悬停事件
+### 带有行悬停事件
 
-例如，您可以添加`@hover`侦听器以使行可悬停，并使用[Popover](/docs/components/popover)或[Tooltip](/docs/components/tooltip)组件来显示行详细信息。
+例如，您可以添加`@hover`侦听器以使行可悬停，并使用[Pover](/docs/components/popover)或[Tooltip](/docs/components/tooltip)组件来显示行详细信息。
 
 ::note
-行程常式函数会分别接收`Event`和`TableRow`实体做为第一个和第二个参数。
+handler函数分别接收`Event`和`TableRow`实例作为第一个和第二个参数。
 ::
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'表格-列-悬停-事件-示例'
-亮点：
-  129岁
-  152岁
-类：“！p-0”
----
-::
-
-::note
-此示例与Popover[类似，但具有以下游标示例：](/docs/components/popover#with-following-cursor)，并使用[`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced)来防止在将游标从一行移动到另一行时Popover打开和关闭得过快。
-::
-
-### 使用列页脚
-
-您可以将`footer`属性加入至数据行定义，以呈现数据行的页尾。
-
-::component-example
----
-更漂亮：真的
-收阖：true
-名称：'表格栏页尾范例'
-亮点：
-- @100个单位
-  112号
-类：“！p-0”
----
-::
-
-### 具有列跨度
-
-可以使用列`meta`中的`colspan`和`rowspan`属性来合并单元格。这些属性接受静态值或接收单元格并返回范围值的函数。
-
-::note
-使用`rowspan`时，需要在视觉上隐藏由上一行的范围“吸收”的单元格。请将`class` Meta与返回这些单元格的`'hidden'`的函数一起使用。
-::
-
-::component-example
----
-更漂亮：真的
-收阖：true
-名称：'表格-栏-范围-范例'
-类：“！p-0”
----
-::
-
-使用列排序
-
-可以更新列`header`以呈现`header`内的[Button](/docs/components/button)组件，从而使用TanStack表[Sorting APIs](https://tanstack.com/table/v8/docs/api/features/sorting)来切换排序状态。
-
-在这些列上也设置`enableSorting: true`。这会将`aria-sort`放在`<th>`上，以便屏幕阅读器可以读取列的当前排序状态：`none`、`ascending`或`descending`。`Button`将保留更改它的控件。
-
-::component-example
----
-更漂亮：真的
-收阖：true
-名称：'表格-栏-排序-范例'
-亮点：
-  90分
-  106号线
-类：“！p-0”
----
-::
-
-::tip
-您可以使用`sorting`属性来控制数据行的排序状态（可以与`v-model`系结）。
-::
-
-您还可以创建一个可重用组件，使任何列标题都可排序。
-
-::component-example
----
-更漂亮：真的
-收阖：true
-名称：'表列排序可重用示例'
-亮点：
-- ，115
-  166号
-类：“！p-0”
+prettier: true
+collapse: true
+name: 'table-row-hover-event-example'
+highlights:
+  - 129
+  - 152
+class: '!p-0'
 ---
 ::
 
 ::note
-在本例中，我们使用一个函数来定义列标题，但您也可以创建一个实际组件。
+此示例与以下光标example](/docs/components/popover#with-following-cursor)的Popover [类似，并使用[`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced)来防止在将光标从一行移动到另一行时Popover打开和关闭过快。
 ::
 
-### 带柱锁定
+### 带列页脚
 
-可以更新列`header`以呈现`header`内的[Button](/docs/components/button)组件，从而使用TanStack表[Column Pinning APIs](https://tanstack.com/table/v8/docs/api/features/column-pinning)来切换固定状态。
+可以向列定义中添加`footer`属性，以呈现列的脚注。
+
+::component-example
+---
+prettier: true
+collapse: true
+name: 'table-column-footer-example'
+highlights:
+  - 100
+  - 112
+class: '!p-0'
+---
+::
+
+### 带列跨度
+
+您可以使用`meta`列中的`colspan`和`rowspan`属性来合并单元格。这些属性接受静态值或接收单元格并返回跨度值的函数。
 
 ::note
-固定的列将粘在表的左侧或右侧。使用列固定时，您应该为列定义显式的`size`值，以确保正确处理列宽，尤其是对于多个固定的列。
+当使用`rowspan`时，被前一行的跨度“吸收”的单元格需要在视觉上隐藏。使用`class` Meta一个函数，为这些单元格返回`'hidden'`。
 ::
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-overflowHidden：真的
-名称：'表格-栏-固定-范例'
-亮点：
-  PH316108
-  126号
-类：“！p-0溢出剪辑”
+prettier: true
+collapse: true
+name: 'table-column-span-example'
+class: '!p-0'
+---
+::
+
+### 带列排序
+
+您可以更新列`header`，以在`header`中呈现[Button](/docs/components/button)组件，从而使用TanStack Table [Sorting APIs](https://tanstack.com/table/v8/docs/api/features/sorting)切换排序状态。
+
+在这些列上也设置`enableSorting: true`。这将`aria-sort`放在`<th>`上，以便屏幕阅读器可以读取列的当前排序状态：`none`，`ascending`或`descending`。`Button`保留更改它的控件。
+
+::component-example
+---
+prettier: true
+collapse: true
+name: 'table-column-sorting-example'
+highlights:
+  - 90
+  - 106
+class: '!p-0'
 ---
 ::
 
 ::tip
-您可以使用`column-pinning`属性来控制数据行的固定状态（可以与`v-model`系结）。
+您可以使用`sorting`属性来控制列的排序状态（可以与`v-model`绑定）。
 ::
 
-### 使用列可见性
-
-您可以使用[DropdownMenu](/docs/components/dropdown-menu)组件，透过TanStack数据表[Column Visibility APIs](https://tanstack.com/table/v8/docs/api/features/column-visibility)来切换数据行的可见性。
+您还可以创建一个可重用的组件来使任何列标题都可排序。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'表列可见性示例'
-亮点：
-  121号线
-- @146
-类：“！p-0”
+prettier: true
+collapse: true
+name: 'table-column-sorting-reusable-example'
+highlights:
+  - 115
+  - 166
+class: '!p-0'
+---
+::
+
+::note
+在这个例子中，我们使用一个函数来定义列标题，但你也可以创建一个实际的组件。
+::
+
+### 带列固定
+
+您可以更新列`header`，以在`header`中呈现[Button](/docs/components/button)组件，从而使用TanStack表[列固定APIs](https://tanstack.com/table/v8/docs/api/features/column-pinning)切换固定状态。
+
+::note
+固定的列将在表的左侧或右侧变得粘滞。使用列固定时，您应该为列定义显式的`size`值，以确保正确的列宽处理，特别是对于多个固定的列。
+::
+
+::component-example
+---
+prettier: true
+collapse: true
+overflowHidden: true
+name: 'table-column-pinning-example'
+highlights:
+  - 108
+  - 126
+class: '!p-0 overflow-clip'
 ---
 ::
 
 ::tip
-您可以使用`column-visibility`属性来控制数据行的可见性状态（可以与`v-model`系结）。
+您可以使用`column-pinning`属性来控制列的固定状态（可以使用`v-model`绑定）。
 ::
 
-使用列筛选器
+### 具有列可见性
 
-您可以使用[Input](/docs/components/input)元件，透过TanStack数据表[Column Filtering APIs](https://tanstack.com/table/v8/docs/api/features/column-filtering)来筛选每一个数据行。
+您可以使用[DropdownMenu](/docs/components/dropdown-menu)组件，通过TanStack表[列可见性APIs](https://tanstack.com/table/v8/docs/api/features/column-visibility)切换列的可见性。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'表格-栏-筛选器-范例'
-亮点：
-  123号
-  128号
-类：“！p-0”
+prettier: true
+collapse: true
+name: 'table-column-visibility-example'
+highlights:
+  - 121
+  - 146
+class: '!p-0'
 ---
 ::
 
 ::tip
-您可以使用`column-filters`属性来控制数据行的筛选状态（可以与`v-model`系结）。
+您可以使用`column-visibility`属性来控制列的可见性状态（可以与`v-model`绑定）。
 ::
 
-使用全局筛选器
+### 带列过滤器
 
-您可以使用[Input](/docs/components/input)组件，通过TanStack表[全局筛选API](https://tanstack.com/table/v8/docs/api/features/global-filtering)来筛选行。
+您可以使用[Input](/docs/components/input)组件，通过TanStack Table [列过滤APIs](https://tanstack.com/table/v8/docs/api/features/column-filtering)按列过滤行。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'表格全域筛选范例'
-类：“！p-0”
-亮点：
-  116号
+prettier: true
+collapse: true
+name: 'table-column-filters-example'
+highlights:
+  - 123
+  - 128
+class: '!p-0'
 ---
 ::
 
 ::tip
-您可以使用`global-filter`属性来控制全域筛选器状态（可以与`v-model`系结）。
+您可以使用`column-filters`属性来控制列的过滤器状态（可以与`v-model`绑定）。
 ::
 
-使用分页功能
+### 带有全局过滤器
 
-您可以使用[Pagination](/docs/components/pagination)组件，透过[Pagination API](https://tanstack.com/table/v8/docs/api/features/pagination)来控制分页状态。
-
-[Pagination Guide](https://tanstack.com/table/v8/docs/guide/pagination#pagination-guide)中说明了不同分页方法在此示例中，我们使用客户端分页，因此需要手动传递`getPaginationRowModel()`{lang="ts-type"}函数
+您可以使用[Input](/docs/components/input)组件，通过TanStack Table [全局过滤APIs](https://tanstack.com/table/v8/docs/api/features/global-filtering)过滤行。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'表格分页范例'
-类：“！p-0”
-亮点：
-  204号
-  209号
+prettier: true
+collapse: true
+name: 'table-global-filter-example'
+class: '!p-0'
+highlights:
+  - 116
+---
+::
+
+::tip
+您可以使用`global-filter`属性来控制全局过滤器状态（可以与`v-model`绑定）。
+::
+
+### 带分页
+
+您可以使用[Pagination](/docs/components/pagination)组件通过[Pagination APIs](https://tanstack.com/table/v8/docs/api/features/pagination)控制分页状态。
+
+有不同的分页方法，如[分页指南](https://tanstack.com/table/v8/docs/guide/pagination#pagination-guide)中所解释的。在这个例子中，我们使用客户端分页，所以我们需要手动传递`getPaginationRowModel()`{lang="ts-type"}函数。
+
+::component-example
+---
+prettier: true
+collapse: true
+name: 'table-pagination-example'
+class: '!p-0'
+highlights:
+  - 204
+  - 209
 ---
 ::
 
@@ -615,70 +615,70 @@ overflowHidden：真的
 您可以使用`pagination`属性来控制分页状态（可以与`v-model`绑定）。
 ::
 
-### 使用提取的数据
+### 使用获取的数据
 
 您可以从API获取数据并在表中使用它们。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'数据表撷取范例'
-亮点：
-  15岁
-  26岁
-类：“！p-0”
+prettier: true
+collapse: true
+name: 'table-fetch-example'
+highlights:
+  - 15
+  - 26
+class: '!p-0'
 ---
 ::
 
 ::note
-此示例使用`useLazyFetch`和`server: false`在客户端上提取数据，而不阻止初始呈现。加载状态检查`pending`和`idle`的状态，以在提取之前和提取过程中显示加载指示器。
+这个例子使用`useLazyFetch`和`server: false`在客户端获取数据，而不阻塞初始渲染。加载状态检查`pending`和`idle`的状态，以在获取之前和期间显示加载指示器。
 ::
 
-使用无限滚动
+### 无限滚动
 
-如果您使用服务器端分页，则可以使用[`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/#useinfinitescroll)可组合项在用户滚动时加载更多数据。
+如果使用服务器端分页，则可以使用[`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/#useinfinitescroll)组合项在用户滚动时加载更多数据。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-亮点：
-  PH 39072小时
-  83号
-overflowHidden：真的
-名称：'表格无限卷动范例'
-类：“！p-0”
+prettier: true
+collapse: true
+highlights:
+  - 72
+  - 83
+overflowHidden: true
+name: 'table-infinite-scroll-example'
+class: '!p-0'
 ---
 ::
 
 ::note
-此示例使用`useLazyFetch`和`server: false`在客户端上提取数据，而不阻止初始呈现。加载状态检查`pending`和`idle`的状态，以在提取之前和提取过程中显示加载指示器。用户滚动时将加载其他页面。
+本例使用`useLazyFetch`和`server: false`在客户端上获取数据，而不会阻塞初始呈现。加载状态检查`pending`和`idle`的状态，以在获取之前和期间显示加载指示符。当用户滚动时，会加载其他页面。
 ::
 
-使用拖放
+### 使用拖放
 
-您可以使用可从[`@vueuse/integrations`](https://vueuse.org/integrations/README.html)组合的[`useSortable`](https://vueuse.org/integrations/useSortable/)来启用数据表上的拖放功能。此整合会包装[Sortable.js](https://sortablejs.github.io/Sortable/)以提供无缝拖放体验。
+您可以使用[`@vueuse/integrations`](https://vueuse.org/integrations/README.html)中的[`useSortable`](https://vueuse.org/integrations/useSortable/)组合来启用Table上的拖放功能。此集成包装了[Sortable.js](https://sortablejs.github.io/Sortable/)，以提供无缝拖放体验。
 
 ::note
-由于表引用不公开tbody元素，因此请通过`:ui`属性为其添加一个唯一的类，以便使用`useSortable`（例如`:ui="{ tbody: 'my-table-tbody' }"`）将其作为目标。
+由于table ref没有公开tbody元素，所以通过`:ui` prop向它添加一个唯一的类，以便使用`useSortable`（例如`:ui="{ tbody: 'my-table-tbody' }"`）将其作为目标。
 ::
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-亮点：
-  81岁
-  83岁
-名称：'表格拖放示例'
-类：“！p-0”
+prettier: true
+collapse: true
+highlights:
+  - 81
+  - 83
+name: 'table-drag-and-drop-example'
+class: '!p-0'
 ---
 ::
 
-### 借助虚拟化：徽标{label="4.1+" class="align-text-top"}
+### 虚拟化：badge{label="4.1+" class="align-text-top"}
 
-使用`virtualize`属性可将大型数据集的虚拟化作为布尔值或带有`{ estimateSize: 65, overscan: 12 }`等选项的对象来启用。您还可以传递其他[TanStack虚拟选项](https://tanstack.com/virtual/latest/docs/api/virtualizer#optional-options)来自定义虚拟化行为。`sticky`属性可与`virtualize`一起使用以在卷动大型数据集时，保持页首或页尾可见。
+使用`virtualize` prop以布尔值或带有`{ estimateSize: 65, overscan: 12 }`等选项的对象的形式启用大型数据集的虚拟化。您还可以传递其他[TanStack Virtual选项](https://tanstack.com/virtual/latest/docs/api/virtualizer#optional-options)以自定义虚拟化行为。`sticky` prop与`virtualize`结合使用，以在滚动大型数据集时保持页眉或页脚可见。
 
 ::warning
 启用虚拟化时不支持行固定。
@@ -686,86 +686,86 @@ overflowHidden：真的
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-overflowHidden：真的
-名称：“表虚拟化示例”
-类：“！p-0”
+prettier: true
+collapse: true
+overflowHidden: true
+name: 'table-virtualize-example'
+class: '!p-0'
 ---
 ::
 
 ::note
-为了使虚拟化正常工作，需要对桌面进行高度限制（例如`class="h-[400px]"`）。
+为了使虚拟化正常工作，需要对表进行高度限制（例如`class="h-[400px]"`）。
 ::
 
-### 带有外部滚动元素：徽标{label="4.10+" class="align-text-top"}
+### 带有外部滚动元素：badge{label="4.10+" class="align-text-top"}
 
-在`virtualize`属性中传递`getScrollElement`函数，以便根据祖先滚动容器而不是表自己的根进行虚拟化。将`scrollMargin`设置为表相对于滚动元素起始位置的偏移量（例如，其上内容的高度），以便表头和表体共享一个滚动条。
+在`virtualize` prop中传递一个`getScrollElement`函数，以针对祖先滚动容器而不是表本身的根进行虚拟化。将`scrollMargin`设置为表从滚动元素开始的偏移量（例如，其上方内容的高度），因此表头和表体共享一个滚动条。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-overflowHidden：真的
-名称：'表格外部卷动范例'
-类：“！p-0”
+prettier: true
+collapse: true
+overflowHidden: true
+name: 'table-external-scroll-example'
+class: '!p-0'
 ---
 ::
 
 ::note
-在此模式下，表格根目录的`overflow`是`visible`，而外部容器拥有两个轴上的卷动功能，因此请指定它`overflow-auto`（而非`overflow-y-auto`），以保持宽表格可水平卷动。然后，`sticky`信头会锚定至该容器。
+在这种模式下，表根的`overflow`是`visible`，外部容器拥有两个轴上的滚动，所以给它`overflow-auto`（而不仅仅是`overflow-y-auto`）以保持宽表的水平滚动。然后`sticky`头部锚定到该容器。
 ::
 
-使用树数据
+### 使用树数据
 
-您可以使用`get-sub-rows`属性来显示数据表中的阶层式（树状）数据。
-例如，如果您的数据物件有`children`数组，请设定`:get-sub-rows="row => row.children"`以启用可展开的列。
+您可以使用`get-sub-rows`属性在表中显示分层（树）数据。
+例如，如果您的数据对象具有`children`数组，则将`:get-sub-rows="row => row.children"`设置为启用可扩展行。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-亮点：
-  175分
-名称：'表格-树状结构-数据-范例'
-类：“！p-0”
+prettier: true
+collapse: true
+highlights:
+  - 175
+name: 'table-tree-data-example'
+class: '!p-0'
 ---
 ::
 
-带插槽的
+### 带插槽
 
-您可以使用槽自定义表格的标题和数据单元格。
+您可以使用插槽来自定义表格的标题和数据单元格。
 
-使用`#<column>-header`槽可自定义列标题。您将可以访问槽范围中的`column`、`header`和`table`属性。
+使用`#<column>-header`插槽自定义列的标题。您将可以访问插槽范围中的`column`、`header`和`table`属性。
 
-使用`#<column>-cell`槽可自定义列的单元格。您将可以访问槽作用域中的`cell`、`column`、`getValue`、`renderValue`、`row`和`table`属性。
+使用`#<column>-cell`插槽自定义列的单元格。您将可以访问插槽范围中的`cell`、`column`、`getValue`、`renderValue`、`row`和`table`属性。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'table-slots-example'（表插槽示例）
-类：“！p-0”
+prettier: true
+collapse: true
+name: 'table-slots-example'
+class: '!p-0'
 ---
 ::
 
-活性成分
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table#attributes" target="_blank"}
-此组件还支持所有本机`<table>`HTML属性。
+此组件还支持所有原生`<table>` HTML属性。
 ::
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-暴露
+### Expose
 
-您可以使用[`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref)来存取具型别的元件执行严修。
+您可以使用[`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref)访问类型化的组件实例。
 
 ```vue
 <script setup lang="ts">
@@ -781,13 +781,13 @@ const table = useTemplateRef('table')
 
 | 名称|类型|
 | ---- | ---- |
-| 475号公路|474号|
-| 483号公路|479，478，484，480，481，482，|
+| `tableRef`{lang="ts-type"}| `Ref<HTMLTableElement \| null>`{lang="ts-type"}|
+| `tableApi`{lang="ts-type"}| [`Table`{lang="ts-type"}](https://tanstack.com/table/v8/docs/api/core/table#table-api)|
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

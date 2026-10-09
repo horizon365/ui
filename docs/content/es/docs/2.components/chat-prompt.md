@@ -11,53 +11,53 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatPrompt.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente ChatPrompt procesa un elemento `<form>` y extiende el componente [Textarea](/docs/components/textarea) para que pueda pasar cualquier propiedad como `icon`,`placeholder`,`autofocus`, etc.
+El componente ChatPrompt procesa un elemento `<form>` y extiende el componente [Textarea](/docs/components/textarea) para que pueda pasar cualquier propiedad como `icon`, `placeholder`, `autofocus`, etc.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'chat-prompt-example'
+collapse: true
+name: 'chat-prompt-example'
 ---
 ::
 
 ::note
 El ChatPrompt maneja los siguientes eventos:
 
-- El formulario se envía cuando el usuario presiona: kbd{value="enter"} o cuando el usuario hace clic en el botón enviar. Establezca el prop `submit-on-enter` a `false` para enviar con: kbd{value="ctrl"}+: kbd{value="enter"}(o: kbd{value="cmd"}+: kbd{value="enter"} en macOS) en su lugar, permitiendo que: kbd{value="enter"} inserte una nueva línea.
+- El formulario se envía cuando el usuario presiona: kbd{value="enter"} o cuando el usuario hace clic en el botón enviar. Establezca el prop `submit-on-enter` en `false` para enviar con: kbd{value="ctrl"} +: kbd{value="enter"} (o: kbd{value="cmd"} +: kbd{value="enter"} en macOS) en su lugar, permitiendo que: kbd{value="enter"} inserte una nueva línea.
 - El área de texto se difumina cuando: kbd{value="escape"} se presiona y emite un evento `close`.
 ::
 
-@@21@Variante
+### Variante
 
-Utilice la prop `variant` para cambiar el estilo del prompt. Defaults a `outline`.
+Utilice el prop `variant` para cambiar el estilo del prompt. Defaults a `outline`.
 
 ::component-code
 ---
-Escondido:
-  @24@autofocus
-Props:
-  Categoría:"Soft"
-  Autoenfoque: Falso
+hide:
+  - autofocus
+props:
+  variant: 'soft'
+  autofocus: false
 ---
 ::
 
-@@25@Ejemplos
+## Ejemplos
 
 ::tip{to="/docs/components/chat"}
-Consulte la página de descripción general **Chat** para obtener instrucciones de instalación, configuración del servidor y ejemplos de uso.
+Consulte la página de descripción general de **Chat** para obtener instrucciones de instalación, configuración del servidor y ejemplos de uso.
 ::
 
-### Con un editor: badge{label="4.10+" class="align-text-top"}
+### Con un Editor: badge{label="4.10+" class="align-text-top"}
 
-Componga los slots `#header`,`#body` y `#footer` para crear un prompt rico: archivos adjuntos, un [Editor](/docs/components/editor) con `@` menciones y `/` comandos a través de [EditorMentionMenu](/docs/components/editor-mention-menu), y un selector de moda.
+Componga las ranuras `#header`, `#body` y `#footer` para crear un prompt rico: archivos adjuntos, un [Editor](xph047) con menciones `@` y comandos `/` a través de [EditorMentionMenu](/docs/components/editor-mention-menu), y un selector de modo.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'chat-prompt-editor-ejemplo'
-Categoría: Justificación-Centro
+collapse: true
+name: 'chat-prompt-editor-example'
+class: 'justify-center'
 ---
 ::
 
@@ -65,7 +65,7 @@ Categoría: Justificación-Centro
 La ranura `#body` reemplaza el área de texto interna y expone los manejadores `submit` y `close`, de modo que puede conectar los atajos de teclado del editor al formulario. Cuando se abre un menú de mención, presionando: kbd{value="enter"} selecciona el elemento resaltado en lugar de enviarlo.
 ::
 
-### Como página de inicio
+Página de inicio ### As
 
 También puede usarlo en la página de inicio de la interfaz de chat.
 
@@ -102,36 +102,36 @@ async function onSubmit() {
 </template>
 ```
 
-@080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## API (Edición española)
 
-@081@081@081@081
+### Accesorios
 
-Componentes Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attributes" target="_blank"}
-Este componente también soporta todos los atributos HTML nativos `<textarea>`.
+Este componente también admite todos los atributos HTML nativos de `<textarea>`.
 ::
 
-@083@espanol
+### Slots (Edición española)
 
-Componentes de slots
+:component-slots
 
-@@84000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@085@@Exposicion
+### Expose
 
 Al acceder al componente a través de una referencia de plantilla, puede utilizar lo siguiente:
 
 | Nombre| Tipo|
 | ---- | ---- |
-| @@|@@@ph087 @|
+| `textareaRef`{lang="ts-type"} (Edición española)| `Ref<HTMLTextAreaElement \| null>`x{lang="ts-type"} (Edición española)|
 
-@090000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Temas
 
-Componente Tema
+:component-theme
 
-@@changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

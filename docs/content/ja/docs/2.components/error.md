@@ -9,57 +9,57 @@ links:
 
 ## 使用法
 
-Errorコンポーネントは`<main>`要素をレンダリングし、[ Header ](/docs/components/header)コンポーネントと連携して、ビューポートの使用可能な高さまで拡張されるフルハイトレイアウトを作成します。
+Errorコンポーネントは`<main>`要素をレンダリングし、[Header](/docs/components/header)コンポーネントと連携してビューポートの使用可能な高さまで拡張するフルハイトレイアウトを作成します。
 
 ::tip{to="/docs/getting-started/theme/css-variables#header"}
-Errorコンポーネントは、`--ui-header-height` CSS変数を使用して、自身を`Header`の下に正しく配置します。
+ErrorコンポーネントはCSS変数`--ui-header-height`を使用して、`Header`の下に正しく配置します。
 ::
 
-### エラー
+### Error
 
-エラーメッセージを表示するには、`error`プロパティを使用します。
+`error`プロパティを使用してエラーメッセージを表示します。
 
 ::framework-only
 #nuxt
 ::note{to="https://nuxt.com/docs/guide/directory-structure/error" target="_blank"}
-ほとんどの場合、`error.vue`ファイルに`error` propが含まれています。
+ほとんどの場合、`error.vue`ファイルの`error`プロパティを受け取ります。
 ::
 ::
 
 ::component-code
 ---
-隠す
-  - クラス
-きれい真
-小道具
-  エラー
-    ステータスコード404
-    statusMessage 'ページが見つかりません'
-    メッセージ：「お探しのページは存在しません。
-  クラス'！min—h—96'
+hide:
+  - class
+prettier: true
+props:
+  error:
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
+  class: '!min-h-96'
 ---
 ::
 
-### アイコンbadge {label="4.8+" class="align-text-top"}
+### アイコンbadge{label="4.8+" class="align-text-top"}
 
 `icon`プロパティを使用して、ステータスコードの上にアイコンを表示します。
 
 ::component-code
 ---
-隠す
-  - クラス
-きれい真
-無視
-  -  error.statusCode
-  -  error.statusメッセージ
-  - エラーメッセージ
-小道具
-  アイコン'i—lucide—file—x'
-  エラー
-    ステータスコード404
-    statusMessage 'ページが見つかりません'
-    メッセージ：「お探しのページは存在しません。
-  クラス'！min—h—96'
+hide:
+  - class
+prettier: true
+ignore:
+  - error.statusCode
+  - error.statusMessage
+  - error.message
+props:
+  icon: 'i-lucide-file-x'
+  error:
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
+  class: '!min-h-96'
 ---
 ::
 
@@ -67,87 +67,87 @@ Errorコンポーネントは、`--ui-header-height` CSS変数を使用して、
 
 ::component-code
 ---
-隠す
-  - クラス
-きれい真
-無視
-  -  error.statusCode
-  -  error.statusメッセージ
-  - エラーメッセージ
-小道具
-  エラー
-    ステータスコード404
-    statusMessage 'ページが見つかりません'
-    メッセージ：「お探しのページは存在しません。
-  クラス'！min—h—96'
-スロット
-  リーダー：|
+hide:
+  - class
+prettier: true
+ignore:
+  - error.statusCode
+  - error.statusMessage
+  - error.message
+props:
+  error:
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
+  class: '!min-h-96'
+slots:
+  leading: |
 
     <img src="https://github.com/nuxt.png" alt="Logo" class="size-10 rounded-full">
 ---
-#リーディング
-img {src="https://github.com/nuxt.png" alt="Logo" class="size-10 rounded-full"}
+#leading
+:img{src="https://github.com/nuxt.png" alt="Logo" class="size-10 rounded-full"}
 ::
 
 ### クリア
 
-`clear`プロパティを使用して、クリアボタンをカスタマイズまたは非表示にします`false`値を指定。
+`clear`プロパティを使用して、クリアボタン（`false`値）をカスタマイズまたは非表示にします。
 
-[ Button ](/docs/components/button)コンポーネントから任意のプロパティを渡してカスタマイズできます。
+[Button](/docs/components/button)コンポーネントの任意のプロパティを渡してカスタマイズできます。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  error.statusCode
-  -  error.statusメッセージ
-  - エラーメッセージ
-  -  clear.color
-  - クリアサイズ
-  -  clear.icon
-  -  clear.class
-小道具
-  クリア
-    色ニュートラル
-    サイズXL
-    アイコンi—lucide—arrow—left
-    クラス：'rounded—full'
-  エラー
-    ステータスコード404
-    statusMessage 'ページが見つかりません'
-    メッセージ：「お探しのページは存在しません。
-  クラス'！min—h—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - error.statusCode
+  - error.statusMessage
+  - error.message
+  - clear.color
+  - clear.size
+  - clear.icon
+  - clear.class
+props:
+  clear:
+    color: neutral
+    size: xl
+    icon: i-lucide-arrow-left
+    class: 'rounded-full'
+  error:
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
+  class: '!min-h-96'
 ---
 ::
 
-### リダイレクト
+### Redirect
 
-`redirect`プロパティを使用して、クリアボタンがクリックされたときにユーザーを別のページにリダイレクトします。デフォルトは`/`です。
+`redirect`プロパティを使用して、clearボタンがクリックされたときにユーザーを別のページにリダイレクトします。デフォルトは`/`です。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  error.statusCode
-  -  error.statusメッセージ
-  - エラーメッセージ
-小道具
-  redirect '/docs/getting—start'
-  エラー
-    ステータスコード404
-    statusMessage 'ページが見つかりません'
-    メッセージ：「お探しのページは存在しません。
-  クラス'！min—h—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - error.statusCode
+  - error.statusMessage
+  - error.message
+props:
+  redirect: '/docs/getting-started'
+  error:
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
+  class: '!min-h-96'
 ---
 ::
 
 ## 例
 
-### 内`error.vue`
+### x`error.vue`内
 
 `error.vue`のErrorコンポーネントを使用します。
 
@@ -172,11 +172,11 @@ const props = defineProps<{
 ```
 
 ::tip
-`app.vue`のコードを`error.vue`ファイル内で複製して、同じレイアウトと機能を持つようにしたい場合があります。例：<https://github.com/nuxt/ui/blob/v4/docs/app/error.vue>
+同じレイアウトと機能を持つように`error.vue`ファイル内で`app.vue`のコードを複製したい場合があります。以下に例を示します：<https://github.com/nuxt/ui/blob/v4/docs/app/error.vue>
 ::
 
 ::note
-エラーの処理方法については、[ Nuxtドキュメント](https://nuxt.com/docs/getting-started/error-handling#error-page)を参照してくださいが、`nuxt generate`を使用する場合は、エラーページが表示されるように`createError`コールの中に`fatal: true`を追加することをお勧めします。
+エラーの処理方法については[Nuxtドキュメント](https://nuxt.com/docs/getting-started/error-handling#error-page)を参照してください。`nuxt generate`を使用する場合は、エラーページが表示されるように`createError`呼び出しの中に`fatal: true`を追加することをお勧めします。
 
 ```vue [pages/\[...slug\\].vue]
 <script setup lang="ts">
@@ -193,20 +193,20 @@ if (!page.value) {
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

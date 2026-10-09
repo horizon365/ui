@@ -13,17 +13,17 @@ links:
 EditorDragHandleコンポーネントは、`@tiptap/extension-drag-handle-vue-3`パッケージを使用してエディタブロックを並べ替えるためのドラッグアンドドロップ機能を提供します。
 
 ::caution
-エディタインスタンスにアクセスするには、[ Editor ](/docs/components/editor)コンポーネントのデフォルトスロット内で使用する必要があります。
+エディタインスタンスにアクセスするには、[Editor](/docs/components/editor)コンポーネントのデフォルトスロット内で使用する必要があります。
 ::
 
-[ Button ](/docs/components/button)コンポーネントを拡張しているので、`color`、`variant`、`size`などのプロパティを渡すことができます。
+[Button](/docs/components/button)コンポーネントを拡張するため、`color`、`variant`、`size`などの任意のプロパティを渡すことができます。
 
 ::component-example
 ---
-崩壊真
-昇格：真
-名前'editor—drag—handle—example'
-クラス'p—8'
+collapse: true
+elevated: true
+name: 'editor-drag-handle-example'
+class: 'p-8'
 ---
 ::
 
@@ -31,7 +31,7 @@ EditorDragHandleコンポーネントは、`@tiptap/extension-drag-handle-vue-3`
 ドラッグハンドル拡張機能の詳細については、TipTapのドキュメントをご覧ください。
 ::
 
-### アイコン
+### Icon
 
 `icon`プロパティを使用して、ドラッグハンドルアイコンをカスタマイズします。
 
@@ -46,18 +46,18 @@ EditorDragHandleコンポーネントは、`@tiptap/extension-drag-handle-vue-3`
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.drag`キーの下の`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`app.config.ts`の`ui.icons.drag`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.drag`キーの下の`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`vite.config.ts`の`ui.icons.drag`キーでグローバルにカスタマイズできます。
 :::
 ::
 
-### オプション
+### Options
 
-`options` propを使用して、[ Floating UI options ](https://floating-ui.com/docs/computeposition#options)を使用して位置決めの動作をカスタマイズします。
+`options`プロパティを使用して、[Floating UIオプション](https://floating-ui.com/docs/computeposition#options)を使用して位置決めの動作をカスタマイズします。
 
 ::note
 オフセットは自動的に計算され、小さなブロックの場合はハンドルを中央に、高いブロックの場合は上部に合わせます。
@@ -80,56 +80,56 @@ EditorDragHandleコンポーネントは、`@tiptap/extension-drag-handle-vue-3`
 
 ### ドロップダウンメニュー付き
 
-デフォルトスロットを使用して、[ DropdownMenu ](/docs/components/dropdown-menu)を追加します。
+デフォルトスロットを使用して[DropdownMenu](/docs/components/dropdown-menu)を追加し、複製、削除、上下移動、ブロックの異なるタイプへの変換などのブロックレベルのアクションを行います。
 
 `@node-change`イベントをリッスンして現在ホバリングされているノードとその位置を追跡し、メニューが開いている間に`editor.chain().setMeta('lockDragHandle', open).run()`{lang="ts-type"}を使用してハンドル位置をロックします。
 
 ::component-example
 ---
-昇格：true
-崩壊真
-名前'editor—drag—handle—dropdown menu—example'
-クラス'p—8'
+elevated: true
+collapse: true
+name: 'editor-drag-handle-dropdown-menu-example'
+class: 'p-8'
 ---
 ::
 
 ::note
-この例では、`@nuxt/ui/utils/editor`の`mapEditorItems`ユーティリティを使用して、ハンドラの種類`duplicate`、`delete`、`moveUp`などを適切な状態管理で対応するエディタコマンドに自動的にマップします。
+この例では、`@nuxt/ui/utils/editor`の`mapEditorItems`ユーティリティを使用して、ハンドラの種類（`duplicate`、`delete`、`moveUp`など）を適切な状態管理で対応するエディタコマンドに自動的にマップします。
 ::
 
 ### 提案メニュー付き
 
-デフォルトスロットを使用して、[ Button ](/docs/components/button)[ EditorSuggestionMenu ](/docs/components/editor-suggestion-menu)を開きます。
+デフォルトスロットを使用して、ドラッグハンドルの横に[Button](/docs/components/button)を追加し、[EditorSuggestionMenu](/docs/components/editor-suggestion-menu)を開きます。
 
 `onClick`スロット関数を呼び出して現在のノード位置を取得し、`handlers.suggestion?.execute(editor, { pos: node?.pos }).run()`{lang="ts-type"}を使用してその位置に新しいブロックを挿入します。
 
 ::component-example
 ---
-昇格：true
-崩壊真
-名前'editor—drag—handle—suggestion—menu—example'
-クラス'！p—0'
+elevated: true
+collapse: true
+name: 'editor-drag-handle-suggestion-menu-example'
+class: '!p-0'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

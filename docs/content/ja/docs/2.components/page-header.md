@@ -12,7 +12,7 @@ links:
 
 PageHeaderコンポーネントはページのヘッダーを表示します。
 
-[ Page ](/docs/components/page)コンポーネントのデフォルトスロット内で、[ PageBody ](/docs/components/page-body)コンポーネントの前に使用します。
+[Page](/docs/components/page)コンポーネントのデフォルトスロット内、[PageBody](/docs/components/page-body)コンポーネントの前に使用します。
 
 ```vue {3}
 <template>
@@ -24,93 +24,93 @@ PageHeaderコンポーネントはページのヘッダーを表示します。
 </template>
 ```
 
-### タイトル
+### Title
 
-`title`プロパティを使用して、ヘッダーにタイトルを表示します。
+ヘッダーにタイトルを表示するには、`title`プロパティを使用します。
 
 ::component-code
 ---
-隠す
-  - クラス
-小道具
-  title 'PageHeader'
-  クラス'w—full'
+hide:
+  - class
+props:
+  title: 'PageHeader'
+  class: 'w-full'
 ---
 ::
 
-### 説明
+### Description
 
-`description`プロパティを使用して、ヘッダーに説明を表示します。
+ヘッダーに説明を表示するには、`description`プロパティを使用します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-隠す
-  - クラス
-小道具
-  title 'PageHeader'
-  description：'タイトル、説明、アクションを含むレスポンシブなページヘッダー。
-  クラス'w—full'
+prettier: true
+ignore:
+  - title
+hide:
+  - class
+props:
+  title: 'PageHeader'
+  description: 'A responsive page header with title, description and actions.'
+  class: 'w-full'
 ---
 ::
 
-### ヘッドライン
+### Headline
 
-`headline`プロパティを使用して、ヘッダーに見出しを表示します。
+ヘッダーに見出しを表示するには、`headline`プロパティを使用します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-  - 説明
-隠す
-  - クラス
-小道具
-  title 'PageHeader'
-  description：'タイトル、説明、アクションを含むレスポンシブなページヘッダー。
-  headline 'コンポーネント'
-  クラス'w—full'
+prettier: true
+ignore:
+  - title
+  - description
+hide:
+  - class
+props:
+  title: 'PageHeader'
+  description: 'A responsive page header with title, description and actions.'
+  headline: 'Components'
+  class: 'w-full'
 ---
 ::
 
-### リンク
+### Links
 
-`links` propを使用して、[ Button ](/docs/components/button)のリストをヘッダーに表示します。
+`links`プロパティを使用して、[Button](/docs/components/button)のリストをヘッダーに表示します。
 
 ::component-code
 ---
-きれい真
-外部
-  - リンク
-externalTypes
-  -  ButtonProps []
-無視
-  -  title
-  - 説明
-  - 見出し
-  - リンク
-隠す
-  - クラス
-小道具
-  title 'PageHeader'
-  description：'タイトル、説明、アクションを含むレスポンシブなページヘッダー。
-  headline 'コンポーネント'
-  リンク
-    -  label 'GitHub'
-      アイコンi—simple—icons—github
-      「https//github.com/nuxt/ui/tree/v4/src/runtime/components/PageHeader.vue」
-      ターゲット'_blank'
-  クラス'w—full'
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - headline
+  - links
+hide:
+  - class
+props:
+  title: 'PageHeader'
+  description: 'A responsive page header with title, description and actions.'
+  headline: 'Components'
+  links:
+    - label: 'GitHub'
+      icon: i-simple-icons-github
+      to: 'https://github.com/nuxt/ui/tree/v4/src/runtime/components/PageHeader.vue'
+      target: '_blank'
+  class: 'w-full'
 ---
 ::
 
 ## 例
 
 ::note
-これらの例では[ Nuxt Content ](https://content.nuxt.com)を使用していますが、コンポーネントは任意のコンテンツ管理システムと統合することができます。
+これらの例は[Nuxt Content](https://content.nuxt.com)を使用していますが、コンポーネントは任意のコンテンツ管理システムと統合できます。
 ::
 
 ### ページ内
@@ -158,20 +158,20 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 </template>
 ```
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

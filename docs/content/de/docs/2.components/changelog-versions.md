@@ -8,9 +8,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChangelogVersions.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Die ChangelogVersions Komponente bietet ein flexibles Layout , um eine Liste von[ChangelogVersion](/docs/components/changelog-version)Komponenten entweder mit dem Standard-Slot oder dem`versions`prop.
+Die ChangelogVersions Komponente bietet ein flexibles Layout, um eine Liste von [ChangelogVersion](/docs/components/changelog-version) Komponenten entweder mit dem Standard-Slot oder dem `versions` prop. anzuzeigen.
 
 ```vue {2,8}
 <template>
@@ -26,145 +26,145 @@ Die ChangelogVersions Komponente bietet ein flexibles Layout , um eine Liste von
 
 ### Versionen
 
-Verwenden Sie`versions`prop als Array von Objekten mit den Eigenschaften der Komponente[ChangelogVersion](/docs/components/changelog-version#props).
+Verwenden Sie die `versions`-Prop als Array von Objekten mit den Eigenschaften der Komponente [ChangelogVersion](/docs/components/changelog-version#props).
 
 ::component-code
 ---
-Einsturz : wahr
-Ignoriert :
-  @@ph023@Versionen
-Außen :
-  @@ph024@Versionen
-Externe Personen :
-  - ChangelogVersionProps [ Bearbeiten | Quelltext bearbeiten ]
-Hide :
-  @@ph026@@gmail.de
-Props :
-  Version :
-    - title : Nuxt 3.17 (Deutsche Ausgabe)
-      Beschreibung : Nuxt 3.17 ist da - mit einer umfassenden Überarbeitung der asynchronen Datenschicht , einer neuen integrierten Komponente , besseren Warnungen und Leistungsverbesserungen !
-      Image :https://nuxt.com/assets/blog/v3.17.png
-      Datum : 2025 - 04 - 27
-      zu : ' https://nuxt.com/blog/v3-17 '
-      Ziel : _ blank
-      ui . container : ' max-w - lg ' (auf Englisch)
-    - title : Nuxt 3.16 (Deutsche Übersetzung)
-      Beschreibung : ' Nuxt 3.16 ist da - vollgepackt mit Features und Leistungsverbesserungen ! '
-      Image :https://nuxt.com/assets/blog/v3.16.png
-      Datum : 2025 - 03 - 07
-      zu : ' https://nuxt.com/blog/v3-16 '
-      Ziel : _ blank
-      ui . container : ' max-w - lg ' (auf Englisch)
-    - title : Nuxt 3.15 (Deutsche Übersetzung)
-      Nuxt 3.15 ist da - mit Vite 6 , besserer HMR und schnellerer Performance !
-      Image :https://nuxt.com/assets/blog/v3.15.png
-      Datum : 2024 - 12 - 24
-      zu : ' https://nuxt.com/blog/v3-15 '
-      Ziel : _ blank
-      ui . container : ' max-w - lg ' (auf Englisch)
-  Klasse : " W-voll "
+collapse: true
+ignore:
+  - versions
+external:
+  - versions
+externalTypes:
+  - ChangelogVersionProps[]
+hide:
+  - class
+props:
+  versions:
+    - title: Nuxt 3.17
+      description: 'Nuxt 3.17 is out - bringing a major reworking of the async data layer, a new built-in component, better warnings, and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.17.png
+      date: 2025-04-27
+      to: 'https://nuxt.com/blog/v3-17'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.16
+      description: 'Nuxt 3.16 is out - packed with features and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.16.png
+      date: 2025-03-07
+      to: 'https://nuxt.com/blog/v3-16'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.15
+      description: 'Nuxt 3.15 is out - with Vite 6, better HMR and faster performance!'
+      image: https://nuxt.com/assets/blog/v3.15.png
+      date: 2024-12-24
+      to: 'https://nuxt.com/blog/v3-15'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+  class: 'w-full'
 ---
 ::
 
-### Anzeige
+### Indicator Anzeige
 
-Verwenden Sie die`indicator`prop , um die Indikatorleiste auf der linken Seite auszublenden . Standardmäßig auf`true`.
+Verwenden Sie die `indicator`-Stütze, um die Indikatorleiste auf der linken Seite auszublenden. Standardmäßig `true`.
 
 ::component-code
 ---
-Einsturz : wahr
-Ignoriert :
-  @@ph033@Versionen
-Außen :
-  @@ph034@versionen.de
-Externe Typen :
-  - ChangelogVersionProps [ Bearbeiten | Quelltext bearbeiten ]
-Hide :
-  @@@@@@36@36@36@36@36@36@36@36@36@36@36@36@36@36@36@36@36@36@36@36@36@@36@@36@36@@36@@36@@36@@36@@36@@36@@36@@36@@36@@36@@36@@@36@@@36@@@@36@@@@36@@@@@@@@@@@@@@@3336@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@33336@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Props :
-  Anzeige : false
-  Versionen :
-    - title : Nuxt 3.17 (Deutsche Übersetzung)
-      Beschreibung : : Nuxt 3.17 ist da - mit einer umfassenden Überarbeitung der asynchronen Datenschicht , einer neuen integrierten Komponente , besseren Warnungen und Leistungsverbesserungen !
-      Image :https://nuxt.com/assets/blog/v3.17.png
-      Datum : 2025 - 04 - 27
-      zu : ' https://nuxt.com/blog/v3-17 '
-      Ziel : _ blank
-      ui . container : ' max-w - lg ' (auf Englisch)
-    - title : Nuxt 3.16 (Deutsche Übersetzung)
-      Beschreibung : ' Nuxt 3.16 ist da - vollgepackt mit Features und Leistungsverbesserungen ! '
-      Image :https://nuxt.com/assets/blog/v3.16.png
-      Datum : 2025 - 03 - 07
-      zu : ' https://nuxt.com/blog/v3-16 '
-      Ziel : _ blank
-      ui . container : ' max-w - lg ' (auf Englisch)
-    - title : Nuxt 3.15 (Deutsche Übersetzung)
-      Nuxt 3.15 ist da - mit Vite 6 , besserer HMR und schnellerer Performance !
-      Image :https://nuxt.com/assets/blog/v3.15.png
-      Datum : 2024 - 12 - 24
-      zu : ' https://nuxt.com/blog/v3-15 '
-      Ziel : _ blank
-      ui . container : ' max-w - lg ' (auf Englisch)
-  Klasse : " W-voll "
+collapse: true
+ignore:
+  - versions
+external:
+  - versions
+externalTypes:
+  - ChangelogVersionProps[]
+hide:
+  - class
+props:
+  indicator: false
+  versions:
+    - title: Nuxt 3.17
+      description: 'Nuxt 3.17 is out - bringing a major reworking of the async data layer, a new built-in component, better warnings, and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.17.png
+      date: 2025-04-27
+      to: 'https://nuxt.com/blog/v3-17'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.16
+      description: 'Nuxt 3.16 is out - packed with features and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.16.png
+      date: 2025-03-07
+      to: 'https://nuxt.com/blog/v3-16'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.15
+      description: 'Nuxt 3.15 is out - with Vite 6, better HMR and faster performance!'
+      image: https://nuxt.com/assets/blog/v3.15.png
+      date: 2024-12-24
+      to: 'https://nuxt.com/blog/v3-15'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+  class: 'w-full'
 ---
 ::
 
-### Indikatorbewegung
+### Indicator Bewegung
 
-Verwenden Sie die`indicator-motion`prop , um den Bewegungseffekt auf der Indikatorleiste anzupassen oder auszublenden . Standardmäßig auf`true`mit`{ damping: 30, restDelta: 0.001 }`[spring transition options](https://motion.dev/docs/vue-transitions#spring).
+Verwenden Sie die `indicator-motion`-Stütze, um den Bewegungseffekt auf der Indikatorleiste anzupassen oder auszublenden. Standardmäßig auf `true` mit `{ damping: 30, restDelta: 0.001 }` [spring-Übergangsoptionen ](https://motion.dev/docs/vue-transitions#spring).
 
 ::component-code
 ---
-Einsturz : wahr
-Ignoriert :
-  @@ph048@Versionen
-Außen :
-  @@ph049@Versionen
-Externe Personen :
-  - ChangelogVersionProps [ Bearbeiten | Quelltext bearbeiten ]
-Hide :
-  @@@@@@51@000@051@051@051@051@000@0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Items :
-  Indikationsentwicklung :
-    @@ph052@@true
-    @@ph053@@falsch
-Props :
-  Anzeige : true
-  Version :
-    - title : Nuxt 3.17 (Deutsche Übersetzung)
-      Beschreibung : : Nuxt 3.17 ist da - mit einer umfassenden Überarbeitung der asynchronen Datenschicht , einer neuen integrierten Komponente , besseren Warnungen und Leistungsverbesserungen !
-      Image :https://nuxt.com/assets/blog/v3.17.png
-      Datum : 2025 - 04 - 27
-      zu : ' https://nuxt.com/blog/v3-17 '
-      Ziel : _ blank
-      ui . container : ' max-w - lg ' (auf Englisch)
-    - title : Nuxt 3.16 (Deutsche Übersetzung)
-      Beschreibung : ' Nuxt 3.16 ist da - vollgepackt mit Features und Leistungsverbesserungen ! '
-      Image :https://nuxt.com/assets/blog/v3.16.png
-      Datum : 2025 - 03 - 07
-      zu : ' https://nuxt.com/blog/v3-16 '
-      Ziel : _ blank
-      ui . container : ' max-w - lg ' (auf Englisch)
-    - title : Nuxt 3.15 (Deutsche Übersetzung)
-      Nuxt 3.15 ist da - mit Vite 6 , besserer HMR und schnellerer Performance !
-      Image :https://nuxt.com/assets/blog/v3.15.png
-      Datum : 2024 - 12 - 24
-      zu : ' https://nuxt.com/blog/v3-15 '
-      Ziel : _ blank
-      ui . container : ' max-w - lg ' (auf Englisch)
-  Klasse : " W-voll "
+collapse: true
+ignore:
+  - versions
+external:
+  - versions
+externalTypes:
+  - ChangelogVersionProps[]
+hide:
+  - class
+items:
+  indicatorMotion:
+    - true
+    - false
+props:
+  indicatorMotion: true
+  versions:
+    - title: Nuxt 3.17
+      description: 'Nuxt 3.17 is out - bringing a major reworking of the async data layer, a new built-in component, better warnings, and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.17.png
+      date: 2025-04-27
+      to: 'https://nuxt.com/blog/v3-17'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.16
+      description: 'Nuxt 3.16 is out - packed with features and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.16.png
+      date: 2025-03-07
+      to: 'https://nuxt.com/blog/v3-16'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.15
+      description: 'Nuxt 3.15 is out - with Vite 6, better HMR and faster performance!'
+      image: https://nuxt.com/assets/blog/v3.15.png
+      date: 2024-12-24
+      to: 'https://nuxt.com/blog/v3-15'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+  class: 'w-full'
 ---
 ::
 
-## Beispiele
+## Examples [Bearbeiten]
 
 ::note
-Während diese Beispiele[Nuxt Content](https://content.nuxt.com)verwenden , können die Komponenten in jedes Content-Management - System integriert werden .
+Während diese Beispiele [Nuxt Content](https://content.nuxt.com) verwenden, können die Komponenten in jedes Content Management System integriert werden.
 ::
 
-### Innerhalb einer Seite
+### innerhalb einer Seite
 
-Verwenden Sie die Komponente ChangelogVersions in einer Seite , um eine Changelog-Seite zu erstellen :
+Verwenden Sie die ChangelogVersions Komponente in einer Seite, um eine Changelog-Seite zu erstellen:
 
 ```vue [pages/changelog.vue]{10-17}
 <script setup lang="ts">
@@ -190,31 +190,31 @@ const { data: versions } = await useAsyncData('versions', () => queryCollection(
 ```
 
 ::note
-In diesem Beispiel werden die`versions`mit`queryCollection`aus dem`@nuxt/content`Modul geholt .
+In diesem Beispiel werden die `versions` mit `queryCollection` aus dem `@nuxt/content`-Modul abgerufen.
 ::
 
 ::tip
-Die`to`prop wird hier überschrieben , da`@nuxt/content`die@@@- Eigenschaft verwendet .
+Die `to`-Prop wird hier überschrieben, da `@nuxt/content` die Eigenschaft `path` verwendet.
 ::
 
-### Mit klebrigen Indikator
+### Mit klebriger Anzeige
 
-Sie können die`ui`prop und die verschiedenen Slots verwenden , um die Indikatoren klebrig zu machen :
+Sie können die `ui` prop und die verschiedenen Steckplätze verwenden, um die Indikatoren klebrig zu machen:
 
 ::component-example
 ---
-Schöner : wahr
-Einsturz : wahr
-Name : ' changelog-versions - sticky-example ' (englisch)
-Klasse : ' P - 8 '
-Props:
-  Klasse: "W-voll"
+prettier: true
+collapse: true
+name: 'changelog-versions-sticky-example'
+class: 'p-8'
+props:
+  class: 'w-full'
 ---
 ::
 
 ### Mit Scrollcontainer: badge{label="4.4+" class="align-text-top"}
 
-Übergeben Sie ein Objekt an `indicator` prop, um den Scrollcontainer zu konfigurieren. Standardmäßig verfolgt der Indikator den Fenster-/Seitenlauf (https://motion.dev/docs/vue-use-scroll#page-scroll).
+Übergeben Sie ein Objekt an die `indicator`-prop, um den Scroll-Container zu konfigurieren. Standardmäßig verfolgt der Indikator den Fenster-/Seiten-Scroll (https://motion.dev/docs/vue-use-scroll#page-scroll)
 
 ```vue
 <script setup lang="ts">
@@ -229,21 +229,21 @@ const scrollContainer = ref<HTMLElement>()
 ```
 
 ::warning
-Wenn Sie ein benutzerdefiniertes `container` verwenden, stellen Sie sicher, dass das Container-Element vor `UChangelogVersions` eingehängt ist.
+Wenn Sie ein benutzerdefiniertes `container` verwenden, stellen Sie sicher, dass das Container-Element vor `UChangelogVersions` eingehängt wird.
 ::
 
-@@109@bmg109
+## API Bearbeiten
 
-### Props
+### Props Bearbeiten
 
-Komponenten Props
+:component-props
 
-### Slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
 ::tip
-Sie können alle Steckplätze der [`ChangelogVersion`](/docs/components/changelog-version#slots) Komponente innerhalb von ChangelogVersions verwenden, sie werden automatisch weitergeleitet, so dass Sie individuelle Versionen anpassen können, wenn Sie die `versions` prop.
+Sie können alle Steckplätze der [`ChangelogVersion`](/docs/components/changelog-version#slots)-Komponente in ChangelogVersions verwenden, sie werden automatisch weitergeleitet, sodass Sie bei Verwendung der `versions`-Prop einzelne Versionen anpassen können.
 
 ```vue{3-5}
 <template>
@@ -256,10 +256,10 @@ Sie können alle Steckplätze der [`ChangelogVersion`](/docs/components/changelo
 ```
 ::
 
-## Themes
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph128@@changelog (auf Englisch)
+## Changelog Bearbeiten
 
-Das Component-Changelog
+:component-changelog

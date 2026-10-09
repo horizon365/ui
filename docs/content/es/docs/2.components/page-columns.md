@@ -1,5 +1,5 @@
 ---
-title: PageColumnas
+title: Páginas Columnas
 description: 'Un sistema de diseño multi-columna sensible para organizar el contenido de lado a lado.'
 category: page
 links:
@@ -8,32 +8,32 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageColumns.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-Funciona bien con [PageCard](/docs/components/page-card) componentes o cualquier otro elemento, la adaptación de una sola columna en el móvil a múltiples columnas en pantallas más grandes.
+Funciona bien con componentes [PageCard](/docs/components/page-card) o cualquier otro elemento, adaptándose de una sola columna en dispositivos móviles a múltiples columnas en pantallas más grandes.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'Page-Columnas-Ejemplo'
-Categoría: P-8
+collapse: true
+name: 'page-columns-example'
+class: 'p-8'
 ---
 ::
 
-@@pH005
+## API (Edición española)
 
-@@pH006@@Propuestas
+### Accesorios
 
-Componentes Props
+:component-props
 
-@@007@@espanol
+### Slots (Edición española)
 
-Componentes de slots
+:component-slots
 
-@0008@Proyecto
+## Theme
 
-Componente Tema
+:component-theme
 
-@000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

@@ -9,9 +9,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CardGroup.vue
 ---
 
-## 使用情况
+## 用法
 
-用`card-group`组件包裹`card`组件，以网格布局将它们组合在一起。
+用`card-group`组件包装`card`组件，将它们组合在网格布局中。
 
 ::code-preview
 
@@ -19,47 +19,47 @@ links:
 
 ::card
 ---
-标题：仪表板
-图标：i-simple-图标-github
-发送至：www.example.com
-目标：空白（_B）
+title: Dashboard
+icon: i-simple-icons-github
+to: https://github.com/nuxt-ui-templates/dashboard
+target: _blank
 ---
 具有多列布局的仪表板。
 ::
 
 ::card
 ---
-标题：SaaS
-图标：i-simple-图标-github
-发送至：www.example.com
-目标：空白（_B）
+title: SaaS
+icon: i-simple-icons-github
+to: https://github.com/nuxt-ui-templates/saas
+target: _blank
 ---
 一个模板与着陆，定价，文档和博客.
 ::
 
 ::card
 ---
-标题：
-图标：i-simple-图标-github
-发送至：www.example.com
-目标：空白（_B）
+title: Docs
+icon: i-simple-icons-github
+to: https://github.com/nuxt-ui-templates/docs
+target: _blank
 ---
-一份带有`@nuxt/content`的文档。
+一个用`@nuxt/content`编写的文档。
 ::
 
 ::card
 ---
-标题：登陆
-图标：i-simple-图标-github
-发送至：www.example.com
-目标：空白（_B）
+title: Landing
+icon: i-simple-icons-github
+to: https://github.com/nuxt-ui-templates/landing
+target: _blank
 ---
 您可以使用的着陆页作为起点。
 ::
 
 :::
 
-#代码
+#code
 
 ```mdc
 ::card-group
@@ -113,16 +113,16 @@ A landing page you can use as starting point.
 
 ### Props
 
-：组件-道具{prose}
+:component-props{prose}
 
 ### Slots
 
-：组件插槽{prose}
+:component-slots{prose}
 
 ## Theme
 
-：组件主题{prose}
+:component-theme{prose}
 
-## 变更日志
+## Changelog
 
-：component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

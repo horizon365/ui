@@ -10,71 +10,71 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Banner.vue
 ---
 
-## 使用情况
+## 用法
 
-标题：
+### 标题
 
-使用`title`道具在横幅上显示标题。
+使用`title`道具在Banner上显示标题。
 
 ::component-code
 ---
-更漂亮：真的
-类：“！p-0”
-道具：
-  title：“这是一条带有重要信息的横幅。”
+prettier: true
+class: '!p-0'
+props:
+  title: 'This is a banner with an important message.'
 ---
 ::
 
-### 图标
+### Icon
 
-使用`icon`道具在横幅上显示图标。
+使用`icon`道具在Banner上显示图标。
 
 ::component-code
 ---
-更漂亮：真的
-类：“！p-0”
-忽略：
-  标题：
-道具：
-  图标：i-lucide信息
-  title：'这是一个带有图标的横幅。'
+prettier: true
+class: '!p-0'
+ignore:
+  - title
+props:
+  icon: i-lucide-info
+  title: 'This is a banner with an icon.'
 ---
 ::
 
-彩色的
+### Color
 
-使用`color`道具更改横幅的颜色。
+使用`color`道具更改Banner的颜色。
 
 ::component-code
 ---
-更漂亮：真的
-类：“！p-0”
-忽略：
-- 图标
-  标题
-道具：
-  颜色：“中性”
-  图标：i-lucide-信息
-  title：'这是一个带有图标的横幅。'
+prettier: true
+class: '!p-0'
+ignore:
+  - icon
+  - title
+props:
+  color: 'neutral'
+  icon: i-lucide-info
+  title: 'This is a banner with an icon.'
 ---
 ::
 
 ### 关闭
 
-使用`close`道具来显示[按钮](/docs/components/button)以关闭横幅。预设值为`false`。
+使用`close`属性显示[Button](/docs/components/button)，以将Banner. banner关闭为`false`。
 
 ::tip
-按一下关闭按钮时，将会发出`close`事件。
+当单击关闭按钮时，将发出`close`事件。
 ::
 
 ::component-example
 ---
-iframe：
-  样式：'高度：48 px;'
-overflowHidden：真的
-名称：'banner-example'
+iframe:
+  style: 'height: 48px;'
+overflowHidden: true
+name: 'banner-example'
 ---
-#代码
+#code
 
 ```vue
 <template>
@@ -85,28 +85,28 @@ overflowHidden：真的
 ::
 
 ::note
-关闭后，`banner-${id}`将存储在本地存储中，以防止再次显示。：br对于上面的示例，`banner-example`将存储在本地存储中。
+关闭时，`banner-${id}`将存储在本地存储中，以防止再次显示。：br对于上面的示例，`banner-example`将存储在本地存储中。
 ::
 
 ::caution
-若要在页面重新载入时保持已解除状态，您必须指定`id`属性。如果没有明确的`id`，则横幅只会在目前的工作阶段中隐藏，并会在页面重新载入时重新出现。
+要在页面重新加载时保持解除状态，必须指定`id`属性。如果没有显式的`id`，横幅将仅在当前会话中隐藏，并在页面重新加载时重新显示。
 ::
 
 ### 关闭图标
 
-使用`close-icon`道具来自订关闭按钮[Icon](/docs/components/icon)。预设值为`i-lucide-x`。
+使用`close-icon`道具自定义关闭按钮[Icon](/docs/components/icon).`i-lucide-x`。
 
 ::component-example
 ---
-iframe：
-  样式：'高度：48 px;'
-overflowHidden：真的
-名称：'banner-example'
-道具：
-  title：'这是一个带有自定义关闭图标的可关闭横幅。'
-  关闭图标：'i-透明-x-圆圈'
+iframe:
+  style: 'height: 48px;'
+overflowHidden: true
+name: 'banner-example'
+props:
+  title: 'This is a closable banner with a custom close icon.'
+  closeIcon: 'i-lucide-x-circle'
 ---
-#代码
+#code
 
 ```vue
 <template>
@@ -121,64 +121,64 @@ overflowHidden：真的
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 您可以在`ui.icons.close`键下的`app.config.ts`中全局自定义此图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`ui.icons.close`键下的`vite.config.ts`中全局自定义此图标。
+你可以在你的`vite.config.ts`中的`ui.icons.close`键下全局自定义这个图标。
 :::
 ::
 
-操作
+### Actions
 
-使用`actions`道具将一些[按钮](/docs/components/button)动作添加到横幅中。
+使用`actions`属性向Banner添加一些[Button](/docs/components/button)操作。
 
 ::component-code
 ---
-更漂亮：真的
-类：“！p-0”
-忽略：
-  标题：
-  操作
-- 变体
-外部：
-  操作
-外部类型：
-  - 按钮属性[]
-道具：
-  title：'这是一个包含操作的横幅。'
-  动作：
-    标签：操作1
-      变体：轮廓
-    标签：操作2
-      拖尾图标：i-透明箭头-右
+prettier: true
+class: '!p-0'
+ignore:
+  - title
+  - actions
+  - variant
+external:
+  - actions
+externalTypes:
+  - ButtonProps[]
+props:
+  title: 'This is a banner with actions.'
+  actions:
+    - label: Action 1
+      variant: outline
+    - label: Action 2
+      trailingIcon: i-lucide-arrow-right
 ---
 ::
 
 ::note
-动作按钮的预设值为`color="neutral"`和`size="xs"`。您可以将这些值直接传递给每个动作按钮，以自订这些值。
+操作按钮默认为`color="neutral"`和`size="xs"`。您可以通过将这些值直接传递给每个操作按钮来自定义这些值。
 ::
 
-链接到
+### Link
 
-您可以从[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)元件传递任何属性，例如`to`、`target`、`rel`等。
+您可以从[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)组件传递任何属性，如`to`、`target`、`rel`等。
 
 ::component-code
 ---
-更漂亮：真的
-类：“！p-0”
-overflowHidden：真的
-忽略：
-  标题：
-  目标位置
-道具：
-  至：'https：//nuxtlabs.com/'
-  目的：'_blank'
-  标题：“NuxtLabs加入Vercel！”
-  color：'primary'
+prettier: true
+class: '!p-0'
+overflowHidden: true
+ignore:
+  - title
+  - target
+props:
+  to: 'https://nuxtlabs.com/'
+  target: '_blank'
+  title: 'NuxtLabs is joining Vercel!'
+  color: 'primary'
 ---
 ::
 
@@ -188,7 +188,7 @@ overflowHidden：真的
 
 ## 示例
 
-### `app.vue`内
+### 内部`app.vue`
 
 在`app.vue`或布局中使用Banner组件：
 
@@ -214,20 +214,20 @@ overflowHidden：真的
 
 ### Props
 
-：组件-支柱
+:component-props
 
 ### Slots
 
-：组件插槽
+:component-slots
 
 ### Emits
 
-：组件发射
+:component-emits
 
 ## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

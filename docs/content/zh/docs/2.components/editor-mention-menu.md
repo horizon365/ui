@@ -8,24 +8,24 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/EditorMentionMenu.vue
 ---
 
-## 使用情况
+## 用法
 
-在编辑器中键入触发器字符（默认为`@`）时，EditorMentionMenu组件会显示一个用户建议菜单，并使用`@tiptap/extension-mention`包插入选定的提及。在呈现插入的提及时，触发器字符还用作前缀。
+EditorMentionMenu组件在编辑器中键入触发字符（默认为`@`）时显示用户建议菜单，并使用`@tiptap/extension-mention`包插入选定的提及。在呈现插入的提及时，触发字符也用作前缀。
 
 ::note
-它使用建立在TipTap的[Sugestion](https://tiptap.dev/docs/editor/api/utilities/suggestion)公用程式之上的`useEditorMenu`composable，在您输入时筛选项目，并支援键盘浏览（方向键、Enter选取、Esc关闭）。
+它使用构建在TipTap的[Suggestion](https://tiptap.dev/docs/editor/api/utilities/suggestion)实用程序之上的`useEditorMenu`组合工具来过滤输入项，并支持键盘导航（箭头键，回车选择，转义关闭）。
 ::
 
 ::caution
-它必须在[Editor](/docs/components/editor)组件的默认槽中使用，才能访问编辑器实例。
+它必须在[Editor](/docs/components/editor)组件的默认插槽中使用才能访问编辑器实例。
 ::
 
 ::component-example
 ---
-升高：true
-收阖：true
-名称：'编辑器-提及-菜单-示例'
-类别：'p-8'
+elevated: true
+collapse: true
+name: 'editor-mention-menu-example'
+class: 'p-8'
 ---
 ::
 
@@ -33,32 +33,32 @@ links:
 在TipTap文档中了解有关“提及”扩展的更多信息。
 ::
 
-项目
+### 项目
 
-使用`items`属性作为具有下列属性的对象数组：
+使用`items` prop作为具有以下属性的对象数组：
 
-我的天啊！
-我的天啊！
-020、021、022、
-我的天啊！
-我的天啊！
+- `label: string`{lang="ts-type"}
+- `avatar?: AvatarProps`{lang="ts-type"}
+- `icon?: string`{lang="ts-type"}
+- `description?: string`{lang="ts-type"}
+- `disabled?: boolean`{lang="ts-type"}
 
 ::component-example
 ---
-升高：true
-收阖：true
-名称：'编辑器-提及-菜单-项目-示例'
-类别：'p-8'
+elevated: true
+collapse: true
+name: 'editor-mention-menu-items-example'
+class: 'p-8'
 ---
 ::
 
 ::note
-您也可以将数组的数组传递给`items`属性，以建立个别的项目群组。
+您还可以将数组的数组传递给`items`属性，以创建分隔的项组。
 ::
 
-### 字符
+### Char
 
-使用`char`属性更改触发器字符。默认值为`@`{lang="ts-type"}。在呈现插入的提及时，触发器字符也用作前缀（例如，`#channel`而不是`@channel`）。
+使用`char` prop将触发字符. `@`{lang="ts-type"}更改为`@`{lang="ts-type"}。在渲染插入的提及时，触发字符也用作前缀（例如，`#channel`而不是`@channel`）。
 
 ```vue
 <template>
@@ -69,7 +69,7 @@ links:
 ```
 
 ::note
-您可以在同一个编辑器上使用多个`EditorMentionMenu`组件，并使用不同的`char`和`plugin-key`属性来支持不同的提及类型。
+您可以在同一个编辑器上使用多个`EditorMentionMenu`组件，并使用不同的`char`和`plugin-key`道具来支持不同的提及类型。
 
 ```vue
 <template>
@@ -81,11 +81,11 @@ links:
 ```
 ::
 
-建议：使用徽章
+### 建议：badge{label="4.7+" class="align-text-top"}
 
 使用`suggestion`道具自定义TipTap的[建议匹配行为](https://tiptap.dev/docs/editor/api/utilities/suggestion#settings)。
 
-当触发器字符应直接在其他字符之后打开而不需要默认的空白前缀时，这很有用。
+当触发字符应直接在其他字符之后打开而不需要默认的空白前缀时，这很有用。
 
 ```vue
 <template>
@@ -104,7 +104,7 @@ links:
 
 ### 选项
 
-使用`options`属性，使用[浮动UI选项来自订定位行为](https://floating-ui.com/docs/computeposition#options)。
+使用`options` prop自定义定位行为，使用[浮动UI选项](https://floating-ui.com/docs/computeposition#options)。
 
 ```vue
 <template>
@@ -121,35 +121,35 @@ links:
 </template>
 ```
 
-示例
+## 示例
 
-### 使用忽略筛选器：徽标{label="4.4+" class="align-text-top"}
+### 带忽略过滤器：badge{label="4.4+" class="align-text-top"}
 
-您可以将`ignore-filter`属性设置为`true`以禁用内部搜索并使用您自己的搜索逻辑。使用`v-model:search-term`访问当前搜索词并从API获取项目。
+您可以将`ignore-filter`属性设置为`true`以禁用内部搜索并使用自己的搜索逻辑。使用`v-model:search-term`访问当前搜索项并从API获取项目。
 
 ::component-example
 ---
-升高：true
-收阖：true
-名称：'编辑器-提及-菜单-忽略-过滤器-示例'
-类别：'p-8'
+elevated: true
+collapse: true
+name: 'editor-mention-menu-ignore-filter-example'
+class: 'p-8'
 ---
 ::
 
 ::note
-此示例使用[`refDebounced`](https://vueuse.org/shared/refDebounced/)来消除API调用的抖动。
+此示例使用[`refDebounced`](https://vueuse.org/shared/refDebounced/)对API调用进行反跳。
 ::
 
-## 活性成分
+## API
 
-### 道具
+### Props
 
-：组件-支柱
+:component-props
 
 ## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

@@ -1,20 +1,21 @@
 ---
-title: ChatPromptSubmit
-description: '用于提交聊天提示的按钮，可自动处理状态。'
+title: 联系我们
+description: '一个按钮，用于提交聊天提示和自动状态处理。'
 category: chat
 links:
-  - label: Button
+  - label: 按钮
     to: /docs/components/button
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatPromptSubmit.vue
 ---
+
 ## 用法
 
-ChatPromptSubmit 组件用于在 [ChatPrompt](/docs/components/chat-prompt) 组件内部提交提示词。它会自动处理不同的 `status` 值以控制聊天。
+在[ChatNot](/docs/components/chat-prompt)组件中使用ChatNotSubmit组件来提交提示。它自动处理不同的`status`值以控制聊天。
 
-它扩展了 [Button](/docs/components/button) 组件，因此你可以传入任意属性，例如 `color`、`variant`、`size` 等。
+它扩展了[Button](/docs/components/button)组件，因此您可以传递任何属性，如`color`，`variant`，`size`等。
 
 ::code-preview
 
@@ -32,12 +33,12 @@ ChatPromptSubmit 组件用于在 [ChatPrompt](/docs/components/chat-prompt) 组�
 ::
 
 ::note
-你也可以将其用在 [`ChatPrompt`](/docs/components/chat-prompt) 组件的 `footer` 插槽中。
+也可以在[`ChatPrompt`](/docs/components/chat-prompt)组件的`footer`插槽中使用。
 ::
 
-### 就绪
+### Ready
 
-当其状态为 `ready`{lang="ts-type"} 时，使用 `color`、`variant` 和 `icon` 属性来自定义 Button。默认值为：
+当其状态为`ready`{lang="ts-type"}时，使用`color`、`variant`和`icon`道具来自定义Button。
 
 - `color="primary"`{lang="ts-type"}
 - `variant="solid"`{lang="ts-type"}
@@ -70,25 +71,25 @@ props:
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-你可以在 `app.config.ts` 中的 `ui.icons.arrowUp` 键下全局自定义此图标。
+你可以在你的`app.config.ts`中的`ui.icons.arrowUp`键下全局自定义这个图标。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-你可以在 `vite.config.ts` 中的 `ui.icons.arrowUp` 键下全局自定义此图标。
+你可以在你的`vite.config.ts`中的`ui.icons.arrowUp`键下全局自定义这个图标。
 :::
 ::
 
 ### 已提交
 
-当其状态为 `submitted`{lang="ts-type"} 时，使用 `submitted-color`、`submitted-variant` 和 `submitted-icon` 属性来自定义 Button。默认值为：
+当其状态为`submitted`{lang="ts-type"}时，使用`submitted-color`、`submitted-variant`和`submitted-icon`道具来自定义Button。
 
 - `submittedColor="neutral"`{lang="ts-type"}
 - `submittedVariant="subtle"`{lang="ts-type"}
 - `submittedIcon="i-lucide-square"`{lang="ts-type"}
 
 ::note
-当用户点击 Button 时，会发出 `stop` 事件。
+`stop`事件在用户单击Button时发出。
 ::
 
 ::component-code
@@ -121,25 +122,25 @@ props:
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-你可以在 `app.config.ts` 中的 `ui.icons.stop` 键下全局自定义此图标。
+你可以在你的`app.config.ts`中的`ui.icons.stop`键下全局自定义这个图标。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-你可以在 `vite.config.ts` 中的 `ui.icons.stop` 键下全局自定义此图标。
+你可以在你的`vite.config.ts`中的`ui.icons.stop`键下全局自定义这个图标。
 :::
 ::
 
-### 流式传输
+### 流媒体
 
-当其状态为 `streaming`{lang="ts-type"} 时，使用 `streaming-color`、`streaming-variant` 和 `streaming-icon` 属性来自定义 Button。默认值为：
+当其状态为`streaming`{lang="ts-type"}时，使用`streaming-color`、`streaming-variant`和`streaming-icon`道具自定义Button. Button为：
 
 - `streamingColor="neutral"`{lang="ts-type"}
 - `streamingVariant="subtle"`{lang="ts-type"}
 - `streamingIcon="i-lucide-square"`{lang="ts-type"}
 
 ::note
-当用户点击 Button 时，会发出 `stop` 事件。
+`stop`事件在用户单击Button时发出。
 ::
 
 ::component-code
@@ -172,25 +173,25 @@ props:
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-你可以在 `app.config.ts` 中的 `ui.icons.stop` 键下全局自定义此图标。
+你可以在你的`ui.icons.stop`键下的`app.config.ts`中全局自定义这个图标。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-你可以在 `vite.config.ts` 中的 `ui.icons.stop` 键下全局自定义此图标。
+你可以在你的`vite.config.ts`中的`ui.icons.stop`键下全局自定义这个图标。
 :::
 ::
 
-### 错误
+### Error
 
-当其状态为 `error`{lang="ts-type"} 时，使用 `error-color`、`error-variant` 和 `error-icon` 属性来自定义 Button。默认值为：
+当其状态为`error`{lang="ts-type"}时，使用`error-color`、`error-variant`和`error-icon`道具来自定义Button。
 
 - `errorColor="error"`{lang="ts-type"}
 - `errorVariant="soft"`{lang="ts-type"}
 - `errorIcon="i-lucide-rotate-ccw"`{lang="ts-type"}
 
 ::note
-当用户点击 Button 时，会发出 `reload` 事件。
+当用户单击Button时，将触发`reload`事件。
 ::
 
 ::component-code
@@ -223,43 +224,43 @@ props:
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-你可以在 `app.config.ts` 中的 `ui.icons.reload` 键下全局自定义此图标。
+你可以在你的`app.config.ts`下的`ui.icons.reload`键全局自定义这个图标。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-你可以在 `vite.config.ts` 中的 `ui.icons.reload` 键下全局自定义此图标。
+你可以在你的`vite.config.ts`中的`ui.icons.reload`键下全局自定义这个图标。
 :::
 ::
 
 ## 示例
 
 ::tip{to="/docs/components/chat"}
-查看 **Chat** 概览页面，了解安装说明、服务器设置和使用示例。
+查看**Chat**概述页面以获取安装说明、服务器设置和使用示例。
 ::
 
 ## API
 
-### 属性
+### Props
 
 :component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-此组件还支持所有原生 `<button>` HTML 属性。
+此组件还支持所有原生`<button>` HTML属性。
 ::
 
-### 插槽
+### Slots
 
 :component-slots
 
-### 事件
+### Emits
 
 :component-emits
 
-## 主题
+## Theme
 
 :component-theme
 
-## 更新日志
+## Changelog
 
 :component-changelog

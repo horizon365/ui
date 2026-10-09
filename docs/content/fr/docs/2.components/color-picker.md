@@ -12,18 +12,18 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ColorPicker.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
 Utilisez la directive `v-model` pour contrôler la valeur du ColorPicker.
 
 ::component-code
 ---
-Ignorer:
-  - modèleValeur
-Extérieur:
-  - modèleValeur
-Props:
-  Modèle:'#00C16A'
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: '#00C16A'
 ---
 ::
 
@@ -31,145 +31,145 @@ Utilisez la prop `default-value` pour définir la valeur initiale lorsque vous n
 
 ::component-code
 ---
-ignorer:
-  @@@ph005@@defaultValue
-Props:
-  valeur: '#00BCD4'
+ignore:
+  - defaultValue
+props:
+  defaultValue: '#00BCD4'
 ---
 ::
 
-### RGB au format RGB
+Format ### RGB
 
 Utilisez la prop `format` pour définir la valeur `rgb` du ColorPicker.
 
 ::component-code
 ---
-Ignorer:
-  - modèleValeur
-  @@ph010@format
-Extérieure:
-  - modèleValeur
-Props:
-  Format: rgb
-  valeur: 'rgb (0, 193, 106)'
+ignore:
+  - modelValue
+  - format
+external:
+  - modelValue
+props:
+  format: rgb
+  modelValue: 'rgb(0, 193, 106)'
 ---
 ::
 
-### HSL Format d'émission
+Format ### HSL
 
 Utilisez la prop `format` pour définir la valeur `hsl` du ColorPicker.
 
 ::component-code
 ---
-Ignorer:
-  - modèleValeur
-  @@ph016@format
-Extérieure:
-  - modèleValeur
-Props:
-  Format: HSL
-  modelValue: 'hsl (153, 100%, 37.8%)'
+ignore:
+  - modelValue
+  - format
+external:
+  - modelValue
+props:
+  format: hsl
+  modelValue: 'hsl(153, 100%, 37.8%)'
 ---
 ::
 
-### CMYK Format d'émission
+Format ### CMYK
 
 Utilisez la prop `format` pour définir la valeur `cmyk` du ColorPicker.
 
 ::component-code
 ---
-Ignorer:
-  - modèleValeur
-  @@ph022@format
-Extérieure:
-  - modelValeur
-Props:
-  Format: Cmyk
-  modelValue: 'cmyk (100%, 0%, 45.08%, 24.31%)'
+ignore:
+  - modelValue
+  - format
+external:
+  - modelValue
+props:
+  format: cmyk
+  modelValue: 'cmyk(100%, 0%, 45.08%, 24.31%)'
 ---
 ::
 
-### CIELab Format d'accueil
+Format ### CIELab
 
 Utilisez la prop `format` pour définir la valeur `lab` du ColorPicker.
 
 ::component-code
 ---
-Ignorer:
-  - modelValeur
-  @@28@format
-Extérieur:
-  - modèleValeur
-Props:
-  Format: laboratoire
-  modelValue: 'laboratoire (68.88%-60.41% 32. 55%)'
+ignore:
+  - modelValue
+  - format
+external:
+  - modelValue
+props:
+  format: lab
+  modelValue: 'lab(68.88% -60.41% 32.55%)'
 ---
 ::
 
-@@ph030@throttle
+### Throttle électrique
 
-Utilisez le prop `throttle` pour régler la valeur de l'accélérateur du ColorPicker.
+Utilisez le prop `throttle` pour définir la valeur de l'accélérateur du ColorPicker.
 
 ::component-code
 ---
-ignorer:
-  - modèleValeur
-Extérieur:
-  - modelValeur
-Props:
-  Téléchargement: 100
-  Modèle:'#00C16A'
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  throttle: 100
+  modelValue: '#00C16A'
 ---
 ::
 
-@@ph034@série
+### taille
 
-Utilisez la prop `size` pour définir la taille du ColorPicker.
+Utilisez le prop `size` pour définir la taille du ColorPicker.
 
 ::component-code
 ---
-Props:
-  Taille: XL
+props:
+  size: xl
 ---
 ::
 
-### désactivé
+### Désactivé
 
-Utilisez la prop `disabled` pour désactiver le ColorPicker.
+Utilisez le prop `disabled` pour désactiver le ColorPicker.
 
 ::component-code
 ---
-Props:
-  handicapés: vrai
+props:
+  disabled: true
 ---
 ::
 
-@@ph038@exemples
+## exemples
 
-### En tant que choix de couleur
+### As un sélecteur de couleur
 
-Utilisez un [Button](/docs/components/button) et un [Popover](/docs/components/popover) pour créer un sélecteur de couleur.
+Utilisez un composant [Button](/docs/components/button) et un composant [Popover](/docs/components/popover) pour créer un sélecteur de couleur.
 
 ::component-example
 ---
-nom: 'color-picker-chooser-exemple'
+name: 'color-picker-chooser-example'
 ---
 ::
 
-@@ph048@@api
+## API
 
-@@ph049@@props
+### Props équipements
 
-Composants-props
+:component-props
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Emis
 
-Composants émetteurs
+:component-emits
 
-@@ph051@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

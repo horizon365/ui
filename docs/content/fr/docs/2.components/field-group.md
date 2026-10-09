@@ -13,113 +13,113 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/FieldGroup.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Enveloppez plusieurs [Button](/docs/components/button) dans un groupe de champ pour les regrouper.
-
-::component-code
----
-Étiquette: true
-Slots:
-  Défaut:|
-
-    @@@ 005 @
-    @@@ 006 @
----
-Référence: u-button {color="neutral" variant="subtle" label="Button"}
-Référence: u-button {color="neutral" variant="outline" icon="i-lucide-chevron-down"}
-::
-
-@@pH009@@série
-
-Utilisez la prop `size` pour modifier la taille de tous les boutons.
+Enveloppez plusieurs [Button](/docs/components/button) dans un groupe de champs pour les regrouper.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Taille: XL
-Slots:
-  Défaut:|
+prettier: true
+slots:
+  default: |
 
-    @@@@ 011 @
-    @@@ 012 @
+    <UButton color="neutral" variant="subtle" label="Button" />
+    <UButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
 ---
-Référence: u-button {color="neutral" variant="subtle" label="Button"}
-Référence: u-button {color="neutral" variant="outline" icon="i-lucide-chevron-down"}
+:u-button{color="neutral" variant="subtle" label="bouton"}
+:u-button{color="neutral" variant="outline" icon="i-lucide-chevron-down"}
 ::
 
-### Référencement
+### taille
 
-Utilisez la prop `orientation` pour modifier l'orientation des boutons. Par défaut à `horizontal`.
+Utilisez le prop `size` pour modifier la taille de tous les boutons.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Orientation: verticale
-Slots:
-  Default:|
+prettier: true
+props:
+  size: xl
+slots:
+  default: |
 
-    @@@@ 018 @
-    @@@@ 019 @
+    <UButton color="neutral" variant="subtle" label="Button" />
+    <UButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
 ---
-Le bouton {color="neutral" variant="subtle" label="Submit"}
-Référence: u-button {color="neutral" variant="outline" label="Cancel"}
+:u-button{color="neutral" variant="subtle" label="bouton"}
+:u-button{color="neutral" variant="outline" icon="i-lucide-chevron-down"}
 ::
 
-@@ph022@Exemples
+### Définition
+
+Utilisez la prop `orientation` pour changer l'orientation des boutons. Par défaut, `horizontal`.
+
+::component-code
+---
+prettier: true
+props:
+  orientation: vertical
+slots:
+  default: |
+
+    <UButton color="neutral" variant="subtle" label="Submit" />
+    <UButton color="neutral" variant="outline" label="Cancel" />
+---
+:u-button{color="neutral" variant="subtle" label="soumis"}
+:u-button{color="neutral" variant="outline" label="Annuler"}
+::
+
+## Exemples
 
 ### Avec entrée
 
-Vous pouvez utiliser des composants tels que [Input](/docs/components/input),[InputMenu](),[Select]()[](/docs/components/select-menu), etc. au sein d'un groupe de champs.
+Vous pouvez utiliser des composants tels que [Input](/docs/components/input), [InputMenu](xph050), [Select](xph054) [SelectMenu](xph058), etc. au sein d'un groupe de champs.
 
 ::component-code
 ---
-Étiquette: true
-Slots:
-  Défaut:|
+prettier: true
+slots:
+  default: |
 
-    @@@ 040 @
+    <UInput color="neutral" variant="outline" placeholder="Enter token" />
 
-    @@@ 041 @
+    <UButton color="neutral" variant="subtle" icon="i-lucide-clipboard" />
 ---
-par: u-input {color="neutral" variant="outline" placeholder="Enter token"}
-Référence: u-button {color="neutral" variant="subtle" icon="i-lucide-clipboard"}
+:u-input{color="neutral" variant="outline" placeholder="Enter token"}
+:u-button{color="neutral" variant="subtle" icon="i-lucide-clipboard"}
 ::
 
 ### Avec tooltip
 
 Vous pouvez utiliser un [Tooltip](/docs/components/tooltip) dans un groupe de champs.
 
-: exemple de composant {name="field-group-tooltip-example"}
+:component-example{name="field-group-tooltip-example"}
 
-### Avec le menu déroulant
+### With menu déroulant
 
-Vous pouvez utiliser un [DropdownMenu](/docs/components/dropdown-menu) dans un groupe de champs.
+Vous pouvez utiliser un [DropdownMenu](xph077) dans un groupe de champs.
 
-: exemple de composant {name="field-group-dropdown-example"}
+:component-example{name="field-group-dropdown-example"}
 
 ### Avec badge
 
 Vous pouvez utiliser un [Badge](/docs/components/badge) dans un groupe de champs.
 
-: exemple de composant {name="field-group-badge-example"}
+:component-example{name="field-group-badge-example"}
 
-@@ph062 @ réponse
+## api
 
-@@ph063@@props
+### Props
 
-Composants-props
+:component-props
 
-@@ph064@@réseaux sociaux
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph065@thème
+## thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

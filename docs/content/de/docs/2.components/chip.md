@@ -10,153 +10,153 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Chip.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
 Wickeln Sie ein beliebiges Bauteil mit einem Chip ein, um eine Anzeige anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Slots auf:
-  Default:|
+prettier: true
+slots:
+  default: |
 
-    @@001
+    <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-: u-button {icon="i-lucide-mail" color="neutral" variant="subtle"}
+:u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
-@@003@Farbe
+### color
 
-Verwenden Sie die `color` prop, um die Farbe des Chips zu ändern.
+Verwenden Sie die `color`-Prop, um die Farbe des Chips zu ändern.
 
 ::component-code
 ---
-Schöner: wahr
-Props:
-  Farbe: neutral
-Die Slots:
-  Default:|
+prettier: true
+props:
+  color: neutral
+slots:
+  default: |
 
-    @@@@005
+    <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-: u-button {icon="i-lucide-mail" color="neutral" variant="subtle"}
+:u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
-@@007@00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Größe
 
-Verwenden Sie die `size` prop, um die Größe des Chips zu ändern.
+Verwenden Sie die `size`-Prop, um die Größe des Chips zu ändern.
 
 ::component-code
 ---
-Schöner: wahr
-Props:
-  Größe: 3xl
-Slots auf:
-  Default:|
+prettier: true
+props:
+  size: 3xl
+slots:
+  default: |
 
-    @@009 @
+    <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-: u-button {icon="i-lucide-mail" color="neutral" variant="subtle"}
+:u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
-@@ph011@@text
+### Text Bearbeiten
 
-Verwenden Sie `text` prop, um den Text des Chips festzulegen.
+Verwenden Sie die `text`-Prop, um den Text des Chips festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Props:
-  Text: 5
-  Größe: 3xl
-Slots auf:
-  Default:|
+prettier: true
+props:
+  text: 5
+  size: 3xl
+slots:
+  default: |
 
-    @@ph013 @
+    <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-: u-button {icon="i-lucide-mail" color="neutral" variant="subtle"}
+:u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
-@@ph015@@Einwurf
+### Position Bearbeiten
 
-Verwenden Sie die `position` prop, um die Position des Chips zu ändern.
+Verwenden Sie die `position`-Prop, um die Position des Chips zu ändern.
 
 ::component-code
 ---
-Schöner: wahr
-Props:
-  Position: „ links unten "
-Die Slots:
-  Default:|
+prettier: true
+props:
+  position: 'bottom-left'
+slots:
+  default: |
 
-    @@ph017
+    <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-: u-button {icon="i-lucide-mail" color="neutral" variant="subtle"}
+:u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
-@@ph019@inset
+### Inset (nicht)
 
-Verwenden Sie die `inset` prop, um den Chip innerhalb der Komponente anzuzeigen.
+Verwenden Sie die `inset` prop, um den Chip im Inneren der Komponente anzuzeigen. Dies ist nützlich, wenn es sich um abgerundete Komponenten handelt.
 
 ::component-code
 ---
-Schöner: wahr
-Props:
-  Einschub: true
-Die Slots:
-  Default:|
+prettier: true
+props:
+  inset: true
+slots:
+  default: |
 
-    @@ph021 @
+    <UAvatar src="https://github.com/benjamincanac.png" loading="lazy" />
 ---
-: u-avatar {src="https://github.com/benjamincanac.png" loading="lazy"}
+:u-avatar{src="https://github.com/benjamincanac.png" loading="lazy"}
 ::
 
-### Standalone@@@Standalone### Standalone
+### Standalone (englisch)
 
-Verwenden Sie `standalone` prop neben dem `inset` prop, um den Chip inline anzuzeigen.
+Verwenden Sie die `standalone`-Prop neben der `inset`-Prop, um den Chip inline anzuzeigen.
 
 ::component-code
 ---
-Props:
-  Standalone: echt
-  Einschub: true
+props:
+  standalone: true
+  inset: true
 ---
 ::
 
 ::note
-Es wird auf diese Weise in der [`CommandPalette`](/docs/components/command-palette),[`InputMenu`](/docs/components/input-menu),[`Select`](/docs/components/select) oder [](/docs/components/select-menu) Komponenten zum Beispiel.
+Es wird auf diese Weise in den Komponenten [`CommandPalette`](](/docs/components/command-palette), [`InputMenu`](/docs/components/input-menu), [`Select`x5x/docs/components/select) oder xph0885x`SelectMenu`]() verwendet.
 ::
 
-## Beispiele
+## Examples [Bearbeiten]
 
-### Kontrollsichtbarkeit
+### Control-Sichtbarkeit
 
-Sie können die Sichtbarkeit des Chips mit der `show` prop steuern.
+Sie können die Sichtbarkeit des Chips mit der `show`-Stütze steuern.
 
-: component-beispiel {name="chip-show-example"}
+:component-example{name="chip-show-example"}
 
 ::note
 In diesem Beispiel hat der Chip eine Farbe pro Status und wird angezeigt, wenn der Status nicht `offline` ist.
 ::
 
-@@@@@@@511@@@bpb
+## API (englisch)
 
-@@ph052@@@props
+### Props (englisch)
 
-Komponenten-Props
+:component-props
 
-@@ph053@gmail.de
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph054@@emits
+### Emits (nicht)
 
-Komponenten emittieren
+:component-emits
 
-@@@@@@@555@@@@@@555@55@@@555@@@@55@@@@555@@@@55@@@@@@55@@@@@@@@@@@@@Themes
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph056@@changelog @@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

@@ -42,7 +42,7 @@ links:
 
 ::
 
-#コード
+#code
 
 ````mdc
 ::code-collapse
@@ -75,20 +75,20 @@ links:
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props {prose}
+:component-props{prose}
 
 ### スロット
 
-component—slots {prose}
+:component-slots{prose}
 
-## テーマ
+## Theme
 
-component—theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

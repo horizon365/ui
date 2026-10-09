@@ -8,15 +8,15 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageAside.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Die PageAside-Komponente ist ein klebriges `<aside>`-Element, das nur ab dem [`lg` breakpoint](https://tailwindcss.com/docs/breakpoints) angezeigt wird.
+Die PageAside-Komponente ist ein klebriges `<aside>`-Element, das nur ab dem [`lg`-Breakpoint ](https://tailwindcss.com/docs/breakpoints) angezeigt wird.
 
 ::tip{to="/docs/getting-started/theme/css-variables#header"}
-Die PageAside-Komponente verwendet die CSS-Variable `--ui-header-height`, um sich korrekt unter `Header` zu positionieren.
+Die PageAside-Komponente verwendet die CSS-Variable `--ui-header-height`, um sich korrekt unter der `Header` zu positionieren.
 ::
 
-Verwenden Sie es innerhalb des `left` oder `right` Steckplatz der [Page](/docs/components/page) Komponente:
+Verwenden Sie es innerhalb des `left`-oder `right`-Steckplatzes der Komponente [Page](/docs/components/page):
 
 ```vue {4}
 <template>
@@ -28,13 +28,13 @@ Verwenden Sie es innerhalb des `left` oder `right` Steckplatz der [Page](/docs/c
 </template>
 ```
 
-@@ph024@Beispiele
+## Examples (Beispiele)
 
 ::note
-Während in diesen Beispielen [Nuxt Content](https://content.nuxt.com) verwendet wird, können die Komponenten in jedes Content-Management-System integriert werden.
+Während diese Beispiele [Nuxt Content](https://content.nuxt.com) verwenden, können die Komponenten in jedes Content Management System integriert werden.
 ::
 
-### Innerhalb eines Layouts
+### In einem Layout
 
 Verwenden Sie die Komponente PageAside in einem Layout, um die Navigation anzuzeigen:
 
@@ -59,23 +59,23 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 ```
 
 ::note
-In diesem Beispiel verwenden wir die Komponente `ContentNavigation`, um die in `app.vue` eingefügte Navigation anzuzeigen.
+In diesem Beispiel verwenden wir die `ContentNavigation`-Komponente, um die in `app.vue` eingespeiste Navigation anzuzeigen.
 ::
 
-@@@@@@@511@@@bpb
+## API (englisch)
 
-@@ph052@@@props
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
-@@ph053@gmail.de
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph054@gmail.de
+## Theme (englisch)
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph055@@changelog @@@ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

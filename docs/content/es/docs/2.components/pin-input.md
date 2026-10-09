@@ -15,46 +15,46 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PinInput.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice la directiva `v-model` para controlar el valor del PinInput.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  - modelValoración
-Externo:
-  - modelValue (Edición española)
-Props:
-  Modelos: []
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: []
 ---
 ::
 
-Utilice la prop `default-value` para establecer el valor inicial cuando no necesite controlar su estado.
+Utilice el prop `default-value` para establecer el valor inicial cuando no necesite controlar su estado.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH005@@defaultValue
-Props:
-  defaultValue: ['1 ','2','3 ']
+prettier: true
+ignore:
+  - defaultValue
+props:
+  defaultValue: ['1','2','3']
 ---
 ::
 
-@0006@Nombre
+### Tipo
 
-Utilice el prop `type` para cambiar el tipo de entrada. Predeterminados a `text`.
+Utilice la prop `type` para cambiar el tipo de entrada. Predeterminados a `text`.
 
 ::component-code
 ---
 items:
-  Tipo:
-    @009@texto
-    @000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Tipo: 'Número'
+  type:
+    - text
+    - number
+props:
+  type: 'number'
 ---
 ::
 
@@ -62,55 +62,55 @@ Props:
 Cuando `type` se establece en `number`, sólo aceptará caracteres numéricos.
 ::
 
-@@Máscara
+### Máscara
 
 Utilice el prop `mask` para tratar la entrada como una contraseña.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @150000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @@pH016@defaultValue (en inglés)
-Props:
-  Máscara: Verdad
-  defaultValue: ['1 ','2','3 ','4','5 ']
+prettier: true
+ignore:
+  - placeholder
+  - defaultValue
+props:
+  mask: true
+  defaultValue: ['1','2','3','4','5']
 ---
 ::
 
-@170000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### OTP (Edición española)
 
 Utilice el prop `otp` para habilitar la funcionalidad de contraseña de un solo uso. Cuando está habilitada, los dispositivos móviles pueden detectar y rellenar automáticamente los códigos OTP de los mensajes SMS o el contenido del portapapeles, con soporte de autocompletado.
 
 ::component-code
 ---
-Props:
-  OTP: Verdad
+props:
+  otp: true
 ---
 ::
 
-@@@P2019@Placeholder (en inglés)
+### Placeholder (Edición española)
 
 Utilice el prop `placeholder` para establecer un texto de marcador de posición.
 
 ::component-code
 ---
-Props:
-  Plantilla: '○'
+props:
+  placeholder: '○'
 ---
 ::
 
-@@21@20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Longitud
 
 Utilice el prop `length` para cambiar la cantidad de entradas.
 
 ::component-code
 ---
-Ignora:
-  @233@@retoño
-Props:
-  Longitud: 6
-  Plantilla: '○'
+ignore:
+  - placeholder
+props:
+  length: 6
+  placeholder: '○'
 ---
 ::
 
@@ -120,12 +120,12 @@ Utilice el prop `separator` para insertar un separador entre grupos de entradas.
 
 ::component-code
 ---
-Ignora:
-  @@27@@decodificador
-Props:
-  Longitud: 6
-  Separación: 3
-  Plantilla: '○'
+ignore:
+  - placeholder
+props:
+  length: 6
+  separator: 3
+  placeholder: '○'
 ---
 ::
 
@@ -133,64 +133,64 @@ También puede pasar una matriz de posiciones para insertar separadores después
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@28@@decodificador
-  @@29@longuetud
-  - separador
-Props:
-  Longitud: 7
-  separador: [3, 4]
-  Plantilla: '○'
+prettier: true
+ignore:
+  - placeholder
+  - length
+  - separator
+props:
+  length: 7
+  separator: [3, 4]
+  placeholder: '○'
 ---
 ::
 
-@@31@color
+### Color (Edición española)
 
-Utilice el prop `color` para cambiar el color del anillo cuando se enfoca la PinInput.
+Utilice el accesorio `color` para cambiar el color del anillo cuando se enfoca la entrada de pin.
 
 ::component-code
 ---
-Ignora:
-  @@pH033@@marcador de posición
-Props:
-  Color: Neutro
-  Destacado: Verdadero
-  Plantilla: '○'
+ignore:
+  - placeholder
+props:
+  color: neutral
+  highlight: true
+  placeholder: '○'
 ---
 ::
 
 ::note
-La `highlight` prop se utiliza aquí para mostrar el estado de enfoque. Se utiliza internamente cuando se produce un error de validación.
+El prop `highlight` se utiliza aquí para mostrar el estado de enfoque. Se utiliza internamente cuando se produce un error de validación.
 ::
 
-@@P250@Variante
+### Variante
 
-Utilice el `variant` prop para cambiar la variante de la PinInput.
+Utilice el prop `variant` para cambiar la variante del PinInput.
 
 ::component-code
 ---
-Ignora:
-  @@pH037@placeholder (en inglés)
-Props:
-  Color: Neutral
-  Variación: Sutil
-  Destacado: Falso
-  Plantilla: '○'
+ignore:
+  - placeholder
+props:
+  color: neutral
+  variant: subtle
+  highlight: false
+  placeholder: '○'
 ---
 ::
 
-@@380@Tamaño
+### Tamaño
 
-Utilice el prop `size` para cambiar el tamaño de la entrada de pin.
+Utilice el prop `size` para cambiar el tamaño de la entrada PinInput.
 
 ::component-code
 ---
-Ignora:
-  @400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Tamaño: XL
-  Plantilla: '○'
+ignore:
+  - placeholder
+props:
+  size: xl
+  placeholder: '○'
 ---
 ::
 
@@ -200,15 +200,15 @@ Utilice el prop `disabled` para desactivar la entrada de pin.
 
 ::component-code
 ---
-Ignora:
-  @@pH043@@marcador de posición
-Props:
-  Discapacidad: Verdadero
-  Plantilla: '○'
+ignore:
+  - placeholder
+props:
+  disabled: true
+  placeholder: '○'
 ---
 ::
 
-@@44@Ejemplos
+## Ejemplos
 
 ### Con ranura separadora: badge{label="4.9+" class="align-text-top"}
 
@@ -216,36 +216,36 @@ Utilice la ranura `separator` para personalizar la apariencia del separador.
 
 ::component-example
 ---
-Nombre: 'pin-input-separator-slot-example'
+name: 'pin-input-separator-slot-example'
 ---
 ::
 
-@480000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## API (Edición española)
 
-@@40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots
 
-Componentes de slots
+:component-slots
 
-@@501@@Emisiones
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Exposición
 
 Al acceder al componente a través de una referencia de plantilla, puede utilizar lo siguiente:
 
 | Nombre| Tipo|
 | ---- | ---- |
-| @@|@@|
+| `inputsRef`x{lang="ts-type"} (Edición española)| `Ref<ComponentPublicInstance[]>`x{lang="ts-type"}|
 
-@@507@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@@changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

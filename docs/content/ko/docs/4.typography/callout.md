@@ -9,80 +9,80 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Callout.vue
 ---
 
-##  사용
+## Usage
 
-`callout` 구성 요소의 기본 슬롯에서 markdown을 사용하여 콘텐츠에 눈길을 끄는 컨텍스트를 추가합니다.
-
-::component-code{slug="callout" prose}
----
-소품 :
-  클래스: 'w-full my-0'
-숨기기 (Hide):
-  -  클래스
-슬롯 :
-  기본값: 전체 **markdown**지원을 포함하는 `callout`입니다.
----
-::
-
-###  Icon
-
-`icon`prop을 사용하여 콘텐츠 옆에 아이콘을 표시합니다.
+`callout` 구성 요소의 기본 슬롯에서 Markdown을 사용하여 콘텐츠에 눈길을 끄는 컨텍스트를 추가합니다.
 
 ::component-code{slug="callout" prose}
 ---
-소품 :
-  아이콘 : i-lucide-square-play
-  클래스: 'w-full my-0'
-숨기기 (Hide):
-  -  클래스
-슬롯 :
-  기본값: 아이콘이 있는 `callout`입니다.
+props:
+  class: 'w-full my-0'
+hide:
+  - class
+slots:
+  default: This is a `callout` with full **markdown** support.
 ---
 ::
 
-###  색상
+### Icon
 
-`color`prop을 사용하여 콜아웃 색상을 변경합니다.
+`icon` prop을 사용하여 내용 옆에 아이콘을 표시합니다.
 
 ::component-code{slug="callout" prose}
 ---
-무시하기:
-  -  icon
-소품 :
-  아이콘: i-lucide-info
-  색상: 정보
-  클래스: 'w-full my-0'
-숨기기 (Hide):
-  -  클래스
-슬롯 :
-  기본값: 사용자 정의 색상이 있는 `callout`입니다.
+props:
+  icon: i-lucide-square-play
+  class: 'w-full my-0'
+hide:
+  - class
+slots:
+  default: This is a `callout` with an icon.
 ---
 ::
 
-###  링크
+### Color 이미지
 
-[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) 구성요소(예: `to` 및 `target` )의 속성을 전달하여 콜아웃을 링크로 만들 수 있습니다.
+`color` 소품을 사용하여 콜아웃의 색상을 변경합니다.
 
 ::component-code{slug="callout" prose}
 ---
-숨기기 (Hide):
-  -  클래스
-무시하기:
-  -  icon
-  -  target
-소품 :
-  아이콘 : i-lucide-square-play
-  to: '/docs/getting-started/installation/nuxt' 로 이동
-  색상: 중립
-  클래스: 'w-full my-0'
-슬롯 :
-  default: 프로젝트에 `@nuxt/ui`를 설치하는 방법에 대해 알아봅니다.
+ignore:
+  - icon
+props:
+  icon: i-lucide-info
+  color: info
+  class: 'w-full my-0'
+hide:
+  - class
+slots:
+  default: This is a `callout` with a custom color.
 ---
 ::
 
-##  바로가기
+### 링크
 
-또한 미리 정의된 아이콘과 색상이 있는 `note`, `tip``warning` 및 `caution` 바로 가기를 사용할 수 있습니다.
+[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) 구성 요소의 모든 속성을 전달하여 콜아웃을 링크로 만들 수 있습니다.
+
+::component-code{slug="callout" prose}
+---
+hide:
+  - class
+ignore:
+  - icon
+  - target
+props:
+  icon: i-lucide-square-play
+  to: '/docs/getting-started/installation/nuxt'
+  color: neutral
+  class: 'w-full my-0'
+slots:
+  default: Learn how to install `@nuxt/ui` in your project.
+---
+::
+
+## 바로가기
+
+미리 정의된 아이콘과 색상이 포함된 `note`, `tip`, `warning` 및 `caution` 바로 가기를 사용할 수도 있습니다.
 
 ::code-preview
 
@@ -101,12 +101,12 @@ links:
 ::
 
 ::caution{class="w-full my-0"}
-이 작업은 취소할 수 없습니다.
+이 작업은 실행 취소할 수 없습니다.
 ::
 
 :::
 
-# 코드
+#code
 
 ```mdc
 ::note
@@ -128,20 +128,20 @@ This action cannot be undone.
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props (### Props)
 
-: component-props {prose}
+:component-props{prose}
 
-###  슬롯
+### Slots
 
-: component-slots {prose}
+:component-slots{prose}
 
-##  테마
+## Theme 테마
 
-:component-theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## 변경 로그
 
-: component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

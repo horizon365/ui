@@ -123,9 +123,9 @@ function joinFrontmatter({ frontmatter, body }) {
 // FREE ENGINE — keyless machine translation with placeholder protection
 // ══════════════════════════════════════════════════════════════════════════
 
-// Placeholder pool. Tokens look like `@@PH000@@`; machine translation keeps
-// them but occasionally injects spaces (esp. Japanese), so restoration uses
-// a loose regex and indexes are zero-padded to avoid PH10/PH100 collisions.
+// Placeholder pool. Tokens look like `xph000x` — an opaque token both the
+// Tencent and Volcengine engines pass through verbatim (unlike `@@PH0@@`,
+// which Volcengine mangles with spaces and `@` signs).
 class Placeholders {
   constructor() {
     this.items = []
@@ -136,7 +136,7 @@ class Placeholders {
   protect(value) {
     const i = this.items.length
     this.items.push(value)
-    return `@@PH${String(i).padStart(3, '0')}@@`
+    return `xph${String(i).padStart(3, '0')}x`
   }
 
   // Expose `value` for translation: it rides as a placeholder inside a line
@@ -146,7 +146,7 @@ class Placeholders {
     const i = this.items.length
     this.items.push(value)
     this.translate.add(i)
-    return `@@PH${String(i).padStart(3, '0')}@@`
+    return `xph${String(i).padStart(3, '0')}x`
   }
 
   applyTranslations(values) {
@@ -160,11 +160,9 @@ class Placeholders {
   restore(text) {
     for (let i = this.items.length - 1; i >= 0; i--) {
       const code = String(i).padStart(3, '0')
-      // The translator strips `@` symbols sometimes (even all of them) and
-      // inserts spaces between letters, so make the @s optional and tolerate
-      // whitespace. A bare `PH002` never appears in natural prose, and the
-      // lookahead prevents PH002 matching inside PH0020.
-      const re = new RegExp(`@*[ \\t]*P[ \\t]*H[ \\t]*${code}[ \\t]*@*(?![0-9])`, 'g')
+      // Tolerate rare space injection (`xph 000 x`) but nothing else; the
+      // token is distinctive enough that it cannot collide with real words.
+      const re = new RegExp(`xph[ \\t]?${code}[ \\t]?x`, 'g')
       text = text.replace(re, () => this.items[i])
     }
     return text
@@ -258,13 +256,57 @@ async function translateFileFree(source, locale, isYaml) {
   let resultBody = null
   if (bodyLines) {
     let inFence = false
+    // Stack of colon counts for open MDC containers (`::name` = 2,
+    // `:::name` = 3) so nested containers close in the right order.
+    const containerStack = []
+    let inContainerYaml = false
     const mask = bodyLines.map((line) => {
       if (/^\s*```/.test(line)) {
         inFence = !inFence
         return 'skip' // the fence delimiter itself
       }
       if (inFence) return 'skip'
-      if (/^\s*:::?/.test(line)) return 'tag'
+      // MDC container close: a line of only colons
+      const closeMatch = /^\s*(:{2,})\s*$/.exec(line)
+      if (closeMatch && containerStack.length) {
+        const n = closeMatch[1].length
+        // Pop the matching opener; tolerate a mismatched close by popping top
+        const idx = containerStack.lastIndexOf(n)
+        if (idx !== -1) containerStack.splice(idx, 1)
+        else containerStack.pop()
+        inContainerYaml = false
+        return 'tag'
+      }
+      // MDC container open: `::name` / `:::name`, optionally with {props}
+      const openMatch = /^\s*(:{2,})(?=[a-z])/i.exec(line)
+      if (openMatch) {
+        containerStack.push(openMatch[1].length)
+        inContainerYaml = false
+        return 'tag'
+      }
+      // A `---` … `---` block inside a container is the component's YAML
+      // props (e.g. component-code `props:`/`slots:`). Translating its keys
+      // or values breaks the live examples, so protect the whole block.
+      if (containerStack.length && /^\s*---\s*$/.test(line)) {
+        inContainerYaml = !inContainerYaml
+        return 'skip'
+      }
+      if (inContainerYaml) return 'skip'
+      // MDC slot marker inside a container (`#nuxt`, `#vue`, `#code{...}`).
+      // The slot name is structural — machine translation mangles it
+      // (`#vue` -> `# vakantie`), so treat it like a tag line.
+      if (containerStack.length && /^\s*#[a-z][\w.-]*(?:\{[^{}]*\})?\s*$/i.test(line)) {
+        return 'tag'
+      }
+      // Line-start single-colon MDC component (`:badge{...}`,
+      // `:components-list{...}`, `:read-more{...}`). The free engines drop
+      // or mangle these lines when they pass through as text (the props
+      // placeholder leaves a bare `:name` that the translator discards),
+      // so treat the line as a tag: protectTagLine keeps the component
+      // intact and only translates title/label/description attributes.
+      if (/^\s*:[a-z][\w.-]*/i.test(line)) {
+        return 'tag'
+      }
       return 'text'
     })
 
@@ -438,8 +480,83 @@ async function googleTranslate(texts, targetLang) {
 
 async function freeTranslate(texts, locale) {
   if (!texts.length) return []
-  if (locale === 'nl') return googleTranslate(texts, 'nl')
+  // Dutch: Tencent has no nl and the public Google endpoint rate-limits
+  // aggressively, so route nl through the keyless Volcengine crx endpoint.
+  if (locale === 'nl') return volcengineTranslate(texts, 'nl')
   return tencentTranslate(texts, locale)
+}
+
+// Volcengine crx endpoint (the one Immersive Translate's free tier uses):
+// keyless, supports Dutch. Unlike Tencent it does NOT accept a batch array,
+// but it DOES accept multi-line text and preserves newlines. We therefore
+// join input units with \n, translate once, then split back. The endpoint
+// rejects payloads above ~5000 chars with HTTP 400, so units are greedily
+// packed into chunks under the budget; if the returned newline count drifts,
+// the affected chunk is re-translated one unit at a time.
+const VOLC_MAX_CHUNK = Number(process.env.VOLC_MAX_CHUNK) || 4500
+
+async function volcengineCall(text, targetLang) {
+  for (let attempt = 0; attempt < 5; attempt++) {
+    try {
+      const res = await fetch('https://translate.volcengine.com/crx/translate/v1/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ source_language: 'en', target_language: targetLang, text })
+      })
+      if (!res.ok) {
+        const detail = await res.text().catch(() => '')
+        throw new Error(`HTTP ${res.status} (${text.length}-char payload): ${detail.slice(0, 200)}`)
+      }
+      const data = await res.json()
+      if (typeof data.translation === 'string') return data.translation
+      throw new Error('bad response')
+    } catch (err) {
+      if (attempt === 4) throw new Error(`volcengine: ${err.message}`, { cause: err })
+      await sleep(1500 * (attempt + 1))
+    }
+  }
+}
+
+async function volcengineTranslate(texts, targetLang) {
+  if (!texts.length) return []
+  // Greedily pack units into chunks whose joined size fits the budget.
+  const chunks = []
+  let cur = []
+  let curLen = 0
+  for (const t of texts) {
+    const add = t.length + (cur.length ? 1 : 0)
+    if (curLen + add > VOLC_MAX_CHUNK && cur.length) {
+      chunks.push(cur)
+      cur = []
+      curLen = 0
+    }
+    cur.push(t)
+    curLen += add
+  }
+  if (cur.length) chunks.push(cur)
+
+  const out = []
+  for (const chunk of chunks) {
+    if (chunk.length === 1) {
+      out.push(await volcengineCall(chunk[0], targetLang))
+      await sleep(400)
+      continue
+    }
+    const translation = await volcengineCall(chunk.join('\n'), targetLang)
+    const parts = translation.split('\n')
+    if (parts.length === chunk.length) {
+      out.push(...parts)
+    } else {
+      // Newline count drifted: recover by translating each unit separately.
+      console.warn(`    ⚠ volcengine line mismatch ${parts.length}/${chunk.length}, translating units separately`)
+      for (const u of chunk) {
+        out.push(await volcengineCall(u, targetLang))
+        await sleep(400)
+      }
+    }
+    await sleep(400)
+  }
+  return out
 }
 
 // ══════════════════════════════════════════════════════════════════════════
@@ -551,6 +668,23 @@ async function mapLimit(items, limit, fn) {
 // ──────────────────────────────────────────────────────────────────────────
 
 async function main() {
+  // --file=<path relative to content/en> translates a single file to stdout
+  // for debugging, e.g. --file=docs/1.getting-started/2.installation/2.vue.md
+  const FILE_FILTER = (() => {
+    const a = args.find(a => a.startsWith('--file='))
+    return a ? a.split('=').slice(1).join('=') : null
+  })()
+  if (FILE_FILTER) {
+    const src = join(SOURCE_DIR, FILE_FILTER)
+    const content = await readFile(src, 'utf8')
+    const isYaml = /\.(?:yml|yaml)$/.test(src)
+    const out = ENGINE === 'llm'
+      ? await translateFileLlm(content, locales[0], isYaml)
+      : await translateFileFree(content, locales[0], isYaml)
+    process.stdout.write(out)
+    return
+  }
+
   const files = await walk(SOURCE_DIR)
   console.log(`📚 Found ${files.length} source files under content/en/`)
   console.log(`🌐 Target locales: ${locales.join(', ')}`)

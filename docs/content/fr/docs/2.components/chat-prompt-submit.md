@@ -11,16 +11,16 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatPromptSubmit.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Le composant ChatPromptSubmit est utilisé à l'intérieur du composant [ChatPrompt](/docs/components/chat-prompt) pour soumettre l'invite. Il gère automatiquement les différentes valeurs `status` pour contrôler le chat.
 
-Il étend le [Button](/docs/components/button) composant, de sorte que vous pouvez passer n'importe quelle propriété telle que `color`,`variant`,`size`, etc.
+Il étend le composant [Button](/docs/components/button), de sorte que vous pouvez passer n'importe quelle propriété telle que `color`, `variant`, `size`, etc.
 
 ::code-preview
 
-#Défaut
-: u-chat-prompt-soumettre
+#default
+:u-chat-prompt-submit
 
 #code
 ```vue
@@ -33,43 +33,43 @@ Il étend le [Button](/docs/components/button) composant, de sorte que vous pouv
 ::
 
 ::note
-Vous pouvez également l'utiliser à l'intérieur de l'emplacement `footer` du composant [`ChatPrompt`](/docs/components/chat-prompt).
+Vous pouvez également l'utiliser dans l'emplacement `footer` du composant [`ChatPrompt`](/docs/components/chat-prompt).
 ::
 
-@@26@prêt
+### prêt
 
-Lorsque son statut est `ready`{lang="ts-type"}, utilisez les accessoires `color`,`variant` et `icon` pour personnaliser le bouton. Par défaut:
+Lorsque son statut est `ready`{lang="ts-type"}, utilisez les accessoires `color`, `variant` et `icon` pour personnaliser le bouton.
 
-@@
-@@
-@@
+- xx`color="primary"`xx{lang="ts-type"}
+- x`variant="solid"`xx{lang="ts-type"}
+- x`icon="i-lucide-arrow-up"`x{lang="ts-type"}
 
 ::component-code
 ---
-Étiquette: true
+prettier: true
 items:
-  Couleur:
-    @@ph041@primaire
-    - secondaire
-    - réussite
-    @@44@avertissement
-    @@F045@erreur
-    @@ph046@neutre
-  Variante:
-    @@ph047@solide
-    @@ph048@outline
-    @@pH049@@doux
-    @@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @@ph051@fantôme
-Props:
-  Couleur: Primaire
-  Étiquette:"solide"
-  Icône: i-lucide-arrow-up
+  color:
+    - primary
+    - secondary
+    - success
+    - warning
+    - error
+    - neutral
+  variant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+props:
+  color: 'primary'
+  variant: 'solid'
+  icon: 'i-lucide-arrow-up'
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.arrowUp`.
 :::
@@ -80,13 +80,13 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 :::
 ::
 
-@@pH056@@Réponse
+### Répondre
 
-Lorsque son statut est `submitted`{lang="ts-type"}, utilisez les accessoires `submitted-color`,`submitted-variant` et `submitted-icon` pour personnaliser le bouton. Par défaut:
+Lorsque son statut est `submitted`{lang="ts-type"}, utilisez les accessoires `submitted-color`, `submitted-variant` et `submitted-icon` pour personnaliser le bouton.
 
-@@
-@@
-@@
+- x`submittedColor="neutral"`xx{lang="ts-type"}
+- xx`submittedVariant="subtle"`xxxph0777x
+- xx`submittedIcon="i-lucide-square"`xx{lang="ts-type"}
 
 ::note
 L'événement `stop` est émis lorsque l'utilisateur clique sur le bouton.
@@ -94,33 +94,33 @@ L'événement `stop` est émis lorsque l'utilisateur clique sur le bouton.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph072@statut
+prettier: true
+ignore:
+  - status
 items:
-  Soumissionnaire:
-    @@ph073@primaire
-    @@ph074@secondaire
-    @@75@réussite
-    @@776@référencement
-    @@77@erreur
-    @@ph078@neutre
-  SoumissionVariante:
-    @@ph079@solide
-    @@ph080@outline
-    @@ph081@doudou
-    @082@suédois
-    @@ph083@fantôme
-Props:
-  Couleur: "Neutre"
-  Étiquette:"subtil"
-  Étiquette: i-lucide-square
-  Statut: "Soumis"
+  submittedColor:
+    - primary
+    - secondary
+    - success
+    - warning
+    - error
+    - neutral
+  submittedVariant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+props:
+  submittedColor: 'neutral'
+  submittedVariant: 'subtle'
+  submittedIcon: 'i-lucide-square'
+  status: 'submitted'
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.stop`.
 :::
@@ -131,13 +131,13 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 :::
 ::
 
-@@888@Streaming
+### Streaming
 
-Lorsque son statut est `streaming`{lang="ts-type"}, utilisez les accessoires `streaming-color`,`streaming-variant` et `streaming-icon` pour personnaliser le bouton. Par défaut:
+Lorsque son statut est `streaming`{lang="ts-type"}, utilisez les accessoires `streaming-color`, `streaming-variant` et `streaming-icon` pour personnaliser le bouton.
 
-@@
-@@
-@@
+- x`streamingColor="neutral"`x{lang="ts-type"}
+- x`streamingVariant="subtle"`{lang="ts-type"}
+- x`streamingIcon="i-lucide-square"`x{lang="ts-type"}
 
 ::note
 L'événement `stop` est émis lorsque l'utilisateur clique sur le bouton.
@@ -145,33 +145,33 @@ L'événement `stop` est émis lorsque l'utilisateur clique sur le bouton.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph104@statut
+prettier: true
+ignore:
+  - status
 items:
-  StreamingCouleur:
-    - primaire
-    @@ph106@secondaire
-    @@707@réussite
-    @@ph108@avertissement
-    @@ph109@erreur
-    @@ph110@neutre
-  StreamingVariété:
-    @@ph111@solide
-    @@ph112@outline
-    @@ph113@doux
-    @@ph114@subtile
-    @@ph115@fantôme
-Props:
-  Couleur: "Neutre"
-  Étiquette:'subtil'
-  Étiquette: i-lucide-square
-  Étiquette: streaming
+  streamingColor:
+    - primary
+    - secondary
+    - success
+    - warning
+    - error
+    - neutral
+  streamingVariant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+props:
+  streamingColor: 'neutral'
+  streamingVariant: 'subtle'
+  streamingIcon: 'i-lucide-square'
+  status: 'streaming'
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.stop`.
 :::
@@ -182,13 +182,13 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 :::
 ::
 
-@@ph120@erreur
+### erreur
 
-Lorsque son statut est `error`{lang="ts-type"}, utilisez les accessoires `error-color`,`error-variant` et `error-icon` pour personnaliser le bouton.
+Lorsque son statut est `error`{lang="ts-type"}, utilisez les accessoires `error-color`, `error-variant` et `error-icon` pour personnaliser le bouton.
 
-@@
-@@
-@@
+- `errorColor="error"`x{lang="ts-type"}
+- x`errorVariant="soft"`x{lang="ts-type"}
+- x`errorIcon="i-lucide-rotate-ccw"`x{lang="ts-type"}
 
 ::note
 L'événement `reload` est émis lorsque l'utilisateur clique sur le bouton.
@@ -196,33 +196,33 @@ L'événement `reload` est émis lorsque l'utilisateur clique sur le bouton.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph136@statut
+prettier: true
+ignore:
+  - status
 items:
-  Erreur couleur:
-    @@ph137@primaire
-    - secondaire
-    - réussite
-    @@ph140@avertissement
-    @@ph141@@erreur
-    @@ph142@neutre
-  Variante d'erreur:
-    - solide
+  errorColor:
+    - primary
+    - secondary
+    - success
+    - warning
+    - error
+    - neutral
+  errorVariant:
+    - solid
     - outline
-    @@ph145@@doux
-    @@ph146@subtile
-    @ph147@fantôme
-Props:
-  erreur: 'erreur'
-  Étiquette:"soft"
+    - soft
+    - subtle
+    - ghost
+props:
+  errorColor: 'error'
+  errorVariant: 'soft'
   errorIcon: 'i-lucide-rotate-ccw'
-  État:"Erreur"
+  status: 'error'
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.reload`.
 :::
@@ -233,34 +233,34 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 :::
 ::
 
-@@ph152@@Exemples
+## Exemples
 
 ::tip{to="/docs/components/chat"}
-Consultez la page d'aperçu **Chat** pour connaître les instructions d'installation, la configuration du serveur et les exemples d'utilisation.
+Consultez la page d'aperçu **Chat** pour les instructions d'installation, la configuration du serveur et les exemples d'utilisation.
 ::
 
-@@ph155 @@ référence
+## API
 
-@@ph156@@props
+### Props
 
-Composants-props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
 Ce composant prend également en charge tous les attributs HTML natifs `<button>`.
 ::
 
-@@ph158@@réglages
+### Slots
 
-Composants slots
+:component-slots
 
 ### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph160@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@161@changements
+## Changelog
 
-Composant-changelog
+:component-changelog

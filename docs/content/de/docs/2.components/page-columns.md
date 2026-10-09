@@ -8,32 +8,32 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageColumns.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Es funktioniert gut mit [PageCard](/docs/components/page-card) Komponenten oder anderen Elementen, die sich von einer einzelnen Spalte auf dem Handy bis zu mehreren Spalten auf größeren Bildschirmen anpassen.
+Es funktioniert gut mit [PageCard](/docs/components/page-card)-Komponenten oder anderen Elementen und passt sich von einer einzelnen Spalte auf dem Handy bis zu mehreren Spalten auf größeren Bildschirmen an.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'Seiten-Spalten-Beispiel'
-Klasse: 'P-8'
+collapse: true
+name: 'page-columns-example'
+class: 'p-8'
 ---
 ::
 
-@@005@api
+## API Bearbeiten
 
-@@@@@@@@ph006@@props
+### Props (englisch)
 
-Komponenten Props
+:component-props
 
-@@ph007@gmail.de
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@@@@@@@@@@@@ph008@@theme
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph009@@changelog @ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

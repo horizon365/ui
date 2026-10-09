@@ -11,137 +11,137 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Card.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-Utilice las ranuras `header`,`default` y `footer` para añadir contenido a la tarjeta.
+Utilice las ranuras `header`, `default` y `footer` para añadir contenido a la tarjeta.
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @@clase004
-Props:
-  Categoría: w-full
-Los slots:
-  El header:|
+prettier: true
+hide:
+  - class
+props:
+  class: 'w-full'
+slots:
+  header: |
 
-    @@@ 005 @
+    <Placeholder class="h-8" />
 
-  Default:|
+  default: |
 
-    @@ 006 @
+    <Placeholder class="h-32" />
 
-  footer:|
+  footer: |
 
-    @@@ 007 @
+    <Placeholder class="h-8" />
 ---
 
 #header
-por: placeholder{class="h-8"}
+:placeholder{class="h-8"}
 
-#por defecto
-por: placeholder{class="h-32"}
+#default
+:placeholder{class="h-32"}
 
 #footer
-por placeholder{class="h-8"}
+:placeholder{class="h-8"}
 ::
 
-### Título: badge{label="4.7+" class="align-text-top"}
+Archivo de la etiqueta: badge{label="4.7+" class="align-text-top"}
 
-Use the `title` prop to set the title of the Card's header.
+Utilice el prop `title` para establecer el título de la cabecera de la tarjeta.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@clase014
-Props:
-  Título:"Tarjeta con título"
-  Categoría: w-full
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - class
+props:
+  title: 'Card with title'
+  class: 'w-full'
+slots:
+  default: |
 
-    @@@ 15 @
+    <Placeholder class="h-32" />
 ---
 
-#por defecto
-por: placeholder{class="h-32"}
+#default
+:placeholder{class="h-32"}
 ::
 
-### Descripción: badge{label="4.7+" class="align-text-top"}
+Descripción: badge{label="4.7+" class="align-text-top"}
 
-Utilice la `description` prop para establecer la descripción de la cabecera de la tarjeta.
+Utilice el prop `description` para establecer la descripción del encabezado de la tarjeta.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @@21@clase
-Props:
-  Título:"Tarjeta con descripción"
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit".
-  Categoría: w-full
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+  - class
+props:
+  title: 'Card with description'
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  class: 'w-full'
+slots:
+  default: |
 
-    @22
+    <Placeholder class="h-32" />
 ---
 
-#por defecto
-por placeholder{class="h-32"}
+#default
+:placeholder{class="h-32"}
 ::
 
-@@24@Variación
+### Variante
 
 Utilice el prop `variant` para cambiar la variante de la tarjeta.
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @@26@clase
-Props:
-  Variación: Sutil
-  Categoría: w-full
-Los slots:
-  El header:|
+prettier: true
+hide:
+  - class
+props:
+  variant: subtle
+  class: 'w-full'
+slots:
+  header: |
 
-    @@ 27
+    <Placeholder class="h-8" />
 
-  Default:|
+  default: |
 
-    @@ 28
+    <Placeholder class="h-32" />
 
-  footer:|
+  footer: |
 
-    @@ 29
+    <Placeholder class="h-8" />
 ---
 
 #header
-por placeholder{class="h-8"}
+:placeholder{class="h-8"}
 
-#por defecto
-por placeholder{class="h-32"}
+#default
+:placeholder{class="h-32"}
 
 #footer
-por placeholder{class="h-8"}
+:placeholder{class="h-8"}
 ::
 
-@3333@3333
+## API (Edición española)
 
-@@30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Accesorios
 
-Componentes Props
+:component-props
 
-@@35000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots
 
-Componentes de slots
+:component-slots
 
-@366@366
+## Temas
 
-Componente Tema
+:component-theme
 
-@@changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

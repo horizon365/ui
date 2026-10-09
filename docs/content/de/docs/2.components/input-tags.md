@@ -14,295 +14,295 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputTags.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Verwenden Sie die `v-model` Direktive, um den Wert der InputTags zu steuern.
+Verwenden Sie die `v-model`-Direktive, um den Wert der InputTags zu steuern.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: ["Vue"]
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
 ---
 ::
 
-Verwenden Sie `default-value` prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
+Verwenden Sie die `default-value`-prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
+prettier: true
+ignore:
   - defaultValue
-Props:
-  DefaultValue: ['Sichtung']
+props:
+  defaultValue: ['Vue']
 ---
 ::
 
 ### Platzhalter
 
-Verwenden Sie `placeholder` prop, um einen Platzhaltertext zu setzen.
+Verwenden Sie die `placeholder`-Prop, um einen Platzhaltertext festzulegen.
 
 ::component-code
 ---
-Props:
-  Platzhalter: "Enter tags..."
+props:
+  placeholder: 'Enter tags...'
 ---
 ::
 
 ### Max Länge
 
-Verwenden Sie `max-length` prop, um die maximale Anzahl von Zeichen in einem Tag festzulegen.
+Verwenden Sie die `max-length`-prop, um die maximale Anzahl von Zeichen in einem Tag festzulegen.
 
 ::component-code
 ---
-Props:
-  Max-Größe: 4
+props:
+  maxLength: 4
 ---
 ::
 
-@@@@@10@100@100@100@100@100@100@10@10@10@10@10@10@@10@10@10@@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@@100@@@@@100000@@@@@@@@@@@@@1000000000@@@@@@@@@@@@@@@@@@@@@@@10000000000@@@@@@@@@@@@@@@@@@@
+### Color (englisch)
 
-Verwenden Sie die `color` prop, um die Ringfarbe zu ändern, wenn die InputTags fokussiert sind.
+Verwenden Sie die `color`-Prop, um die Ringfarbe zu ändern, wenn die InputTags fokussiert sind.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: ['Vue']
-  Farbe: neutral
-  Highlight: Wahr
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  color: neutral
+  highlight: true
 ---
 ::
 
 ::note
-Das `highlight` prop wird hier verwendet, um den Fokuszustand anzuzeigen. Es wird intern verwendet, wenn ein Validierungsfehler auftritt.
+Die `highlight`-prop wird hier verwendet, um den Fokuszustand anzuzeigen. Es wird intern verwendet, wenn ein Validierungsfehler auftritt.
 ::
 
-@@ph015@@@Varianten
+### Varianten
 
-Verwenden Sie `variant` prop, um das Aussehen der InputTags zu ändern.
+Verwenden Sie die `variant`-prop, um das Aussehen der InputTags zu ändern.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: ['Vue']
-  Variante: subtil
-  Farbe: neutral
-  Markiert: false
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  variant: subtle
+  color: neutral
+  highlight: false
 ---
 ::
 
-@@ph019 @ Größe
+### Größe
 
-Verwenden Sie die `size` prop, um die Größe der InputTags anzupassen.
+Verwenden Sie die `size`-prop, um die Größe der InputTags anzupassen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: ["Vue"]
-  Größe: XL
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  size: xl
 ---
 ::
 
-@@ph023@@gmail.de
+### Icon (englisch)
 
-Verwenden Sie die `icon` prop, um ein [Icon](/docs/components/icon) innerhalb der InputTags anzuzeigen.
+Verwenden Sie die `icon`-Prop, um eine [Icon](/docs/components/icon) innerhalb der InputTags anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: ["Vue"]
-  Icon: 'i-lucide-search'(auf Englisch)
-  Größe: MD
-  Variante: Übersicht
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  icon: 'i-lucide-search'
+  size: md
+  variant: outline
 ---
 ::
 
 ::note
-Verwenden Sie `leading` und `trailing` props, um die Symbolposition festzulegen, oder die `leading-icon` und `trailing-icon` props, um für jede Position ein anderes Symbol festzulegen.
+Verwenden Sie die `leading`-und `trailing`-Requisiten, um die Symbolposition festzulegen, oder die `leading-icon`-und `trailing-icon`-Requisiten, um für jede Position ein anderes Symbol festzulegen.
 ::
 
-@@@@@@avatar35@avatar35@@avatar35@@avatar35@@avatar35@@avatar35@@avatar35@@avatar35@@avatar35@@avatar35@avatar35@avatar35@avatar5@@avatarant35@@avatarant35@@avatarantgardiy@avatardiyardiy@avatardiy@avatardiatardiy@avatardiatardiy@avatardiy@avatardiatardiy@avatardiy@avatardiy@@avatardiatardiatardiy@@@avatardiatardiatardiatardiatardiy@@avatardiy@@avatardiyardiy@@@@@avatardiatardiyardiatardiatardiatardiy
+### Avatar (englisch)
 
-Verwenden Sie die `avatar` prop, um ein [Avatar](/docs/components/avatar) innerhalb der InputTags anzuzeigen.
+Verwenden Sie die `avatar`-Prop, um eine [Avatar](/docs/components/avatar) innerhalb der InputTags anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  - modellWert
-  - avatar.loading (nicht verfügbar)
-Außen:
-  - modellWert
-Props:
-  Modellwert: ['Vue']
-  Avatare sind:
-    src: 'https://github.com/vuejs.png'(auf Englisch)
-    Aufladung: Lazy
-  Größe: md
-  Beschreibung: Outline
+prettier: true
+ignore:
+  - modelValue
+  - avatar.loading
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  avatar:
+    src: 'https://github.com/vuejs.png'
+    loading: lazy
+  size: md
+  variant: outline
 ---
 ::
 
-@@ph044@@Delete Icon Bearbeiten
+### Delete Icon (englisch)
 
-Verwenden Sie die `delete-icon` prop, um das Löschen von [Icon](/docs/components/icon) in den Tags. Defaults auf `i-lucide-x` anzupassen.
+Verwenden Sie die `delete-icon`-Prop, um das Löschen [Icon](/docs/components/icon) in den Tags. Defaults auf `i-lucide-x` anzupassen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: ['Vue']
-  deleteIcon: 'i-lucide-trash'(deutsch: 'i-lucide-trash')
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  deleteIcon: 'i-lucide-trash'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.close` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.close` Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.close` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.close` Schlüssel anpassen.
 :::
 ::
 
-@@@@@57@Aufladen
+### Loading (nicht verfügbar)
 
-Verwenden Sie das `loading` prop, um ein Ladesymbol auf den InputTags anzuzeigen.
+Verwenden Sie die `loading`-Prop, um ein Ladesymbol auf den InputTags anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: ['Vue']
-  Aufladung: true
-  Nachtrag: false
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  loading: true
+  trailing: false
 ---
 ::
 
-@@ph061@@Icon-Loading-Funktion
+### Loading Icon (englisch).
 
-Verwenden Sie `loading-icon` prop, um das Ladesymbol anzupassen. Standardmäßig ist `i-lucide-loader-circle`.
+Verwenden Sie die `loading-icon`-Prop, um das Ladesymbol anzupassen. Standardmäßig `i-lucide-loader-circle`.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: ["Vue"]
-  Aufladung: true
-  loadingIcon: 'i-lucide-loader'(englisch)
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  loading: true
+  loadingIcon: 'i-lucide-loader'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.loading` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.loading` Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.loading` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.loading` Schlüssel anpassen.
 :::
 ::
 
-### disabled @ disabled
+### Disabled (nicht verfügbar)
 
-Verwenden Sie `disabled` prop, um die InputTags zu deaktivieren.
+Verwenden Sie die `disabled`-Prop, um die InputTags zu deaktivieren.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: ['Vue']
-  Behindert: Wahr
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  disabled: true
 ---
 ::
 
-## Beispiele
+## Beispiele:
 
-### Innerhalb eines FormFeldes
+### Innerhalb eines Formularfelds
 
-Sie können die InputTags innerhalb einer [FormField](/docs/components/form-field) Komponente verwenden, um ein Etikett, einen Hilfetext, einen erforderlichen Indikator usw. anzuzeigen.
+Sie können die InputTags innerhalb einer [FormField](/docs/components/form-field)-Komponente verwenden, um eine Beschriftung, einen Hilfetext, eine erforderliche Anzeige usw. anzuzeigen.
 
 ::component-example
 ---
-Name: 'input-tags-form-field-example'(Eingabe-Tags-Formular-Feld-Beispiel)
+name: 'input-tags-form-field-example'
 ---
 ::
 
-@@800@bpb
+## API ist
 
-@@@@@@@@@@@ph081@@props
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
-Diese Komponente unterstützt auch alle nativen `<input>` HTML-Attribute.
+Diese Komponente unterstützt auch alle nativen `<input>`-HTML-Attribute.
 ::
 
-@@ph083@gmail.de
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@@@@@@@@@@emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-### Expose
+### Expose (englisch)
 
 Beim Zugriff auf die Komponente über eine Template-Referenz können Sie Folgendes verwenden:
 
-| Vorname| Typ|
+| Vorname| Typen|
 | ---- | ---- |
-| @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
+| `inputRef`{lang="ts-type"} nicht| `Ref<HTMLInputElement \| null>`{lang="ts-type"} (nicht)|
 
-@@ph090@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph091@@changelog @@changelog @ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

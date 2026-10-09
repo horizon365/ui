@@ -4,7 +4,7 @@ category: overlay
 keywords:
   - hint
 links:
-  - label: Tooltip Bearbeiten
+  - label: Der Tooltip
     icon: i-custom-reka-ui
     to: https://reka-ui.com/docs/components/tooltip
   - label: GitHub
@@ -12,230 +12,230 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Tooltip.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Verwenden Sie ein [Button](/docs/components/button) oder eine andere Komponente im Standardsteckplatz des Tooltips.
+Verwenden Sie einen [Button](/docs/components/button) oder eine andere Komponente im Standard-Slot des Tooltips.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph005@@text
-Props:
-  Text: "Öffnen auf GitHub"
-Die Slots:
-  Default:|
+prettier: true
+ignore:
+  - text
+props:
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-    @@@@006 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="öffnen" color="neutral" variant="subtle"}
 ::
 
 ::warning
-Stellen Sie sicher, dass Sie Ihre App mit der Komponente [`App`]() umschließen, die die Komponente [`TooltipProvider`](https://reka-ui.com/docs/components/tooltip#provider) von Reka UI verwendet.
+Stellen Sie sicher, dass Sie Ihre App mit der Komponente [`App`](/docs/components/app) umschließen, die die Komponente [`TooltipProvider`](https://reka-ui.com/docs/components/tooltip#provider) von Reka UI verwendet.
 ::
 
 ::tip{to="/docs/components/app#props"}
-Sie können die `App` Komponente `tooltip` prop überprüfen, um zu sehen, wie der Tooltip global konfiguriert wird.
+Sie können die `App`-Komponente `tooltip` prop überprüfen, um zu sehen, wie Sie den Tooltip global konfigurieren.
 ::
 
-@@ph020@@text @@ Übersetzung
+### Text Übersetzung
 
-Verwenden Sie `text` prop, um den Inhalt des Tooltips einzustellen.
+Verwenden Sie die `text`-Prop, um den Inhalt des Tooltips festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Props:
-  Text: "Öffnen auf GitHub"
-Die Slots:
-  Default:|
+prettier: true
+props:
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-    @@ph022
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="öffnen" color="neutral" variant="subtle"}
 ::
 
-### Kbds
+### Kbds (englisch)
 
-Verwenden Sie `kbds` prop, um [Kbd](/docs/components/kbd) Komponenten im Tooltip zu rendern
+Verwenden Sie die `kbds` prop, um [Kbd](/docs/components/kbd) Komponenten im Tooltip zu rendern.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph030@@text @ Übersetzung
+prettier: true
+ignore:
+  - text
   - kbds
-Props:
-  Text: "Öffnen auf GitHub"
-  Die KBS:
-    @@@@@@@@@@@@@@@@@@@ph032@meta
-    @@@@333@@g-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t
-Slots auf:
-  Default:|
+props:
+  text: 'Open on GitHub'
+  kbds:
+    - meta
+    - G
+slots:
+  default: |
 
-    @@@@@@@@034
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="öffnen" color="neutral" variant="subtle"}
 ::
 
 ::tip
 Sie können spezielle Tasten wie `meta` verwenden, die auf macOS als `⌘` und auf anderen Plattformen als `Ctrl` angezeigt werden.
 ::
 
-@@ph039@delay
+### Delay (englisch)
 
-Verwenden Sie `delay-duration` prop, um die Verzögerung zu ändern, bevor der Tooltip angezeigt wird.
-
-::component-code
----
-Schöner: wahr
-Ignoriert:
-  @@ph042@@text @ Übersetzung
-Props:
-  Verzögerung: 0
-  Text: "Öffnen auf GitHub"
-Slots auf:
-  Default:|
-
-    @@043 @
----
-
-: u-button {label="Open" color="neutral" variant="subtle"}
-::
-
-::tip
-Dies kann global durch die Option `tooltip.delayDuration` in der Komponente [`App`](/docs/components/app) konfiguriert werden.
-::
-
-@@ph051@@Inhalt
-
-Verwenden Sie `content` prop, um zu steuern, wie der Tooltip-Inhalt gerendert wird, z. B.`align` oder `side` zum.
-
-::tip
-Dies kann global über die Option `tooltip.content` in der Komponente [`App`](/docs/components/app) konfiguriert werden.
-::
+Verwenden Sie die `delay-duration`-prop, um die Verzögerung zu ändern, bevor die Tooltip angezeigt wird. Zum Beispiel können Sie es sofort erscheinen lassen, indem Sie es auf `0` setzen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph061@@@text @@@ Übersetzung
-Items:
+prettier: true
+ignore:
+  - text
+props:
+  delayDuration: 0
+  text: 'Open on GitHub'
+slots:
+  default: |
+
+    <UButton label="Open" color="neutral" variant="subtle" />
+---
+
+:u-button{label="öffnen" color="neutral" variant="subtle"}
+::
+
+::tip
+Dies kann global über die `tooltip.delayDuration`-Option in der Komponente [`App`](/docs/components/app) konfiguriert werden.
+::
+
+### Content Inhalt
+
+Verwenden Sie die `content`-Prop, um zu steuern, wie der Tooltip-Inhalt gerendert wird, z. B. `align` oder `side`.
+
+::tip
+Dies kann global über die `tooltip.content`-Option in der Komponente [`App`](/docs/components/app) konfiguriert werden.
+::
+
+::component-code
+---
+prettier: true
+ignore:
+  - text
+items:
   content.align:
-    @@ph062@@starter.de
-    @@ph063@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mitte@mittemitte@mitte@mittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemittemit
-    @@@@@@@@@@@@@@@@@@ph064@ende
+    - start
+    - center
+    - end
   content.side:
-    @@@@@@65@000 @ rechts
-    @@@@@@666@@666@@666@66@66@66@@666@@66@@66@@66@@66@@66@@66@@66@@@66@@@66@@66@@6@@@left
-    @@@@@67@10
-    @@@@@68@@bottom
-Props:
-  Inhalt:
-    Ausrichtung: Center
-    Seite: Bottom
-    Seitenversatz: 8
-  Text: "Öffnen auf GitHub"
-Slots auf:
-  Default:|
+    - right
+    - left
+    - top
+    - bottom
+props:
+  content:
+    align: center
+    side: bottom
+    sideOffset: 8
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-    @@@@@@@@@@@@@@069 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="öffnen" color="neutral" variant="subtle"}
 ::
 
-@@@@@@@@@@ph071@arrow
+### Pfeil
 
-Verwenden Sie `arrow` prop, um einen Pfeil auf dem Tooltip anzuzeigen.
+Verwenden Sie die `arrow` prop, um einen Pfeil auf der Tooltip anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph073@@text
-  @@ph074@@arrow
-Props:
-  Pfeil: wahr
-  Text: "Öffnen auf GitHub"
-Die Slots:
-  Default:|
+prettier: true
+ignore:
+  - text
+  - arrow
+props:
+  arrow: true
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@075
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="öffnen" color="neutral" variant="subtle"}
 ::
 
-### disabled @ disabled
+### Disabled (englisch)
 
-Verwenden Sie `disabled` prop, um den Tooltip zu deaktivieren.
+Verwenden Sie die `disabled` prop, um den Tooltip zu deaktivieren.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph079@@@text @@@ Übersetzung
-Props:
-  Behindert: Wahr
-  Text: "Öffnen auf GitHub"
-Die Slots:
-  Default:|
+prettier: true
+ignore:
+  - text
+props:
+  disabled: true
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-    @@@@80
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="öffnen" color="neutral" variant="subtle"}
 ::
 
-@@ph082@@@Beispiele
+## Beispiele
 
-### Control offener Zustand
+### Control im offenen Zustand
 
-Sie können den offenen Zustand mit der `default-open` prop oder der `v-model:open`-Direktive steuern.
+Sie können den offenen Zustand mit der `default-open` prop oder der `v-model:open` Direktive steuern.
 
 ::component-example
 ---
-Name: 'Tooltip-open-example'(Tooltip-öffnen-Beispiel)
+name: 'tooltip-open-example'
 ---
 ::
 
 ::note
-In diesem Beispiel können Sie den Tooltip mithilfe von [`defineShortcuts`]() umschalten, indem Sie auf kbd{value="O"} drücken.
+In diesem Beispiel können Sie mit [`defineShortcuts`](/docs/composables/define-shortcuts) den Tooltip umschalten, indem Sie: kbd{value="O"} drücken.
 ::
 
-@@ph092@@mit folgendem Cursor
+### Mit dem folgenden Cursor
 
-Sie können den Tooltip dazu bringen, dem Cursor zu folgen, wenn Sie mit dem Mauszeiger über ein Element fahren, indem Sie den Befehl [`reference`](https://reka-ui.com/docs/components/tooltip#trigger) prop verwenden:
+Sie können den Tooltip dazu bringen, dem Cursor zu folgen, wenn Sie mit der Prop [`reference`](https://reka-ui.com/docs/components/tooltip#trigger) über ein Element fahren:
 
 ::component-example
 ---
-Name: 'Tooltip-Cursor-Beispiel'
+name: 'tooltip-cursor-example'
 ---
 ::
 
-@@@@@@98@@bpb
+## API
 
-@@@@@@@@@@@@@@@@ph0999@@@props
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
-@@ph100@@slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@@@@@@@@@@@@@@@@@@@@@@emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-@@ph102@@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph103@@changelog @ changelog
+## Changelog Bearbeiten
 
-Das Component-Changelog
+:component-changelog

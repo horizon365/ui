@@ -10,260 +10,260 @@ links:
 ---
 
 ::warning{to="/docs/getting-started/integrations/content"}
-Ce composant n'est disponible que lorsque le module `@nuxt/content` est installé.
+Ce composant est uniquement disponible lorsque le module `@nuxt/content` est installé.
 ::
 
-@@ph001@@utilisation
+## Utilisation
 
-Utilisez le `links` prop avec le `page?.body?.toc?.links`{lang="ts-type"} que vous obtenez lors de la récupération d'une page.
+Utilisez le prop `links` avec le `page?.body?.toc?.links`{lang="ts-type"} que vous obtenez lors de la récupération d'une page.
 
 ::component-example
 ---
-nom: 'content-toc-exemple'
-Props:
-  Catégorie: w-full
+name: 'content-toc-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-@@ph005@titre
+### Titre
 
 Utilisez la prop `title` pour modifier le titre de la table des matières.
 
 ::component-code{prefix="content"}
 ---
-Étiquette: true
-Collapse: vrai
-Caché:
-  @@ph007@classe
-Ignorer:
-  @@ph008@liens
-Extérieur:
-  @@ph009@liens
-Extérieurs:
-  - ContentTocLink []
-Props:
-  Titre: Sur cette page
-  Catégorie: w-full
-  à gauche:
-  - id: utilisation
-    Profondeur: 2
-    Étiquette: usage
-    Enfants:
-    - id: titre
-      Profondeur: 3
-      Texte: Titre
-    - id: couleur
-      Profondeur: 3
-      Texte: couleur
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  title: 'On this page'
+  class: 'w-full'
+  links:
+  - id: usage
+    depth: 2
+    text: Usage
+    children:
+    - id: title
+      depth: 3
+      text: Title
+    - id: color
+      depth: 3
+      text: Color
     - id: highlight
-      Profondeur: 3
-      Étiquette: highlight
-    - id:'highlight-couleur'
-      Profondeur: 3
-      Étiquette: Highlight Color
-    - id:'highlight-variant'
-      Profondeur: 3
-      Étiquette: highlight variant
+      depth: 3
+      text: Highlight
+    - id: 'highlight-color'
+      depth: 3
+      text: Highlight Color
+    - id: 'highlight-variant'
+      depth: 3
+      text: Highlight Variant
 ---
 ::
 
-### couleur
+### Couleur
 
-Utilisez la prop `color` pour changer la couleur des liens.
+Utilisez le prop `color` pour changer la couleur des liens.
 
 ::component-code{prefix="content"}
 ---
-Étiquette: true
-Collapse: vrai
-Caché:
-  @@classe 19
-ignorer:
-  @@20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Extérieur:
-  @@ph021@@liens
-Extérieurs:
-  @@222@@ContentTéléchargement []
-Props:
-  Couleur: "Neutre"
-  Catégorie: w-full
-  à gauche:
-    - id: utilisation
-      Profondeur: 2
-      Étiquette: usage
-      Enfants:
-        - id: titre
-          Profondeur: 3
-          Texte: titre
-        - id: couleur
-          Profondeur: 3
-          Texte: Couleur
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  color: 'neutral'
+  class: 'w-full'
+  links:
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
         - id: highlight
-          Profondeur: 3
-          Étiquette: highlight
-        - id:'highlight-couleur'
-          Profondeur: 3
-          Étiquette: Highlight Color
-        - id:'highlight-variant'
-          Profondeur: 3
-          Étiquette: highlight variant
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
 ---
 ::
 
-@@29@highlight
+### highlight
 
-Utilisez la prop `highlight` pour afficher une bordure surlignée pour l'élément actif.
+Utilisez le prop `highlight` pour afficher une bordure surlignée pour l'élément actif.
 
 ::component-code{prefix="content"}
 ---
-Étiquette: true
-Collapse: vrai
-Caché:
-  @@ph031@classe
-Ignorer:
-  @@ph032@liens
-Extérieur:
-  @@ph033@liens
-Extérieurs:
-  - ContentTocLink []
-Props:
-  Highlights: vrai
-  Catégorie: w-full
-  à gauche:
-    - id: utilisation
-      Profondeur: 2
-      Étiquette: usage
-      Enfants:
-        - id: titre
-          Profondeur: 3
-          Texte: Titre
-        - id: couleur
-          Profondeur: 3
-          Texte: Couleur
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  highlight: true
+  class: 'w-full'
+  links:
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
         - id: highlight
-          Profondeur: 3
-          Étiquette: highlight
-        - id:'hauteur de couleur'
-          Profondeur: 3
-          Étiquette: Highlight Color
-        - id:'highlight-variant'
-          Profondeur: 3
-          Étiquette: highlight variant
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
 ---
 ::
 
-### Highlight Couleur
+XPH121xHighlight Couleur
 
-Utilisez la prop `highlight-color` pour changer la couleur du surbrillant. Il est par défaut la prop `color`.
+Utilisez la prop `highlight-color` pour changer la couleur de la surbrillance. Elle est par défaut la prop `color`.
 
 ::component-code{prefix="content"}
 ---
-Étiquette: true
-Collapse: vrai
-Caché:
-  @@ph044@classe
-Ignorer:
-  @@ph045@liens
-  @@ph046@highlight
-Extérieur:
-  @@ph047@liens
-Extérieurs:
-  - ContentTocLink []
-Props:
-  Highlights: vrai
-  highlightColor: neutre
-  Catégorie: w-full
-  à gauche:
-    - id: utilisation
-      Profondeur: 2
-      Étiquette: usage
-      Enfants:
-        - id: titre
-          Profondeur: 3
-          Texte: titre
-        - id: couleur
-          Profondeur: 3
-          Texte: Couleur
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+  - highlight
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  highlight: true
+  highlightColor: 'neutral'
+  class: 'w-full'
+  links:
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
         - id: highlight
-          Profondeur: 3
-          Étiquette: highlight
-        - id:'highlight-couleur'
-          Profondeur: 3
-          Étiquette: Highlight Color
-        - id:'highlight-variant'
-          Profondeur: 3
-          Étiquette: highlight variant
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
 ---
 ::
 
 ### Highlight Variant: badge{label="4.6+" class="align-text-top"}
 
-Utilisez la prop `highlight-variant` pour modifier le style du surbrillant. Par défaut à `straight`.
+Utilisez la prop `highlight-variant` pour modifier le style de la surbrillance. Par défaut à `straight`.
 
 ::component-code{prefix="content"}
 ---
-Étiquette: true
-Collapse: vrai
-Caché:
-  @@ph059@classe
-Ignorer:
-  @@ph060@liens
-  @@ph061@highlight
-Extérieur:
-  @@ph062@liens
-Extérieurs:
-  - ContentTocLink []
-Props:
-  Highlights: vrai
-  highlightColor: 'primaire'
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+  - highlight
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  highlight: true
+  highlightColor: 'primary'
   highlightVariant: 'circuit'
-  Catégorie: w-full
-  à gauche:
-    - id: utilisation
-      Profondeur: 2
-      Étiquette: usage
-      Enfants:
-        - id: titre
-          Profondeur: 3
-          Texte: Titre
-        - id: couleur
-          Profondeur: 3
-          Texte: couleur
+  class: 'w-full'
+  links:
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
         - id: highlight
-          Profondeur: 3
-          Étiquette: highlight
-        - id:'hauteur de couleur'
-          Profondeur: 3
-          Étiquette: Highlight Color
-        - id:'highlight-variant'
-          Profondeur: 3
-          Étiquette: highlight variant
-    - id: exemples
-      Profondeur: 2
-      Étiquette: exemples
-      Enfants:
-        - id: dans une page
-          Profondeur: 3
-          Texte: Dans une page
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
+    - id: examples
+      depth: 2
+      text: Examples
+      children:
+        - id: within-a-page
+          depth: 3
+          text: Within a Page
     - id: api
-      Profondeur: 2
-      Étiquette: API
-      Enfants:
-        @@ph073@@id: props
-          Profondeur: 3
-          Étiquette: props
-        - id: réglages
-          Profondeur: 3
-          Étiquette: slots
-        - id: émet
-          Profondeur: 3
-          Étiquette: Emits
-    - id: thème
-      Profondeur: 2
-      Étiquette: theme
+      depth: 2
+      text: API
+      children:
+        - id: props
+          depth: 3
+          text: Props
+        - id: slots
+          depth: 3
+          text: Slots
+        - id: emits
+          depth: 3
+          text: Emits
+    - id: theme
+      depth: 2
+      text: Theme
 ---
 ::
 
-@@ph077@exemples
+## Exemples
 
 ### Dans une page
 
@@ -298,24 +298,24 @@ if (!page.value) {
 </template>
 ```
 
-@@ph107@api
+## API
 
-@@ph108@props
+### Props
 
-Composants-props
+:component-props
 
-@@ph109@@Slots
+### Slots
 
-Composants slots
+:component-slots
 
-@110@110@110
+### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph111@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog écrit
 
-: composant-changelog {prefix="content"}
+:component-changelog{prefix="content"}

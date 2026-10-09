@@ -11,49 +11,49 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Link.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente Link es una envoltura alrededor de [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) usando el [`custom`](https://router.vuejs.org/api/interfaces/RouterLinkProps.html#Properties-custom) prop.
+El componente Link es una envoltura alrededor de [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) usando el prop. [`custom`xph008https://router.vuejs.org/api/interfaces/RouterLinkProps.html#Properties-custom).
 
-- `inactive-class` prop to set a class when the link is inactive,`active-class` is used when active.
-- `exact` prop para usar el estilo `active-class` cuando el enlace está activo y la ruta es exactamente la misma que la ruta actual.
-- `exact-query` y `exact-hash` props para estilizar con `active-class` cuando el enlace está activo y la consulta o hash es exactamente la misma que la consulta o hash actual.
-  - use `exact-query="partial"` para usar `active-class` cuando el enlace esté activo y la consulta coincida parcialmente con la consulta actual.
+- `inactive-class` prop para establecer una clase cuando el enlace está inactivo, `active-class` se utiliza cuando está activo.
+- `exact` prop para estilizar con `active-class` cuando el enlace está activo y la ruta es exactamente la misma que la ruta actual.
+- `exact-query` y `exact-hash` props para usar `active-class` cuando el enlace está activo y la consulta o el hash es exactamente el mismo que la consulta o hash actual.
+  - Use `exact-query="partial"` para estilizar con `active-class` cuando el enlace está activo y la consulta coincide parcialmente con la consulta actual.
 
-El incentivo detrás de esto es proporcionar la misma API que NuxtLink en Nuxt 2/Vue 2. Puede leer más sobre esto en la migración de Vue Router [de la guía Vue 2](https://router.vuejs.org/guide/migration/#removal-of-the-exact-prop-in-router-link).
+El incentivo detrás de esto es proporcionar la misma API que NuxtLink en Nuxt 2/Vue 2. Puede leer más al respecto en la guía Vue Router [migration de Vue 2](xph026).
 
 ::note
-Es utilizado por el [`Breadcrumb`](/docs/components/breadcrumb),[/docs/components/button),[`ContextMenu`](/docs/components/context-menuPH0444 @@,[`DropdownMenu`](/docs/components/dropdown-menu) y [`NavigationMenu`](/docs/components/navigation-menu).
+Es utilizado por los componentes [`Breadcrumb`](/docs/components/breadcrumb), [`Button`](/docs/components/button), [xxph030](xph043), [`DropdownMenu`xph046/docs/components/dropdown-menu) y [x`NavigationMenu`/docs/components/navigation-menu).
 ::
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+xp053xTítulos
 
-El `Link` componentes hace un `<a>` etiqueta cuando se proporciona un `to` prop, de lo contrario se hace un `<button>` etiqueta.
+Los componentes `Link` representan una etiqueta `<a>` cuando se proporciona un soporte `to`, de lo contrario representa una etiqueta `<button>`.
 
 ::component-code
 ---
-Props:
-  Dos: "
-  como: "botón"
-Los slots:
-  por defecto: link
+props:
+  to: ''
+  as: 'button'
+slots:
+  default: Link
 ---
 ::
 
 ::note
-Puede inspeccionar el HTML renderizado cambiando el `to` prop.
+Puede inspeccionar el HTML renderizado cambiando la prop. `to`.
 ::
 
-@@pH060@Estilo
+### Estilo
 
 De forma predeterminada, el enlace tiene estilos activos e inactivos predeterminados, consulte la sección [#theme](#theme).
 
 ::component-code
 ---
-Props:
-  En: /docs/componentes/enlace
-Los slots:
-  por defecto: link
+props:
+  to: /docs/components/link
+slots:
+  default: Link
 ---
 ::
 
@@ -61,26 +61,26 @@ Los slots:
 Intente cambiar el prop `to` para ver los estados activo e inactivo.
 ::
 
-Puede anular este comportamiento utilizando el prop `raw` y proporcionar sus propios estilos utilizando `class`,`active-class` y `inactive-class`.
+Puede anular este comportamiento usando el prop `raw` y proporcionar sus propios estilos usando `class`, `active-class` y `inactive-class`.
 
 ::component-code
 ---
-Ignora:
-  @F070 @
-Props:
-  RAW: Verdad
-  En: /docs/componentes/enlace
-  Categoría:'font-bold'
+ignore:
+  - raw
+props:
+  raw: true
+  to: /docs/components/link
+  activeClass: 'font-bold'
   inactiveClass: 'text-muted'
-Los slots:
-  por defecto: Link
+slots:
+  default: Link
 ---
 
 El Link
 ::
 
 ::callout{icon="i-simple-icons-visualstudiocode"}
-Si está utilizando la extensión [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) para VSCode y desea obtener la autofinalización para los accesorios `active-class` y `inactive-class`, puede agregar los siguientes ajustes a su `.vscode/settings.json`:
+Si está utilizando la extensión [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) para VSCode y desea obtener la autofinalización para los accesorios `active-class` y `inactive-class`, puede agregar la siguiente configuración a su `.vscode/settings.json`:
 
 ```json [.vscode/settings.json]
 {
@@ -92,9 +92,9 @@ Si está utilizando la extensión [Tailwind CSS IntelliSense](https://marketplac
 ```
 ::
 
-### Locale: badge{label="4.7+" class="align-text-top"}
+Ubicación: badge{label="4.7+" class="align-text-top"}
 
-El componente Link se integra automáticamente con [`@nuxtjs/i18n`](https://i18n.nuxtjs.org/) cuando se instala. Los enlaces internos se localizan automáticamente utilizando el ayudante `$localePath` sin necesidad de envolver manualmente.
+El componente Link se integra automáticamente con [`@nuxtjs/i18n`](https://i18n.nuxtjs.org/) cuando se instala. Los enlaces internos se localizan automáticamente con el ayudante `$localePath` sin necesidad de empaquetar manualmente.
 
 ```vue
 <template>
@@ -104,36 +104,36 @@ El componente Link se integra automáticamente con [`@nuxtjs/i18n`](https://i18n
 ```
 
 ::tip
-Todavía puede utilizar manualmente `localePath()` o `localeRoute()` si es necesario.
+Todavía puede usar manualmente `localePath()` o `localeRoute()` si es necesario.
 ::
 
 ::note{to="/docs/getting-started/integrations/i18n/nuxt#dynamic-locale"}
 Obtenga más información sobre Internacionalización en Nuxt UI.
 ::
 
-@P2002 @
+## API (Edición española)
 
-@300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props (Edición española)
 
 ::component-props
 ---
-Ignora:
-  @F104 @ Custom
+ignore:
+  - custom
 ---
 ::
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attributes" target="_blank"}
-Este componente también soporta todos los atributos HTML nativos `<a>`.
+Este componente también soporta todos los atributos HTML `<a>` nativos.
 ::
 
-@106@106@106
+### Slots
 
-Componentes de slots
+:component-slots
 
-@107 @@ Temas
+## Temas
 
-Componente Tema
+:component-theme
 
-@108@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

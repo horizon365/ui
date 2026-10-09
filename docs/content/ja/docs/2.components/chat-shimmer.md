@@ -13,64 +13,64 @@ links:
 ChatShimmerコンポーネントは、チャットインターフェイスでストリーミングまたはロード状態を示すために一般的に使用される、テキスト上にアニメーションの輝くグラデーションで要素をレンダリングします。
 
 ::note
-このコンポーネントは、ストリーミング時に[`ChatTool`](/docs/components/chat-tool)および[`ChatReasoning`](/docs/components/chat-reasoning)コンポーネントによって自動的に使用されます。
+このコンポーネントはストリーミング時に[`ChatTool`](/docs/components/chat-tool)および[`ChatReasoning`](/docs/components/chat-reasoning)コンポーネントで自動的に使用されます。
 ::
 
 ::tip
 アニメーションは、ユーザーが縮小された動きを好む場合に自動的に無効になり、テキストは代わりに静的なミュートテキストとして表示されます。
 ::
 
-### テキスト
+### Text
 
-`text`プロパティを使用して、shimmerテキストを設定します。
-
-::component-code
----
-小道具
-  テキスト：「思考...」
----
-::
-
-### 期間
-
-`duration`プロパティを使用して、アニメーションの速度を秒単位で制御します。
+`text`プロパティを使用して、シマーテキストを設定します。
 
 ::component-code
 ---
-小道具
-  テキスト：「思考...」
-  期間4
+props:
+  text: 'Thinking...'
 ---
 ::
 
-### スプレッド
+### Duration
+
+`duration`プロパティを使用して、アニメーション速度を秒単位で制御します。
+
+::component-code
+---
+props:
+  text: 'Thinking...'
+  duration: 4
+---
+::
+
+### Spread
 
 `spread`プロパティを使用して、シマーハイライトの幅を制御します。実際のスプレッドは`text.length * spread`としてピクセル単位で計算されます。
 
 ::component-code
 ---
-小道具
-  テキスト：「思考...」
-  広がり5
+props:
+  text: 'Thinking...'
+  spread: 5
 ---
 ::
 
 ## 例
 
 ::tip{to="/docs/components/chat"}
-インストール手順、サーバー設定、使用例については、** Chat **概要ページをご覧ください。
+インストール手順、サーバーのセットアップ、使用例については、**Chat**の概要ページをご覧ください。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

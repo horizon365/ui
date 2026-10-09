@@ -13,314 +13,314 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Pagination.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Utilisez la directive `default-page` ou la directive `v-model:page` pour contrôler la page en cours.
+Utilisez la prop `default-page` ou la directive `v-model:page` pour contrôler la page en cours.
 
 ::component-code
 ---
-Extérieure:
-  @@ph003@page
-Modèle:
-  @@ph004@page
-ignorer:
-  @@ph005@page
-  @@F006@tout
-Props:
-  Page: cinq
-  Total: 100
+external:
+  - page
+model:
+  - page
+ignore:
+  - page
+  - total
+props:
+  page: 5
+  total: 100
 ---
 ::
 
 ::note
-Le composant Pagination utilise un certain [`Button`](/docs/components/button) pour afficher les pages, utilisez [`color`](#color),[`variant`](#variant) et [`size`](#size) pour les styliser
+Le composant Pagination utilise des accessoires [`Button`](/docs/components/button) pour afficher les pages, utilisez les accessoires [`color`](#color), [`variant`xph028#variant) et [`size`](xph0333xph0x pour les styliser.
 ::
 
-@27@@Total
+### totale
 
 Utilisez la prop `total` pour définir le nombre total d'éléments dans la liste.
 
 ::component-code
 ---
-Extérieure:
-  @29@page
-Modèle:
-  @@ph030@page
-Props:
-  Page: cinq
-  Total: 100
+external:
+  - page
+model:
+  - page
+props:
+  page: 5
+  total: 100
 ---
 ::
 
 ### Items par page
 
-Utilisez la prop `items-per-page` pour définir le nombre d'éléments par page. Par défaut à `10`.
+Utilisez la prop `items-per-page` pour définir le nombre d'éléments par page. Par défaut, `10`.
 
 ::component-code
 ---
-Ignorer:
-  @@ph034@page
-Extérieure:
-  @@ph035@page
-Modèle:
-  @@ph036@page
-Props:
-  Page: cinq
-  Étiquettes: 20
-  Total: 100
+ignore:
+  - page
+external:
+  - page
+model:
+  - page
+props:
+  page: 5
+  itemsPerPage: 20
+  total: 100
 ---
 ::
 
-### Sibling Compte
+### Sibling Compteur
 
 Utilisez la prop `sibling-count` pour définir le nombre de frères et sœurs à afficher. Defaults à `2`.
 
 ::component-code
 ---
-Ignorer:
-  @@ph040@page
-  @@ph041@@total
-Extérieur:
-  @@ph042@page
-Modèle:
-  @@ph043@page
-Props:
-  Page: cinq
-  Sibérien: 1
-  Total: 100
+ignore:
+  - page
+  - total
+external:
+  - page
+model:
+  - page
+props:
+  page: 5
+  siblingCount: 1
+  total: 100
 ---
 ::
 
 ### Afficher les bords
 
-Utilisez la prop `show-edges` pour toujours afficher les points de suspension, la première et la dernière pages. Par défaut à `false`.
+Utilisez la prop `show-edges` pour toujours afficher les points de suspension, la première et la dernière pages.
 
 ::component-code
 ---
-Ignorer:
-  @@ph047@page
-  @@ph048@@total
-Extérieur:
-  @@ph049@page
-Modèle:
-  @@ph050@page
-Props:
-  Page: cinq
-  Spectacle: vrai
-  Sibérien: 1
-  Total: 100
+ignore:
+  - page
+  - total
+external:
+  - page
+model:
+  - page
+props:
+  page: 5
+  showEdges: true
+  siblingCount: 1
+  total: 100
 ---
 ::
 
-### Afficher les contrôles
+### Show Contrôles
 
-Utilisez la prop `show-controls` pour afficher les boutons premier, précédent, suivant et dernier. Par défaut à `true`.
+Utilisez la prop `show-controls` pour afficher les boutons premier, précédent, suivant et dernier. Par défaut `true`.
 
 ::component-code
 ---
-ignorer:
-  @@ph054@page
-  @@505@tout
-Extérieure:
-  @@ph056@page
-Modèle:
-  @@ph057@page
-Props:
-  Page: cinq
-  Démonstration: False
-  Spectacle: vrai
-  Total: 100
+ignore:
+  - page
+  - total
+external:
+  - page
+model:
+  - page
+props:
+  page: 5
+  showControls: false
+  showEdges: true
+  total: 100
 ---
 ::
 
 ### couleur
 
-Utilisez la prop `color` pour définir la couleur des contrôles inactifs. Par défaut sur `neutral`.
+Utilisez la prop `color` pour définir la couleur des contrôles inactifs. Par défaut `neutral`.
 
 ::component-code
 ---
-ignorer:
-  @@ph061@page
-  - tout
-Extérieure:
-  @@ph063@page
-Modèle:
-  @@ph064@page
+ignore:
+  - page
+  - total
+external:
+  - page
+model:
+  - page
 items:
-  Couleur:
-    @@ph065@primaire
-    @@ph066@secondaire
-    - réussite
-    @@ph068@info
-    @@ph069@référencement
-    @@F070@erreur
-    @@ph071@neutre
-Props:
-  Page: cinq
-  Couleur: Primaire
-  Total: 100
+  color:
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
+props:
+  page: 5
+  color: primary
+  total: 100
 ---
 ::
 
-@@72@Variant
+### Variant
 
-Utilisez la prop `variant` pour définir la variante des contrôles inactifs. Defaults à `outline`.
+Utilisez la prop `variant` pour définir la variante des contrôles inactifs. Defaults sur `outline`.
 
 ::component-code
 ---
-Ignorer:
-  @@ph075@page
-  @@76@tout
-Extérieure:
-  @@ph077@page
-Modèle:
-  @@ph078@page
+ignore:
+  - page
+  - total
+external:
+  - page
+model:
+  - page
 items:
-  Couleur:
-    @@79@primaire
-    - secondaire
-    @081@réussite
-    @@ph082@info
-    @@ph083@référencement
-    @@ph084@erreur
-    @@ph085@neutre
-  Variante:
-    @@ph086@solide
-    @@ph087@outline
-    @@888@référencement
-    @899@subtile
-    @ghost
-    @@ph091@lien
-Props:
-  Page: cinq
-  Couleur: Neutre
-  Variante: subtile
-  Total: 100
+  color:
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
+  variant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+    - link
+props:
+  page: 5
+  color: neutral
+  variant: subtle
+  total: 100
 ---
 ::
 
-### Couleur active
+XPH169xCouleur active
 
-Utilisez la prop `active-color` pour définir la couleur du contrôle actif. Par défaut sur `primary`.
+Utilisez la prop `active-color` pour définir la couleur du contrôle actif. Par défaut, `primary`.
 
 ::component-code
 ---
-ignorer:
-  @@ph095@page
-  @@P096@tout
-Extérieure:
-  @@ph097@page
-Modèle:
-  @@ph098@page
+ignore:
+  - page
+  - total
+external:
+  - page
+model:
+  - page
 items:
-  Activité:
-    @@ph099@primaire
-    - secondaire
-    @101@réussite
-    @@ph102@info
-    - référencement
-    @@F104@erreur
-    @@ph105@neutre
-Props:
-  Page: cinq
-  Couleur: Neutre
-  Total: 100
+  activeColor:
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
+props:
+  page: 5
+  activeColor: neutral
+  total: 100
 ---
 ::
 
-### Variante active
+### Active Variante d'équipement
 
-Utilisez la prop `active-variant` pour définir la variante du contrôle actif. Defaults sur `solid`.
+Utilisez la prop `active-variant` pour définir la variante du contrôle actif. Par défaut sur `solid`.
 
 ::component-code
 ---
-ignorer:
-  @@ph109@page
-  @@ph110@totale
-Extérieure:
-  @@ph111@page
-Modèle:
-  @@ph112@page
+ignore:
+  - page
+  - total
+external:
+  - page
+model:
+  - page
 items:
-  Activité:
-    @@ph113@primaire
-    - secondaire
-    @@115@réussite
-    @@ph116@info
-    @@ph117@avertissement
-    @@ph118@erreur
-    @@ph119@neutre
-  Activité:
-    @@ph120@solide
-    @@ph121@outline
-    @@ph122@doux
-    @@ph123@subtile
-    @ph124@fantôme
-    @@ph125@lien
-Props:
-  Page: cinq
-  Activité: Primary
-  Activité: Subtil
-  Total: 100
+  activeColor:
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
+  activeVariant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+    - link
+props:
+  page: 5
+  activeColor: primary
+  activeVariant: subtle
+  total: 100
 ---
 ::
 
-@@ph126@size
+### Size
 
-Utilisez la prop `size` pour définir la taille des contrôles. Par défaut à `md`.
+Utilisez la prop `size` pour définir la taille des contrôles. Par défaut, `md`.
 
 ::component-code
 ---
-Ignorer:
-  @@ph129@page
-  @@P130@tout
-Extérieur:
-  @@ph131@page
-Modèle:
-  @@ph132@page
+ignore:
+  - page
+  - total
+external:
+  - page
+model:
+  - page
 items:
-  Size:
-    @@ph133@@x
-    @@ph134
-    @@ph135@md
-    @@ph136@lg
-    @@ph137@xl
-Props:
-  Page: cinq
-  Taille: XL
-  Total: 100
+  size:
+    - xs
+    - sm
+    - md
+    - lg
+    - xl
+props:
+  page: 5
+  size: xl
+  total: 100
 ---
 ::
 
-### désactivé
+### Désactivé
 
-Utilisez la prop `disabled` pour désactiver les contrôles de pagination.
+Utilisez le prop `disabled` pour désactiver les contrôles de pagination.
 
 ::component-code
 ---
-Ignorer:
-  @@ph140@@page
-  @@ph141@@total
-Extérieure:
-  @@ph142@page
-Modèle:
-  @@ph143@page
-Props:
-  Page: cinq
-  Total: 100
-  handicapés: vrai
+ignore:
+  - page
+  - total
+external:
+  - page
+model:
+  - page
+props:
+  page: 5
+  total: 100
+  disabled: true
 ---
 ::
 
-@@ph144@exemples
+## Exemples
 
-### Avec les liens
+### Avec gauche
 
 Utilisez la prop `to` pour transformer les boutons en liens. Passez une fonction qui reçoit le numéro de page et renvoie une destination de route.
 
 ::component-example
 ---
-nom: 'pagination-links-exemple'
+name: 'pagination-links-example'
 ---
 ::
 
@@ -328,24 +328,24 @@ nom: 'pagination-links-exemple'
 Dans cet exemple, nous ajoutons le hachage `#with-links` pour éviter d'aller en haut de la page.
 ::
 
-@@ph148@@api
+## API
 
-@@ph149@@props
+### Props
 
-Composants-props
+:component-props
 
-@@ph150@@réseaux sociaux
+### Slots
 
-Composants slots
+:component-slots
 
-@@151@@émetteur
+### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph152@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

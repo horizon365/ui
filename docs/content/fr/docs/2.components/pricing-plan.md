@@ -8,7 +8,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PricingPlan.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Le composant Pricing Plan offre un moyen flexible d'afficher un plan de tarification avec un contenu personnalisable, y compris le titre, la description, le prix, les fonctionnalités, etc.
 
@@ -16,21 +16,21 @@ Le composant Pricing Plan offre un moyen flexible d'afficher un plan de tarifica
 
 ::u-pricing-plan
 ---
-Titre: Solo
-Pour les bootstrappers et les hackers indépendants.
-Prix: 249 $
-Réduction: 199 $
-cycle de facturation: '/mois'
-Badge: "Le plus populaire"
-Caractéristiques:
-  - 'Un développeur '
-  - 'Projets illimités '
-  - 'Accès au dépôt GitHub '
-  - 'Patch illimité et mises à jour mineures '
-  - 'Accès à vie '
-bouton:
-  Étiquette:"Acheter maintenant"
-Catégorie: W-96
+title: 'Solo'
+description: 'For bootstrappers and indie hackers.'
+price: '$249'
+discount: '$199'
+billing-cycle: '/month'
+badge: 'Most popular'
+features:
+  - 'One developer'
+  - 'Unlimited projects'
+  - 'Access to GitHub repository'
+  - 'Unlimited patch & minor updates'
+  - 'Lifetime access'
+button:
+  label: 'Buy now'
+class: 'w-96'
 ---
 ::
 
@@ -40,174 +40,174 @@ Catégorie: W-96
 Utilisez le composant `PricingPlans` pour afficher plusieurs plans tarifaires dans une mise en page de grille réactive.
 ::
 
-@@ph007@titre
+### Titre
 
 Utilisez la prop `title` pour définir le titre du plan de prix.
 
 ::component-code
 ---
-Ignorer:
-  @@ph009@classe
-Props:
-  Titre: Solo
-  Catégorie: W-96
+ignore:
+  - class
+props:
+  title: 'Solo'
+  class: 'w-96'
 ---
 ::
 
-@@ph010@Description
+### Description
 
 Utilisez la prop `description` pour définir la description du plan de prix.
 
 ::component-code
 ---
-Caché:
-  @@classe 12
-ignorer:
-  @@ph013@titre
-Props:
-  Titre: Solo
-  Pour les bootstrappers et les hackers indépendants.
-  Catégorie: W-96
+hide:
+  - class
+ignore:
+  - title
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  class: 'w-96'
 ---
 ::
 
-@@ph014@@badge
+### badge référence
 
-Utilisez le `badge` prop pour afficher un [Badge](/docs/components/badge) à côté du titre du plan de tarification.
+Utilisez la prop `badge` pour afficher un [Badge](xph044) à côté du titre du plan de prix.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@ph020@classe
-ignorer:
-  @@21@titre
-  @@ph022@description
-Props:
-  Titre: Solo
-  Pour les bootstrappers et les hackers indépendants.
-  Badge: "Le plus populaire"
-  Catégorie: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  badge: 'Most popular'
+  class: 'w-96'
 ---
 ::
 
-You can pass any property from the [Badge](/docs/components/badge#props) component to customize it.
+Vous pouvez passer n'importe quelle propriété du composant [Badge](/docs/components/badge#props) pour le personnaliser.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@ph027@classe
-Ignorer:
-  @@28@titre
-  @@ph029@description
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
   - badge.label
-  - badge.couleur
+  - badge.color
   - badge.variant
-Props:
-  Titre: Solo
-  Pour les bootstrappers et les hackers indépendants.
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
   badge:
-    Étiquette:"Most Popular"
-    Couleur: "Neutre"
-    Étiquette:"solide"
-  Catégorie: W-96
+    label: 'Most popular'
+    color: 'neutral'
+    variant: 'solid'
+  class: 'w-96'
 ---
 ::
 
-@@ph033@price
+### Prix
 
-Utilisez le `price` prop pour définir le prix du plan de prix.
+Utilisez le prop `price` pour définir le prix du plan de prix.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@classe 35
-Ignorer:
-  @@ph036@titre
-  @@ph037@description
-Props:
-  Titre: Solo
-  Pour les bootstrappers et les hackers indépendants.
-  Prix: 249 $
-  Catégorie: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  class: 'w-96'
 ---
 ::
 
-@@38@@réduction
+### Discount
 
-Utilisez le prop `discount` pour définir un prix réduit qui sera affiché à côté du prix original (qui sera affiché avec une barre).
+Utilisez le prop `discount` pour définir un prix réduit qui sera affiché à côté du prix d'origine (qui sera affiché avec une barre).
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@classe 400
-Ignorer:
-  @@ph041@titre
-  @@ph042@description
-Props:
-  Titre: Solo
-  Pour les bootstrappers et les hackers indépendants.
-  Prix: 249 $
-  Réduction: 199 $
-  Catégorie: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  discount: '$199'
+  class: 'w-96'
 ---
 ::
 
-@@pH043@@référencement
+### Facturation
 
-Utilisez les accessoires `billing-cycle` et/ou `billing-period` pour afficher les informations de facturation du plan de tarification.
+Utilisez les accessoires `billing-cycle` et/ou `billing-period` pour afficher les informations de facturation du plan de prix.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@ph046@classe
-ignorer:
-  @@ph047@titre
-  @@ph048@description
-Props:
-  Titre: Solo
-  Pour les bootstrappers et les hackers indépendants.
-  Prix: 9 $
-  cycle: '/mois'
-  Période de facturation: 'facturé annuellement'
-  Catégorie: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$9'
+  billingCycle: '/month'
+  billingPeriod: 'billed annually'
+  class: 'w-96'
 ---
 ::
 
 ### Caractéristiques
 
-Utilisez le `features` prop comme tableau de chaînes pour afficher une liste de caractéristiques sur le plan de prix:
+Utilisez le prop `features` comme tableau de chaînes pour afficher une liste de fonctionnalités sur le plan de prix:
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@ph051@classe
-Ignorer:
-  @@ph052@titre
-  @@ph053@description
-  - prix
-  - caractéristiques
-Props:
-  Titre: Solo
-  Pour les bootstrappers et les hackers indépendants.
-  Prix: 249 $
-  Caractéristiques:
-    - 'Un développeur '
-    - 'Projets illimités '
-    - 'Accès au dépôt GitHub '
-    - 'Patch illimité et mises à jour mineures '
-    - 'Accès à vie '
-  Catégorie: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - price
+  - features
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - 'One developer'
+    - 'Unlimited projects'
+    - 'Access to GitHub repository'
+    - 'Unlimited patch & minor updates'
+    - 'Lifetime access'
+  class: 'w-96'
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.success`.
 :::
@@ -220,262 +220,262 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 
 Vous pouvez également passer un tableau d'objets avec les propriétés suivantes:
 
-@@
-@@
+- x`title: string`x{lang="ts-type"}
+- x`icon?: string`x{lang="ts-type"}
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@ph071@classe
-Extérieure:
-  - caractéristiques
-Extérieurs:
-  - PricingPlanFeature []
-Ignorer:
-  @@ph074@titre
-  @@ph075@description
-  @76@prix
-  - caractéristiques
-Props:
-  Titre: Solo
-  Pour les bootstrappers et les hackers indépendants.
-  Prix: 249 $
-  Caractéristiques:
-    - title:'Un développeur'
-      Icône: i-lucide-user
-    - title:'Projets illimités'
-      Icône: i-lucide-infinity
-    - title:'Accès au dépôt GitHub'
-      Icône: i-lucide-github
-    - title:'Patch illimité et mises à jour mineures'
-      Icône: i-lucide-refresh-cw
-    - title: Accès à vie
-      Icône: i-lucide-clock
-  Catégorie: W-96
+prettier: true
+hide:
+  - class
+external:
+  - features
+externalTypes:
+  - PricingPlanFeature[]
+ignore:
+  - title
+  - description
+  - price
+  - features
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - title: 'One developer'
+      icon: i-lucide-user
+    - title: 'Unlimited projects'
+      icon: i-lucide-infinity
+    - title: 'Access to GitHub repository'
+      icon: i-lucide-github
+    - title: 'Unlimited patch & minor updates'
+      icon: i-lucide-refresh-cw
+    - title: 'Lifetime access'
+      icon: i-lucide-clock
+  class: 'w-96'
 ---
 ::
 
-@@ph083@bouton
+### Bouton
 
-Utilisez la prop `button` avec n'importe quelle propriété du composant [Button](/docs/components/button) pour afficher un bouton au bas du plan de prix.
+Utilisez la prop `button` avec n'importe quelle propriété du composant [Button](/docs/components/button) pour afficher un bouton en bas du plan de prix.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@ph089@classe
-ignorer:
-  @@ph090@titre
-  @@ph091@description
-  @@ph092@prix
-  - caractéristiques
-Props:
-  Titre: Solo
-  Pour les bootstrappers et les hackers indépendants.
-  Prix: 249 $
-  Caractéristiques:
-    - 'Un développeur '
-    - 'Projets illimités '
-    - 'Accès au dépôt GitHub '
-    - 'Patch illimité et mises à jour mineures '
-    - 'Accès à vie '
-  Bouton:
-    Étiquette:"acheter maintenant"
-  Catégorie: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - price
+  - features
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - 'One developer'
+    - 'Unlimited projects'
+    - 'Access to GitHub repository'
+    - 'Unlimited patch & minor updates'
+    - 'Lifetime access'
+  button:
+    label: 'Buy now'
+  class: 'w-96'
 ---
 ::
 
 ::tip
-Utilisez le champ `onClick` pour ajouter un gestionnaire de clics afin de déclencher l'achat du plan.
+Utilisez le champ `onClick` pour ajouter un gestionnaire de clics pour déclencher l'achat du plan.
 ::
 
-@@P100@@Variant
+### Variant équivalent
 
-Utilisez la prop `variant` pour modifier la variante du plan de prix.
+Utilisez le prop `variant` pour modifier la variante du plan de prix.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@ph102@classe
-Ignorer:
-  @@ph103@titre
-  @@ph104@description
-  @@P105 @ prix
-  - caractéristiques
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - price
+  - features
   - button.label
-Props:
-  Titre: Solo
-  Pour les bootstrappers et les hackers indépendants.
-  Prix: 249 $
-  Caractéristiques:
-    - 'Un développeur '
-    - 'Projets illimités '
-    - 'Accès au dépôt GitHub '
-    - 'Patch illimité et mises à jour mineures '
-    - 'Accès à vie '
-  Bouton:
-    Étiquette:"acheter maintenant"
-  Étiquette:"subtil"
-  Catégorie: W-96
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - 'One developer'
+    - 'Unlimited projects'
+    - 'Access to GitHub repository'
+    - 'Unlimited patch & minor updates'
+    - 'Lifetime access'
+  button:
+    label: 'Buy now'
+  variant: 'subtle'
+  class: 'w-96'
 ---
 ::
 
-### Référencement
+### Orientation
 
-Utilisez la prop `orientation` pour modifier l'orientation de la Pricing Plan. Defaults à `vertical`.
+Utilisez la prop `orientation` pour modifier l'orientation de l'option. Defaults sur `vertical`.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@classe 116
-Ignorer:
-  @@ph117@titre
-  @@ph118@description
-  @@ph119@prix
-  - caractéristiques
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - price
+  - features
   - button.label
-Props:
-  Titre: Solo
-  Pour les bootstrappers et les hackers indépendants.
-  Prix: 249 $
-  Caractéristiques:
-    - 'Un développeur '
-    - 'Projets illimités '
-    - 'Accès au dépôt GitHub '
-    - 'Accès à vie '
-  Bouton:
-    Étiquette:"Acheter maintenant"
-  Orientation: horizontale
-  Étiquette:"Outline"
-  Catégorie: w-full
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - 'One developer'
+    - 'Unlimited projects'
+    - 'Access to GitHub repository'
+    - 'Lifetime access'
+  button:
+    label: 'Buy now'
+  orientation: horizontal
+  variant: 'outline'
+  class: 'w-full'
 ---
 ::
 
-@@ph126@@synthèse
+### Télécharger
 
 Utilisez le prop `tagline` pour afficher un texte de slogan au-dessus du prix.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@ph128@classe
-Ignorer:
-  @@ph129@titre
-  @@ph130@description
-  @@ph131@prix
-  - caractéristiques
-  @@ph133@@button.label
-  - référence
-Props:
-  Titre: Solo
-  Pour les bootstrappers et les hackers indépendants.
-  Prix: 249 $
-  Caractéristiques:
-    - 'Un développeur '
-    - 'Projets illimités '
-    - 'Accès au dépôt GitHub '
-    - 'Accès à vie '
-  Bouton:
-    Étiquette:"Acheter maintenant"
-  Orientation: horizontale
-  Le slogan: « Payez une fois, possédez-le pour toujours »
-  Catégorie: w-full
----
-::
-
-@@ph139@@termes
-
-Use the `terms` prop to display terms below the price.
-
-::component-code
----
-Étiquette: true
-Caché:
-  @@ph141@@classe
-Ignorer:
-  @@ph142@titre
-  @@ph143@description
-  @@ph144@prix
-  - caractéristiques
-  - button.label
-  - référencement
-  @@ph148@synthèse
-Props:
-  Titre: Solo
-  Pour les bootstrappers et les hackers indépendants.
-  Prix: 249 $
-  Caractéristiques:
-    - 'Un développeur '
-    - 'Projets illimités '
-    - 'Accès au dépôt GitHub '
-    - 'Accès à vie '
-  Bouton:
-    Étiquette:"acheter maintenant"
-  Orientation: horizontale
-  Le slogan: « Payez une fois, possédez-le pour toujours »
-  termes: "Factures et reçus disponibles."
-  Catégorie: w-full
----
-::
-
-@@ph153@@highlight
-
-Utilisez la prop `highlight` pour afficher une bordure surlignée autour du plan de prix.
-
-::component-code
----
-Étiquette: true
-Caché:
-  @@ph155@classe
-ignorer:
-  @@ph156@titre
+prettier: true
+hide:
+  - class
+ignore:
+  - title
   - description
-  - prix
-  - caractéristiques
+  - price
+  - features
   - button.label
-Props:
-  Titre: Solo
-  Pour les bootstrappers et les hackers indépendants.
-  Prix: 249 $
-  Caractéristiques:
-    - 'Un développeur '
-    - 'Projets illimités '
-    - 'Accès au dépôt GitHub '
-    - 'Patch illimité et mises à jour mineures '
-    - 'Accès à vie '
-  Bouton:
-    Étiquette:"acheter maintenant"
-  Highlight: vrai
-  Catégorie: W-96
+  - orientation
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - 'One developer'
+    - 'Unlimited projects'
+    - 'Access to GitHub repository'
+    - 'Lifetime access'
+  button:
+    label: 'Buy now'
+  orientation: horizontal
+  tagline: 'Pay once, own it forever'
+  class: 'w-full'
 ---
 ::
 
-@@ph166@@échelle
+### Terms
 
-Use the `scale` prop to make a PricingPlan bigger than the others.
+Utilisez le prop `terms` pour afficher les termes en dessous du prix.
+
+::component-code
+---
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - price
+  - features
+  - button.label
+  - orientation
+  - tagline
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - 'One developer'
+    - 'Unlimited projects'
+    - 'Access to GitHub repository'
+    - 'Lifetime access'
+  button:
+    label: 'Buy now'
+  orientation: horizontal
+  tagline: 'Pay once, own it forever'
+  terms: 'Invoices and receipts available.'
+  class: 'w-full'
+---
+::
+
+### highlight
+
+Utilisez le prop `highlight` pour afficher une bordure en surbrillance autour du plan de prix.
+
+::component-code
+---
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - price
+  - features
+  - button.label
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - 'One developer'
+    - 'Unlimited projects'
+    - 'Access to GitHub repository'
+    - 'Unlimited patch & minor updates'
+    - 'Lifetime access'
+  button:
+    label: 'Buy now'
+  highlight: true
+  class: 'w-96'
+---
+::
+
+### échelle
+
+Utilisez le prop `scale` pour rendre un plan de prix plus grand que les autres.
 
 ::note{to="/docs/components/pricing-plans#scale"}
 Consultez l'exemple `scale` de PricingPlans pour voir comment cela fonctionne, car il est difficile de le démontrer par lui-même.
 ::
 
-@@ph169@@api
+## API
 
-@170@projets
+### Props équipements
 
-Composants-props
+:component-props
 
-@@ph171@@slot
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph172@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement.com
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

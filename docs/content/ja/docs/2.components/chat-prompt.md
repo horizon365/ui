@@ -13,59 +13,59 @@ links:
 
 ## 使用法
 
-ChatPromptコンポーネントは`<form>`要素をレンダリングし、[ Textarea ](/docs/components/textarea)コンポーネントを拡張します。これにより、`icon`、`placeholder`、`autofocus`などのプロパティを渡すことができます。
+ChatPromptコンポーネントは`<form>`要素をレンダリングし、[Textarea](/docs/components/textarea)コンポーネントを拡張するため、`icon`、`placeholder`、`autofocus`などのプロパティを渡すことができます。
 
 ::component-example
 ---
-崩壊真
-名前'チャットプロンプト例'
+collapse: true
+name: 'chat-prompt-example'
 ---
 ::
 
 ::note
 ChatPromptは以下のイベントを処理します。
 
-- フォームは、ユーザーがkbd {value="enter"}を押したとき、またはユーザーが送信ボタンをクリックしたときに送信されます。代わりにkbd {value="ctrl"}+ kbd {value="enter"} macOSではkbd {value="cmd"}+ kbd {value="enter"}で送信する場合は、{value="enter"}に改行を挿入できます。
--  textareaは、kbd {value="escape"}が押されて`close`イベントが発生するとぼやけます。
+- フォームは、ユーザがkbd{value="enter"}を押したとき、またはユーザが送信ボタンをクリックしたときに送信されます。代わりにkbd{value="ctrl"} + kbd{value="enter"}またはmacOSではkbd{value="cmd"} + kbd{value="enter"}で送信するには`submit-on-enter`プロパティを`false`に設定します。kbd{value="enter"}に改行を挿入できます。
+-  kbd{value="escape"}が押されて`close`イベントが発生すると、テキストエリアがぼやけます。
 ::
 
-### バリアント
+### Variant
 
-プロンプトのスタイルを変更するには、`variant`プロパティを使用します。デフォルトは`outline`です。
+`variant`プロパティを使用してプロンプトのスタイルを変更します。デフォルトは`outline`です。
 
 ::component-code
 ---
-隠す
-  - オートフォーカス
-小道具
-  バリアント'ソフト'
-  オートフォーカスfalse
+hide:
+  - autofocus
+props:
+  variant: 'soft'
+  autofocus: false
 ---
 ::
 
-## 例
+## サンプル
 
 ::tip{to="/docs/components/chat"}
-インストール手順、サーバー設定、使用例については、** Chat **概要ページをご覧ください。
+インストール手順、サーバーのセットアップ、使用例については、**Chat**の概要ページをご覧ください。
 ::
 
-### エディタを使用して：badge {label="4.10+" class="align-text-top"}
+### エディタ付き：badge{label="4.10+" class="align-text-top"}
 
-リッチプロンプトを作成するには、`#header`、`#body`、および`#footer`スロットを作成します。ファイル添付ファイル、[ Editor ](/docs/components/editor)`@`メンションと`/`コマンド[ EditorMentionMenu ](/docs/components/editor-mention-menu)モードセレクタです
+`#header`、`#body`、`#footer`スロットを作成して、リッチなプロンプトを作成します。ファイル添付ファイル、[Editor](/docs/components/editor)、[EditorMentionMenu](/docs/components/editor-mention-menu)を介した`/`コマンド、およびモードセレクタです。
 
 ::component-example
 ---
-崩壊真
-名前'chat—prompt—editor—example'
-class 'justify—center'
+collapse: true
+name: 'chat-prompt-editor-example'
+class: 'justify-center'
 ---
 ::
 
 ::note
-`#body`スロットは内部のテキストエリアを置き換え、`submit`と`close`ハンドラを公開します。これにより、エディタのキーボードショートカットをフォームに接続できます。メンションメニューが開いているとき、kbd {value="enter"}を押すと、送信の代わりにハイライトされた項目が選択されます。
+`#body`スロットは内部のテキストエリアを置き換え、`submit`と`close`ハンドラを公開します。これにより、エディタのキーボードショートカットをフォームに接続できます。メンションメニューが開いているとき、kbd{value="enter"}を押すと、送信の代わりにハイライトされた項目が選択されます。
 ::
 
-### ホームページとして
+### Asホームページ
 
 チャットインターフェイスのホームページでも使用できます。
 
@@ -102,25 +102,25 @@ async function onSubmit() {
 </template>
 ```
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attributes" target="_blank"}
-このコンポーネントは、すべてのネイティブ`<textarea>` HTML属性もサポートします。
+このコンポーネントはすべてのネイティブ`<textarea>` HTML属性もサポートします。
 ::
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-### エクスポーズ
+### Expose
 
 テンプレート参照を介してコンポーネントにアクセスする場合、以下を使用できます：
 
@@ -128,10 +128,10 @@ component—emits
 | ---- | ---- |
 | `textareaRef`{lang="ts-type"}| `Ref<HTMLTextAreaElement \| null>`{lang="ts-type"}|
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

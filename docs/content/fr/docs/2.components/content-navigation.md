@@ -13,146 +13,146 @@ links:
 Ce composant est uniquement disponible lorsque le module `@nuxt/content` est installé.
 ::
 
-@@ph001@utilisation
+## Utilisation
 
 Utilisez la prop `navigation` avec la valeur `navigation`{lang="ts-type"} que vous obtenez lors de la récupération de la navigation de votre application.
 
 ::component-example
 ---
-nom: 'content-navigation-exemple'
-Classe: h-96 overflow-y-auto
-dépassement: true
-Props:
-  Catégorie: w-full
+name: 'content-navigation-example'
+class: 'h-96 overflow-y-auto'
+overflowHidden: true
+props:
+  class: 'w-full'
 ---
 ::
 
-### Télécharger
+### Type à
 
-Définissez le `type` prop à `single` pour permettre qu 'un seul élément soit ouvert à la fois.
+Réglez la prop `type` sur `single` pour ne permettre qu 'un seul élément à la fois.
 
 ::component-code{prefix="content"}
 ---
-Étiquette: true
-Collapse: vrai
-Extérieure:
+prettier: true
+collapse: true
+external:
   - navigation
-Extérieurs:
-  - ContentNavigationLink []
+externalTypes:
+  - ContentNavigationLink[]
 items:
-  Type:
-  @@ph011 @@'unique '
-  - 'multiple '
-Caché:
-  @@classe
+  type:
+  - 'single'
+  - 'multiple'
+hide:
+  - class
   - navigation
-Props:
-  Catégorie: w-full
-  Catégorie:"Single"
-  Navigation:
-    - title:« Guide »
+props:
+  class: 'w-full'
+  type: 'single'
+  navigation:
+    - title: 'Guide'
       icon: 'i-lucide-book-open'
-      chemin: '#démarrage'
-      Enfants:
-        - title:'Introduction'
-          chemin: '#Introduction'
-          Actif: vrai
-        - title:"Réalisation"
-          chemin: #installation
-    - title:« Composables »
-      icon: 'i-lucide-base de données'
-      chemin: '#composables'
-      Enfants:
-        - title:'Définition des raccourcis'
-          Voir aussi: #defineshortcuts
-        - title:'utilisation de l'appareil'
-          Voir aussi: #usemodal
+      path: '#getting-started'
+      children:
+        - title: 'Introduction'
+          path: '#introduction'
+          active: true
+        - title: 'Installation'
+          path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
+        - title: 'defineShortcuts'
+          path: '#defineshortcuts'
+        - title: 'useModal'
+          path: '#usemodal'
 ---
 ::
 
-@@21@couleur
+### Couleur
 
-Utilisez la prop `color` pour changer la couleur des liens de navigation.
+Utilisez le prop `color` pour changer la couleur des liens de navigation.
 
 ::component-code{prefix="content"}
 ---
-Étiquette: true
-Collapse: vrai
-Extérieure:
+prettier: true
+collapse: true
+external:
   - navigation
-Extérieurs:
-  - ContentNavigationLink []
-Caché:
-  @@classe 25
+externalTypes:
+  - ContentNavigationLink[]
+hide:
+  - class
   - navigation
-Props:
-  Catégorie: w-full
-  Couleur: "Neutre"
-  Navigation:
-    - title:"Référence"
+props:
+  class: 'w-full'
+  color: 'neutral'
+  navigation:
+    - title: 'Guide'
       icon: 'i-lucide-book-open'
-      chemin: '#démarrage'
-      Enfants:
-      - title:'Introduction'
-        chemin: '#Introduction'
-        Actif: vrai
-      - title:"Réalisation"
-        chemin: #installation
-    - title:« Composables »
-      icon: 'i-lucide-base de données'
-      chemin: '#composables'
-      Enfants:
-      - title:'Définition des raccourcis'
-        Voir aussi: #defineshortcuts
-      - title:'utilisation de l'appareil'
-        Voir aussi: #usemodal
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
+      - title: 'defineShortcuts'
+        path: '#defineshortcuts'
+      - title: 'useModal'
+        path: '#usemodal'
 ---
 ::
 
-### Variant
+### Variant équivalent
 
-Utilisez la prop `variant` pour modifier la variante des liens de navigation.
+Utilisez le prop `variant` pour changer la variante des liens de navigation.
 
 ::component-code{prefix="content"}
 ---
-Étiquette: true
-Collapse: vrai
-Extérieur:
+prettier: true
+collapse: true
+external:
   - navigation
-Extérieurs:
-  - ContentNavigationLink []
-Caché:
-  @@ph037@classe
+externalTypes:
+  - ContentNavigationLink[]
+hide:
+  - class
   - navigation
 items:
-  Variante:
-  @@ph039 @@'lien '
-  @@pH040 @@'pilule '
-Props:
-  Catégorie: w-full
-  Variante: « lien »
-  Navigation:
-    - title:"Référence"
+  variant:
+  - 'link'
+  - 'pill'
+props:
+  class: 'w-full'
+  variant: 'link'
+  navigation:
+    - title: 'Guide'
       icon: 'i-lucide-book-open'
-      chemin: '#démarrage'
-      Enfants:
-      - title:'Présentation'
-        chemin: '#Introduction'
-        Actif: vrai
-      - title:"Réalisation"
-        chemin: #installation
-    - title:"Composables"
-      icon: 'i-lucide-base de données'
-      chemin: '#composables'
-      Enfants:
-      - title:'Définition des raccourcis'
-        Voir aussi: #defineshortcuts
-      - title:'utilisation de l'appareil'
-        Référence:#usemodal
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
+      - title: 'defineShortcuts'
+        path: '#defineshortcuts'
+      - title: 'useModal'
+        path: '#usemodal'
 ---
 ::
 
-@@ph047@highlight
+### highlight
 
 Utilisez la prop `highlight` pour afficher une bordure surlignée pour le lien actif.
 
@@ -160,90 +160,90 @@ Utilisez la prop `highlight-color` pour changer la couleur de la bordure. Elle e
 
 ::component-code{prefix="content"}
 ---
-Étiquette: true
-Collapse: vrai
-Extérieur:
+prettier: true
+collapse: true
+external:
   - navigation
-Extérieurs:
-  - ContentNavigationLink []
-Caché:
-  @@classe 500
+externalTypes:
+  - ContentNavigationLink[]
+hide:
+  - class
   - navigation
-Props:
-  Catégorie: w-full
-  Highlights: vrai
-  highlightColor: 'primaire'
-  Couleur: Primaire
-  Étiquette: pilule
-  Navigation:
-    - title:"Référence"
+props:
+  class: 'w-full'
+  highlight: true
+  highlightColor: 'primary'
+  color: 'primary'
+  variant: 'pill'
+  navigation:
+    - title: 'Guide'
       icon: 'i-lucide-book-open'
-      chemin: '#démarrage'
-      Enfants:
-      - title:'Présentation'
-        chemin: '#Introduction'
-        Actif: vrai
-      - title:"Réalisation"
-        chemin: #installation
-    - title:"Composables"
-      icon: 'i-lucide-base de données'
-      chemin: '#composables'
-      Enfants:
-      - title:'Définition des raccourcis'
-        Voir aussi: #defineshortcuts
-      - title:'utilisation du système'
-        Voir aussi: #usemodal
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
+      - title: 'defineShortcuts'
+        path: '#defineshortcuts'
+      - title: 'useModal'
+        path: '#usemodal'
 ---
 ::
 
-### Trailing Icône
+Icône ### Trailing
 
-Utilisez le prop `trailing-icon` pour personnaliser le [Icon](/docs/components/icon) des éléments qui ont des enfants.
+Utilisez la prop `trailing-icon` pour personnaliser le [Icon](/docs/components/icon) final des éléments qui ont des enfants.
 
 ::component-code{prefix="content"}
 ---
-Étiquette: true
-Collapse: vrai
-Extérieur:
+prettier: true
+collapse: true
+external:
   - navigation
-Extérieurs:
-  - ContentNavigationLink []
-Caché:
-  @@ph070@classe
+externalTypes:
+  - ContentNavigationLink[]
+hide:
+  - class
   - navigation
-Props:
-  Catégorie: w-full
-  trailingIcône:'i-lucide-arrow-up'
-  Navigation:
-    - title:"Référence"
+props:
+  class: 'w-full'
+  trailingIcon: 'i-lucide-arrow-up'
+  navigation:
+    - title: 'Guide'
       icon: 'i-lucide-book-open'
-      chemin: '#démarrage'
-      Enfants:
-      - title:'Présentation'
-        chemin: '#Introduction'
-        Actif: vrai
-      - title:"Réalisation"
-        chemin: #installation
-    - title:"Composables"
-      icon: 'i-lucide-base de données'
-      chemin: '#composables'
-      Enfants:
-      - title:'Définition des raccourcis'
-        Voir aussi: #defineshortcuts
-      - title:'utilisation de l'appareil'
-        Voir aussi: #usemodal
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
+      - title: 'defineShortcuts'
+        path: '#defineshortcuts'
+      - title: 'useModal'
+        path: '#usemodal'
 ---
 ::
 
 ::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.chevronDown`.
+Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la clé `ui.icons.chevronDown`.
 ::
 
-@@ph080@exemples
+## Exemples
 
-### Dans une mise en page
+### Within a layout
 
-Utilisez le composant ContentNavigation à l'intérieur d'un composant [PageAside](/docs/components/page-aside) dans une mise en page pour afficher la navigation de la page:
+Use the ContentNavigation component within a [PageAside](/docs/components/page-aside) component within a layout to display the navigation of the page:
 
 ```vue [layouts/docs.vue]{11}
 <script setup lang="ts">
@@ -265,9 +265,9 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 </template>
 ```
 
-### Dans un header.
+### Within a header
 
-Utilisez le composant ContentNavigation à l'intérieur de l'emplacement `content` d'un composant [Header](/docs/components/header) pour afficher la navigation de la page sur mobile:
+Utilisez le composant ContentNavigation à l'intérieur de l'emplacement `content` d'un composant [Header](xph233) pour afficher la navigation de la page sur mobile:
 
 ```vue [components/Header.vue]{9-11}
 <script setup lang="ts">
@@ -285,24 +285,24 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 </template>
 ```
 
-@@ph126@api
+## API is
 
-@@ph127@@props
+### Props
 
-Composants-props
+:component-props
 
-@@ph128@@réseaux sociaux
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph129@@émissions
+### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph130@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@change131 @ changement
+## Changelog
 
-: composant-changelog {prefix="content"}
+:component-changelog{prefix="content"}

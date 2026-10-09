@@ -1,5 +1,5 @@
 ---
-description: Ein Button-Element, das als Link fungieren oder eine Aktion auslösen kann.
+description: Ein Button-Element, das als Link oder als Auslöser einer Aktion fungieren kann.
 category: element
 keywords:
   - cta
@@ -11,220 +11,220 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Button.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
 Verwenden Sie den Standard-Slot, um das Label des Buttons festzulegen.
 
 ::component-code
 ---
-Die Slots:
-  Markiert: Button
+slots:
+  default: Button
 ---
 ::
 
-@@ph001@@@bpg-bpg.de
+### Label
 
-Verwenden Sie `label` prop, um die Beschriftung des Buttons festzulegen.
+Verwenden Sie die `label` prop, um die Beschriftung des Buttons festzulegen.
 
 ::component-code
 ---
-Props:
-  Bezeichnung: Button
+props:
+  label: Button
 ---
 ::
 
-@@003@Farbe
+### Farbe
 
 Verwenden Sie die `color` prop, um die Farbe des Buttons zu ändern.
 
 ::component-code
 ---
-Props:
-  Farbe: neutral
-Slots auf:
-  Markiert: Button
+props:
+  color: neutral
+slots:
+  default: Button
 ---
 ::
 
-@@ph005@@Variantentyp
+### Variant Bearbeiten
 
-Verwenden Sie die `variant` prop, um die Variante des Buttons zu ändern.
+Verwenden Sie die `variant`-Prop, um die Variante des Buttons zu ändern.
 
 ::component-code
 ---
-Props:
-  Farbe: neutral
-  Beschreibung: Outline
-Die Slots:
-  Fehler: Button
+props:
+  color: neutral
+  variant: outline
+slots:
+  default: Button
 ---
 ::
 
-@@007@000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Größe
 
-Verwenden Sie die `size` prop, um die Größe des Buttons zu ändern.
+Verwenden Sie die `size`-Prop, um die Größe des Buttons zu ändern.
 
 ::component-code
 ---
-Props:
-  Größe: XL
-Die Slots:
-  Fehler: Button
+props:
+  size: xl
+slots:
+  default: Button
 ---
 ::
 
-@@ph009@@gmail.de
+### Icon (englisch)
 
-Verwenden Sie die `icon` prop, um ein [Icon](/docs/components/icon) innerhalb des Buttons anzuzeigen.
+Verwenden Sie die `icon`-Prop, um ein [Icon](/docs/components/icon) innerhalb des Buttons anzuzeigen.
 
 ::component-code
 ---
-Props:
-  I-Lucide-Rakete
-  Größe: md
-  Farbe: Primary
-  Variante: solide
-Die Slots:
-  Markiert: Button
+props:
+  icon: i-lucide-rocket
+  size: md
+  color: primary
+  variant: solid
+slots:
+  default: Button
 ---
 ::
 
-Verwenden Sie `leading` und `trailing` props, um die Symbolposition festzulegen, oder die `leading-icon` und `trailing-icon` props, um für jede Position ein anderes Symbol festzulegen.
+Verwenden Sie die `leading` und `trailing` props, um die Symbolposition festzulegen, oder die `leading-icon` und `trailing-icon` props, um für jede Position ein anderes Symbol festzulegen.
 
 ::component-code
 ---
-Props:
-  trailingIcon: i-lucide-arrow-right (englisch)
-  Größe: MD
-Slots auf:
-  Markiert: Button
+props:
+  trailingIcon: i-lucide-arrow-right
+  size: md
+slots:
+  default: Button
 ---
 ::
 
-Der `label` als Prop oder Slot ist optional, sodass Sie den Button als Nur-Symbol-Button verwenden können.
+Der `label` als Prop oder Slot ist optional, sodass Sie den Button als Nur-Icon-Button verwenden können.
 
 ::component-code
 ---
-Props:
-  I-Lucide-Suche
-  Größe: md
-  Farbe: Primary
-  Variante: solide
+props:
+  icon: i-lucide-search
+  size: md
+  color: primary
+  variant: solid
 ---
 ::
 
-@@@@@@@@avatar20@@@avatar200000000000000000000000000000000000000000000000000
+### avatar Bearbeiten
 
-Verwenden Sie die `avatar` prop, um ein [Avatar](/docs/components/avatar) innerhalb des Buttons anzuzeigen.
+Verwenden Sie die `avatar`-Prop, um ein [Avatar](/docs/components/avatar) innerhalb des Buttons anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  - avatar.loading (nicht verfügbar)
-Props:
-  Avatare sind:
-    src: 'https://github.com/nuxt.png'(auf Englisch)
-    Aufladung: Lazy
-  Größe: md
-  Farbe: neutral
-  Beschreibung: Outline
-Slots auf:
-  Default:|
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
+    src: 'https://github.com/nuxt.png'
+    loading: lazy
+  size: md
+  color: neutral
+  variant: outline
+slots:
+  default: |
 
-    Der Button
+    Button
 ---
 ::
 
-Der `label` als Prop oder Slot ist optional, sodass Sie den Button nur als Avatar-Button verwenden können.
+Der `label` als prop oder slot ist optional, so dass sie den button als avatar-button verwenden können.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  - avatar.loading (nicht verfügbar)
-Props:
-  Avatare sind:
-    src: 'https://github.com/nuxt.png'(auf Englisch)
-    Aufladung: Lazy
-  Größe: md
-  Farbe: neutral
-  Variante: Übersicht
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
+    src: 'https://github.com/nuxt.png'
+    loading: lazy
+  size: md
+  color: neutral
+  variant: outline
 ---
 ::
 
-@@@@@@@29@@Link
+### Link Bearbeiten
 
-Sie können jede Eigenschaft von der[Link](/docs/components/link#props)Komponente wie`to`,`target`, etc. übergeben .
+Sie können jede Eigenschaft der Komponente [Link](/docs/components/link#props) übergeben, z. B. `to`, `target` usw.
 
 ::component-code
 ---
-Ignoriert :
-  @@ph036@@zielgerichtet.de
-Props :
-  zwei :https://github.com/nuxt/ui
-  Ziel : _ blank
-Slots auf :
-  Markiert : Button
+ignore:
+  - target
+props:
+  to: https://github.com/nuxt/ui
+  target: _blank
+slots:
+  default: Button
 ---
 ::
 
-Wenn der Button ein Link ist oder wenn Sie`active`prop verwenden , können Sie die`active-color`und`active-variant`props verwenden , um den aktiven Status anzupassen .
+Wenn der Button ein Link ist oder wenn Sie die `active`-Prop verwenden, können Sie die `active-color`-und `active-variant`-Props verwenden, um den aktiven Status anzupassen.
 
 ::component-code
 ---
-Schöner : wahr
-Ignoriert :
-  @@ph040@gmail.de
-  @@ph041@@variantenreich
-Items :
-  Aktiviert :
-    - vorallem
-    @@ph043@zweitrangig
-    @@ph044@Erfolg
-    @@45@info.de
-    @@ph046@@warning
-    @@ph047@Fehler
-    @@ph048@neutral.de
-  Aktivvariante :
-    @@ph049@@gmail.de
-    @@ph050@@outline (nicht bekannt)
-    @@ph051@gmail.de
-    @@ph052@unterschwellig
-    @@ph053@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost.com
-    @@@@@@54@Link
-Props:
-  aktiv: wahr
-  Farbe: neutral
-  Variante: Übersicht
-  activeFarbe: primär
-  Ausführung: Solid
-Slots auf:
-  Default:|
+prettier: true
+ignore:
+  - color
+  - variant
+items:
+  activeColor:
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
+  activeVariant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+    - link
+props:
+  active: true
+  color: neutral
+  variant: outline
+  activeColor: primary
+  activeVariant: solid
+slots:
+  default: |
 
-    Der Button
+    Button
 ---
 
 Der Button
 ::
 
-Sie können auch die Props `active-class` und `inactive-class` verwenden, um den aktiven Status anzupassen.
+Sie können auch die `active-class`-und `inactive-class`-Requisiten verwenden, um den aktiven Status anzupassen.
 
 ::component-code
 ---
-Props:
-  aktiv: wahr
-  Beispiel: font-bold
-  inactiveClass: 'font-light'(nicht aktiviert)
-Die Slots:
-  Fehler: Button
+props:
+  active: true
+  activeClass: 'font-bold'
+  inactiveClass: 'font-light'
+slots:
+  default: Button
 ---
 
 Der Button
 ::
 
 ::tip
-Sie können diese Stile global in Ihrer `app.config.ts` Datei unter dem `ui.button.variants.active` Schlüssel konfigurieren.
+Sie können diese Stile global in Ihrer `app.config.ts`-Datei unter dem `ui.button.variants.active`-Schlüssel konfigurieren.
 
 ```ts
 export default defineAppConfig({
@@ -243,133 +243,133 @@ export default defineAppConfig({
 ```
 ::
 
-@@ph074@Aufladen
+### loading (englisch)
 
-Verwenden Sie die `loading` prop, um ein Ladesymbol anzuzeigen und den Button zu deaktivieren.
+Verwenden Sie die `loading`-Prop, um ein Ladesymbol anzuzeigen und den Button zu deaktivieren.
 
 ::component-code
 ---
-Props:
-  Aufladung: true
-  Nachtrag: false
-Slots auf:
-  Markiert: Button
+props:
+  loading: true
+  trailing: false
+slots:
+  default: Button
 ---
 Der Button
 ::
 
-Verwenden Sie `loading-auto` prop, um das Ladesymbol automatisch anzuzeigen, während das `@click`-Versprechen aussteht.
+Verwenden Sie die `loading-auto`-Prop, um das Ladesymbol automatisch anzuzeigen, während das `@click`-Versprechen aussteht.
 
-: component-example {name="button-loading-auto-example"}
+:component-example{name="button-loading-auto-example"}
 
-Dies funktioniert auch mit der Komponente [Form](/docs/components/form).
+Dies funktioniert auch mit der [Form](/docs/components/form)-Komponente.
 
-: component-example {name="button-loading-auto-form-example"}
+:component-example{name="button-loading-auto-form-example"}
 
-@@ph084@@Iconloading @@ Iconloading@@@ph084@@loading-icon@@loading-icon.de
+### Loading Icon (Deutsche Übersetzung)
 
-Verwenden Sie `loading-icon` prop, um das Ladesymbol anzupassen. Standardmäßig ist `i-lucide-loader-circle`.
+Verwenden Sie die `loading-icon`-Prop, um das Ladesymbol anzupassen. Standardmäßig `i-lucide-loader-circle`.
 
 ::component-code
 ---
-Props:
-  Aufladung: true
-  loadingIcon: 'i-lucide-loader'(englisch)
-Die Slots:
-  Markiert: Button
+props:
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+slots:
+  default: Button
 ---
 Der Button
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.loading` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter dem `ui.icons.loading`-Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.loading` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.loading` Schlüssel anpassen.
 :::
 ::
 
-@@ph091@@disabled @ nicht vorhanden
+### Disabled (nicht verfügbar)
 
-Verwenden Sie `disabled` prop, um die Schaltfläche zu deaktivieren.
+Verwenden Sie die `disabled`-Prop, um den Button zu deaktivieren.
 
 ::component-code
 ---
-Props:
-  Behindert: Wahr
-Die Slots:
-  Markiert: Button
+props:
+  disabled: true
+slots:
+  default: Button
 ---
 
 Der Button
 ::
 
-@@ph093@@Beispiele
+## Examples Bearbeiten
 
-`class` prop
+### `class` prop (Deutsche Übersetzung)
 
-Verwenden Sie `class` prop, um die Grundstile des Buttons zu überschreiben.
-
-::component-code
----
-Props:
-  Klasse: 'font-bold rounded-full'(font-bold gerunded-voll)
-Slots auf:
-  Markiert: Button
----
-::
-
-`ui` prop
-
-Verwenden Sie die `ui` prop, um die Slots-Stile des Buttons zu überschreiben.
+Verwenden Sie die `class`-Prop, um die Basisstile des Buttons zu überschreiben.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@100@Ui
-  @@101@101@101@101@101@101@101@101@101@101@101@101@101@101@@101@101@101@@101@101@@101@101@101@101@101@101@@10101@101@101@101@101@101@101@10101@101@101@101@10101@101@101@101@@@1010101@@@@10101001@@@@@1010101@@@@@@@@@10101010101@@@@@@@@@@@@@@@1010101010
-  @@ph102@@variantenreich
-  @@ph103@@gmail.de
-Props:
-  I-Lucide-Rakete
-  Farbe: neutral
-  Beschreibung: Outline
-  ui: ist
-    leadingIcon: 'text-primär'
-Slots auf:
-  Default:|
-
-    Der Button
+props:
+  class: 'font-bold rounded-full'
+slots:
+  default: Button
 ---
 ::
 
-@@104@bmg10
+### `ui` prop (Deutsche Ausgabe)
 
-### Props
+Verwenden Sie die `ui` prop, um die Slots Stile der Schaltfläche zu überschreiben.
 
-Komponenten-Props
+::component-code
+---
+prettier: true
+ignore:
+  - ui
+  - color
+  - variant
+  - icon
+props:
+  icon: i-lucide-rocket
+  color: neutral
+  variant: outline
+  ui:
+    leadingIcon: 'text-primary'
+slots:
+  default: |
+
+    Button
+---
+::
+
+## API (Englisch)
+
+### Props (nicht)
+
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
 Diese Komponente unterstützt auch alle nativen `<button>` HTML-Attribute.
 ::
 
 ::callout{icon="i-simple-icons-github" to="https://github.com/nuxt/ui/blob/v4/src/runtime/components/Link.vue#L13"}
-Die `Button` Komponente erweitert die `Link` Komponente.
+Die `Button`-Komponente erweitert die `Link`-Komponente. Überprüfen Sie den Quellcode auf GitHub.
 ::
 
-### Spielautomaten
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph110@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph111@changelog @@changelog @ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

@@ -1,5 +1,5 @@
 ---
-description: 'Un composant d'erreur pré-construit avec support NuxtError.'
+description: 'Un componente de error preconstruido con soporte para NuxtError.'
 category: layout
 links:
   - label: GitHub à
@@ -7,20 +7,20 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Error.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Le composant Error rend un élément `<main>` qui fonctionne avec le composant [Header](/docs/components/header) pour créer une disposition pleine hauteur qui s'étend à la hauteur disponible de la fenêtre d'affichage.
+Le composant Error affiche un élément `<main>` qui fonctionne avec le composant [Header](/docs/components/header) pour créer une disposition pleine hauteur qui s'étend à la hauteur disponible de la fenêtre d'affichage.
 
 ::tip{to="/docs/getting-started/theme/css-variables#header"}
-Le composant Error utilise la variable CSS `--ui-header-height` pour se positionner correctement sous le `Header`.
+Le composant Error utilise la variable CSS `--ui-header-height` pour se positionner correctement en dessous de la variable `Header`.
 ::
 
-@@ph008@erreur
+### Erreur
 
-Utilisez la prop `error` pour afficher un message d'erreur.
+Utilisez le prop `error` pour afficher un message d'erreur.
 
 ::framework-only
-#numérique
+#nuxt
 ::note{to="https://nuxt.com/docs/guide/directory-structure/error" target="_blank"}
 Dans la plupart des cas, vous recevrez le prop `error` dans votre fichier `error.vue`.
 ::
@@ -28,68 +28,68 @@ Dans la plupart des cas, vous recevrez le prop `error` dans votre fichier `error
 
 ::component-code
 ---
-Caché:
-  @@classe 12
-Étiquette: true
-Props:
-  erreur:
-    Code d'état: 404
-    statutMessage: "Page non trouvée"
-    Message: "La page que vous recherchez n'existe pas".
-  classe: '! min-h-96'
+hide:
+  - class
+prettier: true
+props:
+  error:
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
+  class: '!min-h-96'
 ---
 ::
 
-### Icon: badge{label="4.8+" class="align-text-top"}
+### Icône: badge{label="4.8+" class="align-text-top"}
 
-Utilisez la prop `icon` pour afficher une icône au-dessus du code d'état.
+Utilisez le prop `icon` pour afficher une icône au-dessus du code d'état.
 
 ::component-code
 ---
-Caché:
-  @@ph016@classe
-Étiquette: true
-Ignorer:
+hide:
+  - class
+prettier: true
+ignore:
   - error.statusCode
   - error.statusMessage
-  @@ph019@@error.message
-Props:
-  Icône: i-lucide-file-x
-  erreur:
-    Code d'état: 404
-    statutMessage: "Page non trouvée"
-    Message: "La page que vous recherchez n'existe pas".
-  classe: '! min-h-96'
+  - error.message
+props:
+  icon: 'i-lucide-file-x'
+  error:
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
+  class: '!min-h-96'
 ---
 ::
 
-Utilisez l'emplacement `#leading` pour afficher un élément personnalisé, tel qu 'un logo.
+Utilisez le slot `#leading` pour afficher un élément personnalisé, tel qu 'un logo.
 
 ::component-code
 ---
-Caché:
-  @@ph021@classe
-Étiquette: true
-ignorer:
+hide:
+  - class
+prettier: true
+ignore:
   - error.statusCode
   - error.statusMessage
-  @@ph024@@error.message
-Props:
-  Mistake:
-    Code d'état: 404
-    statutMessage: "Page non trouvée"
-    Message: "La page que vous recherchez n'existe pas".
-  classe: '! min-h-96'
-Slots:
-  Leader:|
+  - error.message
+props:
+  error:
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
+  class: '!min-h-96'
+slots:
+  leading: |
 
-    @@@ 25 @
+    <img src="https://github.com/nuxt.png" alt="Logo" class="size-10 rounded-full">
 ---
-#leader
-par img{src="https://github.com/nuxt.png" alt="Logo" class="size-10 rounded-full"}
+#leading
+:img{src="https://github.com/nuxt.png" alt="Logo" class="size-10 rounded-full"}
 ::
 
-@27@@Clear
+### Clear
 
 Utilisez la prop `clear` pour personnaliser ou masquer le bouton effacer (avec la valeur `false`).
 
@@ -97,55 +97,55 @@ Vous pouvez passer n'importe quelle propriété du composant [Button](/docs/comp
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@classe 34
-Ignorer:
+prettier: true
+hide:
+  - class
+ignore:
   - error.statusCode
   - error.statusMessage
-  @@ph037@@error.message
+  - error.message
   - clear.color
   - clear.size
-  @@clear.icon
+  - clear.icon
   - clear.class
-Props:
-  Clair:
-    Couleur: Neutre
-    Taille: XL
-    Icône: i-lucide-arrow-left
-    Catégorie:"round-full"
-  Mistake:
-    Code d'état: 404
-    statutMessage: "Page non trouvée"
-    Message: "La page que vous recherchez n'existe pas".
-  classe: '! min-h-96'
+props:
+  clear:
+    color: neutral
+    size: xl
+    icon: i-lucide-arrow-left
+    class: 'rounded-full'
+  error:
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
+  class: '!min-h-96'
 ---
 ::
 
-@@ph042@@Redirect
+### Redirect
 
-Utilisez la prop `redirect` pour rediriger l'utilisateur vers une page différente lorsque le bouton effacer est cliqué. Par défaut à `/`.
+Utilisez la prop `redirect` pour rediriger l'utilisateur vers une page différente lorsque le bouton effacer est cliqué.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@classe 45
-ignorer:
+prettier: true
+hide:
+  - class
+ignore:
   - error.statusCode
   - error.statusMessage
-  @@ph048@@error.message
-Props:
-  redirect: '/docs/démarrage'
-  Mistake:
-    Code d'état: 404
-    statutMessage: "Page non trouvée"
-    Message: "La page que vous recherchez n'existe pas".
-  classe: '! min-h-96'
+  - error.message
+props:
+  redirect: '/docs/getting-started'
+  error:
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
+  class: '!min-h-96'
 ---
 ::
 
-@@ph049@exemples
+## exemples
 
 ### Dans `error.vue`
 
@@ -176,7 +176,7 @@ Vous voudrez peut-être répliquer le code de votre `app.vue` dans votre fichier
 ::
 
 ::note
-Vous pouvez en savoir plus sur la façon de gérer les erreurs dans la documentation [Nuxt, mais lorsque vous utilisez `nuxt generate`, il est recommandé d'ajouter `fatal: true` à l'intérieur de votre appel `createError` pour vous assurer que la page d'erreur s'affiche:
+Vous pouvez en savoir plus sur la façon de gérer les erreurs dans la documentation [Nuxt ](https://nuxt.com/docs/getting-started/error-handling#error-page), mais lorsque vous utilisez `nuxt generate`, il est recommandé d'ajouter `fatal: true` à l'intérieur de votre appel `createError` pour vous assurer que la page d'erreur est affichée:
 
 ```vue [pages/\[...slug\\].vue]
 <script setup lang="ts">
@@ -193,20 +193,20 @@ if (!page.value) {
 
 ::
 
-@@ph094@@api
+## API
 
-@@ph095@@projets
+### Props
 
-Composants-props
+:component-props
 
-@@ph096@@réglages
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph097@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

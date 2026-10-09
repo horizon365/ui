@@ -3,17 +3,18 @@ title: ColorPicker
 description: 用于选择颜色的组件。
 category: form
 keywords:
-  - 颜色选择器
-  - 色板
-  - 十六进制
+  - colour picker
+  - swatch
+  - hex
 links:
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ColorPicker.vue
 ---
+
 ## 用法
 
-使用 `v-model` 指令控制 ColorPicker 的值。
+使用`v-model`指令控制ColorPicker的值。
 
 ::component-code
 ---
@@ -26,7 +27,7 @@ props:
 ---
 ::
 
-当你不需要控制其状态时，使用 `default-value` prop 设置初始值。
+当不需要控制其状态时，使用`default-value`属性设置初始值。
 
 ::component-code
 ---
@@ -37,9 +38,9 @@ props:
 ---
 ::
 
-### RGB 格式
+### RGB格式
 
-使用 `format` prop 设置 ColorPicker 的 `rgb` 值。
+使用`format`属性设置ColorPicker的`rgb`值。
 
 ::component-code
 ---
@@ -54,9 +55,9 @@ props:
 ---
 ::
 
-### HSL 格式
+### HSL格式
 
-使用 `format` prop 设置 ColorPicker 的 `hsl` 值。
+使用`format`属性设置ColorPicker的`hsl`值。
 
 ::component-code
 ---
@@ -71,9 +72,9 @@ props:
 ---
 ::
 
-### CMYK 格式
+### CMYK格式
 
-使用 `format` prop 设置 ColorPicker 的 `cmyk` 值。
+使用`format`属性设置ColorPicker的`cmyk`值。
 
 ::component-code
 ---
@@ -88,9 +89,9 @@ props:
 ---
 ::
 
-### CIELab 格式
+### CIELab格式
 
-使用 `format` prop 设置 ColorPicker 的 `lab` 值。
+使用`format`属性设置ColorPicker的`lab`值。
 
 ::component-code
 ---
@@ -105,9 +106,9 @@ props:
 ---
 ::
 
-### 节流
+### 节流阀
 
-使用 `throttle` prop 设置 ColorPicker 的节流值。
+使用`throttle` prop设置ColorPicker的节流值。
 
 ::component-code
 ---
@@ -121,9 +122,9 @@ props:
 ---
 ::
 
-### 尺寸
+### Size
 
-使用 `size` prop 设置 ColorPicker 的尺寸。
+使用`size` prop设置ColorPicker的大小。
 
 ::component-code
 ---
@@ -134,7 +135,7 @@ props:
 
 ### 禁用
 
-使用 `disabled` prop 禁用 ColorPicker。
+使用`disabled` prop禁用ColorPicker。
 
 ::component-code
 ---
@@ -145,13 +146,13 @@ props:
 
 ## 示例
 
-### 作为颜色选择器
+### 作为一种彩色滤光片
 
-使用 [Button](/docs/components/button) 和 [Popover](/docs/components/popover) 组件创建颜色选择器。
+使用[Button](/docs/components/button)和[Pover](/docs/components/popover)组件来创建彩色显示器。
 
 ::component-example
 ---
-name:
+name: 'color-picker-chooser-example'
 ---
 ::
 
@@ -165,10 +166,10 @@ name:
 
 :component-emits
 
-## 主题
+## Theme
 
 :component-theme
 
-## 更新日志
+## Changelog
 
 :component-changelog

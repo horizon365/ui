@@ -12,11 +12,11 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/FooterColumns.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
 Die Komponente FooterColumns rendert eine Liste von Spalten, die in Ihrer Fußzeile angezeigt werden sollen.
 
-Verwenden Sie es im `top`-Slot der [Footer](/docs/components/footer)-Komponente:
+Verwenden Sie es im `top`-Steckplatz der [Footer](/docs/components/footer)-Komponente:
 
 ```vue {3-7}
 <template>
@@ -30,46 +30,46 @@ Verwenden Sie es im `top`-Slot der [Footer](/docs/components/footer)-Komponente:
 </template>
 ```
 
-@@ph017@gmail.de
+### columns (Deutsche Ausgabe)
 
-Verwenden Sie `columns` prop als Array von Objekten mit den folgenden Eigenschaften:
+Verwenden Sie die `columns`-prop als Array von Objekten mit den folgenden Eigenschaften:
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@PH02020@@@@@@@@@PH0202020@@@@@@@@@@@PH02021
-`children?: FooterColumnLink[]``children?: FooterColumnLink[]`{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}
+- `label: string`{lang="ts-type"} (nicht vorhanden)
+- `children?: FooterColumnLink[]`{lang="ts-type"} (nicht)
 
-Jede Spalte enthält ein `children`-Array von Objekten, die die Links definieren.
+Jede Spalte enthält ein `children`-Array mit Objekten, die die Links definieren. Jeder Link kann die folgenden Eigenschaften haben:
 
-`label?: string`{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}PH028027@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`icon?: string``icon?: string`PH03030{lang="ts-type"}{lang="ts-type"}
-@@@@@@@@@@@@@@@@@@@@@@PH0333@@@@@@@@@@@@@@PH03333@@@@@@@@@@@@@@@PH0334{lang="ts-type"}{lang="ts-type"}PH03334@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkLeadingIcon?: ClassNameValue }``ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkLeadingIcon?: ClassNameValue }``ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkLeadingIcon?: ClassNameValue }`{lang="ts-type"}
+- `label?: string`{lang="ts-type"} (nicht)
+- `icon?: string`{lang="ts-type"} (nicht vorhanden)
+- `class?: any`{lang="ts-type"} (nicht vorhanden)
+- `ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkLeadingIcon?: ClassNameValue }`{lang="ts-type"} (nicht vorhanden)
 
-Sie können jede Eigenschaft von der [Link](/docs/components/link#props) Komponente wie `to`,`target`, etc. übergeben.
+Sie können jede Eigenschaft der Komponente [Link](/docs/components/link#props) übergeben, z. B. `to`, `target` usw.
 
 ::component-example
 ---
-Schöner: wahr
-name: 'footer-columns-example'(footer-columns-beispiel)
-Klasse: 'P-8'
-Props:
-  Klasse: "W-voll"
+prettier: true
+name: 'footer-columns-example'
+class: 'p-8'
+props:
+  class: 'w-full'
 ---
 ::
 
-@@044@bpgbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvb
+## API (englisch)
 
-@@ph045@@gmail.de
+### Props Bearbeiten
 
-Komponenten Props
+:component-props
 
-### Slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph047@@gmail.de
+## Theme (englisch)
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph048@@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

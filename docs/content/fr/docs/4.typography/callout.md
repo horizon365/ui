@@ -9,80 +9,80 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Callout.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Utilisez la réduction dans l'emplacement par défaut du composant `callout` pour ajouter un contexte accrocheur à votre contenu.
 
 ::component-code{slug="callout" prose}
 ---
-Props:
-  classe: 'w-full my-0'
-Caché:
-  @@ph002@classe
-Slots:
-  Par défaut: Ceci est un `callout` avec le plein **markdown** support.
+props:
+  class: 'w-full my-0'
+hide:
+  - class
+slots:
+  default: This is a `callout` with full **markdown** support.
 ---
 ::
 
-@@ph006@icône
+### icône
 
-Utilisez la prop `icon` pour afficher une icône à côté du contenu.
+Utilisez le prop `icon` pour afficher une icône à côté du contenu.
 
 ::component-code{slug="callout" prose}
 ---
-Props:
-  Icône: i-lucide-square-play
-  classe: 'w-full my-0'
-Caché:
-  @@ph008@classe
-Slots:
-  par défaut: Ceci est un `callout` avec une icône.
+props:
+  icon: i-lucide-square-play
+  class: 'w-full my-0'
+hide:
+  - class
+slots:
+  default: This is a `callout` with an icon.
 ---
 ::
 
-### couleur
+### Couleur
 
-Utilisez la prop `color` pour changer la couleur de l'appel.
+Utilisez le prop `color` pour changer la couleur de l'appel.
 
 ::component-code{slug="callout" prose}
 ---
-ignorer:
-  @@pha12@icon
-Props:
-  Icône: i-lucide-info
-  Couleur: info
-  classe: 'w-full my-0'
-Caché:
-  @@classe
-Slots:
-  par défaut: Il s'agit d'un `callout` avec une couleur personnalisée
+ignore:
+  - icon
+props:
+  icon: i-lucide-info
+  color: info
+  class: 'w-full my-0'
+hide:
+  - class
+slots:
+  default: This is a `callout` with a custom color.
 ---
 ::
 
-@@ph015@lien
+### Lien
 
-Vous pouvez passer n'importe quelle propriété du composant `<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) comme `to` et `target` pour faire de l'appel un lien.
+Vous pouvez passer n'importe quelle propriété du composant [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) telle que `to` et `target` pour faire de l'appel un lien.
 
 ::component-code{slug="callout" prose}
 ---
-Caché:
-  @@classe 23
-Ignorer:
-  @@24@icon
-  @25@cible
-Props:
-  Icône: i-lucide-square-play
-  dans/docs/getting-started/installation/nuxt
-  Couleur: Neutre
-  classe: 'w-full my-0'
-Slots:
-  Découvrez comment installer `@nuxt/ui` dans votre projet.
+hide:
+  - class
+ignore:
+  - icon
+  - target
+props:
+  icon: i-lucide-square-play
+  to: '/docs/getting-started/installation/nuxt'
+  color: neutral
+  class: 'w-full my-0'
+slots:
+  default: Learn how to install `@nuxt/ui` in your project.
 ---
 ::
 
-@@27@raccourcis
+## Découpe
 
-Vous pouvez également utiliser les raccourcis `note`,`tip`,`warning` et `caution` avec des icônes et des couleurs prédéfinies.
+Vous pouvez également utiliser les raccourcis `note`, `tip`, `warning` et `caution` avec des icônes et des couleurs prédéfinies.
 
 ::code-preview
 
@@ -128,20 +128,20 @@ This action cannot be undone.
 
 ::
 
-@@ph049@@api
+## api
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props équipement
 
-: composant-props {prose}
+:component-props{prose}
 
-@@52@@séries
+### Slots
 
-: composant {prose}
+:component-slots{prose}
 
-@@ph054@thème
+## Thème
 
-: composant {prose}
+:component-theme{prose}
 
-@changement@changement@changement.com
+## Changelog
 
-: composant-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

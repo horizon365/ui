@@ -8,58 +8,58 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/EditorSuggestionMenu.vue
 ---
 
-## 使用情况
+## 用法
 
-在编辑器中键入触发器字符时，EditorSugestionMenu组件会显示格式与操作建议得菜单，并在选定某个项时执行相应得[handler](/docs/components/editor#handlers).
+EditorSuggestionMenu组件在编辑器中键入触发器字符时显示格式和操作建议菜单，并在选择项目时执行相应的[handler](/docs/components/editor#handlers)。
 
 ::note
-它使用建立在TipTap的[Sugestion](https://tiptap.dev/docs/editor/api/utilities/suggestion)公用程式之上的`useEditorMenu`composable，在您输入时筛选项目，并支援键盘浏览（方向键、Enter选取、Esc关闭）。
+它使用构建在TipTap的[Suggestion](https://tiptap.dev/docs/editor/api/utilities/suggestion)实用程序之上的`useEditorMenu`组合工具来过滤输入项，并支持键盘导航（箭头键，回车选择，转义关闭）。
 ::
 
 ::caution
-它必须在[Editor](/docs/components/editor)组件的默认槽中使用，才能访问编辑器实例。
+它必须在[Editor](/docs/components/editor)组件的默认插槽中使用，才能访问编辑器实例。
 ::
 
 ::component-example
 ---
-升高：true
-收阖：true
-名称：'编辑器-建议-菜单-示例'
-类别：'p-8'
+elevated: true
+collapse: true
+name: 'editor-suggestion-menu-example'
+class: 'p-8'
 ---
 ::
 
-项目
+### 项目
 
-使用`items`属性作为具有下列属性的对象数组：
+使用`items` prop作为具有以下属性的对象数组：
 
-@@小标题：小标题：小标题
-我的天啊！
-我的天啊！
-我的天啊！
-我的天啊！
-我的天啊！
+- [`kind?: "textAlign" | "heading" | "link" | "image" | "blockquote" | "bulletList" | "orderedList" | "taskList" | "codeBlock" | "horizontalRule" | "paragraph" | "clearFormatting" | "duplicate" | "delete" | "moveUp" | "moveDown" | "suggestion" | "mention" | "emoji"`{lang="ts-type"}](/docs/components/editor#handlers)
+- `label?: string`{lang="ts-type"}
+- `description?: string`{lang="ts-type"}
+- `icon?: string`{lang="ts-type"}
+- `type?: "label" | "separator"`{lang="ts-type"}
+- `disabled?: boolean`{lang="ts-type"}
 
 ::component-example
 ---
-升高：true
-收阖：true
-名称：'编辑器-建议-菜单-项目-示例'
-类别：'p-8'
+elevated: true
+collapse: true
+name: 'editor-suggestion-menu-items-example'
+class: 'p-8'
 ---
 ::
 
 ::note
-您也可以将数组的数组传递给`items`属性，以建立个别的项目群组。
+您还可以将数组的数组传递给`items`属性，以创建分隔的项目组。
 ::
 
 ::tip
-将`type: 'label'`用于节标题，将`type: 'separator'`用于可视分隔符，以便将命令组织到逻辑组中，从而提高可发现性。
+使用`type: 'label'`作为节标题，使用`type: 'separator'`作为可视分隔符，将命令组织到逻辑组中，以获得更好的可重复性。
 ::
 
-字符集
+### Char
 
-使用`char`属性更改触发器字符。默认值为`/`{lang="ts-type"}。
+使用`char`属性将触发器字符. `/`{lang="ts-type"}更改为。
 
 ```vue
 <template>
@@ -69,11 +69,11 @@ links:
 </template>
 ```
 
-建议：徽章
+### 建议：badge{label="4.7+" class="align-text-top"}
 
 使用`suggestion`道具自定义TipTap的[建议匹配行为](https://tiptap.dev/docs/editor/api/utilities/suggestion#settings)。
 
-当触发器字符应直接在其他字符之后打开而不需要默认的空白前缀时，这很有用。
+当触发字符应直接在其他字符之后打开而不需要默认的空白前缀时，这很有用。
 
 ```vue
 <template>
@@ -92,7 +92,7 @@ links:
 
 ### 选项
 
-使用`options`属性，使用[浮动UI选项来自订定位行为](https://floating-ui.com/docs/computeposition#options)。
+使用`options` prop自定义定位行为，使用[浮动UI选项](https://floating-ui.com/docs/computeposition#options)。
 
 ```vue
 <template>
@@ -109,16 +109,16 @@ links:
 </template>
 ```
 
-活性成分
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

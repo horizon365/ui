@@ -8,105 +8,105 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageLinks.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Verwenden Sie die Komponente PageLinks , um eine Liste von Links anzuzeigen .
+Verwenden Sie die Komponente PageLinks, um eine Liste von Links anzuzeigen.
 
 ::component-code
 ---
-Einsturz : wahr
-Schöner : wahr
-Ignoriert :
-  @@@001@@links
-Außen :
-  @@@002@@links
-Externe Typen :
-  @@ph003@pagelink [ Bearbeiten | Quelltext bearbeiten ]
-Props :
-  Links auf :
-    - label : ' Diese Seite bearbeiten '
-      I-Lucide - File-Pen (englisch)
-      zwei :https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
-    - label : ' Stern auf GitHub '
-      Bildnachweis : i-Lucide - Star
-      zwei :https://github.com/nuxt/ui
-    - label : ' Freigaben '
-      I-Lucide - Rakete
-      zwei :https://github.com/nuxt/ui/releases
+collapse: true
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageLink[]
+props:
+  links:
+    - label: 'Edit this page'
+      icon: i-lucide-file-pen
+      to: https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
+    - label: 'Star on GitHub'
+      icon: i-lucide-star
+      to: https://github.com/nuxt/ui
+    - label: 'Releases'
+      icon: i-lucide-rocket
+      to: https://github.com/nuxt/ui/releases
 ---
 ::
 
-@@@@@@007@Links
+x022xLinks (englisch)
 
-Verwenden Sie`links`prop als Array von Objekten mit den folgenden Eigenschaften :
+Verwenden Sie die `links`-prop als Array von Objekten mit den folgenden Eigenschaften:
 
-`label: string``label: string`PH0111@@
-`icon?: string``icon?: string``icon?: string`{lang="ts-type"}
-`class?: any``class?: any``class?: any`{lang="ts-type"}{lang="ts-type"}`class?: any``class?: any``class?: any`
-`ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkLeadingIcon?: ClassNameValue }``ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkLeadingIcon?: ClassNameValue }`PH02020
+- `label: string`{lang="ts-type"} (nicht vorhanden)
+- `icon?: string`{lang="ts-type"} (nicht vorhanden)
+- `class?: any`{lang="ts-type"} (englisch)
+xph0333x`ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkLeadingIcon?: ClassNameValue }`{lang="ts-type"} (englisch)
 
-Sie können jede Eigenschaft von der[Link](/docs/components/link#props)Komponente wie`to`,`target`, etc. übergeben .
+Sie können jede Eigenschaft der Komponente [Link](/docs/components/link#props) übergeben, z. B. `to`, `target` usw.
 
 ::component-code
 ---
-Schöner : wahr
-Ignoriert :
-  @@@@@@27@@@links
-Außen :
-  @@@@@@@28@@links
-Externe Personen :
-  @@ph029@@PageLink [ ]
-Props :
-  Linke :
-    - label : ' Diese Seite bearbeiten '
-      I-Lucide - File-Pen (englisch)
-      zwei :https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
-    - label : ' Stern auf GitHub '
-      Bildnachweis : i-Lucide - Star
-      zwei :https://github.com/nuxt/ui
-    - label : ' Freigaben '
-      Bezeichnung : i-Lucide - Rocket
-      zwei :https://github.com/nuxt/ui/releases
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageLink[]
+props:
+  links:
+    - label: 'Edit this page'
+      icon: i-lucide-file-pen
+      to: https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
+    - label: 'Star on GitHub'
+      icon: i-lucide-star
+      to: https://github.com/nuxt/ui
+    - label: 'Releases'
+      icon: i-lucide-rocket
+      to: https://github.com/nuxt/ui/releases
 ---
 ::
 
-@@ph033@title
+### Titel
 
-Verwenden Sie die`title`prop , um einen Titel über den Links anzuzeigen .
+Verwenden Sie die `title`-Prop, um einen Titel über den Links anzuzeigen.
 
 ::component-code
 ---
-Schöner : wahr
-Ignoriert :
-  @@@@@35@@links
-Außen :
-  @@@@@36@@links
-Externe Typen :
-  - PageLink [ Bearbeiten | Quelltext bearbeiten ]
-Props :
-  Titel : " Gemeinschaft "
-  Links auf :
-    - label : ' Diese Seite bearbeiten '
-      I-Lucide - File-Pen (englisch)
-      zwei :https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
-    - label : ' Stern auf GitHub '
-      Bildnachweis : i-Lucide - Star
-      zwei :https://github.com/nuxt/ui
-    - label : ' Freigaben '
-      I-Lucide - Rakete
-      zwei :https://github.com/nuxt/ui/releases
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageLink[]
+props:
+  title: 'Community'
+  links:
+    - label: 'Edit this page'
+      icon: i-lucide-file-pen
+      to: https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
+    - label: 'Star on GitHub'
+      icon: i-lucide-star
+      to: https://github.com/nuxt/ui
+    - label: 'Releases'
+      icon: i-lucide-rocket
+      to: https://github.com/nuxt/ui/releases
 ---
 ::
 
 ## Beispiele
 
 ::note
-Während diese Beispiele[Nuxt Content](https://content.nuxt.com)verwenden , können die Komponenten in jedes Content-Management - System integriert werden .
+Während diese Beispiele [Nuxt Content](https://content.nuxt.com) verwenden, können die Komponenten in jedes Content Management System integriert werden.
 ::
 
-### Innerhalb einer Seite
+### innerhalb einer Seite
 
-Verwenden Sie die PageLinks-Komponente im`bottom`- Slot der ContentToc-Komponente , um eine Liste von Links unterhalb des Inhaltsverzeichnisses anzuzeigen .
+Verwenden Sie die PageLinks-Komponente im `bottom`-Slot der ContentToc-Komponente, um eine Liste von Links unterhalb des Inhaltsverzeichnisses anzuzeigen.
 
 ```vue [pages/\[...slug\\].vue]{48-52}
 <script setup lang="ts">
@@ -168,20 +168,20 @@ const links = computed<PageLink[]>(() => [{
 </template>
 ```
 
-@@107@bpb
+## API (Englisch)
 
-@@@@@@@@@@@@@@@ph108@@props
+### Props (englisch)
 
-Komponenten Props
+:component-props
 
-### Spielautomaten
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph110@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph111@changelog @@changelog @ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

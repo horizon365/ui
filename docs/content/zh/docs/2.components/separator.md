@@ -14,121 +14,121 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Separator.vue
 ---
 
-## 使用情况
+## 用法
 
-按原样使用分隔符组件分隔内容。
+按原样使用Separator组件分隔内容。
 
 ::component-code
 ---
-类别：'p-8'
+class: 'p-8'
 ---
 ::
 
-方向
+### 定向
 
-使用`orientation`属性来变更分隔符号的方向。预设为`horizontal`。
+使用`orientation`道具将Separator. px的方向更改为`horizontal`。
 
 ::component-code
 ---
-忽略：
-  班级
-类别：'p-8'
-道具：
-  方向：垂直
-  类别：'h-48'
+ignore:
+  - class
+class: 'p-8'
+props:
+  orientation: vertical
+  class: 'h-48'
 ---
 ::
 
-标签
+### Label
 
-使用`label`道具在分隔符中间显示标签。
+使用`label`属性在分隔符中间显示标签。
 
 ::component-code
 ---
-类别：'p-8'
-道具：
-  标签：“Hello World”
+class: 'p-8'
+props:
+  label: 'Hello World'
 ---
 ::
 
-### 位置：徽章{label="4.8+" class="align-text-top"}
+### 位置：badge{label="4.8+" class="align-text-top"}
 
-使用`position`属性来变更分隔符号内容的位置。预设值为`center`。
+使用`position`属性将Separator.xml内容的位置更改为`center`。
 
 ::component-code
 ---
-忽略：
-  班级
-类别：'p-8'
-道具：
-  位置：开始
-  标签：“Hello World”
+ignore:
+  - class
+class: 'p-8'
+props:
+  position: start
+  label: 'Hello World'
 ---
 ::
 
-### 图标
+### Icon
 
-使用`icon`道具在分隔符中间显示图标。
+使用`icon`道具在分隔符中间显示一个图标。
 
 ::component-code
 ---
-类别：'p-8'
-道具：
-  图标：“简单图标-nuxtdotjs”
+class: 'p-8'
+props:
+  icon: 'i-simple-icons-nuxtdotjs'
 ---
 ::
 
-虚拟人偶
+### Avatar
 
-使用`avatar`道具在分隔符中间显示一个虚拟形象。
+使用`avatar`道具在分隔符中间显示头像。
 
 ::component-code
 ---
-更漂亮：真的
-类别：'p-8'
-忽略：
-- 虚拟形象.加载中
-道具：
-  头像：
-    来源：'https：//github.com/nuxt.png'
-    加载：惰性
+prettier: true
+class: 'p-8'
+ignore:
+  - avatar.loading
+props:
+  avatar:
+    src: 'https://github.com/nuxt.png'
+    loading: lazy
 ---
 ::
 
-颜色
+### Color
 
-使用`color`道具将Separator. png的颜色更改为`neutral`。
+使用`color`属性将Separator.xml的颜色更改为`neutral`。
 
 ::component-code
 ---
-类别：'p-8'
-道具：
-  颜色：原色
-  类型：实心
+class: 'p-8'
+props:
+  color: primary
+  type: solid
 ---
 ::
 
 ### Type
 
-使用`type`属性将Separator. png的类型更改为`solid`。
+使用`type`属性将Separator.xml的类型更改为`solid`。
 
 ::component-code
 ---
-类别：'p-8'
-道具：
-  类型：虚线
+class: 'p-8'
+props:
+  type: dashed
 ---
 ::
 
 ### Size
 
-使用`size`道具将Separator. gif的大小更改为`xs`。
+使用`size`属性将Separator.xml的大小更改为`xs`。
 
 ::component-code
 ---
-类别：'p-8'
-道具：
-  Size：lg
+class: 'p-8'
+props:
+  size: lg
 ---
 ::
 
@@ -136,16 +136,16 @@ links:
 
 ### Props
 
-：组件-支柱
+:component-props
 
 ### Slots
 
-：组件插槽
+:component-slots
 
 ## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

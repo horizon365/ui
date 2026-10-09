@@ -91,16 +91,16 @@ Look at the [Nuxt 4 documentation](https://nuxt.com/docs/getting-started/introdu
 Make sure to install the dependencies:
 
 ```bash
-#  npm
+# npm
 npmインストール
 
-#  pnpm
+# pnpm
 pnpmインストール
 
-#  yarn
+# yarn
 ヤーンインストール
 
-#  bun
+# bun
 bunインストール
 ```
 
@@ -109,16 +109,16 @@ bunインストール
 Start the development server on `http://localhost:3000`:
 
 ```bash
-#  npm
+# npm
 npm run dev
 
-メール：info @ pnpm
+# pnpm
 pnpm run dev
 
-#  yarn
+# yarn
 ヤーンdev
 
-#  bun
+# bun
 bun run dev
 ```
 
@@ -127,32 +127,32 @@ bun run dev
 Build the application for production:
 
 ```bash
-#  npm
+# npm
 npm run build
 
-#  pnpm
+# pnpm
 pnpm run build
 
-#  yarn
+# yarn
 ヤーンビルド
 
-#  bun
+# bun
 bun runビルド
 ```
 
 Locally preview production build:
 
 ```bash
-#  npm
+# npm
 npm runプレビュー
 
-#  pnpm
+# pnpm
 pnpm実行プレビュー
 
-#  yarn
+# yarn
 ヤーンプレビュー
 
-#  bun
+# bun
 bun runプレビュー
 ```
 
@@ -161,7 +161,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 ::
 
-#コード
+#code
 
 ::code-collapse{class="[&>div>pre]:rounded-t-none [&>div]:my-0"}
 
@@ -233,11 +233,11 @@ export defineAppConfig {
 ```
 
 ````md [README.md]
-#  Nuxt 4最小スターター
+# Nuxt 4最小スターター
 
-詳細については、[ Nuxt 4ドキュメント](https://nuxt.com/docs/getting-started/introduction)をご覧ください。
+詳細は[Nuxt 4ドキュメント](https://nuxt.com/docs/getting-started/introduction)をご覧ください。
 
-## セットアップ
+## Setup
 
 依存関係をインストールしてください：
 
@@ -255,7 +255,7 @@ yarn install
 bun install
 ```
 
-## 開発サーバ
+## Developmentサーバ
 
 `http://localhost:3000`で開発サーバーを起動します。
 
@@ -307,7 +307,7 @@ yarn preview
 bun run preview
 ```
 
-詳細については、[ deployment documentation ](https://nuxt.com/docs/getting-started/deployment)を参照してください。
+詳細は[deploymentドキュメント](https://nuxt.com/docs/getting-started/deployment)をご覧ください。
 ````
 
 ::
@@ -321,20 +321,20 @@ bun run preview
 `ProsePre`コンポーネントと同様に、`CodeTree`はファイル名、アイコン、コピーボタンを処理します。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props {prose}
+:component-props{prose}
 
 ### スロット
 
-component—slots {prose}
+:component-slots{prose}
 
-## テーマ
+## Theme
 
-component—theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

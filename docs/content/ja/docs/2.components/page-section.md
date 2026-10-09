@@ -1,6 +1,6 @@
 ---
 title: ページセクション
-description: 'ページのレスポンシブセクション。'
+description: 'あなたのページの応答セクション。'
 category: page
 links:
   - label: サイトマップ
@@ -10,34 +10,34 @@ links:
 
 ## 使用法
 
-PageSectionコンポーネントは、コンテンツを[ Container ](/docs/components/container)でラップします。背景色、画像、パターンを簡単に追加できるように全幅の柔軟性を維持します。デフォルトスロットにイラストを使用してコンテンツを表示する柔軟な方法を提供します。
+PageSectionコンポーネントはコンテンツを[Container](/docs/components/container)にラップし、背景色、画像、パターンを簡単に追加できるように全幅の柔軟性を維持します。デフォルトスロットにイラストとともにコンテンツを表示する柔軟な方法を提供します。
 
 ::code-preview
 
 ::u-page-section
 ---
-title「美しいVue UIコンポーネント」
-説明Nuxt UIは、VueとNuxtで美しくアクセスしやすいWebアプリケーションを構築するのに役立つコンポーネントとユーティリティの包括的なスイートを提供します。
-headline '特徴'
-特徴
-  -  title 'アイコン'
-    説明：Nuxt UIはNuxt Iconと統合され、Iconifyから20万以上のアイコンにアクセスできます。
-    アイコン'i—lucide—smile'
-    to '/docs/getting—started/integrations/icons'
-  -  title 'フォント'
-    説明'Nuxt UIはNuxtフォントと統合され、プラグアンドプレイフォント最適化を提供します。
-    アイコン'i—lucide a—large small'
-    '/docs/getting—started/integrations/fonts'
-  -  title 'カラーモード'
-    説明'Nuxt UIはNuxt Color Modeと統合され、明暗を切り替えます。
-    アイコン'i—lucide—sun—moon'
-    to '/docs/getting—started/integrations/color—mode'
+title: 'Beautiful Vue UI components'
+description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+headline: 'Features'
+features:
+  - title: 'Icons'
+    description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
+    icon: 'i-lucide-smile'
+    to: '/docs/getting-started/integrations/icons'
+  - title: 'Fonts'
+    description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
+    icon: 'i-lucide-a-large-small'
+    to: '/docs/getting-started/integrations/fonts'
+  - title: 'Color Mode'
+    description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.'
+    icon: 'i-lucide-sun-moon'
+    to: '/docs/getting-started/integrations/color-mode'
 ---
 ::
 
 ::
 
-[ PageHero ](/docs/components/page-hero)コンポーネントの後に使用します。
+[PageHero](/docs/components/page-hero)コンポーネントの後に使用します。
 
 ```vue {4}
 <template>
@@ -49,255 +49,255 @@ headline '特徴'
 
 ### タイトル
 
-セクションのタイトルを設定するには、`title`プロパティを使用します。
+`title`プロパティを使用してセクションのタイトルを設定します。
 
 ::component-code
 ---
-小道具
-  title「美しいVue UIコンポーネント」
+props:
+  title: 'Beautiful Vue UI components'
 ---
 ::
 
-### 説明
+### Description
 
 セクションの説明を設定するには、`description`プロパティを使用します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  title「美しいVue UIコンポーネント」
-  説明Nuxt UIは、VueとNuxtで美しくアクセスしやすいWebアプリケーションを構築するのに役立つコンポーネントとユーティリティの包括的なスイートを提供します。
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
 ---
 ::
 
 ### ヘッドライン
 
-セクションの見出しを設定するには、`headline` propを使用します。
+`headline`プロパティを使用して、セクションの見出しを設定します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-  - 説明
-小道具
-  title「美しいVue UIコンポーネント」
-  説明Nuxt UIは、VueとNuxtで美しくアクセスしやすいWebアプリケーションを構築するのに役立つコンポーネントとユーティリティの包括的なスイートを提供します。
-  headline '特徴'
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  headline: 'Features'
 ---
 ::
 
-### アイコン
+### Icon
 
-`icon`プロパティを使用して、セクションのアイコンを設定します。
+`icon`プロパティを使用してセクションのアイコンを設定します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-  - 説明
-小道具
-  title「美しいVue UIコンポーネント」
-  説明Nuxt UIは、VueとNuxtで美しくアクセスしやすいWebアプリケーションを構築するのに役立つコンポーネントとユーティリティの包括的なスイートを提供します。
-  アイコン'i—lucide—rocket'
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  icon: 'i-lucide-rocket'
 ---
 ::
 
 ### 特徴
 
-`features`プロパティを使用して、説明の下に[ PageFeature ](/docs/components/page-feature)のリストを、次のプロパティを持つオブジェクトの配列として表示します。
+`features`プロパティを使用して、説明の下に[PageFeature](/docs/components/page-feature)のリストを次のプロパティを持つオブジェクトの配列として表示します。
 
 - `title?: string`{lang="ts-type"}
 - `description?: string`{lang="ts-type"}
 - `icon?: string`{lang="ts-type"}
 - `orientation?: 'horizontal' | 'vertical'`{lang="ts-type"}
 
-[ Link ](/docs/components/link#props)コンポーネントから、`to`、`target`などのプロパティを渡すことができます。
+[Link](/docs/components/link#props)コンポーネントから、`to`、`target`などの任意のプロパティを渡すことができます。
 
 ::component-code
 ---
-きれい真
-外部
-  - 特徴
-externalTypes
-  -  PageFeatureProps []
-無視
-  -  title
-  - 説明
-  - 機能
-小道具
-  title「美しいVue UIコンポーネント」
-  説明Nuxt UIは、VueとNuxtで美しくアクセスしやすいWebアプリケーションを構築するのに役立つコンポーネントとユーティリティの包括的なスイートを提供します。
-  特徴
-    -  title 'アイコン'
-      説明：Nuxt UIはNuxt Iconと統合され、Iconifyから20万以上のアイコンにアクセスできます。
-      アイコン'i—lucide—smile'
-      to '/docs/getting—started/integrations/icons'
-    -  title 'フォント'
-      説明'Nuxt UIはNuxtフォントと統合され、プラグアンドプレイフォントの最適化を提供します。
-      アイコン'i—lucide a—large small'
-      '/docs/getting—started/integrations/fonts'
-    -  title 'カラーモード'
-      説明'Nuxt UIはNuxt Color Modeと統合され、明暗を切り替えます。
-      アイコン'i—lucide—sun—moon'
-      to '/docs/getting—started/integrations/color—mode'
+prettier: true
+external:
+  - features
+externalTypes:
+  - PageFeatureProps[]
+ignore:
+  - title
+  - description
+  - features
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  features:
+    - title: 'Icons'
+      description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
+      icon: 'i-lucide-smile'
+      to: '/docs/getting-started/integrations/icons'
+    - title: 'Fonts'
+      description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
+      icon: 'i-lucide-a-large-small'
+      to: '/docs/getting-started/integrations/fonts'
+    - title: 'Color Mode'
+      description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.'
+      icon: 'i-lucide-sun-moon'
+      to: '/docs/getting-started/integrations/color-mode'
 ---
 ::
 
-### リンク
+### Links
 
-`links` propを使用して、[ Button ](/docs/components/button)のリストを表示します。
+`links`プロパティを使用して、説明の下に[Button](/docs/components/button)のリストを表示します。
 
 ::component-code
 ---
-きれい真
-外部
-  - リンク
-externalTypes
-  -  ButtonProps []
-無視
-  -  title
-  - 説明
-  - リンク
-小道具
-  title「美しいVue UIコンポーネント」
-  説明Nuxt UIは、VueとNuxtで美しくアクセスしやすいWebアプリケーションを構築するのに役立つコンポーネントとユーティリティの包括的なスイートを提供します。
-  リンク
-    -  label '始める'
-      /docs/getting—started
-      アイコン'i—lucide—square—play'
-      色'中立'
-    -  label 'コンポーネントを探索'
-      to '/docs/components/app'
-      色'中立'
-      バリアント：'微妙'
-      trailingIcon 'i—lucide—arrow—right'
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  links:
+    - label: 'Get started'
+      to: '/docs/getting-started'
+      icon: 'i-lucide-square-play'
+      color: 'neutral'
+    - label: 'Explore components'
+      to: '/docs/components/app'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
 ---
 ::
 
-### オリエンテーション
+### Orientation
 
 `orientation`プロパティを使用して、デフォルトスロットの向きを変更します。デフォルトは`vertical`です。
 
 ::component-code
 ---
-きれい真
-外部
-  - 機能
-  - リンク
-externalTypes
-  -  PageFeatureProps []
-  -  ButtonProps []
-無視
-  -  title
-  - 説明
-  - アイコン
-  - 特徴
-  - リンク
-小道具
-  title「美しいVue UIコンポーネント」
-  説明Nuxt UIは、VueとNuxtで美しくアクセスしやすいWebアプリケーションを構築するのに役立つコンポーネントとユーティリティの包括的なスイートを提供します。
-  アイコン'i—lucide—rocket'
-  オリエンテーション水平
-  特徴
-    -  title 'アイコン'
-      説明：Nuxt UIはNuxt Iconと統合され、Iconifyから20万以上のアイコンにアクセスできます。
-      アイコン'i—lucide—smile'
-      to '/docs/getting—started/integrations/icons'
-    -  title 'フォント'
-      説明'Nuxt UIはNuxtフォントと統合され、プラグアンドプレイフォントの最適化を提供します。
-      アイコン'i—lucide a—large small'
-      '/docs/getting—started/integrations/fonts'
-    -  title 'カラーモード'
-      説明'Nuxt UIはNuxt Color Modeと統合され、明暗を切り替えます。
-      アイコン'i—lucide—sun—moon'
-      to '/docs/getting—started/integrations/color—mode'
-  リンク
-    -  label 'コンポーネントの探索'
-      to '/docs/components/app'
-      色'ニュートラル'
-      バリアント：'微妙'
-      trailingIcon 'i—lucide—arrow—right'
-スロット
-  デフォルト|
+prettier: true
+external:
+  - features
+  - links
+externalTypes:
+  - PageFeatureProps[]
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - icon
+  - features
+  - links
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  icon: 'i-lucide-rocket'
+  orientation: horizontal
+  features:
+    - title: 'Icons'
+      description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
+      icon: 'i-lucide-smile'
+      to: '/docs/getting-started/integrations/icons'
+    - title: 'Fonts'
+      description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
+      icon: 'i-lucide-a-large-small'
+      to: '/docs/getting-started/integrations/fonts'
+    - title: 'Color Mode'
+      description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.'
+      icon: 'i-lucide-sun-moon'
+      to: '/docs/getting-started/integrations/color-mode'
+  links:
+    - label: 'Explore components'
+      to: '/docs/components/app'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
     <img src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy" />
 ---
 
-img {src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
+:img{src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
 ::
 
-### リバース
+### Reverse
 
-`reverse`プロパティを使用して、デフォルトスロットの向きを反転させます。
+`reverse`プロパティを使用して、デフォルトスロットの向きを逆にします。
 
 ::component-code
 ---
-きれい真
-外部
-  - 機能
-  - リンク
-externalTypes
-  -  PageFeatureProps []
-  -  ButtonProps []
-無視
-  -  title
-  - 説明
-  - アイコン
-  - 機能
-  - リンク
-小道具
-  title「美しいVue UIコンポーネント」
-  説明Nuxt UIは、VueとNuxtで美しくアクセスしやすいWebアプリケーションを構築するのに役立つコンポーネントとユーティリティの包括的なスイートを提供します。
-  アイコン'i—lucide—rocket'
-  オリエンテーション水平
-  逆真
-  特徴
-    -  title 'アイコン'
-      説明：Nuxt UIはNuxt Iconと統合され、Iconifyから20万以上のアイコンにアクセスできます。
-      アイコン'i—lucide—smile'
-      to '/docs/getting—started/integrations/icons'
-    -  title 'フォント'
-      説明'Nuxt UIはNuxtフォントと統合され、プラグアンドプレイフォント最適化を提供します。
-      アイコン'i—lucide a—large small'
-      '/docs/getting—started/integrations/fonts'
-    -  title 'カラーモード'
-      説明'Nuxt UIはNuxt Color Modeと統合され、明暗を切り替えます。
-      アイコン'i—lucide—sun—moon'
-      to '/docs/getting—started/integrations/color—mode'
-  リンク
-    -  label 'コンポーネントの探索'
-      to '/docs/components/app'
-      色'中立'
-      バリアント：'微妙'
-      trailingIcon 'i—lucide—arrow—right'
-スロット
-  デフォルト|
+prettier: true
+external:
+  - features
+  - links
+externalTypes:
+  - PageFeatureProps[]
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - icon
+  - features
+  - links
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  icon: 'i-lucide-rocket'
+  orientation: horizontal
+  reverse: true
+  features:
+    - title: 'Icons'
+      description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
+      icon: 'i-lucide-smile'
+      to: '/docs/getting-started/integrations/icons'
+    - title: 'Fonts'
+      description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
+      icon: 'i-lucide-a-large-small'
+      to: '/docs/getting-started/integrations/fonts'
+    - title: 'Color Mode'
+      description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.'
+      icon: 'i-lucide-sun-moon'
+      to: '/docs/getting-started/integrations/color-mode'
+  links:
+    - label: 'Explore components'
+      to: '/docs/components/app'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
     <img src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy" />
 ---
 
-メール：info @@ ph111
+:img{src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

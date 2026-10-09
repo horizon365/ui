@@ -10,9 +10,9 @@ links:
 
 ## 使用法
 
-DashboardPanelコンポーネントは、パネルを表示するために使用されます。その状態（サイズ、折りたたみなど）は、[ DashboardGroup ](/docs/components/dashboard-group#props))`storage``storage-key` propsに基づいて保存されます。
+DashboardPanelコンポーネントは、パネルを表示するために使用されます。その状態（サイズ、折りたたみなど）は、[DashboardGroup](/docs/components/dashboard-group#props)コンポーネントに提供する`storage`および`storage-key`プロパティに基づいて保存されます。
 
-[ DashboardGroup ](/docs/components/dashboard-group)コンポーネントのデフォルトスロット内で使用します。複数のパネルを隣り合わせに配置できます。
+[DashboardGroup](/docs/components/dashboard-group)コンポーネントのデフォルトスロット内で使用します。複数のパネルを隣り合わせに配置できます。
 
 ```vue [pages/index.vue]{8,10}
 <script setup lang="ts">
@@ -29,25 +29,25 @@ definePageMeta({
 ```
 
 ::caution
-異なるページで複数のパネルを使用する場合は、競合を避けるために`id`を設定することを推奨します。
+異なるページで複数のパネルを使用する場合は、競合を避けるために`id`を設定することをお勧めします。
 ::
 
 ::warning
-このコンポーネントは`resizable` propを使用する場合、単一のルート要素を持ちません。そのため、ページ遷移を使用する場合やレイアウトに単一のルートを必要とする場合は、コンテナにラップしてください例：`<div class="flex flex-1">`。
+`resizable`プロパティを使用する場合、このコンポーネントは単一のルート要素を持ちません。ページ遷移を使用する場合や、レイアウトに単一のルートを必要とする場合は、コンテナ（例えば`<div class="flex flex-1">`）でラップします。
 ::
 
 パディング付きのスクロール可能なボディを望まない場合は、`header`、`body`、`footer`スロットを使用してパネルまたはデフォルトスロットをカスタマイズします。
 
 ::component-example
 ---
-崩壊真
-名前'dashboard—panel'
-クラス'！p—0！justify—start'
-小道具
-  minSize 22
-  defaultSize 35
-  最大サイズ40
-  クラス'！min—h—96 h—136'
+collapse: true
+name: 'dashboard-panel-example'
+class: '!p-0 !justify-start'
+props:
+  minSize: 22
+  defaultSize: 35
+  maxSize: 40
+  class: '!min-h-96 h-136'
 ---
 ::
 
@@ -55,81 +55,81 @@ definePageMeta({
 ほとんどの場合、[`DashboardNavbar`](/docs/components/dashboard-navbar)コンポーネントを`header`スロットで使用します。
 ::
 
-###  Resizable
+### サイズ変更可能
 
-`resizable`プロパティを使用して、パネルのサイズを変更できます。
+`resizable`プロパティを使用してパネルのサイズを変更できます。
 
 ::component-code
 ---
-きれい真
-隠す
-  -  minSize
-  -  defaultSize
-  -  maxSize
-  - クラス
-小道具
-  サイズ変更可能true
-  minSize 22
-  defaultSize 35
-  最大サイズ40
-  クラス'！min—h—96'
-スロット
-  ボディ|
+prettier: true
+hide:
+  - minSize
+  - defaultSize
+  - maxSize
+  - class
+props:
+  resizable: true
+  minSize: 22
+  defaultSize: 35
+  maxSize: 40
+  class: '!min-h-96'
+slots:
+  body: |
 
     <Placeholder class="h-96" />
-クラス'！p—0！justify—start'
+class: '!p-0 !justify-start'
 ---
 
 #body
-placeholder {class="h-96"}
+:placeholder{class="h-96"}
 ::
 
 ### サイズ
 
-パネルのサイズをカスタマイズするには、`min-size`、`max-size`、および`default-size` propsを使用します。
+`min-size`、`max-size`、`default-size`の小道具を使用して、パネルのサイズをカスタマイズします。
 
 ::component-code
 ---
-きれい真
-無視
-  -  resizable
-隠す
-  - クラス
-小道具
-  サイズ変更可能true
-  minSize 22
-  defaultSize 35
-  最大サイズ40
-  クラス'！min—h—96'
-スロット
-  ボディ|
+prettier: true
+ignore:
+  - resizable
+hide:
+  - class
+props:
+  resizable: true
+  minSize: 22
+  defaultSize: 35
+  maxSize: 40
+  class: '!min-h-96'
+slots:
+  body: |
 
     <Placeholder class="h-96" />
-クラス'！p—0！justify—start'
+class: '!p-0 !justify-start'
 ---
 
 #body
-placeholder {class="h-96"}
+:placeholder{class="h-96"}
 ::
 
 ::tip{to="/docs/components/dashboard-group#props"}
 サイズはデフォルトでパーセンテージで計算されます。`DashboardGroup`コンポーネントの`unit`プロパティを使用して変更できます。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

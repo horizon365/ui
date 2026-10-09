@@ -8,7 +8,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatMessages.vue
 ---
 
-## 使用情况
+## 用法
 
 ChatMessages组件使用默认插槽或`messages`属性显示[ChatMessage](/docs/components/chat-message)组件的列表。
 
@@ -28,343 +28,343 @@ ChatMessages组件使用默认插槽或`messages`属性显示[ChatMessage](/docs
 此组件专为AI聊天机器人构建，具有以下特性：
 
 - 加载时初始滚动到底部（[`shouldScrollToBottom`](#should-scroll-to-bottom)）。
-当新邮件到达时，继续向下滚动（[`shouldAutoScroll`](#should-auto-scroll)）。
-- 向上卷动时会出现[自动卷动]按钮，让使用者可以跳回到最新的邮件（[`autoScroll`](#auto-scroll)）。
-- 当助手正在处理（[`status`](#status)）时，将显示一个加载指示器。
-- Submitted message会卷动到检视区的顶端，而且最后一个使用者消息的高度会动态调整。
+- 在新邮件到达时持续向下滚动（[`shouldAutoScroll`](#should-auto-scroll)）。
+- 向上滚动时会出现“自动滚动”按钮，允许用户跳回到最新消息（[`autoScroll`](#auto-scroll)）。
+- 助手正在处理时显示加载指示器（[`status`](#status)）。
+- 提交的消息滚动到视口的顶部，最后一条用户消息的高度动态调整。
 ::
 
-消息
+### 留言
 
-使用`messages`道具显示聊天消息列表。
+使用`messages`属性显示聊天消息列表。
 
 ::component-code
 ---
-更漂亮：真的
-外部：
-  消息
-忽略：
-  消息
-隐藏：
-  应该滚动到底部
-收阖：true
-类：'溢出-y-auto'
-道具：
-  留言：
-    【045235a-a435 - 46b8 - 989d-2df38ca2eb47】我的手机号码是：
-      角色：用户
-      零件名称：
-        类型：'文本'
-          短信："你好，你好吗？"
-    "我的天啊!"
-      角色：助理
-      零件名称：
-- 类型："文本"
-          文本："我做得很好，谢谢你的关心!今天我能为你做些什么？"
-    "我的天啊!"
-      角色：用户
-      零件名称：
-        类型：'文本'
-          text："东京现在的天气怎么样？"
-    【字幕翻译】
-      角色：助理
-      零件名称：
-        类型：'文本'
-          正文：“根据最新的数据，东京目前天气晴朗，气温在24°C（75°F）左右。这是一个晴朗的天气。”
-  应滚动到底部：false
+prettier: true
+external:
+  - messages
+ignore:
+  - messages
+hide:
+  - shouldScrollToBottom
+collapse: true
+class: 'overflow-y-auto'
+props:
+  messages:
+    - id: '6045235a-a435-46b8-989d-2df38ca2eb47'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Hello, how are you?'
+    - id: '7a92b3c1-d5f8-4e76-b8a9-3c1e5fb2e0d8'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: 'I am doing well, thank you for asking! How can I assist you today?'
+    - id: '9c84d6a7-8b23-4f12-a1d5-e7f3b9c05e2a'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'What is the current weather in Tokyo?'
+    - id: 'b2e5f8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: "Based on the latest data, Tokyo is currently experiencing sunny weather with temperatures around 24°C (75°F). It's a beautiful day with clear skies."
+  shouldScrollToBottom: false
 ---
 ::
 
-状态
+### 状态
 
-使用`status`道具可在助手处理时显示可视指示器。
+使用`status`道具在助手处理时显示可视指示器。
 
 ::component-code
 ---
-更漂亮：真的
-外部：
-  消息
-忽略：
-  消息
-  状态
-隐藏：
-- 应该滚动到底部
-类：'溢出-y-auto'
-道具：
-  状态：'已提交'
-  留言：
-    【061】手机号码：6045235 a-a
-      角色：用户
-      零件名称：
-        类型：“文本”
-          短信：“你好，你好吗？”
-  应滚动到底部：false
+prettier: true
+external:
+  - messages
+ignore:
+  - messages
+  - status
+hide:
+  - shouldScrollToBottom
+class: 'overflow-y-auto'
+props:
+  status: 'submitted'
+  messages:
+    - id: '6045235a-a435-46b8-989d-2df38ca2eb47'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Hello, how are you?'
+  shouldScrollToBottom: false
 ---
 ::
 
 ::note
-以下是AI SDK`useChat`composable中不同状态的详细信息：
+以下是AI SDK `useChat`组合的不同状态的详细信息：
 
 - `submitted`：消息已发送到API，我们正在等待响应流的开始。
-- `streaming`：响应正在从API中以流的形式传入，正在接收数据块。
-- `ready`：已收到并处理完整响应;可以提交新的用户消息。
-- `error`：API请求过程中发生错误，导致无法成功完成。
+- `streaming`：响应正在从API主动流入，接收数据块。
+- `ready`：已收到并处理完整响应;可以提交新用户消息。
+- `error`：请求API时出错，无法成功完成。
 ::
 
-用户
+### 用户
 
-使用`user`属性可更改`user`消息的[ChatMessage](/docs/components/chat-message)属性。默认值为：
+使用`user` prop更改`user`消息的[ChatMessage](/docs/components/chat-message) prop。请更改为：
 
-我的天啊！
-我的天啊！
+- `side: 'right'`{lang="ts-type"}
+- `variant: 'soft'`{lang="ts-type"}
 
 ::component-code
 ---
-更漂亮：真的
-外部的：
-  消息
-忽略：
-  消息
-  虚拟形象. src
-- 头像.加载中
-隐藏：
-  应该滚动到底部
-收阖：true
-项目名称：
+prettier: true
+external:
+  - messages
+ignore:
+  - messages
+  - avatar.src
+  - avatar.loading
+hide:
+  - shouldScrollToBottom
+collapse: true
+items:
   user.variant:
-    实心的
-    大纲
-    微妙的
-    软的
-    裸体的
+    - solid
+    - outline
+    - subtle
+    - soft
+    - naked
   user.side:
-    左侧
-    对了
-类：'溢出-y-auto'
-道具：
-  使用者：
-    侧：左
-    变体：实体
-    头像：
-      来源：https://github.com/benjamincanac.png
-      加载：惰性
-  留言：
-    “我的手机号码是6045235 a-a435
-      角色：用户
-      零件名称：
-        类型：'文本'
-          短信：“你好，你好吗？”
-    【099】
-      角色：助理
-      零件名称：
-        - 类型：“文本”
-          文本：“我做得很好，谢谢你的关心！今天我能为你做些什么？”
-    “9 c84 d 6a 7 - 8b 23 - 4f 12-a1 d5-e7 f3 b 9 c 05 e2 a”是一个很好的例子，它是一个很好的例子。
-      角色：用户
-      零件名称：
-        - 类型：“文本”
-          text：“东京现在的天气怎么样？”
-    “我的天啊！”
-      角色：助理
-      零件名称：
-        类型：'文本'
-          正文：“根据最新的数据，东京目前天气晴朗，气温在24°C（75°F）左右。这是一个晴朗的天气。”
-  应滚动到底部：false
+    - left
+    - right
+class: 'overflow-y-auto'
+props:
+  user:
+    side: left
+    variant: solid
+    avatar:
+      src: https://github.com/benjamincanac.png
+      loading: lazy
+  messages:
+    - id: '6045235a-a435-46b8-989d-2df38ca2eb47'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Hello, how are you?'
+    - id: '7a92b3c1-d5f8-4e76-b8a9-3c1e5fb2e0d8'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: 'I am doing well, thank you for asking! How can I assist you today?'
+    - id: '9c84d6a7-8b23-4f12-a1d5-e7f3b9c05e2a'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'What is the current weather in Tokyo?'
+    - id: 'b2e5f8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: "Based on the latest data, Tokyo is currently experiencing sunny weather with temperatures around 24°C (75°F). It's a beautiful day with clear skies."
+  shouldScrollToBottom: false
 ---
 ::
 
 ### 助手
 
-使用`assistant`属性可更改`assistant`消息的[ChatMessage](/docs/components/chat-message)属性。默认值为：
+使用`assistant` prop更改`assistant`消息的[ChatMessage](/docs/components/chat-message) prop。请更改为：
 
-112号，113号，114号
-115号，116号，117号
+- `side: 'left'`{lang="ts-type"}
+- `variant: 'naked'`{lang="ts-type"}
 
 ::component-code
 ---
-更漂亮：真的
-外部：
-  消息
-忽略：
-  消息
-  - 头像.图标
-  - 助理.操作
-隐藏：
-  - 应该滚动到底部
-收阖：true
-项目名称：
+prettier: true
+external:
+  - messages
+ignore:
+  - messages
+  - avatar.icon
+  - assistant.actions
+hide:
+  - shouldScrollToBottom
+collapse: true
+items:
   assistant.variant:
-    固体，固体
-- 大纲
-    微妙的
-    软的
-    裸体的
+    - solid
+    - outline
+    - subtle
+    - soft
+    - naked
   assistant.side:
-    左侧128
-- 右侧
-类：'溢出-y-auto'
-道具类：
-  助手：
-    侧：左
-    变体：轮廓
-    头像：
-      图标：i-lucide-bot
-    动作：
-      - label：'复制到剪贴板'
-        图标：i-lucide-副本
-  留言：
-    @我的手机号码：
-      角色：用户
-      零件名称：
-        “文本”
-          短信：“你好，你好吗？”
-    “我的天啊！”
-      角色：助理
-      零件名称：
-        类型：'文本'
-          文本：“我做得很好，谢谢你的关心！今天我能为你做些什么？”
-    “我的天啊！”
-      角色：用户
-      零件名称：
-        “文本”
-          text：“东京现在的天气怎么样？”
-    “我的天啊！”
-      角色：助理
-      零件名称：
-        “文本”
-          正文：“根据最新的数据，东京目前天气晴朗，气温在24°C（75°F）左右。这是一个晴朗的天气。”
-  应滚动到底部：false
+    - left
+    - right
+class: 'overflow-y-auto'
+props:
+  assistant:
+    side: left
+    variant: outline
+    avatar:
+      icon: i-lucide-bot
+    actions:
+      - label: 'Copy to clipboard'
+        icon: i-lucide-copy
+  messages:
+    - id: '6045235a-a435-46b8-989d-2df38ca2eb47'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Hello, how are you?'
+    - id: '7a92b3c1-d5f8-4e76-b8a9-3c1e5fb2e0d8'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: 'I am doing well, thank you for asking! How can I assist you today?'
+    - id: '9c84d6a7-8b23-4f12-a1d5-e7f3b9c05e2a'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'What is the current weather in Tokyo?'
+    - id: 'b2e5f8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: "Based on the latest data, Tokyo is currently experiencing sunny weather with temperatures around 24°C (75°F). It's a beautiful day with clear skies."
+  shouldScrollToBottom: false
 ---
 ::
 
-### 自动卷动
+### 自动滚动
 
-使用`auto-scroll`道具来自定义或隐藏滚动到聊天顶部时显示的自动滚动按钮（值为`false`）。默认值为：
+使用`auto-scroll`道具自定义或隐藏自动滚动按钮（使用`false`值），当滚动到聊天顶部时显示。
 
-142小时143小时144小时
-145小时146小时147小时
+- `color: 'neutral'`{lang="ts-type"}
+- `variant: 'outline'`{lang="ts-type"}
 
-您可以从[Button](/docs/components/button)组件传递任何属性来自订该组件。
+您可以从[Button](/docs/components/button)组件传递任何属性来对其进行自定义。
 
 ::component-code
 ---
-更漂亮：真的
-收阖：true
-外部：
-  邮件数
-忽略：
-  邮件
-  自动滚动.颜色
-- 自动滚动.变量
-  - 应该滚动到底部
-类：“溢出-y-自动最大值-h-[341 px]静态”
-道具：
-  自动卷动：
-    颜色：中性
-    变体：轮廓
-  应滚动到底部：false
-  留言：
-    【045235 a-a435 - 46 b8 - 989 d-2df 38 ca 2 eb 47】我的手机号码是：
-      角色：用户
-      零件名称：
-        “文本”
-          短信：“你好，你好吗？”
-    “我的天啊！”
-      角色：助理
-      零件名称：
-        “文本”
-          文本：“我做得很好，谢谢你的关心！今天我能为你做些什么？”
-    “我的天啊！”
-      角色：用户
-      零件名称：
-        类型：'文本'
-          text：“东京现在的天气怎么样？”
-    “我的天啊！”
-      角色：助理
-      零件名称：
-        类型：'文本'
-          正文：“根据最新的数据，东京目前天气晴朗，气温在24°C（75°F）左右。这是一个晴朗的天气。本周剩余时间的天气预报显示，周四有轻微的降雨可能，到周末气温将逐渐上升到28°C。湿度水平适中，在65%左右。”东南方向风速为8公里/小时，空气质量良好，指数为42。紫外线指数高达7，所以如果你打算在户外度过一段时间，建议你涂防晒霜。日出是在早上5点24分，日落是在早上6点。48，东京今天大约有13小时24分钟的日照时间，月亮现在正处于上蜡的凸状阶段。”
-    “我的天啊！”
-      角色：用户
-      零件名称：
-        类型：'文本'
-          text：“你能推荐京都一些热门的旅游景点吗？”
-    “我的天啊！”
-      角色：助理
-      零件名称：
-        类型：'文本'
-          正文：京都以其美丽的寺庙、传统的茶馆和花园而闻名。一些受欢迎的景点包括金阁寺（金阁），其令人惊叹的金箔外观反射在镜子池塘，伏见稻成神社，其数千个朱红鸟居门蜿蜒在山腰，岚山格罗夫，高耸的茎创造了一个超凡脱俗的气氛，清水寺（Kiyomizu-dera Temple）坐落在一座希尔赛德上，可以俯瞰整个城市的全景，还有历史悠久的园区（Gion district），在那里，你可能会看到艺妓们在狭窄的石板街道上匆忙赴约，街道两旁是传统的木制町屋。
+prettier: true
+collapse: true
+external:
+  - messages
+ignore:
+  - messages
+  - autoScroll.color
+  - autoScroll.variant
+  - shouldScrollToBottom
+class: 'overflow-y-auto max-h-[341px] static'
+props:
+  autoScroll:
+    color: neutral
+    variant: outline
+  shouldScrollToBottom: false
+  messages:
+    - id: '6045235a-a435-46b8-989d-2df38ca2eb47'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Hello, how are you?'
+    - id: '7a92b3c1-d5f8-4e76-b8a9-3c1e5fb2e0d8'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: 'I am doing well, thank you for asking! How can I assist you today?'
+    - id: '9c84d6a7-8b23-4f12-a1d5-e7f3b9c05e2a'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'What is the current weather in Tokyo?'
+    - id: 'b2e5f8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: "Based on the latest data, Tokyo is currently experiencing sunny weather with temperatures around 24°C (75°F). It's a beautiful day with clear skies. The forecast for the rest of the week shows a slight chance of rain on Thursday, with temperatures gradually rising to 28°C by the weekend. Humidity levels are moderate at around 65%, and wind speeds are light at 8 km/h from the southeast. Air quality is good with an index of 42. The UV index is high at 7, so it's recommended to wear sunscreen if you're planning to spend time outdoors. Sunrise was at 5:24 AM and sunset will be at 6:48 PM, giving Tokyo approximately 13 hours and 24 minutes of daylight today. The moon is currently in its waxing gibbous phase."
+    - id: 'c3e5f8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Can you recommend some popular tourist attractions in Kyoto?'
+    - id: 'd4f5g8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: 'Kyoto is known for its beautiful temples, traditional tea houses, and gardens. Some popular attractions include Kinkaku-ji (Golden Pavilion) with its stunning gold leaf exterior reflecting in the mirror pond, Fushimi Inari Shrine with its thousands of vermilion torii gates winding up the mountainside, Arashiyama Bamboo Grove where towering stalks create an otherworldly atmosphere, Kiyomizu-dera Temple perched on a hillside offering panoramic views of the city, and the historic Gion district where you might spot geisha hurrying to evening appointments through narrow stone-paved streets lined with traditional wooden machiya houses.'
 ---
 ::
 
 ### 自动滚动图标
 
-使用`auto-scroll-icon`属性来自订自动卷动按钮[Icon](/docs/components/icon)。预设值为`i-lucide-arrow-down`。
+使用`auto-scroll-icon`道具自定义自动滚动按钮[Icon](/docs/components/icon)。
 
 ::component-code
 ---
-更漂亮：真的
-收阖：true
-外部：
-  消息
-忽略：
-  消息
-  自动滚动.颜色
-  自动滚动.变量
-- 应该滚动到底部
-类：“溢出-y-自动最大值-h-[341 px]静态”
-道具：
-  autoScrollIcon：'i-lucide-V形图案-向下'
-  应滚动到底部：false
-  留言：
-    @我的手机号码：
-      角色：用户
-      零件名称：
-        "文本"
-          短信："你好，你好吗？"
-    "我的天啊!"
-      角色：助理
-      零件名称：
-        "文本"
-          文本："我做得很好，谢谢你的关心!今天我能为你做些什么？"
-    "我的天啊!"
-      角色：用户
-      零件名称：
-        "文本"
-          text："东京现在的天气怎么样？"
-    "我的天啊!"
-      角色：助理
-      零件名称：
-        "文本"
-          正文："根据最新的数据，东京目前天气晴朗，气温在24 ° C（75 ° F）左右。这是一个晴朗的天气。本周剩余时间的天气预报显示，周四有轻微的降雨可能，到周末气温将逐渐上升到28 ° C。湿度水平适中，在65%左右。"东南方向风速为8公里/小时，空气质量良好，指数为42。紫外线指数高达7，所以如果你打算在户外度过一段时间，建议你涂防晒霜。日出是在早上5点24分，日落是在早上6点。48，东京今天大约有13小时24分钟的日照时间，月亮现在正处于上蜡的凸状阶段。"
-    "我的天啊!"
-      角色：用户
-      零件名称：
-        "文本"
-          text："你能推荐京都一些热门的旅游景点吗？"
-    "我的天啊!"
-      角色：助理
-      零件名称：
-        "文本"
-          正文：京都以其美丽的寺庙、传统的茶馆和花园而闻名。一些受欢迎的景点包括金阁寺（金阁），其令人惊叹的金箔外观反射在镜子池塘，伏见稻成神社，其数千个朱红鸟居门蜿蜒在山腰，岚山竹林，高耸的茎创造了一个超凡脱俗的气氛，清水寺（Kiyomizu-dera Temple）坐落在一座山坡上，可以俯瞰整个城市的全景，还有历史悠久的园区（Gion district），在那里，你可能会看到艺妓们在狭窄的石板街道上匆忙赴约，街道两旁是传统的木制町屋。
+prettier: true
+collapse: true
+external:
+  - messages
+ignore:
+  - messages
+  - autoScroll.color
+  - autoScroll.variant
+  - shouldScrollToBottom
+class: 'overflow-y-auto max-h-[341px] static'
+props:
+  autoScrollIcon: 'i-lucide-chevron-down'
+  shouldScrollToBottom: false
+  messages:
+    - id: '6045235a-a435-46b8-989d-2df38ca2eb47'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Hello, how are you?'
+    - id: '7a92b3c1-d5f8-4e76-b8a9-3c1e5fb2e0d8'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: 'I am doing well, thank you for asking! How can I assist you today?'
+    - id: '9c84d6a7-8b23-4f12-a1d5-e7f3b9c05e2a'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'What is the current weather in Tokyo?'
+    - id: 'b2e5f8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: "Based on the latest data, Tokyo is currently experiencing sunny weather with temperatures around 24°C (75°F). It's a beautiful day with clear skies. The forecast for the rest of the week shows a slight chance of rain on Thursday, with temperatures gradually rising to 28°C by the weekend. Humidity levels are moderate at around 65%, and wind speeds are light at 8 km/h from the southeast. Air quality is good with an index of 42. The UV index is high at 7, so it's recommended to wear sunscreen if you're planning to spend time outdoors. Sunrise was at 5:24 AM and sunset will be at 6:48 PM, giving Tokyo approximately 13 hours and 24 minutes of daylight today. The moon is currently in its waxing gibbous phase."
+    - id: 'c3e5f8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Can you recommend some popular tourist attractions in Kyoto?'
+    - id: 'd4f5g8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: 'Kyoto is known for its beautiful temples, traditional tea houses, and gardens. Some popular attractions include Kinkaku-ji (Golden Pavilion) with its stunning gold leaf exterior reflecting in the mirror pond, Fushimi Inari Shrine with its thousands of vermilion torii gates winding up the mountainside, Arashiyama Bamboo Grove where towering stalks create an otherworldly atmosphere, Kiyomizu-dera Temple perched on a hillside offering panoramic views of the city, and the historic Gion district where you might spot geisha hurrying to evening appointments through narrow stone-paved streets lined with traditional wooden machiya houses.'
 ---
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`ui.icons.arrowDown`键下的`app.config.ts`中全局自定此图标。
+您可以在`app.config.ts`中的`ui.icons.arrowDown`键下全局自定义此图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`ui.icons.arrowDown`键下的`vite.config.ts`中全局自定此图标。
+你可以在你的`vite.config.ts`下的`ui.icons.arrowDown`键全局自定义这个图标。
 :::
 ::
 
-### 应该自动卷动
+### 应自动滚动
 
-使用`should-auto-scroll`属性可启用/禁用邮件流传输时的连续自动滚动。默认为`false`。
+使用`should-auto-scroll` prop来启用/禁用连续自动滚动，而消息是流。安装到`false`。
 
 ```vue
 <template>
@@ -372,9 +372,9 @@ ChatMessages组件使用默认插槽或`messages`属性显示[ChatMessage](/docs
 </template>
 ```
 
-### 应该滚动到底部
+### 应滚动到底部
 
-使用`should-scroll-to-bottom`属性来启用/停用挂载元件时的底部自动卷动。预设值为`true`。
+使用`should-scroll-to-bottom` prop来启用/禁用底部自动滚动时，组件是挂载。安装到`true`。
 
 ```vue
 <template>
@@ -382,36 +382,36 @@ ChatMessages组件使用默认插槽或`messages`属性显示[ChatMessage](/docs
 </template>
 ```
 
-示例
+## 示例
 
 ::tip{to="/docs/components/chat"}
-有关安装说明、服务器设置和使用示例，请查看**Chat**概述页。
+查看**Chat**概述页面以获取安装说明、服务器设置和使用示例。
 ::
 
-### 带指示槽
+### 带指示灯槽
 
-使用`#indicator`插槽自定义加载指示器，使其具有[`ChatShimmer`](/docs/components/chat-shimmer)效果。
+使用`#indicator`插槽自定义具有[`ChatShimmer`](/docs/components/chat-shimmer)效果的加载指示器。
 
 ::component-example
 ---
-名称：'聊天消息指示器插槽示例'
-类：'溢出-y-auto'
-收阖：true
+name: 'chat-messages-indicator-slot-example'
+class: 'overflow-y-auto'
+collapse: true
 ---
 ::
 
-## 活性成分
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽数
+### Slots
 
-：组件插槽
+:component-slots
 
 ::tip
-您可以在ChatMessages中使用[`ChatMessage`](/docs/components/chat-message#slots)组件的所有插槽，这些插槽会自动转发，因此您可以在使用`messages`属性时自定义各个消息。
+您可以使用ChatMessages内[`ChatMessage`](/docs/components/chat-message#slots)组件的所有插槽，它们会自动转发，因此您可以在使用`messages`道具时自定义单个消息。
 
 ```vue{7-15}
 <script setup lang="ts">
@@ -435,18 +435,18 @@ import { isTextUIPart } from 'ai'
 ```
 ::
 
-暴露
+### 曝光
 
 通过模板引用访问组件时，可以使用以下命令：
 
 | 名称|类型|
 | ---- | ---- |
-| 255秒后|254小时256小时|
+| `registerMessageRef(id: string, element: ComponentPublicInstance \| null)`{lang="ts-type"}| `void`{lang="ts-type"}|
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

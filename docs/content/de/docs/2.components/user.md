@@ -11,48 +11,48 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/User.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-@@ph001@@names
+### Name Bearbeiten
 
-Verwenden Sie `name` prop, um einen Namen für den Benutzer anzuzeigen.
+Verwenden Sie die `name`-Prop, um einen Namen für den Benutzer anzuzeigen.
 
 ::component-code
 ---
-Props:
-  Der Name: John Doe
+props:
+  name: 'John Doe'
 ---
 ::
 
-@@ph003 @ Beschreibung
+xph007 Beschreibung
 
-Verwenden Sie `description` prop, um eine Beschreibung für den Benutzer anzuzeigen.
+Verwenden Sie die `description`-Prop, um eine Beschreibung für den Benutzer anzuzeigen.
 
 ::component-code
 ---
-Props:
-  Der Name: John Doe
-  Beschreibung: "Software Engineer"
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
 ---
 ::
 
-@@@@@@@avatar@@avatar@@@avatar@@@avatar@@avatar@@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avataratar@avataratar@avataratar@avataratar@avataratar@avataratar@avataratar@avatar@avataratar@avataratar@avataratar@avataratar@avatar@avataratar@avatar@avataratar@@@@avataratarataratarataratarataratar@@@avatarataratarataram@@@avataramataram@@avataramataramataramataramataramataramatar
+### Avatar Bearbeiten
 
-Verwenden Sie die `avatar` prop, um eine [Avatar](/docs/components/avatar) Komponente anzuzeigen.
+Verwenden Sie die `avatar`-Prop, um eine [Avatar](/docs/components/avatar)-Komponente anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph011@@names
-  @@ph012@beschreibung
-Props:
-  Der Name: John Doe
-  Beschreibung: "Software Engineer"
-  Avatare sind:
-    src: 'https://i.pravatar.cc/150?u=john-doe'(auf Englisch)
-    Aufladung: Lazy
-    Icon: i-lucide-Bild
+prettier: true
+ignore:
+  - name
+  - description
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
+  avatar:
+    src: 'https://i.pravatar.cc/150?u=john-doe'
+    loading: lazy
+    icon: i-lucide-image
 ---
 ::
 
@@ -60,47 +60,47 @@ Props:
 
 ::component-props
 ---
-Bezeichnung: Avatar
-Ignoriert:
-  @@ph013@Größe
-  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##############################################################################################################################################
+name: Avatar
+ignore:
+  - size
+  - as
 ---
 ::
 
 ::
 
-@@ph015@chip@@@chip@@chip@@chip@@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@@chip@chip@chip@@chip@@chip@@chip@chip@@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip
+### Chip ist ein
 
-Verwenden Sie die `chip` prop, um eine [Chip](/docs/components/chip) Komponente anzuzeigen.
+Verwenden Sie die `chip`-Prop, um eine [Chip](/docs/components/chip)-Komponente anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph021@@names
-  @@ph022@beschreibung
+prettier: true
+ignore:
+  - name
+  - description
   - avatar.src
-Items:
+items:
   chip.color:
-    - vorallem
-    @@ph025@zweitrangig
-    @@ph026@@Erfolg
-    @@@@@@info@@@info@@info@@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@@info@info@info@info@info@info@info@info@@@info@info@@info@info@@info@info@@@info@@@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@
-    @@ph028@@warning
-    @@ph029@Fehler
-    @@ph030@neutral
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
   chip.position:
-    @@ b31 @ b31
-    @@@ ph032 @@ oben rechts
-    @@ bottom-left @ bottom-left @ bottom-left-left-left-left-left-left-left-left-left-left-left @ bottom-left-left-left-left-left-left-left-left-lefth-left-
-    @@ bottom-right @@ bottom-right @ bottom-right @@ bottom-right @ bottom-right @ bottom-rechts
-Props:
-  Der Name: John Doe
-  Beschreibung: "Software Engineer"
-  avatar. src: 'https://i.pravatar.cc/150?u=john-doe'(englisch)
-  Der CHIP:
-    Farbe: "Primär"
-    Position: oben rechts
+    - top-left
+    - top-right
+    - bottom-left
+    - bottom-right
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
+  avatar.src: 'https://i.pravatar.cc/150?u=john-doe'
+  chip:
+    color: 'primary'
+    position: top-right
 ---
 ::
 
@@ -108,93 +108,93 @@ Props:
 
 ::component-props
 ---
-Bezeichnung: Chip
-Ignoriert:
-  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#####################################################################################################################################
-  @@ph036 @ Größe
-  @@ph037@stylon.de
+name: Chip
+ignore:
+  - as
+  - size
+  - standalone
 ---
 ::
 
 ::
 
-@@@@@@38@38
+### Size
 
-Verwenden Sie `size` prop, um die Größe des Benutzeravatars und des Texts zu ändern.
+Verwenden Sie die `size`-Prop, um die Größe des Benutzer-Avatars und des Texts zu ändern.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph040@names @ names @ nr
-  @@ph041@beschreibung
+prettier: true
+ignore:
+  - name
+  - description
   - avatar.src
-  @@ph043@chip@@@chip@@@chip@@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@@chip@@chip@@chip@chip@@@chip@chip@@@@chip@chip@@chip@@chip@@@@chip@@@chip@@chip@@@chip@@@chip@@@chip@chip@@@chip@chip@@@@@chip@
-Props:
-  Der Name: John Doe
-  Beschreibung: "Software Engineer"
-  avatar. src: 'https://i.pravatar.cc/150?u=john-doe'(englisch)
-  Chip: echt
-  Größe: XL
+  - chip
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
+  avatar.src: 'https://i.pravatar.cc/150?u=john-doe'
+  chip: true
+  size: xl
 ---
 ::
 
-@@ph044@Orientierung
+### Orientierung
 
-Verwenden Sie `orientation` prop, um die Ausrichtung zu ändern. Standardmäßig ist `horizontal`.
+Verwenden Sie die `orientation`-prop, um die Ausrichtung zu ändern. Standardmäßig `horizontal`.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
+prettier: true
+ignore:
   - avatar.src
-Props:
-  Ausrichtung: "vertikal"
-  Der Name: John Doe
-  Beschreibung: "Software Engineer"
-  avatar. src: 'https://i.pravatar.cc/150?u=john-doe'(englisch)
+props:
+  orientation: 'vertical'
+  name: 'John Doe'
+  description: 'Software Engineer'
+  avatar.src: 'https://i.pravatar.cc/150?u=john-doe'
 ---
 ::
 
-@@@@@@@48@Link
+### Link ist
 
-Sie können jede Eigenschaft von der [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) Komponente wie `to`,`target`,`rel`, etc. übergeben.
+Sie können jede Eigenschaft der Komponente [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) übergeben, z. B. `to`, `target`, `rel` usw.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph057@nomega
-  @@ph058@beschreibung
+prettier: true
+ignore:
+  - name
+  - description
   - avatar.src
-  @@ph060@@zielgruppe
-Props:
-  zu: 'https://github.com/benjamincanac'
-  Ziel: _blank
-  Der Name: Benjamin Canac
-  Beschreibung: "Software Engineer"
-  avatar. src: 'https://github.com/benjamincanac.png'(englisch)
+  - target
+props:
+  to: 'https://github.com/benjamincanac'
+  target: '_blank'
+  name: 'Benjamin Canac'
+  description: 'Software Engineer'
+  avatar.src: 'https://github.com/benjamincanac.png'
 ---
 ::
 
 ::note
-Die Komponente `NuxtLink` erbt alle anderen Attribute, die Sie an die Komponente `User` übergeben.
+Die `NuxtLink`-Komponente erbt alle anderen Attribute, die Sie an die `User`-Komponente übergeben.
 ::
 
-## api
+## API (englisch)
 
-@@@ph064@@Props
+### Props Bearbeiten
 
-Komponenten Props
+:component-props
 
-### Slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-## Thema
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph067@@changelog @@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

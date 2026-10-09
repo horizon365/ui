@@ -1,5 +1,5 @@
 ---
-title: Kontextmenü erstellen
+title: Kontextmenü
 description: Ein Menü zum Anzeigen von Aktionen beim Rechtsklick auf ein Element.
 category: overlay
 keywords:
@@ -13,344 +13,344 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ContextMenu.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
 Verwenden Sie alles, was Sie im Standard-Slot des ContextMenu möchten, und klicken Sie mit der rechten Maustaste darauf, um das Menü anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Einsturz: wahr
-Ignoriert:
-  @@ph001@@gmail.de
+prettier: true
+collapse: true
+ignore:
+  - items
   - ui.content
-Außen:
-  @@ph003@gmail.de
-Externe Typen:
-  @@@ph004@@@contextmenuItem [][]
-Props:
-  Items:
-    - -label: Aussehen
-        Kinder:
-          - label: Das System
-            Bildnachweis: i-Lucide-Monitor
-          - label: Licht
-            Bildnachweis: i-lucide-sun
-          @@ph008@@label: dunkel
-            I-Lucide-Moon Ubersetzungen
-    - -label: Seitenleiste anzeigen
-        Die KBS:
-          @@1010@100@100@100@100@100@100@100@100@100@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@10@@10@@10@@@100@@@@@@@@@1000000@@@@@@@@@@@@@@@@@@@1000000000@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@1000000000000@@@@@@@@@@@@@@@@@
-          @@@@@@11@11@11@11@11@11@111@111@111@1111@111@111@111111@@111111@@11111@111@1111@1111@1111@1111@11111@1111111@11111111@111111111111111111@@111111111111111111111111111111111111111@@@@@@11111111111111111111111111111111111111111111111111111111@@@@@@11111
-      - label: Symbolleiste anzeigen
-        Die KBS:
-          @@ph013@schichten.de
-          @@@@@14@14@14@14@14@14@14@14@14@14@14@14
-          @@@@@15@15
-      - label: Eingeklemmte Tabs
-        Behindert: Wahr
-    - -label: Aktualisieren Sie die Seite
-      - label: Cookies löschen und aktualisieren
-      - label: Cache löschen und aktualisieren
-      - type: trennzeichen
-      - label: Entwickler
-        Kinder:
-          - -label: Quelle ansehen
-              Die KBS:
-                @@@@@@@@@@@@@@@@ph023@meta
-                @@ph024@schichten.de
-                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@########################################################################################################################################################################
-            - label: Entwicklertools
-              Die KBS:
-                @@ph027@@option
-                @@@@@@@@@@@ph028@@meta
-                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@###########################################################################################################################################################
-            - label: Elemente prüfen
-              Die KBS:
-                @@ph031@@option
-                @@@@@@@@@@@@@@@@@@ph032@meta
-                @@@@@@333@@33@@33@@333@@333@@@@333@@@@333@@@@333@@@333@@@@@@333@@@@33@@@@333@@@@33@@@@33@@@@@333@@@@@333@@@@333@@@@@33@@@@@@@@333@@@@@@@@@@@@@@@@@@@33333@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-          - -label: JavaScript-Konsole
-              Die KBS:
-                @@ph035@@option
-                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@###########################################################################################################################################################################################################
-                @@@37@jm10
-Slots auf:
-  Default:|
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[][]
+props:
+  items:
+    - - label: Appearance
+        children:
+          - label: System
+            icon: i-lucide-monitor
+          - label: Light
+            icon: i-lucide-sun
+          - label: Dark
+            icon: i-lucide-moon
+    - - label: Show Sidebar
+        kbds:
+          - meta
+          - s
+      - label: Show Toolbar
+        kbds:
+          - shift
+          - meta
+          - d
+      - label: Collapse Pinned Tabs
+        disabled: true
+    - - label: Refresh the Page
+      - label: Clear Cookies and Refresh
+      - label: Clear Cache and Refresh
+      - type: separator
+      - label: Developer
+        children:
+          - - label: View Source
+              kbds:
+                - meta
+                - shift
+                - u
+            - label: Developer Tools
+              kbds:
+                - option
+                - meta
+                - i
+            - label: Inspect Elements
+              kbds:
+                - option
+                - meta
+                - c
+          - - label: JavaScript Console
+              kbds:
+                - option
+                - meta
+                - j
+slots:
+  default: |
 
-    @@@@@@@@@@@@@@@@@038 @
-      Rechts klicken Sie hier
-    @@@@@@@39
+    <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
+      Right click here
+    </div>
 ---
 
-: div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Rechtsklick hier]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
-@@ph041@gmail.de
+### Einträge
 
-Verwenden Sie `items` prop als Array von Objekten mit den folgenden Eigenschaften:
+Verwenden Sie die `items`-prop als Array von Objekten mit den folgenden Eigenschaften:
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@PH0444@@@@@@@@PH0444@@@@@@@@@@@PH04444@@@@@@@@@@PH0445 @
-`icon?: string``icon?: string``icon?: string`{lang="ts-type"}
-`avatar?: AvatarProps``avatar?: AvatarProps``avatar?: AvatarProps``avatar?: AvatarProps``avatar?: AvatarProps`{lang="ts-type"}PH05051 @
-`kbds?: string[] | KbdProps[]``kbds?: string[] | KbdProps[]``kbds?: string[] | KbdProps[]`{lang="ts-type"}
-- [`type?: "link" | "label" | "separator" | "checkbox"`{lang="ts-type"}]()
-`color?: "error" | "primary" | "secondary" | "success" | "info" | "warning" | "neutral"``color?: "error" | "primary" | "secondary" | "success" | "info" | "warning" | "neutral"``color?: "error" | "primary" | "secondary" | "success" | "info" | "warning" | "neutral"`))PH0667@@@@@PH0667@@@@@PH0667@@@
-`checked?: boolean`)))))PH0744.@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`slot?: string`PH08080@@@@@@PH080444`slot?: string`PH08080@@@@@PH08080@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`onUpdateChecked?: (checked: boolean) => void`{lang="ts-type"}{lang="ts-type"}PH0944)PH0994{lang="ts-type"}PH0944@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`class?: any`PH1000@@@@@@PH1001 @
-`ui?: { item?: ClassNameValue, label?: ClassNameValue, separator?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLabel?: ClassNameValue, itemLabelExternalIcon?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingIcon?: ClassNameValue, itemTrailingKbds?: ClassNameValue, itemTrailingKbdsSize?: ClassNameValue }``ui?: { item?: ClassNameValue, label?: ClassNameValue, separator?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLabel?: ClassNameValue, itemLabelExternalIcon?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingIcon?: ClassNameValue, itemTrailingKbds?: ClassNameValue, itemTrailingKbdsSize?: ClassNameValue }``ui?: { item?: ClassNameValue, label?: ClassNameValue, separator?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLabel?: ClassNameValue, itemLabelExternalIcon?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingIcon?: ClassNameValue, itemTrailingKbds?: ClassNameValue, itemTrailingKbdsSize?: ClassNameValue }`{lang="ts-type"}
+- `label?: string`{lang="ts-type"} (nicht vorhanden)
+- `icon?: string`{lang="ts-type"} (nicht vorhanden)
+- `avatar?: AvatarProps`{lang="ts-type"} (nicht vorhanden)
+- `kbds?: string[] | KbdProps[]`{lang="ts-type"}078x078x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+- [`type?: "link" | "label" | "separator" | "checkbox"`{lang="ts-type"}](#with-checkbox-items)
+- [`color?: "error" | "primary" | "secondary" | "success" | "info" | "warning" | "neutral"`{lang="ts-type"}](#with-color-items) ) xph08800)
+- [`checked?: boolean`{lang="ts-type"}](#with-checkbox-items) ) xph0998x xph0999999xxph0999xx{lang="ts-type"}x{lang="ts-type"}x{lang="ts-type"}xx09xx)
+- `disabled?: boolean`{lang="ts-type"} (nicht)
+- [`slot?: string`{lang="ts-type"}](#with-custom-slot)
+- `onSelect?: (e: Event) => void`{lang="ts-type"} (englisch)
+- [`onUpdateChecked?: (checked: boolean) => void`{lang="ts-type"}](#with-checkbox-items) )
+- `children?: ContextMenuItem[] | ContextMenuItem[][]`{lang="ts-type"} (nicht)
+- `class?: any`{lang="ts-type"} (nicht)
+- `ui?: { item?: ClassNameValue, label?: ClassNameValue, separator?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLabel?: ClassNameValue, itemLabelExternalIcon?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingIcon?: ClassNameValue, itemTrailingKbds?: ClassNameValue, itemTrailingKbdsSize?: ClassNameValue }`{lang="ts-type"} (nicht)
 
-Sie können jede Eigenschaft von der [Link](/docs/components/link#props) Komponente wie `to`,`target`, etc. übergeben.
+Sie können jede Eigenschaft der Komponente [Link](/docs/components/link#props) übergeben, z. B. `to`, `target` usw.
 
 ::component-code
 ---
-Schöner: wahr
-Einsturz: wahr
-Ignoriert:
-  - Artikel
+prettier: true
+collapse: true
+ignore:
+  - items
   - ui.content
-Außen:
-  - Artikel
-Externe Personen:
-  - KontextMenuItem [][]
-Props:
-  Items:
-    - -label: Aussehen
-        Kinder:
-          - label: Das System
-            Bildnachweis: i-Lucide-Monitor
-          - label: Licht
-            Bildnachweis: i-lucide-sun
-          - label: Dunkel
-            I-Lucide-Moon Ubersetzungen
-    - -label: Seitenleiste anzeigen
-        Die KBS:
-          @@120@gmail.de
-          @@121@s2
-      - label: Symbolleiste anzeigen
-        Die KBS:
-          @@ph123@schichten.de
-          @@@@@@@@124@meta
-          @@@@@@@125@125@125@125@125@125@125@125@125@@125@@125@@125@@125@@125@125@@@125@@125@125@125@@@125@125@125@@@@125@@@@125@@@125@@@125@@@@@@125@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-      - label: Eingeklemmte Tabs
-        Behindert: Wahr
-    - -label: Aktualisieren Sie die Seite
-      - label: Cookies löschen und aktualisieren
-      - label: Cache löschen und aktualisieren
-      - type: trennzeichen
-      - label: Entwickler
-        Kinder:
-          - -label: Quelle ansehen
-              Die KBS:
-                @@133@@133@133@13@133@133@133@133@133@133@133@133@@1333@13@13@13@13@13@13@13@13@13@@133@133@@133@13@133@@@1333@@@1333@@@@@13333@@@@@@@@133333@@@@@@@@@@@@@13333333@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-                @@ph134@schichten.de
-                @135@135@135@135@135@135@135@135@135@135@135@135@135@135@@135@135@135@135@135@@135@@135@@135@135@135@135@135@135@135@@@135@135@@135@@@135@@@@135@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-            - label: Entwicklertools
-              Die KBS:
-                @@ph137@@option
-                @@138@138@138@138@138@138@138@138@138@138@138@138@@138@138@138@138@138@138@138@138@@138@138@@138@138@138@@@@1338@@@@@1338@@@@@@@@138@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@###########################################################
-                @139 @ ich
-            - label: Elemente prüfen
-              Die KBS:
-                @@ph141@@option
-                @@@@@@@142@@meta
-                @@@@@@143@143@143@143@143@143@143@143@143@143@143@143@143@143@143@@143@143@143@@143@@143@@143@@143@@143@@143@@143@@@143@@@@143@@@@143@@@@@@@143
-          - -label: JavaScript-Konsole
-              Die KBS:
-                @@ph145@@option
-                @@146@@btw
-                @@147@jm14
-  ui: ist
-    Inhalt: "W-48"
-Die Slots:
-  Default:|
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[][]
+props:
+  items:
+    - - label: Appearance
+        children:
+          - label: System
+            icon: i-lucide-monitor
+          - label: Light
+            icon: i-lucide-sun
+          - label: Dark
+            icon: i-lucide-moon
+    - - label: Show Sidebar
+        kbds:
+          - meta
+          - s
+      - label: Show Toolbar
+        kbds:
+          - shift
+          - meta
+          - d
+      - label: Collapse Pinned Tabs
+        disabled: true
+    - - label: Refresh the Page
+      - label: Clear Cookies and Refresh
+      - label: Clear Cache and Refresh
+      - type: separator
+      - label: Developer
+        children:
+          - - label: View Source
+              kbds:
+                - meta
+                - shift
+                - u
+            - label: Developer Tools
+              kbds:
+                - option
+                - meta
+                - i
+            - label: Inspect Elements
+              kbds:
+                - option
+                - meta
+                - c
+          - - label: JavaScript Console
+              kbds:
+                - option
+                - meta
+                - j
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@@@@@@148
-      Rechts klicken Sie hier
-    @@@@149
+    <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
+      Right click here
+    </div>
 ---
 
-: div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Rechtsklick hier]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
 ::note
-Sie können auch ein Array von Arrays an `items` prop übergeben, um getrennte Gruppen von Elementen zu erstellen.
+Sie können auch ein Array von Arrays an die `items`-Prop übergeben, um getrennte Gruppen von Elementen zu erstellen.
 ::
 
 ::tip
-Jedes Element kann ein `children` Array von Objekten mit den gleichen Eigenschaften wie die `items` prop nehmen, um ein verschachteltes Menü zu erstellen, das mit den Eigenschaften `open`,`defaultOpen` und `content` gesteuert werden kann.
+Jedes Element kann ein `children`-Array von Objekten mit den gleichen Eigenschaften wie die `items`-Prop verwenden, um ein verschachteltes Menü zu erstellen, das mit den Eigenschaften `open`, `defaultOpen` und `content` gesteuert werden kann.
 ::
 
-@@157@157@157
+### Size ist
 
-Verwenden Sie `size` prop, um die Größe des ContextMenu zu ändern.
+Verwenden Sie die `size`-prop, um die Größe des Kontextmenüs zu ändern.
 
 ::component-code
 ---
-Schöner: wahr
-Einsturz: wahr
-Ignoriert:
-  @@ph159@gmail.de
-  - ui.content (auf Englisch)
-Außen:
-  - Artikel
-Externe Personen:
-  - KontextMenuItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Größe: XL
-  Items:
-    - label: Das System
-      Bildnachweis: i-Lucide-Monitor
-    - label: Licht
-      Bildnachweis: i-lucide-sun
-    - label: Dunkel
-      I-Lucide-Moon Ubersetzungen
-  ui: ist
-    Inhalt: "W-48"
-Slots auf:
-  Default:|
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[]
+props:
+  size: xl
+  items:
+    - label: System
+      icon: i-lucide-monitor
+    - label: Light
+      icon: i-lucide-sun
+    - label: Dark
+      icon: i-lucide-moon
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@@@166 @
-      Rechts klicken Sie hier
-    @@@@@@167 @
+    <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
+      Right click here
+    </div>
 ---
 
-: div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Rechtsklick hier]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
-@@@@@@169@modal
+### Modal ist
 
-Verwenden Sie `modal` prop, um zu steuern, ob das ContextMenu die Interaktion mit externen Inhalten blockiert.
+Verwenden Sie die `modal`-prop, um zu steuern, ob das ContextMenu die Interaktion mit externen Inhalten blockiert.
 
 ::component-code
 ---
-Schöner: wahr
-Einsturz: wahr
-Ignoriert:
-  -  Artikel
-  - ui.content (auf Englisch)
-Außen:
-  - Artikel
-Externe Typen:
-  - KontextMenuItem []
-Props:
-  Ausführung: FALSE
-  Items:
-    - label: Das System
-      Bildnachweis: i-Lucide-Monitor
-    - label: Licht
-      Bildnachweis: i-lucide-sun
-    - label: Dunkel
-      I-Lucide-Moon Ubersetzungen
-  ui: ist
-    Inhalt: "W-48"
-Slots auf:
-  Default:|
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[]
+props:
+  modal: false
+  items:
+    - label: System
+      icon: i-lucide-monitor
+    - label: Light
+      icon: i-lucide-sun
+    - label: Dark
+      icon: i-lucide-moon
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@@@179 @
-      Rechts klicken Sie hier
-    @@@@180 @
+    <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
+      Right click here
+    </div>
 ---
 
-: div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Rechtsklick hier]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
 
-### disabled
+### Disabled (nicht verfügbar)
 
-Verwenden Sie `disabled` prop, um das ContextMenu zu deaktivieren.
+Verwenden Sie die `disabled`-prop, um das Kontextmenü zu deaktivieren.
 
 ::component-code
 ---
-Schöner: wahr
-Einsturz: wahr
-Ignoriert:
-  @@ph184@gmail.de
-  - ui.content @@ Ui.content - Ui.content @ Ui.content @@Ui.content @@Ui.content - Ui.content @ Ui.content @@Ui.content
-Außen:
-  @@186@gmail.de
-Externe Personen:
-  - KontextMenuItem []
-Props:
-  Behindert: Wahr
-  Items:
-    - label: Das System
-      Bildnachweis: i-Lucide-Monitor
-    - label: Licht
-      Bildnachweis: i-lucide-sun
-    - label: Dunkel
-      I-Lucide-Moon Ubersetzungen
-  ui: ist
-    Inhalt: "W-48"
-Slots auf:
-  Default:|
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[]
+props:
+  disabled: true
+  items:
+    - label: System
+      icon: i-lucide-monitor
+    - label: Light
+      icon: i-lucide-sun
+    - label: Dark
+      icon: i-lucide-moon
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@@@191
-      Rechts klicken Sie hier
-    @@@@@@192 @
+    <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
+      Right click here
+    </div>
 ---
 
-: div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Rechtsklick hier]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
 ## Beispiele
 
-### Mit Checkbox Elemente
+### With Checkbox-Elemente
 
 Sie können die `type`-Eigenschaft mit `checkbox` verwenden und die `checked`/`onUpdateChecked`-Eigenschaften verwenden, um den überprüften Zustand des Elements zu steuern.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'context-menu-checkbox-items-example'(Kontext-Menü-Checkbox-Elemente-Beispiel)
+collapse: true
+name: 'context-menu-checkbox-items-example'
 ---
 ::
 
 ::note
-Um die Reaktivität für den `checked`-Status von Elementen sicherzustellen, wird empfohlen, Ihr `items`-Array in ein `computed`-Array zu wickeln.
+Um die Reaktivität für den `checked`-Status von Elementen zu gewährleisten, wird empfohlen, das `items`-Array in ein `computed` zu wickeln.
 ::
 
-### Mit farbigen Elementen
+### With color items (Deutsche Übersetzung)
 
-Sie können die `color` Eigenschaft verwenden, um bestimmte Elemente mit einer Farbe hervorzuheben.
+Mit der Eigenschaft `color` können Sie bestimmte Elemente mit einer Farbe hervorheben.
 
 ::component-example
 ---
-Einsturz: wahr
-name: 'context-menu-color-items-example'(Kontext-Menü-Farb-Elemente-Beispiel)
+collapse: true
+name: 'context-menu-color-items-example'
 ---
 ::
 
-### Mit benutzerdefinierten Steckplatz
+### Mit benutzerdefiniertem Slot
 
 Verwenden Sie die `slot`-Eigenschaft, um ein bestimmtes Element anzupassen.
 
 Sie haben Zugriff auf folgende Slots:
 
-`#{{ item.slot }}``#{{ item.slot }}``#{{ item.slot }}`PH2099`#{{ item.slot }}`PH2099@@@@@@@@@@PH2099999@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@####################################################################################################################################
-`#{{ item.slot }}-label``#{{ item.slot }}-label``#{{ item.slot }}-label``#{{ item.slot }}-label`{lang="ts-type"}
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#########################################################################################################################
+- `#{{ item.slot }}`{lang="ts-type"} (nicht)
+- `#{{ item.slot }}-leading`{lang="ts-type"}324x
+- `#{{ item.slot }}-label`{lang="ts-type"} (nicht)
+- `#{{ item.slot }}-trailing`{lang="ts-type"} (nicht)
 
 ::component-example
 ---
-Einsturz: wahr
-name: 'context-menu-custom-slot-example'(Kontextmenü-Beispiel-Beispiel)
+collapse: true
+name: 'context-menu-custom-slot-example'
 ---
 ::
 
 ::tip{to="#slots"}
-Sie können auch die Slots `#item`,`#item-leading`,`#item-label` und `#item-trailing` verwenden, um alle Elemente anzupassen.
+Sie können auch die `#item`, `#item-leading`, `#item-label` und `#item-trailing` Steckplätze verwenden, um alle Elemente anzupassen.
 ::
 
-### Extract-Verknüpfungen
+### Extract Shortcuts (englisch)
 
-Verwenden Sie das Dienstprogramm [extractShortcuts](/docs/composables/extract-shortcuts), um automatisch Verknüpfungen aus Menüelementen mit einer `kbds`-Eigenschaft zu definieren.
+Verwenden Sie das Dienstprogramm [extractShortcuts](/docs/composables/extract-shortcuts), um automatisch Verknüpfungen von Menüelementen mit einer `kbds`-Eigenschaft zu definieren.
 
 ```vue
 <script setup lang="ts">
@@ -413,27 +413,27 @@ defineShortcuts(extractShortcuts(items))
 ```
 
 ::note
-In diesem Beispiel: kbd{value="meta"}: kbd{value="S" class="ms-px"},: kbd{value="shift"}: kbd{value="meta" class="ms-px"}: kbd{value="D" class="ms-px"},: kbd{value="D" class="ms-px"},:@ bbbd@@ph298 @@: bd@@ph299 @: bd@@ph300 @: bd@ph301 @: bd@ph302 @: bd@ph302 @@: bd@ph302 @: bd@ph302 @: bd@@ph300 @@: bd@@ph302 @:{value="I" class="ms-px"},: kbd{value="option"}: kbd{value="meta" class="ms-px"}: kbd{value="C" class="ms-px"} und: kbd{value="option"}: kbd{value="meta" class="ms-px"}: kbd{value="J" class="ms-px"} würde die `select`-Funktion des entsprechenden Elements auslösen.
+In diesem Beispiel: kbd{value="meta"}: kbd{value="S" class="ms-px"},: kbd{value="shift"}: kbd{value="meta" class="ms-px"}: kbd{value="D" class="ms-px"},: kbd{value="option"}: kbd{value="meta" class="ms-px"}: kbd{value="U" class="ms-px"},: kbd{value="option"}: kbd{value="meta" class="ms-px"}: kbd{value="I" class="ms-px"},: kbd{value="option"}: kbd{value="meta" class="ms-px"}: kbd{value="meta" class="ms-px"}: kbd{value="meta" class="ms-px"} würde die entsprechende Funktion auslösen.
 ::
 
-@@310@bmdr
+## API (Englisch)
 
-@@ph311@@gmail.de
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
-### Slots
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph313@@emits
+### Emits (Englisch)
 
-Komponenten emittieren
+:component-emits
 
-@@ph314@@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph315@changelog @@@@ changelog @@@ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

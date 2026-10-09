@@ -1,5 +1,5 @@
 ---
-title: Inputées
+title: Inputrating
 description: Un composant pour afficher et collecter les évaluations des utilisateurs.
 category: form
 keywords:
@@ -14,16 +14,16 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputRating.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Utilisez la directive `v-model` pour contrôler la valeur de classement du composant InputRating.
+Utilisez la directive `v-model` pour contrôler la valeur d'évaluation du composant InputRating.
 
 ::component-code
 ---
-Extérieure:
-  - modèleValeur
-Props:
-  Modèle: 3
+external:
+  - modelValue
+props:
+  modelValue: 3
 ---
 ::
 
@@ -31,88 +31,88 @@ Utilisez la prop `default-value` pour définir la valeur initiale lorsque vous n
 
 ::component-code
 ---
-ignorer:
-  @@ph004@@valeur défaillante
-Props:
-  Défaut: 3
----
-::
-
-@@P005@étape
-
-Utilisez la prop `step` pour contrôler la granularité de chaque étoile. Réglez-la sur `0.5` pour permettre des cotes d'une demi-étoile.
-
-::component-code
----
-ignorer:
-  @@ph008@@defaultValue
-Props:
-  Étape: 0,5
-  Défaut: 3.5
----
-::
-
-@@pH009@@longueur
-
-Utilisez la prop `length` pour définir le nombre d'étoiles. Par défaut, la valeur est `5`.
-
-::component-code
----
-ignorer:
+ignore:
   - defaultValue
-Props:
-  Longueur: 10
-  Étape: 0,5
-  Défaut: 7.5
+props:
+  defaultValue: 3
 ---
 ::
 
-@@ph013@clearable
+### Step étape
 
-Utilisez la prop `clearable` pour permettre aux utilisateurs d'effacer la cote en cliquant sur la valeur actuellement sélectionnée.
+Utilisez la prop `step` pour contrôler la granularité de chaque étoile. Réglez-la sur `0.5` pour permettre des évaluations d'une demi-étoile.
 
 ::component-code
 ---
-Ignorer:
+ignore:
   - defaultValue
-Props:
-  Étiquette: true
-  Défaut: 3
+props:
+  step: 0.5
+  defaultValue: 3.5
+---
+::
+
+### longueur
+
+Utilisez la prop `length` pour définir le nombre d'étoiles. Par défaut, `5`.
+
+::component-code
+---
+ignore:
+  - defaultValue
+props:
+  length: 10
+  step: 0.5
+  defaultValue: 7.5
+---
+::
+
+### Clearable
+
+Utilisez la prop `clearable` pour permettre aux utilisateurs d'effacer la note en cliquant sur la valeur actuellement sélectionnée.
+
+::component-code
+---
+ignore:
+  - defaultValue
+props:
+  clearable: true
+  defaultValue: 3
 ---
 ::
 
 ### Hoverable
 
-Utilisez la prop `hoverable` pour contrôler si l'évaluation prévisualise la valeur lorsque vous survolez les étoiles. Par défaut à `false`.
+Utilisez la prop `hoverable` pour contrôler si l'évaluation affiche un aperçu de la valeur lorsque vous survolez les étoiles.
 
 ::component-code
 ---
-Ignorer:
-  @@ph020@@valeur défaillante
-Props:
-  Hovable: vrai
-  Défaut: 3
+ignore:
+  - defaultValue
+props:
+  hoverable: true
+  defaultValue: 3
 ---
 ::
 
-@@21@Icon
+### Icône
 
-Utilisez la prop `icon` pour personnaliser l'icône utilisée pour les étoiles. Par défaut,`i-lucide-star`.
+Utilisez la prop `icon` pour personnaliser l'icône utilisée pour les étoiles. Par défaut, `i-lucide-star`.
 
 ::component-code
 ---
-Ignorer:
-  - valeur défaillante
-Props:
-  Icône: i-lucide-heart
-  Défaut: 4
+ignore:
+  - defaultValue
+props:
+  icon: 'i-lucide-heart'
+  defaultValue: 4
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Vous pouvez personnaliser globalement l'icône étoile par défaut dans votre `app.config.ts` sous la touche `ui.icons.star`.
+Vous pouvez personnaliser l'icône étoile par défaut globalement dans votre `app.config.ts` sous la touche `ui.icons.star`.
 :::
 
 #vue
@@ -123,114 +123,114 @@ Vous pouvez personnaliser l'icône étoile par défaut globalement dans votre `v
 
 ### Empty Icône
 
-Utilisez la prop `empty-icon` pour personnaliser l'icône utilisée pour les étoiles vides. Si elle n'est pas fournie, utilisez la même icône que `icon`.
+Utilisez la prop `empty-icon` pour personnaliser l'icône utilisée pour les étoiles vides. Si elle n'est pas fournie, utilise la même icône que `icon`.
 
 ::component-code
 ---
-ignorer:
+ignore:
   - defaultValue
-Props:
-  emptyIcon: 'i-lucide-cercle'
-  Icône: i-lucide-circle-check
-  Défaut: 3
+props:
+  emptyIcon: 'i-lucide-circle'
+  icon: 'i-lucide-circle-check'
+  defaultValue: 3
 ---
 ::
 
-@@pH033@couleur
+### couleur
 
-Utilisez la prop `color` pour changer la couleur des étoiles remplies.
+Utilisez le prop `color` pour changer la couleur des étoiles remplies.
 
 ::component-code
 ---
-ignorer:
-  - valeur défaillante
-Props:
-  Couleur: Neutre
-  Défaut: 4
+ignore:
+  - defaultValue
+props:
+  color: neutral
+  defaultValue: 4
 ---
 ::
 
-@@pH036@@Size
+### taille
 
 Utilisez le prop `size` pour modifier la taille des étoiles.
 
 ::component-code
 ---
-Ignorer:
+ignore:
   - defaultValue
 items:
-  Size:
-    @@pH039@@x
-    @@ph040
-    @@ph041@md
-    @@ph042@lg
-    @@ph043@xl
-Props:
-  Taille: XL
-  Défaut: 4
+  size:
+    - xs
+    - sm
+    - md
+    - lg
+    - xl
+props:
+  size: xl
+  defaultValue: 4
 ---
 ::
 
-### Référencement
+### Orientation
 
-Utilisez la prop `orientation` pour changer l'orientation de la cote. Par défaut à `horizontal`.
+Utilisez la prop `orientation` pour modifier l'orientation de l'évaluation. Par défaut à `horizontal`.
 
 ::component-code
 ---
-Ignorer:
+ignore:
   - defaultValue
-Props:
-  Orientation: verticale
-  Défaut: 4
+props:
+  orientation: vertical
+  defaultValue: 4
 ---
 ::
 
-### désactivé
+### Désactivé
 
-Utilisez la prop `disabled` pour désactiver le composant InputRating. Lorsqu 'il est désactivé, l'opacité du composant est réduite (75%) et affiche un curseur `not-allowed` pour indiquer qu' il n'est pas interactif.
+Utilisez la prop `disabled` pour désactiver le composant InputRating. Lorsqu 'il est désactivé, le composant a une opacité réduite (75%) et montre un curseur `not-allowed` pour indiquer qu' il n'est pas interactif.
 
 ::component-code
 ---
-Ignorer:
+ignore:
   - defaultValue
-Props:
-  handicapés: vrai
-  Défaut: 3
+props:
+  disabled: true
+  defaultValue: 3
 ---
 ::
 
 ### Readonly
 
-Utilisez la prop `readonly` pour afficher une note sans permettre l'interaction de l'utilisateur. Contrairement à `disabled`, elle conserve une apparence normale (opacité totale, curseur par défaut). Utilisez lorsque vous souhaitez afficher une note qui ne peut pas être modifiée mais qui doit avoir un aspect normal.
+Utilisez la prop `readonly` pour afficher une note sans permettre l'interaction de l'utilisateur. Contrairement à `disabled`, il conserve l'apparence normale (opacité totale, curseur par défaut). Utilisez lorsque vous voulez afficher une note qui ne peut pas être modifiée mais qui doit avoir l'air normal.
 
 ::component-code
 ---
-ignorer:
-  - valeur défaillante
-Props:
-  Étiquette: true
-  Défaut: 4.5
+ignore:
+  - defaultValue
+props:
+  readonly: true
+  defaultValue: 4.5
 ---
 ::
 
-@@ph056@@api
+## API
 
-@@507@propriétaires
+### Props équipements
 
-Composants-props
+:component-props
 
-@@508@@série
+### Slots
 
-Composants slots
+:component-slots
 
-@@59@@émissaire
+### Emis
 
-Composants émetteurs
+:component-emits
 
-@@ph060@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

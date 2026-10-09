@@ -11,34 +11,34 @@ links:
 
 ## 使用法
 
-[ブレッドクラム]コンポーネントを使用して、サイトの階層に現在のページの場所を表示します。
+ブレッドクラムコンポーネントを使用して、サイトの階層に現在のページの場所を表示します。
 
 ::component-code
 ---
-崩壊真
-無視
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  -  BreadcrumbItem []
-小道具
-  アイテム
-    -  label 'Docs'
-      アイコン'i—lucide—book—open'
-      to '/docs'
-    -  label 'コンポーネント'
-      アイコン'i—lucide—box'
-      to：'/docs/components'
-    -  label 'ブレッドクラム'
-      アイコン'i—lucide—link'
-      '/docs/components/breadcrumb'
+collapse: true
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - BreadcrumbItem[]
+props:
+  items:
+    - label: 'Docs'
+      icon: 'i-lucide-book-open'
+      to: '/docs'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      to: '/docs/components'
+    - label: 'Breadcrumb'
+      icon: 'i-lucide-link'
+      to: '/docs/components/breadcrumb'
 ---
 ::
 
 ### アイテム
 
-`items` propを、次のプロパティを持つオブジェクトの配列として使用します。
+`items`プロパティを次のプロパティを持つオブジェクトの配列として使用します。
 
 - `label?: string`{lang="ts-type"}
 - `icon?: string`{lang="ts-type"}
@@ -47,27 +47,27 @@ externalTypes
 - `class?: any`{lang="ts-type"}
 - `ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLeadingIcon?: ClassNameValue, linkLeadingAvatar?: ClassNameValue, linkLabel?: ClassNameValue, separator?: ClassNameValue, separatorIcon?: ClassNameValue }`{lang="ts-type"}
 
-[ Link ](/docs/components/link#props)コンポーネントから、`to`、`target`などのプロパティを渡すことができます。
+[Link](/docs/components/link#props)コンポーネントから、`to`、`target`などの任意のプロパティを渡すことができます。
 
 ::component-code
 ---
-無視
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  -  BreadcrumbItem []
-小道具
-  アイテム
-    -  label 'Docs'
-      アイコン'i—lucide—book—open'
-      to '/docs'
-    -  label 'コンポーネント'
-      アイコン'i—lucide—box'
-      to '/docs/components'
-    -  label 'ブレッドクラム'
-      アイコン'i—lucide—link'
-      '/docs/components/breadcrumb'
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - BreadcrumbItem[]
+props:
+  items:
+    - label: 'Docs'
+      icon: 'i-lucide-book-open'
+      to: '/docs'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      to: '/docs/components'
+    - label: 'Breadcrumb'
+      icon: 'i-lucide-link'
+      to: '/docs/components/breadcrumb'
 ---
 ::
 
@@ -75,69 +75,69 @@ externalTypes
 `to`プロパティが定義されていない場合、リンクの代わりに`span`がレンダリングされます。
 ::
 
-### セパレータアイコン
+### Separatorアイコン
 
-`separator-icon`プロパティを使用して、各項目間の[ Icon ](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-chevron-right`です。
+`separator-icon`プロパティを使用して、[Icon](/docs/components/icon)を各項目間でカスタマイズします。デフォルトは`i-lucide-chevron-right`です。
 
 ::component-code
 ---
-無視
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  - ブレッドクラムアイテム[]
-小道具
-  separatorIcon 'i—lucide—arrow—right'
-  アイテム
-    -  label 'Docs'
-      アイコン'i—lucide—book—open'
-      to '/docs'
-    -  label 'Components'
-      アイコン'i—lucide—box'
-      to '/docs/components'
-    -  label 'ブレッドクラム'
-      アイコン'i—lucide—link'
-      '/docs/components/breadcrumb'
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - BreadcrumbItem[]
+props:
+  separatorIcon: 'i-lucide-arrow-right'
+  items:
+    - label: 'Docs'
+      icon: 'i-lucide-book-open'
+      to: '/docs'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      to: '/docs/components'
+    - label: 'Breadcrumb'
+      icon: 'i-lucide-link'
+      to: '/docs/components/breadcrumb'
 ---
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.chevronRight`キーの`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`app.config.ts`の`ui.icons.chevronRight`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.chevronRight`キーの下の`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`vite.config.ts`の`ui.icons.chevronRight`キーでグローバルにカスタマイズできます。
 :::
 ::
 
-### 色バッジ{label="4.8+" class="align-text-top"}
+### Color badge{label="4.8+" class="align-text-top"}
 
 `color`プロパティを使用して、アクティブなブレッドクラムの色を変更します。
 
 ::component-code
 ---
-無視
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  -  BreadcrumbItem []
-小道具
-  色'セカンダリ'
-  アイテム
-    -  label 'Docs'
-      アイコン'i—lucide—book—open'
-      to '/docs'
-    -  label 'Components'
-      アイコン'i—lucide—box'
-      to '/docs/components'
-    -  label 'ブレッドクラム'
-      アイコン'i—lucide—link'
-      '/docs/components/breadcrumb'
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - BreadcrumbItem[]
+props:
+  color: 'secondary'
+  items:
+    - label: 'Docs'
+      icon: 'i-lucide-book-open'
+      to: '/docs'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      to: '/docs/components'
+    - label: 'Breadcrumb'
+      icon: 'i-lucide-link'
+      to: '/docs/components/breadcrumb'
 ---
 ::
 
@@ -145,13 +145,13 @@ externalTypes
 
 ### セパレータースロット付き
 
-`#separator`スロットを使用して、各項目間の区切り文字をカスタマイズします。
+`#separator`スロットを使用して、各アイテム間の区切り文字をカスタマイズします。
 
-component—example {name="breadcrumb-separator-slot-example"}
+:component-example{name="breadcrumb-separator-slot-example"}
 
 ### カスタムスロット付き
 
-特定の項目をカスタマイズするには、`slot`プロパティを使用します。
+`slot`プロパティを使用して、特定の項目をカスタマイズします。
 
 以下のスロットにアクセスできます：
 
@@ -160,26 +160,26 @@ component—example {name="breadcrumb-separator-slot-example"}
 - `#{{ item.slot }}-label`{lang="ts-type"}
 - `#{{ item.slot }}-trailing`{lang="ts-type"}
 
-component—example {name="breadcrumb-custom-slot-example"}
+:component-example{name="breadcrumb-custom-slot-example"}
 
 ::tip{to="#slots"}
-また、`#item`、`#item-leading`、`#item-label`、および`#item-trailing`スロットを使用して、すべてのアイテムをカスタマイズすることもできます。
+`#item`、`#item-leading`、`#item-label`、`#item-trailing`スロットを使用して、すべてのアイテムをカスタマイズすることもできます。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

@@ -8,9 +8,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PricingPlans.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Die PricingPlans-Komponente bietet ein flexibles Layout, um eine Liste von [PricingPlan](/docs/components/pricing-plan) Komponenten entweder mit dem Standard-Slot oder dem `plans` prop.
+Die Komponente PricingPlans bietet ein flexibles Layout, um eine Liste von [PricingPlan](/docs/components/pricing-plan)-Komponenten entweder über den Standardsteckplatz oder die `plans`-Prop anzuzeigen.
 
 ```vue {2,8}
 <template>
@@ -25,200 +25,200 @@ Die PricingPlans-Komponente bietet ein flexibles Layout, um eine Liste von [Pric
 ```
 
 ::tip
-Die Rasterspalten werden automatisch basierend auf der Anzahl der Pläne berechnet, dies funktioniert mit dem `plans` prop aber auch mit dem Standardslot.
+Die Rasterspalten werden automatisch basierend auf der Anzahl der Pläne berechnet, dies funktioniert mit der `plans` prop, aber auch mit dem Standardslot.
 ::
 
-@@ph018@@@Pläne
+### PlannBearbeiten
 
-Verwenden Sie `plans` prop als Array von Objekten mit den Eigenschaften der Komponente [PricingPlan](/docs/components/pricing-plan#props).
+Verwenden Sie die `plans`-Prop als Array von Objekten mit den Eigenschaften der Komponente [PricingPlan](/docs/components/pricing-plan#props).
 
 ::component-code
 ---
-Einsturz: wahr
-Ignoriert:
-  @@ph024@Pläne
-Außen:
-  @@ph025@Pläne
-Externe Typen:
-  - PricingPlanProps [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Pläne:
-    @@ph027@title: Einfach
-      Beschreibung: 'Maßgeschneidert für Indie-Hacker.'
-      Preis: 249 €
-      Features:
-        - 'Ein Entwickler'
-        - 'Lebenslanger Zugang'
-      Der Button:
-        Label: "Jetzt kaufen"
-    - title: Startseite
-      Beschreibung: "Am besten für kleine Teams geeignet."
-      Preis: $499
-      Features:
-        - 'Bis zu 5 Entwickler'
-        - 'Alles im Alleingang'
-      Der Button:
-        Label: "Jetzt kaufen"
-    - title: Organisation
-      Beschreibung: "Ideal für größere Teams und Organisationen."
-      Preis: '999'
-      Features:
-        - 'Bis zu 20 Entwickler'
-        - 'Alles im Startup'
-      Der Button:
-        Label: "Jetzt kaufen"
+collapse: true
+ignore:
+  - plans
+external:
+  - plans
+externalTypes:
+  - PricingPlanProps[]
+props:
+  plans:
+    - title: Solo
+      description: 'Tailored for indie hackers.'
+      price: '$249'
+      features:
+        - 'One developer'
+        - 'Lifetime access'
+      button:
+        label: 'Buy now'
+    - title: Startup
+      description: 'Best suited for small teams.'
+      price: '$499'
+      features:
+        - 'Up to 5 developers'
+        - 'Everything in Solo'
+      button:
+        label: 'Buy now'
+    - title: Organization
+      description: 'Ideal for larger teams and organizations.'
+      price: '$999'
+      features:
+        - 'Up to 20 developers'
+        - 'Everything in Startup'
+      button:
+        label: 'Buy now'
 ---
 ::
 
-@@ph036@Orientierung
+### Ausrichtung
 
-Verwenden Sie `orientation` prop, um die Ausrichtung der PricingPlans. Defaults auf `horizontal` zu ändern.
+Verwenden Sie die `orientation`-prop, um die Ausrichtung der PricingPlans. Defaults auf `horizontal` zu ändern.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
-  @@@@@@399@@class
-Ignoriert:
-  @@ph040@Pläne
-Außen:
-  - Pläne
-Externe Typen:
-  - PricingPlanProps []
-Props:
-  Ausrichtung: Vertikal
-  Plane:
-    @@ph043@title: Einfach
-      Beschreibung: 'Maßgeschneidert für Indie-Hacker.'
-      Preis: 249 €
-      Features:
-        - 'Ein Entwickler'
-        - 'Lebenslanger Zugang'
-      Der Button:
-        Label: "Jetzt kaufen"
-    - title: Startseite
-      Beschreibung: "Am besten für kleine Teams geeignet."
-      Preis: $499
-      Features:
-        - 'Bis zu 5 Entwickler '
-        - 'Alles im Alleingang'
-      Der Button:
-        Label: "Jetzt kaufen"
-    - title: Organisation
-      Beschreibung: "Ideal für größere Teams und Organisationen."
-      Preis: '999'
-      Features:
-        - 'Bis zu 20 Entwickler'
-        - 'Alles im Startup'
-      Der Button:
-        Label: "Jetzt kaufen"
-  Klasse: "W-voll"
+collapse: true
+hide:
+  - class
+ignore:
+  - plans
+external:
+  - plans
+externalTypes:
+  - PricingPlanProps[]
+props:
+  orientation: vertical
+  plans:
+    - title: Solo
+      description: 'Tailored for indie hackers.'
+      price: '$249'
+      features:
+        - 'One developer'
+        - 'Lifetime access'
+      button:
+        label: 'Buy now'
+    - title: Startup
+      description: 'Best suited for small teams.'
+      price: '$499'
+      features:
+        - 'Up to 5 developers'
+        - 'Everything in Solo'
+      button:
+        label: 'Buy now'
+    - title: Organization
+      description: 'Ideal for larger teams and organizations.'
+      price: '$999'
+      features:
+        - 'Up to 20 developers'
+        - 'Everything in Startup'
+      button:
+        label: 'Buy now'
+  class: 'w-full'
 ---
 ::
 
 ::tip
-Bei Verwendung von `plans` prop anstelle des Standard-Steckplatzes wird das `orientation` der Pläne automatisch umgekehrt,`horizontal` zu `vertical` und umgekehrt.
+Wenn Sie die `plans`-Prop anstelle des Standardsteckplatzes verwenden, wird der `orientation` der Pläne automatisch umgekehrt, `horizontal` zu `vertical` und umgekehrt.
 ::
 
-### compact
+### compact ist
 
-Verwenden Sie `compact` prop, um das Auffüllen zwischen den Plänen zu reduzieren, wenn einer der Pläne skaliert wird, um eine bessere visuelle Balance zu erzielen.
+Verwenden Sie die `compact`-Prop, um die Auffüllung zwischen den Plänen zu reduzieren, wenn einer der Pläne skaliert wird, um eine bessere visuelle Balance zu erzielen.
 
 ::component-code
 ---
-Einsturz: wahr
-Ignoriert:
-  @@@@@@58@gmail.de
-  @@ph059@@gmail.de
-Außen:
-  - Pläne
-Externe Personen:
-  - PricingPlanProps []
-Klasse: 'P-8'
-Props:
-  Kompakt: wahr
-  Pläne:
-    - title: Einfach
-      Beschreibung: 'Maßgeschneidert für Indie-Hacker.'
-      Preis: $249
-      Features:
-        - 'Ein Entwickler'
-        - 'Lebenslanger Zugang'
-      Der Button:
-        Label: "Jetzt kaufen"
-    - title: Startseite
-      Beschreibung: "Am besten für kleine Teams geeignet."
-      Preis: $499
-      Maßstab: true
-      Features:
-        - 'Bis zu 5 Entwickler'
-        - 'Alles im Alleingang'
-      Der Button:
-        Label: "Jetzt kaufen"
-    - title: Organisation
-      Beschreibung: "Ideal für größere Teams und Organisationen."
-      Preis: '999'
-      Features:
-        - 'Bis zu 20 Entwickler '
-        - 'Alles im Startup'
-      Der Button:
-        Label: "Jetzt kaufen"
+collapse: true
+ignore:
+  - plans
+  - compact
+external:
+  - plans
+externalTypes:
+  - PricingPlanProps[]
+class: 'p-8'
+props:
+  compact: true
+  plans:
+    - title: Solo
+      description: 'Tailored for indie hackers.'
+      price: '$249'
+      features:
+        - 'One developer'
+        - 'Lifetime access'
+      button:
+        label: 'Buy now'
+    - title: Startup
+      description: 'Best suited for small teams.'
+      price: '$499'
+      scale: true
+      features:
+        - 'Up to 5 developers'
+        - 'Everything in Solo'
+      button:
+        label: 'Buy now'
+    - title: Organization
+      description: 'Ideal for larger teams and organizations.'
+      price: '$999'
+      features:
+        - 'Up to 20 developers'
+        - 'Everything in Startup'
+      button:
+        label: 'Buy now'
 ---
 ::
 
-@@@ph071@@gmail.de
+### Scale (englisch)
 
-Verwenden Sie `scale` prop, um den Abstand zwischen den Plänen anzupassen, wenn einer der Pläne skaliert wird, um eine bessere visuelle Balance zu erzielen.
+Verwenden Sie die `scale` prop, um den Abstand zwischen den Plänen anzupassen, wenn einer der Pläne skaliert wird, um eine bessere visuelle Balance zu erreichen.
 
 ::component-code
 ---
-Einsturz: wahr
-Ignoriert:
-  - Pläne
-  @@ph074@gmail.de
-Außen:
-  @@ph075@Pläne
-Externe Personen:
-  - PricingPlanProps []
-Klasse: 'P-8'
-Props:
-  Maßstab: true
-  Pläne:
-    - title: Einfach
-      Beschreibung: 'Maßgeschneidert für Indie-Hacker.'
-      Preis: $249
-      Features:
-        - 'Ein Entwickler'
-        - 'Lebenslanger Zugang'
-      Der Button:
-        Label: "Jetzt kaufen"
-    - title: Startseite
-      Beschreibung: "Am besten für kleine Teams geeignet."
-      Preis: $499
-      Maßstab: true
-      Features:
-        - 'Bis zu 5 Entwickler'
-        - 'Alles im Alleingang '
-      Der Button:
-        Label: "Jetzt kaufen"
-    - title: Organisation
-      Beschreibung: "Ideal für größere Teams und Organisationen."
-      Preis: '999'
-      Features:
-        - 'Bis zu 20 Entwickler '
-        - 'Alles im Startup'
-      Der Button:
-        Label: "Jetzt kaufen"
+collapse: true
+ignore:
+  - plans
+  - scale
+external:
+  - plans
+externalTypes:
+  - PricingPlanProps[]
+class: 'p-8'
+props:
+  scale: true
+  plans:
+    - title: Solo
+      description: 'Tailored for indie hackers.'
+      price: '$249'
+      features:
+        - 'One developer'
+        - 'Lifetime access'
+      button:
+        label: 'Buy now'
+    - title: Startup
+      description: 'Best suited for small teams.'
+      price: '$499'
+      scale: true
+      features:
+        - 'Up to 5 developers'
+        - 'Everything in Solo'
+      button:
+        label: 'Buy now'
+    - title: Organization
+      description: 'Ideal for larger teams and organizations.'
+      price: '$999'
+      features:
+        - 'Up to 20 developers'
+        - 'Everything in Startup'
+      button:
+        label: 'Buy now'
 ---
 ::
 
-@@ph086@@@Beispiele
+## Beispiele
 
 ::note
-Während in diesen Beispielen [Nuxt Content](https://content.nuxt.com) verwendet wird, können die Komponenten in jedes Content-Management-System integriert werden.
+Während diese Beispiele [Nuxt Content](https://content.nuxt.com) verwenden, können die Komponenten in jedes Content Management System integriert werden.
 ::
 
-### Innerhalb einer Seite
+### innerhalb einer Seite
 
 Verwenden Sie die Komponente PricingPlans auf einer Seite, um eine Preisseite zu erstellen:
 
@@ -241,23 +241,23 @@ const { data: plans } = await useAsyncData('plans', () => queryCollection('plans
 ```
 
 ::note
-In diesem Beispiel werden die `plans` mit `queryCollection` aus dem Modul `@nuxt/content` abgerufen.
+In diesem Beispiel werden die `plans` mit `queryCollection` aus dem `@nuxt/content`-Modul abgerufen.
 ::
 
-@@112@bmw.de
+## API (Englisch)
 
-@@@@@@@@113@@props
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
-### Slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@115@Einsteigertipps
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-## Changelog (Deutsche Übersetzung)
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

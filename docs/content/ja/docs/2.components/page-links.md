@@ -8,105 +8,105 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageLinks.vue
 ---
 
-## 使用 法
+## 使用法
 
-PageLinks コンポーネント を 使用 し て 、 リンク の リスト を 表示 し ます 。
+PageLinksコンポーネントを使用して、リンクのリストを表示します。
 
 ::component-code
 ---
-崩壊 真
-きれい 真
-無視
-  - リンク
-外部
-  - リンク
-externalTypes
-  - PageLink [ ]
-小道具
-  リンク
-    - label ' この ページ を 編集 '
-      アイコン i-lucide-file-pen
-      次 へhttps://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
-    - label ' GitHub 上 の スター '
-      アイコン i-lucide-star
-      次 へhttps://github.com/nuxt/ui
-    - label ' リリース '
-      アイコン i- lucide ロケット
-      次 へhttps://github.com/nuxt/ui/releases
+collapse: true
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageLink[]
+props:
+  links:
+    - label: 'Edit this page'
+      icon: i-lucide-file-pen
+      to: https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
+    - label: 'Star on GitHub'
+      icon: i-lucide-star
+      to: https://github.com/nuxt/ui
+    - label: 'Releases'
+      icon: i-lucide-rocket
+      to: https://github.com/nuxt/ui/releases
 ---
 ::
 
-### リンク
+### Links
 
-`links`prop を 、 次 の プロ パティ を 持つ オブジェクト の 配列 として 使用 し ます 。
+`links`プロパティを次のプロパティを持つオブジェクトの配列として使用します。
 
 - `label: string`{lang="ts-type"}
 - `icon?: string`{lang="ts-type"}
 - `class?: any`{lang="ts-type"}
 - `ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkLeadingIcon?: ClassNameValue }`{lang="ts-type"}
 
-[Link](/docs/components/link#props)コンポーネント から 、`to`、`target`など の プロ パティ を 渡す こと が でき ます 。
+[Link](/docs/components/link#props)コンポーネントから、`to`、`target`などの任意のプロパティを渡すことができます。
 
 ::component-code
 ---
-きれい 真
-無視
-  - リンク
-外部
-  - リンク
-externalTypes
-  - PageLink [ ]
-小道具
-  リンク
-    - label ' この ページ を 編集 '
-      アイコン i-lucide-file-pen
-      次 へhttps://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
-    - label ' GitHub 上 の スター '
-      アイコン i-lucide-star
-      次 へhttps://github.com/nuxt/ui
-    - label ' リリース '
-      アイコン i- lucide ロケット
-      次 へhttps://github.com/nuxt/ui/releases
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageLink[]
+props:
+  links:
+    - label: 'Edit this page'
+      icon: i-lucide-file-pen
+      to: https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
+    - label: 'Star on GitHub'
+      icon: i-lucide-star
+      to: https://github.com/nuxt/ui
+    - label: 'Releases'
+      icon: i-lucide-rocket
+      to: https://github.com/nuxt/ui/releases
 ---
 ::
 
-### タイトル
+### Title
 
-`title`プロ パティ を 使用 し て 、 リンク の 上 に タイトル を 表示 し ます 。
+`title`プロパティを使用して、リンクの上にタイトルを表示します。
 
 ::component-code
 ---
-きれい 真
-無視
-  - リンク
-外部
-  - リンク
-externalTypes
-  - PageLink [ ]
-小道具
-  タイトル ： “ コミュニティ ”
-  リンク
-    - label ' この ページ を 編集 '
-      アイコン i-lucide-file-pen
-      次 へhttps://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
-    - label ' GitHub 上 の スター '
-      アイコン i-lucide-star
-      次 へhttps://github.com/nuxt/ui
-    - label ' リリース '
-      アイコン i- lucide ロケット
-      次 へhttps://github.com/nuxt/ui/releases
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageLink[]
+props:
+  title: 'Community'
+  links:
+    - label: 'Edit this page'
+      icon: i-lucide-file-pen
+      to: https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
+    - label: 'Star on GitHub'
+      icon: i-lucide-star
+      to: https://github.com/nuxt/ui
+    - label: 'Releases'
+      icon: i-lucide-rocket
+      to: https://github.com/nuxt/ui/releases
 ---
 ::
 
 ## 例
 
 ::note
-これら の 例 で は[Nuxt Content](https://content.nuxt.com)を 使用 し て い ます が 、 コンポーネント は 任意 の コンテンツ 管理 システム と 統合 でき ます 。
+これらの例は[Nuxt Content](https://content.nuxt.com)を使用していますが、コンポーネントは任意のコンテンツ管理システムと統合できます。
 ::
 
-### ページ 内
+### ページ内
 
-ContentToc コンポーネント の`bottom`スロット に ある PageLinks コンポーネント を 使用 し て 、 目次 の 下 に リンク の リスト を 表示 し ます 。
+ContentTocコンポーネントの`bottom`スロットにあるPageLinksコンポーネントを使用して、目次の下にリンクのリストを表示します。
 
 ```vue [pages/\[...slug\\].vue]{48-52}
 <script setup lang="ts">
@@ -172,16 +172,16 @@ const links = computed<PageLink[]>(() => [{
 
 ### Props
 
-component-props
+:component-props
 
 ### スロット
 
-コンポーネント スロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネント テーマ
+:component-theme
 
 ## Changelog
 
-component-changelog
+:component-changelog

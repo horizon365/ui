@@ -14,16 +14,16 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Progress.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-Utilice la directiva `v-model` para controlar el valor de la Progress.
+Utilice la directiva `v-model` para controlar el valor del progreso.
 
 ::component-code
 ---
-Externo:
-  - modelValoración
-Props:
-  Modelos: 50
+external:
+  - modelValue
+props:
+  modelValue: 50
 ---
 ::
 
@@ -31,17 +31,17 @@ Props:
 Utilice el componente [`ProgressGroup`](/docs/components/progress-group) para dividir una sola barra en varios segmentos que se suman a un total.
 ::
 
-@008@008@008
+### Max (Edición española)
 
-Utilice el prop `max` para establecer el valor máximo del progreso.
+Utilice el prop `max` para establecer el valor máximo del Progreso.
 
 ::component-code
 ---
-Externo:
-  @@P0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Modelos: 3
-  Max: cuatro
+external:
+  - modelValue
+props:
+  modelValue: 3
+  max: 4
 ---
 ::
 
@@ -49,61 +49,61 @@ Utilice el prop `max` con una matriz de cadenas para mostrar el paso activo deba
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @120000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externo:
-  - modelValue (Edición española)
-Props:
-  Modelos: 3
-  Max:
-    @@pH014 @@"En espera"
-    - 'Clonación...'
-    - 'La migración...'
-    - 'Despliegue...'
-    - "¡ Ya está!"
+prettier: true
+ignore:
+  - max
+external:
+  - modelValue
+props:
+  modelValue: 3
+  max:
+    - 'Waiting...'
+    - 'Cloning...'
+    - 'Migrating...'
+    - 'Deploying...'
+    - 'Done!'
 ---
 ::
 
-@19@@Estado
+### Estado
 
 Utilice el prop `status` para mostrar el valor de progreso actual por encima de la barra.
 
 ::component-code
 ---
-Externo:
-  - modelValue (Edición española)
-Props:
-  Modelos: 50
-  Estado: Verdadero
+external:
+  - modelValue
+props:
+  modelValue: 50
+  status: true
 ---
 ::
 
 ::tip
-El estado rastrea el final de la barra, utilice `:ui="{ status: 'w-full' }"` para que abarque todo el ancho.
+El estado rastrea el final de la barra, use `:ui="{ status: 'w-full' }"` para que abarque todo el ancho.
 ::
 
-@@23@indeterminado
+### indéterminé
 
-Cuando no se establece `v-model` o el valor es `null`, el progreso se convierte en_indeterminate_. La barra de progreso se anima como un `carousel`, pero puede cambiarla utilizando el [`animation`](#animationprop.
+Cuando no se establece `v-model` o el valor es `null`, el progreso se convierte en_indeterminate_. La barra de progreso se anima como `carousel`, pero puede cambiarlo usando el prop. [`animation`](#animation).
 
 ::component-code
 ---
-Externo:
-  - modelValue (Edición española)
-Props:
-  Modalidad: NULL
+external:
+  - modelValue
+props:
+  modelValue: null
 ---
 ::
 
-@@33@animación
+### Animación
 
-Utilice el prop `animation` para cambiar la animación del progreso a un carrusel inverso, una barra oscilante o una barra elástica.
+Utilice el prop `animation` para cambiar la animación del Progreso a un carrusel inverso, una barra oscilante o una barra elástica.
 
 ::component-code
 ---
-Props:
-  Animación: Swing
+props:
+  animation: swing
 ---
 ::
 
@@ -113,26 +113,26 @@ La animación se deshabilita automáticamente cuando el usuario prefiere un movi
 
 ### Orientación
 
-Utilice el prop `orientation` para cambiar la orientación del Progress. Defaults a `horizontal`.
+Utilice el prop `orientation` para cambiar la orientación de los valores predeterminados de Progress a `horizontal`.
 
 ::component-code
 ---
-Ignora:
-  @@39@clase
-Props:
-  Orientación: Vertical
-  Categoría: H-48
+ignore:
+  - class
+props:
+  orientation: vertical
+  class: 'h-48'
 ---
 ::
 
-@@pH040@color
+### Color (Edición)
 
-Utilice el prop `color` para cambiar el color del Progreso.
+Utilice el accesorio `color` para cambiar el color del Progress.
 
 ::component-code
 ---
-Props:
-  Color: Neutro
+props:
+  color: neutral
 ---
 ::
 
@@ -140,47 +140,47 @@ Props:
 Este accesorio también acepta cualquier valor de color CSS para paletas fuera del tema.
 ::
 
-@@42000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Tamaño
 
-Utilice el prop `size` para cambiar el tamaño del Progreso.
-
-::component-code
----
-Props:
-  Tamaño: XL
----
-::
-
-@@444@444@4444
-
-Utilice el prop `inverted` para invertir visualmente el progreso.
+Utilice el prop `size` para cambiar el tamaño de la Progress.
 
 ::component-code
 ---
-Props:
-  Invertido: verdadero
-  Modelos: 25
+props:
+  size: xl
 ---
 ::
 
-@4666 @ Vía
+### Invertido
 
-@@40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Utilice el soporte `inverted` para invertir visualmente el progreso.
 
-Componentes Props
+::component-code
+---
+props:
+  inverted: true
+  modelValue: 25
+---
+::
 
-@@488@4888
+## API (Edición española)
 
-Componentes de slots
+### Props (Edición española)
 
-@499@4999
+:component-props
 
-Componentes Emisiones
+### Slots (Edición española)
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+:component-slots
 
-Componente Tema
+### Emisiones
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+:component-emits
 
-Categoría: component-changelog
+## Temas
+
+:component-theme
+
+## Changelog (Edición española)
+
+:component-changelog

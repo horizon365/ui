@@ -3,18 +3,18 @@ title: 使用说明
 description: '一个可组合的构建引导图尔斯通过重新锚定一个单一的弹出跨越步骤。'
 ---
 
-## 使用情况
+## 用法
 
-使用自动导入的`useTour`可组合项来驱动带有单个[Popover](/docs/components/popover)（其锚在步骤之间移动）的指导教程。可组合项拥有步骤状态，并将每个步骤的`target`解析为您绑定到`<UPopover>`的`reference`。同时保持对内容和导航的完全控制。
+使用自动导入的`useTour`可组合项，通过单个[Popover](/docs/components/popover)（其锚在步骤之间移动）来驱动指导教程。可组合项拥有步骤状态，并将每个步骤的`target`解析为绑定到`<UPopover>`的`reference`，同时您可以完全控制内容和导航。
 
 ::component-example
 ---
-收阖：true
-名称：'使用教程示例'
+collapse: true
+name: 'use-tour-example'
 ---
 ::
 
-每一步都需要一个`target`作为弹出窗口的锚点。它接受一个CSS选择器、一个元素、一个虚拟元素（任何带有`getBoundingClientRect`的字段），或返回其中一个的ref/getter。传递`null`将步骤定位到视口的中心。步骤上的任何其他字段（`title`、`body`、`side`、...）会原封不动地通过，并可透过`current`使用。
+每个步骤都需要一个`target`，以供弹出窗口锚定。它接受CSS选择器、元素、虚拟元素（任何包含`getBoundingClientRect`的元素）或返回其中之一的ref/getter。传递`null`以将步骤锚定到视口的中心。步骤上的任何其他字段（`title`、`body`、`side`...）都将原封不动地传递，并可通过`current`访问。
 
 ```vue
 <script setup lang="ts">
@@ -40,13 +40,13 @@ const tour = useTour([
 </template>
 ```
 
-- 建立在Popover的反应`reference`道具上，因此当作用中步骤变更时，Popover会顺利地重新定位。
-- 当步骤变为活动状态时，活动目标将自动滚动到视图中。
-- 由于您是自己呈现内容的，因此不需要维护额外的主题或区域设置。
+- 基于Popover的反应式`reference`道具而构建，因此当活动步骤发生变化时，Popover会平滑地重新定位。
+- 当步骤变为活动状态时，活动目标自动滚动到视图中。
+- 由于您自己呈现内容，因此无需维护额外的主题或区域设置。
 
-活性成分
+应用程序接口
 
-我的天啊
+`useTour(steps, options?)`{lang="ts-type"}的字符串
 
 参数
 
@@ -59,11 +59,11 @@ const tour = useTour([
 
       ::field-group
         ::field{name="target" type="MaybeRefOrGetter<string | ReferenceElement | null | undefined>"}
-        步骤锚定的元素。接受CSS选取器（`'#id'`、`'.class'`或解析为`#id`的bare id）、元素、虚拟元素或传回元素的ref/getter。使用`null`将步骤置于视区中央。
+        步骤所锚定的元素。接受CSS选择器（`'#id'`、`'.class'`或解析为`#id`的bare id）、元素、虚拟元素或传回元素的ref/getter。使用`null`可将步骤置于视见区的中央。
         ::
 
         ::field{name="[key: string]" type="any"}
-        任何其他字段（`title`、`body`、`side`、...）都将通过`current`传递并可用。
+        任何附加字段（`title`、`body`、`side`、......）都将通过`current`传递并可用。
         ::
       ::
     ::
@@ -91,7 +91,7 @@ const tour = useTour([
   ::
 ::
 
-返回
+### 返回
 
 ::field-group
 
@@ -104,11 +104,11 @@ const tour = useTour([
   ::
 
   ::field{name="current" type="ComputedRef<TourStep | undefined>"}
-  当前步骤对象，或者`undefined`（如果没有步骤）。
+  当前步骤对象，或者当没有步骤时为`undefined`。
   ::
 
   ::field{name="reference" type="ComputedRef<ReferenceElement | undefined>"}
-  当前步骤的已解析锚，要传递给`<UPopover :reference>`。
+  当前步骤的已解析锚点，要传递到`<UPopover :reference>`。
   ::
 
   ::field{name="total" type="ComputedRef<number>"}
@@ -128,7 +128,7 @@ const tour = useTour([
   ::
 
   ::field{name="next" type="() => void"}
-  转到下一步。根据`loop`选项的不同，是循环还是在结尾结束。
+  转到下一步。根据`loop`选项，循环或结束。
   ::
 
   ::field{name="prev" type="() => void"}
@@ -136,10 +136,10 @@ const tour = useTour([
   ::
 
   ::field{name="goTo" type="(index: number) => void"}
-  跳转到特定步骤并打开教程。
+  跳转到特定步骤并打开浏览。
   ::
 
   ::field{name="finish" type="() => void"}
-  关闭导览。
+  结束参观。
   ::
 ::

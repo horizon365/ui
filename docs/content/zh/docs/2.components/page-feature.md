@@ -8,122 +8,122 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageFeature.vue
 ---
 
-## 使用情况
+## 用法
 
-页面功能组件由[PageSection](/docs/components/page-section)组件用来显示[features](/docs/components/page-section#featuresPH08 @@.
+PageFeature组件由[PageSection](/docs/components/page-section)组件用于显示[features](/docs/components/page-section#features)。
 
-标题：
+### 标题
 
-使用`title`道具设置功能的标题。
-
-::component-code
----
-隐藏：
-  班级
-道具：
-  标题：“主题”
-  类别：'w-96'
----
-::
-
-说明：
-
-使用`description`属性设置功能的描述。
+使用`title`属性设置特性的标题。
 
 ::component-code
 ---
-更漂亮：真的
-隐藏：
-  班级
-忽略：
-- 标题
-道具：
-  标题：“主题”
-  description：'使用您自己的颜色、字体等自定义Nuxt UI。'
-  类别：'w-96'
+hide:
+  - class
+props:
+  title: 'Theme'
+  class: 'w-96'
 ---
 ::
 
-### 图标
+### 说明
 
-使用`icon`道具来设定功能的图标。
+使用`description` prop设置功能的描述。
 
 ::component-code
 ---
-更漂亮：真的
-隐藏：
-  班级
-忽略：
-  019标题
-  描述：
-道具：
-  标题：“主题”
-  description：'使用您自己的颜色、字体等自定义Nuxt UI。'
-  图标：“i-lucide-色板-书本”
-  类别：'w-96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+props:
+  title: 'Theme'
+  description: 'Customize Nuxt UI with your own colors, fonts, and more.'
+  class: 'w-96'
 ---
 ::
 
-链接
+### Icon
 
-您可以从[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)元件传递任何属性，例如`to`、`target`、`rel`等。
+使用`icon`道具设置功能的图标。
 
 ::component-code
 ---
-更漂亮：真的
-隐藏：
-  班级
-忽略：
-- 标题
-  描述：
-- 图标
-  目标位置
-道具类：
-  标题：“主题”
-  description：'使用您自己的颜色、字体等自定义Nuxt UI。'
-  图标：“i-lucide-色板-书本”
-  到：“/docs/入门/主题/设计系统”
-  目标：空白（_B）
-  类别：'w-96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Theme'
+  description: 'Customize Nuxt UI with your own colors, fonts, and more.'
+  icon: 'i-lucide-swatch-book'
+  class: 'w-96'
 ---
 ::
 
-定位
+### Link
 
-使用`orientation`属性更改特征的方向。默认为`horizontal`。
+可以从[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)组件传递任何属性，如`to`、`target`、`rel`等。
 
 ::component-code
 ---
-更漂亮：真的
-隐藏：
-  班级
-忽略：
-  标题
-  描述：
-  “- ”图标
-道具：
-  方向：'垂直'
-  标题：“主题”
-  description：'使用您自己的颜色、字体等自定义Nuxt UI。'
-  图标：“i-lucide-色板-书本”
-  类别：'w-96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - target
+props:
+  title: 'Theme'
+  description: 'Customize Nuxt UI with your own colors, fonts, and more.'
+  icon: 'i-lucide-swatch-book'
+  to: '/docs/getting-started/theme/design-system'
+  target: _blank
+  class: 'w-96'
 ---
 ::
 
-活性成分
+### 方向
 
-道具
+使用`orientation`属性将特征. xp的方向更改为`horizontal`。
 
-：组件-支柱
+::component-code
+---
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+props:
+  orientation: 'vertical'
+  title: 'Theme'
+  description: 'Customize Nuxt UI with your own colors, fonts, and more.'
+  icon: 'i-lucide-swatch-book'
+  class: 'w-96'
+---
+::
 
-插槽
+## API
 
-：组件插槽
+### Props
 
-主题
+:component-props
 
-：组件主题
+### Slots
 
-## 变更日志
+:component-slots
 
-：组件更改日志
+## Theme
+
+:component-theme
+
+## Changelog
+
+:component-changelog

@@ -13,42 +13,42 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Pagination.vue
 ---
 
-## 使用情况
+## 用法
 
-使用`default-page`prop或`v-model:page`指令控制当前页面。
+使用`default-page` prop或`v-model:page`指令控制当前页面。
 
 ::component-code
 ---
-外部：
+external:
   - page
-产品型号：
+model:
   - page
-忽略：
+ignore:
   - page
   - total
-道具：
-  第5页
-  总数：100
+props:
+  page: 5
+  total: 100
 ---
 ::
 
 ::note
-分页组件使用一些[`Button`](/docs/components/button)来显示页面，使用[`color`](#color)，[`variant`](#variant)和[`size`](#size)道具来设置它们的样式。
+Pagination组件使用一些[`Button`](/docs/components/button)来显示页面，使用[`color`](#color)，[`variant`](#variant)和[`size`](#size)道具来样式化它们。
 ::
 
-### Total
+### 总计
 
-使用`total`道具设置列表中的项目总数。
+使用`total`属性设置列表中的项目总数。
 
 ::component-code
 ---
-外部：
+external:
   - page
-产品型号：
+model:
   - page
-道具：
-  第5页
-  总数：100
+props:
+  page: 5
+  total: 100
 ---
 ::
 
@@ -58,96 +58,96 @@ links:
 
 ::component-code
 ---
-忽略：
+ignore:
   - page
-外部：
+external:
   - page
-产品型号：
+model:
   - page
-道具：
-  第5页
-  每页显示：20条
-  总数：100
+props:
+  page: 5
+  itemsPerPage: 20
+  total: 100
 ---
 ::
 
-### Sibling Count
+### 同胞计数
 
-使用`sibling-count`道具将要显示的兄弟节点数设置为`2`。
+使用`sibling-count`属性将要显示的兄弟节点数设置为`2`。
 
 ::component-code
 ---
-忽略：
+ignore:
   - page
   - total
-外部：
-  第页
-产品型号：
-  第页
-道具：
-  页数：5页
-  兄弟计数：1
-  总数：100
+external:
+  - page
+model:
+  - page
+props:
+  page: 5
+  siblingCount: 1
+  total: 100
 ---
 ::
 
 ### 显示边缘
 
-使用`show-edges`属性可始终显示省略号、第一页和最后一页。默认为`false`。
+使用`show-edges`属性总是显示省略号，第一页和最后一页。
 
 ::component-code
 ---
-忽略：
-  第页
-  总计
-外部：
-  第页
-产品型号：
-  第50页
-道具：
-  页数：5页
-  showEdges：真值
-  兄弟计数：1
-  总数：100
+ignore:
+  - page
+  - total
+external:
+  - page
+model:
+  - page
+props:
+  page: 5
+  showEdges: true
+  siblingCount: 1
+  total: 100
 ---
 ::
 
 ### 显示控件
 
-使用`show-controls`道具来显示第一个、上一个、下一个和最后一个按钮。预设值为`true`。
+使用`show-controls`道具来显示第一个，上一个，下一个和最后一个按钮。
 
 ::component-code
 ---
-忽略：
-  第页
-  总计
-外部：
-  第页
-产品型号：
-  第57页
-道具：
-  页数：5页
-  显示控件：假
-  showEdges：真值
-  总数：100
+ignore:
+  - page
+  - total
+external:
+  - page
+model:
+  - page
+props:
+  page: 5
+  showControls: false
+  showEdges: true
+  total: 100
 ---
 ::
 
-颜色
+### Color
 
-使用`color`属性设置非活动控件的颜色。默认为`neutral`。
+使用`color`属性将非活动控件的颜色设置为`neutral`。
 
 ::component-code
 ---
-忽略：
-- 第
-  总计
-外部：
+ignore:
   - page
-产品型号：
+  - total
+external:
   - page
-项目名称：
-  色彩：
+model:
+  - page
+items:
+  color:
     - primary
     - secondary
     - success
@@ -155,28 +155,28 @@ links:
     - warning
     - error
     - neutral
-道具：
-  页数：5页
-  颜色：原色
-  总数：100
+props:
+  page: 5
+  color: primary
+  total: 100
 ---
 ::
 
 ### Variant
 
-使用`variant`prop将非活动控件的变量. css设置为`outline`。
+使用`variant`属性将非活动控件的变量设置为`outline`。
 
 ::component-code
 ---
-忽略：
+ignore:
   - page
   - total
-外部：
+external:
   - page
-产品型号：
+model:
   - page
-项目名称：
-  色彩：
+items:
+  color:
     - primary
     - secondary
     - success
@@ -184,36 +184,36 @@ links:
     - warning
     - error
     - neutral
-  变体：
+  variant:
     - solid
     - outline
     - soft
     - subtle
     - ghost
     - link
-道具：
-  页数：5页
-  颜色：中性
-  变体：细微
-  总数：100
+props:
+  page: 5
+  color: neutral
+  variant: subtle
+  total: 100
 ---
 ::
 
 ### Active Color
 
-使用`active-color`道具将活动控件. push的颜色设置为`primary`。
+使用`active-color`属性将活动控件的颜色设置为`primary`。
 
 ::component-code
 ---
-忽略：
+ignore:
   - page
   - total
-外部：
+external:
   - page
-产品型号：
+model:
   - page
-项目名称：
-  活动颜色：
+items:
+  activeColor:
     - primary
     - secondary
     - success
@@ -221,28 +221,28 @@ links:
     - warning
     - error
     - neutral
-道具：
-  页数：5页
-  active颜色：中性
-  总数：100
+props:
+  page: 5
+  activeColor: neutral
+  total: 100
 ---
 ::
 
-### Active Variant
+### 活动变体
 
-使用`active-variant`prop将活动控件的变量设置为`solid`。
+使用`active-variant` prop将活动控件的变量. css设置为`solid`。
 
 ::component-code
 ---
-忽略：
+ignore:
   - page
   - total
-外部：
+external:
   - page
-产品型号：
+model:
   - page
-项目名称：
-  活动颜色：
+items:
+  activeColor:
     - primary
     - secondary
     - success
@@ -250,102 +250,102 @@ links:
     - warning
     - error
     - neutral
-  active变量：
+  activeVariant:
     - solid
     - outline
     - soft
     - subtle
     - ghost
     - link
-道具：
-  页数：5页
-  活动颜色：主色
-  active变体：微妙
-  总数：100
+props:
+  page: 5
+  activeColor: primary
+  activeVariant: subtle
+  total: 100
 ---
 ::
 
 ### Size
 
-使用`size`属性将控件. png的大小设置为`md`。
+使用`size`属性将controls.xml的大小设置为`md`。
 
 ::component-code
 ---
-忽略：
+ignore:
   - page
   - total
-外部：
+external:
   - page
-产品型号：
+model:
   - page
-项目名称：
-  尺寸：
+items:
+  size:
     - xs
     - sm
     - md
     - lg
     - xl
-道具：
-  页数：5页
-  尺寸：xl
-  总数：100
+props:
+  page: 5
+  size: xl
+  total: 100
 ---
 ::
 
-### Disabled
+### 禁用
 
-使用`disabled`道具禁用分页控件。
+使用`disabled`属性禁用分页控件。
 
 ::component-code
 ---
-忽略：
-  第140页
-  总计141小时
-外部：
-  第142页
-产品型号：
-  第143页
-道具：
-  页数：5页
-  总数：100
-  已禁用：true
+ignore:
+  - page
+  - total
+external:
+  - page
+model:
+  - page
+props:
+  page: 5
+  total: 100
+  disabled: true
 ---
 ::
 
-示例
+## 示例
 
-### 使用链接
+### 带链接
 
-使用`to`属性将按钮转换为链接。传递一个接收页码并返回路由目标的函数。
+使用`to` prop将按钮转换为链接。传递一个函数，该函数接收页码并返回路由目的地。
 
 ::component-example
 ---
-名称：'分页链接示例'
+name: 'pagination-links-example'
 ---
 ::
 
 ::note
-在本例中，我们将添加`#with-links`哈希以避免转到页面顶部。
+在这个例子中，我们添加了`#with-links`散列，以避免进入页面顶部。
 ::
 
-美国石油学会
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-### 插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-### 放射性
+### Emits
 
-：组件发射
+:component-emits
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

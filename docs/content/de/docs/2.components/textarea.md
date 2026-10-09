@@ -9,266 +9,266 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Textarea.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Verwenden Sie die `v-model`-Direktive, um den Wert des Textarea zu steuern.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: ""
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ''
 ---
 ::
 
-@@@@@@@004@rows
+### rows Bearbeiten
 
-Verwenden Sie `rows` prop, um die Anzahl der Zeilen festzulegen. Standardmäßig ist `3`.
+Verwenden Sie die `rows`-prop, um die Anzahl der Zeilen festzulegen. Standardmäßig ist `3`.
 
 ::component-code
 ---
-Props:
-  Roben: 12
+props:
+  rows: 12
 ---
 ::
 
 ### Platzhalter
 
-Verwenden Sie `placeholder` prop, um einen Platzhaltertext zu setzen.
+Verwenden Sie die `placeholder`-Prop, um einen Platzhaltertext festzulegen.
 
 ::component-code
 ---
-Props:
-  Platzhalter: "Typ etwas..."
+props:
+  placeholder: 'Type something...'
 ---
 ::
 
-@@ph009@autoresize
+### AutoSize (englisch)
 
-Verwenden Sie `autoresize` prop, um die automatische Größenänderung der Höhe des Textarea zu aktivieren.
+Verwenden Sie die `autoresize`-Prop, um die automatische Größenänderung der Höhe des Textarea zu aktivieren.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  modelValue: 'Dies ist ein langer Text, der die Höhe des Textareas automatisch skaliert.'
-  Autoresize: wahr
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 'This is a long text that will autoresize the height of the Textarea.'
+  autoresize: true
 ---
 ::
 
-Verwenden Sie `maxrows` prop, um die maximale Anzahl von Zeilen bei der automatischen Größenänderung festzulegen. Wenn auf `0` gesetzt, wird der Textarea unbegrenzt wachsen.
+Verwenden Sie die Prop `maxrows`, um die maximale Anzahl von Zeilen bei der automatischen Größenänderung festzulegen. Wenn auf `0` gesetzt, wird der Textarea unbegrenzt wachsen.
 
 ::component-code
 ---
-Ignoriert:
-  - modellwert
-Außen:
-  - modellWert
-Props:
-  modelValue: 'Dies ist ein langer Text, der die Höhe des Textareas mit maximal 4 Zeilen automatisch skaliert.'
-  Maxon: 4 von
-  Autoresize: wahr
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 'This is a long text that will autoresize the height of the Textarea with a maximum of 4 rows.'
+  maxrows: 4
+  autoresize: true
 ---
 ::
 
-@@@@@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17
+### Color (englisch)
 
-Verwenden Sie die `color` prop, um die Ringfarbe zu ändern, wenn der Textarea fokussiert ist.
+Verwenden Sie die `color`-Prop, um die Ringfarbe zu ändern, wenn der Textarea fokussiert ist.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph019@@gmail.de
-Props:
-  Farbe: neutral
-  Highlight: Wahr
-  Platzhalter: 'Typ etwas...'
+ignore:
+  - placeholder
+props:
+  color: neutral
+  highlight: true
+  placeholder: 'Type something...'
 ---
 ::
 
 ::note
-`highlight` prop wird hier verwendet, um den Fokuszustand anzuzeigen. Es wird intern verwendet, wenn ein Validierungsfehler auftritt.
+Die `highlight`-prop wird hier verwendet, um den Fokuszustand anzuzeigen. Es wird intern verwendet, wenn ein Validierungsfehler auftritt.
 ::
 
-@@ph021@@@Variantentyp
+### Variant Übersetzung
 
-Verwenden Sie `variant` prop, um die Variante des Textarea zu ändern.
+Verwenden Sie die `variant`-Prop, um die Variante des Textarea zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph023@gmail.de
-Props:
-  Farbe: neutral
-  Variante: subtil
-  Markiert: false
-  Platzhalter: 'Typ etwas...'
+ignore:
+  - placeholder
+props:
+  color: neutral
+  variant: subtle
+  highlight: false
+  placeholder: 'Type something...'
 ---
 ::
 
-@@ph024 @ Größe
+### Größe
 
-Verwenden Sie `size` prop, um die Größe des Textarea zu ändern.
+Verwenden Sie die `size`-Stütze, um die Größe des Textarea zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph026@@gmail.de
-Props:
-  Größe: XL
-  Platzhalter: 'Typ etwas...'
+ignore:
+  - placeholder
+props:
+  size: xl
+  placeholder: 'Type something...'
 ---
 ::
 
-@@@@@@@@@@@@@@@@@@@ICON
+### Icon (Deutsche Ausgabe)
 
-Verwenden Sie die `icon` prop, um ein [Icon](/docs/components/icon) innerhalb des Textarea anzuzeigen.
+Verwenden Sie die `icon`-Prop, um eine [Icon](/docs/components/icon) innerhalb des Textarea anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph033@gmail.de
-Props:
-  Icon: 'i-lucide-search'(auf Englisch)
-  Größe: MD
-  Beschreibung: Outline
-  Platzhalter: 'Suche...'
-  Roben: 1
+prettier: true
+ignore:
+  - placeholder
+props:
+  icon: 'i-lucide-search'
+  size: md
+  variant: outline
+  placeholder: 'Search...'
+  rows: 1
 ---
 ::
 
-Verwenden Sie `leading` und `trailing` props, um die Symbolposition festzulegen, oder die `leading-icon` und `trailing-icon` props, um für jede Position ein anderes Symbol festzulegen.
+Verwenden Sie die `leading` und `trailing` props, um die Icon-Position oder die `leading-icon` und `trailing-icon` props, um ein anderes Symbol für jede Position gesetzt.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph038@gmail.de
-Props:
-  Bezeichnung: i-Lucide-at-Sign
-  Platzhalter: "Geben Sie Ihre E-Mail ein"
-  Größe: MD
-  Röhren: 1
+prettier: true
+ignore:
+  - placeholder
+props:
+  trailingIcon: i-lucide-at-sign
+  placeholder: 'Enter your email'
+  size: md
+  rows: 1
 ---
 ::
 
-@@@@@@Avatar@@@@@Avatar@@@@@@@@Avatar@@Avatar@@@Avatar@@Avatar@@Avatar@@Avatar@@Avatar@@Avatar@@Avatar@@Avatar@Avatar@@Avatar@@Avatar@Avatar@@Avatar@Avatar@@@Avatar@@Avatar@@@@Avatar@@@@@Avatar@@@@@@Avatar@@@@@@@@@Avatar@@@@@@@@@@@@Avatar@@@@@@@@@@@@@@@@@Avatar@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+### avatar Bearbeiten
 
-Verwenden Sie die `avatar` prop, um ein [Avatar](/docs/components/avatar) innerhalb des Textarea zu zeigen.
+Verwenden Sie die `avatar`-Prop, um ein [Avatar](/docs/components/avatar) im Textarea anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph045@gmail.de
-  - avatar.loading (nicht verfügbar)
-Props:
-  Avatare sind:
-    src: 'https://github.com/nuxt.png'(auf Englisch)
-    Aufladung: Lazy
-  Größe: MD
-  Variante: Übersicht
-  Platzhalter: 'Suche...'
-  Röhren: 1
+prettier: true
+ignore:
+  - placeholder
+  - avatar.loading
+props:
+  avatar:
+    src: 'https://github.com/nuxt.png'
+    loading: lazy
+  size: md
+  variant: outline
+  placeholder: 'Search...'
+  rows: 1
 ---
 ::
 
-@@ph047@Aufladen
+### loading (englisch)
 
-Verwenden Sie `loading` prop, um ein Ladesymbol auf dem Textarea anzuzeigen.
+Verwenden Sie die `loading`-Prop, um ein Ladesymbol auf der Textarea anzuzeigen.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph049@gmail.de
-Props:
-  Aufladung: true
-  Nachtrag: false
-  Platzhalter: 'Suche...'
-  Roben: 1
+ignore:
+  - placeholder
+props:
+  loading: true
+  trailing: false
+  placeholder: 'Search...'
+  rows: 1
 ---
 ::
 
-@@ph050@@@Icon-Aufladung
+### Loading Icon (englisch)
 
-Verwenden Sie `loading-icon` prop, um das Ladesymbol anzupassen. Standardmäßig ist `i-lucide-loader-circle`.
+Verwenden Sie die `loading-icon`-Prop, um das Ladesymbol anzupassen. Standardmäßig ist `i-lucide-loader-circle`.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph053@@gmail.de
-Props:
-  Aufladung: true
-  loadingIcon: 'i-lucide-loader'(englisch)
-  Platzhalter: 'Suche...'
-  Roben: 1
+ignore:
+  - placeholder
+props:
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  placeholder: 'Search...'
+  rows: 1
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.loading` Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.loading` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.loading` Schlüssel anpassen.
 :::
 ::
 
-### disabled
+### Disabled (nicht verfügbar)
 
-Verwenden Sie `disabled` prop, um den Textarea zu deaktivieren.
+Verwenden Sie die `disabled` prop, um die Textarea zu deaktivieren.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph060@@gmail.de
-Props:
-  Behindert: Wahr
-  Platzhalter: 'Typ etwas...'
+ignore:
+  - placeholder
+props:
+  disabled: true
+  placeholder: 'Type something...'
 ---
 ::
 
-## api
+## API (Englisch)
 
-### Props
+### Props (nicht)
 
-Komponenten Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attributes" target="_blank"}
 Diese Komponente unterstützt auch alle nativen `<textarea>` HTML-Attribute.
 ::
 
-### Slots
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph065@@emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-### Aufdecken
+### Expose (englisch)
 
 Beim Zugriff auf die Komponente über eine Template-Referenz können Sie Folgendes verwenden:
 
-| Vorname| Typ|
+| Vorname| Typen|
 | ---- | ---- |
-| {lang="ts-type"}|@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
-| @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
+| `textareaRef`{lang="ts-type"} (nicht)| `Ref<HTMLTextAreaElement \| null>`{lang="ts-type"} (nicht)|
+| `autoResize`{lang="ts-type"} (nicht)| `() => void`{lang="ts-type"} (nicht)|
 
-@@@@@@@@@ph075@theme
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph076@@changelog @@changelog
+## Changelog Bearbeiten
 
-Das Component-Changelog
+:component-changelog

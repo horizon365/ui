@@ -3,7 +3,7 @@ title: Autenticidad
 description: 'Un formulario personalizable para crear formularios de inicio de sesión, registro o restablecimiento de contraseña.'
 category: page
 links:
-  - label: Forma
+  - label: forma
     to: /docs/components/form
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub también
@@ -11,209 +11,209 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/AuthForm.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-Construido sobre el [Form](/docs/components/form) componente, el `AuthForm` componente se puede utilizar en sus páginas o envuelto en un [PageCard](/docs/components/page-card).
+Construido sobre el componente [Form](/docs/components/form), el componente `AuthForm` se puede utilizar en sus páginas o envuelto en un [PageCard](/docs/components/page-card).
 
 ::component-example
 ---
-Nombre: 'auth-form-example'
-Colapso: Verdad
+name: 'auth-form-example'
+collapse: true
 ---
 ::
 
-@100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Xph014xCampos
 
 El formulario se construirá a sí mismo basado en el prop `fields` y el estado se manejará internamente.
 
-Utilice el `fields` prop como una matriz de objetos con las siguientes propiedades:
+Utilice el prop `fields` como una matriz de objetos con las siguientes propiedades:
 
-@@
-@@
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- x`type: 'checkbox' | 'select' | 'otp' | 'InputHTMLAttributes['type']'`xx{lang="ts-type"}
 
-Cada campo debe incluir una propiedad `type`, que determina el componente de entrada y cualquier accesorio adicional aplicado:`checkbox` los campos usan [Checkbox](/docs/components/checkbox#props) los accesorios,`select` los campos usan [SelectMenu](/docs/components/select-menu#props) los accesorios,`otp` campos de uso [PinInput](/docs/components/pin-input#props) accesorios, y todos los demás tipos de uso de [Input](/docs/components/input#props) accesorios.
+Cada campo debe incluir una propiedad `type`, que determina el componente de entrada y cualquier accesorio adicional aplicado: Los campos `checkbox` usan props [Checkbox](/docs/components/checkbox#props), los campos `select` usan props [SelectMenu](xph0333), los campos `otp` usan props [PinInput](/docs/components/pin-input#props), y todos los demás tipos usan props [Input](/docs/components/input#props).
 
 También puede pasar cualquier propiedad del componente [FormField](/docs/components/form-field#props) a cada campo.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@304@campos
-  @444@clase
-Externo:
-  @@F045 @ Campos
-Externalidades:
-  - AuthFormField [en inglés]
-Props:
-  Campos:
-    - nombre:'correo electrónico'
-      Categoría:"Email"
-      Etiqueta: "Correo electrónico"
-      marcador de posición:"Introduzca su correo electrónico"
-      Requerido: Verdadero
-    - nombre:'contraseña'
-      Tipo de contraseña:"Password"
-      Categoría:"Password"
-      Contraseña:"Introduzca su contraseña"
-      Requerido: Verdadero
-    - name:'país'
-      Tipo: "Selección"
-      Etiqueta: "país"
-      placeholder: "Seleccione país"
-      Items:
-        - label:'Estados Unidos'
-          Nombre: "Nosotros"
-        - label:'España'
-          Nombre: "fr"
-        - label:'Reino Unido'
-          Nombre: "UK"
-        - label:'España'
-          Nombre: 'au'
-    - name:'otp'(en inglés)
-      Categoría:"OTP"
-      Categoría: OTP
-      Longitud: 6
-      Plantilla: '○'
-    - name:"Recuerda"
-      Categoría:"Checkbox"
-      Archivo de la etiqueta: "Remember Me"
-      Descripción:"Usted estará conectado durante 30 días".
-  Categoría: max-w-sm
+prettier: true
+ignore:
+  - fields
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
+  fields:
+    - name: 'email'
+      type: 'email'
+      label: 'Email'
+      placeholder: 'Enter your email'
+      required: true
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+      placeholder: 'Enter your password'
+      required: true
+    - name: 'country'
+      type: 'select'
+      label: 'Country'
+      placeholder: 'Select country'
+      items:
+        - label: 'United States'
+          value: 'us'
+        - label: 'France'
+          value: 'fr'
+        - label: 'United Kingdom'
+          value: 'uk'
+        - label: 'Australia'
+          value: 'au'
+    - name: 'otp'
+      type: 'otp'
+      label: 'OTP'
+      length: 6
+      placeholder: '○'
+    - name: 'remember'
+      type: 'checkbox'
+      label: 'Remember me'
+      description: 'You will be logged in for 30 days.'
+  class: 'max-w-sm'
 ---
 ::
 
-@@506@Título
+### Títulos
 
 Utilice el prop `title` para establecer el título del formulario.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@508@campos
-  @@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externo:
-  @@F060@F060
-Externalidades:
-  - AuthFormField [en inglés]
-Props:
-  Nombre: Login
-  Campos:
-    - nombre:'correo electrónico'
-      Tipo: Texto
-      Etiqueta: "Correo electrónico"
-    - nombre:'contraseña'
-      Tipo de contraseña:"Password"
-      Categoría:"Password"
-  Categoría: Max-W-MD
+prettier: true
+ignore:
+  - fields
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
+  title: 'Login'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
 ::
 
-@@pH064@Descripción
+Xph114xDescripción
 
 Utilice el prop `description` para establecer la descripción del formulario.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @666@Campos
-  @@767@título
-  @068@clase
-Externo:
-  @@pH069@campos
-Externalidades:
-  - AuthFormField [en inglés]
-Props:
-  Nombre: Login
-  Descripción:"Introduzca sus credenciales para acceder a su cuenta."
-  Campos:
-    - nombre:'correo electrónico'
-      Tipo: Texto
-      Etiqueta: "Correo electrónico"
-    - nombre:'contraseña'
-      Tipo: "Contraseña"
-      Categoría:"Password"
-  Categoría: Max-W-MD
+prettier: true
+ignore:
+  - fields
+  - title
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
 ::
 
-@@pH073@Icon
+### Icon
 
-Utilice el prop `icon` para establecer el icono del formulario.
+Utilice el prop `icon` para configurar el icono del formulario.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @750@campos
-  @@76@título
-  @@777@Descripción
-  @788@clase
-Externo:
-  @79@campos
-Externalidades:
-  - AuthFormField [en inglés]
-Props:
-  Título: Login
-  Descripción:"Introduzca sus credenciales para acceder a su cuenta."
-  icono: 'i-lucide-usuario'
-  Campos:
-    - nombre:'correo electrónico'
-      Tipo: Texto
-      Etiqueta: "Correo electrónico"
-    - nombre:'contraseña'
-      Tipo: "Contraseña"
-      Categoría:"Password"
-  Categoría: Max-W-MD
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  icon: 'i-lucide-user'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
 ::
 
-### Servicios
+### Proveedores
 
 Utilice el prop `providers` para agregar proveedores al formulario.
 
-Puede pasar cualquier propiedad del componente [Button](/docs/components/button) como `variant`,`color`,`to`, etc.
+Puede pasar cualquier propiedad del componente [Button](/docs/components/button) como `variant`, `color`, `to`, etc.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @2009@campos
-  @@pH093@título
-  @@ph094@descripción
-  @@icon
-  @@pH096@proveedores
-  @@pH097@@headerAlign
-  @098@clase
-Externo:
-  @@pH099@proveedores
-  @@F100@Campos
-Externalidades:
-  @101@101@101@101@101@101@101@101@101@101@101@101@101@101@10101)
-  - AuthFormField [en inglés]
-Props:
-  Nombre: Login
-  Descripción:"Introduzca sus credenciales para acceder a su cuenta."
-  icono: 'i-lucide-usuario'
-  Proveedores:
-    - label:'Google'(Edición española)
-      icono: 'i-simple-icons-google'
-      Categoría:"Neutral"
-      Variación:"Sutil"
-    - label:'GitHub'(Edición española)
-      icono: 'i-simple-icons-github'
-      Categoría:"Neutral"
-      Variación:"Sutil"
-  Campos:
-    - nombre:'correo electrónico'
-      Tipo: Texto
-      Etiqueta: "Correo electrónico"
-    - nombre:'contraseña'
-      Tipo: "Contraseña"
-      Categoría:"Password"
-  Categoría: Max-W-MD
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
+  - headerAlign
+  - class
+external:
+  - providers
+  - fields
+externalTypes:
+  - ButtonProps[]
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  icon: 'i-lucide-user'
+  providers:
+    - label: 'Google'
+      icon: 'i-simple-icons-google'
+      color: 'neutral'
+      variant: 'subtle'
+    - label: 'GitHub'
+      icon: 'i-simple-icons-github'
+      color: 'neutral'
+      variant: 'subtle'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
 ::
 
@@ -223,42 +223,42 @@ Utilice el prop `separator` para personalizar el [Separator](/docs/components/se
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @114 @ Campos
-  @@115@título
-  @@ph116@descripción
-  @117@icon
-  @118@proveedores
-  @119 @ clase
-Externo:
-  @@pH120@proveedores
-  @121 @ Campos
-Externalidades:
-  @@2012@2012@2012@2012@2012@2012@2012@2012@2012@2012@2012@2012@2012@2012@2012@222@2012@2012@2012@@2012@2222222222222222222222222222012@20120122222222222012012012201220122001222200120
-  - AuthFormField [en inglés]
-Props:
-  Nombre: Login
-  Descripción:"Introduzca sus credenciales para acceder a su cuenta."
-  icono: 'i-lucide-usuario'
-  Proveedores:
-    - label:'Google'(Edición española)
-      icono: 'i-simple-icons-google'
-      Categoría:"Neutral"
-      Variación:"Sutil"
-    - label:'GitHub'(Edición española)
-      icono: 'i-simple-icons-github'
-      Categoría:"Neutral"
-      Variación:"Sutil"
-  Campos:
-    - nombre:'correo electrónico'
-      Tipo: Texto
-      Etiqueta: "Correo electrónico"
-    - nombre:'contraseña'
-      Tipo: "Contraseña"
-      Categoría:"Password"
-  Separador: "Proveedores"
-  Categoría: Max-W-MD
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
+  - class
+external:
+  - providers
+  - fields
+externalTypes:
+  - ButtonProps[]
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  icon: 'i-lucide-user'
+  providers:
+    - label: 'Google'
+      icon: 'i-simple-icons-google'
+      color: 'neutral'
+      variant: 'subtle'
+    - label: 'GitHub'
+      icon: 'i-simple-icons-github'
+      color: 'neutral'
+      variant: 'subtle'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  separator: 'Providers'
+  class: 'max-w-md'
 ---
 ::
 
@@ -266,89 +266,89 @@ Puede pasar cualquier propiedad del componente [Separator](/docs/components/sepa
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@ph132@campos
-  @@313@título
-  @@ph134@descripción
-  @@icon 135
-  - proveedores
-  @137 @ clase
-Externo:
-  - proveedores
-  @@ph139@campos
-Externalidades:
-  @@P140@@BotónProps []
-  - AuthFormField [en inglés]
-Props:
-  Nombre: Login
-  Descripción:"Introduzca sus credenciales para acceder a su cuenta."
-  icono: 'i-lucide-usuario'
-  Proveedores:
-    - label:'Google'(Edición española)
-      icono: 'i-simple-icons-google'
-      Categoría:"Neutral"
-      Variación:"Sutil"
-    - label:'GitHub'(Edición española)
-      icono: 'i-simple-icons-github'
-      Categoría:"Neutral"
-      Variación:"Sutil"
-  Campos:
-    - nombre:'correo electrónico'
-      Tipo: Texto
-      Etiqueta: "Correo electrónico"
-    - nombre:'contraseña'
-      Tipo: "Contraseña"
-      Categoría:"Password"
-  separador:
-    icono: 'i-lucide-usuario'
-  Categoría: Max-W-MD
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
+  - class
+external:
+  - providers
+  - fields
+externalTypes:
+  - ButtonProps[]
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  icon: 'i-lucide-user'
+  providers:
+    - label: 'Google'
+      icon: 'i-simple-icons-google'
+      color: 'neutral'
+      variant: 'subtle'
+    - label: 'GitHub'
+      icon: 'i-simple-icons-github'
+      color: 'neutral'
+      variant: 'subtle'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  separator:
+    icon: 'i-lucide-user'
+  class: 'max-w-md'
 ---
 ::
 
-@146 @ Submitir
+### Submit (Edición española)
 
 Utilice el prop `submit` para cambiar el botón de envío del formulario.
 
-Puede pasar cualquier propiedad del componente [Button](/docs/components/button) como `variant`,`color`,`to`, etc.
+Puede pasar cualquier propiedad desde el componente [Button](/docs/components/button) como `variant`, `color`, `to`, etc.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@F155 @ Campos
-  @156@título
-  - descripción
-  @@icon 158
-  - proveedores
-  @@submit.label
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
+  - submit.label
   - submit.color
-  - submit.variante
-  @163 @ clase
-Externo:
-  @F164 @ Campos
-Externalidades:
-  - AuthFormField [en inglés]
-Props:
-  Nombre: Login
-  Descripción:"Introduzca sus credenciales para acceder a su cuenta."
-  Icono: 'i-lucide-usuario'
-  Campos:
-    - nombre:'correo electrónico'
-      Tipo: Texto
-      Etiqueta: "Correo electrónico"
-    - nombre:'contraseña'
-      Tipo: "Contraseña"
-      Categoría:"Password"
-  Sumisión:
-    Categoría:"Submit"
-    Categoría:"Error"
-    Variación:"Sutil"
-  Categoría: Max-W-MD
+  - submit.variant
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  icon: 'i-lucide-user'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  submit:
+    label: 'Submit'
+    color: 'error'
+    variant: 'subtle'
+  class: 'max-w-md'
 ---
 ::
 
-@@ph168@Ejemplos
+## Ejemplos
 
 ### Dentro de una página
 
@@ -356,32 +356,32 @@ Puede envolver el componente `AuthForm` con el componente [PageCard](/docs/compo
 
 ::component-example
 ---
-Nombre: 'auth-form-page-exemple'
-Colapso: Verdad
+name: 'auth-form-page-example'
+collapse: true
 ---
 ::
 
-@176
+## API (Edición española)
 
-@177@177@177
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attributes" target="_blank"}
-Este componente también soporta todos los atributos HTML nativos `<form>`.
+Este componente también admite todos los atributos HTML nativos de `<form>`.
 ::
 
-@179@179@179
+### Slots en línea
 
-Componentes de slots
+:component-slots
 
-@180000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@@181@181@181
+### Exposición
 
-Puede acceder a la instancia del componente escrito (exponiendo formRef y estado) usando [`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref). Por ejemplo, en una forma separada (por ejemplo, un formulario de "restablecimiento") puede hacer:
+Puede acceder a la instancia del componente escrito (exponiendo formRef y estado) usando [`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref). Por ejemplo, en un formulario separado (por ejemplo, un formulario de "restablecimiento") puede hacer:
 
 ```vue
 <script setup lang="ts">
@@ -397,13 +397,13 @@ Esto le da acceso a las siguientes propiedades (expuestas):
 
 | Nombre| Tipo|
 | ---- | ---- |
-| @196@198| @1977 @@@ 1999 @|
-| @200@2002| @@|
+| `formRef`x{lang="ts-type"}| `Ref<HTMLFormElement \| null>`x{lang="ts-type"}|
+| `state`x{lang="ts-type"} (Edición española)| `Reactive<FormStateType>`x{lang="ts-type"} (Edición española)|
 
-@@204@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@2015@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

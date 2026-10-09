@@ -8,11 +8,11 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageBody.vue
 ---
 
-##  사용
+## Usage
 
 PageBody 구성 요소는 기본 내용을 감싸고 일정한 간격을 유지하기 위해 패딩을 추가합니다.
 
-[Page](/docs/components/page) 구성 요소의 기본 슬롯 안에서 사용하고 [PageHeader](/docs/components/page-header) 구성 요소 다음에 사용합니다.
+[Page](/docs/components/page) 구성 요소의 기본 슬롯 내에서 [PageHeaderxph06x/docs/components/page-headerxph08x 구성 요소 다음에 사용합니다.
 
 ```vue {5}
 <template>
@@ -24,13 +24,13 @@ PageBody 구성 요소는 기본 내용을 감싸고 일정한 간격을 유지�
 </template>
 ```
 
-##  예
+## 예
 
 ::note
-이러한 예에서는 [Nuxt Content](https://content.nuxt.com)를 사용하지만 모든 컨텐츠 관리 시스템과 통합할 수 있습니다.
+이러한 예제에서는 [Nuxt Content](https://content.nuxt.com)를 사용하지만 구성 요소는 모든 콘텐츠 관리 시스템과 통합 할 수 있습니다.
 ::
 
-###  페이지 내에서
+### 페이지 안에서
 
 페이지의 PageBody 구성 요소를 사용하여 페이지 내용을 표시합니다.
 
@@ -71,23 +71,23 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 ```
 
 ::note
-이 예제에서는 [`ContentRenderer`](https://content.nuxt.com/docs/components/content-renderer) 구성요소를 사용하여 페이지의 내용을 렌더링합니다.
+이 예제에서는 `@nuxt/content`의 [`ContentRenderer`](https://content.nuxt.com/docs/components/content-renderer) 구성 요소를 사용하여 페이지 내용을 렌더링합니다.
 ::
 
-##  API
+## API 파일
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### Slots
 
-:구성요소 - 슬롯
+:component-slots
 
-##  테마
+## Theme 테마
 
-:구성요소 주제
+:component-theme
 
-##  Changelog
+## 변경 로그Name
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

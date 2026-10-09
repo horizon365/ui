@@ -14,14 +14,14 @@ links:
 
 ## 使用法
 
-`v-model`ディレクティブを使用して、Sliderの値を制御します。
+Sliderの値を制御するには、`v-model`ディレクティブを使用します。
 
 ::component-code
 ---
-外部
-  -  modelValue
-小道具
-  modelValue 50
+external:
+  - modelValue
+props:
+  modelValue: 50
 ---
 ::
 
@@ -29,60 +29,60 @@ links:
 
 ::component-code
 ---
-無視
-  -  defaultValue
-小道具
-  defaultValue 50
+ignore:
+  - defaultValue
+props:
+  defaultValue: 50
 ---
 ::
 
 ::tip
-`aria-label`または`aria-labelledby`を使用して、単一のthumb Sliderに名前を付けます。thumb Sliderは`slider`ロールを持つ要素であるthumbに転送されます。
+`aria-label`または`aria-labelledby`を使用して単一のthumb Sliderに名前を付けると、`slider`ロールを持つ要素であるthumbに転送されます。
 
-複数の親指Sliderの親指は位置によって名前が付けられ、2つの親指の場合は`Minimum`/`Maximum`、3つ以上の場合は`Value n of m`です。これらの名前は保持され、`aria-label`はすべての親指で繰り返されるのではなく、ルート上の`group`ロールを介してスライダー全体に名前を付けます。
+複数の親指スライダーの親指は位置によって名前が付けられます。2つの親指の場合は`Minimum`/`Maximum`、3つ以上の場合は`Value n of m`です。これらの名前は保持され、`aria-label`はすべての親指で繰り返されるのではなく、ルート上の`group`ロールを通じてスライダー全体に名前を付けます。
 ::
 
-###  Min/Max
+### Min/Max
 
-`min`および`max` propsを使用して、スライダーの最小値と最大値を設定します。デフォルトは`0`および`100`です。
+`min`と`max`のプロパティを使用して、スライダーの最小値と最大値を設定します。デフォルトは`0`と`100`です。
 
 ::component-code
 ---
-無視
-  -  defaultValue
-小道具
-  分0
-  最高50
-  defaultValue 50
+ignore:
+  - defaultValue
+props:
+  min: 0
+  max: 50
+  defaultValue: 50
 ---
 ::
 
-### ステップ
+### Step
 
 スライダーのインクリメント値を設定するには、`step`プロパティを使用します。デフォルトは`1`です。
 
 ::component-code
 ---
-無視
-  -  defaultValue
-小道具
-  ステップ10
-  defaultValue 50
+ignore:
+  - defaultValue
+props:
+  step: 10
+  defaultValue: 50
 ---
 ::
 
 ### 複数
 
-`v-model`ディレクティブまたは`default-value`プロパティを値の配列で使用して、範囲スライダーを作成します。
+`v-model`ディレクティブまたは`default-value`プロパティを値の配列とともに使用して、範囲Sliderを作成します。
 
 ::component-code
 ---
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue [25 75]
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: [25, 75]
 ---
 ::
 
@@ -90,117 +90,117 @@ links:
 
 ::component-code
 ---
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue [25 50 75]
-  最小ステップ間親指10
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: [25, 50, 75]
+  minStepsBetweenThumbs: 10
 ---
 ::
 
-### オリエンテーション
+### Orientation
 
 スライダーの向きを変更するには、`orientation`プロパティを使用します。デフォルトは`horizontal`です。
 
 ::component-code
 ---
-無視
-  -  defaultValue
-  - クラス
-小道具
-  オリエンテーション垂直
-  defaultValue 50
-  クラス'h—48'
+ignore:
+  - defaultValue
+  - class
+props:
+  orientation: vertical
+  defaultValue: 50
+  class: 'h-48'
 ---
 ::
 
-### カラー
+### Color
 
-スライダーの色を変更するには、`color`プロパティを使用します。
+`color`プロパティを使用してスライダーの色を変更します。
 
 ::component-code
 ---
-無視
-  -  defaultValue
-小道具
-  色ニュートラル
-  defaultValue 50
+ignore:
+  - defaultValue
+props:
+  color: neutral
+  defaultValue: 50
 ---
 ::
 
 ### サイズ
 
-スライダーのサイズを変更するには、`size`プロパティを使用します。
+`size`プロパティを使用してスライダーのサイズを変更します。
 
 ::component-code
 ---
-無視
-  -  defaultValue
-小道具
-  サイズXL
-  defaultValue 50
+ignore:
+  - defaultValue
+props:
+  size: xl
+  defaultValue: 50
 ---
 ::
 
-### ツールチップ
+### Tooltip
 
-`tooltip` propを使用して、現在の値でSliderの親指の周りに[ Tooltip ](/docs/components/tooltip)を表示します。デフォルトの動作で`true`に設定するか、[ Tooltip ](/docs/components/tooltip#props)コンポーネントの任意のプロパティを使用してカスタマイズするオブジェクトを渡すことができます。
+`tooltip`プロパティを使用して、[Tooltip](/docs/components/tooltip)をスライダー親指の周りに現在の値で表示します。デフォルトの動作では`true`に設定するか、[Tooltip](/docs/components/tooltip#props)コンポーネントの任意のプロパティを使用してカスタマイズするオブジェクトを渡すことができます。
 
 ::component-code
 ---
-無視
-  -  defaultValue
-  - ツールチップ
-小道具
-  defaultValue 50
-  ツールチップtrue
+ignore:
+  - defaultValue
+  - tooltip
+props:
+  defaultValue: 50
+  tooltip: true
 ---
 ::
 
-### 無効
+### Disable
 
-スライダーを無効にするには、`disabled`プロパティを使用します。
+`disabled`プロパティを使用してスライダーを無効にします。
 
 ::component-code
 ---
-無視
-  -  defaultValue
-小道具
-  無効true
-  defaultValue 50
+ignore:
+  - defaultValue
+props:
+  disabled: true
+  defaultValue: 50
 ---
 ::
 
-### インバータ
+### 反転
 
-スライダーを視覚的に反転させるには、`inverted`プロパティを使用します。
+`inverted`プロパティを使用してスライダーを視覚的に反転させます。
 
 ::component-code
 ---
-無視
-  -  defaultValue
-小道具
-  反転：true
-  defaultValue 25
+ignore:
+  - defaultValue
+props:
+  inverted: true
+  defaultValue: 25
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

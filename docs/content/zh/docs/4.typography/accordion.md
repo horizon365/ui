@@ -9,7 +9,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Accordion.vue
 ---
 
-## 使用情况
+## 用法
 
 使用`accordion`和`accordion-item`组件在内容中显示[Accordion](/docs/components/accordion)。
 
@@ -17,7 +17,7 @@ links:
 
 :::accordion
 ---
-默认值：
+defaultValue:
   - '1'
 ---
 
@@ -26,7 +26,7 @@ links:
 ::
 
 ::accordion-item{label="我可以在没有Nuxt的情况下使用Vue的Nuxt UI吗？" icon="i-lucide-circle-help"}
-是的，我会的在针对Nuxt进行优化的同时，Nuxt UI可以通过我们的Vite插件完美地与独立的Vue项目配合使用。您可以按照[](/docs/getting-started/installation/vue)开始安装。
+是的，我会的虽然针对Nuxt进行了优化，但Nuxt UI通过我们的Vite插件与独立Vue项目完美兼容。您可以按照[安装指南](/docs/getting-started/installation/vue)开始使用。
 ::
 
 ::accordion-item{label="Nuxt UI是否已准备好生产？" icon="i-lucide-circle-help"}
@@ -35,7 +35,7 @@ links:
 
 :::
 
-#代码
+#code
 
 ```mdc
 ::accordion
@@ -61,25 +61,25 @@ Yes! Nuxt UI is used in production by thousands of applications with extensive t
 
 ::
 
-美国石油学会
+## API
 
 ### Props
 
-：组件-道具{prose}
+:component-props{prose}
 
 ### Slots
 
-：组件插槽{prose}
+:component-slots{prose}
 
-主题
+## Theme
 
 ::component-theme{prose}
 ---
-额外：
+extra:
   - accordionItem
 ---
 ::
 
 ## Changelog
 
-：component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

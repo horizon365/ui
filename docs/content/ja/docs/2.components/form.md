@@ -13,67 +13,67 @@ links:
 
 ## 使用法
 
-フォームコンポーネントを使用して、[ Standard Schema ](https://github.com/standard-schema/standard-schema)[ Valibot ](https://github.com/fabian-hiller/valibot)[ Zod ](https://github.com/colinhacks/zod)をサポートする任意の検証ライブラリを使用してフォームデータを検証します。[ Regle ](https://github.com/victorgarciaesgi/regle)[ Yup ](https://github.com/jquense/yup)[ Joi ](https://github.com/hapijs/joi)または[ Superstruct ](https://github.com/ianstormtaylor/superstruct)または独自の検証ロジック
+フォームコンポーネントを使用して、[標準Schema](https://github.com/standard-schema/standard-schema)をサポートする検証ライブラリ（[ Valibot](https://github.com/fabian-hiller/valibot)、[Zod](https://github.com/colinhacks/zod)、[ Regle](https://github.com/victorgarciaesgi/regle)、[Yup](https://github.com/jquense/yup)など）を使用してフォームデータを検証します。[Joi](https://github.com/hapijs/joi)または[Superstruct](https://github.com/ianstormtaylor/superstruct)または独自の検証ロジック。
 
-[ FormField ](/docs/components/form-field)コンポーネントと連携して、フォーム要素に関するエラーメッセージを自動的に表示します。
+[FormField](/docs/components/form-field)コンポーネントと連携して、フォーム要素に関するエラーメッセージを自動的に表示します。
 
-### スキーマ検証
+### Schema検証
 
 小道具は2つ必要です。
 
 - `state`—フォームの状態を保持するリアクティブオブジェクト。
-- `schema`—any [ Standard Schema ](https://github.com/standard-schema/standard-schema)または[ Superstruct ](https://github.com/ianstormtaylor/superstruct)。
+- `schema`—任意の[標準Schema](https://github.com/standard-schema/standard-schema)または[Superstruct](https://github.com/ianstormtaylor/superstruct)。
 
 ::warning
-**デフォルトではバリデーションライブラリが含まれていません。**必要なライブラリを@@@インストールしてください。
+**x**はデフォルトでは含まれていません。**xxx**をインストールしてください。
 ::
 
 ::tabs{class="gap-0"}
   ::component-example{label="Valibot"}
   ---
-  名前'form—example—valibot'
-  小道具
-    クラス'w—60'
+  name: 'form-example-valibot'
+  props:
+    class: 'w-60'
   ---
   ::
 
   ::component-example{label="ゾッド"}
   ---
-  名前'form—example—zod'
-  小道具
-    クラス'w—60'
+  name: 'form-example-zod'
+  props:
+    class: 'w-60'
   ---
   ::
 
   ::component-example{label="リーグル"}
   ---
-  名前'form—example—regle'
-  小道具
-    クラス'w—60'
+  name: 'form-example-regle'
+  props:
+    class: 'w-60'
   ---
   ::
 
   ::component-example{label="うん。"}
   ---
-  名前'form—example—yup'
-  小道具
-    クラス'w—60'
+  name: 'form-example-yup'
+  props:
+    class: 'w-60'
   ---
   ::
 
   ::component-example{label="Joi"}
   ---
-  名前'form—example—joi'
-  小道具
-    クラス'w—60'
+  name: 'form-example-joi'
+  props:
+    class: 'w-60'
   ---
   ::
 
   ::component-example{label="Superstruct"}
   ---
-  名前'form—example—superstruct'
-  小道具
-    クラス'w—60'
+  name: 'form-example-superstruct'
+  props:
+    class: 'w-60'
   ---
   ::
 ::
@@ -88,44 +88,44 @@ links:
 - `name`—エラーを送信する`FormField`の`name`。
 
 ::tip
-`schema` propと一緒に使用して、複雑なユースケースを処理できます。
+`schema`プロパティと一緒に使用して、複雑なユースケースを処理できます。
 ::
 
 ::component-example
 ---
-名前'form—example—basic'
-小道具
-  クラス'w—60'
+name: 'form-example-basic'
+props:
+  class: 'w-60'
 ---
 ::
 
-### エラー報告
+### Errorレポート
 
-エラーは対応する[ FormField ](/docs/components/form-field)`name` propを使用してマッチします。`email`フィールドのエラーは`<FormField name="email">`{lang="vue"}で表示されます。
+エラーは、対応する[FormField](/docs/components/form-field)の`name`プロパティを使用してマッチングされます。`email`フィールドのエラーは`<FormField name="email">`{lang="vue"}で表示されます。
 
 ネストされたフィールドはドット表記でマッチングされます。`<FormField name="user.email">`{lang="vue"}には`{ user: z.object({ email: z.string() }) }`{lang="ts"}のようなスキーマが適用されます。
 
 ::warning
-配列項目のエラーは名前にインデックスを含む例`tags.1`と、`name`だけでは`<FormField name="tags">`{lang="vue"}にマッチしません。`/^tags\..+/`{lang="ts"}のような正規表現で`error-pattern` propを使用してキャプチャします。これは[ InputTags @のようなコンポーネントで特に便利です。](/docs/components/input-tags)。
+配列アイテムのエラーは名前にインデックスを含み例`tags.0` `tags.1`、`name`だけでは`<FormField name="tags">`{lang="vue"}にはマッチしません。`error-pattern`プロパティに`/^tags\..+/`{lang="ts"}のような正規表現を加えて使用してください。これは特に[InputTags](/docs/components/input-tags)のようなコンポーネントに便利です。
 ::
 
 ::component-example
 ---
-名前'form—example—error—pattern'
-小道具
-  クラス'w—60'
+name: 'form-example-error-pattern'
+props:
+  class: 'w-60'
 ---
 ::
 
-### 入力イベント
+### Inputイベント
 
 フォームコンポーネントは、入力が`input`、`change`、または`blur`イベントを出力すると自動的に検証をトリガします。
 
-- `input`の検証は、**と入力すると**が発生します。
-- `change`のバリデーションは、**が値**にコミットした場合に発生します。
-- `blur`の検証は、入力**がフォーカス**を失ったときに行われます。
+- `input`の検証は、e**をタイプすると**が行われます。
+- `change`のバリデーションは、**xvalue**にコミットすると発生します。
+- `blur`の検証は、入力**focus**を失うと行われます。
 
-`validate-on` propを使用してバリデーションが行われるタイミングを制御できます。
+`validate-on` propを使ってバリデーションのタイミングを制御できます。
 
 ::tip
 フォームは常に送信時に検証します。
@@ -133,20 +133,20 @@ links:
 
 ::component-example{label="デフォルト"}
 ---
-ソース：false
-name 'form—example—elements'
-オプション
-  -  name 'validate—on'
-    ラベル'validate—on'
-    アイテム
-    - '入力'
+source: false
+name: 'form-example-elements'
+options:
+  - name: 'validate-on'
+    label: 'validate-on'
+    items:
+    - 'input'
     - 'change'
     - 'blur'
-    デフォルト
-    - '入力'
+    default:
+    - 'input'
     - 'change'
     - 'blur'
-    複数true
+    multiple: true
 ---
 ::
 
@@ -154,11 +154,11 @@ name 'form—example—elements'
 `useFormField`コンポーザブルを使用して、独自のコンポーネント内でこれを実装できます。
 ::
 
-### エラーイベント
+### Errorイベント
 
-`@error`イベントをリッスンしてエラーを処理できます。このイベントはフォームが送信されたときにトリガーされ、以下のフィールドを持つ`FormError`オブジェクトの配列が含まれています。
+エラーを処理するために`@error`イベントをリッスンできます。このイベントはフォームが送信されたときにトリガーされ、次のフィールドを持つ`FormError`オブジェクトの配列が含まれています。
 
-- `id`—入力は`id`です。
+- `id`—入力の`id`。
 - `name`—`FormField`の`name`
 - `message`—表示するエラーメッセージ。
 
@@ -166,26 +166,26 @@ name 'form—example—elements'
 
 ::component-example
 ---
-名前'form—example—on—error'
-崩壊真
-小道具
-  クラス'w—60'
+name: 'form-example-on-error'
+collapse: true
+props:
+  class: 'w-60'
 ---
 ::
 
-###  HTML5検証badge {label="4.5+" class="align-text-top"}
+### HTML5検証badge{label="4.5+" class="align-text-top"}
 
-`form.submit()`をプログラムで呼び出すと、フォームコンポーネントは送信前にネイティブHTML5検証を自動的にトリガーします。
+`form.submit()`をプログラムで呼び出すと、フォームコンポーネントは送信前にネイティブHTML 5検証を自動的にトリガーします。
 
 ::note
-これは、モーダルフッターなど、送信ボタンがフォーム要素の外側にある場合に特に便利です。
+これはモーダルフッターなど、送信ボタンがフォーム要素の外側にある場合に特に便利です。
 ::
 
 ::component-example
 ---
-名前'form—example—html5—validation'
-小道具
-  クラス'w—60'
+name: 'form-example-html5-validation'
+props:
+  class: 'w-60'
 ---
 ::
 
@@ -199,8 +199,8 @@ name 'form—example—elements'
 
 ::component-example
 ---
-崩壊真
-名前'form—example—nested'
+collapse: true
+name: 'form-example-nested'
 ---
 ::
 
@@ -208,32 +208,32 @@ name 'form—example—elements'
 
 ::component-example
 ---
-崩壊真
-名前'form—example—nested—list'
+collapse: true
+name: 'form-example-nested-list'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attributes" target="_blank"}
-このコンポーネントは、すべてのネイティブ`<form>` HTML属性もサポートします。
+このコンポーネントはすべてのネイティブ`<form>` HTML属性もサポートします。
 ::
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-###  Expose
+### Expose
 
-型付きコンポーネントインスタンスには、[`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref)を使用してアクセスできます。
+[`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref)を使用して型付きコンポーネントインスタンスにアクセスできます。
 
 ```vue
 <script setup lang="ts">
@@ -249,22 +249,22 @@ const form = useTemplateRef('form')
 
 | 名前|タイプ|
 | ---- | ---- |
-| `submit()`{lang="ts-type"}| `Promise<void>`{lang="ts-type"}<br><div class="text-toned mt-1"><p> HTML5検証でフォーム送信をトリガーします。</p></div>|
-| `validate(opts: { name?: keyof T \| (keyof T)[], silent?: boolean, nested?: boolean, transform?: boolean })`{lang="ts-type"}| `Promise<T>`{lang="ts-type"}<br><div class="text-toned mt-1"><p>フォーム検証をトリガーします。`opts.silent`がtrueに設定されていない限り、エラーが発生します。</p></div>|
-| `clear(path?: keyof T \| RegExp)`{lang="ts-type"}| `void`<br><div class="text-toned mt-1"><p>特定のパスに関連付けられたフォームエラーをクリアします。パスが指定されていない場合は、すべてのフォームエラーをクリアします。</p></div>|
-| `getErrors(path?: keyof T \| RegExp)`{lang="ts-type"}| `FormErrorWithId[]`{lang="ts-type"}<br><div class="text-toned mt-1"><p>特定のパスに関連付けられたフォームエラーを取得します。パスが指定されていない場合は、すべてのフォームエラーを返します。</p></div>|
-| `setErrors(errors: FormError[], name?: keyof T \| RegExp)`{lang="ts-type"}| `void`<br><div class="text-toned mt-1"><p>指定されたパスのフォームエラーを設定します。パスが指定されていない場合、すべてのエラーを上書きします。</p></div>|
-| `errors`{lang="ts-type"}| `Ref<FormErrorWithId[]>`{lang="ts-type"}<br><div class="text-toned mt-1"><p>バリデーションエラーを含む配列への参照。エラー情報にアクセスしたり操作したりするときに使用します。</p></div>|
+| `submit()`{lang="ts-type"}| `Promise<void>`{lang="ts-type"} <br> <div class="text-toned mt-1"><p> HTML5検証でフォーム送信をトリガーします。</p></div>|
+| `validate(opts: { name?: keyof T \| (keyof T)[], silent?: boolean, nested?: boolean, transform?: boolean })`{lang="ts-type"}| `Promise<T>`{lang="ts-type"} <br> <div class="text-toned mt-1"><p>フォーム検証をトリガーします。`opts.silent`がtrueに設定されていない限り、エラーが発生します。</p></div>|
+| `clear(path?: keyof T \| RegExp)`{lang="ts-type"}| `void` <br> <div class="text-toned mt-1"><p>特定のパスに関連付けられたフォームエラーをクリアします。パスが指定されていない場合、すべてのフォームエラーをクリアします。</p></div>|
+| `getErrors(path?: keyof T \| RegExp)`{lang="ts-type"}| `FormErrorWithId[]`{lang="ts-type"} <br> <div class="text-toned mt-1"><p>特定のパスに関連するフォームエラーを取得します。パスが指定されていない場合、すべてのフォームエラーを返します。</p></div>|
+| `setErrors(errors: FormError[], name?: keyof T \| RegExp)`{lang="ts-type"}| `void` <br> <div class="text-toned mt-1"><p>指定したパスのエラーを設定します。パスが指定されていない場合、すべてのエラーを上書きします。</p></div>|
+| `errors`{lang="ts-type"}| `Ref<FormErrorWithId[]>`{lang="ts-type"} <br> <div class="text-toned mt-1"><p>A検証エラーを含む配列への参照。これを使用してエラー情報にアクセスしたり操作したりします。</p></div>|
 | `disabled`{lang="ts-type"}| `Ref<boolean>`{lang="ts-type"}|
-| `dirty`{lang="ts-type"}| `Ref<boolean>`{lang="ts-type"}`true`は、ユーザーによって少なくとも1つのフォームフィールドが更新された場合。|
-| `dirtyFields`{lang="ts-type"}| `ReadonlySet<DeepReadonly<keyof T>>`{lang="ts-type"}ユーザーが変更したフィールドを追跡します。|
+| `dirty`{lang="ts-type"}| `Ref<boolean>`{lang="ts-type"} `true`少なくとも1つのフォームフィールドがユーザによって更新された場合。|
+| `dirtyFields`{lang="ts-type"}| `ReadonlySet<DeepReadonly<keyof T>>`{lang="ts-type"}ユーザが変更したフィールドを追跡します。|
 | `touchedFields`{lang="ts-type"}| `ReadonlySet<DeepReadonly<keyof T>>`{lang="ts-type"}ユーザが操作したフィールドを追跡します。|
 | `blurredFields`{lang="ts-type"}| `ReadonlySet<DeepReadonly<keyof T>>`{lang="ts-type"}ユーザーがぼかしたフィールドを追跡します。|
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

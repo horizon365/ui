@@ -14,13 +14,13 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Separator.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice el componente Separador para separar el contenido.
 
 ::component-code
 ---
-Categoría: P-8
+class: 'p-8'
 ---
 ::
 
@@ -30,122 +30,122 @@ Utilice el prop `orientation` para cambiar la orientación del Separator. Defaul
 
 ::component-code
 ---
-Ignora:
-  @@clase004
-Categoría: P-8
-Props:
-  Orientación: Vertical
-  Categoría: H-48
+ignore:
+  - class
+class: 'p-8'
+props:
+  orientation: vertical
+  class: 'h-48'
 ---
 ::
 
-@@pH005@etiqueta
+### Label
 
-Utilice el prop `label` para mostrar una etiqueta en el centro del separador.
+Utilice el accesorio `label` para mostrar una etiqueta en el centro del separador.
 
 ::component-code
 ---
-Categoría: P-8
-Props:
-  Archivo de la etiqueta: "Hello World"
+class: 'p-8'
+props:
+  label: 'Hello World'
 ---
 ::
 
-### Posición: badge{label="4.8+" class="align-text-top"}
+Ubicación: badge{label="4.8+" class="align-text-top"}
 
-Utilice el prop `position` para cambiar la posición del contenido del Separator. Defaults a `center`.
+Utilice la prop `position` para cambiar la posición del contenido del Separator. Defaults a `center`.
 
 ::component-code
 ---
-Ignora:
-  @@11@clase
-Categoría: P-8
-Props:
-  Ubicación: Start
-  Archivo de la etiqueta: "Hello World"
+ignore:
+  - class
+class: 'p-8'
+props:
+  position: start
+  label: 'Hello World'
 ---
 ::
 
-@@pH012@Icon
+### Icono
 
-Utilice el prop `icon` para mostrar un icono en el centro del separador.
+Utilice el accesorio `icon` para mostrar un icono en el centro del separador.
 
 ::component-code
 ---
-Categoría: P-8
-Props:
-  icono: 'i-simple-icons-nuxtdotjs'
+class: 'p-8'
+props:
+  icon: 'i-simple-icons-nuxtdotjs'
 ---
 ::
 
-@14@avatar
+### Avatar
 
-Utilice el prop `avatar` para mostrar un avatar en el medio del Separador.
+Utilice el soporte `avatar` para mostrar un avatar en el centro del Separador.
 
 ::component-code
 ---
-Categoría: true
-Categoría: P-8
-Ignora:
-  - avatar.carga
-Props:
-  El avatar:
+prettier: true
+class: 'p-8'
+ignore:
+  - avatar.loading
+props:
+  avatar:
     src: 'https://github.com/nuxt.png'
-    Categoría: Lazy
+    loading: lazy
 ---
 ::
 
-@17@color
+### Color (Edición española)
 
-Utilice el prop `color` para cambiar el color del Separador. Predeterminados a `neutral`.
+Utilice el prop `color` para cambiar el color del Separator. Defaults a `neutral`.
 
 ::component-code
 ---
-Categoría: P-8
-Props:
-  Color: Primario
-  Tipo: Sólido
+class: 'p-8'
+props:
+  color: primary
+  type: solid
 ---
 ::
 
-@200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Tipo
 
 Utilice el prop `type` para cambiar el tipo de Separator. Defaults a `solid`.
 
 ::component-code
 ---
-Categoría: P-8
-Props:
-  Categoría: Fretted
+class: 'p-8'
+props:
+  type: dashed
 ---
 ::
 
-@@23000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Tamaño
 
-Utilice el prop `size` para cambiar el tamaño del Separator. Defaults a `xs`.
+Utilice el prop `size` para cambiar el tamaño del Separator. Prevalus a `xs`.
 
 ::component-code
 ---
-Categoría: P-8
-Props:
-  Tamaño: LG
+class: 'p-8'
+props:
+  size: lg
 ---
 ::
 
-@@26000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## API (Edición española)
 
-@@27000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Accesorios
 
-Componentes Props
+:component-props
 
-@@28000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots (en inglés)
 
-Componentes de slots
+:component-slots
 
-@@29@29000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Temas
 
-Componente Tema
+:component-theme
 
-@@changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

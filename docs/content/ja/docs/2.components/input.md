@@ -15,32 +15,32 @@ Inputの値を制御するには`v-model`ディレクティブを使用します
 
 ::component-code
 ---
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue ''
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ''
 ---
 ::
 
-### タイプ
+### Type
 
-入力タイプを変更するには、`type`プロパティを使用します。デフォルトは`text`です。
+`type`プロパティを使用して入力タイプを変更します。デフォルトは`text`です。
 
-[ Checkbox ](/docs/components/checkbox)[ Radio ](/docs/components/radio-group)[ INputNumber ](/docs/components/input-number)などのような型もあります。
+[Check box](/docs/components/checkbox)，[Radio](/docs/components/radio-group)，[InputNumber](/docs/components/input-number)などの型もあります。
 
 ::component-code
 ---
-アイテム
-  タイプ
-    - テキスト
-    -  number
-    - パスワード
-    - 検索
-    - ファイル
-小道具
-  タイプ'file'
+items:
+  type:
+    - text
+    - number
+    - password
+    - search
+    - file
+props:
+  type: 'file'
 ---
 ::
 
@@ -48,170 +48,170 @@ Inputの値を制御するには`v-model`ディレクティブを使用します
 利用可能なすべての型はMDN Web Docsで確認できます。
 ::
 
-### プレースホルダー
+### Placeholder
 
-プレースホルダーテキストを設定するには、`placeholder`プロパティを使用します。
+`placeholder`プロパティを使用してプレースホルダーテキストを設定します。
 
 ::component-code
 ---
-小道具
-  プレースホルダー '検索...'
+props:
+  placeholder: 'Search...'
 ---
 ::
 
-### カラー
+### Color
 
 `color`プロパティを使用して、Inputがフォーカスされたときにリングの色を変更します。
 
 ::component-code
 ---
-無視
-  - プレースホルダー
-小道具
-  色ニュートラル
-  ハイライト真
-  プレースホルダー '検索...'
+ignore:
+  - placeholder
+props:
+  color: neutral
+  highlight: true
+  placeholder: 'Search...'
 ---
 ::
 
 ::note
-`highlight` propはフォーカス状態を示すために使用されます。これはバリデーションエラーが発生したときに内部で使用されます。
+`highlight`プロパティはフォーカスの状態を示すために使用されます。バリデーションエラーが発生したときに内部で使用されます。
 ::
 
-### バリアント
+### Variant
 
-Inputのバリアントを変更するには、`variant`プロパティを使用します。
+`variant`プロパティを使用して、Inputのバリアントを変更します。
 
 ::component-code
 ---
-無視
-  - プレースホルダー
-小道具
-  色ニュートラル
-  バリアント：微妙
-  ハイライトfalse
-  プレースホルダー '検索...'
+ignore:
+  - placeholder
+props:
+  color: neutral
+  variant: subtle
+  highlight: false
+  placeholder: 'Search...'
 ---
 ::
 
 ### サイズ
 
-入力のサイズを変更するには、`size`プロパティを使用します。
+`size`プロパティを使用してInputのサイズを変更します。
 
 ::component-code
 ---
-無視
-  - プレースホルダー
-小道具
-  サイズXL
-  プレースホルダー '検索...'
+ignore:
+  - placeholder
+props:
+  size: xl
+  placeholder: 'Search...'
 ---
 ::
 
-### アイコン
+### Icon
 
-`icon` propを使用して、入力内に[ Icon ](/docs/components/icon)を表示します。
+`icon`プロパティを使用して、Input内に[Icon](/docs/components/icon)を表示します。
 
 ::component-code
 ---
-きれい真
-無視
-  - プレースホルダー
-小道具
-  アイコン'i—lucide'
-  サイズMD
-  variantアウトライン
-  プレースホルダー '検索...'
+prettier: true
+ignore:
+  - placeholder
+props:
+  icon: 'i-lucide-search'
+  size: md
+  variant: outline
+  placeholder: 'Search...'
 ---
 ::
 
-アイコンの位置を設定するには`leading`と`trailing` propsを使用し、位置ごとに異なるアイコンを設定するには`leading-icon`と`trailing-icon` propsを使用します。
+アイコンの位置を設定するには`leading`と`trailing`のプロップを使用し、位置ごとに異なるアイコンを設定するには`leading-icon`と`trailing-icon`のプロップを使用します。
 
 ::component-code
 ---
-きれい真
-無視
-  - プレースホルダー
-小道具
-  trailingIcon i—lucide—at—sign
-  プレースホルダー 'メールアドレスを入力'
-  サイズMD
+prettier: true
+ignore:
+  - placeholder
+props:
+  trailingIcon: i-lucide-at-sign
+  placeholder: 'Enter your email'
+  size: md
 ---
 ::
 
 ### アバター
 
-`avatar` propを使用して、入力内に[ Avatar ](/docs/components/avatar)を表示します。
+`avatar`プロパティを使用して、Input内に[Avatar](/docs/components/avatar)を表示します。
 
 ::component-code
 ---
-きれい真
-無視
-  - プレースホルダー
-  -  avatar.loading
-小道具
-  アバター
-    https//github.com/nuxt.png
-    読み込み怠惰
-  サイズMD
-  variantアウトライン
-  プレースホルダー '検索...'
+prettier: true
+ignore:
+  - placeholder
+  - avatar.loading
+props:
+  avatar:
+    src: 'https://github.com/nuxt.png'
+    loading: lazy
+  size: md
+  variant: outline
+  placeholder: 'Search...'
 ---
 ::
 
-### ローディング
+### Loading
 
 `loading`プロパティを使用して、Inputにロードアイコンを表示します。
 
 ::component-code
 ---
-無視
-  - プレースホルダー
-小道具
-  読み込み真
-  トレーリングfalse
-  プレースホルダー '検索...'
+ignore:
+  - placeholder
+props:
+  loading: true
+  trailing: false
+  placeholder: 'Search...'
 ---
 ::
 
-###  Loadingアイコン
+### Loading Icon
 
-読み込みアイコンをカスタマイズするには、`loading-icon`プロパティを使用します。デフォルトは`i-lucide-loader-circle`です。
+`loading-icon`プロパティを使用してロードアイコンをカスタマイズします。デフォルトは`i-lucide-loader-circle`です。
 
 ::component-code
 ---
-無視
-  - プレースホルダー
-小道具
-  読み込み真
-  loadingIcon 'i—lucide—loader'
-  プレースホルダー '検索...'
+ignore:
+  - placeholder
+props:
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  placeholder: 'Search...'
 ---
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.loading`キーの下の`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`app.config.ts`の`ui.icons.loading`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.loading`キーの下の`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`vite.config.ts`の`ui.icons.loading`キーでグローバルにカスタマイズできます。
 :::
 ::
 
 ### 無効
 
-入力を無効にするには、`disabled`プロパティを使用します。
+`disabled`プロパティを使用してInputを無効にします。
 
 ::component-code
 ---
-無視
-  - プレースホルダー
-小道具
-  無効true
-  プレースホルダー '検索...'
+ignore:
+  - placeholder
+props:
+  disabled: true
+  placeholder: 'Search...'
 ---
 ::
 
@@ -219,76 +219,76 @@ Inputのバリアントを変更するには、`variant`プロパティを使用
 
 ### クリアボタン付き
 
-入力をクリアするには、[ Button ](/docs/components/button)を`#trailing`スロット内に入れます。
+入力をクリアするには、[Button](/docs/components/button)を`#trailing`スロット内に入れます。
 
 ::component-example
 ---
-名前'入力—クリア—ボタンの例'
+name: 'input-clear-button-example'
 ---
 ::
 
 ### コピーボタン付き
 
-[ Button ](/docs/components/button)を`#trailing`スロット内に入れて、値をクリップボードにコピーできます。
+[Button](/docs/components/button)を`#trailing`スロット内に配置して、値をクリップボードにコピーできます。
 
 ::component-example
 ---
-名前'入力—コピー—ボタン—例'
+name: 'input-copy-button-example'
 ---
 ::
 
-### パスワードトグル付き
+### Withパスワードトグル
 
-[ Button ](/docs/components/button)を`#trailing`スロット内に入れて、パスワードの表示を切り替えることができます。
+パスワードの表示を切り替えるには、[Button](/docs/components/button)を`#trailing`スロット内に置くことができます。
 
 ::component-example
 ---
-名前'入力パスワード—toggle—example'
+name: 'input-password-toggle-example'
 ---
 ::
 
 ### パスワード強度インジケータ付き
 
-[ Progress ](/docs/components/progress)コンポーネントを使用して、パスワード強度インジケータを表示できます。
+[Progress](/docs/components/progress)コンポーネントを使用して、パスワード強度インジケータを表示できます。
 
 ::component-example
 ---
-崩壊真
-名前'入力パスワード強度インジケータ例'
+collapse: true
+name: 'input-password-strength-indicator-example'
 ---
 ::
 
-### 文字数制限あり
+### 文字制限付き
 
-`#trailing`スロットを使用して、入力に文字制限を追加できます。
+`#trailing`スロットを使用して、Inputに文字数制限を追加できます。
 
 ::component-example
 ---
-名前'入力文字制限例'
+name: 'input-character-limit-example'
 ---
 ::
 
 ### キーボードショートカット付き
 
-`#trailing`スロット内の[ Kbd ](/docs/components/kbd)コンポーネントを使用して、入力にキーボードショートカットを追加できます。
+`#trailing`スロット内の[Kbd](/docs/components/kbd)コンポーネントを使用して、入力にキーボードショートカットを追加できます。
 
 ::component-example
 ---
-名前'input—kbd—example'
+name: 'input-kbd-example'
 ---
 ::
 
 ::note{to="/docs/composables/define-shortcuts"}
-この例では、kbd {value="/"}キーが押されたときに入力にフォーカスするために`defineShortcuts`コンポーザブルを使用します。
+この例では、kbd{value="/"}キーが押されたときに入力にフォーカスするために`defineShortcuts`コンポーザブルを使用します。
 ::
 
 ### マスク付き
 
-マスクの組み込みサポートはありませんが、[ maska ](https://github.com/beholdr/maska)のようなライブラリを使用して入力をマスクできます。
+マスクの組み込みサポートはありませんが、[maska](https://github.com/beholdr/maska)のようなライブラリを使用してInputをマスクできます。
 
 ::component-example
 ---
-名前'入力マスク—example'
+name: 'input-mask-example'
 ---
 ::
 
@@ -298,64 +298,64 @@ Inputのバリアントを変更するには、`variant`プロパティを使用
 
 ::component-example
 ---
-名前'input—floating—label—example'
+name: 'input-floating-label-example'
 ---
 ::
 
-###  FormField内
+### FormField内
 
-[ FormField ](/docs/components/form-field)コンポーネント内のInputを使用して、ラベル、ヘルプテキスト、必須インジケータなどを表示できます。
+[FormField](/docs/components/form-field)コンポーネント内のInputを使用して、ラベル、ヘルプテキスト、必要なインジケータなどを表示できます。
 
 ::component-example
 ---
-名前'入力フォームフィールド例'
+name: 'input-form-field-example'
 ---
 ::
 
 ::tip{to="/docs/components/form"}
-また、** Form **コンポーネント内で使用された場合の検証とエラー処理も提供します。
+また、**Form**コンポーネント内で使用すると、検証とエラー処理も提供します。
 ::
 
 ### フィールドグループ内
 
-[ FieldGroup ](/docs/components/field-group)コンポーネント内のInputを使用して、複数の要素をグループ化できます。
+[ FieldGroup](/docs/components/field-group)コンポーネント内のInputを使用して、複数の要素をグループ化できます。
 
 ::component-example
 ---
-名前'入力フィールドグループ例'
+name: 'input-field-group-example'
 ---
 ::
 
 ### 電話番号入力として
 
-[ FieldGroup ](/docs/components/field-group)コンポーネント内の入力を[ SelectMenu ](/docs/components/select-menu)と一緒に使用して、国コードを選択した電話番号入力を作成できます。
+[ FieldGroup](/docs/components/field-group)コンポーネント内のInputを[ SelectMenu](/docs/components/select-menu)とともに使用して、国コードを選択した電話番号入力を作成できます。
 
 ::component-example
 ---
-崩壊真
-名前'入力電話番号—example'
+collapse: true
+name: 'input-phone-number-example'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
-このコンポーネントは、すべてのネイティブ`<input>` HTML属性もサポートします。
+このコンポーネントはすべてのネイティブ`<input>` HTML属性もサポートします。
 ::
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-###  Expose
+### Expose
 
 テンプレート参照を介してコンポーネントにアクセスする場合、以下を使用できます：
 
@@ -363,10 +363,10 @@ component—emits
 | ---- | ---- |
 | `inputRef`{lang="ts-type"}| `Ref<HTMLInputElement \| null>`{lang="ts-type"}|
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

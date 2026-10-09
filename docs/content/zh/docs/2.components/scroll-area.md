@@ -17,234 +17,234 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ScrollArea.vue
 ---
 
-## 使用情况
+## 用法
 
-ScrollArea组件为大型列表创建可滚动的容器，并提供可选的虚拟化功能。
+ScrollArea组件为大型列表创建可滚动的容器，并提供可选的虚拟化。
 
 ::component-example
 ---
-收阖：true
-overflowHidden：真的
-名称：“滚动区示例”
-类：“！p-0”
+collapse: true
+overflowHidden: true
+name: 'scroll-area-example'
+class: '!p-0'
 ---
 ::
 
-项目
+### 项目
 
-将`items`道具用作数组，并使用默认插槽呈现每个项目：
+使用`items` prop作为数组，并使用默认插槽渲染每个项目：
 
 ::component-example
 ---
-收阖：true
-overflowHidden：真的
-名称：'滚动区项目示例'
-类：“！p-0”
+collapse: true
+overflowHidden: true
+name: 'scroll-area-items-example'
+class: '!p-0'
 ---
 ::
 
 ::tip{to="#with-default-slot"}
-您也可以使用不含`items`属性的预设插槽，直接呈现自订可卷动内容。
+您也可以使用不带`items`属性的默认插槽来直接呈现自定义的可滚动内容。
 ::
 
-方向
+### 方向
 
-使用`orientation`道具来变更卷动方向。预设为`vertical`。
+使用`orientation`属性更改滚动方向。将滚动方向改为`vertical`。
 
 ::component-example
 ---
-收阖：true
-overflowHidden：真的
-名称：'滚动区方向示例'
-类：“！p-0”
-可选项：
-- 名称：方向
-    标签：方向
-    默认：水平
-    项目名称：
-      垂直的
-      水平方向
+collapse: true
+overflowHidden: true
+name: 'scroll-area-orientation-example'
+class: '!p-0'
+options:
+  - name: orientation
+    label: orientation
+    default: horizontal
+    items:
+      - vertical
+      - horizontal
 ---
 ::
 
 ### 虚拟化
 
-使用`virtualize`道具仅呈现当前视图中的项目，从而在处理大型数据集时显著提高性能。
+使用`virtualize`属性仅呈现当前视图中的项目，在处理大型数据集时显著提高性能。
 
 ::note
-当虚拟化**enabled**时，请透过`virtualize`属性选项（例如`gap`、`paddingStart`和`paddingEnd`）自订间距。否则，请使用`ui`属性在`viewport`插槽上套用`gap p-4`之类的类别。
+当虚拟化为**enabled**时，通过`virtualize` prop选项（如`gap`、`paddingStart`和`paddingEnd`）自定义间距。否则，使用`ui` prop在`viewport`插槽上应用`gap p-4`等类。
 ::
 
 ::tip
-如果您的所有项目都具有**相同的高度**，请在`virtualize`属性中将`skipMeasurement`设定为`true`，以略过每一项目的DOM测量，而改用`estimateSize`。这会大幅改善大型统一清单的效能。
+如果你的所有项目都有**相同的高度**，在`virtualize`属性中将`skipMeasurement`设置为`true`，以跳过每个项目的DOM测量，而依赖于`estimateSize`。这显著提高了大型统一列表的性能。
 ::
 
 ::component-example
 ---
-收阖：true
-overflowHidden：真的
-名称：“滚动区虚拟化示例”
-类：“！p-0”
-可选项：
-- 名称：方向
-    标签：方向
-    默认：垂直
-    项目名称：
-      垂直的
-      水平方向
+collapse: true
+overflowHidden: true
+name: 'scroll-area-virtualize-example'
+class: '!p-0'
+options:
+  - name: orientation
+    label: orientation
+    default: vertical
+    items:
+      - vertical
+      - horizontal
 ---
 ::
 
-阴影：徽章
+### 阴影：badge{label="4.9+" class="align-text-top"}
 
-使用`shadow`道具可在可滚动边缘上显示渐变阴影，表示在滚动方向上有更多内容可用。渐变会自动跟随`orientation`，并且仅在内容溢出时才会显示。
+使用`shadow`道具在可滚动边缘显示淡入淡出阴影，表示滚动方向上有更多内容可用。淡入淡出自动跟随`orientation`，仅在内容溢出时出现。
 
 ::component-example
 ---
-收阖：true
-名称："滚动区阴影示例"
----
-::
-
-::tip
-将对象传递给`shadow`道具以配置淡入淡出大小，例如`:shadow="{ size: 48 }"`。
-::
-
-示例
-
-按砌体布置图
-
-将`virtualize`道具与`lanes`、`gap`和`estimateSize`选项一起使用，可创建具有可变高度项目的Pinterest风格的砖石布局。
-
-::component-example
----
-收阖：true
-overflowHidden：真的
-名称：'滚动区-砖石结构-布局-示例'
-类："! p-0"
-可选项：
-- 的方向
-    标签：方向
-    默认：垂直
-    项目名称：
-      垂直的
-      水平方向
-  我的天啊
-    类型：数字
-    标签：车道
-    默认值：3
-  空白处
-    类型：数字
-    标签：间隙
-    默认值：16
+collapse: true
+name: 'scroll-area-shadow-example'
 ---
 ::
 
 ::tip
-若要获得最佳性能，请将`estimateSize`设置为接近平均项目高度。增大`overscan`可提高滚动的平滑度，但会呈现更多屏幕外项目。
+传递一个对象到`shadow` prop来配置渐变大小，例如`:shadow="{ size: 48 }"`。
 ::
 
-有了快速响应的通道
+## 示例
 
-您可以使用[`useWindowSize`](https://vueuse.org/core/useWindowSize/)（对于基于视口的）或[`useElementSize`](https://vueuse.org/core/useElementSize/)（对于基于容器的）可合成对象使`lanes`具有反应性。
+### As砌体布置图
+
+将`virtualize`道具与`lanes`、`gap`和`estimateSize`选项一起使用，创建具有可变高度项目的Pinterest风格砖石布局。
 
 ::component-example
 ---
-收阖：true
-overflowHidden：真的
-名称："滚动区响应通道示例"
-类："! p-0"
+collapse: true
+overflowHidden: true
+name: 'scroll-area-masonry-layout-example'
+class: '!p-0'
+options:
+  - name: orientation
+    label: orientation
+    default: vertical
+    items:
+      - vertical
+      - horizontal
+  - name: lanes
+    type: number
+    label: lanes
+    default: 3
+  - name: gap
+    type: number
+    label: gap
+    default: 16
 ---
 ::
 
-### 带有外部滚动元素：徽标{label="4.10+" class="align-text-top"}
+::tip
+为了获得最佳性能，请将`estimateSize`设置为接近平均项目高度。增加`overscan`可以提高滚动平滑度，但会呈现更多的屏幕外项目。
+::
 
-在`virtualize`属性中传递`getScrollElement`函数，以便根据祖先滚动容器而不是组件自己的视口进行虚拟化。将`scrollMargin`设置为列表相对于滚动元素开始位置的偏移量（例如，其上内容的高度）。
+### 带响应通道
+
+您可以使用[`useWindowSize`](https://vueuse.org/core/useWindowSize/)（对于基于视口的）或[`useElementSize`](https://vueuse.org/core/useElementSize/)（对于基于容器的）组合来使`lanes`成为响应式的。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-overflowHidden：真的
-名称：'滚动区域外部滚动示例'
-类：“！p-0”
-可选项：
-- 名称：方向
-    标签：方向
-    默认：垂直
-    项目名称：
-      垂直的
-      水平方向
+collapse: true
+overflowHidden: true
+name: 'scroll-area-responsive-lanes-example'
+class: '!p-0'
+---
+::
+
+### 带有外部滚动元素：badge{label="4.10+" class="align-text-top"}
+
+在`virtualize` prop中传递一个`getScrollElement`函数，以针对祖先滚动容器而不是组件自己的viewport进行虚拟化。将`scrollMargin`设置为列表从滚动元素开始的偏移量（例如，其上方内容的高度）。
+
+::component-example
+---
+prettier: true
+collapse: true
+overflowHidden: true
+name: 'scroll-area-external-scroll-example'
+class: '!p-0'
+options:
+  - name: orientation
+    label: orientation
+    default: vertical
+    items:
+      - vertical
+      - horizontal
 ---
 ::
 
 ::note
-因为容器拥有滚动条，所以工具栏的“查找”和“顶部”按钮直接使用`container.scrollTo`滚动它。
+因为容器拥有滚动条，所以工具栏的查找和“Top”按钮直接使用`container.scrollTo`滚动它。
 ::
 
 ::caution
-`shadow`道具在此模式下无效，因为根目录不再拥有卷轴。请改为将您自己的淡化应用到卷轴容器。
+`shadow`道具在此模式下无效，因为根不再拥有卷轴。请对卷轴容器应用您自己的淡入淡出。
 ::
 
-### 使用程序设计滚动
+### 带有可编程滚动
 
-您可以使用公开的`virtualizer`以程序设计方式控制卷动位置。
+您可以使用暴露的`virtualizer`以编程方式控制滚动位置。
 
 ::component-example
 ---
-收阖：true
-overflowHidden：真的
-名称：'滚动区域滚动到示例'
-类：“！p-0”
+collapse: true
+overflowHidden: true
+name: 'scroll-area-scroll-to-example'
+class: '!p-0'
 ---
 ::
 
-使用无限滚动
+### 无限滚动
 
-您可以使用[`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/)可组合对象在用户滚动时加载更多数据。
+您可以使用[`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/)组合文件在用户滚动时加载更多数据。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-overflowHidden：真的
-名称：'滚动区域-无限滚动-示例'
-类：“！p-0”
+prettier: true
+collapse: true
+overflowHidden: true
+name: 'scroll-area-infinite-scroll-example'
+class: '!p-0'
 ---
 ::
 
 ::note
-此示例使用`useLazyFetch`和`server: false`在客户端上提取数据，而不阻止初始呈现。加载状态检查`pending`和`idle`的状态，以在提取之前和提取过程中显示加载指示器。用户滚动时将加载其他页面。
+本例使用`useLazyFetch`和`server: false`在客户端上获取数据，而不会阻塞初始呈现。加载状态检查`pending`和`idle`的状态，以在获取之前和期间显示加载指示符。当用户滚动时，会加载其他页面。
 ::
 
-### 使用默认插槽
+### 带默认插槽
 
-您可以使用不含`items`属性的预设插槽，直接呈现自订可卷动内容。
+您可以使用不带`items`属性的默认插槽来直接呈现自定义的可滚动内容。
 
 ::component-example
 ---
-名称：'滚动区默认插槽示例'
-类：“！p-0”
+name: 'scroll-area-default-slot-example'
+class: '!p-0'
 ---
 ::
 
-美国石油学会
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-发射器
+### Emits
 
-：组件发射
+:component-emits
 
-曝光
+### 曝光
 
-您可以使用[`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref)来存取具型别的元件实体。
+您可以使用[`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref)访问类型化的组件实例。
 
 ```vue
 <script setup lang="ts">
@@ -261,17 +261,17 @@ function scrollToItem(index: number) {
 </template>
 ```
 
-这将允许您访问以下内容：
+这将使您能够访问以下内容：
 
 | 名称|类型|描述|
 | ---- | ---- | ----------- |
-| `$el`{lang="ts-type"}|`HTMLElement`{lang="ts-type"}|组件的根元素。|
-| `virtualizer`{lang="ts-type"}|`Ref<Virtualizer> \| undefined`{lang="ts-type"}|[TanStack Virtual](https://tanstack.com/virtual/latest/docs/api/virtualizer)virtualizer实例（如果禁用虚拟化，则为`undefined`）。|
+| `$el`{lang="ts-type"}| `HTMLElement`{lang="ts-type"}|组件的根元素。|
+| `virtualizer`{lang="ts-type"}| `Ref<Virtualizer> \| undefined`{lang="ts-type"}| [TanStack Virtual](https://tanstack.com/virtual/latest/docs/api/virtualizer)虚拟器实例（如果禁用虚拟化，则为`undefined`）。|
 
 ## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

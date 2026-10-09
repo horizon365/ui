@@ -11,32 +11,32 @@ links:
 
 Footerコンポーネントは`<footer>`要素をレンダリングします。
 
-フッターをカスタマイズするには、`left`、`default`、および`right`スロットを使用します。
+フッターをカスタマイズするには、`left`、`default`、`right`スロットを使用します。
 
 ::component-example
 ---
-きれい真
-崩壊真
-名前'footer—example'
-クラス'！p—0'
-小道具
-  クラス'w—full'
+prettier: true
+collapse: true
+name: 'footer-example'
+class: '!p-0'
+props:
+  class: 'w-full'
 ---
 ::
 
 ::note
-この例では、[ NavigationMenu ](/docs/components/navigation-menu)コンポーネントを使用して、中央のフッターリンクをレンダリングします。
+この例では、[NavigationMenu](/docs/components/navigation-menu)コンポーネントを使用して、中央のフッタリンクをレンダリングします。
 ::
 
 ::tip{to="/docs/components/footer-columns"}
 `FooterColumns`コンポーネントを使用して、`top`スロット内のリンクのリストを表示できます。
 ::
 
-## 例
+## サンプル
 
-### 内`app.vue`
+### `app.vue`内
 
-`app.vue`またはレイアウトでFooterコンポーネントを使用します。
+`app.vue`またはレイアウト内でFooterコンポーネントを使用します。
 
 ```vue [app.vue]{32-67}
 <script setup lang="ts">
@@ -110,23 +110,23 @@ const items: NavigationMenuItem[] = [{
 ```
 
 ::note
-この例では、[ Separator ](/docs/components/separator)コンポーネントを使用して、フッターの上に境界線を追加します。
+この例では、[ Separator](/docs/components/separator)コンポーネントを使用してフッターの上に境界線を追加しています。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

@@ -9,13 +9,13 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Field.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Un champ, un prop ou un paramètre à afficher dans votre contenu.
 
 ::code-preview
 ::field{name="name" type="string" required class="w-full"}
-Le `description` peut être défini comme prop ou dans l'emplacement par défaut avec un support complet **markdown**.
+Le `description` peut être défini comme prop ou dans l'emplacement par défaut avec un support complet de **markdown**.
 ::
 
 #code
@@ -28,20 +28,20 @@ The `description` can be set as prop or in the default slot with full **markdown
 
 ::
 
-@@ph009 @@ réponse
+## api
 
-@@ph010@@props
+### Props
 
-: composants {prose}
+:component-props{prose}
 
-@@ph012@@réglages
+### Slots
 
-: composant-slots {prose}
+:component-slots{prose}
 
-@@ph014@thème
+## Thème
 
-: composant-thème {prose}
+:component-theme{prose}
 
-@changement@changement@changement.com
+## Changelog
 
-: composant-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

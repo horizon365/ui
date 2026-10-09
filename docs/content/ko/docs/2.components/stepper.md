@@ -12,189 +12,189 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Stepper.vue
 ---
 
-##  사용
+## Usage
 
-Stepper 구성 요소를 사용하여 스테퍼의 항목 목록을 표시합니다.
+Stepper 구성요소를 사용하여 스테퍼의 항목 목록을 표시합니다.
 
 ::component-code
 ---
-축소: true
-숨기기 (Hide):
-  -  클래스
-무시하기:
-  -  items
-  -  클래스
-외부:
-  - items 항목
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+  - class
+external:
+  - items
 externalTypes:
-  -  StepperItem []
-소품 :
-  프로젝트:
-    - title: '주소'
-      사진: "Add your address here"
-      사진: "i-lucide-house"
-    - title: '배송'
-      사진: "Set your preferred shipping method"
-      아이콘 : i-lucide-truck
-    - title: '체크 아웃'
-      사진: "confirm your order"
-  클래스 : 'w-full'
+  - StepperItem[]
+props:
+  items:
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
+  class: 'w-full'
 ---
 ::
 
-###  프로젝트
+### Items 이미지
 
-`items`prop을 다음과 같은 속성을 가진 객체의 배열로 사용합니다.
+`items` Prop을 다음 속성을 가진 오브젝트 배열로 사용합니다.
 
-- `title?: string` {lang="ts-type"}
--  @ `description?: AvatarProps` @ @ {lang="ts-type"} @
--  @ `content?: string` @ @ {lang="ts-type"} @
+- `title?: string`{lang="ts-type"}
+- `description?: AvatarProps`{lang="ts-type"} (- `description?: AvatarProps`{lang="ts-type"})
+- `content?: string`{lang="ts-type"} - {lang="ts-type"}
 - `icon?: string`{lang="ts-type"}
--  @ `value?: string | number` @ @ {lang="ts-type"} @
--  @ `disabled?: boolean` @ @ {lang="ts-type"} @
+- `value?: string | number`{lang="ts-type"}
+- `disabled?: boolean`{lang="ts-type"} (- `disabled?: boolean`{lang="ts-type"})
 - [`slot?: string`{lang="ts-type"}](#with-custom-slot)
--  @ `class?: any` @ @ {lang="ts-type"} @
-- `ui?: { item?: ClassNameValue, container?: ClassNameValue, trigger?: ClassNameValue, indicator?: ClassNameValue, icon?: ClassNameValue, separator?: ClassNameValue, wrapper?: ClassNameValue, title?: ClassNameValue, description?: ClassNameValue }` {lang="ts-type"}
+- `class?: any`{lang="ts-type"}
+- `ui?: { item?: ClassNameValue, container?: ClassNameValue, trigger?: ClassNameValue, indicator?: ClassNameValue, icon?: ClassNameValue, separator?: ClassNameValue, wrapper?: ClassNameValue, title?: ClassNameValue, description?: ClassNameValue }`{lang="ts-type"} (- `ui?: { item?: ClassNameValue, container?: ClassNameValue, trigger?: ClassNameValue, indicator?: ClassNameValue, icon?: ClassNameValue, separator?: ClassNameValue, wrapper?: ClassNameValue, title?: ClassNameValue, description?: ClassNameValue }`{lang="ts-type"})
 
 ::component-code
 ---
-무시하기:
-  -  items
-  -  클래스
-외부:
-  -  items
+ignore:
+  - items
+  - class
+external:
+  - items
 externalTypes:
-  -  StepperItem []
-소품 :
-  프로젝트:
-    - title: '주소'
-      사진: "Add your address here "
-      아이콘: i-lucide-house
-    - title: '배송'
-      사진: "Set your preferred shipping method"
-      아이콘 : i-lucide-truck
-    - title: '체크 아웃'
-      사진: "confirm your order"
-  클래스 : 'w-full'
+  - StepperItem[]
+props:
+  items:
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
+  class: 'w-full'
 ---
 ::
 
 ::note
-항목을 클릭하여 단계를 탐색합니다.
+단계를 탐색하려면 항목을 클릭합니다.
 ::
 
-###  색상
+### Color 이미지
 
-`color`prop 을 사용하여 스텝퍼의 색상을 변경합니다.
+`color` Prop을 사용하여 Stepper의 색상을 변경합니다.
 
 ::component-code
 ---
-무시하기:
-  -  content
-  -  items
-  -  클래스
-외부:
-  -  items
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
 externalTypes:
-  -  StepperItem []
-소품 :
-  색상: 중립
-  항목:
-    - title: '주소'
-      사진: "Add your address here "
-      아이콘: i-lucide-house
-    - title: '배송'
-      사진: "Set your preferred shipping method"
-      아이콘 : i-lucide-truck
-    - title: '체크 아웃'
-      사진: "confirm your order"
-  클래스: 'w-full'
+  - StepperItem[]
+props:
+  color: neutral
+  items:
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
+  class: 'w-full'
 ---
 ::
 
-###  크기
+### Size 사용
 
-`size`prop을 사용하여 스텝퍼의 크기를 변경합니다.
+`size` Prop을 사용하여 Stepper의 크기를 변경합니다.
 
 ::component-code
 ---
-무시하기:
-  -  content
-  -  items
-  -  클래스
-외부:
-  -  items
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
 externalTypes:
-  -  StepperItem []
-소품 :
-  크기: xl
-  항목:
-    - title: '주소'
-      사진: "Add your address here "
-      사진: "i-lucide-house"
-    - title: '배송'
-      사진: "Set your preferred shipping method"
-      아이콘 : i-lucide-truck
-    - title: '체크 아웃'
-      사진: "confirm your order"
-  클래스: 'w-full'
+  - StepperItem[]
+props:
+  size: xl
+  items:
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
+  class: 'w-full'
 ---
 ::
 
-###  방향
+### 방향 성
 
-`orientation`prop 을 사용하여 Stepper.기본값을 `horizontal`로 변경합니다.
+`orientation` 소품을 사용하여 Stepper.기본값은 `horizontal`로 변경합니다.
 
 ::component-code
 ---
-무시하기:
-  -  content
-  -  items
-  -  클래스
-외부:
-  -  items
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
 externalTypes:
-  -  StepperItem []
-소품 :
-  방향: 세로
-  프로젝트:
-    - title: '주소'
-      사진: "Add your address here "
-      사진: "i-lucide-house"
-    - title: '배송'
-      사진: "Set your preferred shipping method"
-      아이콘 : i-lucide-truck
-    - title: '체크 아웃'
-      사진: "confirm your order"
-  클래스 : 'w-full'
+  - StepperItem[]
+props:
+  orientation: vertical
+  items:
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
+  class: 'w-full'
 ---
 ::
 
-###  비활성 화
+### Disabled 사용 안 함
 
-`disabled`prop을 사용하여 단계 탐색을 비활성화합니다.
+`disabled` prop을 사용하여 단계 탐색을 비활성화합니다.
 
 ::component-code
 ---
-무시하기:
-  -  content
-  -  items
-  -  클래스
-외부:
-  -  items
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
 externalTypes:
-  -  StepperItem []
-소품 :
-  사용 안 함:true
-  프로젝트:
-    - title: '주소'
-      사진: "Add your address here "
-      아이콘: i-lucide-house
-    - title: '배송'
-      사진: "Set your preferred shipping method"
-      아이콘 : i-lucide-truck
-    - title: '체크 아웃'
-      사진: "confirm your order"
+  - StepperItem[]
+props:
+  disabled: true
+  items:
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
 ---
 ::
 
@@ -202,29 +202,29 @@ externalTypes:
 이 기능은 컨트롤을 사용하여 탐색을 강제로 수행하려는 경우에 유용합니다.
 ::
 
-##  예제
+## examples 예제
 
-###  컨트롤
+### With 컨트롤
 
 버튼을 사용하여 스텝퍼에 대한 추가 컨트롤을 추가할 수 있습니다.
 
-:component-example {name="stepper-with-controls-example"}
+:component-example{name="stepper-with-controls-example"}
 
-###  활성 항목 제어
+### Control 활성화된 프로젝트
 
-`default-value`prop 또는 `v-model` 지시문을 사용하여 활성 항목을 제어할 수 있습니다. `value` 가 제공되지 않은 경우 기본값은 인덱스입니다.
+`default-value` prop 또는 `v-model` 지시어를 사용하여 활성 항목을 제어할 수 있습니다. `value`가 제공되지 않으면 기본적으로 인덱스로 설정됩니다.
 
-: component-example {name="stepper-model-value-example"}
+:component-example{name="stepper-model-value-example"}
 
 ::tip
-`value-key`prop을 사용하여 `v-model` 또는 `default-value` 가 제공될 때 항목을 일치시키는 키를 변경합니다.
+`value-key` prop을 사용하여 `v-model` 또는 `default-value`가 제공될 때 항목을 일치시키는 키를 변경합니다.
 ::
 
-### 콘텐츠 슬롯 포함
+### With 컨텐츠 슬롯
 
-`#content`슬롯을 사용하여 각 항목의 콘텐츠를 사용자 정의합니다.
+`#content` 슬롯을 사용하여 각 항목의 컨텐츠를 사용자 정의합니다.
 
-: component-example {name="stepper-content-slot-example"}
+:component-example{name="stepper-content-slot-example"}
 
 ### 사용자 지정 슬롯 포함
 
@@ -232,27 +232,27 @@ externalTypes:
 
 다음과 같은 슬롯에 액세스할 수 있습니다.
 
-- `#{{ item.slot }}`{lang="ts-type"}
+- `#{{ item.slot }}`{lang="ts-type"} (- `#{{ item.slot }}`{lang="ts-type"})
 
-:component-example {name="stepper-custom-slot-example"}
+:component-example{name="stepper-custom-slot-example"}
 
-##  API
+## API 파일
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### 슬롯
 
-:컴포넌트 - 슬롯
+:component-slots
 
-###  에미츠
+### Emits
 
-:구성요소 - 방사
+:component-emits
 
-###  노출
+### exose 소개
 
-[`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref)를 사용하여 유형 구성요소 인스턴스에 액세스할 수 있습니다.
+[`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref)를 사용하여 유형이 지정된 구성 요소 인스턴스에 액세스할 수 있습니다.
 
 ```vue
 <script setup lang="ts">
@@ -266,17 +266,17 @@ const stepper = useTemplateRef('stepper')
 
 이렇게 하면 다음 항목에 액세스할 수 있습니다.
 
-| 이름 (Name)| 유형 (Type)|
+| 이름 Name| 유형 (Type)|
 | ---- | ---- |
 | `next`{lang="ts-type"}| `() => void`{lang="ts-type"}|
-| `prev`{lang="ts-type"}| `() => void`{lang="ts-type"}|
+| `prev`{lang="ts-type"} 파일| `() => void`{lang="ts-type"}|
 | `hasNext`{lang="ts-type"}| `Ref<boolean>`{lang="ts-type"}|
 | `hasPrev`{lang="ts-type"}| `Ref<boolean>`{lang="ts-type"}|
 
-##  테마
+## Theme 테마
 
-:구성요소 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

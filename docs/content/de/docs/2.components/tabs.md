@@ -6,7 +6,7 @@ keywords:
   - panels
   - sections
 links:
-  - label: Tabs sind
+  - label: Tabs sein
     icon: i-custom-reka-ui
     to: https://reka-ui.com/docs/components/tabs
   - label: GitHub
@@ -14,107 +14,107 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Tabs.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
 Verwenden Sie die Tabs-Komponente, um eine Liste von Elementen in Tabs anzuzeigen.
 
 ::component-example
 ---
-Einsturz: wahr
-Schöner: wahr
-Name: 'Tabs-Beispiel'
-Props:
-  Klasse: "W-voll"
+collapse: true
+prettier: true
+name: 'tabs-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-@@ph001@gmail.de
+### Items Bearbeiten
 
-Verwenden Sie `items` prop als Array von Objekten mit den folgenden Eigenschaften:
+Verwenden Sie die `items`-prop als Array von Objekten mit den folgenden Eigenschaften:
 
-`label?: string`PH0004@@@@@@@@@@@PH0005 @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@PH0007@@@@@@@@@@@PH0008@@@@@PH00008 @
-`avatar?: AvatarProps``avatar?: AvatarProps`PH0111 @@
-`badge?: string | number | BadgeProps``badge?: string | number | BadgeProps``badge?: string | number | BadgeProps`{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}`badge?: string | number | BadgeProps`{lang="ts-type"}
-`content?: string``content?: string``content?: string`{lang="ts-type"}{lang="ts-type"}`content?: string``content?: string``content?: string`
-`value?: string | number``value?: string | number`PH02020
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-- [`slot?: string`](#with-custom-slot)
-`class?: any`PH03333 @
-`ui?: { trigger?: ClassNameValue, leadingIcon?: ClassNameValue, leadingAvatar?: ClassNameValue, leadingAvatarSize?: ClassNameValue, label?: ClassNameValue, trailingBadge?: ClassNameValue, trailingBadgeSize?: ClassNameValue, content?: ClassNameValue }``ui?: { trigger?: ClassNameValue, leadingIcon?: ClassNameValue, leadingAvatar?: ClassNameValue, leadingAvatarSize?: ClassNameValue, label?: ClassNameValue, trailingBadge?: ClassNameValue, trailingBadgeSize?: ClassNameValue, content?: ClassNameValue }``ui?: { trigger?: ClassNameValue, leadingIcon?: ClassNameValue, leadingAvatar?: ClassNameValue, leadingAvatarSize?: ClassNameValue, label?: ClassNameValue, trailingBadge?: ClassNameValue, trailingBadgeSize?: ClassNameValue, content?: ClassNameValue }`{lang="ts-type"}{lang="ts-type"}
+- `label?: string`{lang="ts-type"} (englisch)
+- `icon?: string`{lang="ts-type"} (englisch)
+- `avatar?: AvatarProps`{lang="ts-type"} (nicht vorhanden)
+- `badge?: string | number | BadgeProps`{lang="ts-type"} (nicht vorhanden)
+- `content?: string`{lang="ts-type"} (nicht)
+- `value?: string | number`{lang="ts-type"} (Deutsche Ausgabe)
+- `disabled?: boolean`{lang="ts-type"} (nicht)
+- [`slot?: string`{lang="ts-type"}](#with-custom-slot)
+- `class?: any`{lang="ts-type"} (nicht vorhanden)
+- `ui?: { trigger?: ClassNameValue, leadingIcon?: ClassNameValue, leadingAvatar?: ClassNameValue, leadingAvatarSize?: ClassNameValue, label?: ClassNameValue, trailingBadge?: ClassNameValue, trailingBadgeSize?: ClassNameValue, content?: ClassNameValue }`{lang="ts-type"} (englisch)
 
 ::component-code
 ---
-Ignoriert:
-  @@ph037@gmail.de
-  @@@@@@38@38@38@38@38@38@38@38@38@38@38@38@38@38@38@38@@38@38@@38@38@@38@@38@@38@@38@@38@@38@@38@@38@@38@@38@@38@@38@@38@38@@38@@38@@@38@@@38@@@38@@@38@@@@@38@@@@@38@@@@@@@@@@@@@@@@@@38338@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@383338
-Außen:
-  @@ph039@gmail.de
-Externe Typen:
-  @@ph040@@tabsItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Items:
-    - label: Rechnung
-      Icon: 'i-lucide-user'(Benutzer)
-      content: "Dies ist der Inhalt des Kontos."
-    @@ph042@@label: Passwort eingeben
-      Icon: 'i-lucide-lock'(I-luzide-Schloss)
-      content: 'Dies ist der Inhalt des Passworts.'
-  Klasse: "W-voll"
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  items:
+    - label: Account
+      icon: 'i-lucide-user'
+      content: 'This is the account content.'
+    - label: Password
+      icon: 'i-lucide-lock'
+      content: 'This is the password content.'
+  class: 'w-full'
 ---
 ::
 
-@@ph043@@Inhalt
+### Inhalt
 
-Setzen Sie `content` prop auf `false`, um die Trigger ohne Panels zu rendern.
+Setzen Sie die `content`-prop auf `false`, um die Trigger ohne Panels zu rendern.
 
 ::component-code
 ---
-Ignoriert:
-  @@@@@@@@@@@ph047@@Inhalt
-  @@ph048@gmail.de
-  @@@@@@49@class
-Außen:
-  @@@ph050@gmail.de
-Externe Personen:
-  @@ph051@@tabsItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Inhalt: false
-  Items:
-    - label: Rechnung
-      Icon: 'i-lucide-user'(Benutzer)
-      content: "Dies ist der Inhalt des Kontos."
-    @@ph053@label: Passwort eingeben
-      Icon: 'i-lucide-lock'(I-luzide-Schloss)
-      content: 'Dies ist der Inhalt des Passworts.'
-  Klasse: "W-voll"
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  content: false
+  items:
+    - label: Account
+      icon: 'i-lucide-user'
+      content: 'This is the account content.'
+    - label: Password
+      icon: 'i-lucide-lock'
+      content: 'This is the password content.'
+  class: 'w-full'
 ---
 ::
 
-@@ph054@unmount
+### Unmount (nicht einhängen)
 
-Verwenden Sie `unmount-on-hide` prop, um zu verhindern, dass der Inhalt beim Herunterklappen der Tabs entfernt wird.
+Verwenden Sie die `unmount-on-hide`-Prop, um zu verhindern, dass der Inhalt beim Zusammenklappen der Tabs nicht mehr eingehängt wird. Standardmäßig ist `true`.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph057@@Inhalt
-  @@ph058@gmail.de
-  @@599@Klasse
-Außen:
-  @@ph060@@gmail.de
-Externe Typen:
-  - TabsItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  unmountOnHide: falsch
-  Items:
-    - label: Rechnung
-      Icon: 'i-lucide-user'(Benutzer)
-      content: "Dies ist der Inhalt des Kontos."
-    - label: Passwort eingeben
-      Icon: 'i-lucide-lock'(I-luzide-Schloss)
-      content: 'Dies ist der Inhalt des Passworts.'
-  Klasse: "W-voll"
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  unmountOnHide: false
+  items:
+    - label: Account
+      icon: 'i-lucide-user'
+      content: 'This is the account content.'
+    - label: Password
+      icon: 'i-lucide-lock'
+      content: 'This is the password content.'
+  class: 'w-full'
 ---
 ::
 
@@ -122,181 +122,181 @@ Props:
 Sie können das DOM inspizieren, um zu sehen, wie der Inhalt jedes Elements gerendert wird.
 ::
 
-### Farbe
+### Color (englisch)
 
 Verwenden Sie die `color` prop, um die Farbe der Tabs zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@@@@@@@@@@@@ph066@@@@content
-  - Artikel
-  @@@@@@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@class@class@class@class@class@class@class@class@class@class@classc
-Außen:
-  @@ph069@gmail.de
-Externe Typen:
-  - TabsItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Farbe: neutral
-  Inhalt: false
-  Items:
-    - label: Rechnung
-    - label: Passwort eingeben
-  Klasse: "W-voll"
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  color: neutral
+  content: false
+  items:
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
-@@@ph073@@@Variant
+### Variant Bearbeiten
 
 Verwenden Sie die `variant` prop, um die Variante der Tabs zu ändern.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - content
-  @@ph076@@gmail.de
-  @@@@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@c
-Außen:
-  @@@ph078@@gmail.de
-Externe Personen:
-  - TabsItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Farbe: neutral
-  Variante: Link
-  Inhalt: false
-  Items:
-    - label: Rechnung
-    - label: Passwort eingeben
-  Klasse: "W-voll"
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  color: neutral
+  variant: link
+  content: false
+  items:
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
-### Größe
+### Size
 
-Verwenden Sie die `size` prop, um die Größe der Tabs zu ändern.
+Verwenden Sie die `size`-Prop, um die Größe der Tabs zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@@@@@@@@@@@@@@@@@@@@@@@@@@@ph084@@@@content
-  @@@@@@@@@@@ph085@gmail.de
-  @@@@@@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@classclass@class@classclassclassclassclass@class@class
-Außen:
-  @@@ph087@gmail.de
-Externe Personen:
-  @@@@@@@@@@@@TabsItem []
-Props:
-  Größe: md
-  Variante: Pille
-  Inhalt: false
-  Items:
-    - label: Rechnung
-    @@ph090@label: Passwort eingeben
-  Klasse: "W-voll"
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  size: md
+  variant: pill
+  content: false
+  items:
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
-@@ph091@@Orientierung
+### Orientierung.
 
-Verwenden Sie `orientation` prop, um die Ausrichtung der Tabs. Defaults auf `horizontal` zu ändern.
+Verwenden Sie die `orientation`-prop, um die Ausrichtung der Tabs. Defaults auf `horizontal` zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph094 @ Inhalt
-  @@ph095@gmail.de
-  @@@@@@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class
-Außen:
-  @@ph097@gmail.de
-Externe Personen:
-  @@ph098@@tabsItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Ausrichtung: Vertikal
-  Variante: Pille
-  Inhalt: false
-  Items:
-    - label: Rechnung
-    @@@ph100@label: Passwort eingeben
-  Klasse: "W-voll"
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  orientation: vertical
+  variant: pill
+  content: false
+  items:
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
-@@101 @ Beispiele
+## Beispiele
 
-### Control aktiv Element
+### Control Aktiver Eintrag
 
-Sie können das aktive Element steuern, indem Sie die `default-value` prop oder die `v-model` Direktive mit der `value` des Elements verwenden. Wenn kein `value` angegeben ist, wird standardmäßig der Index **als Zeichenfolge ** verwendet.
+Sie können das aktive Element steuern, indem Sie die `default-value`-prop oder die `v-model`-Direktive mit dem `value` des Elements verwenden. Wenn kein `value` angegeben ist, wird standardmäßig der Index **as ein string** verwendet.
 
-: component-example {name="tabs-model-value-example"}
+:component-example{name="tabs-model-value-example"}
 
 ::tip
-Verwenden Sie `value-key` prop, um den Schlüssel zu ändern, der für die Übereinstimmung mit Elementen verwendet wird, wenn ein `v-model` oder `default-value` bereitgestellt wird.
+Verwenden Sie die `value-key`-Prop, um den Schlüssel zu ändern, mit dem Elemente übereinstimmen, wenn ein `v-model` oder `default-value` bereitgestellt wird.
 ::
 
-### Mit Routenabfrage
+### With Route Query (Routenabfrage)
 
-Sie können das aktive Element über einen URL-Abfrageparameter steuern, indem Sie `route.query.tab` als `value` des Elements verwenden.
+Sie können das aktive Element durch einen URL-Abfrageparameter steuern, wobei `route.query.tab` als `value` des Elements verwendet wird.
 
-: component-example {name="tabs-route-query-example"}
+:component-example{name="tabs-route-query-example"}
 
-### Mit Inhalt Slot
+### With Inhalts-Slot
 
 Verwenden Sie den `#content`-Slot, um den Inhalt jedes Elements anzupassen.
 
-: component-example {name="tabs-content-slot-example"}
+:component-example{name="tabs-content-slot-example"}
 
-### Mit unterer Tabulatorleiste
+### Mit unterer Tab-Leiste
 
-Verwenden Sie `ui` prop, um die Tabs in eine untere Tab-Leiste im mobilen Stil mit Symbolen und kleinen Labels zu verwandeln, ähnlich wie bei YouTube oder Instagram.
+Verwenden Sie die `ui`-Prop, um die Tabs in eine untere Tab-Leiste im mobilen Stil mit Symbolen und kleinen Labels zu verwandeln, ähnlich wie bei YouTube oder Instagram.
 
 ::component-example
 ---
-Einsturz: wahr
-Tabs-bottom-tab-bar-Beispiel
+collapse: true
+name: 'tabs-bottom-tab-bar-example'
 ---
 ::
 
-### Mit benutzerdefinierten Steckplatz
+### Mit benutzerdefiniertem Slot
 
 Verwenden Sie die `slot`-Eigenschaft, um ein bestimmtes Element anzupassen.
 
 Sie haben Zugriff auf folgende Slots:
 
-`#{{ item.slot }}``#{{ item.slot }}``#{{ item.slot }}`{lang="ts-type"}
+- `#{{ item.slot }}`{lang="ts-type"} (nicht)
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'tabs-custom-slot-Beispiel'
+collapse: true
+name: 'tabs-custom-slot-example'
 ---
 ::
 
-@@127@btw
+## API
 
-@@@@@@@@@@@@@@@ph128@@props
+### Props Bearbeiten
 
-Komponenten Props
+:component-props
 
-### Spielautomaten
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph130@emits
+### Emits (nicht)
 
-Komponenten emittieren
+:component-emits
 
-@@131@131@131@131@131@131@131@131@131@131@131@131@13@131@13@131@131@13@131@131@13@131@@131@131@131@131@131@131@131@131@131@131@131@@131@131@131@@@13131@@@13131@@@@13131@@@@131331@@@@@@@1313131@@@@@@@@1313131@@@@@@@@@@@131313131331@@@@@@@@@@@@@@@@@@
+### Expose (englisch)
 
 Beim Zugriff auf die Komponente über eine Template-Referenz können Sie Folgendes verwenden:
 
 | Vorname| Typ|
 | ---- | ---- |
-| {lang="ts-type"}|{lang="ts-type"}|
+| `triggersRef`{lang="ts-type"} nicht| `Ref<ComponentPublicInstance[]>`{lang="ts-type"} Übersetzung|
 
-@@136@Einsteigertipps
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph137@@changelog @ changelog
+## Changelog (deutsch)
 
-Das Component-Changelog
+:component-changelog

@@ -8,87 +8,87 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageAnchors.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Utilisez le composant PageAnchors pour afficher une liste de liens .
+Utilisez le composant PageAnchors pour afficher une liste de liens.
 
 ::component-code
 ---
-Collapse : vrai
-Étiquette : true
-ignorer :
-  @@ph001@liens
-Extérieure :
-  @@ph002@liens
-Extérieurs :
-  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Props :
-  à gauche :
-    - label : ' Documentation '
-      Icône : i-lucide - book-open
-      à :/docs/commencer
-    - label : ' Composants '
-      Icône : i-lucide - box
-      à/docs/composants
-    - label : ' Figma Kit '
-      Icône : i-simple - icons-figma
-      Deux :https://go.nuxt.com/figma-ui
-      Référence : _ blank
-    - label : " Découverte "
-      icon : i-simple - icons-github
-      Deux :https://github.com/nuxt/ui/releases
-      Référence:_blank
+collapse: true
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageAnchor[]
+props:
+  links:
+    - label: 'Documentation'
+      icon: i-lucide-book-open
+      to: /docs/getting-started
+    - label: 'Components'
+      icon: i-lucide-box
+      to: /docs/components
+    - label: 'Figma Kit'
+      icon: i-simple-icons-figma
+      to: https://go.nuxt.com/figma-ui
+      target: _blank
+    - label: 'Releases'
+      icon: i-simple-icons-github
+      to: https://github.com/nuxt/ui/releases
+      target: _blank
 ---
 ::
 
-@@ph008@référencement
+### Liens
 
-Utilisez le `links` prop comme un tableau d'objets avec les propriétés suivantes:
+Utilisez le prop `links` comme un tableau d'objets avec les propriétés suivantes:
 
-@@
-@@
-@@
-@@
+- x`label: string`x{lang="ts-type"}
+- x`icon?: string`xx{lang="ts-type"}
+- x`class?: any`xx{lang="ts-type"}
+- x`ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkLeading?: ClassNameValue, linkLeadingIcon?: ClassNameValue }`x{lang="ts-type"}
 
-Vous pouvez passer n'importe quelle propriété du composant [Link](/docs/components/link#props) comme `to`,`target`, etc.
+Vous pouvez passer n'importe quelle propriété du composant [Link](/docs/components/link#props) telle que `to`, `target`, etc.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @28@@liens
-Extérieure:
-  @@229@liens
-Extérieurs:
-  @@@P300@@P3000 [réf. nécessaire]
-Props:
-  à gauche:
-    - label:'Documentation'
-      Icône: i-lucide-book-open
-      à:/docs/commencer
-    - label:'Composants'
-      Icône: i-lucide-box
-      à/docs/composants
-    - label:'Figma Kit'
-      Icône: i-simple-icons-figma
-      Deux :https://go.nuxt.com/figma-ui
-      Référence : _ blank
-    - label : " Découverte "
-      icon : i-simple - icons-github
-      Deux :https://github.com/nuxt/ui/releases
-      Référence : _ blank
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageAnchor[]
+props:
+  links:
+    - label: 'Documentation'
+      icon: i-lucide-book-open
+      to: /docs/getting-started
+    - label: 'Components'
+      icon: i-lucide-box
+      to: /docs/components
+    - label: 'Figma Kit'
+      icon: i-simple-icons-figma
+      to: https://go.nuxt.com/figma-ui
+      target: _blank
+    - label: 'Releases'
+      icon: i-simple-icons-github
+      to: https://github.com/nuxt/ui/releases
+      target: _blank
 ---
 ::
 
 ## Exemples
 
 ::note
-Bien que ces exemples utilisent[Nuxt Content](https://content.nuxt.com), les composants peuvent être intégrés à n'importe quel système de gestion de contenu .
+While these examples use [Nuxt Content](https://content.nuxt.com), the components can be integrated with any content management system.
 ::
 
-### Dans une mise en page
+### Dans un layout
 
-Utilisez le composant PageAnchors à l'intérieur du composant[PageAside](/docs/components/page-aside)pour afficher une liste de liens au-dessus de la navigation .
+Utilisez le composant PageAnchors à l'intérieur du composant [PageAside](/docs/components/page-aside) pour afficher une liste de liens au-dessus de la navigation.
 
 ```vue [layouts/docs.vue]{35}
 <script setup lang="ts">
@@ -135,20 +135,20 @@ const links: PageAnchor[] = [{
 </template>
 ```
 
-@@ph089@api
+## API
 
-@@ph090@@props
+### Props équipement
 
-Composants-props
+:component-props
 
-@@ph091@@slot
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph092@thématique
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

@@ -8,24 +8,24 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/EditorEmojiMenu.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente EditorEmojiMenu muestra un menú de sugerencias de emojis al escribir el carácter `:` en el editor e inserta el emoji seleccionado.
+El componente EditorEmojiMenu muestra un menú de sugerencias de emoji al escribir el carácter `:` en el editor e inserta el emoji seleccionado.
 
 ::note
-Utiliza el `useEditorMenu` composable construido en la parte superior de TipTap's [Suggestion](https://tiptap.dev/docs/editor/api/utilities/suggestion) utilidad para filtrar elementos a medida que escribe y soporta la navegación del teclado (teclas de flecha, entrar para seleccionar, escapar para cerrar).
+Utiliza el composable `useEditorMenu` construido sobre la utilidad [Suggestion](https://tiptap.dev/docs/editor/api/utilities/suggestion) de TipTap para filtrar elementos a medida que escribe y admite la navegación con el teclado (teclas de flecha, ingresar para seleccionar, escapar para cerrar).
 ::
 
 ::caution
-Debe usarse dentro de la ranura predeterminada de un componente [Editor](/docs/components/editor) para tener acceso a la instancia del editor.
+Debe utilizarse dentro de la ranura predeterminada de un componente [Editor](/docs/components/editor) para tener acceso a la instancia del editor.
 ::
 
 ::component-example
 ---
-Elevado: Verdadero
-Colapso: Verdad
-Nombre: 'emotico-emoji-menu-ejemplo'
-Categoría: P-8
+elevated: true
+collapse: true
+name: 'editor-emoji-menu-example'
+class: 'p-8'
 ---
 ::
 
@@ -37,31 +37,31 @@ El paquete `@tiptap/extension-emoji` no está instalado de forma predeterminada,
 Más información sobre la extensión Emoji en la documentación de TipTap.
 ::
 
-@13@130 puntos
+### Artículos
 
 Utilice el prop `items` como una matriz de objetos con las siguientes propiedades:
 
-@@
-@@
-@@
-@@
-@@
-@@
+- x`name: string`xx{lang="ts-type"}
+- xx`emoji: string`xx{lang="ts-type"}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`tags?: string[]`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xxx`group?: string`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ::component-example
 ---
-Elevado: verdadero
-Colapso: Verdad
-Nombre: 'emoji-emoji-menu-items-example'
-Categoría: P-8
+elevated: true
+collapse: true
+name: 'editor-emoji-menu-items-example'
+class: 'p-8'
 ---
 ::
 
 ::note
-También puede pasar un array de arrays al prop `items` para crear grupos separados de elementos.
+You can also pass an array of arrays to the `items` prop to create separate groups of items.
 ::
 
-@344@34@34
+### xChar (Edición española)
 
 Utilice el prop `char` para cambiar el carácter de activación. Predeterminados a `:`{lang="ts-type"}.
 
@@ -75,9 +75,9 @@ Utilice el prop `char` para cambiar el carácter de activación. Predeterminados
 
 ### Sugerencia: badge{label="4.7+" class="align-text-top"}
 
-Utilice el prop `suggestion` para personalizar el comportamiento de coincidencia de sugerencias de TipTap [](https://tiptap.dev/docs/editor/api/utilities/suggestion#settings).
+Utilice el prop `suggestion` para personalizar el comportamiento de coincidencia [Sugerencia de TipTap ](https://tiptap.dev/docs/editor/api/utilities/suggestion#settings).
 
-Esto es útil cuando el carácter de activación debe abrirse directamente después de otros caracteres en lugar de requerir el prefijo de espacio en blanco predeterminado.
+Esto es útil cuando el carácter desencadenante debe abrirse directamente después de otros caracteres en lugar de requerir el prefijo de espacio en blanco predeterminado.
 
 ```vue
 <template>
@@ -95,7 +95,7 @@ Esto es útil cuando el carácter de activación debe abrirse directamente despu
 
 ### Opciones
 
-Utilice el prop `options` para personalizar el comportamiento de posicionamiento utilizando [opciones de interfaz de usuario flotante ](https://floating-ui.com/docs/computeposition#options).
+Utilice el prop `options` para personalizar el comportamiento de posicionamiento utilizando las opciones de interfaz de usuario flotante ](https://floating-ui.com/docs/computeposition#options).
 
 ```vue
 <template>
@@ -112,16 +112,16 @@ Utilice el prop `options` para personalizar el comportamiento de posicionamiento
 </template>
 ```
 
-@085
+## API (Edición española)
 
-@866@8666
+### Accesorios
 
-Componentes Props
+:component-props
 
-@087@@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@888@@Changelog (en inglés)
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

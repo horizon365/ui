@@ -15,140 +15,140 @@ links:
 
 ## 使用法
 
-`navigation`プロパティを、アプリケーションのナビゲーションを取得するときに取得する`navigation`{lang="ts-type"}を指定して使用します。
+`navigation`プロパティには、アプリケーションのナビゲーションを取得するときに取得する`navigation`{lang="ts-type"}値を指定して使用します。
 
 ::component-example
 ---
-名前'content—navigation—example'
-クラス'h—96 overflow—y—auto'
-overflowHidden true
-小道具
-  クラス'w—full'
+name: 'content-navigation-example'
+class: 'h-96 overflow-y-auto'
+overflowHidden: true
+props:
+  class: 'w-full'
 ---
 ::
 
-### タイプ
+### Type
 
-`type` propを`single`に設定して、一度に1つのアイテムのみを開くことができます。デフォルトは`multiple`です。
+`type`プロパティを`single`に設定すると、一度に1つのアイテムしか開くことができません。デフォルトは`multiple`です。
 
 ::component-code{prefix="content"}
 ---
-きれい真
-崩壊真
-外部
-  - ナビゲーション
-externalTypes
-  -  ContentNavigationLink []
-アイテム
-  タイプ
-  - 'シングル'
-  - '複数'
-隠す
-  - クラス
-  - ナビゲーション
-小道具
-  クラス'w—full'
-  タイプ'シングル'
-  ナビゲーション
-    -  title 'ガイド'
-      アイコン'i—lucide—book—open'
-      path '#getting—started'
-      子供：
-        -  title 'はじめに'
-          path '#導入'
-          アクティブtrue
-        -  title 'インストール'
-          path '#インストール'
-    -  title 'Composables'
-      アイコン'i—lucide—database'
-      path '#composables'
-      子供：
-        -  title '定義ショートカット'
-          パス'#defineshortcuts'
-        -  title 'useModal'
-          パス'#usemodal'
+prettier: true
+collapse: true
+external:
+  - navigation
+externalTypes:
+  - ContentNavigationLink[]
+items:
+  type:
+  - 'single'
+  - 'multiple'
+hide:
+  - class
+  - navigation
+props:
+  class: 'w-full'
+  type: 'single'
+  navigation:
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+        - title: 'Introduction'
+          path: '#introduction'
+          active: true
+        - title: 'Installation'
+          path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
+        - title: 'defineShortcuts'
+          path: '#defineshortcuts'
+        - title: 'useModal'
+          path: '#usemodal'
 ---
 ::
 
-### カラー
+### Color
 
 `color`プロパティを使用して、ナビゲーションリンクの色を変更します。
 
 ::component-code{prefix="content"}
 ---
-きれい真
-崩壊真
-外部
-  - ナビゲーション
-externalTypes
-  -  ContentNavigationLink []
-隠す
-  - クラス
-  - ナビゲーション
-小道具
-  クラス'w—full'
-  色'ニュートラル'
-  ナビゲーション
-    -  title 'ガイド'
-      アイコン'i—lucide—book—open'
-      path '#getting—started'
-      子供：
-      -  title 'はじめに'
-        path '#導入'
-        アクティブtrue
-      -  title 'インストール'
-        path '#インストール'
-    -  title 'Composables'
-      アイコン'i—lucide—database'
-      path '#composables'
-      子供：
-      -  title '定義ショートカット'
-        パス'#defineshortcuts'
-      -  title 'useModal'
-        パス'#usemodal'
+prettier: true
+collapse: true
+external:
+  - navigation
+externalTypes:
+  - ContentNavigationLink[]
+hide:
+  - class
+  - navigation
+props:
+  class: 'w-full'
+  color: 'neutral'
+  navigation:
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
+      - title: 'defineShortcuts'
+        path: '#defineshortcuts'
+      - title: 'useModal'
+        path: '#usemodal'
 ---
 ::
 
-### バリアント
+### Variant
 
 `variant`プロパティを使用して、ナビゲーションリンクのバリアントを変更します。
 
 ::component-code{prefix="content"}
 ---
-きれい真
-崩壊真
-外部
-  - ナビゲーション
-externalTypes
-  -  ContentNavigationLink []
-隠す
-  - クラス
-  - ナビゲーション
-アイテム
-  バリアント
+prettier: true
+collapse: true
+external:
+  - navigation
+externalTypes:
+  - ContentNavigationLink[]
+hide:
+  - class
+  - navigation
+items:
+  variant:
   - 'link'
-  - 'ピル'
-小道具
-  クラス'w—full'
-  variant 'link'
-  ナビゲーション
-    -  title 'ガイド'
-      アイコン'i—lucide—book—open'
-      path '#getting—started'
-      子供：
-      -  title 'はじめに'
-        path '#導入'
-        アクティブtrue
-      -  title 'インストール'
-        path '#インストール'
-    -  title 'Composables'
-      アイコン'i—lucide—database'
-      path '#composables'
-      子供：
-      -  title '定義ショートカット'
-        パス'#defineshortcuts'
-      -  title 'useModal'
-        パス'#usemodal'
+  - 'pill'
+props:
+  class: 'w-full'
+  variant: 'link'
+  navigation:
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
+      - title: 'defineShortcuts'
+        path: '#defineshortcuts'
+      - title: 'useModal'
+        path: '#usemodal'
 ---
 ::
 
@@ -156,94 +156,94 @@ externalTypes
 
 `highlight`プロパティを使用して、アクティブなリンクのハイライトされた境界線を表示します。
 
-境界線の色を変更するには`highlight-color` propを使用します。デフォルトは`color` propです。
+境界線の色を変更するには`highlight-color`プロパティを使用します。デフォルトは`color`プロパティです。
 
 ::component-code{prefix="content"}
 ---
-きれい真
-崩壊真
-外部
-  - ナビゲーション
-externalTypes
-  -  ContentNavigationLink []
-隠す
-  - クラス
-  - ナビゲーション
-小道具
-  クラス'w—full'
-  ハイライト真
-  highlightColor 'primary'
-  色'プライマリ'
-  バリアント'ピル'
-  ナビゲーション
-    -  title 'ガイド'
-      アイコン'i—lucide—book—open'
-      path '#getting—started'
-      子供：
-      -  title 'はじめに'
-        path '#導入'
-        アクティブtrue
-      -  title 'インストール'
-        path '#インストール'
-    -  title 'Composables'
-      アイコン'i—lucide—database'
-      path '#composables'
-      子供：
-      -  title '定義ショートカット'
-        パス'#defineshortcuts'
-      -  title 'useModal'
-        パス'#usemodal'
+prettier: true
+collapse: true
+external:
+  - navigation
+externalTypes:
+  - ContentNavigationLink[]
+hide:
+  - class
+  - navigation
+props:
+  class: 'w-full'
+  highlight: true
+  highlightColor: 'primary'
+  color: 'primary'
+  variant: 'pill'
+  navigation:
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
+      - title: 'defineShortcuts'
+        path: '#defineshortcuts'
+      - title: 'useModal'
+        path: '#usemodal'
 ---
 ::
 
-### トレーリングアイコン
+### Trailingアイコン
 
-`trailing-icon`プロパティを使用して、子を持つアイテムの末尾の[ Icon ](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-chevron-down`です。
+`trailing-icon`プロパティを使用して、子を持つアイテムの末尾の[Icon](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-chevron-down`です。
 
 ::component-code{prefix="content"}
 ---
-きれい真
-崩壊真
-外部
-  - ナビゲーション
-externalTypes
-  -  ContentNavigationLink []
-隠す
-  - クラス
-  - ナビゲーション
-小道具
-  クラス'w—full'
-  trailingIcon 'i—lucide—arrow—up'
-  ナビゲーション
-    -  title 'ガイド'
-      アイコン'i—lucide—book—open'
-      path '#getting—started'
-      子供：
-      -  title 'はじめに'
-        path '#導入'
-        アクティブtrue
-      -  title 'インストール'
-        path '#インストール'
-    -  title 'Composables'
-      アイコン'i—lucide—database'
-      path '#composables'
-      子供：
-      -  title '定義ショートカット'
-        パス'#defineshortcuts'
-      -  title 'useModal'
-        パス'#usemodal'
+prettier: true
+collapse: true
+external:
+  - navigation
+externalTypes:
+  - ContentNavigationLink[]
+hide:
+  - class
+  - navigation
+props:
+  class: 'w-full'
+  trailingIcon: 'i-lucide-arrow-up'
+  navigation:
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
+      - title: 'defineShortcuts'
+        path: '#defineshortcuts'
+      - title: 'useModal'
+        path: '#usemodal'
 ---
 ::
 
 ::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.chevronDown`キーの下の`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`app.config.ts`の`ui.icons.chevronDown`キーでグローバルにカスタマイズできます。
 ::
 
-## 例
+## サンプル
 
 ### レイアウト内
 
-レイアウト内の[ PageAside ](/docs/components/page-aside)コンポーネント内のContentNavigationコンポーネントを使用して、ページのナビゲーションを表示します。
+レイアウト内の[PageAside](/docs/components/page-aside)コンポーネント内のContentNavigationコンポーネントを使用して、ページのナビゲーションを表示します。
 
 ```vue [layouts/docs.vue]{11}
 <script setup lang="ts">
@@ -267,7 +267,7 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 
 ### ヘッダー内
 
-モバイルでページのナビゲーションを表示するには、[ Header ](/docs/components/header)コンポーネントの`content`スロット内のContentNavigationコンポーネントを使用します。
+モバイルでページのナビゲーションを表示するには、[Header](/docs/components/header)コンポーネントの`content`スロット内のContentNavigationコンポーネントを使用します。
 
 ```vue [components/Header.vue]{9-11}
 <script setup lang="ts">
@@ -285,24 +285,24 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 </template>
 ```
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
-### スロット
+### Slot
 
-コンポーネントスロット
+:component-slots
 
-###  Emits
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="content"}
+:component-changelog{prefix="content"}

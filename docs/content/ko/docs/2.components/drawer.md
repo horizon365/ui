@@ -14,311 +14,311 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Drawer.vue
 ---
 
-##  사용
+## Usage
 
-[Button](/docs/components/button) 또는 서랍의 기본 슬롯에 있는 다른 구성 요소를 사용합니다.
+서랍의 기본 슬롯에 있는 [Button](xph03x) 또는 다른 구성 요소를 사용합니다.
 
-그런 다음 `#content` 슬롯을 사용하여 Drawer가 열려 있을 때 표시되는 내용을 추가합니다.
+그런 다음 `#content` 슬롯을 사용하여 Drawer가 열려 있을 때 표시된 내용을 추가합니다.
 
 ::component-code
 ---
-상품명 : True
-슬롯 :
-  기본 값:|
+prettier: true
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  컨텐츠:|
+  content: |
 
     <Placeholder class="h-48 m-4" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="열기 (Open)" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#content 내용
-: placeholder{class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-또한 `#header`{lang="ts-type"}`#body`{lang="ts-type"} 및 `#footer`{lang="ts-type"} 슬롯을 사용하여 서랍의 콘텐츠를 사용자 정의할 수 있습니다.
+또한 `#header`{lang="ts-type"}, `#body`{lang="ts-type"} 및 `#footer`{lang="ts-type"} 슬롯을 사용하여 서랍의 내용을 사용자 정의할 수 있습니다.
 
-###  제목
+### Title 파일
 
-`title`prop을 사용하여 Drawer 헤더의 제목을 설정합니다.
+`title` prop을 사용하여 Drawer의 헤더 제목을 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-소품 :
-  사진: "Drawer with title"
-슬롯 :
-  기본 값:|
+prettier: true
+props:
+  title: 'Drawer with title'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  본문 (Body):|
+  body: |
 
     <Placeholder class="h-48" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="열기 (Open)" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-# 바디
-: placeholder{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
-###  설명
+### 설명
 
-`description`prop을 사용하여 Drawer의 헤더에 대한 설명을 설정합니다.
+`description` prop을 사용하여 Drawer의 헤더에 대한 설명을 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  title
-소품 :
-  사진: "Drawer with description"
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit" (로렘 ipsum dolor sit amet, consectetur adipiscing elit)" 이라는 문구가 있다.
-슬롯 :
-  기본값 :|
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Drawer with description'
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  본문 (Body):|
+  body: |
 
     <Placeholder class="h-48" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="열기 (Open)" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-# 바디
-: placeholder{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
-### 닫기: badge{label="4.10+" class="align-text-top"}
+### Close : badge{label="4.10+" class="align-text-top"}
 
-`close`prop을 사용하여 서랍에 닫기 단추를 표시합니다. 기본값은 `false`입니다.
+`close` prop을 사용하여 Drawer에 닫기 버튼을 표시합니다. 기본값은 `false`입니다.
 
-[Button](/docs/components/button) 구성 요소에서 속성을 전달하여 사용자 지정할 수 있습니다.
+[Button](/docs/components/button) 구성 요소의 모든 속성을 전달하여 사용자 정의할 수 있습니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  title
-  -  close. color
-  - close.variant - close.variant
-소품 :
-  사진: "Drawer with close button"
-  닫기:
-    색상: 기본
-    변형: 외곽 선
-    클래스: rounded-full
-슬롯 :
-  기본 값:|
+prettier: true
+ignore:
+  - title
+  - close.color
+  - close.variant
+props:
+  title: 'Drawer with close button'
+  close:
+    color: primary
+    variant: outline
+    class: 'rounded-full'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  본문 (Body):|
+  body: |
 
     <Placeholder class="h-48" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="열기 (Open)" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-# 본문
-: placeholder{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
 ### 닫기 아이콘: badge{label="4.10+" class="align-text-top"}
 
-`close-icon`prop을 사용하여 닫기 버튼 [Icon](/docs/components/icon)를 사용자 정의합니다. 기본값은 `i-lucide-x`입니다.
+`close-icon` 소품을 사용하여 닫기 버튼 [Icon](/docs/components/icon)를 사용자 정의합니다. 기본값은 `i-lucide-x`입니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  title
-소품 :
-  사진: "Drawer with close button"
-  닫기: true
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Drawer with close button'
+  close: true
   closeIcon: 'i-lucide-arrow-right'
-슬롯 :
-  기본 값:|
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  본문 (Body):|
+  body: |
 
     <Placeholder class="h-48" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="열기 (Open)" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-# 본문
-: placeholder{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
-###  방향
+### Direction
 
-`direction`prop 을 사용하여 Drawer의 방향을 제어합니다. 기본값은 `bottom`입니다.
+`direction` Prop을 사용하여 Drawer의 방향을 제어합니다. 기본값은 `bottom`입니다.
 
 ::component-code
 ---
-상품명 : True
-소품 :
-  방향 : "right"
-슬롯 :
-  기본값 :|
+prettier: true
+props:
+  direction: 'right'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  컨텐츠 :|
+  content: |
 
     <Placeholder class="min-w-96 min-h-96 size-full m-4" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="열기 (Open)" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#content 내용
-: placeholder {class="min-w-96 min-h-96 size-full m-4"}
+#content
+:placeholder{class="min-w-96 min-h-96 size-full m-4"}
 ::
 
-###  Inset
+### Inset 이미지
 
-`inset`prop을 사용하여 가장자리에서 Drawer를 삽입합니다.
+`inset` Prop을 사용하여 Drawer를 가장자리에서 삽입합니다.
 
 ::component-code
 ---
-상품명 : True
-소품 :
-  방향 : "right"
-  삽입: true
-슬롯 :
-  기본값 :|
+prettier: true
+props:
+  direction: 'right'
+  inset: true
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  컨텐츠:|
+  content: |
 
     <Placeholder class="min-w-96 min-h-96 size-full m-4" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="열기 (Open)" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#content 내용
-: placeholder {class="min-w-96 min-h-96 size-full m-4"}
+#content
+:placeholder{class="min-w-96 min-h-96 size-full m-4"}
 ::
 
-###  핸들
+### 핸들
 
-`handle`prop 을 사용하여 서랍에 핸들이 있는지 여부를 제어합니다. 기본값은 `true`입니다.
+`handle` 소품을 사용하여 Drawer에 핸들이 있는지 여부를 제어합니다. 기본값은 `true`입니다.
 
 ::component-code
 ---
-상품명 : True
-소품 :
-  핸들: false
-슬롯 :
-  기본값 :|
+prettier: true
+props:
+  handle: false
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  컨텐츠 :|
+  content: |
 
     <Placeholder class="h-48 m-4" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="열기 (Open)" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#content 내용
-: placeholder{class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-###  핸들만 사용
+### Handle 전용
 
-`handle-only`prop을 사용하여 Drawer를 핸들로만 드래그할 수 있습니다.
+`handle-only` Prop을 사용하여 Drawer가 핸들로만 드래그되도록 합니다.
 
 ::component-code
 ---
-상품명 : True
-소품 :
-  handleOnly : true
-슬롯 :
-  기본 값:|
+prettier: true
+props:
+  handleOnly: true
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  컨텐츠:|
+  content: |
 
     <Placeholder class="h-48 m-4" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="열기 (Open)" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#content 내용
-: placeholder{class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-###  오버레이
+### 오버레이
 
-`overlay`prop을 사용하여 Drawer에 오버레이가 있는지 여부를 제어할 수 있습니다. 기본값은 `true`입니다.
+`overlay` Prop을 사용하여 Drawer에 오버레이가 있는지 여부를 제어합니다. 기본값은 `true`입니다.
 
 ::component-code
 ---
-상품명 : True
-소품 :
-  오버레이: false
-슬롯 :
-  기본 값:|
+prettier: true
+props:
+  overlay: false
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  컨텐츠:|
+  content: |
 
     <Placeholder class="h-48 m-4" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="열기 (Open)" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#content 내용
-: placeholder {class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-### Modal @ 모달
+### Modal 모델
 
-`modal`prop을 사용하여 Drawer가 외부 콘텐츠와의 상호 작용을 차단할지 여부를 제어합니다. 기본값은 `true`입니다.
+`modal` 소품을 사용하여 Drawer가 외부 내용과의 상호 작용을 차단할지 여부를 제어합니다. 기본값은 `true`입니다.
 
 ::note
-`modal`가 `false`로 설정되면 오버레이가 자동으로 비활성화되고 외부 콘텐츠가 대화형으로 전환됩니다.
+`modal`가 `false`로 설정되면 오버레이가 자동으로 비활성화되고 외부 내용은 대화형이 됩니다.
 ::
 
 ::component-code
 ---
-상품명 : True
-소품 :
-  모달: false
-슬롯 :
-  기본 값:|
+prettier: true
+props:
+  modal: false
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  컨텐츠 :|
+  content: |
 
     <Placeholder class="h-48 m-4" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="열기 (Open)" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#content 내용
-: placeholder{class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-###  허용되지 않음
+### 허용되지 않는 파일
 
-`dismissible`prop을 사용하여 Drawer의 바깥쪽을 클릭하거나 escape를 누를 때 Drawer가 허용되지 않도록 설정합니다. 기본값은 `true`입니다.
+`dismissible` Prop을 사용하여 Drawer 바깥쪽을 클릭하거나 escape 키를 누를 때 Drawer가 표시되지 않도록 제어합니다. 기본값은 `true`입니다.
 
 ::note
-`close:prevent` 이벤트는 사용자가 종료하려고 할 때 발생합니다.
+`close:prevent` 이벤트는 사용자가 닫으려고 할 때 내보내집니다.
 ::
 
 ::tip
@@ -327,39 +327,39 @@ links:
 
 ::component-example
 ---
-상품명 : True
-이름: 'drawer-dismissible-example'
+prettier: true
+name: 'drawer-dismissible-example'
 ---
 ::
 
-### 스케일 배경
+### Scale 배경
 
-Drawer가 열려 있을 때 `should-scale-background`prop을 사용하여 배경의 배율을 조정하여 시각적 깊이를 만듭니다. `set-background-color-on-scale`prop을 `false`로 설정하면 배경색이 변하지 않습니다.
+Drawer가 열려 있을 때 `should-scale-background` 소품을 사용하여 배경의 크기를 조정하여 시각적 깊이를 만듭니다. `set-background-color-on-scale` 소품을 `false`로 설정하면 배경색이 변경되지 않습니다.
 
 ::component-code
 ---
-상품명 : True
-소품 :
-  shouldScaleBackground: true : true
+prettier: true
+props:
+  shouldScaleBackground: true
   setBackgroundColorOnScale: true
-슬롯 :
-  기본 값:|
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  컨텐츠 :|
+  content: |
 
     <Placeholder class="h-48 m-4" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="열기 (Open)" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#content 내용
-: placeholder{class="h-screen m-4"}
+#content
+:placeholder{class="h-screen m-4"}
 ::
 
 ::warning
-이 작업을 수행하려면 앱의 부모 요소에 `data-vaul-drawer-wrapper` 지시문을 추가해야 합니다.Make sure to add the `data-vaul-drawer-wrapper` directive to a parent element of your app.
+앱의 부모 요소에 `data-vaul-drawer-wrapper` 지시문을 추가하여 이 작업을 수행해야 합니다.
 
 ```vue [app.vue]
 <template>
@@ -386,69 +386,69 @@ export default defineNuxtConfig({
 
 ::
 
-##  예제
+## 예제
 
-###  열린 상태 제어
+### Control 오픈 상태
 
-`default-open`prop 또는 `v-model:open` 지시문을 사용하여 열린 상태를 제어할 수 있습니다.
+`default-open` prop 또는 `v-model:open` 지시문을 사용하여 오픈 상태를 제어할 수 있습니다.
 
 ::component-example
 ---
-상품명 : True
-이름: 'drawer-open-example'
+prettier: true
+name: 'drawer-open-example'
 ---
 ::
 
 ::note
-이 예에서는 [`defineShortcuts`](/docs/composables/define-shortcuts)를 사용하여 Drawer를 전환할 수 있습니다.
+이 예제에서는 [`defineShortcuts`](/docs/composables/define-shortcuts)를 사용하여 kbd{value="O"}를 눌러 Drawer를 토글할 수 있습니다.
 ::
 
 ::tip
 이렇게 하면 트리거를 Drawer 외부로 이동하거나 완전히 제거할 수 있습니다.
 ::
 
-### 반응형 서랍
+### 응답형 서랍
 
-예를 들어 [Modal](/docs/components/modal) 구성 요소를 바탕 화면에서 렌더링하고 모바일에서는 Drawer를 렌더링할 수 있습니다.
+예를 들어 데스크톱에서는 [Modal](/docs/components/modal) 구성 요소를 렌더링하고 모바일에서는 Drawer를 렌더링할 수 있습니다.
 
 ::component-example
 ---
-상품명 : True
-이름: 'drawer-responsive-example'
+prettier: true
+name: 'drawer-responsive-example'
 ---
 ::
 
-### Nested 서랍
+### nested 서랍
 
-`nested`prop을 사용하여 서랍을 서로 중첩할 수 있습니다.
+`nested` prop을 사용하여 서로 서랍을 중첩 할 수 있습니다.
 
 ::component-example
 ---
-상품명 : True
-이름: 'drawer-nested-example'
+prettier: true
+name: 'drawer-nested-example'
 ---
 ::
 
-###  바닥글 슬롯 포함
+### 바닥글 슬롯 포함
 
-`#footer` 슬롯을 사용하여 Drawer의 본문 뒤에 내용을 추가합니다.
+`#footer` 슬롯을 사용하여 Drawer의 본체 뒤에 내용을 추가합니다.
 
 ::component-example
 ---
-상품명 : True
-축소: true
-이름: 'drawer-footer-slot-example'
+prettier: true
+collapse: true
+name: 'drawer-footer-slot-example'
 ---
 ::
 
-###  명령 팔레트 사용
+### With 명령 팔레트
 
-Drawer의 콘텐츠에 [CommandPalette](/docs/components/command-palette) 구성 요소를 사용할 수 있습니다.
+[CommandPalette](/docs/components/command-palette) 구성 요소를 Drawer의 콘텐츠 내에서 사용할 수 있습니다.
 
 ::component-example
 ---
-축소: true
-이름: 'drawer-command-palette-example'
+collapse: true
+name: 'drawer-command-palette-example'
 ---
 ::
 
@@ -456,24 +456,24 @@ Drawer의 콘텐츠에 [CommandPalette](/docs/components/command-palette) 구성
 이 예제에서는 `useLazyFetch`와 `immediate: false`를 사용하여 Drawer가 열릴 때만 데이터를 가져옵니다.
 ::
 
-##  API
+## API
 
-### Props @ 프로스
+### Props 코드
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### 슬롯
 
-:구성요소 - 슬롯
+:component-slots
 
-###  에미츠
+### Emits
 
-:구성요소 - 방사
+:component-emits
 
-##  테마
+## Theme 테마
 
-:구성요소 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

@@ -7,20 +7,20 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Footer.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente de pie de página representa un elemento `<footer>`.
+El componente Pie de página representa un elemento `<footer>`.
 
-Utilice las ranuras `left`,`default` y `right` para personalizar el pie de página.
+Utilice las ranuras `left`, `default` y `right` para personalizar el pie de página.
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre: 'Ejemplo'
-Categoría:! p-0
-Props:
-  Categoría: w-full
+prettier: true
+collapse: true
+name: 'footer-example'
+class: '!p-0'
+props:
+  class: 'w-full'
 ---
 ::
 
@@ -32,11 +32,11 @@ En este ejemplo, usamos el componente [NavigationMenu](/docs/components/navigati
 Puede utilizar el componente `FooterColumns` para mostrar una lista de enlaces dentro de la ranura `top`.
 ::
 
-@111@Ejemplos
+## Ejemplos
 
-@@pH012
+### Dentro de `app.vue`
 
-Use el componente Pie de página en su `app.vue` o en un diseño:
+Utilice el componente Pie de página en su `app.vue` o en un diseño:
 
 ```vue [app.vue]{32-67}
 <script setup lang="ts">
@@ -113,20 +113,20 @@ const items: NavigationMenuItem[] = [{
 En este ejemplo, usamos el componente [Separator](/docs/components/separator) para agregar un borde sobre el pie de página.
 ::
 
-@@pH089
+## API (Edición española)
 
-@090000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Accesorios
 
-Componentes Props
+:component-props
 
-@091@091@0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots (Edición española)
 
-Componentes de slots
+:component-slots
 
-@092@@Proyecto
+## Theme (Edición española)
 
-Componente Tema
+:component-theme
 
-@@changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

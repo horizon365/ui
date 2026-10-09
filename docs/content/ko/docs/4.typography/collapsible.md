@@ -9,23 +9,23 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Collapsible.vue
 ---
 
-##  사용
+## Usage
 
-`collapsible` 구성 요소로 콘텐츠를 래핑하여 콘텐츠에 [Collapsible](/docs/components/collapsible)를 표시합니다.
+`collapsible` 구성 요소를 사용하여 내용에 [Collapsiblexph03x/docs/components/collapsible)를 표시합니다.
 
 ::code-preview{class="[&>div]:*:w-full [&>div]:*:my-0"}
 
 ::collapsible
 
-| 프로프 (Prop)    | 기본 값   | 유형 (Type)                     |
+| 프로프 (Prop)    | 기본 값 (Default)   | 유형 (Type)                     |
 |---------|-----------|--------------------------|
 | `name`|           | `string`{lang="ts-type"}|
-| `size`| `md`| `string`{lang="ts-type"}|
+| `size`| `md`      | `string`{lang="ts-type"}|
 | `color`| `neutral`| `string`{lang="ts-type"}|
 
 ::
 
-# 코드
+#code
 
 ```mdc
 ::collapsible
@@ -41,20 +41,20 @@ links:
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props (### Props)
 
-: component-props {prose}
+:component-props{prose}
 
-###  슬롯
+### Slots
 
-: component-slots {prose}
+:component-slots{prose}
 
-##  테마
+## Theme (## 테마)
 
-: component-theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## 변경 로그
 
-: component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

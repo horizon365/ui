@@ -9,46 +9,46 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Card.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Verwenden Sie Markdown im Standard-Slot der`card`Komponente , um Ihre Inhalte hervorzuheben .
+Verwenden Sie Markdown im Standard-Slot der `card`-Komponente, um Ihren Inhalt hervorzuheben.
 
-Sie können auch jede Eigenschaft von der Komponente[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)oder[`<RouterLink>`](https://router.vuejs.org/api/interfaces/RouterLinkProps.html)übergeben .
+Sie können auch jede Eigenschaft aus der Komponente [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) oder [xph06x](https://router.vuejs.org/api/interfaces/RouterLinkProps.html) übergeben..
 
 ::component-code{slug="card" prose}
 ---
-Hide :
-  @@15@Klasse
-Ignoriert :
-  @@ph016@@zielgerichteter
-Props :
-  Klasse : ' my - 0 w - 96 ' (Meine - 0 w - 96)
-  Titel : Startup
-  Icon : i-lucide - Benutzer
-  Farbe : Primär
-  auf : ' https ://nuxt.lemonsqueezy.com'
-  Ziel : _ blank
-Die Slots :
-  Standard : Am besten für kleine Teams , Startups und Agenturen mit bis zu 5 Entwicklern geeignet .
+hide:
+  - class
+ignore:
+  - target
+props:
+  class: 'my-0 w-96'
+  title: Startup
+  icon: i-lucide-users
+  color: primary
+  to: 'https://nuxt.lemonsqueezy.com'
+  target: '_blank'
+slots:
+  default: Best suited for small teams, startups and agencies with up to 5 developers.
 ---
 
-Ideal für kleine Teams , Startups und Agenturen mit bis zu 5 Entwicklern .
+Ideal für kleine Teams, Startups und Agenturen mit bis zu 5 Entwicklern.
 ::
 
-@@@@@b17@b17.de
+## API Bearbeiten
 
-@@ph018@@@gmail.de
+### Props (englisch)
 
-: component-props{prose}
+:component-props{prose}
 
-@@ph020@@slots (nicht vorhanden)
+### Slots Bearbeiten
 
-: component-slots{prose}
+:component-slots{prose}
 
-@@ph022@@gmail.de
+## Theme Bearbeiten
 
-: component-theme{prose}
+:component-theme{prose}
 
-@@ph024@@changelog@changelog
+## Changelog (englisch)
 
-: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

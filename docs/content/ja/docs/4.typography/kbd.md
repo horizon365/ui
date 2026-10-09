@@ -11,12 +11,12 @@ links:
 
 ## 使用法
 
-`kbd`コンポーネントを使用して、コンテンツ内に[ Kbd ](/docs/components/kbd)を表示します。
+`kbd`コンポーネントを使用して、[Kbd](/docs/components/kbd)をコンテンツに表示します。
 
 ::code-preview{class="[&>div]:*:my-0"}
-kbd {value="meta"}
+:kbd{value="meta"} :kbd{value="K"}
 
-#コード
+#code
 
 ```mdc
 :kbd{value="meta"} :kbd{value="K"}
@@ -24,20 +24,20 @@ kbd {value="meta"}
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props {prose}
+:component-props{prose}
 
 ### スロット
 
-component—slots {prose}
+:component-slots{prose}
 
-## テーマ
+## Theme
 
-component—theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

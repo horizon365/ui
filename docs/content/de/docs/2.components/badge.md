@@ -11,148 +11,148 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Badge.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
 Verwenden Sie den Standardslot, um das Etikett des Badges festzulegen.
 
 ::component-code
 ---
-Die Slots:
-  Markiert: Badge
+slots:
+  default: Badge
 ---
 ::
 
-@@ph001@@@bpg-bpg.de
+### Label
 
-Verwenden Sie die `label` prop, um das Etikett des Badges festzulegen.
+Verwenden Sie die `label`-Prop, um das Etikett des Badges festzulegen.
 
 ::component-code
 ---
-Props:
-  Bezeichnung: Badge
+props:
+  label: Badge
 ---
 ::
 
-@@003@Farbe
+### Farbe
 
-Verwenden Sie die `color` prop, um die Farbe des Badges zu ändern.
+Verwenden Sie die `color` prop, um die Farbe des Badge zu ändern.
 
 ::component-code
 ---
-Props:
-  Farbe: neutral
-Die Slots:
-  Schlagwörter: Badge
+props:
+  color: neutral
+slots:
+  default: Badge
 ---
 ::
 
-@@ph005@@Variantentyp
+### Variant Bearbeiten
 
-Verwenden Sie `variant` props, um die Variante des Badges zu ändern.
+Verwenden Sie die `variant`-Requisiten, um die Variante des Badges zu ändern.
 
 ::component-code
 ---
-Props:
-  Farbe: neutral
-  Variante: Übersicht
-Die Slots:
-  Markiert: Badge
+props:
+  color: neutral
+  variant: outline
+slots:
+  default: Badge
 ---
 ::
 
-@@007@000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Größe
 
-Verwenden Sie die `size` prop, um die Größe des Badges zu ändern.
+Verwenden Sie die `size`-Stütze, um die Größe des Badges zu ändern.
 
 ::component-code
 ---
-Props:
-  Größe: XL
-Slots auf:
-  Schlagwörter: Badge
+props:
+  size: xl
+slots:
+  default: Badge
 ---
 ::
 
-@@ph009@@gmail.de
+### Icon (nicht)
 
-Verwenden Sie die `icon` prop, um ein [Icon](/docs/components/icon) innerhalb des Badge anzuzeigen.
+Verwenden Sie die `icon`-Prop, um ein [Icon](/docs/components/icon) im Badge anzuzeigen.
 
 ::component-code
 ---
-Props:
-  Bezeichnung: i-Lucide-Rocket
-  Größe: MD
-  Farbe: Primary
-  Variante: solide
-Die Slots:
-  Schlagwörter: Badge
+props:
+  icon: i-lucide-rocket
+  size: md
+  color: primary
+  variant: solid
+slots:
+  default: Badge
 ---
 ::
 
-Verwenden Sie `leading` und `trailing` props, um die Symbolposition festzulegen, oder die `leading-icon` und `trailing-icon` props, um für jede Position ein anderes Symbol festzulegen.
+Verwenden Sie die `leading` und `trailing` props, um die Symbolposition festzulegen, oder die `leading-icon` und `trailing-icon` props, um für jede Position ein anderes Symbol festzulegen.
 
 ::component-code
 ---
-Props:
-  trailingIcon: i-lucide-arrow-right (englisch)
-  Größe: md
-Die Slots:
-  Schlagwörter: Badge
+props:
+  trailingIcon: i-lucide-arrow-right
+  size: md
+slots:
+  default: Badge
 ---
 ::
 
-@@@@@@@avatar19@avatar19@@avatar19@@avatar19@@avatar19@@avatar19@@avatar19@@avatar19@@avatar19@avatar19@avatar19@avatar@avatarant@avataratar@avataratarant19@avatarantgardium@avatarantgardium@avatardium@avatardium@avatardium@avatardium@avatardium@avatardium@avatardium@avatardium@avatardium@avatardium@avatardium@avatardium@avatardium@avatardium@avatardium@avatardium@avatardium@avatardium@avatardium@avatardium@avatardium@avatardi
+### Avatar (englisch)
 
-Verwenden Sie die `avatar` prop, um ein [Avatar](/docs/components/avatar) innerhalb des Badges zu zeigen.
+Verwenden Sie die `avatar`-Prop, um ein [Avatar](/docs/components/avatar) im Inneren des Badge anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  - avatar.loading (nicht verfügbar)
-Props:
-  Avatare sind:
-    src: 'https://github.com/nuxt.png'(auf Englisch)
-    Aufladung: Lazy
-  Größe: md
-  Farbe: neutral
-  Variante: Übersicht
-Slots auf:
-  Default:|
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
+    src: 'https://github.com/nuxt.png'
+    loading: lazy
+  size: md
+  color: neutral
+  variant: outline
+slots:
+  default: |
 
-    Badges
+    Badge
 ---
 ::
 
 ## Beispiele
 
-`class` prop
+### `class` prop (englisch)
 
-Verwenden Sie `class` prop, um die Grundstile des Badges zu überschreiben.
+Verwenden Sie die `class`-Prop, um die Basisstile des Badges zu überschreiben.
 
 ::component-code
 ---
-Props:
-  Klasse: 'font-bold rounded-full'(font-bold gerunded-voll)
-Slots auf:
-  Schlagwörter: Badge
+props:
+  class: 'font-bold rounded-full'
+slots:
+  default: Badge
 ---
 ::
 
-@@@@300@@bpb
+## API (Englisch)
 
-@@ph031@@gmail.de
+### Props Bearbeiten
 
-Komponenten Props
+:component-props
 
-@@ph032@gmail.de
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph033@gmail.de
+## Theme (englisch)
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph034@@changelog @@@ changelog @@@ changelog @@ changelog @ changelog @ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

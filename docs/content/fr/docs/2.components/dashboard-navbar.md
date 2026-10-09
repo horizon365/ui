@@ -8,9 +8,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardNavbar.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Le composant DashboardNavbar est une barre de navigation réactive qui s'intègre au composant [DashboardSidebar](/docs/components/dashboard-sidebar). Il comprend un bouton de bascule mobile pour activer la navigation réactive dans les mises en page du tableau de bord.
+Le composant DashboardNavbar est une barre de navigation réactive qui s'intègre au composant [DashboardSidebar](xph003). Il comprend un bouton de bascule mobile pour activer la navigation réactive dans les mises en page de tableau de bord.
 
 Utilisez-le à l'intérieur de l'emplacement `header` du composant [DashboardPanel](/docs/components/dashboard-panel):
 
@@ -30,101 +30,101 @@ definePageMeta({
 </template>
 ```
 
-Utilisez les emplacements `left`,`default` et `right` pour personnaliser la barre de navigation.
+Utilisez les slots `left`, `default` et `right` pour personnaliser la barre de navigation.
 
 ::component-example
 ---
-Étiquette: true
-nom: dashboard-navbar-exemple
-classe: '! px-0! pt-0'
-Props:
-  Catégorie: w-full
+prettier: true
+name: 'dashboard-navbar-example'
+class: '!px-0 !pt-0'
+props:
+  class: 'w-full'
 ---
 ::
 
 ::note
-Dans cet exemple, nous utilisons le composant [Tabs](/docs/components/tabs) dans l'emplacement de droite pour afficher des onglets.
+Dans cet exemple, nous utilisons le composant [Tabs](/docs/components/tabs) dans l'emplacement de droite pour afficher certains onglets.
 ::
 
-@@ph032@@titre
+### Titre
 
-Utilisez la prop `title` pour définir le titre de la barre de navigation.
+Utilisez le prop `title` pour définir le titre de la barre de navigation.
 
 ::component-code
 ---
-Caché:
-  @@classe 34
-Props:
-  Titre: Dashboard
-  Catégorie: w-full
-classe: '! px-0! pt-0'
+hide:
+  - class
+props:
+  title: 'Dashboard'
+  class: 'w-full'
+class: '!px-0 !pt-0'
 ---
 ::
 
-### Icon
+### icône
 
-Utilisez la prop `icon` pour définir l'icône de la barre de navigation.
+Utilisez le prop `icon` pour définir l'icône de la barre de navigation.
 
 ::component-code
 ---
-Caché:
-  @@ph037@classe
-Ignorer:
-  @@ph038@titre
-Props:
-  Titre: Dashboard
-  Icône:'i-lucide-house'
-  Catégorie: w-full
-classe: '! px-0! pt-0'
+hide:
+  - class
+ignore:
+  - title
+props:
+  title: 'Dashboard'
+  icon: 'i-lucide-house'
+  class: 'w-full'
+class: '!px-0 !pt-0'
 ---
 ::
 
-@@ph039@Toggle
+### Télécharger
 
-Utilisez le prop `toggle` pour personnaliser le bouton bascule affiché sur le mobile qui ouvre le composant [DashboardSidebar](/docs/components/dashboard-sidebar).
+Use the `toggle` prop to customize the toggle button displayed on mobile that opens the [DashboardSidebar](xph066) component.
 
 Vous pouvez passer n'importe quelle propriété du composant [Button](/docs/components/button) pour le personnaliser.
 
 ::component-example
 ---
-iframe: vrai
-iframeMobile: vrai
-dépassement: true
-nom: 'dashboard-navbar-toggle-exemple'
-Props:
-  Catégorie: w-full
+iframe: true
+iframeMobile: true
+overflowHidden: true
+name: 'dashboard-navbar-toggle-example'
+props:
+  class: 'w-full'
 ---
 ::
 
 ### Toggle Côté
 
-Utilisez le prop `toggle-side` pour changer le côté du bouton bascule. Par défaut à `right`.
+Utilisez la prop `toggle-side` pour changer le côté du bouton bascule. Par défaut, `right`.
 
 ::component-example
 ---
-iframe: vrai
-iframeMobile: vrai
-dépassement: true
-nom: 'dashboard-navbar-toggle-side-example'
-Props:
-  Catégorie: w-full
+iframe: true
+iframeMobile: true
+overflowHidden: true
+name: 'dashboard-navbar-toggle-side-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-@@P252@@référencement
+## api
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props
 
-Composants-props
+:component-props
 
-@@54@@séries
+### Slots
 
-Composants slots
+:component-slots
 
-@@505@thème
+## thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

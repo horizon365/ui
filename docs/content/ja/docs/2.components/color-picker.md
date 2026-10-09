@@ -1,6 +1,6 @@
 ---
 title: カラーピッカー
-description: 色を選択するためのコンポーネント。
+description: 色を選択するコンポーネント。
 category: form
 keywords:
   - colour picker
@@ -14,16 +14,16 @@ links:
 
 ## 使用法
 
-`v-model`ディレクティブを使用して、ColorPickerの値を制御します。
+ColorPickerの値を制御するには、`v-model`ディレクティブを使用します。
 
 ::component-code
 ---
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue '#00C16A'
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: '#00C16A'
 ---
 ::
 
@@ -31,78 +31,78 @@ links:
 
 ::component-code
 ---
-無視
-  -  defaultValue
-小道具
-  defaultValue '#00BCD4'
+ignore:
+  - defaultValue
+props:
+  defaultValue: '#00BCD4'
 ---
 ::
 
-###  RGBフォーマット
+### RGBフォーマット
 
 `format`プロパティを使用して、ColorPickerの`rgb`値を設定します。
 
 ::component-code
 ---
-無視
-  -  modelValue
-  - フォーマット
-外部
-  -  modelValue
-小道具
-  フォーマットRGB
-  modelValue 'rgb 0193106'
+ignore:
+  - modelValue
+  - format
+external:
+  - modelValue
+props:
+  format: rgb
+  modelValue: 'rgb(0, 193, 106)'
 ---
 ::
 
-###  HSLフォーマット
+### HSLフォーマット
 
 `format`プロパティを使用して、ColorPickerの`hsl`値を設定します。
 
 ::component-code
 ---
-無視
-  -  modelValue
-  - フォーマット
-外部
-  -  modelValue
-小道具
-  フォーマットhsl
-  modelValue 'hsl 153 100% 37.8%'
+ignore:
+  - modelValue
+  - format
+external:
+  - modelValue
+props:
+  format: hsl
+  modelValue: 'hsl(153, 100%, 37.8%)'
 ---
 ::
 
-###  CMYKフォーマット
+### CMYKフォーマット
 
 `format`プロパティを使用して、ColorPickerの`cmyk`値を設定します。
 
 ::component-code
 ---
-無視
-  -  modelValue
-  - フォーマット
-外部
-  -  modelValue
-小道具
-  フォーマットcmyk
-  modelValue 'cmyk 100% 0% 45.08% 24.31%'
+ignore:
+  - modelValue
+  - format
+external:
+  - modelValue
+props:
+  format: cmyk
+  modelValue: 'cmyk(100%, 0%, 45.08%, 24.31%)'
 ---
 ::
 
-###  CIELabフォーマット
+### CIELabフォーマット
 
 `format`プロパティを使用して、ColorPickerの`lab`値を設定します。
 
 ::component-code
 ---
-無視
-  -  modelValue
-  - フォーマット
-外部
-  -  modelValue
-小道具
-  フォーマットラボ
-  modelValue 'lab 68.88%—60.41 % 32.55%'
+ignore:
+  - modelValue
+  - format
+external:
+  - modelValue
+props:
+  format: lab
+  modelValue: 'lab(68.88% -60.41% 32.55%)'
 ---
 ::
 
@@ -112,35 +112,35 @@ links:
 
 ::component-code
 ---
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  スロットル100
-  modelValue '#00C16A'
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  throttle: 100
+  modelValue: '#00C16A'
 ---
 ::
 
 ### サイズ
 
-`size`プロパティを使用して、ColorPickerのサイズを設定します。
+`size`プロパティを使用してColorPickerのサイズを設定します。
 
 ::component-code
 ---
-小道具
-  サイズXL
+props:
+  size: xl
 ---
 ::
 
 ### 無効
 
-`disabled`プロパティを使用して、ColorPickerを無効にします。
+`disabled`プロパティを使用してColorPickerを無効にします。
 
 ::component-code
 ---
-小道具
-  無効true
+props:
+  disabled: true
 ---
 ::
 
@@ -148,28 +148,28 @@ links:
 
 ### カラーセレクターとして
 
-[ Button ](/docs/components/button)と[ Popover ](/docs/components/popover)コンポーネントを使用して、カラーセレクターを作成します。
+カラーセレクターを作成するには、[Button](/docs/components/button)と[Popover](/docs/components/popover)コンポーネントを使用します。
 
 ::component-example
 ---
-名前'カラーピッカー—選択例'
+name: 'color-picker-chooser-example'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
-###  Emits
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

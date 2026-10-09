@@ -11,34 +11,34 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/color-mode/ColorModeAvatar.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Le composant ColorModeAvatar étend le composant [Avatar](/docs/components/avatar), de sorte que vous pouvez passer n'importe quelle propriété telle que `size`,`icon`, etc.
+Le composant ColorModeAvatar étend le composant [Avatar](/docs/components/avatar), de sorte que vous pouvez passer n'importe quelle propriété telle que `size`, `icon`, etc.
 
 Utilisez les accessoires `light` et `dark` pour définir la source des modes clair et sombre.
 
 ::component-code{prefix="color-mode"}
 ---
-Props:
+props:
   light: 'https://github.com/vuejs.png'
   dark: 'https://github.com/nuxt.png'
 ---
 ::
 
 ::note
-Basculer entre le mode clair et sombre pour voir les différentes images: : u-color-mode-select {size="sm"}
+Basculer entre le mode clair et sombre pour voir les différentes images: : u-color-mode-select{size="sm"}
 ::
 
-@@P0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## api
 
-@@111@propriété
+### Props
 
-Composants-props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes" target="_blank"}
 Ce composant prend également en charge tous les attributs HTML natifs `<img>`.
 ::
 
-@changement@changement@changement.com
+## Changelog
 
-: composant-changelog {prefix="color-mode"}
+:component-changelog{prefix="color-mode"}

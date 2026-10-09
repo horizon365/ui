@@ -15,283 +15,283 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ProgressGroup.vue
 ---
 
-## 使用情况
+## 用法
 
-使用ProgressGroup组件可以将多个值显示为单个进度条的分段。
+使用ProgressGroup组件将多个值显示为单个进度条的段。
 
 ::component-code
 ---
-收阖：true
-忽略：
-- 个项目
-- 最大值
-  班级
-外部：
-  项目数
-外部类型：
-  - ProgressGroupItem []进度组项目
-道具：
-  最大值：128
-  项目名称：
-    - 标签："系统"
-      数值：24
-      颜色："中性"
-      图标："i-lucide-cog"
-    - 标签："应用程序"
-      数值：8
-      颜色：'错误'
-      图标："i-lucide应用程序窗口"
-    - 标签："文档"
-      数值：12
-      颜色："警告"
-      图标："i-lucide文件"
-    - 标签："多媒体"
-      数值：42
-      颜色："成功"
-      图标："i-lucide-film"
-  类别：'w-96'
+collapse: true
+ignore:
+  - items
+  - max
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  max: 128
+  items:
+    - label: 'System'
+      value: 24
+      color: 'neutral'
+      icon: 'i-lucide-cog'
+    - label: 'Apps'
+      value: 8
+      color: 'error'
+      icon: 'i-lucide-app-window'
+    - label: 'Documents'
+      value: 12
+      color: 'warning'
+      icon: 'i-lucide-file'
+    - label: 'Multimedia'
+      value: 42
+      color: 'success'
+      icon: 'i-lucide-film'
+  class: 'w-96'
 ---
 ::
 
-项目
+### 项目
 
-使用`items`属性作为具有下列属性的对象数组：
+使用`items` prop作为具有以下属性的对象数组：
 
-我的天啊!
-我的天啊!
-我的天啊!
-@@小标题：小标题：小标题
-我的天啊!
-我的天啊!
-我的天啊!
+- `label?: string`{lang="ts-type"}
+- `icon?: string`{lang="ts-type"}
+- `value?: number`{lang="ts-type"}
+- [`color?: "primary" | "secondary" | "success" | "info" | "warning" | "error" | "neutral" | (string & {})`{lang="ts-type"}](#with-custom-colors)
+- `slot?: string`{lang="ts-type"}
+- `class?: any`{lang="ts-type"}
+- `ui?: { segment?: ClassNameValue, indicator?: ClassNameValue, item?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingDot?: ClassNameValue, itemLabel?: ClassNameValue, itemTrailing?: ClassNameValue }`{lang="ts-type"}
 
 ::component-code
 ---
-收阖：true
-忽略：
-  项目
-  班级
-外部：
-  项目名称
-外部类型：
-  - ProgressGroupItem[]进度组项目
-道具：
-  项目名称：
-    - 标签：“计算”
-      数值：42
-      颜色：'主要'
-    标签：“存储”
-      数值：18
-      颜色：“信息”
-    标签：“带宽”
-      数值：9
-      颜色：“警告”
-  类别：'w-96'
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  items:
+    - label: 'Compute'
+      value: 42
+      color: 'primary'
+    - label: 'Storage'
+      value: 18
+      color: 'info'
+    - label: 'Bandwidth'
+      value: 9
+      color: 'warning'
+  class: 'w-96'
 ---
 ::
 
 ::note
-没有`icon`的项目在列表中会显示一个彩色圆点。
+没有`icon`的项目会在列表中显示一个彩色点。
 ::
 
-最大值
+### Max
 
-使用`max`属性来设定所有项目加起来的值。预设值为`100`。
+使用`max`属性将所有项的值加起来为. `100`。
 
 ::component-code
 ---
-收阖：true
-忽略：
-  个项目
-  班级
-外部：
-- 个项目
-外部类型：
-  - ProgressGroupItem[]进度组项目
-道具：
-  最大值：512
-  项目名称：
-    标签：“已使用”
-      数值：128
-      颜色：'主要'
-    - 标签：“保留”
-      数值：64
-      颜色：“中性”
-  类别：'w-96'
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  max: 512
+  items:
+    - label: 'Used'
+      value: 128
+      color: 'primary'
+    - label: 'Reserved'
+      value: 64
+      color: 'neutral'
+  class: 'w-96'
 ---
 ::
 
 ::note
-值被限制在`0`和`max`之间，并且加起来超过`max`的分段将按比例共享轨道。
+值被限制在`0`和`max`之间，并且相加超过`max`的段按比例共享轨道。
 ::
 
-状态
+### 状态
 
-使用`status`道具在条形图上方显示合计值。
+使用`status` prop在条形图上方显示求和值。
 
 ::component-code
 ---
-收阖：true
-忽略：
-  项目数
-  班级
-外部：
-- 个项目
-外部类型：
-  - ProgressGroupItem []进度组项目
-道具：
-  状态：真
-  最大值：128
-  项目名称：
-    - 标签："系统"
-      数值：24
-      颜色："中性"
-    - 标签："应用程序"
-      数值：8
-      颜色：'错误'
-    标签："多媒体"
-      数值：42
-      颜色："成功"
-  类别：'w-96'
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  status: true
+  max: 128
+  items:
+    - label: 'System'
+      value: 24
+      color: 'neutral'
+    - label: 'Apps'
+      value: 8
+      color: 'error'
+    - label: 'Multimedia'
+      value: 42
+      color: 'success'
+  class: 'w-96'
 ---
 ::
 
 ::tip
-状态会追踪长条图的结尾，请使用`:ui="{ status: 'w-full' }"`让它横跨整个长度。
+状态跟踪条的末端，使用`:ui="{ status: 'w-full' }"`使其跨越整个宽度。
 ::
 
-颜色
+### Color
 
-使用`color`道具更改每个未设置其自身颜色的线段的颜色。
+使用`color`属性来改变每一个没有设置自己的段的颜色。
 
 ::component-code
 ---
-收阖：true
-忽略：
-  项目数
-  班级
-外部：
-- 个项目
-外部类型：
-  - 进度组项目[]
-道具：
-  颜色：中性
-  项目名称：
-    - 标签：“读取”
-      数值：42
-    - 标签：“写入”
-      数值：18
-  类别：'w-96'
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  color: neutral
+  items:
+    - label: 'Read'
+      value: 42
+    - label: 'Write'
+      value: 18
+  class: 'w-96'
 ---
 ::
 
 ::tip
-此道具和每个项目的`color`都接受任何CSS颜色值，这对于主题之外的调色板非常方便。
+这个道具和每个项目的`color`都接受任何CSS颜色值，这对于主题之外的调色板来说很方便。
 ::
 
-尺寸
+### Size
 
 使用`size`属性更改ProgressGroup的大小。
 
 ::component-code
 ---
-收阖：true
-忽略：
-  项目数
-  班级
-外部：
-- 个项目
-外部类型：
-  - ProgressGroupItem[]进度组项目
-道具：
-  尺寸：xl
-  项目名称：
-    - 标签：“读取”
-      数值：42
-      颜色：'主要'
-    - 标签：“写入”
-      数值：18
-      颜色：“信息”
-  类别：'w-96'
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  size: xl
+  items:
+    - label: 'Read'
+      value: 42
+      color: 'primary'
+    - label: 'Write'
+      value: 18
+      color: 'info'
+  class: 'w-96'
 ---
 ::
 
-方向
+### 方向
 
-使用`orientation`属性更改ProgressGroup的方向。默认为`horizontal`。
+使用`orientation`属性将ProgressGroup.xml的方向更改为`horizontal`。
 
 ::component-code
 ---
-收阖：true
-忽略：
-  项目数
-  班级
-外部：
-  项目数
-外部类型：
-  - ProgressGroupItem[]进度组项目
-道具：
-  方向：垂直
-  项目名称：
-    - 标签：“已读”
-      数值：42
-      颜色：'主要'
-    - 标签：“写入”
-      数值：18
-      颜色：“信息”
-  类别：'h-48'
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  orientation: vertical
+  items:
+    - label: 'Read'
+      value: 42
+      color: 'primary'
+    - label: 'Write'
+      value: 18
+      color: 'info'
+  class: 'h-48'
 ---
 ::
 
-示例
+## 示例
 
-### 使用状态插槽
+### 带状态槽
 
-使用`#status`插槽，用您自己的内容替换合计百分比。
+使用`#status`插槽将百分比总和替换为您自己的内容。
 
 ::component-example
 ---
-收阖：true
-名称：进度组状态示例
+collapse: true
+name: progress-group-status-example
 ---
 ::
 
-### 使用项目插槽
+### 带物品插槽
 
-使用`#item-label`和`#item-trailing`插槽来更改每个条目的显示内容。这两个插槽都将接收`item`、`index`和`percent`。
+使用`#item-label`和`#item-trailing`插槽来更改每个条目的显示内容。两者都接收`item`，其`index`和其`percent`。
 
 ::component-example
 ---
-收阖：true
-名称：进度-组-项-示例
+collapse: true
+name: progress-group-item-example
 ---
 ::
 
-### 使用自定义颜色
+### 自定义颜色
 
-为每个项目指定一种CSS颜色，以便在主题调色板之外构建细目。
+给每个项目一个CSS颜色，以建立一个细分以外的主题调色板。
 
 ::component-example
 ---
-收阖：true
-名称：进度组自定义颜色示例
+collapse: true
+name: progress-group-custom-color-example
 ---
 ::
 
-## 活性成分
+## API
 
-### 道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽数
+### Slots
 
-：组件插槽
+:component-slots
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

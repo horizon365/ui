@@ -13,113 +13,113 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/FieldGroup.vue
 ---
 
-## 使用情况
+## 用法
 
-将多个[Button](/docs/components/button)包装在字段组中，以便将它们组合在一起。
-
-::component-code
----
-更漂亮：真的
-插槽：
-  默认值：|
-
-<UButton color="neutral" variant="subtle" label="Button" />的
-<UButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />的
----
-：U型按钮{color="neutral" variant="subtle" label="Button"}
-：U型按钮{color="neutral" variant="outline" icon="i-lucide-chevron-down"}
-::
-
-尺寸
-
-使用`size`道具更改所有按钮的大小。
+将多个[Button](/docs/components/button)包装在一个FieldGroup中，以将它们分组在一起。
 
 ::component-code
 ---
-更漂亮：真的
-道具：
-  尺寸：xl
-插槽：
-  默认值：|
+prettier: true
+slots:
+  default: |
 
-<UButton color="neutral" variant="subtle" label="Button" />的
-<UButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />的
+    <UButton color="neutral" variant="subtle" label="Button" />
+    <UButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
 ---
-：U型按钮{color="neutral" variant="subtle" label="Button"}
-：U型按钮{color="neutral" variant="outline" icon="i-lucide-chevron-down"}
+:u-button{color="neutral" variant="subtle" label="按钮"}
+:u-button{color="neutral" variant="outline" icon="i-lucide-chevron-down"}
 ::
 
-方向
+### Size
 
-使用`orientation`道具来变更按钮的方向。预设为`horizontal`。
+使用`size`属性更改所有按钮的大小。
 
 ::component-code
 ---
-更漂亮：真的
-道具：
-  方向：垂直
-插槽：
-  默认值：|
+prettier: true
+props:
+  size: xl
+slots:
+  default: |
 
-<UButton color="neutral" variant="subtle" label="Submit" />的
-<UButton color="neutral" variant="outline" label="Cancel" />的电话
+    <UButton color="neutral" variant="subtle" label="Button" />
+    <UButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
 ---
-：U形按钮{color="neutral" variant="subtle" label="Submit"}
-：U形按钮{color="neutral" variant="outline" label="Cancel"}
+:u-button{color="neutral" variant="subtle" label="按钮"}
+:u-button{color="neutral" variant="outline" icon="i-lucide-chevron-down"}
 ::
 
-示例
+### 方向
 
-### 使用输入
-
-您可以在字段群组中使用下列元件：[Input](/docs/components/input)、[InputMenu](/docs/components/input-menu)、[Select](/docs/components/select)[SelectMenu](/docs/components/select-menu)等。
+使用`orientation`属性将按钮的方向更改为`horizontal`。
 
 ::component-code
 ---
-更漂亮：真的
-插槽：
-  默认值：|
+prettier: true
+props:
+  orientation: vertical
+slots:
+  default: |
 
-<UInput color="neutral" variant="outline" placeholder="Enter token" />的
-
-    041号
+    <UButton color="neutral" variant="subtle" label="Submit" />
+    <UButton color="neutral" variant="outline" label="Cancel" />
 ---
-：u输入{color="neutral" variant="outline" placeholder="Enter token"}
-：u-button{color="neutral" variant="subtle" icon="i-lucide-clipboard"}
+:u-button{color="neutral" variant="subtle" label="提交"}
+:u-button{color="neutral" variant="outline" label="取消"}
 ::
 
-### With tooltip
+## 示例
+
+### 带输入
+
+您可以在字段组中使用[Input](/docs/components/input)、[InputMenu](/docs/components/input-menu)、[Select](/docs/components/select) xSelectMenu](/docs/components/select-menu)等组件。
+
+::component-code
+---
+prettier: true
+slots:
+  default: |
+
+    <UInput color="neutral" variant="outline" placeholder="Enter token" />
+
+    <UButton color="neutral" variant="subtle" icon="i-lucide-clipboard" />
+---
+:u-input{color="neutral" variant="outline" placeholder="Enter token"}
+:u-button{color="neutral" variant="subtle" icon="i-lucide-clipboard"}
+::
+
+### 带工具提示
 
 您可以在字段组中使用[Tooltip](/docs/components/tooltip)。
 
-：组件示例{name="field-group-tooltip-example"}
+:component-example{name="field-group-tooltip-example"}
 
-### With panel menu
+### 带菜单
 
 您可以在字段组中使用[DropdownMenu](/docs/components/dropdown-menu)。
 
-：组件示例{name="field-group-dropdown-example"}
+:component-example{name="field-group-dropdown-example"}
 
-### With badge
+### 带徽章
 
 您可以在字段组中使用[Badge](/docs/components/badge)。
 
-：组件示例{name="field-group-badge-example"}
+:component-example{name="field-group-badge-example"}
 
 ## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
 ### Slots
 
-：组件插槽
+:component-slots
 
 ## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

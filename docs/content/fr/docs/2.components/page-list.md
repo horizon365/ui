@@ -1,5 +1,5 @@
 ---
-title: Pagées
+title: PageLire
 description: 'Une disposition de liste verticale pour afficher du contenu dans un format empilé.'
 category: page
 links:
@@ -8,46 +8,46 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageList.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Il est parfait pour créer des listes empilées de [PageCard](/docs/components/page-card) composants ou tout autre élément, avec des séparateurs facultatifs entre les éléments.
-
-::component-example
----
-Collapse: vrai
-nom: 'page-exemple'
-Props:
-  Catégorie: w-full
----
-::
-
-@@005@Diffuseur
-
-Utilisez la prop `divide` pour ajouter un diviseur entre chaque élément enfant.
+Il est parfait pour créer des listes empilées de composants [PageCard](/docs/components/page-card) ou de tout autre élément, avec des séparateurs facultatifs entre les éléments.
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'page-liste-divise-exemple'
-Props:
-  Catégorie: w-full
+collapse: true
+name: 'page-list-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-@@ph007@@api
+### Séparation
 
-@@ph008@props
+Utilisez le prop `divide` pour ajouter un diviseur entre chaque élément enfant.
 
-Composants-props
+::component-example
+---
+collapse: true
+name: 'page-list-divide-example'
+props:
+  class: 'w-full'
+---
+::
 
-@@ph009@@réseau
+## api
 
-Composants slots
+### Props
 
-@@ph010@thème
+:component-props
 
-Composant-thème
+### Slots
 
-@changement@changement@changement.com
+:component-slots
 
-Composant-changelog
+## Thème
+
+:component-theme
+
+## changelog
+
+:component-changelog

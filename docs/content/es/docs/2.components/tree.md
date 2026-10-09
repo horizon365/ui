@@ -14,185 +14,185 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Tree.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice el componente Árbol para mostrar una estructura jerárquica de elementos.
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
-  @001@clase
-Ignora:
-  @@2002@artículos
-Externo:
-  @@pH000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externalidades:
-  @@F004@F004 [en línea]
-Props:
-  Items:
-    - label:'aplicación/'
-      defaultExpanded: verdadero
-      niños:
-        - label:'composables/'
-          niños:
-            - label:'useAuth. ts'
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
+  items:
+    - label: 'app/'
+      defaultExpanded: true
+      children:
+        - label: 'composables/'
+          children:
+            - label: 'useAuth.ts'
               icon: 'i-vscode-icons-file-type-typescript'
-            - label:'UseUser.es'
+            - label: 'useUser.ts'
               icon: 'i-vscode-icons-file-type-typescript'
-        - label:'componentes/'
-          defaultExpanded: verdadero
-          niños:
-            - label:'Tarjeta. vista'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
               icon: 'i-vscode-icons-file-type-vue'
-            - label:'Botón. vue'
+            - label: 'Button.vue'
               icon: 'i-vscode-icons-file-type-vue'
-    - label:'aplicación. vue'
+    - label: 'app.vue'
       icon: 'i-vscode-icons-file-type-vue'
-    - label:'nuxt. config. ts'
+    - label: 'nuxt.config.ts'
       icon: 'i-vscode-icons-file-type-nuxt'
-  Categoría: W-60
+  class: 'w-60'
 ---
 ::
 
-@140000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Artículos
 
-Utilice el prop `items` como una matriz de objetos con las siguientes propiedades:
+Utilice el prop `items` como un array de objetos con las siguientes propiedades:
 
-@@
-@@
-@@
-@@
-@@
-@@
-@@
-@@
-@@
-@@
-@@
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`label?: string`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`trailingIcon?: string`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`disabled?: boolean`xx{lang="ts-type"}
+- xxx`slot?: string`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`children?: TreeItem[]`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`onToggle?: (e: TreeItemToggleEvent<TreeItem>) => void`xxx{lang="ts-type"}
+- xx`onSelect?: (e: TreeItemSelectEvent<TreeItem>) => void`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`class?: any`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ::note
-Se requiere un identificador único para cada ítem. El componente utilizará el `label` prop como identificador si no se proporciona `get-key`. Idealmente, debe proporcionar un `get-key` función prop para devolver un identificador único. Alternativamente, puede usar el `labelKey` prop para especificar qué propiedad usar como identificador único.
+Se requiere un identificador único para cada ítem. El componente usará la prop `label` como identificador si no se proporciona `get-key`.Idealmente, debería proporcionar una prop de función `get-key` para devolver un identificador único. Alternativamente, puede usar la prop `labelKey` para especificar qué propiedad usar como identificador único.
 ::
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
-  @@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Ignora:
-  @@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externo:
-  @@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externalidades:
-  @@500@5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Items:
-    - label:'aplicación/'
-      defaultExpanded: verdadero
-      niños:
-        - label:'composables/'
-          niños:
-            - label:'useAuth. ts'
-              icon: 'i-vscode-icons-file-type-typescript'
-            - label:'UseUser.es'
-              icon: 'i-vscode-icons-file-type-typescript'
-        - label:'componentes/'
-          defaultExpanded: verdadero
-          niños:
-            - label:'Tarjeta. vista'
-              icon: 'i-vscode-icons-file-type-vue'
-            - label:'Botón. vue'
-              icon: 'i-vscode-icons-file-type-vue'
-    - label:'aplicación. vue'
-      icon: 'i-vscode-icons-file-type-vue'
-    - label:'nuxt. config. ts'
-      icon: 'i-vscode-icons-file-type-nuxt'
-  Categoría: W-60
----
-::
-
-@@6666 @
-
-Utilice el prop `multiple` para permitir la selección de varios elementos.
-
-::component-code
----
-Colapso: Verdad
-Escondido:
-  @068@clase
-Ignora:
-  @@pH069@artículos
-Externo:
-  @070000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externalidades:
-  @@701@@TREE [en línea]
-Props:
-  Multiplicación: True
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
   items:
-    - label:'aplicación/'
-      defaultExpanded: verdadero
-      niños:
-        - label:'composables/'
-          niños:
-            - label:'useAuth. ts'
+    - label: 'app/'
+      defaultExpanded: true
+      children:
+        - label: 'composables/'
+          children:
+            - label: 'useAuth.ts'
               icon: 'i-vscode-icons-file-type-typescript'
-            - label:'UseUser.es'
+            - label: 'useUser.ts'
               icon: 'i-vscode-icons-file-type-typescript'
-        - label:'componentes/'
-          defaultExpanded: verdadero
-          niños:
-            - label:'Tarjeta. vue'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
               icon: 'i-vscode-icons-file-type-vue'
-            - label:'Botón. vue'
+            - label: 'Button.vue'
               icon: 'i-vscode-icons-file-type-vue'
-    - label:'aplicación. vue'
+    - label: 'app.vue'
       icon: 'i-vscode-icons-file-type-vue'
-    - label:'nuxt. config. ts'
+    - label: 'nuxt.config.ts'
       icon: 'i-vscode-icons-file-type-nuxt'
-  Categoría: W-60
+  class: 'w-60'
 ---
 ::
 
-### Anidado: badge{label="4.1+" class="align-text-top"}
+### Multiple (Edición española)
+
+Utilice el accesorio `multiple` para permitir la selección de varios elementos.
+
+::component-code
+---
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
+  multiple: true
+  items:
+    - label: 'app/'
+      defaultExpanded: true
+      children:
+        - label: 'composables/'
+          children:
+            - label: 'useAuth.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+            - label: 'useUser.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+            - label: 'Button.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+    - label: 'app.vue'
+      icon: 'i-vscode-icons-file-type-vue'
+    - label: 'nuxt.config.ts'
+      icon: 'i-vscode-icons-file-type-nuxt'
+  class: 'w-60'
+---
+::
+
+Archivo de la etiqueta: badge{label="4.1+" class="align-text-top"}
 
 Utilice el prop `nested` para controlar si el árbol se representa con una estructura anidada o como una lista plana.
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
-  @085 @ clase
-Ignora:
-  @086 @ Artículos
-Externo:
-  @087 @ Artículos
-Externalidades:
-  @@888@888@888@888 [en]
-Props:
-  Categoría: False
-  Items:
-    - label:'aplicación/'
-      defaultExpanded: verdadero
-      niños:
-        - label:'composables/'
-          niños:
-            - label:'useAuth. ts'
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
+  nested: false
+  items:
+    - label: 'app/'
+      defaultExpanded: true
+      children:
+        - label: 'composables/'
+          children:
+            - label: 'useAuth.ts'
               icon: 'i-vscode-icons-file-type-typescript'
-            - label:'UseUser.es'
+            - label: 'useUser.ts'
               icon: 'i-vscode-icons-file-type-typescript'
-        - label:'componentes/'
-          defaultExpanded: verdadero
-          niños:
-            - label:'Tarjeta. vista'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
               icon: 'i-vscode-icons-file-type-vue'
-            - label:'Botón. vue'
+            - label: 'Button.vue'
               icon: 'i-vscode-icons-file-type-vue'
-    - label:'aplicación. vue'
+    - label: 'app.vue'
       icon: 'i-vscode-icons-file-type-vue'
-    - label:'nuxt. config. ts'
+    - label: 'nuxt.config.ts'
       icon: 'i-vscode-icons-file-type-nuxt'
-  Categoría: W-60
+  class: 'w-60'
 ---
 ::
 
@@ -200,93 +200,93 @@ Props:
 Cuando `nested` es `false`, todos los elementos se representan en el mismo nivel con sangría para indicar jerarquía.
 ::
 
-@@pH100@color (Edición española)
+### Color (Edición)
 
-Utilice el prop `color` para cambiar el color del árbol.
+Utilice el accesorio `color` para cambiar el color del árbol.
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
-  @2010@clase
-Ignora:
-  @303@artículos
-Externo:
-  @104@puntos
-Externalidades:
-  @105@@105@105@105@105@105@105)
-Props:
-  Color: Neutral
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
+  color: neutral
   items:
-    - label:'aplicación/'
-      defaultExpanded: verdadero
-      niños:
-        - label:'composables/'
-          niños:
-            - label:'useAuth. ts'
+    - label: 'app/'
+      defaultExpanded: true
+      children:
+        - label: 'composables/'
+          children:
+            - label: 'useAuth.ts'
               icon: 'i-vscode-icons-file-type-typescript'
-            - label:'UseUser.es'
+            - label: 'useUser.ts'
               icon: 'i-vscode-icons-file-type-typescript'
-        - label:'componentes/'
-          defaultExpanded: verdadero
-          niños:
-            - label:'Tarjeta. vue'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
               icon: 'i-vscode-icons-file-type-vue'
-            - label:'Botón. vue'
+            - label: 'Button.vue'
               icon: 'i-vscode-icons-file-type-vue'
-    - label:'aplicación. vue'
+    - label: 'app.vue'
       icon: 'i-vscode-icons-file-type-vue'
-    - label:'nuxt. config. ts'
+    - label: 'nuxt.config.ts'
       icon: 'i-vscode-icons-file-type-nuxt'
-  Categoría: W-60
+  class: 'w-60'
 ---
 ::
 
-@115 @@ Tamaño
+### Tamaño
 
 Utilice el prop `size` para cambiar el tamaño del árbol.
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
-  @117 @ clase
-Ignora:
-  @118@artículos
-Externo:
-  @119@artículos
-Externalidades:
-  @120@120@120@120@120@120@120@120@120@120@120@1201111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
-Props:
-  Tamaño: xl
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
+  size: xl
   items:
-    - label:'aplicación/'
-      defaultExpanded: verdadero
-      niños:
-        - label:'composables/'
-          niños:
-            - label:'useAuth. ts'
+    - label: 'app/'
+      defaultExpanded: true
+      children:
+        - label: 'composables/'
+          children:
+            - label: 'useAuth.ts'
               icon: 'i-vscode-icons-file-type-typescript'
-            - label:'UseUser.es'
+            - label: 'useUser.ts'
               icon: 'i-vscode-icons-file-type-typescript'
-        - label:'componentes/'
-          defaultExpanded: verdadero
-          niños:
-            - label:'Tarjeta. vue'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
               icon: 'i-vscode-icons-file-type-vue'
-            - label:'Botón. vue'
+            - label: 'Button.vue'
               icon: 'i-vscode-icons-file-type-vue'
-    - label:'aplicación. vue'
+    - label: 'app.vue'
       icon: 'i-vscode-icons-file-type-vue'
-    - label:'nuxt. config. ts'
+    - label: 'nuxt.config.ts'
       icon: 'i-vscode-icons-file-type-nuxt'
-  Categoría: W-60
+  class: 'w-60'
 ---
 ::
 
-### Trailing Icon (Edición española)
+XPH260xTrailing Icon de diseño
 
-Utilice el prop `trailing-icon` para personalizar el [Icon](/docs/components/icon) de un nodo padre.
+Utilice el prop `trailing-icon` para personalizar el [Icon](/docs/components/icon) final de un nodo padre.
 
 ::note
 Si se especifica un icono para un elemento, siempre tendrá prioridad sobre estos accesorios.
@@ -294,173 +294,173 @@ Si se especifica un icono para un elemento, siempre tendrá prioridad sobre esto
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
-  @137 @ clase
-Ignora:
-  @138@artículos
-Externo:
-  @139 @ artículos
-Externalidades:
-  @140@140@140@140@140@140@140@140@140@140@14000114001140000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  TrailingIcono: 'i-lucide-arrow-down'
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
+  trailingIcon: 'i-lucide-arrow-down'
   items:
-    - label:'aplicación/'
-      defaultExpanded: verdadero
-      niños:
-        - label:'composables/'
-          Archivo de la etiqueta: i-lucide-chevron-down
-          niños:
-            - label:'useAuth. ts'
+    - label: 'app/'
+      defaultExpanded: true
+      children:
+        - label: 'composables/'
+          trailingIcon: 'i-lucide-chevron-down'
+          children:
+            - label: 'useAuth.ts'
               icon: 'i-vscode-icons-file-type-typescript'
-            - label:'UseUser.es'
+            - label: 'useUser.ts'
               icon: 'i-vscode-icons-file-type-typescript'
-        - label:'componentes/'
-          defaultExpanded: verdadero
-          niños:
-            - label:'Tarjeta. vista'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
               icon: 'i-vscode-icons-file-type-vue'
-            - label:'Botón. vue'
+            - label: 'Button.vue'
               icon: 'i-vscode-icons-file-type-vue'
-    - label:'aplicación. vue'
+    - label: 'app.vue'
       icon: 'i-vscode-icons-file-type-vue'
-    - label:'nuxt. config. ts'
+    - label: 'nuxt.config.ts'
       icon: 'i-vscode-icons-file-type-nuxt'
-  Categoría: W-60
+  class: 'w-60'
 ---
 ::
 
 ::framework-only
-#nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.chevronDown`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.chevronDown`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.chevronDown`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.chevronDown`.
 :::
 ::
 
-### Icono expandido
+### Expanded Icono
 
-Utilice los props `expanded-icon` y `collapsed-icon` para personalizar los iconos de un nodo padre cuando se expande o colapsa.
+Utilice los accesorios `expanded-icon` y `collapsed-icon` para personalizar los iconos de un nodo padre cuando se expande o colapsa.
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
-  @159 @ clase
-Ignora:
-  @160000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externo:
-  @161@artículos
-Externalidades:
-  @162@162@162@162@162@162@162@162@162@162@162@162@162@162@162@162@162@162@162@162@162)
-Props:
-  expandedIcono: 'i-lucide-book-open'
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
+  expandedIcon: 'i-lucide-book-open'
   collapsedIcon: 'i-lucide-book'
-  Items:
-    - label:'aplicación/'
-      defaultExpanded: verdadero
-      niños:
-        - label:'composables/'
-          niños:
-            - label:'useAuth. ts'
+  items:
+    - label: 'app/'
+      defaultExpanded: true
+      children:
+        - label: 'composables/'
+          children:
+            - label: 'useAuth.ts'
               icon: 'i-vscode-icons-file-type-typescript'
-            - label:'UseUser.es'
+            - label: 'useUser.ts'
               icon: 'i-vscode-icons-file-type-typescript'
-        - label:'componentes/'
-          defaultExpanded: verdadero
-          niños:
-            - label:'Tarjeta. vue'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
               icon: 'i-vscode-icons-file-type-vue'
-            - label:'Botón. vue'
+            - label: 'Button.vue'
               icon: 'i-vscode-icons-file-type-vue'
-    - label:'aplicación. vue'
+    - label: 'app.vue'
       icon: 'i-vscode-icons-file-type-vue'
-    - label:'nuxt. config. ts'
+    - label: 'nuxt.config.ts'
       icon: 'i-vscode-icons-file-type-nuxt'
-  Categoría: W-60
+  class: 'w-60'
 ---
 ::
 
 ::framework-only
-#nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar estos iconos de forma global en su `app.config.ts` bajo `ui.icons.folder` y `ui.icons.folderOpen` teclas.
+Puede personalizar estos iconos de forma global en su `app.config.ts` bajo las teclas `ui.icons.folder` y `ui.icons.folderOpen`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar estos iconos de forma global en su `vite.config.ts` bajo `ui.icons.folder` y `ui.icons.folderOpen` teclas.
+Puede personalizar estos iconos globalmente en su `vite.config.ts` bajo las teclas `ui.icons.folder` y `ui.icons.folderOpen`.
 :::
 ::
 
 ### Desactivado
 
-Utilice el prop `disabled` para evitar cualquier interacción del usuario con el árbol.
+Utilice el accesorio `disabled` para evitar cualquier interacción del usuario con el árbol.
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
-  @180000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Ignora:
-  @181@artículos
-Externo:
-  @2018@artículos
-Externalidades:
-  @183@183@183@183@183@183)
-Props:
-  Discapacidad: Verdadero
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
+  disabled: true
   items:
-    - label:'aplicación'
-      icono: 'i-lucide-folder'
-      defaultExpanded: verdadero
-      niños:
-        - label:'Compuestos'
-          icono: 'i-lucide-folder'
-          niños:
-            - label:'useAuth. ts'
+    - label: 'app'
+      icon: 'i-lucide-folder'
+      defaultExpanded: true
+      children:
+        - label: 'composables'
+          icon: 'i-lucide-folder'
+          children:
+            - label: 'useAuth.ts'
               icon: 'i-vscode-icons-file-type-typescript'
-            - label:'UseUser.es'
+            - label: 'useUser.ts'
               icon: 'i-vscode-icons-file-type-typescript'
-        - label:'componentes'
-          icono: 'i-lucide-folder'
-          niños:
-            - label:'El hogar'
-              icono: 'i-lucide-folder'
-              niños:
-                - label:'Tarjeta. vue'
+        - label: 'components'
+          icon: 'i-lucide-folder'
+          children:
+            - label: 'Home'
+              icon: 'i-lucide-folder'
+              children:
+                - label: 'Card.vue'
                   icon: 'i-vscode-icons-file-type-vue'
-                - label:'Botón. vue'
+                - label: 'Button.vue'
                   icon: 'i-vscode-icons-file-type-vue'
-    - label:'aplicación. vue'
+    - label: 'app.vue'
       icon: 'i-vscode-icons-file-type-vue'
-    - label:'nuxt. config. ts'
+    - label: 'nuxt.config.ts'
       icon: 'i-vscode-icons-file-type-nuxt'
-  Categoría: W-60
+  class: 'w-60'
 ---
 ::
 
 ::note
-También puede desactivar elementos individuales utilizando `item.disabled`.
+También puede desactivar elementos individuales usando `item.disabled`.
 ::
 
-@@P195 Ejemplos
+## Ejemplos
 
-### Control elemento (s) seleccionado (s)
+### Control artículo (s) seleccionado (s)
 
 Puede controlar los elementos seleccionados mediante la directiva `default-value` o la directiva `v-model`.
 
 ::component-example
 ---
-Nombre: 'arbo-modelo-valor-ejemplo'
-Colapso: Verdad
-Props:
-  Categoría: W-60
+name: 'tree-model-value-example'
+collapse: true
+props:
+  class: 'w-60'
 ---
 ::
 
@@ -468,14 +468,14 @@ Props:
 Utilice el prop `get-key` para cambiar la función utilizada para obtener la clave única de cada elemento cuando se proporciona un `v-model` o `default-value`.
 ::
 
-Si desea evitar que se seleccione un elemento, puede utilizar la propiedad `item.onSelect()`{lang="ts-type"} o el evento global `select`:
+Si desea evitar que se seleccione un elemento, puede usar la propiedad `item.onSelect()`{lang="ts-type"} o el evento global `select`:
 
 ::component-example
 ---
-Nombre del archivo: 'tree-on-select-example'
-Colapso: Verdad
-Props:
-  Categoría: W-60
+name: 'tree-on-select-example'
+collapse: true
+props:
+  class: 'w-60'
 ---
 ::
 
@@ -485,14 +485,14 @@ Esto le permite expandir o contraer un elemento primario sin seleccionarlo.
 
 ### Control artículos expandidos
 
-Puede controlar los elementos expandidos mediante la prop `default-expanded` o la directiva `v-model`.
+Puede controlar los elementos expandidos mediante el prop `default-expanded` o la directiva `v-model`.
 
 ::component-example
 ---
-Nombre: 'arbo-ejemplo'
-Colapso: Verdad
-Props:
-  Categoría: W-60
+name: 'tree-expanded-example'
+collapse: true
+props:
+  class: 'w-60'
 ---
 ::
 
@@ -500,53 +500,53 @@ Si desea evitar que un elemento se expanda, puede usar la propiedad `item.onTogg
 
 ::component-example
 ---
-Nombre del archivo: 'tree-on-toggle-example'
-Colapso: Verdad
-Props:
-  Categoría: W-60
+name: 'tree-on-toggle-example'
+collapse: true
+props:
+  class: 'w-60'
 ---
 ::
 
 ::note
-Esto le permite seleccionar un elemento padre sin expandir o contraer sus hijos.
+Esto le permite seleccionar un elemento principal sin expandir o contraer sus hijos.
 ::
 
 ### Con casilla de verificación en los elementos: badge{label="4.1+" class="align-text-top"}
 
-Puede utilizar la ranura `item-leading` para añadir una [Checkbox](/docs/components/checkbox) a los elementos. Props `propagate-select` y `bubble-select` para permitir la selección múltiple con relación padre-hijo y los `select` y `toggle`eventos para controlar el estado seleccionado y expandido de los elementos.
+Puede utilizar la ranura `item-leading` para añadir un [Checkbox](/docs/components/checkbox) a los elementos. Utilice los accesorios `multiple`, `propagate-select` y `bubble-select` para habilitar la selección múltiple con relación padre-hijo y los eventos `select` y `toggle` para controlar el estado seleccionado y expandido de los elementos.
 
 ::component-example
 ---
-Nombre: 'arbor-checkbox-items-example'
-Colapso: Verdad
-Props:
-  Categoría: W-60
+name: 'tree-checkbox-items-example'
+collapse: true
+props:
+  class: 'w-60'
 ---
 ::
 
 ::note
-Este ejemplo utiliza el prop `as` para cambiar los elementos de `button` a `div` ya que el [`Checkbox`](/docs/components/checkbox) también se representa como un `button`.
+En este ejemplo se utiliza la prop `as` para cambiar los elementos de `button` a `div`, ya que el [`Checkbox`](/docs/components/checkbox) también se representa como un `button`.
 ::
 
 ### Con arrastrar y soltar: badge{label="4.1+" class="align-text-top"}
 
-Utilice el [`useSortable`](https://vueuse.org/integrations/useSortable/) componible de [`@vueuse/integrations`](https://vueuse.org/integrations/README.html) para habilitar la funcionalidad de arrastrar y soltar en el árbol. para proporcionar una experiencia de arrastrar y soltar sin interrupciones.
+Use el composable [`useSortable`](https://vueuse.org/integrations/useSortable/) de [`@vueuse/integrations`](https://vueuse.org/integrations/README.html) para habilitar la funcionalidad de arrastrar y soltar en el árbol. Esta integración envuelve [Sortable.js](ph47xhttps://sortablejs.github.io/Sortable/) para proporcionar una experiencia de arrastrar y soltar sin problemas.
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-name: 'drag-and-drop-example'
+prettier: true
+collapse: true
+name: 'tree-drag-and-drop-example'
 ---
 ::
 
 ::note
-Este ejemplo establece la prop `nested` a `false` para tener una lista plana de elementos de modo que los elementos se puedan arrastrar y soltar.
+Este ejemplo establece el prop `nested` a `false` para tener una lista plana de elementos para que los elementos se puedan arrastrar y soltar.
 ::
 
-### With virtualization: badge{label="4.1+" class="align-text-top"}
+### Con virtualización: badge{label="4.1+" class="align-text-top"}
 
-Utilice la prop `virtualize` para habilitar la virtualización de listas grandes como un booleano o un objeto con opciones como `{ estimateSize: 32, overscan: 12 }`.
+Utilice el prop `virtualize` para habilitar la virtualización de listas grandes como un booleano o un objeto con opciones como `{ estimateSize: 32, overscan: 12 }`.
 
 ::warning
 Cuando la virtualización está habilitada, la estructura del árbol se aplana, similar a la configuración de la prop `nested` a `false`.
@@ -554,10 +554,10 @@ Cuando la virtualización está habilitada, la estructura del árbol se aplana, 
 
 ::component-example
 ---
-Categoría: true
-Nombre: 'arbor-virtualize-ejemplo'
-Props:
-  Categoría: W-60
+prettier: true
+name: 'tree-virtualize-example'
+props:
+  class: 'w-60'
 ---
 ::
 
@@ -565,41 +565,41 @@ Props:
 
 Utilice la propiedad `slot` para personalizar un elemento específico.
 
-Tendrás acceso a los siguientes slots:
+Tendrás acceso a las siguientes slots:
 
-@@258@@@259@@260
-@@
-@@
-@@267@@268@269
-@@270@@271@272
+- x`#{{ item.slot }}-wrapper`x{lang="ts-type"}
+- x`#{{ item.slot }}`x{lang="ts-type"}
+- x`#{{ item.slot }}-leading`x{lang="ts-type"}
+- x`#{{ item.slot }}-label`x{lang="ts-type"}
+- x`#{{ item.slot }}-trailing`x{lang="ts-type"}
 
 ::component-example
 ---
-Nombre del archivo: 'tree-custom-slot-example'
-Colapso: Verdad
-Props:
-  Categoría: W-60
+name: 'tree-custom-slot-example'
+collapse: true
+props:
+  class: 'w-60'
 ---
 ::
 
-@273
+## API (Edición española)
 
-@@274@274@274
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
-@275@275@275
+### Slots en línea
 
-Componentes de slots
+:component-slots
 
-@276@276@276
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@277 @@ Temas
+## Temas
 
-Componente Tema
+:component-theme
 
-@@278@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

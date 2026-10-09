@@ -9,46 +9,46 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Card.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Utilisez le markdown dans l'emplacement par défaut du composant`card`pour mettre en évidence votre contenu .
+Utilisez le markdown dans l'emplacement par défaut du composant `card` pour mettre en évidence votre contenu.
 
-Utilisez les props`title`,`icon`et`color`pour le personnaliser . Vous pouvez également transmettre n'importe quelle propriété du composant[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)ou@@@PH0111](https://router.vuejs.org/api/interfaces/RouterLinkProps.html).
+Vous pouvez également passer n'importe quelle propriété du composant [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) ou [`<RouterLink>`](https://router.vuejs.org/api/interfaces/RouterLinkProps.html).
 
 ::component-code{slug="card" prose}
 ---
-Caché :
-  @@classe 15
-ignorer :
-  @@ph016@cible
-Props :
-  classe : ' my - 0 w - 96 '
-  Titre : Startup
-  icon : i-lucide - utilisateurs
-  Couleur : Primaire
-  à : ' https://nuxt.lemonsqueezy.com'
-  cible : _ blanc
-Slots :
-  Par défaut : Mieux adapté aux petites équipes , aux startups et aux agences comptant jusqu'à 5 développeurs .
+hide:
+  - class
+ignore:
+  - target
+props:
+  class: 'my-0 w-96'
+  title: Startup
+  icon: i-lucide-users
+  color: primary
+  to: 'https://nuxt.lemonsqueezy.com'
+  target: '_blank'
+slots:
+  default: Best suited for small teams, startups and agencies with up to 5 developers.
 ---
 
-Idéal pour les petites équipes , les startups et les agences comptant jusqu'à 5 développeurs .
+Idéal pour les petites équipes, les startups et les agences comptant jusqu'à 5 développeurs.
 ::
 
-@@P017@@Paix
+## api
 
-@@ph018@@props
+### Props
 
-: composants{prose}
+:component-props{prose}
 
-@@20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots
 
-: composant-slots{prose}
+:component-slots{prose}
 
-@222@thème
+## Thème
 
-: composant - thème{prose}
+:component-theme{prose}
 
-@@changelog
+## Changelog
 
-: composant-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

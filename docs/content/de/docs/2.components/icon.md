@@ -6,7 +6,7 @@ keywords:
   - iconify
   - symbol
 links:
-  - label: Iconifikation
+  - label: Ikonisch
     to: https://iconify.design/
     target: _blank
     icon: i-simple-icons-iconify
@@ -15,15 +15,15 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Icon.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Verwenden Sie das `name` prop, um ein Symbol anzuzeigen.
+Verwenden Sie die `name` prop, um ein Symbol anzuzeigen.
 
 ::component-code
 ---
-Props:
-  Bezeichnung: i-lucide-lightbulb
-  Klasse: Größe-5
+props:
+  name: 'i-lucide-lightbulb'
+  class: 'size-5'
 ---
 ::
 
@@ -32,25 +32,25 @@ Durchsuchen Sie sie einfach auf <https://icones.js.org> oder suchen Sie direkt v
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::caution{to="/docs/getting-started/integrations/icons/nuxt#collections"}
 Es wird dringend empfohlen, die Icon-Sammlungen zu installieren, die Sie benötigen, lesen Sie mehr darüber.
 :::
 ::
 
-@@ph009@@Beispiele
+## Examples (Beispiele)
 
-@@1010@svg
+### SVG
 
-Sie können auch eine Vue-Komponente in die `name` prop übergeben:
+Sie können auch eine Vue-Komponente in die `name`-prop übergeben:
 
 ::component-example
 ---
-Name: 'icon-svg-Beispiel'
+name: 'icon-svg-example'
 ---
 ::
 
-Sie können Ihre Icon-Komponenten selbst definieren, oder verwenden Sie [`unplugin-icons`](https://github.com/unplugin/unplugin-icons) um sie direkt aus SVG-Dateien zu importieren:
+Sie können Ihre Icon-Komponenten selbst definieren oder mit [`unplugin-icons`](https://github.com/unplugin/unplugin-icons) direkt aus SVG-Dateien importieren:
 
 ```vue
 <script setup lang="ts">
@@ -62,12 +62,12 @@ import IconLightbulb from '~icons/lucide/lightbulb'
 </template>
 ```
 
-## api@@api@@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api26
+## API (englisch)
 
-@@@ph027@@Props
+### Props Bearbeiten
 
-Komponenten Props
+:component-props
 
-@@ph028@@changelog @ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

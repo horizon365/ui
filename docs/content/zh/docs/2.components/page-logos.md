@@ -8,125 +8,125 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageLogos.vue
 ---
 
-## 使用情况
+## 用法
 
-PageLogos组件提供了一种在页面中显示徽标或图像列表的灵活方法。
-
-::component-code
----
-收阖：true
-更漂亮：真的
-隐藏：
-  班级
-忽略：
-- 个项目
-道具：
-  项目名称：
-    - i-简单图标-github
-    - i-简单图标-不和谐
-    - i-简单图标-x
-    - i-简单图标-Instagram
-    - 我的简单图标-linkedin
-    - i-简单图标-facebook
-  类别：'mb-10'
----
-::
-
-标题：
-
-使用`title`道具在徽标上方设置标题。
+PageLogos组件提供了一种灵活的方式来显示页面中的徽标或图像列表。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 个项目
-隐藏：
-  班级
-道具：
-  title：“受最佳前端团队信任”
-  项目名称：
-    - 我的简单图标-github
-    - i-简单图标-不和谐
-    - i-简单图标-x
-    - i-简单图标-Instagram
-    - 我的简单图标-linkedin
-    - i-简单图标-facebook
-  类别：'my-10'
+collapse: true
+prettier: true
+hide:
+  - class
+ignore:
+  - items
+props:
+  items:
+    - i-simple-icons-github
+    - i-simple-icons-discord
+    - i-simple-icons-x
+    - i-simple-icons-instagram
+    - i-simple-icons-linkedin
+    - i-simple-icons-facebook
+  class: 'mb-10'
 ---
 ::
 
-项目
+### 标题
 
-您可以使用两种方式显示标志：
+使用`title`道具将标题设置在徽标上方。
 
-1. 使用`items`属性提供徽标列表。每个项目可以是：
-  - 一个图标名称（例如`i-simple-icons-github`）
-  - 一个包含图像的`src`和`alt`属性的对象，该属性将在`UAvatar`组件中使用
-2. 使用默认插槽完全控制内容
+::component-code
+---
+prettier: true
+ignore:
+  - items
+hide:
+  - class
+props:
+  title: 'Trusted by the best front-end teams'
+  items:
+    - i-simple-icons-github
+    - i-simple-icons-discord
+    - i-simple-icons-x
+    - i-simple-icons-instagram
+    - i-simple-icons-linkedin
+    - i-simple-icons-facebook
+  class: 'my-10'
+---
+::
+
+### 项目
+
+您可以通过两种方式显示徽标：
+
+1. 使用`items` prop提供一个徽标列表。每个项目可以是：
+  - 图标名称（例如`i-simple-icons-github`）
+  - 包含`src`和`alt`图像属性的对象，将在`UAvatar`组件中使用
+2. 使用默认插槽对内容进行完全控制
 
 ::tabs{class="gap-0"}
 
 ::component-example{label="与项目"}
 ---
-名称：'包含项目的页面徽标'
-类：'[&>div]：my-10'
+name: 'page-logos-with-items'
+class: '[&>div]:my-10'
 ---
 ::
 
 ::component-example{label="与槽"}
 ---
-名称：'带插槽的页面徽标'
-类：'[&>div]：my-10'
+name: 'page-logos-with-slot'
+class: '[&>div]:my-10'
 ---
 ::
 
 ::
 
-### 字幕
+### Marquee
 
-使用`marquee`道具为徽标启用字幕效果。
+使用`marquee`道具为徽标启用选框效果。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  项目
-  选取框
-隐藏：
-  班级
-道具：
-  title：“受最佳前端团队信任”
-  选取框：true
-  项目名称：
-    - 我的简单图标-github
-    - i-简单图标-不和谐
-    - i-简单图标-x
-    - i-简单图标-Instagram
-    - 我的简单图标-linkedin
-    - i-简单图标-Facebook
-  类别：'my-10'
+prettier: true
+ignore:
+  - items
+  - marquee
+hide:
+  - class
+props:
+  title: 'Trusted by the best front-end teams'
+  marquee: true
+  items:
+    - i-simple-icons-github
+    - i-simple-icons-discord
+    - i-simple-icons-x
+    - i-simple-icons-instagram
+    - i-simple-icons-linkedin
+    - i-simple-icons-facebook
+  class: 'my-10'
 ---
 ::
 
 ::note{to="/docs/components/marquee"}
-当您使用`marquee`模式时，您可以透过传递props自订其行为。如需详细信息，请参阅`Marquee`元件。
+当你使用`marquee`模式时，你可以通过传递props来定制它的行为。更多信息，请查看`Marquee`组件。
 ::
 
-美国石油学会
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

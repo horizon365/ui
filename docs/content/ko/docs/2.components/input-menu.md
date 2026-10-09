@@ -1,5 +1,5 @@
 ---
-title: InputMenu (입력 메뉴)
+title: InputMenu
 description: 실시간 제안이 포함된 자동 완성 입력입니다.
 category: form
 keywords:
@@ -18,804 +18,804 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputMenu.vue
 ---
 
-##  사용
+## Usage
 
-`v-model` 지시문을 사용하여 InputMenu의 값을 제어하거나 `default-value`prop을 사용하여 상태를 제어할 필요가 없을 때 초기 값을 설정합니다.
+`v-model` 지시문을 사용하여 InputMenu의 값을 제어하거나 `default-value` prop의 상태를 제어할 필요가 없을 때 초기 값을 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  - modelValue - modelValue 이미지
-  - items 항목
-외부:
-  -  items
-  - modelValue - modelValue 이미지
-소품 :
-  모델값: 'Backlog'
-  프로젝트:
-    -  Backlog
-    -  Todo
-    - 진행 중
-    -  완료
+prettier: true
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
 ::tip
-자동 완성 기능을 제공하는 Reka UI의 [`Combobox`](https://reka-ui.com/docs/components/combobox) 구성 요소를 활용하기 위해 ](/docs/components/input/docs/components/input) 를 통해 이 기능을 사용합니다.
+자동 완성 기능을 제공하는 Reka UI의 [`Combobox`](https://reka-ui.com/docs/components/combobox) 구성 요소를 활용하려면 [`Input`](/docs/components/input)에서 이 기능을 사용합니다.
 ::
 
 ::note
-이 구성 요소는 [`SelectMenu`](/docs/components/select-menu)와 유사하지만 Select 대신 Input을 사용합니다.
+이 구성 요소는 [`SelectMenu`](/docs/components/select-menu)와 비슷하지만 Select 대신 Input을 사용합니다.
 ::
 
-###  프로젝트
+### Items 항목
 
-`items`prop을 문자열, 숫자 또는 부울 배열로 사용합니다.
+`items` prop을 문자열, 숫자 또는 부울 배열로 사용합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  - modelValue - modelValue 이미지
-  -  items
-외부:
-  -  items
-  - modelValue - modelValue
-소품 :
-  모델값: 'Backlog'
-  항목:
-    -  Backlog
-    -  Todo
-    - 진행 중
-    -  완료
+prettier: true
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
 또한 다음 속성을 사용하여 객체 배열을 전달할 수 있습니다.
 
--  @ `label?: string` @ @ {lang="ts-type"} @
-- [`type?: "label" | "separator" | "item"`{lang="ts-type"} ]( @ #with-items-type )
--  @ [ @ @ `icon?: string` @ {lang="ts-type"} @ ]( @ #with-icons-in-items @ )
-- [`avatar?: AvatarProps``avatar?: AvatarProps`](](#with-avatar-in-items)
--  [ @ `chip?: ChipProps` @ {lang="ts-type"} @ @ ]( @ #with-chip-in-items )
--  @ `disabled?: boolean` @ @ {lang="ts-type"} @
-- `onSelect?: (e: Event) => void`{lang="ts-type"}
--  @ `class?: any` @ {lang="ts-type"}
--  @ `ui?: { tagsItem?: ClassNameValue, tagsItemText?: ClassNameValue, tagsItemDelete?: ClassNameValue, tagsItemDeleteIcon?: ClassNameValue, label?: ClassNameValue, separator?: ClassNameValue, item?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLeadingChip?: ClassNameValue, itemLeadingChipSize?: ClassNameValue, itemLabel?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingIcon?: ClassNameValue }` @ {lang="ts-type"} @
+- `label?: string`{lang="ts-type"}
+- [`type?: "label" | "separator" | "item"`{lang="ts-type"}](#with-items-type)
+- [`icon?: string`{lang="ts-type"}](#with-icons-in-items)
+- [`avatar?: AvatarProps`{lang="ts-type"}](#with-avatar-in-items)
+- [`chip?: ChipProps`{lang="ts-type"}](#with-chip-in-items)
+- `disabled?: boolean`{lang="ts-type"} - {lang="ts-type"}
+- `onSelect?: (e: Event) => void`{lang="ts-type"} (- `onSelect?: (e: Event) => void`{lang="ts-type"})
+- `class?: any`{lang="ts-type"}
+- `ui?: { tagsItem?: ClassNameValue, tagsItemText?: ClassNameValue, tagsItemDelete?: ClassNameValue, tagsItemDeleteIcon?: ClassNameValue, label?: ClassNameValue, separator?: ClassNameValue, item?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLeadingChip?: ClassNameValue, itemLeadingChipSize?: ClassNameValue, itemLabel?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingIcon?: ClassNameValue }`{lang="ts-type"} (- `ui?: { tagsItem?: ClassNameValue, tagsItemText?: ClassNameValue, tagsItemDelete?: ClassNameValue, tagsItemDeleteIcon?: ClassNameValue, label?: ClassNameValue, separator?: ClassNameValue, item?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLeadingChip?: ClassNameValue, itemLeadingChipSize?: ClassNameValue, itemLabel?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingIcon?: ClassNameValue }`{lang="ts-type"})
 
 ::component-code
 ---
-무시하기:
-  -  modelValue. label
-  -  items
-외부:
-  -  items
-  - modelValue - modelValue 이미지
+ignore:
+  - modelValue.label
+  - items
+external:
+  - items
+  - modelValue
 externalTypes:
-  -  InputMenuItem []
-소품 :
+  - InputMenuItem[]
+props:
   modelValue:
-    사진: "todo"
-  프로젝트:
+    label: 'Todo'
+  items:
     - label: 'Backlog'
     - label: 'Todo'
-    - label: '진행 중'
-    - label: '완료'
+    - label: 'In Progress'
+    - label: 'Done'
 ---
 ::
 
-배열 배열을 `items`prop에 전달하여 개별 항목 그룹을 표시할 수도 있습니다.
+배열 배열을 `items` prop에 전달하여 개별 항목 그룹을 표시할 수도 있습니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  - modelValue - modelValue 이미지
-  -  items
-외부:
-  -  items
-  - modelValue - modelValue 이미지
-소품 :
-  모델값: 'Apple'
-  프로젝트:
-    -  - 애플
-      -  바나나
-      - Blueberry @ 블루베리
-      -  Grapes
-      -  Pineapple
-    -  - 오베르진
-      -  브로콜리
-      -  당근
-      - Courgette -  코제트
-      -  Leek
+prettier: true
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Apple'
+  items:
+    - - Apple
+      - Banana
+      - Blueberry
+      - Grapes
+      - Pineapple
+    - - Aubergine
+      - Broccoli
+      - Carrot
+      - Courgette
+      - Leek
 ---
 ::
 
-###  가치 키
+### 값 키
 
-`value-key`prop.기본값을 `undefined`로 사용하여 전체 객체가 아닌 객체의 단일 속성을 바인딩하도록 선택할 수 있습니다.
+`value-key` prop. 기본값은 `undefined`로 설정하여 전체 오브젝트가 아닌 오브젝트의 단일 속성을 바인딩하도록 선택할 수 있습니다.
 
 ::component-code
 ---
-축소: true
-무시하기:
-  - modelValue - modelValue 이미지
-  -  valueKey
-  -  items
-외부:
-  -  items
-  - modelValue - modelValue 이미지
+collapse: true
+ignore:
+  - modelValue
+  - valueKey
+  - items
+external:
+  - items
+  - modelValue
 externalTypes:
-  -  InputMenuItem []
-소품 :
+  - InputMenuItem[]
+props:
   modelValue: 'todo'
-  valueKey : 'id'
-  프로젝트:
+  valueKey: 'id'
+  items:
     - label: 'Backlog'
-      ID: 'Backlog'
+      id: 'backlog'
     - label: 'Todo'
-      id: 'todo' 입니다.
-    - label: '진행 중'
-      id: 'in_progress' 입니다.
-    - label: '완료'
-      ID: '완료'
+      id: 'todo'
+    - label: 'In Progress'
+      id: 'in_progress'
+    - label: 'Done'
+      id: 'done'
 ---
 ::
 
 ::tip
-`by`prop을 사용하여 `model-value`가 개체일 때 참조 대신 필드로 개체를 비교합니다.
+`model-value`가 객체인 경우 참조 대신 필드로 객체를 비교하려면 `by` prop을 사용합니다.
 ::
 
-###  다중
+### 다중 입력
 
-`multiple`prop을 사용하여 다중 선택을 허용하면 선택한 항목이 태그로 표시됩니다.
+`multiple` 소품을 사용하여 여러 선택을 허용하면 선택한 항목이 태그로 표시됩니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  - modelValue - modelValue
-  -  items
-  - multiple @ 다중
-외부:
-  -  items
-  - modelValue - modelValue 이미지
-소품 :
+prettier: true
+ignore:
+  - modelValue
+  - items
+  - multiple
+external:
+  - items
+  - modelValue
+props:
   modelValue:
-    -  Backlog
-    -  Todo
-  다중: True
-  항목:
-    - Backlog @ 백로그
-    -  Todo
-    - 진행 중
-    -  완료
+    - Backlog
+    - Todo
+  multiple: true
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
 ::caution
-배열을 `default-value`prop 또는 `v-model` 지시문으로 전달해야 합니다.
+배열을 `default-value` prop 또는 `v-model` 지시문으로 전달해야 합니다.
 ::
 
 ### 아이콘 삭제
 
-`multiple` 를 사용하여 `delete-icon`prop 을 사용하여 태그에서 [Icon](/docs/components/icon) 삭제를 사용자 지정합니다. 기본값은 `i-lucide-x`입니다.
+`multiple`를 사용하면 `delete-icon` prop을 사용하여 태그에서 [Icon](/docs/components/icon) 삭제를 사용자 정의합니다. 기본값은 `i-lucide-x`입니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  - modelValue - modelValue 이미지
-  -  items
-  - multiple @ 다중
-외부:
-  -  items
-  - modelValue - modelValue 이미지
-소품 :
-  ModelValue:
-    - Backlog @ 백로그
-    -  Todo
-  다중: True
+prettier: true
+ignore:
+  - modelValue
+  - items
+  - multiple
+external:
+  - items
+  - modelValue
+props:
+  modelValue:
+    - Backlog
+    - Todo
+  multiple: true
   deleteIcon: 'i-lucide-trash'
-  항목:
-    - Backlog @@@@ 백로그
-    -  Todo
-    - 진행 중
-    -  완료
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
 ::framework-only
-#nuxt 코드
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.close` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.close` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.close` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.close` 키 아래의 `vite.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-### 자리 표시자
+### placeholder 자리 표시자
 
-`placeholder`prop을 사용하여 자리 표시자 텍스트를 설정합니다.
+`placeholder` prop을 사용하여 자리 표시자 텍스트를 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  items
-외부:
-  -  items
-소품 :
-  자리 표시자: '상태 선택'
-  항목:
-    -  Backlog
-    -  Todo
-    - 진행 중
-    -  완료
+prettier: true
+ignore:
+  - items
+external:
+  - items
+props:
+  placeholder: 'Select status'
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
-### 모드: badge{label="4.8+" class="align-text-top"}
+### Mode: badge{label="4.8+" class="align-text-top"} 모드
 
-InputMenu를 제안이 포함된 자유 형식 텍스트 입력으로 바꾸려면 `mode`prop을 `autocomplete`로 설정합니다. `modelValue`는 선택된 항목이 아닌 입력 텍스트(`string`)가 됩니다.
+`mode` prop을 `autocomplete`로 설정하면 InputMenu를 제안이 포함된 자유 형식 텍스트 입력으로 변경합니다. `modelValue`는 선택된 항목이 아닌 입력 텍스트(`string`)가 됩니다.
 
 ::component-example
 ---
-이름 : input-menu-mode-example
+name: 'input-menu-mode-example'
 ---
 ::
 
 ::caution
-`mode`이 `autocomplete`인 경우 `multiple`는 해당되지 않습니다.
+`mode`가 `autocomplete`인 경우 `multiple`, `by`, `resetSearchTermOnSelect` 및 `resetModelValueOnClear`는 적용되지 않습니다.
 ::
 
 ::tip
-일치하는 제안이 없을 때는 `content.hideWhenEmpty`prop을 사용하여 메뉴를 숨깁니다.
+`content.hideWhenEmpty` prop를 사용하여 일치하는 제안이 없을 때 메뉴를 숨깁니다.
 ::
 
-###  컨텐츠
+### Content 파일
 
-`content`prop을 사용하여 InputMenu 콘텐츠가 렌더링되는 방식을 제어합니다(예: `align` 또는 `side` 처럼).
+`content` prop을 사용하여 InputMenu 내용이 렌더링되는 방식을 제어합니다. 예를 들어 `align` 또는 `side`와 같습니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  items
-  - modelValue - modelValue 이미지
-외부:
-  -  items
-  - modelValue - modelValue 이미지
-항목:
+prettier: true
+ignore:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+items:
   content.align:
-    -  start
-    -  센터
-    -  끝
+    - start
+    - center
+    - end
   content.side:
-    -  오른쪽
-    -  왼쪽
-    -  top
-    -  bottom
-소품 :
+    - right
+    - left
+    - top
+    - bottom
+props:
   modelValue: 'Backlog'
-  컨텐츠 :
-    정렬: 중심
-    측면: 맨 아래
-    사이드 오프셋: 8
-  항목:
-    - Backlog @ 백로그
-    -  Todo
-    - 진행 중
-    -  완료
+  content:
+    align: center
+    side: bottom
+    sideOffset: 8
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
-### Arrow 이미지
+### Arrow 화살표
 
-`arrow`prop 을 사용하여 InputMenu 에 화살표를 표시합니다.
+`arrow` prop를 사용하여 InputMenu에 화살표를 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  items
-  - modelValue - modelValue 이미지
-  -  arrow
-외부:
-  -  items
-  - modelValue - modelValue 이미지
-소품 :
-  모델값: 'Backlog'
-  화살표: True
-  프로젝트:
-    -  Backlog
-    -  Todo
-    - 진행 중
-    -  완료
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - arrow
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  arrow: true
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
-###  색상
+### color
 
-InputMenu에 초점을 맞출 때 `color`prop을 사용하여 링 색상을 변경합니다.
+InputMenu에 초점을 맞출 때 `color` Prop을 사용하여 링 색상을 변경합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  items
-  - modelValue - modelValue 이미지
-외부:
-  -  items
-  - modelValue - modelValue 이미지
-소품 :
-  모델값: 'Backlog'
-  색상: 중립
-  강조 표시: true
-  항목:
-    - Backlog @ 백로그
-    -  Todo
-    - 진행 중
-    -  완료
+prettier: true
+ignore:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  color: neutral
+  highlight: true
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
 ::note
-`highlight`prop은 초점 상태를 나타내기 위해 사용되며, 검증 오류가 발생할 때 내부적으로 사용됩니다.
+`highlight` prop은 초점 상태를 표시하기 위해 사용되며, 유효성 검사 오류가 발생할 때 내부적으로 사용됩니다.
 ::
 
-### Variant (변형)
+### 변형
 
-`variant`prop 을 사용하여 InputMenu 의 변형을 변경합니다.
+`variant` prop 을 사용하여 InputMenu 의 변형을 변경합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  items
-  - modelValue - modelValue 이미지
-외부:
-  -  items
-  - modelValue - modelValue 이미지
-소품 :
+prettier: true
+ignore:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+props:
   modelValue: 'Backlog'
-  색상: 중립
-  변형: 미묘함
-  강조 표시:거짓
-  프로젝트:
-    -  Backlog
-    -  Todo
-    - 진행 중
-    -  완료
+  color: neutral
+  variant: subtle
+  highlight: false
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
-###  크기
+### Size
 
-`size`prop을 사용하여 InputMenu의 크기를 변경합니다.
-
-::component-code
----
-상품명 : True
-무시하기:
-  -  items
-  - modelValue - modelValue 이미지
-외부:
-  -  items
-  - modelValue - modelValue 이미지
-소품 :
-  모델값: 'Backlog'
-  크기: xl
-  프로젝트:
-    - Backlog @ 백로그
-    -  Todo
-    - 진행 중
-    -  완료
----
-::
-
-###  아이콘
-
-`icon`prop을 사용하여 InputMenu 내부에 [Icon](/docs/components/icon)를 표시합니다.
+`size` prop을 사용하여 InputMenu 크기를 변경합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  items
-  - modelValue - modelValue 이미지
-외부:
-  -  items
-  - modelValue - modelValue 이미지
-소품 :
+prettier: true
+ignore:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+props:
   modelValue: 'Backlog'
-  아이콘: 'i-lucide-search'
-  크기: MD
-  항목:
-    - Backlog @ 백로그
-    -  Todo
-    - 진행 중
-    -  완료
+  size: xl
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+---
+::
+
+### Icon 이미지
+
+`icon` prop을 사용하여 InputMenu 내부에 [Icon](/docs/components/icon)를 표시합니다.
+
+::component-code
+---
+prettier: true
+ignore:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  icon: 'i-lucide-search'
+  size: md
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
 ### 트레일 아이콘
 
-`trailing-icon`prop을 사용하여 후행 [Icon](/docs/components/icon)로 사용자 지정합니다. 기본값은 `i-lucide-chevron-down`입니다.
+`trailing-icon` 소품을 사용하여 후행 [Icon](/docs/components/icon)를 사용자 정의합니다. 기본값은 `i-lucide-chevron-down`입니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  items
-  - modelValue - modelValue
-외부:
-  -  items
-  - modelValue - modelValue 이미지
-소품 :
-  모델값: 'Backlog'
+prettier: true
+ignore:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
   trailingIcon: 'i-lucide-arrow-down'
-  크기: md
-  프로젝트:
-    - Backlog @ 백로그
-    -  Todo
-    - 진행 중
-    -  완료
+  size: md
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
 ::framework-only
-#nuxt #nuxt
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.chevronDown` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.chevronDown` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.chevronDown` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.chevronDown` 키 아래의 `vite.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
 ### 선택한 아이콘
 
-항목을 선택할 때 `selected-icon`prop을 사용하여 아이콘을 사용자 정의합니다. 기본값은 `i-lucide-check`입니다.
+`selected-icon` 소품을 사용하여 항목을 선택할 때 아이콘을 사용자 정의합니다. 기본값은 `i-lucide-check`입니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  items
-  - modelValue - modelValue 이미지
-외부:
-  -  items
-  - modelValue - modelValue 이미지
-소품 :
-  모델값: 'Backlog'
+prettier: true
+ignore:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
   selectedIcon: 'i-lucide-flame'
-  크기: md
-  프로젝트:
-    - Backlog @ 백로그
-    -  Todo
-    - 진행 중
-    -  완료
+  size: md
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
 ::framework-only
-#nuxt #nuxt
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.check` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.check` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.check` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.check` 키 아래의 `vite.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-### Clear: badge{label="4.4+" class="align-text-top"}
+### Clear : badge{label="4.4+" class="align-text-top"}
 
-`clear`prop을 사용하여 값을 선택할 때 지우기 버튼을 표시합니다.
+값을 선택할 때 `clear` Prop을 사용하여 지우기 버튼을 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  items
-  - modelValue - modelValue 이미지
-외부:
-  -  items
-  - modelValue - modelValue 이미지
-프로젝트:
-  정리:
-    -  true
-    -  false
-소품 :
-  모델값: 'Backlog'
-  지우기: true
-  프로젝트:
-    - Backlog @ 백로그
-    -  Todo
-    - 진행 중
-    -  완료
+prettier: true
+ignore:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+items:
+  clear:
+    - true
+    - false
+props:
+  modelValue: 'Backlog'
+  clear: true
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
-### Clear Icon: badge{label="4.4+" class="align-text-top"}
+### 지우기 아이콘: badge{label="4.4+" class="align-text-top"}
 
-`clear-icon`prop을 사용하여 지우기 버튼을 사용자 정의합니다.[Icon](/docs/components/icon). 기본값은 `i-lucide-x`입니다.
+`clear-icon` 소품을 사용하여 지우기 단추 [Icon](/docs/components/icon)를 사용자 정의합니다. 기본값은 `i-lucide-x`입니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  items
-  - modelValue - modelValue 이미지
-외부:
-  -  items
-  - modelValue - modelValue
-항목:
-  정리:
-    -  true
-    -  거짓
-소품 :
-  모델값: 'Backlog'
-  지우기: True
-  clearIcon : 'i-lucide-trash' 에러
-  항목:
-    - Backlog @ 백로그
-    -  Todo
-    - 진행 중
-    -  완료
+prettier: true
+ignore:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+items:
+  clear:
+    - true
+    - false
+props:
+  modelValue: 'Backlog'
+  clear: true
+  clearIcon: 'i-lucide-trash'
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
 ::framework-only
-#nuxt #nuxt
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.close` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.close` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 지정할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.close` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.close` 키 아래의 `vite.config.ts` 내에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-### Avatar 이미지
+### Avatar (### 아바타)
 
-`avatar`prop을 사용하여 InputMenu 내부에 [Avatar](/docs/components/avatar)를 표시합니다.
+`avatar` prop을 사용하여 InputMenu 내부에 [Avatar](/docs/components/avatar)를 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  items
-  - modelValue - modelValue 이미지
-  - avatar.loading - avatar.loading
-외부:
-  -  프로젝트
-  - modelValue - modelValue 이미지
-소품 :
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - avatar.loading
+external:
+  - items
+  - modelValue
+props:
   modelValue: 'Nuxt'
-  아바타 (Avatar):
+  avatar:
     src: 'https://github.com/nuxt.png'
-    로드: Lazy
-  프로젝트:
-    -  Nuxt
-    - NuxtHub - NuxtHub
-    - NuxtLabs @ NuxtLabs -  NuxtLabs @ NuxtLabs @ -  NuxtLabs @ NuxtLabs @ -  NuxtLabs @ NuxtLabs @ NuxtLabs 의 지도
-    - Nuxt 모듈
-    - Nuxt 커뮤니티
+    loading: lazy
+  items:
+    - Nuxt
+    - NuxtHub
+    - NuxtLabs
+    - Nuxt Modules
+    - Nuxt Community
 ---
 ::
 
-###  로드 중
+### Loading 중
 
-`loading`prop을 사용하여 InputMenu에 로드 아이콘을 표시합니다.
+`loading` prop을 사용하여 InputMenu에 로드 아이콘을 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  items
-  - modelValue - modelValue 이미지
-외부:
-  -  items
-  - modelValue - modelValue 이미지
-소품 :
-  모델값: 'Backlog'
-  로드: true
-  후행: false
-  항목:
-    - Backlog @@@ 백로그
-    -  Todo
-    -  진행 중
-    -  완료
+prettier: true
+ignore:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  loading: true
+  trailing: false
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
-### Loading Icon (아이콘 로드)
+### Loading 아이콘
 
-`loading-icon`prop을 사용하여 로드 아이콘을 사용자 정의합니다. 기본값은 `i-lucide-loader-circle`입니다.
+`loading-icon` 소품을 사용하여 로드 아이콘을 사용자 정의합니다. 기본값은 `i-lucide-loader-circle`입니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  프로젝트
-  - modelValue - modelValue 이미지
-외부:
-  -  프로젝트
-  - modelValue - modelValue 이미지
-소품 :
-  모델값: 'Backlog'
-  로드: true
+prettier: true
+ignore:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  loading: true
   loadingIcon: 'i-lucide-loader'
-  항목:
-    - Backlog @@@ 백로그
-    -  Todo
-    - 진행 중
-    -  완료
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
 ::framework-only
-#nuxt 코드
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.loading` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.loading` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.loading` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.loading` 키 아래의 `vite.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-###  비활성 화
+### 비활성 화
 
-`disabled`prop을 사용하여 InputMenu를 비활성화합니다.
+`disabled` prop을 사용하여 InputMenu를 비활성화합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  items
-  - 자리 표시자
-외부:
-  -  items
-소품 :
-  사용 안 함:true
-  자리 표시자: '상태 선택'
-  항목:
-    - Backlog @@@ 백로그
-    -  Todo
-    - 진행 중
-    -  완료
+prettier: true
+ignore:
+  - items
+  - placeholder
+external:
+  - items
+props:
+  disabled: true
+  placeholder: 'Select status'
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
-##  예제
+## examples 예제
 
-###  항목 유형
+### With 아이템 타입
 
-`type` 속성을 `separator`와 함께 사용하여 항목 사이의 구분 기호를 표시하거나 `label` 레이블을 표시할 수 있습니다.
+`type` 속성을 `separator`와 함께 사용하여 항목 사이의 구분 기호를 표시하거나 `label`를 사용하여 레이블을 표시할 수 있습니다.
 
 ::component-code
 ---
-축소: true
-무시하기:
-  - modelValue - modelValue 이미지
-  -  items
-외부:
-  -  items
-  - modelValue - modelValue 이미지
+collapse: true
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
 externalTypes:
-  -  InputMenuItem []
-소품 :
-  모델값: 'Apple'
-  프로젝트:
-    -  - 유형: 'label'
-        사진: "fruits"
-      -  애플
-      -  바나나
-      - Blueberry @ 블루베리
-      -  Grapes
-      - Pineapple @ 파인애플
-    -  - 유형: 'label'
-        사진: "vegetables"
-      - Aubergine - Aubergine
-      -  브로콜리
-      -  당근
-      - Courgette -  코제트
-      - Leek @ Leek
+  - InputMenuItem[]
+props:
+  modelValue: 'Apple'
+  items:
+    - - type: 'label'
+        label: 'Fruits'
+      - Apple
+      - Banana
+      - Blueberry
+      - Grapes
+      - Pineapple
+    - - type: 'label'
+        label: 'Vegetables'
+      - Aubergine
+      - Broccoli
+      - Carrot
+      - Courgette
+      - Leek
 ---
 ::
 
 ::note
-`label`items를 그룹 머리글로 사용할 때 배열 배열을 전달하여 레이블이 그룹과 함께 필터링되도록 합니다.
+`label` 항목을 그룹 제목으로 사용할 때 배열 배열을 전달하여 레이블이 그룹과 함께 필터링되도록 합니다.
 ::
 
-###  항목에 아이콘 포함
+### With 항목의 아이콘
 
 `icon` 속성을 사용하여 항목 내부에 [Icon](/docs/components/icon)를 표시할 수 있습니다.
 
 ::component-example
 ---
-축소: true
-name: 'input-menu-items-icon-example' 입력메뉴-항목-아이콘-예
+collapse: true
+name: 'input-menu-items-icon-example'
 ---
 ::
 
 ::tip
-또한 `#leading`슬롯을 사용하여 선택한 아이콘을 표시할 수 있습니다.
+`#leading` 슬롯을 사용하여 선택된 아이콘을 표시할 수도 있습니다.
 ::
 
-###  항목에 아바타가 있습니다.
+###  항목에 아바타 포함
 
 `avatar` 속성을 사용하여 [Avatar](/docs/components/avatar)를 항목 내부에 표시할 수 있습니다.
 
 ::component-example
 ---
-축소: true
-name: 'input-menu-items-avatar-example' 입력메뉴-항목-아바타-예
+collapse: true
+name: 'input-menu-items-avatar-example'
 ---
 ::
 
 ::tip
-또한 `#leading`슬롯을 사용하여 선택한 아바타를 표시할 수 있습니다.
+또한 `#leading` 슬롯을 사용하여 선택한 아바타를 표시할 수 있습니다.
 ::
 
-###  칩 항목
+### With 칩 in items
 
-`chip` 속성을 사용하여 항목 내부에 [Chip](/docs/components/chip)를 표시할 수 있습니다.
+`chip` 속성을 사용하여 [Chip](/docs/components/chip)를 항목 안에 표시할 수 있습니다.
 
 ::component-example
 ---
-축소: true
-이름: input-menu-items-chip-example
+collapse: true
+name: 'input-menu-items-chip-example'
 ---
 ::
 
 ::note
-이 예제에서는 `#leading`슬롯을 사용하여 선택된 칩을 표시합니다.
+이 예제에서는 `#leading` 슬롯이 선택한 칩을 표시하는 데 사용됩니다.
 ::
 
-###  열린 상태 제어
+### Control 오픈 상태
 
-`default-open`prop 또는 `v-model:open` 지시문을 사용하여 열린 상태를 제어할 수 있습니다.
+`default-open` prop 또는 `v-model:open` 지시문을 사용하여 개방 상태를 제어할 수 있습니다.
 
 ::component-example
 ---
-name: 'input-menu-open-example' 입력메뉴-열기
+name: 'input-menu-open-example'
 ---
 ::
 
 ::note
-이 예에서는 [`defineShortcuts`](/docs/composables/define-shortcuts)를 사용하여 InputMenu를 전환할 수 있습니다. kbd{value="O"} 키를 눌러 입력메뉴를 전환할 수 있습니다.
+이 예제에서는 [`defineShortcuts`](/docs/composables/define-shortcuts)를 사용하여 입력 메뉴를 토글할 수 있습니다. kbd{value="O"}를 누르면 됩니다.
 ::
 
-### 포커스에 열린 상태 제어
+### Control 포커스 시 열기 상태
 
-`open-on-focus` 또는 `open-on-click`props를 사용하여 입력이 집중되거나 클릭될 때 메뉴를 열 수 있습니다.
+입력에 초점을 맞추거나 클릭할 때 `open-on-focus` 또는 `open-on-click` 소품을 사용하여 메뉴를 열 수 있습니다.
 
 ::component-example
 ---
-이름: input-menu-open-focus-example
+name: 'input-menu-open-focus-example'
 ---
 ::
 
-###  검색 용어 통제
+### Control 검색 항목
 
 `v-model:search-term` 지시문을 사용하여 검색 용어를 제어합니다.
 
 ::component-example
 ---
-이름: 'input-menu-search-term-example'
+name: 'input-menu-search-term-example'
 ---
 ::
 
@@ -825,27 +825,27 @@ name: 'input-menu-open-example' 입력메뉴-열기
 
 ::component-example
 ---
-이름: 'input-menu-icon-example'
+name: 'input-menu-icon-example'
 ---
 ::
 
 ###  프로젝트 만들기
 
-`create-item`prop을 사용하여 사용자가 미리 정의된 옵션에 없는 사용자 정의 값을 추가할 수 있도록 합니다.
+`create-item` prop을 사용하여 사용자가 미리 정의된 옵션에 없는 사용자 정의 값을 추가할 수 있도록 합니다.
 
 ::component-example
 ---
-축소: true
-name: 'input-menu-create-item-example' 입력메뉴-create-item-example
+collapse: true
+name: 'input-menu-create-item-example'
 ---
 ::
 
 ::note
-만들기 옵션은 기본적으로 일치하는 항목을 찾을 수 없을 때를 표시합니다. 유사한 값이 있을 때도 표시하려면 `always`로 설정하십시오.
+생성 옵션은 기본적으로 일치하는 항목이 없을 때 표시됩니다. 유사한 값이 있는 경우에도 표시하려면 `always`로 설정하십시오.
 ::
 
 ::tip{to="#emits"}
-`@create` 이벤트를 사용하여 항목 생성을 처리합니다. 이벤트와 항목을 인수로 받습니다.
+`@create` 이벤트를 사용하여 항목 생성을 처리합니다. 이벤트 및 항목을 인수로 받습니다.
 ::
 
 ### 가져온 항목과 함께
@@ -854,38 +854,8 @@ API에서 항목을 가져와서 InputMenu에서 사용할 수 있습니다.You 
 
 ::component-example
 ---
-축소: true
-name: 'input-menu-fetch-example' 입력 메뉴-fetch-example
----
-::
-
-::note
-이 예제에서는 `useLazyFetch`와 `immediate: false`를 사용하여 메뉴가 열릴 때만 데이터를 가져오므로 페이지 로드 시 불필요한 API 호출을 방지합니다.
-::
-
-###  무시 필터
-
-`ignore-filter`prop을 `true`로 설정하여 내부 검색을 비활성화하고 사용자 고유의 검색 논리를 사용합니다.
-
-::component-example
----
-축소: true
-name: 'input-menu-ignore-filter-example' 입력메뉴-ignore-filter-example
----
-::
-
-::note
-이 예에서는 [`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced)를 사용하여 API 호출을 토론합니다. 검색은 `immediate: false`로 연기되므로 메뉴가 열릴 때까지 요청이 수행되지 않습니다.
-::
-
-### 필터 필드 포함
-
-필터링할 필드 배열과 함께 `filter-fields`prop을 사용합니다. 기본값은 `[labelKey]`입니다.
-
-::component-example
----
-축소: true
-name: 'input-menu-filter-fields-example' 입력메뉴-필터-필드-예
+collapse: true
+name: 'input-menu-fetch-example'
 ---
 ::
 
@@ -893,9 +863,39 @@ name: 'input-menu-filter-fields-example' 입력메뉴-필터-필드-예
 이 예제에서는 `useLazyFetch`와 `immediate: false`를 사용하여 메뉴가 열릴 때만 데이터를 가져오므로 페이지 로드 시 불필요한 API 호출을 피할 수 있습니다.
 ::
 
-### 가상화 사용: badge{label="4.1+" class="align-text-top"}
+### 무시 필터 사용
 
-`virtualize`prop을 사용하여 큰 목록에 대해 부울 또는 `{ estimateSize: 32, overscan: 12 }`와 같은 옵션이 있는 개체로 가상화를 활성화합니다.
+`ignore-filter` prop을 `true`로 설정하여 내부 검색을 비활성화하고 자체 검색 논리를 사용합니다.
+
+::component-example
+---
+collapse: true
+name: 'input-menu-ignore-filter-example'
+---
+::
+
+::note
+이 예에서는 [`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced)를 사용하여 API 호출을 토론합니다. 검색은 `immediate: false`를 사용하여 지연되므로 메뉴가 열릴 때까지 요청이 수행되지 않습니다.
+::
+
+### With 필터 필드
+
+`filter-fields` Prop을 필드 배열과 함께 사용하여 필터링합니다. 기본값은 `[labelKey]`입니다.
+
+::component-example
+---
+collapse: true
+name: 'input-menu-filter-fields-example'
+---
+::
+
+::note
+이 예제에서는 `useLazyFetch`와 `immediate: false`를 사용하여 메뉴가 열릴 때만 데이터를 가져오므로 페이지 로드 시 불필요한 API 호출을 피할 수 있습니다.
+::
+
+### 가상화 지원: badge{label="4.1+" class="align-text-top"}
+
+`virtualize` prop을 사용하여 큰 목록에 대해 부울 또는 `{ estimateSize: 32, overscan: 12 }`와 같은 옵션이있는 개체로 가상화를 활성화합니다.
 
 ::warning{to="https://github.com/unovue/reka-ui/issues/1885" target="_blank"}
 설정하면 Reka UI의 제한으로 인해 모든 그룹이 단일 리스트로 병합됩니다.
@@ -903,39 +903,39 @@ name: 'input-menu-filter-fields-example' 입력메뉴-필터-필드-예
 
 ::component-example
 ---
-상품명 : True
-이름: 'input-menu-virtualization-example'
+prettier: true
+name: 'input-menu-virtualize-example'
 ---
 ::
 
-### 무한 스크롤 : badge{label="4.4+" class="align-text-top"}
+### 무한 스크롤 사용: badge{label="4.4+" class="align-text-top"}
 
-[`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/)컴포지블을 사용하여 사용자가 스크롤할 때 더 많은 데이터를로드할 수 있습니다.
+[`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/) 컴포지블을 사용하여 사용자가 스크롤할 때 더 많은 데이터를 로드할 수 있습니다.
 
 ::component-example
 ---
-상품명 : True
-축소: true
-강조 표시:
-  - @41 @ 41
-  - @51
+prettier: true
+collapse: true
+highlights:
+  - 41
+  - 51
 overflowHidden: true
-이름: 'input-menu-infinite-scroll-example'
+name: 'input-menu-infinite-scroll-example'
 ---
 ::
 
 ::note
-이 예제에서는 `useLazyFetch`와 `immediate: false`를 사용하므로 사용자가 스크롤할 때만 데이터가 로드됩니다.
+이 예제에서는 `useLazyFetch`를 `immediate: false`와 함께 사용하므로 사용자가 스크롤할 때만 데이터가 로드됩니다.
 ::
 
-###  전체 콘텐츠 너비
+### With full content width 전체 콘텐츠 너비
 
-`ui.content` 슬롯에 `min-w-fit` 클래스를 추가하여 콘텐츠를 항목의 전체 너비로 확장할 수 있습니다.
+`ui.content` 슬롯에 `min-w-fit` 클래스를 추가하여 내용을 항목의 전체 너비로 확장할 수 있습니다.
 
 ::component-example
 ---
-이름: 'input-menu-content-width-example'
-축소: true
+name: 'input-menu-content-width-example'
+collapse: true
 ---
 ::
 
@@ -955,14 +955,14 @@ export default defineAppConfig({
 ```
 ::
 
-###  국가 선택기로
+### As a country 선택기
 
-입력 메뉴를 로드가 느린 국가 선택기로 사용할 수 있습니다. 국가는 메뉴를 처음 열었을 때만 가져옵니다.
+입력 메뉴를 로드가 느린 국가 선택기로 사용할 수 있습니다. 국가는 메뉴를 처음 열었을 때만 가져오기됩니다.
 
 ::component-example
 ---
-축소: true
-name: 'input-menu-countries-example' 입력메뉴-카운트-예제
+collapse: true
+name: 'input-menu-countries-example'
 ---
 ::
 
@@ -970,37 +970,37 @@ name: 'input-menu-countries-example' 입력메뉴-카운트-예제
 이 예제에서는 `useLazyFetch`와 `immediate: false`를 사용하여 메뉴를 처음 열었을 때 국가만 로드합니다.
 ::
 
-##  API
+## API
 
-### Props 이미지
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
-이 컴포넌트는 모든 네이티브 `<input>`HTML 속성을 지원합니다.
+이 구성 요소는 모든 기본 `<input>` HTML 속성을 지원합니다.
 ::
 
-###  슬롯
+### Slots
 
-:컴포넌트 - 슬롯
+:component-slots
 
-### Emits @ 에미츠
+### Emits 이미지
 
-:구성요소 - 방사
+:component-emits
 
-###  노출
+### 노출
 
 템플릿 참조를 통해 컴포넌트에 액세스하는 경우 다음을 사용할 수 있습니다.
 
-| 이름 Name| 유형 (Type)|
+| 이름 (Name)| 유형 (Type)|
 | ---- | ---- |
-| `inputRef`{lang="ts-type"}| `Ref<HTMLInputElement \| null>`{lang="ts-type"}|
-| `viewportRef`{lang="ts-type"}| `Ref<HTMLDivElement \| null>`{lang="ts-type"}|
+| `inputRef`{lang="ts-type"}의 발음을 {lang="ts-type"}| `Ref<HTMLInputElement \| null>`{lang="ts-type"}의 발음을 `Ref<HTMLInputElement \| null>`xph787|
+| `viewportRef`{lang="ts-type"}의 발음을 `viewportRef`xph790| `Ref<HTMLDivElement \| null>`{lang="ts-type"} (`Ref<HTMLDivElement \| null>`{lang="ts-type"})|
 
-##  테마
+## Theme (## 테마)
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## Changelog 변경
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

@@ -12,232 +12,232 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/FileUpload.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-Utilice la directiva `v-model` para controlar el valor de la carga de archivos.
+Utilice la directiva `v-model` para controlar el valor del archivo.
 
 ::component-code
 ---
-Ignora:
-  - modelValoración
-  @003@clase
-Externo:
-  - modelValue (Edición española)
-Props:
-  Modalidad: NULL
-  Clase: 'w-96 min-h-48'
+ignore:
+  - modelValue
+  - class
+external:
+  - modelValue
+props:
+  modelValue: null
+  class: 'w-96 min-h-48'
 ---
 ::
 
-@@0005@@Multiplicación
+### Multiplicación
 
 Utilice el prop `multiple` para permitir que se seleccionen varios archivos.
 
 ::component-code
 ---
-Ignora:
-  @007@clase
-Props:
-  Multiplicación: True
-  Clase: 'w-96 min-h-48'
+ignore:
+  - class
+props:
+  multiple: true
+  class: 'w-96 min-h-48'
 ---
 ::
 
-@080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Dropzone
 
-Utilice el prop `dropzone` para habilitar/deshabilitar el área desplegable. Prevalue a `true`.
+Utilice el prop `dropzone` para habilitar/deshabilitar el área desplegable.
 
 ::component-code
 ---
-Ignora:
-  @@11@clase
-Props:
-  Categoría: False
-  Clase: 'w-96 min-h-48'
+ignore:
+  - class
+props:
+  dropzone: false
+  class: 'w-96 min-h-48'
 ---
 ::
 
-@12@Interactivo
+### Interactivo
 
 Utilice el prop `interactive` para habilitar/deshabilitar el área en la que se puede hacer clic.
 
 ::tip{to="#with-files-bottom-slot"}
-Esto puede ser útil cuando se agrega un componente `Button` en la ranura `#actions`.
+Esto puede ser útil al agregar un componente `Button` en la ranura `#actions`.
 ::
 
 ::component-code
 ---
-Ignora:
-  @17@clase
-Props:
-  Interactivo: Falso
-  Clase: 'w-96 min-h-48'
+ignore:
+  - class
+props:
+  interactive: false
+  class: 'w-96 min-h-48'
 ---
 ::
 
-@18@Acepto
+### Acepto
 
-Utilice el prop `accept` para especificar los tipos de archivo permitidos para la entrada. Proporcionar una lista separada por comas de [MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types) o extensiones de archivo (por ejemplo,`image/png,application/pdf,.jpg`).
+Utilice la prop `accept` para especificar los tipos de archivo permitidos para la entrada. Proporcionar una lista separada por comas de [MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types) o extensiones de archivo (por ejemplo, `image/png,application/pdf,.jpg`). Por defecto a `*` (todos los tipos de archivo).
 
 ::component-code
 ---
-Ignora:
-  @@26000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @27@clase
-Props:
-  Aceptar: 'imagen/*'
-  Clase: 'w-96 min-h-48'
+ignore:
+  - accept
+  - class
+props:
+  accept: 'image/*'
+  class: 'w-96 min-h-48'
 ---
 ::
 
-@@28@etiqueta
+### Label
 
-Utilice el `label` prop para establecer la etiqueta de la FileUpload.
+Utilice el prop `label` para establecer la etiqueta del FileUpload.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Etiqueta: 'Deja tu imagen aquí'
-  Clase: 'w-96 min-h-48'
+prettier: true
+ignore:
+  - class
+props:
+  label: 'Drop your image here'
+  class: 'w-96 min-h-48'
 ---
 ::
 
-@@pH031@Descripción
+### Descripción
 
-Utilice el `description` prop para establecer la descripción de la FileUpload.
+Utilice el prop `description` para establecer la descripción del FileUpload.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH033@etiqueta
-  @34@@clase
-Props:
-  Etiqueta: 'Deja tu imagen aquí'
-  Descripción:'SVG, PNG, JPG o GIF (máx. 2MB)'
-  Clase: 'w-96 min-h-48'
+prettier: true
+ignore:
+  - label
+  - class
+props:
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96 min-h-48'
 ---
 ::
 
-@@pH035@Icon
+### Icon
 
-Utilice el `icon` prop para establecer el icono de la FileUpload. Defaults a `i-lucide-upload`.
+Utilice el prop `icon` para establecer el icono de FileUpload. Defaults a `i-lucide-upload`.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH038@etiqueta
-  @@ph039@descripción
-  @@clase00000
-Props:
-  icono: 'i-lucide-image'
-  Etiqueta: 'Deja tu imagen aquí'
-  Descripción:'SVG, PNG, JPG o GIF (máx. 2MB)'
-  Clase: 'w-96 min-h-48'
+prettier: true
+ignore:
+  - label
+  - description
+  - class
+props:
+  icon: 'i-lucide-image'
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96 min-h-48'
 ---
 ::
 
 ::framework-only
-#nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.upload`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
 Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.upload`.
 :::
 ::
 
-@450000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Color (Edición española)
 
 Utilice el prop `color` para cambiar el color del archivo.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH047@etiqueta
-  @@ph048@descripción
-  @494@clase
-Props:
-  Color: Neutral
-  Destacado: Verdadero
-  Etiqueta: 'Deja tu imagen aquí'
-  Descripción:'SVG, PNG, JPG o GIF (máx. 2MB)'
-  Clase: 'w-96 min-h-48'
+prettier: true
+ignore:
+  - label
+  - description
+  - class
+props:
+  color: neutral
+  highlight: true
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96 min-h-48'
 ---
 ::
 
 ::note
-El `highlight` prop se utiliza aquí para mostrar el estado de enfoque. Se utiliza internamente cuando se produce un error de validación.
+El prop `highlight` se utiliza aquí para mostrar el estado de enfoque. Se utiliza internamente cuando se produce un error de validación.
 ::
 
-@@501@Variante
+### Variante en Español
 
-Utilice el `variant` prop para cambiar la variante de la FileUpload.
+Utilice el prop `variant` para cambiar la variante del FileUpload.
 
 ::component-code
 ---
-Ignora:
-  @@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Variante: Botón
+ignore:
+  - class
+props:
+  variant: button
 ---
 ::
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Tamaño
 
-Utilice el prop `size` para cambiar el tamaño de la carga de archivos.
+Utilice el prop `size` para cambiar el tamaño del archivo.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH056@etiqueta
-  @@ph057@descripción
-  @@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Tamaño: xl
-  Variante: Región
-  Etiqueta: 'Deja tu imagen aquí'
-  Descripción:'SVG, PNG, JPG o GIF (máx. 2MB)'
+prettier: true
+ignore:
+  - label
+  - description
+  - class
+props:
+  size: xl
+  variant: area
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
 ---
 ::
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Diseño
 
 Utilice el prop `layout` para cambiar la forma en que se muestran los archivos en el FileUpload. Defaults a `grid`.
 
 ::warning
-Esto sólo funciona cuando `variant` es `area`.
+Este accesorio solo funciona cuando `variant` es `area`.
 ::
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH064@etiqueta
-  @@pH065@descripción
-  @@6666 @
-  @067 @ clase
+prettier: true
+ignore:
+  - label
+  - description
+  - multiple
+  - class
   - ui.base
-Props:
-  Categoría: List
-  Multiplicación: True
-  Etiqueta: 'Deja tus imágenes aquí'
-  Descripción:'SVG, PNG, JPG o GIF (máx. 2MB)'
-  Categoría: W-96
-  UU.:
-    Categoría: min-h-48
+props:
+  layout: list
+  multiple: true
+  label: 'Drop your images here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96'
+  ui:
+    base: 'min-h-48'
 ---
 ::
 
-@@pH069@@Posición
+### Posición
 
 Utilice el prop `position` para cambiar la posición de los archivos en el FileUpload. Defaults a `outside`.
 
@@ -247,37 +247,37 @@ Este prop sólo funciona cuando `variant` es `area` y cuando `layout` es `list`.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @766@etiqueta
-  @@777@Descripción
-  @@788@multiples
-  @799@layout
-  @080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+prettier: true
+ignore:
+  - label
+  - description
+  - multiple
+  - layout
+  - class
   - ui.base
-Props:
-  Ubicación: Inside
-  Categoría: List
-  Multiplicación: True
-  Etiqueta: 'Deja tus imágenes aquí'
-  Descripción:'SVG, PNG, JPG o GIF (máx. 2MB)'
-  Categoría: W-96
-  UU.:
-    Categoría: min-h-48
+props:
+  position: inside
+  layout: list
+  multiple: true
+  label: 'Drop your images here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96'
+  ui:
+    base: 'min-h-48'
 ---
 ::
 
-@@ph082@Ejemplos
+## Ejemplos
 
-### Con validación del formulario
+### Con validación de formulario
 
-Puede utilizar el FileUpload dentro de un [Form](/docs/components/form) y [FormField](/docs/components/form-field) componentes para manejar la validación y el manejo de errores.
+Puede utilizar FileUpload dentro de los componentes [Form](/docs/components/form) y [FormField](/docs/components/form-field) para gestionar la validación y el manejo de errores.
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre: 'file-upload-form-validation-example'
+prettier: true
+collapse: true
+name: 'file-upload-form-validation-example'
 ---
 ::
 
@@ -287,71 +287,71 @@ Puede utilizar la ranura predeterminada para crear su propio componente FileUplo
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre del archivo: 'file-upload-default-slot-example'
+prettier: true
+collapse: true
+name: 'file-upload-default-slot-example'
 ---
 ::
 
-### Con ranura de fondo de archivos
+### With ranura inferior de archivos
 
-Puede usar la ranura `files-bottom` para agregar un [Button ](/docs/components/button) debajo de la lista de archivos para eliminar todos los archivos, por ejemplo.
+Puede utilizar la ranura `files-bottom` para agregar un [Button](/docs/components/button) debajo de la lista de archivos para eliminar todos los archivos, por ejemplo.
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre del archivo: 'file-upload-files-bottom-slot-example'
+prettier: true
+collapse: true
+name: 'file-upload-files-bottom-slot-example'
 ---
 ::
 
 ::note{to="#interactive"}
-El prop `interactive` se establece en `false` en este ejemplo para evitar que el área de clic predeterminada.
+El prop `interactive` se establece en `false` en este ejemplo para evitar el área de clic predeterminada.
 ::
 
-### Con ranura de archivo superior
+### With Files-Top Slot (Edición española)
 
-Puede utilizar la ranura `files-top` para añadir un [Button](/docs/components/button) encima de la lista de archivos para añadir nuevos archivos, por ejemplo.
+Puede usar la ranura `files-top` para agregar un [Button](/docs/components/button) encima de la lista de archivos para agregar nuevos archivos, por ejemplo.
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Nombre del archivo: 'file-upload-files-top-slot-example'
+prettier: true
+collapse: true
+name: 'file-upload-files-top-slot-example'
 ---
 ::
 
-@@pH107 @@ Español
+## API (Versión)
 
-@108@108@108@108
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
-Este componente también soporta todos los atributos HTML nativos `<input>`.
+Este componente también admite todos los atributos HTML nativos de `<input>`.
 ::
 
-@100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots en línea
 
-Componentes de slots
+:component-slots
 
-@111@1111@1111
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@112@Exposicion
+### Exposición
 
 Al acceder al componente a través de una referencia de plantilla, puede utilizar lo siguiente:
 
 | Nombre| Tipo|
 | ---- | ---- |
-| @113 @@@ 115 @|@114 @@@ 116|
-| @117 @@@ 119 @|@118 @@@ 120 @|
+| `inputRef`x{lang="ts-type"}| `Ref<HTMLInputElement \| null>`x{lang="ts-type"} (Edición española)|
+| `dropzoneRef`{lang="ts-type"} (Edición española)| `Ref<HTMLDivElement \| null>`x{lang="ts-type"} (Edición española)|
 
-@121@@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@@222@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

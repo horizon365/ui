@@ -11,7 +11,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Empty.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice el componente Vacío para mostrar un estado de marcador de posición cuando no hay contenido que mostrar.
 
@@ -19,79 +19,79 @@ Utilice el componente Vacío para mostrar un estado de marcador de posición cua
 
 :::u-empty
 ---
-Archivo: i-lucide-file
-Título: No se encontraron proyectos
-Descripción: Parece que no has añadido ningún proyecto. Crea uno para empezar.
-Acciones:
+icon: i-lucide-file
+title: No projects found
+description: It looks like you haven't added any projects. Create one to get started.
+actions:
   - icon: i-lucide-plus
-    Etiqueta: crear nuevo
+    label: Create new
   - icon: i-lucide-refresh-cw
-    Categoría: Refresh
-    Color: Neutro
-    Variación: Sutil
+    label: Refresh
+    color: neutral
+    variant: subtle
 ---
 :::
 
 ::
 
-@@pH0003@title (Edición española)
+### Nombre
 
-Utilice la prop `title` para establecer el título del estado vacío.
-
-::component-code
----
-Props:
-  Categoría: No se encontraron proyectos
----
-::
-
-@@pH005@Descripción
-
-Utilice la prop `description` para establecer la descripción del estado vacío.
+Utilice el prop `title` para establecer el título del estado vacío.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @007@title
-Props:
-  Categoría: No se encontraron proyectos
-  Descripción: Parece que no has añadido ningún proyecto. Crea uno para empezar.
+props:
+  title: No projects found
 ---
 ::
 
-@008@Icon
+### Descripción
+
+Utilice el prop `description` para establecer la descripción del estado vacío.
+
+::component-code
+---
+prettier: true
+ignore:
+  - title
+props:
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
+---
+::
+
+### Icon
 
 Utilice el prop `icon` para establecer el icono del estado vacío.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @@pH011@descripción
-Props:
-  Archivo: i-lucide-file
-  Categoría: No se encontraron proyectos
-  Descripción: Parece que no has añadido ningún proyecto. Crea uno para empezar.
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  icon: i-lucide-file
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
 ---
 ::
 
-@12@avatar
+### Avatar
 
 Utilice el prop `avatar` para establecer el avatar del estado vacío.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@icon
-  @@15@título
-  @@ph016@descripción
-Props:
-  avatar. src: 'https://github.com/nuxt.png'
-  Category: No projects found
-  Descripción: Parece que no has añadido ningún proyecto. Crea uno para empezar.
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+props:
+  avatar.src: 'https://github.com/nuxt.png'
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
 ---
 ::
 
@@ -101,129 +101,129 @@ Utilice el prop `loading` para mostrar un icono de carga en lugar del icono. El 
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @@21@título
-  @@ph022@descripción
-Props:
-  Archivo: i-lucide-file
-  Carga: Verdad
-  Titre: Chargement de projets
-  Descripción: Por favor, espere mientras recogemos sus proyectos.
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+props:
+  icon: i-lucide-file
+  loading: true
+  title: Loading projects
+  description: Please wait while we fetch your projects.
 ---
 ::
 
 ### Icono de carga: badge{label="4.10+" class="align-text-top"}
 
-Utilice el prop `loading-icon` para personalizar el icono de carga. Prevalue a `i-lucide-loader-circle`.
+Utilice el prop `loading-icon` para personalizar el icono de carga.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @27@icon
-  @28@title
-  @@ph029@descripción
-  @300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Archivo: i-lucide-file
-  Carga: Verdad
-  LoadingIcon: 'i-lucide-loader'(en inglés)
-  Título: Carga de Proyectos
-  Descripción: Por favor espere mientras recogemos sus proyectos.
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - loading
+props:
+  icon: i-lucide-file
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  title: Loading projects
+  description: Please wait while we fetch your projects.
 ---
 ::
 
 ::framework-only
-#Nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.loading`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.loading`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.loading`.
 :::
 ::
 
-@@P035@Acciones
+### Acciones
 
 Utilice el prop `actions` para añadir algunas acciones [Button](/docs/components/button) al estado vacío.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@icon 41
-  @@2004@título
-  @@ph043@descripción
-  @@44@acciones
-Props:
-  Archivo: i-lucide-file
-  Category: No projects found
-  Descripción: Parece que no has añadido ningún proyecto. Crea uno para empezar.
-  Acciones:
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - actions
+props:
+  icon: i-lucide-file
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
+  actions:
     - icon: i-lucide-plus
-      Etiqueta: crear nuevo
+      label: Create new
     - icon: i-lucide-refresh-cw
-      Categoría: Refresh
-      Color: Neutral
-      Variación: Sutil
+      label: Refresh
+      color: neutral
+      variant: subtle
 ---
 ::
 
-@@47@Variación
+### Variante
 
-Utilice la prop `variant` para cambiar la variante del estado vacío.
+Utilice el prop `variant` para cambiar la variante del estado vacío.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @49@icon
-  @@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @@ph051@descripción
-  @@52@acciones
-Props:
-  Categoría: Desnudo
-  Icono: i-lucide-bell
-  Título: Sin notificaciones
-  Descripción: Todos están al día. Las nuevas notificaciones aparecerán aquí.
-  Acciones:
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - actions
+props:
+  variant: naked
+  icon: i-lucide-bell
+  title: No notifications
+  description: You're all caught up. New notifications will appear here.
+  actions:
     - icon: i-lucide-refresh-cw
-      Categoría: Refresh
-      Color: Neutro
-      Variación: Sutil
+      label: Refresh
+      color: neutral
+      variant: subtle
 ---
 ::
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Tamaño
 
-Utilice la prop `size` para cambiar el tamaño del estado vacío.
+Utilice el prop `size` para cambiar el tamaño del estado vacío.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@icon 56
-  @@507@título
-  @@pH058@descripción
-  @@59@acciones
-Props:
-  Tamaño: XL
-  Icono: i-lucide-bell
-  Título: Sin notificaciones
-  Descripción: Todos están al día. Las nuevas notificaciones aparecerán aquí.
-  Acciones:
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - actions
+props:
+  size: xl
+  icon: i-lucide-bell
+  title: No notifications
+  description: You're all caught up. New notifications will appear here.
+  actions:
     - icon: i-lucide-refresh-cw
-      Categoría: Refresh
-      Color: Neutro
-      Variación: Sutil
+      label: Refresh
+      color: neutral
+      variant: subtle
 ---
 ::
 
-@@ph061@@Ejemplos
+## Ejemplos
 
 ### Con ranuras
 
@@ -231,25 +231,25 @@ Utilice las ranuras disponibles para crear un estado vacío más complejo.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'empty-slots-example'
+collapse: true
+name: 'empty-slots-example'
 ---
 ::
 
-@@pH063
+## API (Edición española)
 
-@@pH064@@Propuestas
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
-@@P065@@Escenarios
+### Slots en línea
 
-Componentes de slots
+:component-slots
 
-@@666@@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@@changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

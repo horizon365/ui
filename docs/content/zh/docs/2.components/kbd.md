@@ -11,41 +11,41 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Kbd.vue
 ---
 
-## 使用情况
+## 用法
 
 使用默认插槽设置Kbd的值。
 
 ::component-code
 ---
-插槽：
-  默认值：K
+slots:
+  default: K
 ---
 ::
 
-### Value
+### 值
 
-使用`value`prop设置Kbd的值。
+使用`value` prop设置Kbd的值。
 
 ::component-code
 ---
-道具：
-  值：K
+props:
+  value: K
 ---
 ::
 
-您可以将特殊密钥传递给经过[`useKbd`](https://github.com/nuxt/ui/blob/v4/src/runtime/composables/useKbd.ts)可组合的`value`道具。例如，`meta`密钥在macOS上显示为`⌘`，在其他平台上显示为`Ctrl`。
+您可以将特殊密钥传递给`value` prop，该prop通过[`useKbd`](https://github.com/nuxt/ui/blob/v4/src/runtime/composables/useKbd.ts)组合。例如，`meta`密钥在macOS上显示为`⌘`，在其他平台上显示为`Ctrl`。
 
 ::component-code
 ---
-道具：
-  值：Meta
-项目名称：
-  价值观：
+props:
+  value: meta
+items:
+  value:
     - meta
     - win
     - command
     - shift
-    - cnc
+    - ctrl
     - option
     - alt
     - enter
@@ -71,41 +71,41 @@ links:
 
 ::component-code
 ---
-道具：
-  颜色：中性
-插槽：
-  默认值：K
+props:
+  color: neutral
+slots:
+  default: K
 ---
 ::
 
 ### Variant
 
-使用`variant`prop更改Kbd的变体。
+使用`variant` prop更改Kbd的变体。
 
 ::component-code
 ---
-道具：
-  颜色：中性
-  变体：实体
-插槽：
-  默认值：K
+props:
+  color: neutral
+  variant: solid
+slots:
+  default: K
 ---
 ::
 
 ### Size
 
-使用`size`道具更改Kbd的大小。
+使用`size`属性更改Kbd的大小。
 
 ::component-code
 ---
-道具：
-  Size：lg
-插槽：
-  默认值：K
+props:
+  size: lg
+slots:
+  default: K
 ---
 ::
 
-## Examples
+## 示例
 
 ### `class`道具
 
@@ -113,11 +113,11 @@ links:
 
 ::component-code
 ---
-道具：
-  class：'font-bold rounded-full'
-  变体：细微
-插槽：
-  默认值：K
+props:
+  class: 'font-bold rounded-full'
+  variant: subtle
+slots:
+  default: K
 ---
 ::
 
@@ -125,16 +125,16 @@ links:
 
 ### Props
 
-：组件-支柱
+:component-props
 
 ### Slots
 
-：组件插槽
+:component-slots
 
 ## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

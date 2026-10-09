@@ -1,6 +1,6 @@
 ---
-title: Input-Daten
-description: 'Eine Eingabekomponente für die Datumsauswahl.'
+title: Inputdaten
+description: 'Eine Eingabekomponente zur Datumsauswahl.'
 category: form
 keywords:
   - date picker
@@ -15,237 +15,237 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputDate.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Verwenden Sie die `v-model` Direktive, um das ausgewählte Datum zu steuern.
+Verwenden Sie die `v-model`-Direktive, um das ausgewählte Datum zu steuern.
 
 ::component-code
 ---
-Cast auf:
-  Dateiendung: DateValue
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: [2022, 2, 3]
+cast:
+  modelValue: DateValue
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: [2022, 2, 3]
 ---
 ::
 
-Verwenden Sie `default-value` prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
+Verwenden Sie die `default-value` prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
 
 ::component-code
 ---
-Cast auf:
-  Standardwert: DateValue
-Ignoriert:
+cast:
+  defaultValue: DateValue
+ignore:
   - defaultValue
-Außen:
+external:
   - defaultValue
-Props:
-  Standardwert: [2022, 2, 6]
+props:
+  defaultValue: [2022, 2, 6]
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::note{to="/docs/getting-started/integrations/i18n/nuxt#locale"}
-Diese Komponente verwendet das Paket `@internationalized/date` für die lokale Formatierung. Das Datumsformat wird durch die `locale` prop der App-Komponente bestimmt.
+Diese Komponente verwendet das `@internationalized/date`-Paket für die lokalbezogene Formatierung. Das Datumsformat wird durch die `locale`-Prop der App-Komponente bestimmt.
 :::
 
-#Ansehen
+#vue
 :::note{to="/docs/getting-started/integrations/i18n/vue#locale"}
-Diese Komponente verwendet das Paket `@internationalized/date` für die lokale Formatierung. Das Datumsformat wird durch die `locale` prop der App-Komponente bestimmt.
+Diese Komponente verwendet das `@internationalized/date`-Paket für die lokalbezogene Formatierung. Das Datumsformat wird durch die `locale`-Prop der App-Komponente bestimmt.
 :::
 ::
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@####################################################################################################################################################
+### Range-Funktion
 
-Verwenden Sie `range` prop, um einen Bereich von Daten auszuwählen.
+Verwenden Sie die `range`-prop, um einen Datumsbereich auszuwählen.
 
 ::component-code
 ---
-Schöner: wahr
-Cast auf:
-  Dateiendung: DateRange
-Ignoriert:
-  @@ph013@@gmail.de
-  - modellValue.start
-  - modellValue.end
-Außen:
-  - modellWert
-Props:
-  Range: wahr
-  Modellwert:
-    Beginn: [2022, 2, 3]
-    Ende: [2022, 2, 20] Bearbeiten
+prettier: true
+cast:
+  modelValue: DateRange
+ignore:
+  - range
+  - modelValue.start
+  - modelValue.end
+external:
+  - modelValue
+props:
+  range: true
+  modelValue:
+    start: [2022, 2, 3]
+    end: [2022, 2, 20]
 ---
 ::
 
-@@@@@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17
+### Farbe
 
-Verwenden Sie `color` prop, um die Farbe des Eingabedatums zu ändern.
+Verwenden Sie die `color`-prop, um die Farbe des Eingabedatums zu ändern.
 
 ::component-code
 ---
-Props:
-  Farbe: neutral
-  Highlight: Wahr
+props:
+  color: neutral
+  highlight: true
 ---
 ::
 
-@@ph019@@Variantentabelle
+### Variant Bearbeiten
 
-Verwenden Sie `variant` prop, um die Variante des InputDatums zu ändern.
+Verwenden Sie die `variant`-prop, um die Variante des Eingabedatums zu ändern.
 
 ::component-code
 ---
-Props:
-  Variante: subtil
+props:
+  variant: subtle
 ---
 ::
 
-@@ph021 @ Größe
+### Größe
 
-Verwenden Sie `size` prop, um die Größe des Eingabedatums zu ändern.
+Verwenden Sie die `size`-Prop, um die Größe des Eingabedatums zu ändern.
 
 ::component-code
 ---
-Props:
-  Größe: XL
+props:
+  size: xl
 ---
 ::
 
-@@ph023@@gmail.de
+### Icon (Deutsche Ausgabe)
 
-Verwenden Sie die `icon` prop, um ein [Icon](/docs/components/icon) innerhalb des Eingabedatums anzuzeigen.
+Verwenden Sie die `icon`-Prop, um ein [Icon](/docs/components/icon) innerhalb des InputDate anzuzeigen.
 
 ::component-code
 ---
-Props:
-  Icon: 'i-lucide-Kalender'
+props:
+  icon: 'i-lucide-calendar'
 ---
 ::
 
 ::note
-Verwenden Sie `leading` und `trailing` props, um die Symbolposition festzulegen, oder die `leading-icon` und `trailing-icon` props, um für jede Position ein anderes Symbol festzulegen.
+Verwenden Sie die `leading` und `trailing` props, um die Symbolposition festzulegen, oder die `leading-icon` und `trailing-icon` props, um für jede Position ein anderes Symbol festzulegen.
 ::
 
-@@ph033@@trennsymbol
+### Separator-Symbol
 
-Verwenden Sie `separator-icon` prop, um die [Icon](/docs/components/icon) des Bereichsabscheiders zu ändern.
+Verwenden Sie die `separator-icon`-prop, um die [Icon](/docs/components/icon) des Bereichsseparators zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph040@@gmail.de
-Props:
-  Range: wahr
-  separatorIcon: 'i-lucide-arrow-right'(I-lucide-arrow-rechts)
+ignore:
+  - range
+props:
+  range: true
+  separatorIcon: 'i-lucide-arrow-right'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.minus` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.minus` Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.minus` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.minus` Schlüssel anpassen.
 :::
 ::
 
-@@@@@Avatar45@@Avatar45@@@Avatar45@@@Avatar45@@@@Avatar45@@@@Avatar45@@@@Avatar45@@@@Avatar@@Avatar@@Avatar@@Avatar@@@Avatar@@@@Avatar@@@@Avatar@@@@@@@@Avatar@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Avatar
+### Avatar (englisch)
 
-Verwenden Sie die `avatar` prop, um ein [Avatar](/docs/components/avatar) innerhalb des Eingabedatums anzuzeigen.
-
-::component-code
----
-Schöner: wahr
-Ignoriert:
-  - avatar.loading (auf Englisch)
-Props:
-  Avatare sind:
-    src: 'https://github.com/vuejs.png'(auf Englisch)
-    Aufladung: Lazy
-  Größe: md
-  Beschreibung: Outline
----
-::
-
-@@ph052@@disabled @ nicht vorhanden
-
-Verwenden Sie `disabled` prop, um das Eingabedatum zu deaktivieren.
+Verwenden Sie die `avatar`-Prop, um eine [Avatar](/docs/components/avatar) innerhalb des Eingabedatums anzuzeigen.
 
 ::component-code
 ---
-Props:
-  Behindert: Wahr
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
+    src: 'https://github.com/vuejs.png'
+    loading: lazy
+  size: md
+  variant: outline
 ---
 ::
 
-@@ph054@@Beispiele
+### Disabled (nicht verfügbar)
 
-### Mit nicht verfügbaren Daten
+Verwenden Sie die `disabled`-prop, um das Eingabedatum zu deaktivieren.
 
-Verwenden Sie `is-date-unavailable` prop mit einer Funktion, um bestimmte Datumsangaben als nicht verfügbar zu markieren.
+::component-code
+---
+props:
+  disabled: true
+---
+::
+
+## Beispiele
+
+### With unavailable dates (Datum nicht verfügbar)
+
+Verwenden Sie die `is-date-unavailable`-Prop mit einer Funktion, um bestimmte Daten als nicht verfügbar zu markieren.
 
 ::component-example
 ---
-Name: 'input-date-unavailable-dates-example'(Eingabedatum-nicht verfügbares Datums-Beispiel)
+name: 'input-date-unavailable-dates-example'
 ---
 ::
 
 ### Mit min/max Daten
 
-Verwenden Sie die Props `min-value` und `max-value`, um die Daten zu begrenzen.
+Verwenden Sie die Props `min-value` und `max-value`, um die Datumsangaben zu begrenzen.
 
 ::component-example
 ---
-Name: 'input-date-min-max-dates-example'(Eingabe-Datum-Min-Max-Datums-Beispiel)
+name: 'input-date-min-max-dates-example'
 ---
 ::
 
-### Als Datumsauswahl
+### As eine Datumsauswahl
 
 Verwenden Sie eine [Calendar](/docs/components/calendar) und eine [Popover](/docs/components/popover) Komponente, um eine Datumsauswahl zu erstellen.
 
 ::component-example
 ---
-Name: 'input-date-date-picker-example'(Eingabe-Datum-Datum-Picker-Beispiel)
+name: 'input-date-date-picker-example'
 ---
 ::
 
-### Als Datumsbereich-Picker.
+### Als Datumsbereich-Auswahl
 
-Verwenden Sie eine [Calendar](/docs/components/calendar) und eine [Popover](/docs/components/popover) Komponente, um eine Datumsbereich-Auswahl zu erstellen.
+Verwenden Sie eine Komponente [Calendar](/docs/components/calendar) und eine Komponente [Popover](/docs/components/popover), um eine Datumsbereich-Auswahl zu erstellen.
 
 ::component-example
 ---
-Name: 'input-date-date-range-picker-example'(Eingabe-Datum-Datum-Bereich-Picker-Beispiel)
+name: 'input-date-date-range-picker-example'
 ---
 ::
 
-## api
+## API Bearbeiten
 
-@@@@@@@@@@@ph079@@props
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
-@@ph080@@slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@@@@@@@@@@emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-@@@@@@@@@@@ph082@@theme
+## Theme (englisch)
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph083@@changelog @@@ changelog @@@ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

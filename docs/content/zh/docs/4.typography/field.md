@@ -9,16 +9,16 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Field.vue
 ---
 
-## 使用情况
+## 用法
 
 要在内容中显示的字段、属性或参数。
 
 ::code-preview
 ::field{name="name" type="string" required class="w-full"}
-`description`可以设置为道具，也可以设置为默认插槽，完全支持**markdown**。
+该`description`可以设置为道具或在默认插槽与完整的**markdown**的支持。
 ::
 
-#代码
+#code
 
 ```mdc
 ::field{name="name" type="string" required}
@@ -32,16 +32,16 @@ The `description` can be set as prop or in the default slot with full **markdown
 
 ### Props
 
-：组件-道具{prose}
+:component-props{prose}
 
-### Slots
+### 老虎机
 
-：组件插槽{prose}
+:component-slots{prose}
 
 ## Theme
 
-：组件主题{prose}
+:component-theme{prose}
 
 ## Changelog
 
-：component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

@@ -14,329 +14,329 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/RadioGroup.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Utilisez la directive `v-model` pour contrôler la valeur du RadioGroup ou la prop `default-value` pour définir la valeur initiale lorsque vous n'avez pas besoin de contrôler son état.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  - modèleValeur
-  @@ph004@articles
-Extérieur:
-  @@ph005@articles
-  - modèleValeur
-Props:
-  Modèle:'Système'
+prettier: true
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'System'
   items:
-    - « Réseau »
-    - "éclairage"
-    - "Désolé"
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-@@ph010@articles
+### Éléments
 
-Utilisez le `items` prop comme un tableau de chaînes ou de nombres:
+Utilisez le prop `items` comme un tableau de chaînes ou de nombres:
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  - modèleValeur
-  @@ph013@articles
-Extérieure:
-  @@ph014@articles
-  - modèleValeur
-Props:
-  Modèle:'Système'
+prettier: true
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'System'
   items:
-    - « Réseau »
-    - "Lumière"
-    - "Désolé"
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
 Vous pouvez également passer un tableau d'objets avec les propriétés suivantes:
 
-@@
-@@
-@@
-@@
-@@
-@@
-@@
+- x`label?: string`xx{lang="ts-type"}
+- x`description?: string`x{lang="ts-type"}
+Xph041xx[x`value?: string`x{lang="ts-type"}x](#value-keyx)
+- x`disabled?: boolean`x{lang="ts-type"}
+- x[x`icon?: string`x{lang="ts-type"}x](x#indicatorx)
+- xx`class?: any`xx{lang="ts-type"}
+- x`ui?: { item?: ClassNameValue, container?: ClassNameValue, base?: ClassNameValue, 'indicator'?: ClassNameValue, wrapper?: ClassNameValue, label?: ClassNameValue, icon?: ClassNameValue, description?: ClassNameValue }`xx{lang="ts-type"}
 
 ::component-code
 ---
-ignorer:
-  - modèle Valeur
-  @@ph049@articles
-Extérieur:
-  @@ph050@articles
-  - modèleValeur
-Extérieurs:
-  - RadioGroupItem [réf. nécessaire]
-Props:
-  Modèle:'Système'
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+externalTypes:
+  - RadioGroupItem[]
+props:
+  modelValue: 'system'
   items:
-    - label:'Système'
-      Description: "Correspond aux paramètres de votre appareil."
-      Valeur: 'Système'
-    - label:« Lumière »
-      Description: "Utilisez toujours le thème de la lumière."
-      Étiquette:'light'
-    - label:« Sombre »
-      Description: "Utilisez toujours le thème sombre."
-      Catégorie:"Dark"
+    - label: 'System'
+      description: 'Matches your device settings.'
+      value: 'system'
+    - label: 'Light'
+      description: 'Always uses the light theme.'
+      value: 'light'
+    - label: 'Dark'
+      description: 'Always uses the dark theme.'
+      value: 'dark'
 ---
 ::
 
 ::caution
-Lorsque vous utilisez des objets, vous devez faire référence à la propriété `value` de l'objet dans la directive `v-model` ou dans la propriété `default-value`.
+Lorsque vous utilisez des objets, vous devez faire référence à la propriété `value` de l'objet dans la directive `v-model` ou la prop `default-value`.
 ::
 
-### Clé de valeur
+Clé ### Value
 
-Vous pouvez modifier la propriété utilisée pour définir la valeur en utilisant la propriété `value-key`.
+Vous pouvez modifier la propriété qui est utilisée pour définir la valeur en utilisant la prop. `value-key`.
 
 ::component-code
 ---
-ignorer:
-  - modèleValeur
-  @@ph063@articles
+ignore:
+  - modelValue
+  - items
   - valueKey
-Extérieure:
-  @@ph065@articles
-  - modèleValeur
-Extérieurs:
-  - RadioGroupItem [réf. nécessaire]
-Props:
-  Modèle:'Light'
+external:
+  - items
+  - modelValue
+externalTypes:
+  - RadioGroupItem[]
+props:
+  modelValue: 'light'
   valueKey: 'id'
   items:
-    - label:'Système'
-      Description: 'Correspond aux paramètres de votre appareil.'
-      ID: « Système »
-    - label:« Lumière »
-      Description: "Utilisez toujours le thème de la lumière."
-      Étiquette:"light"
-    - label:« Sombre »
-      Description: "Toujours utiliser le thème sombre."
-      Étiquette:"Dark"
+    - label: 'System'
+      description: 'Matches your device settings.'
+      id: 'system'
+    - label: 'Light'
+      description: 'Always uses the light theme.'
+      id: 'light'
+    - label: 'Dark'
+      description: 'Always uses the dark theme.'
+      id: 'dark'
 ---
 ::
 
-@@ph071@Légende
+### Légende
 
-Utilisez la prop `legend` pour définir la légende du groupe radio.
+Utilisez le prop `legend` pour définir la légende du RadioGroup.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
+prettier: true
+ignore:
   - defaultValue
-  @@ph074@articles
-Extérieure:
-  @@75@éléments
-Props:
-  Légende:"Thème"
-  valeur: 'Système'
+  - items
+external:
+  - items
+props:
+  legend: 'Theme'
+  defaultValue: 'System'
   items:
-    - « Système »
-    - 'Lumière '
-    - "Désolé"
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-@@79@couleur
+### couleur
 
-Utilisez la prop `color` pour changer la couleur du groupe radio.
+Utilisez le prop `color` pour changer la couleur du groupe radio.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
+prettier: true
+ignore:
   - defaultValue
-  @@ph082@articles
-Extérieur:
-  @@ph083@articles
-Props:
-  Couleur: Neutre
-  valeur: 'Système'
+  - items
+external:
+  - items
+props:
+  color: neutral
+  defaultValue: 'System'
   items:
-    - « Système »
-    - "Lumière"
-    - "Désolé"
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-@@ph087@@Variant
+### Variant
 
-Utilisez la prop `variant` pour modifier la variante du groupe radio.
+Utilisez le prop `variant` pour changer la variante du RadioGroup.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
+prettier: true
+ignore:
   - defaultValue
-  @@ph090@articles
-Extérieure:
-  @@ph091@articles
-Extérieurs:
-  - RadioGroupItem [réf. nécessaire]
-Props:
-  Couleur: Primaire
-  Variante: carte
-  valeur: 'système'
+  - items
+external:
+  - items
+externalTypes:
+  - RadioGroupItem[]
+props:
+  color: 'primary'
+  variant: 'card'
+  defaultValue: 'system'
   items:
-    - label:'Système'
-      Valeur: 'Système'
-      Description: "Correspond aux paramètres de votre appareil."
-    - label:"Lumière"
-      Étiquette:'light'
-      Description: "Utilisez toujours le thème de la lumière."
-    - label:« Sombre »
-      Catégorie:"Dark"
-      Description: "Utilisez toujours le thème sombre."
+    - label: 'System'
+      value: 'system'
+      description: 'Matches your device settings.'
+    - label: 'Light'
+      value: 'light'
+      description: 'Always uses the light theme.'
+    - label: 'Dark'
+      value: 'dark'
+      description: 'Always uses the dark theme.'
 ---
 ::
 
-@@ph096@série
+### Size
 
-Utilisez la prop `size` pour modifier la taille du groupe radio.
+Utilisez le prop `size` pour modifier la taille du groupe radio.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
+prettier: true
+ignore:
   - defaultValue
-  @099@articles
-Extérieure:
-  @@ph100@éléments
-Props:
-  Taille: "XL"
-  Variante: « liste »
-  valeur: 'Système'
+  - items
+external:
+  - items
+props:
+  size: 'xl'
+  variant: 'list'
+  defaultValue: 'System'
   items:
-    - « Système »
-    - 'Lumière '
-    - « Noir »
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-### Référencement
+### Orientation
 
-Utilisez la prop `orientation` pour modifier l'orientation du RadioGroup. Defaults à `vertical`.
+Utilisez la prop `orientation` pour changer l'orientation du RadioGroup. Defaults à `vertical`.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
+prettier: true
+ignore:
   - defaultValue
-  @@ph108@articles
-Extérieur:
-  @@ph109@articles
-Props:
-  Orientation: « horizontale »
-  Variante: « liste »
-  valeur: 'Système'
+  - items
+external:
+  - items
+props:
+  orientation: 'horizontal'
+  variant: 'list'
+  defaultValue: 'System'
   items:
-    - « Système »
-    - 'Lumière '
-    - "Découverte"
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
 ### indicateur
 
-Utilisez la prop `indicator` pour modifier la position ou masquer l'indicateur. Par défaut à `start`.
+Utilisez la prop `indicator` pour modifier la position ou masquer l'indicateur. Par défaut, `start`.
 
 ::note
-Le `icon` d'un article n'est affiché que lorsque le `indicator` est `hidden`, au-dessus de l'étiquette, car une radio n'a pas d'icône à l'intérieur de son indicateur.
+Le `icon` d'un article n'est affiché que lorsque `indicator` est `hidden`, au-dessus de l'étiquette, car une radio n'a pas d'icône à l'intérieur de son indicateur.
 ::
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph119@@defaultValue
-  @@ph120@articles
-Extérieure:
-  @@ph121@articles
-Extérieurs:
-  - RadioGroupItem [réf. nécessaire]
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+externalTypes:
+  - RadioGroupItem[]
 items:
-  indicateur:
-    @@ph123@départ
-    @@ph124@fin
-    @@P125 @ réservé
-  Variante:
-    @@ph126@liste
-    @@ph127@carte
-    @@ph128@table
-Props:
-  Référence:"Hidden"
-  Orientation: « horizontale »
-  Variété:"table"
-  valeur: 'Système'
+  indicator:
+    - start
+    - end
+    - hidden
+  variant:
+    - list
+    - card
+    - table
+props:
+  indicator: 'hidden'
+  orientation: 'horizontal'
+  variant: 'table'
+  defaultValue: 'System'
   items:
-    - label:'Système'
-      Icône: i-lucide-monitor
-      Valeur: 'Système'
-      Catégorie: W-20
-    - label:« Lumière »
-      Icône: i-lucide-sun
-      Catégorie:"Light"
-      Catégorie: W-20
-    - label:« Sombre »
-      Icône: i-lucide-moon
-      Catégorie:"Dark"
-      Catégorie: W-20
+    - label: 'System'
+      icon: 'i-lucide-monitor'
+      value: 'System'
+      class: 'w-20'
+    - label: 'Light'
+      icon: 'i-lucide-sun'
+      value: 'Light'
+      class: 'w-20'
+    - label: 'Dark'
+      icon: 'i-lucide-moon'
+      value: 'Dark'
+      class: 'w-20'
 ---
 ::
 
-### désactivé
+### Disabled
 
-Utilisez la prop `disabled` pour désactiver le groupe radio.
+Utilisez le prop `disabled` pour désactiver le RadioGroup.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  - valeur défaillante
-  @@ph135@articles
-Extérieure:
-  @@ph136@articles
-Props:
-  handicapés: vrai
-  valeur: 'Système'
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+props:
+  disabled: true
+  defaultValue: 'System'
   items:
-    - « Système »
-    - 'Lumière '
-    - « Noir »
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-@@ph140@api
+## API
 
-@141@141@141
+### Props équipements
 
-Composants-props
+:component-props
 
-@@ph142@@réglages
+### Slots électroniques
 
-Composants slots
+:component-slots
 
-### émissions
+### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph144@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

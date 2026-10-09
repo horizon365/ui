@@ -13,30 +13,30 @@ links:
 
 ## 使用法
 
-DashboardSidebarCollapseコンポーネントは、[ DashboardSidebar ](/docs/components/dashboard-sidebar) component **を折りたたみ/展開するために使用されます。
+DashboardSidebarCollapseコンポーネントは、[DashboardSidebar](/docs/components/dashboard-sidebar)コンポーネント**の`collapsible`プロパティが設定**の場合に折りたたみ/展開するために使用されます。
 
-コンポーネントコード
+:component-code
 
-[ Button ](/docs/components/button)コンポーネントを拡張しているので、`color`、`variant`、`size`などのプロパティを渡すことができます。
+[Button](/docs/components/button)コンポーネントを拡張するため、`color`、`variant`、`size`などの任意のプロパティを渡すことができます。
 
 ::component-code
 ---
-無視
-  - バリアント
-小道具
-  バリアント：'微妙'
+ignore:
+  - variant
+props:
+  variant: 'subtle'
 ---
 ::
 
 ::note
-ボタンのデフォルトは`color="neutral"`および`variant="ghost"`です。
+ボタンのデフォルトは`color="neutral"`と`variant="ghost"`です。
 ::
 
 ## 例
 
-### 内`header`スロット
+### `header`スロット内
 
-このコンポーネントを[ DashboardSidebar ](/docs/components/dashboard-sidebar)コンポーネントの`header`スロットに配置し、`collapsed` propを使用してヘッダーの左側部分を隠すことができます。
+このコンポーネントを[DashboardSidebar](/docs/components/dashboard-sidebar)コンポーネントの`header`スロットに配置し、`collapsed`プロパティを使用してヘッダーの左側部分を非表示にできます。
 
 ```vue [layouts/dashboard.vue]{4-8}
 <template>
@@ -54,9 +54,9 @@ DashboardSidebarCollapseコンポーネントは、[ DashboardSidebar ](/docs/co
 </template>
 ```
 
-### 内`leading`スロット
+### x`leading`スロット内
 
-このコンポーネントを[ DashboardNavbar ](/docs/components/dashboard-navbar)コンポーネントの`leading`スロットに配置して、タイトルの前に表示できます。
+このコンポーネントを[DashboardNavbar](/docs/components/dashboard-navbar)コンポーネントの`leading`スロットに配置して、タイトルの前に表示できます。
 
 ```vue [pages/index.vue]{11-13}
 <script setup lang="ts">
@@ -78,20 +78,20 @@ definePageMeta({
 </template>
 ```
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-このコンポーネントは、すべてのネイティブ`<button>` HTML属性もサポートします。
+このコンポーネントはすべてのネイティブ`<button>` HTML属性もサポートします。
 ::
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

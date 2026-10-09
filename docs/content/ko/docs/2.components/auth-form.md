@@ -11,377 +11,377 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/AuthForm.vue
 ---
 
-##  사용
+## Usage
 
-[Form](/docs/components/form) 구성 요소 위에 내장되어 있으며 `AuthForm` 구성 요소는 페이지에서 사용하거나 [Page Card](/docs/components/page-cardPH09@@ 로 포장할 수 있습니다.
+[Form](/docs/components/form) 구성 요소 위에 구축 된 `AuthForm` 구성 요소는 페이지에서 사용하거나 [PageCard](xph08x)로 래핑 할 수 있습니다.
 
 ::component-example
 ---
-이름: 'auth-form-example'
-축소: true
+name: 'auth-form-example'
+collapse: true
 ---
 ::
 
-###  필드
+### 필드
 
-양식은 `fields`prop을 기반으로 자체적으로 구성되며 상태는 내부적으로 처리됩니다.
+폼은 `fields` prop을 기반으로 자체 구성되며 상태는 내부적으로 처리됩니다.
 
-`fields`prop을 다음 속성을 가진 객체의 배열로 사용합니다.
+`fields` Prop을 다음 속성을 가진 오브젝트 배열로 사용합니다.
 
-- `name: string`{lang="ts-type"}
--  @ `type: 'checkbox' | 'select' | 'otp' | 'InputHTMLAttributes['type']'` @ @ {lang="ts-type"} @
+- `name: string`{lang="ts-type"} Xph017x`name: string`
+- `type: 'checkbox' | 'select' | 'otp' | 'InputHTMLAttributes['type']'`{lang="ts-type"}
 
-각 필드에는 입력 구성요소와 적용되는 추가 소품을 결정하는 `type` 속성이 포함되어야 합니다.`checkbox`필드 사용[Checkbox](/docs/components/checkbox#propsprops, )props, `select`fields use[SelectMenu](/docs/components/select-menu#props)props, props `otp`필드는 [PinInput](/docs/components/pin-input#props)props를 사용하고 다른 모든 유형은 [Input](/docs/components/input#props)props를 사용합니다.
+각 필드에는 입력 구성요소와 적용되는 추가 소품을 결정하는 `type` 속성이 포함되어야 합니다. `checkbox` 필드는 [Checkbox](/docs/components/checkbox#props) props를 사용하고, `select` 필드는 [SelectMenu](/docs/components/select-menu#props) props를 사용하고, `otp` 필드는 [PinInput](/docs/components/pin-input#props/docs/components/pin-input#props, x) props를 사용합니다. 그리고 다른 모든 타입은 [Input](/docs/components/input#props) props를 사용합니다.
 
-또한 [FormField](/docs/components/form-field#props) 구성 요소의 속성을 각 필드에 전달할 수 있습니다.
+또한 [FormField](/docs/components/form-field#props) 구성 요소의 모든 속성을 각 필드로 전달할 수 있습니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  필드
-  -  클래스
-외부:
-  -  필드
+prettier: true
+ignore:
+  - fields
+  - class
+external:
+  - fields
 externalTypes:
-  -  AuthFormField []
-소품 :
-  필드 :
-    -  이름: 'email'
-      유형: 'email'
-      사진: "Email"
-      자리 표시자: "Enter your email"
+  - AuthFormField[]
+props:
+  fields:
+    - name: 'email'
+      type: 'email'
+      label: 'Email'
+      placeholder: 'Enter your email'
       required: true
-    - 이름: 'password'
-      type : 'password'
-      레이블: "Password"
-      자리 표시자: "Enter your password"
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+      placeholder: 'Enter your password'
       required: true
-    - 이름: '국가'
-      타입: 'select'
-      사진: "Country "
-      위치 표시자: '국가 선택'
-      프로젝트:
-        - label: '미국'
-          value: '우리'
-        - label: '프랑스'
-          값: 'fr'
-        - label: '영국'
-          값: "uk"
-        - label: '호주'
-          값: "au"
-    - 이름: 'otp'
-      타입 : 'otp'
-      레이블: OTP
-      길이: 6
-      자리 표시자: '○'
-    - 이름: '기억해'
-      type : 체크박스
-      사진: "Remember Me"
-      설명: "30일 동안 로그인합니다."
-  클래스: 'max-w-sm'
+    - name: 'country'
+      type: 'select'
+      label: 'Country'
+      placeholder: 'Select country'
+      items:
+        - label: 'United States'
+          value: 'us'
+        - label: 'France'
+          value: 'fr'
+        - label: 'United Kingdom'
+          value: 'uk'
+        - label: 'Australia'
+          value: 'au'
+    - name: 'otp'
+      type: 'otp'
+      label: 'OTP'
+      length: 6
+      placeholder: '○'
+    - name: 'remember'
+      type: 'checkbox'
+      label: 'Remember me'
+      description: 'You will be logged in for 30 days.'
+  class: 'max-w-sm'
 ---
 ::
 
-###  제목
+### Title 파일
 
-`title`prop을 사용하여 양식의 제목을 설정합니다.
+`title` prop 을 사용하여 Form 의 제목을 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  필드
-  -  클래스
-외부:
-  -  필드
+prettier: true
+ignore:
+  - fields
+  - class
+external:
+  - fields
 externalTypes:
-  -  AuthFormField []
-소품 :
-  제목: Login
-  필드 :
-    -  이름: 'email'
-      문자: 문자
-      사진: "Email"
-    - 이름: 'password'
-      type : 'password'
-      레이블: "Password"
-  클래스: 'max-w-md'
+  - AuthFormField[]
+props:
+  title: 'Login'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
 ::
 
-###  설명
+### 설명
 
-`description`prop을 사용하여 양식에 대한 설명을 설정합니다.
+`description` prop을 사용하여 양식에 대한 설명을 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  필드
-  -  title
-  -  클래스
-외부:
-  -  필드
+prettier: true
+ignore:
+  - fields
+  - title
+  - class
+external:
+  - fields
 externalTypes:
-  -  AuthFormField []
-소품 :
-  제목: Login
-  계정에 액세스하려면 자격 증명을 입력하십시오.Enter your credentials to access your account.
-  필드 :
-    -  이름: 'email'
-      문자: 문자
-      사진: "email"
-    - 이름: 'password'
-      type : 'password'
-      태그: "Password"
-  클래스: 'max-w-md'
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
 ::
 
-###  아이콘
+### Icon
 
-`icon`prop을 사용하여 양식의 아이콘을 설정합니다.
+`icon` prop을 사용하여 form의 아이콘을 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  필드
-  -  title
-  -  설명
-  -  클래스
-외부:
-  -  필드
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - class
+external:
+  - fields
 externalTypes:
-  -  AuthFormField []
-소품 :
-  제목: Login
-  계정에 액세스하려면 자격 증명을 입력하십시오.Enter your credentials to access your account.
-  아이콘: i-lucide-user
-  필드 :
-    -  이름: 'email'
-      문자: 문자
-      사진: "email"
-    - 이름: 'password'
-      type : 'password'
-      태그: "Password"
-  클래스: 'max-w-md'
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  icon: 'i-lucide-user'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
 ::
 
-###  공급자
+### 공급자
 
-`providers`prop을 사용하여 양식에 공급자를 추가하십시오.
+`providers` prop를 사용하여 양식에 공급자를 추가합니다.
 
-당신은 [Button](/docs/components/button) 구성 요소에서 모든 속성을 전달할 수 있습니다 `variant`, `color`, `to` 등.
+[Button](/docs/components/button) 구성 요소에서 `variant`, `color`, `to` 등과 같은 속성을 전달할 수 있습니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  필드
-  -  title
-  -  설명
-  -  icon
-  -  공급자
-  -  headerAlign
-  -  클래스
-외부:
-  -  공급자
-  -  필드
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
+  - headerAlign
+  - class
+external:
+  - providers
+  - fields
 externalTypes:
-  - ButtonProps []
-  -  AuthFormField []
-소품 :
-  사진: "Login"
-  계정에 액세스하려면 자격 증명을 입력하십시오.Enter your credentials to access your account.
-  아이콘: i-lucide-user
-  공급 업체:
+  - ButtonProps[]
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  icon: 'i-lucide-user'
+  providers:
     - label: 'Google'
-      아이콘 : 'i-simple-icons-google'
-      색상 : Neutral
-      variant: '미묘한'
+      icon: 'i-simple-icons-google'
+      color: 'neutral'
+      variant: 'subtle'
     - label: 'GitHub'
-      아이콘 : 'i-simple-icons-github'
-      색상: Neutral
-      variant: '미묘한'
-  필드 :
-    - 이름: 'email'
-      문자: 문자
-      사진: "email"
-    - 이름: 'password'
-      type : 'password'
-      레이블: "Password"
-  클래스: 'max-w-md'
+      icon: 'i-simple-icons-github'
+      color: 'neutral'
+      variant: 'subtle'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
 ::
 
-###  분리자
+### Separator 문자 입력
 
-`separator`prop을 사용하여 공급자와 필드 사이의 [Separator](/docs/components/separator)를 사용자 정의합니다. 기본값은 `or`입니다.
+`separator` Prop을 사용하여 공급자와 필드 간에 [Separator](/docs/components/separator)를 사용자 정의합니다. 기본값은 `or`입니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  필드
-  -  title
-  -  설명
-  -  icon
-  -  공급자
-  - class 클래스
-외부:
-  -  공급자
-  -  필드
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
+  - class
+external:
+  - providers
+  - fields
 externalTypes:
-  -  ButtonProps []
-  -  AuthFormField []
-소품 :
-  사진: "Login"
-  계정에 액세스하려면 자격 증명을 입력하십시오.Enter your credentials to access your account.
-  아이콘: i-lucide-user
-  공급 업체:
+  - ButtonProps[]
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  icon: 'i-lucide-user'
+  providers:
     - label: 'Google'
-      아이콘 : 'i-simple-icons-google'
-      색상 : Neutral
-      variant: '미묘한'
+      icon: 'i-simple-icons-google'
+      color: 'neutral'
+      variant: 'subtle'
     - label: 'GitHub'
-      아이콘 : 'i-simple-icons-github'
-      색상 : Neutral
-      variant: '미묘한'
-  필드 :
-    -  이름: 'email'
-      문자: 문자
-      사진: "email"
-    - 이름: 'password'
-      type : 'password'
-      태그: "Password"
-  구분 기호: '공급자'
-  class: 'max-w-md' 의 약자
+      icon: 'i-simple-icons-github'
+      color: 'neutral'
+      variant: 'subtle'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  separator: 'Providers'
+  class: 'max-w-md'
 ---
 ::
 
-[Separator](/docs/components/separator#props) 구성 요소에서 임의의 속성을 전달하여 사용자 지정할 수 있습니다.
+[Separator](/docs/components/separator#props) 구성 요소의 속성을 전달하여 사용자 정의할 수 있습니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  필드
-  -  title
-  -  설명
-  -  icon
-  -  공급자
-  -  클래스
-외부:
-  -  공급자
-  -  필드
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
+  - class
+external:
+  - providers
+  - fields
 externalTypes:
-  -  ButtonProps []
-  -  AuthFormField []
-소품 :
-  제목: Login
-  계정에 액세스하려면 자격 증명을 입력하십시오.Enter your credentials to access your account.
-  아이콘: i-lucide-user
-  공급 업체:
+  - ButtonProps[]
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  icon: 'i-lucide-user'
+  providers:
     - label: 'Google'
-      아이콘 : 'i-simple-icons-google'
-      색상: Neutral
-      variant: '미묘한'
+      icon: 'i-simple-icons-google'
+      color: 'neutral'
+      variant: 'subtle'
     - label: 'GitHub'
-      아이콘 : 'i-simple-icons-github'
-      색상 : Neutral
-      variant: '미묘한'
-  필드 :
-    -  이름: 'email'
-      문자: 문자
-      사진: "email"
-    - 이름: 'password'
-      type : 'password'
-      레이블: "Password"
-  구분 기호:
-    아이콘: i-lucide-user
-  클래스: 'max-w-md'
+      icon: 'i-simple-icons-github'
+      color: 'neutral'
+      variant: 'subtle'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  separator:
+    icon: 'i-lucide-user'
+  class: 'max-w-md'
 ---
 ::
 
-###  제출
+### Submit 제출
 
-`submit`prop을 사용하여 양식의 제출 단추를 변경합니다.
+`submit` prop을 사용하여 양식의 제출 버튼을 변경합니다.
 
-당신은 [Button](/docs/components/button) 구성 요소에서 모든 속성을 전달 할 수 있습니다 `variant`, `color`, `to`, 등.
+[Button](/docs/components/button) 구성 요소에서 `variant`, `color`, `to` 등의 속성을 전달할 수 있습니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  필드
-  -  title
-  -  설명
-  -  icon
-  -  공급자
-  -  submit. label
-  -  submit. color
-  -  submit. variant
-  -  클래스
-외부:
-  -  필드
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
+  - submit.label
+  - submit.color
+  - submit.variant
+  - class
+external:
+  - fields
 externalTypes:
-  -  AuthFormField []
-소품 :
-  제목: Login
-  계정에 액세스하려면 자격 증명을 입력하십시오.Enter your credentials to access your account.
-  아이콘: i-lucide-user
-  필드 :
-    -  이름: 'email'
-      문자: 문자
-      사진: "email"
-    - 이름: 'password'
-      type : 'password'
-      태그: "Password"
-  제출 하기:
-    사진: "Submit"
-    색상 : "error"
-    variant: '미묘한'
-  class: 'max-w-md' 의 약자
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  icon: 'i-lucide-user'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  submit:
+    label: 'Submit'
+    color: 'error'
+    variant: 'subtle'
+  class: 'max-w-md'
 ---
 ::
 
-##  예제
+## examples 예제
 
-###  한 페이지 내에서
+### 페이지 내에서
 
 `AuthForm` 구성 요소를 [PageCard](/docs/components/page-card) 구성 요소로 래핑하여 `login.vue` 페이지 내에 표시할 수 있습니다.
 
 ::component-example
 ---
-이름: 'authe-form-page-example'
-축소: true
+name: 'auth-form-page-example'
+collapse: true
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props (### Props)
 
-: 컴포넌트-소품
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attributes" target="_blank"}
-이 컴포넌트는 또한 모든 네이티브 `<form>`HTML 속성을 지원합니다.
+이 구성 요소는 모든 기본 `<form>` HTML 속성을 지원합니다.
 ::
 
-###  슬롯
+### 슬롯
 
-:구성요소 - 슬롯
+:component-slots
 
-### Emits @ 에미츠
+### Emits
 
-:구성요소 - 방출
+:component-emits
 
-###  노출
+### exose 소개
 
-[`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref)를 사용하여 형식화된 구성 요소 인스턴스에 액세스할 수 있습니다. 예를 들어, "리셋" 양식과 같은 별도의 양식으로 다음을 수행할 수 있습니다.
+[`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref)를 사용하여 형식화된 구성 요소 인스턴스(formRef 및 상태 노출)에 액세스할 수 있습니다. 예를 들어, 별도의 양식(예: "reset" 양식)에서 다음을 수행할 수 있습니다.
 
 ```vue
 <script setup lang="ts">
@@ -397,13 +397,13 @@ const authForm = useTemplateRef('authForm')
 
 | 이름 (Name)| 유형 (Type)|
 | ---- | ---- |
-| `formRef`{lang="ts-type"}| `Ref<HTMLFormElement \| null>`{lang="ts-type"}|
-| `state`{lang="ts-type"}| `Reactive<FormStateType>`{lang="ts-type"}|
+| `formRef`{lang="ts-type"}| `Ref<HTMLFormElement \| null>`{lang="ts-type"} (`Ref<HTMLFormElement \| null>`{lang="ts-type"})|
+| `state`{lang="ts-type"} 파일| `Reactive<FormStateType>`{lang="ts-type"}|
 
-##  테마
+## Theme (## 테마)
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

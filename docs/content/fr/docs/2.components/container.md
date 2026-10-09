@@ -7,7 +7,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Container.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Utilisez l'emplacement par défaut pour centrer et limiter la largeur de votre contenu.
 
@@ -17,26 +17,26 @@ Sa largeur maximale est contrôlée par la variable CSS `--ui-container`.
 
 ::component-example
 ---
-nom: 'container-exemple'
-Props:
-  Catégorie: w-full
+name: 'container-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-@@ph002@api
+## api
 
-@@ph003@@projets
+### Props
 
-Composants-props
+:component-props
 
-@@ph004@@réglages
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph005@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

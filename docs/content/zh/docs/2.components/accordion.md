@@ -15,167 +15,167 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Accordion.vue
 ---
 
-## 使用情况
+## 用法
 
 使用Accordion组件可显示可折叠项的列表。
 
 ::component-code
 ---
-收阖：true
-忽略：
-- 个项目
-  - 用户界面内容
-外部：
-- 个项目
-外部类型：
-  - Accordion项目[]
-隐藏：
-  班级
-  我的天
-  - 默认值
-道具：
-  默认值：“0”
-  类别：'px-4最大值-w-lg'
-  用户界面：
-    内容：'文本静音'
-  项目名称：
-    - label：“Nuxt用户界面是否可以免费使用？”
-      内容：“是的！Nuxt UI是完全免费的，在MIT许可证下是开源的。所有125个以上的组件对每个人都可用。”
-    - label：“我可以在没有Nuxt的情况下将Nuxt UI与Vue一起使用吗？”
-      主要内容：“”是的！虽然针对Nuxt进行了优化，但Nuxt用户界面通过我们的Vite插件与独立的Vue项目完美配合。您可以按照[installationguide](/docs/getting-started/installation/vue)开始操作。
-    - label：“Nuxt UI是否已准备好生产？”
-      content：“是的！Nuxt UI在生产中被数千个应用程序使用，并经过广泛的测试，定期更新和主动维护。”
----
-::
-
-项目
-
-使用`items`属性作为具有下列属性的对象数组：
-
-我的天啊！
-020、021、022、023、024、025、026、027、028、029、029、029、029、020、021、022、029、029、020、021、022、029、020、020、021、022、020、021、022、021、022、021、022、021、022、022、022、023、024、025、026、027、028、029、029、029、29、29、20
-我的天啊！
-我的天啊！
-我的天啊！
-我的天啊！
-我的天啊，我的天啊
-我的天啊！
-我的天啊！
-
-::component-code
----
-忽略：
-  个项目
-外部：
+collapse: true
+ignore:
   - items
-外部类型：
+  - ui.content
+external:
+  - items
+externalTypes:
   - AccordionItem[]
-隐藏：
+hide:
   - class
-道具：
-  类别：'px-4'
-  项目名称：
-    - label：'图标'
-      图标：“我-透明-微笑”
-      content：'您无事可做，@nuxt/icon将自动处理。'
-    - label：'颜色'
-      图标：“i-lucide-色板-书本”
-      content：'从您的Tailwind CSS主题中选择主色和中性色。'
-    - label：'组件'
-      图标：“i-lucide盒”
-      content：'您可以通过使用`class` / `ui`道具或在您的app. aplog. ts中自定义组件。'
+  - ui
+  - defaultValue
+props:
+  defaultValue: '0'
+  class: 'px-4 max-w-lg'
+  ui:
+    content: 'text-muted'
+  items:
+    - label: 'Is Nuxt UI free to use?'
+      content: 'Yes! Nuxt UI is completely free and open source under the MIT license. All 125+ components are available to everyone.'
+    - label: 'Can I use Nuxt UI with Vue without Nuxt?'
+      content: 'Yes! While optimized for Nuxt, Nuxt UI works perfectly with standalone Vue projects via our Vite plugin. You can follow the [installation guide](/docs/getting-started/installation/vue) to get started.'
+    - label: 'Is Nuxt UI production-ready?'
+      content: 'Yes! Nuxt UI is used in production by thousands of applications with extensive tests, regular updates, and active maintenance.'
 ---
 ::
 
-### Multiple
+### 项目
 
-将`type`属性设置为`multiple`，以允许同时激活多个项目。将其设置为`single`。
+使用`items` prop作为具有以下属性的对象数组：
+
+- `label?: string`{lang="ts-type"}
+- `icon?: string`{lang="ts-type"}
+- `trailingIcon?: string`{lang="ts-type"}
+- `content?: string`{lang="ts-type"}
+- `value?: string`{lang="ts-type"}
+- `disabled?: boolean`{lang="ts-type"}
+- [`slot?: string`{lang="ts-type"}](#with-custom-slot)
+- `class?: any`{lang="ts-type"}
+- `ui?: { item?: ClassNameValue, header?: ClassNameValue, trigger?: ClassNameValue, leadingIcon?: ClassNameValue, label?: ClassNameValue, trailingIcon?: ClassNameValue, content?: ClassNameValue, body?: ClassNameValue }`{lang="ts-type"}
 
 ::component-code
 ---
-忽略：
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  items:
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    - label: 'Colors'
+      icon: 'i-lucide-swatch-book'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+---
+::
+
+### 多个
+
+将`type`属性设置为`multiple`，以允许多个项目同时处于活动状态。将其设置为`single`。
+
+::component-code
+---
+ignore:
   - type
   - items
-外部：
+external:
   - items
-外部类型：
+externalTypes:
   - AccordionItem[]
-隐藏：
+hide:
   - class
-道具：
-  类别：'px-4'
-  类型：'multiple'
-  项目名称：
-    - label：'图标'
-      图标：“我-透明-微笑”
-      content：'您无事可做，@nuxt/icon将自动处理。'
-    - label：'颜色'
-      图标：“i-lucide-色板-书本”
-      content：'从您的Tailwind CSS主题中选择主色和中性色。'
-    - label：'组件'
-      图标：“i-lucide盒”
-      content：“您可以使用`class` / `ui`道具或在app. config. ts中自定义组件。”
+props:
+  class: 'px-4'
+  type: 'multiple'
+  items:
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    - label: 'Colors'
+      icon: 'i-lucide-swatch-book'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
-可折叠的
+### 可折叠
 
-当`type`为`single`时，您可以将`collapsible`属性设定为`false`，以防止使用中项目折迭。
+当`type`为`single`时，可以将`collapsible`属性设置为`false`，以防止活动项折叠。
 
 ::component-code
 ---
-忽略：
-  可折叠的
-  项目数
-外部：
-  项目数
-外部类型：
-  - 会计科目项目[]
-隐藏：
-  班级
-道具：
-  类别：'px-4'
-  可折叠：假
-  项目名称：
-    - 标签：“图标”
-      图标：“我-透明-微笑”
-      content：'您无事可做，@nuxt/icon将自动处理。'
-    - 标签：“颜色”
-      图标：“i-lucide-色板-书本”
-      content：'从您的Tailwind CSS主题中选择主色和中性色。'
-    - 标签：“组件”
-      图标：“i-lucide盒”
-      content：'您可以使用`class` / `ui`道具或在app. config. ts中自定义组件。'
+ignore:
+  - collapsible
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  collapsible: false
+  items:
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    - label: 'Colors'
+      icon: 'i-lucide-swatch-book'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
-卸载
+### 卸载
 
-使用`unmount-on-hide`道具可防止折叠面板折叠时卸载内容。默认为`true`。
+使用`unmount-on-hide`属性来防止折叠手风琴时内容被卸载。将其转换为`true`。
 
 ::component-code
 ---
-忽略：
-  项目数
-外部：
-- 个项目
-外部类型：
-  - Accordion项目[]
-隐藏：
-  班级
-道具：
-  类别：'px-4'
-  隐藏时卸载：假
-  项目名称：
-    - 标签：'图标'
-      图标：“我-透明-微笑”
-      content：'您无事可做，@nuxt/icon将自动处理。'
-    标签：“颜色”
-      图标：“i-lucide-色板-书本”
-      content：'从您的Tailwind CSS主题中选择主色和中性色。'
-    - 标签：“组件”
-      图标：“i-lucide盒”
-      content：'您可以使用`class` / `ui`道具或在app. config. ts中自定义组件。'
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  unmountOnHide: false
+  items:
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    - label: 'Colors'
+      icon: 'i-lucide-swatch-book'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
@@ -183,193 +183,193 @@ links:
 您可以检查DOM以查看呈现的每个项的内容。
 ::
 
-### 已停用
+### 禁用
 
-使用`disabled`属性来停用折迭式。
+使用`disabled`属性禁用折叠器。
 
-您也可以使用item物件中的`disabled`属性来停用特定的项目。
+您还可以使用item对象中的`disabled`属性禁用特定项。
 
 ::component-code
 ---
-忽略：
-- 个项目
-外部：
-  102个项目
-外部类型：
-  - Accordion项目[]
-隐藏：
-  班级
-道具：
-  类别：'px-4'
-  已禁用：true
-  项目名称：
-    - 标签：'图标'
-      图标：“我-透明-微笑”
-      content：'您无事可做，@nuxt/icon将自动处理。'
-    - 标签：“颜色”
-      图标：“i-lucide-色板-书本”
-      content：'从您的Tailwind CSS主题中选择主色和中性色。'
-      已禁用：true
-    - 标签：“组件”
-      图标：“i-lucide盒”
-      content：'您可以使用`class` / `ui`道具或在app. config. ts中自定义组件。'
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  disabled: true
+  items:
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    - label: 'Colors'
+      icon: 'i-lucide-swatch-book'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+      disabled: true
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
-### 结尾图标
+### 拖尾图标
 
-使用`trailing-icon`属性可自定义每个项目的尾部[Icon](/docs/components/icon)。默认为`i-lucide-chevron-down`。
+使用`trailing-icon`属性将每个项目的尾随[Icon](/docs/components/icon)自定义为`i-lucide-chevron-down`。
 
 ::tip
-您也可以使用item物件中的`trailingIcon`属性来设定特定项目的图标。
+还可以使用item对象中的`trailingIcon`属性为特定项设置图标。
 ::
 
 ::component-code
 ---
-忽略：
-  118个项目
-外部：
+ignore:
   - items
-外部类型：
+external:
+  - items
+externalTypes:
   - AccordionItem[]
-隐藏：
+hide:
   - class
-道具：
-  类别：'px-4'
-  trailingIcon：'i-lucide-arrow-down'
-  项目名称：
-    - label：'图标'
-      图标：“我-透明-微笑”
-      content：'您无事可做，@nuxt/icon将自动处理。'
-      trailingIcon：'i-lucide-plus'
-    - label：'颜色'
-      图标：“i-lucide-色板-书本”
-      content：'从您的Tailwind CSS主题中选择主色和中性色。'
-    - label：'组件'
-      图标：“i-lucide盒”
-      content：'您可以使用`class` /`ui`props或在您的app. ap. ts中自定义组件。'
+props:
+  class: 'px-4'
+  trailingIcon: 'i-lucide-arrow-down'
+  items:
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+      trailingIcon: 'i-lucide-plus'
+    - label: 'Colors'
+      icon: 'i-lucide-swatch-book'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`app.config.ts`中的`ui.icons.chevronDown`键下全局自定义此图标。
+你可以在你的`app.config.ts`下的`ui.icons.chevronDown`键全局自定义这个图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`vite.config.ts`中的`ui.icons.chevronDown`键下全局自定义此图标。
+你可以在你的`vite.config.ts`中的`ui.icons.chevronDown`键下全局自定义这个图标。
 :::
 ::
 
 ## 示例
 
-### Control活动项目
+active item（s）
 
-您可以通过使用`default-value`prop或`v-model`指令与项目的`value`来控制活动项目。如果没有提供`value`，则默认为索引**作为字符串**。
+您可以通过使用`default-value` prop或`v-model`指令与项目的`value`来控制活动项目。如果没有提供`value`，则默认为索引**作为字符串**。
 
 ::component-example
 ---
-name：'accordion-model-value-example'
-道具：
-  类别：'px-4'
+name: 'accordion-model-value-example'
+props:
+  class: 'px-4'
 ---
 ::
 
 ::tip
-当提供了`v-model`或`default-value`时，使用`value-key`属性更改用于匹配项的密钥。
+当提供`v-model`或`default-value`时，使用`value-key`属性更改用于匹配项的键。
 ::
 
 ::caution
-当`type="multiple"`时，确保将数组传递给`default-value`prop或`v-model`指令。
+当`type="multiple"`时，确保将数组传递给`default-value` prop或`v-model`指令。
 ::
 
-### With drag and drop
+### 使用拖放
 
-使用来自[`@vueuse/integrations`](https://vueuse.org/integrations/README.html)的[`useSortable`](https://vueuse.org/integrations/useSortable/)可组合项在Accordion上启用拖放功能。此集成将封装[Sortable.js](https://sortablejs.github.io/Sortable/)以提供无缝的拖放体验。
+使用[`@vueuse/integrations`](https://vueuse.org/integrations/README.html)中的[`useSortable`](https://vueuse.org/integrations/useSortable/)组合可在Accordion上启用拖放功能。此集成包装[Sortable.js](https://sortablejs.github.io/Sortable/)以提供无缝拖放体验。
 
 ::component-example
 ---
-name：'accordion-drag-and-drop-example'
+name: 'accordion-drag-and-drop-example'
 ---
 ::
 
-### With body slot
+### 带机身插槽
 
 使用`#body`插槽自定义每个项目的主体。
 
 ::component-example
 ---
-name：'accordion-body-slot-example'
-道具：
-  类别：'px-4'
+name: 'accordion-body-slot-example'
+props:
+  class: 'px-4'
 ---
 ::
 
 ::tip
-`#body`插槽包含一些预定义的样式，如果您想从头开始，请使用[`#content`插槽](#with-content-slot)。
+`#body`插槽包括一些预定义的样式，如果您想从头开始，请使用[`#content`插槽](#with-content-slot)。
 ::
 
-### 使用内容插槽
+### 带内容插槽
 
-使用`#content`插槽来自定每个项目的内容。
+使用`#content`插槽自定义每个项目的内容。
 
 ::component-example
 ---
-名称：'折叠内容插槽示例'
-道具：
-  类别：'px-4'
+name: 'accordion-content-slot-example'
+props:
+  class: 'px-4'
 ---
 ::
 
-### 使用自定义插槽
+### 带自定义插槽
 
-使用`slot`属性可自定义特定项目。
+使用`slot`属性可自定义特定项。
 
 您将可以访问以下插槽：
 
-172小时173小时174小时
-第175话第176话177话
+- `#{{ item.slot }}`{lang="ts-type"}
+- `#{{ item.slot }}-body`{lang="ts-type"}
 
 ::component-example
 ---
-名称：“折叠式自定义插槽示例”
-道具：
-  类别：'px-4'
+name: 'accordion-custom-slot-example'
+props:
+  class: 'px-4'
 ---
 ::
 
-### 包含减价内容
+### 带有markdown内容
 
-您可以使用`@comark/vue`中的[Markdown](https://comark.dev/rendering/vue)组件来呈现折叠式项目中的减价。
+您可以使用`@comark/vue`中的[Markdown](https://comark.dev/rendering/vue)组件来呈现可折叠项中的markdown。
 
 ::component-example
 ---
-收阖：true
-名称：“折叠-标记-示例”
-类别：'px-8'
+collapse: true
+name: 'accordion-markdown-example'
+class: 'px-8'
 ---
 ::
 
-## 活性成分
+## API
 
-### 道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽数
+### Slots
 
-：组件插槽
+:component-slots
 
-发射率
+### 发射
 
-：组件发射
+:component-emits
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

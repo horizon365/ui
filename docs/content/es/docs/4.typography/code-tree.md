@@ -9,7 +9,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodeTree.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Envuelva los bloques de código con un componente `code-tree` en cualquier orden en particular para mostrar una vista de árbol de sus archivos.
 
@@ -91,16 +91,16 @@ Look at the [Nuxt 4 documentation](https://nuxt.com/docs/getting-started/introdu
 Make sure to install the dependencies:
 
 ```bash
-@npm000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+# npm (Edición española)
 npm instalación
 
-@pnpm@pnpm
+# pnpm (Edición española)
 Pnpm Instalación
 
-@2007@@deals2007
+# yyyyyyyyy
 irion instalacion
 
-@@pH073@@bun
+# bn (Edición española)
 Buena instalación
 ```
 
@@ -109,16 +109,16 @@ Buena instalación
 Start the development server on `http://localhost:3000`:
 
 ```bash
-@@pH081@npm
+# npm
 npm run dev (en español)
 
-@pnpm @pnpm
+# pnpm (Edición española)
 Pnpm y Dev
 
-@@pH083
-Yolanda Dev
+# hilado
+Iñaki Dev
 
-@840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+# bun
 Buen trabajo dev
 ```
 
@@ -127,32 +127,32 @@ Buen trabajo dev
 Build the application for production:
 
 ```bash
-@npm092@npm00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+# npm (Edición española)
 npm run build (Edición española)
 
-@pnpm@pnpm
+# pnpm (Edición española)
 Pnpm Run Build (Edición española)
 
-@@pH094
+# yyyyyyyyy
 Yarn construcción
 
-@@pH095@@bun
+# bun
 Buen trabajo construir
 ```
 
 Locally preview production build:
 
 ```bash
-@101@npm
+# npm (Edición española)
 npm run preview (Edición española)
 
-@pnpm @pnpm
+# pnpm (Edición española)
 Pnpm Run Preview (Edición española)
 
-@300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+# Yarn (Edición española)
 Siguiente: Yarn Preview
 
-@@pH104@@bun
+# bun (Edición española)
 Siguiente Run Preview
 ```
 
@@ -161,7 +161,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 ::
 
-#El Código
+#code
 
 ::code-collapse{class="[&>div>pre]:rounded-t-none [&>div]:my-0"}
 
@@ -194,11 +194,11 @@ export default defineAppConfig ({
 ```
 
 ```vue [app/app.vue]
-@2012
-  @@@ 123
-    @@ 124 @
-  @@@ 125 @
-@@@ 126 @
+<template> también
+  <UApp> también
+    <NuxtPage /> también
+  </UApp> también
+</template> también
 ```
 
 ```json [package.json]
@@ -206,7 +206,7 @@ export default defineAppConfig ({
   "nombre":"nuxt-app",
   "privado": verdadero,
   "tipo":"módulo",
-  "Escritos":{
+  "Escritos":
     "Build":"Nuxt Build"
     "Dev":"Dev",
     "Generar":"Generar",
@@ -235,9 +235,9 @@ export default defineAppConfig ({
 ````md [README.md]
 # Nuxt 4 Inicio mínimo
 
-Consulte la documentación de [Nuxt 4 ](https://nuxt.com/docs/getting-started/introduction) para obtener más información.
+Consulte la documentación [Nuxt 4 ](https://nuxt.com/docs/getting-started/introduction) para obtener más información.
 
-@141@141
+## Configuración
 
 Asegúrese de instalar las dependencias:
 
@@ -273,7 +273,7 @@ yarn dev
 bun run dev
 ```
 
-@170@@Producción
+XPH170xProducción
 
 Crear la aplicación para la producción:
 
@@ -307,7 +307,7 @@ yarn preview
 bun run preview
 ```
 
-Consulte la documentación de implementación [](https://nuxt.com/docs/getting-started/deployment) para obtener más información.
+Consulte la documentación de despliegue [x](https://nuxt.com/docs/getting-started/deployment) para obtener más información.
 ````
 
 ::
@@ -321,20 +321,20 @@ Consulte la documentación de implementación [](https://nuxt.com/docs/getting-s
 Al igual que el componente `ProsePre`, el `CodeTree` maneja nombres de archivos, iconos y botón de copia.
 ::
 
-@207
+## API (Versión)
 
-@208@2000 puntos
+### Props (accesorios)
 
-Artículo siguienteComponentes {prose}
+:component-props{prose}
 
-@@210@210@210@210
+### Slots (Edición española)
 
-Componentes: @ph211 @
+:component-slots{prose}
 
-@212 @@ Temas
+## Temas
 
-Artículo siguiente{prose}
+:component-theme{prose}
 
-@@214@Changelog (Edición española)
+## Changelog (Edición española)
 
-por: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

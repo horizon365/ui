@@ -9,16 +9,16 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Accordion.vue
 ---
 
-##  사용
+## Usage
 
-`accordion` 및 `accordion-item` 구성 요소를 사용하여 콘텐츠에 [Accordion](/docs/components/accordion) 를 표시합니다.
+`accordion` 및 `accordion-item` 구성 요소를 사용하여 내용에 [Accordion](xph05x)를 표시합니다.
 
 ::code-preview{class="[&>div]:*:my-0"}
 
 :::accordion
 ---
-defaultValue :
-  -  1 '
+defaultValue:
+  - '1'
 ---
 
 ::accordion-item{label="Nuxt UI는 무료로 사용할 수 있습니까?" icon="i-lucide-circle-help"}
@@ -26,16 +26,16 @@ Nuxt UI는 MIT 라이센스에 따라 완전히 무료이며 오픈 소스이며
 ::
 
 ::accordion-item{label="Nuxt 없이 Vue와 Nuxt UI를 사용할 수 있습니까?" icon="i-lucide-circle-help"}
-- 그래! Nuxt에 최적화되어 있지만 Nuxt UI는 Vite 플러그인을 통해 독립형 Vue 프로젝트와 완벽하게 작동합니다. [설치 가이드](/docs/getting-started/installation/vue)를 따라 시작할 수 있습니다.
+- 그래! Nuxt에 최적화되어 있지만 Nuxt UI는 Vite 플러그인을 통해 독립형 Vue 프로젝트와 완벽하게 작동합니다.[installation guide](/docs/getting-started/installation/vue)를 따라 시작할 수 있습니다.
 ::
 
 ::accordion-item{label="Nuxt UI 프로덕션 준비가 되었습니까?" icon="i-lucide-circle-help"}
-Nuxt UI는 광범위한 테스트, 정기적인 업데이트 및 활성 유지 관리를 통해 수천 개의 응용 프로그램에서 프로덕션에 사용됩니다.
+Nuxt UI는 광범위한 테스트, 정기적 업데이트 및 활성 유지 관리를 통해 수천 개의 응용 프로그램에서 프로덕션에 사용됩니다.
 ::
 
 :::
 
-# 코드
+#code
 
 ```mdc
 ::accordion
@@ -61,25 +61,25 @@ Yes! Nuxt UI is used in production by thousands of applications with extensive t
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props (### Props)
 
-: component-props {prose}
+:component-props{prose}
 
-###  슬롯
+### Slots
 
-:component-slots {prose}
+:component-slots{prose}
 
-##  테마
+## Theme 테마
 
 ::component-theme{prose}
 ---
-추가:
-  -  accordionItem
+extra:
+  - accordionItem
 ---
 ::
 
-##  Changelog
+## 변경 로그
 
-: component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

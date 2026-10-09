@@ -8,11 +8,11 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardGroup.vue
 ---
 
-## 使用情况
+## 用法
 
-DashboardGroup组件是包装[DashboardSidebar](/docs/components/dashboard-sidebar)和[DashboardPanel](/docs/components/dashboard-panel)组件以创建响应式仪表板界面的主要布局。
+DashboardGroup组件是包装[DashboardSidebar](/docs/components/dashboard-sidebar)和[DashboardPanel](/docs/components/dashboard-panel)组件以创建响应式仪表板界面的主布局。
 
-在布局中或在`app.vue`中使用它：
+在布局或`app.vue`中使用它：
 
 ```vue [layouts/dashboard.vue]{2,6}
 <template>
@@ -28,16 +28,16 @@ DashboardGroup组件是包装[DashboardSidebar](/docs/components/dashboard-sideb
 
 ### Props
 
-：组件-支柱
+:component-props
 
-### Slots
+### 老虎机
 
-：组件插槽
+:component-slots
 
 ## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

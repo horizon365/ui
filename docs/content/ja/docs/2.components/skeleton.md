@@ -14,22 +14,22 @@ links:
 
 スケルトンコンポーネントをそのまま使用してプレースホルダーを表示します。
 
-component—example {name="skeleton-example"}
+:component-example{name="skeleton-example"}
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

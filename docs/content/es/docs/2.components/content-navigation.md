@@ -13,237 +13,237 @@ links:
 Este componente sólo está disponible cuando el módulo `@nuxt/content` está instalado.
 ::
 
-@@pH001@@El uso
+## Servicio
 
-Utilice el prop `navigation` con el valor `navigation`{lang="ts-type"} que obtiene al buscar la navegación de su aplicación.
+Utiliza el prop `navigation` con el valor `navigation`{lang="ts-type"} que obtienes al buscar la navegación de tu aplicación.
 
 ::component-example
 ---
-Nombre: 'content-navigation-example'
-Categoría: h-96 overflow-y-auto
-Desconocido: true
-Props:
-  Categoría: w-full
+name: 'content-navigation-example'
+class: 'h-96 overflow-y-auto'
+overflowHidden: true
+props:
+  class: 'w-full'
 ---
 ::
 
-@@pH005@@Nombre
+### Tipo
 
-Establezca el prop `type` a `single` para permitir que solo se abra un elemento a la vez.
+Configure el prop `type` en `single` para permitir que solo se abra un elemento a la vez.
 
 ::component-code{prefix="content"}
 ---
-Categoría: true
-Colapso: Verdad
-Externo:
-  @@pH009@navegación
-Externalidades:
-  - ContentNavigationLink []
-Items:
-  Tipo:
-  @@pH011 @@'único '
-  - 'múltiples '
-Escondido:
-  @@13@clase
-  - navegación
-Props:
-  Categoría: w-full
-  Categoría:"Single"
-  Navegación:
-    - title:'Guía'(en inglés)
-      icono: 'i-lucide-libro-abierto'
-      Vía:'#Getting-Started'
-      niños:
-        - title:'Introducción'
-          camino: '#introducción'
-          Activo: Verdadero
-        - title:'Instalación'
-          path: '#instalación'
-    - title:'Composables'(Edición española)
+prettier: true
+collapse: true
+external:
+  - navigation
+externalTypes:
+  - ContentNavigationLink[]
+items:
+  type:
+  - 'single'
+  - 'multiple'
+hide:
+  - class
+  - navigation
+props:
+  class: 'w-full'
+  type: 'single'
+  navigation:
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+        - title: 'Introduction'
+          path: '#introduction'
+          active: true
+        - title: 'Installation'
+          path: '#installation'
+    - title: 'Composables'
       icon: 'i-lucide-database'
-      Vía:#composables
-      niños:
-        - title:'DefineShortcuts'
-          Vía:#definieshortcuts
-        - title:'UseModal'(Edición española)
-          Vía:#usemodal
+      path: '#composables'
+      children:
+        - title: 'defineShortcuts'
+          path: '#defineshortcuts'
+        - title: 'useModal'
+          path: '#usemodal'
 ---
 ::
 
-@@21@color
+### Color (Edición española)
 
 Utilice el prop `color` para cambiar el color de los enlaces de navegación.
 
 ::component-code{prefix="content"}
 ---
-Categoría: true
-Colapso: Verdad
-Externo:
-  @@23@navegación
-Externalidades:
-  - ContentNavigationLink []
-Escondido:
-  @@25@clase
-  @@26@navegación
-Props:
-  Categoría: w-full
-  Categoría:"Neutral"
-  Navegación:
-    - title:'Guía'(en inglés)
-      icono: 'i-lucide-libro-abierto'
-      Vía:'#Getting-Started'
-      niños:
-      - title:'Introducción'
-        camino: '#introducción'
-        Activo: Verdadero
-      - title:'Instalación'
-        path: '#instalación'
-    - title:'Composables'(Edición española)
+prettier: true
+collapse: true
+external:
+  - navigation
+externalTypes:
+  - ContentNavigationLink[]
+hide:
+  - class
+  - navigation
+props:
+  class: 'w-full'
+  color: 'neutral'
+  navigation:
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
       icon: 'i-lucide-database'
-      Vía:#composables
-      niños:
-      - title:'DefineShortcuts'(Edición española)
-        Vía:#definieshortcuts
-      - title:'UseModal'(Edición española)
-        Vía:#usemodal
+      path: '#composables'
+      children:
+      - title: 'defineShortcuts'
+        path: '#defineshortcuts'
+      - title: 'useModal'
+        path: '#usemodal'
 ---
 ::
 
-@@33@Variación
+### Variante
 
 Utilice el prop `variant` para cambiar la variante de los enlaces de navegación.
 
 ::component-code{prefix="content"}
 ---
-Categoría: true
-Colapso: Verdad
-Externo:
-  - navegación
-Externalidades:
-  - ContentNavigationLink []
-Escondido:
-  @37@clase
-  - navegación
-Items:
-  Variante:
-  @@pH039 @@'enlace'
-  @@pH040 @@'pildora'(en inglés)
-Props:
-  Categoría: w-full
-  Categoría:"Link"
-  Navegación:
-    - title:'Guía'(en inglés)
-      icono: 'i-lucide-libro-abierto'
-      Vía:'#Getting-Started'
-      niños:
-      - title:'Introducción'
-        ruta: '#introducción'
-        Activo: Verdadero
-      - title:'Instalación'
-        path: '#instalación'
-    - title:'Composables'(Edición española)
+prettier: true
+collapse: true
+external:
+  - navigation
+externalTypes:
+  - ContentNavigationLink[]
+hide:
+  - class
+  - navigation
+items:
+  variant:
+  - 'link'
+  - 'pill'
+props:
+  class: 'w-full'
+  variant: 'link'
+  navigation:
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
       icon: 'i-lucide-database'
-      Vía:#composables
-      niños:
-      - title:'DefineShortcuts'(Edición española)
-        Vía:#definieshortcuts
-      - title:'UseModal'(Edición española)
-        Vía:#usemodal
+      path: '#composables'
+      children:
+      - title: 'defineShortcuts'
+        path: '#defineshortcuts'
+      - title: 'useModal'
+        path: '#usemodal'
 ---
 ::
 
-@477@highlight
+### Highlight (Edición española)
 
-Utilice el prop `highlight` para mostrar un borde resaltado para el enlace activo.
+Utilice el prop `highlight` para mostrar un borde resaltado para el vínculo activo.
 
-Utilice el `highlight-color` prop para cambiar el color del borde. Por defecto a la `color` prop.
+Utilice el prop `highlight-color` para cambiar el color del borde. Por defecto es el prop `color`.
 
 ::component-code{prefix="content"}
 ---
-Categoría: true
-Colapso: Verdad
-Externo:
-  - navegación
-Externalidades:
-  - ContentNavigationLink []
-Escondido:
-  @@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  - navegación
-Props:
-  Categoría: w-full
-  Destacado: Verdadero
-  highlightColor: 'primario'
-  Categoría:"Primary"
-  Categoría:"Píldora"
-  Navegación:
-    - title:'Guía'(en inglés)
-      icono: 'i-lucide-libro-abierto'
-      Vía:'#Getting-Started'
-      niños:
-      - title:'Introducción'
-        camino: '#introducción'
-        Activo: Verdadero
-      - title:'Instalación'
-        path: '#instalación'
-    - title:'Composables'(Edición española)
+prettier: true
+collapse: true
+external:
+  - navigation
+externalTypes:
+  - ContentNavigationLink[]
+hide:
+  - class
+  - navigation
+props:
+  class: 'w-full'
+  highlight: true
+  highlightColor: 'primary'
+  color: 'primary'
+  variant: 'pill'
+  navigation:
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
       icon: 'i-lucide-database'
-      Vía:#composables
-      niños:
-      - title:'DefineShortcuts'(Edición española)
-        Vía:#definieshortcuts
-      - title:"El tiempo"
-        Vía:#usemodal
+      path: '#composables'
+      children:
+      - title: 'defineShortcuts'
+        path: '#defineshortcuts'
+      - title: 'useModal'
+        path: '#usemodal'
 ---
 ::
 
-### Trailing Icon (Edición española)
+XPH163XTrailing Icon de diseño
 
-Utilice el prop `trailing-icon` para personalizar el [Icon](/docs/components/icon) de los elementos que tienen hijos.
+Utilice el prop `trailing-icon` para personalizar el [Icon](/docs/components/icon) final de los elementos que tienen hijos.
 
 ::component-code{prefix="content"}
 ---
-Categoría: true
-Colapso: Verdad
-Externo:
-  - navegación
-Externalidades:
-  - ContentNavigationLink []
-Escondido:
-  @070@clase
-  - navegación
-Props:
-  Categoría: w-full
-  TrailingIcono: 'i-lucide-arrow-up'
-  Navegación:
-    - title:'Guía'(en inglés)
-      icono: 'i-lucide-libro-abierto'
-      Vía:'#Getting-Started'
-      niños:
-      - title:'Introducción'
-        camino: '#introducción'
-        Activo: Verdadero
-      - title:'Instalación'
-        path: '#instalación'
-    - title:'Composables'(Edición española)
+prettier: true
+collapse: true
+external:
+  - navigation
+externalTypes:
+  - ContentNavigationLink[]
+hide:
+  - class
+  - navigation
+props:
+  class: 'w-full'
+  trailingIcon: 'i-lucide-arrow-up'
+  navigation:
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
       icon: 'i-lucide-database'
-      Vía:#composables
-      niños:
-      - title:'DefineShortcuts'(Edición española)
-        Vía:#definieshortcuts
-      - title:'UseModal'(Edición española)
-        Vía:#usemodal
+      path: '#composables'
+      children:
+      - title: 'defineShortcuts'
+        path: '#defineshortcuts'
+      - title: 'useModal'
+        path: '#usemodal'
 ---
 ::
 
 ::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.chevronDown`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.chevronDown`.
 ::
 
-@@ph080@Ejemplos
+## Ejemplos
 
 ### Dentro de un diseño
 
-Utilice el componente ContentNavigation dentro de un componente [PageAside](/docs/components/page-aside) dentro de un diseño para mostrar la navegación de la página:
+Use el componente ContentNavigation dentro de un componente [PageAside](/docs/components/page-aside) dentro de un diseño para mostrar la navegación de la página:
 
 ```vue [layouts/docs.vue]{11}
 <script setup lang="ts">
@@ -267,7 +267,7 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 
 ### Dentro de un encabezado
 
-Utilice el componente ContentNavigation dentro de la ranura `content` de un componente [](/docs/components/header) para mostrar la navegación de la página en el móvil:
+Utilice el componente ContentNavigation dentro de la ranura `content` de un componente [Header](xph233) para mostrar la navegación de la página en el móvil:
 
 ```vue [components/Header.vue]{9-11}
 <script setup lang="ts">
@@ -285,24 +285,24 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 </template>
 ```
 
-@@pH126 @@ Español
+## API (Edición española)
 
-@127@127@127
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
-@128@128@128@128
+### Slots
 
-Componentes de slots
+:component-slots
 
-@129@@129@129
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@130 @@ Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@131@Changelog
+## Changelog (Edición española)
 
-por: component-changelog {prefix="content"}
+:component-changelog{prefix="content"}

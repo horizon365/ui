@@ -8,11 +8,11 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardPanel.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
 Son état (taille, effondrement, etc.) sera enregistré en fonction des accessoires `storage` et `storage-key` que vous fournissez au composant [DashboardGroup](/docs/components/dashboard-group#props).
 
-Utilisez-le à l'intérieur de l'emplacement par défaut du composant [DashboardGroup](/docs/components/dashboard-group), vous pouvez placer plusieurs panneaux les uns à côté des autres:
+Utilisez-le dans l'emplacement par défaut du composant [DashboardGroup](/docs/components/dashboard-group), vous pouvez placer plusieurs panneaux les uns à côté des autres:
 
 ```vue [pages/index.vue]{8,10}
 <script setup lang="ts">
@@ -36,100 +36,100 @@ Il est recommandé de définir un `id` lorsque vous utilisez plusieurs panneaux 
 Ce composant n'a pas un seul élément racine lorsque vous utilisez la prop `resizable`, donc enveloppez-le dans un conteneur (par exemple `<div class="flex flex-1">`) si vous utilisez des transitions de page ou si vous avez besoin d'une seule racine pour la mise en page.
 ::
 
-Utilisez les emplacements `header`,`body` et `footer` pour personnaliser le panneau ou l'emplacement par défaut si vous ne voulez pas un corps défilable avec rembourrage.
+Utilisez les emplacements `header`, `body` et `footer` pour personnaliser le panneau ou l'emplacement par défaut si vous ne voulez pas un corps défilable avec rembourrage.
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'dashboard-panel-exemple'
-classe: '! p-0! justify-start'
-Props:
-  minuscule: 22
-  Défaut: 35
-  Maxime: 40
-  classe: '! min-h-96 h-136'
+collapse: true
+name: 'dashboard-panel-example'
+class: '!p-0 !justify-start'
+props:
+  minSize: 22
+  defaultSize: 35
+  maxSize: 40
+  class: '!min-h-96 h-136'
 ---
 ::
 
 ::note
-La plupart du temps, vous utiliserez le composant [`DashboardNavbar`](/docs/components/dashboard-navbar) dans le slot `header`.
+La plupart du temps, vous utiliserez le composant [`DashboardNavbar`](/docs/components/dashboard-navbar) dans l'emplacement `header`.
 ::
 
-### Réalisable
+### Redimensionnable
 
 Utilisez le prop `resizable` pour redimensionner le panneau.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@ph038@minSize
-  @@ph039@@defaultSize
-  @@ph040@maxSize
-  @@ph041@classe
-Props:
-  Réalisable: true
-  minuscule: 22
-  Défaut: 35
-  Maxime: 40
-  classe: '! min-h-96'
-Slots:
-  Corps:|
+prettier: true
+hide:
+  - minSize
+  - defaultSize
+  - maxSize
+  - class
+props:
+  resizable: true
+  minSize: 22
+  defaultSize: 35
+  maxSize: 40
+  class: '!min-h-96'
+slots:
+  body: |
 
-    @@@ 42 @
-classe: '! p-0! justify-start'
+    <Placeholder class="h-96" />
+class: '!p-0 !justify-start'
 ---
 
-#corps
-@ph043
+#body
+:placeholder{class="h-96"}
 ::
 
-@@ph044@@Size
+### taille
 
-Utilisez les accessoires `min-size`,`max-size` et `default-size` pour personnaliser la taille du panneau.
+Utilisez les accessoires `min-size`, `max-size` et `default-size` pour personnaliser la taille du panneau.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  - redimensionnable
-Caché:
-  @@ph049@classe
-Props:
-  Réalisable: true
-  minuscule: 22
-  Défaut: 35
-  Maxime: 40
-  classe: '! min-h-96'
-Slots:
-  Corps:|
+prettier: true
+ignore:
+  - resizable
+hide:
+  - class
+props:
+  resizable: true
+  minSize: 22
+  defaultSize: 35
+  maxSize: 40
+  class: '!min-h-96'
+slots:
+  body: |
 
-    @@@ 500 @
-classe: '! p-0! justify-start'
+    <Placeholder class="h-96" />
+class: '!p-0 !justify-start'
 ---
 
-#corps
-par: placeholder{class="h-96"}
+#body
+:placeholder{class="h-96"}
 ::
 
 ::tip{to="/docs/components/dashboard-group#props"}
 Les tailles sont calculées en pourcentage par défaut. Vous pouvez modifier cela en utilisant la prop `unit` sur le composant `DashboardGroup`.
 ::
 
-@@P054@@été
+## api
 
-@@500@@propriétés
+### Props
 
-Composants-props
+:component-props
 
-@@556@@série
+### Slots électroniques
 
-Composants slots
+:component-slots
 
-@@ph057@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

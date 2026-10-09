@@ -9,7 +9,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodeTree.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Enveloppez vos blocs de code avec un composant `code-tree` dans un ordre particulier pour afficher une arborescence de vos fichiers.
 
@@ -91,16 +91,16 @@ Look at the [Nuxt 4 documentation](https://nuxt.com/docs/getting-started/introdu
 Make sure to install the dependencies:
 
 ```bash
-@@nf070@nfp
+# npm
 NPM pour installer
 
-@@pnpm@pnpm
+# pnpm
 Pnpm installé
 
-@@722@@électricité
+# xxxxxxxxxxxxxxxxxxxxxxx
 Yannick Installer
 
-@@pH073@@bun
+# bn
 Bonne installation
 ```
 
@@ -109,16 +109,16 @@ Bonne installation
 Start the development server on `http://localhost:3000`:
 
 ```bash
-@@ph081@npm
+# npm
 npm run dev
 
-@@pnpm@pnpm
+# pnpm
 Pnpm développeur
 
-@@pH083@@raccourci
+# Yarn
 Yannick Dev
 
-@@pH084@bun
+# bun
 Bonne route dev
 ```
 
@@ -127,32 +127,32 @@ Bonne route dev
 Build the application for production:
 
 ```bash
-@npm092@npm00000
+# npm
 npm run build
 
-@@pnpm@pnpm
+# pnpm
 Pnpm run build (en anglais)
 
-@@ph094 @@ électricité
+# xyrée
 Yannick construit
 
-@@ph095@@bun
+# bun
 Bon course à construire
 ```
 
 Locally preview production build:
 
 ```bash
-@@ph101@npm
+# npm
 npm run prévisualisation
 
-@@pnpm@pnpm
+# pnpm
 Pnpm run preview
 
-@@pha103
+# Yarn
 Présentation de Yarn Preview
 
-@@ph104@bun
+# bun
 Bon courant de prévisualisation
 ```
 
@@ -184,8 +184,8 @@ export default définition ({
 
 ```ts [app/app.config.ts]
 export default définition ({
-  à:{
-    Couleurs: {
+  là:{
+    couleurs: {
       Prénom:"Sky"
       Couleur: Slate
     }
@@ -194,11 +194,11 @@ export default définition ({
 ```
 
 ```vue [app/app.vue]
-@@@ 222 @
-  @@@ 123 @
-    @@@ 124 @
-  @@@ 125 @
-@@@ 126 @
+<template>
+  <UApp> équipement
+    <NuxtPage />
+  </UApp>
+</template>
 ```
 
 ```json [package.json]
@@ -233,11 +233,11 @@ export default définition ({
 ```
 
 ````md [README.md]
-# Nuxt 4 Démarreur minimal
+# nuxt 4 démarreur minimal
 
 Consultez la documentation [Nuxt 4 ](https://nuxt.com/docs/getting-started/introduction) pour en savoir plus.
 
-@@ph141@réseau
+## Réseau
 
 Assurez-vous d'installer les dépendances:
 
@@ -307,7 +307,7 @@ yarn preview
 bun run preview
 ```
 
-Consultez la documentation de déploiement [](https://nuxt.com/docs/getting-started/deployment) pour plus d'informations.
+Consultez la documentation de déploiement [x](https://nuxt.com/docs/getting-started/deployment) pour plus d'informations.
 ````
 
 ::
@@ -321,20 +321,20 @@ Consultez la documentation de déploiement [](https://nuxt.com/docs/getting-star
 Comme le composant `ProsePre`, le `CodeTree` gère les noms de fichiers, les icônes et le bouton de copie.
 ::
 
-@207@@écrit
+## API
 
-@@ph208@props
+### Props
 
-: composants {prose}
+:component-props{prose}
 
-@@ph210@@Slots
+### Slots
 
-: composant {prose}
+:component-slots{prose}
 
-@@ph212@thème
+## Thème
 
-: composant {prose}
+:component-theme{prose}
 
-@@changelog
+## Changelog
 
-: composant-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

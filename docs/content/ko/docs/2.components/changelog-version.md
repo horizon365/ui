@@ -8,355 +8,355 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChangelogVersion.vue
 ---
 
-## 사용
+## Usage
 
-ChangelogVersion   구성   요소 는   제목 ,   설명 ,   이미지   등 을   포함 하 여   사용자   정의   가능 한   콘텐츠 를   가진  `<article>`  요소 를   유연 하 게   표시 할   수   있 는   방법 을   제공 합니다 .
+ChangelogVersion 구성 요소는 제목, 설명, 이미지 등을 포함하여 사용자 정의 가능한 컨텐츠가 포함된 `<article>` 요소를 유연하게 표시할 수 있는 방법을 제공합니다.
 
 ::code-preview
 
 ::u-changelog-version
 ---
-제목 :   Introducing   Nuxt   UI   v 3
-설명   :' Nuxt   UI   v 3 가   나왔 습니다 ! 1500 개   이상 의   커밋   후 ,   이   주요   재 설계 는   향상 된   접근성 ,   Tailwind   CSS   지원   및   완전 한   Vue   호환 성 을   제공 합니다 .
-이미지 :   ' https ://nuxt . com/assets/blog/nuxt - ui - v 3 . png '
-날짜   :   2025 - 03 - 12
-작성자   :
-  -   이름 :   Benjamin   Canac
-    설명 :   '@benjamincanac '
-    아바타 (Avatar) :
-      src :https://github.com/benjamincanac.png
-      로드 : Lazy
-    대상   :https://x.com/benjamincanac
-    target :   _ blank   대상
-  -   이름 :   Sebastien   Chopin
-    설명 :   "@atinux "
-    아바타 (Avatar) :
-      src :https://github.com/atinux.png
-      로드 : Lazy
-    대상   :https://x.com/atinux
-    target :   _ blank   대상
-  -   이름 :   Hugo   Richard
-    설명 :   '@hugorcd '
-    아바타 (Avatar) :
-      src :https://github.com/hugorcd.png
-      로드 : Lazy
-    대상   :https://x.com/hugorcd
-    target :   _ blank   대상
-다음   주소 :   ' https ://nuxt . com/blog/nuxt - ui - v 3 '
-대상 :   '_ blank '
-클래스 :   ' w - full '
-ui . container :   ' max - w - lg '
+title: 'Introducing Nuxt UI v3'
+description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+image: 'https://nuxt.com/assets/blog/nuxt-ui-v3.png'
+date: 2025-03-12
+authors:
+  - name: Benjamin Canac
+    description: '@benjamincanac'
+    avatar:
+      src: https://github.com/benjamincanac.png
+      loading: lazy
+    to: https://x.com/benjamincanac
+    target: _blank
+  - name: Sebastien Chopin
+    description: '@atinux'
+    avatar:
+      src: https://github.com/atinux.png
+      loading: lazy
+    to: https://x.com/atinux
+    target: _blank
+  - name: Hugo Richard
+    description: '@hugorcd'
+    avatar:
+      src: https://github.com/hugorcd.png
+      loading: lazy
+    to: https://x.com/hugorcd
+    target: _blank
+to: 'https://nuxt.com/blog/nuxt-ui-v3'
+target: '_blank'
+class: 'w-full'
+ui.container: 'max-w-lg'
 ---
 ::
 
 ::
 
 ::tip{to="/docs/components/changelog-versions"}
-`ChangelogVersions`  구성   요소 를   사용 하 여   왼쪽 에   표시기   막대 가   있 는   타임 라인 에   여러   변경   로그   버전 을   표시 합니다 .
+`ChangelogVersions` 구성 요소를 사용하여 왼쪽에 표시기 막대가 있는 타임라인에 여러 변경 로그 버전을 표시합니다.
 ::
 
-###   제목
+### 제목
 
-`title`prop 을   사용 하 여   ChangelogVersion 의   제목 을   표시 합니다 .
+`title` prop 를 사용하여 ChangelogVersion 의 제목을 표시합니다.
 
 ::component-code
 ---
-숨기 기 (Hide) :
-  - 클래스
+hide:
+  - class
   - ui
-  - ui . container  - ui . container  @  UI 010@@  컨테이너
-소품   :
-  제목 :   Introducing   Nuxt   UI   v 3
-  클래스   :   ' w - full '
-  ui . container :   ' max - w - lg '
----
-::
-
-### 설명
-
-`description`prop 을   사용 하 여   ChangelogVersion 에   대한   설명 을   표시 합니다 .
-
-::component-code
----
-상품명   :   True
-숨기 기 (Hide) :
-  - 클래스
-  - ui
-  - ui . container  - ui . container
-무시하기:
-  -  title
-소품 :
-  제목: Introducing Nuxt UI v3
-  설명 :'Nuxt UI v3가 나왔습니다! 1500개 이상의 커밋 후, 이 주요 재설계는 향상된 접근성, Tailwind CSS 지원 및 완전한 Vue 호환성을 제공합니다.
-  클래스: 'w-full'
+  - ui.container
+props:
+  title: 'Introducing Nuxt UI v3'
+  class: 'w-full'
   ui.container: 'max-w-lg'
 ---
 ::
 
-###  날짜
+### Description
 
-`date`prop을 사용하여 ChangelogVersion의 날짜를 표시합니다.
+`description` prop를 사용하여 ChangelogVersion에 대한 설명을 표시합니다.
+
+::component-code
+---
+prettier: true
+hide:
+  - class
+  - ui
+  - ui.container
+ignore:
+  - title
+props:
+  title: 'Introducing Nuxt UI v3'
+  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+  class: 'w-full'
+  ui.container: 'max-w-lg'
+---
+::
+
+### Date 날짜
+
+`date` prop 를 사용하여 ChangelogVersion 의 날짜를 표시합니다.
 
 ::tip
-날짜는 자동으로 [현재 로케일](/docs/getting-started/integrations/i18n/nuxt#locale)로 형식이 지정됩니다. `Date` 개체 또는 문자열을 전달할 수 있습니다.
+날짜 형식은 [current locale](/docs/getting-started/integrations/i18n/nuxt#locale)로 자동으로 지정됩니다. `Date` 객체 또는 문자열을 전달할 수 있습니다.
 ::
 
 ::component-code
 ---
-상품명 : True
-숨기기 (Hide):
-  -  클래스
-  -  ui
-  - ui.container - ui.container
-무시하기:
-  -  title
-  -  설명
-소품 :
-  제목: Introducing Nuxt UI v3
-  설명 :'Nuxt UI v3가 나왔습니다! 1500개 이상의 커밋 후, 이 주요 재설계는 향상된 접근성, Tailwind CSS 지원 및 완전한 Vue 호환성을 제공합니다.
-  날짜 : 2025-03-12
-  클래스 : 'w-full'
+prettier: true
+hide:
+  - class
+  - ui
+  - ui.container
+ignore:
+  - title
+  - description
+props:
+  title: 'Introducing Nuxt UI v3'
+  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+  date: 2025-03-12
+  class: 'w-full'
   ui.container: 'max-w-lg'
 ---
 ::
 
-###  배지
+### 배지
 
-`badge`prop을 사용하여 ChangelogVersion에서 [Badge](/docs/components/badge)를 표시합니다.
+`badge` prop를 사용하여 ChangelogVersion에 [Badge](/docs/components/badge)를 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-숨기기 (Hide):
-  -  클래스
-  -  ui
-  - ui.container - ui.container
-무시하기:
-  -  title
-  -  Description
-  -  date
-소품 :
-  제목: Introducing Nuxt UI v3
-  설명 :'Nuxt UI v3가 나왔습니다! 1500개 이상의 커밋 후, 이 주요 재설계는 향상된 접근성, Tailwind CSS 지원 및 완전한 Vue 호환성을 제공합니다.
-  날짜 : 2025-03-12
-  사진: "Release"
-  클래스 : 'w-full'
+prettier: true
+hide:
+  - class
+  - ui
+  - ui.container
+ignore:
+  - title
+  - description
+  - date
+props:
+  title: 'Introducing Nuxt UI v3'
+  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+  date: 2025-03-12
+  badge: 'Release'
+  class: 'w-full'
   ui.container: 'max-w-lg'
 ---
 ::
 
-[Badge](/docs/components/badge#props) 구성 요소에서 모든 속성을 전달하여 사용자 지정할 수 있습니다.
+[Badge](xph12x) 구성 요소의 모든 속성을 전달하여 사용자 정의할 수 있습니다.
 
 ::component-code
 ---
-상품명 : True
-숨기기 (Hide):
-  -  클래스
-  -  ui
-  - ui.container - ui.container (으)로 이동
-무시하기:
-  -  title
-  -  설명
-  -  date
-  -  badge. label
-  -  badge. color
-  - badge.variant - badge.variant - badge.variant @ badge @ badge. variant -  badge. variant -  badge. variant -  badge. @ badge. variant @ 월 25일 @ 월 25일
-소품 :
-  제목: Introducing Nuxt UI v3
-  설명 :'Nuxt UI v3가 나왔습니다! 1500개 이상의 커밋 후, 이 주요 재설계는 향상된 접근성, Tailwind CSS 지원 및 완전한 Vue 호환성을 제공합니다.
-  날짜 : 2025-03-12
-  뱃지:
-    사진: "Release"
-    색상: 기본
-    변형: 외곽 선
-  클래스 : 'w-full'
+prettier: true
+hide:
+  - class
+  - ui
+  - ui.container
+ignore:
+  - title
+  - description
+  - date
+  - badge.label
+  - badge.color
+  - badge.variant
+props:
+  title: 'Introducing Nuxt UI v3'
+  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+  date: 2025-03-12
+  badge:
+    label: 'Release'
+    color: primary
+    variant: outline
+  class: 'w-full'
   ui.container: 'max-w-lg'
 ---
 ::
 
-###  사진
+### Image 이미지
 
-`image`prop 을 사용하여 BlogPost 에 이미지를 표시합니다.
+`image` prop를 사용하여 BlogPost에 이미지를 표시합니다.
 
 ::note
-[`@nuxt/image`](https://image.nuxt.com/get-started/installation) 가 설치된 경우 기본 `img` 태그 대신 `<NuxtImg>` 구성 요소가 사용됩니다.
+[`@nuxt/image`](https://image.nuxt.com/get-started/installation)가 설치되어 있는 경우 기본 `img` 태그 대신 `<NuxtImg>` 구성 요소가 사용됩니다.
 ::
 
 ::component-code
 ---
-상품명 : True
-숨기기 (Hide):
-  -  클래스
-  -  ui
-  - ui.container - ui.container @ UI065 컨테이너
-무시하기:
-  -  title
-  -  설명
-  -  날짜
-소품 :
-  제목: Introducing Nuxt UI v3
-  설명 :'Nuxt UI v3가 나왔습니다! 1500개 이상의 커밋 후, 이 주요 재설계는 향상된 접근성, Tailwind CSS 지원 및 완전한 Vue 호환성을 제공합니다.
-  날짜 : 2025-03-12
-  이미지: 'https://nuxt.com/assets/blog/nuxt-ui-v3.png'
-  클래스 : 'w-full'
+prettier: true
+hide:
+  - class
+  - ui
+  - ui.container
+ignore:
+  - title
+  - description
+  - date
+props:
+  title: 'Introducing Nuxt UI v3'
+  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+  date: 2025-03-12
+  image: 'https://nuxt.com/assets/blog/nuxt-ui-v3.png'
+  class: 'w-full'
   ui.container: 'max-w-lg'
 ---
 ::
 
-###  작성자
+### authors 작성자
 
-`authors`prop을 사용하여 ChangelogVersion에서 [User](/docs/components/user)의 목록을 다음과 같은 속성을 가진 객체 배열로 표시합니다.
+`authors` prop을 사용하여 ChangelogVersion에 [User](/docs/components/user) 목록을 다음 속성을 가진 객체 배열로 표시합니다.
 
--  @ `name?: string` @ {lang="ts-type"}
--  @ `description?: string` @ {lang="ts-type"}
-- `avatar?: Omit<AvatarProps, 'size'>`{lang="ts-type"}
+- `name?: string`{lang="ts-type"} (- `name?: string`{lang="ts-type"})
+- `description?: string`{lang="ts-type"} (- `description?: string`{lang="ts-type"})
+- `avatar?: Omit<AvatarProps, 'size'>`{lang="ts-type"} (- `avatar?: Omit<AvatarProps, 'size'>`{lang="ts-type"})
 - `chip?: boolean | Omit<ChipProps, 'size' | 'inset'>`{lang="ts-type"}
 - `size?: UserProps['size']`{lang="ts-type"}
 - `orientation?: UserProps['orientation']`{lang="ts-type"}
 
-당신은 [Link](/docs/components/link#props) 구성 요소에서 모든 속성을 전달 할 수 있습니다 `to`, `target` 등.
+[Link](/docs/components/link#props) 구성 요소에서 `to`, `target` 등의 속성을 전달할 수 있습니다.
 
 ::component-code
 ---
-상품명 : True
-숨기기 (Hide):
-  -  클래스
-  -  ui
-  - ui.container - ui.container @UI101 컨테이너
-외부:
-  -  authors
-externalTypes :
-  - UserProps [ ]
-무시 하 기 :
-  - title
-  - 설명
-  - date
-  - 사진
-  - authors
-소품   :
-  제목 :   Introducing   Nuxt   UI   v 3
-  설명   :' Nuxt   UI   v 3 가   나왔 습니다 ! 1500 개   이상 의   커밋   후 ,   이   주요   재 설계 는   향상 된   접근성 ,   Tailwind   CSS   지원   및   완전 한   Vue   호환 성 을   제공 합니다 .
-  날짜   :   2025 - 03 - 12
-  이미지 :   ' https ://nuxt . com/assets/blog/nuxt - ui - v 3 . png '
-  작성자   :
-    -   이름 :   벤자민   카낙
-      설명 :   '@benjamincanac '
-      아바타 (Avatar) :
-        src :https://github.com/benjamincanac.png
-        로드 : Lazy
-      대상 :https://x.com/benjamincanac
-      target :   _ blank   대상
-    - 이름 : Sebastien   Chopin
-      설명 :   "@atinux "
-      아바타 (Avatar) :
-        src :https://github.com/atinux.png
-        로드 : Lazy
-      대상   :https://x.com/atinux
-      target :   _ blank   대상
-    -   이름 :   Hugo   Richard
-      설명 :   "@hugorcd "
-      아바타 (Avatar) :
-        src   :https://github.com/hugorcd.png
-        로드 : Lazy
-      대상   :https://x.com/hugorcd
-      target :   _ blank   대상
-  클래스   :   ' w - full '
-  ui . container :   ' max - w - lg '
----
-::
-
-### 링크
-
-당신 은  [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)  구성   요소 에서   모든   속성 을   전달   할   수   있 습니다  `to`,  `target`,  `rel`,   etc .
-
-::component-code
----
-상품명   :   True
-숨기 기 (Hide) :
+prettier: true
+hide:
   - class
   - ui
-  - ui . container  - ui . container
-무시 하 기 :
+  - ui.container
+external:
+  - authors
+externalTypes:
+  - UserProps[]
+ignore:
   - title
-  - 설명
-  -   날짜
-  - 사진
-  - target
-소품 :
-  제목: Introducing Nuxt UI v3
-  설명 :'Nuxt UI v3가 나왔습니다! 1500개 이상의 커밋 후, 이 주요 재설계는 향상된 접근성, Tailwind CSS 지원 및 완전한 Vue 호환성을 제공합니다.
-  날짜 : 2025-03-12
-  이미지: 'https://nuxt.com/assets/blog/nuxt-ui-v3.png'
-  다음 주소: 'https://nuxt.com/blog/nuxt-ui-v3'
-  target: _blank 대상
-  클래스: 'w-full'
+  - description
+  - date
+  - image
+  - authors
+props:
+  title: 'Introducing Nuxt UI v3'
+  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+  date: 2025-03-12
+  image: 'https://nuxt.com/assets/blog/nuxt-ui-v3.png'
+  authors:
+    - name: Benjamin Canac
+      description: '@benjamincanac'
+      avatar:
+        src: https://github.com/benjamincanac.png
+        loading: lazy
+      to: https://x.com/benjamincanac
+      target: _blank
+    - name: Sebastien Chopin
+      description: '@atinux'
+      avatar:
+        src: https://github.com/atinux.png
+        loading: lazy
+      to: https://x.com/atinux
+      target: _blank
+    - name: Hugo Richard
+      description: '@hugorcd'
+      avatar:
+        src: https://github.com/hugorcd.png
+        loading: lazy
+      to: https://x.com/hugorcd
+      target: _blank
+  class: 'w-full'
   ui.container: 'max-w-lg'
 ---
 ::
 
-###  표시기
+### Link 링크
 
-`indicator`prop을 사용하여 왼쪽의 지시자 점을 숨깁니다. 기본값은 `true`입니다.
+[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) 구성 요소에서 `to`, `target`, `rel` 등의 속성을 전달할 수 있습니다.
 
 ::component-code
 ---
-상품명 : True
-숨기기 (Hide):
-  - class 클래스
-  -  ui
-  - ui.container - ui.container
-무시하기:
-  -  title
-  -  설명
-  -  날짜
-  -  사진
-소품 :
-  제목: Introducing Nuxt UI v3
-  설명 :'Nuxt UI v3가 나왔습니다! 1500개 이상의 커밋 후, 이 주요 재설계는 향상된 접근성, Tailwind CSS 지원 및 완전한 Vue 호환성을 제공합니다.
-  날짜 : 2025-03-12
-  이미지: 'https://nuxt.com/assets/blog/nuxt-ui-v3.png'
-  지시자: false
-  클래스 : 'w-full'
+prettier: true
+hide:
+  - class
+  - ui
+  - ui.container
+ignore:
+  - title
+  - description
+  - date
+  - image
+  - target
+props:
+  title: 'Introducing Nuxt UI v3'
+  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+  date: 2025-03-12
+  image: 'https://nuxt.com/assets/blog/nuxt-ui-v3.png'
+  to: 'https://nuxt.com/blog/nuxt-ui-v3'
+  target: _blank
+  class: 'w-full'
+  ui.container: 'max-w-lg'
+---
+::
+
+### Indicator (### 표시기)
+
+`indicator` 소품을 사용하여 왼쪽에 있는 지시자 점을 숨깁니다. 기본값은 `true`입니다.
+
+::component-code
+---
+prettier: true
+hide:
+  - class
+  - ui
+  - ui.container
+ignore:
+  - title
+  - description
+  - date
+  - image
+props:
+  title: 'Introducing Nuxt UI v3'
+  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+  date: 2025-03-12
+  image: 'https://nuxt.com/assets/blog/nuxt-ui-v3.png'
+  indicator: false
+  class: 'w-full'
   ui.container: 'max-w-lg'
 ---
 ::
 
 ::note
-`indicator`prop이 `false`일 때, 날짜는 제목 위에 표시됩니다.
+`indicator` prop이 `false`일 때, 날짜는 제목 위에 표시됩니다.
 ::
 
-##  예제
+## examples 예제
 
-###  바디 슬롯
+###  본체 슬롯
 
-`body`slot을 사용하여 이미지와 작성자 사이에 사용자 정의 콘텐츠를 표시할 수 있습니다.
+`body` 슬롯을 사용하여 다음과 같은 기능을 사용하여 이미지와 작성자 간에 사용자 정의 콘텐츠를 표시할 수 있습니다.
 
-- the[Markdown](https://comark.dev/rendering/vue 구성요소 `@comark/vue` 에서 일부 Markdown을 표시합니다.
-- the[ContentRenderer](https://content.nuxt.com/docs/components/content-renderer)component from `@nuxt/content` 페이지 또는 목록의 내용을 렌더링합니다.
--  또는 `:u-changelog-version` 구성 요소를 콘텐츠에 직접 사용하여 `body` 슬롯 내에 markdown을 사용하여 Nuxt UI가 사전 스타일 산문 구성 요소를 제공합니다.
+- x[Markdown](https://comark.dev/rendering/vue) 구성 요소 `@comark/vue`에서 일부 Markdown을 표시합니다.
+- x[ContentRendererr](https://content.nuxt.com/docs/components/content-renderer) 구성 요소는 페이지 또는 목록의 내용을 렌더링합니다.
+- or는 `body` 슬롯 내부의 markdown과 함께 콘텐츠에서 직접 `:u-changelog-version` 구성 요소를 사용하여 Nuxt UI가 사전 스타일의 산문 구성 요소를 제공합니다.- or use the `:u-changelog-version` component directly in your content with markdown inside the `body` slot as Nuxt UI provides pre-styled prose components.
 
 ::component-example
 ---
-상품명 : True
-이름: 'changelog-version-markdown-example'
-축소: true
+prettier: true
+name: 'changelog-version-markdown-example'
+collapse: true
 ---
 ::
 
-##  API
+## API 파일
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### Slots
 
-:구성요소 - 슬롯
+:component-slots
 
-##  테마
+## Theme 테마
 
-:구성요소 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

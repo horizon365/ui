@@ -8,69 +8,69 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatShimmer.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Die ChatShimmer-Komponente rendert ein Element mit einem animierten Schimmerverlauf über Text, der üblicherweise verwendet wird, um Streaming-oder Ladezustände in Chat-Schnittstellen anzuzeigen.
+Die ChatShimmer-Komponente rendert ein Element mit einem animierten Schimmerverlauf über Text, der häufig verwendet wird, um Streaming-oder Ladezustände in Chat-Schnittstellen anzuzeigen.
 
 ::note
-Diese Komponente wird automatisch von den Komponenten [`ChatTool`](/docs/components/chat-tool) und [`ChatReasoning`](/docs/components/chat-reasoning) beim Streaming verwendet.
+Diese Komponente wird automatisch von den Komponenten [`ChatTool`](/docs/components/chat-tool) und [`ChatReasoning`](xph09x) beim Streaming verwendet.
 ::
 
 ::tip
 Die Animation wird automatisch deaktiviert, wenn der Benutzer eine reduzierte Bewegung bevorzugt, der Text wird stattdessen als statischer stummgeschalteter Text angezeigt.
 ::
 
-@@ph011@@text (nicht)
+### Text Übersetzung
 
-Verwenden Sie `text` prop, um den Schimmertext festzulegen.
-
-::component-code
----
-Props:
-  Text: "Nachdenken..."
----
-::
-
-### Dauer
-
-Verwenden Sie die `duration` prop, um die Animationsgeschwindigkeit in Sekunden zu steuern.
+Verwenden Sie die `text`-Prop, um den Schimmertext festzulegen.
 
 ::component-code
 ---
-Props:
-  Text: "Nachdenken..."
-  Dauer: 4
+props:
+  text: 'Thinking...'
 ---
 ::
 
-@@ph015@spreizung
+### Duration Übersetzung
 
-Verwenden Sie die `spread` prop, um die Breite des Schimmer-Glanzes zu steuern. Die tatsächliche Ausbreitung wird als `text.length * spread` in Pixeln berechnet.
+Verwenden Sie die `duration`-Prop, um die Animationsgeschwindigkeit in Sekunden zu steuern.
 
 ::component-code
 ---
-Props:
-  Text: "Nachdenken..."
-  Verbreitung: 5
+props:
+  text: 'Thinking...'
+  duration: 4
 ---
 ::
 
-@@ph018@@Beispiele
+### Spread (nicht)
+
+Verwenden Sie die `spread` prop, um die Breite des Schimmer-Highlights zu steuern. Die tatsächliche Ausbreitung wird als `text.length * spread` in Pixel berechnet.
+
+::component-code
+---
+props:
+  text: 'Thinking...'
+  spread: 5
+---
+::
+
+## Examples (Beispiele)
 
 ::tip{to="/docs/components/chat"}
 Auf der Übersichtsseite **Chat** finden Sie Installationsanweisungen, Server-Setup und Anwendungsbeispiele.
 ::
 
-## api
+## API (englisch)
 
-@@@ph022@@props
+### Props Bearbeiten
 
-Komponenten Props
+:component-props
 
-@@ph023@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph024@@changelog @ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

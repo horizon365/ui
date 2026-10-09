@@ -10,160 +10,160 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Avatar.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 El Avatar utiliza el componente `<NuxtImg>` cuando [`@nuxt/image`](https://github.com/nuxt/image) está instalado, volviendo a `img` de lo contrario.
 
 ::component-code
 ---
-Ignora:
-  @@src008 @
-Props:
+ignore:
+  - src
+props:
   src: 'https://github.com/benjamincanac.png'
 ---
 ::
 
 ::note
-Puede pasar cualquier propiedad del elemento HTML `<img>` como `alt`,`loading`, etc.
+Puede pasar cualquier propiedad del elemento HTML `<img>` como `alt`, `loading`, etc.
 ::
 
 ::tip
-Para darse de baja de `@nuxt/image`, utilice el prop `as`:`:as="{ img: 'img' }"`.
+Para excluirse de `@nuxt/image`, use el prop `as`: `:as="{ img: 'img' }"`.
 ::
 
-@@15 @
+### Src (Edición española)
 
-Utilice el prop `src` para establecer la URL de la imagen.
+Utilice el prop `src` para configurar la URL de la imagen.
 
 ::component-code
 ---
-Ignora:
-  @170000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
+ignore:
+  - loading
+props:
   src: 'https://github.com/benjamincanac.png'
-  Categoría: Lazy
+  loading: lazy
 ---
 ::
 
-@180000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Tamaño
 
-Utilice el prop `size` para establecer el tamaño del Avatar.
+Utilice el accesorio `size` para establecer el tamaño del avatar.
 
 ::component-code
 ---
-Ignora:
-  @2000@src
-  @@21@Loading (Edición española)
-Props:
+ignore:
+  - src
+  - loading
+props:
   src: 'https://github.com/benjamincanac.png'
-  Tamaño: XL
-  Categoría: Lazy
+  size: xl
+  loading: lazy
 ---
 ::
 
 ::note
-El `<img>` del elemento `width` y `height` se establecen automáticamente sobre la base de la `size` prop.
+Los valores `width` y `height` del elemento `<img>` se establecen automáticamente en función de la proposición `size`.
 ::
 
-@26@Icon
+### Icon
 
-Utilice el prop `icon` para mostrar un respaldo [Icon](/docs/components/icon).
+Utilice el soporte `icon` para mostrar un respaldo [Icon](/docs/components/icon).
 
 ::component-code
 ---
-Props:
-  icono: 'i-lucide-image'
-  Tamaño: MD
+props:
+  icon: 'i-lucide-image'
+  size: md
 ---
 ::
 
-@@pH032@Texto en español
+### Text (Edición española)
 
 Utilice el prop `text` para mostrar un texto alternativo.
 
 ::component-code
 ---
-Props:
-  Nombre: "+1"
-  Tamaño: MD
+props:
+  text: '+1'
+  size: md
 ---
 ::
 
-@34@@Alt
+### Alt (Edición española)
 
-Cuando no se proporciona ningún icono o texto, el **initials** de la `alt` prop se utiliza como alternativa.
+Cuando no se proporciona ningún icono o texto, el **initials** del prop `alt` se utiliza como alternativa.
 
 ::component-code
 ---
-Props:
-  Archivo de la etiqueta: Benjamin Canac
-  Tamaño: MD
+props:
+  alt: 'Benjamin Canac'
+  size: md
 ---
 ::
 
 ::note
-El `alt` prop se pasa a la `img` elemento como el `alt` atributo.
+El prop `alt` se pasa al elemento `img` como el atributo `alt`.
 ::
 
-### Color: badge{label="4.8+" class="align-text-top"}
+### Color: badge{label="4.8+" class="align-text-top"} (en inglés)
 
-Utilice el prop `color` para cambiar el color del Avatar.
+Utilice el accesorio `color` para cambiar el color del Avatar.
 
 ::component-code
 ---
-Props:
-  Color: Primario
-  Archivo de la etiqueta: Benjamin Canac
+props:
+  color: primary
+  alt: 'Benjamin Canac'
 ---
 ::
 
-@444@@Chic
+### Chip (Edición española)
 
-Utilice el prop `chip` para mostrar un chip alrededor del Avatar.
+Utilice el soporte `chip` para mostrar un chip alrededor del Avatar.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @46@src
-  @474@carga
-  - chip.insert (en inglés)
-Props:
+prettier: true
+ignore:
+  - src
+  - loading
+  - chip.inset
+props:
   src: 'https://github.com/benjamincanac.png'
-  Categoría: Lazy
-  The chip:
-    Inserción: True
+  loading: lazy
+  chip:
+    inset: true
 ---
 ::
 
-@@ph049@@Examples
+## Ejemplos
 
-### Con información útil
+### Con herramienta
 
-Puede usar un componente [Tooltip](/docs/components/tooltip) para mostrar una información sobre herramientas al pasar el Avatar por encima.
+Puede usar un componente [Tooltip](/docs/components/tooltip) para mostrar una información sobre herramientas al pasar el Avatar.
 
-Ejemplo de componente {name="avatar-tooltip-example"}
+:component-example{name="avatar-tooltip-example"}
 
 ### Con máscara
 
 Puedes usar una máscara CSS para mostrar un avatar con una forma personalizada en lugar de un círculo simple.
 
-Ejemplo de componente {name="avatar-mask-example"}
+:component-example{name="avatar-mask-example"}
 
-@@pH058
+## API (Edición española)
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes" target="_blank"}
-Este componente también soporta todos los atributos HTML nativos `<img>`.
+Este componente también admite todos los atributos HTML nativos de `<img>`.
 ::
 
-@061 @@ Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@@2006@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

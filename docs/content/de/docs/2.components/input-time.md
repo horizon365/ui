@@ -18,230 +18,230 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputTime.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
 Verwenden Sie die `v-model`-Direktive, um die ausgewählte Zeit zu steuern.
 
 ::component-code
 ---
-Cast auf:
-  Modellbezeichnung: TimeValue
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: [12, 30, 0]
+cast:
+  modelValue: TimeValue
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: [12, 30, 0]
 ---
 ::
 
-Verwenden Sie `default-value` prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
+Verwenden Sie die `default-value` prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
 
 ::component-code
 ---
-Cast auf:
-  DefaultValue: Zeitwert
-Ignoriert:
+cast:
+  defaultValue: TimeValue
+ignore:
   - defaultValue
-Außen:
+external:
   - defaultValue
-Props:
-  DefaultValue: [9, 45, 0](Fehlerwert: [9, 45, 0])
+props:
+  defaultValue: [9, 45, 0]
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::note{to="/docs/getting-started/integrations/i18n/nuxt#locale"}
-Diese Komponente verwendet das Paket `@internationalized/date` für die lokalbezogene Formatierung. Das Zeitformat wird durch die `locale` prop der App-Komponente bestimmt.
+Diese Komponente verwendet das `@internationalized/date`-Paket für die lokalbezogene Formatierung. Das Zeitformat wird durch die `locale`-Prop der App-Komponente bestimmt.
 :::
 
-#Ansehen
+#vue
 :::note{to="/docs/getting-started/integrations/i18n/vue#locale"}
-Diese Komponente verwendet das Paket `@internationalized/date` für die lokalbezogene Formatierung. Das Zeitformat wird durch das `locale` prop der App-Komponente bestimmt.
+Diese Komponente verwendet das `@internationalized/date`-Paket für die lokalbezogene Formatierung. Das Zeitformat wird durch die `locale`-Prop der App-Komponente bestimmt.
 :::
 ::
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@####################################################################################################################################################
+### Range-Funktion
 
-Verwenden Sie `range` prop, um die Zeitbereichsauswahl mit Start-und Endzeit zu aktivieren.
+Verwenden Sie die `range`-Prop, um die Zeitbereichsauswahl mit Start-und Endzeit zu aktivieren.
 
 ::component-code
 ---
-Schöner: wahr
-Cast auf:
-  Modellwert: TimeRangeValue
-Ignoriert:
-  @@ph013@@gmail.de
-  - modellValue.start
-  - modellValue.end
-Außen:
-  - modellWert
-Props:
-  Range: wahr
-  Modellwert:
-    Beginn: [9, 0, 0]
-    Ende: [17, 30, 0]
+prettier: true
+cast:
+  modelValue: TimeRangeValue
+ignore:
+  - range
+  - modelValue.start
+  - modelValue.end
+external:
+  - modelValue
+props:
+  range: true
+  modelValue:
+    start: [9, 0, 0]
+    end: [17, 30, 0]
 ---
 ::
 
-### Stundenzyklus
+### Hour Zyklus
 
-Verwenden Sie `hour-cycle` prop, um den Stundenzyklus der InputTime. Defaults auf `12` zu ändern.
+Verwenden Sie die `hour-cycle`-prop, um den Stundenzyklus der InputTime. Defaults auf `12` zu ändern.
 
 ::component-code
 ---
-Cast auf:
-  DefaultValue: Zeitwert
-Ignoriert:
+cast:
+  defaultValue: TimeValue
+ignore:
   - hourCycle
   - defaultValue
-Außen:
+external:
   - defaultValue
-Props:
-  Stundenzahl: 24
-  Standardwert: [16, 30, 0]
+props:
+  hourCycle: 24
+  defaultValue: [16, 30, 0]
 ---
 ::
 
-@@ph023@gmail.de
+### color-
 
-Verwenden Sie `color` prop, um die Farbe der InputTime zu ändern.
+Verwenden Sie die `color`-prop, um die Farbe der Eingabezeit zu ändern.
 
 ::component-code
 ---
-Props:
-  Farbe: neutral
-  Highlight: Wahr
+props:
+  color: neutral
+  highlight: true
 ---
 ::
 
 ::note
-`highlight` prop wird hier verwendet, um den Fokuszustand anzuzeigen. Es wird intern verwendet, wenn ein Validierungsfehler auftritt.
+Die `highlight`-prop wird hier verwendet, um den Fokuszustand anzuzeigen. Es wird intern verwendet, wenn ein Validierungsfehler auftritt.
 ::
 
-@@ph026@@@Variantentyp
+### Variant Übersetzung
 
-Verwenden Sie `variant` prop, um die Variante der InputTime zu ändern.
+Verwenden Sie die `variant` prop, um die Variante der InputTime zu ändern.
 
 ::component-code
 ---
-Props:
-  Variante: subtil
+props:
+  variant: subtle
 ---
 ::
 
-@@ph028 @ Größe
+### Größe
 
-Verwenden Sie `size` prop, um die Größe der InputTime zu ändern.
+Verwenden Sie die `size` prop, um die Größe der InputTime zu ändern.
 
 ::component-code
 ---
-Props:
-  Größe: XL
+props:
+  size: xl
 ---
 ::
 
-@@ph030@@gmail.de
+### Icon (nicht)
 
-Verwenden Sie die `icon` prop, um eine [Icon](/docs/components/icon) innerhalb der InputTime anzuzeigen.
+Verwenden Sie die `icon`-Prop, um eine [Icon](/docs/components/icon) innerhalb der InputTime anzuzeigen.
 
 ::component-code
 ---
-Props:
-  I-Lucide-Clock (englisch)
+props:
+  icon: 'i-lucide-clock'
 ---
 ::
 
 ::note
-Verwenden Sie `leading` und `trailing` props, um die Symbolposition festzulegen, oder die `leading-icon` und `trailing-icon` props, um für jede Position ein anderes Symbol festzulegen.
+Verwenden Sie die `leading`-und `trailing`-Requisiten, um die Symbolposition festzulegen, oder die `leading-icon`-und `trailing-icon`-Requisiten, um für jede Position ein anderes Symbol festzulegen.
 ::
 
-@@ph040@@Trennung-Icon
+### Separator-Icon (englisch)
 
-Verwenden Sie `separator-icon` prop, um die [Icon](/docs/components/icon) des Bereichsabscheiders zu ändern.
+Verwenden Sie die `separator-icon`-prop, um die [Icon](/docs/components/icon) des Bereichsseparators zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph047@@gmail.com
-Props:
-  Range: wahr
-  separatorIcon: 'i-lucide-arrow-right'(I-lucide-arrow-rechts)
+ignore:
+  - range
+props:
+  range: true
+  separatorIcon: 'i-lucide-arrow-right'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.minus` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter der `ui.icons.minus`-Taste.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.minus` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter der `ui.icons.minus`-Taste.
 :::
 ::
 
-@@@@@@avatar2015 @ avatar2015 @@avatar2015 @ avatar2015 @@avatar2015 @ avatar2015 @@avatar2015
+### Avatar (englisch)
 
-Verwenden Sie die `avatar` prop, um eine [Avatar](/docs/components/avatar) innerhalb der InputTime anzuzeigen.
-
-::component-code
----
-Schöner: wahr
-Ignoriert:
-  - avatar.loading (auf Englisch)
-Props:
-  Avatare sind:
-    src: 'https://github.com/vuejs.png'(auf Englisch)
-    Aufladung: Lazy
-  Größe: MD
-  Variante: Übersicht
----
-::
-
-@@ph059@@disabled
-
-Verwenden Sie `disabled` prop, um die InputTime zu deaktivieren.
+Verwenden Sie die `avatar`-Prop, um ein [Avatar](/docs/components/avatar) innerhalb der InputTime anzuzeigen.
 
 ::component-code
 ---
-Props:
-  Behindert: Wahr
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
+    src: 'https://github.com/vuejs.png'
+    loading: lazy
+  size: md
+  variant: outline
 ---
 ::
 
-## Beispiele
+### Disabled (nicht verfügbar)
 
-### Innerhalb eines FormFeldes
+Verwenden Sie die `disabled` prop, um die InputTime zu deaktivieren.
 
-Sie können die InputTime innerhalb einer [FormField](/docs/components/form-field) Komponente verwenden, um ein Etikett, einen Hilfetext, einen erforderlichen Indikator usw. anzuzeigen.
+::component-code
+---
+props:
+  disabled: true
+---
+::
+
+## Examples [Bearbeiten]
+
+### Innerhalb eines Formularfelds
+
+Sie können die InputTime innerhalb einer [FormField](/docs/components/form-field)-Komponente verwenden, um eine Beschriftung, einen Hilfetext, eine erforderliche Anzeige usw. anzuzeigen.
 
 ::component-example
 ---
-Name: 'input-time-form-field-example'(Eingabe-Zeit-Form-Feld-Beispiel)
+name: 'input-time-form-field-example'
 ---
 ::
 
-## api
+## API (Englisch)
 
-@@@@@@@@@@@@ph068@@props
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
-### Slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@@ph070@@emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-@@@@@@@@@ph071@theme
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph072@@changelog @@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

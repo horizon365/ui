@@ -8,7 +8,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageBody.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Die PageBody-Komponente umschließt Ihren Hauptinhalt und fügt etwas Padding für konsistente Abstände hinzu.
 
@@ -24,13 +24,13 @@ Verwenden Sie es innerhalb des Standardsteckplatzes der Komponente [Page](/docs/
 </template>
 ```
 
-@@ph018 @ Beispiele
+## Examples (Beispiele)
 
 ::note
-Während diese Beispiele [Nuxt Content](https://content.nuxt.com) verwenden, können die Komponenten in jedes Content-Management-System integriert werden.
+Während diese Beispiele [Nuxt Content](https://content.nuxt.com) verwenden, können die Komponenten in jedes Content Management System integriert werden.
 ::
 
-### Innerhalb einer Seite
+### innerhalb einer Seite
 
 Verwenden Sie die PageBody-Komponente auf einer Seite, um den Inhalt der Seite anzuzeigen:
 
@@ -71,23 +71,23 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 ```
 
 ::note
-In diesem Beispiel verwenden wir die Komponente [`ContentRenderer`](https://content.nuxt.com/docs/components/content-renderer) Komponente von `@nuxt/content`, um den Inhalt der Seite darzustellen.
+In diesem Beispiel verwenden wir die Komponente [`ContentRenderer`](https://content.nuxt.com/docs/components/content-renderer) von `@nuxt/content`, um den Inhalt der Seite darzustellen.
 ::
 
-## api
+## API (Englisch)
 
-@@@@@@@@@ph066@@Props
+### Props (englisch)
 
-Komponenten Props
+:component-props
 
-### Slots
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-## theme
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph069@@changelog @@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

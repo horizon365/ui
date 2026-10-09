@@ -14,295 +14,295 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputTags.vue
 ---
 
-## 使用情况
+## 用法
 
-使用`v-model`指令来控制InputTags的值。
+使用`v-model`指令控制InputTags的值。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  - 模型值
-外部：
-  - 模型值
-道具类：
-  模型值：['Vue']
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
 ---
 ::
 
-当您不需要控制其状态时，请使用`default-value`属性来设定初始值。
+当不需要控制其状态时，使用`default-value`属性设置初始值。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  - 默认值
-道具：
-  默认值：['Vue']
+prettier: true
+ignore:
+  - defaultValue
+props:
+  defaultValue: ['Vue']
 ---
 ::
 
-### 预留位置
+### 占位符
 
-使用`placeholder`道具来设定预留位置文字。
+使用`placeholder`属性设置占位符文本。
 
 ::component-code
 ---
-道具：
-  占位符：'输入标记...'
+props:
+  placeholder: 'Enter tags...'
 ---
 ::
 
-### Max长度
+### 最大长度
 
-使用`max-length`属性可设置标记中允许的最大字符数。
+使用`max-length`属性设置标记中允许的最大字符数。
 
 ::component-code
 ---
-道具：
-  最大长度：4
+props:
+  maxLength: 4
 ---
 ::
 
-### 颜色
+### Color
 
-使用`color`道具可在InputTags成为焦点时更改圆环颜色。
+使用`color`属性更改InputTags聚焦时的环颜色。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  - 模型值
-外部：
-- 模型值
-道具：
-  模型值：['Vue']
-  颜色：中性
-  高亮显示：真
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  color: neutral
+  highlight: true
 ---
 ::
 
 ::note
-`highlight`属性在这里用来显示焦点状态。当发生验证错误时，它会在内部使用。
+这里使用`highlight`属性来显示焦点状态。当发生验证错误时，在内部使用它。
 ::
 
 ### 变体
 
-使用`variant`道具更改InputTags的外观。
+使用`variant`属性更改InputTags的外观。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  - 模型值
-外部：
-  - 模型值
-道具：
-  模型值：['Vue']
-  变体：细微
-  颜色：中性色
-  突出显示：假
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  variant: subtle
+  color: neutral
+  highlight: false
 ---
 ::
 
-尺寸
+### 尺寸
 
-使用`size`道具来调整InputTags的大小。
+使用`size`属性调整InputTags的大小。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 模型值
-外部：
-  - 模型值
-道具：
-  模型值：['Vue']
-  尺寸：xl
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  size: xl
 ---
 ::
 
-### 图标
+### Icon
 
-使用`icon`道具在“输入标记”中显示[](/docs/components/icon)图标。
+使用`icon` prop在InputTags中显示[Icon](/docs/components/icon)。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  模型值
-外部：
-  - 型号值
-道具：
-  模型值：['Vue']
-  图标：“i-lucide-搜索”
-  尺寸：md
-  变体：轮廓
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  icon: 'i-lucide-search'
+  size: md
+  variant: outline
 ---
 ::
 
 ::note
-使用`leading`和`trailing`道具来设定图标位置，或使用`leading-icon`和`trailing-icon`道具来为每个位置设定不同的图标。
+使用`leading`和`trailing`道具设置图标位置，或使用`leading-icon`和`trailing-icon`道具为每个位置设置不同的图标。
 ::
 
-阿凡达
+### Avatar
 
-使用`avatar`道具在输入标记内显示[Avatar](/docs/components/avatar)。
+使用`avatar`道具在InputTags中显示[Avatar](/docs/components/avatar)。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 模型值
-- 头像.加载中
-外部：
-  模型值
-道具：
-  模型值：['Vue']
-  头像：
-    来源：“https：//github.com/vuejs.png”
-    加载：惰性
-  尺寸：md
-  变体：轮廓
+prettier: true
+ignore:
+  - modelValue
+  - avatar.loading
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  avatar:
+    src: 'https://github.com/vuejs.png'
+    loading: lazy
+  size: md
+  variant: outline
 ---
 ::
 
 ### 删除图标
 
-使用`delete-icon`属性可自定义在标记中删除[Icon](/docs/components/icon)。默认为`i-lucide-x`。
+使用`delete-icon` prop自定义删除标签中的[Icon](/docs/components/icon)。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 模型值
-外部：
-- 模型值
-道具：
-  模型值：['Vue']
-  删除图标：'i-lucide-垃圾桶'
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  deleteIcon: 'i-lucide-trash'
 ---
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`ui.icons.close`键下的`app.config.ts`中全局自定义此图标。
+你可以在你的`app.config.ts`中的`ui.icons.close`键下全局自定义这个图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`ui.icons.close`键下的`vite.config.ts`中全局自定义此图标。
+你可以在你的`vite.config.ts`下的`ui.icons.close`键全局自定义这个图标。
 :::
 ::
 
-正在载入
+### 加载中
 
-使用`loading`道具在InputTags上显示加载图标。
+使用`loading` prop在InputTags上显示一个加载图标。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  模型值
-外部：
-- 模型值
-道具：
-  模型值：['Vue']
-  载入：true
-  结尾：false
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  loading: true
+  trailing: false
 ---
 ::
 
-### 载入图标
+### 加载图标
 
-使用`loading-icon`属性来自订载入图标。预设为`i-lucide-loader-circle`。
+使用`loading-icon`道具自定义加载图标. `i-lucide-loader-circle`。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  模型值
-外部：
-- 模型值
-道具：
-  模型值：['Vue']
-  载入：true
-  加载图标：“i-lucide加载程序”
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  loading: true
+  loadingIcon: 'i-lucide-loader'
 ---
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`app.config.ts`的`ui.icons.loading`键下全局自定义此图标。
+你可以在你的`app.config.ts`中的`ui.icons.loading`键下全局自定义这个图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`ui.icons.loading`键下的`vite.config.ts`中全局自定义此图标。
+你可以在你的`vite.config.ts`下的`ui.icons.loading`键全局自定义这个图标。
 :::
 ::
 
-### 已停用
+### 禁用
 
-使用`disabled`道具禁用输入标记。
+使用`disabled`属性禁用InputTags。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 模型值
-外部：
-  模型值
-道具：
-  模型值：['Vue']
-  已禁用：true
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  disabled: true
 ---
 ::
 
-示例
+## 示例
 
-### 在表单字段中
+### 在表单域中
 
-您可以在[FormField](/docs/components/form-field)组件中使用InputTags来显示标签、帮助文本、必需的指示器等。
+您可以使用[FormField](/docs/components/form-field)组件中的InputTags来显示标签、帮助文本、必需的指示符等。
 
 ::component-example
 ---
-名称：'输入标签表单字段范例'
+name: 'input-tags-form-field-example'
 ---
 ::
 
-美国石油学会
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
-此组件还支持所有本机`<input>`HTML属性。
+此组件还支持所有原生`<input>` HTML属性。
 ::
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-发射器
+### Emits
 
-：组件发射
+:component-emits
 
-曝光
+### 曝光
 
 通过模板引用访问组件时，可以使用以下命令：
 
 | 名称|类型|
 | ---- | ---- |
-| 我的天啊|我的天啊|
+| `inputRef`{lang="ts-type"}| `Ref<HTMLInputElement \| null>`{lang="ts-type"}|
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

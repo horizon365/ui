@@ -8,58 +8,58 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/EditorSuggestionMenu.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Die EditorSuggestionMenu-Komponente zeigt ein Menü mit Formatierungs-und Aktionsvorschlägen an, wenn ein Triggerzeichen in den Editor eingegeben wird, und führt das entsprechende [handler](/docs/components/editor#handlers) aus, wenn ein Element ausgewählt wird.
+Die EditorSuggestionMenu-Komponente zeigt ein Menü mit Formatierungs-und Aktionsvorschlägen an, wenn Sie ein Triggerzeichen im Editor eingeben, und führt das entsprechende [handler](/docs/components/editor#handlers) aus, wenn ein Element ausgewählt ist.
 
 ::note
-Es verwendet das `useEditorMenu` composable, das auf TipTaps [Suggestion](https://tiptap.dev/docs/editor/api/utilities/suggestion) Utility aufbaut, um Elemente während der Eingabe zu filtern und die Tastaturnavigation zu unterstützen (Pfeiltasten, eingeben, um auszuwählen, entkommen, um zu schließen).
+Es verwendet das `useEditorMenu` composable, das auf dem [Suggestion](https://tiptap.dev/docs/editor/api/utilities/suggestion)-Dienstprogramm von TipTap aufbaut, um Elemente während der Eingabe zu filtern und die Tastaturnavigation zu unterstützen (Pfeiltasten, zum Auswählen eingeben, zum Schließen entkommen).
 ::
 
 ::caution
-Es muss innerhalb eines [Editor](/docs/components/editor) Components verwendet werden, um Zugriff auf die Editor-Instanz zu haben.
+Es muss innerhalb eines [Editor](/docs/components/editor)-Komponentensteckplatzes verwendet werden, um Zugriff auf die Editorinstanz zu haben.
 ::
 
 ::component-example
 ---
-Höhe: wahr
-Einsturz: wahr
-Name: 'Vorschlag-Menü-Beispiel'
-Klasse: 'P-8'
+elevated: true
+collapse: true
+name: 'editor-suggestion-menu-example'
+class: 'p-8'
 ---
 ::
 
-@@ph014@gmail.de
+### Bearbeiten
 
-Verwenden Sie `items` prop als Array von Objekten mit folgenden Eigenschaften:
+Verwenden Sie die `items`-prop als Array von Objekten mit den folgenden Eigenschaften:
 
-[`kind?: "textAlign" | "heading" | "link" | "image" | "blockquote" | "bulletList" | "orderedList" | "taskList" | "codeBlock" | "horizontalRule" | "paragraph" | "clearFormatting" | "duplicate" | "delete" | "moveUp" | "moveDown" | "suggestion" | "mention" | "emoji"`PH0222)
-`label?: string``label?: string``label?: string`{lang="ts-type"}
-`description?: string`{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}PH028027@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`icon?: string``icon?: string`PH03030{lang="ts-type"}{lang="ts-type"}
-@@@@@@@@@@@@@@@@@@@@@@PH0333@@@@@@@@@@@@@@PH03333@@@@@@@@@@@@@@@PH0334{lang="ts-type"}{lang="ts-type"}PH03334@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`disabled?: boolean``disabled?: boolean``disabled?: boolean`{lang="ts-type"}
+xph0222x[`kind?: "textAlign" | "heading" | "link" | "image" | "blockquote" | "bulletList" | "orderedList" | "taskList" | "codeBlock" | "horizontalRule" | "paragraph" | "clearFormatting" | "duplicate" | "delete" | "moveUp" | "moveDown" | "suggestion" | "mention" | "emoji"`{lang="ts-type"}](/docs/components/editor#handlers) x27x x27x028x028x028x028x028x028x028x028x028x028x028x26x27x
+- `label?: string`{lang="ts-type"} (nicht vorhanden)
+- `description?: string`{lang="ts-type"} (nicht vorhanden)
+- `icon?: string`{lang="ts-type"} (nicht vorhanden)
+- `type?: "label" | "separator"`{lang="ts-type"} (nicht vorhanden)
+- `disabled?: boolean`{lang="ts-type"} (englisch)
 
 ::component-example
 ---
-Höhe: wahr
-Einsturz: wahr
-name: 'editor-suggestion-menu-items-example'(Editor-Vorschlag-Menu-Elemente-Beispiel)
-Klasse: 'P-8'
+elevated: true
+collapse: true
+name: 'editor-suggestion-menu-items-example'
+class: 'p-8'
 ---
 ::
 
 ::note
-Sie können auch ein Array von Arrays an `items` prop übergeben, um getrennte Gruppen von Elementen zu erstellen.
+Sie können auch ein Array von Arrays an die `items`-prop übergeben, um getrennte Gruppen von Elementen zu erstellen.
 ::
 
 ::tip
-Verwenden Sie `type: 'label'` für Abschnittsüberschriften und `type: 'separator'` für visuelle Trennzeichen, um Befehle in logischen Gruppen zu organisieren, um die Auffindbarkeit zu verbessern.
+Verwenden Sie `type: 'label'` für Abschnittsüberschriften und `type: 'separator'` für visuelle Teiler, um Befehle in logischen Gruppen zu organisieren, um die Auffindbarkeit zu verbessern.
 ::
 
-@@ph041@@@char
+### Char (englisch)
 
-Verwenden Sie `char` prop, um das Triggerzeichen zu ändern. Defaults auf `/`{lang="ts-type"}.
+Verwenden Sie die `char`-prop, um das Triggerzeichen zu ändern. Standardmäßig ist `/`{lang="ts-type"}.
 
 ```vue
 <template>
@@ -69,9 +69,9 @@ Verwenden Sie `char` prop, um das Triggerzeichen zu ändern. Defaults auf `/`{la
 </template>
 ```
 
-### Vorschlag: badge{label="4.7+" class="align-text-top"}
+### Suggestion: badge{label="4.7+" class="align-text-top"}
 
-Verwenden Sie die `suggestion` prop, um TipTap's [Suggestion matching behavior](https://tiptap.dev/docs/editor/api/utilities/suggestion#settings) anzupassen.
+Verwenden Sie die `suggestion`-Prop, um TipTaps [Suggestion-Übereinstimmungsverhalten ](https://tiptap.dev/docs/editor/api/utilities/suggestion#settings) anzupassen.
 
 Dies ist nützlich, wenn das Triggerzeichen direkt nach anderen Zeichen geöffnet werden soll, anstatt das Standard-Whitespace-Präfix zu erfordern.
 
@@ -90,9 +90,9 @@ Dies ist nützlich, wenn das Triggerzeichen direkt nach anderen Zeichen geöffne
 </template>
 ```
 
-@@ph073@@Optionen
+### Options (englisch)
 
-Verwenden Sie `options` prop, um das Positionierungsverhalten mit [Floating-UI-Optionen ](https://floating-ui.com/docs/computeposition#options) anzupassen.
+Verwenden Sie die `options`-Prop, um das Positionierungsverhalten mithilfe von [Floating UI-Optionen ](https://floating-ui.com/docs/computeposition#options) anzupassen.
 
 ```vue
 <template>
@@ -109,16 +109,16 @@ Verwenden Sie `options` prop, um das Positionierungsverhalten mit [Floating-UI-O
 </template>
 ```
 
-@@@@@@@@@@@@@@@@@@@@@@@@@api
+## API Bearbeiten
 
-@@@@@@@ph094@@@Props
+### Props Bearbeiten
 
-Komponenten Props
+:component-props
 
-@@@@@ph095@@theme@theme@@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@@theme@theme@theme@@theme@theme@@@theme@theme@@@theme@theme@@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph096@@changelog @@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

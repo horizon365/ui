@@ -3,18 +3,18 @@ title: Utilisation
 description: 'Un composable pour construire des visites guidées en ré-ancrant un seul Popover à travers les étapes.'
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Utilisez le composant `useTour` auto-importé pour conduire une visite guidée avec un seul [Popover](/docs/components/popover) dont l'ancre se déplace entre les étapes. Le composable possède l'état de l'étape et résout le `target` de chaque étape en un `reference` que vous liez à `<UPopover>`, Vous gardez un contrôle total sur le contenu et la navigation.
+Utilisez le composable `useTour` importé automatiquement pour conduire une visite guidée avec un seul [Popover](/docs/components/popover) dont l'ancre se déplace entre les étapes. Le composable possède l'état de l'étape et résout le `target` de chaque étape en un `reference` que vous liez à `<UPopover>`, tout en gardant un contrôle total sur le contenu et la navigation.
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'exemple de tour'
+collapse: true
+name: 'use-tour-example'
 ---
 ::
 
-Chaque étape requiert un `target` auquel le popover s'ancre. Il accepte un sélecteur CSS, un élément, un élément virtuel (n'importe quoi avec `getBoundingClientRect`), ou un ref/getter retournant l'un de ceux-ci. Pass `null` pour ancrer l'étape au centre de la fenêtre d'affichage. Tout autre champ sur une étape (`title`,`body`,`side`,...) est passé intact et disponible via `current`.
+Chaque étape requiert un `target` auquel le popover s'ancre. Il accepte un sélecteur CSS, un élément, un élément virtuel (tout ce qui contient `getBoundingClientRect`), ou un ref/getter renvoyant l'un de ceux-ci. Passez `null` pour ancrer l'étape au centre de la fenêtre d'affichage. Tout autre champ sur une étape (`title`, `body`, `side`,...) est passé intact et disponible via `current`.
 
 ```vue
 <script setup lang="ts">
@@ -40,37 +40,37 @@ const tour = useTour([
 </template>
 ```
 
-- Construit sur le prop `reference` réactif du Popover, de sorte que le popover se repositionne en douceur lorsque l'étape active change.
+- Construit sur le prop `reference` réactif du Popover, le popover se repositionne en douceur lorsque l'étape active change.
 - La cible active est défilée automatiquement dans la vue lorsqu 'une étape devient active.
-- Puisque vous rendre le contenu vous-même, il n'y a pas de thème supplémentaire ou locale à maintenir.
+- Puisque vous affichez le contenu vous-même, il n'y a pas de thème ou de paramètres régionaux supplémentaires à gérer.
 
-@@ph043@@api
+## api
 
-@@
+`useTour(steps, options?)`x{lang="ts-type"}
 
-@@ph046@paramètres
+### Paramètres
 
 ::field-group
 
   ::field{name="steps" type="MaybeRefOrGetter<TourStep[]>" required}
-  La liste des étapes de la tournée peut être un tableau statique, un `ref`, ou un getter pour les étapes réactives.
+  Peut être un tableau statique, un `ref`, ou un getter pour les étapes réactives.
 
     ::collapsible
 
       ::field-group
         ::field{name="target" type="MaybeRefOrGetter<string | ReferenceElement | null | undefined>"}
-        Accepte un sélecteur CSS (`'#id'`,`'.class'`, ou un identifiant nu résolu comme `#id`), un élément, un élément virtuel ou un ref/getter en renvoyant un. Utilisez `null` pour centrer l'étape dans la fenêtre d'affichage.
+        Accepte un sélecteur CSS (`'#id'`, `'.class'` ou un identifiant nu résolu comme `#id`), un élément, un élément virtuel ou un ref/getter renvoyant un élément. Utilisez `null` pour centrer l'étape dans la fenêtre d'affichage.
         ::
 
         ::field{name="[key: string]" type="any"}
-        Tous les champs supplémentaires (`title`,`body`,`side`,...) sont transmis et disponibles via `current`.
+        Tous les champs supplémentaires (`title`, `body`, `side`,...) sont transmis et disponibles via `current`.
         ::
       ::
     ::
   ::
 
   ::field{name="options" type="UseTourOptions"}
-  Options de configuration pour la tournée
+  Options de configuration pour le tour.
 
     ::collapsible
 
@@ -91,7 +91,7 @@ const tour = useTour([
   ::
 ::
 
-@@P56@retour
+### retour
 
 ::field-group
 
@@ -104,7 +104,7 @@ const tour = useTour([
   ::
 
   ::field{name="current" type="ComputedRef<TourStep | undefined>"}
-  L'objet step courant, ou `undefined` lorsqu 'il n'y a pas d'étapes.
+  L'objet step courant, ou `undefined` lorsqu 'il n'y a pas de step.
   ::
 
   ::field{name="reference" type="ComputedRef<ReferenceElement | undefined>"}
@@ -128,7 +128,7 @@ const tour = useTour([
   ::
 
   ::field{name="next" type="() => void"}
-  Passez à l'étape suivante. Boucles ou finitions à la fin en fonction de l'option `loop`.
+  Passez à l'étape suivante. Boucles ou finitions à la fin selon l'option `loop`.
   ::
 
   ::field{name="prev" type="() => void"}

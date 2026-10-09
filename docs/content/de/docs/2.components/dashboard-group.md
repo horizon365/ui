@@ -8,11 +8,11 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardGroup.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Die DashboardGroup-Komponente ist das Hauptlayout, das die Komponenten [DashboardSidebar](/docs/components/dashboard-sidebar) und [DashboardPanel](/docs/components/dashboard-panel) umschließt, um eine reaktionsschnelle Dashboard-Oberfläche zu erstellen.
+Die DashboardGroup-Komponente ist das Hauptlayout, das die Komponenten [DashboardSidebar](/docs/components/dashboard-sidebar) und [DashboardPanel](/docs/components/dashboard-panel) umschließt, um eine ansprechende Dashboard-Oberfläche zu erstellen.
 
-Verwenden Sie es in einem Layout oder in Ihrem `app.vue`:
+Verwenden Sie es in einem Layout oder in Ihrer `app.vue`:
 
 ```vue [layouts/dashboard.vue]{2,6}
 <template>
@@ -24,20 +24,20 @@ Verwenden Sie es in einem Layout oder in Ihrem `app.vue`:
 </template>
 ```
 
-@@1919 @ BTW
+## API (Englisch)
 
-@@ph020@@@props
+### Props (nicht)
 
-Komponenten Props
+:component-props
 
-### Slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph022@@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph023@@changelog @ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

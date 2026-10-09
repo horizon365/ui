@@ -15,31 +15,31 @@ links:
 
 ## 使用法
 
-[ Button ](/docs/components/button)またはCollapsibleのデフォルトスロットにあるその他のコンポーネントを使用します。
+Collapsibleのデフォルトスロットにある[Button](/docs/components/button)またはその他のコンポーネントを使用します。
 
 次に、`#content`スロットを使用して、Collapsibleが開いたときに表示されるコンテンツを追加します。
 
 ::component-code
 ---
-きれい真
-無視
-  - クラス
-小道具
-  クラス'フレックスコルギャップ—2 w—48'
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - class
+props:
+  class: 'flex flex-col gap-2 w-48'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
 
-  内容：|
+  content: |
 
     <Placeholder class="h-48" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
+:u-button{label="オープン" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
 
-#コンテンツ
-placeholder {class="h-48"}
+#content
+:placeholder{class="h-48"}
 ::
 
 ### アンマウント
@@ -48,26 +48,26 @@ placeholder {class="h-48"}
 
 ::component-code
 ---
-きれい真
-無視
-  - クラス
-小道具
-  unmountOnHide false
-  クラス'フレックスコルギャップ—2 w—48'
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - class
+props:
+  unmountOnHide: false
+  class: 'flex flex-col gap-2 w-48'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
 
-  内容：|
+  content: |
 
     <Placeholder class="h-48" />
 ---
 
-uボタン{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
+:u-button{label="オープン" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
 
-#コンテンツ
-placeholder {class="h-48"}
+#content
+:placeholder{class="h-48"}
 ::
 
 ::note
@@ -76,46 +76,46 @@ DOMを検査して、レンダリングされているコンテンツを確認�
 
 ### 無効
 
-`disabled`プロパティを使用して、Collapsibleを無効にします。
+`disabled`プロパティを使用してCollapsibleを無効にします。
 
 ::component-code
 ---
-きれい真
-無視
-  - クラス
-小道具
-  クラス'フレックスコルギャップ—2 w—48'
-  無効true
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - class
+props:
+  class: 'flex flex-col gap-2 w-48'
+  disabled: true
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
 
-  内容：|
+  content: |
 
     <Placeholder class="h-48" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
+:u-button{label="オープン" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
 
-#コンテンツ
-placeholder {class="h-48"}
+#content
+:placeholder{class="h-48"}
 ::
 
 ## 例
 
 ###  Controlオープンステート
 
-`default-open` propまたは`v-model:open`ディレクティブを使用してオープン状態を制御できます。
+オープン状態は`default-open`プロパティまたは`v-model:open`ディレクティブを使用して制御できます。
 
 ::component-example
 ---
-名前'collapsible—open—example'
+name: 'collapsible-open-example'
 ---
 ::
 
 ::note
-この例では、[`defineShortcuts`](/docs/composables/define-shortcuts)を活用して、kbd {value="O"}を押してCollapsibleを切り替えることができます。
+この例では、[`defineShortcuts`](/docs/composables/define-shortcuts)を活用して、kbd{value="O"}を押して折りたたみを切り替えることができます。
 ::
 
 ::tip
@@ -128,28 +128,28 @@ placeholder {class="h-48"}
 
 ::component-example
 ---
-名前'collapsible—icon—example'
+name: 'collapsible-icon-example'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-###  Emits
+### Emits
 
-component—emits
+:component-emits
 
 ## テーマ
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

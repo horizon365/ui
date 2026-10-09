@@ -8,21 +8,21 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageHero.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Die PageHero-Komponente umhüllt Ihre Inhalte in einem [Container](/docs/components/container), während sie die Flexibilität der vollen Breite beibehält, wodurch es einfach ist, Hintergrundfarben, Bilder oder Muster hinzuzufügen.
+Die PageHero-Komponente umhüllt Ihre Inhalte in einem [Container](/docs/components/container) und behält dabei die Flexibilität der vollen Breite bei, sodass Hintergrundfarben, Bilder oder Muster einfach hinzugefügt werden können.
 
 ::code-preview
 
 :::u-page-hero
 ---
-Weitere Informationen: Ultimate Vue UI Library
-Beschreibung: Eine Nuxt/Vue-integrierte UI-Bibliothek, die eine Vielzahl von vollständig gestalteten, zugänglichen und hochgradig anpassbaren Komponenten für die Erstellung moderner Webanwendungen bietet.
+title: 'Ultimate Vue UI library'
+description: 'A Nuxt/Vue-integrated UI library providing a rich set of fully-styled, accessible and highly customizable components for building modern web applications.'
 ---
 
 ::::u-page-card{variant="subtle" class="rounded-lg"}
 
-![App-Screenshot ](/blocks/image4.png){width="960" height="540" class="rounded-sm shadow-2xl ring ring-default"}
+![App Screenshot ](/blocks/image4.png){width="960" height="540" class="rounded-sm shadow-2xl ring ring-default"}
 
 ::::
 
@@ -30,172 +30,172 @@ Beschreibung: Eine Nuxt/Vue-integrierte UI-Bibliothek, die eine Vielzahl von vol
 
 ::
 
-@@ph010@title
+xph014title Übersetzung
 
-Verwenden Sie die `title` prop, um den Titel des Helden festzulegen.
-
-::component-code
----
-Props:
-  Weitere Informationen: Ultimate Vue UI Library
----
-::
-
-@@ph012 @ Beschreibung
-
-Verwenden Sie die `description` prop, um die Beschreibung des Helden festzulegen.
+Verwenden Sie die `title` prop, um den Titel des Helden zu setzen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph014@title
-Props:
-  Weitere Empfehlungen zu „ Ultimate Vue UI Library "
-  Beschreibung: : Eine Nuxt/Vue-integrierte UI-Bibliothek, die eine Vielzahl von vollständig gestalteten, zugänglichen und hochgradig anpassbaren Komponenten für die Erstellung moderner Webanwendungen bietet.
+props:
+  title: 'Ultimate Vue UI library'
 ---
 ::
 
-@@@@@@15@15@15.10.2015 @ Überschrift
+### Beschreibung
 
-Verwenden Sie die `headline` prop, um die Überschrift des Helden festzulegen.
+Verwenden Sie die `description`-Prop, um die Beschreibung des Helden festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph017@title
-  @@ph018@beschreibung
-Props:
-  Weitere Empfehlungen zu „ Ultimate Vue UI Library "
-  Beschreibung: : Eine Nuxt/Vue-integrierte UI-Bibliothek, die eine Vielzahl von vollständig gestalteten, zugänglichen und hochgradig anpassbaren Komponenten für die Erstellung moderner Webanwendungen bietet.
-  Schlagzeile: „ Neues Release "
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Ultimate Vue UI library'
+  description: 'A Nuxt/Vue-integrated UI library providing a rich set of fully-styled, accessible and highly customizable components for building modern web applications.'
 ---
 ::
 
-@@@@19@19@19.19.2019 @ Links
+### Headline Übersetzung
 
-Verwenden Sie `links` prop, um eine Liste von [Button](/docs/components/button) unter der Beschreibung anzuzeigen.
+Verwenden Sie die `headline`-Prop, um die Überschrift des Helden zu setzen.
 
 ::component-code
 ---
-Schöner: wahr
-Außen:
-  @@@@@25@@links
-Externe Personen:
-  @@ph026@@buttonprops [Bearbeiten | Quelltext bearbeiten]
-Ignoriert:
-  @@ph027@title
-  @@ph028@beschreibung
-  @@@@@@@@@29@@links
-Props:
-  Weitere Empfehlungen zu „ Ultimate Vue UI Library "
-  Beschreibung: Eine Nuxt/Vue-integrierte UI-Bibliothek, die eine Vielzahl von vollständig gestalteten, zugänglichen und hochgradig anpassbaren Komponenten für die Erstellung moderner Webanwendungen bietet.
-  Links auf:
-    - label:'Mach den Anfang'
-      nach/docs/getting-started/
-      I-Lucide-Square-Play (Deutsche Ausgabe)
-    - label:'Mehr erfahren'
-      zu: '/docs/getting-started/theme/design-system'
-      Farbe: "neutral"
-      Variante: „ subtil "
-      trailingIcon: 'i-lucide-arrow-right'(englisch)
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  title: 'Ultimate Vue UI library'
+  description: 'A Nuxt/Vue-integrated UI library providing a rich set of fully-styled, accessible and highly customizable components for building modern web applications.'
+  headline: 'New release'
 ---
 ::
 
-@@ph032@Orientierung
+### Links (englisch)
 
-Verwenden Sie `orientation` prop, um die Ausrichtung mit dem Standardslot zu ändern.
+Verwenden Sie die `links`-Prop, um eine Liste von [Button](/docs/components/button) unter der Beschreibung anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Außen:
-  @@@@@35@@links
-Externe Typen:
-  @@ph036@buttonprops [Bearbeiten | Quelltext bearbeiten]
-Ignoriert:
-  @@ph037@title
-  @@ph038@beschreibung
-  @@@@@headline
-  @@@@@40@@links
-Props:
-  Weitere Empfehlungen zu „ Ultimate Vue UI Library "
-  Beschreibung: : Eine Nuxt/Vue-integrierte UI-Bibliothek, die eine Vielzahl von vollständig gestalteten, zugänglichen und hochgradig anpassbaren Komponenten für die Erstellung moderner Webanwendungen bietet.
-  Schlagzeile: „ Neues Release "
-  Ausrichtung: horizontal
-  Links auf:
-    - label:'Fangen Sie an'
-      nach/docs/getting-started
-      I-Lucide-Square-Play (Deutsche Ausgabe)
-    - label:'Mehr erfahren'
-      zu: '/docs/getting-started/theme/design-system'
-      Farbe: „ neutral "
-      Variante: „ subtil "
-      trailingIcon: 'i-lucide-arrow-right'(englisch)
-Slots auf:
-  Default:|
-
-    @@043 @
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Ultimate Vue UI library'
+  description: 'A Nuxt/Vue-integrated UI library providing a rich set of fully-styled, accessible and highly customizable components for building modern web applications.'
+  links:
+    - label: 'Get started'
+      to: '/docs/getting-started'
+      icon: 'i-lucide-square-play'
+    - label: 'Learn more'
+      to: '/docs/getting-started/theme/design-system'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
 ---
-
-![App-Screenshot ](/blocks/image4.png){class="rounded-lg shadow-2xl ring ring-default"}
 ::
 
-@@ph049@umgekehrt@ph049
+### Orientierung.
 
-Verwenden Sie die `reverse` prop, um die Ausrichtung des Standardsteckplatzes umzukehren.
+Verwenden Sie die `orientation`-Prop, um die Ausrichtung mit dem Standardslot zu ändern. Standardmäßig ist `vertical`.
 
 ::component-code
 ---
-Schöner: wahr
-Außen:
-  @@@@@@@@51@@links
-Externe Personen:
-  @@ph052@@buttonprops [Bearbeiten | Quelltext bearbeiten]
-Ignoriert:
-  @@ph053@title
-  @@@ph054@beschreibung
-  @@@@555@headline
-  @@@@@@@56@@links
-Props:
-  Weitere Empfehlungen zu „ Ultimate Vue UI Library "
-  Beschreibung: : Eine Nuxt/Vue-integrierte UI-Bibliothek, die eine Vielzahl von vollständig gestalteten, zugänglichen und hochgradig anpassbaren Komponenten für die Erstellung moderner Webanwendungen bietet.
-  Schlagzeile: „ Neues Release "
-  Ausrichtung: horizontal
-  umgekehrt: wahr
-  Linke:
-    - label:'Fangen Sie an'
-      nach/docs/getting-started
-      I-Lucide-Square-Play (Deutsche Ausgabe)
-    - label:'Mehr erfahren'
-      zu: '/docs/getting-started/theme/design-system'
-      Farbe: "neutral"
-      Variante: "Unterwürfig"
-      trailingIcon: 'i-lucide-arrow-right'(englisch)
-Slots auf:
-  Default:|
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - headline
+  - links
+props:
+  title: 'Ultimate Vue UI library'
+  description: 'A Nuxt/Vue-integrated UI library providing a rich set of fully-styled, accessible and highly customizable components for building modern web applications.'
+  headline: 'New release'
+  orientation: horizontal
+  links:
+    - label: 'Get started'
+      to: '/docs/getting-started'
+      icon: 'i-lucide-square-play'
+    - label: 'Learn more'
+      to: '/docs/getting-started/theme/design-system'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
-    @@@@@59
+    <img src="/blocks/image4.png" alt="App screenshot" class="rounded-lg shadow-2xl ring ring-default" />
 ---
 
-![App-Screenshot ](/blocks/image4.png{class="rounded-lg shadow-2xl ring ring-default"}
+![App Screenshot ](/blocks/image4.png){class="rounded-lg shadow-2xl ring ring-default"}
 ::
 
-## api
+### Umgekehrtes
 
-@@@@@@@@@ph066@@Props
+Verwenden Sie die `reverse`-Prop, um die Ausrichtung des Standardsteckplatzes umzukehren.
 
-Komponenten-Props
+::component-code
+---
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - headline
+  - links
+props:
+  title: 'Ultimate Vue UI library'
+  description: 'A Nuxt/Vue-integrated UI library providing a rich set of fully-styled, accessible and highly customizable components for building modern web applications.'
+  headline: 'New release'
+  orientation: horizontal
+  reverse: true
+  links:
+    - label: 'Get started'
+      to: '/docs/getting-started'
+      icon: 'i-lucide-square-play'
+    - label: 'Learn more'
+      to: '/docs/getting-started/theme/design-system'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
-### Slots
+    <img src="/blocks/image4.png" alt="App screenshot" class="rounded-lg shadow-2xl ring ring-default" />
+---
 
-Die Komponenten-Slots
+![App Screenshot ](/blocks/image4.png){class="rounded-lg shadow-2xl ring ring-default"}
+::
 
-## theme
+## API (Englisch)
 
-Das Komponenten-Theme
+### Props Bearbeiten
 
-@@ph069@@changelog @@changelog
+:component-props
 
-Das Component-Changelog
+### Slots (englisch)
+
+:component-slots
+
+## Theme Bearbeiten
+
+:component-theme
+
+## Changelog Bearbeiten
+
+:component-changelog

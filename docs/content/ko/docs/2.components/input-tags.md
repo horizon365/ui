@@ -1,6 +1,6 @@
 ---
 title: InputTags 입력
-description: 대화식 태그를 표시하는 입력 요소입니다.
+description: 대화형 태그를 표시하는 입력 요소입니다.
 category: form
 keywords:
   - chips input
@@ -14,295 +14,295 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputTags.vue
 ---
 
-##  사용
+## Usage
 
 `v-model` 지시문을 사용하여 InputTags 값을 제어합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  - modelValue - modelValue 이미지
-외부:
-  - modelValue - modelValue 이미지
-소품 :
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: ['Vue']
 ---
 ::
 
-상태를 제어할 필요가 없을 때는 `default-value`prop을 사용하여 초기값을 설정합니다.
+상태를 제어할 필요가 없을 때 `default-value` prop을 사용하여 초기 값을 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  - defaultValue - defaultValue
-소품 :
+prettier: true
+ignore:
+  - defaultValue
+props:
   defaultValue: ['Vue']
 ---
 ::
 
-### 자리 표시자
+### 자리표시자
 
-`placeholder`prop을 사용하여 자리 표시자 텍스트를 설정합니다.
+`placeholder` 소품을 사용하여 자리 표시자 텍스트를 설정합니다.
 
 ::component-code
 ---
-소품 :
-  자리 표시자: "태그 입력..."
+props:
+  placeholder: 'Enter tags...'
 ---
 ::
 
-### 최대 길이
+### Max 길이
 
-`max-length`prop 을 사용하여 태그에 허용되는 최대 문자 수를 설정합니다.
+`max-length` Prop을 사용하여 태그에 허용되는 최대 문자 수를 설정합니다.
 
 ::component-code
 ---
-소품 :
-  maxLength : 4개
+props:
+  maxLength: 4
 ---
 ::
 
-###  색상
+### Color 이미지
 
-`color`prop을 사용하여 InputTags에 초점을 맞출 때 링 색상을 변경합니다.
+InputTags에 초점을 맞출 때 `color` Prop을 사용하여 링 색상을 변경합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  - modelValue - modelValue 이미지
-외부:
-  - modelValue - modelValue 이미지
-소품 :
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: ['Vue']
-  색상: 중립
-  강조 표시:true
+  color: neutral
+  highlight: true
 ---
 ::
 
 ::note
-`highlight`prop은 초점 상태를 보여주기 위해 사용됩니다. 검증 오류가 발생할 때 내부적으로 사용됩니다.
+`highlight` prop은 초점 상태를 표시하기 위해 사용되며, 유효성 검사 오류가 발생할 때 내부적으로 사용됩니다.
 ::
 
-### Variants 변형
+### 변형 변수
 
-`variant`prop 을 사용하여 InputTags 의 모양을 변경합니다.
+`variant` prop을 사용하여 InputTags의 모양을 변경합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  - modelValue - modelValue 이미지
-외부:
-  - modelValue - modelValue 이미지
-소품 :
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: ['Vue']
-  변형: 미묘한
-  색상: 중립
-  강조 표시:거짓
+  variant: subtle
+  color: neutral
+  highlight: false
 ---
 ::
 
-###  사이즈
+### Sizes 크기
 
-`size`prop을 사용하여 InputTags의 크기를 조정합니다.
+`size` prop 를 사용하여 InputTags 의 크기를 조정합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  - modelValue - modelValue 이미지
-외부:
-  - modelValue - modelValue 이미지
-소품 :
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: ['Vue']
-  크기: xl
+  size: xl
 ---
 ::
 
-###  아이콘
+### Icon
 
-`icon`prop을 사용하여 InputTags 내부에 [Icon](/docs/components/icon)를 표시합니다.
+`icon` prop을 사용하여 InputTags 내부에 [Icon](/docs/components/icon)를 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  - modelValue - modelValue 이미지
-외부:
-  - modelValue - modelValue 이미지
-소품 :
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: ['Vue']
-  아이콘: 'i-lucide-search'
-  크기: MD
-  변형: 윤곽선
+  icon: 'i-lucide-search'
+  size: md
+  variant: outline
 ---
 ::
 
 ::note
-`leading` 및 `trailing`props를 사용하여 아이콘 위치를 설정하거나 `leading-icon` 및 `trailing-icon`props를 사용하여 각 위치에 대해 다른 아이콘을 설정합니다.
+`leading` 및 `trailing` 소품을 사용하여 아이콘 위치를 설정하거나 `leading-icon` 및 `trailing-icon` 소품을 사용하여 각 위치에 대해 다른 아이콘을 설정합니다.
 ::
 
-### Avatar 이미지
+### avatar 이미지
 
-`avatar`prop을 사용하여 InputTags 내부에 [Avatar](/docs/components/avatar) 를 표시합니다.
+`avatar` prop을 사용하여 InputTags 내부에 [Avatar](/docs/components/avatar)를 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  - modelValue - modelValue 이미지
-  - avatar.loading - avatar.loading
-외부:
-  - modelValue - modelValue 이미지
-소품 :
+prettier: true
+ignore:
+  - modelValue
+  - avatar.loading
+external:
+  - modelValue
+props:
   modelValue: ['Vue']
-  아바타 (Avatar):
+  avatar:
     src: 'https://github.com/vuejs.png'
-    로드: Lazy
-  크기: md
-  변형: 외곽 선
+    loading: lazy
+  size: md
+  variant: outline
 ---
 ::
 
-### 아이콘 삭제
+### 제거 아이콘
 
-`delete-icon`prop을 사용하여 태그에서 [Icon](/docs/components/icon) 삭제를 사용자 정의합니다. 기본값은 `i-lucide-x`입니다.
+`delete-icon` 소품을 사용하여 태그에서 [Iconxph18x/docs/components/icon) 삭제를 사용자 정의합니다. 기본값은 `i-lucide-x`입니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  - modelValue - modelValue 이미지
-외부:
-  - modelValue - modelValue 이미지
-소품 :
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: ['Vue']
   deleteIcon: 'i-lucide-trash'
 ---
 ::
 
 ::framework-only
-#nuxt #nuxt
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.close` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.close` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.close` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.close` 키 아래의 `vite.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-###  로딩 중
+### loading 파일
 
-`loading`prop을 사용하여 InputTags에 로드 아이콘을 표시합니다.
+`loading` prop을 사용하여 InputTags에 로딩 아이콘을 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  - modelValue - modelValue 이미지
-외부:
-  - modelValue - modelValue
-소품 :
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: ['Vue']
-  로드: true
-  후행: false
+  loading: true
+  trailing: false
 ---
 ::
 
-### Loading Icon (아이콘 불러오기)
+### Loading 아이콘
 
-`loading-icon`prop을 사용하여 로드 아이콘을 사용자 정의합니다. 기본값은 `i-lucide-loader-circle`입니다.
+`loading-icon` prop을 사용하여 로드 아이콘을 사용자 정의합니다. 기본값은 `i-lucide-loader-circle`입니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  - modelValue - modelValue 이미지
-외부:
-  - modelValue - modelValue 이미지
-소품 :
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: ['Vue']
-  로드: true
+  loading: true
   loadingIcon: 'i-lucide-loader'
 ---
 ::
 
 ::framework-only
-#nuxt 코드
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.loading` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.loading` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.loading` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.loading` 키 아래의 `vite.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-###  비활성 화
+### 비활성 화
 
-`disabled`prop 을 사용하여 InputTags 를 비활성화합니다.
+`disabled` prop을 사용하여 InputTags를 비활성화합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  - modelValue - modelValue 이미지
-외부:
-  - modelValue - modelValue 이미지
-소품 :
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: ['Vue']
-  사용 안 함:true
+  disabled: true
 ---
 ::
 
-##  예제
+## 예제
 
-###  내에서 FormField
+### within a FormField 형식 내에서
 
 [FormField](/docs/components/form-field) 구성 요소 내에서 InputTags를 사용하여 레이블, 도움말 텍스트, 필수 표시기 등을 표시할 수 있습니다.
 
 ::component-example
 ---
-name: 'input-tags-form-field-example' 입력태그-양식-필드-예제
+name: 'input-tags-form-field-example'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
-이 컴포넌트는 모든 네이티브 `<input>`HTML 속성을 지원합니다.
+이 구성 요소는 모든 기본 `<input>` HTML 속성을 지원합니다.
 ::
 
-###  슬롯
+### Slots
 
-:컴포넌트 - 슬롯
+:component-slots
 
-###  Emits
+### Emits 파일
 
-:구성요소 - 방출
+:component-emits
 
-###  노출
+### exposes 소개
 
 템플릿 참조를 통해 컴포넌트에 액세스하는 경우 다음을 사용할 수 있습니다.
 
 | 이름 (Name)| 유형 (Type)|
 | ---- | ---- |
-| `inputRef`{lang="ts-type"}| `Ref<HTMLInputElement \| null>`{lang="ts-type"}|
+| `inputRef`{lang="ts-type"} Xph195x (`inputRef`{lang="ts-type"}) - `inputRef`{lang="ts-type"}의 발음을 {lang="ts-type"} [en]| `Ref<HTMLInputElement \| null>`{lang="ts-type"}|
 
-##  테마
+## 테마
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

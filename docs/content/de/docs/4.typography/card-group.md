@@ -9,9 +9,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CardGroup.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Wickeln Sie Ihre`card`Komponenten mit der`card-group`Komponente , um sie in einem Rasterlayout zusammenzufassen .
+Wickeln Sie Ihre `card`-Komponenten mit der `card-group`-Komponente ein, um sie in einem Rasterlayout zu gruppieren.
 
 ::code-preview
 
@@ -19,47 +19,47 @@ Wickeln Sie Ihre`card`Komponenten mit der`card-group`Komponente , um sie in eine
 
 ::card
 ---
-Titel : Dashboard
-Icon : I-Simple - Icons-GitHub
-zwei :https://github.com/nuxt-ui-templates/dashboard
-Ziel : _ blank
+title: Dashboard
+icon: i-simple-icons-github
+to: https://github.com/nuxt-ui-templates/dashboard
+target: _blank
 ---
-Ein Dashboard mit mehrspaltigem Layout .
+Ein Dashboard mit mehrspaltigem Layout.
 ::
 
 ::card
 ---
-Titel : SaaS
-Icon : I-Simple - Icons-GitHub
-zwei :https://github.com/nuxt-ui-templates/saas
-Ziel : _ blank
+title: SaaS
+icon: i-simple-icons-github
+to: https://github.com/nuxt-ui-templates/saas
+target: _blank
 ---
-Eine Vorlage mit Landung , Preisgestaltung , Dokumentation und Blog .
+Eine Vorlage mit Landung, Preisgestaltung, Dokumentation und Blog.
 ::
 
 ::card
 ---
-Titel : Docs
-Icon : I-Simple - Icons-GitHub
-zwei :https://github.com/nuxt-ui-templates/docs
-Ziel : _ blank
+title: Docs
+icon: i-simple-icons-github
+to: https://github.com/nuxt-ui-templates/docs
+target: _blank
 ---
-Eine Dokumentation mit`@nuxt/content`.
+Eine Dokumentation mit `@nuxt/content`.
 ::
 
 ::card
 ---
-Titel : Landung
-Icon : I-Simple - Icons-GitHub
-zwei :https://github.com/nuxt-ui-templates/landing
-Ziel : _ blank
+title: Landing
+icon: i-simple-icons-github
+to: https://github.com/nuxt-ui-templates/landing
+target: _blank
 ---
-Eine Landing Page , die Sie als Ausgangspunkt verwenden können .
+Eine Landing Page, die Sie als Ausgangspunkt verwenden können.
 ::
 
 :::
 
-# Der Code
+#code
 
 ```mdc
 ::card-group
@@ -109,20 +109,20 @@ A landing page you can use as starting point.
 
 ::
 
-@@ph049@@api
+## API (englisch)
 
-@@@@@@@@ph050@@props
+### Props (englisch)
 
-: component-props {prose}
+:component-props{prose}
 
-@@ph052@gmail.de
+### Slots Bearbeiten
 
-: component-slots {prose}
+:component-slots{prose}
 
-@@ph054@gmail.de
+## Theme Bearbeiten
 
-: component-theme {prose}
+:component-theme{prose}
 
-@@ph056@@changelog @@changelog
+## Changelog (englisch)
 
-: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

@@ -9,56 +9,56 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Textarea.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice la directiva `v-model` para controlar el valor de la Textarea.
 
 ::component-code
 ---
-Ignora:
-  - modelValoración
-Externo:
-  - modelValue (Edición española)
-Props:
-  Modelos: ''
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ''
 ---
 ::
 
-@@pH004@@Roves
+### Rows (Edición española)
 
-Utilice el prop `rows` para establecer el número de filas. Defaults a `3`.
+Utilice el prop `rows` para establecer el número de filas. Defaults en `3`.
 
 ::component-code
 ---
-Props:
-  Rutas: 12
+props:
+  rows: 12
 ---
 ::
 
-@@@P2007@Placeholder (Edición española)
+### Placeholder (Edición española)
 
 Utilice el prop `placeholder` para establecer un texto de marcador de posición.
 
 ::component-code
 ---
-Props:
-  marcador de posición:'Tipo algo...'
+props:
+  placeholder: 'Type something...'
 ---
 ::
 
-### auto-redimensionamiento
+### Redimensionamiento automático
 
 Utilice el prop `autoresize` para habilitar el redimensionamiento automático de la altura de la Textarea.
 
 ::component-code
 ---
-Ignora:
-  @@P011@@modelValue (Edición española)
-Externo:
-  @@P2012@modelValue (Edición española)
-Props:
-  modelValue: 'Este es un texto largo que cambiará automáticamente la altura de la Textarea.'
-  Autoedición: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 'This is a long text that will autoresize the height of the Textarea.'
+  autoresize: true
 ---
 ::
 
@@ -66,81 +66,81 @@ Utilice el prop `maxrows` para establecer el número máximo de filas al cambiar
 
 ::component-code
 ---
-Ignora:
-  @@P015@modelValue (Edición española)
-Externo:
-  @@P016@modelValue (Edición española)
-Props:
-  modelValue: 'Este es un texto largo que redimensionará automáticamente la altura de la Textarea con un máximo de 4 filas.'
-  Máquinas: 4
-  Autoedición: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 'This is a long text that will autoresize the height of the Textarea with a maximum of 4 rows.'
+  maxrows: 4
+  autoresize: true
 ---
 ::
 
-@17@color
+### Color (Edición española)
 
-Utilice el prop `color` para cambiar el color del anillo cuando se enfoca la Textarea.
+Utilice el accesorio `color` para cambiar el color del anillo cuando el Textarea está enfocado.
 
 ::component-code
 ---
-Ignora:
-  @1919@@retoño
-Props:
-  Color: Neutral
-  Destacado: Verdadero
-  marcador de posición:'Tipo algo...'
+ignore:
+  - placeholder
+props:
+  color: neutral
+  highlight: true
+  placeholder: 'Type something...'
 ---
 ::
 
 ::note
-El `highlight` prop se utiliza aquí para mostrar el estado de enfoque. Se utiliza internamente cuando se produce un error de validación.
+The `highlight` prop is used here to show the focus state. It is used internally when a validation error occurs.
 ::
 
-@@21@Variante
+### Variante
 
 Utilice el prop `variant` para cambiar la variante de la Textarea.
 
 ::component-code
 ---
-Ignora:
-  @233@@retoño
-Props:
-  Color: Neutro
-  Variación: Sutil
-  Destacado: Falso
-  marcador de posición:'Tipo algo...'
+ignore:
+  - placeholder
+props:
+  color: neutral
+  variant: subtle
+  highlight: false
+  placeholder: 'Type something...'
 ---
 ::
 
-@@24@24000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Tamaño
 
 Utilice el prop `size` para cambiar el tamaño de la Textarea.
 
 ::component-code
 ---
-Ignora:
-  @@26@26000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Tamaño: xl
-  marcador de posición:'Tipo algo...'
+ignore:
+  - placeholder
+props:
+  size: xl
+  placeholder: 'Type something...'
 ---
 ::
 
-@27@Icon
+### Icon
 
 Utilice el prop `icon` para mostrar un [Icon](/docs/components/icon) dentro de la Textarea.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH033@@marcador de posición
-Props:
+prettier: true
+ignore:
+  - placeholder
+props:
   icon: 'i-lucide-search'
-  Tamaño: MD
-  Categoría: Outline
-  placeholder: "Búsqueda..."
-  Rodas: 1
+  size: md
+  variant: outline
+  placeholder: 'Search...'
+  rows: 1
 ---
 ::
 
@@ -148,79 +148,79 @@ Utilice los accesorios `leading` y `trailing` para establecer la posición del i
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @388@@retoño
-Props:
-  Archivo de la etiqueta: i-lucide-at-sign
-  marcador de posición:"Introduzca su correo electrónico"
-  Tamaño: MD
-  Rodas: 1
+prettier: true
+ignore:
+  - placeholder
+props:
+  trailingIcon: i-lucide-at-sign
+  placeholder: 'Enter your email'
+  size: md
+  rows: 1
 ---
 ::
 
-### Avatar en Español
+### Avatar (Edición)
 
 Utilice el prop `avatar` para mostrar un [Avatar](/docs/components/avatar) dentro de la Textarea.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH045@@marcador de posición
-  - avatar.carga
-Props:
-  El avatar:
+prettier: true
+ignore:
+  - placeholder
+  - avatar.loading
+props:
+  avatar:
     src: 'https://github.com/nuxt.png'
-    Categoría: Lazy
-  Tamaño: MD
-  Categoría: Outline
-  placeholder: "Búsqueda..."
-  Rodas: 1
+    loading: lazy
+  size: md
+  variant: outline
+  placeholder: 'Search...'
+  rows: 1
 ---
 ::
 
-@@40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Cargando
 
 Utilice el prop `loading` para mostrar un icono de carga en el Textarea.
 
 ::component-code
 ---
-Ignora:
-  @@pH049@@marcador de posición
-Props:
-  Carga: Verdad
-  Trayectoria: Falso
-  placeholder: "Búsqueda..."
-  Rodas: 1
+ignore:
+  - placeholder
+props:
+  loading: true
+  trailing: false
+  placeholder: 'Search...'
+  rows: 1
 ---
 ::
 
-### Icono de carga
+### Loading Icon (en inglés)
 
-Utilice el prop `loading-icon` para personalizar el icono de carga. Prevalue a `i-lucide-loader-circle`.
+Utilice el accesorio `loading-icon` para personalizar el icono de carga. Por defecto `i-lucide-loader-circle`.
 
 ::component-code
 ---
-Ignora:
-  @@pH053@@marcador de posición
-Props:
-  Carga: Verdad
-  LoadingIcon: 'i-lucide-loader'(en inglés)
-  placeholder: "Búsqueda..."
-  Rodas: 1
+ignore:
+  - placeholder
+props:
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  placeholder: 'Search...'
+  rows: 1
 ---
 ::
 
 ::framework-only
-#nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.loading`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.loading`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.loading`.
 :::
 ::
 
@@ -230,45 +230,45 @@ Utilice el prop `disabled` para desactivar el Textarea.
 
 ::component-code
 ---
-Ignora:
-  @@pH060@placeholder (en inglés)
-Props:
-  Discapacitados: Verdadero
-  marcador de posición:'Tipo algo...'
+ignore:
+  - placeholder
+props:
+  disabled: true
+  placeholder: 'Type something...'
 ---
 ::
 
-@@pH061
+## API (Versión)
 
-@@pH062@@Propuestas
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attributes" target="_blank"}
-Este componente también soporta todos los atributos HTML nativos `<textarea>`.
+Este componente también admite todos los atributos HTML nativos de `<textarea>`.
 ::
 
-### Escenarios
+### Slots
 
-Componentes de slots
+:component-slots
 
-@@P065@@Emisiones
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@@666@@Exposicion
+### Exposición
 
 Al acceder al componente a través de una referencia de plantilla, puede utilizar lo siguiente:
 
 | Nombre| Tipo|
 | ---- | ---- |
-| @@|@@pH068 @|
-| @@|@@|
+| `textareaRef`x{lang="ts-type"}| `Ref<HTMLTextAreaElement \| null>`x{lang="ts-type"} (Edición española)|
+| `autoResize`x{lang="ts-type"} (Edición española)| `() => void`xx{lang="ts-type"} (Edición española)|
 
-@750000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Temas
 
-Componente Tema
+:component-theme
 
-@@776@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

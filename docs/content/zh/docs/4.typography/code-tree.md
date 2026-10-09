@@ -9,9 +9,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodeTree.vue
 ---
 
-## 使用情况
+## 用法
 
-用`code-tree`组件以任何特定顺序包装代码块，以显示文件的树视图。
+使用`code-tree`组件以任意特定顺序包装代码块，以显示文件的树视图。
 
 ::code-preview{class="[&>div]:*:my-0 [&>div]:*:w-full"}
 
@@ -97,11 +97,11 @@ npm install
 # pnpm
 pnpm安装程序
 
-# yarn
+# 纱线
 纱线安装
 
 # bun
-bun安装程序
+面包安装
 ```
 
 ## Development server
@@ -115,11 +115,11 @@ npm run dev
 # pnpm
 pnpm run dev
 
-# yarn
+# 纱线
 纱线发展
 
 # bun
-面包运行设备
+文润开发
 ```
 
 ## Production
@@ -133,7 +133,7 @@ npm run build
 # pnpm
 pnpm run build
 
-# yarn
+# 纱线
 纱线结构
 
 # bun
@@ -149,7 +149,7 @@ npm运行预览
 # pnpm
 pnpm运行预览
 
-# yarn
+# 纱线
 纱线预览
 
 # bun
@@ -161,7 +161,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 ::
 
-#代码
+#code
 
 ::code-collapse{class="[&>div>pre]:rounded-t-none [&>div]:my-0"}
 
@@ -170,7 +170,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 ```ts [nuxt.config.ts]
 defineNuxtConfig（{
-  模块：'@nuxt/ui']，
+  模块：'@ nuxt/ui']，
 
   css：文件'assets/css/main.css']
 })
@@ -178,8 +178,8 @@ defineNuxtConfig（{
 ```
 
 ```css [app/assets/css/main.css]
-@import "tailwindcss";
-@import "@nuxt/ui ";
+@import“tailwindcss”;
+@import“@nuxt/ui”;
 ```
 
 ```ts [app/app.config.ts]
@@ -196,39 +196,39 @@ defineAppConfig（{
 ```vue [app/app.vue]
 <template>
   <UApp>
-<NuxtPage />小时
+    <NuxtPage />
   </UApp>
 </template>
 ```
 
 ```json [package.json]
 {
-  "name"："nuxt-app"，
-  "私有"：是，
-  "type"："模块"，
-  "脚本"：{
-    "build"："nuxt build"，
-    "dev"："nuxt dev"，
+  “name”：“nuxt-app”，
+  “私有”：是，
+  “type”：“模块”，
+  “脚本”：{
+    “build”：“nuxt build”，
+    “dev”：“nuxt dev”，
     “generate”：“nuxt generate”，
-    "preview"："nuxt preview"，
-    "postinstall"："nuxt prepare"，
-    "typecheck"："nuxt typecheck"
+    “preview”：“nuxt preview”，
+    “postinstall”：“nuxt prepare”，
+    “typecheck”：“nuxt typecheck”
   },
-  "dependencies"：{
-    "@iconify-json/lucide "："^1.2.0 "，
-    "@nuxt/ui "："^4.0.0 "，
-    "nuxt"："^4.0.0"
+  “dependencies”：{
+    “@iconify-json/lucide”：“^1.2.0”，
+    “@nuxt/ui”：“^4.0.0”，
+    “nuxt”：“^4.0.0”
   },
-  "develop"：{
-    "typescript"："^6.0.0"，
-    "vue-tsc"："^3.2.0"
+  “develop”：{
+    “typescript”：“^6.0.0”，
+    “vue-tsc”：“^3.2.0”
   }
 }
 ```
 
 ```json [tsconfig.json]
 {
-  "extends"："./.nuxt/tsv.json"
+  “extends”：“./.nuxt/tsv.json”
 }
 ```
 
@@ -237,7 +237,7 @@ defineAppConfig（{
 
 查看[Nuxt 4文档](https://nuxt.com/docs/getting-started/introduction)了解更多信息。
 
-## Setup
+## 设置
 
 确保安装依赖项：
 
@@ -255,7 +255,7 @@ yarn install
 bun install
 ```
 
-## Development server
+## 开发服务器
 
 在`http://localhost:3000`上启动开发服务器：
 
@@ -273,7 +273,7 @@ yarn dev
 bun run dev
 ```
 
-## Production
+## 生产
 
 构建用于生产的应用程序：
 
@@ -307,7 +307,7 @@ yarn preview
 bun run preview
 ```
 
-有关详细信息，请查看[deployment documentation](https://nuxt.com/docs/getting-started/deployment)。
+查看[部署文档](https://nuxt.com/docs/getting-started/deployment)了解更多信息。
 ````
 
 ::
@@ -325,16 +325,16 @@ bun run preview
 
 ### Props
 
-：组件-道具{prose}
+:component-props{prose}
 
 ### Slots
 
-：组件插槽{prose}
+:component-slots{prose}
 
 ## Theme
 
-：组件主题{prose}
+:component-theme{prose}
 
 ## Changelog
 
-：component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

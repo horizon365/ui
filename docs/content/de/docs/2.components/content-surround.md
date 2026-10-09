@@ -10,53 +10,53 @@ links:
 ---
 
 ::warning{to="/docs/getting-started/integrations/content"}
-Diese Komponente ist nur verfügbar, wenn das `@nuxt/content`-Modul installiert ist.
+Diese Komponente ist nur verfügbar, wenn das Modul `@nuxt/content` installiert ist.
 ::
 
-@@ph001@@Nutzung
+## Usage (Verwendung)
 
-Verwenden Sie `surround` prop mit dem Wert `surround`{lang="ts-type"}, den Sie beim Abrufen einer Seitenumrandung erhalten.
+Verwenden Sie die `surround`-Prop mit dem `surround`{lang="ts-type"}-Wert, den Sie beim Abrufen eines Seitenumhangs erhalten.
 
 ::component-example
 ---
-Name: 'Content-Surround-Beispiel'
-Props:
-  Klasse: "W-voll"
+name: 'content-surround-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-### Prev/Nächste
+### Prev/Next Bearbeiten
 
-Verwenden Sie die Requisiten `prev-icon` und `next-icon`, um die Schaltflächen [Icon](/docs/components/icon) anzupassen.
+Verwenden Sie die Props `prev-icon` und `next-icon`, um die Schaltflächen [Icon](/docs/components/icon) anzupassen.
 
 ::component-code{prefix="content"}
 ---
-Schöner: wahr
-Einsturz: wahr
-Ignoriert:
+prettier: true
+collapse: true
+ignore:
   - surround
-Außen:
+external:
   - surround
-Externe Personen:
-  - ContentSurroundLink []
-Props:
-  VorschauIcon: 'i-lucide-chevron-left'
-  nextIcon: 'i-lucide-chevron-right'(I-lucide-chevron-rechts) auf der rechten Seite
-  Surround:
-  - title: ContentSearchButton [Bearbeiten | Quelltext bearbeiten]
-    path: /docs/components/content-search-button (auf Englisch)
-    stem: docs/2.components/content-search-button (englisch)
-    Beschreibung: Ein vorgestylter Button zum Öffnen des ContentSearch Modal.
-  - title: Inhalt
-    Pfad: /docs/Komponenten/content-toc
-    Datei: docs/2.components/content-toc
-    Beschreibung: Ein klebriges Inhaltsverzeichnis mit anpassbaren Slots.
+externalTypes:
+  - ContentSurroundLink[]
+props:
+  prevIcon: 'i-lucide-chevron-left'
+  nextIcon: 'i-lucide-chevron-right'
+  surround:
+  - title: ContentSearchButton
+    path: /docs/components/content-search-button
+    stem: docs/2.components/content-search-button
+    description: A pre-styled Button to open the ContentSearch modal.
+  - title: ContentToc
+    path: /docs/components/content-toc
+    stem: docs/2.components/content-toc
+    description: A sticky Table of Contents with customizable slots.
 ---
 ::
 
 ## Beispiele
 
-### Innerhalb einer Seite
+### innerhalb einer Seite
 
 Verwenden Sie die ContentSurround-Komponente in einer Seite, um die Links prev und next anzuzeigen:
 
@@ -89,20 +89,20 @@ if (!page.value) {
 </template>
 ```
 
-## api
+## API (Englisch)
 
-@@@@@@@@@@ph048@@props
+### Props Bearbeiten
 
-Komponenten Props
+:component-props
 
-@@ph049@gmail.de
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph050@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph051@@changelog @@@ changelog @@@ changelog
+## Changelog Übersetzung
 
-: component-changelog {prefix="content"}
+:component-changelog{prefix="content"}

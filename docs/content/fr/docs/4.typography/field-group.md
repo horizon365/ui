@@ -9,7 +9,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/FieldGroup.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Regrouper les champs dans une liste.
 
@@ -18,19 +18,19 @@ Regrouper les champs dans une liste.
 ::field-group{class="my-0"}
 
   ::field{name="analytics" type="boolean"}
-  Par défaut à `false`. Permet l'analyse de votre projet (à venir).
+  Par défaut, `false`. Permet l'analyse de votre projet (à venir).
   ::
 
   ::field{name="blob" type="boolean"}
-  Par défaut à `false`. Permet le stockage blob pour stocker des ressources statiques, telles que des images, des vidéos et plus encore.
+  Par défaut, `false`. permet au stockage blob de stocker des ressources statiques, telles que des images, des vidéos, etc.
   ::
 
   ::field{name="cache" type="boolean"}
-  Permet le stockage en cache pour mettre en cache les réponses ou les fonctions d'itinéraire de votre serveur à l'aide des `cachedEventHandler` et `cachedFunction` de Nitro.
+  Permet le stockage en cache pour mettre en cache les réponses ou les fonctions de route de votre serveur à l'aide des `cachedEventHandler` et `cachedFunction` de Nitro.
   ::
 
   ::field{name="database" type="boolean"}
-  Par défaut,`false`. Permet à la base de données SQL de stocker les données de votre application.
+  `false`. Permet à la base de données SQL de stocker les données de votre application.
   ::
 
 ::
@@ -59,20 +59,20 @@ Regrouper les champs dans une liste.
 
 :::
 
-@@226@api
+## api
 
-@27@@Projets
+### Props
 
-: composants {prose}
+:component-props{prose}
 
-@@229@@séries
+### Slots
 
-: composant-slots {prose}
+:component-slots{prose}
 
-@@ph031@thème
+## thème
 
-: composant-thème {prose}
+:component-theme{prose}
 
-@changelog @changelog
+## Changelog
 
-: composant-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

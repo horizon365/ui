@@ -5,27 +5,27 @@ description: 'オーバーレイをプログラムで制御するコンポーザ
 
 ## 使用法
 
-自動インポートされた`useOverlay`コンポジットを使用して、[ Modal ](/docs/components/modal)[ Slideover ](/docs/components/slideover)コンポーネントをプログラムで制御します。
+自動インポートされた`useOverlay`コンポーザーを使用して、[Modal](/docs/components/modal)および[Slideover](/docs/components/slideover)コンポーネントをプログラムで制御します。
 
 ::component-example
 ---
-名前'use—overlay—example'
+name: 'use-overlay-example'
 ---
 ::
 
-- `useOverlay`コンポーザブルは`createSharedComposable`を使用して作成され、アプリケーション全体で同じオーバーレイ状態が共有されるようにします。
+-  `useOverlay`コンポーザブルは`createSharedComposable`を使用して作成され、アプリケーション全体で同じオーバーレイ状態が共有されるようにします。
 
 ::note
-`overlay.open()`を待ち、オーバーレイから値を取得します。これは** overlayコンポーネントが`close` event **を出力した場合にのみ機能します。詳細は以下の例を参照してください。
+`overlay.open()`がオーバーレイから値を取得するのを待ちます。これは**overlayコンポーネントが`close` event**を出力する場合にのみ機能します。詳細は以下の例を参照してください。
 ::
 
-##  API
+## API
 
 `useOverlay()`{lang="ts-type"}
 
 `useOverlay`コンポーザブルはオーバーレイをグローバルに管理するメソッドを提供します。作成されたオーバーレイはそれぞれ独自のメソッドを持つインスタンスを返します。
 
-###  create
+### create
 
 `create(component: T, options?: OverlayOptions<ComponentProps<T>>): OverlayInstance<T>`{lang="ts-type"}
 
@@ -61,13 +61,13 @@ description: 'オーバーレイをプログラムで制御するコンポーザ
   ::
 ::
 
-###  open
+### open
 
 `open(id: symbol, props?: ComponentProps<T>): OpenedOverlay<T>`{lang="ts-type"}
 
-オーバーレイを`id`で開きます。
+`id`でオーバーレイを開きます。
 
-#### パラメータ
+#### パラメーター
 
 ::field-group
   ::field{name="id" type="symbol" required}
@@ -79,13 +79,13 @@ description: 'オーバーレイをプログラムで制御するコンポーザ
   ::
 ::
 
-###  close
+### close
 
 `close(id: symbol, value?: any): void`{lang="ts-type"}
 
 オーバーレイを`id`で閉じます。
 
-#### パラメータ
+#### パラメーター
 
 ::field-group
   ::field{name="id" type="symbol" required}
@@ -97,19 +97,19 @@ description: 'オーバーレイをプログラムで制御するコンポーザ
   ::
 ::
 
-###  closeAll
+### closeAll
 
 `closeAll(): void`{lang="ts-type"}
 
 すべてのオーバーレイを閉じる。
 
-###  patch
+### patch
 
 `patch(id: symbol, props: Partial<ComponentProps<T>>): void`{lang="ts-type"}
 
-オーバーレイを`id`で更新します。
+`id`でオーバーレイを更新します。
 
-#### パラメータ
+#### パラメーター
 
 ::field-group
   ::field{name="id" type="symbol" required}
@@ -121,11 +121,11 @@ description: 'オーバーレイをプログラムで制御するコンポーザ
   ::
 ::
 
-###  unmount
+### unmount
 
 `unmount(id: symbol): void`{lang="ts-type"}
 
-DOMから`id`でオーバーレイを削除します。
+`id`によってDOMからオーバーレイを削除します。
 
 #### パラメータ
 
@@ -135,7 +135,7 @@ DOMから`id`でオーバーレイを削除します。
   ::
 ::
 
-###  isOpen
+### isOpen
 
 `isOpen(id: symbol): boolean`{lang="ts-type"}
 
@@ -155,15 +155,15 @@ DOMから`id`でオーバーレイを削除します。
 
 作成されたすべてのオーバーレイのインメモリリスト。
 
-## インスタンスAPI
+## Instance API
 
-これらは、`create()`が返すインスタンスで使用できるメソッドです。
+これらは`create()`が返すインスタンスで使用できるメソッドです。
 
-###  open
+### open
 
 `open(props?: ComponentProps<T>): OpenedOverlay<T>`{lang="ts-type"}
 
-オーバーレイを開きます。`OpenedOverlay`を返します。これは、`close`イベントによって生成された値で解決されるPromiseです。同じPromiseが`result`としても公開されるので、`const { result } = modal.open()`も動作します。
+オーバーレイを開きます。`OpenedOverlay`を返します。これは`close`イベントによって生成された値で解決されるPromiseです。同じPromiseが`result`としても公開されるため、`const { result } = modal.open()`も動作します。
 
 #### パラメータ
 
@@ -189,7 +189,7 @@ function openModal() {
 </script>
 ```
 
-###  close
+### close
 
 `close(value?: any): void`{lang="ts-type"}
 
@@ -203,7 +203,7 @@ function openModal() {
   ::
 ::
 
-###  patch
+### patch
 
 `patch(props: Partial<ComponentProps<T>>): void`{lang="ts-type"}
 
@@ -275,9 +275,9 @@ const openModalB = async () => {
 
 ### 確認ダイアログ
 
-この例では、`useOverlay`をラップするカスタム`useConfirmDialog`構成可能を使用して再利用可能な確認ダイアログパターンを作成する方法を示します。このアプローチにより、特定のビジネス要件やデザインの好みに合わせた意見のあるダイアログが可能になります。
+この例では、`useOverlay`をラップするカスタム`useConfirmDialog`コンポーザブルを使用して再利用可能な確認ダイアログパターンを作成する方法を示します。このアプローチにより、特定のビジネス要件やデザインの好みに合わせた意見のあるダイアログが可能になります。
 
-1. 閉じるとブール値を出力する`ConfirmDialog`コンポーネントを作成します。
+1. クローズ時にブール値を出力する`ConfirmDialog`コンポーネントを作成します。
 
 ```vue [components/ConfirmDialog.vue]
 <script lang="ts" setup>
@@ -359,9 +359,9 @@ const handleDelete = async () => {
 
 ### 提供/注入
 
-オーバーレイをプログラムで開く場合モーダル、スライドオーバーなど、オーバーレイコンポーネントは`UApp`を含むコンポーネント通常は`app.vue`またはレイアウトコンポーネントから注入された値にのみアクセスできます。これは、オーバーレイが`UApp`コンポーネントによってページコンテキストの外側にマウントされるためです。
+プログラムでオーバーレイを開くときモーダル、スライドオーバーなど、オーバーレイコンポーネントは`UApp`を含むコンポーネント通常は`app.vue`またはレイアウトコンポーネントから注入された値にのみアクセスできます。これは、オーバーレイが`UApp`コンポーネントによってページコンテキストの外側にマウントされるためです。
 
-そのため、ページまたは親コンポーネントで`provide()`を使用することは直接サポートされていません。オーバーレイに与えられた値を渡すには、代わりにpropsを使用することを推奨します。
+そのため、ページや親コンポーネントで`provide()`を使用することは直接サポートされていません。オーバーレイに与えられた値を渡すには、代わりにpropsを使用することを推奨します。
 
 ```vue
 <script setup lang="ts">

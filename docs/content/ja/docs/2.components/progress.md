@@ -20,28 +20,28 @@ Progressの値を制御するには`v-model`ディレクティブを使用しま
 
 ::component-code
 ---
-外部
-  -  modelValue
-小道具
-  modelValue 50
+external:
+  - modelValue
+props:
+  modelValue: 50
 ---
 ::
 
 ::note
-[`ProgressGroup`](/docs/components/progress-group)コンポーネントを使用して、1つのバーを合計する複数のセグメントに分割します。
+[`ProgressGroup`](/docs/components/progress-group)コンポーネントを使用して、1つのバーを複数のセグメントに分割し、合計します。
 ::
 
-### マックス
+### Max
 
-Progressの最大値を設定するには、`max`プロパティを使用します。
+`max`プロパティを使用して、Progressの最大値を設定します。
 
 ::component-code
 ---
-外部
-  -  modelValue
-小道具
-  modelValue 3
-  最高4
+external:
+  - modelValue
+props:
+  modelValue: 3
+  max: 4
 ---
 ::
 
@@ -49,50 +49,50 @@ Progressの最大値を設定するには、`max`プロパティを使用しま�
 
 ::component-code
 ---
-きれい真
-無視
-  -  max
-外部
-  -  modelValue
-小道具
-  modelValue 3
-  マックス
+prettier: true
+ignore:
+  - max
+external:
+  - modelValue
+props:
+  modelValue: 3
+  max:
     - 'Waiting...'
-    - 'クローニング...'
-    - '移行...'
-    - 'デプロイ...'
-    - 'Done！'
+    - 'Cloning...'
+    - 'Migrating...'
+    - 'Deploying...'
+    - 'Done!'
 ---
 ::
 
-### ステータス
+### Status
 
-`status`プロパティを使用して、バーの上に現在のProgress値を表示します。
+`status`プロパティを使用して、現在のProgress値をバーの上に表示します。
 
 ::component-code
 ---
-外部
-  -  modelValue
-小道具
-  modelValue 50
-  ステータス真
+external:
+  - modelValue
+props:
+  modelValue: 50
+  status: true
 ---
 ::
 
 ::tip
-ステータスはバーの終わりを追跡します。代わりに`:ui="{ status: 'w-full' }"`を使用して、バーの幅全体にまたがるようにします。
+ステータスはバーの終わりを追跡します。`:ui="{ status: 'w-full' }"`を使用して、代わりに幅いっぱいにします。
 ::
 
 ### 不定
 
-`v-model`が設定されていない場合や、値が`null`の場合、Progressは_indetermine_になります。プログレスバーは`carousel`としてアニメーション化されますが、[`animation`](#animation) propを使って変更できます。
+`v-model`が設定されていない場合、または値が`null`の場合、Progressは_indetermineter__になります。プログレスバーは`carousel`としてアニメーション化されますが、[`animation`](#animation) propを使用して変更できます。
 
 ::component-code
 ---
-外部
-  -  modelValue
-小道具
-  modelValue null
+external:
+  - modelValue
+props:
+  modelValue: null
 ---
 ::
 
@@ -102,8 +102,8 @@ Progressの最大値を設定するには、`max`プロパティを使用しま�
 
 ::component-code
 ---
-小道具
-  アニメーション：スイング
+props:
+  animation: swing
 ---
 ::
 
@@ -111,28 +111,28 @@ Progressの最大値を設定するには、`max`プロパティを使用しま�
 アニメーションは、ユーザーが縮小された動きを好む場合に自動的に無効になり、不定のバーは代わりに全幅のパルスとして表示されます。
 ::
 
-### オリエンテーション
+### Orientation
 
-プログレスの向きを変更するには、`orientation`プロパティを使用します。デフォルトは`horizontal`です。
+`orientation`プロパティを使用してプログレスの向きを変更します。デフォルトは`horizontal`です。
 
 ::component-code
 ---
-無視
-  - クラス
-小道具
-  オリエンテーション垂直
-  クラス'h—48'
+ignore:
+  - class
+props:
+  orientation: vertical
+  class: 'h-48'
 ---
 ::
 
-### カラー
+### Color
 
-プログレスの色を変更するには、`color`プロパティを使用します。
+`color`プロパティを使用してプログレスの色を変更します。
 
 ::component-code
 ---
-小道具
-  色ニュートラル
+props:
+  color: neutral
 ---
 ::
 
@@ -142,45 +142,45 @@ Progressの最大値を設定するには、`max`プロパティを使用しま�
 
 ### サイズ
 
-プログレスのサイズを変更するには、`size`プロパティを使用します。
+`size`プロパティを使用してプログレスのサイズを変更します。
 
 ::component-code
 ---
-小道具
-  サイズXL
+props:
+  size: xl
 ---
 ::
 
-### インバータ
+### 反転
 
-Progressを視覚的に反転させるには、`inverted` propを使用します。
+`inverted`プロパティを使用してProgressを視覚的に反転します。
 
 ::component-code
 ---
-小道具
-  反転：true
-  modelValue 25
+props:
+  inverted: true
+  modelValue: 25
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

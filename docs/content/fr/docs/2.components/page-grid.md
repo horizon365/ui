@@ -8,41 +8,41 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageGrid.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Le composant PageGrid fournit une disposition de grille réactive pour afficher les composants [PageCard](/docs/components/page-card) ou tout autre élément, en ajustant automatiquement de 1 à 3 colonnes en fonction de la taille de l'écran.
-
-::component-example
----
-nom: 'page-grid-exemple'
-Catégorie: P-8
----
-::
-
-Vous pouvez également l'utiliser pour afficher une liste de cartes dans une mise en page de style bento en utilisant les classes d'utilitaires `col-span-*` et `row-span-*`.
+Le composant PageGrid fournit une disposition de grille réactive pour afficher les composants [PageCard](xph003) ou tout autre élément, en ajustant automatiquement de 1 à 3 colonnes en fonction de la taille de l'écran.
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'page-grid-bento-exemple'
-Catégorie: P-8
+name: 'page-grid-example'
+class: 'p-8'
 ---
 ::
 
-@@ph007@@api
+Vous pouvez également l'utiliser pour afficher une liste de cartes dans une disposition de style bento en utilisant les classes d'utilitaires `col-span-*` et `row-span-*`.
 
-@@ph008@props
+::component-example
+---
+collapse: true
+name: 'page-grid-bento-example'
+class: 'p-8'
+---
+::
 
-Composants-props
+## api
 
-@@ph009@@réseau
+### Props
 
-Composants slots
+:component-props
 
-@@ph010@thème
+### Slots électronique
 
-Composant-thème
+:component-slots
 
-@changement@changement@changement.com
+## Thème
 
-Composant-changelog
+:component-theme
+
+## Changelog
+
+:component-changelog

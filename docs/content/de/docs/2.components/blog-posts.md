@@ -1,5 +1,5 @@
 ---
-title: Blogposts schreiben
+title: Blogposts Bearbeiten
 description: 'Zeigt eine Liste von Blog-Posts in einem responsiven Rasterlayout an.'
 category: page
 links:
@@ -8,9 +8,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/BlogPosts.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Die BlogPosts-Komponente bietet ein flexibles Layout , um eine Liste von[BlogPost](/docs/components/blog-post)Komponenten entweder mit dem Standardsteckplatz oder dem`posts`prop.
+Die BlogPosts-Komponente bietet ein flexibles Layout, um eine Liste von [BlogPost](/docs/components/blog-post)-Komponenten entweder über den Standardsteckplatz oder die `posts`-Prop anzuzeigen.
 
 ```vue {2,8}
 <template>
@@ -24,80 +24,80 @@ Die BlogPosts-Komponente bietet ein flexibles Layout , um eine Liste von[BlogPos
 </template>
 ```
 
-@@ph017@postings
+### Posts (englisch)
 
-Verwenden Sie`posts`prop als Array von Objekten mit den Eigenschaften der Komponente[BlogPost](/docs/components/blog-post#props).
+Verwenden Sie die `posts`-Prop als Array von Objekten mit den Eigenschaften der Komponente [BlogPost](/docs/components/blog-post#props).
 
 ::component-code
 ---
-Einsturz : wahr
-Ignoriert :
-  @@ph023@postings
-Außen :
-  @@ph024@postings
-Externe Personen :
-  @@@ph025@@blogpostprops [ Bearbeiten | Quelltext bearbeiten ]
-Props :
-  Posts auf :
-    - title : Nuxt Icon v1 (Deutsche Übersetzung)
-      Beschreibung : ' Entdecken Sie Nuxt Icon v1 ! '
-      Bild :https://nuxt.com/assets/blog/nuxt-icon/cover.png
-      Datum : 2024 - 11 - 25
-    - title : Nuxt 3.14 (Deutsche Übersetzung)
-      Beschreibung : ' Nuxt 3.14 ist da ! '
-      Bild :https://nuxt.com/assets/blog/v3.14.png
-      Datum : 2024 - 11 - 04
-    - title : Nuxt 3.13 (Deutsche Übersetzung)
-      Beschreibung : ' Nuxt 3.13 ist da ! '
-      Image :https://nuxt.com/assets/blog/v3.13.png
-      Datum : 2024 - 08 - 22
+collapse: true
+ignore:
+  - posts
+external:
+  - posts
+externalTypes:
+  - BlogPostProps[]
+props:
+  posts:
+    - title: Nuxt Icon v1
+      description: 'Discover Nuxt Icon v1!'
+      image: https://nuxt.com/assets/blog/nuxt-icon/cover.png
+      date: 2024-11-25
+    - title: Nuxt 3.14
+      description: 'Nuxt 3.14 is out!'
+      image: https://nuxt.com/assets/blog/v3.14.png
+      date: 2024-11-04
+    - title: Nuxt 3.13
+      description: 'Nuxt 3.13 is out!'
+      image: https://nuxt.com/assets/blog/v3.13.png
+      date: 2024-08-22
 ---
 ::
 
-@@ph029@@Orientierung
+### Ausrichtung
 
-Verwenden Sie`orientation`prop , um die Ausrichtung der BlogPosts . Defaults auf`horizontal`zu ändern .
+Verwenden Sie die `orientation` prop, um die Ausrichtung der BlogPosts. Defaults auf `horizontal` zu ändern.
 
 ::component-code
 ---
-Einsturz : wahr
-Ignoriert :
-  @@ph032@postings
-Außen :
-  @@ph033@@postings
-Externe Typen :
-  @@@ph034@@BlogPostProps [ Bearbeiten | Quelltext bearbeiten ]
-Props :
-  Ausrichtung : vertikal
-  Posts auf :
-    - title : Nuxt Icon v1 (Deutsche Übersetzung)
-      Beschreibung : ' Entdecken Sie Nuxt Icon v1 ! '
-      Image :https://nuxt.com/assets/blog/nuxt-icon/cover.png
-      Datum : 2024 - 11 - 25
-    - title : Nuxt 3.14 (Deutsche Übersetzung)
-      Beschreibung : ' Nuxt 3.14 ist da ! '
-      Image :https://nuxt.com/assets/blog/v3.14.png
-      Datum : 2024 - 11 - 04
-    - title : Nuxt 3.13 (Deutsche Übersetzung)
-      Beschreibung : ' Nuxt 3.13 ist da ! '
-      Image :https://nuxt.com/assets/blog/v3.13.png
-      Datum : 2024 - 08 - 22
+collapse: true
+ignore:
+  - posts
+external:
+  - posts
+externalTypes:
+  - BlogPostProps[]
+props:
+  orientation: vertical
+  posts:
+    - title: Nuxt Icon v1
+      description: 'Discover Nuxt Icon v1!'
+      image: https://nuxt.com/assets/blog/nuxt-icon/cover.png
+      date: 2024-11-25
+    - title: Nuxt 3.14
+      description: 'Nuxt 3.14 is out!'
+      image: https://nuxt.com/assets/blog/v3.14.png
+      date: 2024-11-04
+    - title: Nuxt 3.13
+      description: 'Nuxt 3.13 is out!'
+      image: https://nuxt.com/assets/blog/v3.13.png
+      date: 2024-08-22
 ---
 ::
 
 ::tip
-Bei Verwendung des`posts`prop anstelle des Standard-Steckplatzes wird das`orientation`der Beiträge automatisch umgekehrt ,`horizontal`zu`vertical`und umgekehrt .
+Wenn Sie die `posts`-Prop anstelle des Standardsteckplatzes verwenden, wird die `orientation` der Pfosten automatisch umgekehrt, `horizontal` zu `vertical` und umgekehrt.
 ::
 
-@@ph042@@Beispiele
+## Examples (Deutsche Ausgabe)
 
 ::note
-Während in diesen Beispielen [Nuxt Content](https://content.nuxt.com) verwendet wird, können die Komponenten in jedes Content-Management-System integriert werden.
+Während diese Beispiele [Nuxt Content](https://content.nuxt.com) verwenden, können die Komponenten in jedes Content Management System integriert werden.
 ::
 
-### Innerhalb einer Seite
+### innerhalb einer Seite
 
-Verwenden Sie die Komponente BlogPosts in einer Seite, um eine Blogseite zu erstellen:
+Verwenden Sie die BlogPosts-Komponente in einer Seite, um eine Blogseite zu erstellen:
 
 ```vue [pages/blog/index.vue]{11-18}
 <script setup lang="ts">
@@ -125,27 +125,27 @@ const { data: posts } = await useAsyncData('posts', () => queryCollection('posts
 ```
 
 ::note
-In diesem Beispiel werden die `posts` mit `queryCollection` aus dem Modul `@nuxt/content` abgerufen.
+In diesem Beispiel werden die `posts` mit `queryCollection` aus dem `@nuxt/content`-Modul abgerufen.
 ::
 
 ::tip
-`to` prop wird hier überschrieben, da `@nuxt/content` die @@@-Eigenschaft verwendet.
+Die `to`-Prop wird hier überschrieben, da `@nuxt/content` die Eigenschaft `path` verwendet.
 ::
 
-## api
+## API (Englisch)
 
-@@@@@@@@@@@ph079@@props
+### Props (nicht)
 
-Komponenten-Props
+:component-props
 
-@@ph080@@slots
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-@@@@@@@@@ph081@@theme
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph082@@changelog @@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

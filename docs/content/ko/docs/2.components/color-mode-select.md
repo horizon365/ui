@@ -1,6 +1,6 @@
 ---
 title: ColorMode 선택
-description: '시스템, 어둡고 밝은 모드 사이를 전환하려면 선택합니다.'
+description: '시스템, 어둡고 밝은 모드 간에 전환하려면 선택합니다.'
 category: color-mode
 links:
   - label: SelectMenu 선택
@@ -11,18 +11,18 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/color-mode/ColorModeSelect.vue
 ---
 
-##  사용
+## Usage
 
-ColorModeSelect 구성 요소는 [SelectMenu](/docs/components/select-menu) 구성 요소를 확장하므로 `color`, `variant`, `size` 등과 같은 속성을 전달할 수 있습니다.
+ColorModeSelect 구성 요소는 [SelectMenu](/docs/components/select-menu) 구성 요소를 확장하므로 `color`, `variant`, `size` 등의 속성을 전달할 수 있습니다.
 
-: component-code {prefix="color-mode"}
+:component-code{prefix="color-mode"}
 
-##  예제
+## 예
 
-### 사용자 지정 아이콘
+### 사용자 정의 아이콘 포함
 
 ::framework-only
-#nuxt #nuxt
+#nuxt
 ::div
 
 `app.config.ts`를 사용하여 `ui.icons` 속성을 사용하여 아이콘을 사용자 정의합니다.
@@ -41,7 +41,7 @@ export default defineAppConfig({
 
 ::
 
-#vue #vue
+#vue
 ::div
 `vite.config.ts`를 사용하여 `ui.icons` 속성을 사용하여 아이콘을 사용자 정의합니다.
 
@@ -69,12 +69,12 @@ export default defineConfig({
 
 ::
 
-##  API
+## API
 
-### Props 이미지
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-##  Changelog
+## 변경 로그
 
-: component-changelog{prefix="color-mode"}
+:component-changelog{prefix="color-mode"}

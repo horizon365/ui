@@ -16,197 +16,197 @@ links:
 
 ## 使用法
 
-[ Button ](/docs/components/button)またはDrawerのデフォルトスロットにある他のコンポーネントを使用します。
+Drawerのデフォルトスロットにある[Button](/docs/components/button)またはその他のコンポーネントを使用します。
 
-次に、`#content`スロットを使用して、Drawerが開いているときに表示されるコンテンツを追加します。
+次に、`#content`スロットを使用して、Drawerが開いたときに表示されるコンテンツを追加します。
 
 ::component-code
 ---
-きれい真
-スロット
-  デフォルト|
+prettier: true
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  内容：|
+  content: |
 
     <Placeholder class="h-48 m-4" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="オープン" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#コンテンツ
-placeholder {class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-また、`#header`{lang="ts-type"}、`#body`{lang="ts-type"}、`#footer`{lang="ts-type"}スロットを使用してDrawerのコンテンツをカスタマイズすることもできます。
+`#header`{lang="ts-type"}、`#body`{lang="ts-type"}、`#footer`{lang="ts-type"}スロットを使用してDrawerのコンテンツをカスタマイズすることもできます。
 
-### タイトル
+### Title
 
-`title` propを使用して、Drawerのヘッダーのタイトルを設定します。
+`title`プロパティを使用して、Drawerのヘッダーのタイトルを設定します。
 
 ::component-code
 ---
-きれい真
-小道具
-  タイトル：「タイトル付き引き出し」
-スロット
-  デフォルト|
+prettier: true
+props:
+  title: 'Drawer with title'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-48" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="オープン" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
 #body
-placeholder {class="h-48"}
+:placeholder{class="h-48"}
 ::
 
-### 説明
+### Description
 
 `description`プロパティを使用して、Drawerのヘッダーの説明を設定します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  タイトル：「説明付き引き出し」
-  「Lorem ipsum dolor sit amet consectetur adipiscing elit」
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Drawer with description'
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-48" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="オープン" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
 #body
-placeholder {class="h-48"}
+:placeholder{class="h-48"}
 ::
 
-### 閉じるbadge {label="4.10+" class="align-text-top"}
+### 閉じるbadge{label="4.10+" class="align-text-top"}
 
 `close`プロパティを使用して、Drawerに閉じるボタンを表示します。デフォルトは`false`です。
 
-[ Button ](/docs/components/button)コンポーネントから任意のプロパティを渡してカスタマイズできます。
+[Button](/docs/components/button)コンポーネントの任意のプロパティを渡してカスタマイズできます。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-  -  close.color
-  -  close.variant
-小道具
-  title「閉じるボタン付き引き出し」
-  閉じる
-    色プライマリ
-    variantアウトライン
-    クラス：'rounded—full'
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+  - close.color
+  - close.variant
+props:
+  title: 'Drawer with close button'
+  close:
+    color: primary
+    variant: outline
+    class: 'rounded-full'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-48" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="オープン" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
 #body
-placeholder {class="h-48"}
+:placeholder{class="h-48"}
 ::
 
-### 閉じるアイコンbadge {label="4.10+" class="align-text-top"}
+### アイコンを閉じるbadge{label="4.10+" class="align-text-top"}
 
-`close-icon`プロパティを使用して、閉じるボタン[ Icon ](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-x`です。
+`close-icon`プロパティを使用して、閉じるボタン[Icon](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-x`です。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  title「閉じるボタン付き引き出し」
-  閉じるtrue
-  closeIcon 'i—lucide—arrow—right'
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Drawer with close button'
+  close: true
+  closeIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-48" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="オープン" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
 #body
-placeholder {class="h-48"}
+:placeholder{class="h-48"}
 ::
 
-### ディレクション
+### 方向
 
-Drawerの方向を制御するには`direction`プロパティを使用します。デフォルトは`bottom`です。
+Drawerの方向を制御するには、`direction`プロパティを使用します。デフォルトは`bottom`です。
 
 ::component-code
 ---
-きれい真
-小道具
-  方向'右'
-スロット
-  デフォルト|
+prettier: true
+props:
+  direction: 'right'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  内容：|
+  content: |
 
     <Placeholder class="min-w-96 min-h-96 size-full m-4" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="オープン" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#コンテンツ
-placeholder {class="min-w-96 min-h-96 size-full m-4"}
+#content
+:placeholder{class="min-w-96 min-h-96 size-full m-4"}
 ::
 
-### インセット
+### Inset
 
 `inset`プロパティを使用して、Drawerをエッジから挿入します。
 
 ::component-code
 ---
-きれい真
-小道具
-  方向'右'
-  インセットtrue
-スロット
-  デフォルト|
+prettier: true
+props:
+  direction: 'right'
+  inset: true
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  内容：|
+  content: |
 
     <Placeholder class="min-w-96 min-h-96 size-full m-4" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="オープン" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#コンテンツ
-placeholder {class="min-w-96 min-h-96 size-full m-4"}
+#content
+:placeholder{class="min-w-96 min-h-96 size-full m-4"}
 ::
 
 ### ハンドル
@@ -215,76 +215,76 @@ Drawerにハンドルがあるかどうかを制御するには、`handle`プロ
 
 ::component-code
 ---
-きれい真
-小道具
-  ハンドルfalse
-スロット
-  デフォルト|
+prettier: true
+props:
+  handle: false
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  内容：|
+  content: |
 
     <Placeholder class="h-48 m-4" />
 ---
 
-uボタン{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="オープン" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#コンテンツ
-placeholder {class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-### ハンドルのみ
+### Handle Only
 
 `handle-only`プロパティを使用して、Drawerをハンドルでのみドラッグできるようにします。
 
 ::component-code
 ---
-きれい真
-小道具
-  handleOnly true
-スロット
-  デフォルト|
+prettier: true
+props:
+  handleOnly: true
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  内容：|
+  content: |
 
     <Placeholder class="h-48 m-4" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="オープン" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#コンテンツ
-placeholder {class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
 ### オーバーレイ
 
-Drawerにオーバーレイがあるかどうかを制御するには、`overlay`プロパティを使用します。デフォルトは`true`です。
+`overlay`プロパティを使用して、Drawerにオーバーレイがあるかどうかを制御します。デフォルトは`true`です。
 
 ::component-code
 ---
-きれい真
-小道具
-  オーバーレイfalse
-スロット
-  デフォルト|
+prettier: true
+props:
+  overlay: false
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  内容：|
+  content: |
 
     <Placeholder class="h-48 m-4" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="オープン" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#コンテンツ
-placeholder {class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-###  Modal
+### Modal
 
 `modal`プロパティを使用して、Drawerが外部コンテンツとのインタラクションをブロックするかどうかを制御します。デフォルトは`true`です。
 
@@ -294,31 +294,31 @@ placeholder {class="h-48 m-4"}
 
 ::component-code
 ---
-きれい真
-小道具
-  モーダルfalse
-スロット
-  デフォルト|
+prettier: true
+props:
+  modal: false
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  内容：|
+  content: |
 
     <Placeholder class="h-48 m-4" />
 ---
 
-uボタン{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="オープン" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#コンテンツ
-placeholder {class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
 ###  Dismissible
 
-`dismissible`プロパティを使用して、Drawerの外側をクリックしたりescapeを押したりしたときにDrawerがdismissibleかどうかを制御します。デフォルトは`true`です。
+`dismissible`プロパティを使用して、Drawerの外側をクリックするかescapeを押したときにDrawerがdismissibleかどうかを制御します。デフォルトは`true`です。
 
 ::note
-`close:prevent`イベントは、ユーザーがそれを閉じようとすると発行されます。
+`close:prevent`イベントは、ユーザーがクローズしようとすると発行されます。
 ::
 
 ::tip
@@ -327,39 +327,39 @@ placeholder {class="h-48 m-4"}
 
 ::component-example
 ---
-きれい真
-名前'drawer—dismission—example'
+prettier: true
+name: 'drawer-dismissible-example'
 ---
 ::
 
-### スケール背景
+### Scale背景
 
-`should-scale-background`プロパティを使用して、Drawerが開いているときに背景を拡大し、視覚的な奥行き効果を作成します。`set-background-color-on-scale`プロパティを`false`に設定して、背景色の変更を防ぐことができます。
+`should-scale-background`プロパティを使用して、Drawerが開いているときに背景を拡大し、視覚的な奥行き効果を作成します。`set-background-color-on-scale`プロパティを`false`に設定すると、背景色の変更を防ぐことができます。
 
 ::component-code
 ---
-きれい真
-小道具
-  shouldScaleBackground true
-  setBackgroundColorOnScale true
-スロット
-  デフォルト|
+prettier: true
+props:
+  shouldScaleBackground: true
+  setBackgroundColorOnScale: true
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  内容：|
+  content: |
 
     <Placeholder class="h-48 m-4" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="オープン" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#コンテンツ
-placeholder {class="h-screen m-4"}
+#content
+:placeholder{class="h-screen m-4"}
 ::
 
 ::warning
-これを動作させるには、`data-vaul-drawer-wrapper`ディレクティブをアプリの親要素に追加してください。
+これを動作させるには、アプリケーションの親要素に`data-vaul-drawer-wrapper`ディレクティブを追加してください。
 
 ```vue [app.vue]
 <template>
@@ -390,90 +390,90 @@ export default defineNuxtConfig({
 
 ###  Controlオープンステート
 
-`default-open` propまたは`v-model:open`ディレクティブを使用してオープン状態を制御できます。
+オープン状態は`default-open`プロパティまたは`v-model:open`ディレクティブを使用して制御できます。
 
 ::component-example
 ---
-きれい真
-名前'drawer—open—example'
+prettier: true
+name: 'drawer-open-example'
 ---
 ::
 
 ::note
-この例では、[`defineShortcuts`](/docs/composables/define-shortcuts)を活用して、kbd {value="O"}を押してDrawerを切り替えることができます。
+この例では、[`defineShortcuts`](/docs/composables/define-shortcuts)を活用して、kbd{value="O"}を押してDrawerを切り替えることができます。
 ::
 
 ::tip
 これにより、トリガーを引き出しの外側に移動したり、完全に削除したりできます。
 ::
 
-###  Responsiveドロワー
+### Responsiveドロワー
 
-たとえば、[ Modal ](/docs/components/modal)コンポーネントをデスクトップで、Drawerをモバイルでレンダリングできます。
+例えば、[Modal](/docs/components/modal)コンポーネントをデスクトップで、Drawerをモバイルでレンダリングできます。
 
 ::component-example
 ---
-きれい真
-名前'drawer—responsive'
+prettier: true
+name: 'drawer-responsive-example'
 ---
 ::
 
-### ネストされた引き出し
+### 入れ子の引き出し
 
-`nested` propを使用して、ドロワー同士をネストできます。
+`nested`プロパティを使用して、ドロワー同士をネストできます。
 
 ::component-example
 ---
-きれい真
-名前'drawer—nested—example'
+prettier: true
+name: 'drawer-nested-example'
 ---
 ::
 
 ### フッタースロット付き
 
-`#footer`スロットを使用して、Drawerの本体の後にコンテンツを追加します。
+`#footer`スロットを使用して、Drawer本体の後にコンテンツを追加します。
 
 ::component-example
 ---
-きれい真
-崩壊真
-名前'drawer—footer—slot—example'
+prettier: true
+collapse: true
+name: 'drawer-footer-slot-example'
 ---
 ::
 
-### コマンドパレット付き
+### Withコマンドパレット
 
-Drawerのコンテンツ内で[ CommandPalette ](/docs/components/command-palette)コンポーネントを使用できます。
+Drawerのコンテンツ内で[ CommandPalette](/docs/components/command-palette)コンポーネントを使用できます。
 
 ::component-example
 ---
-崩壊真
-名前'drawer—command—palette—example'
+collapse: true
+name: 'drawer-command-palette-example'
 ---
 ::
 
 ::note
-この例では、`useLazyFetch`と`immediate: false`を使用して、Drawerが開いたときにのみデータを取得します。
+この例では`useLazyFetch`と`immediate: false`を使用して、Drawerが開いたときにのみデータをフェッチします。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

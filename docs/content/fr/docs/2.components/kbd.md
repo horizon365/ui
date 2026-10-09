@@ -11,130 +11,130 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Kbd.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Utilisez le slot par défaut pour définir la valeur du Kbd.
 
 ::component-code
 ---
-Slots:
-  Défaut: K
+slots:
+  default: K
 ---
 ::
 
-@@ph001@valeur
+### Valeur
 
 Utilisez la prop `value` pour définir la valeur du Kbd.
 
 ::component-code
 ---
-Props:
-  Valeur: K
+props:
+  value: K
 ---
 ::
 
-Vous pouvez passer des clés spéciales à la prop `value` qui passe par le [`useKbd`](https://github.com/nuxt/ui/blob/v4/src/runtime/composables/useKbd.ts) composable. Par exemple, la clé `meta` s'affiche comme `⌘` sur macOS et `Ctrl` sur d'autres plateformes.
+Vous pouvez passer des touches spéciales à la prop `value` qui passe par le composable [`useKbd`](https://github.com/nuxt/ui/blob/v4/src/runtime/composables/useKbd.ts). Par exemple, la touche `meta` s'affiche sous la forme `⌘` sur macOS et `Ctrl` sur d'autres plates-formes.
 
 ::component-code
 ---
-Props:
-  Valeur: meta
+props:
+  value: meta
 items:
-  Valeur:
-    @@ph012@méta
-    @@g013@gagnant
-    @@ph014@commande
-    @@15@@shift
-    @@ctrl @ctrl
-    @@ph017@option
-    @@ph018
-    @@P19@entrée
-    @200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @@21@rétroaction
-    @@22@échappé
-    @@23@tab
-    @@24@capsule
-    @250@@Arrouette
-    @26@@Arrowright
-    @@@27@@Arrowdown
-    @@28@@Arrowleft
-    @@29@@pha29
-    @@ph030@@ph030
-    @@ph031@home
-    @@ph032@fin
+  value:
+    - meta
+    - win
+    - command
+    - shift
+    - ctrl
+    - option
+    - alt
+    - enter
+    - delete
+    - backspace
+    - escape
+    - tab
+    - capslock
+    - arrowup
+    - arrowright
+    - arrowdown
+    - arrowleft
+    - pageup
+    - pagedown
+    - home
+    - end
 ---
 ::
 
-@@pH033@@couleur
+### Couleur
 
-Utilisez la prop `color` pour changer la couleur du Kbd.
+Utilisez le prop `color` pour changer la couleur du Kbd.
 
 ::component-code
 ---
-Props:
-  Couleur: Neutre
-Slots:
-  Défaut: K
+props:
+  color: neutral
+slots:
+  default: K
 ---
 ::
 
-### Variant
+### Variant équivalent
 
-Utilisez la prop `variant` pour modifier la variante du Kbd.
+Utilisez le prop `variant` pour changer la variante du Kbd.
 
 ::component-code
 ---
-Props:
-  Couleur: Neutre
-  Variante: solide
-Slots:
-  Défaut: K
+props:
+  color: neutral
+  variant: solid
+slots:
+  default: K
 ---
 ::
 
-@@ph037@série
+### taille
 
-Utilisez la prop `size` pour modifier la taille du Kbd.
+Utilisez le prop `size` pour modifier la taille du Kbd.
 
 ::component-code
 ---
-Props:
-  Taille: LG
-Slots:
-  Défaut: K
+props:
+  size: lg
+slots:
+  default: K
 ---
 ::
 
-@@ph039@exemples
+## Exemples
 
-@@
+### x`class` prop
 
-Utilisez la prop `class` pour remplacer les styles de base du badge.
+Utilisez le prop `class` pour remplacer les styles de base du badge.
 
 ::component-code
 ---
-Props:
-  classe: 'font-bold rounded-full'
-  Variante: subtile
-Slots:
-  Défaut: K
+props:
+  class: 'font-bold rounded-full'
+  variant: subtle
+slots:
+  default: K
 ---
 ::
 
-@@ph043@@api
+## API
 
-@@444@propriété
+### Props
 
-Composants-props
+:component-props
 
 ### Slots
 
-Composants slots
+:component-slots
 
-@@ph046@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

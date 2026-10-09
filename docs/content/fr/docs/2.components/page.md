@@ -7,7 +7,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Page.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
 Le composant Page vous aide à créer des mises en page avec des colonnes optionnelles de gauche et de droite. Il est parfait pour créer des sites de documentation et d'autres pages axées sur le contenu.
 
@@ -25,13 +25,13 @@ Le composant Page vous aide à créer des mises en page avec des colonnes option
 La page s'affiche sous la forme d'une mise en page à colonne centrée si aucun emplacement n'est spécifié.
 ::
 
-@@ph010@exemples
+## Exemples
 
 ::note
 Bien que ces exemples utilisent [Nuxt Content](https://content.nuxt.com), les composants peuvent être intégrés à n'importe quel système de gestion de contenu.
 ::
 
-### Dans une mise en page
+### Dans un layout
 
 Utilisez le composant Page dans une mise en page avec l'emplacement `left` pour afficher une navigation:
 
@@ -61,7 +61,7 @@ Dans cet exemple, nous utilisons le composant `ContentNavigation` pour afficher 
 
 ### Dans une page
 
-Utilisez le composant Page dans une page avec l'emplacement `right` pour afficher une table des matières:
+Use the Page component in a page with the `right` slot to display a table of contents:
 
 ```vue [pages/\[...slug\\].vue]{29-31}
 <script setup lang="ts">
@@ -100,23 +100,23 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 ```
 
 ::note
-Dans cet exemple, nous utilisons le composant `ContentToc` pour afficher la table des matières.
+In this example, we use the `ContentToc` component to display the table of contents.
 ::
 
-@@ph076@@api
+## api
 
-@@777@référencement
+### Props équipement
 
-Composants-props
+:component-props
 
-@@788@@réseau
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph079@thème
+## thème
 
-Composant-thème
+:component-theme
 
-@changelog 800
+## Changelog
 
-Composant-changelog
+:component-changelog

@@ -10,240 +10,240 @@ links:
 ---
 
 ::warning{to="/docs/getting-started/integrations/content"}
-이 구성 요소는 `@nuxt/content` 모듈이 설치된 경우에만 사용할 수 있습니다.
+이 구성요소는 `@nuxt/content` 모듈이 설치된 경우에만 사용할 수 있습니다.
 ::
 
-##  사용
+## Usage
 
-앱 탐색을 가져올 때 얻은 `navigation`{lang="ts-type"} 값과 함께 `navigation`prop을 사용하십시오.
+앱 탐색을 가져올 때 얻은 `navigation`{lang="ts-type"} 값과 함께 `navigation` prop을 사용합니다.
 
 ::component-example
 ---
-이름: "content-navigation-example"
-클래스: H-96 overflow-y-auto
+name: 'content-navigation-example'
+class: 'h-96 overflow-y-auto'
 overflowHidden: true
-소품 :
-  클래스: 'w-full'
+props:
+  class: 'w-full'
 ---
 ::
 
-###  유형
+### Type 형식
 
-`type`prop을 `single`로 설정하여 한 번에 하나의 항목만 열 수 있도록 합니다. 기본값은 `multiple`입니다.
+`type` prop을 `single`로 설정하여 한 번에 하나의 항목만 열 수 있도록 합니다. 기본값은 `multiple`입니다.
 
 ::component-code{prefix="content"}
 ---
-상품명 : True
-축소: true
-외부:
-  -  navigation
+prettier: true
+collapse: true
+external:
+  - navigation
 externalTypes:
-  -  ContentNavigationLink []
-프로젝트:
-  문자:
-  -  '싱글'
-  - multiple' 다중
-숨기기 (Hide):
-  -  클래스
-  -  navigation
-소품 :
-  클래스 : 'w-full'
-  타입: 'single'
-  탐색 :
-    - title: '가이드'
-      아이콘: i-lucide-book-open
-      경로: '#getting-started'
-      1차 하위 항목:
-        - title: '소개'
-          경로: #introduction
-          활성: true
-        - title: '설치'
-          경로: "#installation"
+  - ContentNavigationLink[]
+items:
+  type:
+  - 'single'
+  - 'multiple'
+hide:
+  - class
+  - navigation
+props:
+  class: 'w-full'
+  type: 'single'
+  navigation:
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+        - title: 'Introduction'
+          path: '#introduction'
+          active: true
+        - title: 'Installation'
+          path: '#installation'
     - title: 'Composables'
-      아이콘: 'i-lucide-database'
-      경로: "#composables"
-      1차 하위 항목:
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
         - title: 'defineShortcuts'
-          #defineshortcuts 경로: #defineshortcuts
+          path: '#defineshortcuts'
         - title: 'useModal'
-          경로 : #usemodal
+          path: '#usemodal'
 ---
 ::
 
-###  색상
+### Color 색상
 
-`color`prop을 사용하여 탐색 링크의 색을 변경합니다.
+`color` 소품을 사용하여 탐색 링크의 색상을 변경합니다.
 
 ::component-code{prefix="content"}
 ---
-상품명 : True
-축소: true
-외부:
-  -  navigation
+prettier: true
+collapse: true
+external:
+  - navigation
 externalTypes:
-  -  ContentNavigationLink []
-숨기기 (Hide):
-  -  클래스
-  -  navigation
-소품 :
-  클래스 : 'w-full'
-  색상 : Neutral
-  탐색 :
-    - title: '가이드'
-      아이콘: i-lucide-book-open
-      경로: '#getting-started'
-      1차 하위 항목:
-      - title: '소개'
-        경로: #introduction
-        활성: true
-      - title: '설치'
-        경로: "#installation"
-    - title: '합성 가능'
-      아이콘: i-lucide-database
-      경로: "#composables"
-      1차 하위 항목:
+  - ContentNavigationLink[]
+hide:
+  - class
+  - navigation
+props:
+  class: 'w-full'
+  color: 'neutral'
+  navigation:
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
       - title: 'defineShortcuts'
-        경로: #defineshortcuts
+        path: '#defineshortcuts'
       - title: 'useModal'
-        경로 : #usemodal
+        path: '#usemodal'
 ---
 ::
 
-###  변형
+### 변형
 
-`variant`prop 을 사용하여 탐색 링크의 변형을 변경합니다.
+`variant` Prop을 사용하여 탐색 링크의 변형을 변경합니다.
 
 ::component-code{prefix="content"}
 ---
-상품명 : True
-축소: true
-외부:
-  -  navigation
+prettier: true
+collapse: true
+external:
+  - navigation
 externalTypes:
-  -  ContentNavigationLink []
-숨기기 (Hide):
-  - class 클래스
-  -  navigation
-프로젝트:
-  변형:
-  -  link '
-  -  pill '
-소품 :
-  클래스 : 'w-full'
-  변수: 'link'
-  탐색 :
-    - title: '가이드'
-      아이콘: i-lucide-book-open
-      경로: '#getting-started'
-      1차 하위 항목:
-      - title: '소개'
-        경로: #introduction
-        활성: true
-      - title: '설치'
-        경로: "#installation"
-    - title: '합성 가능'
-      아이콘: 'i-lucide-database'
-      경로: "#composables"
-      1차 하위 항목:
+  - ContentNavigationLink[]
+hide:
+  - class
+  - navigation
+items:
+  variant:
+  - 'link'
+  - 'pill'
+props:
+  class: 'w-full'
+  variant: 'link'
+  navigation:
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
       - title: 'defineShortcuts'
-        경로: #defineshortcuts
+        path: '#defineshortcuts'
       - title: 'useModal'
-        경로 : #usemodal
+        path: '#usemodal'
 ---
 ::
 
-###  하이라이트
+### Highlight 이미지
 
-`highlight`prop을 사용하여 활성 링크의 강조 표시된 테두리를 표시합니다.
+`highlight` Prop을 사용하여 활성 링크의 강조 표시된 테두리를 표시합니다.
 
-`highlight-color`prop을 사용하여 테두리 색상을 변경합니다. 기본값은 `color`prop입니다.
+`highlight-color` prop을 사용하여 테두리 색상을 변경합니다. 기본적으로 `color` prop이 사용됩니다.
 
 ::component-code{prefix="content"}
 ---
-상품명 : True
-축소: true
-외부:
-  -  navigation
+prettier: true
+collapse: true
+external:
+  - navigation
 externalTypes:
-  -  ContentNavigationLink []
-숨기기 (Hide):
-  -  클래스
-  -  navigation
-소품 :
-  클래스: 'w-full'
-  강조 표시: true
-  highlightColor: '기본'
-  색상 : primary
-  제목: Pill
-  탐색 :
-    - title: '가이드'
-      아이콘 : i-lucide-book-open
-      경로: '#getting-started'
-      1차 하위 항목:
-      - title: '소개'
-        경로: #introduction
-        활성: true
-      - title: '설치'
-        경로: "#installation"
-    - title: '합성 가능'
-      아이콘: i-lucide-database
-      경로: '#composables'
-      1차 하위 항목:
+  - ContentNavigationLink[]
+hide:
+  - class
+  - navigation
+props:
+  class: 'w-full'
+  highlight: true
+  highlightColor: 'primary'
+  color: 'primary'
+  variant: 'pill'
+  navigation:
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
       - title: 'defineShortcuts'
-        경로: #defineshortcuts
+        path: '#defineshortcuts'
       - title: 'useModal'
-        경로 : #usemodal
+        path: '#usemodal'
 ---
 ::
 
-### 트레일링 아이콘
+### 트레일 아이콘
 
-`trailing-icon`prop을 사용하여 하위 항목의 후행 [Icon](/docs/components/icon) 을 사용자 정의합니다. 기본값은 `i-lucide-chevron-down`입니다.
+`trailing-icon` 소품을 사용하여 하위 항목이 있는 항목의 뒤에 있는 [Icon](/docs/components/icon)를 사용자 정의합니다. 기본값은 `i-lucide-chevron-down`입니다.
 
 ::component-code{prefix="content"}
 ---
-상품명 : True
-축소: true
-외부:
-  -  navigation
+prettier: true
+collapse: true
+external:
+  - navigation
 externalTypes:
-  -  ContentNavigationLink []
-숨기기 (Hide):
-  -  클래스
-  -  navigation
-소품 :
-  클래스 : 'w-full'
+  - ContentNavigationLink[]
+hide:
+  - class
+  - navigation
+props:
+  class: 'w-full'
   trailingIcon: 'i-lucide-arrow-up'
-  탐색 :
-    - title: '가이드'
-      아이콘: i-lucide-book-open
-      경로: '#getting-started'
-      1차 하위 항목:
-      - title: '소개'
-        경로: #introduction
-        활성: true
-      - title: '설치'
-        경로: "#installation"
-    - title: '합성 가능'
-      아이콘: i-lucide-database
-      경로: '#composables'
-      1차 하위 항목:
+  navigation:
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
       - title: 'defineShortcuts'
-        경로: #defineshortcuts
+        path: '#defineshortcuts'
       - title: 'useModal'
-        경로: #usemodal
+        path: '#usemodal'
 ---
 ::
 
 ::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.chevronDown` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.chevronDown` 키 아래의 `app.config.ts` 내에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 ::
 
-##  예
+## examples 예제
 
-###  레이아웃 내에서
+### 레이아웃 내에서
 
-레이아웃 내에서 [PageAside](/docs/components/page-aside) 구성 요소 내에 있는 ContentNavigation 구성 요소를 사용하여 페이지 탐색을 표시합니다.
+레이아웃 내의 [PageAside](/docs/components/page-aside) 구성 요소 내에서 ContentNavigation 구성 요소를 사용하여 페이지 탐색을 표시합니다.
 
 ```vue [layouts/docs.vue]{11}
 <script setup lang="ts">
@@ -265,9 +265,9 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 </template>
 ```
 
-###  헤더 내에서
+### header 내부
 
-[Header](/docs/components/header) 구성요소의 `content` 슬롯 안에 있는 ContentNavigation 구성요소를 사용하여 모바일에서 페이지 탐색을 표시합니다.
+[Header](/docs/components/header) 구성 요소의 `content` 슬롯 안에 있는 ContentNavigation 구성 요소를 사용하여 모바일에서 페이지 탐색을 표시합니다.
 
 ```vue [components/Header.vue]{9-11}
 <script setup lang="ts">
@@ -285,24 +285,24 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 </template>
 ```
 
-##  API
+## API
 
-### Props @ 프로
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### 슬롯
 
-:컴포넌트 - 슬롯
+:component-slots
 
-###  에미츠
+### Emits
 
-:구성요소 - 방출
+:component-emits
 
-##  테마
+## Theme (## 테마)
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-: component-changelog{prefix="content"}
+:component-changelog{prefix="content"}

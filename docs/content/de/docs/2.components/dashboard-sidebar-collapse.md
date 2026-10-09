@@ -1,5 +1,5 @@
 ---
-title: DashboardSidebarCollapse Bearbeiten
+title: DashboardSidebarCollapse (Übersicht)
 description: 'Ein Button, um die Sidebar auf dem Desktop zu reduzieren.'
 category: dashboard
 links:
@@ -11,32 +11,32 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardSidebarCollapse.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Die Komponente DashboardSidebarCollapse wird verwendet, um die Komponente [DashboardSidebar](/docs/components/dashboard-sidebar) Komponente **wenn die `collapsible` prop gesetzt ist ** zu reduzieren/erweitern.
+Die Komponente DashboardSidebarCollapse wird verwendet, um die [DashboardSidebar](/docs/components/dashboard-sidebar)-Komponente ** zu reduzieren/zu erweitern, wenn die `collapsible`-Prop auf ** gesetzt ist.
 
-Der Komponentencode
+:component-code
 
-Es erweitert die Komponente [Button](/docs/components/button), so dass Sie jede Eigenschaft wie `color`,`variant`,`size` usw. übergeben können.
+Es erweitert die Komponente [Button](/docs/components/button), so dass Sie jede Eigenschaft wie `color`, `variant`, `size` usw. übergeben können.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph015@@variant.de
-Props:
-  Variante: "Unterwürfig"
+ignore:
+  - variant
+props:
+  variant: 'subtle'
 ---
 ::
 
 ::note
-Die Schaltfläche ist standardmäßig auf `color="neutral"` und `variant="ghost"`.
+Die Standardeinstellungen für die Schaltfläche sind `color="neutral"` und `variant="ghost"`.
 ::
 
-@@ph018 @ Beispiele
+## Examples (Beispiele)
 
-@@ph019@@@ph020
+### Innerhalb des `header` Steckplatzes
 
-Sie können diese Komponente in den `header`-Slot der [DashboardSidebar](/docs/components/dashboard-sidebar)-Komponente einfügen und die `collapsed`-Prop verwenden, um den linken Teil des Headers auszublenden, zum Beispiel:
+Sie können diese Komponente in den `header`-Steckplatz der [DashboardSidebar](/docs/components/dashboard-sidebar)-Komponente einfügen und die `collapsed`-Prop verwenden, um den linken Teil des Headers auszublenden, zum Beispiel:
 
 ```vue [layouts/dashboard.vue]{4-8}
 <template>
@@ -54,9 +54,9 @@ Sie können diese Komponente in den `header`-Slot der [DashboardSidebar](/docs/c
 </template>
 ```
 
-@@ph042@@@ph043
+### Innerhalb des `leading` Steckplatzes
 
-Sie können diese Komponente in den `leading`-Schlitz der Komponente [DashboardNavbar](/docs/components/dashboard-navbar) einfügen, um sie beispielsweise vor dem Titel anzuzeigen:
+Sie können diese Komponente in den `leading`-Slot der Komponente [DashboardNavbar](/docs/components/dashboard-navbar) einfügen, um sie beispielsweise vor dem Titel anzuzeigen:
 
 ```vue [pages/index.vue]{11-13}
 <script setup lang="ts">
@@ -78,20 +78,20 @@ definePageMeta({
 </template>
 ```
 
-## api
+## API (Englisch)
 
-@@@@@@@@@@@@ph069@@props
+### Props (englisch)
 
-Komponenten Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
 Diese Komponente unterstützt auch alle nativen `<button>` HTML-Attribute.
 ::
 
-@@@@@@@@@ph071@theme
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph072@@changelog @@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

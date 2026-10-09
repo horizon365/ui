@@ -13,77 +13,77 @@ links:
 ---
 
 ::warning{to="/docs/getting-started/integrations/content"}
-Este componente sólo está disponible cuando el módulo `@nuxt/content` está instalado.
+Este componente solo está disponible cuando se instala el módulo `@nuxt/content`.
 ::
 
-@@pH001@@El uso
+## Servicio
 
-El componente ContentSearchButton se utiliza para abrir el [ContentSearch](/docs/components/content-search) modal.
+El componente ContentSearchButton se utiliza para abrir el modal [ContentSearch](/docs/components/content-search).
 
-: código de componentes {prefix="content"}
+:component-code{prefix="content"}
 
-Se extiende el [Button](/docs/components/button) componente, por lo que puede pasar cualquier propiedad, como `color`,`variant`,`size`, etc
+Extiende el componente [Button](/docs/components/button), por lo que puede pasar cualquier propiedad como `color`, `variant`, `size`, etc.
 
 ::component-code{prefix="content"}
 ---
-Ignora:
-  @@P014@Variación
-Props:
-  Variación:"Sutil"
+ignore:
+  - variant
+props:
+  variant: 'subtle'
 ---
 ::
 
 ::note{to="#collapsed"}
-El botón por defecto es `color="neutral"` y `variant="outline"` cuando no está colapsado,`variant="ghost"` cuando está colapsado
+El botón por defecto es `color="neutral"` y `variant="outline"` cuando no se colapsa, `variant="ghost"` cuando se colapsa.
 ::
 
-@180000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Colapsado
 
 Utilice el prop `collapsed` para mostrar la etiqueta del botón y [kbds](#kbds).
 
 ::component-code{prefix="content"}
 ---
-Categoría: true
-Props:
-  Colapsado: Falso
+prettier: true
+props:
+  collapsed: false
 ---
 ::
 
-@@25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### kbds (en inglés)
 
-Utilice el `kbds` prop para mostrar las teclas del teclado en el botón. Predeterminados a `['meta', 'K']`{lang="ts-type"} para que coincida con el acceso directo predeterminado del componente [ContentSearch](/docs/components/content-search#shortcut).
+Utilice el prop `kbds` para mostrar las teclas del teclado en el botón. Predeterminados a `['meta', 'K']`{lang="ts-type"} para que coincida con el acceso directo predeterminado del componente [ContentSearch](/docs/components/content-search#shortcut).
 
 ::component-code{prefix="content"}
 ---
-Categoría: true
-Ignora:
-  @@333@333@333@333@333@333@333@333@333@333@3333@3333@3333@3333@33333@33333@3333@3333@3333@3333@3333@3333@3333333@333333333@333333333@33333333@333333333333@3333333333333@3333333333333333333333333333333333333333333333333333333333333333333333333333333333
-Props:
-  Colapsado: Falso
-  kbd:
-    @@pH034 @@'Alto'.
-    @@pH035 @@'y'
+prettier: true
+ignore:
+  - kbds
+props:
+  collapsed: false
+  kbds:
+    - 'alt'
+    - 'O'
 ---
 ::
 
-@@pH036@@pH036
+## API (Edición española)
 
-@@@3700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Accesorios
 
-Componentes Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-Este componente también soporta todos los atributos HTML nativos `<button>`.
+Este componente también admite todos los atributos HTML nativos `<button>`.
 ::
 
-@@39@39@39
+### Slots (Edición española)
 
-Componentes de slots
+:component-slots
 
-@@pH040@@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@@changelog
+## Changelog (Edición española)
 
-por: component-changelog {prefix="content"}
+:component-changelog{prefix="content"}

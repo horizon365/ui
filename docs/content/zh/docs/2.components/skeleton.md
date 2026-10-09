@@ -10,26 +10,26 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Skeleton.vue
 ---
 
-## 使用情况
+## 用法
 
 按原样使用“骨架”组件显示占位符。
 
-：组件示例{name="skeleton-example"}
+:component-example{name="skeleton-example"}
 
 ## API
 
 ### Props
 
-：组件-支柱
+:component-props
 
-### Slots
+### 老虎机
 
-：组件插槽
+:component-slots
 
 ## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

@@ -9,33 +9,33 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/FieldGroup.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Gruppieren Sie die Felder in einer Liste.
+Gruppieren Sie Felder in einer Liste.
 
 :::code-preview
 
 ::field-group{class="my-0"}
 
   ::field{name="analytics" type="boolean"}
-  Standardmäßig ist `false`. Ermöglicht Analysen für Ihr Projekt (in Kürze).
+  Standardmäßig ist `false`. Enables Analytics für Ihr Projekt (in Kürze verfügbar).
   ::
 
   ::field{name="blob" type="boolean"}
-  Standardmäßig auf `false`. Ermöglicht Blob-Speicher zum Speichern statischer Assets wie Bilder, Videos und mehr.
+  Standardmäßig `false`. Ermöglicht Blob-Speicher, um statische Assets wie Bilder, Videos und mehr zu speichern.
   ::
 
   ::field{name="cache" type="boolean"}
-  Standardmäßig auf `false`. Ermöglicht Cache-Speicher, um Antworten oder Funktionen Ihrer Serverroute mit Nitros `cachedEventHandler` und `cachedFunction` zwischenzuspeichern.
+  Standardmäßig `false`. Ermöglicht den Cache-Speicher, um die Antworten oder Funktionen Ihrer Serverroute mit Nitros `cachedEventHandler` und `cachedFunction` zwischenzuspeichern.
   ::
 
   ::field{name="database" type="boolean"}
-  Standardmäßig auf `false`. Ermöglicht der SQL-Datenbank, die Daten Ihrer Anwendung zu speichern.
+  Standardmäßig ist `false`. Ermöglicht der SQL-Datenbank, die Daten Ihrer Anwendung zu speichern.
   ::
 
 ::
 
-#Der Code
+#code
 
 ```mdc
 ::field-group
@@ -59,20 +59,20 @@ Gruppieren Sie die Felder in einer Liste.
 
 :::
 
-## api@@api@@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api@api26
+## API
 
-@@@ph027@@Props
+### Props Bearbeiten
 
-: component-props {prose}
+:component-props{prose}
 
-@@ph029@@slots
+### Slots Bearbeiten
 
-: component-slots {prose}
+:component-slots{prose}
 
-@@ph031@gmail.de
+## Theme Bearbeiten
 
-: component-theme {prose}
+:component-theme{prose}
 
-@@ph033@changelog @ changelog
+## Changelog (englisch)
 
-: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

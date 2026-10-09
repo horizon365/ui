@@ -14,107 +14,107 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Tabs.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Utilisez le composant onglets pour afficher une liste d'éléments dans des onglets.
 
 ::component-example
 ---
-Collapse: vrai
-Étiquette: true
-nom: 'tableau exemple'
-Props:
-  Catégorie: w-full
+collapse: true
+prettier: true
+name: 'tabs-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-@@ph001@@éléments
+### Éléments
 
 Utilisez le prop `items` comme un tableau d'objets avec les propriétés suivantes:
 
-@@
-@@
-@@
-@@
-@@
-@@
-@@
-@@
-@@
-@@
+- x`label?: string`x{lang="ts-type"}
+- x`icon?: string`xx{lang="ts-type"}
+- x`avatar?: AvatarProps`xx{lang="ts-type"}
+- x`badge?: string | number | BadgeProps`xx{lang="ts-type"}
+- x`content?: string`xx{lang="ts-type"}
+- x`value?: string | number`x{lang="ts-type"}
+- x`disabled?: boolean`x{lang="ts-type"}
+Xph031xx[x`slot?: string`x{lang="ts-type"}x](x#with-custom-slotx)
+- x`class?: any`x{lang="ts-type"}
+- x`ui?: { trigger?: ClassNameValue, leadingIcon?: ClassNameValue, leadingAvatar?: ClassNameValue, leadingAvatarSize?: ClassNameValue, label?: ClassNameValue, trailingBadge?: ClassNameValue, trailingBadgeSize?: ClassNameValue, content?: ClassNameValue }`x{lang="ts-type"}
 
 ::component-code
 ---
-ignorer:
-  @@ph037@articles
-  @@ph038@classe
-Extérieure:
-  @@ph039@articles
-Extérieurs:
-  @@P0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
   items:
-    - label: Compte
+    - label: Account
       icon: 'i-lucide-user'
-      content: "Ceci est le contenu du compte."
-    - label: mot de passe
-      Icône: i-lucide-lock
-      content: 'Ceci est le contenu du mot de passe.'
-  Catégorie: w-full
+      content: 'This is the account content.'
+    - label: Password
+      icon: 'i-lucide-lock'
+      content: 'This is the password content.'
+  class: 'w-full'
 ---
 ::
 
-@@ph043@contenu
+### Contenu
 
-Définissez la prop `content` à `false` pour rendre les déclencheurs sans panneaux. Par défaut à `true`.
+Réglez la prop `content` sur `false` pour rendre les déclencheurs sans panneaux.
 
 ::component-code
 ---
-Ignorer:
-  @@ph047@contenu
-  @@ph048@articles
-  @@ph049@classe
-Extérieure:
-  @@ph050@articles
-Extérieurs:
-  @@501@Téléchargement []
-Props:
-  Contenu: faux
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  content: false
   items:
-    - label: Compte
+    - label: Account
       icon: 'i-lucide-user'
-      content: "Ceci est le contenu du compte."
-    - label: mot de passe
-      Icône: i-lucide-lock
-      content: 'Ceci est le contenu du mot de passe.'
-  Catégorie: w-full
+      content: 'This is the account content.'
+    - label: Password
+      icon: 'i-lucide-lock'
+      content: 'This is the password content.'
+  class: 'w-full'
 ---
 ::
 
-@@500@@unmount
+### Unmount
 
-Utilisez la prop `unmount-on-hide` pour empêcher le contenu d'être démonté lorsque les onglets sont réduits. Par défaut à `true`.
+Utilisez la prop `unmount-on-hide` pour empêcher que le contenu ne soit démonté lorsque les onglets sont réduits.
 
 ::component-code
 ---
-ignorer:
-  @@57@contenu
-  @@508@articles
-  @@ph059@classe
-Extérieure:
-  @@ph060@articles
-Extérieurs:
-  - Télécharger []
-Props:
-  Défaut: False
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  unmountOnHide: false
   items:
-    - label: Compte
+    - label: Account
       icon: 'i-lucide-user'
-      content: "Ceci est le contenu du compte."
-    - label: mot de passe
-      Icône: i-lucide-lock
-      content: 'Ceci est le contenu du mot de passe.'
-  Catégorie: w-full
+      content: 'This is the account content.'
+    - label: Password
+      icon: 'i-lucide-lock'
+      content: 'This is the password content.'
+  class: 'w-full'
 ---
 ::
 
@@ -122,181 +122,181 @@ Props:
 Vous pouvez inspecter le DOM pour voir le contenu de chaque élément rendu.
 ::
 
-@@pH064@couleur
+### Couleur
 
-Utilisez la prop `color` pour changer la couleur des onglets.
+Utilisez le prop `color` pour changer la couleur des onglets.
 
 ::component-code
 ---
-Ignorer:
-  @@ph066@contenu
-  @@ph067@articles
-  @@ph068@classe
-Extérieure:
-  @@ph069@articles
-Extérieurs:
-  @@70000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Couleur: Neutre
-  Contenu: faux
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  color: neutral
+  content: false
   items:
-    - label: Compte
-    - label: mot de passe
-  Catégorie: w-full
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
-@@73@@Variant
+### Variant
 
-Utilisez la prop `variant` pour changer la variante des onglets.
+Utilisez le prop `variant` pour changer la variante des onglets.
 
 ::component-code
 ---
-ignorer:
-  @@75@contenu
-  @@ph076@articles
-  @@ph077@classe
-Extérieure:
-  @@ph078@articles
-Extérieurs:
-  @@779@téléchargement []
-Props:
-  Couleur: Neutre
-  Variante: lien
-  Contenu: faux
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  color: neutral
+  variant: link
+  content: false
   items:
-    - label: Compte
-    - label: mot de passe
-  Catégorie: w-full
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
-@@ph082@série
+### Size
 
-Utilisez la prop `size` pour modifier la taille des onglets.
+Utilisez le prop `size` pour modifier la taille des onglets.
 
 ::component-code
 ---
-ignorer:
-  @@ph084@contenu
-  @@ph085@articles
-  @@ph086@classe
-Extérieur:
-  @@ph087@articles
-Extérieurs:
-  @@888@888@888 [réf. nécessaire]
-Props:
-  Étiquette: MD
-  Variante: pilule
-  Contenu: faux
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  size: md
+  variant: pill
+  content: false
   items:
-    - label: Compte
-    - label: mot de passe
-  Catégorie: w-full
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
 ### Référencement
 
-Utilisez la prop `orientation` pour modifier l'orientation des onglets. Defaults à `horizontal`.
+Utilisez la prop `orientation` pour changer l'orientation des onglets. Defaults à `horizontal`.
 
 ::component-code
 ---
-Ignorer:
-  @@ph094@contenu
-  @@@ph095@articles
-  @@ph096@classe
-Extérieur:
-  @@ph097@articles
-Extérieurs:
-  @@P098@@Télécharger []
-Props:
-  Orientation: verticale
-  Variante: pilule
-  Contenu: faux
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  orientation: vertical
+  variant: pill
+  content: false
   items:
-    - label: Compte
-    - label: mot de passe
-  Catégorie: w-full
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
-@@ph101@exemples
+## exemples
 
-### Contrôle élément actif
+### Control élément actif
 
-Vous pouvez contrôler l'élément actif en utilisant la prop `default-value` ou la directive `v-model` avec le `value` de l'élément. Si aucun `value` n'est fourni, l'index par défaut est **en tant que chaîne **.
+Vous pouvez contrôler l'élément actif à l'aide de la prop `default-value` ou de la directive `v-model` avec le `value` de l'élément. Si aucun `value` n'est fourni, l'index **as par défaut est une string**.
 
-: composant {name="tabs-model-value-example"}
+:component-example{name="tabs-model-value-example"}
 
 ::tip
 Utilisez la prop `value-key` pour modifier la clé utilisée pour faire correspondre les éléments lorsqu 'un `v-model` ou `default-value` est fourni.
 ::
 
-### Avec la requête de route
+### With route requête
 
 Vous pouvez contrôler l'élément actif par un paramètre de requête URL, en utilisant `route.query.tab` comme `value` de l'élément.
 
-: composant {name="tabs-route-query-example"}
+:component-example{name="tabs-route-query-example"}
 
-### Avec emplacement de contenu
+### With slot de contenu
 
-Utilisez l'emplacement `#content` pour personnaliser le contenu de chaque élément.
+Utilisez le slot `#content` pour personnaliser le contenu de chaque élément.
 
-: composant {name="tabs-content-slot-example"}
+:component-example{name="tabs-content-slot-example"}
 
-### Avec tabulation inférieure
+### With barre de tabulation inférieur
 
 Utilisez le prop `ui` pour transformer les onglets en une barre d'onglets inférieure de style mobile avec des icônes et de petites étiquettes, similaire à YouTube ou Instagram.
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'tabs-bottom-tab-bar-exemple'
+collapse: true
+name: 'tabs-bottom-tab-bar-example'
 ---
 ::
 
-### Avec slot custom
+### With slot personnalisé
 
 Utilisez la propriété `slot` pour personnaliser un élément spécifique.
 
 Vous aurez accès aux slots suivants:
 
-@@
+- x`#{{ item.slot }}`x{lang="ts-type"}
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'tabs-custom-slot-example'
+collapse: true
+name: 'tabs-custom-slot-example'
 ---
 ::
 
-by ## API
+## API équivalent
 
-### Props
+### Props équipement
 
-Composants-props
+:component-props
 
-@@ph129@@réseaux sociaux
+### Slots
 
-Composants slots
+:component-slots
 
 ### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph131@@exposé
+### Expose à
 
 Lorsque vous accédez au composant via une référence de modèle, vous pouvez utiliser les éléments suivants:
 
 | nom| type|
 | ---- | ---- |
-| @@|@@|
+| `triggersRef`x{lang="ts-type"}| `Ref<ComponentPublicInstance[]>`x{lang="ts-type"}|
 
-@@ph136@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement137
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

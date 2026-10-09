@@ -11,81 +11,81 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Button.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
 Utilisez l'emplacement par défaut pour définir l'étiquette du bouton.
 
 ::component-code
 ---
-Slots:
-  Défaut: bouton
+slots:
+  default: Button
 ---
 ::
 
-@@ph001@étiquette
+### étiquette
 
-Utilisez la prop `label` pour définir l'étiquette du bouton.
+Utilisez le prop `label` pour définir l'étiquette du bouton.
 
 ::component-code
 ---
-Props:
-  Étiquette: bouton
+props:
+  label: Button
 ---
 ::
 
-@@pH003@couleur
+### Couleur
 
-Utilisez la prop `color` pour changer la couleur du bouton.
+Utilisez le prop `color` pour changer la couleur du bouton.
 
 ::component-code
 ---
-Props:
-  Couleur: Neutre
-Slots:
-  Par défaut: Button
+props:
+  color: neutral
+slots:
+  default: Button
 ---
 ::
 
-@@005@@Variant
+### Variant
 
-Utilisez la prop `variant` pour changer la variante du bouton.
+Utilisez le prop `variant` pour changer la variante du bouton.
 
 ::component-code
 ---
-Props:
-  Couleur: Neutre
-  Étiquette: Outline
-Slots:
-  Défaut: bouton
+props:
+  color: neutral
+  variant: outline
+slots:
+  default: Button
 ---
 ::
 
-@@ph007@série
+### Size
 
-Utilisez la prop `size` pour modifier la taille du bouton.
+Utilisez le prop `size` pour modifier la taille du bouton.
 
 ::component-code
 ---
-Props:
-  Taille: XL
-Slots:
-  Défaut: bouton
+props:
+  size: xl
+slots:
+  default: Button
 ---
 ::
 
-@@ph009@icône
+### Icône
 
-Utilisez le prop `icon` pour afficher un [Icon](/docs/components/icon) à l'intérieur du bouton.
+Utilisez la prop `icon` pour afficher un [Icon](/docs/components/icon) à l'intérieur du bouton.
 
 ::component-code
 ---
-Props:
-  Étiquette: i-lucide-rocket
-  Taille: MD
-  Couleur: Primaire
-  Variante: solide
-Slots:
-  Défaut: bouton
+props:
+  icon: i-lucide-rocket
+  size: md
+  color: primary
+  variant: solid
+slots:
+  default: Button
 ---
 ::
 
@@ -93,116 +93,116 @@ Utilisez les accessoires `leading` et `trailing` pour définir la position de l'
 
 ::component-code
 ---
-Props:
-  Icône: i-lucide-arrow-right
-  Étiquette: MD
-Slots:
-  Par défaut: Button
+props:
+  trailingIcon: i-lucide-arrow-right
+  size: md
+slots:
+  default: Button
 ---
 ::
 
-Le `label` comme accessoire ou emplacement est facultatif afin que vous puissiez utiliser le bouton comme bouton d'icône uniquement.
+Le `label` comme accessoire ou fente est facultatif afin que vous puissiez utiliser le bouton comme bouton d'icône uniquement.
 
 ::component-code
 ---
-Props:
-  Icône: i-lucide-search
-  Étiquette: MD
-  Couleur: Primaire
-  Variante: solide
+props:
+  icon: i-lucide-search
+  size: md
+  color: primary
+  variant: solid
 ---
 ::
 
-@2000@avatar
+### Avatars
 
-Utilisez le prop `avatar` pour afficher un [Avatar](/docs/components/avatar) à l'intérieur du bouton.
+Utilisez la prop `avatar` pour afficher un [Avatar](/docs/components/avatar) à l'intérieur du bouton.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  - avatar.chargement
-Props:
-  Avatar:
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
     src: 'https://github.com/nuxt.png'
-    Étiquette: Lazy
-  Étiquette: MD
-  Couleur: Neutre
-  Étiquette: Outline
-Slots:
-  Défaut:|
+    loading: lazy
+  size: md
+  color: neutral
+  variant: outline
+slots:
+  default: |
 
-    bouton
+    Button
 ---
 ::
 
-Le `label` comme accessoire ou emplacement est facultatif afin que vous puissiez utiliser le bouton comme bouton d'avatar uniquement.
+Le `label` en tant qu 'accessoire ou fente est facultatif, vous pouvez donc utiliser le bouton comme bouton d'avatar uniquement.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  - avatar.chargement
-Props:
-  Avatar:
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
     src: 'https://github.com/nuxt.png'
-    Étiquette: Lazy
-  Étiquette: MD
-  Couleur: Neutre
-  Étiquette: Outline
+    loading: lazy
+  size: md
+  color: neutral
+  variant: outline
 ---
 ::
 
-@29@lien
+### Link équipé
 
-Vous pouvez passer n'importe quelle propriété du composant[Link](/docs/components/link#props)comme`to`,`target`, etc.
+Vous pouvez passer n'importe quelle propriété du composant [Link](xph110) telle que `to`, `target`, etc.
 
 ::component-code
 ---
-ignorer :
-  @@ph036@cible
-Props :
-  Deux :https://github.com/nuxt/ui
-  Référence : _ blank
-Slots :
-  Par défaut : Button
+ignore:
+  - target
+props:
+  to: https://github.com/nuxt/ui
+  target: _blank
+slots:
+  default: Button
 ---
 ::
 
-Lorsque le bouton est un lien ou lorsque vous utilisez l'accessoire`active`, vous pouvez utiliser les accessoires`active-color`et`active-variant`pour personnaliser l'état actif .
+Lorsque le bouton est un lien ou lorsque vous utilisez la prop `active`, vous pouvez utiliser les props `active-color` et `active-variant` pour personnaliser l'état actif.
 
 ::component-code
 ---
-Étiquette : true
-Ignorer :
-  @@pH040@couleur
+prettier: true
+ignore:
+  - color
   - variant
-items :
-  Activité :
-    @@ph042@primaire
-    - secondaire
-    @@44@réussite
-    @@ph045@info
-    @@ph046@référencement
-    @@ph047@erreur
-    @@ph048@neutre
-  Activité :
-    @@ph049@solide
-    @@ph050@outline
-    @@ph051@@doux
-    @@502@subtile
-    @@ph053@fantôme
-    @@ph054@lien
-Props:
-  Actif: vrai
-  Couleur: Neutre
-  Étiquette: Outline
-  Activité: Primary
-  Activité: Solide
-Slots:
-  Default:|
+items:
+  activeColor:
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
+  activeVariant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+    - link
+props:
+  active: true
+  color: neutral
+  variant: outline
+  activeColor: primary
+  activeVariant: solid
+slots:
+  default: |
 
-    bouton
+    Button
 ---
 
 bouton
@@ -212,12 +212,12 @@ Vous pouvez également utiliser les accessoires `active-class` et `inactive-clas
 
 ::component-code
 ---
-Props:
-  Actif: vrai
-  Classe d'utilisateur: font-bold
-  inactiveClasse: 'font-light'
-Slots:
-  Par défaut: Button
+props:
+  active: true
+  activeClass: 'font-bold'
+  inactiveClass: 'font-light'
+slots:
+  default: Button
 ---
 
 bouton
@@ -243,46 +243,46 @@ export default defineAppConfig({
 ```
 ::
 
-@@774@chargement
+### Chargement
 
-Utilisez la prop `loading` pour afficher une icône de chargement et désactiver le bouton.
+Utilisez le prop `loading` pour afficher une icône de chargement et désactiver le bouton.
 
 ::component-code
 ---
-Props:
-  Chargement: vrai
-  Traînée: Faux
-Slots:
-  Défaut: bouton
+props:
+  loading: true
+  trailing: false
+slots:
+  default: Button
 ---
 bouton
 ::
 
 Utilisez la prop `loading-auto` pour afficher l'icône de chargement automatiquement pendant que la promesse `@click` est en attente.
 
-: composant {name="button-loading-auto-example"}
+:component-example{name="button-loading-auto-example"}
 
 Cela fonctionne également avec le composant [Form](/docs/components/form).
 
-: exemple de composant {name="button-loading-auto-form-example"}
+:component-example{name="button-loading-auto-form-example"}
 
-### Icône de chargement
+### Chargement Icône
 
-Utilisez la prop `loading-icon` pour personnaliser l'icône de chargement. Par défaut,`i-lucide-loader-circle`.
+Utilisez la prop `loading-icon` pour personnaliser l'icône de chargement. Par défaut, `i-lucide-loader-circle`.
 
 ::component-code
 ---
-Props:
-  Chargement: vrai
+props:
+  loading: true
   loadingIcon: 'i-lucide-loader'
-Slots:
-  Défaut: bouton
+slots:
+  default: Button
 ---
 bouton
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.loading`.
 :::
@@ -293,83 +293,83 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 :::
 ::
 
-### désactivé
+### Désactivé
 
-Utilisez la prop `disabled` pour désactiver le bouton.
+Utilisez le prop `disabled` pour désactiver le bouton.
 
 ::component-code
 ---
-Props:
-  handicapés: vrai
-Slots:
-  Par défaut: Button
+props:
+  disabled: true
+slots:
+  default: Button
 ---
 
 bouton
 ::
 
-@@ph093@exemples
+## Exemples
 
-@@
+### `class` avec prop
 
 Utilisez la prop `class` pour remplacer les styles de base du bouton.
 
 ::component-code
 ---
-Props:
-  classe: 'font-bold rounded-full'
-Slots:
-  Défaut: bouton
+props:
+  class: 'font-bold rounded-full'
+slots:
+  default: Button
 ---
 ::
 
-@@
+### `ui` prop
 
 Utilisez la prop `ui` pour remplacer les styles de slots du bouton.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph100 @
-  -  couleur
+prettier: true
+ignore:
+  - ui
+  - color
   - variant
-  @@pha103 @@ icon
-Props:
-  Étiquette: i-lucide-rocket
-  Couleur: Neutre
-  Étiquette: Outline
-  UI:
-    leadingIcon: 'text-primaire'
-Slots:
-  Défaut:|
+  - icon
+props:
+  icon: i-lucide-rocket
+  color: neutral
+  variant: outline
+  ui:
+    leadingIcon: 'text-primary'
+slots:
+  default: |
 
-    bouton
+    Button
 ---
 ::
 
-@@ph104@api
+## API
 
-@@P105@@Projets
+### Props équipement
 
-Composants-props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
 Ce composant prend également en charge tous les attributs HTML natifs `<button>`.
 ::
 
 ::callout{icon="i-simple-icons-github" to="https://github.com/nuxt/ui/blob/v4/src/runtime/components/Link.vue#L13"}
-Le composant `Button` étend le composant `Link`. Consultez le code source sur GitHub.
+Le composant `Button` étend le composant `Link`.Consultez le code source sur GitHub.
 ::
 
-@@ph109@@Slots
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph110@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@111@changements
+## Changelog
 
-Composant-changelog
+:component-changelog

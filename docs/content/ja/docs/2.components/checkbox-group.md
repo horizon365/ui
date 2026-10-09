@@ -17,47 +17,47 @@ links:
 
 ## 使用法
 
-`v-model`ディレクティブを使用してCheckboxGroupの値を制御し、`default-value` propを使用して、状態を制御する必要がない場合に初期値を設定します。
+`v-model`ディレクティブを使用してCheckboxGroupの値を制御し、状態を制御する必要がない場合は`default-value`プロパティを使用して初期値を設定します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  modelValue
-  - アイテム
-外部
-  - アイテム
-  -  modelValue
-小道具
-  modelValue
-    - 'システム'
-  アイテム
-    - 'システム'
-    - 'ライト'
-    - 'ダーク'
+prettier: true
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+props:
+  modelValue:
+    - 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
 ### アイテム
 
-`items` propを文字列または数値の配列として使用します。
+`items`プロパティを文字列または数値の配列として使用します：
 
 ::component-code
 ---
-きれい真
-無視
-  -  modelValue
-  - アイテム
-外部
-  - アイテム
-  -  modelValue
-小道具
-  modelValue
-    - 'システム'
-  アイテム
-    - 'システム'
-    - 'ライト'
-    - 'ダーク'
+prettier: true
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+props:
+  modelValue:
+    - 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
@@ -73,221 +73,221 @@ links:
 
 ::component-code
 ---
-無視
-  -  modelValue
-  - アイテム
-外部
-  - アイテム
-  -  modelValue
-externalTypes
-  -  CheckboxGroupItem []
-小道具
-  modelValue
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+externalTypes:
+  - CheckboxGroupItem[]
+props:
+  modelValue:
     - 'system'
-  アイテム
-    -  label 'System'
-      説明'デバイスの設定に一致します。'
-      value 'system'
-    -  label 'Light'
-      説明：「常に光のテーマを使う」
-      値'光'
-    -  label 'Dark'
-      説明：「常に暗いテーマを使う」
-      値'暗い'
+  items:
+    - label: 'System'
+      description: 'Matches your device settings.'
+      value: 'system'
+    - label: 'Light'
+      description: 'Always uses the light theme.'
+      value: 'light'
+    - label: 'Dark'
+      description: 'Always uses the dark theme.'
+      value: 'dark'
 ---
 ::
 
 ::caution
-オブジェクトを使用する場合は、`v-model`ディレクティブまたは`default-value` propでオブジェクトの`value`プロパティを参照する必要があります。
+オブジェクトを使用する場合は、`v-model`ディレクティブまたは`default-value` propのオブジェクトの`value`プロパティを参照する必要があります。
 ::
 
-### 値キー
+### Valueキー
 
-`value-key` propを使用して、値を設定するために使用するプロパティを変更できます。デフォルトは`value`です。
+`value-key`プロパティを使用して、値を設定するために使用するプロパティを変更できます。デフォルトは`value`です。
 
 ::component-code
 ---
-無視
-  -  modelValue
-  - アイテム
-  -  valueKey
-外部
-  - アイテム
-  -  modelValue
-externalTypes
-  -  CheckboxGroupItem []
-小道具
-  modelValue
-    - 'ライト'
-  valueKey 'id'
-  アイテム
-    -  label 'System'
-      説明'デバイスの設定に一致します。'
-      id 'システム'
-    -  label 'Light'
-      説明：「常に光のテーマを使う」
-      id 'ライト'
-    -  label 'Dark'
-      説明：「常に暗いテーマを使う」
-      id '暗い'
+ignore:
+  - modelValue
+  - items
+  - valueKey
+external:
+  - items
+  - modelValue
+externalTypes:
+  - CheckboxGroupItem[]
+props:
+  modelValue:
+    - 'light'
+  valueKey: 'id'
+  items:
+    - label: 'System'
+      description: 'Matches your device settings.'
+      id: 'system'
+    - label: 'Light'
+      description: 'Always uses the light theme.'
+      id: 'light'
+    - label: 'Dark'
+      description: 'Always uses the dark theme.'
+      id: 'dark'
 ---
 ::
 
-###  Legend
+### Legend
 
 `legend`プロパティを使用して、CheckboxGroupの凡例を設定します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  defaultValue
-  - アイテム
-外部
-  - アイテム
-小道具
-  legend：「テーマ」
-  defaultValue
-    - 'システム'
-  アイテム
-    - 'システム'
-    - 'ライト'
-    - 'ダーク'
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+props:
+  legend: 'Theme'
+  defaultValue:
+    - 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-### カラー
+### Color
 
 `color`プロパティを使用して、CheckboxGroupの色を変更します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  defaultValue
-  - アイテム
-外部
-  - アイテム
-アイテム
-  色
-    - プライマリ
-    - セカンダリ
-    - 成功
-    -  info
-    -  warning
-    - エラー
-    - ニュートラル
-小道具
-  色ニュートラル
-  defaultValue
-    - 'システム'
-  アイテム
-    - 'システム'
-    - 'ライト'
-    - 'ダーク'
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+items:
+  color:
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
+props:
+  color: neutral
+  defaultValue:
+    - 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-### バリアント
+### Variant
 
-CheckboxGroupのバリアントを変更するには、`variant`プロパティを使用します。
+`variant`プロパティを使用して、CheckboxGroupのバリアントを変更します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  defaultValue
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  -  CheckboxGroupItem []
-アイテム
-  色
-    - プライマリ
-    - セカンダリ
-    - 成功
-    -  info
-    -  warning
-    - エラー
-    - ニュートラル
-  バリアント
-    - リスト
-    - カード
-    - テーブル
-小道具
-  色'プライマリ'
-  バリアント'カード'
-  defaultValue
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+externalTypes:
+  - CheckboxGroupItem[]
+items:
+  color:
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
+  variant:
+    - list
+    - card
+    - table
+props:
+  color: 'primary'
+  variant: 'card'
+  defaultValue:
     - 'system'
-  アイテム
-    -  label 'System'
-      value 'system'
-      説明'デバイスの設定に一致します。'
-    -  label 'Light'
-      値'光'
-      説明：「常に光のテーマを使う」
-    -  label 'Dark'
-      値'暗い'
-      説明：「常に暗いテーマを使う」
+  items:
+    - label: 'System'
+      value: 'system'
+      description: 'Matches your device settings.'
+    - label: 'Light'
+      value: 'light'
+      description: 'Always uses the light theme.'
+    - label: 'Dark'
+      value: 'dark'
+      description: 'Always uses the dark theme.'
 ---
 ::
 
-### サイズ
+### Size
 
 `size`プロパティを使用して、CheckboxGroupのサイズを変更します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  defaultValue
-  - アイテム
-外部
-  - アイテム
-アイテム
-  バリアント
-    - リスト
-    - カード
-    - テーブル
-小道具
-  サイズ'xl'
-  variant 'list'
-  defaultValue
-    - 'システム'
-  アイテム
-    - 'システム'
-    - 'ライト'
-    - 'ダーク'
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+items:
+  variant:
+    - list
+    - card
+    - table
+props:
+  size: 'xl'
+  variant: 'list'
+  defaultValue:
+    - 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-### オリエンテーション
+### Orientation
 
 `orientation`プロパティを使用して、CheckboxGroupの向きを変更します。デフォルトは`vertical`です。
 
 ::component-code
 ---
-きれい真
-無視
-  -  defaultValue
-  - アイテム
-外部
-  - アイテム
-アイテム
-  バリアント
-    - リスト
-    - カード
-    - テーブル
-小道具
-  オリエンテーション'水平'
-  variant 'list'
-  defaultValue
-    - 'システム'
-  アイテム
-    - 'システム'
-    - 'ライト'
-    - 'ダーク'
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+items:
+  variant:
+    - list
+    - card
+    - table
+props:
+  orientation: 'horizontal'
+  variant: 'list'
+  defaultValue:
+    - 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
@@ -296,91 +296,91 @@ externalTypes
 `indicator`プロパティを使用して位置を変更したり、インジケーターを非表示にしたりします。デフォルトは`start`です。
 
 ::note
-インジケータが表示されている間は項目の`icon`がチェックマークに置き換わり、`hidden`の場合はラベルの上に表示されます。
+インジケータが表示されている間は項目の`icon`がチェックマークに置き換えられ、`hidden`の場合はラベルの上に表示されます。
 ::
 
 ::component-code
 ---
-きれい真
-無視
-  -  defaultValue
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  -  CheckboxGroupItem []
-アイテム
-  インジケータ
-    -  start
-    -  end
-    - 隠し
-  バリアント
-    - リスト
-    - カード
-    - テーブル
-小道具
-  インジケータ'隠し'
-  オリエンテーション'水平'
-  variant 'table'
-  defaultValue
-    - 'システム'
-  アイテム
-    -  label 'System'
-      アイコン'i—lucideモニター'
-      value 'システム'
-      クラス'W—20'
-    -  label 'Light'
-      アイコン'i—lucide—sun'
-      クラス'W—20'
-      値'ライト'
-    -  label 'Dark'
-      アイコン'i—lucide月'
-      クラス'w—20'
-      値'暗い'
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+externalTypes:
+  - CheckboxGroupItem[]
+items:
+  indicator:
+    - start
+    - end
+    - hidden
+  variant:
+    - list
+    - card
+    - table
+props:
+  indicator: 'hidden'
+  orientation: 'horizontal'
+  variant: 'table'
+  defaultValue:
+    - 'System'
+  items:
+    - label: 'System'
+      icon: 'i-lucide-monitor'
+      value: 'System'
+      class: 'w-20'
+    - label: 'Light'
+      icon: 'i-lucide-sun'
+      class: 'w-20'
+      value: 'Light'
+    - label: 'Dark'
+      icon: 'i-lucide-moon'
+      class: 'w-20'
+      value: 'Dark'
 ---
 ::
 
 ### 無効
 
-CheckboxGroupを無効にするには、`disabled`プロパティを使用します。
+`disabled`プロパティを使用して、CheckboxGroupを無効にします。
 
 ::component-code
 ---
-きれい真
-無視
-  -  defaultValue
-  - アイテム
-外部
-  - アイテム
-小道具
-  無効true
-  defaultValue
-    - 'システム'
-  アイテム
-    - 'システム'
-    - 'ライト'
-    - 'ダーク'
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+props:
+  disabled: true
+  defaultValue:
+    - 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

@@ -15,255 +15,255 @@ links:
 
 ## 使用法
 
-`links`プロパティを、ページフェッチ時に取得する`page?.body?.toc?.links`{lang="ts-type"}とともに使用します。
+`links`プロパティは、ページ取得時に取得する`page?.body?.toc?.links`{lang="ts-type"}と共に使用します。
 
 ::component-example
 ---
-name 'content—toc—example'
-小道具
-  クラス'w—full'
+name: 'content-toc-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-### タイトル
+### Title
 
 `title`プロパティを使用して、目次のタイトルを変更します。
 
 ::component-code{prefix="content"}
 ---
-きれい真
-崩壊真
-隠す
-  - クラス
-無視
-  - リンク
-外部
-  - リンク
-externalTypes
-  -  ContentTocLink []
-小道具
-  タイトル：「このページで」
-  クラス'w—full'
-  リンク
-  -  id使用法
-    深さ2
-    text使用法
-    子供：
-    -  idタイトル
-      深さ3
-      textタイトル
-    -  idカラー
-      深さ3
-      text色
-    -  idハイライト
-      深さ3
-      textハイライト
-    -  id 'highlight—color'
-      深さ3
-      textハイライト色
-    -  id 'highlight—variant'
-      深さ3
-      textハイライトバリアント
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  title: 'On this page'
+  class: 'w-full'
+  links:
+  - id: usage
+    depth: 2
+    text: Usage
+    children:
+    - id: title
+      depth: 3
+      text: Title
+    - id: color
+      depth: 3
+      text: Color
+    - id: highlight
+      depth: 3
+      text: Highlight
+    - id: 'highlight-color'
+      depth: 3
+      text: Highlight Color
+    - id: 'highlight-variant'
+      depth: 3
+      text: Highlight Variant
 ---
 ::
 
-### カラー
+### Color
 
 `color`プロパティを使用して、リンクの色を変更します。
 
 ::component-code{prefix="content"}
 ---
-きれい真
-崩壊真
-隠す
-  - クラス
-無視
-  - リンク
-外部
-  - リンク
-externalTypes
-  -  ContentTocLink []
-小道具
-  色'中立'
-  クラス'w—full'
-  リンク
-    -  id使用法
-      深さ2
-      text使用法
-      子供：
-        -  idタイトル
-          深さ3
-          textタイトル
-        -  id色
-          深さ3
-          text色
-        -  idハイライト
-          深さ3
-          textハイライト
-        -  id 'highlight—color'
-          深さ3
-          textハイライト色
-        -  id 'highlight—variant'
-          深さ3
-          textハイライトバリアント
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  color: 'neutral'
+  class: 'w-full'
+  links:
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
+        - id: highlight
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
 ---
 ::
 
 ### ハイライト
 
-`highlight`プロパティを使用して、アクティブな項目のハイライトされた境界線を表示します。
+`highlight`プロパティを使用して、アクティブなアイテムのハイライトされた境界線を表示します。
 
 ::component-code{prefix="content"}
 ---
-きれい真
-崩壊真
-隠す
-  - クラス
-無視
-  - リンク
-外部
-  - リンク
-externalTypes
-  -  ContentTocLink []
-小道具
-  ハイライト真
-  クラス'w—full'
-  リンク
-    -  id使用法
-      深さ2
-      text使用法
-      子供：
-        -  idタイトル
-          深さ3
-          textタイトル
-        -  idカラー
-          深さ3
-          text色
-        -  idハイライト
-          深さ3
-          textハイライト
-        -  id 'highlight—color'
-          深さ3
-          textハイライト色
-        -  id 'highlight—variant'
-          深さ3
-          textハイライトバリアント
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  highlight: true
+  class: 'w-full'
+  links:
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
+        - id: highlight
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
 ---
 ::
 
 ### ハイライト色
 
-ハイライトの色を変更するには`highlight-color` propを使用します。デフォルトは`color` propです。
+ハイライトの色を変更するには、`highlight-color`プロパティを使用します。デフォルトでは`color`プロパティになります。
 
 ::component-code{prefix="content"}
 ---
-きれい真
-崩壊真
-隠す
-  - クラス
-無視
-  - リンク
-  - ハイライト
-外部
-  - リンク
-externalTypes
-  -  ContentTocLink []
-小道具
-  ハイライト真
-  highlightColor '中立'
-  クラス'w—full'
-  リンク
-    -  id使用法
-      深さ2
-      text使用法
-      子供：
-        -  idタイトル
-          深さ3
-          textタイトル
-        -  id色
-          深さ3
-          text色
-        -  idハイライト
-          深さ3
-          textハイライト
-        -  id 'highlight—color'
-          深さ3
-          textハイライト色
-        -  id 'highlight—variant'
-          深さ3
-          textハイライトバリアント
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+  - highlight
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  highlight: true
+  highlightColor: 'neutral'
+  class: 'w-full'
+  links:
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
+        - id: highlight
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
 ---
 ::
 
-### ハイライトバリアント：badge {label="4.6+" class="align-text-top"}
+### Highlightバリアントbadge{label="4.6+" class="align-text-top"}
 
-`highlight-variant`プロパティを使用して、ハイライトのスタイルを変更します。デフォルトは`straight`です。
+ハイライトのスタイルを変更するには、`highlight-variant`プロパティを使用します。デフォルトは`straight`です。
 
 ::component-code{prefix="content"}
 ---
-きれい真
-崩壊真
-隠す
-  - クラス
-無視
-  - リンク
-  -  highlight
-外部
-  - リンク
-externalTypes
-  -  ContentTocLink []
-小道具
-  ハイライト真
-  highlightColor 'primary'
-  highlightVariant 'circuit'
-  クラス'w—full'
-  リンク
-    -  id使用法
-      深さ2
-      text使用法
-      子供：
-        -  idタイトル
-          深さ3
-          textタイトル
-        -  id色
-          深さ3
-          text色
-        -  idハイライト
-          深さ3
-          textハイライト
-        -  id 'highlight—color'
-          深さ3
-          textハイライト色
-        -  id 'highlight—variant'
-          深さ3
-          textハイライトバリアント
-    -  id例
-      深さ2
-      text例
-      子供：
-        -  idページ内
-          深さ3
-          text：ページ内
-    -  id api
-      深さ2
-      text API
-      子供：
-        -  id props
-          深さ3
-          text小道具
-        -  idスロット
-          深さ3
-          textスロット
-        -  id放出
-          深さ3
-          textエミッツ
-    -  idテーマ
-      深さ2
-      textテーマ
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+  - highlight
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  highlight: true
+  highlightColor: 'primary'
+  highlightVariant: 'circuit'
+  class: 'w-full'
+  links:
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
+        - id: highlight
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
+    - id: examples
+      depth: 2
+      text: Examples
+      children:
+        - id: within-a-page
+          depth: 3
+          text: Within a Page
+    - id: api
+      depth: 2
+      text: API
+      children:
+        - id: props
+          depth: 3
+          text: Props
+        - id: slots
+          depth: 3
+          text: Slots
+        - id: emits
+          depth: 3
+          text: Emits
+    - id: theme
+      depth: 2
+      text: Theme
 ---
 ::
 
-## 例
+## サンプル
 
 ### ページ内
 
@@ -298,24 +298,24 @@ if (!page.value) {
 </template>
 ```
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-###  Emits
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="content"}
+:component-changelog{prefix="content"}

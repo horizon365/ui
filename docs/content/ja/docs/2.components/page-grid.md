@@ -10,39 +10,39 @@ links:
 
 ## 使用法
 
-PageGridコンポーネントは、[ PageCard ](/docs/components/page-card)コンポーネントまたはその他の要素を表示するための応答性の高いグリッドレイアウトを提供し、画面サイズに基づいて1～3列に自動的に調整します。
+PageGridコンポーネントは、[PageCard](/docs/components/page-card)コンポーネントまたはその他の要素を表示するためのレスポンシブなグリッドレイアウトを提供し、画面サイズに基づいて1～3列に自動的に調整します。
 
 ::component-example
 ---
-名前'ページグリッド例'
-クラス'p—8'
+name: 'page-grid-example'
+class: 'p-8'
 ---
 ::
 
-また、`col-span-*`と`row-span-*`のユーティリティクラスを使用して、弁当スタイルのレイアウトでカードの一覧を表示することもできます。
+`col-span-*`と`row-span-*`ユーティリティクラスを使用して、弁当スタイルのレイアウトでカードのリストを表示することもできます。
 
 ::component-example
 ---
-崩壊真
-名前'page—grid—bento—example'
-クラス'p—8'
+collapse: true
+name: 'page-grid-bento-example'
+class: 'p-8'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

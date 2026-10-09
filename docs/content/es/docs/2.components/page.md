@@ -7,7 +7,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Page.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 El componente Página le ayuda a crear diseños con columnas opcionales a la izquierda y a la derecha. Es perfecto para crear sitios de documentación y otras páginas centradas en el contenido.
 
@@ -25,7 +25,7 @@ El componente Página le ayuda a crear diseños con columnas opcionales a la izq
 La página se mostrará como un diseño de columna única centrado si no se especifican ranuras.
 ::
 
-@@pH010@Ejemplos
+## ejemplos
 
 ::note
 Si bien estos ejemplos utilizan [Nuxt Content](https://content.nuxt.com), los componentes se pueden integrar con cualquier sistema de gestión de contenido.
@@ -61,7 +61,7 @@ En este ejemplo, usamos el componente `ContentNavigation` para mostrar la navega
 
 ### Dentro de una página
 
-Utilice el componente Página en una página con la ranura `right` para mostrar una tabla de contenidos:
+Utilice el componente Página en una página con la ranura `right` para mostrar una tabla de contenido:
 
 ```vue [pages/\[...slug\\].vue]{29-31}
 <script setup lang="ts">
@@ -100,23 +100,23 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 ```
 
 ::note
-En este ejemplo, usamos el componente `ContentToc` para mostrar la tabla de contenidos.
+En este ejemplo, usamos el componente `ContentToc` para mostrar la tabla de contenido.
 ::
 
-@766@@pccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+## API (Edición española)
 
-@777@@@Deportación
+### Props (Edición española)
 
-Componentes Props
+:component-props
 
-@@788@espanol
+### Slots (Edición española)
 
-Componentes de slots
+:component-slots
 
-@@799@themes
+## Temas
 
-Componente Tema
+:component-theme
 
-@080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

@@ -17,17 +17,17 @@ links:
 
 ## 使用法
 
-`v-model`ディレクティブを使用して、PinInputの値を制御します。
+PinInputの値を制御するには`v-model`ディレクティブを使用します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue []
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: []
 ---
 ::
 
@@ -35,97 +35,97 @@ links:
 
 ::component-code
 ---
-きれい真
-無視
-  -  defaultValue
-小道具
-  defaultValue ['1''2''3']
+prettier: true
+ignore:
+  - defaultValue
+props:
+  defaultValue: ['1','2','3']
 ---
 ::
 
-### タイプ
+### Type
 
-入力タイプを変更するには、`type`プロパティを使用します。デフォルトは`text`です。
+`type`プロパティを使用して入力タイプを変更します。デフォルトは`text`です。
 
 ::component-code
 ---
-アイテム
-  タイプ
-    - テキスト
-    -  number
-小道具
-  タイプ'数値'
+items:
+  type:
+    - text
+    - number
+props:
+  type: 'number'
 ---
 ::
 
 ::note
-`type`を`number`に設定すると、数字のみ受け付けます。
+`type`が`number`に設定されている場合、数字のみを受け付けます。
 ::
 
 ### マスク
 
-`mask`プロパティを使用して、入力をパスワードのように扱います。
+入力をパスワードのように扱うには`mask`プロパティを使用します。
 
 ::component-code
 ---
-きれい真
-無視
-  - プレースホルダー
-  -  defaultValue
-小道具
-  マスクtrue
-  defaultValue ['1''2''3''4''5']
+prettier: true
+ignore:
+  - placeholder
+  - defaultValue
+props:
+  mask: true
+  defaultValue: ['1','2','3','4','5']
 ---
 ::
 
-###  OTP
+### OTP
 
-`otp`プロパティを使用してワンタイムパスワード機能を有効にします。有効にすると、モバイルデバイスはSMSメッセージやクリップボードのコンテンツからOTPコードを自動的に検出して入力し、オートコンプリートをサポートします。
+`otp`プロパティを使用して、ワンタイムパスワード機能を有効にします。有効にすると、モバイルデバイスはSMSメッセージやクリップボードのコンテンツからOTPコードを自動的に検出して入力します。
 
 ::component-code
 ---
-小道具
-  otp true
+props:
+  otp: true
 ---
 ::
 
-### プレースホルダー
+### Placeholder
 
-プレースホルダーテキストを設定するには、`placeholder`プロパティを使用します。
+`placeholder`プロパティを使用してプレースホルダーテキストを設定します。
 
 ::component-code
 ---
-小道具
-  プレースホルダー '○'
+props:
+  placeholder: '○'
 ---
 ::
 
-### 長さ
+### Length
 
-入力量を変更するには、`length`プロパティを使用します。
+`length`プロパティを使用して入力量を変更します。
 
 ::component-code
 ---
-無視
-  - プレースホルダー
-小道具
-  長さ6
-  プレースホルダー '○'
+ignore:
+  - placeholder
+props:
+  length: 6
+  placeholder: '○'
 ---
 ::
 
-### セパレータbadge {label="4.9+" class="align-text-top"}
+### Separator badge{label="4.9+" class="align-text-top"}
 
-入力のグループ間に区切り文字を挿入するには、`separator`プロパティを使用します。N番目の入力ごとに挿入するには、数値を渡します。
+`separator`プロパティを使用して、入力のグループ間に区切り文字を挿入します。N番目の入力ごとに挿入するには、数値を渡します。
 
 ::component-code
 ---
-無視
-  - プレースホルダー
-小道具
-  長さ6
-  セパレーター 3
-  プレースホルダー '○'
+ignore:
+  - placeholder
+props:
+  length: 6
+  separator: 3
+  placeholder: '○'
 ---
 ::
 
@@ -133,108 +133,108 @@ links:
 
 ::component-code
 ---
-きれい真
-無視
-  - プレースホルダー
-  - 長さ
-  - セパレーター
-小道具
-  長さ7
-  区切り文字[3 4]
-  プレースホルダー '○'
+prettier: true
+ignore:
+  - placeholder
+  - length
+  - separator
+props:
+  length: 7
+  separator: [3, 4]
+  placeholder: '○'
 ---
 ::
 
-### カラー
+### Color
 
-`color`プロパティを使用して、PinInputがフォーカスされたときにリングの色を変更します。
+PinInputがフォーカスされたときにリングの色を変更するには、`color`プロパティを使用します。
 
 ::component-code
 ---
-無視
-  - プレースホルダー
-小道具
-  色ニュートラル
-  ハイライト真
-  プレースホルダー '○'
+ignore:
+  - placeholder
+props:
+  color: neutral
+  highlight: true
+  placeholder: '○'
 ---
 ::
 
 ::note
-`highlight` propはフォーカス状態を表示するために使用されます。これはバリデーションエラーが発生したときに内部で使用されます。
+`highlight`プロパティはフォーカスの状態を示すために使用されます。バリデーションエラーが発生したときに内部で使用されます。
 ::
 
-### バリアント
+### Variant
 
 `variant`プロパティを使用して、PinInputのバリアントを変更します。
 
 ::component-code
 ---
-無視
-  - プレースホルダー
-小道具
-  色ニュートラル
-  バリアント：微妙
-  ハイライトfalse
-  プレースホルダー '○'
+ignore:
+  - placeholder
+props:
+  color: neutral
+  variant: subtle
+  highlight: false
+  placeholder: '○'
 ---
 ::
 
-### サイズ
+### Size
 
 `size`プロパティを使用して、PinInputのサイズを変更します。
 
 ::component-code
 ---
-無視
-  - プレースホルダー
-小道具
-  サイズXL
-  プレースホルダー '○'
+ignore:
+  - placeholder
+props:
+  size: xl
+  placeholder: '○'
 ---
 ::
 
 ### 無効
 
-`disabled`プロパティを使用して、PinInputを無効にします。
+`disabled`プロパティを使用してPinInputを無効にします。
 
 ::component-code
 ---
-無視
-  - プレースホルダー
-小道具
-  無効true
-  プレースホルダー '○'
+ignore:
+  - placeholder
+props:
+  disabled: true
+  placeholder: '○'
 ---
 ::
 
 ## 例
 
-### セパレータースロット付き：badge {label="4.9+" class="align-text-top"}
+### セパレータースロット付きbadge{label="4.9+" class="align-text-top"}
 
-`separator`スロットを使用して、セパレーターの外観をカスタマイズします。
+`separator`スロットを使用してセパレータの外観をカスタマイズします。
 
 ::component-example
 ---
-名前'pin—input—separator—slot—example'
+name: 'pin-input-separator-slot-example'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-### エクスポーズ
+### Expose
 
 テンプレート参照を介してコンポーネントにアクセスする場合、以下を使用できます：
 
@@ -242,10 +242,10 @@ component—emits
 | ---- | ---- |
 | `inputsRef`{lang="ts-type"}| `Ref<ComponentPublicInstance[]>`{lang="ts-type"}|
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

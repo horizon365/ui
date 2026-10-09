@@ -9,14 +9,14 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Icon.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice el componente `icon` para mostrar un [Icon](/docs/components/icon) en su contenido.
 
 ::code-preview
-por: icon{name="i-simple-icons-nuxtdotjs"}
+:icon{name="i-simple-icons-nuxtdotjs"}
 
-#El Código
+#code
 
 ```mdc
 :icon{name="i-simple-icons-nuxtdotjs"}
@@ -24,16 +24,16 @@ por: icon{name="i-simple-icons-nuxtdotjs"}
 
 ::
 
-@@pH000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## API (Edición española)
 
-@1111@1111
+### Props (Edición española)
 
-Artículo siguienteComponentes {prose}
+:component-props{prose}
 
-@130000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Temas
 
-: Componente {prose}
+:component-theme{prose}
 
-@15@Changelog
+## Changelog (Edición española)
 
-por: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

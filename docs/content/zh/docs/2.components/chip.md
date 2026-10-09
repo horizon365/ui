@@ -10,153 +10,153 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Chip.vue
 ---
 
-## 使用情况
+## 用法
 
-用芯片包裹任何组件，以显示指示器。
+用芯片包裹任何元件以显示指示器。
 
 ::component-code
 ---
-更漂亮：真的
-插槽：
-  默认值：|
+prettier: true
+slots:
+  default: |
 
-<UButton icon="i-lucide-mail" color="neutral" variant="subtle" />号
+    <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-：U形按钮{icon="i-lucide-mail" color="neutral" variant="subtle"}
+:u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
-### 颜色
+### Color
 
-使用`color`道具来变更筹码的颜色。
+使用`color`道具来改变芯片的颜色。
 
 ::component-code
 ---
-更漂亮：真的
-道具：
-  颜色：中性
-插槽：
-  默认值：|
+prettier: true
+props:
+  color: neutral
+slots:
+  default: |
 
-<UButton icon="i-lucide-mail" color="neutral" variant="subtle" />的
+    <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-：U型按钮{icon="i-lucide-mail" color="neutral" variant="subtle"}
+:u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
-尺寸
+### Size
 
-使用`size`道具来变更筹码的大小。
+使用`size`道具来改变芯片的大小。
 
 ::component-code
 ---
-更漂亮：真的
-道具：
-  尺寸：3xl
-插槽：
-  默认值：|
+prettier: true
+props:
+  size: 3xl
+slots:
+  default: |
 
-<UButton icon="i-lucide-mail" color="neutral" variant="subtle" />的
+    <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-：U形按钮{icon="i-lucide-mail" color="neutral" variant="subtle"}
+:u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
-文字
+### Text
 
-使用`text`道具来设定筹码的文字。
+使用`text`道具设置芯片的文本。
 
 ::component-code
 ---
-更漂亮：真的
-道具：
-  正文：5
-  尺寸：3xl
-插槽：
-  默认值：|
+prettier: true
+props:
+  text: 5
+  size: 3xl
+slots:
+  default: |
 
-<UButton icon="i-lucide-mail" color="neutral" variant="subtle" />的
+    <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-：U型按钮{icon="i-lucide-mail" color="neutral" variant="subtle"}
+:u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
 ### 位置
 
-使用`position`道具来变更筹码的位置。
+使用`position`道具来改变芯片的位置。
 
 ::component-code
 ---
-更漂亮：真的
-道具：
-  位置：'左下'
-插槽：
-  默认值：|
+prettier: true
+props:
+  position: 'bottom-left'
+slots:
+  default: |
 
-<UButton icon="i-lucide-mail" color="neutral" variant="subtle" />的
+    <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-：U型按钮{icon="i-lucide-mail" color="neutral" variant="subtle"}
+:u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
-插入式
+### 插入
 
-使用`inset`道具来显示元件内部的芯片。这在处理圆形元件时很有用。
+使用`inset`道具显示元件内部的芯片。这在处理圆形元件时很有用。
 
 ::component-code
 ---
-更漂亮：真的
-道具：
-  插图：true
-插槽：
-  默认值为：|
+prettier: true
+props:
+  inset: true
+slots:
+  default: |
 
-<UAvatar src="https://github.com/benjamincanac.png" loading="lazy" />，你好
+    <UAvatar src="https://github.com/benjamincanac.png" loading="lazy" />
 ---
-：u-头像{src="https://github.com/benjamincanac.png" loading="lazy"}
+:u-avatar{src="https://github.com/benjamincanac.png" loading="lazy"}
 ::
 
 ### 独立
 
-在`inset`道具旁边使用`standalone`道具，以内嵌方式显示筹码。
+使用`standalone`道具旁边的`inset`道具显示芯片内联。
 
 ::component-code
 ---
-道具：
-  单机版：true
-  插图：true
+props:
+  standalone: true
+  inset: true
 ---
 ::
 
 ::note
-它在[、/docs/components/command-palette、)、[、](、/docs/components/input-menu、)、例如，[`Select`](/docs/components/select)或[`SelectMenu`](/docs/components/select-menu)的组件。
+例如，它在[`CommandPalette`](/docs/components/command-palette)、[`InputMenu`](/docs/components/input-menu)、[`Select`](/docs/components/select)或[`SelectMenu`](/docs/components/select-menu)组件中以这种方式使用。
 ::
 
-示例
+## 示例
 
-### 控制可见性
+### 控件可见性
 
-您可以使用`show`道具来控制芯片的可见性。
+您可以使用`show`道具控制芯片的可见性。
 
-：组件示例{name="chip-show-example"}
+:component-example{name="chip-show-example"}
 
 ::note
-在此示例中，芯片具有每个状态的颜色，并且在状态不是`offline`时显示。
+在本例中，Chip具有每个状态的颜色，并且当状态不是`offline`时显示。
 ::
 
-API，活性成分
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-发射器
+### Emits
 
-：组件发射
+:component-emits
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## 更改日志
 
-：组件更改日志
+:component-changelog

@@ -8,9 +8,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PricingPlans.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente PricingPlans proporciona un diseño flexible para mostrar una lista de [PricingPlan](/docs/components/pricing-plan) componentes utilizando la ranura predeterminada o el prop `plans`.
+El componente PricingPlans proporciona un diseño flexible para mostrar una lista de componentes [PricingPlan](/docs/components/pricing-plan) utilizando la ranura predeterminada o la prop. `plans`.
 
 ```vue {2,8}
 <template>
@@ -25,194 +25,194 @@ El componente PricingPlans proporciona un diseño flexible para mostrar una list
 ```
 
 ::tip
-Las columnas de la cuadrícula se calcularán automáticamente en función del número de planes, esto funciona con el `plans` prop pero también con la ranura predeterminada.
+Las columnas de la cuadrícula se calcularán automáticamente en función del número de planos, esto funciona con el accesorio `plans` pero también con la ranura predeterminada.
 ::
 
-@@18000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Proyectos
 
 Utilice el prop `plans` como una matriz de objetos con las propiedades del componente [PricingPlan](/docs/components/pricing-plan#props).
 
 ::component-code
 ---
-Colapso: Verdad
-Ignora:
-  @@24@proyectos
-Externo:
-  @@25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externalidades:
-  - PricingPlanProps [en inglés]
-Props:
-  Planos:
-    - title: Sólo en Español
-      Descripción:'Diseñado para hackers indie'.
-      Precio: $249 dólares
-      Features:
-        - 'Un desarrollador '
-        - 'Acceso de por vida '
-      Botón:
-        Etiqueta: "Comprar ahora"
-    - title: Inicio
-      Descripción:"Ideal para equipos pequeños".
-      Precio: 499 dólares
-      Features:
-        - 'Hasta 5 desarrolladores '
-        - 'Todo en Solo'
-      Botón:
-        Etiqueta: "Comprar ahora"
-    - title: Organización
-      Descripción:'Ideal para equipos y organizaciones más grandes.'
-      Precio: 999 dólares
-      Features:
-        - 'Hasta 20 desarrolladores '
-        - 'Todo en Startup'
-      Botón:
-        Etiqueta: "Comprar ahora"
+collapse: true
+ignore:
+  - plans
+external:
+  - plans
+externalTypes:
+  - PricingPlanProps[]
+props:
+  plans:
+    - title: Solo
+      description: 'Tailored for indie hackers.'
+      price: '$249'
+      features:
+        - 'One developer'
+        - 'Lifetime access'
+      button:
+        label: 'Buy now'
+    - title: Startup
+      description: 'Best suited for small teams.'
+      price: '$499'
+      features:
+        - 'Up to 5 developers'
+        - 'Everything in Solo'
+      button:
+        label: 'Buy now'
+    - title: Organization
+      description: 'Ideal for larger teams and organizations.'
+      price: '$999'
+      features:
+        - 'Up to 20 developers'
+        - 'Everything in Startup'
+      button:
+        label: 'Buy now'
 ---
 ::
 
 ### Orientación
 
-Utilice el `orientation` prop para cambiar la orientación de los planes de precios. Predeterminados a `horizontal`.
+Utilice el prop `orientation` para cambiar la orientación de los planes de precios. Predeterminados a `horizontal`.
 
 ::component-code
 ---
-Colapso: Verdad
-Escondido:
-  @@39@clase
-Ignora:
-  @400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externo:
-  @@401@proyectos
-Externalidades:
-  - PricingPlanProps (en inglés)
-Props:
-  Orientación: Vertical
-  Planos:
-    - title: Sólo en Español
-      Descripción:'Diseñado para hackers indie'.
-      Precio: $249 dólares
-      Características:
-        - 'Un desarrollador '
-        - 'Acceso de por vida '
-      Botón:
-        Etiqueta: "Comprar ahora"
-    - title: Inicio
-      Descripción:"Ideal para equipos pequeños".
-      Precio: 499 dólares
-      Features:
-        - 'Hasta 5 desarrolladores '
-        - 'Todo en Solo'
-      Botón:
-        Etiqueta: "Comprar ahora"
-    - title: Organización
-      Descripción:'Ideal para equipos y organizaciones más grandes.'
-      Precio: 999 dólares
-      Características:
-        - 'Hasta 20 desarrolladores '
-        - 'Todo en Startup'
-      Botón:
-        Etiqueta: "Comprar ahora"
-  Categoría: w-full
+collapse: true
+hide:
+  - class
+ignore:
+  - plans
+external:
+  - plans
+externalTypes:
+  - PricingPlanProps[]
+props:
+  orientation: vertical
+  plans:
+    - title: Solo
+      description: 'Tailored for indie hackers.'
+      price: '$249'
+      features:
+        - 'One developer'
+        - 'Lifetime access'
+      button:
+        label: 'Buy now'
+    - title: Startup
+      description: 'Best suited for small teams.'
+      price: '$499'
+      features:
+        - 'Up to 5 developers'
+        - 'Everything in Solo'
+      button:
+        label: 'Buy now'
+    - title: Organization
+      description: 'Ideal for larger teams and organizations.'
+      price: '$999'
+      features:
+        - 'Up to 20 developers'
+        - 'Everything in Startup'
+      button:
+        label: 'Buy now'
+  class: 'w-full'
 ---
 ::
 
 ::tip
-Cuando se utiliza el prop `plans` en lugar de la ranura predeterminada, el `orientation` de los planos se invierte automáticamente,`horizontal` a `vertical` y viceversa.
+Cuando se utiliza el accesorio `plans` en lugar de la ranura predeterminada, el `orientation` de los planes se invierte automáticamente, de `horizontal` a `vertical` y viceversa.
 ::
 
-@@pH056@Compacto
+### Compact (Edición española)
 
-Utilice el prop `compact` para reducir el relleno entre los planos cuando uno de los planos se escala para un mejor equilibrio visual.
+Utilice el accesorio `compact` para reducir el relleno entre los planos cuando uno de los planos se escala para un mejor equilibrio visual.
 
 ::component-code
 ---
-Colapso: Verdad
-Ignora:
-  @@508@proyectos
-  @@pH059@compacto
-Externo:
-  @060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externalidades:
-  - PricingPlanProps [en inglés]
-Categoría: P-8
-Props:
-  Compacto: verdadero
-  Planos:
-    - title: Sólo en Español
-      Descripción:'Diseñado para hackers indie'.
-      Precio: $249 dólares
-      Características:
-        - 'Un desarrollador '
-        - 'Acceso de por vida '
-      Botón:
-        Etiqueta: "Comprar ahora"
-    - title: Inicio
-      Descripción:"Ideal para equipos pequeños".
-      Precio: 499 dólares
-      Escala: Verdad
-      Features:
-        - 'Hasta 5 desarrolladores '
-        - 'Todo en Solo'
-      Botón:
-        Etiqueta: "Comprar ahora"
-    - title: Organización
-      Descripción:'Ideal para equipos y organizaciones más grandes.'
-      Precio: 999 dólares
-      Características:
-        - 'Hasta 20 desarrolladores '
-        - 'Todo en Startup'
-      Botón:
-        Etiqueta: "Comprar ahora"
+collapse: true
+ignore:
+  - plans
+  - compact
+external:
+  - plans
+externalTypes:
+  - PricingPlanProps[]
+class: 'p-8'
+props:
+  compact: true
+  plans:
+    - title: Solo
+      description: 'Tailored for indie hackers.'
+      price: '$249'
+      features:
+        - 'One developer'
+        - 'Lifetime access'
+      button:
+        label: 'Buy now'
+    - title: Startup
+      description: 'Best suited for small teams.'
+      price: '$499'
+      scale: true
+      features:
+        - 'Up to 5 developers'
+        - 'Everything in Solo'
+      button:
+        label: 'Buy now'
+    - title: Organization
+      description: 'Ideal for larger teams and organizations.'
+      price: '$999'
+      features:
+        - 'Up to 20 developers'
+        - 'Everything in Startup'
+      button:
+        label: 'Buy now'
 ---
 ::
 
-@710@@Scala
+### Scale (Edición española)
 
-Utilice el prop `scale` para ajustar el espaciado entre los planos cuando uno de los planos se escala para un mejor equilibrio visual.
+Utilice el soporte `scale` para ajustar el espaciado entre los planos cuando uno de los planos se escala para un mejor equilibrio visual.
 
 ::component-code
 ---
-Colapso: Verdad
-Ignora:
-  @@73@proyectos
-  @@700@scalar
-Externo:
-  @@75000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externalidades:
-  - PricingPlanProps (en inglés)
-Categoría: P-8
-Props:
-  Escala: Verdad
-  Planos:
-    - title: Sólo en Español
-      Descripción:'Diseñado para hackers indie'.
-      Precio: $249 dólares
-      Features:
-        - 'Un desarrollador '
-        - 'Acceso de por vida '
-      Botón:
-        Etiqueta: "Comprar ahora"
-    - title: Inicio
-      Descripción:"Ideal para equipos pequeños".
-      Precio: 499 dólares
-      Escala: Verdad
-      Features:
-        - 'Hasta 5 desarrolladores '
-        - 'Todo en Solo'
-      Botón:
-        Etiqueta: "Comprar ahora"
-    - title: Organización
-      Descripción:'Ideal para equipos y organizaciones más grandes.'
-      Precio: 999 dólares
-      Características:
-        - 'Hasta 20 desarrolladores '
-        - 'Todo en Startup'
-      Botón:
-        Etiqueta: "Comprar ahora"
+collapse: true
+ignore:
+  - plans
+  - scale
+external:
+  - plans
+externalTypes:
+  - PricingPlanProps[]
+class: 'p-8'
+props:
+  scale: true
+  plans:
+    - title: Solo
+      description: 'Tailored for indie hackers.'
+      price: '$249'
+      features:
+        - 'One developer'
+        - 'Lifetime access'
+      button:
+        label: 'Buy now'
+    - title: Startup
+      description: 'Best suited for small teams.'
+      price: '$499'
+      scale: true
+      features:
+        - 'Up to 5 developers'
+        - 'Everything in Solo'
+      button:
+        label: 'Buy now'
+    - title: Organization
+      description: 'Ideal for larger teams and organizations.'
+      price: '$999'
+      features:
+        - 'Up to 20 developers'
+        - 'Everything in Startup'
+      button:
+        label: 'Buy now'
 ---
 ::
 
-@@ph086@@Ejemplos
+## Ejemplos
 
 ::note
 Si bien estos ejemplos utilizan [Nuxt Content](https://content.nuxt.com), los componentes se pueden integrar con cualquier sistema de gestión de contenido.
@@ -241,23 +241,23 @@ const { data: plans } = await useAsyncData('plans', () => queryCollection('plans
 ```
 
 ::note
-En este ejemplo, el `plans` se obtiene utilizando `queryCollection` desde el módulo `@nuxt/content`.
+En este ejemplo, los `plans` se obtienen utilizando `queryCollection` desde el módulo `@nuxt/content`.
 ::
 
-@112
+## API
 
-@@113@113@113
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
-@@114@114@114
+### Slots
 
-Componentes de slots
+:component-slots
 
-@115 @@ Temas
+## Temas
 
-Componente Tema
+:component-theme
 
-@116@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

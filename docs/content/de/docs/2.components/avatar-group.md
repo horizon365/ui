@@ -12,132 +12,132 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/AvatarGroup.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Wickeln Sie mehrere [Avatar](/docs/components/avatar) innerhalb einer AvatarGroup ein, um sie zu stapeln.
-
-::component-code
----
-Schöner: wahr
-Die Slots:
-  Default:|
-
-    @@@@005
-    @@@@006 @
-    @@@@007 @
----
-: u-avatar {src="https://github.com/benjamincanac.png" alt="Benjamin Canac"}
-: u-avatar {src="https://github.com/HugoRCD.png" alt="Hugo Richard"}
-: u-avatar {src="https://github.com/atinux.png" alt="Sébastien Chopin"}
-::
-
-@@11@11@11.11.11
-
-Verwenden Sie die `size` prop, um die Größe aller Avatare zu ändern.
+Wickeln Sie mehrere [Avatar](/docs/components/avatar) in eine AvatarGroup ein, um sie zu stapeln.
 
 ::component-code
 ---
-Schöner: wahr
-Props:
-  Größe: XL
-Die Slots:
-  Default:|
+prettier: true
+slots:
+  default: |
 
-    @@ph013 @
-    @@ph013 @
-    @@015
+    <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" />
+    <UAvatar src="https://github.com/HugoRCD.png" alt="Hugo Richard" />
+    <UAvatar src="https://github.com/atinux.png" alt="Sébastien Chopin" />
 ---
-: u-avatar {src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
-: u-avatar {src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
-: u-avatar {src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
+:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac"}
+:u-avatar{src="https://github.com/HugoRCD.png" alt="Hugo Richard"}
+:u-avatar{src="https://github.com/atinux.png" alt="Sébastien Chopin"}
 ::
 
-@@@@19@Max
+### Größe
 
-Verwenden Sie die `max` prop, um die Anzahl der angezeigten Avatare zu begrenzen.
+Verwenden Sie die `size`-prop, um die Größe aller Avatare zu ändern.
 
 ::component-code
 ---
-Schöner: wahr
-Props:
-  max: zwei
-Slots auf:
-  Default:|
+prettier: true
+props:
+  size: xl
+slots:
+  default: |
 
-    @@ph022
-    @@ph023
-    @@ph024
+    <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy" />
+    <UAvatar src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy" />
+    <UAvatar src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy" />
 ---
-: u-avatar {src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
-: u-avatar {src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
-: u-avatar {src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
+:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
+:u-avatar{src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
+:u-avatar{src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
 ::
 
-### Color: badge{label="4.8+" class="align-text-top"}
+### Max ist
 
-Verwenden Sie die `color` prop, um die Farbe aller Avatare zu ändern.
+Verwenden Sie die `max`-Prop, um die Anzahl der angezeigten Avatare zu begrenzen.
 
 ::component-code
 ---
-Schöner: wahr
-Props:
-  Farbe: Primary
-Slots auf:
-  Default:|
+prettier: true
+props:
+  max: 2
+slots:
+  default: |
 
-    @031
-    @@@@@@@@@@@@@@032
-    @033
+    <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy" />
+    <UAvatar src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy" />
+    <UAvatar src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy" />
 ---
-: u-avatar {alt="Benjamin Canac"}
-: u-avatar {alt="Hugo Richard"}
-: u-avatar {alt="Sébastien Chopin"}
+:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
+:u-avatar{src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
+:u-avatar{src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
 ::
 
-@@ph037@@Beispiele
+### Farbe: badgexx042x
 
-### Mit Tooltip
+Verwenden Sie die `color`-prop, um die Farbe aller Avatare zu ändern.
 
-Wickeln Sie jeden Avatar mit einem [Tooltip](/docs/components/tooltip), um einen Tooltip beim Hover anzuzeigen.
+::component-code
+---
+prettier: true
+props:
+  color: primary
+slots:
+  default: |
 
-: component-example {name="avatar-group-tooltip-example"}
+    <UAvatar alt="Benjamin Canac" />
+    <UAvatar alt="Hugo Richard" />
+    <UAvatar alt="Sébastien Chopin" />
+---
+:u-avatar{alt="Benjamin Canac"}
+:u-avatar{alt="Hugo Richard"}
+:u-avatar{alt="Sébastien Chopin"}
+::
 
-### Mit Chip
+## Examples [Bearbeiten]
 
-Wickeln Sie jeden Avatar mit einem [Chip](/docs/components/chip) um einen Chip um den Avatar herum anzuzeigen.
+### With Tooltip Übersetzung
 
-: component-beispiel {name="avatar-group-chip-example"}
+Wickeln Sie jeden Avatar mit einem [Tooltip](/docs/components/tooltip) ein, um einen Tooltip beim Hover anzuzeigen.
 
-@@ph050@@mit Link
+:component-example{name="avatar-group-tooltip-example"}
+
+### With Chip (englisch)
+
+Wickeln Sie jeden Avatar mit einem [Chip](/docs/components/chip) ein, um einen Chip um den Avatar herum anzuzeigen.
+
+:component-example{name="avatar-group-chip-example"}
+
+### mit Link
 
 Wickeln Sie jeden Avatar mit einem [Link](/docs/components/link), um sie anklickbar zu machen.
 
-: component-beispiel {name="avatar-group-link-example"}
+:component-example{name="avatar-group-link-example"}
 
-### Mit Maske
+### With Maske
 
-Wickeln Sie einen Avatar mit einer CSS-Maske ein, um ihn mit einer benutzerdefinierten Form anzuzeigen.
+Wickeln Sie einen Avatar mit einer CSS-Maske, um ihn mit einer benutzerdefinierten Form anzuzeigen.
 
-: component-beispiel {name="avatar-group-mask-example"}
+:component-example{name="avatar-group-mask-example"}
 
 ::warning
-Die `chip` prop funktioniert nicht korrekt, wenn Sie eine Maske verwenden.
+Die `chip` prop funktioniert nicht richtig, wenn Sie eine Maske verwenden. Chips können je nach Maskenform geschnitten werden.
 ::
 
-@@5999@bmg-ng-ng.de
+## API (englisch)
 
-@@ph060@@@props
+### Props (englisch)
 
-Komponenten Props
+:component-props
 
-### Slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph062@@theme@@theme@@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@@theme@theme@theme@theme@@theme@theme@theme@theme@theme@theme@theme@theme@the
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph063@@changelog @@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

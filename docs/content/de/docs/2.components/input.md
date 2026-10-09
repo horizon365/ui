@@ -9,364 +9,364 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Input.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Verwenden Sie die `v-model` Direktive, um den Wert der Eingabe zu steuern.
+Verwenden Sie die `v-model`-Direktive, um den Wert der Eingabe zu steuern.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: ''
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ''
 ---
 ::
 
-@@004@0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### type ist
 
-Verwenden Sie `type` prop, um den Eingabetyp zu ändern. Standardmäßig ist `text`.
+Verwenden Sie die `type`-prop, um den Eingabetyp zu ändern. Standardmäßig ist `text`.
 
-Einige Typen wurden in ihren eigenen Komponenten implementiert, wie [Checkbox](/docs/components/checkbox),[Radio](/docs/components/radio-group),[InputNumber](/docs/components/input-number) etc. und andere wurden wie `file`zum Beispiel gestyt.
+Einige Typen wurden in ihren eigenen Komponenten implementiert, wie z.B. [Checkbox](/docs/components/checkbox), [Radio](/docs/components/radio-group), [InputNumber](/docs/components/input-number) usw. und andere wurden wie z.B. `file` gestaltet.
 
 ::component-code
 ---
-Items:
-  Typen:
-    @@ph020@@@text @@ Übersetzung
-    @@ph021@@Nummer
-    @@@ph022@passwort
-    @@@ph023@suche
-    @@ph024@Dateiendung
-Props:
-  Typ: 'Datei'
+items:
+  type:
+    - text
+    - number
+    - password
+    - search
+    - file
+props:
+  type: 'file'
 ---
 ::
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types" target="_blank"}
-Sie können alle verfügbaren Typen in den MDN Web Docs überprüfen.
+Sie können alle verfügbaren Typen auf den MDN Web Docs überprüfen.
 ::
 
-### Platzhalter
+### Placeholder (englisch)
 
-Verwenden Sie `placeholder` prop, um einen Platzhaltertext zu setzen.
+Verwenden Sie die `placeholder`-Prop, um einen Platzhaltertext festzulegen.
 
 ::component-code
 ---
-Props:
-  Platzhalter: 'Suche...'
+props:
+  placeholder: 'Search...'
 ---
 ::
 
-@@ph027@gmail.de
+### Color (englisch)
 
-Verwenden Sie `color` prop, um die Ringfarbe zu ändern, wenn die Eingabe fokussiert ist.
+Verwenden Sie die `color`-prop, um die Ringfarbe zu ändern, wenn der Eingang fokussiert ist.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph029@@gmail.de
-Props:
-  Farbe: neutral
-  Highlight: Wahr
-  Platzhalter: 'Suche...'
+ignore:
+  - placeholder
+props:
+  color: neutral
+  highlight: true
+  placeholder: 'Search...'
 ---
 ::
 
 ::note
-`highlight` prop wird hier verwendet, um den Fokuszustand anzuzeigen. Es wird intern verwendet, wenn ein Validierungsfehler auftritt.
+Die `highlight`-prop wird hier verwendet, um den Fokuszustand anzuzeigen. Es wird intern verwendet, wenn ein Validierungsfehler auftritt.
 ::
 
-@@ph031@@Variant-Variante
+### Variant Übersetzung
 
-Verwenden Sie `variant` prop, um die Variante der Eingabe zu ändern.
+Verwenden Sie die `variant`-prop, um die Variante des Eingangs zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph033@gmail.de
-Props:
-  Farbe: neutral
-  Variante: subtil
-  Markiert: false
-  Platzhalter: 'Suche...'
+ignore:
+  - placeholder
+props:
+  color: neutral
+  variant: subtle
+  highlight: false
+  placeholder: 'Search...'
 ---
 ::
 
-@@ph034 @ Größe
+### Size
 
-Verwenden Sie `size` prop, um die Größe der Eingabe zu ändern.
+Verwenden Sie die `size`-prop, um die Größe des Eingangs zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph036@gmail.de
-Props:
-  Größe: XL
-  Platzhalter: 'Suche...'
+ignore:
+  - placeholder
+props:
+  size: xl
+  placeholder: 'Search...'
 ---
 ::
 
-@@ph037@@gmail.de
+### Icon (englisch)
 
-Verwenden Sie die `icon` prop, um ein [Icon](/docs/components/icon) innerhalb des Eingangs anzuzeigen.
+Verwenden Sie die `icon`-Prop, um ein [Icon](/docs/components/icon) innerhalb der Eingabe anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph043@gmail.de
-Props:
-  Icon: 'i-lucide-search'(auf Englisch)
-  Größe: MD
-  Beschreibung: Outline
-  Platzhalter: 'Suche...'
+prettier: true
+ignore:
+  - placeholder
+props:
+  icon: 'i-lucide-search'
+  size: md
+  variant: outline
+  placeholder: 'Search...'
 ---
 ::
 
-Verwenden Sie `leading` und `trailing` props, um die Symbolposition festzulegen, oder die `leading-icon` und `trailing-icon` props, um für jede Position ein anderes Symbol festzulegen.
+Verwenden Sie die `leading`-und `trailing`-Requisiten, um die Symbolposition festzulegen, oder die `leading-icon`-und `trailing-icon`-Requisiten, um für jede Position ein anderes Symbol festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph048@@gmail.de
-Props:
-  Bezeichnung: i-Lucide-at-Sign
-  Platzhalter: "Geben Sie Ihre E-Mail ein"
-  Größe: MD
+prettier: true
+ignore:
+  - placeholder
+props:
+  trailingIcon: i-lucide-at-sign
+  placeholder: 'Enter your email'
+  size: md
 ---
 ::
 
-@@@@@@Avatar@@Avatar@Avatar@Avatar@@@@@Avatar@@@Avatar@@@@@Avatar@@@@Avatar@@@@@Avatar@@Avatar@Avatar@Avatar@Avatar@Avatar@@Avatar@Avatar@@Avatar@Avatar@@Avatar@@Avatar@@Avatar@@@@Avatar@@@@Avatar@@@@@@Avatar@@@@@@@@@Avatar@@@@@@@@@@@Avatar@@@@@@@@@@@@@@@Avatar@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@avatarataratarar
+### Avatar (englisch)
 
-Verwenden Sie die `avatar` prop, um ein [Avatar](/docs/components/avatar) innerhalb des Eingangs anzuzeigen.
+Verwenden Sie die `avatar`-Prop, um ein [Avatar](/docs/components/avatar) innerhalb des Eingangs anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph055@gmail.de
-  - avatar.loading (nicht verfügbar)
-Props:
-  Avatare sind:
-    src: 'https://github.com/nuxt.png'(auf Englisch)
-    Aufladung: Lazy
-  Größe: md
-  Variante: Übersicht
-  Platzhalter: 'Suche...'
+prettier: true
+ignore:
+  - placeholder
+  - avatar.loading
+props:
+  avatar:
+    src: 'https://github.com/nuxt.png'
+    loading: lazy
+  size: md
+  variant: outline
+  placeholder: 'Search...'
 ---
 ::
 
-@@@@@57@Aufladen
+### Loading (englisch)
 
-Verwenden Sie `loading` prop, um ein Ladesymbol auf der Eingabe anzuzeigen.
+Verwenden Sie die `loading` prop, um ein Ladesymbol auf der Eingabe anzuzeigen.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph059@gmail.de
-Props:
-  Aufladung: true
-  Nachtrag: false
-  Platzhalter: 'Suche...'
+ignore:
+  - placeholder
+props:
+  loading: true
+  trailing: false
+  placeholder: 'Search...'
 ---
 ::
 
-@@ph060@@Icon-Anzeige
+### Loading Icon (englisch)
 
-Verwenden Sie `loading-icon` prop, um das Ladesymbol anzupassen. Standardmäßig ist `i-lucide-loader-circle`.
+Verwenden Sie die `loading-icon`-prop, um das Ladesymbol anzupassen. Standardmäßig ist `i-lucide-loader-circle`.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph063@@gmail.de
-Props:
-  Aufladung: true
-  loadingIcon: 'i-lucide-loader'(englisch)
-  Platzhalter: 'Suche...'
+ignore:
+  - placeholder
+props:
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  placeholder: 'Search...'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.loading` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.loading` Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.loading` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.loading` Schlüssel anpassen.
 :::
 ::
 
-### disabled @@ nicht vorhanden
+### Disabled (nicht verfügbar)
 
-Verwenden Sie `disabled` prop, um die Eingabe zu deaktivieren.
+Verwenden Sie die `disabled`-prop, um die Eingabe zu deaktivieren.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph070@@gmail.de
-Props:
-  Behindert: Wahr
-  Platzhalter: 'Suche...'
+ignore:
+  - placeholder
+props:
+  disabled: true
+  placeholder: 'Search...'
 ---
 ::
 
-## Beispiele
+## Examples (Beispiele)
 
-### Mit einem klaren Knopf
+### Mit Clear-Taste
 
-Sie können einen [Button](/docs/components/button) in den `#trailing`-Steckplatz einfügen, um die Eingabe zu löschen.
+Sie können einen [Button](/docs/components/button) in den `#trailing`-Steckplatz stecken, um die Eingabe zu löschen.
 
 ::component-example
 ---
-Name: 'input-clear-button-beispiel'.
+name: 'input-clear-button-example'
 ---
 ::
 
-### Mit Kopierknopf
+### Mit Copy-Button
 
 Sie können einen [Button](/docs/components/button) in den `#trailing`-Steckplatz einfügen, um den Wert in die Zwischenablage zu kopieren.
 
 ::component-example
 ---
-Name: 'Input-Copy-Button-Beispiel'
+name: 'input-copy-button-example'
 ---
 ::
 
-### Mit Passwort-Umschalter
+### Mit Passwort umschalten
 
-Sie können ein [Button](/docs/components/button) innerhalb des `#trailing`-Steckplatzes setzen, um die Passwortsichtbarkeit umzuschalten.
+Sie können einen [Button](/docs/components/button) in den `#trailing`-Steckplatz einfügen, um die Sichtbarkeit des Kennworts zu ändern.
 
 ::component-example
 ---
-name: 'input-password-toggle-example'(Eingabe-Passwort-Toggle-Beispiel)
+name: 'input-password-toggle-example'
 ---
 ::
 
-### Mit Kennwortstärkeanzeige
+### Mit Kennwortstärke-Anzeige
 
 Sie können die Komponente [Progress](/docs/components/progress) verwenden, um die Kennwortstärkeanzeige anzuzeigen.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'input-password-strength-indicator-example'(Eingabekennwort-Stärke-Indikator-Beispiel)
+collapse: true
+name: 'input-password-strength-indicator-example'
 ---
 ::
 
-### Mit Zeichenbegrenzung
+### With character limit (Zeichenbegrenzung)
 
-Sie können den `#trailing`-Slot verwenden, um der Eingabe eine Zeichenbegrenzung hinzuzufügen.
+Sie können den `#trailing`-Steckplatz verwenden, um der Eingabe eine Zeichenbegrenzung hinzuzufügen.
 
 ::component-example
 ---
-Name: 'input-character-limit-example'(Eingabezeichen-Beispiel)
+name: 'input-character-limit-example'
 ---
 ::
 
-### Mit Tastaturkürzel
+### With Tastaturkürzel
 
-Sie können die [Kbd](/docs/components/kbd) Komponente innerhalb des `#trailing` Steckplatzes verwenden, um eine Tastenkombination zur Eingabe hinzuzufügen.
+Sie können die [Kbd](/docs/components/kbd)-Komponente im `#trailing`-Steckplatz verwenden, um der Eingabe eine Tastenkombination hinzuzufügen.
 
 ::component-example
 ---
-Name: 'input-kbd-beispiel'
+name: 'input-kbd-example'
 ---
 ::
 
 ::note{to="/docs/composables/define-shortcuts"}
-In diesem Beispiel wird das `defineShortcuts` composable verwendet, um die Eingabe zu fokussieren, wenn die Taste: kbd{value="/"} gedrückt wird.
+In diesem Beispiel wird das Composable `defineShortcuts` verwendet, um die Eingabe zu fokussieren, wenn die: kbd{value="/"}-Taste gedrückt wird.
 ::
 
-### Mit Maske
+### With Maske
 
-Es gibt keine integrierte Unterstützung für Masken, aber Sie können Bibliotheken wie [maska](https://github.com/beholdr/maska) verwenden, um die Eingabe zu maskieren.
+Es gibt keine eingebaute Unterstützung für Masken, aber Sie können Bibliotheken wie [maska](https://github.com/beholdr/maska) verwenden, um die Eingabe zu maskieren.
 
 ::component-example
 ---
-Name: 'input-mask-example'(Eingabemaske)
+name: 'input-mask-example'
 ---
 ::
 
-### Mit schwimmendem Etikett
+### Mit Floating-Label
 
 Sie können den `#default`-Steckplatz verwenden, um dem Eingang ein Floating-Label hinzuzufügen.
 
 ::component-example
 ---
-Bezeichnung: Input-Floating-Label-Example.
+name: 'input-floating-label-example'
 ---
 ::
 
-### Innerhalb eines FormFeldes
+### Innerhalb eines Formularfelds
 
-Sie können die Eingabe innerhalb einer [FormField](/docs/components/form-field) Komponente verwenden, um ein Etikett, einen Hilfetext, einen erforderlichen Indikator usw. anzuzeigen.
+Sie können die Eingabe innerhalb einer [FormField](/docs/components/form-field)-Komponente verwenden, um eine Beschriftung, einen Hilfetext, eine erforderliche Anzeige usw. anzuzeigen.
 
 ::component-example
 ---
-name: 'input-form-field-example'(Eingabe-Formular-Feld-Beispiel)
+name: 'input-form-field-example'
 ---
 ::
 
 ::tip{to="/docs/components/form"}
-Es bietet auch Validierung und Fehlerbehandlung, wenn es in einer **Form** Komponente verwendet wird.
+Es bietet auch Validierung und Fehlerbehandlung, wenn es in einer **Form**-Komponente verwendet wird.
 ::
 
 ### Innerhalb einer Feldgruppe
 
-Sie können die Eingabe innerhalb einer [FieldGroup](/docs/components/field-group) Komponente verwenden, um mehrere Elemente zusammen zu gruppieren.
+Sie können die Eingabe in einer [FieldGroup](/docs/components/field-group)-Komponente verwenden, um mehrere Elemente zusammen zu gruppieren.
 
 ::component-example
 ---
-Name: 'input-field-group-example'(Eingabefeld-Gruppenbeispiel)
+name: 'input-field-group-example'
 ---
 ::
 
-### Als Telefonnummer eingeben
+### Wie eine Telefonnummer eingeben
 
-Sie können die Eingabe in einer [FieldGroup](/docs/components/field-group) Komponente neben einer [SelectMenu](/docs/components/select-menu) verwenden, um eine Rufnummerneingabe mit Ländervorwahl zu erstellen.
+Sie können die Eingabe innerhalb einer [FieldGroup](/docs/components/field-group)-Komponente neben einer [SelectMenu](/docs/components/select-menu) verwenden, um eine Rufnummerneingabe mit Ländervorwahl zu erstellen.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'Eingabe-Telefonnummer-Beispiel'.
+collapse: true
+name: 'input-phone-number-example'
 ---
 ::
 
-@@@@@@133@133@133@133@133@133@@133@13@133@@133@@133@@133@@133@13@13@13@13@13@@133@133@@@133@133@@13@@1333@@133@133@@133@@133@@1333@@@@13333@@@@@13333@@@@@@133333@@@@@@@@@133333333@@@@@@@@@@@@@1333333333@@@@@@@@@@@@@@@@@@@1333333333333@@@@@@@@@@@@@@
+## API
 
-@@@@@@@@134@@props
+### Props Bearbeiten
 
-Komponenten Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
-Diese Komponente unterstützt auch alle nativen `<input>` HTML-Attribute.
+Diese Komponente unterstützt auch alle nativen `<input>`-HTML-Attribute.
 ::
 
-### Slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@@@@@@@@@@@@@Emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-@@138@@smail.de
+### Expose (englisch)
 
 Beim Zugriff auf die Komponente über eine Template-Referenz können Sie Folgendes verwenden:
 
-| Vorname| Typen|
+| Vorname| Typ|
 | ---- | ---- |
-| {lang="ts-type"}|@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@###################################################################################################################################|
+| `inputRef`{lang="ts-type"} (englisch)| `Ref<HTMLInputElement \| null>`{lang="ts-type"} nicht|
 
-@@143@Einsteiger-Tipp
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph144@@changelog @@ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

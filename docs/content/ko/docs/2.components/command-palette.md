@@ -1,5 +1,5 @@
 ---
-title: Command팔레트
+title: CommandPalette 명령팔레트
 description: 효율적인 퍼지 매칭을 위해 Fuse.js로 구동되는 전체 텍스트 검색이 포함된 명령 팔레트입니다.
 category: navigation
 keywords:
@@ -20,869 +20,869 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/CommandPalette.vue
 ---
 
-##  사용
+## Usage
 
-`v-model` 지시문을 사용하여 CommandPalette의 값을 제어하거나 `default-value`prop을 사용하여 상태를 제어할 필요가 없을 때 초기 값을 설정합니다.
+`v-model` 지시어를 사용하여 CommandPalette 값을 제어하거나 `default-value` prop 상태를 제어할 필요가 없을 때 초기값을 설정합니다.
 
 ::component-code
 ---
-축소: true
-숨기기 (Hide):
-  - autofocus @ 자동 초점
-무시하기:
-  -  그룹
-  - modelValue - modelValue 이미지
-  -  클래스
-외부:
-  -  그룹
-  - modelValue - modelValue 이미지
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - groups
+  - modelValue
+  - class
+external:
+  - groups
+  - modelValue
 externalTypes:
-  - CommandPaletteGroup []
-클래스 : "!p-0"
-소품 :
-  모델값: {}
-  자동 초점:false
-  그룹 :
-    - id: '사용자'
-      레이블: "Users"
-      프로젝트:
-        - label: '벤자민 카낙'
-          이름: Benjamincanac
-          아바타 (Avatar):
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  modelValue: {}
+  autofocus: false
+  groups:
+    - id: 'users'
+      label: 'Users'
+      items:
+        - label: 'Benjamin Canac'
+          suffix: 'benjamincanac'
+          avatar:
             src: 'https://github.com/benjamincanac.png'
-            로드: Lazy
+            loading: lazy
         - label: 'Hugo Richard'
-          접미사: 'HugoRCD'
-          아바타 (Avatar):
+          suffix: 'HugoRCD'
+          avatar:
             src: 'https://github.com/HugoRCD.png'
-            로드: Lazy
+            loading: lazy
         - label: 'Sébastien Chopin'
-          사진: "atinux"
-          아바타 (Avatar):
+          suffix: 'atinux'
+          avatar:
             src: 'https://github.com/atinux.png'
-            로드: Lazy
+            loading: lazy
         - label: 'Romain Hamel'
-          접미사: "romhml"
-          아바타 (Avatar):
+          suffix: 'romhml'
+          avatar:
             src: 'https://github.com/romhml.png'
-            로드: Lazy
-        - label: '산드로 서커스'
-          접미어: 'sandros94'
-          아바타 (Avatar):
+            loading: lazy
+        - label: 'Sandro Circi'
+          suffix: 'sandros94'
+          avatar:
             src: 'https://github.com/sandros94.png'
-            로드: Lazy
-        - label: 'Jakub Michalek'
-          이름: J-Michalek
-          아바타 (Avatar):
+            loading: lazy
+        - label: 'Jakub Michálek'
+          suffix: 'J-Michalek'
+          avatar:
             src: 'https://github.com/J-Michalek.png'
-            로드: Lazy
-        - label: '알렉스'
-          사진: "hywax"
-          아바타 (Avatar):
+            loading: lazy
+        - label: 'Alex'
+          suffix: 'hywax'
+          avatar:
             src: 'https://github.com/hywax.png'
-            로드: Lazy
+            loading: lazy
         - label: 'Maxime Pauvert'
-          접미사: 'maximepvrt'
-          아바타 (Avatar):
+          suffix: 'maximepvrt'
+          avatar:
             src: 'https://github.com/maximepvrt.png'
-            로드: Lazy
-  클래스 : 'flex-1 h-80'
+            loading: lazy
+  class: 'flex-1 h-80'
 ---
 ::
 
 ::tip{to="#control-selected-items"}
-또한 `@update:model-value` 이벤트를 사용하여 선택한 항목을 들을 수 있습니다.
+`@update:model-value` 이벤트를 사용하여 선택한 항목을 청취할 수도 있습니다.
 ::
 
-###  그룹
+### Groups 그룹
 
-CommandPalette 구성 요소는 사용자 입력에 따라 일치하는 명령을 그룹화하고 순위를 지정합니다. 효율적인 명령 검색을 위해 동적인 즉각적인 검색 결과를 제공합니다. `groups`prop을 다음 등록 정보를 가진 객체 배열로 사용합니다.
+CommandPalette 구성 요소는 사용자 입력에 따라 일치하는 명령을 그룹화하고 순위를 지정합니다. 효율적인 명령 검색을 위해 동적인 즉각적인 검색 결과를 제공합니다. `groups` prop을 객체 배열로 사용하여 다음 속성을 사용합니다.
 
--  @ `id: string` @ @ {lang="ts-type"} @
--  @ `label?: string` @ @ {lang="ts-type"} @
-- `slot?: string`{lang="ts-type"}
-- `items?: CommandPaletteItem[]`{lang="ts-type"}
+- `id: string`{lang="ts-type"} / - {lang="ts-type"}
+- `label?: string`{lang="ts-type"} (- `label?: string`{lang="ts-type"})
+- `slot?: string`{lang="ts-type"} (- `slot?: string`{lang="ts-type"})
+- `items?: CommandPaletteItem[]`{lang="ts-type"}의 발음을 - `items?: CommandPaletteItem[]`{lang="ts-type"}
 - [`ignoreFilter?: boolean`{lang="ts-type"}](#with-ignore-filter)
--  @ [ @ @ `postFilter?: (searchTerm: string, items: T[]) => T[]` @ {lang="ts-type"} @ ]( @ #with-post-filtered-items @ ) @
-- `highlightedIcon?: string` {lang="ts-type"}
+- [`postFilter?: (searchTerm: string, items: T[]) => T[]`{lang="ts-type"}](#with-post-filtered-items)
+- `highlightedIcon?: string`{lang="ts-type"}
 
 ::caution
-각 그룹에 대해 `id`를 입력해야 합니다. 그렇지 않으면 그룹이 무시됩니다.
+각 그룹에 대해 `id`를 제공해야 합니다. 그렇지 않으면 그룹이 무시됩니다.
 ::
 
 각 그룹에는 명령을 정의하는 `items` 객체 배열이 포함되어 있습니다. 각 항목에는 다음 등록 정보가 있을 수 있습니다.
 
--  @ `prefix?: string` @ @ {lang="ts-type"} @
--  @ `label?: string` @ @ {lang="ts-type"} @
+- `prefix?: string`{lang="ts-type"} (- `prefix?: string`{lang="ts-type"})
+- `label?: string`{lang="ts-type"}
 - `suffix?: string`{lang="ts-type"}
--  @ `icon?: string` @ {lang="ts-type"} @
--  @ `avatar?: AvatarProps` @ @ {lang="ts-type"} @
-- `chip?: ChipProps` {lang="ts-type"}
--  @ `kbds?: string[] | KbdProps[]` @ @ {lang="ts-type"} @
--  @ `active?: boolean` @ {lang="ts-type"}
--  @ `loading?: boolean` @ {lang="ts-type"}
-- `disabled?: boolean`{lang="ts-type"}
+- `icon?: string`{lang="ts-type"}
+- `avatar?: AvatarProps`{lang="ts-type"}
+- `chip?: ChipProps`{lang="ts-type"}
+- `kbds?: string[] | KbdProps[]`{lang="ts-type"}
+- `active?: boolean`{lang="ts-type"}
+- `loading?: boolean`{lang="ts-type"}
+- `disabled?: boolean`{lang="ts-type"} (- `disabled?: boolean`{lang="ts-type"})
 - [`slot?: string`{lang="ts-type"}](#with-custom-slot)
 - `placeholder?: string`{lang="ts-type"}
-- `children?: CommandPaletteItem[]`{lang="ts-type"}
-- `onSelect?: (e: Event) => void`{lang="ts-type"}
-- `class?: any`{lang="ts-type"}
-- `ui?: { item?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLeadingChipSize?: ClassNameValue, itemLeadingChip?: ClassNameValue, itemLabel?: ClassNameValue, itemLabelPrefix?: ClassNameValue, itemLabelBase?: ClassNameValue, itemLabelSuffix?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingKbds?: ClassNameValue, itemTrailingKbdsSize?: ClassNameValue, itemTrailingHighlightedIcon?: ClassNameValue, itemTrailingIcon?: ClassNameValue }`{lang="ts-type"}
+- `children?: CommandPaletteItem[]`{lang="ts-type"} (- `children?: CommandPaletteItem[]`{lang="ts-type"})
+- `onSelect?: (e: Event) => void`{lang="ts-type"} - {lang="ts-type"} (- `onSelect?: (e: Event) => void`{lang="ts-type"}) / - `onSelect?: (e: Event) => void`{lang="ts-type"}
+- `class?: any`{lang="ts-type"} (- `class?: any`{lang="ts-type"}) / - `class?: any`{lang="ts-type"} / - `class?: any`{lang="ts-type"}
+- `ui?: { item?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLeadingChipSize?: ClassNameValue, itemLeadingChip?: ClassNameValue, itemLabel?: ClassNameValue, itemLabelPrefix?: ClassNameValue, itemLabelBase?: ClassNameValue, itemLabelSuffix?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingKbds?: ClassNameValue, itemTrailingKbdsSize?: ClassNameValue, itemTrailingHighlightedIcon?: ClassNameValue, itemTrailingIcon?: ClassNameValue }`{lang="ts-type"} (- `ui?: { item?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLeadingChipSize?: ClassNameValue, itemLeadingChip?: ClassNameValue, itemLabel?: ClassNameValue, itemLabelPrefix?: ClassNameValue, itemLabelBase?: ClassNameValue, itemLabelSuffix?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingKbds?: ClassNameValue, itemTrailingKbdsSize?: ClassNameValue, itemTrailingHighlightedIcon?: ClassNameValue, itemTrailingIcon?: ClassNameValue }`{lang="ts-type"})
 
-당신은 [Link](/docs/components/link#props) 구성 요소에서 모든 속성을 전달 할 수 있습니다 `to`, `target` 등.
+[Link](/docs/components/link#props) 구성 요소에서 `to`, `target` 등의 속성을 전달할 수 있습니다.
 
 ::component-code
 ---
-축소: true
-숨기기 (Hide):
-  - autofocus @ 자동 초점
-무시하기:
-  -  그룹
-  - modelValue - modelValue 이미지
-  -  클래스
-외부:
-  -  그룹
-  - modelValue - modelValue 이미지
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - groups
+  - modelValue
+  - class
+external:
+  - groups
+  - modelValue
 externalTypes:
-  -  CommandPaletteGroup []
-클래스: "!p-0"
-소품 :
-  모델값: {}
-  자동 초점:false
-  그룹 :
-    - id: '사용자'
-      레이블: "Users"
-      프로젝트:
-        - label: '벤자민 카낙'
-          이름: Benjamincanac
-          아바타 (Avatar):
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  modelValue: {}
+  autofocus: false
+  groups:
+    - id: 'users'
+      label: 'Users'
+      items:
+        - label: 'Benjamin Canac'
+          suffix: 'benjamincanac'
+          avatar:
             src: 'https://github.com/benjamincanac.png'
-            로드: Lazy
+            loading: lazy
         - label: 'Hugo Richard'
-          접미사: 'HugoRCD'
-          아바타 (Avatar):
+          suffix: 'HugoRCD'
+          avatar:
             src: 'https://github.com/HugoRCD.png'
-            로드: Lazy
-        - label: '세바스티앙 쇼팽'
-          사진: "atinux"
-          아바타 (Avatar):
+            loading: lazy
+        - label: 'Sébastien Chopin'
+          suffix: 'atinux'
+          avatar:
             src: 'https://github.com/atinux.png'
-            로드: Lazy
+            loading: lazy
         - label: 'Romain Hamel'
-          접미사: "romhml"
-          아바타 (Avatar):
+          suffix: 'romhml'
+          avatar:
             src: 'https://github.com/romhml.png'
-            로드: Lazy
-        - label: '산드로 서커스'
-          접미사: 'sandros94'
-          아바타 (Avatar):
+            loading: lazy
+        - label: 'Sandro Circi'
+          suffix: 'sandros94'
+          avatar:
             src: 'https://github.com/sandros94.png'
-            로드: Lazy
-        - label: 'Jakub Michalek'
-          이름: J-Michalek
-          아바타 (Avatar):
+            loading: lazy
+        - label: 'Jakub Michálek'
+          suffix: 'J-Michalek'
+          avatar:
             src: 'https://github.com/J-Michalek.png'
-            로드: Lazy
-        - label: '알렉스'
-          사진: "hywax"
-          아바타 (Avatar):
+            loading: lazy
+        - label: 'Alex'
+          suffix: 'hywax'
+          avatar:
             src: 'https://github.com/hywax.png'
-            로드: Lazy
+            loading: lazy
         - label: 'Maxime Pauvert'
-          접미사: 'maximepvrt'
-          아바타 (Avatar):
-            src: 'https://github. com/maximepvrt. png'
-            로드: Lazy
-  클래스: flex-1
+          suffix: 'maximepvrt'
+          avatar:
+            src: 'https://github.com/maximepvrt.png'
+            loading: lazy
+  class: 'flex-1'
 ---
 ::
 
 ::tip{to="#with-children-in-items"}
-각 항목은 다음 속성을 가진 `children` 객체의 배열을 사용하여 하위 메뉴를 작성할 수 있습니다.
+각 항목은 다음과 같은 속성을 가진 객체의 `children` 배열을 사용하여 하위 메뉴를 작성할 수 있습니다.
 ::
 
-###  다중
+### Multiple 다중
 
-`multiple`prop을 사용하여 여러 개의 선택을 허용합니다.
+`multiple` prop을 사용하여 여러 선택을 허용합니다.
 
 ::component-code
 ---
-축소: true
-숨기기 (Hide):
-  - autofocus @ 자동 초점
-무시하기:
-  -  그룹
-  - modelValue - modelValue 이미지
-  - multiple @ 다중
-  -  클래스
-외부:
-  -  그룹
-  - modelValue - modelValue 이미지
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - groups
+  - modelValue
+  - multiple
+  - class
+external:
+  - groups
+  - modelValue
 externalTypes:
-  -  CommandPaletteGroup []
-클래스: "!p-0"
-소품 :
-  다중: True
-  자동 초점:false
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  multiple: true
+  autofocus: false
   modelValue: []
-  그룹:
-    - id: '사용자'
-      레이블: "Users"
-      프로젝트:
-        - label: '벤자민 카낙'
-          이름: Benjamincanac
-          아바타 (Avatar):
+  groups:
+    - id: 'users'
+      label: 'Users'
+      items:
+        - label: 'Benjamin Canac'
+          suffix: 'benjamincanac'
+          avatar:
             src: 'https://github.com/benjamincanac.png'
-            로드: Lazy
+            loading: lazy
         - label: 'Hugo Richard'
-          접미사: 'HugoRCD'
-          아바타 (Avatar):
+          suffix: 'HugoRCD'
+          avatar:
             src: 'https://github.com/HugoRCD.png'
-            로드: Lazy
+            loading: lazy
         - label: 'Sébastien Chopin'
-          사진: "atinux"
-          아바타 (Avatar):
+          suffix: 'atinux'
+          avatar:
             src: 'https://github.com/atinux.png'
-            로드: Lazy
+            loading: lazy
         - label: 'Romain Hamel'
-          접미사: "romhml"
-          아바타 (Avatar):
+          suffix: 'romhml'
+          avatar:
             src: 'https://github.com/romhml.png'
-            로드: Lazy
-        - label: '산드로 서커스'
-          접미사: 'sandros94'
-          아바타 (Avatar):
+            loading: lazy
+        - label: 'Sandro Circi'
+          suffix: 'sandros94'
+          avatar:
             src: 'https://github.com/sandros94.png'
-            로드: Lazy
-        - label: 'Jakub Michalek'
-          이름: J-Michalek
-          아바타 (Avatar):
+            loading: lazy
+        - label: 'Jakub Michálek'
+          suffix: 'J-Michalek'
+          avatar:
             src: 'https://github.com/J-Michalek.png'
-            로드: Lazy
-        - label: '알렉스'
-          사진: "hywax"
-          아바타 (Avatar):
+            loading: lazy
+        - label: 'Alex'
+          suffix: 'hywax'
+          avatar:
             src: 'https://github.com/hywax.png'
-            로드: Lazy
+            loading: lazy
         - label: 'Maxime Pauvert'
-          접미사: 'maximepvrt'
-          아바타 (Avatar):
+          suffix: 'maximepvrt'
+          avatar:
             src: 'https://github.com/maximepvrt.png'
-            로드: Lazy
-  클래스: flex-1
+            loading: lazy
+  class: 'flex-1'
 ---
 ::
 
 ::caution
-배열을 `default-value`prop 또는 `v-model` 지시문에 전달해야 합니다.
+배열을 `default-value` prop 또는 `v-model` 디렉티브로 전달해야 합니다.
 ::
 
 ### 자리 표시자
 
-`placeholder`prop을 사용하여 자리 표시자 텍스트를 변경합니다.
+`placeholder` prop을 사용하여 자리 표시자 텍스트를 변경합니다.
 
 ::component-code
 ---
-축소: true
-숨기기 (Hide):
-  - autofocus @ 자동 초점
-무시하기:
-  -  클래스
-  -  그룹
-외부:
-  -  그룹
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - class
+  - groups
+external:
+  - groups
 externalTypes:
-  -  CommandPaletteGroup []
-클래스: "!p-0"
-소품 :
-  자동 초점:false
-  자리 표시자: '앱 검색...'
-  그룹 :
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  placeholder: 'Search an app...'
+  groups:
     - id: 'apps'
-      프로젝트:
-        - label: '달력'
-          아이콘: 'i-lucide-calendar'
-        - label: '음악'
-          아이콘 : i-lucide-music
-        - label: '지도'
-          아이콘 : i-lucide-map
-  클래스: flex-1
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
-### 크기: badge{label="4.4+" class="align-text-top"}
+### Size : badge{label="4.4+" class="align-text-top"}
 
-`size`prop 을 사용하여 CommandPalette 의 크기를 변경합니다.
+`size` prop을 사용하여 CommandPalette의 크기를 변경합니다.
 
 ::component-code
 ---
-축소: true
-숨기기 (Hide):
-  - autofocus @ 자동 초점
-무시하기:
-  -  클래스
-  -  그룹
-외부:
-  -  그룹
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - class
+  - groups
+external:
+  - groups
 externalTypes:
-  -  CommandPaletteGroup []
-클래스: "!p-0"
-소품 :
-  자동 초점:false
-  크기: "xl"
-  그룹:
-    - id: 'apps' 입니다.
-      항목:
-        - label: '달력'
-          아이콘: 'i-lucide-calendar'
-        - label: '음악'
-          아이콘 : i-lucide-music
-        - label: '지도'
-          아이콘 : i-lucide-map
-  클래스: flex-1
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  size: 'xl'
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
-###  아이콘
+### Icon
 
-`icon`prop을 사용하여 [Icon](/docs/components/icon) 입력을 사용자 지정합니다. 기본값은 `i-lucide-search`입니다.
+`icon` 소품을 사용하여 입력 [Icon](/docs/components/icon)를 사용자 정의합니다. 기본값은 `i-lucide-search`입니다.
 
 ::component-code
 ---
-축소: true
-숨기기 (Hide):
-  - autofocus @ 자동 초점
-무시하기:
-  -  클래스
-  -  그룹
-외부:
-  -  그룹
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - class
+  - groups
+external:
+  - groups
 externalTypes:
-  -  CommandPaletteGroup []
-클래스 : "!p-0"
-소품 :
-  자동 초점:false
-  아이콘 : i-lucide-box
-  그룹 :
-    - id: 'apps' 입니다.
-      프로젝트:
-        - label: '달력'
-          아이콘: 'i-lucide-calendar'
-        - label: '음악'
-          아이콘 : i-lucide-music
-        - label: '지도'
-          아이콘 : i-lucide-map
-  클래스: flex-1
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  icon: 'i-lucide-box'
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#nuxt #nuxt
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.search` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.search` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.search` 키에서 전역적으로 사용자 정의할 수 있습니다.
+`ui.icons.search` 키 아래의 `vite.config.ts`에서 이 아이콘을 전역적으로 사용자 지정할 수 있습니다.
 :::
 ::
 
 ### 선택한 아이콘
 
-`selected-icon`prop을 사용하여 선택한 항목을 사용자 지정합니다.[Icon](/docs/components/icon). 기본값은 `i-lucide-check`입니다.
+`selected-icon` 소품을 사용하여 선택한 항목 [Icon](/docs/components/icon)를 사용자 정의합니다. 기본값은 `i-lucide-check`입니다.
 
 ::component-code
 ---
-축소: true
-숨기기 (Hide):
-  - autofocus @ 자동 초점
-무시하기:
-  -  그룹
-  - modelValue - modelValue 이미지
-  - multiple @ 다중
-  -  클래스
-외부:
-  -  그룹
-  - modelValue - modelValue 이미지
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - groups
+  - modelValue
+  - multiple
+  - class
+external:
+  - groups
+  - modelValue
 externalTypes:
-  -  CommandPaletteGroup []
-클래스 : "!p-0"
-소품 :
-  다중: true
-  자동 초점:false
-  ModelValue:
-    - label: '벤자민 카낙'
-      이름: Benjamincanac
-      아바타 (Avatar):
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  multiple: true
+  autofocus: false
+  modelValue:
+    - label: 'Benjamin Canac'
+      suffix: 'benjamincanac'
+      avatar:
         src: 'https://github.com/benjamincanac.png'
-        로드: Lazy
-  selectedIcon : 'i-lucide-circle-check'
-  그룹:
-    - id: '사용자'
-      레이블: "Users"
-      항목:
-        - label: '벤자민 카낙'
-          이름: Benjamincanac
-          아바타 (Avatar):
+        loading: lazy
+  selectedIcon: 'i-lucide-circle-check'
+  groups:
+    - id: 'users'
+      label: 'Users'
+      items:
+        - label: 'Benjamin Canac'
+          suffix: 'benjamincanac'
+          avatar:
             src: 'https://github.com/benjamincanac.png'
-            로드: Lazy
+            loading: lazy
         - label: 'Hugo Richard'
-          접미사: 'HugoRCD'
-          아바타 (Avatar):
+          suffix: 'HugoRCD'
+          avatar:
             src: 'https://github.com/HugoRCD.png'
-            로드: Lazy
-        - label: '세바스티앙 쇼팽'
-          사진: "atinux"
-          아바타 (Avatar):
+            loading: lazy
+        - label: 'Sébastien Chopin'
+          suffix: 'atinux'
+          avatar:
             src: 'https://github.com/atinux.png'
-            로드: Lazy
+            loading: lazy
         - label: 'Romain Hamel'
-          접미사: "romhml"
-          아바타 (Avatar):
+          suffix: 'romhml'
+          avatar:
             src: 'https://github.com/romhml.png'
-            로드: Lazy
-        - label: '산드로 서커스'
-          접미어: 'sandros94'
-          아바타 (Avatar):
+            loading: lazy
+        - label: 'Sandro Circi'
+          suffix: 'sandros94'
+          avatar:
             src: 'https://github.com/sandros94.png'
-            로드: Lazy
-        - label: 'Jakub Michalek'
-          이름: J-Michalek
-          아바타 (Avatar):
+            loading: lazy
+        - label: 'Jakub Michálek'
+          suffix: 'J-Michalek'
+          avatar:
             src: 'https://github.com/J-Michalek.png'
-            로드: Lazy
-        - label: '알렉스'
-          사진: "hywax"
-          아바타 (Avatar):
+            loading: lazy
+        - label: 'Alex'
+          suffix: 'hywax'
+          avatar:
             src: 'https://github.com/hywax.png'
-            로드: Lazy
+            loading: lazy
         - label: 'Maxime Pauvert'
-          접미사: 'maximepvrt'
-          아바타 (Avatar):
+          suffix: 'maximepvrt'
+          avatar:
             src: 'https://github.com/maximepvrt.png'
-            로드: Lazy
-  클래스: flex-1
+            loading: lazy
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#nuxt #nuxt
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.check` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.check` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.check` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.check` 키 아래의 `vite.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-### 트레일링 아이콘
+### 트레일 아이콘
 
-`trailing-icon`prop을 사용하여 항목에 하위 항목이 있을 때 후행 [Icon](/docs/components/icon) 을 사용자 정의합니다. 기본값은 `i-lucide-chevron-right`입니다.
+항목에 자식이 있을 때 `trailing-icon` 소품을 사용하여 후행 [Icon](/docs/components/icon)를 사용자 정의합니다. 기본값은 `i-lucide-chevron-right`로 설정됩니다.
 
 ::component-code
 ---
-축소: true
-상품명 : True
-숨기기 (Hide):
-  - autofocus @ 자동 초점
-무시하기:
-  -  그룹
-  -  클래스
-외부:
-  -  그룹
+collapse: true
+prettier: true
+hide:
+  - autofocus
+ignore:
+  - groups
+  - class
+external:
+  - groups
 externalTypes:
-  - CommandPaletteGroup []
-클래스 : "!p-0"
-소품 :
-  자동 초점:false
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
   trailingIcon: 'i-lucide-arrow-right'
-  그룹:
-    - id: '액션'
-      프로젝트:
-        - label: '공유'
-          아이콘: 'i-lucide-share'
-          1차 하위 항목:
-            - label: '이메일'
-              아이콘 : i-lucide-mail
-            - label: '복사'
-              아이콘: 'i-lucide-copy'
-            - label: '링크'
-              아이콘: 'i-lucide-link'
-  클래스: flex-1
+  groups:
+    - id: 'actions'
+      items:
+        - label: 'Share'
+          icon: 'i-lucide-share'
+          children:
+            - label: 'Email'
+              icon: 'i-lucide-mail'
+            - label: 'Copy'
+              icon: 'i-lucide-copy'
+            - label: 'Link'
+              icon: 'i-lucide-link'
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#nuxt #nuxt
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.chevronRight` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.chevronRight` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.chevronRight` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.chevronRight` 키 아래의 `vite.config.ts` 내에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-###  로딩 중
+### loading 중
 
-`loading`prop을 사용하여 CommandPalette에 로드 아이콘을 표시합니다.
+`loading` prop를 사용하여 CommandPalette에 로드 아이콘을 표시합니다.
 
 ::component-code
 ---
-축소: true
-숨기기 (Hide):
-  - autofocus @ 자동 초점
-무시하기:
-  -  class
-  -  그룹
-외부:
-  -  그룹
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - class
+  - groups
+external:
+  - groups
 externalTypes:
-  -  CommandPaletteGroup []
-클래스: "!p-0"
-소품 :
-  자동 초점:false
-  로드: true
-  그룹:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  loading: true
+  groups:
     - id: 'apps'
-      프로젝트:
-        - label: '달력'
-          아이콘: 'i-lucide-calendar'
-        - label: '음악'
-          아이콘 : i-lucide-music
-        - label: '지도'
-          아이콘 : i-lucide-map
-  클래스: flex-1
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
-### Loading Icon (아이콘 로드)
+### loading 아이콘
 
-`loading-icon`prop을 사용하여 로드 아이콘을 사용자 정의합니다. 기본값은 `i-lucide-loader-circle`입니다.
+`loading-icon` 소품을 사용하여 로드 아이콘을 사용자 정의합니다. 기본값은 `i-lucide-loader-circle`입니다.
 
 ::component-code
 ---
-축소: true
-숨기기 (Hide):
-  - autofocus @ 자동 초점
-무시하기:
-  -  class
-  -  그룹
-외부:
-  -  그룹
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - class
+  - groups
+external:
+  - groups
 externalTypes:
-  -  CommandPaletteGroup []
-클래스: "!p-0"
-소품 :
-  자동 초점:false
-  로드: true
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  loading: true
   loadingIcon: 'i-lucide-loader'
-  그룹:
-    - id: '앱'
-      프로젝트:
-        - label: '달력'
-          아이콘: 'i-lucide-calendar'
-        - label: '음악'
-          아이콘 : i-lucide-music
-        - label: '지도'
-          아이콘 : i-lucide-map
-  클래스: flex-1
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#nuxt 코드
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.loading` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.loading` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.loading` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.loading` 키 아래의 `vite.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-###  닫기
+### Close (### 닫기)
 
-`close`prop을 사용하여 [Button](/docs/components/button)를 표시하여 CommandPalette를 해제합니다.
+`close` prop를 사용하여 [Button](/docs/components/button)를 표시하여 CommandPalette를 해제합니다.
 
 ::tip
-닫기 단추를 클릭하면 `update:open` 이벤트가 발생합니다.
+닫기 버튼을 클릭하면 `update:open` 이벤트가 발생합니다.
 ::
 
 ::component-code
 ---
-축소: true
-숨기기 (Hide):
-  -  autofocus
-무시하기:
-  -  class
-  -  그룹
-  -  닫기
-외부:
-  -  그룹
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - class
+  - groups
+  - close
+external:
+  - groups
 externalTypes:
-  -  CommandPaletteGroup []
-클래스 : "!p-0"
-소품 :
-  자동 초점:false
-  닫기: true
-  그룹 :
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  close: true
+  groups:
     - id: 'apps'
-      항목:
-        - label: '달력'
-          아이콘: 'i-lucide-calendar'
-        - label: '음악'
-          아이콘 : i-lucide-music
-        - label: '지도'
-          아이콘 : i-lucide-map
-  클래스: flex-1
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
-[Button](/docs/components/button) 구성 요소에서 속성을 전달하여 사용자 지정할 수 있습니다.
+[Button](/docs/components/button) 구성 요소의 모든 속성을 전달하여 사용자 정의할 수 있습니다.
 
 ::component-code
 ---
-축소: true
-상품명 : True
-숨기기 (Hide):
-  - autofocus @ 자동 초점
-무시하기:
-  -  close. color
-  - close.variant - close.variant
-  -  그룹
-  -  class
-외부:
-  -  그룹
+collapse: true
+prettier: true
+hide:
+  - autofocus
+ignore:
+  - close.color
+  - close.variant
+  - groups
+  - class
+external:
+  - groups
 externalTypes:
-  -  CommandPaletteGroup []
-클래스 : "!p-0"
-소품 :
-  자동 초점:false
-  닫기:
-    색상: 기본
-    변형: 윤곽선
-    클래스: rounded-full
-  그룹:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  close:
+    color: primary
+    variant: outline
+    class: 'rounded-full'
+  groups:
     - id: 'apps'
-      항목:
-        - label: '달력'
-          아이콘: 'i-lucide-calendar'
-        - label: '음악'
-          아이콘 : i-lucide-music
-        - label: '지도'
-          아이콘 : i-lucide-map
-  클래스: flex-1
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
-### 아이콘 닫기
+### Close 아이콘
 
-`close-icon`prop을 사용하여 닫기 버튼을 사용자 정의합니다.[Icon](/docs/components/icon). 기본값은`i-lucide-x`입니다.
+`close-icon` 소품을 사용하여 닫기 단추 [Icon](/docs/components/icon)를 사용자 정의합니다. 기본값은 `i-lucide-x`입니다.
 
 ::component-code
 ---
-축소: true
-숨기기 (Hide):
-  - autofocus @ 자동 초점
-무시하기:
-  -  class
-  -  그룹
-  -  닫기
-외부:
-  -  그룹
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - class
+  - groups
+  - close
+external:
+  - groups
 externalTypes:
-  -  CommandPaletteGroup []
-클래스 : "!p-0"
-소품 :
-  자동 초점:false
-  닫기: True
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  close: true
   closeIcon: 'i-lucide-arrow-right'
-  그룹 :
-    - id: 'apps' 입니다.
-      프로젝트:
-        - label: '달력'
-          아이콘: 'i-lucide-calendar'
-        - label: '음악'
-          아이콘 : i-lucide-music
-        - label: '지도'
-          아이콘 : i-lucide-map
-  클래스: flex-1
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#nuxt #nuxt
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.close` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.close` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.close` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.close` 키 아래의 `vite.config.ts`에서 이 아이콘을 전역적으로 사용자 지정할 수 있습니다.
 :::
 ::
 
-###  뒤로
+### 뒤로
 
-`back`prop을 사용하여 하위 메뉴로 이동할 때 표시된 뒤로 버튼(`false` 값)을 사용자 정의하거나 숨깁니다.
+`back` 소품을 사용하여 하위 메뉴로 이동할 때 표시되는 뒤로 버튼(`false` 값)을 사용자 정의하거나 숨깁니다.
 
-[Button](/docs/components/button) 구성 요소에서 모든 속성을 전달하여 사용자 지정할 수 있습니다.
+[Button](/docs/components/button) 구성 요소의 모든 속성을 전달하여 사용자 정의할 수 있습니다.
 
 ::component-code
 ---
-축소: true
-상품명 : True
-숨기기 (Hide):
-  - autofocus @ 자동 초점
-무시하기:
-  -  back. color
-  -  그룹
-  -  클래스
-외부:
-  -  그룹
+collapse: true
+prettier: true
+hide:
+  - autofocus
+ignore:
+  - back.color
+  - groups
+  - class
+external:
+  - groups
 externalTypes:
-  - CommandPaletteGroup []
-클래스 : "!p-0"
-소품 :
-  자동 초점:false
-  뒤로:
-    색상: 기본
-  그룹 :
-    - id: '액션'
-      항목:
-        - label: '공유'
-          아이콘: 'i-lucide-share'
-          1차 하위 항목:
-            - label: '이메일'
-              아이콘 : i-lucide-mail
-            - label: '복사'
-              아이콘: 'i-lucide-copy'
-            - label: '링크'
-              아이콘: 'i-lucide-link'
-  클래스: flex-1
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  back:
+    color: primary
+  groups:
+    - id: 'actions'
+      items:
+        - label: 'Share'
+          icon: 'i-lucide-share'
+          children:
+            - label: 'Email'
+              icon: 'i-lucide-mail'
+            - label: 'Copy'
+              icon: 'i-lucide-copy'
+            - label: 'Link'
+              icon: 'i-lucide-link'
+  class: 'flex-1'
 ---
 ::
 
-### 뒤로 아이콘
+### Back 아이콘
 
-`back-icon`prop을 사용하여 뒤로 버튼을 사용자 지정합니다.[Icon](/docs/components/icon). 기본값은`i-lucide-arrow-left`입니다.
+`back-icon` 소품을 사용하여 뒤로 단추 [Icon](/docs/components/icon)를 사용자 정의합니다. 기본값은 `i-lucide-arrow-left`입니다.
 
 ::component-code
 ---
-축소: true
-숨기기 (Hide):
-  - autofocus @ 자동 초점
-무시하기:
-  -  클래스
-  -  그룹
-  -  뒤로
-외부:
-  -  그룹
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - class
+  - groups
+  - back
+external:
+  - groups
 externalTypes:
-  - CommandPaletteGroup []
-클래스: "!p-0"
-소품 :
-  자동 초점:false
-  뒤로: true
-  backIcon: 'i-lucide-house'에 해당되는 글 1건
-  그룹 :
-    - id: '액션'
-      항목:
-        - label: '공유'
-          아이콘: 'i-lucide-share'
-          1차 하위 항목:
-            - label: '이메일'
-              아이콘: i-lucide-mail
-            - label: '복사'
-              아이콘: 'i-lucide-copy'
-            - label: '링크'
-              아이콘: 'i-lucide-link'
-  클래스: flex-1
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  back: true
+  backIcon: 'i-lucide-house'
+  groups:
+    - id: 'actions'
+      items:
+        - label: 'Share'
+          icon: 'i-lucide-share'
+          children:
+            - label: 'Email'
+              icon: 'i-lucide-mail'
+            - label: 'Copy'
+              icon: 'i-lucide-copy'
+            - label: 'Link'
+              icon: 'i-lucide-link'
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#nuxt 코드
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.arrowLeft` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.arrowLeft` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.arrowLeft` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.arrowLeft` 키 아래의 `vite.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-###  비활성 화
+### Disabled 사용 안 함
 
-`disabled`prop 을 사용하여 CommandPalette 를 비활성화합니다.
+`disabled` prop를 사용하여 CommandPalette를 비활성화합니다.
 
 ::component-code
 ---
-축소: true
-숨기기 (Hide):
-  - autofocus @ 자동 초점
-무시하기:
-  -  그룹
-  -  클래스
-외부:
-  -  그룹
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - groups
+  - class
+external:
+  - groups
 externalTypes:
-  -  CommandPaletteGroup []
-클래스 : "!p-0"
-소품 :
-  자동 초점:false
-  사용 안 함:true
-  그룹 :
-    - id: 'apps' 입니다.
-      프로젝트:
-        - label: '달력'
-          아이콘: 'i-lucide-calendar'
-        - label: '음악'
-          아이콘 : i-lucide-music
-        - label: '지도'
-          아이콘 : i-lucide-map
-  클래스: flex-1
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  disabled: true
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
-##  예
+## examples 예제
 
-### 선택한 항목 제어
+### Control 선택된 항목
 
-선택된 항목은 `default-value`prop 또는 `v-model` 지시문을 사용하거나 각 항목에 `onSelect` 필드를 사용하거나 `@update:model-value` 이벤트를 사용하여 제어할 수 있습니다.
+`default-value` prop 또는 `v-model` 지시문을 사용하거나, 각 항목에 `onSelect` 필드를 사용하거나, `@update:model-value` 이벤트를 사용하여 선택된 항목을 제어할 수 있습니다.
 
 ::component-example
 ---
-축소: true
-이름: 'command-palette-select-example'
-클래스: "!p-0"
-소품 :
-  자동 초점:false
+collapse: true
+name: 'command-palette-select-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::tip
-`value-key`prop을 사용하여 객체 자체가 아닌 값으로 사용할 항목의 필드를 선택합니다. `by`prop을 사용하여 참조 대신 필드로 객체를 비교합니다.
+`value-key` prop을 사용하여 객체 자체가 아닌 값으로 사용할 항목의 필드를 선택합니다. `by` prop을 사용하여 참조가 아닌 필드로 객체를 비교합니다.
 ::
 
-###  검색 용어 제어
+### Control 검색 용어
 
 `v-model:search-term` 지시문을 사용하여 검색 용어를 제어합니다.
 
 ::component-example
 ---
-축소: true
-이름: 'command-palette-search-term-example'
-클래스: "!p-0"
-소품 :
-  자동 초점:false
+collapse: true
+name: 'command-palette-search-term-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
@@ -890,75 +890,75 @@ externalTypes:
 이 예제에서는 `@update:model-value` 이벤트를 사용하여 항목을 선택할 때 검색 용어를 재설정합니다.
 ::
 
-###  어린이 프로젝트
+### 항목에 자식 포함
 
-항목에 `children` 등록 정보를 사용하여 계층 메뉴를 생성할 수 있습니다. 항목에 1차 하위 구성요소가 있으면 자동으로 갈매기 모양 아이콘이 표시되고 하위 메뉴로 이동할 수 있습니다.
+항목에서 `children` 등록 정보를 사용하여 계층 메뉴를 생성할 수 있습니다. 항목에 1차 하위 구성 요소가 있으면 자동으로 갈매기 모양 아이콘이 표시되고 하위 메뉴로 이동할 수 있습니다.
 
 ::component-example
 ---
-축소: true
-상품명 : True
-이름: 'command-palette-items-children-example'
-클래스: "!p-0"
-소품 :
-  자동 초점:false
+collapse: true
+prettier: true
+name: 'command-palette-items-children-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
 하위 메뉴로 이동하는 경우:
--  검색 용어가 재설정되었습니다.
+- 검색 용어가 재설정됨
 - A 뒤로 버튼이 입력에 나타납니다.
--  이전 그룹으로 돌아갈 수 있습니다. kbd{value="backspace"}key
+-  :kbd{value="backspace"} 키를 눌러 이전 그룹으로 돌아갈 수 있습니다
 ::
 
-###  가져온 항목과 함께
+### 가져온 항목 포함
 
-API에서 항목을 가져오고 CommandPalette에서 사용할 수 있습니다.
+API에서 항목을 가져와서 CommandPalette에서 사용할 수 있습니다.
 
 ::component-example
 ---
-축소: true
-이름: 'command-palette-fetch-example'
-클래스: "!p-0"
-소품 :
-  자동 초점:false
+collapse: true
+name: 'command-palette-fetch-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
-이 예에서는 `useLazyFetch`와 `server: false`를 사용하여 초기 렌더링을 차단하지 않고 클라이언트에서 데이터를 검색합니다. 로드 상태에서는 `pending` 및 `idle`status를 모두 확인하여 가져오기 전과 프로세스 중에 로드 표시기를 표시합니다.
+이 예에서는 `useLazyFetch`와 `server: false`를 사용하여 초기 렌더링을 차단하지 않고 클라이언트에서 데이터를 검색합니다. 로드 상태에서는 `pending` 및 `idle` 상태를 모두 확인하여 가져오기 전과 도중에 로드 표시기를 표시합니다.
 ::
 
-###  무시 필터
+### Ignore 필터 사용
 
-그룹에서 `ignoreFilter` 필드를 `true`로 설정하여 내부 검색을 비활성화하고 자체 검색 논리를 사용할 수 있습니다.
+그룹에서 `ignoreFilter` 필드를 `true`로 설정하여 내부 검색을 비활성화하고 사용자 고유의 검색 논리를 사용할 수 있습니다.
 
 ::component-example
 ---
-축소: true
-이름: 'command-palette-ignore-filter-example'
-클래스 : "!p-0"
-소품 :
-  자동 초점:false
+collapse: true
+name: 'command-palette-ignore-filter-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
-이 예에서는 [`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced)을 사용하여 API 호출을 선언합니다. 로드 상태는 `pending` 및 `idle`status 모두를 확인하여 가져오기 전과 진행 중에 로드 표시기를 표시합니다.
+이 예에서는 [`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced)를 사용하여 API 호출을 디버깅합니다. 로드 상태는 `pending` 및 `idle` 상태를 모두 확인하여 검색 전과 도중에 로드 표시기를 표시합니다.
 ::
 
-###  후 필터링된 항목 포함
+### Post-filtered 항목 포함
 
-그룹의 `postFilter` 필드를 사용하여 검색이 수행된 후 항목을 필터링할 수 있습니다.
+검색이 수행된 후 그룹의 `postFilter` 필드를 사용하여 항목을 필터링할 수 있습니다.
 
 ::component-example
 ---
-축소: true
-이름: 'command-palette-post-filter-example'
-클래스 : "!p-0"
-소품 :
-  자동 초점:false
+collapse: true
+name: 'command-palette-post-filter-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
@@ -966,9 +966,9 @@ API에서 항목을 가져오고 CommandPalette에서 사용할 수 있습니다
 입력을 시작하여 상위 레벨의 항목이 표시되는지 확인합니다.
 ::
 
-### 사용자 정의 퓨즈 검색
+### 사용자 정의 퓨즈 검색 기능
 
-`fuse`prop을 사용하여 [useFuse](https://vueuse.org/integrations/useFuse)의 옵션을 재정의할 수 있습니다. 기본값은 다음과 같습니다.
+`fuse` prop을 사용하여 [useFuse](https://vueuse.org/integrations/useFuse)의 옵션을 무시할 수 있으며, 기본값은 다음과 같습니다.
 
 ```ts
 {
@@ -983,24 +983,24 @@ API에서 항목을 가져오고 CommandPalette에서 사용할 수 있습니다
 ```
 
 ::tip
-`fuseOptions`는 [Fuse.js](https://www.fusejs.io/)의 옵션이며, `resultLimit`는 검색 용어가 비어 있을 때 모든 항목과 일치하는 부울입니다.
+`fuseOptions`는 [Fuse.js](xph87x)의 옵션이며, `resultLimit`는 반환할 최대 결과 수이며, `matchAllWhenSearchEmpty`는 검색 용어가 비어 있을 때 모든 항목을 일치시키는 부울입니다.
 ::
 
-예를 들어 `{ fuseOptions: { includeMatches: true } }`{lang="ts-type"}를 설정하여 항목에서 검색 용어를 강조 표시할 수 있습니다.
+예를 들어, `{ fuseOptions: { includeMatches: true } }`{lang="ts-type"}를 설정하여 항목에서 검색 용어를 강조 표시할 수 있습니다.
 
 ::component-example
 ---
-축소: true
-name: 'command-palette-fuse-example' 명령어 팔레트-fuse-example
-클래스: "!p-0"
-소품 :
-  자동 초점:false
+collapse: true
+name: 'command-palette-fuse-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
-###  가상화 사용: badge{label="4.1+" class="align-text-top"}
+### 가상화 지원: badge{label="4.1+" class="align-text-top"}
 
-`virtualize`prop을 사용하여 큰 목록에 대해 부울 또는 `{ estimateSize: 32, overscan: 12 }`와 같은 옵션이 있는 개체로 가상화를 활성화합니다.
+`virtualize` prop을 사용하여 큰 목록에 대해 부울 또는 `{ estimateSize: 32, overscan: 12 }`와 같은 옵션이있는 개체로 가상화를 활성화합니다.
 
 ::warning{to="https://github.com/unovue/reka-ui/issues/1885" target="_blank"}
 설정하면 Reka UI의 제한으로 인해 모든 그룹이 단일 리스트로 병합됩니다.
@@ -1008,54 +1008,54 @@ name: 'command-palette-fuse-example' 명령어 팔레트-fuse-example
 
 ::component-example
 ---
-축소: true
-이름: 'command-palette-virtualize-example'
-클래스: "!p-0"
-소품 :
-  자동 초점:false
+collapse: true
+name: 'command-palette-virtualize-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
-###  포포포버 안에서
+###  Popover 내부
 
-CommandPalette 구성 요소는 [Popher](/docs/components/popover)의 콘텐츠 내에서 사용할 수 있습니다.
+[Popover](/docs/components/popover)의 콘텐츠에서 CommandPalette 구성 요소를 사용할 수 있습니다.
 
 ::component-example
 ---
-축소: true
-이름 : popher-command-palette-example
-소품 :
-  자동 초점:false
+collapse: true
+name: 'popover-command-palette-example'
+props:
+  autofocus: false
 ---
 ::
 
-###  Within a Modal (내부 어 모드)
+### within a modal 모드 내에서
 
-CommandPalette 구성 요소는 [Modal](/docs/components/modal)의 콘텐츠 내에서 사용할 수 있습니다.
+[Modal](/docs/components/modal)의 콘텐츠 내에서 CommandPalette 구성 요소를 사용할 수 있습니다.
 
 ::component-example
 ---
-축소: true
-이름: 'modal-command-palette-example'
-소품 :
-  자동 초점:false
+collapse: true
+name: 'modal-command-palette-example'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
-이 예제에서는 `useLazyFetch`와 `immediate: false`를 사용하여 Modal이 열릴 때만 데이터를 가져옵니다.
+이 예에서는 `useLazyFetch`와 `immediate: false`를 사용하여 Modal이 열릴 때만 데이터를 가져옵니다.
 ::
 
-###  서랍 안에
+### within a drawer 드라이버 안에서
 
-CommandPalette 구성 요소는 [Drawer](/docs/components/drawer)의 콘텐츠 내에서 사용할 수 있습니다.
+[Drawer](/docs/components/drawer)의 콘텐츠 내에서 CommandPalette 구성 요소를 사용할 수 있습니다.
 
 ::component-example
 ---
-축소: true
-이름: 'drawer-command-palette-example'
-소품 :
-  자동 초점:false
+collapse: true
+name: 'drawer-command-palette-example'
+props:
+  autofocus: false
 ---
 ::
 
@@ -1063,85 +1063,85 @@ CommandPalette 구성 요소는 [Drawer](/docs/components/drawer)의 콘텐츠 �
 이 예제에서는 `useLazyFetch`와 `immediate: false`를 사용하여 Drawer가 열릴 때만 데이터를 가져옵니다.
 ::
 
-###  Listen open state 열기 상태
+### Listen 열린 상태
 
-`close`prop을 사용할 때 버튼을 클릭하면 `update:open` 이벤트를 들을 수 있습니다.
+`close` Prop을 사용할 때 버튼을 클릭하면 `update:open` 이벤트를 들을 수 있습니다.
 
 ::component-example
 ---
-축소: true
-이름: 'command-palette-open-example'
-소품 :
-  자동 초점:false
+collapse: true
+name: 'command-palette-open-example'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
-이 기능은 [`Modal`](/docs/components/modal)와 같은 CommandPalette 내부에서 사용할 때 유용합니다.
+이 기능은 예를 들어 [`Modal`](/docs/components/modal) 내부에서 CommandPalette를 사용할 때 유용합니다.
 ::
 
-###  바닥글 슬롯 포함
+### 바닥글 슬롯 포함
 
-`#footer` 슬롯을 사용하여 CommandPalette 맨 아래에 키보드 바로 가기 도움말 또는 추가 작업과 같은 사용자 정의 컨텐츠를 추가합니다.
+`#footer` 슬롯을 사용하여 CommandPalette의 맨 아래에 키보드 바로 가기 도움말 또는 추가 작업과 같은 사용자 정의 컨텐츠를 추가합니다.
 
 ::component-example
 ---
-축소: true
-이름: 'command-palette-footer-slot-example'
-클래스: "!p-0"
-소품 :
-  자동 초점:false
+collapse: true
+name: 'command-palette-footer-slot-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
-### 사용자 지정 슬롯 사용
+### 사용자 정의 슬롯 포함
 
-`slot` 등록 정보를 사용하여 특정 항목이나 그룹을 사용자 정의합니다.
+`slot` 속성을 사용하여 특정 항목 또는 그룹을 사용자 정의합니다.
 
 다음과 같은 슬롯에 액세스할 수 있습니다.
 
-- `#{{ item.slot }}` {lang="ts-type"} @
--  @ `#{{ item.slot }}-leading` @ {lang="ts-type"} @
--  @ `#{{ item.slot }}-label` @ @ {lang="ts-type"} @
+- `#{{ item.slot }}`{lang="ts-type"}
+- `#{{ item.slot }}-leading`{lang="ts-type"}
+- `#{{ item.slot }}-label`{lang="ts-type"}
 - `#{{ item.slot }}-trailing`{lang="ts-type"}
 
 - `#{{ group.slot }}`{lang="ts-type"}
 - `#{{ group.slot }}-leading`{lang="ts-type"}
-- `#{{ group.slot }}-label`{lang="ts-type"}
-- `#{{ group.slot }}-trailing` {lang="ts-type"}
+- `#{{ group.slot }}-label`{lang="ts-type"} (- `#{{ group.slot }}-label`{lang="ts-type"})
+- `#{{ group.slot }}-trailing`{lang="ts-type"} (- xph93xxph94x)
 
 ::component-example
 ---
-축소: true
-이름: 'command-palette-custom-slot-example'
-클래스 : "!p-0"
-소품 :
-  자동 초점:false
+collapse: true
+name: 'command-palette-custom-slot-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::tip{to="#slots"}
-또한 `#item``#item-leading``#item-label` 및 `#item-trailing` 슬롯을 사용하여 모든 항목을 사용자 정의 할 수 있습니다.
+또한 `#item`, `#item-leading`, `#item-label` 및 `#item-trailing` 슬롯을 사용하여 모든 항목을 사용자 정의 할 수 있습니다.
 ::
 
-##  API
+## API 파일
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### 슬롯
 
-:컴포넌트 - 슬롯
+:component-slots
 
-### Emits @ 에미츠
+### Emits
 
-:구성요소 - 방출
+:component-emits
 
-##  테마
+## Theme 테마
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

@@ -17,8 +17,8 @@ navigation.badge: New
 
 ::component-example
 ---
-崩壊真
-名前'splitter—example'
+collapse: true
+name: 'splitter-example'
 ---
 ::
 
@@ -28,7 +28,7 @@ Splitterはコンテナの高さを埋めますので、親要素が定義して
 
 ### アイテム
 
-`items` propを、次のプロパティを持つオブジェクトの配列として使用します。
+`items`プロパティを次のプロパティを持つオブジェクトの配列として使用します。
 
 - `defaultSize?: number`{lang="ts-type"}
 - `minSize?: number`{lang="ts-type"}
@@ -42,77 +42,77 @@ Splitterはコンテナの高さを埋めますので、親要素が定義して
 - `class?: any`{lang="ts-type"}
 - `ui?: { panel?: ClassNameValue }`{lang="ts-type"}
 
-`slot`キーを使用してパネルのコンテンツを入力し、`class`キーを使用してスタイルを設定します。`slot`キーがないアイテムは`panel-{index}`スロットに戻ります。サイズはデフォルトでパーセンテージです。ピクセル値の項目に`sizeUnit: 'px'`を設定します。
+`slot`キーを使用してパネルの内容を入力し、`class`キーを使用してスタイルを設定します。`slot`キーがないアイテムは`panel-{index}`スロットに戻ります。サイズはデフォルトでパーセンテージです。ピクセル値の項目に`sizeUnit: 'px'`を設定します。
 
 ::caution
-サーバー上でレンダリングするとき、`id` propを設定し、`defaultSize`をすべてのアイテムまたはなしに指定します。そうでなければ、IDは自動的に生成され、サーバーとクライアントは一致しない可能性があり、ハイドレーションのレイアウトが崩れます。`defaultSize`がないアイテムはサーバー上で等しいシェアに戻ります。だから2つを混合すると、水和するとパネルがジャンプします。ピクセルサイズはクライアントで測定され、常に少しシフトします。
+サーバー上でレンダリングするとき、`id`プロパティを設定し、`defaultSize`をすべてのアイテムまたはなしに指定します。そうでなければIDは自動的に生成され、サーバーとクライアントは一致しない可能性があり、ハイドレーション時のレイアウトが崩れます。`defaultSize`がないアイテムはサーバー上で等しいシェアに戻ります。そのため、2つを混ぜると、ハイドレーション後にパネルがジャンプします。ピクセルサイズはクライアントで測定され、常に少しずれます。
 ::
 
 ::component-code
 ---
-崩壊真
-クラス'h—96'
-きれい真
-無視
-  - アイテム
-  -  ID
-外部
-  - アイテム
-externalTypes
-  -  SplitterItem []
-小道具
-  id 'splitter—items'
-  アイテム
-    -  slot 'sidebar'
-      minSize 15
-      最大サイズ40
-      defaultSize 25
-      クラス'bg—elevated/50 border border—default rounded—xl items—center justify—center text—muted font—medium'
-    -  slot 'main'
-      defaultSize 75
-      クラス'bg—elevated/50 border border—default rounded—xl items—center justify—center text—muted font—medium'
-スロット
-  サイドバーサイドバー
-  メインメイン
+collapse: true
+class: 'h-96'
+prettier: true
+ignore:
+  - items
+  - id
+external:
+  - items
+externalTypes:
+  - SplitterItem[]
+props:
+  id: 'splitter-items'
+  items:
+    - slot: 'sidebar'
+      minSize: 15
+      maxSize: 40
+      defaultSize: 25
+      class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
+    - slot: 'main'
+      defaultSize: 75
+      class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
+slots:
+  sidebar: Sidebar
+  main: Main
 ---
 
-#サイドバー
+#sidebar
 サイトマップ
 
-#メイン
+#main
 メイン
 ::
 
-### オリエンテーション
+### Orientation
 
 `orientation`プロパティを使用して、スプリッタの方向を変更します。デフォルトは`horizontal`です。
 
 ::component-code
 ---
-崩壊真
-クラス'h—96'
-きれい真
-無視
-  - アイテム
-  -  ID
-外部
-  - アイテム
-externalTypes
-  -  SplitterItem []
-小道具
-  id 'splitter—orientation'
-  オリエンテーション'垂直'
-  アイテム
-    -  slot 'first'
-      クラス'bg—elevated/50 border border—default rounded—xl items—center justify—center text—muted font—medium'
-    -  slot 'second'
-      クラス'bg—elevated/50 border border—default rounded—xl items—center justify—center text—muted font—medium'
-スロット
-  最初最初
-  セカンド：セカンド
+collapse: true
+class: 'h-96'
+prettier: true
+ignore:
+  - items
+  - id
+external:
+  - items
+externalTypes:
+  - SplitterItem[]
+props:
+  id: 'splitter-orientation'
+  orientation: 'vertical'
+  items:
+    - slot: 'first'
+      class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
+    - slot: 'second'
+      class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
+slots:
+  first: First
+  second: Second
 ---
 
-#最初に
+#first
 ファースト
 
 #second
@@ -123,23 +123,23 @@ externalTypes
 
 ### 折りたたみパネル付き
 
-アイテムに`collapsible: true`を設定すると、`minSize`を超えて折りたたまれます。`collapsedSize`を使用して、折りたたまれたときにパネルの一部が見えるようにします。パネルスロットは`collapsed`、`collapse`、`expand`を公開しているので、プログラムで制御できます。`collapse`は、`expand`と`resize`イベントは、パネルインデックスで発生します。
+`collapsible: true`をアイテムに設定すると、`minSize`を超えて折りたたまれるようになります。`collapsedSize`を使用して、折りたたまれたときにパネルの一部が見えるようにします。パネルスロットは`collapsed`、`collapse`、`expand`を公開しているので、プログラムで制御できます。`collapse`、`expand`、`resize`イベントはパネルインデックスとともに発生します。
 
 ::component-example
 ---
-崩壊真
-名前'splitter—collapsilt—example'
+collapse: true
+name: 'splitter-collapsible-example'
 ---
 ::
 
 ### ネストされたスプリッタ
 
-パネル内に`Splitter`をネストして、2次元のIDEスタイルのレイアウトを作成します。
+パネル内に`Splitter`をネストして、2次元のIDEスタイルのレイアウトを構築します。
 
 ::component-example
 ---
-崩壊真
-name 'splitter—nested—example'
+collapse: true
+name: 'splitter-nested-example'
 ---
 ::
 
@@ -149,14 +149,14 @@ name 'splitter—nested—example'
 
 ::component-example
 ---
-崩壊真
-名前'splitterカスタムハンドル例'
+collapse: true
+name: 'splitter-custom-handle-example'
 ---
 ::
 
 ### 持続性
 
-`auto-save-id`を指定して、レイアウトを`localStorage`に保持し、リロード時に復元します。
+レイアウトを`localStorage`に保持し、リロード時に復元するために`auto-save-id`を指定します。
 
 ```vue
 <template>
@@ -166,24 +166,24 @@ name 'splitter—nested—example'
 </template>
 ```
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

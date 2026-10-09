@@ -11,19 +11,19 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/locale/LocaleSelect.vue
 ---
 
-##  사용
+## Usage
 
-LocaleSelect 구성 요소는 [SelectMenu](/docs/components/select-menu) 구성 요소를 확장하므로 `color`, `variant`, `size` 등의 속성을 전달할 수 있습니다.
+LocaleSelect 구성 요소는 [SelectMenu](/docs/components/select-menu) 구성 요소를 확장하므로 `color`, `variant`, `size` 등과 같은 속성을 전달할 수 있습니다.
 
 ::framework-only
-#nuxt #nuxt
+#nuxt
 ::note{to="/docs/getting-started/integrations/i18n/nuxt"}
-이 구성 요소는 **i18n** 시스템과 함께 사용하기 위한 것입니다. 자세한 내용은 가이드를 참조하십시오.
+이 구성 요소는 **18n** 시스템과 함께 사용하기 위한 것입니다. 이 구성 요소에 대해 자세히 알아보려면 가이드를 참조하십시오.
 ::
 
-#vue #vue
+#vue
 ::note{to="/docs/getting-started/integrations/i18n/vue"}
-이 구성 요소는 **i18n** 시스템과 함께 사용되도록 설계되었습니다. 자세한 내용은 가이드를 참조하십시오.
+이 구성 요소는 **18n** 시스템과 함께 사용하기 위한 것입니다. 이 구성 요소에 대해 자세히 알아보려면 가이드를 참조하십시오.
 ::
 
 ::
@@ -32,13 +32,13 @@ LocaleSelect 구성 요소는 [SelectMenu](/docs/components/select-menu) 구성 
 플래그는 유니코드 문자를 사용하여 표시됩니다. 이렇게 하면 다른 표시가 발생할 수 있습니다. 예를 들어, Windows의 Microsoft Edge는 OS 글꼴과 함께 제공되는 플래그 아이콘이 없으므로 ISO 3166-1 알파-2 코드를 대신 표시합니다.
 ::
 
-###  로켈 레스
+### Locales 로캘
 
-`locales`prop을 `@nuxt/ui/locale`의 로케일 배열과 함께 사용하십시오.
+`locales` prop을 `@nuxt/ui/locale`의 로케일 배열과 함께 사용합니다.
 
 ::component-example
 ---
-이름: 'locale-select-example'
+name: 'locale-select-example'
 ---
 ::
 
@@ -56,10 +56,10 @@ const locale = ref('en')
 </template>
 ```
 
-### 동적 로케일
+### Dynamic 로케일
 
 ::framework-only
-#nuxt 코드
+#nuxt
 ::div
 Nuxt i18n과 함께 사용할 수 있습니다.
 
@@ -81,7 +81,7 @@ const { locale, setLocale } = useI18n()
 
 ::
 
-#vue #vue
+#vue
 ::div
 Vue i18n을 사용할 수 있습니다.
 
@@ -106,12 +106,12 @@ const { locale, setLocale } = useI18n()
 
 ::
 
-##  API
+## API
 
-### Props 이미지
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-##  Changelog
+## 변경 로그
 
-: component-changelog{prefix="locale"}
+:component-changelog{prefix="locale"}

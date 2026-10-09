@@ -9,7 +9,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodeCollapse.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Enveloppez votre bloc de code avec un composant `code-collapse` pour afficher un bloc de code pliable.
 
@@ -75,20 +75,20 @@ Enveloppez votre bloc de code avec un composant `code-collapse` pour afficher un
 
 ::
 
-@@ph032@api
+## api
 
-@@333@propriétés
+### Props
 
-: composant-props {prose}
+:component-props{prose}
 
 ### Slots
 
-: composant {prose}
+:component-slots{prose}
 
-@@ph037@thème
+## Thème
 
-: composant-thème {prose}
+:component-theme{prose}
 
-@changement@changement@changement.com
+## Changelog
 
-: composant-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

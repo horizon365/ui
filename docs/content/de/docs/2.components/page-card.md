@@ -1,6 +1,6 @@
 ---
 title: PageCard
-description: 'Eine vorgefertigte Kartenkomponente, die einen Titel, eine Beschreibung und einen optionalen Link anzeigt.'
+description: 'Eine vorgestylte Kartenkomponente, die einen Titel, eine Beschreibung und einen optionalen Link anzeigt.'
 category: page
 links:
   - label: GitHub
@@ -8,248 +8,248 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageCard.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Die PageCard-Komponente bietet eine flexible Möglichkeit, Inhalte auf einer Karte mit einer Illustration im Standardsteckplatz anzuzeigen.
+Die PageCard-Komponente bietet eine flexible Möglichkeit, Inhalte auf einer Karte mit einer Abbildung im Standardsteckplatz anzuzeigen.
 
 ::code-preview
 
 ::u-page-card
 ---
-Titel: "Tailwind CSS"
-Beschreibung: 'Nuxt UI integriert sich mit dem neuesten Tailwind CSS und bringt erhebliche Verbesserungen.'
-Icon: 'i-simple-icons-tailwindcss'(I-Einfaches-Ikonen-Tailwindcss)
-Klasse: W-96
+title: 'Tailwind CSS'
+description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+icon: 'i-simple-icons-tailwindcss'
+class: 'w-96'
 ---
 
-: img@@ph001
+:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
 ::
 
 ::
 
 ::tip
-Verwenden Sie die [PageGrid](/docs/components/page-grid),[PageColumns](/docs/components/page-columns) oder [PageList](/docs/components/page-list) Komponenten, um mehrere PageCards anzuzeigen,
+Verwenden Sie die Komponenten [PageGrid](/docs/components/page-grid), [PageColumns](/docs/components/page-columns) oder [PageList](/docs/components/page-list), um mehrere PageCard anzuzeigen.
 ::
 
-@@ph014@title @ Übersetzung
+xph019title Übersetzung
 
-Verwenden Sie die `title` prop, um den Titel der Karte festzulegen.
+Verwenden Sie die `title`-Stütze, um den Titel der Karte festzulegen.
 
 ::component-code
 ---
-Hide:
-  @@16@Klasse
-Props:
-  Titel: Tailwind CSS
-  Klasse: W-96
+hide:
+  - class
+props:
+  title: 'Tailwind CSS'
+  class: 'w-96'
 ---
 ::
 
-@@ph017@@Beschreibung
+### Beschreibung
 
-Verwenden Sie `description` prop, um die Beschreibung der Karte festzulegen.
+Verwenden Sie die `description`-Prop, um die Beschreibung der Karte festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@ph019@class
-Ignoriert:
-  @@ph020@@title
-Props:
-  Titel: "Tailwind CSS"
-  Beschreibung: 'Nuxt UI integriert sich mit dem neuesten Tailwind CSS und bringt erhebliche Verbesserungen.'
-  Klasse: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  class: 'w-96'
 ---
 ::
 
-@@ph021@@@Icon-Seite
+### Icon (Deutsche Ausgabe)
 
-Verwenden Sie `icon` prop, um das Symbol der Karte einzustellen.
+Verwenden Sie die `icon` prop, um das Symbol der Karte einzustellen.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@ph023@class
-Ignoriert:
-  @@ph024@title
-  @@ph025@beschreibung
-Props:
-  Titel: "Tailwind CSS"
-  Beschreibung: 'Nuxt UI integriert sich mit dem neuesten Tailwind CSS und bringt erhebliche Verbesserungen.'
-  Icon: 'i-simple-icons-tailwindcss'(I-einfach-ikonen-tailwindcss)
-  Klasse: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  icon: 'i-simple-icons-tailwindcss'
+  class: 'w-96'
 ---
 ::
 
-@@ph026@@Link
+### Link auf
 
-Sie können jede Eigenschaft von der [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) Komponente wie `to`,`target`,`rel`, etc. übergeben.
+Sie können jede Eigenschaft der Komponente [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) übergeben, z. B. `to`, `target`, `rel` usw.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@35@Klasse
-Ignoriert:
-  @@ph036@title
-  @@ph037@beschreibung
-  @@@@@@@@@@icon______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-  @@ph039@@zielgerichteter
-Props:
-  Titel: Tailwind CSS
-  Beschreibung: 'Nuxt UI integriert sich mit dem neuesten Tailwind CSS und bringt erhebliche Verbesserungen.'
-  Icon: 'i-simple-icons-tailwindcss'(I-einfach-ikonen-tailwindcss)
-  zu: 'https://tailwindcss.com/blog/tailwindcss-v4'
-  Ziel: _blank
-  Klasse: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - target
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  icon: 'i-simple-icons-tailwindcss'
+  to: 'https://tailwindcss.com/blog/tailwindcss-v4'
+  target: _blank
+  class: 'w-96'
 ---
 ::
 
-@@ph040@@@Variantentyp
+### Variant Bearbeiten
 
 Verwenden Sie die `variant` prop, um den Stil der Karte zu ändern.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@ph042@gmail.de
-Ignoriert:
-  @@ph043@title
-  @@ph044@beschreibung
-  @@ph045@@gmail.de
-  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@###############################################################################################################################################################################
-  @@ph047@@zielgruppe
-Props:
-  Titel: Tailwind CSS
-  Beschreibung: 'Nuxt UI integriert sich mit dem neuesten Tailwind CSS und bringt erhebliche Verbesserungen.'
-  Icon: 'i-simple-icons-tailwindcss'(I-einfach-ikonen-tailwindcss)
-  zu: 'https://tailwindcss.com/blog/tailwindcss-v4'
-  Ziel: _blank
-  Die Variante: Soft
-  Klasse: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - to
+  - target
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  icon: 'i-simple-icons-tailwindcss'
+  to: 'https://tailwindcss.com/blog/tailwindcss-v4'
+  target: _blank
+  variant: soft
+  class: 'w-96'
 ---
 ::
 
 ::tip
-Sie können die Klasse `light` oder `dark` auf den Slot `links` anwenden, wenn Sie die Variante `solid` verwenden, um die Farben umzukehren.
+Sie können die `light`-oder `dark`-Klasse auf den `links`-Steckplatz anwenden, wenn Sie die `solid`-Variante verwenden, um die Farben umzukehren.
 ::
 
-@@ph052@@Orientierung
+xph107 Orientierung
 
-Verwenden Sie `orientation` prop, um die Ausrichtung mit dem Standardslot zu ändern.
+Verwenden Sie die `orientation`-Prop, um die Ausrichtung mit dem Standardslot zu ändern. Standardmäßig `vertical`.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@555@Titel
-  @@@ph056@beschreibung
-  @@ph057@@gmail.de
-Props:
-  Titel: Tailwind CSS
-  Beschreibung: 'Nuxt UI integriert sich mit dem neuesten Tailwind CSS und bringt erhebliche Verbesserungen.'
-  Icon: 'i-simple-icons-tailwindcss'(I-einfach-ikonen-tailwindcss)
-  Ausrichtung: horizontal
-Die Slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+  - description
+  - icon
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  icon: 'i-simple-icons-tailwindcss'
+  orientation: horizontal
+slots:
+  default: |
 
-    @@@@@@@58
+    <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
 ---
 
-: img@@ph059
+:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
 ::
 
-@@ph060@umgekehrter
+### reverse (umgekehrt)
 
-Verwenden Sie `reverse` prop, um die Ausrichtung des Standard-Steckplatzes umzukehren.
+Verwenden Sie die `reverse`-Prop, um die Ausrichtung des Standardsteckplatzes umzukehren.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph062@@title
-  @@ph063@beschreibung
-  @@ph064@@gmail.de
-Props:
-  Titel: "Tailwind CSS"
-  Beschreibung: 'Nuxt UI integriert sich mit dem neuesten Tailwind CSS und bringt erhebliche Verbesserungen.'
-  Icon: 'i-simple-icons-tailwindcss'(I-Einfaches-Ikonen-Tailwindcss)
-  Ausrichtung: horizontal
-  umgekehrt: wahr
-Die Slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+  - description
+  - icon
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  icon: 'i-simple-icons-tailwindcss'
+  orientation: horizontal
+  reverse: true
+slots:
+  default: |
 
-    @@@@@@@@@@@065
+    <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
 ---
 
-: img@@ph066
+:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
 ::
 
-### Highlight
+### Highlight (Englisch)
 
-Verwenden Sie die Props `highlight` und `highlight-color`, um einen hervorgehobenen Rahmen um die Karte anzuzeigen.
+Verwenden Sie die `highlight`-und `highlight-color`-Requisiten, um einen hervorgehobenen Rahmen um die Karte anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@@@@@@class070@class@class070@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@classclassclass@classclassclass@class@class@class@classclassclassclassclassclass@classclass
-Ignoriert:
-  @@ph071@title
-  @@ph072@beschreibung
-  @@@@@@@@@@@icon.de
-  @@ph074@orientierung
-Props:
-  Titel: Tailwind CSS
-  Beschreibung: 'Nuxt UI integriert sich mit dem neuesten Tailwind CSS und bringt erhebliche Verbesserungen.'
-  Icon: 'i-simple-icons-tailwindcss'(I-einfach-ikonen-tailwindcss)
-  Ausrichtung: horizontal
-  Highlight: Wahr
-  highlightFarbe: 'primär'
-Die Slots:
-  Default:|
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - orientation
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  icon: 'i-simple-icons-tailwindcss'
+  orientation: horizontal
+  highlight: true
+  highlightColor: 'primary'
+slots:
+  default: |
 
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@075
+    <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
 ---
 
-: img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
 ::
 
-### Spotlight
+### Spotlight (englisch)
 
 Verwenden Sie die Props `spotlight` und `spotlight-color`, um einen Spotlight-Effekt anzuzeigen, der dem Mauszeiger folgt und die Ränder beim Schweben hervorhebt.
 
 ::note
-Der Spotlight-Effekt übernimmt die Hover-Effekte, wenn Sie eine `to` prop. Es ist am besten, es mit der `outline` Variante zu verwenden.
+Der Spotlight-Effekt übernimmt Hover-Effekte, wenn Sie eine `to`-Prop. Es ist am besten, es mit der `outline`-Variante zu verwenden.
 ::
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@@@@@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@classclassclass@class@class@class@class@class@class
-Ignoriert:
-  @@@@@83@title
-  @@ph084@beschreibung
-  @@@@@@@@@@@@icon@@@ph085@@@icon
-  @@@@@@ph086@@orientierung
-Props:
-  Titel: Tailwind CSS
-  Beschreibung: 'Nuxt UI integriert sich mit dem neuesten Tailwind CSS und bringt erhebliche Verbesserungen.'
-  Icon: 'i-simple-icons-tailwindcss'(I-einfach-ikonen-tailwindcss)
-  Ausrichtung: horizontal
-  Schlagwörter: true
-  spotlightFarbe: 'primär'
-Die Slots:
-  Default:|
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - orientation
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  icon: 'i-simple-icons-tailwindcss'
+  orientation: horizontal
+  spotlight: true
+  spotlightColor: 'primary'
+slots:
+  default: |
 
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@087
+    <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
 ---
 
-: img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
 ::
 
 ::tip
@@ -262,36 +262,36 @@ Sie können die Farbe und Größe auch mit den CSS-Variablen `--spotlight-color`
 ```
 ::
 
-@@ph096@@@Beispiele
+## Beispiele
 
-### Als ein Zeugnis
+### As ein Zeugnis
 
-Verwenden Sie die Komponente [User](/docs/components/user) im Schlitz `header` oder `footer`, um die Karte wie ein Zeugnis aussehen zu lassen.
+Verwenden Sie die [User](/docs/components/user)-Komponente im `header`-oder `footer`-Steckplatz, um die Karte wie ein Testimonial aussehen zu lassen.
 
 ::component-example
 ---
-name: 'page-card-testimonial-example'(Seiten-Karte-Beispiel-Zeugnis)
+name: 'page-card-testimonial-example'
 ---
 ::
 
 ::tip{to="/docs/components/page-columns"}
-Sie können die Komponente `PageColumns` verwenden, um mehrere PageCards in einem mehrspaltigen Layout anzuzeigen.
+Sie können die `PageColumns`-Komponente verwenden, um mehrere PageCards in einem mehrspaltigen Layout darzustellen.
 ::
 
-@@105@bpb
+## API (englisch)
 
-@@@@@@@@106@@props
+### Props (nicht)
 
-Komponenten Props
+:component-props
 
-### Spielautomaten
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@################################################################################################################################################################################################
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph109@@changelog (auf Englisch)
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

@@ -18,33 +18,33 @@ links:
 
 ::component-code
 ---
-崩壊真
-隠す
-  - クラス
-無視
-  - アイテム
-  - クラス
-外部
-  - アイテム
-externalTypes
-  -  StepperItem []
-小道具
-  アイテム
-    -  title 'アドレス'
-      説明：'ここに住所を追加'
-      アイコン'i—lucide—house'
-    -  title '出荷'
-      説明：「ご希望の配送方法を設定」
-      アイコン'i—lucide—truck'
-    -  title 'チェックアウト'
-      説明'あなたの順序を確認'
-  クラス'w—full'
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - StepperItem[]
+props:
+  items:
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
+  class: 'w-full'
 ---
 ::
 
 ### アイテム
 
-`items` propを、次のプロパティを持つオブジェクトの配列として使用します。
+`items`プロパティを次のプロパティを持つオブジェクトの配列として使用します。
 
 - `title?: string`{lang="ts-type"}
 - `description?: AvatarProps`{lang="ts-type"}
@@ -58,115 +58,115 @@ externalTypes
 
 ::component-code
 ---
-無視
-  - アイテム
-  - クラス
-外部
-  - アイテム
-externalTypes
-  -  StepperItem []
-小道具
-  アイテム
-    -  title 'アドレス'
-      説明：'ここに住所を追加'
-      アイコン'i—lucide—house'
-    -  title '出荷'
-      説明：「ご希望の配送方法を設定」
-      アイコン'i—lucide—truck'
-    -  title 'チェックアウト'
-      説明'あなたの順序を確認'
-  クラス'w—full'
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - StepperItem[]
+props:
+  items:
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
+  class: 'w-full'
 ---
 ::
 
 ::note
-項目をクリックして、手順を移動します。
+項目をクリックして手順を移動します。
 ::
 
-### カラー
+### Color
 
-ステッパーの色を変更するには、`color`プロパティを使用します。
+`color`プロパティを使用して、Stepperの色を変更します。
 
 ::component-code
 ---
-無視
-  - コンテンツ
-  - アイテム
-  - クラス
-外部
-  - アイテム
-externalTypes
-  -  StepperItem []
-小道具
-  色ニュートラル
-  アイテム
-    -  title 'アドレス'
-      説明：'ここに住所を追加'
-      アイコン'i—lucide—house'
-    -  title '出荷'
-      説明：「ご希望の配送方法を設定」
-      アイコン'i—lucide—truck'
-    -  title 'チェックアウト'
-      説明'あなたの順序を確認'
-  クラス'w—full'
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - StepperItem[]
+props:
+  color: neutral
+  items:
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
+  class: 'w-full'
 ---
 ::
 
-### サイズ
+### Size
 
-ステッパーのサイズを変更するには、`size`プロパティを使用します。
+`size`プロパティを使用して、Stepperのサイズを変更します。
 
 ::component-code
 ---
-無視
-  -  content
-  - アイテム
-  - クラス
-外部
-  - アイテム
-externalTypes
-  -  StepperItem []
-小道具
-  サイズXL
-  アイテム
-    -  title 'アドレス'
-      説明：'ここに住所を追加'
-      アイコン'i—lucide—house'
-    -  title '出荷'
-      説明：「ご希望の配送方法を設定」
-      アイコン'i—lucide—truck'
-    -  title 'チェックアウト'
-      説明'あなたの順序を確認'
-  クラス'w—full'
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - StepperItem[]
+props:
+  size: xl
+  items:
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
+  class: 'w-full'
 ---
 ::
 
-### オリエンテーション
+### Orientation
 
-ステッパーの向きを変更するには、`orientation`プロパティを使用します。デフォルトは`horizontal`です。
+`orientation`プロパティを使用してステッパーの向きを変更します。デフォルトは`horizontal`です。
 
 ::component-code
 ---
-無視
-  - コンテンツ
-  - アイテム
-  - クラス
-外部
-  - アイテム
-externalTypes
-  -  StepperItem []
-小道具
-  オリエンテーション垂直
-  アイテム
-    -  title 'アドレス'
-      説明：'ここに住所を追加'
-      アイコン'i—lucide—house'
-    -  title '出荷'
-      説明：「ご希望の配送方法を設定」
-      アイコン'i—lucide—truck'
-    -  title 'チェックアウト'
-      説明'あなたの順序を確認'
-  クラス'w—full'
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - StepperItem[]
+props:
+  orientation: vertical
+  items:
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
+  class: 'w-full'
 ---
 ::
 
@@ -176,25 +176,25 @@ externalTypes
 
 ::component-code
 ---
-無視
-  - コンテンツ
-  - アイテム
-  - クラス
-外部
-  - アイテム
-externalTypes
-  -  StepperItem []
-小道具
-  無効true
-  アイテム
-    -  title 'アドレス'
-      説明：'ここに住所を追加'
-      アイコン'i—lucide—house'
-    -  title '出荷'
-      説明：「ご希望の配送方法を設定」
-      アイコン'i—lucide—truck'
-    -  title 'チェックアウト'
-      説明'あなたの順序を確認'
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - StepperItem[]
+props:
+  disabled: true
+  items:
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
 ---
 ::
 
@@ -208,13 +208,13 @@ externalTypes
 
 ボタンを使用してステッパーの追加コントロールを追加できます。
 
-component—example {name="stepper-with-controls-example"}
+:component-example{name="stepper-with-controls-example"}
 
-###  Controlアクティブ項目
+###  Controlアクティブなアイテム
 
-`default-value` propを使用するか、`v-model`ディレクティブを使用して、アクティブなアイテムを制御できます。`value`が指定されていない場合は、インデックスがデフォルトになります。
+`default-value`プロパティを使用するか、`v-model`ディレクティブを項目の`value`と共に使用することでアクティブな項目を制御できます。`value`が指定されない場合、デフォルトでインデックスになります。
 
-component—example {name="stepper-model-value-example"}
+:component-example{name="stepper-model-value-example"}
 
 ::tip
 `value-key`プロパティを使用して、`v-model`または`default-value`が指定されたときにアイテムにマッチするキーを変更します。
@@ -222,37 +222,37 @@ component—example {name="stepper-model-value-example"}
 
 ### コンテンツスロット付き
 
-`#content`スロットを使用して、各項目の内容をカスタマイズします。
+`#content`スロットを使用して、各アイテムのコンテンツをカスタマイズします。
 
-component—example {name="stepper-content-slot-example"}
+:component-example{name="stepper-content-slot-example"}
 
 ### カスタムスロット付き
 
-特定の項目をカスタマイズするには、`slot`プロパティを使用します。
+`slot`プロパティを使用して特定のアイテムをカスタマイズします。
 
 以下のスロットにアクセスできます：
 
 - `#{{ item.slot }}`{lang="ts-type"}
 
-component—example {name="stepper-custom-slot-example"}
+:component-example{name="stepper-custom-slot-example"}
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-###  Emits
+### Emits
 
-component—emits
+:component-emits
 
-###  Expose
+### Expose
 
-型付きコンポーネントインスタンスには、[`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref)を使用してアクセスできます。
+型付きコンポーネントインスタンスには[`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref)を使用してアクセスできます。
 
 ```vue
 <script setup lang="ts">
@@ -273,10 +273,10 @@ const stepper = useTemplateRef('stepper')
 | `hasNext`{lang="ts-type"}| `Ref<boolean>`{lang="ts-type"}|
 | `hasPrev`{lang="ts-type"}| `Ref<boolean>`{lang="ts-type"}|
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

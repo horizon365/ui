@@ -1,5 +1,5 @@
 ---
-title: ColormodeAuswählen
+title: Farbauswahl
 description: 'Wählen Sie, um zwischen System-, Dunkel-und Hellmodus zu wechseln.'
 category: color-mode
 links:
@@ -11,21 +11,21 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/color-mode/ColorModeSelect.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Die ColorModeSelect-Komponente erweitert die Komponente [SelectMenu](/docs/components/select-menu), so dass Sie jede Eigenschaft wie `color`,`variant`,`size` usw. übergeben können.
+Die ColorModeSelect-Komponente erweitert die [SelectMenu](/docs/components/select-menu)-Komponente, sodass Sie jede Eigenschaft wie `color`, `variant`, `size` usw. übergeben können.
 
-: component-code {prefix="color-mode"}
+:component-code{prefix="color-mode"}
 
-@@ph009@@Beispiele
+## Examples (Beispiele)
 
-@@ph010@@Mit benutzerdefinierten Icons
+### Mit benutzerdefinierten Icons
 
 ::framework-only
-#nuxt sein
+#nuxt
 ::div
 
-Verwenden Sie `app.config.ts`, um das Symbol mit der `ui.icons`-Eigenschaft anzupassen:
+Verwenden Sie die `app.config.ts`, um das Symbol mit der Eigenschaft `ui.icons` anzupassen:
 
 ```ts [app/app.config.ts]
 export default defineAppConfig({
@@ -41,9 +41,9 @@ export default defineAppConfig({
 
 ::
 
-#Ansehen
+#vue
 ::div
-Verwenden Sie `vite.config.ts`, um das Symbol mit der `ui.icons`-Eigenschaft anzupassen:
+Verwenden Sie die `vite.config.ts`, um das Symbol mit der Eigenschaft `ui.icons` anzupassen:
 
 ```ts [vite.config.ts]
 import { defineConfig } from 'vite'
@@ -69,12 +69,12 @@ export default defineConfig({
 
 ::
 
-@@ph045@@api
+## API (englisch)
 
-@@ph046@@@props
+### Props Bearbeiten
 
-Komponenten Props
+:component-props
 
-@@ph047@@changelog @ changelog
+## Changelog (englisch)
 
-: component-changelog {prefix="color-mode"}
+:component-changelog{prefix="color-mode"}

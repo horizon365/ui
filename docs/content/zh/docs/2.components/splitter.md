@@ -11,152 +11,152 @@ links:
 navigation.badge: New
 ---
 
-## 使用情况
+## 用法
 
-使用拆分器组件可以显示由可拖动手柄分隔的可调整大小面板的列表。
+使用Splitter组件显示由可拖动手柄分隔的可调整大小的面板的列表。
 
 ::component-example
 ---
-收阖：true
-名称：'拆分器示例'
+collapse: true
+name: 'splitter-example'
 ---
 ::
 
 ::note
-Splitter填充其容器的高度，因此请确保父元素定义了一个容器。
+Splitter填充其容器的高度，因此请确保父元素定义了一个Splitter。
 ::
 
-项目
+### 项目
 
-使用`items`属性作为具有下列属性的对象数组：
+使用`items` prop作为具有以下属性的对象数组：
 
-005号机
-006年7月8日
-009年10月11日
-我的天啊!
-我的天啊!
-我的天啊!
-021、022、023、
-我的天啊!
-我的天啊!
-我的天啊!
-我的天啊!
+- `defaultSize?: number`{lang="ts-type"}
+- `minSize?: number`{lang="ts-type"}
+- `maxSize?: number`{lang="ts-type"}
+- `collapsible?: boolean`{lang="ts-type"}
+- `collapsedSize?: number`{lang="ts-type"}
+- `sizeUnit?: '%' | 'px'`{lang="ts-type"}
+- `order?: number`{lang="ts-type"}
+- `id?: string`{lang="ts-type"}
+- `slot?: string`{lang="ts-type"}
+- `class?: any`{lang="ts-type"}
+- `ui?: { panel?: ClassNameValue }`{lang="ts-type"}
 
-使用`slot`键填充面板的内容，使用`class`键设置面板的样式。没有`slot`键的项将返回到`panel-{index}`槽中。默认情况下，大小是百分比，请在项上设置`sizeUnit: 'px'`作为像素值。
+使用`slot`键填充面板的内容，使用`class`键设置面板的样式。没有`slot`键的项目将返回到`panel-{index}`插槽。默认情况下，大小为百分比，在像素值的项目上设置`sizeUnit: 'px'`。
 
 ::caution
-在服务器上呈现时，设置`id`属性并将`defaultSize`指定给所有项或不指定任何项。否则，将自动生成ID，服务器与客户端可能不同意，这会破坏水合布局。没有`defaultSize`的项将在服务器上回退到相等的份额，因此，混合这两种使面板跳一次水化。像素大小是在客户端上测量的，总是会有一点偏移。
+在服务器上渲染时，设置`id`属性并将`defaultSize`赋予所有项目或不赋予任何项目。否则会自动生成ID，服务器和客户端可能会不一致，这会破坏布局。没有`defaultSize`的项目会在服务器上退回到相等的份额，因此混合两者会使面板在水合后跳动。像素大小在客户端上测量，并且总是会有一点偏移。
 ::
 
 ::component-code
 ---
-收阖：true
-类别："h-96"
-更漂亮：真的
-忽略：
-  项目
-  我是
-外部：
-  项目数
-外部类型：
-  - SplitterItem []拆分器项
-道具：
-  id：'拆分器项目'
-  项目名称：
-    插槽："边栏"
-      最小大小：15
-      最大大小：40
-      默认大小：25
-      class：'bg-高边框/50边框边框-默认圆角-xl项目-居中对齐-文本居中-静音字体-中等'
-    插槽："主"
-      默认大小：75
-      class：'bg-高边框/50边框边框-默认圆角-xl项目-居中对齐-文本居中-静音字体-中等'
-插槽：
-  提要字段：提要字段
-  main：主菜单
+collapse: true
+class: 'h-96'
+prettier: true
+ignore:
+  - items
+  - id
+external:
+  - items
+externalTypes:
+  - SplitterItem[]
+props:
+  id: 'splitter-items'
+  items:
+    - slot: 'sidebar'
+      minSize: 15
+      maxSize: 40
+      defaultSize: 25
+      class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
+    - slot: 'main'
+      defaultSize: 75
+      class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
+slots:
+  sidebar: Sidebar
+  main: Main
 ---
 
-#边栏
+#sidebar
 边栏
 
-#主要
+#main
 主要
 ::
 
-方向图
+### 方向
 
-使用`orientation`道具更改拆分器的方向。默认为`horizontal`。
+使用`orientation`属性将拆分器. xmp的方向更改为`horizontal`。
 
 ::component-code
 ---
-收阖：true
-类别：“h-96”
-更漂亮：真的
-忽略：
-  项目数
-  我是
-外部：
-  项目数
-外部类型：
-  - SplitterItem[]拆分器项
-道具：
-  id：'拆分器方向'
-  方向：'垂直'
-  项目名称：
-    插槽：“第一个”
-      class：'bg-高边框/50边框边框-默认圆角-xl项目-居中对齐-文本居中-静音字体-中等'
-    插槽：“秒”
-      class：'bg-高边框/50边框边框-默认圆角-xl项目-居中对齐-文本居中-静音字体-中等'
-插槽：
-  first：第一个
-  第二：第二
+collapse: true
+class: 'h-96'
+prettier: true
+ignore:
+  - items
+  - id
+external:
+  - items
+externalTypes:
+  - SplitterItem[]
+props:
+  id: 'splitter-orientation'
+  orientation: 'vertical'
+  items:
+    - slot: 'first'
+      class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
+    - slot: 'second'
+      class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
+slots:
+  first: First
+  second: Second
 ---
 
-#第一个
+#first
 第一
 
-秒数
+#second
 二
 ::
 
-示例
+## 示例
 
-### 使用可折叠面板
+### 带可折叠面板
 
-在项目上设定`collapsible: true`，让它折迭时超过它的`minSize`，并使用`collapsedSize`让面板的一部分在折迭时保持可见。面板插槽会公开`collapsed`、`collapse`和`expand`，让您可以程式化方式控制它，而`collapse`，`expand`和`resize`事件随面板索引一起触发。
+在一个项目上设置`collapsible: true`，让它折叠超过它的`minSize`，并使用`collapsedSize`在折叠时保持面板的一部分可见。面板槽暴露`collapsed`，`collapse`和`expand`，因此您可以通过编程方式控制它，`collapse`，`expand`和`resize`事件将与面板索引一起触发。
 
 ::component-example
 ---
-收阖：true
-名称：'拆分器-可折叠-示例'
+collapse: true
+name: 'splitter-collapsible-example'
 ---
 ::
 
-### 使用嵌套拆分器
+### 带嵌套拆分器
 
-在面板内嵌套`Splitter`以构建二维的IDE样式布局。
+将`Splitter`嵌套在面板中以构建二维IDE样式的布局。
 
 ::component-example
 ---
-收阖：true
-名称：'分割器巢状范例'
+collapse: true
+name: 'splitter-nested-example'
 ---
 ::
 
-### 使用自定义句柄
+### 带自定义手柄
 
-默认情况下，句柄是不可见的。使用`ui`道具可对其重新设置样式，例如，将其设置为齐平布局的可见分隔线，并使用`resize-handle`插槽将其内部内容呈现为手柄。
+默认情况下，句柄是不可见的。使用`ui`属性可以重新设置它的样式，例如，作为齐平布局的可见分隔线，使用`resize-handle`插槽可以将其内部的内容呈现为夹点。
 
 ::component-example
 ---
-收阖：true
-名称：'拆分器自定义句柄示例'
+collapse: true
+name: 'splitter-custom-handle-example'
 ---
 ::
 
 ### 具有持久性
 
-提供`auto-save-id`以将布局保存到`localStorage`并在重新加载时恢复。
+提供一个`auto-save-id`来将布局保持为`localStorage`并在重新加载时恢复它。
 
 ```vue
 <template>
@@ -166,24 +166,24 @@ Splitter填充其容器的高度，因此请确保父元素定义了一个容器
 </template>
 ```
 
-美国石油学会
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-发射器
+### Emits
 
-：组件发射
+:component-emits
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

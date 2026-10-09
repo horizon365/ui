@@ -3,7 +3,7 @@ title: Authentique
 description: 'Un formulaire personnalisable pour créer des formulaires de login, d'enregistrement ou de réinitialisation de mot de passe.'
 category: page
 links:
-  - label: forme
+  - label: Forme
     to: /docs/components/form
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub à
@@ -11,254 +11,254 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/AuthForm.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Construit au-dessus du composant [Form](/docs/components/form), le composant `AuthForm` peut être utilisé dans vos pages ou enveloppé dans une [PageCard](/docs/components/page-card).
+Construit sur le composant [Form](/docs/components/form), le composant `AuthForm` peut être utilisé dans vos pages ou enveloppé dans un [PageCard](/docs/components/page-card).
 
 ::component-example
 ---
-nom: 'auth-form-example'
-Collapse: vrai
+name: 'auth-form-example'
+collapse: true
 ---
 ::
 
-@@ph010@@champs
+### champs
 
 Le formulaire se construira lui-même sur la base de la prop `fields` et l'état sera géré en interne.
 
-Utilisez le `fields` prop comme un tableau d'objets avec les propriétés suivantes:
+Utilisez le prop `fields` comme tableau d'objets avec les propriétés suivantes:
 
-@@
-@@
+- x`name: string`xx{lang="ts-type"}
+- x`type: 'checkbox' | 'select' | 'otp' | 'InputHTMLAttributes['type']'`x{lang="ts-type"}
 
-Chaque champ doit inclure une propriété `type`, qui détermine le composant d'entrée et tous les accessoires supplémentaires appliqués:`checkbox` les champs utilisent [Checkbox](/docs/components/checkbox#props) les accessoires,`select` les champs utilisent [SelectMenu](/docs/components/select-menu#props) les accessoires, Les champs `otp` utilisent les accessoires [PinInput](/docs/components/pin-input#props), et tous les autres types utilisent les accessoires [Input](/docs/components/input#props).
+Chaque champ doit inclure une propriété `type`, qui détermine le composant d'entrée et tout accessoire supplémentaire appliqué: Les champs `checkbox` utilisent les props [Checkbox](/docs/components/checkbox#props), les champs `select` utilisent les props [SelectMenu](xph0333), les champs `otp` utilisent les props [PinInput](/docs/components/pin-input#props), et tous les autres types utilisent des accessoires [Input](/docs/components/input#props).
 
 Vous pouvez également passer n'importe quelle propriété du composant [FormField](/docs/components/form-field#props) à chaque champ.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph043@@champs
-  @@ph044@classe
-Extérieur:
-  @@ph045@champs
-Extérieurs:
-  - AuthFormField [réf. nécessaire]
-Props:
-  champs:
-    - nom:'email'
-      Type: "Email"
-      Étiquette:'Email'
-      placeholder: "Entrez votre email"
-      Requis: Vrai
-    - name: mot de passe
-      Type: "password"
-      Étiquette:"Password"
-      réservé:"Entrez votre mot de passe"
-      Requis: Vrai
-    - name:'pays'
-      Type: "sélectionner"
-      Étiquette:"Pays"
-      placeholder: 'Sélectionner un pays'
+prettier: true
+ignore:
+  - fields
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
+  fields:
+    - name: 'email'
+      type: 'email'
+      label: 'Email'
+      placeholder: 'Enter your email'
+      required: true
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+      placeholder: 'Enter your password'
+      required: true
+    - name: 'country'
+      type: 'select'
+      label: 'Country'
+      placeholder: 'Select country'
       items:
-        - label:'États-Unis d'Amérique'
-          Valeur: "nous"
-        - label:« France »
-          Valeur: 'fr'
-        - label:'Royaume-Uni'
-          Valeur: 'UK'
-        - label:« Australie »
-          Valeur: "au"
-    - nom:'otp'
-      Catégorie:"OTP"
-      Étiquette: OTP
-      Longueur: 6
-      réservé:'○'
-    - name:« souvenez-vous »
-      Catégorie:"checkbox"
-      Étiquette: Remember Me
-      Description: "Vous serez connecté pendant 30 jours."
-  classe: 'max-w-sm'
+        - label: 'United States'
+          value: 'us'
+        - label: 'France'
+          value: 'fr'
+        - label: 'United Kingdom'
+          value: 'uk'
+        - label: 'Australia'
+          value: 'au'
+    - name: 'otp'
+      type: 'otp'
+      label: 'OTP'
+      length: 6
+      placeholder: '○'
+    - name: 'remember'
+      type: 'checkbox'
+      label: 'Remember me'
+      description: 'You will be logged in for 30 days.'
+  class: 'max-w-sm'
 ---
 ::
 
-@@56@titre
+### Titre
 
 Utilisez la prop `title` pour définir le titre du formulaire.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph058@champs
-  @@ph059@classe
-Extérieur:
-  @@ph060@champs
-Extérieurs:
-  - AuthFormField [réf. nécessaire]
-Props:
-  Titre: Login
-  Champs:
-    - name:'courriel'
-      Type: texte
-      Étiquette:'Email'
-    - name: mot de passe
-      Type: "password"
-      Étiquette:"Password"
-  classe: 'max-w-md'
+prettier: true
+ignore:
+  - fields
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
+  title: 'Login'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
 ::
 
-### Description
+### Définition
 
 Utilisez la prop `description` pour définir la description du formulaire.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph066@champs
-  @@ph067@titre
-  @@ph068@classe
-Extérieure:
-  @@ph069@champs
-Extérieurs:
-  - AuthFormField [réf. nécessaire]
-Props:
-  Titre: Login
-  Description: "Entrez vos informations d'identification pour accéder à votre compte".
-  champs:
-    - name:'courriel'
-      Type: texte
-      Étiquette:'Email'
-    - name: mot de passe
-      Type: "password"
-      Étiquette:"Password"
-  classe: 'max-w-md'
+prettier: true
+ignore:
+  - fields
+  - title
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
 ::
 
-### Icon
+### Icône
 
 Utilisez la prop `icon` pour définir l'icône du formulaire.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph075@champs
-  @@ph076@titre
-  @@ph077@description
-  @@ph078@classe
-Extérieur:
-  @@ph079@champs
-Extérieurs:
-  - AuthFormField [réf. nécessaire]
-Props:
-  Titre: Login
-  Description: "Entrez vos informations d'identification pour accéder à votre compte."
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
   icon: 'i-lucide-user'
-  Champs:
-    - nom:'courriel'
-      Type: texte
-      Étiquette:'Email'
-    - name: mot de passe
-      Type: "password"
-      Étiquette:"Password"
-  classe: 'max-w-md'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
 ::
 
-### Fournisseurs
+### Fournisseur
 
 Utilisez la prop `providers` pour ajouter des fournisseurs au formulaire.
 
-Vous pouvez passer n'importe quelle propriété du composant [Button](/docs/components/button) comme `variant`,`color`,`to`, etc.
+Vous pouvez passer n'importe quelle propriété du composant [Button](/docs/components/button) telle que `variant`, `color`, `to`, etc.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph092@champs
-  @@ph093@titre
-  @@ph094@description
-  @@ph095@icon
-  - fournisseurs
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
   - headerAlign
-  @@ph098@classe
-Extérieur:
-  - fournisseurs
-  @@ph100@champs
-Extérieurs:
-  @@ph101@@buttonprops []
-  - AuthFormField [réf. nécessaire]
-Props:
-  Titre: Login
-  Description: "Entrez vos informations d'identification pour accéder à votre compte."
+  - class
+external:
+  - providers
+  - fields
+externalTypes:
+  - ButtonProps[]
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
   icon: 'i-lucide-user'
-  Fournisseurs:
-    - label:« Google »
+  providers:
+    - label: 'Google'
       icon: 'i-simple-icons-google'
-      Couleur: "Neutre"
-      Étiquette:"subtil"
-    - label:« GitHub »
+      color: 'neutral'
+      variant: 'subtle'
+    - label: 'GitHub'
       icon: 'i-simple-icons-github'
-      Couleur: "Neutre"
-      Étiquette:"subtil"
-  Champs:
-    - nom:'email'
-      Type: texte
-      Étiquette:'Email'
-    - name: mot de passe
-      Type: "password"
-      Étiquette:"Password"
-  classe: 'max-w-md'
+      color: 'neutral'
+      variant: 'subtle'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
 ::
 
 ### Séparateur
 
-Utilisez le prop `separator` pour personnaliser le [Separator](/docs/components/separator) entre les fournisseurs et les champs.
+Utilisez la prop `separator` pour personnaliser le [Separator](/docs/components/separator) entre les fournisseurs et les champs.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph114@champs
-  @@ph115@titre
-  @@ph116@description
-  @@ph117@icon
-  - fournisseurs
-  @@classe 119
-Extérieure:
-  - fournisseurs
-  @@ph121@@champs
-Extérieurs:
-  @@ph122@@buttonprops [réf. nécessaire]
-  - AuthFormField [réf. nécessaire]
-Props:
-  Titre: Login
-  Description: "Entrez vos informations d'identification pour accéder à votre compte."
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
+  - class
+external:
+  - providers
+  - fields
+externalTypes:
+  - ButtonProps[]
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
   icon: 'i-lucide-user'
-  Fournisseurs:
-    - label:« Google »
+  providers:
+    - label: 'Google'
       icon: 'i-simple-icons-google'
-      Couleur: "Neutre"
-      Étiquette:"subtil"
-    - label:« GitHub »
+      color: 'neutral'
+      variant: 'subtle'
+    - label: 'GitHub'
       icon: 'i-simple-icons-github'
-      Couleur: "Neutre"
-      Étiquette:"subtil"
-  champs:
-    - name:'courriel'
-      Type: texte
-      Étiquette:'Email'
-    - name: mot de passe
-      Type: "password"
-      Étiquette:"Password"
-  Séparateur:"Fournisseurs"
-  classe: 'max-w-md'
+      color: 'neutral'
+      variant: 'subtle'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  separator: 'Providers'
+  class: 'max-w-md'
 ---
 ::
 
@@ -266,85 +266,85 @@ Vous pouvez passer n'importe quelle propriété du composant [Separator](/docs/c
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph132@champs
-  @@ph133@titre
-  @@ph134@description
-  @@P135 @@ icon
-  - fournisseurs
-  @@ph137@classe
-Extérieur:
-  - fournisseurs
-  @@ph139@@champs
-Extérieurs:
-  @@ph140@@buttonprops [réf. nécessaire]
-  - AuthFormField [réf. nécessaire]
-Props:
-  Titre: Login
-  Description: "Entrez vos informations d'identification pour accéder à votre compte."
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
+  - class
+external:
+  - providers
+  - fields
+externalTypes:
+  - ButtonProps[]
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
   icon: 'i-lucide-user'
-  Fournisseurs:
-    - label:« Google »
+  providers:
+    - label: 'Google'
       icon: 'i-simple-icons-google'
-      Couleur: "Neutre"
-      Étiquette:"subtil"
-    - label:« GitHub »
+      color: 'neutral'
+      variant: 'subtle'
+    - label: 'GitHub'
       icon: 'i-simple-icons-github'
-      Couleur: "Neutre"
-      Étiquette:"subtil"
-  Champs:
-    - name:'courriel'
-      Type: texte
-      Étiquette:'Email'
-    - name: mot de passe
-      Type: "password"
-      Étiquette:"Password"
-  Séparateur:
+      color: 'neutral'
+      variant: 'subtle'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  separator:
     icon: 'i-lucide-user'
-  classe: 'max-w-md'
+  class: 'max-w-md'
 ---
 ::
 
-@@ph146@soumettre
+### Soumettre
 
-Utilisez la prop `submit` pour modifier le bouton de soumission du formulaire.
+Utilisez la prop `submit` pour modifier le bouton d'envoi du formulaire.
 
-Vous pouvez passer n'importe quelle propriété du composant [Button](/docs/components/button) comme `variant`,`color`,`to`, etc.
+Vous pouvez passer n'importe quelle propriété du composant [Button](/docs/components/button) telle que `variant`, `color`, `to`, etc.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph155@champs
-  @@ph156@titre
+prettier: true
+ignore:
+  - fields
+  - title
   - description
-  @@ph158@icon
-  - fournisseurs
+  - icon
+  - providers
   - submit.label
-  - submit.couleur
+  - submit.color
   - submit.variant
-  @@ph163@classe
-Extérieure:
-  @@ph164@champs
-Extérieurs:
-  - AuthFormField [réf. nécessaire]
-Props:
-  Titre: Login
-  Description: "Entrez vos informations d'identification pour accéder à votre compte."
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
   icon: 'i-lucide-user'
-  champs:
-    - name:'courriel'
-      Type: texte
-      Étiquette:'Email'
-    - name: mot de passe
-      Type: "password"
-      Étiquette:"Password"
-  soumis:
-    Étiquette:"Submit"
-    Couleur: "Erreur"
-    Étiquette:"subtil"
-  classe: 'max-w-md'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  submit:
+    label: 'Submit'
+    color: 'error'
+    variant: 'subtle'
+  class: 'max-w-md'
 ---
 ::
 
@@ -356,32 +356,32 @@ Vous pouvez envelopper le composant `AuthForm` avec le composant [PageCard](/doc
 
 ::component-example
 ---
-nom: 'auth-form-page-exemple'
-Collapse: vrai
+name: 'auth-form-page-example'
+collapse: true
 ---
 ::
 
-@@ph176@api
+## API équipement
 
-@@ph177@props
+### Props
 
-Composants-props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attributes" target="_blank"}
 Ce composant prend également en charge tous les attributs HTML natifs `<form>`.
 ::
 
-@@ph179@@réglages
+### Slots
 
-Composants slots
+:component-slots
 
-### émissions
+### Emits
 
-Composants émetteurs
+:component-emits
 
-### Exposé
+### Expose à
 
-Vous pouvez accéder à l'instance du composant typé (exposant formRef et state) en utilisant `useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref). Par exemple, dans une forme séparée (par exemple, un formulaire "reset"), vous pouvez faire:
+Vous pouvez accéder à l'instance du composant typé (exposant formRef et state) en utilisant [`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref). Par exemple, dans un formulaire séparé (par exemple un formulaire "reset"), vous pouvez faire:
 
 ```vue
 <script setup lang="ts">
@@ -397,13 +397,13 @@ Cela vous donne accès aux propriétés (exposées) suivantes:
 
 | nom| type|
 | ---- | ---- |
-| @@|@@|
-| @@|@@|
+| `formRef`x{lang="ts-type"}| `Ref<HTMLFormElement \| null>`x{lang="ts-type"}|
+| `state`x{lang="ts-type"}| `Reactive<FormStateType>`x{lang="ts-type"}|
 
-@204@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@205@changements
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

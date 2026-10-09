@@ -9,12 +9,12 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Kbd.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
 Utilisez le composant `kbd` pour afficher un [Kbd](/docs/components/kbd) dans votre contenu.
 
 ::code-preview{class="[&>div]:*:my-0"}
-: kbd@@ph006 @@: kbd@@ph007
+:kbd{value="meta"} :kbd{value="K"}
 
 #code
 
@@ -24,20 +24,20 @@ Utilisez le composant `kbd` pour afficher un [Kbd](/docs/components/kbd) dans vo
 
 ::
 
-@@P011@@Paix
+## api
 
-@@ph012@@props
+### Props
 
-: composants {prose}
+:component-props{prose}
 
-@@ph014@@réglages
+### Slots
 
-: composant-slots {prose}
+:component-slots{prose}
 
-@@ph016@thème
+## Thème
 
-: composant-thème {prose}
+:component-theme{prose}
 
-@changement@changement@changement.com
+## Changelog
 
-: composant-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

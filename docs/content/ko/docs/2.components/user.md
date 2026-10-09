@@ -11,48 +11,48 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/User.vue
 ---
 
-##  사용
+## Usage
 
-###  이름
+### Name
 
-`name`prop을 사용하여 사용자의 이름을 표시합니다.
+`name` prop을 사용하여 사용자의 이름을 표시합니다.
 
 ::component-code
 ---
-소품 :
-  이름: John Doe
+props:
+  name: 'John Doe'
 ---
 ::
 
-###  설명
+### Description
 
-`description`prop을 사용하여 사용자에 대한 설명을 표시합니다.
+`description` prop을 사용하여 사용자에 대한 설명을 표시합니다.
 
 ::component-code
 ---
-소품 :
-  이름: John Doe
-  사진: "Software Engineer"
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
 ---
 ::
 
-###  Avatar
+### Avatar 이미지
 
-`avatar`prop을 사용하여 [Avatar](/docs/components/avatar) 구성요소를 표시합니다.
+`avatar` Prop을 사용하여 [Avatar](/docs/components/avatar) 구성 요소를 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  name
-  -  설명
-소품 :
-  이름: John Doe
-  설명: "Software Engineer"
-  아바타 (Avatar):
+prettier: true
+ignore:
+  - name
+  - description
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
+  avatar:
     src: 'https://i.pravatar.cc/150?u=john-doe'
-    로드: Lazy
-    아이콘: i-lucide-image
+    loading: lazy
+    icon: i-lucide-image
 ---
 ::
 
@@ -60,47 +60,47 @@ links:
 
 ::component-props
 ---
-제목: Avatar
-무시하기:
-  -  크기
-  -  as
+name: Avatar
+ignore:
+  - size
+  - as
 ---
 ::
 
 ::
 
-###  칩
+### chip
 
-`chip`prop을 사용하여 [Chip](/docs/components/chip) 구성요소를 표시합니다.
+`chip` 소품을 사용하여 [Chip](/docs/components/chip) 구성 요소를 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  name
-  -  설명
-  -  avatar. src
-프로젝트:
+prettier: true
+ignore:
+  - name
+  - description
+  - avatar.src
+items:
   chip.color:
-    -  기본
-    -  secondary
-    -  성공
-    -  info
-    -  경고
-    -  오류
-    -  neutral
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
   chip.position:
-    - 왼쪽 위
-    -  오른쪽 위
-    - 왼쪽 아래
-    -  오른쪽 아래
-소품 :
-  이름: John Doe
-  사진: "Software Engineer"
+    - top-left
+    - top-right
+    - bottom-left
+    - bottom-right
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
   avatar.src: 'https://i.pravatar.cc/150?u=john-doe'
-  칩 :
-    색상 : primary
-    위치:오른쪽 위
+  chip:
+    color: 'primary'
+    position: top-right
 ---
 ::
 
@@ -108,93 +108,93 @@ links:
 
 ::component-props
 ---
-이름: Chip
-무시하기:
-  -  as
-  -  크기
-  -  독립 형
+name: Chip
+ignore:
+  - as
+  - size
+  - standalone
 ---
 ::
 
 ::
 
-###  크기
+### Size 크기
 
-`size`prop을 사용하여 사용자 아바타 및 텍스트의 크기를 변경합니다.
+`size` Prop을 사용하여 사용자 아바타와 텍스트의 크기를 변경합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  이름
-  -  설명
-  -  avatar. src
-  -  칩
-소품 :
-  이름: John Doe
-  사진: "Software Engineer"
+prettier: true
+ignore:
+  - name
+  - description
+  - avatar.src
+  - chip
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
   avatar.src: 'https://i.pravatar.cc/150?u=john-doe'
-  칩 : True
-  크기: xl
+  chip: true
+  size: xl
 ---
 ::
 
-###  방향
+### 방향 지정
 
-방향을 변경하려면 `orientation`prop을 사용합니다. 기본값은 `horizontal`입니다.
+`orientation` Prop을 사용하여 방향을 변경합니다. 기본값은 `horizontal`입니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  avatar. src
-소품 :
-  방향: 수직
-  이름: John Doe
-  설명: "Software Engineer"
+prettier: true
+ignore:
+  - avatar.src
+props:
+  orientation: 'vertical'
+  name: 'John Doe'
+  description: 'Software Engineer'
   avatar.src: 'https://i.pravatar.cc/150?u=john-doe'
 ---
 ::
 
-###  링크
+### Link 링크
 
-당신은 [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) 구성 요소에서 모든 속성을 전달할 수 있습니다 `to`, `target`, `rel`, etc.
+[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) 구성 요소에서 `to`, `target`, `rel` 등의 속성을 전달할 수 있습니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  이름
-  -  설명
-  -  avatar. src
-  -  target
-소품 :
-  다음 주소: 'https://github.com/benjamincanac'
-  대상: '_blank'
-  이름 : Benjamin Canac
-  설명: "Software Engineer"
+prettier: true
+ignore:
+  - name
+  - description
+  - avatar.src
+  - target
+props:
+  to: 'https://github.com/benjamincanac'
+  target: '_blank'
+  name: 'Benjamin Canac'
+  description: 'Software Engineer'
   avatar.src: 'https://github.com/benjamincanac.png'
 ---
 ::
 
 ::note
-`NuxtLink` 구성 요소는 `User` 구성 요소에 전달된 다른 모든 속성을 상속합니다.
+`NuxtLink` 구성 요소는 `User` 구성 요소에 전달하는 다른 모든 속성을 상속합니다.
 ::
 
-##  API
+## API
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### 슬롯
 
-:컴포넌트 - 슬롯
+:component-slots
 
-##  테마
+## Theme 본문
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

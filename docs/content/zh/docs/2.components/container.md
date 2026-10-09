@@ -7,19 +7,19 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Container.vue
 ---
 
-## 使用情况
+## 用法
 
 使用默认插槽居中并限制内容的宽度。
 
 ::tip{to="/docs/getting-started/theme/css-variables#container"}
-其最大宽度由`--ui-container`CSS变量控制。
+它的最大宽度由`--ui-container` CSS变量控制。
 ::
 
 ::component-example
 ---
-name：'container-example'
-道具：
-  类别：'w-完整'
+name: 'container-example'
+props:
+  class: 'w-full'
 ---
 ::
 
@@ -27,16 +27,16 @@ name：'container-example'
 
 ### Props
 
-：组件-支柱
+:component-props
 
 ### Slots
 
-：组件插槽
+:component-slots
 
 ## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

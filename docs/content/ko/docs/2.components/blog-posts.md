@@ -8,9 +8,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/BlogPosts.vue
 ---
 
-## 사용
+## Usage
 
-BlogPosts   구성 요소 는   유연 한   레이아웃 을   제공 하 여   기본   슬롯 이나  `posts`prop 을   사용 하 여  [BlogPost](/docs/components/blog-post)구성 요소   목록 을   표시 합니다 .
+BlogPosts 구성 요소는 유연한 레이아웃을 제공하여 기본 슬롯이나 `posts` prop를 사용하여 [BlogPost](xph04x) 구성 요소 목록을 표시합니다.
 
 ```vue {2,8}
 <template>
@@ -24,80 +24,80 @@ BlogPosts   구성 요소 는   유연 한   레이아웃 을   제공 하 여  
 </template>
 ```
 
-###   게시물
+### Posts
 
-`posts`prop 을  [BlogPost](/docs/components/blog-post#props)  구성   요소 의   속성 을   가진   객체   배열 로   사용 합니다 .
+`posts` prop을 [BlogPost](/docs/components/blog-post#props) 구성 요소의 속성을 가진 오브젝트 배열로 사용합니다.
 
 ::component-code
 ---
-축소 :   true
-무시 하 기 :
+collapse: true
+ignore:
   - posts
-외부 :
+external:
   - posts
-externalTypes :
-  - BlogPostProps   [ ]
-소품   :
-  포스트 :
-    - title :   Nuxt   Icon   v 1
-      설명 :   " Discover   Nuxt   Icon   v 1 ! "   (Nuxt   Icon   v 1 을   발견 하 십시오)
-      그림 :https://nuxt.com/assets/blog/nuxt-icon/cover.png
-      날짜   :   2024 - 11 - 25
-    - title :   Nuxt   3 . 14
-      설명 :   " Nuxt   3 . 14 가   나왔 습니다 ! "
-      이미지 :https://nuxt.com/assets/blog/v3.14.png
-      날짜 :   2024 - 11 - 04
-    - title :   Nuxt   3 . 13
-      설명 :   " Nuxt   3 . 13 이   나왔 습니다 ! "
-      그림 :https://nuxt.com/assets/blog/v3.13.png
-      날짜   :   2024 - 08 - 22
+externalTypes:
+  - BlogPostProps[]
+props:
+  posts:
+    - title: Nuxt Icon v1
+      description: 'Discover Nuxt Icon v1!'
+      image: https://nuxt.com/assets/blog/nuxt-icon/cover.png
+      date: 2024-11-25
+    - title: Nuxt 3.14
+      description: 'Nuxt 3.14 is out!'
+      image: https://nuxt.com/assets/blog/v3.14.png
+      date: 2024-11-04
+    - title: Nuxt 3.13
+      description: 'Nuxt 3.13 is out!'
+      image: https://nuxt.com/assets/blog/v3.13.png
+      date: 2024-08-22
 ---
 ::
 
 ### 방향
 
-`orientation`prop   을   사용 하 여   BlogPosts . 기본 값 을  `horizontal`로   변경 합니다 .
+`orientation` prop을 사용하여 BlogPosts.default의 방향을 `horizontal`로 변경합니다.
 
 ::component-code
 ---
-축소 :   true
-무시 하 기 :
+collapse: true
+ignore:
   - posts
-외부 :
+external:
   - posts
-externalTypes :
-  - BlogPostProps   [ ]
-소품   :
-  방향 : 세로
-  포스트 :
-    - title :   Nuxt   Icon   v 1
-      설명 :   " Discover   Nuxt   Icon   v 1 ! "   (Nuxt   Icon   v 1 을   발견 하 십시오)
-      이미지 :https://nuxt.com/assets/blog/nuxt-icon/cover.png
-      날짜   :   2024 - 11 - 25
-    - title :   Nuxt   3 . 14
-      설명 :   " Nuxt   3 . 14 가   나왔 습니다 . "
-      이미지 :https://nuxt.com/assets/blog/v3.14.png
-      날짜   :   2024 - 11 - 04
-    - title :   Nuxt   3 . 13
-      설명 :   " Nuxt   3 . 13 이   나왔 습니다 ! "
-      그림 :https://nuxt.com/assets/blog/v3.13.png
-      날짜   :   2024 - 08 - 22
+externalTypes:
+  - BlogPostProps[]
+props:
+  orientation: vertical
+  posts:
+    - title: Nuxt Icon v1
+      description: 'Discover Nuxt Icon v1!'
+      image: https://nuxt.com/assets/blog/nuxt-icon/cover.png
+      date: 2024-11-25
+    - title: Nuxt 3.14
+      description: 'Nuxt 3.14 is out!'
+      image: https://nuxt.com/assets/blog/v3.14.png
+      date: 2024-11-04
+    - title: Nuxt 3.13
+      description: 'Nuxt 3.13 is out!'
+      image: https://nuxt.com/assets/blog/v3.13.png
+      date: 2024-08-22
 ---
 ::
 
 ::tip
-기본   슬롯   대신  `posts`prop 을   사용 하 면  `orientation`  포스트 가   자동 으로   반전 되 고  `horizontal`  to  `vertical`  또는   그   반대 의   경우 도   마찬가지 입니다 .
+기본 슬롯 대신 `posts` prop을 사용하면 포스트의 `orientation`가 자동으로 반전되고 `horizontal`가 `vertical`로 또는 그 반대의 경우도 마찬가지입니다.
 ::
 
-## 예제
+## 예
 
 ::note
-이러 한   예 에서 는  [Nuxt   Content](https://content.nuxt.com)를   사용 하 지만   모든   컨텐츠   관리   시스템 과   구성   요소 를   통합 할   수   있 습니다 .
+이러한 예제에서는 [Nuxt Content](https://content.nuxt.com)를 사용하지만 구성 요소는 모든 콘텐츠 관리 시스템과 통합 될 수 있습니다.
 ::
 
-###   페이지   내 에서
+### 페이지 안에서
 
-페이지 의   BlogPosts   구성   요소 를   사용 하 여   블로그   페이지 를   만들 려면 :
+페이지의 BlogPosts 구성 요소를 사용하여 블로그 페이지를 만들려면:
 
 ```vue [pages/blog/index.vue]{11-18}
 <script setup lang="ts">
@@ -125,27 +125,27 @@ const { data: posts } = await useAsyncData('posts', () => queryCollection('posts
 ```
 
 ::note
-이   예제 에서 는  `posts`  모듈 에서  `queryCollection`  를   사용 하 여  `@nuxt/content`  를   가져옵니다 .
+이 예제에서는 `posts`가 `queryCollection` 모듈에서 `queryCollection`를 사용하여 인출됩니다.
 ::
 
 ::tip
-`to`prop 은  `@nuxt/content`  속성 을   사용 하 기   때문 에   여기 서   재정 의 됩니다 .
+`@nuxt/content`가 `path` 속성을 사용하기 때문에 `to` prop이 재정의됩니다.
 ::
 
-## API
+## API 파일
 
-### Props   이미지
+### Props (### Props)
 
-: 컴포넌트   -   소품
+:component-props
 
-### 슬롯
+### Slots
 
-: 컴포넌트   -   슬롯
+:component-slots
 
-##   테마
+## Theme 테마
 
-: 구성 요소   -   주제
+:component-theme
 
-## Changelog
+## 변경 로그
 
-: component - changelog   구성 요소   변경   로그
+:component-changelog

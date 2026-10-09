@@ -9,38 +9,38 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Input.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice la directiva `v-model` para controlar el valor de la entrada.
 
 ::component-code
 ---
-Ignora:
-  - modelValoración
-Externo:
-  - modelValue (Edición española)
-Props:
-  Modelos: ''
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ''
 ---
 ::
 
-@@pH004@@Nombre
+### Tipo
 
-Utilice el prop `type` para cambiar el tipo de entrada. Predeterminados a `text`.
+Utilice la prop `type` para cambiar el tipo de entrada. Predeterminados a `text`.
 
-Algunos tipos se han puesto en práctica en sus propios componentes como [Checkbox](),[Radio](/docs/components/radio-group),[InputNumber](/docs/components/input-number) etc. y otros se han diseñado como `file` por ejemplo.
+Algunos tipos se han implementado en sus propios componentes, como [Checkbox](/docs/components/checkbox), [Radio](/docs/components/radio-group), [InputNumber](ph024), etc. y otros se han diseñado como `file`, por ejemplo.
 
 ::component-code
 ---
 items:
-  Tipo:
-    @200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @@21@número de teléfono
-    @22@password
-    @23@búsqueda
-    @24@archivo
-Props:
-  Tipo: "Archivo"
+  type:
+    - text
+    - number
+    - password
+    - search
+    - file
+props:
+  type: 'file'
 ---
 ::
 
@@ -48,80 +48,80 @@ Props:
 Puede consultar todos los tipos disponibles en los documentos Web de MDN.
 ::
 
-@25@@Placeholder (Edición española)
+### Placeholder (Edición española)
 
 Utilice el prop `placeholder` para establecer un texto de marcador de posición.
 
 ::component-code
 ---
-Props:
-  placeholder: "Búsqueda..."
+props:
+  placeholder: 'Search...'
 ---
 ::
 
-@@27@color
+### Color (Edición española)
 
-Utilice el prop `color` para cambiar el color del anillo cuando la entrada está enfocada.
+Utilice el accesorio `color` para cambiar el color del anillo cuando la entrada está enfocada.
 
 ::component-code
 ---
-Ignora:
-  @@29@@decodificador
-Props:
-  Color: Neutral
-  Destacado: Verdadero
-  placeholder: "Búsqueda..."
+ignore:
+  - placeholder
+props:
+  color: neutral
+  highlight: true
+  placeholder: 'Search...'
 ---
 ::
 
 ::note
-El `highlight` prop se utiliza aquí para mostrar el estado de enfoque. Se utiliza internamente cuando se produce un error de validación.
+El prop `highlight` se utiliza aquí para mostrar el estado de enfoque. Se utiliza internamente cuando se produce un error de validación.
 ::
 
-@@P201@@Variante
+### Variante en Español
 
 Utilice el prop `variant` para cambiar la variante de la entrada.
 
 ::component-code
 ---
-Ignora:
-  @@pH033@@marcador de posición
-Props:
-  Color: Neutro
-  Variación: Sutil
-  Destacado: Falso
-  placeholder: "Búsqueda..."
+ignore:
+  - placeholder
+props:
+  color: neutral
+  variant: subtle
+  highlight: false
+  placeholder: 'Search...'
 ---
 ::
 
-@@pH034@@Tamaño
+### Tamaño
 
 Utilice el prop `size` para cambiar el tamaño de la entrada.
 
 ::component-code
 ---
-Ignora:
-  @@pH036@placeholder (en inglés)
-Props:
-  Tamaño: XL
-  placeholder: "Búsqueda..."
+ignore:
+  - placeholder
+props:
+  size: xl
+  placeholder: 'Search...'
 ---
 ::
 
-@@pH037@Icon
+### Icon
 
 Utilice el prop `icon` para mostrar un [Icon](/docs/components/icon) dentro de la entrada.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH043@@marcador de posición
-Props:
+prettier: true
+ignore:
+  - placeholder
+props:
   icon: 'i-lucide-search'
-  Tamaño: MD
-  Categoría: Outline
-  placeholder: 'Búsqueda...'
+  size: md
+  variant: outline
+  placeholder: 'Search...'
 ---
 ::
 
@@ -129,142 +129,142 @@ Utilice los accesorios `leading` y `trailing` para establecer la posición del i
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @484@@retoño
-Props:
-  Archivo de la etiqueta: i-lucide-at-sign
-  marcador de posición:"Introduzca su correo electrónico"
-  Tamaño: MD
+prettier: true
+ignore:
+  - placeholder
+props:
+  trailingIcon: i-lucide-at-sign
+  placeholder: 'Enter your email'
+  size: md
 ---
 ::
 
-@49@avatar
+### Avatar en Español
 
 Utilice el prop `avatar` para mostrar un [Avatar](/docs/components/avatar) dentro de la entrada.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  - avatar.carga
-Props:
-  El avatar:
+prettier: true
+ignore:
+  - placeholder
+  - avatar.loading
+props:
+  avatar:
     src: 'https://github.com/nuxt.png'
-    Categoría: Lazy
-  Tamaño: MD
-  Categoría: Outline
-  placeholder: 'Búsqueda...'
+    loading: lazy
+  size: md
+  variant: outline
+  placeholder: 'Search...'
 ---
 ::
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Cargando
 
 Utilice el prop `loading` para mostrar un icono de carga en la entrada.
 
 ::component-code
 ---
-Ignora:
-  @@pH059@@spin-off
-Props:
-  Carga: Verdad
-  Trayectoria: Falso
-  placeholder: "Búsqueda..."
+ignore:
+  - placeholder
+props:
+  loading: true
+  trailing: false
+  placeholder: 'Search...'
 ---
 ::
 
-### Icono de carga
+### Loading Icon (en inglés)
 
-Utilice el prop `loading-icon` para personalizar el icono de carga. Por defecto a `i-lucide-loader-circle`.
+Utilice el prop `loading-icon` para personalizar el icono de carga.
 
 ::component-code
 ---
-Ignora:
-  @@pH063@@marcador de posición
-Props:
-  Carga: Verdad
-  LoadingIcon: 'i-lucide-loader'(en inglés)
-  placeholder: "Búsqueda..."
+ignore:
+  - placeholder
+props:
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  placeholder: 'Search...'
 ---
 ::
 
 ::framework-only
-#nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.loading`.
+Puede personalizar este icono de forma global en su XPH143x bajo la tecla XPH144x.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.loading`.
+Puede personalizar este icono de forma global en su XPH145x bajo la tecla XPH146x.
 :::
 ::
 
-@@pH068@@desactivado
+### Disabled
 
 Utilice el prop `disabled` para desactivar la entrada.
 
 ::component-code
 ---
-Ignora:
-  @700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Discapacitados: Verdadero
-  placeholder: "Búsqueda..."
+ignore:
+  - placeholder
+props:
+  disabled: true
+  placeholder: 'Search...'
 ---
 ::
 
-@@ph071@@Ejemplos
+## Ejemplos
 
-### Con el botón claro
+### Con el botón transparente
 
 Puede poner un [Button](/docs/components/button) dentro de la ranura `#trailing` para borrar la entrada.
 
 ::component-example
 ---
-Nombre: 'input-clear-button-example'
+name: 'input-clear-button-example'
 ---
 ::
 
-### Con el botón copiar
+### Con botón de copia
 
 Puede poner un [Button](/docs/components/button) dentro de la ranura `#trailing` para copiar el valor al portapapeles.
 
 ::component-example
 ---
-Nombre: 'input-copy-button-example'
+name: 'input-copy-button-example'
 ---
 ::
 
 ### Con contraseña toggle
 
-Puede poner un [Button](/docs/components/button) dentro de la ranura `#trailing` para alternar la visibilidad de la contraseña.
+Puede colocar un [Button](/docs/components/button) dentro de la ranura `#trailing` para alternar la visibilidad de la contraseña.
 
 ::component-example
 ---
-Nombre: 'input-password-toggle-example'
+name: 'input-password-toggle-example'
 ---
 ::
 
-### Con indicador de fuerza de contraseña
+### With indicador de fuerza de contraseña
 
-Puede utilizar el componente [Progress](/docs/components/progress) para mostrar el indicador de fortaleza de la contraseña.
+Puede usar el componente [Progress](/docs/components/progress) para mostrar el indicador de fortaleza de la contraseña.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'input-password-indicador-ejemplo'
+collapse: true
+name: 'input-password-strength-indicator-example'
 ---
 ::
 
-### Con límite de caracteres
+### con límite de caracteres
 
 Puede utilizar la ranura `#trailing` para añadir un límite de caracteres a la entrada.
 
 ::component-example
 ---
-Nombre: 'input-character-limit-example'
+name: 'input-character-limit-example'
 ---
 ::
 
@@ -274,31 +274,31 @@ Puede utilizar el componente [Kbd](/docs/components/kbd) dentro de la ranura `#t
 
 ::component-example
 ---
-Nombre: 'input-kbd-ejemplo'
+name: 'input-kbd-example'
 ---
 ::
 
 ::note{to="/docs/composables/define-shortcuts"}
-En este ejemplo se utiliza el componente `defineShortcuts` para enfocar la entrada cuando se presiona la tecla: kbd{value="/"}.
+Este ejemplo utiliza el componente `defineShortcuts` para enfocar la entrada cuando se presiona la tecla: kbd{value="/"}.
 ::
 
 ### Con máscara
 
-No hay soporte integrado para máscaras, pero puede usar bibliotecas como [maska](https://github.com/beholdr/maska) para enmascarar la entrada.
+No hay soporte incorporado para máscaras, pero puede usar bibliotecas como [maska](https://github.com/beholdr/maska) para enmascarar la entrada.
 
 ::component-example
 ---
-Nombre: 'input-mask-example'
+name: 'input-mask-example'
 ---
 ::
 
-### Con etiqueta flotante
+### Con etiquetas flotantes
 
 Puede utilizar la ranura `#default` para añadir una etiqueta flotante a la entrada.
 
 ::component-example
 ---
-Nombre: 'input-floating-label-example'
+name: 'input-floating-label-example'
 ---
 ::
 
@@ -308,7 +308,7 @@ Puede utilizar la entrada dentro de un componente [FormField](/docs/components/f
 
 ::component-example
 ---
-Nombre: 'input-form-field-example'
+name: 'input-form-field-example'
 ---
 ::
 
@@ -322,51 +322,51 @@ Puede utilizar la entrada dentro de un componente [FieldGroup](/docs/components/
 
 ::component-example
 ---
-Nombre: 'input-field-group-example'
+name: 'input-field-group-example'
 ---
 ::
 
 ### Como entrada de número de teléfono
 
-Puede utilizar la entrada dentro de un [FieldGroup](/docs/components/field-group) junto con un [SelectMenu](/docs/components/select-menu) para crear una entrada de número de teléfono con selección de código de país.
+Puede utilizar la entrada dentro de un componente [FieldGroup](/docs/components/field-group) junto con un componente [SelectMenu](/docs/components/select-menu) para crear una entrada de número de teléfono con selección de código de país.
 
 ::component-example
 ---
-Colapso: Verdad
-nombre: 'input-phone-number-example'
+collapse: true
+name: 'input-phone-number-example'
 ---
 ::
 
-@@pH133
+## API
 
-@134@134@134
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
-Este componente también soporta todos los atributos HTML nativos `<input>`.
+Este componente también admite todos los atributos HTML nativos de `<input>`.
 ::
 
-@@136@136@136
+### Slots en línea
 
-Componentes de slots
+:component-slots
 
-@137@137@137
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@@ph138@@Exposición
+### Exposición
 
 Al acceder al componente a través de una referencia de plantilla, puede utilizar lo siguiente:
 
 | Nombre| Tipo|
 | ---- | ---- |
-| @139 @@ 141 @|@140 @@ 142 @|
+| `inputRef`x{lang="ts-type"}| `Ref<HTMLInputElement \| null>`{lang="ts-type"} (Edición española)|
 
-@@143@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@144@Changelog (Edición española)
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

@@ -20,44 +20,44 @@ links:
 
 ::component-code
 ---
-崩壊真
-隠す
-  - クラス
-無視
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  -  TreeItem []
-小道具
-  アイテム
-    -  label 'app/'
-      defaultExpanded true
-      子供：
-        -  label 'composables/'
-          子供：
-            -  label 'useAuth.ts'
-              アイコン'i—vscode—icons—file—typescript'
-            -  label 'useUser.ts'
-              アイコン'i—vscode—icons—file—typescript'
-        -  label 'components/'
-          defaultExpanded true
-          子供：
-            -  label 'Card.vue'
-              アイコン'i—vscode—icons—file—type—vue'
-            -  label 'Button.vue'
-              アイコン'i—vscode—icons—file—type—vue'
-    -  label 'app.vue'
-      アイコン'i—vscode—icons—file—type—vue'
-    -  label 'nuxt.config.ts'
-      アイコン'i—vscode—icons—file—type—nuxt'
-  クラス'w—60'
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
+  items:
+    - label: 'app/'
+      defaultExpanded: true
+      children:
+        - label: 'composables/'
+          children:
+            - label: 'useAuth.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+            - label: 'useUser.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+            - label: 'Button.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+    - label: 'app.vue'
+      icon: 'i-vscode-icons-file-type-vue'
+    - label: 'nuxt.config.ts'
+      icon: 'i-vscode-icons-file-type-nuxt'
+  class: 'w-60'
 ---
 ::
 
 ### アイテム
 
-`items`プロパティを、次のプロパティを持つオブジェクトの配列として使用します。
+`items`プロパティを次のプロパティを持つオブジェクトの配列として使用します。
 
 - `icon?: string`{lang="ts-type"}
 - `label?: string`{lang="ts-type"}
@@ -72,173 +72,173 @@ externalTypes
 - `ui?: { item?: ClassNameValue, itemWithChildren?: ClassNameValue, link?: ClassNameValue, linkLeadingIcon?: ClassNameValue, linkLabel?: ClassNameValue, linkTrailing?: ClassNameValue, linkTrailingIcon?: ClassNameValue, listWithChildren?: ClassNameValue }`{lang="ts-type"}
 
 ::note
-各項目には一意の識別子が必要です。`get-key`が指定されていない場合、コンポーネントは`label` propを識別子として使用します。理想的には、一意の識別子を返すために`get-key` function propを提供する必要があります。あるいは、一意の識別子として使用するプロパティを指定するには、`labelKey` propを使用することもできます。
+各アイテムには一意の識別子が必要です。`get-key`が指定されていない場合、コンポーネントは`label`プロパティを識別子として使用します。理想的には、一意の識別子を返すために`get-key`関数プロパティを提供するべきです。あるいは、`labelKey`プロパティを使用して、一意の識別子として使用するプロパティを指定することもできます。
 ::
 
 ::component-code
 ---
-崩壊真
-隠す
-  - クラス
-無視
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  -  TreeItem []
-小道具
-  アイテム
-    -  label 'app/'
-      defaultExpanded true
-      子供：
-        -  label 'composables/'
-          子供：
-            -  label 'useAuth.ts'
-              アイコン'i—vscode—icons—file—typescript'
-            -  label 'useUser.ts'
-              アイコン'i—vscode—icons—file—typescript'
-        -  label 'components/'
-          defaultExpanded true
-          子供：
-            -  label 'Card.vue'
-              アイコン'i—vscode—icons—file—type—vue'
-            -  label 'Button.vue'
-              アイコン'i—vscode—icons—file—type—vue'
-    -  label 'app.vue'
-      アイコン'i—vscode—icons—file—type—vue'
-    -  label 'nuxt.config.ts'
-      アイコン'i—vscode—icons—file—type—nuxt'
-  クラス'w—60'
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
+  items:
+    - label: 'app/'
+      defaultExpanded: true
+      children:
+        - label: 'composables/'
+          children:
+            - label: 'useAuth.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+            - label: 'useUser.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+            - label: 'Button.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+    - label: 'app.vue'
+      icon: 'i-vscode-icons-file-type-vue'
+    - label: 'nuxt.config.ts'
+      icon: 'i-vscode-icons-file-type-nuxt'
+  class: 'w-60'
 ---
 ::
 
 ### 複数
 
-`multiple`プロパティを使用して、複数の項目を選択できます。
+`multiple`プロパティを使用して複数の項目を選択できます。
 
 ::component-code
 ---
-崩壊真
-隠す
-  - クラス
-無視
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  -  TreeItem []
-小道具
-  複数true
-  アイテム
-    -  label 'app/'
-      defaultExpanded true
-      子供：
-        -  label 'composables/'
-          子供：
-            -  label 'useAuth.ts'
-              アイコン'i—vscode—icons—file—typescript'
-            -  label 'useUser.ts'
-              アイコン'i—vscode—icons—file—typescript'
-        -  label 'components/'
-          defaultExpanded true
-          子供：
-            -  label 'Card.vue'
-              アイコン'i—vscode—icons—file—type—vue'
-            -  label 'Button.vue'
-              アイコン'i—vscode—icons—file—type—vue'
-    -  label 'app.vue'
-      アイコン'i—vscode—icons—file—type—vue'
-    -  label 'nuxt.config.ts'
-      アイコン'i—vscode—icons—file—type—nuxt'
-  クラス'w—60'
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
+  multiple: true
+  items:
+    - label: 'app/'
+      defaultExpanded: true
+      children:
+        - label: 'composables/'
+          children:
+            - label: 'useAuth.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+            - label: 'useUser.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+            - label: 'Button.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+    - label: 'app.vue'
+      icon: 'i-vscode-icons-file-type-vue'
+    - label: 'nuxt.config.ts'
+      icon: 'i-vscode-icons-file-type-nuxt'
+  class: 'w-60'
 ---
 ::
 
-### ネストbadge {label="4.1+" class="align-text-top"}
+### ネストbadge{label="4.1+" class="align-text-top"}
 
-ツリーをネスト構造でレンダリングするか、フラットリストでレンダリングするかを制御するには、`nested`プロパティを使用します。デフォルトは`true`です。
+`nested`プロパティを使用して、ツリーをネスト構造でレンダリングするか、フラットリストとしてレンダリングするかを制御します。デフォルトは`true`です。
 
 ::component-code
 ---
-崩壊真
-隠す
-  - クラス
-無視
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  -  TreeItem []
-小道具
-  ネストfalse
-  アイテム
-    -  label 'app/'
-      defaultExpanded true
-      子供：
-        -  label 'composables/'
-          子供：
-            -  label 'useAuth.ts'
-              アイコン'i—vscode—icons—file—typescript'
-            -  label 'useUser.ts'
-              アイコン'i—vscode—icons—file—typescript'
-        -  label 'components/'
-          defaultExpanded true
-          子供：
-            -  label 'Card.vue'
-              アイコン'i—vscode—icons—file—type—vue'
-            -  label 'Button.vue'
-              アイコン'i—vscode—icons—file—type—vue'
-    -  label 'app.vue'
-      アイコン'i—vscode—icons—file—type—vue'
-    -  label 'nuxt.config.ts'
-      アイコン'i—vscode—icons—file—type—nuxt'
-  クラス'w—60'
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
+  nested: false
+  items:
+    - label: 'app/'
+      defaultExpanded: true
+      children:
+        - label: 'composables/'
+          children:
+            - label: 'useAuth.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+            - label: 'useUser.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+            - label: 'Button.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+    - label: 'app.vue'
+      icon: 'i-vscode-icons-file-type-vue'
+    - label: 'nuxt.config.ts'
+      icon: 'i-vscode-icons-file-type-nuxt'
+  class: 'w-60'
 ---
 ::
 
 ::note{to="#with-virtualization"}
-`nested`が`false`の場合、すべての項目が同じレベルで表示され、階層を示すためにインデントされます。これは仮想化やドラッグアンドドロップ機能に便利です。
+`nested`が`false`の場合、すべてのアイテムは階層を示すインデント付きで同じレベルでレンダリングされます。これは仮想化やドラッグアンドドロップ機能に便利です。
 ::
 
-### カラー
+### Color
 
 `color`プロパティを使用してツリーの色を変更します。
 
 ::component-code
 ---
-崩壊真
-隠す
-  - クラス
-無視
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  -  TreeItem []
-小道具
-  色ニュートラル
-  アイテム
-    -  label 'app/'
-      defaultExpanded true
-      子供：
-        -  label 'composables/'
-          子供：
-            -  label 'useAuth.ts'
-              アイコン'i—vscode—icons—file—typescript'
-            -  label 'useUser.ts'
-              アイコン'i—vscode—icons—file—typescript'
-        -  label 'components/'
-          defaultExpanded true
-          子供：
-            -  label 'Card.vue'
-              アイコン'i—vscode—icons—file—type—vue'
-            -  label 'Button.vue'
-              アイコン'i—vscode—icons—file—type—vue'
-    -  label 'app.vue'
-      アイコン'i—vscode—icons—file—type—vue'
-    -  label 'nuxt.config.ts'
-      アイコン'i—vscode—icons—file—type—nuxt'
-  クラス'w—60'
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
+  color: neutral
+  items:
+    - label: 'app/'
+      defaultExpanded: true
+      children:
+        - label: 'composables/'
+          children:
+            - label: 'useAuth.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+            - label: 'useUser.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+            - label: 'Button.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+    - label: 'app.vue'
+      icon: 'i-vscode-icons-file-type-vue'
+    - label: 'nuxt.config.ts'
+      icon: 'i-vscode-icons-file-type-nuxt'
+  class: 'w-60'
 ---
 ::
 
@@ -248,45 +248,45 @@ externalTypes
 
 ::component-code
 ---
-崩壊真
-隠す
-  - クラス
-無視
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  -  TreeItem []
-小道具
-  サイズXL
-  アイテム
-    -  label 'app/'
-      defaultExpanded true
-      子供：
-        -  label 'composables/'
-          子供：
-            -  label 'useAuth.ts'
-              アイコン'i—vscode—icons—file—typescript'
-            -  label 'useUser.ts'
-              アイコン'i—vscode—icons—file—typescript'
-        -  label 'components/'
-          defaultExpanded true
-          子供：
-            -  label 'Card.vue'
-              アイコン'i—vscode—icons—file—type—vue'
-            -  label 'Button.vue'
-              アイコン'i—vscode—icons—file—type—vue'
-    -  label 'app.vue'
-      アイコン'i—vscode—icons—file—type—vue'
-    -  label 'nuxt.config.ts'
-      アイコン'i—vscode—icons—file—type—nuxt'
-  クラス'w—60'
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
+  size: xl
+  items:
+    - label: 'app/'
+      defaultExpanded: true
+      children:
+        - label: 'composables/'
+          children:
+            - label: 'useAuth.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+            - label: 'useUser.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+            - label: 'Button.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+    - label: 'app.vue'
+      icon: 'i-vscode-icons-file-type-vue'
+    - label: 'nuxt.config.ts'
+      icon: 'i-vscode-icons-file-type-nuxt'
+  class: 'w-60'
 ---
 ::
 
-### トレーリングアイコン
+### Trailingアイコン
 
-`trailing-icon`プロパティを使用して、親ノードの末尾の[ Icon ](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-chevron-down`です。
+`trailing-icon`プロパティを使用して、親ノードの末尾の[Icon](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-chevron-down`です。
 
 ::note
 アイテムにアイコンが指定されている場合、常にこれらの小道具よりも優先されます。
@@ -294,188 +294,188 @@ externalTypes
 
 ::component-code
 ---
-崩壊真
-隠す
-  - クラス
-無視
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  -  TreeItem []
-小道具
-  trailingIcon 'i—lucide—arrow—down'
-  アイテム
-    -  label 'app/'
-      defaultExpanded true
-      子供：
-        -  label 'composables/'
-          trailingIcon 'i—lucide—chevron—down'
-          子供：
-            -  label 'useAuth.ts'
-              アイコン'i—vscode—icons—file—typescript'
-            -  label 'useUser.ts'
-              アイコン'i—vscode—icons—file—typescript'
-        -  label 'components/'
-          defaultExpanded true
-          子供：
-            -  label 'Card.vue'
-              アイコン'i—vscode—icons—file—type—vue'
-            -  label 'Button.vue'
-              アイコン'i—vscode—icons—file—type—vue'
-    -  label 'app.vue'
-      アイコン'i—vscode—icons—file—type—vue'
-    -  label 'nuxt.config.ts'
-      アイコン'i—vscode—icons—file—type—nuxt'
-  クラス'w—60'
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
+  trailingIcon: 'i-lucide-arrow-down'
+  items:
+    - label: 'app/'
+      defaultExpanded: true
+      children:
+        - label: 'composables/'
+          trailingIcon: 'i-lucide-chevron-down'
+          children:
+            - label: 'useAuth.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+            - label: 'useUser.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+            - label: 'Button.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+    - label: 'app.vue'
+      icon: 'i-vscode-icons-file-type-vue'
+    - label: 'nuxt.config.ts'
+      icon: 'i-vscode-icons-file-type-nuxt'
+  class: 'w-60'
 ---
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.chevronDown`キーの下の`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`app.config.ts`の`ui.icons.chevronDown`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.chevronDown`キーの下の`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`vite.config.ts`の`ui.icons.chevronDown`キーでグローバルにカスタマイズできます。
 :::
 ::
 
 ### 拡張アイコン
 
-`expanded-icon`および`collapsed-icon` propsを使用して、親ノードが展開または折りたたまれたときのアイコンをカスタマイズします。デフォルトはそれぞれ`i-lucide-folder-open`および`i-lucide-folder`です。
+`expanded-icon`と`collapsed-icon`のプロップを使用して、親ノードが展開または折りたたまれたときのアイコンをカスタマイズします。デフォルトはそれぞれ`i-lucide-folder-open`と`i-lucide-folder`です。
 
 ::component-code
 ---
-崩壊真
-隠す
-  - クラス
-無視
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  -  TreeItem []
-小道具
-  expandedIcon 'i—lucide—book—open'
-  collapsedIcon 'i—lucide'
-  アイテム
-    -  label 'app/'
-      defaultExpanded true
-      子供：
-        -  label 'composables/'
-          子供：
-            -  label 'useAuth.ts'
-              アイコン'i—vscode—icons—file—typescript'
-            -  label 'useUser.ts'
-              アイコン'i—vscode—icons—file—typescript'
-        -  label 'components/'
-          defaultExpanded true
-          子供：
-            -  label 'Card.vue'
-              アイコン'i—vscode—icons—file—type—vue'
-            -  label 'Button.vue'
-              アイコン'i—vscode—icons—file—type—vue'
-    -  label 'app.vue'
-      アイコン'i—vscode—icons—file—type—vue'
-    -  label 'nuxt.config.ts'
-      アイコン'i—vscode—icons—file—type—nuxt'
-  クラス'w—60'
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
+  expandedIcon: 'i-lucide-book-open'
+  collapsedIcon: 'i-lucide-book'
+  items:
+    - label: 'app/'
+      defaultExpanded: true
+      children:
+        - label: 'composables/'
+          children:
+            - label: 'useAuth.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+            - label: 'useUser.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+            - label: 'Button.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+    - label: 'app.vue'
+      icon: 'i-vscode-icons-file-type-vue'
+    - label: 'nuxt.config.ts'
+      icon: 'i-vscode-icons-file-type-nuxt'
+  class: 'w-60'
 ---
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-これらのアイコンは、`ui.icons.folder`および`ui.icons.folderOpen`キーの`app.config.ts`でグローバルにカスタマイズできます。
+これらのアイコンは`app.config.ts`の`ui.icons.folder`および`ui.icons.folderOpen`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-これらのアイコンは、`ui.icons.folder`および`ui.icons.folderOpen`キーの`vite.config.ts`でグローバルにカスタマイズできます。
+これらのアイコンは`vite.config.ts`の`ui.icons.folder`および`ui.icons.folderOpen`キーでグローバルにカスタマイズできます。
 :::
 ::
 
 ### 無効
 
-`disabled`プロパティを使用して、ツリーとのユーザーのやりとりを防止します。
+`disabled`プロパティを使用して、ツリーとのユーザーインタラクションを防止します。
 
 ::component-code
 ---
-崩壊真
-隠す
-  - クラス
-無視
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  -  TreeItem []
-小道具
-  無効true
-  アイテム
-    -  label 'app'
-      アイコン'i—lucide—folder'
-      defaultExpanded true
-      子供：
-        -  label 'composables'
-          アイコン'i—lucide—folder'
-          子供：
-            -  label 'useAuth.ts'
-              アイコン'i—vscode—icons—file—typescript'
-            -  label 'useUser.ts'
-              アイコン'i—vscode—icons—file—typescript'
-        -  label 'コンポーネント'
-          アイコン'i—lucide—folder'
-          子供：
-            -  label 'ホーム'
-              アイコン'i—lucide—folder'
-              子供：
-                -  label 'Card.vue'
-                  アイコン'i—vscode—icons—file—type—vue'
-                -  label 'Button.vue'
-                  アイコン'i—vscode—icons—file—type—vue'
-    -  label 'app.vue'
-      アイコン'i—vscode—icons—file—type—vue'
-    -  label 'nuxt.config.ts'
-      アイコン'i—vscode—icons—file—type—nuxt'
-  クラス'w—60'
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
+  disabled: true
+  items:
+    - label: 'app'
+      icon: 'i-lucide-folder'
+      defaultExpanded: true
+      children:
+        - label: 'composables'
+          icon: 'i-lucide-folder'
+          children:
+            - label: 'useAuth.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+            - label: 'useUser.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+        - label: 'components'
+          icon: 'i-lucide-folder'
+          children:
+            - label: 'Home'
+              icon: 'i-lucide-folder'
+              children:
+                - label: 'Card.vue'
+                  icon: 'i-vscode-icons-file-type-vue'
+                - label: 'Button.vue'
+                  icon: 'i-vscode-icons-file-type-vue'
+    - label: 'app.vue'
+      icon: 'i-vscode-icons-file-type-vue'
+    - label: 'nuxt.config.ts'
+      icon: 'i-vscode-icons-file-type-nuxt'
+  class: 'w-60'
 ---
 ::
 
 ::note
-`item.disabled`を使用して個々の項目を無効にすることもできます。
+`item.disabled`を使用して個々の項目を無効にできます。
 ::
 
 ## 例
 
-### 制御選択項目
+### 選択項目の制御
 
-`default-value` propまたは`v-model`ディレクティブを使用して、選択した項目を制御できます。
+`default-value`プロパティまたは`v-model`ディレクティブを使用して、選択されたアイテムを制御できます。
 
 ::component-example
 ---
-名前'ツリーモデル値の例'
-崩壊真
-小道具
-  クラス'w—60'
+name: 'tree-model-value-example'
+collapse: true
+props:
+  class: 'w-60'
 ---
 ::
 
 ::tip
-`get-key` propを使用して、`v-model`または`default-value`が指定された場合に各項目から一意のキーを取得するために使用される関数を変更します。
+`get-key`プロパティを使用して、`v-model`または`default-value`が指定されたときに各アイテムから一意のキーを取得する関数を変更します。
 ::
 
-項目が選択されないようにするには、`item.onSelect()`{lang="ts-type"}プロパティまたはグローバルな`select`イベントを使用できます。
+項目が選択されないようにしたい場合は、`item.onSelect()`{lang="ts-type"}プロパティまたはグローバル`select`イベントを使用できます。
 
 ::component-example
 ---
-名前'ツリー·オン·セレクトサンプル'
-崩壊真
-小道具
-  クラス'w—60'
+name: 'tree-on-select-example'
+collapse: true
+props:
+  class: 'w-60'
 ---
 ::
 
@@ -483,27 +483,27 @@ externalTypes
 これにより、親項目を選択せずに展開または折りたたむことができます。
 ::
 
-### 制御展開項目
+###  Control展開項目
 
-展開された項目は、`default-expanded` propまたは`v-model`ディレクティブを使用して制御できます。
+展開された項目は、`default-expanded`プロパティまたは`v-model`ディレクティブを使用して制御できます。
 
 ::component-example
 ---
-name 'ツリー展開例'
-崩壊真
-小道具
-  クラス'w—60'
+name: 'tree-expanded-example'
+collapse: true
+props:
+  class: 'w-60'
 ---
 ::
 
-アイテムが展開されないようにしたい場合は、`item.onToggle()`{lang="ts-type"}プロパティまたはグローバルな`toggle`イベントを使用できます。
+アイテムが展開されないようにしたい場合は、`item.onToggle()`{lang="ts-type"}プロパティまたはグローバル`toggle`イベントを使用できます。
 
 ::component-example
 ---
-名前'ツリー·オン·トグル·サンプル'
-崩壊真
-小道具
-  クラス'w—60'
+name: 'tree-on-toggle-example'
+collapse: true
+props:
+  class: 'w-60'
 ---
 ::
 
@@ -511,59 +511,59 @@ name 'ツリー展開例'
 これにより、子アイテムを展開または折りたたみせずに親アイテムを選択できます。
 ::
 
-### 項目にチェックボックスがある場合：バッジ{label="4.1+" class="align-text-top"}
+### 項目にチェックボックスをつけてください：badge{label="4.1+" class="align-text-top"}
 
-`item-leading`スロットを使用して、項目に[ Checkbox ](/docs/components/checkbox)を追加できます。`multiple`を使用して、`propagate-select`と`bubble-select` propsは、親子関係と`select`と`toggle`で複数選択を可能にしますアイテムの選択状態と展開状態を制御するイベントです
+`item-leading`スロットを使用して、[Checkbox](/docs/components/checkbox)をアイテムに追加できます。`multiple`、`propagate-select`、`bubble-select`プロパティを使用して、親子関係を持つ複数選択を有効にし、`select`と`toggle`イベントを使用してアイテムの選択状態と展開状態を制御します。
 
 ::component-example
 ---
-名前'ツリー—チェックボックス—アイテム—例'
-崩壊真
-小道具
-  クラス'w—60'
+name: 'tree-checkbox-items-example'
+collapse: true
+props:
+  class: 'w-60'
 ---
 ::
 
 ::note
-この例では、`as` propを使用して、[`Checkbox`](/docs/components/checkbox)も`button`としてレンダリングされます。
+この例では、`as`プロパティを使用してアイテムを`button`から`div`に変更します。[`Checkbox`](/docs/components/checkbox)も`button`としてレンダリングされます。
 ::
 
-### ドラッグアンドドロップで：badge {label="4.1+" class="align-text-top"}
+### ドラッグアンドドロップでbadge{label="4.1+" class="align-text-top"}
 
-[`useSortable`](https://vueuse.org/integrations/useSortable/)[`@vueuse/integrations`](https://vueuse.org/integrations/README.html)から構成可能な[を使用して、ツリー上でドラッグ&ドロップ機能を有効にします。この統合は[ Sortable.js ](https://sortablejs.github.io/Sortable/)シームレスなドラッグアンドドロップ体験を提供します
+[`@vueuse/integrations`https://vueuse.org/integrations/README.html)から構成可能な[](https://vueuse.org/integrations/useSortable/)を使用して、ツリー上でドラッグ&ドロップ機能を有効にします。この統合は[Sortable.js](https://sortablejs.github.io/Sortable/)をラップし、シームレスなドラッグ&ドロップ体験を提供します。
 
 ::component-example
 ---
-きれい真
-崩壊真
-名前'ツリードラッグアンドドロップの例'
+prettier: true
+collapse: true
+name: 'tree-drag-and-drop-example'
 ---
 ::
 
 ::note
-この例では、`nested` propを`false`に設定して、アイテムをドラッグ&ドロップできるようにします。
+この例では、`nested`プロパティを`false`に設定し、アイテムをドラッグ&ドロップできるようにします。
 ::
 
-### 仮想化の場合：badge {label="4.1+" class="align-text-top"}
+### 仮想化badge{label="4.1+" class="align-text-top"}
 
-`virtualize`プロパティを使用して、ブール値または`{ estimateSize: 32, overscan: 12 }`のようなオプションを持つオブジェクトとして大きなリストの仮想化を有効にします。
+`virtualize`プロパティを使用して、大きなリストをブール値または`{ estimateSize: 32, overscan: 12 }`のようなオプションを持つオブジェクトとして仮想化できます。
 
 ::warning
-仮想化が有効な場合、ツリー構造はフラット化され、`nested` propを`false`に設定するのと同様です。
+仮想化が有効な場合、`nested`プロパティを`false`に設定するのと同様に、ツリー構造はフラット化されます。
 ::
 
 ::component-example
 ---
-きれい真
-名前'ツリー仮想化—example'
-小道具
-  クラス'w—60'
+prettier: true
+name: 'tree-virtualize-example'
+props:
+  class: 'w-60'
 ---
 ::
 
 ### カスタムスロット付き
 
-特定の項目をカスタマイズするには、`slot`プロパティを使用します。
+`slot`プロパティを使用して、特定のアイテムをカスタマイズします。
 
 以下のスロットにアクセスできます：
 
@@ -575,31 +575,31 @@ name 'ツリー展開例'
 
 ::component-example
 ---
-名前'ツリーカスタムスロットサンプル'
-崩壊真
-小道具
-  クラス'w—60'
+name: 'tree-custom-slot-example'
+collapse: true
+props:
+  class: 'w-60'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

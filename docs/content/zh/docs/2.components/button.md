@@ -11,65 +11,65 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Button.vue
 ---
 
-## 使用情况
+## 用法
 
 使用默认插槽设置按钮的标签。
 
 ::component-code
 ---
-插槽：
-  默认：按钮
+slots:
+  default: Button
 ---
 ::
 
 ### Label
 
-使用`label`道具设置按钮的标签。
+使用`label`属性设置Button的标签。
 
 ::component-code
 ---
-道具：
-  标签：按钮
+props:
+  label: Button
 ---
 ::
 
-### Color
+### 颜色
 
-使用`color`道具更改按钮的颜色。
+使用`color`属性更改按钮的颜色。
 
 ::component-code
 ---
-道具：
-  颜色：中性
-插槽：
-  默认：按钮
+props:
+  color: neutral
+slots:
+  default: Button
 ---
 ::
 
 ### Variant
 
-使用`variant`prop更改按钮的变体。
+使用`variant` prop更改Button的变体。
 
 ::component-code
 ---
-道具：
-  颜色：中性
-  变体：轮廓
-插槽：
-  默认：按钮
+props:
+  color: neutral
+  variant: outline
+slots:
+  default: Button
 ---
 ::
 
 ### Size
 
-使用`size`道具更改按钮的大小。
+使用`size`属性更改按钮的大小。
 
 ::component-code
 ---
-道具：
-  尺寸：xl
-插槽：
-  默认：按钮
+props:
+  size: xl
+slots:
+  default: Button
 ---
 ::
 
@@ -79,13 +79,13 @@ links:
 
 ::component-code
 ---
-道具：
-  图标：i-lucide-火箭
-  尺寸：md
-  颜色：原色
-  变体：实体
-插槽：
-  默认：按钮
+props:
+  icon: i-lucide-rocket
+  size: md
+  color: primary
+  variant: solid
+slots:
+  default: Button
 ---
 ::
 
@@ -93,138 +93,138 @@ links:
 
 ::component-code
 ---
-道具：
-  拖尾图标：i-透明箭头-右
-  尺寸：md
-插槽：
-  默认：按钮
+props:
+  trailingIcon: i-lucide-arrow-right
+  size: md
+slots:
+  default: Button
 ---
 ::
 
-将`label`作为道具或插槽是可选的，因此您可以将Button用作仅图标按钮。
+`label`作为道具或插槽是可选的，因此您可以将Button用作仅图标按钮。
 
 ::component-code
 ---
-道具：
-  图标：i-lucide-搜索
-  尺寸：md
-  颜色：原色
-  变体：实体
+props:
+  icon: i-lucide-search
+  size: md
+  color: primary
+  variant: solid
 ---
 ::
 
-阿凡达
+### Avatar
 
-使用`avatar`道具在按钮内显示[](/docs/components/avatar)。
+使用`avatar`道具在按钮内显示[Avatar](/docs/components/avatar)。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 头像.加载中
-道具：
-  头像：
-    来源：'https：//github.com/nuxt.png'
-    加载：惰性
-  尺寸：md
-  颜色：中性
-  变体：轮廓
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
+    src: 'https://github.com/nuxt.png'
+    loading: lazy
+  size: md
+  color: neutral
+  variant: outline
+slots:
+  default: |
 
-    按钮
+    Button
 ---
 ::
 
-将`label`作为道具或插槽是可选的，因此您可以将该按钮用作仅用于头像的按钮。
+`label`作为道具或插槽是可选的，因此您可以将Button用作仅限头像的按钮。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 头像.加载中
-道具：
-  头像：
-    来源：'https：//github.com/nuxt.png'
-    加载：惰性
-  尺寸：md
-  颜色：中性
-  变体：轮廓
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
+    src: 'https://github.com/nuxt.png'
+    loading: lazy
+  size: md
+  color: neutral
+  variant: outline
 ---
 ::
 
-链接
+### Link
 
-您可以从[Link](/docs/components/link#props)元件传递任何属性，例如`to`、`target`等。
+您可以从[Link](/docs/components/link#props)组件传递任何属性，如`to`、`target`等。
 
 ::component-code
 ---
-忽略：
-  目标位置
-道具：
-  发送至：https://github.com/nuxt/ui
-  目标：空白（_B）
-插槽：
-  默认：按钮
+ignore:
+  - target
+props:
+  to: https://github.com/nuxt/ui
+  target: _blank
+slots:
+  default: Button
 ---
 ::
 
-当按钮是链接或使用`active`道具时，您可以使用`active-color`和`active-variant`道具自订作用中状态。
+当Button是一个链接或使用`active`属性时，您可以使用`active-color`和`active-variant`属性来自定义活动状态。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  颜色
-- 变体
-项目名称：
-  活动颜色：
-    主要的
-    第二个
-    成功了
-    @@信息
-    警告：
-    错误消息
-    中性的
-  活动变量：
-    实心的
-- 大纲
-    软的
-    微妙的
-    幽灵，幽灵
-- 链接
-道具：
-  活动：true
-  颜色：中性
-  变体：轮廓
-  活动颜色：主色
-  active变量：实体
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - color
+  - variant
+items:
+  activeColor:
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
+  activeVariant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+    - link
+props:
+  active: true
+  color: neutral
+  variant: outline
+  activeColor: primary
+  activeVariant: solid
+slots:
+  default: |
 
-    按钮
+    Button
 ---
 
 按钮
 ::
 
-您也可以使用`active-class`和`inactive-class`属性来自订作用中状态。
+您还可以使用`active-class`和`inactive-class`属性来自定义活动状态。
 
 ::component-code
 ---
-道具：
-  活动：true
-  活动类：'字体粗体'
-  非活动类：“字体-浅色”
-插槽：
-  默认：按钮
+props:
+  active: true
+  activeClass: 'font-bold'
+  inactiveClass: 'font-light'
+slots:
+  default: Button
 ---
 
 按钮
 ::
 
 ::tip
-您可以在`app.config.ts`文件中的`ui.button.variants.active`项下全局配置这些样式。
+您可以在`ui.button.variants.active`键下的`app.config.ts`文件中全局配置这些样式。
 
 ```ts
 export default defineAppConfig({
@@ -243,133 +243,133 @@ export default defineAppConfig({
 ```
 ::
 
-正在加载
+### 加载中
 
-使用`loading`道具显示加载图标并禁用按钮。
+使用`loading`道具显示一个加载图标并禁用按钮。
 
 ::component-code
 ---
-道具：
-  载入：true
-  结尾：false
-插槽：
-  默认：按钮
+props:
+  loading: true
+  trailing: false
+slots:
+  default: Button
 ---
 按钮
 ::
 
-使用`loading-auto`道具，在`@click`承诺未完成时自动显示载入图标。
+使用`loading-auto` prop在`@click` promise挂起时自动显示加载图标。
 
-：组件示例{name="button-loading-auto-example"}
+:component-example{name="button-loading-auto-example"}
 
 这也适用于[Form](/docs/components/form)组件。
 
-：组件示例{name="button-loading-auto-form-example"}
+:component-example{name="button-loading-auto-form-example"}
 
-### Loading（加载）图标
+### 加载图标
 
-使用`loading-icon`属性来自订载入图标。预设为`i-lucide-loader-circle`。
+使用`loading-icon`道具自定义加载图标. `i-lucide-loader-circle`。
 
 ::component-code
 ---
-道具：
-  载入：true
-  加载图标："i-lucide加载程序"
-插槽：
-  默认：按钮
+props:
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+slots:
+  default: Button
 ---
 按钮
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`ui.icons.loading`键下的`app.config.ts`中全局自定义此图标。
+你可以在你的`app.config.ts`中的`ui.icons.loading`键下全局自定义这个图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`vite.config.ts`的`ui.icons.loading`键下全局自定此图标。
+你可以在你的`ui.icons.loading`键下的`vite.config.ts`中全局自定义这个图标。
 :::
 ::
 
-### 已停用
+### 禁用
 
-使用`disabled`道具禁用按钮。
+使用`disabled` prop禁用按钮。
 
 ::component-code
 ---
-道具：
-  已禁用：true
-插槽：
-  默认：按钮
+props:
+  disabled: true
+slots:
+  default: Button
 ---
 
 按钮
 ::
 
-示例
+## 示例
 
-第1095章道具
+### `class`道具
 
 使用`class`属性覆盖Button的基本样式。
 
 ::component-code
 ---
-道具：
-  类别：'粗体四舍五入完整字型'
-插槽：
-  默认：按钮
+props:
+  class: 'font-bold rounded-full'
+slots:
+  default: Button
 ---
 ::
 
-我的天啊！
+### `ui`道具
 
 使用`ui`属性覆盖Button的插槽样式。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 用户界面
-- 颜色
-- 变体
-- 图标
-道具：
-  图标：i-lucide-火箭
-  颜色：中性
-  变体：轮廓
-  用户界面：
-    leadingIcon：'文本-主'
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - ui
+  - color
+  - variant
+  - icon
+props:
+  icon: i-lucide-rocket
+  color: neutral
+  variant: outline
+  ui:
+    leadingIcon: 'text-primary'
+slots:
+  default: |
 
-    按钮
+    Button
 ---
 ::
 
-## 活性成分
+## API
 
-### 道具
+### Props
 
-：组件-支柱
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-此组件还支持所有本机`<button>`HTML属性。
+此组件还支持所有原生`<button>` HTML属性。
 ::
 
 ::callout{icon="i-simple-icons-github" to="https://github.com/nuxt/ui/blob/v4/src/runtime/components/Link.vue#L13"}
-`Button`组件扩展了`Link`组件。请查看GitHub上的源代码。
+`Button`组件扩展了`Link`组件。在GitHub上查看源代码。
 ::
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-## 主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

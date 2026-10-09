@@ -10,7 +10,7 @@ links:
 
 ## 使用法
 
-ChatPaletteコンポーネントは構造化されたレイアウトラッパーで、[ ChatMessages ](/docs/components/chat-messages)[ ChatPrompt ](/docs/components/chat-prompt)をスクロール可能なコンテンツエリアに整理し、モーダル、スライドオーバー、または引き出し用の一貫したチャットボットインターフェイスを作成します。
+ChatPaletteコンポーネントは構造化されたレイアウトラッパーで、[ChatMessages](/docs/components/chat-messagesxph04 xをスクロール可能なコンテンツエリアに、[ChatPrompt](/docs/components/chat-promptxph08 xを固定下部セクションに整理し、モーダル、スライドオーバー、ドロワー用の一貫したチャットボットインターフェイスを作成します。
 
 ```vue{2,8}
 <template>
@@ -27,54 +27,54 @@ ChatPaletteコンポーネントは構造化されたレイアウトラッパー
 ## 例
 
 ::tip{to="/docs/components/chat"}
-インストール手順、サーバー設定、使用例については、** Chat **概要ページをご覧ください。
+インストール手順、サーバーのセットアップ、使用例については、**Chat**の概要ページをご覧ください。
 ::
 
 ### モード内
 
-ChatPaletteコンポーネントは、[ Modal ](/docs/components/modal)のコンテンツ内で使用できます。
+ChatPaletteコンポーネントは、[Modal](/docs/components/modal)のコンテンツ内で使用できます。
 
 ::component-example
 ---
-崩壊真
-iframe
-  高さ500px；
-iframeモバイルtrue
-overflowHidden true
-名前'chat—pallet—modal—example'
+collapse: true
+iframe:
+  height: 500px;
+iframeMobile: true
+overflowHidden: true
+name: 'chat-palette-modal-example'
 ---
 ::
 
 ### コンテンツ内検索
 
-[ ContentSearch ](/docs/components/content-search)のコンテンツ内でChatPaletteコンポーネントを条件付きで使用して、ユーザが項目を選択したときにチャットボットインターフェイスを表示できます。
+[ContentSearch](/docs/components/content-search)のコンテンツ内のChatPaletteコンポーネントを条件付きで使用して、ユーザが項目を選択したときにチャットボットインターフェイスを表示できます。
 
 ::component-example
 ---
-崩壊真
-iframe
-  高さ500px；
-iframeモバイルtrue
-overflowHidden true
-名前'chat—pallet—content—search—example'
+collapse: true
+iframe:
+  height: 500px;
+iframeMobile: true
+overflowHidden: true
+name: 'chat-palette-content-search-example'
 ---
 ::
 
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

@@ -18,42 +18,42 @@ FileUploadの値を制御するには、`v-model`ディレクティブを使用�
 
 ::component-code
 ---
-無視
-  -  modelValue
-  - クラス
-外部
-  -  modelValue
-小道具
-  modelValue null
-  クラス'w—96 min—h—48'
+ignore:
+  - modelValue
+  - class
+external:
+  - modelValue
+props:
+  modelValue: null
+  class: 'w-96 min-h-48'
 ---
 ::
 
 ### 複数
 
-`multiple`プロパティを使用して、複数のファイルを選択できるようにします。
+`multiple`プロパティを使用して、複数のファイルを選択できます。
 
 ::component-code
 ---
-無視
-  - クラス
-小道具
-  複数true
-  クラス'w—96 min—h—48'
+ignore:
+  - class
+props:
+  multiple: true
+  class: 'w-96 min-h-48'
 ---
 ::
 
-### ドロップゾーン
+### Dropzone
 
-ドロップ可能領域を有効/無効にするには、`dropzone`プロパティを使用します。デフォルトは`true`です。
+`dropzone`プロパティを使用して、ドロップ可能な領域を有効/無効にします。デフォルトは`true`です。
 
 ::component-code
 ---
-無視
-  - クラス
-小道具
-  ドロップゾーンfalse
-  クラス'w—96 min—h—48'
+ignore:
+  - class
+props:
+  dropzone: false
+  class: 'w-96 min-h-48'
 ---
 ::
 
@@ -62,208 +62,208 @@ FileUploadの値を制御するには、`v-model`ディレクティブを使用�
 `interactive`プロパティを使用して、クリック可能な領域を有効/無効にします。デフォルトは`true`です。
 
 ::tip{to="#with-files-bottom-slot"}
-これは`#actions`スロットに`Button`コンポーネントを追加する場合に便利です。
+これは`#actions`スロットに`Button`コンポーネントを追加するときに便利です。
 ::
 
 ::component-code
 ---
-無視
-  - クラス
-小道具
-  インタラクティブfalse
-  クラス'w—96 min—h—48'
+ignore:
+  - class
+props:
+  interactive: false
+  class: 'w-96 min-h-48'
 ---
 ::
 
-### 同意する
+### Accept
 
-`accept`プロパティを使用して、入力に許可されるファイルタイプを指定します。[ MIME types ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types)またはファイル拡張子（例：`image/png,application/pdf,.jpg`）のカンマ区切りリストを指定します。デフォルトは`*`すべてのファイルタイプです。
+`accept`プロパティを使用して、入力に許可されるファイルタイプを指定します。[MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types)またはファイル拡張子例`image/png,application/pdf,.jpg`のカンマ区切りリストを指定します。デフォルトは`*`すべてのファイルタイプです。
 
 ::component-code
 ---
-無視
-  - 受け入れる
-  - クラス
-小道具
-  accept 'image/*'
-  クラス'w—96 min—h—48'
+ignore:
+  - accept
+  - class
+props:
+  accept: 'image/*'
+  class: 'w-96 min-h-48'
 ---
 ::
 
-### ラベル
+### Label
 
-FileUploadのラベルを設定するには、`label`プロパティを使用します。
+`label`プロパティを使用してFileUploadのラベルを設定します。
 
 ::component-code
 ---
-きれい真
-無視
-  - クラス
-小道具
-  ラベル：'ここに画像をドロップ'
-  クラス'w—96 min—h—48'
+prettier: true
+ignore:
+  - class
+props:
+  label: 'Drop your image here'
+  class: 'w-96 min-h-48'
 ---
 ::
 
-### 説明
+### Description
 
-`description`プロパティを使用して、FileUploadの説明を設定します。
+`description`プロパティを使用してFileUploadの説明を設定します。
 
 ::component-code
 ---
-きれい真
-無視
-  - ラベル
-  - クラス
-小道具
-  ラベル：'ここに画像をドロップ'
-  説明'SVG PNG JPGまたはGIF最大2MB'
-  クラス'w—96 min—h—48'
+prettier: true
+ignore:
+  - label
+  - class
+props:
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96 min-h-48'
 ---
 ::
 
-### アイコン
+### Icon
 
-FileUploadのアイコンを設定するには、`icon`プロパティを使用します。デフォルトは`i-lucide-upload`です。
+`icon`プロパティを使用してFileUploadのアイコンを設定します。デフォルトは`i-lucide-upload`です。
 
 ::component-code
 ---
-きれい真
-無視
-  - ラベル
-  - 説明
-  - クラス
-小道具
-  アイコン'i—lucide'
-  ラベル：'ここに画像をドロップ'
-  説明'SVG PNG JPGまたはGIF最大2MB'
-  クラス'w—96 min—h—48'
+prettier: true
+ignore:
+  - label
+  - description
+  - class
+props:
+  icon: 'i-lucide-image'
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96 min-h-48'
 ---
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.upload`キーの下の`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`app.config.ts`の`ui.icons.upload`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.upload`キーの下の`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`vite.config.ts`の`ui.icons.upload`キーでグローバルにカスタマイズできます。
 :::
 ::
 
-### カラー
+### Color
 
 `color`プロパティを使用してFileUploadの色を変更します。
 
 ::component-code
 ---
-きれい真
-無視
-  - ラベル
-  - 説明
-  - クラス
-小道具
-  色ニュートラル
-  ハイライト真
-  ラベル：'ここに画像をドロップ'
-  説明'SVG PNG JPGまたはGIF最大2MB'
-  クラス'w—96 min—h—48'
+prettier: true
+ignore:
+  - label
+  - description
+  - class
+props:
+  color: neutral
+  highlight: true
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96 min-h-48'
 ---
 ::
 
 ::note
-`highlight` propはフォーカス状態を表示するために使用されます。これは、バリデーションエラーが発生したときに内部で使用されます。
+`highlight`プロパティはフォーカスの状態を表示するために使用されます。バリデーションエラーが発生したときに内部で使用されます。
 ::
 
-### バリアント
+### Variant
 
-FileUploadのバリアントを変更するには、`variant`プロパティを使用します。
+`variant`プロパティを使用してFileUploadのバリアントを変更します。
 
 ::component-code
 ---
-無視
-  - クラス
-小道具
-  バリアントボタン
+ignore:
+  - class
+props:
+  variant: button
 ---
 ::
 
-### サイズ
+### Size
 
-FileUploadのサイズを変更するには、`size`プロパティを使用します。
+`size`プロパティを使用してFileUploadのサイズを変更します。
 
 ::component-code
 ---
-きれい真
-無視
-  - ラベル
-  - 説明
-  - クラス
-小道具
-  サイズXL
-  バリアント：面積
-  ラベル：'ここに画像をドロップ'
-  説明'SVG PNG JPGまたはGIF最大2MB'
+prettier: true
+ignore:
+  - label
+  - description
+  - class
+props:
+  size: xl
+  variant: area
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
 ---
 ::
 
-### レイアウト
+### Layout
 
 `layout`プロパティを使用して、FileUploadでのファイルの表示方法を変更します。デフォルトは`grid`です。
 
 ::warning
-このプロパティは`variant`が`area`の場合にのみ機能します。
+このプロパティは`variant`が`area`の場合のみ動作する。
 ::
 
 ::component-code
 ---
-きれい真
-無視
-  - ラベル
-  - 説明
-  - 複数
-  - クラス
-  メール：info @ ui.base
-小道具
-  レイアウトリスト
-  複数true
-  ラベル：'ここに画像をドロップ'
-  説明'SVG PNG JPGまたはGIF最大2MB'
-  クラス'w—96'
-  UI
-    ベース'min—h—48'
+prettier: true
+ignore:
+  - label
+  - description
+  - multiple
+  - class
+  - ui.base
+props:
+  layout: list
+  multiple: true
+  label: 'Drop your images here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96'
+  ui:
+    base: 'min-h-48'
 ---
 ::
 
-### ポジション
+### Position
 
 `position`プロパティを使用して、FileUpload内のファイルの位置を変更します。デフォルトは`outside`です。
 
 ::warning
-このプロパティは、`variant`が`area`で、`layout`が`list`のときにのみ機能します。
+このプロパティは`variant`が`area`、`layout`が`list`の場合にのみ動作します。
 ::
 
 ::component-code
 ---
-きれい真
-無視
-  - ラベル
-  - 説明
-  - 複数
-  -  layout
-  - クラス
-  メール：info @ ui.base
-小道具
-  位置内部
-  レイアウトリスト
-  複数true
-  ラベル：'ここに画像をドロップ'
-  説明'SVG PNG JPGまたはGIF最大2MB'
-  クラス'w—96'
-  UI
-    ベース'min—h—48'
+prettier: true
+ignore:
+  - label
+  - description
+  - multiple
+  - layout
+  - class
+  - ui.base
+props:
+  position: inside
+  layout: list
+  multiple: true
+  label: 'Drop your images here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96'
+  ui:
+    base: 'min-h-48'
 ---
 ::
 
@@ -271,13 +271,13 @@ FileUploadのサイズを変更するには、`size`プロパティを使用し�
 
 ### フォーム検証付き
 
-FileUploadは、[ Form ](/docs/components/form)および[ FormField ](/docs/components/form-field)コンポーネント内で使用して、検証とエラー処理を処理できます。
+FileUploadは、[Form](/docs/components/form)および[FormField](/docs/components/form-field)コンポーネント内で使用して、検証とエラー処理を処理できます。
 
 ::component-example
 ---
-きれい真
-崩壊真
-名前'file—upload—form—validation—example'
+prettier: true
+collapse: true
+name: 'file-upload-form-validation-example'
 ---
 ::
 
@@ -287,59 +287,59 @@ FileUploadは、[ Form ](/docs/components/form)および[ FormField ](/docs/comp
 
 ::component-example
 ---
-きれい真
-崩壊真
-名前'file—upload—default—slot—example'
+prettier: true
+collapse: true
+name: 'file-upload-default-slot-example'
 ---
 ::
 
-### ファイル底スロット付き
+### With files—bottomスロット
 
-`files-bottom`スロットを使用して、ファイルリストの下に[ Button ](/docs/components/button)を追加して、たとえばすべてのファイルを削除できます。
+`files-bottom`スロットを使用して、ファイルリストの下に[Button](/docs/components/button)を追加し、たとえばすべてのファイルを削除できます。
 
 ::component-example
 ---
-きれい真
-崩壊真
-名前'file—upload—files—bottom slot—example'
+prettier: true
+collapse: true
+name: 'file-upload-files-bottom-slot-example'
 ---
 ::
 
 ::note{to="#interactive"}
-この例では、`interactive` propは`false`に設定されています。
+この例では、`interactive`プロパティを`false`に設定しています。
 ::
 
-###  with files—top slot
+### Withファイルトップスロット
 
-`files-top`スロットを使用して、ファイルリストの上に[ Button ](/docs/components/button)を追加して、たとえば新しいファイルを追加できます。
+`files-top`スロットを使用して、例えば新しいファイルを追加するために、ファイルリストの上に[Button](/docs/components/button)を追加できます。
 
 ::component-example
 ---
-きれい真
-崩壊真
-名前'file—upload—files—top—slot—example'
+prettier: true
+collapse: true
+name: 'file-upload-files-top-slot-example'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
-このコンポーネントは、すべてのネイティブ`<input>` HTML属性もサポートします。
+このコンポーネントはすべてのネイティブ`<input>` HTML属性もサポートします。
 ::
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-###  Expose
+### Expose
 
 テンプレート参照を介してコンポーネントにアクセスする場合、以下を使用できます：
 
@@ -348,10 +348,10 @@ component—emits
 | `inputRef`{lang="ts-type"}| `Ref<HTMLInputElement \| null>`{lang="ts-type"}|
 | `dropzoneRef`{lang="ts-type"}| `Ref<HTMLDivElement \| null>`{lang="ts-type"}|
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

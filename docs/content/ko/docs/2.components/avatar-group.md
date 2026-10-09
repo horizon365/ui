@@ -12,132 +12,132 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/AvatarGroup.vue
 ---
 
-##  사용
+## Usage
 
-여러 [Avatar](/docs/components/avatar) 을 AvatarGroup 내에서 랩하여 스택합니다.
+AvatarGroup 내에서 여러 [Avatar](xph03x)를 감싸서 스택합니다.
 
 ::component-code
 ---
-상품명 : True
-슬롯 :
-  기본 값:|
+prettier: true
+slots:
+  default: |
 
     <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" />
     <UAvatar src="https://github.com/HugoRCD.png" alt="Hugo Richard" />
     <UAvatar src="https://github.com/atinux.png" alt="Sébastien Chopin" />
 ---
-: u-avatar {src="https://github.com/benjamincanac.png" alt="Benjamin Canac"}
-: u-avatar {src="https://github.com/HugoRCD.png" alt="Hugo Richard"}
-: u-avatar {src="https://github.com/atinux.png" alt="Sébastien Chopin"}
+:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac"}
+:u-avatar{src="https://github.com/HugoRCD.png" alt="Hugo Richard"}
+:u-avatar{src="https://github.com/atinux.png" alt="Sébastien Chopin"}
 ::
 
-###  크기
+### Size
 
-`size`prop 을 사용하여 모든 아바타의 크기를 변경합니다.
+`size` Prop을 사용하여 모든 아바타의 크기를 변경합니다.
 
 ::component-code
 ---
-상품명 : True
-소품 :
-  크기: xl
-슬롯 :
-  기본 값:|
+prettier: true
+props:
+  size: xl
+slots:
+  default: |
 
     <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy" />
     <UAvatar src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy" />
     <UAvatar src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy" />
 ---
-: u-avatar {src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
-: u-avatar {src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
-: u-avatar {src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
+:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
+:u-avatar{src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
+:u-avatar{src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
 ::
 
-###  Max
+### Max 의 경우
 
-`max`prop을 사용하여 표시되는 아바타 수를 제한합니다. 나머지는 `+X`avatar로 표시됩니다.
+`max` 소품을 사용하여 표시되는 아바타 수를 제한합니다. 나머지는 `+X` 아바타로 표시됩니다.
 
 ::component-code
 ---
-상품명 : True
-소품 :
-  최대 : 2
-슬롯 :
-  기본 값:|
+prettier: true
+props:
+  max: 2
+slots:
+  default: |
 
     <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy" />
     <UAvatar src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy" />
     <UAvatar src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy" />
 ---
-: u-avatar {src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
-: u-avatar {src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
-:u-avatar {src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
+:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
+:u-avatar{src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
+:u-avatar{src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
 ::
 
-### 색상: badge{label="4.8+" class="align-text-top"}
+### Color: badge{label="4.8+" class="align-text-top"} 색상
 
-`color`prop 을 사용하여 모든 아바타의 색상을 변경합니다.
+`color` Prop을 사용하여 모든 아바타의 색상을 변경합니다.
 
 ::component-code
 ---
-상품명 : True
-소품 :
-  색상: 기본
-슬롯 :
-  기본 값:|
+prettier: true
+props:
+  color: primary
+slots:
+  default: |
 
     <UAvatar alt="Benjamin Canac" />
     <UAvatar alt="Hugo Richard" />
     <UAvatar alt="Sébastien Chopin" />
 ---
-: u-avatar {alt="Benjamin Canac"}
-: u-avatar {alt="Hugo Richard"}
-: u-avatar {alt="Sébastien Chopin"}
+:u-avatar{alt="Benjamin Canac"}
+:u-avatar{alt="Hugo Richard"}
+:u-avatar{alt="Sébastien Chopin"}
 ::
 
-##  예제
+## 예
 
-###  툴팁 포함
+### 툴팁 사용
 
-각 아바타를 [Tooltip](/docs/components/tooltip)로 감싸면 마우스 위에 툴팁이 표시됩니다.
+각 아바타를 [Tooltip](/docs/components/tooltip)로 감싸면 커서를 놓으면 툴팁이 표시됩니다.
 
-: component-example {name="avatar-group-tooltip-example"}
+:component-example{name="avatar-group-tooltip-example"}
 
-### 칩 포함
+### with 칩
 
 각 아바타를 [Chip](/docs/components/chip)로 감싸서 아바타 주위에 칩을 표시합니다.
 
-:component-example {name="avatar-group-chip-example"}
+:component-example{name="avatar-group-chip-example"}
 
-###  링크 포함
+### With 연결
 
 각 아바타를 [Link](/docs/components/link)로 감싸서 클릭할 수 있도록 합니다.
 
-:component-example {name="avatar-group-link-example"}
+:component-example{name="avatar-group-link-example"}
 
-### 마스크 사용
+### With 마스크
 
-CSS 마스크로 아바타를 감싸서 사용자 정의 모양으로 표시합니다.
+CSS 마스크로 아바타를 감싸면 사용자 정의 모양으로 표시됩니다.
 
-: component-example {name="avatar-group-mask-example"}
+:component-example{name="avatar-group-mask-example"}
 
 ::warning
-마스크를 사용할 때 `chip`prop이 제대로 작동하지 않습니다. 마스크 모양에 따라 칩이 잘릴 수 있습니다.
+마스크를 사용할 때 `chip` 소품이 제대로 작동하지 않습니다. 마스크 모양에 따라 칩이 잘릴 수 있습니다.
 ::
 
-##  API
+## API 사용
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### 슬롯
 
-:구성요소 - 슬롯
+:component-slots
 
-##  테마
+## Theme 주제
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

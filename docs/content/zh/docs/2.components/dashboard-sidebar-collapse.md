@@ -11,20 +11,20 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardSidebarCollapse.vue
 ---
 
-## 使用情况
+## 用法
 
-DashboardSidebarCollapse组件用于在设置`collapsible`属性时折叠/展开[DashboardSidebar](/docs/components/dashboard-sidebar)组件****。
+DashboardSidebarCollapse组件用于在`collapsible`属性为set**时折叠/展开[DashboardSidebar](/docs/components/dashboard-sidebar)组件**。
 
-：组件代码
+:component-code
 
-它扩展了[Button](/docs/components/button)组件，因此您可以传递任何属性，如`color`、`variant`、`size`等。
+它扩展了[Button](/docs/components/button)组件，因此您可以传递任何属性，如`color`，`variant`，`size`等。
 
 ::component-code
 ---
-忽略：
+ignore:
   - variant
-道具：
-  变体：“细微”
+props:
+  variant: 'subtle'
 ---
 ::
 
@@ -32,11 +32,11 @@ DashboardSidebarCollapse组件用于在设置`collapsible`属性时折叠/展开
 按钮默认为`color="neutral"`和`variant="ghost"`。
 ::
 
-## Examples
+## 示例
 
-### `header`插槽内
+###  `header`插槽内
 
-您可以将此组件放在[DashboardSidebar](/docs/components/dashboard-sidebar)组件的`header`插槽中，并使用`collapsed`道具隐藏标题的左侧部分，例如：
+您可以将此组件放在[DashboardSidebar](/docs/components/dashboard-sidebar)组件的`header`插槽中，并使用`collapsed`属性隐藏标题的左侧部分，例如：
 
 ```vue [layouts/dashboard.vue]{4-8}
 <template>
@@ -54,7 +54,7 @@ DashboardSidebarCollapse组件用于在设置`collapsible`属性时折叠/展开
 </template>
 ```
 
-### `leading`插槽内
+###  `leading`插槽内
 
 您可以将此组件放在[DashboardNavbar](/docs/components/dashboard-navbar)组件的`leading`插槽中，以将其显示在标题之前，例如：
 
@@ -82,16 +82,16 @@ definePageMeta({
 
 ### Props
 
-：组件-支柱
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-此组件还支持所有本机`<button>`HTML属性。
+此组件还支持所有原生`<button>` HTML属性。
 ::
 
 ## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

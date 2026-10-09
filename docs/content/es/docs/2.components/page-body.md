@@ -8,7 +8,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageBody.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 El componente PageBody envuelve su contenido principal y agrega un poco de relleno para un espaciado consistente.
 
@@ -24,7 +24,7 @@ El componente PageBody envuelve su contenido principal y agrega un poco de relle
 </template>
 ```
 
-@18@Ejemplos
+## Ejemplos
 
 ::note
 Si bien estos ejemplos utilizan [Nuxt Content](https://content.nuxt.com), los componentes se pueden integrar con cualquier sistema de gestión de contenido.
@@ -71,23 +71,23 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 ```
 
 ::note
-En este ejemplo, usamos el componente [`ContentRenderer`](https://content.nuxt.com/docs/components/content-renderer) de `@nuxt/content` para representar el contenido de la página.
+En este ejemplo, utilizamos el componente [`ContentRenderer`](https://content.nuxt.com/docs/components/content-renderer) de `@nuxt/content` para representar el contenido de la página.
 ::
 
-@@pH065
+## API (Edición española)
 
-@666@6666
+### Accesorios
 
-Componentes Props
+:component-props
 
-@@P067@@Esfuerzos
+### Slots
 
-Componentes de slots
+:component-slots
 
-@068 @@ Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@@changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

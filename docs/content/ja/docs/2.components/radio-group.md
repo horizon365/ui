@@ -16,45 +16,45 @@ links:
 
 ## 使用法
 
-RadioGroupの値を制御するには`v-model`ディレクティブを使用し、状態を制御する必要がない場合には`default-value` propを使用して初期値を設定します。
+RadioGroupの値を制御するには`v-model`ディレクティブを使用し、状態を制御する必要がない場合は`default-value`プロパティを使用して初期値を設定します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  modelValue
-  - アイテム
-外部
-  - アイテム
-  -  modelValue
-小道具
-  modelValue 'システム'
-  アイテム
-    - 'システム'
-    - 'ライト'
-    - 'ダーク'
+prettier: true
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
 ### アイテム
 
-`items`プロパティを文字列または数値の配列として使用します。
+`items`プロパティを文字列または数値の配列として使用します：
 
 ::component-code
 ---
-きれい真
-無視
-  -  modelValue
-  - アイテム
-外部
-  - アイテム
-  -  modelValue
-小道具
-  modelValue 'システム'
-  アイテム
-    - 'システム'
-    - 'ライト'
-    - 'ダーク'
+prettier: true
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
@@ -70,26 +70,26 @@ RadioGroupの値を制御するには`v-model`ディレクティブを使用し�
 
 ::component-code
 ---
-無視
-  -  modelValue
-  - アイテム
-外部
-  - アイテム
-  -  modelValue
-externalTypes
-  -  RadioGroupItem []
-小道具
-  modelValue 'system'
-  アイテム
-    -  label 'System'
-      説明'デバイスの設定に一致します。'
-      value 'system'
-    -  label 'Light'
-      説明：「常に光のテーマを使う」
-      値'光'
-    -  label 'Dark'
-      説明：「常に暗いテーマを使う」
-      値'暗い'
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+externalTypes:
+  - RadioGroupItem[]
+props:
+  modelValue: 'system'
+  items:
+    - label: 'System'
+      description: 'Matches your device settings.'
+      value: 'system'
+    - label: 'Light'
+      description: 'Always uses the light theme.'
+      value: 'light'
+    - label: 'Dark'
+      description: 'Always uses the dark theme.'
+      value: 'dark'
 ---
 ::
 
@@ -97,246 +97,246 @@ externalTypes
 オブジェクトを使用する場合は、`v-model`ディレクティブまたは`default-value` propでオブジェクトの`value`プロパティを参照する必要があります。
 ::
 
-### 値キー
+### Value Key
 
-`value-key` propを使用して、値を設定するために使用するプロパティを変更できます。デフォルトは`value`です。
-
-::component-code
----
-無視
-  -  modelValue
-  - アイテム
-  -  valueKey
-外部
-  - アイテム
-  -  modelValue
-externalTypes
-  -  RadioGroupItem []
-小道具
-  modelValue 'light'
-  valueKey 'id'
-  アイテム
-    -  label 'System'
-      説明'デバイスの設定に一致します。'
-      id 'システム'
-    -  label 'Light'
-      説明：「常に光のテーマを使う」
-      id 'ライト'
-    -  label 'Dark'
-      説明：「常に暗いテーマを使う」
-      id '暗い'
----
-::
-
-### レジェンド
-
-`legend`プロパティを使用して、RadioGroupの凡例を設定します。
+`value-key`プロパティを使用して、値を設定するために使用するプロパティを変更できます。デフォルトは`value`です。
 
 ::component-code
 ---
-きれい真
-無視
-  -  defaultValue
-  - アイテム
-外部
-  - アイテム
-小道具
-  伝説：「テーマ」
-  defaultValue 'システム'
-  アイテム
-    - 'システム'
-    - 'ライト'
-    - 'ダーク'
+ignore:
+  - modelValue
+  - items
+  - valueKey
+external:
+  - items
+  - modelValue
+externalTypes:
+  - RadioGroupItem[]
+props:
+  modelValue: 'light'
+  valueKey: 'id'
+  items:
+    - label: 'System'
+      description: 'Matches your device settings.'
+      id: 'system'
+    - label: 'Light'
+      description: 'Always uses the light theme.'
+      id: 'light'
+    - label: 'Dark'
+      description: 'Always uses the dark theme.'
+      id: 'dark'
 ---
 ::
 
-### カラー
+### Legend
 
-`color`プロパティを使用して、RadioGroupの色を変更します。
+`legend`プロパティを使用してRadioGroupの凡例を設定します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  defaultValue
-  - アイテム
-外部
-  - アイテム
-小道具
-  色ニュートラル
-  defaultValue 'システム'
-  アイテム
-    - 'システム'
-    - 'ライト'
-    - 'ダーク'
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+props:
+  legend: 'Theme'
+  defaultValue: 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-### バリアント
+### Color
+
+`color`プロパティを使用してRadioGroupの色を変更します。
+
+::component-code
+---
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+props:
+  color: neutral
+  defaultValue: 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
+---
+::
+
+### Variant
 
 `variant`プロパティを使用して、RadioGroupのバリアントを変更します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  defaultValue
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  -  RadioGroupItem []
-小道具
-  色'プライマリ'
-  バリアント'カード'
-  defaultValue 'system'
-  アイテム
-    -  label 'System'
-      value 'system'
-      説明'デバイスの設定に一致します。'
-    -  label 'Light'
-      値'光'
-      説明：「常に光のテーマを使う」
-    -  label 'Dark'
-      値'暗い'
-      説明：「常に暗いテーマを使う」
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+externalTypes:
+  - RadioGroupItem[]
+props:
+  color: 'primary'
+  variant: 'card'
+  defaultValue: 'system'
+  items:
+    - label: 'System'
+      value: 'system'
+      description: 'Matches your device settings.'
+    - label: 'Light'
+      value: 'light'
+      description: 'Always uses the light theme.'
+    - label: 'Dark'
+      value: 'dark'
+      description: 'Always uses the dark theme.'
 ---
 ::
 
 ### サイズ
 
-`size` propを使用して、RadioGroupのサイズを変更します。
+`size`プロパティを使用してRadioGroupのサイズを変更します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  defaultValue
-  - アイテム
-外部
-  - アイテム
-小道具
-  サイズ'xl'
-  variant 'list'
-  defaultValue 'システム'
-  アイテム
-    - 'システム'
-    - 'ライト'
-    - 'ダーク'
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+props:
+  size: 'xl'
+  variant: 'list'
+  defaultValue: 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-### オリエンテーション
+### Orientation
 
-`orientation`プロパティを使用して、RadioGroupの向きを変更します。デフォルトは`vertical`です。
+RadioGroupの向きを変更するには、`orientation`プロパティを使用します。デフォルトは`vertical`です。
 
 ::component-code
 ---
-きれい真
-無視
-  -  defaultValue
-  - アイテム
-外部
-  - アイテム
-小道具
-  オリエンテーション'水平'
-  variant 'list'
-  defaultValue 'システム'
-  アイテム
-    - 'システム'
-    - 'ライト'
-    - 'ダーク'
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+props:
+  orientation: 'horizontal'
+  variant: 'list'
+  defaultValue: 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-### インジケータ
+### Indicator
 
 `indicator`プロパティを使用して位置を変更したり、インジケーターを非表示にしたりします。デフォルトは`start`です。
 
 ::note
-項目の`icon`は、`indicator`がラベルの上にある`hidden`の場合にのみ表示されます。
+ラジオにはインジケータ内にアイコンがないため、アイテムの`icon`は`indicator`がラベルの上にある`hidden`の場合にのみ表示されます。
 ::
 
 ::component-code
 ---
-きれい真
-無視
-  -  defaultValue
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  -  RadioGroupItem []
-アイテム
-  インジケータ
-    -  start
-    -  end
-    - 隠し
-  バリアント
-    - リスト
-    - カード
-    - テーブル
-小道具
-  インジケータ'隠し'
-  オリエンテーション'水平'
-  variant 'table'
-  defaultValue 'システム'
-  アイテム
-    -  label 'System'
-      アイコン'i—lucideモニター'
-      value 'システム'
-      クラス'w—20'
-    -  label 'Light'
-      アイコン'i—lucide—sun'
-      値'ライト'
-      クラス'w—20'
-    -  label 'Dark'
-      アイコン'i—lucide月'
-      値'暗い'
-      クラス'w—20'
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+externalTypes:
+  - RadioGroupItem[]
+items:
+  indicator:
+    - start
+    - end
+    - hidden
+  variant:
+    - list
+    - card
+    - table
+props:
+  indicator: 'hidden'
+  orientation: 'horizontal'
+  variant: 'table'
+  defaultValue: 'System'
+  items:
+    - label: 'System'
+      icon: 'i-lucide-monitor'
+      value: 'System'
+      class: 'w-20'
+    - label: 'Light'
+      icon: 'i-lucide-sun'
+      value: 'Light'
+      class: 'w-20'
+    - label: 'Dark'
+      icon: 'i-lucide-moon'
+      value: 'Dark'
+      class: 'w-20'
 ---
 ::
 
 ### 無効
 
-`disabled`プロパティを使用して、RadioGroupを無効にします。
+`disabled`プロパティを使用してRadioGroupを無効にします。
 
 ::component-code
 ---
-きれい真
-無視
-  -  defaultValue
-  - アイテム
-外部
-  - アイテム
-小道具
-  無効true
-  defaultValue 'システム'
-  アイテム
-    - 'システム'
-    - 'ライト'
-    - 'ダーク'
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+props:
+  disabled: true
+  defaultValue: 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

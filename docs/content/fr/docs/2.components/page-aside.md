@@ -8,15 +8,15 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageAside.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Le composant PageAside est un élément adhésif `<aside>` qui s'affiche uniquement à partir du [`lg` breakpoint](https://tailwindcss.com/docs/breakpoints).
+Le composant PageAside est un élément `<aside>` collant qui s'affiche uniquement à partir du point d'arrêt [`lg` ](https://tailwindcss.com/docs/breakpoints).
 
 ::tip{to="/docs/getting-started/theme/css-variables#header"}
-Le composant PageAside utilise la variable CSS `--ui-header-height` pour se positionner correctement sous le `Header`.
+Le composant PageAside utilise la variable CSS `--ui-header-height` pour se positionner correctement en dessous de la variable `Header`.
 ::
 
-Utilisez-le à l'intérieur de l'emplacement `left` ou `right` du composant [Page](/docs/components/page):
+Utilisez-le dans l'emplacement `left` ou `right` du composant [Page](/docs/components/page):
 
 ```vue {4}
 <template>
@@ -28,13 +28,13 @@ Utilisez-le à l'intérieur de l'emplacement `left` ou `right` du composant [Pag
 </template>
 ```
 
-@@ph024@@Exemples
+## exemples
 
 ::note
 Bien que ces exemples utilisent [Nuxt Content](https://content.nuxt.com), les composants peuvent être intégrés à n'importe quel système de gestion de contenu.
 ::
 
-### Dans une mise en page
+### Dans une disposition
 
 Utilisez le composant PageAside dans une disposition pour afficher la navigation:
 
@@ -62,20 +62,20 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 Dans cet exemple, nous utilisons le composant `ContentNavigation` pour afficher la navigation injectée dans `app.vue`.
 ::
 
-@@P501 @@ référence
+## api
 
-@@502@@propriété
+### Props
 
-Composants-props
+:component-props
 
-@@53@@séries
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph054@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@@changement55
+## Changelog
 
-Composant-changelog
+:component-changelog

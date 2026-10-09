@@ -7,70 +7,70 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Header.vue
 ---
 
-## 使用情况
+## 用法
 
-Header组件会呈现`<header>`元素。
+Header组件呈现`<header>`元素。
 
 ::tip{to="/docs/getting-started/theme/css-variables#header"}
-它的高度是透过`--ui-header-height`CSS变数定义。
+它的高度是透过`--ui-header-height` CSS变数定义。
 ::
 
-使用`left`、`default`和`right`插槽来自定义标题，使用`body`或`content`插槽来自定义标题菜单。
+使用`left`、`default`和`right`插槽自定义标题，使用`body`或`content`插槽自定义标题菜单。
 
 ::component-example
 ---
-收阖：true
-更漂亮：真的
-名称：'标题-示例'
-类：“！px-0！pt-0”
-overflowHidden：真的
-道具：
-  类别：'w-完整'
+collapse: true
+prettier: true
+name: 'header-example'
+class: '!px-0 !pt-0'
+overflowHidden: true
+props:
+  class: 'w-full'
 ---
 ::
 
 ::note
-在这个范例中，我们使用[NavigationMenu](/docs/components/navigation-menu)组件来呈现中央的标题链接。
+在本例中，我们使用[NavigationMenu](/docs/components/navigation-menu)组件在中间呈现标题链接。
 ::
 
 ### 标题
 
-使用`title`属性来变更页首的标题。预设为`Nuxt UI`。
+使用`title`属性更改标题。默认为`Nuxt UI`。
 
 ::component-code
 ---
-隐藏：
-  第15课
-道具：
-  标题：'Nuxt UI'
-  类别：'w-完整'
-类：“！px-0！pt-0”
+hide:
+  - class
+props:
+  title: 'Nuxt UI'
+  class: 'w-full'
+class: '!px-0 !pt-0'
 ---
 ::
 
-您也可以使用`title`插槽来添加您自己的徽标。
+您也可以使用`title`插槽添加自己的徽标。
 
 ::tip{to="#props"}
-您仍应添加`title`道具来替换链接的默认`aria-label`。
+您仍然应该添加`title`属性来替换链接的默认`aria-label`。
 ::
 
 ::component-code
 ---
-更漂亮：真的
-overflowHidden：真的
-隐藏：
-  班级
-道具：
-  类别：'w-完整'
-插槽：
-  标题：|
+prettier: true
+overflowHidden: true
+hide:
+  - class
+props:
+  class: 'w-full'
+slots:
+  title: |
 
-<Logo class="h-6 w-auto" />的
-类：“！px-0！pt-0”
+    <Logo class="h-6 w-auto" />
+class: '!px-0 !pt-0'
 ---
 
-#标题
-：徽标{class="h-6 w-auto"}
+#title
+:logo{class="h-6 w-auto"}
 ::
 
 至
@@ -79,37 +79,37 @@ overflowHidden：真的
 
 ::component-code
 ---
-隐藏：
-  班级
-类：“！px-0！pt-0”
-道具：
-  到：'/docs'
-  类别：'w-完整'
+hide:
+  - class
+class: '!px-0 !pt-0'
+props:
+  to: '/docs'
+  class: 'w-full'
 ---
 ::
 
-您也可以使用`left`插槽完全覆盖链接。
+您也可以使用`left`插槽来完全覆盖链接。
 
 ::component-code
 ---
-更漂亮：真的
-overflowHidden：真的
-隐藏：
-  班级
-类：“！px-0！pt-0”
-道具：
-  类别：'w-完整'
-插槽：
-  左：|
+prettier: true
+overflowHidden: true
+hide:
+  - class
+class: '!px-0 !pt-0'
+props:
+  class: 'w-full'
+slots:
+  left: |
 
-    028号
-      029号
-    030秒
+    <NuxtLink to="/docs">
+      <Logo class="h-6 w-auto" />
+    </NuxtLink>
 ---
 
-#左
+#left
 ::nuxt-link{to="/docs"}
-：徽标{class="h-6 w-auto"}
+:logo{class="h-6 w-auto"}
 ::
 ::
 
@@ -117,91 +117,91 @@ overflowHidden：真的
 
 使用`mode`属性更改标题菜单的模式。默认为`modal`。
 
-请使用`body`插槽来填满功能表主体（在标题下方），或使用`content`插槽来填满整个功能表。
+使用`body`插槽填充菜单主体（在标题下），或使用`content`插槽填充整个菜单。
 
 ::tip{to="#props"}
-您可以使用`menu`道具自定义标题菜单，它将根据您选择的模式进行调整。
+您可以使用`menu`道具自定义标题的菜单，它将根据您选择的模式进行调整。
 ::
 
 ::component-example
 ---
-收阖：true
-iframe：
-  高度：300 px;
-iframeMobile：真的
-overflowHidden：真的
-名称：'标题菜单示例'
-可选项：
-  名称：'模式'
-    标签：'模式'
-    默认值：'drawer'
-    项目名称：
-      模式
-      滑动鼠标
-      抽屉
-道具：
-  类别：'w-完整'
+collapse: true
+iframe:
+  height: 300px;
+iframeMobile: true
+overflowHidden: true
+name: 'header-menu-example'
+options:
+  - name: 'mode'
+    label: 'mode'
+    default: 'drawer'
+    items:
+      - modal
+      - slideover
+      - drawer
+props:
+  class: 'w-full'
 ---
 ::
 
-开关
+### 切换
 
 使用`toggle`道具自定义移动的上显示的切换按钮。
 
-您可以从[Button](/docs/components/button)组件传递任何属性来自订它。
+您可以从[Button](/docs/components/button)组件传递任何属性，以自订该组件。
 
 ::component-example
 ---
-收阖：true
-iframe：
-  高度：300px;
-iframeMobile：真的
-overflowHidden：真的
-名称：'标题-切换-示例'
-道具：
-  类别：'w-完整'
+collapse: true
+iframe:
+  height: 300px;
+iframeMobile: true
+overflowHidden: true
+name: 'header-toggle-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-切换侧边
+### 切换侧边
 
-使用`toggle-side`道具来变更切换按钮的侧边。预设值为`right`。
+使用`toggle-side`道具更改切换按钮的边。默认为`right`。
 
 ::component-example
 ---
-收阖：true
-iframe：
-  高度：300px;
-iframeMobile：真的
-overflowHidden：真的
-名称：'标题-切换-侧-示例'
-道具：
-  类别：'w-完整'
+collapse: true
+iframe:
+  height: 300px;
+iframeMobile: true
+overflowHidden: true
+name: 'header-toggle-side-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-示例
+## 示例
 
-使用动画切换
+### 带动画切换
 
-使用`#toggle`插槽，使用[Motion Vue](https://motion.dev/docs/vue/motion-component)将默认切换按钮替换为自定动画汉堡图标。
+使用[Motion Vue](https://motion.dev/docs/vue/motion-component)，使用`#toggle`插槽将默认切换按钮替换为自定动画汉堡图标。
 
 ::component-example
 ---
-收阖：true
-iframe：
-  高度：300px;
-iframeMobile：真的
-overflowHidden：真的
-名称：'标题-切换-动画-示例'
-道具：
-  类别：'w-完整'
+collapse: true
+iframe:
+  height: 300px;
+iframeMobile: true
+overflowHidden: true
+name: 'header-toggle-animated-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-在`app.vue`范围内
+### 在`app.vue`内
 
-在`app.vue`或布局中使用页眉组件：
+在`app.vue`或布局中使用Header组件：
 
 ```vue [app.vue]{28-51}
 <script setup lang="ts">
@@ -266,24 +266,24 @@ const items = computed<NavigationMenuItem[]>(() => [{
 </template>
 ```
 
-## 活性成分
+## API
 
-### 道具
+### Props
 
-：组件-支柱
+:component-props
 
-### 插槽
+### Slots
 
-：组件插槽
+:component-slots
 
 ### 发射
 
-：组件发射
+:component-emits
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

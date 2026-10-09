@@ -7,59 +7,59 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Error.vue
 ---
 
-## 使用情况
+## 用法
 
-Error组件呈现`<main>`元素，该元素与[Header](/docs/components/header)组件一起使用，以创建扩展到视口的可用高度的全高布局。
+Error组件呈现一个`<main>`元素，该元素与[Header](/docs/components/header)组件一起工作，以创建一个扩展到视口可用高度的全高布局。
 
 ::tip{to="/docs/getting-started/theme/css-variables#header"}
-Error组件使用`--ui-header-height`CSS变量将其自身正确定位在`Header`下方。
+Error组件使用`--ui-header-height` CSS变量将其自身正确定位在`Header`下方。
 ::
 
-错误
+### Error
 
 使用`error`属性显示错误消息。
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 ::note{to="https://nuxt.com/docs/guide/directory-structure/error" target="_blank"}
-在大多数情况下，您会在`error.vue`文件中收到`error`道具。
+在大多数情况下，您将在`error.vue`文件中收到`error`属性。
 ::
 ::
 
 ::component-code
 ---
-隐藏：
-  班级
-更漂亮：真的
-道具：
-  错误类型：
-    状态代码：404
-    页面未找到页面未找到
-    404-页面不存在页面不存在.返回首页
-  类：“！min-h-96”
+hide:
+  - class
+prettier: true
+props:
+  error:
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
+  class: '!min-h-96'
 ---
 ::
 
-### 图标：徽标{label="4.8+" class="align-text-top"}
+### 图标：badge{label="4.8+" class="align-text-top"}
 
 使用`icon`道具在状态代码上方显示图标。
 
 ::component-code
 ---
-隐藏：
-  班级
-更漂亮：真的
-忽略：
-  - 错误.状态代码
-  - 错误.状态消息
-  错误消息
-道具：
-  图标：“i-lucide-文件-x”
-  错误类型：
-    状态代码：404
-    页面未找到页面未找到
-    404-页面不存在页面不存在.返回首页
-  类：“！min-h-96”
+hide:
+  - class
+prettier: true
+ignore:
+  - error.statusCode
+  - error.statusMessage
+  - error.message
+props:
+  icon: 'i-lucide-file-x'
+  error:
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
+  class: '!min-h-96'
 ---
 ::
 
@@ -67,89 +67,89 @@ Error组件使用`--ui-header-height`CSS变量将其自身正确定位在`Header
 
 ::component-code
 ---
-隐藏：
-  班级
-更漂亮：真的
-忽略：
-  - 错误.状态代码
-  - 错误.状态消息
-  错误消息
-道具：
-  错误类型：
-    状态代码：404
-    页面未找到页面未找到
-    404-页面不存在页面不存在.返回首页
-  类："! min-h-96"
-插槽：
-  行距：|
+hide:
+  - class
+prettier: true
+ignore:
+  - error.statusCode
+  - error.statusMessage
+  - error.message
+props:
+  error:
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
+  class: '!min-h-96'
+slots:
+  leading: |
 
-    025号
+    <img src="https://github.com/nuxt.png" alt="Logo" class="size-10 rounded-full">
 ---
-#行距
-：img{src="https://github.com/nuxt.png" alt="Logo" class="size-10 rounded-full"}
+#leading
+:img{src="https://github.com/nuxt.png" alt="Logo" class="size-10 rounded-full"}
 ::
 
-### 清除
+### Clear
 
-使用`clear`属性自定义或隐藏清除按钮（值为`false`）。
+使用`clear`属性自定义或隐藏清除按钮（使用`false`值）。
 
-您可以从[Button](/docs/components/button)组件传递任何属性来自订该组件。
+您可以从[Button](/docs/components/button)组件传递任何属性来对其进行自定义。
 
 ::component-code
 ---
-更漂亮：真的
-隐藏：
-  班级
-忽略：
-  - 错误.状态代码
-  - 错误.状态消息
-  错误消息
-  透明色
-  - 清除.大小
-  清除.图标
-  清除类
-道具：
-  清除：
-    颜色：中性
-    尺寸：xl
-    图标：i-lucide-箭头-左
-    类别：'四舍五入-完整'
-  错误类型：
-    状态代码：404
-    页面未找到页面未找到
-    404-页面不存在页面不存在.返回首页
-  类："! min-h-96"
+prettier: true
+hide:
+  - class
+ignore:
+  - error.statusCode
+  - error.statusMessage
+  - error.message
+  - clear.color
+  - clear.size
+  - clear.icon
+  - clear.class
+props:
+  clear:
+    color: neutral
+    size: xl
+    icon: i-lucide-arrow-left
+    class: 'rounded-full'
+  error:
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
+  class: '!min-h-96'
 ---
 ::
 
 ### 重定向
 
-单击清除按钮时，使用`redirect`属性可将用户重定向到其他页面。默认为`/`。
+使用`redirect`属性在点击清除按钮时将用户重定向到另一个页面。
 
 ::component-code
 ---
-更漂亮：真的
-隐藏：
+prettier: true
+hide:
   - class
-忽略：
+ignore:
   - error.statusCode
   - error.statusMessage
   - error.message
-道具：
-  重定向：'/docs/getting-started'
-  错误类型：
-    状态代码：404
-    页面未找到页面未找到
-    404-页面不存在页面不存在.返回首页
-  类：“！min-h-96”
+props:
+  redirect: '/docs/getting-started'
+  error:
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
+  class: '!min-h-96'
 ---
 ::
 
-## Examples
+## 示例
 
-### `error.vue`内
+### 内部`error.vue`
 
-使用`error.vue`中的错误组件：
+在`error.vue`中使用Error组件：
 
 ```vue [error.vue]{13}
 <script setup lang="ts">
@@ -176,7 +176,7 @@ const props = defineProps<{
 ::
 
 ::note
-您可以在[Nuxt文档中阅读有关如何处理错误的详细信息](https://nuxt.com/docs/getting-started/error-handling#error-page)，但在使用`nuxt generate`时，建议在您的`createError`调用中添加`fatal: true`，以确保显示错误页面：
+您可以在[Nuxt文档](https://nuxt.com/docs/getting-started/error-handling#error-page)中阅读更多有关如何处理错误的信息，但在使用`nuxt generate`时，建议在`createError`调用中添加`fatal: true`，以确保显示错误页面：
 
 ```vue [pages/\[...slug\\].vue]
 <script setup lang="ts">
@@ -197,16 +197,16 @@ if (!page.value) {
 
 ### Props
 
-：组件-支柱
+:component-props
 
 ### Slots
 
-：组件插槽
+:component-slots
 
 ## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

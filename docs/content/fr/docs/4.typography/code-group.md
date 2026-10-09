@@ -9,9 +9,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodeGroup.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Enroulez vos blocs de code autour d'un composant `code-group` pour les regrouper en onglets.
+Enroulez vos blocs de code autour d'un composant `code-group` pour les regrouper dans des onglets.
 
 ::code-preview{class="[&>div]:*:my-0 [&>div]:*:w-full"}
 
@@ -62,23 +62,23 @@ add @ nuxt/ui
 ::
 
 ::note{to="/docs/typography/code#code-blocks"}
-Comme le composant `ProsePre`, le `CodeGroup` gère les noms de fichiers, les icônes et le bouton copier.
+Comme le composant `ProsePre`, le `CodeGroup` gère les noms de fichiers, les icônes et le bouton de copie.
 ::
 
-@@ph033@@api
+## api
 
-@@ph034@@props
+### Props
 
-: composant-props {prose}
+:component-props{prose}
 
-@@ph036@@réglages
+### Slots
 
-: composant {prose}
+:component-slots{prose}
 
-@@ph038@thème
+## Thème
 
-: composant-thème {prose}
+:component-theme{prose}
 
-@changelog @changelog
+## Changelog
 
-: composant-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

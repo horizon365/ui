@@ -11,214 +11,214 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/FormField.vue
 ---
 
-## 使用情况
+## 用法
 
-使用FormField包装任何表单元件。在[Form](/docs/components/form)中使用时，它提供验证和错误行程。
+使用FormField包装任何表单组件。在[Form](/docs/components/form)中使用，它提供验证和错误处理。
 
-标签
+### Label
 
-使用`label`属性来设定表单控件的标签。
+使用`label`属性为表单控件设置标签。
 
 ::component-code
 ---
-更漂亮：真的
-道具：
-  标签：电子邮件
-插槽：
-  默认值：|
+prettier: true
+props:
+  label: Email
+slots:
+  default: |
 
-<UInput placeholder="Enter your email" />的
+    <UInput placeholder="Enter your email" />
 ---
 
-：u-输入{placeholder="Enter your email"}
+:u-input{placeholder="Enter your email"}
 ::
 
 ::note
 标签`for`属性和表单控件与唯一的`id`相关联（如果未提供）。
 ::
 
-使用`required`道具时，会在标签旁边添加一个星号。
+当使用`required`属性时，标签旁边会添加一个星号。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标签
-道具：
-  标签：电子邮件
-  必填项：true
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - label
+props:
+  label: Email
+  required: true
+slots:
+  default: |
 
-<UInput placeholder="Enter your email" />的
+    <UInput placeholder="Enter your email" />
 ---
 
-：u-输入{placeholder="Enter your email"}
+:u-input{placeholder="Enter your email"}
 ::
 
-说明：
+### 说明
 
-使用`description`道具在标签下方提供其他信息。
+使用`description` prop在标签下方提供其他信息。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标签
-道具：
-  标签：电子邮件
-  描述：我们不会与任何人共享您的电子邮件。
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - label
+props:
+  label: Email
+  description: We'll never share your email with anyone else.
+slots:
+  default: |
 
-<UInput placeholder="Enter your email" class="w-full" />的
+    <UInput placeholder="Enter your email" class="w-full" />
 ---
 
-：u-输入{placeholder="Enter your email" class="w-full"}
+:u-input{placeholder="Enter your email" class="w-full"}
 ::
 
-提示：
+### Hint
 
-使用`hint`道具在标签旁边显示提示消息。
+使用`hint`属性在标签旁边显示提示消息。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标签
-道具：
-  标签：电子邮件
-  提示：可选
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - label
+props:
+  label: Email
+  hint: Optional
+slots:
+  default: |
 
-    023号
+    <UInput placeholder="Enter your email" />
 ---
 
-：u-输入{placeholder="Enter your email"}
+:u-input{placeholder="Enter your email"}
 ::
 
-帮助信息
+### 帮助
 
-使用`help`属性可在表单控件下方显示帮助消息。当与`error`属性一起使用时，`error`属性优先。
+使用`help` prop在表单控件下显示帮助消息。当与`error` prop一起使用时，`error` prop优先。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标签
-道具：
-  标签：电子邮件
-  帮助：请输入有效的电子邮件地址。
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - label
+props:
+  label: Email
+  help: Please enter a valid email address.
+slots:
+  default: |
 
-    030秒
+    <UInput placeholder="Enter your email" class="w-full" />
 ---
 
-：u-输入{placeholder="Enter your email" class="w-full"}
+:u-input{placeholder="Enter your email" class="w-full"}
 ::
 
-错误
+### Error
 
-使用`error`属性可在表单控件下方显示错误消息。当与`help`属性一起使用时，`error`属性优先。
+使用`error` prop在表单控件下显示错误消息。当与`help` prop一起使用时，`error` prop优先。
 
-当在[Form](/docs/components/form)中使用时，会在发生验证错误时自动设定此选项。
+当在[Form](/docs/components/form)中使用时，发生验证错误时会自动设置此值。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标签
-道具：
-  标签：电子邮件
-  错误：请输入有效的电子邮件地址。
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - label
+props:
+  label: Email
+  error: Please enter a valid email address.
+slots:
+  default: |
 
-    041号
+    <UInput placeholder="Enter your email" class="w-full" />
 ---
 
-：u输入{placeholder="Enter your email" class="w-full"}
+:u-input{placeholder="Enter your email" class="w-full"}
 ::
 
 ::tip{to="/docs/getting-started/theme/design-system#color-system"}
-这会将表单控件上的`color`设定为`error`。您可以在`app.config.ts`中全域变更它。
+这将表单控件上的`color`设置为`error`。您可以在`app.config.ts`中全局更改它。
 ::
 
 ### 错误模式
 
-使用`error-pattern`属性将表单错误与正则表达式进行匹配。这对于包含数组值的组件（如[InputTags](/docs/components/input-tags)）尤其重要，其中的错误在其名称中包含数组索引（例如`tags.0`）。
+使用`error-pattern`属性来匹配正则表达式中的表单错误。这对于带有数组值的组件（如[InputTags](/docs/components/input-tags)）尤其重要，其中错误在其名称中包含数组索引（例如`tags.0`）。
 
 ::tip{to="/docs/components/form#error-reporting"}
-请参阅在表单中使用`error-pattern`的范例。
+查看在Form中使用`error-pattern`的示例。
 ::
 
-尺寸
+### Size
 
 使用`size`属性更改FormField的大小，`size`将被代理到表单控件。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标签
-  描述
-  提示：
-  帮助信息
-道具：
-  标签：电子邮件
-  描述：我们不会与任何人共享您的电子邮件。
-  提示：可选
-  帮助：请输入有效的电子邮件地址。
-  尺寸：xl
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - label
+  - description
+  - hint
+  - help
+props:
+  label: Email
+  description: We'll never share your email with anyone else.
+  hint: Optional
+  help: Please enter a valid email address.
+  size: xl
+slots:
+  default: |
 
-<UInput placeholder="Enter your email" class="w-full" />，你好
+    <UInput placeholder="Enter your email" class="w-full" />
 ---
 
-：u输入{placeholder="Enter your email" class="w-full"}
+:u-input{placeholder="Enter your email" class="w-full"}
 ::
 
-方向：徽章
+### 方向：badge{label="4.3+" class="align-text-top"}
 
-使用`orientation`属性来变更表单字段的版面配置。预设值为`vertical`。
+使用`orientation`属性将FormField.xml的布局更改为`vertical`。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标签
-  班级
-道具类：
-  方向：水平
-  标签：电子邮件
-  帮助：请输入有效的电子邮件地址。
-  类别：w-72
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - label
+  - class
+props:
+  orientation: horizontal
+  label: Email
+  help: Please enter a valid email address.
+  class: w-72
+slots:
+  default: |
 
-    069号
+    <UInput placeholder="Enter your email" class="w-full" />
 ---
 
-：u输入{placeholder="Enter your email" class="w-full"}
+:u-input{placeholder="Enter your email" class="w-full"}
 ::
 
-活性成分
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

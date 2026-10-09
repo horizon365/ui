@@ -9,9 +9,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodeCollapse.vue
 ---
 
-##  사용
+## Usage
 
-코드 블록을 `code-collapse` 구성 요소로 래핑하여 축소 가능한 코드 블록을 표시합니다.Wrap your code-block with a `code-collapse` component to display a collapable code block.
+축소 가능한 코드 블록을 표시하려면 `code-collapse` 구성 요소로 코드 블록을 래핑합니다.
 
 ::code-preview{class="[&>div]:*:my-0 [&>div]:*:w-full"}
 
@@ -42,7 +42,7 @@ links:
 
 ::
 
-# 코드
+#code
 
 ````mdc
 ::code-collapse
@@ -75,20 +75,20 @@ links:
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props (### Props)
 
-: component-props {prose}
+:component-props{prose}
 
-###  슬롯
+### Slots
 
-: component-slots {prose}
+:component-slots{prose}
 
-##  테마
+## Theme 주제
 
-: component-theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## 변경 로그
 
-: component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

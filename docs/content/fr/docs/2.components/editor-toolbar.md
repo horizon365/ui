@@ -1,5 +1,5 @@
 ---
-title: Editeur Toolbar
+title: EditeurToolbar
 description: Une barre d'outils personnalisable pour les actions de l'éditeur qui peuvent être affichées sous forme de menu fixe, à bulles ou flottant.
 category: editor
 links:
@@ -8,12 +8,12 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/EditorToolbar.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Le composant EditorToolbar affiche une barre d'outils de boutons de mise en forme qui synchronisent automatiquement leur état actif avec le contenu de l'éditeur. Il prend en charge trois modes de mise en page à l'aide du paquet `@tiptap/vue-3/menus`:
-- `fixed`{lang="ts-type"}(toujours visible)
-- `bubble`{lang="ts-type"}(apparaît sur la sélection de texte)
-- `floating`{lang="ts-type"}(apparaît sur les lignes vides)
+Le composant EditorToolbar affiche une barre d'outils de boutons de mise en forme qui synchronisent automatiquement leur état actif avec le contenu de l'éditeur. Il prend en charge trois modes de mise en page à l'aide du package `@tiptap/vue-3/menus`:
+- `fixed`{lang="ts-type"} (toujours visible)
+- `bubble`{lang="ts-type"} (apparaît sur la sélection de texte)
+- `floating`{lang="ts-type"} (s'affiche sur les lignes vides)
 
 ::caution
 Il doit être utilisé dans l'emplacement par défaut d'un composant [Editor](/docs/components/editor) pour avoir accès à l'instance de l'éditeur.
@@ -21,10 +21,10 @@ Il doit être utilisé dans l'emplacement par défaut d'un composant [Editor](/d
 
 ::component-example
 ---
-Élevé: True
-Collapse: vrai
-nom: 'éditeur-toolbar-exemple'
-Catégorie: P-8
+elevated: true
+collapse: true
+name: 'editor-toolbar-example'
+class: 'p-8'
 ---
 ::
 
@@ -32,35 +32,35 @@ Catégorie: P-8
 Les mises en page à bulles et flottantes utilisent les extensions [BubbleMenu](https://tiptap.dev/docs/editor/extensions/functionality/bubble-menu) et [FloatingMenu](https://tiptap.dev/docs/editor/extensions/functionality/floatingmenu) de TipTap.
 ::
 
-@@223@pour les
+### Éléments
 
-Utilisez le `items` prop comme un tableau d'objets avec les propriétés suivantes:
+Utilisez le prop `items` comme un tableau d'objets avec les propriétés suivantes:
 
-@@
-@@
-@@
-@@
-@@
-@@
-@@
-[`kind?: "mark" | "textAlign" | "heading" | "link" | "image" | "blockquote" | "bulletList" | "orderedList" | "taskList" | "codeBlock" | "horizontalRule" | "paragraph" | "undo" | "redo" | "clearFormatting" | "duplicate" | "delete" | "moveUp" | "moveDown" | "suggestion" | "mention" | "emoji"`{lang="ts-type"}](/docs/components/editor#handlers)
-@@
-@@
-@@
-@@
-[`slot?: string``slot?: string`#with-link-popover)
-@@
-@@
-@@
+- x`label?: string`x{lang="ts-type"}
+- x`icon?: string`x{lang="ts-type"}
+- x`color?: "error" | "primary" | "secondary" | "success" | "info" | "warning" | "neutral"`xx{lang="ts-type"}
+- x`activeColor?: "error" | "primary" | "secondary" | "success" | "info" | "warning" | "neutral"`x{lang="ts-type"}
+- x`variant?: "solid" | "outline" | "soft" | "ghost" | "link" | "subtle"`x{lang="ts-type"}
+- x`activeVariant?: "solid" | "outline" | "soft" | "ghost" | "link" | "subtle"`x{lang="ts-type"}
+- x`size?: "xs" | "sm" | "md" | "lg" | "xl"`x{lang="ts-type"}
+Xph052xx[x`kind?: "mark" | "textAlign" | "heading" | "link" | "image" | "blockquote" | "bulletList" | "orderedList" | "taskList" | "codeBlock" | "horizontalRule" | "paragraph" | "undo" | "redo" | "clearFormatting" | "duplicate" | "delete" | "moveUp" | "moveDown" | "suggestion" | "mention" | "emoji"`x{lang="ts-type"}x](x/docs/components/editor#handlersx)
+- xx`disabled?: boolean`xx{lang="ts-type"}
+- x`loading?: boolean`xx{lang="ts-type"}
+- xx`active?: boolean`xx{lang="ts-type"}
+- x`tooltip?: TooltipProps`x{lang="ts-type"}
+Xph071xx[x`slot?: string`x{lang="ts-type"}x](x#with-link-popoverx)
+- x`onClick?: (e: MouseEvent) => void`xx{lang="ts-type"}
+- x`items?: EditorToolbarItem[] | EditorToolbarItem[][]`xx{lang="ts-type"}
+- x`class?: any`xx{lang="ts-type"}
 
-Vous pouvez passer n'importe quelle propriété du composant [Button](/docs/components/button#props) comme `color`,`variant`,`size`, etc.
+Vous pouvez passer n'importe quelle propriété du composant [Button](/docs/components/button#props) telle que `color`, `variant`, `size`, etc.
 
 ::component-example
 ---
-Élevé: True
-Collapse: vrai
-nom: 'éditeur-toolbar-items-exemple'
-Catégorie: P-8
+elevated: true
+collapse: true
+name: 'editor-toolbar-items-example'
+class: 'p-8'
 ---
 ::
 
@@ -69,33 +69,33 @@ Vous pouvez également passer un tableau de tableaux à la prop `items` pour cr�
 ::
 
 ::tip
-Chaque élément peut prendre un tableau `items` d'objets avec les mêmes propriétés que le prop `items` pour créer un [DropdownMenu](/docs/components/dropdown-menu).
+Chaque élément peut prendre un tableau `items` d'objets avec les mêmes propriétés que le prop `items` pour créer un menu [Dropdown ](/docs/components/dropdown-menu).
 ::
 
-@@ph095@layout
+### layout
 
-Utilisez la prop `layout` pour modifier la façon dont la barre d'outils est affichée. Par défaut à `fixed`{lang="ts-type"}.
+Utilisez la prop `layout` pour modifier la façon dont la barre d'outils est affichée. Par défaut, `fixed`{lang="ts-type"}.
 
 ::component-example
 ---
-Élevé: True
-Collapse: vrai
-nom: 'éditeur-toolbar-layout-example'
-Catégorie: P-8
+elevated: true
+collapse: true
+name: 'editor-toolbar-layout-example'
+class: 'p-8'
 options:
-  - nom: layout
-    Étiquette: layout
-    Défaut: Bubble
+  - name: layout
+    label: Layout
+    default: bubble
     items:
-      @@ph100@fixé
-      @@ph101@bubble
-      @@F102@F102
+      - fixed
+      - bubble
+      - floating
 ---
 ::
 
 ### Options
 
-Lorsque vous utilisez les mises en page `bubble`{lang="ts-type"} ou `floating`{lang="ts-type"}, utilisez la prop `options` pour personnaliser le comportement de positionnement à l'aide des options d'interface utilisateur flottante ](https://floating-ui.com/docs/computeposition#options).
+Lorsque vous utilisez des mises en page `bubble`{lang="ts-type"} ou `floating`{lang="ts-type"}, utilisez la prop `options` pour personnaliser le comportement de positionnement à l'aide des options d'interface utilisateur flottante ](https://floating-ui.com/docs/computeposition#options).
 
 ```vue
 <template>
@@ -115,9 +115,9 @@ Lorsque vous utilisez les mises en page `bubble`{lang="ts-type"} ou `floating`{l
 </template>
 ```
 
-### Devrait afficher
+### Should Afficher
 
-Lorsque vous utilisez les mises en page `bubble`{lang="ts-type"} ou `floating`{lang="ts-type"}, utilisez la prop `should-show` pour contrôler l'affichage de la barre d'outils. Cette fonction reçoit le contexte de l'état de l'éditeur et renvoie un booléen.
+Lorsque vous utilisez des mises en page `bubble`{lang="ts-type"} ou `floating`{lang="ts-type"}, utilisez la prop `should-show` pour contrôler l'affichage de la barre d'outils. Cette fonction reçoit le contexte de l'état de l'éditeur et renvoie un booléen.
 
 ```vue
 <template>
@@ -137,22 +137,22 @@ Lorsque vous utilisez les mises en page `bubble`{lang="ts-type"} ou `floating`{l
 </template>
 ```
 
-@@ph153@@Exemples
+## Exemples
 
-### Avec barre d'outils d'images
+### With barre d'outils d'image
 
-Utilisez la prop `should-show` pour créer des barres d'outils contextuelles qui n'apparaissent que pour certains types de nœuds. Cet exemple montre une barre d'outils `bubble` avec des actions de téléchargement et de suppression qui n'apparaissent que lorsqu 'une image est sélectionnée.
+Utilisez la prop `should-show` pour créer des barres d'outils contextuelles spécifiques qui apparaissent uniquement pour certains types de nœuds. Cet exemple montre une barre d'outils `bubble` avec des actions de téléchargement et de suppression qui n'apparaissent que lorsqu 'une image est sélectionnée.
 
 ::component-example
 ---
-Élevé: True
-Collapse: vrai
-nom: 'éditeur-toolbar-image-exemple'
-Catégorie: P-8
+elevated: true
+collapse: true
+name: 'editor-toolbar-image-example'
+class: 'p-8'
 ---
 ::
 
-### Avec lien popover
+### With link popover
 
 Cet exemple montre comment créer un popover de lien personnalisé à l'aide de la propriété `slot` sur les éléments de la barre d'outils et du composant [Popover](/docs/components/popover).
 
@@ -160,9 +160,9 @@ Cet exemple montre comment créer un popover de lien personnalisé à l'aide de 
 
 ::component-example
 ---
-Prévision: Faux
-Collapse: vrai
-nom: 'éditeur-link-popover'
+preview: false
+collapse: true
+name: 'editor-link-popover'
 ---
 ::
 
@@ -170,27 +170,27 @@ nom: 'éditeur-link-popover'
 
 ::component-example
 ---
-Élevé: True
-Collapse: vrai
-nom: 'editor-toolbar-custom-slot-example'
-Catégorie: P-8
+elevated: true
+collapse: true
+name: 'editor-toolbar-custom-slot-example'
+class: 'p-8'
 ---
 ::
 
-@@ph169@@api
+## API
 
-@170@projets
+### Props
 
-Composants-props
+:component-props
 
-@@ph171@@slot
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph172@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement.com
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

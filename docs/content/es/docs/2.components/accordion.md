@@ -15,167 +15,167 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Accordion.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice el componente Acordeón para mostrar una lista de elementos plegables.
 
 ::component-code
 ---
-Colapso: Verdad
-Ignora:
-  @0001@artículos
-  @@pH002@ui.contenido
-Externo:
-  @@pH000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externalidades:
-  @@00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Escondido:
-  @005@clase
-  @0006@jajajajajajajajajaja
-  @@pH007@defaultValue (en inglés)
-Props:
-  Valoración:'0'
-  Categoría: px-4 max-w-lg
-  UU.:
-    Contenido: 'mutado'
-  Items:
-    - label:'¿ Nuxt UI es de uso gratuito?'
-      Nuxt UI es completamente gratuito y de código abierto bajo la licencia MIT. Todos los más de 125 componentes están disponibles para todos.
-    - label:'¿ Puedo usar Nuxt UI con Vue sin Nuxt?'
-      Contenido:"¡ Sí! Aunque está optimizado para Nuxt, la interfaz de usuario de Nuxt funciona perfectamente con proyectos independientes de Vue a través de nuestro complemento Vite. Puede seguir la guía de instalación [](/docs/getting-started/installation/vue) para comenzar.
-    - label:'¿ Está Nuxt UI listo para la producción?'
-      La interfaz de usuario de Nuxt se utiliza en producción en miles de aplicaciones con pruebas exhaustivas, actualizaciones periódicas y mantenimiento activo.
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+  - ui
+  - defaultValue
+props:
+  defaultValue: '0'
+  class: 'px-4 max-w-lg'
+  ui:
+    content: 'text-muted'
+  items:
+    - label: 'Is Nuxt UI free to use?'
+      content: 'Yes! Nuxt UI is completely free and open source under the MIT license. All 125+ components are available to everyone.'
+    - label: 'Can I use Nuxt UI with Vue without Nuxt?'
+      content: 'Yes! While optimized for Nuxt, Nuxt UI works perfectly with standalone Vue projects via our Vite plugin. You can follow the [installation guide](/docs/getting-started/installation/vue) to get started.'
+    - label: 'Is Nuxt UI production-ready?'
+      content: 'Yes! Nuxt UI is used in production by thousands of applications with extensive tests, regular updates, and active maintenance.'
 ---
 ::
 
-@150000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Artículos
 
 Utilice el prop `items` como una matriz de objetos con las siguientes propiedades:
 
-@@
-@@
-@@
-@@
-@@
-@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@
-@@
+- xx`label?: string`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xxx`icon?: string`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`trailingIcon?: string`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`value?: string`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`class?: any`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ::component-code
 ---
-Ignora:
-  @@48000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externo:
-  @494@artículos
-Externalidades:
-  @@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Escondido:
-  @@501@clase
-Props:
-  Categoría: px-4
-  Items:
-    - label:'Iconos'(Edición española)
-      icono: 'i-lucide-smile'
-      contenido: 'No tienes nada que hacer,@ nuxt/icon se encargará de ello automáticamente.'
-    - label:'Los colores'
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  items:
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    - label: 'Colors'
       icon: 'i-lucide-swatch-book'
-      contenido: 'Elija un color primario y un color neutro de su tema CSS Tailwind.'
-    - label:'Componentes'
-      Icono: 'i-lucide-box'
-      contenido: 'Puede personalizar los componentes utilizando los accesorios `class`/`ui` o en su app.config.ts.'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
-@@57@@Multiplicación
+### Multiplicación
 
-Establezca el prop `type` a `multiple` para permitir que varios elementos estén activos al mismo tiempo.
+Configure el prop `type` en `multiple` para permitir que varios elementos estén activos al mismo tiempo.
 
 ::component-code
 ---
-Ignora:
-  @@ph061@type
-  @@pH062@artículos
-Externo:
-  @@pH063@artículos
-Externalidades:
-  @@P064@@P064 [en línea]
-Escondido:
-  @065@clase
-Props:
-  Categoría: px-4
-  Categoría:"Multiple"
+ignore:
+  - type
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  type: 'multiple'
   items:
-    - label:'Icons'
-      icono: 'i-lucide-smile'
-      contenido: 'No tienes nada que hacer,@ nuxt/icon se encargará de ello automáticamente.'
-    - label:'Los colores'
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    - label: 'Colors'
       icon: 'i-lucide-swatch-book'
-      contenido: 'Elija un color primario y un color neutro de su tema CSS Tailwind.'
-    - label:'Componentes'
-      Icono: 'i-lucide-box'
-      contenido: 'Puede personalizar los componentes utilizando los accesorios `class`/`ui` o en su app.config.ts.'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
-@@701@@@Insumible
+### Collapsible (Edición española)
 
-Cuando `type` es `single`, puede configurar el prop `collapsible` a `false` para evitar que el elemento activo colapse.
+Cuando `type` es `single`, puede configurar el accesorio `collapsible` en `false` para evitar que el elemento activo se colapse.
 
 ::component-code
 ---
-Ignora:
-  @@766@flip-flow
-  @@777@artículos
-Externo:
-  @788@artículos
-Externalidades:
-  @@799@@799 [en línea]
-Escondido:
-  @080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Categoría: px-4
-  Pliego: Falso
+ignore:
+  - collapsible
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  collapsible: false
   items:
-    - label:'Iconos'(Edición española)
-      icono: 'i-lucide-smile'
-      contenido: 'No tienes nada que hacer,@ nuxt/icon se encargará de ello automáticamente.'
-    - label:'Los colores'
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    - label: 'Colors'
       icon: 'i-lucide-swatch-book'
-      contenido: 'Elija un color primario y un color neutro de su tema CSS Tailwind.'
-    - label:'Componentes'
-      Icono: 'i-lucide-box'
-      contenido: 'Puede personalizar los componentes utilizando los accesorios `class`/`ui` o en su app.config.ts.'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
-@866@@ununmount
+### Unmount (Edición española)
 
-Utilice el prop `unmount-on-hide` para evitar que el contenido se desmonte cuando el acordeón se colapsa.
+Utilice el accesorio `unmount-on-hide` para evitar que el contenido se desmonte cuando el acordeón se colapsa.
 
 ::component-code
 ---
-Ignora:
-  @089 @ Artículos
-Externo:
-  @090000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externalidades:
-  @@P091@@P091 [en línea]
-Escondido:
-  @092@clase
-Props:
-  Categoría: px-4
-  Desconocido: Falso
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  unmountOnHide: false
   items:
-    - label:'Iconos'(Edición española)
-      icono: 'i-lucide-smile'
-      contenido: 'No tienes nada que hacer,@ nuxt/icon se encargará de ello automáticamente.'
-    - label:'Los colores'
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    - label: 'Colors'
       icon: 'i-lucide-swatch-book'
-      contenido: 'Elija un color primario y un color neutro de su tema CSS Tailwind.'
-    - label:'Componentes'
-      Icono: 'i-lucide-box'
-      contenido: 'Puede personalizar los componentes utilizando los accesorios `class`/`ui` o en su app.config.ts.'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
@@ -183,42 +183,42 @@ Props:
 Puede inspeccionar el DOM para ver el contenido de cada elemento que se representa.
 ::
 
-@@pH098@@desactivado
+### Disabled
 
 Utilice la propiedad `disabled` para desactivar el acordeón.
 
-También puede deshabilitar un elemento específico utilizando la propiedad `disabled` en el objeto elemento.
+También puede deshabilitar un elemento específico utilizando la propiedad `disabled` en el objeto item.
 
 ::component-code
 ---
-Ignora:
-  @101@artículos
-Externo:
-  @2010@artículos
-Externalidades:
-  @103@103@103@103@103@103@103)
-Escondido:
-  @@clase104
-Props:
-  Categoría: px-4
-  Discapacidad: Verdadero
-  Items:
-    - label:'Iconos'(Edición española)
-      icono: 'i-lucide-smile'
-      contenido: 'No tienes nada que hacer,@ nuxt/icon se encargará de ello automáticamente.'
-    - label:'Los colores'
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  disabled: true
+  items:
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    - label: 'Colors'
       icon: 'i-lucide-swatch-book'
-      contenido: 'Elija un color primario y un color neutro de su tema CSS Tailwind.'
-      Discapacidad: Verdadero
-    - label:'Componentes'
-      Icono: 'i-lucide-box'
-      contenido: 'Puede personalizar los componentes utilizando los accesorios `class`/`ui` o en su app.config.ts.'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+      disabled: true
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
-### Trailing Icon (Edición española)
+### Trailing Icono de diseño
 
-Utilice el prop `trailing-icon` para personalizar el [Icon](/docs/components/icon) de cada elemento.
+Utilice el prop `trailing-icon` para personalizar el [Icon](/docs/components/icon) final de cada elemento.
 
 ::tip
 También puede establecer un icono para un elemento específico mediante la propiedad `trailingIcon` en el objeto elemento.
@@ -226,72 +226,72 @@ También puede establecer un icono para un elemento específico mediante la prop
 
 ::component-code
 ---
-Ignora:
-  @118@artículos
-Externo:
-  @119@artículos
-Externalidades:
-  @120@120@120@120@120@120@120@120@120@120@120@120@120@12001111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
-Escondido:
-  @121@clase
-Props:
-  Categoría: px-4
-  TrailingIcono: 'i-lucide-arrow-down'
-  Items:
-    - label:'Iconos'(Edición española)
-      icono: 'i-lucide-smile'
-      contenido: 'No tienes nada que hacer,@ nuxt/icon se encargará de ello automáticamente.'
-      TrailingIcono: 'i-lucide-plus'
-    - label:"Los colores"
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  trailingIcon: 'i-lucide-arrow-down'
+  items:
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+      trailingIcon: 'i-lucide-plus'
+    - label: 'Colors'
       icon: 'i-lucide-swatch-book'
-      contenido: 'Elija un color primario y un color neutro de su tema CSS Tailwind.'
-    - label:'Componentes'
-      Icono: 'i-lucide-box'
-      contenido: 'Puede personalizar los componentes utilizando los accesorios `class`/`ui` o en su app.config.ts.'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
 ::framework-only
-#Nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.chevronDown`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.chevronDown`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.chevronDown`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.chevronDown`.
 :::
 ::
 
-@131@Ejemplos
+## Ejemplos
 
 ### Control elemento (s) activo (s)
 
-Puede controlar el elemento activo mediante el prop `default-value` o la directiva `v-model` con el `value` del elemento. Si no se proporciona `value`, el valor predeterminado es el índice **como una cadena **.
+Puede controlar el elemento activo mediante el uso de la prop `default-value` o la directiva `v-model` con el `value` del elemento. Si no se proporciona `value`, el índice **as predeterminado es un string**.
 
 ::component-example
 ---
-name: 'modelo-modelo-valor-ejemplo'
-Props:
-  Categoría: px-4
+name: 'accordion-model-value-example'
+props:
+  class: 'px-4'
 ---
 ::
 
 ::tip
-Utilice el prop `value-key` para cambiar la clave utilizada para hacer coincidir los elementos cuando se proporciona un `v-model` o `default-value`.
+Utilice el accesorio `value-key` para cambiar la clave utilizada para hacer coincidir los elementos cuando se proporciona un `v-model` o `default-value`.
 ::
 
 ::caution
-Cuando `type="multiple"`, asegúrese de pasar una matriz a la `default-value` prop o la directiva `v-model`.
+Cuando `type="multiple"`, asegúrese de pasar una matriz a la prop `default-value` o a la directiva `v-model`.
 ::
 
 ### Con arrastrar y soltar
 
-Utilice el [`useSortable`](https://vueuse.org/integrations/useSortable/) componible desde [](https://vueuse.org/integrations/README.html) para habilitar la funcionalidad de arrastrar y soltar en el acordeón. Esta integración envuelve [Sortable.js](https://sortablejs.github.io/Sortable/) para proporcionar una experiencia de arrastrar y soltar sin interrupciones.
+Use el composable [`useSortable`](https://vueuse.org/integrations/useSortable/) de [`@vueuse/integrations`](https://vueuse.org/integrations/README.html) para habilitar la funcionalidad de arrastrar y soltar en el acordeón. Esta integración envuelve [Sortable.js](https://sortablejs.github.io/Sortable/) para proporcionar una experiencia de arrastrar y soltar sin problemas.
 
 ::component-example
 ---
-Nombre: 'drag-and-drop-example'
+name: 'accordion-drag-and-drop-example'
 ---
 ::
 
@@ -301,75 +301,75 @@ Utilice la ranura `#body` para personalizar el cuerpo de cada elemento.
 
 ::component-example
 ---
-Nombre: 'acordeón-cuerpo-slot-ejemplo'
-Props:
-  Categoría: px-4
+name: 'accordion-body-slot-example'
+props:
+  class: 'px-4'
 ---
 ::
 
 ::tip
-La ranura `#body` incluye algunos estilos predefinidos, utilice la ranura [`#content` si desea comenzar desde cero.
+La ranura `#body` incluye algunos estilos predefinidos, use la ranura [`#content` ](#with-content-slot) si desea comenzar desde cero.
 ::
 
-### Con espacio de contenido
+### Con ranura de contenido
 
 Utilice la ranura `#content` para personalizar el contenido de cada elemento.
 
 ::component-example
 ---
-Nombre: 'acordeon-content-slot-example'
-Props:
-  Categoría: px-4
+name: 'accordion-content-slot-example'
+props:
+  class: 'px-4'
 ---
 ::
 
-### Con slot personalizado
+### Con ranura personalizada
 
-Utilice la propiedad `slot` para personalizar un elemento específico.
+Use la propiedad `slot` para personalizar un elemento específico.
 
-Tendrás acceso a los siguientes slots:
+Tendrás acceso a las siguientes slots:
 
-@172@@173@174
-@@@ph175@@@ph176@@@ph177
+- x`#{{ item.slot }}`x{lang="ts-type"}
+- x`#{{ item.slot }}-body`x{lang="ts-type"}
 
 ::component-example
 ---
-Nombre: 'accordeon-custom-slot-example'
-Props:
-  Categoría: px-4
+name: 'accordion-custom-slot-example'
+props:
+  class: 'px-4'
 ---
 ::
 
-### Con contenido de descuento
+### Con contenido de marcado
 
-Puede usar el componente [Markdown](https://comark.dev/rendering/vue) de `@comark/vue` para representar la reducción en los artículos de acordeón.
+Puede utilizar el componente [Markdown](https://comark.dev/rendering/vue) de `@comark/vue` para representar la reducción en los elementos de acordeón.
 
 ::component-example
 ---
-Colapso: Verdad
-nombre: 'acordeón-markdown-ejemplo'
-Categoría: px-8
+collapse: true
+name: 'accordion-markdown-example'
+class: 'px-8'
 ---
 ::
 
-@P184 @
+## API (Edición española)
 
-@185@1850 puntos
+### Props
 
-Componentes Props
+:component-props
 
-@186@1866
+### Slots en línea
 
-Componentes de slots
+:component-slots
 
 ### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@188 @@ Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@189@Changelog (Edición española)
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

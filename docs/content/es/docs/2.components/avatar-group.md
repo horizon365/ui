@@ -1,5 +1,5 @@
 ---
-title: El AvatarGrupo
+title: El Avatargrupo
 description: Apila varios avatares en un grupo.
 category: element
 keywords:
@@ -12,132 +12,132 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/AvatarGroup.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Envuelva varios [Avatar](/docs/components/avatar) dentro de un AvatarGroup para apilarlos.
 
 ::component-code
 ---
-Categoría: true
-Los slots:
-  por defecto:|
+prettier: true
+slots:
+  default: |
 
-    @@@ 005 @
-    @@ 006 @
-    @@@ 007 @
+    <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" />
+    <UAvatar src="https://github.com/HugoRCD.png" alt="Hugo Richard" />
+    <UAvatar src="https://github.com/atinux.png" alt="Sébastien Chopin" />
 ---
-por: u-avatar {src="https://github.com/benjamincanac.png" alt="Benjamin Canac"}
-por: u-avatar {src="https://github.com/HugoRCD.png" alt="Hugo Richard"}
-por: u-avatar {src="https://github.com/atinux.png" alt="Sébastien Chopin"}
+:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac"}
+:u-avatar{src="https://github.com/HugoRCD.png" alt="Hugo Richard"}
+:u-avatar{src="https://github.com/atinux.png" alt="Sébastien Chopin"}
 ::
 
-@@1111@1111
+### Tamaño
 
 Utilice el prop `size` para cambiar el tamaño de todos los avatares.
 
 ::component-code
 ---
-Categoría: true
-Props:
-  Tamaño: XL
-Los slots:
-  Default:|
+prettier: true
+props:
+  size: xl
+slots:
+  default: |
 
-    @@@ 013
-    @@@ 14 @
-    @@@ 15 @
+    <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy" />
+    <UAvatar src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy" />
+    <UAvatar src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy" />
 ---
-por: u-avatar {src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
-por: u-avatar {src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
-por: u-avatar {src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
+:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
+:u-avatar{src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
+:u-avatar{src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
 ::
 
-@1919@1919
+### Max (Español)
 
 Utilice el prop `max` para limitar el número de avatares que se muestran. El resto se muestra como un avatar `+X`.
 
 ::component-code
 ---
-Categoría: true
-Props:
-  Max: 2 años
-Los slots:
-  Default:|
+prettier: true
+props:
+  max: 2
+slots:
+  default: |
 
-    @22
-    @@ 23 @
-    @@ 24
+    <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy" />
+    <UAvatar src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy" />
+    <UAvatar src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy" />
 ---
-por: u-avatar {src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
-por: u-avatar {src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
-por: u-avatar {src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
+:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
+:u-avatar{src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
+:u-avatar{src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
 ::
 
-### Color: insignia @
+### Color: badge{label="4.8+" class="align-text-top"} (Edición española)
 
 Utilice el prop `color` para cambiar el color de todos los avatares.
 
 ::component-code
 ---
-Categoría: true
-Props:
-  Color: Primario
-Los slots:
-  Default:|
+prettier: true
+props:
+  color: primary
+slots:
+  default: |
 
-    @@@ 31 @
-    @@@ 32 @
-    @@@ 33 @
+    <UAvatar alt="Benjamin Canac" />
+    <UAvatar alt="Hugo Richard" />
+    <UAvatar alt="Sébastien Chopin" />
 ---
-por: u-avatar {alt="Benjamin Canac"}
-Nombre: U-avatar {alt="Hugo Richard"}
-por: u-avatar {alt="Sébastien Chopin"}
+:u-avatar{alt="Benjamin Canac"}
+:u-avatar{alt="Hugo Richard"}
+:u-avatar{alt="Sébastien Chopin"}
 ::
 
-@@pH037@Ejemplos
+## Ejemplos
 
-### Con información sobre herramientas
+### Con información
 
-Envuelva cada avatar con un [Tooltip](/docs/components/tooltip) para mostrar una información sobre herramientas en el hover.
+Envuelva cada avatar con un [Tooltip](/docs/components/tooltip) para mostrar una información sobre herramientas al flotar.
 
-Ejemplo de componente {name="avatar-group-tooltip-example"}
+:component-example{name="avatar-group-tooltip-example"}
 
 ### Con el chip
 
-Envuelva cada avatar con un chip [](/docs/components/chip) para mostrar un chip alrededor del avatar.
+Envuelve cada avatar con un [Chip](/docs/components/chip) para mostrar un chip alrededor del avatar.
 
-Ejemplo de componente {name="avatar-group-chip-example"}
+:component-example{name="avatar-group-chip-example"}
 
-### Con el link
+### Con el enlace
 
-Envuelva cada avatar con un [Link](/docs/components/link) para que se pueda hacer clic en ellos.
+Envuelve cada avatar con un [Link](/docs/components/link) para que se pueda hacer clic en ellos.
 
-Ejemplo de componente {name="avatar-group-link-example"}
+:component-example{name="avatar-group-link-example"}
 
 ### Con máscara
 
-Envuelva un avatar con una máscara CSS para mostrarlo con una forma personalizada.
+Envuelve un avatar con una máscara CSS para mostrarlo con una forma personalizada.
 
-Ejemplo de componente {name="avatar-group-mask-example"}
+:component-example{name="avatar-group-mask-example"}
 
 ::warning
-El `chip` prop no funciona correctamente cuando se utiliza una máscara. Las virutas pueden cortarse dependiendo de la forma de la máscara.
+El accesorio `chip` no funciona correctamente cuando se utiliza una máscara. Las virutas pueden cortarse dependiendo de la forma de la máscara.
 ::
 
-@599@@pccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+## API (Edición española)
 
-@060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Accesorios
 
-Componentes Props
+:component-props
 
-### Escenarios
+### Slots (Edición española)
 
-Componentes de slots
+:component-slots
 
-@062 @@ Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@@changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

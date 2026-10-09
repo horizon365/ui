@@ -11,78 +11,78 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardSearchButton.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Die DashboardSearchButton-Komponente wird verwendet, um das [DashboardSearch](/docs/components/dashboard-search) modal zu öffnen.
+Die Komponente DashboardSearchButton wird verwendet, um das Modal [DashboardSearch](/docs/components/dashboard-search) zu öffnen.
 
-Der Komponentencode
+:component-code
 
-Es erweitert die Komponente [Button](/docs/components/button), so dass Sie jede Eigenschaft wie `color`,`variant`,`size`, usw. passieren können.
+Es erweitert die [Button](/docs/components/button)-Komponente, sodass Sie jede Eigenschaft wie `color`, `variant`, `size` usw. übergeben können.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph012@@variant.de
-Props:
-  Variante: "Unterwürfig"
+ignore:
+  - variant
+props:
+  variant: 'subtle'
 ---
 ::
 
 ::note{to="#collapsed"}
-Die Schaltfläche ist standardmäßig auf `color="neutral"` und `variant="outline"` eingestellt, wenn sie nicht zusammengeklappt ist, und `variant="ghost"`, wenn sie zusammengeklappt ist.
+Die Schaltfläche ist standardmäßig auf `color="neutral"` und `variant="outline"` eingestellt, wenn sie nicht kollabiert ist, und `variant="ghost"`, wenn sie kollabiert ist.
 ::
 
-@@ph016@gmail.de ist kaputt
+### Collapsed (Überlaufen)
 
-Verwenden Sie `collapsed` prop, um die Beschriftung der Schaltfläche auszublenden, und [kbds](#kbds). Standardmäßig `false`.
+Verwenden Sie die `collapsed`-Prop, um die Beschriftung der Schaltfläche auszublenden, und [kbds](#kbds). Defaults to `false`.
 
 ::component-code
 ---
-Schöner: wahr
-Props:
-  untergegangen: true
+prettier: true
+props:
+  collapsed: true
 ---
 ::
 
 ::tip{to="/docs/components/dashboard-sidebar#slots"}
-Wenn Sie die Schaltfläche in der Komponente **DashboardSidebar** verwenden, verwenden Sie direkt die `collapsed`-Slot-Prop.
+Wenn Sie die Taste in der Komponente **DashboardSidebar** verwenden, verwenden Sie direkt die `collapsed`-Schlitzstütze.
 ::
 
-### Kbds
+### Kbds (englisch)
 
-Verwenden Sie `kbds` prop, um die Tastaturtasten in der Schaltfläche anzuzeigen. Standardmäßig auf `['meta', 'K']`{lang="ts-type"} entspricht die Standardverknüpfung der Komponente [DashboardSearch](/docs/components/dashboard-search#shortcut).
+Verwenden Sie die `kbds`-prop, um Tastaturtasten in der Taste anzuzeigen. Standardmäßig auf `['meta', 'K']`{lang="ts-type"}, um der Standardverknüpfung der Komponente [DashboardSearch](/docs/components/dashboard-search#shortcut) zu entsprechen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph034@@kbds
-Props:
-  untergegangen: false
-  Die KBS:
+prettier: true
+ignore:
+  - kbds
+props:
+  collapsed: false
+  kbds:
     - 'alt'
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#######################################################################################################################################
+    - 'O'
 ---
 ::
 
-@@@@@@b37@b37
+## API (Englisch)
 
-@@@@@@@@@@@@ph038@@props
+### Props (nicht)
 
-Komponenten Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-Diese Komponente unterstützt auch alle nativen `<button>` HTML-Attribute.
+Diese Komponente unterstützt auch alle nativen `<button>`-HTML-Attribute.
 ::
 
-@@ph040@@Slots
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph041@@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph042@@changelog @ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

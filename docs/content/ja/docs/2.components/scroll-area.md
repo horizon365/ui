@@ -23,10 +23,10 @@ ScrollAreaコンポーネントは、大きなリスト用のオプション仮�
 
 ::component-example
 ---
-崩壊真
-overflowHidden true
-名前'scroll—area—example'
-クラス'！p—0'
+collapse: true
+overflowHidden: true
+name: 'scroll-area-example'
+class: '!p-0'
 ---
 ::
 
@@ -36,180 +36,180 @@ overflowHidden true
 
 ::component-example
 ---
-崩壊真
-overflowHidden true
-名前'scroll—area—items—example'
-クラス'！p—0'
+collapse: true
+overflowHidden: true
+name: 'scroll-area-items-example'
+class: '!p-0'
 ---
 ::
 
 ::tip{to="#with-default-slot"}
-`items`プロパティなしでデフォルトスロットを使用して、カスタムスクロール可能なコンテンツを直接レンダリングすることもできます。
+`items`プロパティなしのデフォルトスロットを使用して、カスタムスクロール可能なコンテンツを直接レンダリングすることもできます。
 ::
 
-### オリエンテーション
+### Orientation
 
-スクロール方向を変更するには`orientation`プロパティを使用します。デフォルトは`vertical`です。
+`orientation`プロパティを使用してスクロール方向を変更します。デフォルトは`vertical`です。
 
 ::component-example
 ---
-崩壊真
-overflowHidden true
-名前'scroll—area—orientation—example'
-クラス'！p—0'
-オプション
-  -  nameオリエンテーション
-    ラベルオリエンテーション
-    デフォルト水平
-    アイテム
-      - 垂直
-      - 水平
+collapse: true
+overflowHidden: true
+name: 'scroll-area-orientation-example'
+class: '!p-0'
+options:
+  - name: orientation
+    label: orientation
+    default: horizontal
+    items:
+      - vertical
+      - horizontal
 ---
 ::
 
 ### 仮想化
 
-`virtualize`プロパティを使用して、現在表示されているアイテムのみをレンダリングし、大規模なデータセットを扱う場合のパフォーマンスを大幅に向上させます。
+`virtualize`プロパティを使用して、現在表示されているアイテムのみをレンダリングします。
 
 ::note
-仮想化が** enableed **の場合、`gap`、`paddingStart`、および`paddingEnd`のような`virtualize` propオプションを使用して間隔をカスタマイズします。それ以外の場合は、`ui` propを使用して`gap p-4`のようなクラスを`viewport`スロットに適用します。
+仮想化が**enabled**の場合、`gap`、`paddingStart`、`paddingEnd`などの`virtualize`プロパティオプションを使用して間隔をカスタマイズします。それ以外の場合は、`ui`プロパティを使用して`viewport`スロットに`gap p-4`のようなクラスを適用します。
 ::
 
 ::tip
-すべてのアイテムが**同じ高さ**を持っている場合、`virtualize`プロパティの`skipMeasurement`を`true`に設定して、アイテムごとのDOM測定をスキップし、代わりに`estimateSize`に依存します。これにより、大きなユニフォームリストのパフォーマンスが大幅に向上します。
+すべてのアイテムが**same height**を持っている場合、`virtualize`プロパティで`skipMeasurement`を`true`に設定して、アイテムごとのDOM測定をスキップし、代わりに`estimateSize`に依存します。これにより、大きなユニフォームリストのパフォーマンスが大幅に向上します。
 ::
 
 ::component-example
 ---
-崩壊真
-overflowHidden true
-名前'scroll—area—virtualize—example'
-クラス'！p—0'
-オプション
-  -  nameオリエンテーション
-    ラベルオリエンテーション
-    デフォルト垂直
-    アイテム
-      - 垂直
-      - 水平
+collapse: true
+overflowHidden: true
+name: 'scroll-area-virtualize-example'
+class: '!p-0'
+options:
+  - name: orientation
+    label: orientation
+    default: vertical
+    items:
+      - vertical
+      - horizontal
 ---
 ::
 
-### シャドウbadge {label="4.9+" class="align-text-top"}
+### Shadow badge{label="4.9+" class="align-text-top"}
 
-`shadow`プロパティを使用して、スクロール可能なエッジにフェードシャドウを表示し、スクロール方向により多くのコンテンツが利用可能であることを示します。フェードは自動的に`orientation`に続き、コンテンツがオーバーフローした場合にのみ表示されます。
+`shadow`プロパティを使用して、スクロール可能なエッジにフェードシャドウを表示し、スクロール方向により多くのコンテンツが利用可能であることを示します。フェードは自動的に`orientation`に従い、コンテンツがオーバーフローした場合にのみ表示されます。
 
 ::component-example
 ---
-崩壊真
-名前'scroll—area—shadow—example'
+collapse: true
+name: 'scroll-area-shadow-example'
 ---
 ::
 
 ::tip
-`shadow` propにオブジェクトを渡してフェードサイズを設定します。例：`:shadow="{ size: 48 }"`。
+`shadow`プロパティにオブジェクトを渡して、フェードサイズを設定します。例：`:shadow="{ size: 48 }"`。
 ::
 
 ## 例
 
-### 石積みレイアウトとして
+### As石積みレイアウト
 
-`virtualize` propを`lanes`、`gap`、および`estimateSize`のオプションとともに使用して、高さを可変するPinterestスタイルの石積みレイアウトを作成します。
+`virtualize`プロパティと`lanes`、`gap`、`estimateSize`オプションを使用して、高さを可変するアイテムを持つPinterestスタイルの石積みレイアウトを作成します。
 
 ::component-example
 ---
-崩壊真
-overflowHidden true
-名前'scroll—area—masonry—layout—example'
-クラス'！p—0'
-オプション
-  -  nameオリエンテーション
-    ラベルオリエンテーション
-    デフォルト垂直
-    アイテム
-      - 垂直
-      - 水平
-  -  name lanes
-    タイプ数値
-    ラベルレーン
-    デフォルト3
-  -  name gap
-    タイプ数値
-    ラベルギャップ
-    デフォルト16
+collapse: true
+overflowHidden: true
+name: 'scroll-area-masonry-layout-example'
+class: '!p-0'
+options:
+  - name: orientation
+    label: orientation
+    default: vertical
+    items:
+      - vertical
+      - horizontal
+  - name: lanes
+    type: number
+    label: lanes
+    default: 3
+  - name: gap
+    type: number
+    label: gap
+    default: 16
 ---
 ::
 
 ::tip
-最適なパフォーマンスを得るには、`estimateSize`を平均アイテム高さの近くに設定します。`overscan`を増やすとスクロールのスムーズさが向上しますが、画面外のアイテムが多く表示されます。
+最適なパフォーマンスを得るには、`estimateSize`を平均アイテム高さに近づけるように設定します。`overscan`を上げるとスクロールのスムーズさが向上しますが、画面外のアイテムが増えます。
 ::
 
 ### レスポンシブレーン付き
 
-[`useWindowSize`](https://vueuse.org/core/useWindowSize/)ビューポートベースの場合または[`useElementSize`](https://vueuse.org/core/useElementSize/)コンテナベースの場合コンポジブルを使用して、`lanes`をリアクティブにすることができます。
+`lanes`をリアクティブにするには、[`useWindowSize`](https://vueuse.org/core/useWindowSize/)（ビューポートベースの場合）または[`useElementSize`](https://vueuse.org/core/useElementSize/xph12 x（コンテナベースの場合）コンポジブルを使用できます。
 
 ::component-example
 ---
-崩壊真
-overflowHidden true
-名前'scroll—area—responsive—lanes—example'
-クラス'！p—0'
+collapse: true
+overflowHidden: true
+name: 'scroll-area-responsive-lanes-example'
+class: '!p-0'
 ---
 ::
 
-### 外部スクロール要素付き：badge {label="4.10+" class="align-text-top"}
+### 外部スクロール要素付きbadge{label="4.10+" class="align-text-top"}
 
-`virtualize` propに`getScrollElement`関数を渡して、コンポーネント自身のビューポートではなく、祖先のスクロールコンテナに対して仮想化します。`scrollMargin`をスクロール要素の開始からのリストのオフセット（例：その上のコンテンツの高さ）に設定します。
+`virtualize`プロパティに`getScrollElement`関数を渡して、コンポーネント自身のビューポートではなく、祖先のスクロールコンテナに対して仮想化します。`scrollMargin`をscroll要素の開始点からのリストのオフセット例えば、その上のコンテンツの高さに設定します。
 
 ::component-example
 ---
-きれい真
-崩壊真
-overflowHidden true
-名前'scroll—area—external—scroll—example'
-クラス'！p—0'
-オプション
-  -  nameオリエンテーション
-    ラベルオリエンテーション
-    デフォルト垂直
-    アイテム
-      - 垂直
-      - 水平
+prettier: true
+collapse: true
+overflowHidden: true
+name: 'scroll-area-external-scroll-example'
+class: '!p-0'
+options:
+  - name: orientation
+    label: orientation
+    default: vertical
+    items:
+      - vertical
+      - horizontal
 ---
 ::
 
 ::note
-コンテナがスクロールを所有しているため、ツールバーのfindと"Top"ボタンは`container.scrollTo`で直接スクロールします。
+コンテナがスクロールを所有しているため、ツールバーのfindボタンと“Top”ボタンは`container.scrollTo`で直接スクロールします。
 ::
 
 ::caution
-`shadow` propはこのモードでは効果がありません。ルートはスクロールを所有しなくなったためです。代わりにスクロールコンテナに独自のフェードを適用します。
+`shadow`プロパティはこのモードでは効果がありません。rootはスクロールを所有しなくなったためです。代わりにスクロールコンテナに独自のフェードを適用します。
 ::
 
 ### プログラムスクロール付き
 
-公開された`virtualizer`を使用して、スクロール位置をプログラムで制御できます。
+公開された`virtualizer`を使用してスクロール位置をプログラムで制御できます。
 
 ::component-example
 ---
-崩壊真
-overflowHidden true
-名前'scroll—area—scroll—to—example'
-クラス'！p—0'
+collapse: true
+overflowHidden: true
+name: 'scroll-area-scroll-to-example'
+class: '!p-0'
 ---
 ::
 
-### 無限スクロール
+### 無限スクロール付き
 
-[`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/)を使用して、ユーザーがスクロールするたびにさらにデータを読み込むことができます。
+[`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/)コンポーザブルを使用して、ユーザーがスクロールするにつれてより多くのデータをロードできます。
 
 ::component-example
 ---
-きれい真
-崩壊真
-overflowHidden true
-名前'scroll—area—infinite—scroll—example'
-クラス'！p—0'
+prettier: true
+collapse: true
+overflowHidden: true
+name: 'scroll-area-infinite-scroll-example'
+class: '!p-0'
 ---
 ::
 
@@ -219,32 +219,32 @@ overflowHidden true
 
 ### デフォルトスロット付き
 
-`items`プロパティなしでデフォルトスロットを使用して、カスタムスクロール可能なコンテンツを直接レンダリングできます。
+`items`プロパティなしのデフォルトスロットを使用して、カスタムスクロール可能なコンテンツを直接レンダリングできます。
 
 ::component-example
 ---
-名前'scroll—area—default—slot—example'
-クラス'！p—0'
+name: 'scroll-area-default-slot-example'
+class: '!p-0'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-### エクスポーズ
+### Expose
 
-[`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref)を使用して、型付きコンポーネントインスタンスにアクセスできます。
+型付きコンポーネントインスタンスには[`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref)を使用してアクセスできます。
 
 ```vue
 <script setup lang="ts">
@@ -266,12 +266,12 @@ function scrollToItem(index: number) {
 | 名前|タイプ|説明|
 | ---- | ---- | ----------- |
 | `$el`{lang="ts-type"}| `HTMLElement`{lang="ts-type"}|コンポーネントのルート要素。|
-| `virtualizer`{lang="ts-type"}| `Ref<Virtualizer> \| undefined`{lang="ts-type"}| [ TanStack Virtual](https://tanstack.com/virtual/latest/docs/api/virtualizer) virtualizerインスタンス仮想化が無効の場合は`undefined`。|
+| `virtualizer`{lang="ts-type"}| `Ref<Virtualizer> \| undefined`{lang="ts-type"}| [TanStack Virtual](https://tanstack.com/virtual/latest/docs/api/virtualizer)仮想化インスタンス（仮想化が無効な場合は`undefined`）。|
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

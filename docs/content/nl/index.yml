@@ -1,0 +1,26 @@
+title: De intuïtieve Vue UI-bibliotheek
+description: "Nuxt UI is een gratis, open source Vue-componentenbibliotheek: 125 + toegankelijke, TypeScript-componenten gebouwd op Reka UI en Tailwind CSS, voor Nuxt en elke Vue-app."
+navigation: false
+hero:
+  lead: De Intuïtieve
+  accent: UI-bibliotheek bekijken
+  breakLine: true
+  description: Toegankelijke, getypte componenten gebouwd op Reka UI en Tailwind CSS. Standaard mooi, met pictogrammen, lettertypen, kleurmodus, i18n en typografie al bedraad.
+  links:
+    - label: Aan de slag
+      to: /docs/getting-started/installation/nuxt
+      class: nuxt-only
+      color: neutral
+      variant: solid
+      size: lg
+    - label: Aan de slag
+      to: /docs/getting-started/installation/vue
+      class: vue-only
+      color: neutral
+      variant: solid
+      size: lg
+    - label: Ontdek meer dan 125 componenten
+      to: /docs/components
+      color: neutral
+      variant: soft
+      size: lg

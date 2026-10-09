@@ -11,137 +11,137 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Card.vue
 ---
 
-##  사용
+## Usage
 
-`header``default` 및 `footer` 슬롯을 사용하여 카드에 콘텐츠를 추가합니다.
+`header`, `default` 및 `footer` 슬롯을 사용하여 카드에 콘텐츠를 추가합니다.
 
 ::component-code
 ---
-상품명 : True
-숨기기 (Hide):
-  -  클래스
-소품 :
-  클래스 : 'w-full'
-슬롯 :
-  헤더 (Header):|
+prettier: true
+hide:
+  - class
+props:
+  class: 'w-full'
+slots:
+  header: |
 
     <Placeholder class="h-8" />
 
-  기본 값:|
+  default: |
 
     <Placeholder class="h-32" />
 
-  바닥글:|
+  footer: |
 
     <Placeholder class="h-8" />
 ---
 
-#헤더
-: placeholder{class="h-8"}
+#header
+:placeholder{class="h-8"}
 
-#기본 값
-: placeholder{class="h-32"}
+#default
+:placeholder{class="h-32"}
 
-# 바닥글
-: placeholder{class="h-8"}
+#footer
+:placeholder{class="h-8"}
 ::
 
-###  제목: badge{label="4.7+" class="align-text-top"}
+### Title : badge{label="4.7+" class="align-text-top"}
 
-`title`prop을 사용하여 카드 헤더의 제목을 설정합니다.
+`title` prop을 사용하여 카드 헤더의 제목을 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  클래스
-소품 :
-  제목 : "Card with title"
-  클래스 : 'w-full'
-슬롯 :
-  기본값 :|
+prettier: true
+ignore:
+  - class
+props:
+  title: 'Card with title'
+  class: 'w-full'
+slots:
+  default: |
 
     <Placeholder class="h-32" />
 ---
 
-#기본 값
-: placeholder{class="h-32"}
+#default
+:placeholder{class="h-32"}
 ::
 
 ### 설명: badge{label="4.7+" class="align-text-top"}
 
-`description`prop을 사용하여 카드의 헤더에 대한 설명을 설정합니다.
+`description` prop을 사용하여 카드의 헤더에 대한 설명을 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  title
-  -  class
-소품 :
-  사진: "Card with Description"
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit" (로렘 ipsum dolor sit amet, consectetur adipiscing elit)" 이라는 문구가 있다.
-  클래스 : 'w-full'
-슬롯 :
-  기본 값:|
+prettier: true
+ignore:
+  - title
+  - class
+props:
+  title: 'Card with description'
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  class: 'w-full'
+slots:
+  default: |
 
     <Placeholder class="h-32" />
 ---
 
-#기본 값
-: placeholder{class="h-32"}
+#default
+:placeholder{class="h-32"}
 ::
 
-###  변형
+### Variant
 
-`variant`prop 을 사용하여 카드의 변형을 변경합니다.
+`variant` prop을 사용하여 카드의 변형을 변경합니다.
 
 ::component-code
 ---
-상품명 : True
-숨기기 (Hide):
-  -  클래스
-소품 :
-  변형: 미묘한
-  클래스: 'w-full'
-슬롯 :
-  헤더 (Header):|
+prettier: true
+hide:
+  - class
+props:
+  variant: subtle
+  class: 'w-full'
+slots:
+  header: |
 
     <Placeholder class="h-8" />
 
-  기본값 :|
+  default: |
 
     <Placeholder class="h-32" />
 
-  바닥글:|
+  footer: |
 
     <Placeholder class="h-8" />
 ---
 
-# 헤더
-: placeholder{class="h-8"}
+#header
+:placeholder{class="h-8"}
 
-#기본 값
-: placeholder{class="h-32"}
+#default
+:placeholder{class="h-32"}
 
-# 바닥글
-: placeholder{class="h-8"}
+#footer
+:placeholder{class="h-8"}
 ::
 
-##  API
+## API
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### Slots
 
-:컴포넌트 - 슬롯
+:component-slots
 
-##  테마
+## Theme (## 테마)
 
-:구성요소 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

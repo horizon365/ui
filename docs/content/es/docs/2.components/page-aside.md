@@ -8,12 +8,12 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageAside.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente PageAside es un elemento pegajoso `<aside>` que solo se muestra a partir del [`lg` breakpoint](https://tailwindcss.com/docs/breakpoints).
+El componente PageAside es un elemento adhesivo `<aside>` que solo se muestra a partir del punto de interrupción [`lg` ](https://tailwindcss.com/docs/breakpoints).
 
 ::tip{to="/docs/getting-started/theme/css-variables#header"}
-El componente PageAside utiliza la variable CSS `--ui-header-height` para posicionarse correctamente debajo del `Header`.
+El componente PageAside utiliza la variable CSS `--ui-header-height` para posicionarse correctamente debajo de la variable `Header`.
 ::
 
 Úselo dentro de la ranura `left` o `right` del componente [Page](/docs/components/page):
@@ -28,7 +28,7 @@ El componente PageAside utiliza la variable CSS `--ui-header-height` para posici
 </template>
 ```
 
-@24@Ejemplos
+## Ejemplos
 
 ::note
 Si bien estos ejemplos utilizan [Nuxt Content](https://content.nuxt.com), los componentes se pueden integrar con cualquier sistema de gestión de contenido.
@@ -59,23 +59,23 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 ```
 
 ::note
-In this example, we use the `ContentNavigation` component to display the navigation injected into `app.vue`.
+En este ejemplo, usamos el componente `ContentNavigation` para mostrar la navegación inyectada en `app.vue`.
 ::
 
-@@501@@Apiño
+## API (Edición española)
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Accesorios
 
-Componentes Props
+:component-props
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots (Edición española)
 
-Componentes de slots
+:component-slots
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Temas
 
-Componente Tema
+:component-theme
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

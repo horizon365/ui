@@ -15,46 +15,46 @@ links:
 
 ## 使用法
 
-`surround`プロパティを、ページサラウンドフェッチ時に取得する`surround`{lang="ts-type"}を指定して使用します。
+`surround`プロパティには、ページサラウンドを取得するときに取得する`surround`{lang="ts-type"}の値を指定して使用します。
 
 ::component-example
 ---
-name 'content—surround—example'
-小道具
-  クラス'w—full'
+name: 'content-surround-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-### 前/次
+### 前/次へ
 
-`prev-icon`と`next-icon` propsを使用して、[ Icon ](/docs/components/icon)ボタンをカスタマイズします。
+`prev-icon`と`next-icon`の小道具を使用して、ボタン[Icon](/docs/components/icon)をカスタマイズします。
 
 ::component-code{prefix="content"}
 ---
-きれい真
-崩壊真
-無視
-  - サラウンド
-外部
-  - サラウンド
-externalTypes
-  -  ContentSurroundLink []
-小道具
-  prevIcon 'i—lucide—chevron—left'
-  次アイコン'i—lucide—chevron—right'
-  サラウンド
-  -  title ContentSearchButton
-    パス/docs/components/content—search—button
-    stem docs/2.components/content—search—button
-    description ContentSearchモーダルを開くためのスタイル設定済みボタン。
-  -  title ContentToc
-    パス/docs/components/content—toc
-    stem：docs/2.components/content—toc
-    説明：カスタマイズ可能なスロットを備えた粘着性のある目次。
+prettier: true
+collapse: true
+ignore:
+  - surround
+external:
+  - surround
+externalTypes:
+  - ContentSurroundLink[]
+props:
+  prevIcon: 'i-lucide-chevron-left'
+  nextIcon: 'i-lucide-chevron-right'
+  surround:
+  - title: ContentSearchButton
+    path: /docs/components/content-search-button
+    stem: docs/2.components/content-search-button
+    description: A pre-styled Button to open the ContentSearch modal.
+  - title: ContentToc
+    path: /docs/components/content-toc
+    stem: docs/2.components/content-toc
+    description: A sticky Table of Contents with customizable slots.
 ---
 ::
 
-## 例
+## サンプル
 
 ### ページ内
 
@@ -89,20 +89,20 @@ if (!page.value) {
 </template>
 ```
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="content"}
+:component-changelog{prefix="content"}

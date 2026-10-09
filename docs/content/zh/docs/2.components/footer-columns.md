@@ -12,11 +12,11 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/FooterColumns.vue
 ---
 
-## 使用情况
+## 用法
 
 FooterColumns组件会呈现要在页脚中显示的列的列表。
 
-请在[页脚](组件的/docs/components/footer插槽中使用它：
+在[Footer](/docs/components/footer)组件的`top`插槽中使用：
 
 ```vue {3-7}
 <template>
@@ -32,44 +32,44 @@ FooterColumns组件会呈现要在页脚中显示的列的列表。
 
 ### 列
 
-使用`columns`属性作为具有下列属性的对象数组：
+使用`columns` prop作为具有以下属性的对象数组：
 
-019、020、021、
-022号，023号
+- `label: string`{lang="ts-type"}
+- `children?: FooterColumnLink[]`{lang="ts-type"}
 
-每一栏都包含定义链接之物件的`children`数组。每个链接都可以有下列属性：
+每列包含一个`children`对象数组，用于定义链接。每个链接可以具有以下属性：
 
-我的天啊！
-我的天啊！
-我的天啊！
-我的天啊！
+- `label?: string`{lang="ts-type"}
+- `icon?: string`{lang="ts-type"}
+- `class?: any`{lang="ts-type"}
+- `ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkLeadingIcon?: ClassNameValue }`{lang="ts-type"}
 
-您可以从[Link](/docs/components/link#props)元件传递任何属性，例如`to`、`target`等。
+您可以从[Link](/docs/components/link#props)组件传递任何属性，如`to`、`target`等。
 
 ::component-example
 ---
-更漂亮：真的
-名称：'页脚列示例'
-类别：'p-8'
-道具：
-  类别：'w-完整'
+prettier: true
+name: 'footer-columns-example'
+class: 'p-8'
+props:
+  class: 'w-full'
 ---
 ::
 
-美国石油学会
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

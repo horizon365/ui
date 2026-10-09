@@ -8,7 +8,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PricingPlan.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Die PricingPlan-Komponente bietet eine flexible Möglichkeit, einen Preisplan mit anpassbaren Inhalten wie Titel, Beschreibung, Preis, Funktionen usw. anzuzeigen.
 
@@ -16,466 +16,466 @@ Die PricingPlan-Komponente bietet eine flexible Möglichkeit, einen Preisplan mi
 
 ::u-pricing-plan
 ---
-Titel: „ Solo "
-Für Bootstrapper und Indie-Hacker.
-Preis: 249 €
-Rabatt: $199
-Rechnungszyklus: '/Monat'
-Badge: "Beliebteste"
-Features:
-  - 'Ein Entwickler'
-  - 'Unbegrenzte Projekte'
-  - 'Zugriff auf GitHub-Repository '
-  - 'Unbegrenzter Patch & kleinere Updates'
-  - 'Lebenslanger Zugang'
-Der Button:
-  Labels: "Jetzt kaufen"
-Klasse: W-96
+title: 'Solo'
+description: 'For bootstrappers and indie hackers.'
+price: '$249'
+discount: '$199'
+billing-cycle: '/month'
+badge: 'Most popular'
+features:
+  - 'One developer'
+  - 'Unlimited projects'
+  - 'Access to GitHub repository'
+  - 'Unlimited patch & minor updates'
+  - 'Lifetime access'
+button:
+  label: 'Buy now'
+class: 'w-96'
 ---
 ::
 
 ::
 
 ::tip{to="/docs/components/pricing-plans"}
-Verwenden Sie die Komponente `PricingPlans`, um mehrere Preispläne in einem responsiven Rasterlayout anzuzeigen.
+Verwenden Sie die `PricingPlans`-Komponente, um mehrere Preispläne in einem responsiven Rasterlayout anzuzeigen.
 ::
 
-@@007@Titel
+xph019title Übersetzung
 
-Verwenden Sie `title` prop, um den Titel des PricingPlans festzulegen.
+Verwenden Sie die `title`-Prop, um den Titel des Preisplans festzulegen.
 
 ::component-code
 ---
-Ignoriert:
-  @@009@Klasse
-Props:
-  Titel: „ Solo "
-  Klasse: W-96
+ignore:
+  - class
+props:
+  title: 'Solo'
+  class: 'w-96'
 ---
 ::
 
-@@ph010 @ Beschreibung
+### Beschreibung
 
-Verwenden Sie `description` prop, um die Beschreibung des PricingPlans festzulegen.
+Verwenden Sie die `description`-prop, um die Beschreibung des PricingPlan festzulegen.
 
 ::component-code
 ---
-Hide:
-  @@12@Klasse
-Ignoriert:
-  @@ph013@title
-Props:
-  Titel: „ Solo "
-  Für Bootstrapper und Indie-Hacker.
-  Klasse: W-96
+hide:
+  - class
+ignore:
+  - title
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  class: 'w-96'
 ---
 ::
 
-@@@@@@@@@@badge.de
+### Badge Bearbeiten
 
-Verwenden Sie die `badge` prop, um ein [Badge](/docs/components/badge) neben dem Titel des PricingPlans anzuzeigen.
+Verwenden Sie die `badge`-Prop, um ein [Badge](/docs/components/badge) neben dem Titel des PricingPlans anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@ph020@@class
-Ignoriert:
-  @@ph021@title
-  @@ph022@beschreibung
-Props:
-  Titel: „ Solo "
-  Für Bootstrapper und Indie-Hacker."
-  Badge: "Beliebteste"
-  Klasse: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  badge: 'Most popular'
+  class: 'w-96'
 ---
 ::
 
-Sie können jede Eigenschaft aus der Komponente [Badge](/docs/components/badge#props) übergeben, um sie anzupassen.
+Sie können jede Eigenschaft der Komponente [Badge](/docs/components/badge#props) übergeben, um sie anzupassen.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@ph027@gmail.de
-Ignoriert:
-  @@ph028@title
-  @@ph029@beschreibung
-  @@ph030@badge.label
-  @@ph031@@badge.color
-  @@ph032@badge.variant
-Props:
-  Titel: Allein
-  Für Bootstrapper und Indie-Hacker.
-  Badge:
-    Labels: "Beliebteste"
-    Farbe: "neutral"
-    Variante: "solide"
-  Klasse: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - badge.label
+  - badge.color
+  - badge.variant
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  badge:
+    label: 'Most popular'
+    color: 'neutral'
+    variant: 'solid'
+  class: 'w-96'
 ---
 ::
 
-@@ph033@@Preis
+### Price
 
-Verwenden Sie `price` prop, um den Preis des PricingPlans festzulegen.
+Verwenden Sie die `price`-Prop, um den Preis des PricingPlan festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@35@Klasse
-Ignoriert:
-  @@ph036@title
-  @@ph037@beschreibung
-Props:
-  Titel: Allein
-  Für Bootstrapper und Indie-Hacker."
-  Preis: 249 €
-  Klasse: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  class: 'w-96'
 ---
 ::
 
-@@ph038@discount@@discount@@discount@@discount@@discount@@discount@@discount@discount@@discount@discount@@discount@@discount@discount@@discount@discount@@discount@discount@discount@discount@discount@@discount@discount@@discount@@discount@@discount@@discount@@@discount@@discount@discount@discount@discount@discount@discount@discount@discount@@discount@@discount@discount@@discount@discount@@discount@@discount@discount@@discount@@discount@@@discount@@discount@@@discount@discount@@discount@@discount@@discount
+### Discount (englisch)
 
-Verwenden Sie `discount` prop, um einen ermäßigten Preis festzulegen, der neben dem ursprünglichen Preis angezeigt wird (der mit einem Durchstreichen angezeigt wird).
+Verwenden Sie die `discount`-Prop, um einen ermäßigten Preis festzulegen, der neben dem ursprünglichen Preis angezeigt wird (der mit einem Durchstreichen angezeigt wird).
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@ph040@class
-Ignoriert:
-  @@ph041@title
-  @@ph042@beschreibung
-Props:
-  Titel: Allein
-  Für Bootstrapper und Indie-Hacker."
-  Preis: 249 €
-  Rabatt: $199
-  Klasse: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  discount: '$199'
+  class: 'w-96'
 ---
 ::
 
-@@ph043@abrechnung
+### Billing (englisch)
 
-Verwenden Sie `billing-cycle` und/oder `billing-period` props, um die Rechnungsinformationen des PricingPlans anzuzeigen.
+Verwenden Sie die `billing-cycle` und/oder `billing-period` Requisiten, um die Rechnungsinformationen des PricingPlan anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@@@@@46@46@46@46@46@46@46@46@@46@@46@46@@46@46@@46@@46@@46@@46@@46@@@@class@class@classclassclassclassclassclassclassclassclassclassclassclassclass@classclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassc@classclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassc@classclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassc@classclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassc@classclass
-Ignoriert:
-  @@ph047@title
-  @@ph048@beschreibung
-Props:
-  Titel: „ Solo "
-  Für Bootstrapper und Indie-Hacker.
-  Preis: "9 €"
-  AbrechnungZyklus: '/Monat'
-  Rechnungszeitraum: 'jährlich abgerechnet'
-  Klasse: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$9'
+  billingCycle: '/month'
+  billingPeriod: 'billed annually'
+  class: 'w-96'
 ---
 ::
 
-@@ph049@@Eigenschaften
+### Features Bearbeiten
 
-Verwenden Sie `features` prop als Zeichenfolge, um eine Liste von Funktionen im Preisplan anzuzeigen:
+Verwenden Sie die `features` prop als Array von String, um eine Liste von Funktionen auf dem PricingPlan anzuzeigen:
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@@@@@51@000@051@051@051@051@000@0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Ignoriert:
-  @@ph052@title
-  @@@ph053@beschreibung
-  @@ph054@Preis
-  @@ph055@gmail.de
-Props:
-  Titel: Allein
-  Für Bootstrapper und Indie-Hacker."
-  Preis: 249 €
-  Features:
-    - 'Ein Entwickler'
-    - 'Unbegrenzte Projekte'
-    - 'Zugriff auf GitHub-Repository'
-    - 'Unbegrenzter Patch und kleinere Updates'
-    - 'Lebenslanger Zugang'
-  Klasse: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - price
+  - features
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - 'One developer'
+    - 'Unlimited projects'
+    - 'Access to GitHub repository'
+    - 'Unlimited patch & minor updates'
+    - 'Lifetime access'
+  class: 'w-96'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.success` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.success` Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.success` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.success` Schlüssel anpassen.
 :::
 ::
 
 Sie können auch ein Array von Objekten mit den folgenden Eigenschaften übergeben:
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@PH0666@@@@@@@@@@@@@PH0667 @@
-`icon?: string``icon?: string`{lang="ts-type"}
+- `title: string`{lang="ts-type"} (englisch)
+- `icon?: string`{lang="ts-type"} (englisch)
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@@@@@@@@@class
-Außen:
-  @@@ph072@@features
-Externe Personen:
-  - PricingPlanFeature [Bearbeiten | Quelltext bearbeiten]
-Ignoriert:
-  @@ph074@title
-  @@ph075@beschreibung
-  @@ph076@@Preis
-  @@ph077@@gmail.de
-Props:
-  Titel: Allein
-  Für Bootstrapper und Indie-Hacker."
-  Preis: 249 €
-  Features:
-    - title:'Ein Entwickler'
-      I-Lucide-Benutzer
-    - title:'Unbegrenzte Projekte'
-      Bildnachweis: i-Lucide-Infinity
-    - title:'Zugriff auf GitHub-Repository'
-      Icon: I-Lucide-GitHub (englisch)
-    - title:'Unbegrenzter Patch & kleinere Updates'
-      I-Lucide-Refresh-CW (englisch)
-    - title:'Lebenslanger Zugang'
-      I-Lucide-Uhr
-  Klasse: W-96
+prettier: true
+hide:
+  - class
+external:
+  - features
+externalTypes:
+  - PricingPlanFeature[]
+ignore:
+  - title
+  - description
+  - price
+  - features
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - title: 'One developer'
+      icon: i-lucide-user
+    - title: 'Unlimited projects'
+      icon: i-lucide-infinity
+    - title: 'Access to GitHub repository'
+      icon: i-lucide-github
+    - title: 'Unlimited patch & minor updates'
+      icon: i-lucide-refresh-cw
+    - title: 'Lifetime access'
+      icon: i-lucide-clock
+  class: 'w-96'
 ---
 ::
 
-@@@@@button83
+### Button (englisch)
 
-Verwenden Sie die `button` prop mit einer beliebigen Eigenschaft aus der Komponente [Button](), um eine Schaltfläche am unteren Rand des Preisplans anzuzeigen.
+Verwenden Sie die `button`-Prop mit einer beliebigen Eigenschaft aus der Komponente [Button](/docs/components/button), um eine Schaltfläche am unteren Rand des Preisplans anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@@@@@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@class@classclassclass@class@classclass@classclassclass@classclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclass
-Ignoriert:
-  @@90@Titel
-  @@ph091@beschreibung
-  @@ph092@@Preis
-  @@ph093@gmail.de
-Props:
-  Titel: Allein
-  Für Bootstrapper und Indie-Hacker."
-  Preis: 249 €
-  Features:
-    - 'Ein Entwickler'
-    - 'Unbegrenzte Projekte'
-    - 'Zugriff auf GitHub-Repository '
-    - 'Unbegrenzter Patch und kleinere Updates'
-    - 'Lebenslanger Zugang'
-  Der Button:
-    Label: "Jetzt kaufen"
-  Klasse: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - price
+  - features
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - 'One developer'
+    - 'Unlimited projects'
+    - 'Access to GitHub repository'
+    - 'Unlimited patch & minor updates'
+    - 'Lifetime access'
+  button:
+    label: 'Buy now'
+  class: 'w-96'
 ---
 ::
 
 ::tip
-Verwenden Sie das Feld `onClick`, um einen Klick-Handler hinzuzufügen, um den Kauf des Plans auszulösen.
+Verwenden Sie das Feld `onClick`, um einen Klick-Handler hinzuzufügen, um den Plankauf auszulösen.
 ::
 
-@@100@Variantentabelle
+### Variant Bearbeiten
 
-Verwenden Sie `variant` prop, um die Variante des PricingPlans zu ändern.
+Verwenden Sie die `variant`-prop, um die Variante des PricingPlan zu ändern.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@102@Klasse
-Ignoriert:
-  @@103@Titel
-  @@ph104@beschreibung
-  @@ph105@Preis
-  - Eigenschaften
-  @@@ph107@button.label (auf Englisch)
-Props:
-  Titel: Allein
-  Für Bootstrapper und Indie-Hacker.
-  Preis: 249 €
-  Features:
-    - 'Ein Entwickler'
-    - 'Unbegrenzte Projekte'
-    - 'Zugriff auf GitHub-Repository'
-    - 'Unbegrenzter Patch & kleinere Updates'
-    - 'Lebenslanger Zugang'
-  Der Button:
-    Label: "Jetzt kaufen"
-  Variante: „ subtil "
-  Klasse: W-96
----
-::
-
-### Orientierung
-
-Verwenden Sie `orientation` prop, um die Ausrichtung des PricingPlan. Defaults auf `vertical` zu ändern.
-
-::component-code
----
-Schöner: wahr
-Hide:
-  @@116@Klasse
-Ignoriert:
-  @@117@title
-  @@118@description
-  @@119@Preis
-  @@ph120@gmail.de
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - price
+  - features
   - button.label
-Props:
-  Titel: Allein
-  Für Bootstrapper und Indie-Hacker."
-  Preis: 249 €
-  Features:
-    - 'Ein Entwickler'
-    - 'Unbegrenzte Projekte'
-    - 'Zugriff auf GitHub-Repository'
-    - 'Lebenslanger Zugang'
-  Der Button:
-    Label: "Jetzt kaufen"
-  Ausrichtung: horizontal
-  Variante: "Übersicht"
-  Klasse: "W-voll"
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - 'One developer'
+    - 'Unlimited projects'
+    - 'Access to GitHub repository'
+    - 'Unlimited patch & minor updates'
+    - 'Lifetime access'
+  button:
+    label: 'Buy now'
+  variant: 'subtle'
+  class: 'w-96'
 ---
 ::
 
-@@@@@@@126@@@tagline
+### Orientierung.
 
-Verwenden Sie die `tagline` prop, um einen Tagline-Text über dem Preis anzuzeigen.
+Verwenden Sie die `orientation`-prop, um die Ausrichtung der PricingPlan. Defaults auf `vertical` zu ändern.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@128@gmail.de
-Ignoriert:
-  @@129@title
-  @@@ph130@beschreibung
-  @@131@Preis
-  @@ph132@gmail.de
-  @@@ph133@button.label
-  @@ph134@Orientierung
-Props:
-  Titel: Allein
-  Für Bootstrapper und Indie-Hacker.
-  Preis: 249 €
-  Features:
-    - 'Ein Entwickler'
-    - 'Unbegrenzte Projekte'
-    - 'Zugriff auf GitHub-Repository'
-    - 'Lebenslanger Zugang'
-  Der Button:
-    Label: "Jetzt kaufen"
-  Ausrichtung: horizontal
-  Motto: „ Einmal zahlen, für immer behalten "
-  Klasse: "W-voll"
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - price
+  - features
+  - button.label
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - 'One developer'
+    - 'Unlimited projects'
+    - 'Access to GitHub repository'
+    - 'Lifetime access'
+  button:
+    label: 'Buy now'
+  orientation: horizontal
+  variant: 'outline'
+  class: 'w-full'
 ---
 ::
 
-@@@@@@139@139@139@139@139@139@139@139@@139@139@139@139@139@139@139@139@139@139@139@139@139@139@139@13@139@139@1399@@1399@@13399@@@@@@@@@@@@@@139999999999@@@@@@@@@@@@@@@@@@@@@@@0000000000
+### Tagline (englisch)
 
-Verwenden Sie `terms` prop, um die Bedingungen unter dem Preis anzuzeigen.
+Verwenden Sie die `tagline`-Stütze, um einen Tagline-Text über dem Preis anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@141@141@141@141@141@141@141@141@141@141@141@141@141@141@@141@@141@14@14@14@@141@@141@141@141@141@@1414@@141@141@@@14141@@141@@@@14141@@@@@@1414141@@@@@@@@@@@1414141@@@@@@@@@@@@@@@@@@@@@@@@1414141414141@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Ignoriert:
-  @@142 @ Überschrift
-  - Beschreibung
-  @@144@Preis
-  @@ph145@gmail.de
-  @@@ph146@button.label @ button.label @@button.label @ button.label
-  - Orientierung
-  @@148@gmail.de
-Props:
-  Titel: Allein
-  Für Bootstrapper und Indie-Hacker."
-  Preis: 249 €
-  Features:
-    - 'Ein Entwickler'
-    - 'Unbegrenzte Projekte'
-    - 'Zugriff auf GitHub-Repository '
-    - 'Lebenslanger Zugang'
-  Der Button:
-    Label: "Jetzt kaufen"
-  Ausrichtung: horizontal
-  Motto: „ Einmal zahlen, für immer behalten "
-  "Rechnungen und Quittungen verfügbar".
-  Klasse: "W-voll"
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - price
+  - features
+  - button.label
+  - orientation
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - 'One developer'
+    - 'Unlimited projects'
+    - 'Access to GitHub repository'
+    - 'Lifetime access'
+  button:
+    label: 'Buy now'
+  orientation: horizontal
+  tagline: 'Pay once, own it forever'
+  class: 'w-full'
+---
+::
+
+### Terms (englisch)
+
+Verwenden Sie die `terms`-Prop, um Begriffe unter dem Preis anzuzeigen.
+
+::component-code
+---
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - price
+  - features
+  - button.label
+  - orientation
+  - tagline
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - 'One developer'
+    - 'Unlimited projects'
+    - 'Access to GitHub repository'
+    - 'Lifetime access'
+  button:
+    label: 'Buy now'
+  orientation: horizontal
+  tagline: 'Pay once, own it forever'
+  terms: 'Invoices and receipts available.'
+  class: 'w-full'
 ---
 ::
 
 ### Highlight
 
-Verwenden Sie `highlight` prop, um einen hervorgehobenen Rahmen um den PricingPlan anzuzeigen.
+Verwenden Sie die `highlight`-Prop, um einen hervorgehobenen Rahmen um den PricingPlan anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @155@Klasse
-Ignoriert:
-  @@156 @ Überschrift
-  - Beschreibung
-  @@158@Preis
-  @@ph159@gmail.de
-  @@@ph160@button.label (auf Englisch)
-Props:
-  Titel: Allein
-  Für Bootstrapper und Indie-Hacker.
-  Preis: 249 €
-  Features:
-    - 'Ein Entwickler'
-    - 'Unbegrenzte Projekte'
-    - 'Zugriff auf GitHub-Repository'
-    - 'Unbegrenzter Patch & kleinere Updates '
-    - 'Lebenslanger Zugang'
-  Der Button:
-    Label: "Jetzt kaufen"
-  Highlight: Wahr
-  Klasse: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - price
+  - features
+  - button.label
+props:
+  title: 'Solo'
+  description: 'For bootstrappers and indie hackers.'
+  price: '$249'
+  features:
+    - 'One developer'
+    - 'Unlimited projects'
+    - 'Access to GitHub repository'
+    - 'Unlimited patch & minor updates'
+    - 'Lifetime access'
+  button:
+    label: 'Buy now'
+  highlight: true
+  class: 'w-96'
 ---
 ::
 
-@@@@@@166@166@166@166@166@166@166@166@166@166@166@166@166@16@16@166@16@16@16@16@16@16@16@16@@166@@16@@166@16@16@16@@@1616@@@1616@@@@@161616
+### Scale ist ein
 
-Verwenden Sie `scale` prop, um einen PricingPlan größer als die anderen zu machen.
+Verwenden Sie die `scale`-Prop, um einen PricingPlan größer als die anderen zu machen.
 
 ::note{to="/docs/components/pricing-plans#scale"}
-Schauen Sie sich das Beispiel von PricingPlans `scale` an, um zu sehen, wie es funktioniert, da es selbst schwer zu demonstrieren ist.
+Schauen Sie sich das Beispiel von PricingPlans für `scale` an, um zu sehen, wie es funktioniert, da es selbst schwer zu demonstrieren ist.
 ::
 
-@@@@@@169@@bmwbp.de
+## API Bearbeiten
 
-@@@@@@@@170@@props
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
-### Slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-## theme
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph173@@changelog @ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

@@ -15,144 +15,144 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputNumber.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice la directiva `v-model` para controlar el valor del InputNumber.
 
 ::component-code
 ---
-Ignora:
-  - modelValoración
-Externo:
-  - modelValue (Edición española)
-Props:
-  Modelos: 5
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
 ---
 ::
 
-Utilice la prop `default-value` para establecer el valor inicial cuando no necesite controlar su estado.
+Utilice el prop `default-value` para establecer el valor inicial cuando no necesite controlar su estado.
 
 ::component-code
 ---
-Ignora:
-  @@pH005@@defaultValue
-Props:
-  ValoresDeficientes: 5
+ignore:
+  - defaultValue
+props:
+  defaultValue: 5
 ---
 ::
 
 ::note
-Este componente se basa en el paquete [`@internationalized/number`](https://react-spectrum.adobe.com/internationalized/number/index.html) que proporciona utilidades para formatear y analizar números en locales y sistemas de numeración.
+Este componente se basa en el paquete [`@internationalized/number`](https://react-spectrum.adobe.com/internationalized/number/index.html) que proporciona utilidades para formatear y analizar números a través de locales y sistemas de numeración.
 ::
 
-@@M1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Min/Max (Edición española)
 
 Utilice los props `min` y `max` para establecer los valores mínimos y máximos del InputNumber.
 
 ::component-code
 ---
-Ignora:
-  - modelValue (Edición española)
-Externo:
-  @@P015@modelValue (Edición española)
-Props:
-  Modelos: 5
-  Mínimo: 0
-  Max: 10 años
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  min: 0
+  max: 10
 ---
 ::
 
-@160000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Step (Edición española)
 
 Utilice el prop `step` para establecer el valor de paso del InputNumber.
 
 ::component-code
 ---
-Ignora:
-  @@P018@modelValue (Edición española)
-Externo:
-  @@P2019@modelValue (Edición española)
-Props:
-  Modelos: 5
-  El paso: 2
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  step: 2
 ---
 ::
 
-@@20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Orientación
 
 Utilice el prop `orientation` para cambiar la orientación del InputNumber.
 
 ::component-code
 ---
-Ignora:
-  @@2222@22222@2222@2222222222222222200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externo:
-  - modelValue (Edición española)
-Props:
-  Modelos: 5
-  Orientación: Vertical
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  orientation: vertical
 ---
 ::
 
-@24@240000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Placeholder (Edición española)
 
 Utilice el prop `placeholder` para establecer un texto de marcador de posición.
 
 ::component-code
 ---
-Props:
-  marcador de posición:'Introduzca un número'
+props:
+  placeholder: 'Enter a number'
 ---
 ::
 
-@@26000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Color (Edición española)
 
-Utilice el prop `color` para cambiar el color del anillo cuando el InputNumber está enfocado.
+Utilice el accesorio `color` para cambiar el color del anillo cuando el InputNumber está enfocado.
 
 ::component-code
 ---
-Ignora:
-  @@2008@modelValoración
-Externo:
-  @@20029@modelValoración
-Props:
-  Modelos: 5
-  Color: Neutral
-  Destacado: Verdadero
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  color: neutral
+  highlight: true
 ---
 ::
 
-@@P200@Variante
+### Variante
 
 Utilice el prop `variant` para cambiar la variante del InputNumber.
 
 ::component-code
 ---
-Ignora:
-  - modelValue (Edición española)
-Externo:
-  - modelValue (Edición española)
-Props:
-  Modelos: 5
-  Variación: Sutil
-  Color: Neutro
-  Destacado: Falso
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  variant: subtle
+  color: neutral
+  highlight: false
 ---
 ::
 
-@@pH034@@Tamaño
+### Tamaño
 
 Utilice el prop `size` para cambiar el tamaño del InputNumber.
 
 ::component-code
 ---
-Ignora:
-  - modelValue (Edición española)
-Externo:
-  - modelValue (Edición española)
-Props:
-  Modelos: 5
-  Tamaño: xl
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  size: xl
 ---
 ::
 
@@ -162,43 +162,43 @@ Utilice el prop `disabled` para desactivar el InputNumber.
 
 ::component-code
 ---
-Ignora:
-  - modelValue (Edición española)
-Externo:
-  - modelValue (Edición española)
-Props:
-  Modelos: 5
-  Discapacitados: Verdadero
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  disabled: true
 ---
 ::
 
 ### Incremento/decremento
 
-Utilice los accesorios `increment` y `decrement` para personalizar los botones de incremento y decremento con cualquier accesorio [Button](/docs/components/button).
+Utilice los props `increment` y `decrement` para personalizar los botones de incremento y decremento con cualquier prop [Button](/docs/components/button).
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@P051@@modelValue (Edición española)
+prettier: true
+ignore:
+  - modelValue
   - increment.size
   - increment.color
-  - increment.variante
-  - decrement.size (en inglés)
+  - increment.variant
+  - decrement.size
   - decrement.color
-  - decrement.variante
-Externo:
-  @@P058@modelValue (Edición española)
-Props:
-  Modelos: 5
-  Incremento:
-    Color: Neutral
-    Variante: Sólido
-    Tamaño: XS
-  decretado:
-    Color: Neutral
-    Variante: Sólido
-    Tamaño: XS
+  - decrement.variant
+external:
+  - modelValue
+props:
+  modelValue: 5
+  increment:
+    color: neutral
+    variant: solid
+    size: xs
+  decrement:
+    color: neutral
+    variant: solid
+    size: xs
 ---
 ::
 
@@ -208,37 +208,37 @@ Utilice los accesorios `increment-icon` y `decrement-icon` para personalizar los
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  - modelValue (Edición española)
-Externo:
-  @@pH069@modelValue (Edición española)
-Props:
-  Modelos: 5
-  Icono de incremento: 'i-lucide-arrow-right'
-  Icono de decremento: 'i-lucide-arrow-left'
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  incrementIcon: 'i-lucide-arrow-right'
+  decrementIcon: 'i-lucide-arrow-left'
 ---
 ::
 
-@070@Ejemplos
+## Ejemplos
 
-### Con el formato decimal
+### Con formato decimal
 
-Utilice la prop `format-options` para personalizar el formato del valor.
+Utilice el prop `format-options` para personalizar el formato del valor.
 
 ::component-example
 ---
-Nombre: 'input-number-decimal-example'
+name: 'input-number-decimal-example'
 ---
 ::
 
-### Con el formato de porcentaje
+### Con formato de porcentaje
 
-Utilice el prop `format-options` con `style: 'percent'` para personalizar el formato del valor.
+Utilice la prop `format-options` con `style: 'percent'` para personalizar el formato del valor.
 
 ::component-example
 ---
-Nombre: 'input-number-percentage-example'
+name: 'input-number-percentage-example'
 ---
 ::
 
@@ -248,7 +248,7 @@ Utilice el prop `format-options` con `style: 'currency'` para personalizar el fo
 
 ::component-example
 ---
-Nombre: 'input-number-currency-example'
+name: 'input-number-currency-example'
 ---
 ::
 
@@ -258,7 +258,7 @@ Puede utilizar los accesorios `increment` y `decrement` para controlar la visibi
 
 ::component-example
 ---
-nombre: 'input-number-without-buttons-example'
+name: 'input-number-without-buttons-example'
 ---
 ::
 
@@ -268,7 +268,7 @@ Puede utilizar el InputNumber dentro de un componente [FormField](/docs/componen
 
 ::component-example
 ---
-Nombre: 'input-number-form-field-example'
+name: 'input-number-form-field-example'
 ---
 ::
 
@@ -278,40 +278,40 @@ Utilice las ranuras `#increment` y `#decrement` para personalizar los botones.
 
 ::component-example
 ---
-Nombre: 'input-number-slots-example'
+name: 'input-number-slots-example'
 ---
 ::
 
-@@pH090@@pH0000
+## API (Edición española)
 
-@091@091@0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
-Este componente también soporta todos los atributos HTML nativos `<input>`.
+Este componente también admite todos los atributos HTML nativos de `<input>`.
 ::
 
-@@P093@@Esfuerzos
+### Slots
 
-Componentes de slots
+:component-slots
 
-@@pH094@@Emisiones
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@@P095@@Exposicion
+### Exposición
 
 Al acceder al componente a través de una referencia de plantilla, puede utilizar lo siguiente:
 
 | Nombre| Tipo|
 | ---- | ---- |
-| @@|@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
+| `inputRef`x{lang="ts-type"}| `Ref<HTMLInputElement \| null>`x{lang="ts-type"}|
 
-@100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Temas
 
-Componente Tema
+:component-theme
 
-@101@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

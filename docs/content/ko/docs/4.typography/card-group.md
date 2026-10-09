@@ -9,9 +9,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CardGroup.vue
 ---
 
-## 사용
+## Usage
 
-`card`  구성   요소 를  `card-group`  구성   요소 로   래핑 하 여   그리드   레이아웃 으로   함께   그룹 화 합니다 .
+`card` 구성 요소를 `card-group` 구성 요소로 래핑하여 그리드 레이아웃에서 함께 그룹화합니다.
 
 ::code-preview
 
@@ -19,47 +19,47 @@ links:
 
 ::card
 ---
-제목   :   Dashboard
-아이콘   :   i - simple - icons - github
-대상 :https://github.com/nuxt-ui-templates/dashboard
-target :   _ blank   대상
+title: Dashboard
+icon: i-simple-icons-github
+to: https://github.com/nuxt-ui-templates/dashboard
+target: _blank
 ---
-다중   열   레이아웃 이   있 는   대시보드 입니다 .
+다중 열 레이아웃이 있는 대시보드입니다.
 ::
 
 ::card
 ---
-제목 :   SaaS
-아이콘 :   i - simple - icons - github
-대상 :https://github.com/nuxt-ui-templates/saas
-target :   _ blank   대상
+title: SaaS
+icon: i-simple-icons-github
+to: https://github.com/nuxt-ui-templates/saas
+target: _blank
 ---
-랜딩 ,   가격 ,   문서   및   블로그 가   포함 된   템플 릿 입니다 .
+랜딩, 가격, 문서 및 블로그가 포함된 템플릿입니다.
 ::
 
 ::card
 ---
-제목   :   Docs
-아이콘 :   i - simple - icons - github
-대상 :https://github.com/nuxt-ui-templates/docs
-target :   _ blank   대상
+title: Docs
+icon: i-simple-icons-github
+to: https://github.com/nuxt-ui-templates/docs
+target: _blank
 ---
-문서  `@nuxt/content`
+`@nuxt/content`를 사용하는 문서
 ::
 
 ::card
 ---
-제목   :   Landing
-아이콘   :   i - simple - icons - github
-대상   :https://github.com/nuxt-ui-templates/landing
-target :   _ blank   대상
+title: Landing
+icon: i-simple-icons-github
+to: https://github.com/nuxt-ui-templates/landing
+target: _blank
 ---
-시작점 으로   사용 할   수   있 는   랜딩   페이지 입니다 .
+시작점으로 사용할 수 있는 랜딩 페이지입니다.
 ::
 
 :::
 
-#   코드
+#code
 
 ```mdc
 ::card-group
@@ -109,20 +109,20 @@ A landing page you can use as starting point.
 
 ::
 
-## API
+## API 사용
 
-### Props
+### Props 코드
 
-: component-props {prose}
+:component-props{prose}
 
-###  슬롯
+### Slots
 
-: component-slots {prose}
+:component-slots{prose}
 
-##  테마
+## Theme 테마
 
-:component-theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## 변경 로그
 
-: component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

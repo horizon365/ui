@@ -20,10 +20,10 @@ links:
 
 ::component-code
 ---
-外部
-  -  modelValue
-小道具
-  modelValue 3
+external:
+  - modelValue
+props:
+  modelValue: 3
 ---
 ::
 
@@ -31,206 +31,206 @@ links:
 
 ::component-code
 ---
-無視
-  -  defaultValue
-小道具
-  defaultValue 3
+ignore:
+  - defaultValue
+props:
+  defaultValue: 3
 ---
 ::
 
-### ステップ
+### Step
 
-`step` propを使用して、各星の粒度を制御します。`0.5`に設定して、半星の評価を許可します。
+`step`プロパティを使用して各スターの粒度を制御します。`0.5`に設定して、ハーフスターのレーティングを許可します。
 
 ::component-code
 ---
-無視
-  -  defaultValue
-小道具
-  ステップ0.5
-  defaultValue 3.5
+ignore:
+  - defaultValue
+props:
+  step: 0.5
+  defaultValue: 3.5
 ---
 ::
 
-### 長さ
+### Length
 
-`length`プロパティを使用して、星の数を設定します。デフォルトは`5`です。
+`length`プロパティを使用して星の数を設定します。デフォルトは`5`です。
 
 ::component-code
 ---
-無視
-  -  defaultValue
-小道具
-  長さ10
-  ステップ0.5
-  defaultValue 7.5
+ignore:
+  - defaultValue
+props:
+  length: 10
+  step: 0.5
+  defaultValue: 7.5
 ---
 ::
 
-###  Clearable
+### Clearable
 
 `clearable`プロパティを使用して、ユーザーが現在選択されている値をクリックしてレーティングをクリアできるようにします。デフォルトは`false`です。
 
 ::component-code
 ---
-無視
-  -  defaultValue
-小道具
-  clearable true
-  defaultValue 3
+ignore:
+  - defaultValue
+props:
+  clearable: true
+  defaultValue: 3
 ---
 ::
 
-###  Hoverable
+### Hoverable
 
-`hoverable`プロパティを使用して、星の上にカーソルを合わせたときにレーティングが値をプレビューするかどうかを制御します。デフォルトは`false`です。
+`hoverable`プロパティを使用して、星の上にホバリングしたときにレーティングが値をプレビューするかどうかを制御します。デフォルトは`false`です。
 
 ::component-code
 ---
-無視
-  -  defaultValue
-小道具
-  hoverable true
-  defaultValue 3
+ignore:
+  - defaultValue
+props:
+  hoverable: true
+  defaultValue: 3
 ---
 ::
 
-### アイコン
+### Icon
 
-`icon`プロパティを使用して、星に使用されるアイコンをカスタマイズします。デフォルトは`i-lucide-star`です。
+`icon`プロパティを使用して、星に使用するアイコンをカスタマイズします。デフォルトは`i-lucide-star`です。
 
 ::component-code
 ---
-無視
-  -  defaultValue
-小道具
-  アイコン'i—lucide—heart'
-  defaultValue 4
+ignore:
+  - defaultValue
+props:
+  icon: 'i-lucide-heart'
+  defaultValue: 4
 ---
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-デフォルトのスターアイコンは、`ui.icons.star`キーの`app.config.ts`でカスタマイズできます。
+デフォルトのスターアイコンは`app.config.ts`の`ui.icons.star`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-デフォルトのスターアイコンは、`ui.icons.star`キーの`vite.config.ts`でグローバルにカスタマイズできます。
+デフォルトのスターアイコンは`vite.config.ts`の`ui.icons.star`キーでグローバルにカスタマイズできます。
 :::
 ::
 
-### 空のアイコン
+### Emptyのアイコン
 
-空の星に使用されるアイコンをカスタマイズするには、`empty-icon` propを使用します。指定されていない場合は、`icon`と同じアイコンを使用します。
+`empty-icon`プロパティを使用して、空の星に使用するアイコンをカスタマイズします。指定されていない場合は、`icon`と同じアイコンを使用します。
 
 ::component-code
 ---
-無視
-  -  defaultValue
-小道具
-  emptyIcon 'i—lucide'
-  アイコン'i—lucide—circle—check'
-  defaultValue 3
+ignore:
+  - defaultValue
+props:
+  emptyIcon: 'i-lucide-circle'
+  icon: 'i-lucide-circle-check'
+  defaultValue: 3
 ---
 ::
 
-### カラー
+### Color
 
 `color`プロパティを使用して、塗りつぶされた星の色を変更します。
 
 ::component-code
 ---
-無視
-  -  defaultValue
-小道具
-  色ニュートラル
-  defaultValue 4
+ignore:
+  - defaultValue
+props:
+  color: neutral
+  defaultValue: 4
 ---
 ::
 
 ### サイズ
 
-`size`を使って、星の大きさを変更します。
+`size`プロパティを使用して星のサイズを変更します。
 
 ::component-code
 ---
-無視
-  -  defaultValue
-アイテム
-  サイズ
-    お問い合わせ：-  xs
-    -  sm
-    -  md
-    -  lg
-    お問い合わせ：-  xl
-小道具
-  サイズXL
-  defaultValue 4
+ignore:
+  - defaultValue
+items:
+  size:
+    - xs
+    - sm
+    - md
+    - lg
+    - xl
+props:
+  size: xl
+  defaultValue: 4
 ---
 ::
 
-### オリエンテーション
+### Orientation
 
-`orientation`プロパティを使用して、レーティングの向きを変更します。デフォルトは`horizontal`です。
+`orientation`プロパティを使用してレーティングの向きを変更します。デフォルトは`horizontal`です。
 
 ::component-code
 ---
-無視
-  -  defaultValue
-小道具
-  オリエンテーション垂直
-  defaultValue 4
+ignore:
+  - defaultValue
+props:
+  orientation: vertical
+  defaultValue: 4
 ---
 ::
 
 ### 無効
 
-InputRatingコンポーネントを無効にするには、`disabled`プロパティを使用します。無効にすると、コンポーネントの不透明度が低下し75%、インタラクティブでないことを示す`not-allowed`カーソルが表示されます。
+`disabled`プロパティを使用してInputRatingコンポーネントを無効にします。無効にすると、コンポーネントの不透明度が75%減少し、対話的でないことを示す`not-allowed`カーソルが表示されます。
 
 ::component-code
 ---
-無視
-  -  defaultValue
-小道具
-  無効true
-  defaultValue 3
+ignore:
+  - defaultValue
+props:
+  disabled: true
+  defaultValue: 3
 ---
 ::
 
 ### 読み取り専用
 
-`readonly`プロパティを使用して、ユーザーの操作を許可せずにレーティングを表示します。`disabled`とは異なり、通常の外観（完全な不透明度、デフォルトカーソル）を維持します。変更できないレーティングを表示したい場合に使用します。
+`readonly`プロパティを使用して、ユーザーの操作を許可せずにレーティングを表示します。`disabled`とは異なり、通常の外観完全な不透明度、デフォルトカーソルを維持します。変更できないレーティングを表示したい場合に使用します。
 
 ::component-code
 ---
-無視
-  -  defaultValue
-小道具
-  readonly true
-  defaultValue 4.5
+ignore:
+  - defaultValue
+props:
+  readonly: true
+  defaultValue: 4.5
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

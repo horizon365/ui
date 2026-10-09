@@ -7,16 +7,16 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Theme.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Le composant Theme remplace les classes par défaut **slot classes** et **props** de tous les composants enfants sans modifier chacun individuellement. Il utilise le mécanisme `provide`/`inject` de Vue sous le capot, de sorte que les remplacements s'appliquent à n'importe quelle profondeur.
+Le composant Theme remplace les classes par défaut **slot ** et **props** de tous les composants enfants sans modifier chacun individuellement. Il utilise le mécanisme `provide`/`inject` de Vue sous le capot, de sorte que les remplacements s'appliquent à toute profondeur.
 
 ::note
 Le composant Theme ne restitue aucun élément HTML, il fournit seulement des remplacements de thème à ses enfants.
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip
 Pour la configuration du thème au niveau de l'application, nous vous recommandons d'utiliser le fichier `app.config.ts`.
 :::
@@ -27,23 +27,23 @@ Pour la configuration du thème au niveau de l'application, nous vous recommando
 :::
 ::
 
-### Classes à sous
+### Slot classes
 
 Utilisez la prop `ui` pour remplacer les classes d'emplacement des composants descendants. Les clés sont des noms de composants (camelCase) et les valeurs sont leurs remplacements de classe d'emplacement.
 
 ::component-example
 ---
-nom: 'thème-exemple'
+name: 'theme-ui-example'
 ---
 ::
 
-### Prop défaut: badge{label="4.8+" class="align-text-top"}
+### Prop par défaut: badge{label="4.8+" class="align-text-top"}
 
 Utilisez la prop `props` pour remplacer la valeur par défaut de n'importe quelle prop sur les composants descendants.
 
 ::component-example
 ---
-nom: 'theme-props-exemple'
+name: 'theme-props-example'
 ---
 ::
 
@@ -51,7 +51,7 @@ nom: 'theme-props-exemple'
 Les props explicites sur un composant (par exemple `<UButton color="primary" />`) l'emportent toujours sur `<UTheme :props>`. Les valeurs par défaut du thème ne s'appliquent que lorsque la prop n'a pas été passée explicitement.
 ::
 
-@@ph016@exemples
+## exemples
 
 ### Composants multiples
 
@@ -59,78 +59,78 @@ Utilisez différentes touches dans `ui` ou `props` pour thématiser plusieurs ty
 
 ::component-example
 ---
-nom: 'theme-multiple-exemple'
+name: 'theme-multiple-example'
 ---
 ::
 
-### thèmes imbriqués
+### Thèmes imbriqués
 
 Imbriquez plusieurs composants de thème pour composer des remplacements. Le thème le plus interne a la priorité, tandis que les clés non remplacées sont héritées du thème externe.
 
 ::component-example
 ---
-nom: 'theme-nided-example'
+name: 'theme-nested-example'
 ---
 ::
 
 ### Priorité explicite
 
-Le fait de définir explicitement n'importe quel accessoire (y compris `ui`) sur un composant individuel a toujours priorité sur le composant Thème.
+Le paramétrage explicite d'un prop (y compris `ui`) sur un composant individuel a toujours priorité sur le composant Thème.
 
 ::component-example
 ---
-name: 'thème-priorité-exemple'
+name: 'theme-priority-example'
 ---
 ::
 
 ### Propagation profonde
 
-Les remplacements sont disponibles pour tous les composants descendants, quelle que soit la profondeur de leur imbriquage.
+Les remplacements sont disponibles pour tous les composants descendants, quelle que soit leur profondeur d'imbriquage.
 
 ::component-example
 ---
-nom: 'thème-exemple'
+name: 'theme-deep-example'
 ---
 ::
 
 ::note
-Dans cet exemple,`MyButton` est un composant personnalisé qui rend un `UButton` en interne. Les remplacements de thème s'appliquent toujours car ils se propagent dans toute l'arborescence des composants.
+Dans cet exemple, `MyButton` est un composant personnalisé qui rend un `UButton` en interne. Les remplacements de thème s'appliquent toujours car ils se propagent dans toute l'arborescence des composants.
 ::
 
-### Composants du formulaire
+### Form composants
 
 Utilisez le composant Thème pour appliquer un style cohérent à un groupe de composants de formulaire.
 
 ::component-example
 ---
-nom: 'thème-exemple'
+name: 'theme-form-example'
 ---
 ::
 
 ::tip
-`<UFormField>`,`<UFieldGroup>` et `<UAvatarGroup>` conservent la préséance sur `<UTheme :props>` pour `size`,`color` et `highlight`. Les erreurs de validation forcent également la couleur `error` sur toute valeur de thème.
+`<UFormField>`, `<UFieldGroup>` et `<UAvatarGroup>` conservent la priorité sur `<UTheme :props>` pour `size`, `color` et `highlight`. Les erreurs de validation forcent également la couleur `error` sur n'importe quelle valeur de thème.
 ::
 
-### Prose composants
+Composants ### Prose
 
-Utilisez l'espace de noms `prose` pour thématiser les composants typographiques. Les clés sont imbriquées sous `prose`(par exemple,`prose.p`,`prose.code`).
+Utilisez l'espace de noms `prose` pour thématiser les composants de typographie. Les touches sont imbriquées sous `prose` (par exemple, `prose.p`, `prose.code`).
 
 ::component-example
 ---
-nom: 'thème-prose-exemple'
+name: 'theme-prose-example'
 ---
 ::
 
-@@ph040@@api
+## api
 
-@@ph041@@props
+### Props
 
-Composants-props
+:component-props
 
-@@ph042@@réglages
+### Slots
 
-Composants slots
+:component-slots
 
-@changelog @changelog
+## Changelog
 
-Composant-changelog
+:component-changelog

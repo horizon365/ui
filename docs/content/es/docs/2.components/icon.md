@@ -15,42 +15,42 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Icon.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-Utilice el prop `name` para mostrar un icono.
+Utilice el soporte `name` para mostrar un icono.
 
 ::component-code
 ---
-Props:
-  Nombre: i-lucide-lightbulb
-  Categoría:'Size-5'
+props:
+  name: 'i-lucide-lightbulb'
+  class: 'size-5'
 ---
 ::
 
 ::note
-Puede usar cualquier nombre de la colección <https://iconify.design>. Navegar por ellos fácilmente en <https://icones.js.org> o buscar directamente desde su asistente de IA utilizando la herramienta MCP [`search-icons`](/docs/getting-started/ai/mcp#available-tools).
+Puede utilizar cualquier nombre de la colección <https://iconify.design>. Examínelos fácilmente en <https://icones.js.org> o busque directamente desde su asistente de IA utilizando la herramienta MCP [xph007](/docs/getting-started/ai/mcp#available-tools).
 ::
 
 ::framework-only
-#nuxidad
+#nuxt
 :::caution{to="/docs/getting-started/integrations/icons/nuxt#collections"}
-Se recomienda encarecidamente instalar las colecciones de iconos que necesita, lea más sobre esto.
+Es muy recomendable instalar las colecciones de iconos que necesita, lea más sobre esto.
 :::
 ::
 
-@@pH009@Ejemplos
+## Ejemplos
 
-@100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### svg
 
 También puede pasar un componente de Vue en el prop `name`:
 
 ::component-example
 ---
-Nombre del archivo: 'icon-svg-example'
+name: 'icon-svg-example'
 ---
 ::
 
-Puede definir los componentes de su icono usted mismo, o utilizar [`unplugin-icons`](https://github.com/unplugin/unplugin-icons) para importarlos directamente desde archivos SVG:
+Puede definir los componentes de su icono usted mismo, o usar [`unplugin-icons`](https://github.com/unplugin/unplugin-icons) para importarlos directamente desde archivos SVG:
 
 ```vue
 <script setup lang="ts">
@@ -62,12 +62,12 @@ import IconLightbulb from '~icons/lucide/lightbulb'
 </template>
 ```
 
-@@26000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## API (Edición española)
 
-@@27000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Propciones
 
-Componentes Props
+:component-props
 
-@@28@Changelog
+xph06xChangelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

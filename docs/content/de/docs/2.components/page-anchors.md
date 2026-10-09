@@ -1,5 +1,5 @@
 ---
-title: Seitenanker
+title: PageAncher
 description: 'Eine Liste der Anker, die auf der Seite angezeigt werden sollen.'
 category: page
 links:
@@ -8,87 +8,87 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageAnchors.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Verwenden Sie die PageAnchors-Komponente , um eine Liste von Links anzuzeigen .
-
-::component-code
----
-Einsturz : wahr
-Schöner : wahr
-Ignoriert :
-  @@@001@@links
-Außen :
-  @@@002@@links
-Externe Typen :
-  - PageAnchor [ Bearbeiten | Quelltext bearbeiten ]
-Props :
-  Links auf :
-    - label : ' Dokumentation '
-      I-Lucide - Book-Open (englisch)
-      nach/docs/getting-started
-    - label : ' Komponenten '
-      Icon : I-Lucide - Box (englisch)
-      nach :/docs/components
-    - label : ' Figma Kit ' (auf Englisch)
-      Icon : I-Simple - Icons-Figma (englisch)
-      zwei :https://go.nuxt.com/figma-ui
-      Ziel : _ blank
-    - label : ' Freigaben '
-      Icon : I-Simple - Icons-GitHub
-      zwei :https://github.com/nuxt/ui/releases
-      Ziel: _blank
----
-::
-
-@@@@@008@@Links
-
-Verwenden Sie `links` prop als Array von Objekten mit den folgenden Eigenschaften:
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@PH0111@@@@@@@@@@PH0111@@@@@@@@@@@@PH01112 @
-`icon?: string``icon?: string``icon?: string`{lang="ts-type"}`icon?: string`{lang="ts-type"}
-`class?: any``class?: any`{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}PH018018@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@PH02020@@@@@@@@@PH0202020@@@@@@@@@@@PH02021 @
-
-Sie können jede Eigenschaft von der [Link](/docs/components/link#props) Komponente wie `to`,`target`, etc. übergeben.
+Verwenden Sie die PageAnchors-Komponente, um eine Liste von Links anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@@@@@@28@@links
-Außen:
-  @@@@@@@@@29@@links
-Externe Personen:
-  - PageAnchor [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Linke:
-    - label:'Dokumentation'
-      I-Lucide-Book-Open (englisch)
-      nach/docs/getting-started
-    - label:'Komponenten'
-      Icon: I-Lucide-Box (englisch)
-      nach: /docs/components
-    - label:'Figma Kit'(auf Englisch)
-      Icon: I-Simple-Icons-Figma (englisch)
-      zwei :https://go.nuxt.com/figma-ui
-      Ziel : _ blank
-    - label : ' Freigaben '
-      Icon : I-Simple - Icons-GitHub
-      zwei :https://github.com/nuxt/ui/releases
-      Ziel : _ blank
+collapse: true
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageAnchor[]
+props:
+  links:
+    - label: 'Documentation'
+      icon: i-lucide-book-open
+      to: /docs/getting-started
+    - label: 'Components'
+      icon: i-lucide-box
+      to: /docs/components
+    - label: 'Figma Kit'
+      icon: i-simple-icons-figma
+      to: https://go.nuxt.com/figma-ui
+      target: _blank
+    - label: 'Releases'
+      icon: i-simple-icons-github
+      to: https://github.com/nuxt/ui/releases
+      target: _blank
 ---
 ::
 
-@@ph035@@Beispiele
+x027xLinks (englisch)
+
+Verwenden Sie die `links`-prop als Array von Objekten mit den folgenden Eigenschaften:
+
+- `label: string`{lang="ts-type"} (nicht vorhanden)
+- `icon?: string`{lang="ts-type"} (nicht vorhanden)
+- `class?: any`{lang="ts-type"} (nicht vorhanden)
+- `ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkLeading?: ClassNameValue, linkLeadingIcon?: ClassNameValue }`{lang="ts-type"} (nicht vorhanden)
+
+Sie können jede Eigenschaft der Komponente [Link](/docs/components/link#props) übergeben, z. B. `to`, `target` usw.
+
+::component-code
+---
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageAnchor[]
+props:
+  links:
+    - label: 'Documentation'
+      icon: i-lucide-book-open
+      to: /docs/getting-started
+    - label: 'Components'
+      icon: i-lucide-box
+      to: /docs/components
+    - label: 'Figma Kit'
+      icon: i-simple-icons-figma
+      to: https://go.nuxt.com/figma-ui
+      target: _blank
+    - label: 'Releases'
+      icon: i-simple-icons-github
+      to: https://github.com/nuxt/ui/releases
+      target: _blank
+---
+::
+
+## Beispiele:
 
 ::note
-Während diese Beispiele[Nuxt Content](https://content.nuxt.com)verwenden , können die Komponenten in jedes Content-Management - System integriert werden .
+Während diese Beispiele [Nuxt Content](https://content.nuxt.com) verwenden, können die Komponenten in jedes Content Management System integriert werden.
 ::
 
-### Innerhalb eines Layouts
+### In einem Layout
 
-Verwenden Sie die PageAnchors-Komponente innerhalb der Komponente[PageAside](/docs/components/page-aside), um eine Liste von Links über der Navigation anzuzeigen .
+Verwenden Sie die PageAnchors-Komponente in der Komponente [PageAside](/docs/components/page-aside), um eine Liste von Links oberhalb der Navigation anzuzeigen.
 
 ```vue [layouts/docs.vue]{35}
 <script setup lang="ts">
@@ -135,20 +135,20 @@ const links: PageAnchor[] = [{
 </template>
 ```
 
-@@@@@@899@@bmdbbb
+## API ist
 
-@@@@@@@@@@@ph090@@@props
+### Props (englisch)
 
-Komponenten Props
+:component-props
 
-@@ph091@@slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph092@@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph093@@changelog@@changelog
+## Changelog (deutsch)
 
-Das Component-Changelog
+:component-changelog

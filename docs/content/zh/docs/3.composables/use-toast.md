@@ -3,22 +3,22 @@ title: 使用Toast
 description: '一个可以在应用中显示吐司通知的组合。'
 ---
 
-## 使用情况
+## 用法
 
-使用自动导入的`useToast`可组合显示[Toast](/docs/components/toast)通知。
+使用自动导入的`useToast`组合文件显示[Toast](/docs/components/toast)通知。
 
 ::component-example
 ---
-name：'use-toast-example'
+name: 'use-toast-example'
 ---
 ::
 
-- `useToast`可组合使用Nuxt的`useState`来管理吐司状态，确保整个应用程序的反应性。
-- 默认情况下，一次最多显示5个toast。当添加一个超过此限制的新吐司时，最旧的吐司将自动删除。请使用[`App`](/docs/components/app#props)组件上的`toaster.max`prop进行更改。
+-  `useToast`组合使用Nuxt的`useState`来管理吐司状态，确保整个应用程序的反应性。
+- 默认情况下，一次最多显示5个toast。当添加超过此限制的新吐司时，最旧的吐司将自动删除。请使用[`App`](/docs/components/app#props)组件上的`toaster.max`属性更改它。
 - 当删除一个吐司时，在它实际从状态中删除之前有200 ms的延迟，允许退出动画。
 
 ::warning
-请确保使用[`App`](/docs/components/app)组件包装您的应用，该组件使用我们的[`Toaster`](https://github.com/nuxt/ui/blob/v4/src/runtime/components/Toaster.vue)组件，该组件使用[`ToastProvider`](https://reka-ui.com/docs/components/toast#provider) Reka UI中的组件。
+请确保使用[`App`](/docs/components/app)组件包装您的应用程序，该组件使用我们的[`Toaster`](https://github.com/nuxt/ui/blob/v4/src/runtime/components/Toaster.vue)组件，该组件使用Reka UI中的[`ToastProvider`](https://reka-ui.com/docs/components/toast#provider)组件。
 ::
 
 ::tip{to="/docs/components/toast"}
@@ -29,7 +29,7 @@ name：'use-toast-example'
 
 `useToast()`{lang="ts-type"}
 
-`useToast`组合工具提供了全局管理吐司通知的方法。
+`useToast`组合件提供了全局管理吐司通知的方法。
 
 ### add（）
 
@@ -37,7 +37,7 @@ name：'use-toast-example'
 
 添加新的吐司通知。
 
-#### Parameters
+#### 参数
 
 ::field-group
 
@@ -68,11 +68,11 @@ name：'use-toast-example'
         ::
 
         ::field{name="avatar" type="AvatarProps"}
-        吐司中显示的头像。请参见[Avatar](/docs/components/avatar#props)。
+        在吐司中显示的头像。请参阅[Avatar](/docs/components/avatar#props)。
         ::
 
         ::field{name="color" type="string"}
-        吐司的颜色。请选择`primary`。
+        吐司的颜色。从黄色到`primary`。
         ::
 
         ::field{name="orientation" type="'horizontal' | 'vertical'"}
@@ -80,7 +80,7 @@ name：'use-toast-example'
         ::
 
         ::field{name="close" type="boolean | Omit<ButtonProps, LinkPropsKeys>"}
-        自定义或隐藏关闭按钮（带`false`值）。将其设置为`true`。
+        自定义或隐藏关闭按钮（使用`false`值）。将其设置为`true`。
         ::
 
         ::field{name="closeIcon" type="string"}
@@ -88,15 +88,15 @@ name：'use-toast-example'
         ::
 
         ::field{name="actions" type="ButtonProps[]"}
-        吐司中显示的操作。请参见[Button](/docs/components/button#props)。
+        吐司中显示的操作。请参阅[Button](/docs/components/button#props)。
         ::
 
         ::field{name="progress" type="boolean | Pick<ProgressProps, 'color' | 'ui'>"}
-        自定义或隐藏进度条（带`false`值）。将其设置为`true`。
+        自定义或隐藏进度条（使用`false`值）。将其设置为`true`。
         ::
 
         ::field{name="duration" type="number"}
-        吐司自动关闭前的持续时间（毫秒）。设置为`5000`。设置为`0`可使吐司保持打开状态，直到手动关闭。也可以在[`App`](/docs/components/app)组件上全局设置。
+        吐司自动关闭前的持续时间（以毫秒为单位）。设置为`5000`。设置为`0`可使吐司保持打开状态，直到手动关闭。也可以在[`App`](/docs/components/app)组件上全局设置。
         ::
 
         ::field{name="onClick" type="(toast: Toast) => void"}
@@ -108,18 +108,18 @@ name：'use-toast-example'
         ::
 
         ::field{name="type" type="'foreground' | 'background'"}
-        辅助技术如何宣布吐司。使用`background`表示不是用户直接操作的祝酒词。
+        辅助技术如何宣布吐司。使用`background`进行非用户直接操作的祝酒。
         ::
 
         ::field{name="as" type="any"}
-        吐司呈现为. xml到`li`的元素或组件。
+        吐司呈现为`li`的. xml的元素或组件。
         ::
       ::
     ::
   ::
 ::
 
-**Returns：**添加的完整的`Toast`对象。
+**返回：**添加的完整`Toast`对象。
 
 ```vue
 <script setup lang="ts">
@@ -141,7 +141,7 @@ function showToast() {
 
 更新现有吐司通知。
 
-#### Parameters
+#### 参数
 
 ::field-group
   ::field{name="id" type="string | number" required}
@@ -149,7 +149,7 @@ function showToast() {
   ::
 
   ::field{name="toast" type="Omit<Partial<Toast>, 'id'>" required}
-  具有要更新的属性的部分`Toast`对象。无法更改`id`，将重新打开吐司，并且将重置`duration`，除非您再次传递它。
+  具有要更新的属性的部分`Toast`对象。不能更改`id`，将重新打开吐司，并且`duration`将重置，除非您再次传递它。
   ::
 ::
 

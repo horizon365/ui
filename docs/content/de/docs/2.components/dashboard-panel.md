@@ -1,6 +1,6 @@
 ---
 title: Das DashboardPanel
-description: 'Ein anpassbares Panel, das in einem Dashboard angezeigt wird.'
+description: 'Ein anpassbares Panel, das in einem Dashboard angezeigt werden kann.'
 category: dashboard
 links:
   - label: GitHub
@@ -8,11 +8,11 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardPanel.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Der Status (Größe, Einklappen usw.) wird basierend auf den `storage` und `storage-key` Props gespeichert, die Sie der [DashboardGroup](/docs/components/dashboard-group#props) Komponente zur Verfügung stellen.
+Der Status (Größe, zusammengeklappt usw.) wird basierend auf den `storage`-und `storage-key`-Requisiten gespeichert, die Sie der [DashboardGroup](/docs/components/dashboard-group#props)-Komponente zur Verfügung stellen.
 
-Verwenden Sie es innerhalb des Standardsteckplatzes der Komponente [DashboardGroup](/docs/components/dashboard-group), können Sie mehrere Panels nebeneinander stellen:
+Verwenden Sie es innerhalb des Standardsteckplatzes der [DashboardGroup](/docs/components/dashboard-group)-Komponente, können Sie mehrere Panels nebeneinander platzieren:
 
 ```vue [pages/index.vue]{8,10}
 <script setup lang="ts">
@@ -29,107 +29,107 @@ definePageMeta({
 ```
 
 ::caution
-Es wird empfohlen, ein `id` zu setzen, wenn Sie mehrere Panels auf verschiedenen Seiten verwenden, um Konflikte zu vermeiden.
+Es wird empfohlen, ein `id` zu setzen, wenn mehrere Bedienfelder auf verschiedenen Seiten verwendet werden, um Konflikte zu vermeiden.
 ::
 
 ::warning
-Diese Komponente hat kein einziges Root-Element, wenn Sie `resizable` prop verwenden, also wickeln Sie es in einen Container (z. B.`<div class="flex flex-1">`), wenn Sie Seitenübergänge verwenden oder eine einzelne Root für das Layout benötigen.
+Diese Komponente hat kein einziges Wurzelelement, wenn Sie die `resizable`-prop verwenden, also wickeln Sie es in einen Container (z. B. `<div class="flex flex-1">`), wenn Sie Seitenübergänge verwenden oder eine einzelne Wurzel für das Layout benötigen.
 ::
 
-Verwenden Sie die `header`,`body` und `footer` Steckplätze, um das Panel oder den Standardsteckplatz anzupassen, wenn Sie keinen scrollbaren Körper mit Polsterung wünschen.
+Verwenden Sie die Steckplätze `header`, `body` und `footer`, um das Bedienfeld oder den Standardsteckplatz anzupassen, wenn Sie keinen scrollbaren Körper mit Polsterung wünschen.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'Dashboard-Panel-Beispiel'
-Klasse: '! p-0! justify-start'
-Props:
-  Anzahl: 22
-  Fehlerquote: 35
-  Größe max: 40
-  Klasse: '! min-h-96 h-136'(Englisch)
+collapse: true
+name: 'dashboard-panel-example'
+class: '!p-0 !justify-start'
+props:
+  minSize: 22
+  defaultSize: 35
+  maxSize: 40
+  class: '!min-h-96 h-136'
 ---
 ::
 
 ::note
-Die meiste Zeit werden Sie die Komponente [`DashboardNavbar`PH0333) im `header`-Slot verwenden.
+Meistens verwenden Sie die Komponente [`DashboardNavbar`](/docs/components/dashboard-navbar/docs/components/dashboard-navbar) im `header`-Slot.
 ::
 
-### Resisable36
+### Resizable (nicht übersetzbar)
 
-Verwenden Sie `resizable` prop, um die Größe des Panels zu ändern.
+Verwenden Sie die `resizable`-Prop, um das Panel in der Größe zu vergrößern.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@ph038@@minSize
-  @@ph039@defaultSize
-  @@ph040@@maxSize
-  @@@@@@@class041@class041@class041@class041@class@class@class@class@class041@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@class@classclassclass@class@classclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassc@c@classclassclassc@classclassclassclassclassclass
-Props:
-  Größe: true
-  Anzahl: 22
-  Fehlerquote: 35
-  Größe: 40
-  Klasse: '! min-h-96'
-Slots auf:
-  Der Körper:|
+prettier: true
+hide:
+  - minSize
+  - defaultSize
+  - maxSize
+  - class
+props:
+  resizable: true
+  minSize: 22
+  defaultSize: 35
+  maxSize: 40
+  class: '!min-h-96'
+slots:
+  body: |
 
-    @@042
-Klasse: '! p-0! justify-start'
+    <Placeholder class="h-96" />
+class: '!p-0 !justify-start'
 ---
 
-#Körper
-: placeholder{class="h-96"}
+#body
+:placeholder{class="h-96"}
 ::
 
-@@ph044 @ Größe
+### Größe
 
-Verwenden Sie die Props `min-size`,`max-size` und `default-size`, um die Größe des Panels anzupassen.
+Verwenden Sie die `min-size`, `max-size` und `default-size` Requisiten, um die Größe des Panels anzupassen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
+prettier: true
+ignore:
   - resizable
-Hide:
-  @@@@@@49@class
-Props:
-  Größe: true
-  Anzahl: 22
-  Fehlerquote: 35
-  Größe max: 40
-  Klasse: '! min-h-96'
-Die Slots:
-  Der Körper:|
+hide:
+  - class
+props:
+  resizable: true
+  minSize: 22
+  defaultSize: 35
+  maxSize: 40
+  class: '!min-h-96'
+slots:
+  body: |
 
-    @@500
-Klasse: '! p-0! justify-start'
+    <Placeholder class="h-96" />
+class: '!p-0 !justify-start'
 ---
 
-#Der Körper
-: placeholder{class="h-96"}
+#body
+:placeholder{class="h-96"}
 ::
 
 ::tip{to="/docs/components/dashboard-group#props"}
-Größen werden standardmäßig als Prozentwerte berechnet. Sie können dies mit dem `unit` prop auf der `DashboardGroup` Komponente ändern.
+Größen werden standardmäßig als Prozentsätze berechnet. Sie können dies mit der `unit`-Prop auf der `DashboardGroup`-Komponente ändern.
 ::
 
-@@@@@554@@bmg-gmbh
+## API (englisch)
 
-@@@@555@@gmail.de
+### Props (englisch)
 
-Komponenten-Props
+:component-props
 
-@@ph056@gmail.de
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph057@gmail.de
+## Theme (englisch)
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph058@@changelog @@@ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

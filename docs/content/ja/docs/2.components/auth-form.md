@@ -13,160 +13,160 @@ links:
 
 ## 使用法
 
-[ Form ](/docs/components/form)コンポーネントの上に構築されている`AuthForm`コンポーネントは、ページ内で使用することも、[ PageCard ](/docs/components/page-card)にラップすることもできます。
+[Form](/docs/components/form)コンポーネントの上に構築された`AuthForm`コンポーネントは、ページで使用することも、[ PageCard](/docs/components/page-cardxph 09 xにラップすることもできます。
 
 ::component-example
 ---
-名前'auth—form—example'
-崩壊真
+name: 'auth-form-example'
+collapse: true
 ---
 ::
 
-### フィールズ
+### フィールド
 
 フォームは`fields`プロパティに基づいて構築され、状態は内部で処理されます。
 
-`fields` propを、次のプロパティを持つオブジェクトの配列として使用します。
+`fields`プロパティを次のプロパティを持つオブジェクトの配列として使用します。
 
 - `name: string`{lang="ts-type"}
 - `type: 'checkbox' | 'select' | 'otp' | 'InputHTMLAttributes['type']'`{lang="ts-type"}
 
-各フィールドには`type`プロパティが含まれていなければなりません。`checkbox`フィールド使用[ Checkbox ](/docs/components/checkbox#props) props `select`フィールド使用[ SelectMenu ](/docs/components/select-menu#props) props `otp`フィールドは[ PinInput ](/docs/components/pin-input#props) propsを使用し、他のすべてのタイプは[ Input ](/docs/components/input#props) propsを使用します。
+各フィールドには、入力コンポーネントと適用される追加のプロップを決定する`type`プロパティが必要です。`checkbox`フィールドは[Checkbox](/docs/components/checkbox#props) propsを使用します。`select`フィールドは[SelectMenu](/docs/components/select-menu#props) propsを使用します。`otp`フィールドは[PinInput](/docs/components/pin-input#props) propsを使用します。他の型は[Input](/docs/components/input#props) propsを使用する。
 
-また、[ FormField ](/docs/components/form-field#props)コンポーネントのプロパティを各フィールドに渡すこともできます。
+[FormField](/docs/components/form-field#props)コンポーネントの任意のプロパティを各フィールドに渡すこともできます。
 
 ::component-code
 ---
-きれい真
-無視
-  - フィールド
-  - クラス
-外部
-  - フィールド
-externalTypes
-  -  AuthFormField []
-小道具
-  フィールド
-    -  name 'email'
-      タイプ'メール'
-      ラベル'メール'
-      プレースホルダー 'メールアドレスを入力'
-      必須true
-    -  name 'パスワード'
-      タイプ'パスワード'
-      ラベル'パスワード'
-      プレースホルダー 'パスワードを入力'
-      必須true
-    -  name '国'
-      タイプ'選択'
-      ラベル'国'
-      プレースホルダー '国を選択'
-      アイテム
-        -  label 'United States'
-          値'us'
-        -  label 'France'
-          値'fr'
-        -  label 'イギリス'
-          値'uk'
-        -  label 'オーストラリア'
-          値'au'
-    -  name 'otp'
-      タイプ'otp'
-      ラベル'OTP'
-      長さ6
-      プレースホルダー '○'
-    -  name '覚えています'
-      タイプ'チェックボックス'
-      label 'Remember me'
-      説明：「30日間ログインされます。
-  クラス'max—w—sm'
+prettier: true
+ignore:
+  - fields
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
+  fields:
+    - name: 'email'
+      type: 'email'
+      label: 'Email'
+      placeholder: 'Enter your email'
+      required: true
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+      placeholder: 'Enter your password'
+      required: true
+    - name: 'country'
+      type: 'select'
+      label: 'Country'
+      placeholder: 'Select country'
+      items:
+        - label: 'United States'
+          value: 'us'
+        - label: 'France'
+          value: 'fr'
+        - label: 'United Kingdom'
+          value: 'uk'
+        - label: 'Australia'
+          value: 'au'
+    - name: 'otp'
+      type: 'otp'
+      label: 'OTP'
+      length: 6
+      placeholder: '○'
+    - name: 'remember'
+      type: 'checkbox'
+      label: 'Remember me'
+      description: 'You will be logged in for 30 days.'
+  class: 'max-w-sm'
 ---
 ::
 
-### タイトル
+### Title
 
 `title`プロパティを使用してフォームのタイトルを設定します。
 
 ::component-code
 ---
-きれい真
-無視
-  - フィールド
-  - クラス
-外部
-  - フィールド
-externalTypes
-  -  AuthFormField []
-小道具
-  title 'ログイン'
-  フィールド
-    -  name 'email'
-      タイプテキスト
-      ラベル'メール'
-    -  name 'パスワード'
-      タイプ'パスワード'
-      ラベル'パスワード'
-  クラス'max—w—md'
+prettier: true
+ignore:
+  - fields
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
+  title: 'Login'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
 ::
 
-### 説明
+### Description
 
-`description`プロパティを使用して、フォームの説明を設定します。
+`description`プロパティを使用してフォームの説明を設定します。
 
 ::component-code
 ---
-きれい真
-無視
-  - フィールド
-  -  title
-  - クラス
-外部
-  - フィールド
-externalTypes
-  -  AuthFormField []
-小道具
-  title 'ログイン'
-  説明：'アカウントにアクセスするための資格情報を入力してください。
-  フィールド
-    -  name 'email'
-      タイプテキスト
-      ラベル'メール'
-    -  name 'パスワード'
-      タイプ'パスワード'
-      ラベル'パスワード'
-  クラス'max—w—md'
+prettier: true
+ignore:
+  - fields
+  - title
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
 ::
 
-### アイコン
+### Icon
 
 `icon`プロパティを使用してフォームのアイコンを設定します。
 
 ::component-code
 ---
-きれい真
-無視
-  - フィールド
-  -  title
-  - 説明
-  - クラス
-外部
-  - フィールド
-externalTypes
-  -  AuthFormField []
-小道具
-  title 'ログイン'
-  説明：'アカウントにアクセスするための資格情報を入力してください。
-  アイコン'i—lucide—user'
-  フィールド
-    -  name 'email'
-      タイプテキスト
-      ラベル'メール'
-    -  name 'パスワード'
-      タイプ'パスワード'
-      ラベル'パスワード'
-  クラス'max—w—md'
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  icon: 'i-lucide-user'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
 ::
 
@@ -174,214 +174,214 @@ externalTypes
 
 `providers`プロパティを使用して、フォームにプロバイダを追加します。
 
-[ Button ](/docs/components/button)コンポーネントから、`variant`、`color`、`to`などの任意のプロパティを渡すことができます。
+[Button](/docs/components/button)コンポーネントから、`variant`、`color`、`to`などの任意のプロパティを渡すことができます。
 
 ::component-code
 ---
-きれい真
-無視
-  - フィールド
-  -  title
-  - 説明
-  - アイコン
-  - プロバイダー
-  -  headerAlign
-  - クラス
-外部
-  - プロバイダー
-  - フィールド
-externalTypes
-  -  ButtonProps []
-  -  AuthFormField []
-小道具
-  title 'ログイン'
-  説明：'アカウントにアクセスするための資格情報を入力してください。
-  アイコン'i—lucide—user'
-  プロバイダー：
-    -  label 'Google'
-      アイコン'i—simple—icons—google'
-      色'中立'
-      バリアント：'微妙'
-    -  label 'GitHub'
-      アイコン'i—simple—icons'
-      色'ニュートラル'
-      バリアント：'微妙'
-  フィールド
-    -  name 'email'
-      タイプテキスト
-      ラベル'メール'
-    -  name 'パスワード'
-      タイプ'パスワード'
-      ラベル'パスワード'
-  クラス'max—w—md'
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
+  - headerAlign
+  - class
+external:
+  - providers
+  - fields
+externalTypes:
+  - ButtonProps[]
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  icon: 'i-lucide-user'
+  providers:
+    - label: 'Google'
+      icon: 'i-simple-icons-google'
+      color: 'neutral'
+      variant: 'subtle'
+    - label: 'GitHub'
+      icon: 'i-simple-icons-github'
+      color: 'neutral'
+      variant: 'subtle'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
 ::
 
-### セパレータ
+### Separator
 
-`separator`プロパティを使用して、プロバイダとフィールドの間で[ Separator ](/docs/components/separator)をカスタマイズします。デフォルトは`or`です。
+`separator`プロパティを使用して、[Separator](/docs/components/separator)をプロバイダとフィールド間でカスタマイズします。デフォルトは`or`です。
 
 ::component-code
 ---
-きれい真
-無視
-  - フィールド
-  -  title
-  - 説明
-  - アイコン
-  - プロバイダー
-  - クラス
-外部
-  - プロバイダー
-  - フィールド
-externalTypes
-  -  ButtonProps []
-  -  AuthFormField []
-小道具
-  title 'ログイン'
-  説明：'アカウントにアクセスするための資格情報を入力してください。
-  アイコン'i—lucide—user'
-  プロバイダー：
-    -  label 'Google'
-      アイコン'i—simple—icons—google'
-      色'ニュートラル'
-      バリアント：'微妙'
-    -  label 'GitHub'
-      アイコン'i—simple—icons'
-      色'中立'
-      バリアント：'微妙'
-  フィールド
-    -  name 'email'
-      タイプテキスト
-      ラベル'メール'
-    -  name 'パスワード'
-      タイプ'パスワード'
-      ラベル'パスワード'
-  区切り文字'プロバイダー'
-  クラス'max—w—md'
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
+  - class
+external:
+  - providers
+  - fields
+externalTypes:
+  - ButtonProps[]
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  icon: 'i-lucide-user'
+  providers:
+    - label: 'Google'
+      icon: 'i-simple-icons-google'
+      color: 'neutral'
+      variant: 'subtle'
+    - label: 'GitHub'
+      icon: 'i-simple-icons-github'
+      color: 'neutral'
+      variant: 'subtle'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  separator: 'Providers'
+  class: 'max-w-md'
 ---
 ::
 
-[ Separator ](/docs/components/separator#props)コンポーネントから任意のプロパティを渡してカスタマイズできます。
+[ Separator](/docs/components/separator#props)コンポーネントの任意のプロパティを渡してカスタマイズできます。
 
 ::component-code
 ---
-きれい真
-無視
-  - フィールド
-  -  title
-  - 説明
-  - アイコン
-  - プロバイダー
-  - クラス
-外部
-  - プロバイダー
-  - フィールド
-externalTypes
-  -  ButtonProps []
-  -  AuthFormField []
-小道具
-  title 'ログイン'
-  説明：'アカウントにアクセスするための資格情報を入力してください。
-  アイコン'i—lucide—user'
-  プロバイダー：
-    -  label 'Google'
-      アイコン'i—simple—icons—google'
-      色'中立'
-      バリアント：'微妙'
-    -  label 'GitHub'
-      アイコン'i—simple—icons'
-      色'中立'
-      バリアント：'微妙'
-  フィールド
-    -  name 'email'
-      タイプテキスト
-      ラベル'メール'
-    -  name 'パスワード'
-      タイプ'パスワード'
-      ラベル'パスワード'
-  セパレータ
-    アイコン'i—lucide—user'
-  クラス'max—w—md'
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
+  - class
+external:
+  - providers
+  - fields
+externalTypes:
+  - ButtonProps[]
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  icon: 'i-lucide-user'
+  providers:
+    - label: 'Google'
+      icon: 'i-simple-icons-google'
+      color: 'neutral'
+      variant: 'subtle'
+    - label: 'GitHub'
+      icon: 'i-simple-icons-github'
+      color: 'neutral'
+      variant: 'subtle'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  separator:
+    icon: 'i-lucide-user'
+  class: 'max-w-md'
 ---
 ::
 
 ### 送信
 
-`submit`プロパティを使用して、フォームの送信ボタンを変更します。
+`submit`プロパティを使用してフォームの送信ボタンを変更します。
 
-[ Button ](/docs/components/button)コンポーネントから、`variant`、`color`、`to`などの任意のプロパティを渡すことができます。
+[Button](/docs/components/button)コンポーネントから、`variant`、`color`、`to`などの任意のプロパティを渡すことができます。
 
 ::component-code
 ---
-きれい真
-無視
-  - フィールド
-  -  title
-  - 説明
-  - アイコン
-  - プロバイダー
-  -  submit.label
-  -  submit.color
-  -  submit.variant
-  - クラス
-外部
-  - フィールド
-externalTypes
-  -  AuthFormField []
-小道具
-  title 'ログイン'
-  説明：'アカウントにアクセスするための資格情報を入力してください。
-  アイコン'i—lucide—user'
-  フィールド
-    -  name 'email'
-      タイプテキスト
-      ラベル'メール'
-    -  name 'パスワード'
-      タイプ'パスワード'
-      ラベル'パスワード'
-  投稿
-    ラベル'送信'
-    色'エラー'
-    バリアント：'微妙'
-  クラス'max—w—md'
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
+  - submit.label
+  - submit.color
+  - submit.variant
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  icon: 'i-lucide-user'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  submit:
+    label: 'Submit'
+    color: 'error'
+    variant: 'subtle'
+  class: 'max-w-md'
 ---
 ::
 
-## 例
+## サンプル
 
 ### ページ内
 
-`AuthForm`コンポーネントを[ PageCard ](/docs/components/page-card)コンポーネントでラップして、たとえば`login.vue`ページ内に表示することができます。
+`AuthForm`コンポーネントを[ PageCard](/docs/components/page-card)コンポーネントでラップして、`login.vue`ページ内などに表示できます。
 
 ::component-example
 ---
-名前'auth—form—page—example'
-崩壊真
+name: 'auth-form-page-example'
+collapse: true
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attributes" target="_blank"}
-このコンポーネントは、すべてのネイティブ`<form>` HTML属性もサポートします。
+このコンポーネントはすべてのネイティブ`<form>` HTML属性もサポートします。
 ::
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-###  Emits
+### Emits
 
-component—emits
+:component-emits
 
-###  Expose
+### Expose
 
-[`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref)を使って型付けされたコンポーネントインスタンスにアクセスできます。例えば、別のフォーム例えば"reset"フォームで次のようにできます。
+[`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref)を使用して型付きコンポーネントインスタンスにアクセスすることができます。例えば、別のフォーム例えば"reset"フォームで次のようにできます。
 
 ```vue
 <script setup lang="ts">
@@ -400,10 +400,10 @@ const authForm = useTemplateRef('authForm')
 | `formRef`{lang="ts-type"}| `Ref<HTMLFormElement \| null>`{lang="ts-type"}|
 | `state`{lang="ts-type"}| `Reactive<FormStateType>`{lang="ts-type"}|
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

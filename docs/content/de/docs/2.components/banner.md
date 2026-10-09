@@ -10,58 +10,58 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Banner.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-@@ph001@title
+### Titel
 
-Verwenden Sie die `title` prop, um einen Titel auf dem Banner anzuzeigen.
+Verwenden Sie die `title`-Prop, um einen Titel auf dem Banner anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Klasse: '! p-0'
-Props:
-  Titel: "Das ist ein Banner mit einer wichtigen Botschaft."
+prettier: true
+class: '!p-0'
+props:
+  title: 'This is a banner with an important message.'
 ---
 ::
 
-@@ph003@@Icon-Seite
+### Icon (englisch)
 
 Verwenden Sie die `icon` prop, um ein Symbol auf dem Banner anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Klasse: '! p-0'
-Ignoriert:
-  @@ph005@title
-Props:
-  Bildnachweis: i-lucide-info
-  Titel: "Dies ist ein Banner mit einem Symbol."
+prettier: true
+class: '!p-0'
+ignore:
+  - title
+props:
+  icon: i-lucide-info
+  title: 'This is a banner with an icon.'
 ---
 ::
 
-@@@@@@@006@00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### color Bearbeiten
 
 Verwenden Sie die `color` prop, um die Farbe des Banners zu ändern.
 
 ::component-code
 ---
-Schöner: wahr
-Klasse: '! p-0'
-Ignoriert:
-  @@@@@@@@@@icon______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-  @@ph009@title
-Props:
-  Farbe: "neutral"
-  Bildnachweis: i-lucide-info
-  Titel: "Dies ist ein Banner mit einem Symbol."
+prettier: true
+class: '!p-0'
+ignore:
+  - icon
+  - title
+props:
+  color: 'neutral'
+  icon: i-lucide-info
+  title: 'This is a banner with an icon.'
 ---
 ::
 
-@@ph010 @ geschlossen
+### Schließen
 
-Verwenden Sie die `close` prop, um ein [Button](/docs/components/button) anzuzeigen, um das Banner zu schließen.
+Verwenden Sie die `close`-Prop, um einen [Button](/docs/components/button) anzuzeigen, um das Banner zu schließen.
 
 ::tip
 Ein `close`-Ereignis wird ausgegeben, wenn der Schließen-Button angeklickt wird.
@@ -69,12 +69,12 @@ Ein `close`-Ereignis wird ausgegeben, wenn der Schließen-Button angeklickt wird
 
 ::component-example
 ---
-IFrame:
-  style: 'height: 48px;'(Höhe: 48px;'
-Übertreibungen: true
-Titel: "Banner-Beispiel"
+iframe:
+  style: 'height: 48px;'
+overflowHidden: true
+name: 'banner-example'
 ---
-#Der Code
+#code
 
 ```vue
 <template>
@@ -89,24 +89,24 @@ Beim Schließen wird `banner-${id}` im lokalen Speicher gespeichert, um zu verhi
 ::
 
 ::caution
-Um den Status dismissed über Seiten-Reloads hinweg beizubehalten, müssen Sie ein `id` prop. Ohne ein explizites `id` wird das Banner nur für die aktuelle Sitzung ausgeblendet und beim Seiten-Reload wieder angezeigt.
+Um den Status dismissed über Seiten-Reloads hinweg beizubehalten, müssen Sie eine `id`-Prop angeben. Ohne ein explizites `id` wird das Banner nur für die aktuelle Sitzung ausgeblendet und beim Seiten-Reload wieder angezeigt.
 ::
 
-@@ph027@Schließen-Symbol
+### Close Symbol
 
-Verwenden Sie die `close-icon` prop, um die Schließen-Schaltfläche [Icon](/docs/components/icon). Standardmäßig auf `i-lucide-x`.
+Verwenden Sie die `close-icon`-Prop, um die Schließen-Taste [Icon](/docs/components/icon). Defaults auf `i-lucide-x`.
 
 ::component-example
 ---
-IFrame:
-  style: 'height: 48px;'(Höhe: 48px;'
-Übertreibungen: true
-Name: "Banner-Beispiel"
-Props:
-  title: 'Dies ist ein schließbarer Banner mit einem benutzerdefinierten Schließen-Icon.'
-  closeIcon: 'i-lucide-x-circle'(I-lucide-x-Kreis)
+iframe:
+  style: 'height: 48px;'
+overflowHidden: true
+name: 'banner-example'
+props:
+  title: 'This is a closable banner with a custom close icon.'
+  closeIcon: 'i-lucide-x-circle'
 ---
-#Der Code
+#code
 
 ```vue
 <template>
@@ -121,40 +121,40 @@ Props:
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.close` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter der `ui.icons.close`-Taste.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.close` Schlüssel anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter der `ui.icons.close`-Taste.
 :::
 ::
 
-@@ph047@Aktion
+### Actions Bearbeiten
 
-Verwenden Sie die `actions` prop, um einige [Button](/docs/components/button) Aktionen zum Banner hinzuzufügen.
+Verwenden Sie die `actions`-Prop, um einige [Button](/docs/components/button)-Aktionen zum Banner hinzuzufügen.
 
 ::component-code
 ---
-Schöner: wahr
-Klasse: '! p-0'
-Ignoriert:
-  @@ph053@title
-  @@ph054@Aktion
-  @@ph055@@variantenreich
-Außen:
-  @@ph056@Aktion
-Externe Typen:
-  @@ph057@buttonprops [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Titel: "Das ist ein Banner mit Aktionen."
-  Aktionen:
-    - label: Aktion 1
-      Beschreibung: Outline
-    - label: Aktion 2
-      trailingIcon: i-lucide-arrow-right (englisch)
+prettier: true
+class: '!p-0'
+ignore:
+  - title
+  - actions
+  - variant
+external:
+  - actions
+externalTypes:
+  - ButtonProps[]
+props:
+  title: 'This is a banner with actions.'
+  actions:
+    - label: Action 1
+      variant: outline
+    - label: Action 2
+      trailingIcon: i-lucide-arrow-right
 ---
 ::
 
@@ -162,33 +162,33 @@ Props:
 Die Aktionsbuttons sind standardmäßig `color="neutral"` und `size="xs"`. Sie können diese Werte anpassen, indem Sie sie direkt an jede Aktionsschaltfläche übergeben.
 ::
 
-@@@@@@@@@@Link
+### Link ist
 
-Sie können jede Eigenschaft von der [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) Komponente wie `to`,`target`,`rel`, etc. übergeben.
+Sie können jede Eigenschaft der Komponente [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) übergeben, z. B. `to`, `target`, `rel` usw.
 
 ::component-code
 ---
-Schöner: wahr
-Klasse: '! p-0'
-Übertreibungen: true
-Ignoriert:
-  @@ph071@title
-  @@ph072@@zielgruppe
-Props:
-  zu: 'https://nuxtlabs.com/'
-  Ziel: _blank
-  title: 'NuxtLabs wird Teil von Vercel!'
-  Farbe: "Primär"
+prettier: true
+class: '!p-0'
+overflowHidden: true
+ignore:
+  - title
+  - target
+props:
+  to: 'https://nuxtlabs.com/'
+  target: '_blank'
+  title: 'NuxtLabs is joining Vercel!'
+  color: 'primary'
 ---
 ::
 
 ::note
-Die Komponente `NuxtLink` erbt alle anderen Attribute, die Sie an die Komponente `User` übergeben.
+Die `NuxtLink`-Komponente erbt alle anderen Attribute, die Sie an die `User`-Komponente übergeben.
 ::
 
-## Beispiele
+## Examples (Beispiele)
 
-`app.vue`
+### Innerhalb von `app.vue`
 
 Verwenden Sie die Banner-Komponente in Ihrem `app.vue` oder in einem Layout:
 
@@ -210,24 +210,24 @@ Verwenden Sie die Banner-Komponente in Ihrem `app.vue` oder in einem Layout:
 </template>
 ```
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@api
+## API
 
-@@@@@@@@@@@ph097@@@props
+### Props Bearbeiten
 
-Komponenten Props
+:component-props
 
-@@ph098@@slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@@@@@@@@@@@@ph099@@@emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-@@ph100@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph101@@changelog @@@ changelog @@@ changelog @ changelog @ changelog @ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

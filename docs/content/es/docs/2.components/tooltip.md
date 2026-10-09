@@ -4,7 +4,7 @@ category: overlay
 keywords:
   - hint
 links:
-  - label: Tooltip
+  - label: ToolTip
     icon: i-custom-reka-ui
     to: https://reka-ui.com/docs/components/tooltip
   - label: GitHub también
@@ -12,24 +12,24 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Tooltip.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice un [Button](/docs/components/button) o cualquier otro componente en la ranura predeterminada de la información sobre herramientas.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @005@texto
-Props:
-  texto: 'Abierto en GitHub'
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - text
+props:
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-    @@ 006 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-El botón {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 ::
 
 ::warning
@@ -37,81 +37,81 @@ Asegúrese de envolver su aplicación con el componente [`App`](/docs/components
 ::
 
 ::tip{to="/docs/components/app#props"}
-Puede consultar el componente `App``tooltip` prop para ver cómo configurar la información sobre herramientas de forma global.
+Puede consultar el componente `App` prop `tooltip` para ver cómo configurar la información sobre herramientas a nivel mundial.
 ::
 
-@200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Text (Edición española)
 
 Utilice el prop `text` para establecer el contenido de la información sobre herramientas.
 
 ::component-code
 ---
-Categoría: true
-Props:
-  texto: 'Abierto en GitHub'
-Los slots:
-  Default:|
+prettier: true
+props:
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-    @22
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-por: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 ::
 
-@24@240000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### kbds (Edición española)
 
 Utilice el prop `kbds` para representar los componentes [Kbd](/docs/components/kbd) en la información sobre herramientas.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @31@300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  texto: 'Abierto en GitHub'
-  kbd:
-    @32@meta
-    @@333@@G
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - text
+  - kbds
+props:
+  text: 'Open on GitHub'
+  kbds:
+    - meta
+    - G
+slots:
+  default: |
 
-    @@@ 34 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-Botón {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 ::
 
 ::tip
-Puede usar claves especiales como `meta` que se muestra como `⌘` en macOS y `Ctrl` en otras plataformas.
+Puedes usar teclas especiales como `meta` que se muestra como `⌘` en macOS y `Ctrl` en otras plataformas.
 ::
 
-@39@@delay
+### Delay (Edición española)
 
 Utilice el prop `delay-duration` para cambiar el retardo antes de que aparezca la información sobre herramientas. Por ejemplo, puede hacer que aparezca instantáneamente configurándolo en `0`.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@242@texto
-Props:
-  Retraso: 0
-  texto: 'Abierto en GitHub'
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - text
+props:
+  delayDuration: 0
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-    @@@ 43 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-Botón {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 ::
 
 ::tip
 Esto se puede configurar globalmente a través de la opción `tooltip.delayDuration` en el componente [`App`](/docs/components/app).
 ::
 
-@@501@Contenido
+### Contenido
 
 Utilice el prop `content` para controlar cómo se representa el contenido de la información de herramientas, como su `align` o `side`, por ejemplo.
 
@@ -121,121 +121,121 @@ Esto se puede configurar globalmente a través de la opción `tooltip.content` e
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @061 @ texto
-Items:
+prettier: true
+ignore:
+  - text
+items:
   content.align:
-    @2006@Inicio
-    @@P063@Centro de Información
-    @@F064
+    - start
+    - center
+    - end
   content.side:
-    @@pH065@@derecha
-    @66@izquierda
-    @@pH067@top
-    @68@abajo
-Props:
-  Contenido:
-    Alineación: Centro
-    Categoría: Bottom
-    Desplazamiento: 8
-  texto: 'Abierto en GitHub'
-Los slots:
-  Default:|
+    - right
+    - left
+    - top
+    - bottom
+props:
+  content:
+    align: center
+    side: bottom
+    sideOffset: 8
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-    @@pf069 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-Botón {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 ::
 
-@@F071@Flecha
+### Flecha
 
-Utilice el prop `arrow` para mostrar una flecha en la información sobre herramientas.
+Utilice el accesorio `arrow` para mostrar una flecha en la información sobre herramientas.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @073 @ texto
-  @@744@Arreaza
-Props:
-  Arrow: Verdad
-  texto: 'Abierto en GitHub'
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - text
+  - arrow
+props:
+  arrow: true
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-    @@@ 75 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-El botón {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 ::
 
-@777@@desactivado
+### Desactivado
 
 Utilice el prop `disabled` para desactivar la información sobre herramientas.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @079 @ texto
-Props:
-  Discapacitados: Verdadero
-  texto: 'Abierto en GitHub'
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - text
+props:
+  disabled: true
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-    @@ 080 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-Botón {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 ::
 
-@@ph082@Ejemplos
+##  Ejemplos
 
-### Estado abierto de control
+### Control estado abierto
 
-Puede controlar el estado abierto utilizando la prop `default-open` o la directiva `v-model:open`.
+Puede controlar el estado abierto usando la prop `default-open` o la directiva `v-model:open`.
 
 ::component-example
 ---
-Nombre: 'tooltip-open-example'
+name: 'tooltip-open-example'
 ---
 ::
 
 ::note
-En este ejemplo, aprovechando [`defineShortcuts`](/docs/composables/define-shortcuts), puede alternar la información de herramientas presionando: kbd{value="O"}.
+En este ejemplo, aprovechando [`defineShortcuts`](/docs/composables/define-shortcuts), puede alternar la información sobre herramientas presionando: kbd{value="O"}.
 ::
 
-### Con el siguiente cursor
+### Con el cursor siguiente
 
-Puede hacer que la información sobre herramientas siga el cursor al pasar el cursor sobre un elemento usando el prop [`reference`](https://reka-ui.com/docs/components/tooltip#trigger):
+Puede hacer que la información sobre herramientas siga el cursor al pasar el cursor sobre un elemento utilizando la prop [`reference`](https://reka-ui.com/docs/components/tooltip#trigger):
 
 ::component-example
 ---
-Nombre: 'tooltip-cursor-ejemplo'
+name: 'tooltip-cursor-example'
 ---
 ::
 
-@@pH098
+## API
 
-@099@099@099@099
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
-@100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots (Edición española)
 
-Componentes de slots
+:component-slots
 
-@101@101@101@101
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@2010@tema
+## Temas
 
-Componente Tema
+:component-theme
 
-@100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

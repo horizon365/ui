@@ -9,9 +9,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodeGroup.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Wickeln Sie Ihre Codeblöcke um eine `code-group`-Komponente, um sie in Registerkarten zusammenzufassen.
+Wickeln Sie Ihre Codeblöcke um eine `code-group`-Komponente, um sie in Registerkarten zu gruppieren
 
 ::code-preview{class="[&>div]:*:my-0 [&>div]:*:w-full"}
 
@@ -35,7 +35,7 @@ bun add @nuxt/ui
 
 :::
 
-#Der Code
+#code
 
 ````mdc
 ::code-group
@@ -45,7 +45,7 @@ pnpm add @ nuxt/ui hinzufügen
 ```
 
 ```bash [yarn]
-add @ nuxt/ui hinzufügen
+yarn add @ nuxt/ui hinzufügen
 ```
 
 ```bash [npm]
@@ -62,23 +62,23 @@ bun add @ nuxt/ui hinzufügen
 ::
 
 ::note{to="/docs/typography/code#code-blocks"}
-Wie die Komponente `ProsePre` behandelt die Komponente `CodeGroup` Dateinamen, Symbole und Kopierknopf.
+Wie die `ProsePre`-Komponente verarbeitet die `CodeGroup` Dateinamen, Symbole und Kopierschaltflächen.
 ::
 
-@@333@bpb
+## API (englisch)
 
-@@ph034@@gmail.de
+### Props (nicht)
 
-: component-props {prose}
+:component-props{prose}
 
-@@ph036@gmail.de
+### Slots Bearbeiten
 
-: component-slots {prose}
+:component-slots{prose}
 
-@@ph038@gmail.de
+## Theme Bearbeiten
 
-: component-theme {prose}
+:component-theme{prose}
 
-@@ph040@@changelog @@changelog
+## Changelog (englisch)
 
-: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

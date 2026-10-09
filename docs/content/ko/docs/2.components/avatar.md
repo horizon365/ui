@@ -10,160 +10,160 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Avatar.vue
 ---
 
-##  사용
+## Usage
 
-Avatar는 [`@nuxt/image`](https://github.com/nuxt/image) 가 설치되면 `<NuxtImg>` 구성요소를 사용하며, 그렇지 않으면 `img`로 다시 돌아갑니다.
+아바타는 [`@nuxt/image`](https://github.com/nuxt/image)를 설치할 때 `<NuxtImg>` 구성 요소를 사용하며, 그렇지 않으면 `img`로 다시 돌아갑니다.
 
 ::component-code
 ---
-무시하기:
-  -  src
-소품 :
+ignore:
+  - src
+props:
   src: 'https://github.com/benjamincanac.png'
 ---
 ::
 
 ::note
-HTML `<img>` 요소에서 `alt`, `loading` 등의 속성을 전달할 수 있습니다.
+HTML `<img>` 요소에서 `alt`, `loading` 등의 모든 속성을 전달할 수 있습니다.
 ::
 
 ::tip
-`@nuxt/image`를 선택 해제하려면 `as`prop:`:as="{ img: 'img' }"`를 사용하십시오.
+`@nuxt/image`를 옵트아웃하려면 `as` prop:`:as="{ img: 'img' }"`를 사용합니다.
 ::
 
-###  Src
+### Src (### Src)
 
-`src`prop 을 사용하여 이미지 URL을 설정합니다.
+`src` prop을 사용하여 이미지 URL을 설정합니다.
 
 ::component-code
 ---
-무시하기:
-  -  loading
-소품 :
+ignore:
+  - loading
+props:
   src: 'https://github.com/benjamincanac.png'
-  로드: Lazy
+  loading: lazy
 ---
 ::
 
-###  크기
+### Size
 
-`size`prop을 사용하여 아바타의 크기를 설정합니다.
+`size` prop을 사용하여 Avatar의 크기를 설정합니다.
 
 ::component-code
 ---
-무시하기:
-  -  src
-  -  loading
-소품 :
+ignore:
+  - src
+  - loading
+props:
   src: 'https://github.com/benjamincanac.png'
-  크기: xl
-  로드: Lazy
+  size: xl
+  loading: lazy
 ---
 ::
 
 ::note
-`<img>` 요소의 `width` 및 `height` 는 `size`prop 에 따라 자동으로 설정됩니다.
+`<img>` 요소의 `width` 및 `height`는 `size` prop을 기반으로 자동으로 설정됩니다.
 ::
 
-###  아이콘
+### Icon 이미지
 
-`icon`prop을 사용하여 폴백 [Icon](/docs/components/icon)을 표시합니다.
+`icon` 소품을 사용하여 대체 [Icon](/docs/components/icon) 를 표시합니다.
 
 ::component-code
 ---
-소품 :
-  아이콘: i-lucide-image
-  크기: MD
+props:
+  icon: 'i-lucide-image'
+  size: md
 ---
 ::
 
-###  텍스트
+### Text 파일
 
-`text`prop 을 사용하여 대체 텍스트를 표시합니다.
+`text` prop을 사용하여 대체 텍스트를 표시합니다.
 
 ::component-code
 ---
-소품 :
-  텍스트: '+1'
-  크기: md
+props:
+  text: '+1'
+  size: md
 ---
 ::
 
-###  Alt
+### Alt
 
-아이콘이나 텍스트가 제공되지 않으면 `alt`prop의 **initials** 이 대체 기능으로 사용됩니다.
+아이콘이나 텍스트가 제공되지 않으면 `alt` prop의 **initials**가 대체 기능으로 사용됩니다.
 
 ::component-code
 ---
-소품 :
-  본명: Benjamin Canac
-  크기: MD
+props:
+  alt: 'Benjamin Canac'
+  size: md
 ---
 ::
 
 ::note
-`alt`prop은 `img` 요소에 `alt` 속성으로 전달됩니다.
+`alt` prop 은 `img` 요소에 `alt` 속성으로 전달됩니다.
 ::
 
-### 색상: badge{label="4.8+" class="align-text-top"}
+### Color : badge{label="4.8+" class="align-text-top"}
 
-`color`prop을 사용하여 아바타의 색상을 변경합니다.
+`color` prop을 사용하여 아바타의 색상을 변경합니다.
 
 ::component-code
 ---
-소품 :
-  색상: 기본
-  본명: Benjamin Canac
+props:
+  color: primary
+  alt: 'Benjamin Canac'
 ---
 ::
 
-###  칩
+### Chip 칩
 
-`chip`prop을 사용하여 아바타 주위에 칩을 표시합니다.
+`chip` prop을 사용하여 아바타 주위에 칩을 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  src
-  -  loading
-  - chip.inset - chip.inset
-소품 :
+prettier: true
+ignore:
+  - src
+  - loading
+  - chip.inset
+props:
   src: 'https://github.com/benjamincanac.png'
-  로드: Lazy
-  칩:
-    삽입: True
+  loading: lazy
+  chip:
+    inset: true
 ---
 ::
 
-##  예제
+## 예제
 
-###  툴팁 포함
+### 툴팁 사용
 
-[Tooltip](/docs/components/tooltip) 구성요소를 사용하여 아바타를 마우스로 이동할 때 툴팁을 표시할 수 있습니다.
+아바타를 마우스로 이동할 때 [Tooltip](/docs/components/tooltip) 구성 요소를 사용하여 툴팁을 표시할 수 있습니다.
 
-:component-example {name="avatar-tooltip-example"}
+:component-example{name="avatar-tooltip-example"}
 
-### 마스크 사용
+### With 마스크
 
 CSS 마스크를 사용하여 간단한 원이 아닌 사용자 정의 모양으로 아바타를 표시할 수 있습니다.
 
-: component-example {name="avatar-mask-example"}
+:component-example{name="avatar-mask-example"}
 
-##  API
+## API
 
-### Props 이미지
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes" target="_blank"}
-이 컴포넌트는 모든 네이티브 `<img>`HTML 속성을 지원합니다.
+이 구성 요소는 모든 기본 `<img>` HTML 속성을 지원합니다.
 ::
 
-##  테마
+## 테마
 
-:구성요소 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

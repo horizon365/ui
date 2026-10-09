@@ -13,7 +13,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Collapsible.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice un [Button](/docs/components/button) o cualquier otro componente en la ranura predeterminada del Collapsible.
 
@@ -21,135 +21,135 @@ A continuación, utilice la ranura `#content` para añadir el contenido que se m
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @06@clase
-Props:
-  clase: 'flex flex-col gap-2 w-48'
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - class
+props:
+  class: 'flex flex-col gap-2 w-48'
+slots:
+  default: |
 
-    @@@ 007 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
 
-  Contenido:|
+  content: |
 
-    @@ 008 @
+    <Placeholder class="h-48" />
 ---
 
-El botón {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
+:u-button{label="Abiertos" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
 
-#contenido
-por placeholder{class="h-48"}
+#content
+:placeholder{class="h-48"}
 ::
 
-@111@@ununmount
+### Unmount (Edición española)
 
-Utilice el prop `unmount-on-hide` para evitar que el contenido se desmonte cuando se colapsa el Colapsible.
+Utilice el prop `unmount-on-hide` para evitar que el contenido se desmonte cuando se colapsa el Collapsible.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@clase014
-Props:
-  Desconocido: Falso
-  clase: 'flex flex-col gap-2 w-48'
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - class
+props:
+  unmountOnHide: false
+  class: 'flex flex-col gap-2 w-48'
+slots:
+  default: |
 
-    @@@ 15 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
 
-  Contenido:|
+  content: |
 
-    @@@ 16 @
+    <Placeholder class="h-48" />
 ---
 
-por: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
+:u-button{label="Abiertos" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
 
-#Contenido
-por placeholder{class="h-48"}
+#content
+:placeholder{class="h-48"}
 ::
 
 ::note
 Puede inspeccionar el DOM para ver el contenido que se representa.
 ::
 
-@@pH019@@desactivado
+### Desactivado
 
-Utilice el `disabled` prop para desactivar el Colapsable.
+Utilice el accesorio `disabled` para desactivar el Colapsible.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@21@clase
-Props:
-  clase: 'flex flex-col gap-2 w-48'
-  Discapacidad: Verdadero
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - class
+props:
+  class: 'flex flex-col gap-2 w-48'
+  disabled: true
+slots:
+  default: |
 
-    @22
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
 
-  Contenido:|
+  content: |
 
-    @@ 23 @
+    <Placeholder class="h-48" />
 ---
 
-Botón {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
+:u-button{label="Abiertos" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
 
-#Contenido
-por placeholder{class="h-48"}
+#content
+:placeholder{class="h-48"}
 ::
 
-@@26000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Ejemplos
 
-### Control estado abierto
+### Control Estado abierto
 
-Puede controlar el estado abierto utilizando la prop `default-open` o la directiva `v-model:open`.
+Puede controlar el estado abierto usando la prop `default-open` o la directiva `v-model:open`.
 
 ::component-example
 ---
-Nombre: 'collapsible-open-exemple'
+name: 'collapsible-open-example'
 ---
 ::
 
 ::note
-En este ejemplo, aprovechando [`defineShortcuts`](/docs/composables/define-shortcuts), puede alternar el Colapsable presionando: kbd{value="O"}.
+En este ejemplo, aprovechando [`defineShortcuts`](/docs/composables/define-shortcuts), puede alternar el desplegable presionando: kbd{value="O"}.
 ::
 
 ::tip
 Esto le permite mover el disparador fuera del Collapsible o eliminarlo por completo.
 ::
 
-### Con icono rotativo
+### Con icono giratorio
 
 Aquí hay un ejemplo con un icono giratorio en el botón que indica el estado abierto del Collapsible.
 
 ::component-example
 ---
-Nombre: 'collapsible-icon-example'
+name: 'collapsible-icon-example'
 ---
 ::
 
-@@pH037@@pH037
+## API (Edición española)
 
-@380@38000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Accesorios
 
-Componentes Props
+:component-props
 
-@@39@39@39
+### Slots (Edición española)
 
-Componentes de slots
+:component-slots
 
-@@40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@410000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Temas
 
-Componente Tema
+:component-theme
 
-@@2004@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

@@ -12,346 +12,346 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/FileUpload.vue
 ---
 
-##  사용
+## Usage
 
 `v-model` 지시문을 사용하여 FileUpload 값을 제어합니다.
 
 ::component-code
 ---
-무시하기:
-  - modelValue - modelValue 이미지
-  -  클래스
-외부:
-  - modelValue - modelValue 이미지
-소품 :
-  ModelValue: null
-  클래스: 'w-96 min-h-48'
+ignore:
+  - modelValue
+  - class
+external:
+  - modelValue
+props:
+  modelValue: null
+  class: 'w-96 min-h-48'
 ---
 ::
 
-###  다중
+### Multiple 다중
 
-`multiple`prop을 사용하여 여러 파일을 선택할 수 있습니다.
+`multiple` prop를 사용하여 여러 파일을 선택할 수 있습니다.
 
 ::component-code
 ---
-무시하기:
-  -  클래스
-소품 :
-  다중: True
-  클래스 : 'w-96 min-h-48'
+ignore:
+  - class
+props:
+  multiple: true
+  class: 'w-96 min-h-48'
 ---
 ::
 
-###  Dropzone
+### Dropzone 이미지
 
-`dropzone`prop을 사용하여 삭제 가능한 영역을 활성화/비활성화합니다. 기본값은 `true`입니다.
+`dropzone` 소품을 사용하여 드롭 가능 영역을 활성화/비활성화합니다. 기본값은 `true`입니다.
 
 ::component-code
 ---
-무시하기:
-  -  class
-소품 :
-  dropzone : 거짓
-  클래스 : 'w-96 min-h-48'
+ignore:
+  - class
+props:
+  dropzone: false
+  class: 'w-96 min-h-48'
 ---
 ::
 
-### Interactive 대화형
+### Interactive 대화식
 
-`interactive`prop을 사용하여 클릭 가능한 영역을 활성화/비활성화합니다. 기본값은 `true`입니다.
+`interactive` 소품을 사용하여 클릭 가능한 영역을 활성화/비활성화합니다. 기본값은 `true`입니다.
 
 ::tip{to="#with-files-bottom-slot"}
-이 기능은 `Button` 구성 요소를 `#actions` 슬롯에 추가할 때 유용합니다.
+이 기능은 `#actions` 슬롯에 `Button` 구성 요소를 추가할 때 유용합니다.
 ::
 
 ::component-code
 ---
-무시하기:
-  -  클래스
-소품 :
-  대화식: false
-  클래스 : 'w-96 min-h-48'
+ignore:
+  - class
+props:
+  interactive: false
+  class: 'w-96 min-h-48'
 ---
 ::
 
-###  수락 됨
+### 수락 됨
 
-`accept`prop을 사용하여 입력할 수 있는 파일 형식을 지정합니다. [MIME 형식](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types) 또는 파일 확장자(예: `image/png,application/pdf,.jpg`). 기본값은 `*` (모든 파일 형식)입니다.
+`accept` 소품을 사용하여 입력에 허용되는 파일 유형을 지정합니다. [MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types) 또는 파일 확장자(예: `image/png,application/pdf,.jpg`)의 쉼표로 구분된 목록을 제공합니다. 기본값은 `*`(모든 파일 유형)입니다.
 
 ::component-code
 ---
-무시하기:
-  -  accept
-  -  클래스
-소품 :
-  허용: 'image/*'
-  클래스 : 'w-96 min-h-48'
+ignore:
+  - accept
+  - class
+props:
+  accept: 'image/*'
+  class: 'w-96 min-h-48'
 ---
 ::
 
-###  레이블
+### Label 태그
 
-`label`prop을 사용하여 FileUpload 레이블을 설정합니다.
+`label` prop을 사용하여 FileUpload 레이블을 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  클래스
-소품 :
-  사진: "Drop your image here"
-  클래스 : 'w-96 min-h-48'
+prettier: true
+ignore:
+  - class
+props:
+  label: 'Drop your image here'
+  class: 'w-96 min-h-48'
 ---
 ::
 
-###  설명
+### Description
 
-`description`prop을 사용하여 FileUpload에 대한 설명을 설정합니다.
+`description` prop를 사용하여 FileUpload에 대한 설명을 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  label
-  -  클래스
-소품 :
-  사진: "Drop your image here"
-  설명: 'SVG, PNG, JPG 또는 GIF (최대 2MB)'
-  클래스 : 'w-96 min-h-48'
+prettier: true
+ignore:
+  - label
+  - class
+props:
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96 min-h-48'
 ---
 ::
 
-###  아이콘
+### Icon
 
-`icon`prop을 사용하여 FileUpload.Defaults 아이콘을 `i-lucide-upload`로 설정합니다.
+`icon` prop을 사용하여 FileUpload.Defaults 아이콘을 `i-lucide-upload`로 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  label
-  -  설명
-  -  클래스
-소품 :
-  아이콘: 'i-lucide-image'
-  사진: "drop your image here"
-  설명: 'SVG, PNG, JPG 또는 GIF (최대 2MB)'
-  클래스 : 'w-96 min-h-48'
+prettier: true
+ignore:
+  - label
+  - description
+  - class
+props:
+  icon: 'i-lucide-image'
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96 min-h-48'
 ---
 ::
 
 ::framework-only
-#nuxt 코드
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.upload` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.upload` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.upload` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.upload` 키 아래의 `vite.config.ts` 내에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-###  색상
+### color
 
-`color`prop을 사용하여 FileUpload의 색상을 변경합니다.
+`color` prop을 사용하여 FileUpload 색상을 변경합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  label
-  -  설명
-  -  클래스
-소품 :
-  색상: 중립
-  강조 표시:true
-  사진: "drop your image here"
-  설명: 'SVG, PNG, JPG 또는 GIF (최대 2MB)'
-  클래스 : 'w-96 min-h-48'
+prettier: true
+ignore:
+  - label
+  - description
+  - class
+props:
+  color: neutral
+  highlight: true
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96 min-h-48'
 ---
 ::
 
 ::note
-`highlight`prop은 초점 상태를 보여주기 위해 사용되며, 검증 오류가 발생할 때 내부적으로 사용됩니다.
+`highlight` prop은 초점 상태를 표시하기 위해 사용되며, 유효성 검사 오류가 발생할 때 내부적으로 사용됩니다.
 ::
 
-###  변형
+### Variant
 
-`variant`prop 을 사용하여 FileUpload 의 변형을 변경합니다.
+`variant` prop을 사용하여 FileUpload 변형을 변경합니다.
 
 ::component-code
 ---
-무시하기:
-  -  클래스
-소품 :
-  변형: 버튼
+ignore:
+  - class
+props:
+  variant: button
 ---
 ::
 
-###  크기
+### Size
 
-`size`prop을 사용하여 FileUpload의 크기를 변경합니다.
+`size` prop을 사용하여 FileUpload 크기를 변경합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  label
-  -  설명
-  -  클래스
-소품 :
-  크기: xl
-  변형: 영역
-  사진: "Drop your image here"
-  설명: 'SVG, PNG, JPG 또는 GIF (최대 2MB)'
+prettier: true
+ignore:
+  - label
+  - description
+  - class
+props:
+  size: xl
+  variant: area
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
 ---
 ::
 
-###  레이아웃
+### Layout
 
-`layout`prop을 사용하여 FileUpload.Defaults에 파일이 표시되는 방식을 `grid`로 변경합니다.
+`layout` prop을 사용하여 FileUpload.Defaults에 파일이 표시되는 방식을 `grid`로 변경합니다.
 
 ::warning
-이 prop은 `variant`가 `area`인 경우에만 작동합니다.
+이 소품은 `variant`가 `area`일 때만 작동합니다.
 ::
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  label
-  -  설명
-  - multiple @ 다중
-  -  클래스
-  -  ui. base
-소품 :
-  배치: 리스트
-  다중: true
-  사진: "Drop your images here"
-  설명: 'SVG, PNG, JPG 또는 GIF (최대 2MB)'
-  클래스: 'w-96'
+prettier: true
+ignore:
+  - label
+  - description
+  - multiple
+  - class
+  - ui.base
+props:
+  layout: list
+  multiple: true
+  label: 'Drop your images here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96'
   ui:
-    모델 번호:min-h-48
+    base: 'min-h-48'
 ---
 ::
 
-###  위치
+### Position 위치
 
-`position`prop을 사용하여 FileUpload.Defaults에서 파일 위치를 `outside`로 변경합니다.
+`position` prop을 사용하여 FileUpload.Defaults에서 파일의 위치를 `outside`로 변경합니다.
 
 ::warning
-이 prop은 `variant`가 `area`일 때만 작동하고 `layout`이 `list`일 때만 작동합니다.
+이 소품은 `variant`가 `area`이고 `layout`가 `list`일 때만 작동합니다.
 ::
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  label
-  -  설명
-  - multiple @ 다중
-  -  layout
-  -  클래스
-  -  ui. base
-소품 :
-  위치: 내부
-  배치: 리스트
-  다중: True
-  사진: "Drop your images here"
-  설명: 'SVG, PNG, JPG 또는 GIF (최대 2MB)'
-  클래스: 'W-96'
+prettier: true
+ignore:
+  - label
+  - description
+  - multiple
+  - layout
+  - class
+  - ui.base
+props:
+  position: inside
+  layout: list
+  multiple: true
+  label: 'Drop your images here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96'
   ui:
-    모델 번호:min-h-48
+    base: 'min-h-48'
 ---
 ::
 
-##  예제
+## 예제
 
-###  양식 유효성 검사
+### With 폼 유효성 검사
 
 [Form](/docs/components/form) 및 [FormField](/docs/components/form-field) 구성 요소 내에서 FileUpload를 사용하여 유효성 검사 및 오류 처리를 처리할 수 있습니다.
 
 ::component-example
 ---
-상품명 : True
-축소: true
-이름: 'file-upload-form-validation-example'
+prettier: true
+collapse: true
+name: 'file-upload-form-validation-example'
 ---
 ::
 
-### 기본 슬롯 포함
+### 기본 슬롯 사용
 
-기본 슬롯을 사용하여 파일업로드 구성 요소를 직접 만들 수 있습니다.
+기본 슬롯을 사용하여 고유한 FileUpload 구성 요소를 만들 수 있습니다.
 
 ::component-example
 ---
-상품명 : True
-축소: true
-이름: 'file-upload-default-slot-example'
+prettier: true
+collapse: true
+name: 'file-upload-default-slot-example'
 ---
 ::
 
-###  파일 하단 슬롯 포함
+### 파일 하단 슬롯이 있습니다.
 
-예를 들어 `files-bottom`슬롯을 사용하여 파일 목록 아래에 [Button](/docs/components/button)를 추가하여 모든 파일을 제거할 수 있습니다.
+`files-bottom` 슬롯을 사용하여 파일 목록 아래에 [Button](/docs/components/button)를 추가하여 모든 파일을 제거 할 수 있습니다.
 
 ::component-example
 ---
-상품명 : True
-축소: true
-name: 'file-upload-files-bottom-slot-example' 파일 업로드-파일-bottom-slot-example
+prettier: true
+collapse: true
+name: 'file-upload-files-bottom-slot-example'
 ---
 ::
 
 ::note{to="#interactive"}
-이 예제에서는 `interactive`prop이 `false`로 설정되어 있어 기본 클릭 가능 영역을 방지합니다.
+이 예제에서 `interactive` prop은 기본 클릭 가능 영역을 방지하기 위해 `false`로 설정되어 있습니다.
 ::
 
-###  파일 상단 슬롯 포함
+### 파일 상단 슬롯이 있습니다.
 
-예를 들어 파일 목록 위에 [Button](/docs/components/button) 슬롯을 사용하여 새 파일을 추가할 수 있습니다.
+`files-top` 슬롯을 사용하여 파일 목록 위에 [Button](xph24x)를 추가하여 새 파일을 추가 할 수 있습니다.
 
 ::component-example
 ---
-상품명 : True
-축소: true
-이름: 'file-upload-files-top-slot-example'
+prettier: true
+collapse: true
+name: 'file-upload-files-top-slot-example'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
-이 컴포넌트는 또한 모든 네이티브 `<input>`HTML 속성을 지원합니다.
+이 구성 요소는 모든 기본 `<input>` HTML 속성을 지원합니다.
 ::
 
-###  슬롯
+### Slots
 
-:구성요소 - 슬롯
+:component-slots
 
-###  Emits
+### Emits
 
-:구성요소 - 방출
+:component-emits
 
-###  노출
+### 노출
 
 템플릿 참조를 통해 컴포넌트에 액세스하는 경우 다음을 사용할 수 있습니다.
 
-| 이름 (Name)| 유형 (Type)|
+| 이름 Name| 유형 (Type)|
 | ---- | ---- |
-| `inputRef`{lang="ts-type"}| `Ref<HTMLInputElement \| null>` @ {lang="ts-type"}|
-| `dropzoneRef`{lang="ts-type"}| `Ref<HTMLDivElement \| null>`{lang="ts-type"}|
+| `inputRef`{lang="ts-type"} 파일| `Ref<HTMLInputElement \| null>`{lang="ts-type"}|
+| `dropzoneRef`{lang="ts-type"} 공식| `Ref<HTMLDivElement \| null>`{lang="ts-type"} 파일|
 
-##  테마
+## Theme 테마
 
-:구성요소 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

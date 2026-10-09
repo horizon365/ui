@@ -9,65 +9,65 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Breadcrumb.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Utilisez le composant Breadcrumb pour afficher l'emplacement de la page actuelle dans la hiérarchie de votre site.
 
 ::component-code
 ---
-Collapse: vrai
-Ignorer:
-  @@ph001@articles
-Extérieur:
-  @@ph002@@articles
-Extérieurs:
-  @@@@@@@@@BreadcrumbItem []
-Props:
+collapse: true
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - BreadcrumbItem[]
+props:
   items:
-    - label:« Docs »
+    - label: 'Docs'
       icon: 'i-lucide-book-open'
-      à:/docs
-    - label:'Composants'
-      Icône: i-lucide-box
-      à:'/docs/composants'
-    - label:« Breadcrumb »
-      Icône:'i-lucide-link'
-      à:/docs/components/breadcrumb
+      to: '/docs'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      to: '/docs/components'
+    - label: 'Breadcrumb'
+      icon: 'i-lucide-link'
+      to: '/docs/components/breadcrumb'
 ---
 ::
 
-@0007@@référencement
+### Éléments
 
-Utilisez le `items` prop comme un tableau d'objets avec les propriétés suivantes:
+Utilisez le prop `items` comme un tableau d'objets avec les propriétés suivantes:
 
-@@
-@@
-@@
-@@
-@@
-@@
+- x`label?: string`x{lang="ts-type"}
+- x`icon?: string`x{lang="ts-type"}
+- x`avatar?: AvatarProps`x{lang="ts-type"}
+Xph032xx[x`slot?: string`x{lang="ts-type"}](x#with-custom-slotx)
+- x`class?: any`x{lang="ts-type"}
+- x`ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLeadingIcon?: ClassNameValue, linkLeadingAvatar?: ClassNameValue, linkLabel?: ClassNameValue, separator?: ClassNameValue, separatorIcon?: ClassNameValue }`x{lang="ts-type"}
 
-Vous pouvez passer n'importe quelle propriété du composant [Link](/docs/components/link#props) comme `to`,`target`, etc.
+Vous pouvez passer n'importe quelle propriété du composant [Link](/docs/components/link#props) telle que `to`, `target`, etc.
 
 ::component-code
 ---
-Ignorer:
-  @@ph037@articles
-Extérieure:
-  @@ph038@articles
-Extérieurs:
-  @@@P039@@BreadcrumbItem [réf. nécessaire]
-Props:
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - BreadcrumbItem[]
+props:
   items:
-    - label:'Docs'
+    - label: 'Docs'
       icon: 'i-lucide-book-open'
-      à:/docs
-    - label:'Composants'
-      Icône: i-lucide-box
-      à:'/docs/composants'
-    - label:« Breadcrumb »
-      Icône:'i-lucide-link'
-      à:/docs/components/breadcrumb
+      to: '/docs'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      to: '/docs/components'
+    - label: 'Breadcrumb'
+      icon: 'i-lucide-link'
+      to: '/docs/components/breadcrumb'
 ---
 ::
 
@@ -75,35 +75,35 @@ Props:
 Un `span` est rendu à la place d'un lien lorsque la propriété `to` n'est pas définie.
 ::
 
-### Séparateur Icône
+### Separateur Icône
 
-Utilisez le prop `separator-icon` pour personnaliser le [Icon](/docs/components/icon) entre chaque élément.
+Utilisez la prop `separator-icon` pour personnaliser le [Icon](xph077) entre chaque élément.
 
 ::component-code
 ---
-ignorer:
-  @@502@articles
-Extérieur:
-  @@ph053@articles
-Extérieurs:
-  @@@P505@@@Papier []
-Props:
-  séparateurIcône:'i-lucide-arrow-right'
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - BreadcrumbItem[]
+props:
+  separatorIcon: 'i-lucide-arrow-right'
   items:
-    - label:'Docs'
+    - label: 'Docs'
       icon: 'i-lucide-book-open'
-      à:/docs
-    - label:'Composants'
-      Icône: i-lucide-box
-      à:'/docs/composants'
-    - label:« Breadcrumb »
-      Icône:'i-lucide-link'
-      à:/docs/components/breadcrumb
+      to: '/docs'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      to: '/docs/components'
+    - label: 'Breadcrumb'
+      icon: 'i-lucide-link'
+      to: '/docs/components/breadcrumb'
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.chevronRight`.
 :::
@@ -114,72 +114,72 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 :::
 ::
 
-### Couleur: badge{label="4.8+" class="align-text-top"}
+Couleur: badge{label="4.8+" class="align-text-top"}
 
-Utilisez la prop `color` pour modifier la couleur du fil de pain actif.
+Utilisez le prop `color` pour changer la couleur du fil de pain actif.
 
 ::component-code
 ---
-ignorer:
-  @@ph065@articles
-Extérieur:
-  @@ph066@éléments
-Extérieurs:
-  @@@P067@@BreadcrumbItem [réf. nécessaire]
-Props:
-  Couleur: Secondaire
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - BreadcrumbItem[]
+props:
+  color: 'secondary'
   items:
-    - label:'Docs'
+    - label: 'Docs'
       icon: 'i-lucide-book-open'
-      à:/docs
-    - label:'Composants'
-      Icône: i-lucide-box
-      à:'/docs/composants'
-    - label:« Breadcrumb »
-      Icône:'i-lucide-link'
-      à:/docs/components/breadcrumb
+      to: '/docs'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      to: '/docs/components'
+    - label: 'Breadcrumb'
+      icon: 'i-lucide-link'
+      to: '/docs/components/breadcrumb'
 ---
 ::
 
-@@ph071@@Exemples
+## exemples
 
 ### Avec fente de séparation
 
-Utilisez l'emplacement `#separator` pour personnaliser le séparateur entre chaque élément.
+Utilisez le slot `#separator` pour personnaliser le séparateur entre chaque élément.
 
-: composant {name="breadcrumb-separator-slot-example"}
+:component-example{name="breadcrumb-separator-slot-example"}
 
-### Avec slot custom
+### With slot personnalisé
 
 Utilisez la propriété `slot` pour personnaliser un élément spécifique.
 
 Vous aurez accès aux slots suivants:
 
-@@
-@@
-@@
-@@
+- `#{{ item.slot }}`x{lang="ts-type"}
+- x`#{{ item.slot }}-leading`x{lang="ts-type"}
+- x`#{{ item.slot }}-label`x{lang="ts-type"}
+- x`#{{ item.slot }}-trailing`x{lang="ts-type"}
 
-: exemple de composant {name="breadcrumb-custom-slot-example"}
+:component-example{name="breadcrumb-custom-slot-example"}
 
 ::tip{to="#slots"}
-Vous pouvez également utiliser les emplacements `#item`,`#item-leading`,`#item-label` et `#item-trailing` pour personnaliser tous les articles.
+Vous pouvez également utiliser les emplacements `#item`, `#item-leading`, `#item-label` et `#item-trailing` pour personnaliser tous les éléments.
 ::
 
-@@ph094@@api
+## API équipement
 
-@@ph095@@projets
+### Props équipement
 
-Composants-props
+:component-props
 
-@@ph096@@réglages
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph097@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

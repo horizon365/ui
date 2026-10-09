@@ -13,113 +13,113 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/FieldGroup.vue
 ---
 
-##  사용
+## Usage
 
-FieldGroup 내에서 여러 [Button](PH03) 줄바꿈하여 그룹화합니다.
+필드 그룹 내에서 여러 [Button](/docs/components/buttonxph04x를 래핑하여 그룹화합니다.
 
 ::component-code
 ---
-상품명 : True
-슬롯 :
-  기본값 :|
+prettier: true
+slots:
+  default: |
 
     <UButton color="neutral" variant="subtle" label="Button" />
     <UButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
 ---
-: u-button {color="neutral" variant="subtle" label="Button"}
-: u-button {color="neutral" variant="outline" icon="i-lucide-chevron-down"}
+:u-button{color="neutral" variant="subtle" label="버튼 (Button)"}
+:u-button{color="neutral" variant="outline" icon="i-lucide-chevron-down"}
 ::
 
-###  크기
+### Size
 
-`size`prop을 사용하여 모든 버튼의 크기를 변경합니다.
+`size` Prop을 사용하여 모든 버튼의 크기를 변경합니다.
 
 ::component-code
 ---
-상품명 : True
-소품 :
-  크기: xl
-슬롯 :
-  기본 값:|
+prettier: true
+props:
+  size: xl
+slots:
+  default: |
 
     <UButton color="neutral" variant="subtle" label="Button" />
     <UButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
 ---
-: u-button {color="neutral" variant="subtle" label="Button"}
-: u-button {color="neutral" variant="outline" icon="i-lucide-chevron-down"}
+:u-button{color="neutral" variant="subtle" label="단추"}
+:u-button{color="neutral" variant="outline" icon="i-lucide-chevron-down"}
 ::
 
-###  방향
+### 방향 지정
 
-버튼의 방향을 변경하려면 `orientation`prop을 사용합니다. 기본값은 `horizontal`입니다.
+`orientation` 소품을 사용하여 버튼의 방향을 변경합니다. 기본값은 `horizontal`입니다.
 
 ::component-code
 ---
-상품명 : True
-소품 :
-  방향: 세로
-슬롯 :
-  기본 값:|
+prettier: true
+props:
+  orientation: vertical
+slots:
+  default: |
 
     <UButton color="neutral" variant="subtle" label="Submit" />
     <UButton color="neutral" variant="outline" label="Cancel" />
 ---
-: u-button {color="neutral" variant="subtle" label="Submit"}
-: u-button {color="neutral" variant="outline" label="Cancel"}
+:u-button{color="neutral" variant="subtle" label="제출 하기"}
+:u-button{color="neutral" variant="outline" label="취소 (Cancel)"}
 ::
 
-##  예
+## 예제
 
-###  입력으로
+### 입력 포함
 
-[ Input ](/docs/components/input) InputMenu ](/docs/components/input-menu)[ 선택 ]())))[[]()))))) 선택 [))[)[[)[]()) 선택 @@@@@
+[Input](/docs/components/input), [InputMenu](/docs/components/input-menu), [Select](/docs/components/select) [SelectMenu](/docs/components/select-menu 및 xxx 그룹 내에서 구성 요소를 사용할 수 있습니다.
 
 ::component-code
 ---
-상품명 : True
-슬롯 :
-  기본 값:|
+prettier: true
+slots:
+  default: |
 
     <UInput color="neutral" variant="outline" placeholder="Enter token" />
 
     <UButton color="neutral" variant="subtle" icon="i-lucide-clipboard" />
 ---
-: u-input {color="neutral" variant="outline" placeholder="Enter token"}
-: u 버튼 {color="neutral" variant="subtle" icon="i-lucide-clipboard"}
+:u-input{color="neutral" variant="outline" placeholder="Enter token"}
+:u-button{color="neutral" variant="subtle" icon="i-lucide-clipboard"}
 ::
 
-###  툴팁 사용
+### 툴팁 포함
 
 필드 그룹 내에서 [Tooltip](/docs/components/tooltip)를 사용할 수 있습니다.
 
-:component-example {name="field-group-tooltip-example"}
+:component-example{name="field-group-tooltip-example"}
 
-###  드롭다운 메뉴 포함
+### With 드롭다운 메뉴
 
 필드 그룹 내에서 [DropdownMenu](/docs/components/dropdown-menu)를 사용할 수 있습니다.
 
-:component-example {name="field-group-dropdown-example"}
+:component-example{name="field-group-dropdown-example"}
 
-### 배지 포함
+### With 배지
 
 필드 그룹 내에서 [Badge](/docs/components/badge)를 사용할 수 있습니다.
 
-:component-example {name="field-group-badge-example"}
+:component-example{name="field-group-badge-example"}
 
-##  API
+## API
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### Slots
 
-:컴포넌트 - 슬롯
+:component-slots
 
-##  테마
+## Theme 주제
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

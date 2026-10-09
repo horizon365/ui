@@ -14,107 +14,107 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Tabs.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice el componente Tabs para mostrar una lista de elementos en pestañas.
 
 ::component-example
 ---
-Colapso: Verdad
-Categoría: true
-Nombre: 'tabs-ejemplo'
-Props:
-  Categoría: w-full
+collapse: true
+prettier: true
+name: 'tabs-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-@0001@Artículos
+### Artículos
 
 Utilice el prop `items` como una matriz de objetos con las siguientes propiedades:
 
-@@
-@@
-@@
-@@
-@@
-@@
-@@
-@@
-@@
-@@
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`badge?: string | number | BadgeProps`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`content?: string`xx{lang="ts-type"}
+- xx`value?: string | number`xxx{lang="ts-type"}
+- xx`disabled?: boolean`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`ui?: { trigger?: ClassNameValue, leadingIcon?: ClassNameValue, leadingAvatar?: ClassNameValue, leadingAvatarSize?: ClassNameValue, label?: ClassNameValue, trailingBadge?: ClassNameValue, trailingBadgeSize?: ClassNameValue, content?: ClassNameValue }`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ::component-code
 ---
-Ignora:
-  @373@artículos
-  @38@clase
-Externo:
-  @@pH039@artículos
-Externalidades:
-  @400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
   items:
-    - label: cuenta
-      icono: 'i-lucide-usuario'
-      contenido: "Este es el contenido de la cuenta."
-    - label: contraseña
-      Icono: 'i-lucide-lock'
-      contenido: "Este es el contenido de la contraseña."
-  Categoría: w-full
+    - label: Account
+      icon: 'i-lucide-user'
+      content: 'This is the account content.'
+    - label: Password
+      icon: 'i-lucide-lock'
+      content: 'This is the password content.'
+  class: 'w-full'
 ---
 ::
 
-@@pH043@Contenido
+### Contenidos
 
-Establezca el `content` prop a `false` para representar los disparadores sin ningún panel.
+Configure el prop `content` en `false` para renderizar los disparadores sin ningún panel.
 
 ::component-code
 ---
-Ignora:
-  @@47@contenido
-  @@48000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @494@clase
-Externo:
-  @500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externalidades:
-  @@501@5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Contenido: FALSO
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  content: false
   items:
-    - label: cuenta
-      icono: 'i-lucide-usuario'
-      contenido: "Este es el contenido de la cuenta."
-    - label: contraseña
-      Icono: 'i-lucide-lock'
-      contenido: "Este es el contenido de la contraseña."
-  Categoría: w-full
+    - label: Account
+      icon: 'i-lucide-user'
+      content: 'This is the account content.'
+    - label: Password
+      icon: 'i-lucide-lock'
+      content: 'This is the password content.'
+  class: 'w-full'
 ---
 ::
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### unmount (Edición española)
 
 Utilice el prop `unmount-on-hide` para evitar que el contenido se desmonte cuando se colapsan las pestañas.
 
 ::component-code
 ---
-Ignora:
-  @@507@contenido
-  @@508@artículos
-  @@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externo:
-  @060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externalidades:
-  @@P061@@P061 [en línea]
-Props:
-  Desconocido: Falso
-  Items:
-    - label: cuenta
-      icono: 'i-lucide-usuario'
-      contenido: "Este es el contenido de la cuenta."
-    - label: contraseña
-      Icono: 'i-lucide-lock'
-      contenido: "Este es el contenido de la contraseña."
-  Categoría: w-full
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  unmountOnHide: false
+  items:
+    - label: Account
+      icon: 'i-lucide-user'
+      content: 'This is the account content.'
+    - label: Password
+      icon: 'i-lucide-lock'
+      content: 'This is the password content.'
+  class: 'w-full'
 ---
 ::
 
@@ -122,77 +122,77 @@ Props:
 Puede inspeccionar el DOM para ver el contenido de cada elemento que se representa.
 ::
 
-@@pH064@color
+### Color (Edición)
 
-Utilice el prop `color` para cambiar el color de las pestañas.
+Utilice el soporte `color` para cambiar el color de las pestañas.
 
 ::component-code
 ---
-Ignora:
-  @@66@contenido
-  @067 @ Artículos
-  @068@clase
-Externo:
-  @@pH069@artículos
-Externalidades:
-  @070000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Color: Neutro
-  Contenido: FALSO
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  color: neutral
+  content: false
   items:
-    - label: cuenta
-    - label: contraseña
-  Categoría: w-full
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
-@@73@Variación
+### Variante
 
 Utilice el prop `variant` para cambiar la variante de las pestañas.
 
 ::component-code
 ---
-Ignora:
-  @@75 @ contenido
-  @766@puntos
-  @777@clase
-Externo:
-  @788@artículos
-Externalidades:
-  @@779@079@079@079@079@079@079@079@079@079@079@079@079@079@000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Color: Neutral
-  Variación: Link
-  Contenido: FALSO
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  color: neutral
+  variant: link
+  content: false
   items:
-    - label: cuenta
-    - label: contraseña
-  Categoría: w-full
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
-@082 @ Tamaño
+### Tamaño
 
-Utilice el prop `size` para cambiar el tamaño de las pestañas.
+Utilice el accesorio `size` para cambiar el tamaño de las pestañas.
 
 ::component-code
 ---
-Ignora:
-  @084@contenido
-  @085 @ artículos
-  @086 @ clase
-Externo:
-  @087 @ Artículos
-Externalidades:
-  @@8888@@Tablero [editar]
-Props:
-  Tamaño: MD
-  Variante: Píldora
-  Contenido: FALSO
-  Items:
-    - label: cuenta
-    - label: contraseña
-  Categoría: w-full
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  size: md
+  variant: pill
+  content: false
+  items:
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
@@ -202,57 +202,57 @@ Utilice el prop `orientation` para cambiar la orientación de las pestañas. Pre
 
 ::component-code
 ---
-Ignora:
-  @@pH094@contenido
-  @095 @@ Artículos
-  @096@clase
-Externo:
-  @097@artículos
-Externalidades:
-  @098@098@098@098@098@098@098@098@098@098@098@098@0998@0998@00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Orientación: Vertical
-  Variante: Píldora
-  Contenido: FALSO
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  orientation: vertical
+  variant: pill
+  content: false
   items:
-    - label: cuenta
-    - label: contraseña
-  Categoría: w-full
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
-@101@Ejemplos
+## Ejemplos
 
-### Control elemento activo
+### Control activo
 
-Puede controlar el elemento activo mediante el prop `default-value` o la directiva `v-model` con el `value` del elemento. Si no se proporciona `value`, el valor predeterminado es el índice **como una cadena **.
+Puede controlar el elemento activo utilizando la prop `default-value` o la directiva `v-model` con el `value` del elemento. Si no se proporciona `value`, el índice **as un string** es predeterminado.
 
-Ejemplo de componente {name="tabs-model-value-example"}
+:component-example{name="tabs-model-value-example"}
 
 ::tip
-Utilice el prop `value-key` para cambiar la clave utilizada para hacer coincidir los elementos cuando se proporciona un `v-model` o `default-value`.
+Utilice el accesorio `value-key` para cambiar la clave utilizada para hacer coincidir los elementos cuando se proporciona un `v-model` o `default-value`.
 ::
 
-### Con consulta de ruta
+### With consulta de ruta
 
 Puede controlar el elemento activo mediante un parámetro de consulta de URL, utilizando `route.query.tab` como el `value` del elemento.
 
-Ejemplo de componente {name="tabs-route-query-example"}
+:component-example{name="tabs-route-query-example"}
 
 ### Con ranura de contenido
 
 Utilice la ranura `#content` para personalizar el contenido de cada elemento.
 
-Ejemplo de componente {name="tabs-content-slot-example"}
+:component-example{name="tabs-content-slot-example"}
 
-### Con la barra de pestañas inferior
+### With barra de pestañas inferior
 
-Utiliza el prop `ui` para transformar las pestañas en una barra de pestañas inferior de estilo móvil con iconos y etiquetas pequeñas, similar a YouTube o Instagram.
+Utilice el soporte `ui` para transformar las pestañas en una barra de pestañas inferior de estilo móvil con iconos y etiquetas pequeñas, similar a YouTube o Instagram.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre del archivo: 'tabs-bottom-tab-bar-example'
+collapse: true
+name: 'tabs-bottom-tab-bar-example'
 ---
 ::
 
@@ -260,43 +260,43 @@ Nombre del archivo: 'tabs-bottom-tab-bar-example'
 
 Utilice la propiedad `slot` para personalizar un elemento específico.
 
-Tendrás acceso a las siguientes slots:
+Tendrás acceso a los siguientes slots:
 
-@124@@125@126
+- x`#{{ item.slot }}`x{lang="ts-type"}
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'tabs-custom-slot-example'
+collapse: true
+name: 'tabs-custom-slot-example'
 ---
 ::
 
-@@pH127 @@ Español
+## API
 
-@128@128@128
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
-@129@129@129
+### Slots en línea
 
-Componentes de slots
+:component-slots
 
-@130@@Emisiones
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@@131@131@131
+### Exposición
 
 Al acceder al componente a través de una referencia de plantilla, puede utilizar lo siguiente:
 
 | Nombre| Tipo|
 | ---- | ---- |
-| @132 @@@ 134 @|@@pH133 @|
+| `triggersRef`x{lang="ts-type"}| `Ref<ComponentPublicInstance[]>`x{lang="ts-type"}|
 
-@136 @@ Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@137@Changelog (Edición española)
+Xph230xChangelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

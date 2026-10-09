@@ -1,20 +1,21 @@
 ---
-title: ColorModeAvatar
-description: '一个在浅色和深色模式下使用不同源的 Avatar。'
+title: 颜色模式头像
+description: '一个阿凡达与不同的来源为光明和黑暗模式。'
 category: color-mode
 links:
-  - label: Avatar
+  - label: 化身
     to: /docs/components/avatar
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/color-mode/ColorModeAvatar.vue
 ---
+
 ## 用法
 
-ColorModeAvatar 组件扩展了 [Avatar](/docs/components/avatar) 组件，因此你可以传递 `size`、`icon` 等任意属性。
+ColorModeAvatar组件扩展了[Avatar](/docs/components/avatar)组件，因此您可以传递任何属性，如`size`、`icon`等。
 
-使用 `light` 和 `dark` 属性来定义浅色和深色模式的来源。
+使用`light`和`dark`道具定义亮暗模式的光源。
 
 ::component-code{prefix="color-mode"}
 ---
@@ -25,19 +26,19 @@ props:
 ::
 
 ::note
-在浅色和深色模式之间切换以查看不同图片： :u-color-mode-select{size="sm"}
+在亮模式和暗模式之间切换以查看不同的图像：：u-color-mode-select{size="sm"}
 ::
 
 ## API
 
-### 属性
+### Props
 
 :component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes" target="_blank"}
-该组件还支持所有原生 `<img>` HTML 属性。
+此组件还支持所有原生`<img>` HTML属性。
 ::
 
-## 更新日志
+## Changelog
 
 :component-changelog{prefix="color-mode"}

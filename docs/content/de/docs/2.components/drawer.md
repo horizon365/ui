@@ -6,7 +6,7 @@ keywords:
   - action sheet
   - mobile sheet
 links:
-  - label: Drawer
+  - label: Dracher
     icon: i-custom-reka-ui
     to: https://github.com/unovue/vaul-vue
   - label: GitHub
@@ -14,279 +14,279 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Drawer.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Verwenden Sie eine [Button](/docs/components/button) oder eine andere Komponente im Standardsteckplatz der Schublade.
+Verwenden Sie einen [Button](/docs/components/button) oder eine andere Komponente im Standardsteckplatz der Schublade.
 
-Verwenden Sie dann den `#content`-Slot, um den Inhalt hinzuzufügen, der angezeigt wird, wenn die Schublade geöffnet ist.
+Verwenden Sie dann den Steckplatz `#content`, um den Inhalt hinzuzufügen, der angezeigt wird, wenn die Schublade geöffnet ist.
 
 ::component-code
 ---
-Schöner: wahr
-Die Slots:
-  Default:|
+prettier: true
+slots:
+  default: |
 
-    @@@@006 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Inhalt:|
+  content: |
 
-    @@@@007 @
+    <Placeholder class="h-48 m-4" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="öffnen" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#Inhalte
-: placeholder{class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-Sie können auch die Slots `#header`{lang="ts-type"},`#body`{lang="ts-type"} und `#footer`{lang="ts-type"} verwenden, um den Inhalt der Schublade anzupassen.
+Sie können auch die Slots `#header`{lang="ts-type"}, `#body`{lang="ts-type"} und `#footer`{lang="ts-type"} verwenden, um den Inhalt der Schublade anzupassen.
 
-@@@@@16@16@16@16@16@16@16@16@16@16@16@16@16@16@16@16
+### title
 
-Verwenden Sie `title` prop, um den Titel des Schubladenkopfes festzulegen.
+Verwenden Sie die `title`-prop, um den Titel des Schubladenkopfes festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Props:
-  title: "Schublade mit Titel"
-Die Slots:
-  Default:|
+prettier: true
+props:
+  title: 'Drawer with title'
+slots:
+  default: |
 
-    @@ph018
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Der Körper:|
+  body: |
 
-    @@ph019
+    <Placeholder class="h-48" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="öffnen" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#Körper
-: placeholder{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
-@@ph022@@Beschreibung
+### Beschreibung
 
-Verwenden Sie `description` prop, um die Beschreibung des Headers der Schublade festzulegen.
+Verwenden Sie die `description`-prop, um die Beschreibung des Schubladenkopfes festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph024@title
-Props:
-  Titel: 'Schublade mit Beschreibung'
-  Die Inschrift lautet: "Lorem ipsum dolor sit amet, consectetur adipiscing elit".
-Slots auf:
-  Default:|
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Drawer with description'
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+slots:
+  default: |
 
-    @@@@@@@@@@@@@@@@@025 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Der Körper:|
+  body: |
 
-    @@@@@@@@@@@@@@@@@026 @
+    <Placeholder class="h-48" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="öffnen" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#Der Körper
-: Platzhalter{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
-### Close: badge{label="4.10+" class="align-text-top"} Schließen: badge{label="4.10+" class="align-text-top"}
+### Close: badge{label="4.10+" class="align-text-top"} (geschlossen)
 
-Verwenden Sie `close` prop, um eine Schließen-Schaltfläche in der Schublade anzuzeigen. Defaults to `false`.
+Verwenden Sie die `close`-Stütze, um eine Schließen-Taste in der Schublade anzuzeigen. Standardmäßig ist `false`.
 
-Sie können jede Eigenschaft aus der Komponente [Button](/docs/components/button) übergeben, um sie anzupassen.
+Sie können jede Eigenschaft der Komponente [Button](/docs/components/button) übergeben, um sie anzupassen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph037@title
+prettier: true
+ignore:
+  - title
   - close.color
-  @@ph039@close.variant (nicht verfügbar)
-Props:
-  Titel: "Schublade mit Schließknopf"
-  schließen:
-    Farbe: Primär
-    Variante: Übersicht
-    Klasse: 'rounded-full'
-Slots auf:
-  Default:|
+  - close.variant
+props:
+  title: 'Drawer with close button'
+  close:
+    color: primary
+    variant: outline
+    class: 'rounded-full'
+slots:
+  default: |
 
-    @@040
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Der Körper:|
+  body: |
 
-    @@041
+    <Placeholder class="h-48" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="öffnen" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#Der Körper
-: placeholder{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
-### Close Icon: badge{label="4.10+" class="align-text-top"}
+### Schließen Icon: badge{label="4.10+" class="align-text-top"}
 
-Verwenden Sie die `close-icon` prop, um die Schließen-Taste anzupassen [Icon](/docs/components/icon). Standardmäßig auf `i-lucide-x`.
+Verwenden Sie die `close-icon`-Prop, um die Schließen-Taste [Icon](/docs/components/icon). Defaults auf `i-lucide-x` anzupassen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph052@title
-Props:
-  Titel: "Schublade mit Schließknopf"
-  Schließen: true
-  closeIcon: 'i-lucide-arrow-right'(I-lucide-arrow-rechts)
-Slots auf:
-  Default:|
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Drawer with close button'
+  close: true
+  closeIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
-    @@@@@@@53
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Der Körper:|
+  body: |
 
-    @@@@@@54
+    <Placeholder class="h-48" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="öffnen" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#Körper
-: placeholder{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
-### Richtung
+### Direction Bearbeiten
 
-Verwenden Sie `direction` prop, um die Richtung der Schublade zu steuern. Standardmäßig auf `bottom`.
+Verwenden Sie die `direction`-Stütze, um die Richtung der Schublade zu steuern. Standardmäßig `bottom`.
 
 ::component-code
 ---
-Schöner: wahr
-Props:
-  Richtung: "richtig"
-Die Slots:
-  Default:|
+prettier: true
+props:
+  direction: 'right'
+slots:
+  default: |
 
-    @@@@@@@@060
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Inhalt:|
+  content: |
 
-    @@061
+    <Placeholder class="min-w-96 min-h-96 size-full m-4" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="öffnen" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#Inhalte
-: placeholder{class="min-w-96 min-h-96 size-full m-4"}
+#content
+:placeholder{class="min-w-96 min-h-96 size-full m-4"}
 ::
 
-@@@@@@@@@@ph064@@inset
+### Inset ist
 
-Verwenden Sie die `inset` prop, um die Schublade von den Kanten zu setzen.
+Verwenden Sie die `inset`-Stütze, um die Schublade von den Kanten zu setzen.
 
 ::component-code
 ---
-Schöner: wahr
-Props:
-  Richtung: "richtig"
-  Einschub: true
-Slots auf:
-  Default:|
+prettier: true
+props:
+  direction: 'right'
+  inset: true
+slots:
+  default: |
 
-    @@@@@@@66 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Inhalt:|
+  content: |
 
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@067
+    <Placeholder class="min-w-96 min-h-96 size-full m-4" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="öffnen" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#Inhalte
-: placeholder{class="min-w-96 min-h-96 size-full m-4"}
+#content
+:placeholder{class="min-w-96 min-h-96 size-full m-4"}
 ::
 
-@@ph070@@Bearbeiten
+### Handle Bearbeiten
 
-Verwenden Sie `handle` prop, um zu steuern, ob die Schublade einen Griff hat oder nicht.
+Verwenden Sie die `handle`-Stütze, um zu steuern, ob die Schublade einen Griff hat oder nicht. Standardmäßig `true`.
 
 ::component-code
 ---
-Schöner: wahr
-Props:
-  Ausführung: False
-Slots auf:
-  Default:|
+prettier: true
+props:
+  handle: false
+slots:
+  default: |
 
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@073
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Inhalt:|
+  content: |
 
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    <Placeholder class="h-48 m-4" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="öffnen" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#Inhalte
-: placeholder{class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-### Handle Nur
+### Handle Nur für die
 
-Verwenden Sie die `handle-only` prop, um nur zu erlauben, dass die Schublade am Griff gezogen wird.
+Verwenden Sie die `handle-only`-Stütze, um die Schublade nur am Griff ziehen zu lassen.
 
 ::component-code
 ---
-Schöner: wahr
-Props:
-  Handheld: wahr
-Die Slots:
-  Default:|
+prettier: true
+props:
+  handleOnly: true
+slots:
+  default: |
 
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@079
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Inhalte:|
+  content: |
 
-    @@@@80
+    <Placeholder class="h-48 m-4" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="öffnen" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#Inhalte
-: placeholder{class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-@@ph083@@Überlappung
+### Overlay (Überladen)
 
-Verwenden Sie `overlay` prop, um zu steuern, ob die Schublade ein Overlay hat oder nicht.
+Verwenden Sie die `overlay`-Stütze, um zu steuern, ob die Schublade eine Überlagerung hat oder nicht. Standardmäßig `true`.
 
 ::component-code
 ---
-Schöner: wahr
-Props:
-  Überlagerung: false
-Slots auf:
-  Default:|
+prettier: true
+props:
+  overlay: false
+slots:
+  default: |
 
-    @@@@@@@@@@@@@@@@@@@086
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Inhalt:|
+  content: |
 
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@087
+    <Placeholder class="h-48 m-4" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="öffnen" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#Inhalte
-: placeholder{class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-@@@@@@@@@@@ph090@@@modal
+### Modal Bearbeiten
 
-Verwenden Sie `modal` prop, um zu steuern, ob die Schublade die Interaktion mit externen Inhalten blockiert. Standardmäßig auf `true`.
+Verwenden Sie die `modal`-prop, um zu steuern, ob die Schublade die Interaktion mit externen Inhalten blockiert. Standardmäßig ist `true`.
 
 ::note
 Wenn `modal` auf `false` gesetzt ist, wird das Overlay automatisch deaktiviert und externe Inhalte werden interaktiv.
@@ -294,68 +294,68 @@ Wenn `modal` auf `false` gesetzt ist, wird das Overlay automatisch deaktiviert u
 
 ::component-code
 ---
-Schöner: wahr
-Props:
-  Ausführung: false
-Slots auf:
-  Default:|
+prettier: true
+props:
+  modal: false
+slots:
+  default: |
 
-    @@@@95 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Inhalt:|
+  content: |
 
-    @@@@@@96
+    <Placeholder class="h-48 m-4" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="öffnen" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#Inhalte
-: placeholder{class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-@@999@unzustellbar
+### Dismissible (nicht zulässig)
 
-Verwenden Sie die `dismissible` prop, um zu steuern, ob die Schublade deaktiviert werden kann, wenn Sie außerhalb der Schublade klicken oder escape drücken.
+Verwenden Sie die `dismissible`-Stütze, um zu steuern, ob die Schublade deaktiviert werden kann, wenn Sie außerhalb der Schublade klicken oder escape drücken.
 
 ::note
 Ein `close:prevent`-Ereignis wird ausgegeben, wenn der Benutzer versucht, es zu schließen.
 ::
 
 ::tip
-Sie können `modal: false` mit `dismissible: false` kombinieren, um den Hintergrund der Schublade interaktiv zu gestalten, ohne ihn zu schließen.
+Sie können `modal: false` mit `dismissible: false` kombinieren, um den Hintergrund der Schublade interaktiv zu gestalten, ohne sie zu schließen.
 ::
 
 ::component-example
 ---
-Schöner: wahr
-Name: 'drawer-dismissible-example'(Zeichner-dismissible-Beispiel)
+prettier: true
+name: 'drawer-dismissible-example'
 ---
 ::
 
-### Scale-Hintergrund
+### Scale Hintergrundbilder
 
-Verwenden Sie `should-scale-background` prop, um den Hintergrund bei geöffneter Schublade zu skalieren und einen visuellen Tiefeneffekt zu erzeugen. Sie können `set-background-color-on-scale` prop auf `false` einstellen, um eine Änderung der Hintergrundfarbe zu verhindern.
+Verwenden Sie die `should-scale-background` prop, um den Hintergrund zu skalieren, wenn die Schublade geöffnet ist, wodurch ein visueller Tiefeneffekt entsteht. Sie können die `set-background-color-on-scale` prop auf `false` setzen, um eine Änderung der Hintergrundfarbe zu verhindern.
 
 ::component-code
 ---
-Schöner: wahr
-Props:
-  Hintergrund: true
-  setBackgroundColorOnScale: wahr
-Die Slots:
-  Default:|
+prettier: true
+props:
+  shouldScaleBackground: true
+  setBackgroundColorOnScale: true
+slots:
+  default: |
 
-    @@@@109 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Inhalt:|
+  content: |
 
-    @@@@110 @
+    <Placeholder class="h-48 m-4" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="öffnen" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#Inhalte
-: placeholder{class="h-screen m-4"}
+#content
+:placeholder{class="h-screen m-4"}
 ::
 
 ::warning
@@ -386,69 +386,69 @@ export default defineNuxtConfig({
 
 ::
 
-## Beispiele
+## Examples [Bearbeiten]
 
-### Control Offener Zustand
+### Control im Open State
 
-Sie können den offenen Zustand mithilfe der Direktive `default-open` prop oder der Direktive `v-model:open` steuern.
+Sie können den offenen Zustand mit der `default-open`-prop-oder der `v-model:open`-Direktive steuern.
 
 ::component-example
 ---
-Schöner: wahr
-Name: 'drawer-open-example'(Zeichenöffnungs-Beispiel)
+prettier: true
+name: 'drawer-open-example'
 ---
 ::
 
 ::note
-In diesem Beispiel können Sie die Schublade mithilfe von [`defineShortcuts`]() umschalten, indem Sie: kbd{value="O"} drücken.
+In diesem Beispiel können Sie unter Nutzung von [`defineShortcuts`](/docs/composables/define-shortcuts) die Schublade umschalten, indem Sie: kbd{value="O"} drücken.
 ::
 
 ::tip
 Auf diese Weise können Sie den Auslöser außerhalb der Schublade bewegen oder vollständig entfernen.
 ::
 
-### Responsive Schublade
+### Responsive Drawer für iOS
 
-Sie können beispielsweise eine [Modal](/docs/components/modal) Komponente auf dem Desktop und eine Schublade auf dem Handy rendern.
+Sie können beispielsweise eine [Modal](/docs/components/modal)-Komponente auf dem Desktop und eine Schublade auf dem Handy rendern.
 
 ::component-example
 ---
-Schöner: wahr
-Name: 'drawer-responsive-example'(drawer-responsive-beispiel)
+prettier: true
+name: 'drawer-responsive-example'
 ---
 ::
 
-### geschachtelte Schubladen
+### Verschachtelte Schubladen
 
-Sie können Schubladen miteinander verschachteln, indem Sie die `nested` prop.
+Sie können Schubladen miteinander verschachteln, indem Sie die `nested`-Stütze verwenden.
 
 ::component-example
 ---
-Schöner: wahr
-Name: 'drawer-nested-example'(Zeiger-verschachtetes-Beispiel)
+prettier: true
+name: 'drawer-nested-example'
 ---
 ::
 
-### Mit Fußzeilensteckplatz
+### Mit Footer-Slot
 
-Verwenden Sie den `#footer`-Steckplatz, um Inhalte nach dem Schubladenkörper hinzuzufügen.
+Verwenden Sie den `#footer`-Steckplatz, um Inhalt nach dem Schubladenkörper hinzuzufügen.
 
 ::component-example
 ---
-Schöner: wahr
-Einsturz: wahr
-name: 'drawer-footer-slot-example'(drawer-Fußzeile-Slot-Beispiel)
+prettier: true
+collapse: true
+name: 'drawer-footer-slot-example'
 ---
 ::
 
 ### Mit der Befehlspalette
 
-Sie können eine [CommandPalette](/docs/components/command-palette) Komponente innerhalb des Inhalts der Schublade verwenden.
+Sie können eine [CommandPalette](/docs/components/command-palette)-Komponente innerhalb des Inhalts der Schublade verwenden.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'drawer-command-palette-example'(Zeiger-Befehl-Paletten-Beispiel)
+collapse: true
+name: 'drawer-command-palette-example'
 ---
 ::
 
@@ -456,24 +456,24 @@ Name: 'drawer-command-palette-example'(Zeiger-Befehl-Paletten-Beispiel)
 In diesem Beispiel wird `useLazyFetch` mit `immediate: false` verwendet, um Daten nur beim Öffnen der Schublade abzurufen.
 ::
 
-@@161@btw
+## API
 
-@@@@@@@@162@@Props
+### Props Bearbeiten
 
-Komponenten Props
+:component-props
 
-### Slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@@@@@@164@Emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-@@165@Einsteigertipps
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-## Changelog (Deutsche Übersetzung)
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

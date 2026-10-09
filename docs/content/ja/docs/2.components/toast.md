@@ -16,183 +16,183 @@ links:
 
 ## 使用法
 
-[ useToast ](/docs/composables/use-toast)を使って、アプリケーションでトーストを表示します。
+[useToast](/docs/composables/use-toast)を構成して、アプリケーションにトーストを表示します。
 
 ::component-example
 ---
-崩壊真
-きれい真
-名前'toast—example'
+collapse: true
+prettier: true
+name: 'toast-example'
 ---
 ::
 
 ::warning
-[`App`](/docs/components/app)コンポーネントでアプリをラップしてください。[`Toaster`](https://github.com/nuxt/ui/blob/v4/src/runtime/components/Toaster.vue)[`ToastProvider`](https://reka-ui.com/docs/components/toast#provider)))Reka UIのコンポーネントです。
+[`App`](/docs/components/app)コンポーネントは、Reka UIの[`ToastProvider`](https://reka-ui.com/docs/components/toast#provider)コンポーネントを使用する[`Toaster`](https://github.com/nuxt/ui/blob/v4/src/runtime/components/Toaster.vue)コンポーネントを使用しています。
 ::
 
 ::tip{to="/docs/components/app#props"}
-Toasterをグローバルに設定する方法については、`App` component @@@@ propを確認してください。
+Toasterをグローバルに設定する方法は、`App`コンポーネント`toaster`プロパティを確認できます。
 ::
 
-### タイトル
+### Title
 
-`title`フィールドを`toast.add`メソッドに渡してタイトルを表示します。
+タイトルを表示するには、`title`フィールドを`toast.add`メソッドに渡します。
 
 ::component-example
 ---
-オプション
-  -  name 'title'
-    label 'title'
-    デフォルト'ああ！何かがうまくいかなかった。'
-名前'toast—title—example'
+options:
+  - name: 'title'
+    label: 'title'
+    default: 'Uh oh! Something went wrong.'
+name: 'toast-title-example'
 ---
 ::
 
-### 説明
+### Description
 
-`description`フィールドを`toast.add`メソッドに渡して説明を表示します。
+`toast.add`メソッドに`description`フィールドを渡して説明を表示します。
 
 ::component-example
 ---
-オプション
-  -  name 'title'
-    label 'title'
-    デフォルト'ああ！何かがうまくいかなかった。'
-  -  name 'description'
-    ラベル'description'
-    デフォルト：'リクエストに問題がありました。
-名前'toast—description—example'
+options:
+  - name: 'title'
+    label: 'title'
+    default: 'Uh oh! Something went wrong.'
+  - name: 'description'
+    label: 'description'
+    default: 'There was a problem with your request.'
+name: 'toast-description-example'
 ---
 ::
 
-### アイコン
+### Icon
 
-`icon`フィールドを`toast.add`メソッドに渡すと、[ Icon ](/docs/components/icon)を表示します。
+`icon`フィールドを`toast.add`メソッドに渡し、[Icon](/docs/components/icon)を表示します。
 
 ::component-example
 ---
-オプション
-  -  name 'icon'
-    ラベル'アイコン'
-    デフォルト'i—lucide—wifi'
-名前'toast—icon—example'
+options:
+  - name: 'icon'
+    label: 'icon'
+    default: 'i-lucide-wifi'
+name: 'toast-icon-example'
 ---
 ::
 
 ### アバター
 
-`avatar`フィールドを`toast.add`メソッドに渡すと、[ Avatar ](/docs/components/avatar)を表示します。
+[Avatar](/docs/components/avatar)を表示するには、`avatar`フィールドを`toast.add`メソッドに渡します。
 
 ::component-example
 ---
-オプション
-  -  name 'avatar.src'
-    別名'アバター'
-    ラベル'avatar.src'
-    デフォルト
-      https//github.com/benjamincanac.png
-名前'toast—avatar—example'
+options:
+  - name: 'avatar.src'
+    alias: 'avatar'
+    label: 'avatar.src'
+    default:
+      src: 'https://github.com/benjamincanac.png'
+name: 'toast-avatar-example'
 ---
 ::
 
-### カラー
+### Color
 
-`color`フィールドを`toast.add`メソッドに渡して、トーストの色を変更します。
+`color`フィールドを`toast.add`メソッドに渡して、Toastの色を変更します。
 
 ::component-example
 ---
-オプション
-  -  name 'color'
-    ラベル'色'
-    デフォルト中立
-    アイテム
-      - プライマリ
-      - セカンダリ
-      - 成功
-      -  info
-      -  warning
-      - エラー
-      - ニュートラル
-名前'toast—color—example'
+options:
+  - name: 'color'
+    label: 'color'
+    default: neutral
+    items:
+      - primary
+      - secondary
+      - success
+      - info
+      - warning
+      - error
+      - neutral
+name: 'toast-color-example'
 ---
 ::
 
 ### 閉じる
 
-`close`フィールドを渡すと、閉じる[ Button ](/docs/components/button)`false`値をカスタマイズまたは非表示になります。
+`close`フィールドを渡して、close [Button](/docs/components/button) `false`値をカスタマイズまたは非表示にします。
 
 ::component-example
 ---
-名前'toast—close—example'
+name: 'toast-close-example'
 ---
 ::
 
-### 閉じるアイコン
+### アイコンを閉じる
 
-`closeIcon`フィールドを渡して、閉じるボタン[ Icon ](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-x`です。
+`closeIcon`フィールドを渡して閉じるボタン[Icon](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-x`です。
 
 ::component-example
 ---
-オプション
-  -  name 'closeIcon'
-    label 'closeIcon'
-    デフォルト'i—lucide—arrow—right'
-名前'toast—close—icon—example'
+options:
+  - name: 'closeIcon'
+    label: 'closeIcon'
+    default: 'i-lucide-arrow-right'
+name: 'toast-close-icon-example'
 ---
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.close`キーの`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは、`app.config.ts`の`ui.icons.close`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.close`キーの`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`vite.config.ts`の`ui.icons.close`キーでグローバルにカスタマイズできます。
 :::
 ::
 
-### アクション
+### Actions
 
-`actions`フィールドを渡して、Toastに[ Button ](/docs/components/button)アクションを追加します。
+`actions`フィールドを渡して、[Button](/docs/components/button)アクションをトーストに追加します。
 
 ::component-example
 ---
-オプション
-  -  name '説明'
-    ラベル'description'
-    デフォルト：'リクエストに問題がありました。
-名前'toast—actions'
+options:
+  - name: 'description'
+    label: 'description'
+    default: 'There was a problem with your request.'
+name: 'toast-actions-example'
 ---
 ::
 
-### 期間
+### Duration
 
-`duration`フィールドを`toast.add`メソッドに渡して、Toastの表示時間を変更します（ミリ秒単位）。デフォルトは`5000`です。
+`duration`フィールドを`toast.add`メソッドに渡して、Toastが表示される時間（ミリ秒単位）を変更します。デフォルトは`5000`です。
 
 ::tip
-`duration`フィールドを`0`に設定して、手動で閉じるまでトーストを開いたままにします。
+`duration`フィールドを`0`に設定し、手動で閉じるまでトーストを開いたままにします。
 ::
 
 ::component-example
 ---
-オプション
-  -  name 'duration'
-    ラベル'duration'
-    デフォルト0
-    アイテム
-      -  0
-      -  1000
-      -  3000
-      -  5000
-名前'toast—duration—example'
+options:
+  - name: 'duration'
+    label: 'duration'
+    default: 0
+    items:
+      - 0
+      - 1000
+      - 3000
+      - 5000
+name: 'toast-duration-example'
 ---
 ::
 
-### 進捗状況
+### Progress
 
-`progress`フィールドを渡すと、[ Progress ](/docs/components/progress) bar `false`値をカスタマイズまたは非表示になります。
+`progress`フィールドを渡して、[Progress](/docs/components/progress)バー `false`値をカスタマイズまたは非表示にします。
 
 ::tip
 プログレスバーはデフォルトでToastカラーを継承しますが、`progress.color`フィールドを使用してオーバーライドできます。
@@ -200,36 +200,36 @@ Toasterをグローバルに設定する方法については、`App` component 
 
 ::component-example
 ---
-名前'toast—progress'
+name: 'toast-progress-example'
 ---
 ::
 
-### オリエンテーション
+### Orientation
 
-`orientation`フィールドを`toast.add`メソッドに渡して、トーストの向きを変更します。
+`orientation`フィールドを`toast.add`メソッドに渡して、Toastの向きを変更します。
 
 ::component-example
 ---
-オプション
-  -  name 'オリエンテーション'
-    ラベル'オリエンテーション'
-    デフォルト'水平'
-    アイテム
-      - 水平
-      - 垂直
-名前'toast—oriation—example'
+options:
+  - name: 'orientation'
+    label: 'orientation'
+    default: 'horizontal'
+    items:
+      - horizontal
+      - vertical
+name: 'toast-orientation-example'
 ---
 ::
 
 ## 例
 
 ::note{to="/docs/components/app"}
-Nuxt UIは** App **コンポーネントを提供し、アプリケーションをラップしてグローバルな設定を提供します。
+Nuxt UIは、アプリケーションをラップしてグローバル設定を提供する**App**コンポーネントを提供します。
 ::
 
 ### グローバルポジションを変更
 
-トーストの位置を変更するには、[ App ](/docs/components/app#props)コンポーネントの`toaster.position` propを変更します。
+トーストの位置を変更するには、[App](/docs/components/app#props)コンポーネントの`toaster.position`プロパティを変更します。
 
 ```vue [app.vue]
 <script setup lang="ts">
@@ -245,18 +245,18 @@ const toaster = { position: 'bottom-right' }
 
 ::component-example
 ---
-きれい真
-名前'toast—example'
+prettier: true
+name: 'toast-example'
 ---
 
-#オプション
-toaster—position—example
+#options
+:toaster-position-example
 ::
 
 
 ### グローバル期間の変更
 
-[ App ](/docs/components/app#props)コンポーネントの`toaster.duration` propを変更して、トーストの持続時間を変更します。
+トーストの長さを変更するには、[App](/docs/components/app#props)コンポーネントの`toaster.duration`プロパティを変更します。
 
 ```vue [app.vue]
 <script setup lang="ts">
@@ -272,18 +272,18 @@ const toaster = { duration: 5000 }
 
 ::component-example
 ---
-きれい真
-名前'toast—example'
+prettier: true
+name: 'toast-example'
 ---
 
-#オプション
-toaster—duration—example
+#options
+:toaster-duration-example
 ::
 
 
-### グローバル最大値を変更しますbadge {label="4.1+" class="align-text-top"}
+### Change global max badge{label="4.1+" class="align-text-top"}
 
-[ App ](/docs/components/app#props)コンポーネントの`toaster.max` propを変更して、一度に表示されるトーストの最大数を変更します。
+一度に表示されるトーストの最大数を変更するには、[App](/docs/components/app#props)コンポーネントの`toaster.max`プロパティを変更します。
 
 ```vue [app.vue]
 <script setup lang="ts">
@@ -299,18 +299,18 @@ const toaster = { max: 3 }
 
 ::component-example
 ---
-きれい真
-名前'toast—example'
+prettier: true
+name: 'toast-example'
 ---
 
-#オプション
-toaster—maxの例
+#options
+:toaster-max-example
 ::
 
 
-### スタックトースト
+### 積み重ねたトースト
 
-スタックトーストを表示するには、[ App ](/docs/components/app#props)コンポーネントの`toaster.expand` propを`false`に設定します（[ Sonner ](https://sonner.emilkowal.ski/)に触発されて）。
+[App](/docs/components/app#props)コンポーネントの`toaster.expand`プロパティを`false`に設定して、スタックトーストを表示します（[Sonner](https://sonner.emilkowal.ski/)に触発されて）。
 
 ```vue [app.vue]
 <script setup lang="ts">
@@ -330,63 +330,63 @@ const toaster = { expand: true }
 
 ::component-example
 ---
-きれい真
-名前'toast—example'
+prettier: true
+name: 'toast-example'
 ---
 
-#オプション
-toaster—expand—example
+#options
+:toaster-expand-example
 ::
 
 
-### 重複トーストbadge {label="4.5+" class="align-text-top"}
+### 重複しないトーストbadge{label="4.5+" class="align-text-top"}
 
-すでに存在する`id`を使って`toast.add`を呼び出すと、既存のトーストが重複する代わりにパルス化されます。
+すでに存在する`id`で`toast.add`を呼び出すと、既存のトーストは重複を作成する代わりにパルス化されます。
 
 ::component-example
 ---
-崩壊真
-名前'toast—duplicate'
+collapse: true
+name: 'toast-duplicate-example'
 ---
 ::
 
-### コールバック付き
+### Withコールバック
 
-`onUpdateOpen`フィールドを渡して、トーストがクローズされたときにコールバックを実行します。
+`onUpdateOpen`フィールドを渡して、トーストが閉じられたときにコールバックを実行します。
 
 ::component-example
 ---
-崩壊真
-名前'toast—callback'
+collapse: true
+name: 'toast-callback-example'
 ---
 ::
 
 ###  HTMLコンテンツ付き
 
-`title`または`description`フィールドの[`h()` render関数](https://vuejs.org/api/render-function.html#h)を使用して、HTML要素またはVueコンポーネントをカスタムスタイルでレンダリングします。
+カスタムスタイルでHTML要素またはVueコンポーネントをレンダリングするには、`title`または`description`フィールドの[`h()`レンダリング関数](https://vuejs.org/api/render-function.html#h)を使用します。
 
 ::component-example
 ---
-崩壊真
-名前'toast—html—example'
+collapse: true
+name: 'toast-html-example'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-###  Expose
+### Expose
 
 テンプレート参照を介してコンポーネントにアクセスする場合、以下を使用できます：
 
@@ -394,10 +394,10 @@ component—emits
 | ---- | ---- |
 | `height`{lang="ts-type"}| `Ref<number>`{lang="ts-type"}|
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

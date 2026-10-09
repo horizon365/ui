@@ -18,138 +18,138 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputTime.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-Utilice la directiva `v-model` para controlar la hora seleccionada.
+Utilice la directiva `v-model` para controlar el tiempo seleccionado.
 
 ::component-code
 ---
-Cast:
-  Categoría: TimeValue
-Ignora:
-  - modelValoración
-Externo:
-  - modelValue (Edición española)
-Props:
-  Valoración:[12, 30, 0]
+cast:
+  modelValue: TimeValue
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: [12, 30, 0]
 ---
 ::
 
-Utilice la prop `default-value` para establecer el valor inicial cuando no necesite controlar su estado.
+Utilice el prop `default-value` para establecer el valor inicial cuando no necesite controlar su estado.
 
 ::component-code
 ---
-Cast:
-  Valor por defecto: TimeValue
-Ignora:
-  @@pH005@@defaultValue
-Externo:
-  @@pH006@defaultValue (en inglés)
-Props:
-  Valor por defecto: [9, 45, 0]
+cast:
+  defaultValue: TimeValue
+ignore:
+  - defaultValue
+external:
+  - defaultValue
+props:
+  defaultValue: [9, 45, 0]
 ---
 ::
 
 ::framework-only
-#Nuxidad
+#nuxt
 :::note{to="/docs/getting-started/integrations/i18n/nuxt#locale"}
-Este componente utiliza el paquete `@internationalized/date` para el formato local. El formato de tiempo está determinado por el prop `locale` del componente App.
+Este componente utiliza el paquete `@internationalized/date` para el formato local. El formato de tiempo está determinado por la prop `locale` del componente App.
 :::
 
-#vista
+#vue
 :::note{to="/docs/getting-started/integrations/i18n/vue#locale"}
-Este componente utiliza el paquete `@internationalized/date` para el formato local. El formato de tiempo está determinado por el prop `locale` del componente App.
+Este componente utiliza el paquete `@internationalized/date` para el formato local. El formato de tiempo está determinado por la prop `locale` del componente App.
 :::
 ::
 
-@111@1111
+### Rango en
 
 Utilice el prop `range` para habilitar la selección de rango de tiempo con las horas de inicio y finalización.
 
 ::component-code
 ---
-Categoría: true
-Cast:
-  Categoría: TimeRangeValue
-Ignora:
-  @@13000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+prettier: true
+cast:
+  modelValue: TimeRangeValue
+ignore:
+  - range
   - modelValue.start
   - modelValue.end
-Externo:
-  @@P016@modelValue (Edición española)
-Props:
-  Rango: Verdad
-  Modelación:
-    Inicio: [9, 0, 0]
-    por ejemplo: [17, 30, 0]
+external:
+  - modelValue
+props:
+  range: true
+  modelValue:
+    start: [9, 0, 0]
+    end: [17, 30, 0]
 ---
 ::
 
-### Ciclo de la hora
+Ciclo ### horas
 
-Utilice el prop `hour-cycle` para cambiar el ciclo de horas de la InputTime. Defaults a `12`.
+Utilice el prop `hour-cycle` para cambiar el ciclo de hora del InputTime. Defaults a `12`.
 
 ::component-code
 ---
-Cast:
-  Valor por defecto: TimeValue
-Ignora:
-  @200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @@pH021@@defaultValue
-Externo:
-  @@222@@ValoridadDeficiente
-Props:
-  Horario: 24
-  Valor por defecto: [16, 30, 0]
+cast:
+  defaultValue: TimeValue
+ignore:
+  - hourCycle
+  - defaultValue
+external:
+  - defaultValue
+props:
+  hourCycle: 24
+  defaultValue: [16, 30, 0]
 ---
 ::
 
-@@23@color
+### Color (Edición)
 
-Utilice el prop `color` para cambiar el color de la InputTime.
+Utilice el accesorio `color` para cambiar el color del InputTime.
 
 ::component-code
 ---
-Props:
-  Color: Neutro
-  Destacado: Verdadero
+props:
+  color: neutral
+  highlight: true
 ---
 ::
 
 ::note
-El `highlight` prop se utiliza aquí para mostrar el estado de enfoque. Se utiliza internamente cuando se produce un error de validación.
+El prop `highlight` se utiliza aquí para mostrar el estado de enfoque. Se utiliza internamente cuando se produce un error de validación.
 ::
 
-@@26@Variación
+### Variante
 
 Utilice el prop `variant` para cambiar la variante de la InputTime.
 
 ::component-code
 ---
-Props:
-  Variación: Sutil
+props:
+  variant: subtle
 ---
 ::
 
-@@28000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Tamaño
 
-Utilice el prop `size` para cambiar el tamaño de la InputTime.
+Utilice el prop `size` para cambiar el tamaño del InputTime.
 
 ::component-code
 ---
-Props:
-  Tamaño: xl
+props:
+  size: xl
 ---
 ::
 
-@@pH030@Icon
+### Icon
 
 Utilice el prop `icon` para mostrar un [Icon](/docs/components/icon) dentro del InputTime.
 
 ::component-code
 ---
-Props:
-  Icono: 'i-lucide-clock'(reloj)
+props:
+  icon: 'i-lucide-clock'
 ---
 ::
 
@@ -159,89 +159,89 @@ Utilice los accesorios `leading` y `trailing` para establecer la posición del i
 
 ### Separador Icono
 
-Utilice el prop `separator-icon` para cambiar el [Icon](/docs/components/icon) del separador de rango.
+Utilice la prop `separator-icon` para cambiar el [Icon](/docs/components/icon) del separador de rango.
 
 ::component-code
 ---
-Ignora:
-  @474@@range47
-Props:
-  Rango: Verdad
-  separatorIcono: 'i-lucide-arrow-right'
+ignore:
+  - range
+props:
+  range: true
+  separatorIcon: 'i-lucide-arrow-right'
 ---
 ::
 
 ::framework-only
-#nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.minus`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.minus`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.minus`.
+Puede personalizar este icono de forma global en su Xph110x bajo la tecla Xph111x.
 :::
 ::
 
-@@2015@Avatar
+### Avatar en Español
 
 Utilice el prop `avatar` para mostrar un [Avatar](/docs/components/avatar) dentro del InputTime.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  - avatar.carga
-Props:
-  El avatar:
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
     src: 'https://github.com/vuejs.png'
-    Categoría: Lazy
-  Tamaño: MD
-  Categoría: Outline
+    loading: lazy
+  size: md
+  variant: outline
 ---
 ::
 
-@@59@@desactivado
+### Desactivado
 
-Utilice el prop `disabled` para desactivar el InputTime.
+Utilice el accesorio `disabled` para desactivar el InputTime.
 
 ::component-code
 ---
-Props:
-  Discapacitados: Verdadero
+props:
+  disabled: true
 ---
 ::
 
-@@ph061@@Ejemplos
+## Ejemplos
 
-### Dentro de un campo de formato
+### Dentro de un campo de formulario
 
 Puede utilizar el InputTime dentro de un componente [FormField](/docs/components/form-field) para mostrar una etiqueta, texto de ayuda, indicador requerido, etc.
 
 ::component-example
 ---
-Nombre: 'input-time-form-field-example'
+name: 'input-time-form-field-example'
 ---
 ::
 
-@@pH067
+## API (Edición española)
 
-@068@068@068
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
-@@pH069@@espanol
+### Slots en línea
 
-Componentes de slots
+:component-slots
 
-@070000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@71@@tema
+## Temas
 
-Componente Tema
+:component-theme
 
-@2017@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

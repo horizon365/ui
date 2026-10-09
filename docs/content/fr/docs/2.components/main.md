@@ -7,19 +7,19 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Main.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Le composant principal rend un élément `<main>` qui fonctionne avec le composant [Header](/docs/components/header) pour créer une disposition pleine hauteur qui s'étend à la hauteur disponible de la fenêtre d'affichage.
+Le composant Main rend un élément `<main>` qui fonctionne avec le composant [Header](/docs/components/header) pour créer une disposition pleine hauteur qui s'étend à la hauteur disponible de la fenêtre d'affichage.
 
 ::tip{to="/docs/getting-started/theme/css-variables#header"}
-Le composant principal utilise la variable CSS `--ui-header-height` pour se positionner correctement en dessous du `Header`.
+Le composant Main utilise la variable CSS `--ui-header-height` pour se positionner correctement en dessous de la variable `Header`.
 ::
 
-@@ph008@exemples
+## Exemples
 
 ### Dans `app.vue`
 
-Utilisez le composant Main dans votre `app.vue` ou dans une mise en page:
+Utilice el componente principal en su `app.vue` o en un diseño:
 
 ```vue [app.vue]{5-9}
 <template>
@@ -37,20 +37,20 @@ Utilisez le composant Main dans votre `app.vue` ou dans une mise en page:
 </template>
 ```
 
-@@270@écrivain
+## api
 
-@@28@@projets
+### Props
 
-Composants-props
+:component-props
 
-@@229@@séries
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph030@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

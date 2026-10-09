@@ -8,7 +8,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatPalette.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 El componente ChatPalette es un envoltorio de diseño estructurado que organiza [ChatMessages](/docs/components/chat-messages) en un área de contenido desplazable y [ChatPrompt](/docs/components/chat-prompt) en una sección inferior fija, creando interfaces cohesivas de chatbot para modales, diapositivas o cajones.
 
@@ -24,57 +24,57 @@ El componente ChatPalette es un envoltorio de diseño estructurado que organiza 
 </template>
 ```
 
-@2000000 Ejemplos
+## Ejemplos
 
 ::tip{to="/docs/components/chat"}
-Consulte la página de descripción general **Chat** para obtener instrucciones de instalación, configuración del servidor y ejemplos de uso.
+Consulte la página de descripción general de **Chat** para obtener instrucciones de instalación, configuración del servidor y ejemplos de uso.
 ::
 
 ### Dentro de un Modal
 
-Puede usar el componente ChatPalette dentro del contenido de un [Modal](/docs/components/modal).
+Puede utilizar el componente ChatPalette dentro del contenido de un [Modal](/docs/components/modal).
 
 ::component-example
 ---
-Colapso: Verdad
+collapse: true
 iframe:
-  Tamaño: 500px
-iframeMobile: Verdad
-Desconocido: true
-Nombre del archivo: 'chat-palette-modal-example'
+  height: 500px;
+iframeMobile: true
+overflowHidden: true
+name: 'chat-palette-modal-example'
 ---
 ::
 
-### Dentro del contenido
+### Dentro de ContentSearch
 
-Puede usar el componente ChatPalette condicionalmente dentro del contenido de [ContentSearch](/docs/components/content-search) para mostrar una interfaz de chatbot cuando un usuario selecciona un elemento.
+Puede utilizar el componente ChatPalette condicionalmente dentro del contenido de [ContentSearch](/docs/components/content-search) para mostrar una interfaz de chatbot cuando un usuario selecciona un elemento.
 
 ::component-example
 ---
-Colapso: Verdad
+collapse: true
 iframe:
-  Tamaño: 500px
-iframeMobile: Verdad
-Desconocido: true
-Nombre del archivo: 'chat-palette-content-search-example'
+  height: 500px;
+iframeMobile: true
+overflowHidden: true
+name: 'chat-palette-content-search-example'
 ---
 ::
 
 
-@3333@3333
+## API (en inglés)
 
-@@30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Propciones
 
-Componentes Props
+:component-props
 
-@@35000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots
 
-Componentes de slots
+:component-slots
 
-@366@366
+## Temas
 
-Componente Tema
+:component-theme
 
-@@changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

@@ -1,6 +1,6 @@
 ---
 title: EditorialToolbar
-description: Una barra de herramientas personalizable para las acciones del editor que se pueden mostrar como menú fijo, de burbujas o flotante.
+description: Una barra de herramientas personalizable para las acciones del editor que se pueden mostrar como menú fijo, de burbuja o flotante.
 category: editor
 links:
   - label: GitHub también
@@ -8,23 +8,23 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/EditorToolbar.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 El componente EditorToolbar muestra una barra de herramientas de botones de formato que sincronizan automáticamente su estado activo con el contenido del editor.Admite tres modos de diseño utilizando el paquete `@tiptap/vue-3/menus`:
-- `fixed`{lang="ts-type"}(siempre visible)
-- `bubble`{lang="ts-type"}(aparece en la selección de texto)
-- `floating`{lang="ts-type"}(aparece en las líneas vacías)
+- x`fixed`{lang="ts-type"} (siempre visible)
+- `bubble`{lang="ts-type"} (aparece en la selección de texto)
+- `floating`{lang="ts-type"} (aparece en las líneas vacías)
 
 ::caution
-Debe usarse dentro de la ranura predeterminada de un componente [Editor](/docs/components/editor) para tener acceso a la instancia del editor.
+Debe utilizarse dentro de la ranura predeterminada de un componente [Editor](/docs/components/editor) para tener acceso a la instancia del editor.
 ::
 
 ::component-example
 ---
-Elevado: Verdadero
-Colapso: Verdad
-Nombre: 'editor-toolbar-ejemplo'
-Categoría: P-8
+elevated: true
+collapse: true
+name: 'editor-toolbar-example'
+class: 'p-8'
 ---
 ::
 
@@ -32,70 +32,70 @@ Categoría: P-8
 La burbuja y los diseños flotantes utilizan las extensiones [BubbleMenu](https://tiptap.dev/docs/editor/extensions/functionality/bubble-menu) y [FloatingMenu](https://tiptap.dev/docs/editor/extensions/functionality/floatingmenu) de TipTap.
 ::
 
-@@23@23@Artículos
+### Artículos
 
 Utilice el prop `items` como una matriz de objetos con las siguientes propiedades:
 
-@@
-@@
-@@
-@@
-@@
-@@
-@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@
-@@
-@@
-@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@
-@@
-@@ph078@@@ph079@@@ph080
+- xx`label?: string`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`activeColor?: "error" | "primary" | "secondary" | "success" | "info" | "warning" | "neutral"`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`variant?: "solid" | "outline" | "soft" | "ghost" | "link" | "subtle"`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`size?: "xs" | "sm" | "md" | "lg" | "xl"`xx{lang="ts-type"}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`disabled?: boolean`xxx{lang="ts-type"}
+- xxx`loading?: boolean`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`active?: boolean`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xxx`tooltip?: TooltipProps`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`items?: EditorToolbarItem[] | EditorToolbarItem[][]`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-Puede pasar cualquier propiedad del componente [Button](/docs/components/button#props) como `color`,`variant`,`size`, etc.
+Puede pasar cualquier propiedad del componente [Button](/docs/components/button#props) como `color`, `variant`, `size`, etc.
 
 ::component-example
 ---
-Elevado: Verdadero
-Colapso: Verdad
-Nombre: 'editor-toolbar-items-example'
-Categoría: P-8
+elevated: true
+collapse: true
+name: 'editor-toolbar-items-example'
+class: 'p-8'
 ---
 ::
 
 ::note
-También puede pasar un array de arrays al prop `items` para crear grupos separados de elementos.
+También puede pasar una matriz de matrices al soporte `items` para crear grupos separados de elementos.
 ::
 
 ::tip
-Cada elemento puede tomar una matriz `items` de objetos con las mismas propiedades que el prop `items` para crear un [DropdownMenu](/docs/components/dropdown-menu).
+Cada elemento puede tomar una matriz `items` de objetos con las mismas propiedades que el prop `items` para crear un [DropdownMenu](/docs/components/dropdown-menu)
 ::
 
-@095@@Lait
+### Diseño
 
-Utilice el prop `layout` para cambiar la forma en que se muestra la barra de herramientas. Por defecto a `fixed`{lang="ts-type"}.
+Utilice el prop `layout` para cambiar la forma en que se muestra la barra de herramientas. Por defecto `fixed`{lang="ts-type"}.
 
 ::component-example
 ---
-Elevado: Verdadero
-Colapso: Verdad
-Nombre: 'editor-toolbar-layout-example'
-Categoría: P-8
-Opciones:
-  - name: diseño
-    Categoría: Layout
-    por defecto: bubble
-    Items:
-      @@pH100@@Fixed (Edición española)
-      @101 @ burbuja
-      @@F102@F102
+elevated: true
+collapse: true
+name: 'editor-toolbar-layout-example'
+class: 'p-8'
+options:
+  - name: layout
+    label: Layout
+    default: bubble
+    items:
+      - fixed
+      - bubble
+      - floating
 ---
 ::
 
-@@303@Opciones
+Xph125xOpciones
 
-Al utilizar `bubble`{lang="ts-type"} o `floating`{lang="ts-type"} diseños, utilice el prop `options` para personalizar el comportamiento de posicionamiento utilizando [Floating UI options](https://floating-ui.com/docs/computeposition#options).
+Al usar diseños `bubble`{lang="ts-type"} o `floating`{lang="ts-type"}, utilice el prop `options` para personalizar el comportamiento de posicionamiento utilizando las opciones de interfaz de usuario flotante ](https://floating-ui.com/docs/computeposition#options).
 
 ```vue
 <template>
@@ -115,9 +115,9 @@ Al utilizar `bubble`{lang="ts-type"} o `floating`{lang="ts-type"} diseños, util
 </template>
 ```
 
-@@P130@@debería mostrar
+### Debería mostrar
 
-Al utilizar `bubble`{lang="ts-type"} o `floating`{lang="ts-type"}, utilice la prop `should-show` para controlar cuándo aparece la barra de herramientas.
+Cuando se utilizan diseños `bubble`{lang="ts-type"} o `floating`{lang="ts-type"}, se utiliza el prop `should-show` para controlar cuándo aparece la barra de herramientas.
 
 ```vue
 <template>
@@ -137,22 +137,22 @@ Al utilizar `bubble`{lang="ts-type"} o `floating`{lang="ts-type"}, utilice la pr
 </template>
 ```
 
-@@pH153@Ejemplos
+## Ejemplos
 
-### Con barra de herramientas de imagen
+### With barra de herramientas de imagen
 
-Utilice la prop `should-show` para crear barras de herramientas específicas del contexto que aparecen sólo para ciertos tipos de nodos. Este ejemplo muestra una barra de herramientas `bubble` con acciones de descarga y eliminación que sólo aparece cuando se selecciona una imagen.
+Utilice el prop `should-show` para crear barras de herramientas específicas del contexto que aparecen sólo para ciertos tipos de nodo.Este ejemplo muestra una barra de herramientas `bubble` con acciones de descarga y eliminación que sólo aparece cuando se selecciona una imagen.
 
 ::component-example
 ---
-Elevado: verdadero
-Colapso: Verdad
-Nombre: 'editor-toolbar-image-example'
-Categoría: P-8
+elevated: true
+collapse: true
+name: 'editor-toolbar-image-example'
+class: 'p-8'
 ---
 ::
 
-### Con enlace popover
+### With link popover (Edición española)
 
 En este ejemplo se muestra cómo crear un popover de enlace personalizado utilizando la propiedad `slot` en los elementos de la barra de herramientas y el componente [Popover](/docs/components/popover).
 
@@ -160,9 +160,9 @@ En este ejemplo se muestra cómo crear un popover de enlace personalizado utiliz
 
 ::component-example
 ---
-Reseña: FALSE
-Colapso: Verdad
-Nombre del archivo: 'editor-link-popover'
+preview: false
+collapse: true
+name: 'editor-link-popover'
 ---
 ::
 
@@ -170,27 +170,27 @@ Nombre del archivo: 'editor-link-popover'
 
 ::component-example
 ---
-Elevado: verdadero
-Colapso: Verdad
-Nombre del archivo: 'editor-toolbar-custom-slot-example'
-Categoría: P-8
+elevated: true
+collapse: true
+name: 'editor-toolbar-custom-slot-example'
+class: 'p-8'
 ---
 ::
 
-@@pH169
+## API
 
-@170000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
-@@171@171@171
+### Slots
 
-Componentes de slots
+:component-slots
 
-@@2017@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@173@Changelog (Edición española)
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

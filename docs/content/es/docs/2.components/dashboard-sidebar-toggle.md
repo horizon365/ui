@@ -3,7 +3,7 @@ title: DashboardsidebarToggle
 description: 'Un botón para alternar la barra lateral en el móvil.'
 category: dashboard
 links:
-  - label: botón
+  - label: Botón
     to: /docs/components/button
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub también
@@ -11,32 +11,32 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardSidebarToggle.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente DashboardSidebarToggle es utilizado por los componentes [DashboardNavbar](/docs/components/dashboard-navbar) y [DashboardSidebar](/docs/components/dashboard-sidebar).
+El componente DashboardSidebarToggle lo utilizan los componentes [DashboardNavbar](/docs/components/dashboard-navbar) y [DashboardSidebar](/docs/components/dashboard-sidebar).
 
-Se muestra automáticamente en el móvil para alternar la barra lateral,**no tienes que agregarlo manualmente **.
+Se muestra automáticamente en el móvil para alternar la barra lateral, **no tienes que agregarlo manualmente **.
 
 ::component-code
 ---
-Escondido:
-  @@11@clase
-Props:
-  Categoría:"lg: flex"
+hide:
+  - class
+props:
+  class: 'lg:flex'
 ---
 ::
 
-Se extiende el [Button](/docs/components/button) componente, por lo que puede pasar cualquier propiedad como `color`,`variant`,`size`, etc.
+Extiende el componente [Button](/docs/components/button), por lo que puede pasar cualquier propiedad como `color`, `variant`, `size`, etc.
 
 ::component-code
 ---
-Escondido:
-  @1919@clase
-Ignora:
-  @@20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Variación:"Sutil"
-  Categoría:"lg: flex"
+hide:
+  - class
+ignore:
+  - variant
+props:
+  variant: 'subtle'
+  class: 'lg:flex'
 ---
 ::
 
@@ -44,9 +44,9 @@ Props:
 El botón por defecto es `color="neutral"` y `variant="ghost"`.
 ::
 
-@@23@Ejemplos
+## Ejemplos
 
-### Dentro de `toggle`
+### Dentro de la ranura `toggle`
 
 A pesar de que este componente se muestra automáticamente en el móvil, puede utilizar la ranura `toggle` de los componentes [DashboardNavbar](/docs/components/dashboard-navbar) y [DashboardSidebar](/docs/components/dashboard-sidebar) para personalizar el botón.
 
@@ -89,23 +89,23 @@ definePageMeta({
 ::
 
 ::tip
-Cuando se utiliza el prop `toggle-side` de los componentes `DashboardSidebar` y `DashboardNavbar`, el botón se mostrará en el lado especificado.
+Cuando se utiliza el soporte `toggle-side` de los componentes `DashboardSidebar` y `DashboardNavbar`, el botón se mostrará en el lado especificado.
 ::
 
-@@pH070@@pH070
+## API
 
-@@701@@Propuestas
+### Accesorios
 
-Componentes Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-Este componente también soporta todos los atributos HTML nativos `<button>`.
+Este componente también soporta todos los atributos HTML `<button>` nativos.
 ::
 
-@073@@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@@74@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

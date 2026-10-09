@@ -12,52 +12,52 @@ links:
 
 ## 使用法
 
-アバターは[`@nuxt/image`](https://github.com/nuxt/image)がインストールされている場合、`<NuxtImg>`コンポーネントを使用します。
+Avatarは[`@nuxt/image`](https://github.com/nuxt/image)がインストールされている場合は`<NuxtImg>`コンポーネントを使用し、それ以外の場合は`img`に戻ります。
 
 ::component-code
 ---
-無視
-  -  src
-小道具
-  https//github.com/benjamincanac.png
+ignore:
+  - src
+props:
+  src: 'https://github.com/benjamincanac.png'
 ---
 ::
 
 ::note
-`alt`、`loading`など、HTMLの`<img>`要素から任意のプロパティを渡すことができます。
+`alt`、`loading`など、HTML `<img>`要素から任意のプロパティを渡すことができます。
 ::
 
 ::tip
-`@nuxt/image`をオプトアウトするには、`as` propを使用します。`:as="{ img: 'img' }"`。
+`@nuxt/image`をオプトアウトするには、`as`プロパティ`:as="{ img: 'img' }"`を使用します。
 ::
 
-###  Src
+### Src
 
 `src`プロパティを使用して画像URLを設定します。
 
 ::component-code
 ---
-無視
-  - ローディング
-小道具
-  https//github.com/benjamincanac.png
-  読み込み怠惰
+ignore:
+  - loading
+props:
+  src: 'https://github.com/benjamincanac.png'
+  loading: lazy
 ---
 ::
 
 ### サイズ
 
-アバターのサイズを設定するには、`size`プロパティを使用します。
+`size`プロパティを使ってアバターのサイズを設定します。
 
 ::component-code
 ---
-無視
-  -  src
-  - ローディング
-小道具
-  https//github.com/benjamincanac.png
-  サイズXL
-  読み込み怠惰
+ignore:
+  - src
+  - loading
+props:
+  src: 'https://github.com/benjamincanac.png'
+  size: xl
+  loading: lazy
 ---
 ::
 
@@ -65,74 +65,74 @@ links:
 `<img>`要素の`width`と`height`は、`size` propに基づいて自動的に設定されます。
 ::
 
-### アイコン
+### Icon
 
-`icon` propを使用して、フォールバック[ Icon ](/docs/components/icon)を表示します。
+`icon`プロパティを使用して、フォールバック[Icon](/docs/components/icon)を表示します。
 
 ::component-code
 ---
-小道具
-  アイコン'i—lucide'
-  サイズMD
+props:
+  icon: 'i-lucide-image'
+  size: md
 ---
 ::
 
-### テキスト
+### Text
 
-フォールバックテキストを表示するには、`text`プロパティを使用します。
+`text`プロパティを使用してフォールバックテキストを表示します。
 
 ::component-code
 ---
-小道具
-  テキスト'+1'
-  サイズMD
+props:
+  text: '+1'
+  size: md
 ---
 ::
 
-###  Alt
+### Alt
 
-アイコンまたはテキストが指定されていない場合、`alt` propの** initials **がフォールバックとして使用されます。
+アイコンやテキストが指定されていない場合、`alt`プロパティの**initials**がフォールバックとして使用されます。
 
 ::component-code
 ---
-小道具
-  alt 'ベンジャミン·カナック'
-  サイズMD
+props:
+  alt: 'Benjamin Canac'
+  size: md
 ---
 ::
 
 ::note
-`alt` propは`img`要素に`alt`属性として渡されます。
+`alt`プロパティは`img`要素に`alt`属性として渡されます。
 ::
 
-### 色バッジ{label="4.8+" class="align-text-top"}
+### カラー badge{label="4.8+" class="align-text-top"}
 
-`color`を使ってアバターの色を変更します。
+`color`プロパティを使用してアバターの色を変更します。
 
 ::component-code
 ---
-小道具
-  色プライマリ
-  alt 'ベンジャミン·カナック'
+props:
+  color: primary
+  alt: 'Benjamin Canac'
 ---
 ::
 
-### チップ
+xph082チップ
 
-`chip` propを使用して、アバターの周りにチップを表示します。
+`chip`プロップを使用してアバターの周りにチップを表示します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  src
-  - ローディング
-  -  chip.inset
-小道具
-  https//github.com/benjamincanac.png
-  読み込み怠惰
-  チップ
-    インセットtrue
+prettier: true
+ignore:
+  - src
+  - loading
+  - chip.inset
+props:
+  src: 'https://github.com/benjamincanac.png'
+  loading: lazy
+  chip:
+    inset: true
 ---
 ::
 
@@ -140,30 +140,30 @@ links:
 
 ### ツールチップ付き
 
-[ Tooltip ](/docs/components/tooltip)コンポーネントを使用して、アバターをホバリングするときにツールチップを表示できます。
+[Tooltip](/docs/components/tooltip)コンポーネントを使用して、アバターをホバリングするとツールチップを表示できます。
 
-component—example {name="avatar-tooltip-example"}
+:component-example{name="avatar-tooltip-example"}
 
 ### マスク付き
 
 CSSマスクを使用して、単純な円の代わりにカスタム形状でアバターを表示できます。
 
-component—example {name="avatar-mask-example"}
+:component-example{name="avatar-mask-example"}
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes" target="_blank"}
-このコンポーネントは、すべてのネイティブ`<img>` HTML属性もサポートします。
+このコンポーネントはすべてのネイティブ`<img>` HTML属性もサポートします。
 ::
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

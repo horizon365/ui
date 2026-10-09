@@ -11,61 +11,61 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Card.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Utilisez les emplacements `header`,`default` et `footer` pour ajouter du contenu à la carte.
+Utilisez les fentes `header`, `default` et `footer` pour ajouter du contenu à la carte.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@ph004@classe
-Props:
-  Catégorie: w-full
-Slots:
-  Header:|
+prettier: true
+hide:
+  - class
+props:
+  class: 'w-full'
+slots:
+  header: |
 
-    @@@ 005 @
+    <Placeholder class="h-8" />
 
-  Default:|
+  default: |
 
-    @@@ 006 @
+    <Placeholder class="h-32" />
 
-  Footer:|
+  footer: |
 
-    @@@ 007 @
+    <Placeholder class="h-8" />
 ---
 
-#header écrit
-par placeholder{class="h-8"}
+#header
+:placeholder{class="h-8"}
 
-#défaut
-par placeholder{class="h-32"}
+#default
+:placeholder{class="h-32"}
 
-#Footer
-par placeholder{class="h-8"}
+#footer
+:placeholder{class="h-8"}
 ::
 
-### Titre: badge{label="4.7+" class="align-text-top"}
+Titre: badge{label="4.7+" class="align-text-top"}
 
 Utilisez la prop `title` pour définir le titre de l'en-tête de la carte.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@classe
-Props:
-  Titre: Carte avec titre
-  Catégorie: w-full
-Slots:
-  Default:|
+prettier: true
+ignore:
+  - class
+props:
+  title: 'Card with title'
+  class: 'w-full'
+slots:
+  default: |
 
-    @@
+    <Placeholder class="h-32" />
 ---
 
-#défaut
-par placeholder{class="h-32"}
+#default
+:placeholder{class="h-32"}
 ::
 
 ### Description: badge{label="4.7+" class="align-text-top"}
@@ -74,74 +74,74 @@ Utilisez la prop `description` pour définir la description de l'en-tête de la 
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@20@titre
-  @@ph021@classe
-Props:
-  Titre: Carte avec description
-  « Lorem ipsum dolor sit amet, consectetur adipiscing elit ».
-  Catégorie: w-full
-Slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+  - class
+props:
+  title: 'Card with description'
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  class: 'w-full'
+slots:
+  default: |
 
-    @@@ 22 @
+    <Placeholder class="h-32" />
 ---
 
-#Défaut
-par placeholder{class="h-32"}
+#default
+:placeholder{class="h-32"}
 ::
 
-@@24@Variant
+### Variant équivalent
 
 Utilisez le prop `variant` pour changer la variante de la carte.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@ph026@classe
-Props:
-  Variante: subtile
-  Catégorie: w-full
-Slots:
-  Header:|
+prettier: true
+hide:
+  - class
+props:
+  variant: subtle
+  class: 'w-full'
+slots:
+  header: |
 
-    @@@ 27 @
+    <Placeholder class="h-8" />
 
-  Défaut:|
+  default: |
 
-    @@@ 28 @
+    <Placeholder class="h-32" />
 
-  Footer:|
+  footer: |
 
-    @@@ 29 @
+    <Placeholder class="h-8" />
 ---
 
-#header écrit
-par placeholder{class="h-8"}
+#header
+:placeholder{class="h-8"}
 
-#Défaut
-par placeholder{class="h-32"}
+#default
+:placeholder{class="h-32"}
 
-#Footer
-par placeholder{class="h-8"}
+#footer
+:placeholder{class="h-8"}
 ::
 
-@@ph033@@api
+## api
 
-@@ph034@@props
+### Props
 
-Composants-props
+:component-props
 
 ### Slots
 
-Composants slots
+:component-slots
 
-@@ph036@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

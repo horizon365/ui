@@ -11,25 +11,25 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/color-mode/ColorModeButton.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente ColorModeButton extiende el componente [Button](/docs/components/button), por lo que puede pasar cualquier propiedad, como `color`,`variant`,`size`, etc.
+El componente ColorModeButton extiende el componente [Button](/docs/components/button), por lo que puede pasar cualquier propiedad como `color`, `variant`, `size`, etc.
 
-: código de componentes {prefix="color-mode"}
+:component-code{prefix="color-mode"}
 
 ::note
 El botón por defecto es `color="neutral"` y `variant="ghost"`.
 ::
 
-@111@Ejemplos
+## ejemplos
 
 ### Con iconos personalizados
 
 ::framework-only
-#Nuxidad
+#nuxt
 ::div
 
-Utilice el `app.config.ts` para personalizar el icono con la propiedad `ui.icons`:
+Utilice el icono `app.config.ts` para personalizar el icono con la propiedad `ui.icons`:
 
 ```ts [app/app.config.ts]
 export default defineAppConfig({
@@ -44,7 +44,7 @@ export default defineAppConfig({
 
 ::
 
-#vista
+#vue
 ::div
 Utilice el `vite.config.ts` para personalizar el icono con la propiedad `ui.icons`:
 
@@ -72,16 +72,16 @@ export default defineConfig({
 
 ::
 
-@4666 @ Vía
+## API (Edición española)
 
-@@40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props (Edición española)
 
-Componentes Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-Este componente también soporta todos los atributos HTML nativos `<button>`.
+Este componente también soporta todos los atributos HTML `<button>` nativos.
 ::
 
-@@40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Changelog (Edición española)
 
-por: component-changelog {prefix="color-mode"}
+:component-changelog{prefix="color-mode"}

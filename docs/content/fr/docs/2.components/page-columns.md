@@ -8,32 +8,32 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageColumns.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Le composant PageColumns affiche le contenu dans une mise en page multi-colonnes réactive. Il fonctionne bien avec [PageCard](/docs/components/page-card) composants ou tout autre élément, l'adaptation d'une seule colonne sur mobile à plusieurs colonnes sur des écrans plus grands.
+Il fonctionne bien avec les composants [PageCard](xph003) ou tout autre élément, en s'adaptant d'une seule colonne sur mobile à plusieurs colonnes sur des écrans plus grands.
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'page-colonnes-exemple'
-Catégorie: P-8
+collapse: true
+name: 'page-columns-example'
+class: 'p-8'
 ---
 ::
 
-@@ph005 @@ réponse
+## api
 
-@@ph006@props
+### Props
 
-Composants-props
+:component-props
 
-@@ph007@@réglages
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph008@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

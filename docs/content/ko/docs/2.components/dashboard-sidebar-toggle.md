@@ -3,7 +3,7 @@ title: 대시보드 사이드바토글
 description: '모바일에서 사이드바를 전환하는 버튼입니다.'
 category: dashboard
 links:
-  - label: 버튼 (Button)
+  - label: 단추
     to: /docs/components/button
     icon: i-simple-icons-nuxtdotjs
   - label: Github (GitHub)
@@ -11,32 +11,32 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardSidebarToggle.vue
 ---
 
-##  사용
+## Usage
 
-DashboardSidebarToggle 구성 요소는 [DashboardNavbar](/docs/components/dashboard-navbar) 및 [DashboardSidebar](/docs/components/dashboard-sidebar) 구성 요소에 사용됩니다.
+DashboardSidebarToggle 구성 요소는 [DashboardNavbar](/docs/components/dashboard-navbar) 및 [DashboardSidebar](xph07xxph08x 구성 요소에 사용됩니다.
 
-사이드바를 전환하기 위해 모바일에 자동으로 표시됩니다. ** 수동으로 ** 추가 할 필요가 없습니다.
+그것은 자동으로 사이드바를 토글 모바일에 표시 됩니다, ** 당신은 그것을 manually **를 추가 할 필요가 없습니다.
 
 ::component-code
 ---
-숨기기 (Hide):
-  -  class
-소품 :
-  class: 'lg:flex'에 해당되는 글 0건
+hide:
+  - class
+props:
+  class: 'lg:flex'
 ---
 ::
 
-그것은 [Button](/docs/components/button) 구성 요소를 확장, 그래서 당신은 `color`, `variant`, `size` 등과 같은 속성을 전달 할 수있다.
+[Button](/docs/components/button) 구성 요소를 확장하므로 `color`, `variant`, `size` 등과 같은 속성을 전달할 수 있습니다.
 
 ::component-code
 ---
-숨기기 (Hide):
-  -  클래스
-무시하기:
-  -  variant
-소품 :
-  variant: '미묘한'
-  클래스: 'lg:flex'
+hide:
+  - class
+ignore:
+  - variant
+props:
+  variant: 'subtle'
+  class: 'lg:flex'
 ---
 ::
 
@@ -44,11 +44,11 @@ DashboardSidebarToggle 구성 요소는 [DashboardNavbar](/docs/components/dashb
 버튼의 기본값은 `color="neutral"` 및 `variant="ghost"`입니다.
 ::
 
-##  예제
+## 예
 
-###  Within `toggle` 슬롯
+### x`toggle` 슬롯 내
 
-이 구성 요소는 모바일에서 자동으로 표시되지만 [DashboardNavbar](/docs/components/dashboard-navbar) 및 [DashboardSidebar](/docs/components/dashboard-sidebar 버튼을 사용하여 구성 요소를 사용자 정의할 수 있습니다.
+이 구성 요소는 모바일에서 자동으로 표시되지만 [DashboardNavbar](/docs/components/dashboard-navbar) 및 [DashboardSidebar](/docs/components/dashboard-sidebar) 구성 요소의 `toggle` 슬롯을 사용하여 버튼을 사용자 정의할 수 있습니다.
 
 ::code-group
 
@@ -89,23 +89,23 @@ definePageMeta({
 ::
 
 ::tip
-`DashboardSidebar` 및 `DashboardNavbar` 컴포넌트의 `toggle-side`prop을 사용하면 지정된 측면에 버튼이 표시됩니다.
+`DashboardSidebar` 및 `DashboardNavbar` 구성 요소의 `toggle-side` Prop을 사용하면 지정된 측면에 버튼이 표시됩니다.
 ::
 
-##  API
+## API 사용
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-이 컴포넌트는 모든 네이티브 `<button>`HTML 속성을 지원합니다.
+이 구성 요소는 모든 기본 `<button>` HTML 속성도 지원합니다.
 ::
 
-##  테마
+## Theme 주제
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## Changelog 파일
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

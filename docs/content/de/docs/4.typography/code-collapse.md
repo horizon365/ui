@@ -9,9 +9,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodeCollapse.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Wickeln Sie Ihren Codeblock mit einer `code-collapse`-Komponente ein, um einen zusammenklappbaren Codeblock anzuzeigen.
+Wickeln Sie Ihren Code-Block mit einer `code-collapse`-Komponente ein, um einen zusammenklappbaren Code-Block anzuzeigen.
 
 ::code-preview{class="[&>div]:*:my-0 [&>div]:*:w-full"}
 
@@ -42,7 +42,7 @@ Wickeln Sie Ihren Codeblock mit einer `code-collapse`-Komponente ein, um einen z
 
 ::
 
-#Der Code
+#code
 
 ````mdc
 ::code-collapse
@@ -75,20 +75,20 @@ Wickeln Sie Ihren Codeblock mit einer `code-collapse`-Komponente ein, um einen z
 
 ::
 
-@@@@@@b32@b32
+## API (englisch)
 
-@@ph033@@gmail.de
+### Props Bearbeiten
 
-: component-props {prose}
+:component-props{prose}
 
-@@ph035@gmail.de
+### Slots Bearbeiten
 
-: component-slots {prose}
+:component-slots{prose}
 
-@@ph037@@gmail.de
+## Theme Bearbeiten
 
-: component-theme {prose}
+:component-theme{prose}
 
-@@ph039@@changelog @@@ changelog
+## Changelog (englisch)
 
-: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

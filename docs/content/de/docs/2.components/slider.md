@@ -12,195 +12,195 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Slider.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Verwenden Sie die `v-model` Direktive, um den Wert des Sliders zu steuern.
+Verwenden Sie die `v-model`-Direktive, um den Wert des Sliders zu steuern.
 
 ::component-code
 ---
-Außen:
-  - modellWert
-Props:
-  Modellwert: 50
+external:
+  - modelValue
+props:
+  modelValue: 50
 ---
 ::
 
-Verwenden Sie `default-value` prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
+Verwenden Sie die `default-value`-prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - defaultValue
-Props:
-  Default-Wert: 50
+props:
+  defaultValue: 50
 ---
 ::
 
 ::tip
-Verwenden Sie `aria-label` oder `aria-labelledby`, um einen einzelnen Daumen-Slider zu benennen, sie werden an den Daumen weitergeleitet, der das Element mit der `slider`-Rolle ist.
+Verwenden Sie `aria-label` oder `aria-labelledby`, um einen einzelnen Daumen-Slider zu benennen, sie werden an den Daumen weitergeleitet, der das Element mit der Rolle `slider` ist.
 
-Die Daumen eines Sliders mit mehreren Daumen werden nach ihrer Position benannt, so dass sie auseinandergehalten werden können,`Minimum`/`Maximum` für zwei Daumen und `Value n of m` für drei oder mehr. Diese Namen werden beibehalten, und ein `aria-label` nennt den Slider als Ganzes durch eine `group` Rolle auf der Wurzel, anstatt auf jedem Daumen wiederholt zu werden.
+Die Daumen eines Sliders mit mehreren Daumen werden nach ihrer Position benannt, so dass sie auseinandergehalten werden können, `Minimum`/`Maximum` für zwei Daumen und `Value n of m` für drei oder mehr. Diese Namen werden beibehalten, und ein `aria-label` nennt den Slider als Ganzes durch eine `group`-Rolle an der Wurzel, anstatt auf jedem Daumen wiederholt zu werden.
 ::
 
-@@ph013@@min/max
+### Min/Max (englisch).
 
-Verwenden Sie die Props `min` und `max`, um die Mindest-und Höchstwerte des Slider. Defaults auf `0` und `100` einzustellen.
+Verwenden Sie die Props `min` und `max`, um die minimalen und maximalen Werte des Sliders festzulegen.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - defaultValue
-Props:
-  von: 0
-  max: 50 Stück
-  Default-Wert: 50
+props:
+  min: 0
+  max: 50
+  defaultValue: 50
 ---
 ::
 
-@@ph019@@Schritt
+### Step (englisch)
 
-Verwenden Sie `step` prop, um den Inkrementwert des Slider. Defaults auf `1` zu setzen.
+Verwenden Sie die `step` prop, um den Inkrementwert des Slider. Defaults auf `1` zu setzen.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - defaultValue
-Props:
-  Schritt: 10
-  Default-Wert: 50
+props:
+  step: 10
+  defaultValue: 50
 ---
 ::
 
-@@ph023@mehrfache
+### Mehrfach
 
-Verwenden Sie die `v-model`-Direktive oder die `default-value` prop mit einem Array von Werten, um einen Bereichs-Slider zu erstellen.
+Verwenden Sie die `v-model`-Direktive oder die `default-value`-Prop mit einem Array von Werten, um einen Bereichs-Slider zu erstellen.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: [25, 75]
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: [25, 75]
 ---
 ::
 
-Verwenden Sie die `min-steps-between-thumbs` prop, um den Mindestabstand zwischen den Daumen zu begrenzen.
+Verwenden Sie die `min-steps-between-thumbs`-Stütze, um den Mindestabstand zwischen den Daumen zu begrenzen.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: [25, 50, 75]
-  Unterschenkel-Daumen: 10
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: [25, 50, 75]
+  minStepsBetweenThumbs: 10
 ---
 ::
 
-@@ph031@@Orientierung
+### Orientierung
 
-Verwenden Sie `orientation` prop, um die Ausrichtung des Slider. Defaults auf `horizontal` zu ändern.
+Verwenden Sie die `orientation`-prop, um die Ausrichtung des Sliders zu ändern. Standardmäßig auf `horizontal`.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - defaultValue
-  @@35@Klasse
-Props:
-  Ausrichtung: Vertikal
-  Default-Wert: 50
-  Klasse: H-48
+  - class
+props:
+  orientation: vertical
+  defaultValue: 50
+  class: 'h-48'
 ---
 ::
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##############################################################################################################################################################################################
+### Color Bearbeiten
 
-Verwenden Sie die `color` prop, um die Farbe des Sliders zu ändern.
+Verwenden Sie die `color`-Prop, um die Farbe des Sliders zu ändern.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - defaultValue
-Props:
-  Farbe: neutral
-  Default-Wert: 50
+props:
+  color: neutral
+  defaultValue: 50
 ---
 ::
 
-@@ph039 @ Größe
+### Größe
 
-Verwenden Sie die `size` prop, um die Größe des Sliders zu ändern.
+Verwenden Sie die `size`-Stütze, um die Größe des Sliders zu ändern.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - defaultValue
-Props:
-  Größe: XL
-  Default-Wert: 50
+props:
+  size: xl
+  defaultValue: 50
 ---
 ::
 
-@@ph042@@@tooltip
+### Tooltip (englisch)
 
-Verwenden Sie die `tooltip` prop, um ein [Tooltip](/docs/components/tooltip) um die Slider-Daumen mit dem aktuellen Wert anzuzeigen. Sie können es auf `true` für das Standardverhalten einstellen oder ein Objekt übergeben, um es mit einer beliebigen Eigenschaft aus der Komponente [Tooltip](/docs/components/tooltip#props) anzupassen.
-
-::component-code
----
-Ignoriert:
-  - defaultValue (nicht vorhanden)
-  @@ph054@@tooltip
-Props:
-  Default-Wert: 50
-  Tooltip: Richtig
----
-::
-
-@@ph055@@disabled @@ nicht vorhanden
-
-Verwenden Sie die `disabled` prop, um den Slider zu deaktivieren.
+Verwenden Sie die `tooltip` prop, um eine [Tooltip](/docs/components/tooltip) um die Schieber-Daumen mit dem aktuellen Wert anzuzeigen. Sie können es auf `true` für das Standardverhalten einstellen oder ein Objekt übergeben, um es mit einer beliebigen Eigenschaft aus der Komponente [Tooltip](/docs/components/tooltip#props) anzupassen.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - defaultValue
-Props:
-  Behindert: Wahr
-  Default-Wert: 50
+  - tooltip
+props:
+  defaultValue: 50
+  tooltip: true
 ---
 ::
 
-@@@@@@58@inverted
+### Disabled ist ein
 
-Verwenden Sie die `inverted` prop, um den Slider visuell umzukehren.
+Verwenden Sie die `disabled`-Prop, um den Slider zu deaktivieren.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - defaultValue
-Props:
-  invertiert: wahr
-  Default-Wert: 25
+props:
+  disabled: true
+  defaultValue: 50
 ---
 ::
 
-## api
+### Inverted (englisch)
 
-### Props
+Verwenden Sie die `inverted`-Prop, um den Slider visuell umzukehren.
 
-Komponenten-Props
+::component-code
+---
+ignore:
+  - defaultValue
+props:
+  inverted: true
+  defaultValue: 25
+---
+::
 
-### Emits
+## API (englisch)
 
-Komponenten emittieren
+### Props Bearbeiten
 
-@@ph064@@theme@@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@@theme@theme@theme@theme@@theme@@theme@@theme@theme@theme@theme@@theme@theme@theme@@theme@theme@theme@theme
+:component-props
 
-Das Komponenten-Theme
+### Emits (englisch)
 
-@@ph065@@changelog @@changelog
+:component-emits
 
-Das Component-Changelog
+## Theme Bearbeiten
+
+:component-theme
+
+## Changelog (englisch)
+
+:component-changelog

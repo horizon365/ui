@@ -18,72 +18,72 @@ links:
 
 ## 使用法
 
-ContentSearchButtonコンポーネントは、[ ContentSearch ](/docs/components/content-search)モーダルを開くために使用されます。
+ContentSearchButtonコンポーネントは、[ ContentSearch](/docs/components/content-search)モーダルを開くために使用されます。
 
-コンポーネントコード{prefix="content"}
+:component-code{prefix="content"}
 
-[ Button ](/docs/components/button)コンポーネントを拡張しているので、`color`、`variant`、`size`などのプロパティを渡すことができます。
+[Button](/docs/components/button)コンポーネントを拡張するため、`color`、`variant`、`size`などの任意のプロパティを渡すことができます。
 
 ::component-code{prefix="content"}
 ---
-無視
-  - バリアント
-小道具
-  バリアント：'微妙'
+ignore:
+  - variant
+props:
+  variant: 'subtle'
 ---
 ::
 
 ::note{to="#collapsed"}
-ボタンのデフォルト値は`color="neutral"`と`variant="outline"`、折りたたまれていない場合は`variant="ghost"`です。
+ボタンのデフォルト値は、折りたたまれていない場合は`color="neutral"`と`variant="outline"`、折りたたまれている場合は`variant="ghost"`です。
 ::
 
-### 崩壊
+### Collapsed
 
-`collapsed`プロパティを使用してボタンのラベルを表示し、[ kbds ](#kbds)を表示します。デフォルトは`true`です。
+`collapsed`プロパティを使用してボタンのラベルと[kbds](#kbds)を表示します。デフォルトは`true`です。
 
 ::component-code{prefix="content"}
 ---
-きれい真
-小道具
-  折りたたみ：false
+prettier: true
+props:
+  collapsed: false
 ---
 ::
 
-###  Kbds
+### Kbds
 
-ボタンにキーボードキーを表示するには、`kbds`プロパティを使用します。デフォルトは`['meta', 'K']`{lang="ts-type"}で、[ ContentSearch ](/docs/components/content-search#shortcut)コンポーネントのデフォルトのショートカットに一致します。
+ボタンにキーボードキーを表示するには、`kbds`プロパティを使用します。[ContentSearch](/docs/components/content-search#shortcut)コンポーネントのデフォルトショートカットに一致するように、デフォルトで`['meta', 'K']`{lang="ts-type"}になります。
 
 ::component-code{prefix="content"}
 ---
-きれい真
-無視
-  -  kbds
-小道具
-  折りたたみ：false
-  kbds
+prettier: true
+ignore:
+  - kbds
+props:
+  collapsed: false
+  kbds:
     - 'alt'
     - 'O'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-このコンポーネントは、すべてのネイティブ`<button>` HTML属性もサポートします。
+このコンポーネントはすべてのネイティブ`<button>` HTML属性もサポートします。
 ::
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="content"}
+:component-changelog{prefix="content"}

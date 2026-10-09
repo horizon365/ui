@@ -7,7 +7,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Page.vue
 ---
 
-## 使用情况
+## 用法
 
 “页面”组件帮助您创建具有可选左栏和右栏的布局。它非常适合构建文档站点和其他以内容为中心的页面。
 
@@ -31,9 +31,9 @@ links:
 虽然这些示例使用[Nuxt Content](https://content.nuxt.com)，但这些组件可以与任何内容管理系统集成。
 ::
 
-### 在布局中
+### 在布局内
 
-在带有`left`插槽的布局中使用Page组件可显示导航：
+在具有`left`插槽的布局中使用Page组件可显示导航：
 
 ```vue [layouts/docs.vue] {9-13}
 <script setup lang="ts">
@@ -56,12 +56,12 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 ```
 
 ::note
-在本例中，我们使用`ContentNavigation`组件显示在`app.vue`中注入的导航。
+在本例中，我们使用`ContentNavigation`组件来显示`app.vue`中注入的导航。
 ::
 
 ### 在页面内
 
-在带有`right`插槽的页面中使用Page组件可显示目录：
+在具有`right`插槽的页面中使用Page组件来显示目录：
 
 ```vue [pages/\[...slug\\].vue]{29-31}
 <script setup lang="ts">
@@ -103,20 +103,20 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 在本例中，我们使用`ContentToc`组件显示目录。
 ::
 
-美国石油学会
+## 应用程序接口
 
-道具
+### 道具
 
-：组件-支柱
+:component-props
 
-插槽
+### 插槽
 
-：组件插槽
+:component-slots
 
-主题
+## 主题
 
-：组件主题
+:component-theme
 
-## 变更日志
+## 更改日志
 
-：组件更改日志
+:component-changelog

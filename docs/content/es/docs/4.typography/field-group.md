@@ -9,7 +9,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/FieldGroup.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Agrupe los campos en una lista.
 
@@ -18,24 +18,24 @@ Agrupe los campos en una lista.
 ::field-group{class="my-0"}
 
   ::field{name="analytics" type="boolean"}
-  Por defecto a `false`. Habilita análisis para su proyecto (próximamente).
+  Por defecto `false`. Habilita el análisis para su proyecto (próximamente).
   ::
 
   ::field{name="blob" type="boolean"}
-  Por defecto a `false`. Habilita el almacenamiento de blob para almacenar activos estáticos, como imágenes, videos y más.
+  `false`. Habilita el almacenamiento blob para almacenar activos estáticos, como imágenes, videos y más.
   ::
 
   ::field{name="cache" type="boolean"}
-  Habilita el almacenamiento en caché para almacenar en caché las respuestas o funciones de ruta de su servidor utilizando `cachedEventHandler` y `cachedFunction` de Nitro.
+  Habilita el almacenamiento en caché para almacenar en caché las respuestas o funciones de ruta de su servidor utilizando los `cachedEventHandler` y `cachedFunction` de Nitro.
   ::
 
   ::field{name="database" type="boolean"}
-  Por defecto a `false`. Habilita la base de datos SQL para almacenar los datos de la aplicación.
+  `false`. Habilita la base de datos SQL para almacenar los datos de su aplicación.
   ::
 
 ::
 
-#El Código
+#code
 
 ```mdc
 ::field-group
@@ -59,20 +59,20 @@ Agrupe los campos en una lista.
 
 :::
 
-@@26000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## API (Edición española)
 
-@@27000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props (Edición española)
 
-Artículo siguienteComponentes {prose}
+:component-props{prose}
 
-@@29@29000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots (Edición española)
 
-Componentes: {prose}
+:component-slots{prose}
 
-@@ph031@@Themes
+## Temas
 
-Artículo siguiente{prose}
+:component-theme{prose}
 
-@@30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+xf030xChangelog (Edición española)
 
-por: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

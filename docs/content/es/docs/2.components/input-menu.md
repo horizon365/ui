@@ -18,148 +18,148 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputMenu.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice la directiva `v-model` para controlar el valor del InputMenu o la prop `default-value` para establecer el valor inicial cuando no necesite controlar su estado.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  - modelValue (Edición española)
-  @@pH004@artículos
-Externo:
-  @@0005@artículos
-  - modelValoríaModelación
-Props:
-  Archivo de la etiqueta: 'Backlog'
+prettier: true
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
   items:
-    @070000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @008@todo
-    @000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
 ::tip
-Utilice esto sobre un `Input`](/docs/components/input) para aprovechar el [`Combobox`](https://reka-ui.com/docs/components/combobox) de Reka UI que ofrece capacidades de autocompletado.
+Utilice esto sobre un [`Input`](/docs/components/input) para aprovechar el componente [`Combobox`](https://reka-ui.com/docs/components/combobox) de Reka UI que ofrece capacidades de autocompletado.
 ::
 
 ::note
-Este componente es similar al [`SelectMenu`](/docs/components/select-menu) pero está usando una entrada en lugar de una selección.
+Este componente es similar al [`SelectMenu`](/docs/components/select-menu), pero utiliza una entrada en lugar de una selección.
 ::
 
-@@26000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Artículos
 
-Utilice la prop `items` como una matriz de cadenas, números o booleanos:
+Utilice el prop `items` como una matriz de cadenas, números o booleanos:
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@2008@modelValoración
-  @@29@artículos
-Externo:
-  @@pH030@artículos
-  - modelValue (Edición española)
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  Items:
-    @32@32@32@32@32@32@32@32@32@32@332@32@32@32@332@332@32@332@32@332@332@32@32@332@32@332@332@332@3332@333333333333333332@333332@3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
-    @@33@todo
-    - En proceso
-    @@350@@Apuesta
+prettier: true
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
 También puede pasar una matriz de objetos con las siguientes propiedades:
 
-@@
-@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@
-- [`chip?: ChipProps`{lang="ts-type"}](#with-chip-in-items)
-@@
-@@ph070@@@ph071@@@ph072
-@@
-@@ph076 @@@@ph077
+- xxx`label?: string`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- x`disabled?: boolean`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ::component-code
 ---
-Ignora:
+ignore:
   - modelValue.label
-  @080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externo:
-  @081 @ artículos
-  @@P082@modelValue (Edición española)
-Externalidades:
-  @@883@@InputMenuItem (en inglés)
-Props:
-  Modelación:
-    Etiqueta: "Todo"
-  Items:
-    - label:'Lista de pedidos'
-    - label:"Todo"
-    - label:"En proceso"
-    - label:"Hecho"
----
-::
-
-También puede pasar un array de arrays al prop `items` para mostrar grupos separados de elementos.
-
-::component-code
----
-Categoría: true
-Ignora:
-  @@pH089@modelValue (Edición española)
-  @090000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externo:
-  @091@artículos
-  @@P092@modelValue (Edición española)
-Props:
-  Categoría:"Apple"
+  - items
+external:
+  - items
+  - modelValue
+externalTypes:
+  - InputMenuItem[]
+props:
+  modelValue:
+    label: 'Todo'
   items:
-    - -Nueva York
-      @@pH094@@banana
-      @@pH095@@blueberry
-      @@pH096@@espanol
-      @@pH097@piñones
-    - -La berenjena
-      @099@@broccoli
-      @@P100@Carotón
-      @101@@F101
-      @2010@leek
+    - label: 'Backlog'
+    - label: 'Todo'
+    - label: 'In Progress'
+    - label: 'Done'
 ---
 ::
 
-### Clave de valor
-
-Puede optar por vincular una sola propiedad del objeto en lugar de todo el objeto utilizando la prop.`value-key`.
+También puede pasar una matriz de matrices al soporte `items` para mostrar grupos separados de elementos.
 
 ::component-code
 ---
-Colapso: Verdad
-Ignora:
-  @@pH106@modelValue (Edición española)
-  @107@ValueKey
-  @108@artículos
-Externo:
-  @109 @ artículos
-  - modelValue (Edición española)
-Externalidades:
-  @111@1111@11111@1111111@11111111@11111111@1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
-Props:
-  Valoración:'todo'
-  ValueKey: 'id'
-  Items:
-    - label:'Lista de pedidos'
-      Nombre: Backlog
-    - label:'Todo'(en español)
-      Nombre: "Todo"
-    - label:"En proceso"
-      id: 'en_progreso'
-    - label:"Hecho"
-      Nombre: "Hecho"
+prettier: true
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Apple'
+  items:
+    - - Apple
+      - Banana
+      - Blueberry
+      - Grapes
+      - Pineapple
+    - - Aubergine
+      - Broccoli
+      - Carrot
+      - Courgette
+      - Leek
+---
+::
+
+### Value Clave de seguridad
+
+Puede optar por vincular una sola propiedad del objeto en lugar de todo el objeto mediante el uso de la prop. `value-key`.
+
+::component-code
+---
+collapse: true
+ignore:
+  - modelValue
+  - valueKey
+  - items
+external:
+  - items
+  - modelValue
+externalTypes:
+  - InputMenuItem[]
+props:
+  modelValue: 'todo'
+  valueKey: 'id'
+  items:
+    - label: 'Backlog'
+      id: 'backlog'
+    - label: 'Todo'
+      id: 'todo'
+    - label: 'In Progress'
+      id: 'in_progress'
+    - label: 'Done'
+      id: 'done'
 ---
 ::
 
@@ -167,74 +167,74 @@ Props:
 Utilice la prop `by` para comparar objetos por un campo en lugar de referencia cuando el `model-value` es un objeto.
 ::
 
-@118@118
+### Multiple (Edición española)
 
-Utilice el prop `multiple` para permitir múltiples selecciones, los elementos seleccionados se mostrarán como etiquetas.
+Utilice el prop `multiple` para permitir selecciones múltiples, los elementos seleccionados se mostrarán como etiquetas.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  - modelValue (Edición española)
-  @121@artículos
-  @@222@multiples
-Externo:
-  @123@artículos
-  - modelValue (Edición española)
-Props:
-  Modelación:
-    @125@@Pingback
-    @126 @ todo
-  Multiplicación: True
+prettier: true
+ignore:
+  - modelValue
+  - items
+  - multiple
+external:
+  - items
+  - modelValue
+props:
+  modelValue:
+    - Backlog
+    - Todo
+  multiple: true
   items:
-    @127@2012
-    @128 @ todo
-    @129 @ En proceso
-    @130
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
 ::caution
-Asegúrese de pasar un array a la directiva `default-value` o a la directiva `v-model`.
+Asegúrese de pasar una matriz a la prop `default-value` o a la directiva `v-model`.
 ::
 
-### Delete Icon (Edición española)
+### Delete Icono
 
 Con `multiple`, utilice el prop `delete-icon` para personalizar la eliminación [Icon](/docs/components/icon) en las etiquetas.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @141@141@141
-  @242@puntos
-  @143@@multiples
-Externo:
-  @444@puntos
-  - modelValue (Edición española)
-Props:
-  Modelación:
-    @@146@146@146
-    @147 @ todo
-  Multiplicación: True
-  Archivo de la etiqueta: i-lucide-trash
+prettier: true
+ignore:
+  - modelValue
+  - items
+  - multiple
+external:
+  - items
+  - modelValue
+props:
+  modelValue:
+    - Backlog
+    - Todo
+  multiple: true
+  deleteIcon: 'i-lucide-trash'
   items:
-    @148@148@148
-    @149 @ todo
-    - En proceso
-    @151
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
 ::framework-only
-#nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.close`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.close`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.close`.
+Puede personalizar este icono de forma global en su Xph220x bajo la tecla Xph221x.
 :::
 ::
 
@@ -244,239 +244,239 @@ Utilice el prop `placeholder` para establecer un texto de marcador de posición.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @158@artículos
-Externo:
-  @159 @ artículos
-Props:
-  marcador de posición:'Select status'
+prettier: true
+ignore:
+  - items
+external:
+  - items
+props:
+  placeholder: 'Select status'
   items:
-    @160000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @161 @ todo
-    - En proceso
-    @163 @
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
-### Modo: badge{label="4.8+" class="align-text-top"}
+Xph238xMode: badge{label="4.8+" class="align-text-top"} (Edición española)
 
-Establezca el prop `mode` en `autocomplete` para convertir el InputMenu en una entrada de texto de forma libre con sugerencias. El `modelValue` se convierte en el texto de entrada (`string`) en lugar de un elemento seleccionado.
+Configure la prop `mode` en `autocomplete` para convertir el InputMenu en una entrada de texto de forma libre con sugerencias. El `modelValue` se convierte en el texto de entrada (`string`) en lugar de un elemento seleccionado.
 
 ::component-example
 ---
-Nombre: 'input-menu-mode-ejemplo'
+name: 'input-menu-mode-example'
 ---
 ::
 
 ::caution
-Cuando `mode` es `autocomplete`,`multiple`,`by`,`resetSearchTermOnSelect` y `resetModelValueOnClear` no son aplicables.
+Cuando `mode` es `autocomplete`, `multiple`, `by`, `resetSearchTermOnSelect` y `resetModelValueOnClear` no son aplicables.
 ::
 
 ::tip
-Utilice el prop `content.hideWhenEmpty` para ocultar el menú cuando no haya sugerencias coincidentes.
+Utilice el accesorio `content.hideWhenEmpty` para ocultar el menú cuando no haya sugerencias coincidentes.
 ::
 
-@177 @ Contenido
+### Contenido
 
 Utilice el prop `content` para controlar cómo se representa el contenido de InputMenu, como su `align` o `side`, por ejemplo.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @181@artículos
-  - modelValue (Edición española)
-Externo:
-  @@183@artículos
-  - modelValue (Edición española)
+prettier: true
+ignore:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
 items:
   content.align:
-    @185@Inicio
-    @186 @ Centro
-    @ph187
+    - start
+    - center
+    - end
   content.side:
-    @@ph188@@derecha
-    @189 @ izquierda
-    @190000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @@ph191 @ abajo
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  Contenido:
-    Alineación: Centro
-    Categoría: Bottom
-    Desplazamiento: 8
+    - right
+    - left
+    - top
+    - bottom
+props:
+  modelValue: 'Backlog'
+  content:
+    align: center
+    side: bottom
+    sideOffset: 8
   items:
-    @2019@Backlog
-    @@P193@@Todo
-    - En proceso
-    @195 @
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
-@F196@Flecha
+### Flecha
 
-Utilice el prop `arrow` para mostrar una flecha en el InputMenu.
+Utilice el accesorio `arrow` para mostrar una flecha en el menú de entrada.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @1980@artículos
-  @@pH199@modelValue (Edición española)
-  @200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externo:
-  @@201@artículos
-  @2012@modelValoración
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  Arrow: Verdad
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - arrow
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  arrow: true
   items:
-    @2013@Backlog
-    @204@todo
-    @@205@En desarrollo
-    @@206@2010
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
-@2007@color
+### Color (Edición)
 
-Utilice el prop `color` para cambiar el color del anillo cuando el InputMenu está enfocado.
+Utilice el accesorio `color` para cambiar el color del anillo cuando el InputMenu está enfocado.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @209@artículos
-  - modelValue (Edición española)
-Externo:
-  @211@artículos
-  @212@modelValue (Edición española)
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  Color: Neutro
-  Destacado: Verdadero
-  Items:
-    @@213@@Pingback
-    @@214@@Todo el mundo
-    @@215@En proceso
-    @216
+prettier: true
+ignore:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  color: neutral
+  highlight: true
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
 ::note
-El `highlight` prop se utiliza aquí para mostrar el estado de enfoque. Se utiliza internamente cuando se produce un error de validación.
+El prop `highlight` se utiliza aquí para mostrar el estado de enfoque. Se utiliza internamente cuando se produce un error de validación.
 ::
 
-@218@Variante
+### Variante
 
-Utilice la prop `variant` para cambiar la variante del InputMenu.
+Utilice el accesorio `variant` para cambiar la variante del InputMenu.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @220@artículos
-  @@221@modelValue (Edición española)
-Externo:
-  @222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222220000000000
-  @@223@modelValue (Edición española)
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  Color: Neutral
-  Variación: Sutil
-  Destacado: Falso
-  items:
-    @224@224@224
-    @225 @@ Todo el mundo
-    @@226@En proceso
-    @227
----
-::
-
-@228@228@228
-
-Utilice el prop `size` para cambiar el tamaño del InputMenu.
-
-::component-code
----
-Categoría: true
-Ignora:
-  @230@artículos
+prettier: true
+ignore:
+  - items
   - modelValue
-Externo:
-  @232@artículos
-  @@P233@modelValue (Edición española)
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  Tamaño: XL
-  Items:
-    @@234@234@234@234
-    @235@@todo
-    @@236@En proceso
-    @237
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  color: neutral
+  variant: subtle
+  highlight: false
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
-@238@Icon
+### Tamaño
+
+Utilice el prop `size` para cambiar el tamaño del menú de entrada.
+
+::component-code
+---
+prettier: true
+ignore:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  size: xl
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+---
+::
+
+### Icon en
 
 Utilice el prop `icon` para mostrar un [Icon](/docs/components/icon) dentro del InputMenu.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @244@artículos
-  - modelValue (Edición española)
-Externo:
-  @246@artículos
-  - modelValue (Edición española)
-Props:
-  Archivo de la etiqueta: 'Backlog'
+prettier: true
+ignore:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
   icon: 'i-lucide-search'
-  Tamaño: MD
+  size: md
   items:
-    @248@248@248
-    @249 @ Todo
-    - En desarrollo
-    @251 @
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
-### Trailing Icon (Edición española)
+XPH393XTrailing Icon de diseño
 
-Utilice el prop `trailing-icon` para personalizar el [Icon](/docs/components/icon).
+Utilice el prop `trailing-icon` para personalizar el final [Icon](/docs/components/icon).
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @259 @ artículos
-  @@P260@modelValue (Edición española)
-Externo:
-  @261@artículos
-  @262@262@262@262@262@262@262@262@262@262@262@262@262@262@262@262@262@26262@262@26262@26262@2662@262666@266666666@266662@266662@26666666666666666@226666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  TrailingIcono: 'i-lucide-arrow-down'
-  Tamaño: MD
-  Items:
-    @@263@@Paliño
-    @264 @ todo
-    @265 @ En proceso
-    @266
+prettier: true
+ignore:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  trailingIcon: 'i-lucide-arrow-down'
+  size: md
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
 ::framework-only
-#nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.chevronDown`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.chevronDown`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.chevronDown`.
+Puede personalizar este icono de forma global en su Xph420x bajo la tecla Xph421x.
 :::
 ::
 
@@ -486,220 +486,220 @@ Utilice el prop `selected-icon` para personalizar el icono cuando se selecciona 
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@274@artículos
-  - modelValue (Edición española)
-Externo:
-  @276@artículos
-  - modelValue (Edición española)
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  Icono: 'i-lucide-flame'
-  Tamaño: MD
-  items:
-    @278@278@278
-    @279 @ Todo
-    - En proceso
-    @281
----
-::
-
-::framework-only
-#Nuxidad
-:::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.check`.
-:::
-
-#vista
-:::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.check`.
-:::
-::
-
-### Clear: badge{label="4.4+" class="align-text-top"}
-
-Utilice el prop `clear` para mostrar un botón claro cuando se selecciona un valor.
-
-::component-code
----
-Categoría: true
-Ignora:
-  @289@artículos
-  - modelValue (Edición española)
-Externo:
-  @291@artículos
-  @@P292@modelValue (Edición española)
-Items:
-  Claro:
-    @293@@verdad
-    @294 @ Falso
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  claro: verdadero
-  items:
-    @295@295@295@295
-    @296@todo
-    @297 @ En proceso
-    @298
----
-::
-
-### Clear Icon: badge{label="4.4+" class="align-text-top"}
-
-Utilice el prop `clear-icon` para personalizar el botón transparente [Icon](/docs/components/icon).
-
-::component-code
----
-Categoría: true
-Ignora:
-  @307@artículos
-  - modelValue (Edición española)
-Externo:
-  @309@artículos
-  - modelValue (Edición española)
-Items:
-  Claro:
-    @311@@verdad
-    @@F312 @ Falso
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  claro: verdadero
-  Archivo de la etiqueta: i-lucide-trash
-  Items:
-    @313@313@313@313
-    @314@todo
-    @@P315@En proceso
-    @316
----
-::
-
-::framework-only
-#Nuxidad
-:::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.close`.
-:::
-
-#vista
-:::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.close`.
-:::
-::
-
-@221@AvatarEditar
-
-Utilice el prop `avatar` para mostrar un [Avatar](/docs/components/avatar) dentro del menú de entrada.
-
-::component-code
----
-Categoría: true
-Ignora:
-  @@272@artículos
-  - modelValue (Edición española)
-  - avatar.loading (en inglés)
-Externo:
-  @330@artículos
+prettier: true
+ignore:
+  - items
   - modelValue
-Props:
-  Categoría:'Nuxt'
-  El avatar:
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  selectedIcon: 'i-lucide-flame'
+  size: md
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+---
+::
+
+::framework-only
+#nuxt
+:::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
+Puede personalizar este icono globalmente en su `app.config.ts` en la tecla `ui.icons.check`.
+:::
+
+#vue
+:::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
+Puede personalizar este icono de forma global en su XPH445X bajo la tecla XPH446X.
+:::
+::
+
+### Clear: badge{label="4.4+" class="align-text-top"} (en inglés)
+
+Utilice el accesorio `clear` para mostrar un botón claro cuando se selecciona un valor.
+
+::component-code
+---
+prettier: true
+ignore:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+items:
+  clear:
+    - true
+    - false
+props:
+  modelValue: 'Backlog'
+  clear: true
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+---
+::
+
+### Clear Icono: badge{label="4.4+" class="align-text-top"}
+
+Utilice el accesorio `clear-icon` para personalizar el botón de borrado [Icon](xph477).
+
+::component-code
+---
+prettier: true
+ignore:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+items:
+  clear:
+    - true
+    - false
+props:
+  modelValue: 'Backlog'
+  clear: true
+  clearIcon: 'i-lucide-trash'
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+---
+::
+
+::framework-only
+#nuxt
+:::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.close`.
+:::
+
+#vue
+:::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
+Puede personalizar este icono globalmente en su `vite.config.ts` en la tecla `ui.icons.close`.
+:::
+::
+
+### Avatar en Español
+
+Utilice el prop `avatar` para mostrar un [Avatar](/docs/components/avatar) dentro del InputMenu.
+
+::component-code
+---
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - avatar.loading
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Nuxt'
+  avatar:
     src: 'https://github.com/nuxt.png'
-    Categoría: Lazy
+    loading: lazy
   items:
-    @332 @ Nuxt
-    - NuxtHub (en inglés)
-    - NuxtLabs (en inglés)
-    - Módulos Nuxt
-    - Comunidad Nuxt
+    - Nuxt
+    - NuxtHub
+    - NuxtLabs
+    - Nuxt Modules
+    - Nuxt Community
 ---
 ::
 
-@337 @ Carga
+### Cargando
 
-Utilice el prop `loading` para mostrar un icono de carga en el InputMenu.
-
-::component-code
----
-Categoría: true
-Ignora:
-  @339@artículos
-  - modelValue (Edición española)
-Externo:
-  @341@artículos
-  - modelValue (Edición española)
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  Carga: Verdad
-  Trayectoria: Falso
-  Items:
-    @@343@343@343@343@343@343@343@3443@34333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
-    @444@todo
-    - En proceso
-    @346
----
-::
-
-### Loading Icon (en inglés)
-
-Utilice el prop `loading-icon` para personalizar el icono de carga. Por defecto a `i-lucide-loader-circle`.
+Utilice el accesorio `loading` para mostrar un icono de carga en el menú de entrada.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @350@artículos
+prettier: true
+ignore:
+  - items
   - modelValue
-Externo:
-  @352@artículos
-  - modelValue (Edición española)
-Props:
-  Archivo de la etiqueta: 'Backlog'
-  Carga: Verdad
-  LoadingIcon: 'i-lucide-loader'(en inglés)
-  Items:
-    @@354@354@354
-    @355 @ Todo el mundo
-    - En proceso
-    @357
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  loading: true
+  trailing: false
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+---
+::
+
+### Loading Icon
+
+Utilice el prop `loading-icon` para personalizar el icono de carga.
+
+::component-code
+---
+prettier: true
+ignore:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
 ::framework-only
-#nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.loading`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.loading`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.loading`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.loading`.
 :::
 ::
 
-@@ph362@desactivado
+### Desactivado
 
 Utilice el prop `disabled` para desactivar el InputMenu.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @364@artículos
-  @365@@retoño
-Externo:
-  @366@artículos
-Props:
-  Discapacitados: Verdadero
-  marcador de posición:'Select status'
+prettier: true
+ignore:
+  - items
+  - placeholder
+external:
+  - items
+props:
+  disabled: true
+  placeholder: 'Select status'
   items:
-    @367@367@367@367
-    @368@todo
-    @369 @ En proceso
-    @370
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
 ::
 
-@@ph371@@Ejemplos
+## Ejemplos
 
 ### Con el tipo de elementos
 
@@ -707,62 +707,62 @@ Puede utilizar la propiedad `type` con `separator` para mostrar un separador ent
 
 ::component-code
 ---
-Colapso: Verdad
-Ignora:
-  - modelValue (Edición española)
-  @377@artículos
-Externo:
-  @378@artículos
-  - modelValue (Edición española)
-Externalidades:
-  @380@@380@380@380@380@380@380@380@380@380)
-Props:
-  Categoría:"Apple"
+collapse: true
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+externalTypes:
+  - InputMenuItem[]
+props:
+  modelValue: 'Apple'
   items:
-    - -tipo: 'etiqueta'
-        Categoría:"Frutas"
-      @P382@Apple en Español
-      @@383@383@383
-      @384@blueberry
-      @385@385@385
-      @Pineapple 386@Pineapple
-    - -tipo: 'etiqueta'
-        Categoría:"Vegetales"
-      @388@@Albacete
-      @389@broccoli
-      @390@Carroza
-      @391@@Txxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-      @392@leek
+    - - type: 'label'
+        label: 'Fruits'
+      - Apple
+      - Banana
+      - Blueberry
+      - Grapes
+      - Pineapple
+    - - type: 'label'
+        label: 'Vegetables'
+      - Aubergine
+      - Broccoli
+      - Carrot
+      - Courgette
+      - Leek
 ---
 ::
 
 ::note
-Cuando se utilizan elementos `label` como encabezados de grupo, pase una matriz de matrices para que una etiqueta se filtre junto con su grupo al realizar la búsqueda.
+Al usar elementos `label` como encabezados de grupo, pase una matriz de matrices para que una etiqueta se filtre junto con su grupo al realizar una búsqueda.
 ::
 
 ### Con icono en los elementos
 
-Puede utilizar la propiedad `icon` para mostrar un [Icon](/docs/components/icon) dentro de los elementos.
+Puede usar la propiedad `icon` para mostrar un [Icon](xph633) dentro de los elementos.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'input-menu-items-icon-example'
+collapse: true
+name: 'input-menu-items-icon-example'
 ---
 ::
 
 ::tip
-También puede utilizar la ranura `#leading` para mostrar el icono seleccionado.
+También puede usar la ranura `#leading` para mostrar el icono seleccionado.
 ::
 
-### Con avatar en artículos
+### Con avatar en los artículos
 
-Puede utilizar la propiedad `avatar` para mostrar un [Avatar](/docs/components/avatar) dentro de los elementos.
+Puede usar la propiedad `avatar` para mostrar un [Avatar](/docs/components/avatar) dentro de los elementos.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'input-menu-items-avatar-example'
+collapse: true
+name: 'input-menu-items-avatar-example'
 ---
 ::
 
@@ -772,12 +772,12 @@ También puede utilizar la ranura `#leading` para mostrar el avatar seleccionado
 
 ### Con chip en artículos
 
-Puede utilizar la propiedad `chip` para mostrar un [Chip](/docs/components/chip) dentro de los elementos.
+Puede usar la propiedad `chip` para mostrar un [Chip](/docs/components/chip) dentro de los elementos.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'input-menu-items-chip-example'
+collapse: true
+name: 'input-menu-items-chip-example'
 ---
 ::
 
@@ -785,37 +785,37 @@ Nombre: 'input-menu-items-chip-example'
 En este ejemplo, la ranura `#leading` se utiliza para mostrar el chip seleccionado.
 ::
 
-### Estado abierto de control
+### Control estado abierto
 
-Puede controlar el estado abierto utilizando la directiva `default-open` o la directiva `v-model:open`.
+Puede controlar el estado abierto usando la prop `default-open` o la directiva `v-model:open`.
 
 ::component-example
 ---
-Nombre: 'input-menu-open-exemple'
+name: 'input-menu-open-example'
 ---
 ::
 
 ::note
-En este ejemplo, aprovechando [`defineShortcuts`](/docs/composables/define-shortcuts), puede alternar el InputMenu presionando: kbd{value="O"}.
+En este ejemplo, aprovechando [`defineShortcuts`](/docs/composables/define-shortcuts), puede alternar el menú de entrada presionando: kbd{value="O"}.
 ::
 
-### Control de estado abierto en el foco
+### Control estado abierto en el enfoque
 
 Puede utilizar los accesorios `open-on-focus` o `open-on-click` para abrir el menú cuando se enfoca o se hace clic en la entrada.
 
 ::component-example
 ---
-Nombre: 'input-menu-open-focus-example'
+name: 'input-menu-open-focus-example'
 ---
 ::
 
-### Control término de búsqueda
+### Control términos de búsqueda
 
 Utilice la directiva `v-model:search-term` para controlar el término de búsqueda.
 
 ::component-example
 ---
-Nombre: 'input-menu-search-term-example'
+name: 'input-menu-search-term-example'
 ---
 ::
 
@@ -825,37 +825,37 @@ Aquí hay un ejemplo con un icono giratorio que indica el estado abierto del Inp
 
 ::component-example
 ---
-Nombre del archivo: 'input-menu-icon-example'
+name: 'input-menu-icon-example'
 ---
 ::
 
-### Con crear artículo
+### With crear artículo
 
-Utilice la prop `create-item` para permitir a los usuarios agregar valores personalizados que no están en las opciones predefinidas.
+Utilice el accesorio `create-item` para permitir a los usuarios agregar valores personalizados que no están en las opciones predefinidas.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'input-menu-create-item-example'
+collapse: true
+name: 'input-menu-create-item-example'
 ---
 ::
 
 ::note
-La opción create muestra cuando no se encuentra ninguna coincidencia por defecto. Establezca en `always` para mostrarla incluso cuando existen valores similares.
+La opción create se muestra cuando no se encuentra ninguna coincidencia de forma predeterminada. Establezca `always` para mostrarla incluso cuando existen valores similares.
 ::
 
 ::tip{to="#emits"}
-Utilice el evento `@create` para gestionar la creación del elemento. Recibirá el evento y el elemento como argumentos.
+Utilice el evento `@create` para manejar la creación del elemento. Recibirá el evento y el elemento como argumentos.
 ::
 
-### Con artículos recuperados
+### Con elementos recuperados
 
 Puede obtener elementos de una API y usarlos en el InputMenu.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'input-menu-fetch-example'
+collapse: true
+name: 'input-menu-fetch-example'
 ---
 ::
 
@@ -863,29 +863,29 @@ Nombre: 'input-menu-fetch-example'
 Este ejemplo utiliza `useLazyFetch` con `immediate: false` para obtener datos solo cuando se abre el menú, evitando llamadas innecesarias a la API al cargar la página.
 ::
 
-### Con el filtro ignorar
+### Con filtro de ignorar
 
-Configure la prop `ignore-filter` en `true` para desactivar la búsqueda interna y utilizar su propia lógica de búsqueda.
+Configure el prop `ignore-filter` en `true` para desactivar la búsqueda interna y utilizar su propia lógica de búsqueda.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'input-menu-ignore-filter-example'
+collapse: true
+name: 'input-menu-ignore-filter-example'
 ---
 ::
 
 ::note
-Este ejemplo utiliza [`refDebounced`](PH4444) para desacreditar las llamadas a la API. El fetch se difiere con `immediate: false` por lo que no se realiza ninguna solicitud hasta que se abra el menú.
+Este ejemplo utiliza [`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced) para rechazar las llamadas de la API. La búsqueda se difiere con `immediate: false`, por lo que no se realiza ninguna solicitud hasta que se abra el menú.
 ::
 
 ### Con campos de filtro
 
-Utilice el prop `filter-fields` con una matriz de campos para filtrar. Predeterminados a `[labelKey]`.
+Utilice el prop `filter-fields` con una matriz de campos para filtrar.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre del archivo: 'input-menu-filter-fields-example'
+collapse: true
+name: 'input-menu-filter-fields-example'
 ---
 ::
 
@@ -893,9 +893,9 @@ Nombre del archivo: 'input-menu-filter-fields-example'
 Este ejemplo utiliza `useLazyFetch` con `immediate: false` para obtener datos solo cuando se abre el menú, evitando llamadas innecesarias a la API al cargar la página.
 ::
 
-### Con la virtualización: badge{label="4.1+" class="align-text-top"}
+### Con virtualización: badge{label="4.1+" class="align-text-top"}
 
-Utilice la prop `virtualize` para habilitar la virtualización de listas grandes como un booleano o un objeto con opciones como `{ estimateSize: 32, overscan: 12 }`.
+Utilice el prop `virtualize` para habilitar la virtualización de listas grandes como un booleano o un objeto con opciones como `{ estimateSize: 32, overscan: 12 }`.
 
 ::warning{to="https://github.com/unovue/reka-ui/issues/1885" target="_blank"}
 Cuando está habilitado, todos los grupos se aplanan en una sola lista debido a una limitación de Reka UI.
@@ -903,44 +903,44 @@ Cuando está habilitado, todos los grupos se aplanan en una sola lista debido a 
 
 ::component-example
 ---
-Categoría: true
-Nombre: 'input-menu-virtualize-example'
+prettier: true
+name: 'input-menu-virtualize-example'
 ---
 ::
 
 ### Con desplazamiento infinito: badge{label="4.4+" class="align-text-top"}
 
-Puede utilizar el [`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/) composable para cargar más datos a medida que el usuario se desplaza.
+Puede utilizar el composable [`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/) para cargar más datos a medida que el usuario se desplaza.
 
 ::component-example
 ---
-Categoría: true
-Colapso: Verdad
-Destacados:
-  @462 @ 41 años
-  @463@51
-Desconocido: true
-Nombre: 'input-menu-infinite-scroll-example'
+prettier: true
+collapse: true
+highlights:
+  - 41
+  - 51
+overflowHidden: true
+name: 'input-menu-infinite-scroll-example'
 ---
 ::
 
 ::note
-Este ejemplo utiliza `useLazyFetch` con `immediate: false`, por lo que los datos solo se cargan a medida que el usuario se desplaza.
+Este ejemplo utiliza `useLazyFetch` con `immediate: false` para que los datos solo se carguen a medida que el usuario se desplaza.
 ::
 
-### Con el ancho de contenido completo
+### Con ancho de contenido completo
 
 Puede ampliar el contenido a todo el ancho de sus elementos añadiendo la clase `min-w-fit` en la ranura `ui.content`.
 
 ::component-example
 ---
-Nombre: 'input-menu-content-width-example'
-Colapso: Verdad
+name: 'input-menu-content-width-example'
+collapse: true
 ---
 ::
 
 ::tip
-También puede cambiar el ancho de contenido globalmente en su `app.config.ts`:
+También puede cambiar el ancho del contenido de forma global en su `app.config.ts`:
 
 ```
 export default defineAppConfig({
@@ -961,8 +961,8 @@ Puede utilizar el InputMenu como selector de países con carga lenta. Los paíse
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'input-menu-countries-ejemplo'
+collapse: true
+name: 'input-menu-countries-example'
 ---
 ::
 
@@ -970,37 +970,37 @@ Nombre: 'input-menu-countries-ejemplo'
 Este ejemplo utiliza `useLazyFetch` con `immediate: false` para cargar solo los países cuando se abre el menú por primera vez.
 ::
 
-@484
+## API (Edición española)
 
-@485@500 puntos
+### Props (Edición española)
 
-Componentes Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
-Este componente también soporta todos los atributos HTML nativos `<input>`.
+Este componente también admite todos los atributos HTML nativos de `<input>`.
 ::
 
-@487@espanol
+### Slots
 
-Componentes de slots
+:component-slots
 
-@488@@Emisiones
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@@ph489@@Exposición
+### Exposición
 
 Al acceder al componente a través de una referencia de plantilla, puede utilizar lo siguiente:
 
 | Nombre| Tipo|
 | ---- | ---- |
-| @@pH490@@pH492 @|@@pH491 @|
-| @494 @@@ 496 @|@@pH495 @|
+| `inputRef`x{lang="ts-type"} (Edición española)| `Ref<HTMLInputElement \| null>`xx{lang="ts-type"} (Edición española)|
+| `viewportRef`x{lang="ts-type"} (Edición española)| `Ref<HTMLDivElement \| null>`x{lang="ts-type"} (Edición española)|
 
-@498
+## Temas
 
-Componente Tema
+:component-theme
 
-@499@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

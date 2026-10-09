@@ -9,7 +9,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Collapsible.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
 Enveloppez votre contenu avec le composant `collapsible` pour afficher un [Collapsible](/docs/components/collapsible) dans votre contenu.
 
@@ -19,9 +19,9 @@ Enveloppez votre contenu avec le composant `collapsible` pour afficher un [Colla
 
 | Prop à    | Défaut   | type                     |
 |---------|-----------|--------------------------|
-| @@@ 006 @|           |@@|
-| @@@ 009 @|@@@ 010 @      |@@|
-| @@|@@|@@|
+| `name`|           | `string`x{lang="ts-type"}|
+| `size`| `md`      | `string`x{lang="ts-type"}|
+| `color`| `neutral`| `string`x{lang="ts-type"}|
 
 ::
 
@@ -41,20 +41,20 @@ Enveloppez votre contenu avec le composant `collapsible` pour afficher un [Colla
 
 ::
 
-@@28000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## API
 
-@@@29@@propriété
+### Props équipement
 
-: composant-props {prose}
+:component-props{prose}
 
-@@ph031@@slot
+### Slots
 
-: composant {prose}
+:component-slots{prose}
 
-@@ph033@thème
+## Thème
 
-: composant-thème {prose}
+:component-theme{prose}
 
-@changelog @changelog
+## Changelog
 
-: composant-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

@@ -16,371 +16,371 @@ links:
 
 ## 使用法
 
-[ Button ](/docs/components/button)またはスライドオーバーのデフォルトスロットにあるその他のコンポーネントを使用します。
+スライドオーバーのデフォルトスロットにある[Button](/docs/components/button)またはその他のコンポーネントを使用します。
 
 次に、`#content`スロットを使用して、スライドオーバーが開いたときに表示されるコンテンツを追加します。
 
 ::component-code
 ---
-きれい真
-スロット
-  デフォルト|
+prettier: true
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  内容：|
+  content: |
 
     <Placeholder class="h-full m-4" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
-#コンテンツ
-placeholder {class="h-full m-4"}
+#content
+:placeholder{class="h-full m-4"}
 ::
 
-また、`#header`{lang="ts-type"}、`#body`{lang="ts-type"}および`#footer`{lang="ts-type"}スロットを使用して、スライドオーバーのコンテンツをカスタマイズすることもできます。
+`#header`{lang="ts-type"}、`#body`{lang="ts-type"}、`#footer`{lang="ts-type"}スロットを使用して、スライドオーバーのコンテンツをカスタマイズすることもできます。
 
-### タイトル
+### Title
 
-`title` propを使用して、Slideoverのヘッダーのタイトルを設定します。
+`title`プロパティを使用して、Slideoverのヘッダーのタイトルを設定します。
 
 ::component-code
 ---
-きれい真
-小道具
-  タイトル：'Slideover with title'
-スロット
-  デフォルト|
+prettier: true
+props:
+  title: 'Slideover with title'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-full" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="h-full"}
+:placeholder{class="h-full"}
 ::
 
-### 説明
+### Description
 
 `description`プロパティを使用して、Slideoverのヘッダーの説明を設定します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  タイトル：「説明付きスライドオーバー」
-  「Lorem ipsum dolor sit amet consectetur adipiscing elit」
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Slideover with description'
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-full" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="h-full"}
+:placeholder{class="h-full"}
 ::
 
 ### 閉じる
 
-`close`プロパティを使用して、スライドオーバーのヘッダーに表示される閉じるボタン`false`値をカスタマイズまたは非表示にします。
+`close`プロパティを使用して、スライドオーバーのヘッダーに表示される閉じるボタン（`false`値）をカスタマイズまたは非表示にします。
 
-[ Button ](/docs/components/button)コンポーネントから任意のプロパティを渡してカスタマイズできます。
+[Button](/docs/components/button)コンポーネントから任意のプロパティを渡してカスタマイズできます。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-  -  close.color
-  -  close.variant
-小道具
-  タイトル'閉じるボタンでスライドオーバー'
-  閉じる
-    色プライマリ
-    variantアウトライン
-    クラス：'rounded—full'
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+  - close.color
+  - close.variant
+props:
+  title: 'Slideover with close button'
+  close:
+    color: primary
+    variant: outline
+    class: 'rounded-full'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-full" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="h-full"}
+:placeholder{class="h-full"}
 ::
 
 ::note
 `#content`スロットがヘッダの一部であるため、閉じるボタンは表示されません。
 ::
 
-### 閉じるアイコン
+### アイコンを閉じる
 
-`close-icon`プロパティを使用して、閉じるボタン[ Icon ](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-x`です。
+`close-icon`プロパティを使用して、閉じるボタン[Icon](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-x`です。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  タイトル'閉じるボタンでスライドオーバー'
-  closeIcon 'i—lucide—arrow—right'
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Slideover with close button'
+  closeIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-full" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="h-full"}
+:placeholder{class="h-full"}
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.close`キーの下の`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`app.config.ts`の`ui.icons.close`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.close`キーの`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`vite.config.ts`の`ui.icons.close`キーでグローバルにカスタマイズできます。
 :::
 ::
 
-### サイド
+### Side
 
-`side`プロパティを使用して、スライドオーバーがスライドする画面の側面を設定します。デフォルトは`right`です。
+`side`プロパティを使用して、スライドオーバーをスライドさせる画面の側面を設定します。デフォルトは`right`です。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  サイド'左'
-  タイトルSlideover with side
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+props:
+  side: 'left'
+  title: 'Slideover with side'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-full min-h-48" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="h-full min-h-48"}
+:placeholder{class="h-full min-h-48"}
 ::
 
-### インセットbadge {label="4.3+" class="align-text-top"}
+### Inset badge{label="4.3+" class="align-text-top"}
 
 `inset`プロパティを使用して、スライドオーバーをエッジから挿入します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  サイド'右'
-  インセットtrue
-  タイトルSlideover with inset
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+props:
+  side: 'right'
+  inset: true
+  title: 'Slideover with inset'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="min-w-96 min-h-96 size-full" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="min-w-96 min-h-96 size-full"}
+:placeholder{class="min-w-96 min-h-96 size-full"}
 ::
 
-### トランジション
+### Transition
 
 `transition`プロパティを使用して、スライドオーバーがアニメーション化されるかどうかを制御します。デフォルトは`true`です。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  遷移false
-  タイトル：「トランジションなしのスライドオーバー」
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+props:
+  transition: false
+  title: 'Slideover without transition'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-full" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="h-full"}
+:placeholder{class="h-full"}
 ::
 
 ### オーバーレイ
 
-スライドオーバーにオーバーレイがあるかどうかを制御するには、`overlay`プロパティを使用します。デフォルトは`true`です。
+`overlay`プロパティを使用して、スライドオーバーにオーバーレイがあるかどうかを制御します。デフォルトは`true`です。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  オーバーレイfalse
-  タイトル'オーバーレイなしのスライドオーバー'
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+props:
+  overlay: false
+  title: 'Slideover without overlay'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-full" />
 ---
 
-uボタン{label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="h-full"}
+:placeholder{class="h-full"}
 ::
 
-###  Modal
+### Modal
 
 `modal`プロパティを使用して、Slideoverが外部コンテンツとのインタラクションをブロックするかどうかを制御します。デフォルトは`true`です。
 
 ::note
-`modal`を`false`に設定すると、オーバーレイは自動的に無効になり、外部コンテンツはインタラクティブになります。
+`modal`が`false`に設定されると、オーバーレイは自動的に無効になり、外部コンテンツはインタラクティブになります。
 ::
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  モーダルfalse
-  title「スライドオーバーインタラクティブ」
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+props:
+  modal: false
+  title: 'Slideover interactive'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-full" />
 ---
 
-uボタン{label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="h-full"}
+:placeholder{class="h-full"}
 ::
 
 ###  Dismissible
 
-`dismissible`プロパティを使用して、スライドオーバーの外側をクリックするかエスケープを押したときにスライドオーバーを無効にするかどうかを制御します。デフォルトは`true`です。
+`dismissible`プロパティを使用して、スライドオーバーの外側をクリックするか、escapeを押したときにスライドオーバーを無効にするかを制御します。デフォルトは`true`です。
 
 ::note
-`close:prevent`イベントは、ユーザーがそれを閉じようとすると発行されます。
+`close:prevent`イベントは、ユーザーがクローズしようとすると発行されます。
 ::
 
 ::tip
-`modal: false`と`dismissible: false`を組み合わせると、スライドオーバーの背景を閉じずにインタラクティブにすることができます。
+`modal: false`と`dismissible: false`を組み合わせて、スライドオーバーの背景を閉じずにインタラクティブにすることができます。
 ::
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  dismissible false
-  モーダルtrue
-  タイトル「スライドオーバー非dismissible」
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+props:
+  dismissible: false
+  modal: true
+  title: 'Slideover non-dismissible'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-full" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="h-full"}
+:placeholder{class="h-full"}
 ::
 
-### アンマウントbadge {label="4.10+" class="align-text-top"}
+### アンマウントbadge{label="4.10+" class="align-text-top"}
 
-`unmount-on-hide`プロパティを使用して、Slideoverのコンテンツがクローズされたときにアンマウントされないようにします。デフォルトは`true`です。
+`unmount-on-hide`プロパティを使用して、Slideoverのコンテンツが閉じたときにアンマウントされないようにします。デフォルトは`true`です。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  unmountOnHide false
-  タイトル'スライドオーバー'
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+props:
+  unmountOnHide: false
+  title: 'Slideover'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-full" />
 ---
 
-uボタン{label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="h-full"}
+:placeholder{class="h-full"}
 ::
 
 ::note
@@ -388,61 +388,61 @@ DOMを検査して、Slideoverが閉じている間でもスライドオーバ�
 ::
 
 ::tip
-`portal` propが`false`に設定されている場合、コンテンツもサーバー上でレンダリングされます。これは、SSR中に開いているスライドオーバーをページ読み込み時にフラッシュなしでレンダリングしたり、SEOのためにコンテンツを公開したりするのに便利です。
+`portal`プロパティが`false`に設定されている場合、コンテンツはサーバー上でもレンダリングされます。これはSSR中に開いているスライドオーバーをページ読み込み時にフラッシュなしでレンダリングしたり、SEOのためにコンテンツを公開したりするのに便利です。
 ::
 
 ## 例
 
-###  Controlオープンステート
+### Controlオープンステート
 
-`default-open` propまたは`v-model:open`ディレクティブを使用してオープン状態を制御できます。
+オープン状態は`default-open`プロパティまたは`v-model:open`ディレクティブを使用して制御できます。
 
 ::component-example
 ---
-名前'slideover—open—example'
+name: 'slideover-open-example'
 ---
 ::
 
 ::note
-この例では、[`defineShortcuts`](/docs/composables/define-shortcuts)を活用して、kbd {value="O"}を押してスライドオーバーを切り替えることができます。
+この例では、[`defineShortcuts`](/docs/composables/define-shortcuts)を活用して、kbd{value="O"}を押してスライドオーバーを切り替えることができます。
 ::
 
 ::tip
 これにより、トリガーをスライドオーバーの外側に移動したり、完全に削除したりできます。
 ::
 
-###  Programmatic使用法
+### プログラムの使用法
 
-[`useOverlay`](/docs/composables/use-overlay)を使って、プログラムでスライドオーバーを開くことができます。
+[`useOverlay`](/docs/composables/use-overlay)コンポーザブルを使用して、プログラムでスライドオーバーを開くことができます。
 
 ::warning
-[`App`](/docs/components/app))[`OverlayProvider`](https://github.com/nuxt/ui/blob/v4/src/runtime/components/OverlayProvider.vue)コンポーネントを使用してアプリをラップしてください。
+[`OverlayProvider`](https://github.com/nuxt/ui/blob/v4/src/runtime/components/OverlayProvider.vue)コンポーネントを使用する[`App`](/docs/components/app)コンポーネントでアプリをラップしてください。
 ::
 
 まず、プログラムで開くスライドオーバーコンポーネントを作成します。
 
 ::component-example
 ---
-きれい真
-name 'slideover—example'
-プレビュー false
+prettier: true
+name: 'slideover-example'
+preview: false
 ---
 ::
 
 ::note
-ここでスライドオーバーがクローズまたは却下されたときに`close`イベントを発行しています。`close`イベントを通じて任意のデータを発行することができ、そのデータは`open()`の解決済み値になります。Promiseを解決するにはイベントが発行されなければなりません。
+スライドオーバーがクローズまたは却下されたときに`close`イベントを発行しています。`close`イベントを通じて任意のデータを発行することができ、そのデータは`open()`の解決済み値になります。Promiseを解決するにはイベントを発行する必要があります。
 ::
 
 次に、アプリで使用します。
 
 ::component-example
 ---
-名前'slideover—Programmatic—example'
+name: 'slideover-programmatic-example'
 ---
 ::
 
 ::tip
-slideoverコンポーネント内でslideoverを閉じるには、`emit('close')`を出力します。
+`emit('close')`を出力することで、slideoverコンポーネント内でslideoverを閉じることができます。
 ::
 
 ### ネストされたスライドオーバー
@@ -451,7 +451,7 @@ slideoverコンポーネント内でslideoverを閉じるには、`emit('close')
 
 ::component-example
 ---
-name 'slideover—nested—example'
+name: 'slideover-nested-example'
 ---
 ::
 
@@ -461,28 +461,28 @@ name 'slideover—nested—example'
 
 ::component-example
 ---
-名前'slideover—footer—slot—example'
+name: 'slideover-footer-slot-example'
 ---
 ::
 
 ##  API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-###  Emits
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

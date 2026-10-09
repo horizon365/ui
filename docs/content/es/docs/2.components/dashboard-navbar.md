@@ -8,7 +8,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardNavbar.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 El componente DashboardNavbar es una barra de navegación receptiva que se integra con el componente [DashboardSidebar](/docs/components/dashboard-sidebar). Incluye un botón de alternancia móvil para habilitar la navegación receptiva en los diseños del tablero.
 
@@ -30,15 +30,15 @@ definePageMeta({
 </template>
 ```
 
-Utilice las ranuras `left`,`default` y `right` para personalizar la barra de navegación.
+Utilice las ranuras `left`, `default` y `right` para personalizar la barra de navegación.
 
 ::component-example
 ---
-Categoría: true
-Nombre del archivo: 'dashboard-navbar-ejemplo'
-clase: '! px-0! pt-0'
-Props:
-  Categoría: w-full
+prettier: true
+name: 'dashboard-navbar-example'
+class: '!px-0 !pt-0'
+props:
+  class: 'w-full'
 ---
 ::
 
@@ -46,85 +46,85 @@ Props:
 En este ejemplo, usamos el componente [Tabs](/docs/components/tabs) en la ranura de la derecha para mostrar algunas pestañas.
 ::
 
-@@2003@Título
+### Nombre
 
 Utilice el prop `title` para establecer el título de la barra de navegación.
 
 ::component-code
 ---
-Escondido:
-  @34@@clase
-Props:
-  Título: Dashboard
-  Categoría: w-full
-clase: '! px-0! pt-0'
+hide:
+  - class
+props:
+  title: 'Dashboard'
+  class: 'w-full'
+class: '!px-0 !pt-0'
 ---
 ::
 
-@@pH035@Icon
+### Icon
 
 Utilice el prop `icon` para configurar el icono de la barra de navegación.
 
 ::component-code
 ---
-Escondido:
-  @37@clase
-Ignora:
-  @38@title
-Props:
-  Título: Dashboard
-  Archivo de la etiqueta: i-lucide-house
-  Categoría: w-full
-clase: '! px-0! pt-0'
+hide:
+  - class
+ignore:
+  - title
+props:
+  title: 'Dashboard'
+  icon: 'i-lucide-house'
+  class: 'w-full'
+class: '!px-0 !pt-0'
 ---
 ::
 
-@39@@toggle
+### Télam
 
-Utilice el prop `toggle` para personalizar el botón de alternancia que se muestra en el móvil que abre el componente [DashboardSidebar](/docs/components/dashboard-sidebar).
+Utilice el prop `toggle` para personalizar el botón de alternancia que se muestra en el móvil que abre el componente [DashboardSidebar](xph066).
 
 Puede pasar cualquier propiedad del componente [Button](/docs/components/button) para personalizarlo.
 
 ::component-example
 ---
-iframe: verdad
-iframeMobile: Verdad
-Desconocido: true
-Nombre del archivo: 'dashboard-navbar-toggle-example'
-Props:
-  Categoría: w-full
+iframe: true
+iframeMobile: true
+overflowHidden: true
+name: 'dashboard-navbar-toggle-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-### Toggle Lado de la foto
+### Toggle lado
 
-Utilice el prop `toggle-side` para cambiar el lado del botón de alternancia. Prevalue a `right`.
+Utilice el prop `toggle-side` para cambiar el lado del botón de alternancia.
 
 ::component-example
 ---
-iframe: verdad
-iframeMobile: Verdad
-Desconocido: true
-Nombre del archivo: 'dashboard-navbar-toggle-side-example'
-Props:
-  Categoría: w-full
+iframe: true
+iframeMobile: true
+overflowHidden: true
+name: 'dashboard-navbar-toggle-side-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-@525@Apid
+## API (Edición española)
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Accesorios
 
-Componentes Props
+:component-props
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots (Español)
 
-Componentes de slots
+:component-slots
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Temas
 
-Componente Tema
+:component-theme
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+xph05xChangelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

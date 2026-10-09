@@ -15,507 +15,507 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DropdownMenu.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Verwenden Sie eine [Button](/docs/components/button) oder eine andere Komponente im Standard-Slot des DropdownMenu.
+Verwenden Sie einen [Button](/docs/components/button) oder eine andere Komponente im Standard-Slot des DropdownMenu.
 
 ::component-code
 ---
-Schöner: wahr
-Einsturz: wahr
-Ignoriert:
-  @@@ph005@gmail.de
-  - ui.content (auf Englisch)
-Außen:
-  @@ph007@gmail.de
-Externe Typen:
-  @@@ph008@@dropdownMenuItem [][]
-Props:
-  Items:
-    @@-label: Bender
-        Avatare sind:
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[][]
+props:
+  items:
+    - - label: Benjamin
+        avatar:
           src: 'https://github.com/benjamincanac.png'
-          Aufladung: Lazy
-        Typ: Etikette
-    - -label: Profil
-        I-Lucide-Benutzer
-      - label: Rechnungsstellung
-        Icon: i-lucide-Kreditkarte
-      - label: Einstellungen
-        Bezeichnung: i-Lucide-Cog
-        Die KBS:
-          @@ph013 @@","
-      - label: Tastaturkürzel
-        Bildnachweis: i-Lucide-Monitor
-    - -label: Das Team
-        Icon: i-lucide-Benutzer
-        Filterung:
-          Platzhalter: 'Mitglieder suchen...'
-        Kinder:
-          - -label: benjamincanac (auf Englisch)
-              Avatare sind:
+          loading: lazy
+        type: label
+    - - label: Profile
+        icon: i-lucide-user
+      - label: Billing
+        icon: i-lucide-credit-card
+      - label: Settings
+        icon: i-lucide-cog
+        kbds:
+          - ','
+      - label: Keyboard shortcuts
+        icon: i-lucide-monitor
+    - - label: Team
+        icon: i-lucide-users
+        filter:
+          placeholder: 'Search members...'
+        children:
+          - - label: benjamincanac
+              avatar:
                 src: 'https://github.com/benjamincanac.png'
-                Aufladung: Lazy
+                loading: lazy
             - label: HugoRCD
-              Avatare sind:
+              avatar:
                 src: 'https://github.com/HugoRCD.png'
-                Aufladung: Lazy
+                loading: lazy
             - label: atinux
-              Avatare sind:
-                src: 'https://github.com/atinux.png'(https://github.com/atinux.png)
-                Aufladung: Lazy
+              avatar:
+                src: 'https://github.com/atinux.png'
+                loading: lazy
             - label: romhml
-              Avatare sind:
-                src: 'https://github.com/romhml.png'(auf Englisch)
-                Aufladung: Lazy
+              avatar:
+                src: 'https://github.com/romhml.png'
+                loading: lazy
             - label: sandros94
-              Avatare sind :
-                src : ' https://github.com/sandros94.png ' (auf Englisch)
-                Aufladung : Lazy
-            - label : J-Michalek
-              Avatare sind :
-                src : ' https://github.com/J-Michalek.png '
-                Aufladung : Lazy
-            - label : hywax
-              Avatare sind :
-                src : ' https://github.com/hywax.png ' (auf Englisch)
-                Aufladung : Lazy
-      - label : Benutzer einladen
-        I-Lucide - Benutzer-Plus
-        Kinder :
-          - - label : E-Mail - Adresse
-              Icon : i-lucide - mail (englisch)
-            - label : Nachricht
-              I-Lucide - Message-Square (englisch)
-          - - label : Mehr
-              Bezeichnung : i-Lucide - Circle-Plus
-              Kinder :
-                - label : Import von Slack
-                  Icon : I-Simple - Icons-Slack (englisch)
-                  auf : ' https://slack.com'
-                  Ziel : _ blank
-                - label: Import von Trello
-                  Icon: I-Simple-Icons-Trello (englisch)
-                - label: Import aus Asana
-                  Icon: I-Simple-Icons-Asana (Deutsche Übersetzung)
-      - label: Neues Team
-        Bezeichnung: i-Lucide-Plus
-        Die KBS:
-          @@@@@@@@@@@@@@ph031@@meta
-          @@@@@32@32
-    - -label: GitHub (auf Englisch)
-        Icon: I-Simple-Icons-GitHub
-        zu: 'https://github.com/nuxt/ui'
-        Ziel: _blank
-      - label: Unterstützung
-        Bezeichnung: i-lucide-life-buoy
-        zu: '/docs/components/dropdown-menu'
+              avatar:
+                src: 'https://github.com/sandros94.png'
+                loading: lazy
+            - label: J-Michalek
+              avatar:
+                src: 'https://github.com/J-Michalek.png'
+                loading: lazy
+            - label: hywax
+              avatar:
+                src: 'https://github.com/hywax.png'
+                loading: lazy
+      - label: Invite users
+        icon: i-lucide-user-plus
+        children:
+          - - label: Email
+              icon: i-lucide-mail
+            - label: Message
+              icon: i-lucide-message-square
+          - - label: More
+              icon: i-lucide-circle-plus
+              children:
+                - label: Import from Slack
+                  icon: i-simple-icons-slack
+                  to: 'https://slack.com'
+                  target: _blank
+                - label: Import from Trello
+                  icon: i-simple-icons-trello
+                - label: Import from Asana
+                  icon: i-simple-icons-asana
+      - label: New team
+        icon: i-lucide-plus
+        kbds:
+          - meta
+          - n
+    - - label: GitHub
+        icon: i-simple-icons-github
+        to: 'https://github.com/nuxt/ui'
+        target: _blank
+      - label: Support
+        icon: i-lucide-life-buoy
+        to: '/docs/components/dropdown-menu'
       - label: API
-        I-Lucide-Cloud hinzufügen
-        Behindert: Wahr
-    - -label: Abmelden
-        Icon: I-Lucide-Log-Out (Ausloggen)
-        Farbe: Error
-        Die KBS:
-          @@ph037@schichten.de
-          @@@@@@@@@@@@@@@@ph038@@@meta
-          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@################################################################################################################################################################################################################
-Slots auf:
-  Default:|
+        icon: i-lucide-cloud
+        disabled: true
+    - - label: Logout
+        icon: i-lucide-log-out
+        color: error
+        kbds:
+          - shift
+          - meta
+          - q
+slots:
+  default: |
 
-    @@040
+    <UButton icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-: u-button {icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
-@@ph042@gmail.de
+### Items Bearbeiten
 
-Verwenden Sie `items` prop als Array von Objekten mit den folgenden Eigenschaften:
+Verwenden Sie die `items`-prop als Array von Objekten mit den folgenden Eigenschaften:
 
-`label?: string``label?: string``label?: string``label?: string`{lang="ts-type"}
-`icon?: string``icon?: string``icon?: string`{lang="ts-type"}PH0499@@@@@@@@@PH0499@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`avatar?: AvatarProps``avatar?: AvatarProps``avatar?: AvatarProps`{lang="ts-type"}
-`kbds?: string[] | KbdProps[]``kbds?: string[] | KbdProps[]`PH0554@@@@@@@@@@@PH0555 @@
-- [`type?: "link" | "label" | "separator" | "checkbox"`{lang="ts-type"}]()
-`color?: "error" | "primary" | "secondary" | "success" | "info" | "warning" | "neutral"`{lang="ts-type"}))PH0668@@@@@PH0668@@@@@PH0668@@@@@@@PH0668@@@
-`checked?: boolean``checked?: boolean``checked?: boolean`)
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`onUpdateChecked?: (checked: boolean) => void``onUpdateChecked?: (checked: boolean) => void``onUpdateChecked?: (checked: boolean) => void``onUpdateChecked?: (checked: boolean) => void`PH0995)))
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`filter?: boolean | InputProps`{lang="ts-type"}]())
-`filterFields?: string[]`PH10999@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#################################################################################################################################
-`class?: any``class?: any`PH1115 @@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@###########################################################################################################################
+- `label?: string`{lang="ts-type"} (nicht)
+- `icon?: string`{lang="ts-type"} (nicht)
+- `avatar?: AvatarProps`{lang="ts-type"} (nicht)
+- `kbds?: string[] | KbdProps[]`{lang="ts-type"} (nicht)
+- [`type?: "link" | "label" | "separator" | "checkbox"`{lang="ts-type"}](#with-checkbox-items) ) #with-checkbox-items129x125{lang="ts-type"}](xph128)
+- [`color?: "error" | "primary" | "secondary" | "success" | "info" | "warning" | "neutral"`{lang="ts-type"}](#with-color-items) )136x137{lang="ts-type"}ph136xx136x136x136x136xx136xx136xx137x136xx136x136x
+- [`checked?: boolean`{lang="ts-type"}](#with-checkbox-items)
+- `disabled?: boolean`{lang="ts-type"} (nicht)
+- [`slot?: string`{lang="ts-type"}](#with-custom-slot)
+- `onSelect?: (e: Event) => void`{lang="ts-type"} (englisch)
+- [`onUpdateChecked?: (checked: boolean) => void`{lang="ts-type"}](#with-checkbox-items)
+- `children?: DropdownMenuItem[] | DropdownMenuItem[][]`{lang="ts-type"} (englisch)
+- [`filter?: boolean | InputProps`{lang="ts-type"}](#with-filter-items)
+- `filterFields?: string[]`{lang="ts-type"} (nicht vorhanden)
+- `ignoreFilter?: boolean`{lang="ts-type"} (nicht vorhanden)
+- `class?: any`{lang="ts-type"} (englisch)
+- `ui?: { item?: ClassNameValue, label?: ClassNameValue, separator?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLabel?: ClassNameValue, itemLabelExternalIcon?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingIcon?: ClassNameValue, itemTrailingKbds?: ClassNameValue, itemTrailingKbdsSize?: ClassNameValue }`{lang="ts-type"} (englisch)
 
-Sie können jede Eigenschaft von der [Link](/docs/components/link#props) Komponente wie `to`,`target`, etc. übergeben.
+Sie können jede Eigenschaft aus der Komponente [Link](/docs/components/link#props) übergeben, z. B. `to`, `target` usw.
 
 ::component-code
 ---
-Schöner: wahr
-Einsturz: wahr
-Ignoriert:
-  @@ph125@gmail.de
+prettier: true
+collapse: true
+ignore:
+  - items
   - ui.content
-Außen:
-  - Artikel
-Externe Typen:
-  - DropdownMenuItem [][]
-Props:
-  Items:
-    - -label: Benjamin (nicht bekannt)
-        Avatare sind:
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[][]
+props:
+  items:
+    - - label: Benjamin
+        avatar:
           src: 'https://github.com/benjamincanac.png'
-          Aufladung: Lazy
-        Typ: Etikette
-    - -label: Profil
-        Icon: I-Lucide-Benutzer
-      - label: Abrechnung
-        Icon: i-lucide-Kreditkarte
-      - label: Einstellungen
-        Bezeichnung: i-Lucide-Cog
-        Die KBS:
-          @@@@@@@133 @','
-      - label: Tastaturkürzel
-        Bildnachweis : i-Lucide - Monitor
-    - - label : Das Team
-        Icon : i-lucide - Benutzer
-      - label : Benutzer einladen
-        I-Lucide - Benutzer-Plus
-        Kinder :
-          - - label : E-Mail - Adresse
-              Icon : i-lucide - mail (englisch)
-            - label : Nachricht
-              I-Lucide - Message-Square (englisch)
-          - - label : Mehr
-              Bezeichnung : i-Lucide - Circle-Plus
-              Kinder :
-                - label : Import von Slack
-                  Icon : I-Simple - Icons-Slack (englisch)
-                  auf : ' https ://slack.com'
-                  Ziel : _ blank
-                - label : Import von Trello
-                  Icon : I-Simple - Icons-Trello (englisch)
-                - label : Import aus Asana
-                  Icon : I-Simple - Icons-Asana (Deutsche Übersetzung)
-      - label : Neues Team
-        Bezeichnung : i-Lucide - Plus
-        Die KBS :
-          @@144@@144@144@144@144@144@144@144@144@1444@1444@1444@1444@1444@1444@144@144@1444@144@144@1444@@1444@@@144444@@@@144444@@@@1444444@@@@@@@@1444444@@@@@@@@@@@@@@@@144444444@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-          @145@145@145@145@145@145@145@145@145@145@145@145@145@145@145@145@145@145@145@145@145@145@145@145@145@145@145@145@145@145@145@145@145@@145@@@14555@@@@@14551445@@@@@@@@@@144555555@@@@@@@@@@@@@@@@1445555555@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    - -label: GitHub
-        Icon: I-Simple-Icons-GitHub
-        zu: 'https://github.com/nuxt/ui'
-        Ziel: _blank
-      - label: Unterstützung
-        Bezeichnung: i-lucide-life-buoy
-        zu: '/docs/components/dropdown-menu'
+          loading: lazy
+        type: label
+    - - label: Profile
+        icon: i-lucide-user
+      - label: Billing
+        icon: i-lucide-credit-card
+      - label: Settings
+        icon: i-lucide-cog
+        kbds:
+          - ','
+      - label: Keyboard shortcuts
+        icon: i-lucide-monitor
+    - - label: Team
+        icon: i-lucide-users
+      - label: Invite users
+        icon: i-lucide-user-plus
+        children:
+          - - label: Email
+              icon: i-lucide-mail
+            - label: Message
+              icon: i-lucide-message-square
+          - - label: More
+              icon: i-lucide-circle-plus
+              children:
+                - label: Import from Slack
+                  icon: i-simple-icons-slack
+                  to: 'https://slack.com'
+                  target: _blank
+                - label: Import from Trello
+                  icon: i-simple-icons-trello
+                - label: Import from Asana
+                  icon: i-simple-icons-asana
+      - label: New team
+        icon: i-lucide-plus
+        kbds:
+          - meta
+          - n
+    - - label: GitHub
+        icon: i-simple-icons-github
+        to: 'https://github.com/nuxt/ui'
+        target: _blank
+      - label: Support
+        icon: i-lucide-life-buoy
+        to: '/docs/components/dropdown-menu'
       - label: API
-        I-Lucide-Cloud hinzufügen
-        Behindert: Wahr
-    - -label: Abmelden
-        Icon: I-Lucide-Log-Out (Ausloggen)
-        Die KBS:
-          @@ph150@schichten.de
-          @@151@151@151@151@151@15
-          @@@@@@@@152@@152@152@152@152@152@152@152@152@152@152@152@152@152@@152@@152@152@152@152@@152@@152@152@152@152@@152@@152@152@@152@@152@@@152@@@@@152@@@@@@@@@@@152@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-  ui: ist
-    Inhalt: "W-48"
-Die Slots:
-  Default:|
+        icon: i-lucide-cloud
+        disabled: true
+    - - label: Logout
+        icon: i-lucide-log-out
+        kbds:
+          - shift
+          - meta
+          - q
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@@@153
+    <UButton icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-: u-button {icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ::note
-Sie können auch ein Array von Arrays an `items` prop übergeben, um getrennte Gruppen von Elementen zu erstellen.
+Sie können auch ein Array von Arrays an die `items`-prop übergeben, um getrennte Gruppen von Elementen zu erstellen.
 ::
 
 ::tip
-Jedes Element kann ein `children` Array von Objekten mit den gleichen Eigenschaften wie die `items` prop nehmen, um ein verschachteltes Menü zu erstellen, das mit den Eigenschaften `open`,`defaultOpen` und `content` gesteuert werden kann.
+Jedes Element kann ein `children`-Array von Objekten mit den gleichen Eigenschaften wie die `items`-Prop verwenden, um ein verschachteltes Menü zu erstellen, das mit den Eigenschaften `open`, `defaultOpen` und `content` gesteuert werden kann.
 ::
 
-@@@@@@@161@161@161@161@161@161@161@161@161@@161@161@161@@161@161@161@161@161@161@@161@161@@161@@161@161@@@161@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Inhalt
+### Inhalt
 
-Verwenden Sie `content` prop, um zu steuern, wie der DropdownMenu-Inhalt gerendert wird, z. B.`align` oder `side`.
+Verwenden Sie die `content`-Prop, um zu steuern, wie der DropdownMenu-Inhalt gerendert wird, z. B. `align` oder `side`.
 
 ::component-code
 ---
-Schöner: wahr
-Einsturz: wahr
-Ignoriert:
-  - Artikel
-  - ui.content (auf Englisch)
-Außen:
-  - Artikel
-Externe Typen:
-  - DropdownMenuItem [Bearbeiten | Quelltext bearbeiten]
-Items:
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[]
+items:
   content.align:
-    @@@@@@169@@startup
-    @@@@@@@@170@Zentrum
-    @@171@171@171@171@171@171@171@171@171@171@171@171@171@171@171@171@171@@171@171@171@171@@171@@171@171@171@171@@17171@@@17171@@@17171@@@@17171@@@@@1717171@@@@@@@@@@@@@@@@@171717
+    - start
+    - center
+    - end
   content.side:
-    @@@@@@@172@172@17@172@172@172@172@17@172@172@172@17@172@17@172@17@172@@172@172@172@172@172@@172@172@172@@172@@172@@172@@172@@172@@@172@@@@@@172@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#####################
-    @@173@bt173@bt173@bt173@bt17.de
-    @@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@174@@174@174@@174@@174@@@@174@@@174@@@@174@@@@174@@@@@1774@@@@@@@@@@17744@@@@@@@@@@@@@@@@@@@@@@@@@@@@@17774444444@@@@@
-    @@175@bottom
-Props:
-  Items:
-    - label: Profil anzeigen
-      I-Lucide-Benutzer
-    - label: Rechnungsstellung
-      Icon: i-lucide-Kreditkarte
-    - label: Einstellungen
-      Bezeichnung: i-Lucide-Cog
-  Inhalte:
-    Align: Starten
-    Seite: Bottom
-    Seitenversatz: 8
-  ui: ist
-    Inhalt: "W-48"
-Slots auf:
-  Default:|
+    - right
+    - left
+    - top
+    - bottom
+props:
+  items:
+    - label: Profile
+      icon: i-lucide-user
+    - label: Billing
+      icon: i-lucide-credit-card
+    - label: Settings
+      icon: i-lucide-cog
+  content:
+    align: start
+    side: bottom
+    sideOffset: 8
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@@@179 @
+    <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-: u-button {label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{label="öffnen" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
-### Filter: badge{label="4.6+" class="align-text-top"} Filter: badge{label="4.6+" class="align-text-top"} Filter: badge### Filter: badge{label="4.6+" class="align-text-top"} Filter: badge{label="4.6+" class="align-text-top"} Filter: badge{label="4.6+" class="align-text-top"} Filter: badge{label="4.6+" class="align-text-top"}{label="4.6+" class="align-text-top"}
+### Filter: badge{label="4.6+" class="align-text-top"}
 
-Verwenden Sie `filter` prop, um eine Filtereingabe innerhalb des DropdownMenu anzuzeigen.
+Verwenden Sie die `filter`-Prop, um einen Filtereingang innerhalb des DropdownMenu anzuzeigen. Standardmäßig ist `false`.
 
 ::note{to="#with-ignore-filter"}
-Verwenden Sie `ignore-filter` prop, um die interne Suche zu deaktivieren und Ihre eigene Suchlogik zu verwenden.
+Verwenden Sie die `ignore-filter`-prop, um die interne Suche zu deaktivieren und Ihre eigene Suchlogik zu verwenden.
 ::
 
 ::note{to="#with-filter-fields"}
-Verwenden Sie `filter-fields` prop, um anzugeben, nach welchen Feldern gefiltert werden soll.
+Verwenden Sie die `filter-fields` prop, um anzugeben, nach welchen Feldern gefiltert werden soll. Standardmäßig wird die `labelKey` prop verwendet.
 ::
 
-Sie können jede Eigenschaft von der Komponente [Input](/docs/components/input) übergeben, um sie anzupassen.
+Sie können jede Eigenschaft der Komponente [Input](/docs/components/input) übergeben, um sie anzupassen.
 
 ::component-code
 ---
-Schöner: wahr
-Einsturz: wahr
-Ignoriert:
-  @@ph192@@gmail.de
-  @@@ph193@filter.icon
+prettier: true
+collapse: true
+ignore:
+  - items
+  - filter.icon
   - content.align
-  - ui.content @@ Ui.content - Ui.content @ Ui.content @@Ui.content - Ui.content @ Ui.content @@Ui.content
-Außen:
-  - Artikel
-Externe Personen:
-  - DropdownMenuItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Filterung:
-    I-Lucide-Suche
-  Items:
-    - label: Profil anzeigen
-      I-Lucide-Benutzer
-    - label: Rechnungsstellung
-      Icon: i-lucide-Kreditkarte
-    - label: Einstellungen
-      Bezeichnung: i-Lucide-Cog
-    - label: Das Team
-      Icon: i-lucide-Benutzer
-    - label: Benutzer einladen
-      I-Lucide-Benutzer-Plus
-    - label: Neues Team
-      Bezeichnung: i-Lucide-Plus
-  Inhalte:
-    Align: Starten
-  ui: ist
-    Inhalt: "W-48"
-Slots auf:
-  Default:|
+  - ui.content
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[]
+props:
+  filter:
+    icon: i-lucide-search
+  items:
+    - label: Profile
+      icon: i-lucide-user
+    - label: Billing
+      icon: i-lucide-credit-card
+    - label: Settings
+      icon: i-lucide-cog
+    - label: Team
+      icon: i-lucide-users
+    - label: Invite users
+      icon: i-lucide-user-plus
+    - label: New team
+      icon: i-lucide-plus
+  content:
+    align: start
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@204 von
+    <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-: u-button {label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{label="öffnen" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ::tip{to="#with-filter-items"}
-Sie können den Filter auch für bestimmte Untermenüs aktivieren, indem Sie das Feld `filter` bei Elementen mit `children` verwenden.
+Sie können den Filter auch für bestimmte Untermenüs aktivieren, indem Sie das Feld `filter` für Elemente mit `children` verwenden.
 ::
 
-@@ph208@Pfeiltasten
+### Arrow Bearbeiten
 
-Verwenden Sie `arrow` prop, um einen Pfeil im DropdownMenu anzuzeigen.
+Verwenden Sie die `arrow`-Prop, um einen Pfeil im DropdownMenü anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Einsturz: wahr
-Ignoriert:
-  @@ph210@arrow (nicht bekannt)
-  @@ph211@gmail.de
-  - ui.content (auf Englisch)
-Außen:
-  @@ph213@gmail.de
-Externe Personen:
-  - DropdownMenuItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Arrow: wahr
-  Items:
-    - label: Profil anzeigen
-      I-Lucide-Benutzer
-    - label: Rechnungsstellung
-      Icon: i-lucide-Kreditkarte
-    - label: Einstellungen
-      Bezeichnung: i-Lucide-Cog
-  ui: ist
-    Inhalt: "W-48"
-Slots auf:
-  Default:|
+prettier: true
+collapse: true
+ignore:
+  - arrow
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[]
+props:
+  arrow: true
+  items:
+    - label: Profile
+      icon: i-lucide-user
+    - label: Billing
+      icon: i-lucide-credit-card
+    - label: Settings
+      icon: i-lucide-cog
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@@@@@@@218
+    <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-: u-button {label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{label="öffnen" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
-@@220@000000000000000
+### Size ist
 
-Verwenden Sie `size` prop, um die Größe des DropdownMenu zu steuern.
+Verwenden Sie die `size`-Prop, um die Größe des DropdownMenu zu steuern.
 
 ::component-code
 ---
-Schöner: wahr
-Einsturz: wahr
-Ignoriert:
-  @@ph222@@gmail.de
+prettier: true
+collapse: true
+ignore:
+  - items
   - content.align
-  - ui.content (auf Englisch)
-Außen:
-  @@ph225@gmail.de
-Externe Typen:
-  - DropdownMenuItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Größe: XL
-  Items:
-    - label: Profil anzeigen
-      I-Lucide-Benutzer
-    - label: Rechnungsstellung
-      Icon: i-lucide-Kreditkarte
-    - label: Einstellungen
-      Bezeichnung: i-Lucide-Cog
-  Inhalte:
-    Ausrichtung: Start
-  ui: ist
-    Inhalt: "W-48"
-Slots auf:
-  Default:|
+  - ui.content
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[]
+props:
+  size: xl
+  items:
+    - label: Profile
+      icon: i-lucide-user
+    - label: Billing
+      icon: i-lucide-credit-card
+    - label: Settings
+      icon: i-lucide-cog
+  content:
+    align: start
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@@@@@@230 @
+    <UButton size="xl" label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-: u-button {size="xl" label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{size="xl" label="öffnen" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ::warning
-Der `size` prop wird nicht an den Button weitergeleitet, Sie müssen ihn selbst einstellen.
+Die `size`-Prop wird nicht an den Button weitergeleitet, Sie müssen sie selbst einstellen.
 ::
 
 ::note
 Bei Verwendung derselben Größe werden die DropdownMenu-Elemente perfekt auf den Button ausgerichtet.
 ::
 
-@@ph233@modal (nicht)
+### Modal Bearbeiten
 
-Verwenden Sie `modal` prop, um zu steuern, ob das DropdownMenu die Interaktion mit externen Inhalten blockiert.
+Verwenden Sie die `modal`-Prop, um zu steuern, ob das DropdownMenu die Interaktion mit externen Inhalten blockiert.
 
 ::component-code
 ---
-Schöner: wahr
-Einsturz: wahr
-Ignoriert:
-  @@ph236@gmail.de
-  - ui.content @@ Ui.content - ui.content
-Außen:
-  @@ph238@gmail.de
-Externe Personen:
-  @@ph239@@dropdownmenuitem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Ausführung: false
-  Items:
-    - label: Profil anzeigen
-      I-Lucide-Benutzer
-    - label: Rechnungsstellung
-      Icon: i-lucide-Kreditkarte
-    - label: Einstellungen
-      Bezeichnung: i-Lucide-Cog
-  ui: ist
-    Inhalt: "W-48"
-Die Slots:
-  Default:|
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[]
+props:
+  modal: false
+  items:
+    - label: Profile
+      icon: i-lucide-user
+    - label: Billing
+      icon: i-lucide-credit-card
+    - label: Settings
+      icon: i-lucide-cog
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@243
+    <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-: u-button {label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{label="öffnen" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
-### disabled @@ nicht vorhanden
+### Disabled (nicht verfügbar)
 
-Verwenden Sie `disabled` prop, um das DropdownMenu zu deaktivieren.
+Verwenden Sie die `disabled`-Prop, um das DropdownMenu zu deaktivieren.
 
 ::component-code
 ---
-Schöner: wahr
-Einsturz: wahr
-Ignoriert:
-  @@ph247@gmail.de
-  - ui.content @@ Ui.content - ui.content
-Außen:
-  @@ph249@gmail.de
-Externe Personen:
-  @@ph250@dropdownmenuitem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Behindert: Wahr
-  Items:
-    - label: Profil anzeigen
-      I-Lucide-Benutzer
-    - label: Rechnungsstellung
-      Icon: i-lucide-Kreditkarte
-    - label: Einstellungen
-      Bezeichnung: i-Lucide-Cog
-  ui: ist
-    Inhalt: "W-48"
-Slots auf:
-  Default:|
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[]
+props:
+  disabled: true
+  items:
+    - label: Profile
+      icon: i-lucide-user
+    - label: Billing
+      icon: i-lucide-credit-card
+    - label: Settings
+      icon: i-lucide-cog
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@254
+    <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-: u-button {label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{label="öffnen" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ## Beispiele
 
-### Mit Checkbox Elemente
+### With Checkbox Items (Deutsche Übersetzung)
 
 Sie können die `type`-Eigenschaft mit `checkbox` verwenden und die `checked`/`onUpdateChecked`-Eigenschaften verwenden, um den überprüften Zustand des Elements zu steuern.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'dropdown-menu-checkbox-items-example'(Dropdown-Menü-Checkbox-Elemente-Beispiel)
+collapse: true
+name: 'dropdown-menu-checkbox-items-example'
 ---
 ::
 
 ::note
-Um die Reaktivität für den `checked`-Status von Elementen sicherzustellen, wird empfohlen, Ihr `items`-Array in ein `computed`-Array zu wickeln.
+Um die Reaktivität für den `checked`-Status von Elementen zu gewährleisten, wird empfohlen, das `items`-Array in ein `computed` zu wickeln.
 ::
 
 ### Mit farbigen Elementen
@@ -524,109 +524,109 @@ Sie können die `color`-Eigenschaft verwenden, um bestimmte Elemente mit einer F
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'dropdown-menu-color-items-example'(Dropdown-Menü-Farb-Elemente-Beispiel)
+collapse: true
+name: 'dropdown-menu-color-items-example'
 ---
 ::
 
-### Mit Filterelementen: badge{label="4.6+" class="align-text-top"}
+### With filter items: badge{label="4.6+" class="align-text-top"} (Mit Filterelementen: badge{label="4.6+" class="align-text-top"})
 
 Sie können die `filter`-Eigenschaft für Elemente mit `children` verwenden, um eine Filtereingabe im Untermenü anzuzeigen.
 
 ::component-example
 ---
-Einsturz: wahr
-name: 'dropdown-menu-filter-items-example'(Dropdown-Menü-Filter-Elemente-Beispiel)
+collapse: true
+name: 'dropdown-menu-filter-items-example'
 ---
 ::
 
-### Control Offener Zustand
+### Control im Open State
 
-Sie können den offenen Zustand mit der `default-open` prop oder der `v-model:open` Direktive steuern.
+Sie können den offenen Zustand mit der `default-open`-prop-oder der `v-model:open`-Anweisung steuern.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'dropdown-menu-open-example'(Dropdown-Menü-öffnen-Beispiel).
+collapse: true
+name: 'dropdown-menu-open-example'
 ---
 ::
 
 ::note
-In diesem Beispiel können Sie das DropdownMenu mithilfe von [`defineShortcuts`]() umschalten, indem Sie: kbd{value="O"}.
+In diesem Beispiel können Sie unter Verwendung von [`defineShortcuts`](/docs/composables/define-shortcuts) das DropdownMenu umschalten, indem Sie: kbd{value="O"}.
 ::
 
-### Mit benutzerdefinierten Steckplatz
+### Mit Custom Slot
 
 Verwenden Sie die `slot`-Eigenschaft, um ein bestimmtes Element anzupassen.
 
 Sie haben Zugriff auf folgende Slots:
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#######################################################################################################################
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##########################################################################################################################
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@########################################################################################################################
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#######################################################################################################
+- `#{{ item.slot }}`{lang="ts-type"}
+- `#{{ item.slot }}-leading`{lang="ts-type"} (nicht)
+- `#{{ item.slot }}-label`{lang="ts-type"} (nicht)
+- `#{{ item.slot }}-trailing`{lang="ts-type"}
 
 ::component-example
 ---
-Einsturz: wahr
-name: 'dropdown-menu-custom-slot-example'(Dropdown-Menü-Benutzerdefinitions-Slot-Beispiel)
+collapse: true
+name: 'dropdown-menu-custom-slot-example'
 ---
 ::
 
 ::tip{to="#slots"}
-Sie können auch die `#item`,`#item-leading`,`#item-label` und `#item-trailing` Slots verwenden, um alle Elemente anzupassen.
+Sie können auch die `#item`, `#item-leading`, `#item-label` und `#item-trailing` Steckplätze verwenden, um alle Elemente anzupassen.
 ::
 
-### Mit Schalter in Elemente
+### With switch in items (Mit Schalter in Elementen)
 
-Sie können die `slot`-Eigenschaft mit einem `#{{ slot }}-trailing`-Slot verwenden, um einen [Switch](/docs/components/switch) innerhalb eines Artikels zu rendern.
+Sie können die `slot`-Eigenschaft mit einem `#{{ slot }}-trailing`-Steckplatz verwenden, um einen [Switch](/docs/components/switch) in einem Element zu rendern.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'dropdown-menu-switch-items-example'(Dropdown-Menü-Schalter-Elemente-Beispiel)
+collapse: true
+name: 'dropdown-menu-switch-items-example'
 ---
 ::
 
-### Mit Ignorierfilter: badge{label="4.6+" class="align-text-top"}
+### With ignore filter: badge{label="4.6+" class="align-text-top"} (mit dem Filter "ignorieren")
 
-Wenn Sie das Feld `filter` prop oder das Feld `filter` für Elemente mit `children` verwenden, können Sie `ignore-filter` prop auf `true` einstellen, um die interne Suche zu deaktivieren und Ihre eigene Suchlogik zu verwenden.
+Wenn Sie die `filter`-prop oder das `filter`-Feld für Elemente mit `children` verwenden, können Sie die `ignore-filter`-prop auf `true` setzen, um die interne Suche zu deaktivieren und Ihre eigene Suchlogik zu verwenden.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'dropdown-menu-ignore-filter-example'(Dropdown-Menü-Ignore-Filter-Beispiel)
+collapse: true
+name: 'dropdown-menu-ignore-filter-example'
 ---
 ::
 
 ::note
-Dieses Beispiel verwendet [`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced), um die API-Aufrufe zu entkräften.
+In diesem Beispiel wird [`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced) verwendet, um die API-Aufrufe zu entkräften. Der Abruf wird mit `immediate: false` verschoben, so dass keine Anfrage gestellt wird, bis das Menü geöffnet wird.
 ::
 
-### Mit Filterfeldern: badge{label="4.6+" class="align-text-top"}
+### With Filterfelder: badge{label="4.6+" class="align-text-top"}
 
-Wenn Sie das Feld `filter` prop oder das Feld `filter` für Elemente mit `children` verwenden, können Sie das Feld `filter-fields` prop mit einem Array von Feldern zum Filtern festlegen.
+Wenn Sie die `filter`-Prop oder das `filter`-Feld für Elemente mit `children` verwenden, können Sie die `filter-fields`-Prop mit einem Array von Feldern zum Filtern festlegen.
 
 ::component-example
 ---
-Einsturz: wahr
-name: 'dropdown-menu-filter-fields-example'(Dropdown-Menü-Filter-Felder-Beispiel)
+collapse: true
+name: 'dropdown-menu-filter-fields-example'
 ---
 ::
 
-### Mit Trigger Inhalt Breite
+### With trigger content width (Inhaltsbreite des Triggers)
 
-Sie können den Inhalt auf die volle Breite seiner Schaltfläche erweitern, indem Sie die Klasse `w-(--reka-dropdown-menu-trigger-width)` auf dem @@-Steckplatz hinzufügen.
+Sie können den Inhalt auf die volle Breite der Schaltfläche erweitern, indem Sie die `w-(--reka-dropdown-menu-trigger-width)`-Klasse auf dem `ui.content`-Steckplatz hinzufügen.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'dropdown-menu-content-width-example'(Dropdown-Menü-Inhalt-Breite-Beispiel)
+collapse: true
+name: 'dropdown-menu-content-width-example'
 ---
 ::
 
 ::tip
-Sie können die Inhaltsbreite auch global in Ihrem `app.config.ts` ändern:
+Sie können auch die Inhaltsbreite global in Ihrem `app.config.ts` ändern:
 
 ```
 export default defineAppConfig({
@@ -641,9 +641,9 @@ export default defineAppConfig({
 ```
 ::
 
-### Extract-Verknüpfungen
+### Extract Shortcuts (englisch)
 
-Verwenden Sie das Dienstprogramm [extractShortcuts](/docs/composables/extract-shortcuts), um automatisch Verknüpfungen aus Menüelementen mit einer `kbds`-Eigenschaft zu definieren.
+Verwenden Sie das Dienstprogramm [extractShortcuts](/docs/composables/extract-shortcuts), um automatisch Verknüpfungen von Menüelementen mit einer `kbds`-Eigenschaft zu definieren. Es extrahiert rekursiv Verknüpfungen und gibt ein Objekt zurück, das mit [defineShortcuts](/docs/composables/define-shortcuts) kompatibel ist.
 
 ```vue
 <script setup lang="ts">
@@ -681,27 +681,27 @@ defineShortcuts(extractShortcuts(items))
 ```
 
 ::note
-In diesem Beispiel: kbd{value="meta"}: kbd{value="E" class="ms-px"},: kbd{value="meta"}: kbd{value="I" class="ms-px"} und: kbd{value="meta"}: kbd{value="N" class="ms-px"} würde die Funktion `select` des entsprechenden Elements auslösen.
+In diesem Beispiel würden: kbd{value="meta"}: kbd{value="E" class="ms-px"},: kbd{value="meta"}: kbd{value="I" class="ms-px"} und: kbd{value="meta"}: kbd{value="N" class="ms-px"} die Funktion `select` des entsprechenden Elements auslösen.
 ::
 
-@@391@@bmg391@bmg391@bmg391@bmg391@bmg391@bmg391@bmg391@bmg391@bmg391@bmg391@bmg391@bmg391@bmg391@bmg391@bmg391@bmg391@bmg391@bmg391@bmg391@bmg31@bmg391@bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbd391@bbbbbbbbbbbbd@bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbd391@
+## API (englisch)
 
-@@@@@@@@ph392@@Props
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
-@@ph393@gmail.de
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-@@@@@@@@394@@@Emits
+### Emits Bearbeiten
 
-Komponenten emittieren
+:component-emits
 
-@@ph395@@gmail.de
+## Themes Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph396@@changelog @@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

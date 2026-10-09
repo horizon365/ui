@@ -9,16 +9,16 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodePreview.vue
 ---
 
-## 使用情况
+## 用法
 
-使用`code-preview`组件包装任何内容，以便使用`code`插槽在其源代码旁边显示实时预览。
+使用`code-preview`组件包装任何内容，以使用`code`插槽在其源代码旁边显示实时预览。
 
 ::code-preview{class="[&>div]:*:my-0 [&>div]:*:w-full" label="预览"}
 
 ::code-preview{class="[&>div]:*:my-0"}
 `inline code`
 
-#代码
+#code
 
 ```mdc
 `inline code`
@@ -26,7 +26,7 @@ links:
 
 ::
 
-#代码
+#code
 
 ````mdc
 ::code-preview
@@ -34,7 +34,7 @@ links:
 
 #code
 ```mdc
-`inline code`的
+`inline code`
 ```
 ::
 ````
@@ -45,16 +45,16 @@ links:
 
 ### Props
 
-：组件-道具{prose}
+:component-props{prose}
 
 ### Slots
 
-：组件插槽{prose}
+:component-slots{prose}
 
 ## Theme
 
-：组件主题{prose}
+:component-theme{prose}
 
 ## Changelog
 
-：component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

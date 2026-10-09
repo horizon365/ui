@@ -1,9 +1,9 @@
 ---
-title: ChatPrompt
+title: Chatprompt
 description: 'Ein erweitertes Textarea zum Senden von Eingabeaufforderungen in KI-Chat-Schnittstellen.'
 category: chat
 links:
-  - label: Textarea
+  - label: Textlich
     to: /docs/components/textarea
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub
@@ -11,61 +11,61 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatPrompt.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Die ChatPrompt-Komponente rendert ein `<form>`-Element und erweitert die Komponente [Textarea](/docs/components/textarea), so dass Sie jede Eigenschaft wie `icon`,`placeholder`,`autofocus` usw. übergeben können.
+Die ChatPrompt-Komponente rendert ein `<form>`-Element und erweitert die [Textarea](/docs/components/textarea)-Komponente, sodass Sie jede Eigenschaft wie `icon`, `placeholder`, `autofocus` usw. übergeben können.
 
 ::component-example
 ---
-Einsturz: wahr
-Chat-Prompt-Beispiel:
+collapse: true
+name: 'chat-prompt-example'
 ---
 ::
 
 ::note
 Der ChatPrompt verarbeitet die folgenden Ereignisse:
 
-- Das Formular wird gesendet, wenn der Benutzer drückt: kbd{value="enter"} oder wenn der Benutzer auf die Schaltfläche Senden klickt. Setzen Sie stattdessen die `submit-on-enter` prop auf `false`, um mit: kbd{value="ctrl"}+: kbd{value="enter"}(oder: kbd{value="cmd"}+: kbd{value="enter"} auf macOS) zu senden, so dass: kbd{value="enter"} eine neue Zeile einfügen kann.
-- Der Textarea ist verschwommen, wenn: kbd{value="escape"} gedrückt wird und ein `close`-Ereignis ausgibt.
+- Das Formular wird gesendet, wenn der Benutzer: kbd{value="enter"} drückt oder wenn der Benutzer auf die Schaltfläche zum Senden klickt. Setzen Sie stattdessen die `submit-on-enter`-Prop auf `false`, um mit: kbd{value="ctrl"} +: kbd{value="enter"} (oder: kbd{value="cmd"} +: kbd{value="enter"} auf macOS) zu senden, und erlauben Sie: kbd{value="enter"}, eine neue Zeile einzufügen.
+- Der Textarea ist unscharf, wenn: kbd{value="escape"} gedrückt wird und ein `close`-Ereignis ausgibt.
 ::
 
-@@ph021@@@Variantentyp
+### Variant Bearbeiten
 
-Verwenden Sie `variant` prop, um den Stil der Eingabeaufforderung zu ändern. Defaults zu `outline`.
+Verwenden Sie die `variant`-prop, um den Stil der Eingabeaufforderung zu ändern. Standardmäßig zu `outline`.
 
 ::component-code
 ---
-Hide:
+hide:
   - autofocus
-Props:
-  Variante: „ weich "
-  Autofokus: falsch
+props:
+  variant: 'soft'
+  autofocus: false
 ---
 ::
 
-@@ph025@@Beispiele
+## Examples [Bearbeiten]
 
 ::tip{to="/docs/components/chat"}
 Auf der Übersichtsseite **Chat** finden Sie Installationsanweisungen, Server-Setup und Anwendungsbeispiele.
 ::
 
-### Mit einem Editor: badge{label="4.10+" class="align-text-top"}
+### Mit Editor: badge{label="4.10+" class="align-text-top"}
 
-Erstellen Sie die Slots `#header`,`#body` und `#footer`, um eine umfangreiche Eingabeaufforderung zu erstellen:[Editor](/docs/components/editor) mit `@` Erwähnungen und `/` Befehle durch [EditorMentionMenu](/docs/components/editor-mention-menu), Ein Mode Selector.
+Erstellen Sie die `#header`-, `#body`-und `#footer`-Steckplätze, um eine umfangreiche Eingabeaufforderung zu erstellen: Dateianhänge, ein [Editor](/docs/components/editor) mit `@`-Erwähnungen und `/`-Befehlen über [EditorMenu](/docs/components/editor-mention-menu) und einen Moduswähler.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'chat-prompt-editor-example'(Chat-Eingabeaufforderungs-Editor-Beispiel)
-Kategorie: „ Justizzentrum "
+collapse: true
+name: 'chat-prompt-editor-example'
+class: 'justify-center'
 ---
 ::
 
 ::note
-Der `#body`-Slot ersetzt den internen Textarea und macht die `submit`-und `close`-Handler verfügbar, sodass Sie die Tastaturkürzel des Editors mit dem Formular verbinden können. Wenn ein Mention-Menü geöffnet ist, wählt das Drücken von: kbd{value="enter"} das hervorgehobene Element aus, anstatt es zu senden.
+Der `#body`-Steckplatz ersetzt den internen Textarea und macht die `submit`-und `close`-Handler verfügbar, sodass Sie die Tastaturkürzel des Editors mit dem Formular verbinden können. Wenn ein Mention-Menü geöffnet ist, wählen Sie durch Drücken von: kbd{value="enter"} das hervorgehobene Element aus, anstatt es zu senden.
 ::
 
-### As Homepage
+### A Homepage
 
 Sie können es auch auf der homepage ihrer chat-schnittstelle verwenden.
 
@@ -102,36 +102,36 @@ async function onSubmit() {
 </template>
 ```
 
-@@800@bpb
+## API (englisch)
 
-@@@@@@@@@@@ph081@@props
+### Props (nicht)
 
-Komponenten Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attributes" target="_blank"}
 Diese Komponente unterstützt auch alle nativen `<textarea>` HTML-Attribute.
 ::
 
-@@ph083@gmail.de
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-@@@@@@@@@@@emits
+### Emits (nicht)
 
-Komponenten emittieren
+:component-emits
 
-### Expose
+### Expose Bearbeiten
 
 Beim Zugriff auf die Komponente über eine Template-Referenz können Sie Folgendes verwenden:
 
-| Vorname| Typ|
+| Vorname| Typen|
 | ---- | ---- |
-| @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
+| `textareaRef`{lang="ts-type"} | mehr| `Ref<HTMLTextAreaElement \| null>`{lang="ts-type"} | mehr|
 
-@@ph090@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph091@@changelog @@changelog @ changelog
+## Changelog (deutsch)
 
-Das Component-Changelog
+:component-changelog

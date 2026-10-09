@@ -10,26 +10,26 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Skeleton.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice el componente Esqueleto tal cual para mostrar un marcador de posición.
 
-Ejemplo: {name="skeleton-example"}
+:component-example{name="skeleton-example"}
 
-@2002
+## API (Edición española)
 
-@@pH000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props (Edición española)
 
-Componentes Props
+:component-props
 
-@@pH004@@esencias
+### Slots (Español)
 
-Componentes de slots
+:component-slots
 
-@@005@@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@changelog @changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

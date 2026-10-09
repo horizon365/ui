@@ -12,164 +12,164 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ColorPicker.vue
 ---
 
-##  사용
+## Usage
 
 `v-model` 지시문을 사용하여 ColorPicker 값을 제어합니다.
 
 ::component-code
 ---
-무시하기:
-  - modelValue - modelValue 이미지
-외부:
-  - modelValue - modelValue 이미지
-소품 :
-  모델 값: '#00C16A'
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: '#00C16A'
 ---
 ::
 
-상태를 제어할 필요가 없을 때는 `default-value`prop을 사용하여 초기값을 설정합니다.
+상태를 제어할 필요가 없을 때 `default-value` prop을 사용하여 초기 값을 설정합니다.
 
 ::component-code
 ---
-무시하기:
-  - defaultValue - defaultValue
-소품 :
-  defaultValue: "#00BCD4"
+ignore:
+  - defaultValue
+props:
+  defaultValue: '#00BCD4'
 ---
 ::
 
 ### RGB 포맷
 
-`format`prop을 사용하여 ColorPicker의 `rgb` 값을 설정합니다.
+`format` prop 를 사용하여 ColorPicker 의 `rgb` 값을 설정합니다.
 
 ::component-code
 ---
-무시하기:
-  - modelValue - modelValue 이미지
-  -  형식
-외부:
-  - modelValue - modelValue
-소품 :
-  형식: RGB
-  modelValue: 'rgb(0,193,106)'
+ignore:
+  - modelValue
+  - format
+external:
+  - modelValue
+props:
+  format: rgb
+  modelValue: 'rgb(0, 193, 106)'
 ---
 ::
 
-### HSL 형식
+### HSL 포맷
 
-`format`prop을 사용하여 ColorPicker의 `hsl` 값을 설정합니다.
+`format` prop 를 사용하여 ColorPicker 의 `hsl` 값을 설정합니다.
 
 ::component-code
 ---
-무시하기:
-  - modelValue - modelValue 이미지
-  -  형식
-외부:
-  - modelValue - modelValue 이미지
-소품 :
-  형식: hsl
-  modelValue: 'hsl(153,100%,37.8%)'
+ignore:
+  - modelValue
+  - format
+external:
+  - modelValue
+props:
+  format: hsl
+  modelValue: 'hsl(153, 100%, 37.8%)'
 ---
 ::
 
-### CMYK 포맷
+### CMYK 형식
 
-`format`prop을 사용하여 ColorPicker의 `cmyk` 값을 설정합니다.
+`format` prop 를 사용하여 ColorPicker 의 `cmyk` 값을 설정합니다.
 
 ::component-code
 ---
-무시하기:
-  - modelValue - modelValue 이미지
-  -  형식
-외부:
-  - modelValue - modelValue 이미지
-소품 :
-  형식: cmyk
-  모델 값: 'cmyk(100%, 0%, 45.08%, 24.31%)'
+ignore:
+  - modelValue
+  - format
+external:
+  - modelValue
+props:
+  format: cmyk
+  modelValue: 'cmyk(100%, 0%, 45.08%, 24.31%)'
 ---
 ::
 
-### CIELab 포맷
+### CIELab 형식
 
-`format`prop을 사용하여 ColorPicker의 `lab` 값을 설정합니다.
+`format` prop 를 사용하여 ColorPicker 의 `lab` 값을 설정합니다.
 
 ::component-code
 ---
-무시하기:
-  - modelValue - modelValue 이미지
-  -  형식
-외부:
-  - modelValue - modelValue 이미지
-소품 :
-  형식: 랩
-  modelValue: 'lab (68.88% -60.41% 32.55%)'
+ignore:
+  - modelValue
+  - format
+external:
+  - modelValue
+props:
+  format: lab
+  modelValue: 'lab(68.88% -60.41% 32.55%)'
 ---
 ::
 
-### Throttle (스피드)
+### Throttle 키
 
-`throttle`prop 을 사용하여 ColorPicker 의 스로틀 값을 설정합니다.
+`throttle` Prop을 사용하여 ColorPicker의 스로틀 값을 설정합니다.
 
 ::component-code
 ---
-무시하기:
-  - modelValue - modelValue 이미지
-외부:
-  - modelValue - modelValue 이미지
-소품 :
-  스로틀 : 100
-  모델 값: '#00C16A'
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  throttle: 100
+  modelValue: '#00C16A'
 ---
 ::
 
-###  크기
+### Size 크기
 
-`size`prop 을 사용하여 ColorPicker 의 크기를 설정합니다.
+`size` Prop 을 사용하여 ColorPicker 의 크기를 설정합니다.
 
 ::component-code
 ---
-소품 :
-  크기: xl
+props:
+  size: xl
 ---
 ::
 
-###  비활성 화
+### 비활성 화
 
-`disabled`prop 을 사용하여 ColorPicker 를 비활성화합니다.
+`disabled` Prop을 사용하여 ColorPicker를 비활성화합니다.
 
 ::component-code
 ---
-소품 :
-  사용 안 함:true
+props:
+  disabled: true
 ---
 ::
 
-##  예
+## 예
 
-###  색상 선택
+### As 색상 선택
 
-[Button](/docs/components/button) 및 [Popher](/docs/components/popover) 구성요소를 사용하여 색상 선택기를 만듭니다.
+[Button](/docs/components/button) 및 [Popover](/docs/components/popover) 구성 요소를 사용하여 색상 선택기를 만듭니다.
 
 ::component-example
 ---
-이름: 'color-picker-chooser-example'
+name: 'color-picker-chooser-example'
 ---
 ::
 
-##  API
+## API 파일
 
-###  Props
+### Props 코드
 
-:컴포넌트 - 소품
+:component-props
 
-###  Emits
+### Emits 소개
 
-:구성요소 - 방사
+:component-emits
 
-##  테마
+## Theme 테마
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

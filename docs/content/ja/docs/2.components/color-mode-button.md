@@ -13,15 +13,15 @@ links:
 
 ## 使用法
 
-ColorModeButtonコンポーネントは[ Button ](/docs/components/button)コンポーネントを拡張しているので、`color`、`variant`、`size`などのプロパティを渡すことができます。
+ColorModeButtonコンポーネントは[Button](/docs/components/button)コンポーネントを拡張しているため、`color`、`variant`、`size`などの任意のプロパティを渡すことができます。
 
-コンポーネントコード{prefix="color-mode"}
+:component-code{prefix="color-mode"}
 
 ::note
-ボタンのデフォルトは`color="neutral"`および`variant="ghost"`です。
+ボタンのデフォルトは`color="neutral"`と`variant="ghost"`です。
 ::
 
-## 例
+## サンプル
 
 ### カスタムアイコン付き
 
@@ -29,7 +29,7 @@ ColorModeButtonコンポーネントは[ Button ](/docs/components/button)コン
 #nuxt
 ::div
 
-`app.config.ts`を使用して、`ui.icons`プロパティを使用してアイコンをカスタマイズします。
+`app.config.ts`を使用して、`ui.icons`プロパティでアイコンをカスタマイズします。
 
 ```ts [app/app.config.ts]
 export default defineAppConfig({
@@ -72,16 +72,16 @@ export default defineConfig({
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-このコンポーネントは、すべてのネイティブ`<button>` HTML属性もサポートします。
+このコンポーネントはすべてのネイティブ`<button>` HTML属性もサポートします。
 ::
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="color-mode"}
+:component-changelog{prefix="color-mode"}

@@ -12,297 +12,297 @@ links:
 
 ## 使用法
 
-### タイトル
+### Title
 
 `title`プロパティを使用して、アラートのタイトルを設定します。
 
 ::component-code
 ---
-小道具
-  タイトルは「Heads up！
+props:
+  title: 'Heads up!'
 ---
 ::
 
-### 説明
+### Description
 
 `description`プロパティを使用して、アラートの説明を設定します。
 
 ::component-code
 ---
-きれい真
-小道具
-  タイトルは「Heads up！
-  説明'アプリ設定で原色を変更できます。'
+prettier: true
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
 ---
 ::
 
-### アイコン
+### Icon
 
-`icon` propを使用して、[ Icon ](/docs/components/icon)を表示します。
+`icon`プロパティを使用して[Icon](/docs/components/icon)を表示します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-  - 説明
-小道具
-  タイトルは「Heads up！
-  説明'アプリ設定で原色を変更できます。'
-  アイコン'i—lucide—terminal'
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  icon: 'i-lucide-terminal'
 ---
 ::
 
 ### アバター
 
-`avatar` propを使用して、[ Avatar ](/docs/components/avatar)を表示します。
+`avatar`プロパティを使用して[Avatar](/docs/components/avatar)を表示します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-  - 説明
-小道具
-  タイトルは「Heads up！
-  説明'アプリ設定で原色を変更できます。'
-  avatar.src 'https//github.com/nuxt.png'
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  avatar.src: 'https://github.com/nuxt.png'
 ---
 ::
 
-### カラー
+### Color
 
 `color`プロパティを使用して、アラートの色を変更します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-  - 説明
-  - アイコン
-小道具
-  色ニュートラル
-  タイトルは「Heads up！
-  説明'アプリ設定で原色を変更できます。'
-  アイコン'i—lucide—terminal'
+prettier: true
+ignore:
+  - title
+  - description
+  - icon
+props:
+  color: neutral
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  icon: 'i-lucide-terminal'
 ---
 ::
 
-### バリアント
+### Variant
 
 `variant`プロパティを使用して、Alertのバリアントを変更します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-  - 説明
-  - アイコン
-小道具
-  色ニュートラル
-  バリアント：微妙
-  タイトルは「Heads up！
-  説明'アプリ設定で原色を変更できます。'
-  アイコン'i—lucide—terminal'
+prettier: true
+ignore:
+  - title
+  - description
+  - icon
+props:
+  color: neutral
+  variant: subtle
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  icon: 'i-lucide-terminal'
 ---
 ::
 
 ### 閉じる
 
-`close` propを使用して、[ Button ](/docs/components/button)を表示してアラートを却下します。
+`close`プロパティを使用して[Button](/docs/components/button)を表示し、アラートを却下します。
 
 ::tip
-閉じるボタンをクリックすると`update:open`イベントが発生します。
+closeボタンがクリックされると`update:open`イベントが発生します。
 ::
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-  - 説明
-  - 閉じる
-  - カラー
-  - バリアント
-小道具
-  タイトルは「Heads up！
-  説明'アプリ設定で原色を変更できます。'
-  色ニュートラル
-  variantアウトライン
-  閉じるtrue
+prettier: true
+ignore:
+  - title
+  - description
+  - close
+  - color
+  - variant
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  color: neutral
+  variant: outline
+  close: true
 ---
 ::
 
-[ Button ](/docs/components/button)コンポーネントから任意のプロパティを渡してカスタマイズできます。
+[Button](/docs/components/button)コンポーネントから任意のプロパティを渡してカスタマイズできます。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-  - 説明
-  -  close.color
-  -  close.variant
-  - カラー
-  - バリアント
-小道具
-  タイトルは「Heads up！
-  説明'アプリ設定で原色を変更できます。'
-  色ニュートラル
-  variantアウトライン
-  閉じる
-    色プライマリ
-    variantアウトライン
-    クラス：'rounded—full'
+prettier: true
+ignore:
+  - title
+  - description
+  - close.color
+  - close.variant
+  - color
+  - variant
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  color: neutral
+  variant: outline
+  close:
+    color: primary
+    variant: outline
+    class: 'rounded-full'
 ---
 ::
 
-### 閉じるアイコン
+### アイコンを閉じる
 
-`close-icon`プロパティを使用して、閉じるボタン[ Icon ](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-x`です。
+`close-icon`プロパティを使用して、閉じるボタン[Icon](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-x`です。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-  - 説明
-  - 閉じる
-  - カラー
-  - バリアント
-小道具
-  タイトルは「Heads up！
-  説明'アプリ設定で原色を変更できます。'
-  色ニュートラル
-  variantアウトライン
-  閉じるtrue
-  closeIcon 'i—lucide—arrow—right'
+prettier: true
+ignore:
+  - title
+  - description
+  - close
+  - color
+  - variant
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  color: neutral
+  variant: outline
+  close: true
+  closeIcon: 'i-lucide-arrow-right'
 ---
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.close`キーの下の`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`app.config.ts`の`ui.icons.close`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.close`キーの`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`vite.config.ts`の`ui.icons.close`キーでグローバルにカスタマイズできます。
 :::
 ::
 
-### アクション
+### Actions
 
-`actions` propを使用して、[ Button ](/docs/components/button)アクションをアラートに追加します。
+`actions`プロパティを使用して、アラートに[Button](/docs/components/button)アクションを追加します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-  - アクション
-  - カラー
-  - バリアント
-小道具
-  タイトルは「Heads up！
-  説明'アプリ設定で原色を変更できます。'
-  色ニュートラル
-  variantアウトライン
-  アクション
-    -  labelアクション1
-    -  labelアクション2
-      色ニュートラル
-      バリアント：微妙
+prettier: true
+ignore:
+  - title
+  - actions
+  - color
+  - variant
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  color: neutral
+  variant: outline
+  actions:
+    - label: Action 1
+    - label: Action 2
+      color: neutral
+      variant: subtle
 ---
 ::
 
-### オリエンテーション
+### Orientation
 
 `orientation`プロパティを使用して、アラートの向きを変更します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-  - アクション
-  - カラー
-  - バリアント
-小道具
-  タイトルは「Heads up！
-  説明'アプリ設定で原色を変更できます。'
-  色ニュートラル
-  variantアウトライン
-  オリエンテーション水平
-  アクション
-    -  labelアクション1
-    -  labelアクション2
-      色ニュートラル
-      バリアント：微妙
+prettier: true
+ignore:
+  - title
+  - actions
+  - color
+  - variant
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  color: neutral
+  variant: outline
+  orientation: horizontal
+  actions:
+    - label: Action 1
+    - label: Action 2
+      color: neutral
+      variant: subtle
 ---
 ::
 
 ## 例
 
-### `class` prop
+### `class`プロップ
 
 `class`プロパティを使用して、Alertの基本スタイルを上書きします。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-  - 説明
-小道具
-  タイトルは「Heads up！
-  説明'アプリ設定で原色を変更できます。'
-  クラス'rounded—none'
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  class: 'rounded-none'
 ---
 ::
 
-### `ui` prop
+### `ui`プロップ
 
-`ui`プロパティを使用して、Alertのスロットスタイルを上書きします。
+`ui`プロパティを使用して、Alertのスロットスタイルをオーバーライドします。
 
 ::component-code
 ---
-きれい真
-無視
-  -  ui
-  -  title
-  - 説明
-  - アイコン
-小道具
-  タイトルは「Heads up！
-  説明'アプリ設定で原色を変更できます。'
-  アイコンi—lucideロケット
-  UI
-    アイコン'サイズ—11'
+prettier: true
+ignore:
+  - ui
+  - title
+  - description
+  - icon
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  icon: i-lucide-rocket
+  ui:
+    icon: 'size-11'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

@@ -14,7 +14,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Drawer.vue
 ---
 
-## 使用情况
+## 用法
 
 在抽屉的默认插槽中使用[Button](/docs/components/button)或任何其他组件。
 
@@ -22,344 +22,344 @@ links:
 
 ::component-code
 ---
-更漂亮：真的
-插槽：
-  默认值：|
+prettier: true
+slots:
+  default: |
 
-<UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />的
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  主要内容：|
+  content: |
 
-<Placeholder class="h-48 m-4" />的
+    <Placeholder class="h-48 m-4" />
 ---
 
-：U型按钮{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="开放" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#内容
-：占位符{class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-您也可以使用`#header`{lang="ts-type"}、`#body`{lang="ts-type"}和`#footer`{lang="ts-type"}插槽来自订[抽屉]的内容。
+您还可以使用`#header`{lang="ts-type"}、`#body`{lang="ts-type"}和`#footer`{lang="ts-type"}插槽来自定义抽屉的内容。
 
 ### 标题
 
-使用`title`道具设置抽屉标题。
+使用`title`属性设置Drawer的标题。
 
 ::component-code
 ---
-更漂亮：真的
-道具：
-  title：'带标题的抽屉'
-插槽：
-  默认值：|
+prettier: true
+props:
+  title: 'Drawer with title'
+slots:
+  default: |
 
-<UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />的
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  主体：|
+  body: |
 
-<Placeholder class="h-48" />的电话
+    <Placeholder class="h-48" />
 ---
 
-：U形按钮{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="开放" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-正文数
-：占位符{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
-说明：
+### 说明
 
-使用`description`属性设置抽屉标题的说明。
+使用`description`属性设置Drawer的标题的描述。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标题：
-道具：
-  title：'带说明的抽屉'
-  描述：“痛苦的人是痛苦的，奉献的人是快乐的。”
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Drawer with description'
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+slots:
+  default: |
 
-    025号
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  主体：|
+  body: |
 
-    026号
+    <Placeholder class="h-48" />
 ---
 
-：U型按钮{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="开放" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-正文数
-：占位符{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
-### 关闭：标志{label="4.10+" class="align-text-top"}
+### 关闭：badge{label="4.10+" class="align-text-top"}
 
-使用`close`道具在抽屉中显示关闭按钮。默认为`false`。
+使用`close`属性在`false`的Drawer.exe中显示一个关闭按钮。
 
-您可以从[Button](/docs/components/button)组件传递任何属性来自订它。
+您可以从[Button](/docs/components/button)组件传递任何属性来对其进行自定义。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标题：
-  关闭. color
-  关闭.变量
-道具：
-  title：'带关闭按钮的抽屉'
-  结束语：
-    颜色：原色
-    变体：轮廓
-    类别：'四舍五入-完整'
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - title
+  - close.color
+  - close.variant
+props:
+  title: 'Drawer with close button'
+  close:
+    color: primary
+    variant: outline
+    class: 'rounded-full'
+slots:
+  default: |
 
-<UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />的
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  主体：|
+  body: |
 
-    041号
+    <Placeholder class="h-48" />
 ---
 
-：U型按钮{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="开放" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-正文数
-：占位符{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
-### 关闭图标：徽标{label="4.10+" class="align-text-top"}
+### 关闭图标：badge{label="4.10+" class="align-text-top"}
 
-使用`close-icon`属性来自订关闭按钮[Icon](/docs/components/icon)。预设值为`i-lucide-x`。
+使用`close-icon`道具自定义关闭按钮[Icon](/docs/components/icon).`i-lucide-x`。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标题：
-道具类：
-  title：'带关闭按钮的抽屉'
-  关闭：true
-  关闭图标：'i-透明箭头-右'
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Drawer with close button'
+  close: true
+  closeIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
-    053号
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  正文部分：|
+  body: |
 
-    054号
+    <Placeholder class="h-48" />
 ---
 
-：U型按钮{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="开放" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-正文数
-：占位符{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
-方向
+### 方向
 
-使用`direction`道具来控制抽屉的方向。预设为`bottom`。
+使用`direction`道具来控制抽屉的方向。
 
 ::component-code
 ---
-更漂亮：真的
-道具：
-  方向：'右'
-插槽：
-  默认值：|
+prettier: true
+props:
+  direction: 'right'
+slots:
+  default: |
 
-<UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />的
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  主要内容：|
+  content: |
 
-<Placeholder class="min-w-96 min-h-96 size-full m-4" />，你好
+    <Placeholder class="min-w-96 min-h-96 size-full m-4" />
 ---
 
-：U型按钮{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="开放" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#内容
-：占位符{class="min-w-96 min-h-96 size-full m-4"}
+#content
+:placeholder{class="min-w-96 min-h-96 size-full m-4"}
 ::
 
-插入式
+### Inset
 
 使用`inset`道具从边缘插入抽屉。
 
 ::component-code
 ---
-更漂亮：真的
-道具：
-  方向：'右'
-  插图：true
-插槽：
-  默认值：|
+prettier: true
+props:
+  direction: 'right'
+  inset: true
+slots:
+  default: |
 
-    066号
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  主要内容：|
+  content: |
 
-    067号
+    <Placeholder class="min-w-96 min-h-96 size-full m-4" />
 ---
 
-：U型按钮{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="开放" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#内容
-：占位符{class="min-w-96 min-h-96 size-full m-4"}
+#content
+:placeholder{class="min-w-96 min-h-96 size-full m-4"}
 ::
 
-手柄
+### 手柄
 
-使用`handle`属性来控制抽屉是否有手柄。默认为`true`。
+使用`handle`属性来控制抽屉是否有句柄。将其转换为`true`。
 
 ::component-code
 ---
-更漂亮：真的
-道具：
-  句柄：false
-插槽：
-  默认值：|
+prettier: true
+props:
+  handle: false
+slots:
+  default: |
 
-    073号
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  主要内容：|
+  content: |
 
-    第074章
+    <Placeholder class="h-48 m-4" />
 ---
 
-：U型按钮{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="开放" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#内容
-：占位符{class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-### 仅句柄
+### 仅手柄
 
-使用`handle-only`道具只允许通过手柄拖动抽屉。
+使用`handle-only`属性仅允许通过手柄拖动抽屉。
 
 ::component-code
 ---
-更漂亮：真的
-道具：
-  仅句柄：true
-插槽：
-  默认值：|
+prettier: true
+props:
+  handleOnly: true
+slots:
+  default: |
 
-    第079章
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  主要内容：|
+  content: |
 
-<Placeholder class="h-48 m-4" />的
+    <Placeholder class="h-48 m-4" />
 ---
 
-：U型按钮{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="开放" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#内容
-：占位符{class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-复盖图
+### 叠加
 
-使用`overlay`属性来控制抽屉是否有覆迭。预设值为`true`。
+使用`overlay`属性来控制抽屉是否有覆盖。将其转换为`true`。
 
 ::component-code
 ---
-更漂亮：真的
-道具：
-  覆盖：假
-插槽：
-  默认值：|
+prettier: true
+props:
+  overlay: false
+slots:
+  default: |
 
-    086号
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  主要内容：|
+  content: |
 
-    第087章
+    <Placeholder class="h-48 m-4" />
 ---
 
-：U型按钮{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="开放" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#内容
-：占位符{class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-### 模式
+### Modal
 
-使用`modal`属性控制抽屉是否阻止与外部内容的交互。默认为`true`。
+使用`modal`属性来控制抽屉是否阻止与外部内容的交互。
 
 ::note
-当`modal`设定为`false`时，覆迭会自动停用，且外部内容会变成互动式。
+当`modal`设置为`false`时，叠加将自动禁用，外部内容将变得交互式。
 ::
 
 ::component-code
 ---
-更漂亮：真的
-道具：
-  模式：假
-插槽：
-  默认值：|
+prettier: true
+props:
+  modal: false
+slots:
+  default: |
 
-    095号
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  主要内容：|
+  content: |
 
-    第096章
+    <Placeholder class="h-48 m-4" />
 ---
 
-：U型按钮{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="开放" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#内容
-：占位符{class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-可忽略的
+### 可忽略
 
-使用`dismissible`属性来控制在抽屉外部单击或按Esc键时是否禁用抽屉。默认值为`true`。
+使用`dismissible`属性来控制当在抽屉外单击或按escape. `true`时抽屉是否被禁用。
 
 ::note
-当用户尝试关闭它时，将发出`close:prevent`事件。
+当用户试图关闭它时，将发出`close:prevent`事件。
 ::
 
 ::tip
-您可以将`modal: false`与`dismissible: false`结合使用，使抽屉的背景在不关闭的情况下具有交互性。
+您可以将联合收割机`modal: false`与`dismissible: false`结合使用，使抽屉的背景具有交互性，而无需关闭它。
 ::
 
 ::component-example
 ---
-更漂亮：真的
-名称：'绘图员-可忽略-示例'
+prettier: true
+name: 'drawer-dismissible-example'
 ---
 ::
 
-### 缩放背景
+### Scale背景
 
-当抽屉打开时，使用`should-scale-background`道具缩放背景，创建视觉深度效果。您可以将`set-background-color-on-scale`道具设置为`false`以防止更改背景颜色。
+当抽屉打开时，使用`should-scale-background`道具缩放背景，创建视觉深度效果。您可以将`set-background-color-on-scale`道具设置为`false`，以防止更改背景颜色。
 
 ::component-code
 ---
-更漂亮：真的
-道具：
-  shouldScaleBackground：真的，我的天
-  按比例设置背景颜色：真
-插槽：
-  默认值：|
+prettier: true
+props:
+  shouldScaleBackground: true
+  setBackgroundColorOnScale: true
+slots:
+  default: |
 
-<UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  主要内容：|
+  content: |
 
-    110华氏度
+    <Placeholder class="h-48 m-4" />
 ---
 
-：U形按钮{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="开放" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#内容
-：占位符{class="h-screen m-4"}
+#content
+:placeholder{class="h-screen m-4"}
 ::
 
 ::warning
-请确保将`data-vaul-drawer-wrapper`指令添加到应用的父元素以使其正常工作。
+确保将`data-vaul-drawer-wrapper`指令添加到应用的父元素中以使其工作。
 
 ```vue [app.vue]
 <template>
@@ -386,94 +386,94 @@ export default defineNuxtConfig({
 
 ::
 
-示例
+## 示例
 
 ### 控制打开状态
 
-您可以使用`default-open`属性或`v-model:open`指示词来控制开启状态。
+您可以使用`default-open` prop或`v-model:open`指令控制打开状态。
 
 ::component-example
 ---
-更漂亮：真的
-名称："绘图器打开示例"
+prettier: true
+name: 'drawer-open-example'
 ---
 ::
 
 ::note
-在此示例中，利用[`defineShortcuts`](/docs/composables/define-shortcuts)，您可以通过按下：kbd{value="O"}来切换抽屉。
+在本例中，利用[`defineShortcuts`](/docs/composables/define-shortcuts)，您可以通过按：kbd{value="O"}来切换抽屉。
 ::
 
 ::tip
-这可让您将触发器移出抽屉或将其完全移除。
+这使您可以将触发器移出抽屉或将其完全移除。
 ::
 
-响应抽屉
+### 响应式抽屉
 
-例如，您可以在桌面上呈现[Modal](/docs/components/modal)组件，并在移动设备上呈现Drawer。
+例如，您可以在桌面上渲染[Modal](/docs/components/modal)组件，在移动的上渲染Drawer。
 
 ::component-example
 ---
-更漂亮：真的
-名称：'绘图器回应范例'
+prettier: true
+name: 'drawer-responsive-example'
 ---
 ::
 
 ### 嵌套抽屉
 
-您可以使用`nested`道具将抽屉嵌套在一起。
+您可以使用`nested`属性嵌套抽屉。
 
 ::component-example
 ---
-更漂亮：真的
-名称：'抽屉嵌套示例'
+prettier: true
+name: 'drawer-nested-example'
 ---
 ::
 
-### 使用页脚插槽
+### 带页脚插槽
 
-使用`#footer`插槽在抽屉正文后添加内容。
+使用`#footer`插槽在Drawer的主体之后添加内容。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'绘图页尾插槽范例'
+prettier: true
+collapse: true
+name: 'drawer-footer-slot-example'
 ---
 ::
 
-### 使用命令选项板
+### 带命令调色板
 
-您可以在[绘图员]的内容中使用[CommandPalette](/docs/components/command-palette)元件。
+您可以在Drawer的内容中使用[CommandPalette](/docs/components/command-palette)组件。
 
 ::component-example
 ---
-收阖：true
-名称：'绘图器命令调色板示例'
+collapse: true
+name: 'drawer-command-palette-example'
 ---
 ::
 
 ::note
-此示例将`useLazyFetch`与`immediate: false`一起使用，以便仅在抽屉打开时提取数据。
+本例使用`useLazyFetch`和`immediate: false`，仅在Drawer打开时获取数据。
 ::
 
-## 活性成分
+## API
 
-### 道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-发射率
+### Emits
 
-：组件发射
+:component-emits
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

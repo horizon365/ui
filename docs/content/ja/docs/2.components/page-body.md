@@ -12,7 +12,7 @@ links:
 
 PageBodyコンポーネントはメインコンテンツをラップし、一貫した間隔のためにパディングを追加します。
 
-[ Page ](/docs/components/page)コンポーネントのデフォルトスロット内で、[ PageHeader ](/docs/components/page-header)コンポーネントの後に使用します。
+[Page](/docs/components/page)コンポーネントのデフォルトスロット内、[ PageHeader](/docs/components/page-header)コンポーネントの後に使用します。
 
 ```vue {5}
 <template>
@@ -24,10 +24,10 @@ PageBodyコンポーネントはメインコンテンツをラップし、一貫
 </template>
 ```
 
-## 例
+## サンプル
 
 ::note
-これらの例では[ Nuxt Content ](https://content.nuxt.com)を使用していますが、コンポーネントは任意のコンテンツ管理システムと統合することができます。
+これらの例は[Nuxt Content](https://content.nuxt.com)を使用していますが、コンポーネントは任意のコンテンツ管理システムと統合できます。
 ::
 
 ### ページ内
@@ -71,23 +71,23 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 ```
 
 ::note
-この例では、`@nuxt/content``ContentRenderer`](https://content.nuxt.com/docs/components/content-renderer)コンポーネントを使用して、ページのコンテンツをレンダリングします。
+この例では、`@nuxt/content`の[`ContentRenderer`](https://content.nuxt.com/docs/components/content-renderer)コンポーネントを使用してページのコンテンツをレンダリングします。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

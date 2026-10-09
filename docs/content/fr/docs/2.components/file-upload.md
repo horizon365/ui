@@ -12,54 +12,54 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/FileUpload.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Utilisez la directive `v-model` pour contrôler la valeur du fichier.
+Utilisez la directive `v-model` pour contrôler la valeur du fichier FileUpload.
 
 ::component-code
 ---
-ignorer:
-  - modèleValeur
-  @@ph003@classe
-Extérieur:
-  - modèleValeur
-Props:
-  Modèle: NULL
-  Classe: 'w-96 min-h-48'
+ignore:
+  - modelValue
+  - class
+external:
+  - modelValue
+props:
+  modelValue: null
+  class: 'w-96 min-h-48'
 ---
 ::
 
-@@005@multiple
+### multiple
 
-Utilisez la prop `multiple` pour permettre la sélection de plusieurs fichiers.
+Utilisez le prop `multiple` pour permettre la sélection de plusieurs fichiers.
 
 ::component-code
 ---
-ignorer:
-  @@ph007@classe
-Props:
-  Multiple: Vrai
-  Classe: 'w-96 min-h-48'
+ignore:
+  - class
+props:
+  multiple: true
+  class: 'w-96 min-h-48'
 ---
 ::
 
-@@ph008@dropzone
+### Dropzone
 
-Utilisez la prop `dropzone` pour activer/désactiver la zone déposable. Par défaut à `true`.
+Utilisez la prop `dropzone` pour activer/désactiver la zone déposable. Par défaut `true`.
 
 ::component-code
 ---
-Ignorer:
-  @@classe 11
-Props:
-  Dropzone: faux
-  Classe: 'w-96 min-h-48'
+ignore:
+  - class
+props:
+  dropzone: false
+  class: 'w-96 min-h-48'
 ---
 ::
 
 ### Interactif
 
-Utilisez la prop `interactive` pour activer/désactiver la zone cliquable. Par défaut à `true`.
+Utilisez la prop `interactive` pour activer/désactiver la zone cliquable. Par défaut `true`.
 
 ::tip{to="#with-files-bottom-slot"}
 Cela peut être utile lors de l'ajout d'un composant `Button` dans le slot `#actions`.
@@ -67,82 +67,82 @@ Cela peut être utile lors de l'ajout d'un composant `Button` dans le slot `#act
 
 ::component-code
 ---
-Ignorer:
-  @@classe 17
-Props:
-  Interactif: Faux
-  Classe: 'w-96 min-h-48'
+ignore:
+  - class
+props:
+  interactive: false
+  class: 'w-96 min-h-48'
 ---
 ::
 
-@@ph018@accepté
+### Accepté
 
-Utilisez la prop `accept` pour spécifier les types de fichiers autorisés pour l'entrée. Fournir une liste séparée par des virgules de [MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types) ou des extensions de fichiers (par exemple `image/png,application/pdf,.jpg`). Par défaut à `*`(tous les types de fichiers).
+Utilisez la prop `accept` pour spécifier les types de fichiers autorisés pour l'entrée. Fournir une liste séparée par des virgules de [MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types) ou d'extensions de fichiers (par exemple `image/png,application/pdf,.jpg`). Par défaut, `*` (tous les types de fichiers).
 
 ::component-code
 ---
-ignorer:
-  @@ph026@accepté
-  @@ph027@classe
-Props:
-  accepter: 'image/*'
-  Classe: 'w-96 min-h-48'
+ignore:
+  - accept
+  - class
+props:
+  accept: 'image/*'
+  class: 'w-96 min-h-48'
 ---
 ::
 
-@@ph028@étiquette
+### étiquette
 
-Utilisez la prop `label` pour définir l'étiquette du fichier Upload.
+Utilisez le prop `label` pour définir l'étiquette du fichier.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@classe 30
-Props:
-  Étiquette:'Drop your image here'
-  Classe: 'w-96 min-h-48'
+prettier: true
+ignore:
+  - class
+props:
+  label: 'Drop your image here'
+  class: 'w-96 min-h-48'
 ---
 ::
 
 ### Description
 
-Utilisez la prop `description` pour définir la description du fichier Upload.
+Utilisez la prop `description` pour définir la description du fichier.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@pH033@@label
-  @@classe 34
-Props:
-  Étiquette:'Drop your image here'
-  Description: 'SVG, PNG, JPG ou GIF (max.
-  Classe: 'w-96 min-h-48'
+prettier: true
+ignore:
+  - label
+  - class
+props:
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96 min-h-48'
 ---
 ::
 
-### Icon
+### icône
 
 Utilisez la prop `icon` pour définir l'icône du fichier FileUpload. Defaults sur `i-lucide-upload`.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph038@label
-  @@ph039@description
-  @@classe 400
-Props:
+prettier: true
+ignore:
+  - label
+  - description
+  - class
+props:
   icon: 'i-lucide-image'
-  Étiquette:'Drop your image here'
-  Description: 'SVG, PNG, JPG ou GIF (max.
-  Classe: 'w-96 min-h-48'
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96 min-h-48'
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.upload`.
 :::
@@ -155,153 +155,153 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 
 ### couleur
 
-Utilisez la prop `color` pour changer la couleur du fichier.
+Utilisez le prop `color` pour changer la couleur du fichier.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph047@label
-  @@ph048@description
-  @@ph049@classe
-Props:
-  Couleur: Neutre
-  Highlight: vrai
-  Étiquette:'Drop your image here'
-  Description: 'SVG, PNG, JPG ou GIF (max.
-  Classe: 'w-96 min-h-48'
+prettier: true
+ignore:
+  - label
+  - description
+  - class
+props:
+  color: neutral
+  highlight: true
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96 min-h-48'
 ---
 ::
 
 ::note
-Le `highlight` prop est utilisé ici pour afficher l'état de mise au point. Il est utilisé en interne lorsqu 'une erreur de validation se produit.
+Le prop `highlight` est utilisé ici pour afficher l'état de mise au point. Il est utilisé en interne lorsqu 'une erreur de validation se produit.
 ::
 
-@@501@@Variant
+### Variant
 
-Utilisez la prop `variant` pour modifier la variante du FileUpload.
+Utilisez la prop `variant` pour changer la variante du FileUpload.
 
 ::component-code
 ---
-Ignorer:
-  @@classe 500
-Props:
-  Variante: Bouton
+ignore:
+  - class
+props:
+  variant: button
 ---
 ::
 
-@@500@Size
+### Size
 
-Utilisez la prop `size` pour modifier la taille du fichier.
+Utilisez le prop `size` pour modifier la taille du fichier.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph056@label
-  @@ph057@description
-  @@ph058@classe
-Props:
-  Taille: XL
-  Variante: région
-  Étiquette:'Drop your image here'
-  Description: 'SVG, PNG, JPG ou GIF (max.
+prettier: true
+ignore:
+  - label
+  - description
+  - class
+props:
+  size: xl
+  variant: area
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
 ---
 ::
 
-@@ph059@@layout
+### layout
 
-Utilisez la prop `layout` pour modifier l'affichage des fichiers dans le fichier FileUpload. Defaults à `grid`.
+Utilisez la prop `layout` pour modifier la façon dont les fichiers sont affichés dans le FileUpload. Defaults à `grid`.
 
 ::warning
-Ce prop ne fonctionne que lorsque `variant` est `area`.
+Cette prop ne fonctionne que lorsque `variant` est `area`.
 ::
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph064@label
-  @@ph065@description
-  @@ph066@multiple
-  @@ph067@classe
+prettier: true
+ignore:
+  - label
+  - description
+  - multiple
+  - class
   - ui.base
-Props:
-  layout: liste
-  Multiple: Vrai
-  Étiquette:'Déposez vos images ici'
-  Description: 'SVG, PNG, JPG ou GIF (max.
-  Catégorie: W-96
-  UI:
-    Base: 'min-h-48'
+props:
+  layout: list
+  multiple: true
+  label: 'Drop your images here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96'
+  ui:
+    base: 'min-h-48'
 ---
 ::
 
-@@P069@@Positionnement
+### Position
 
 Utilisez la prop `position` pour changer la position des fichiers dans le fichier FileUpload. Defaults à `outside`.
 
 ::warning
-Cette prop ne fonctionne que lorsque `variant` est `area` et lorsque `layout` est `list`.
+This prop only works when `variant` is `area` and when `layout` is `list`.
 ::
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph076@étiquette
-  @@ph077@description
-  @@78@multiple
-  @@ph079@layout
-  @@ph080@classe
+prettier: true
+ignore:
+  - label
+  - description
+  - multiple
+  - layout
+  - class
   - ui.base
-Props:
-  Position: intérieur
-  layout: liste
-  Multiple: vrai
-  Étiquette:'Déposez vos images ici'
-  Description: 'SVG, PNG, JPG ou GIF (max.
-  Catégorie: W-96
-  UI:
-    Base: 'min-h-48'
+props:
+  position: inside
+  layout: list
+  multiple: true
+  label: 'Drop your images here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96'
+  ui:
+    base: 'min-h-48'
 ---
 ::
 
-@@ph082@Exemples
+## Exemples
 
 ### Avec validation du formulaire
 
-Vous pouvez utiliser le FileUpload dans un [Form](/docs/components/form) et [FormField](/docs/components/form-field) pour gérer la validation et la gestion des erreurs.
+Vous pouvez utiliser le FileUpload dans un composant [Form](/docs/components/form) et [FormField](/docs/components/form-field) pour gérer la validation et la gestion des erreurs.
 
 ::component-example
 ---
-Étiquette: true
-Collapse: vrai
-nom: 'file-upload-form-validation-exemple'
+prettier: true
+collapse: true
+name: 'file-upload-form-validation-example'
 ---
 ::
 
-### Avec slot par défaut
+### With slot par défaut
 
 Vous pouvez utiliser l'emplacement par défaut pour créer votre propre composant FileUpload.
 
 ::component-example
 ---
-Étiquette: true
-Collapse: vrai
-nom: 'file-upload-default-slot-example'
+prettier: true
+collapse: true
+name: 'file-upload-default-slot-example'
 ---
 ::
 
-### Avec emplacement files-bottom
+### With files-bottom slot
 
-Vous pouvez utiliser l'emplacement `files-bottom` pour ajouter un bouton [](/docs/components/button) sous la liste des fichiers pour supprimer tous les fichiers par exemple.
+Vous pouvez utiliser le slot `files-bottom` pour ajouter un [Button](/docs/components/button) sous la liste des fichiers pour supprimer tous les fichiers par exemple.
 
 ::component-example
 ---
-Étiquette: true
-Collapse: vrai
-nom: 'file-upload-files-bottom-slot-example'
+prettier: true
+collapse: true
+name: 'file-upload-files-bottom-slot-example'
 ---
 ::
 
@@ -309,49 +309,49 @@ nom: 'file-upload-files-bottom-slot-example'
 La prop `interactive` est définie sur `false` dans cet exemple pour empêcher la zone cliquable par défaut.
 ::
 
-### Avec emplacement files-top
+### With files-top slot
 
-Vous pouvez utiliser l'emplacement `files-top` pour ajouter un bouton [](/docs/components/button) au-dessus de la liste des fichiers pour ajouter de nouveaux fichiers par exemple.
+Vous pouvez utiliser l'emplacement `files-top` pour ajouter un [Button](/docs/components/button) au-dessus de la liste des fichiers pour ajouter de nouveaux fichiers par exemple.
 
 ::component-example
 ---
-Étiquette: true
-Collapse: vrai
-nom: 'file-upload-files-top-slot-example'
+prettier: true
+collapse: true
+name: 'file-upload-files-top-slot-example'
 ---
 ::
 
-@@ph107@api
+## API
 
-@@ph108@props
+### Props
 
-Composants-props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
 Ce composant prend également en charge tous les attributs HTML natifs `<input>`.
 ::
 
-@@ph110@@Slots
+### Slots
 
-Composants slots
+:component-slots
 
-@111@1111@1111
+### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph112@@exposé
+### Expose à
 
 Lorsque vous accédez au composant via une référence de modèle, vous pouvez utiliser les éléments suivants:
 
 | nom| type|
 | ---- | ---- |
-| @@|@@|
-| @@|@@|
+| `inputRef`x{lang="ts-type"}| `Ref<HTMLInputElement \| null>`x{lang="ts-type"}|
+| `dropzoneRef`{lang="ts-type"}| `Ref<HTMLDivElement \| null>`x{lang="ts-type"}|
 
-@@ph121@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@@changement2@changement2012
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

@@ -15,7 +15,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Modal.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice un [Button](/docs/components/button) o cualquier otro componente en la ranura predeterminada del Modal.
 
@@ -23,115 +23,115 @@ A continuación, utilice la ranura `#content` para añadir el contenido que se m
 
 ::component-code
 ---
-Categoría: true
-Los slots:
-  Default:|
+prettier: true
+slots:
+  default: |
 
-    @@ 006 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Contenido:|
+  content: |
 
-    @@@ 007 @
+    <Placeholder class="h-48 m-4" />
 ---
 
-El botón {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 
-#Contenido
-por: placeholder{class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-También puede utilizar las ranuras `#header`{lang="ts-type"},`#body`{lang="ts-type"} y `#footer`{lang="ts-type"} para personalizar el contenido del Modal.
+También puede utilizar las ranuras `#header`{lang="ts-type"}, `#body`{lang="ts-type"} y `#footer`{lang="ts-type"} para personalizar el contenido del Modal.
 
-@16@Título
+### Nombre
 
 Utilice el prop `title` para establecer el título de la cabecera del Modal.
 
 ::component-code
 ---
-Categoría: true
-Props:
-  Título:"Modal con título"
-Los slots:
-  Default:|
+prettier: true
+props:
+  title: 'Modal with title'
+slots:
+  default: |
 
-    @@@ 18 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  cuerpo:|
+  body: |
 
-    @@@ 19 @
+    <Placeholder class="h-48" />
 ---
 
-Botón {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 
-#cuerpo
-por placeholder{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
-@@222@Descripción
+### Descripción
 
 Utilice el prop `description` para establecer la descripción de la cabecera del Modal.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @24@title
-Props:
-  Título:"Modal con descripción"
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit".
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Modal with description'
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+slots:
+  default: |
 
-    @@ 25
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  cuerpo:|
+  body: |
 
-    @@ 26 @
+    <Placeholder class="h-48" />
 ---
 
-por: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 
-#cuerpo
-por placeholder{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
-@@29@Cerrar
+### Cerrar
 
-Utilice el prop `close` para personalizar u ocultar el botón de cierre (con el valor `false`) que se muestra en el encabezado del Modal.
+Utilice el prop `close` para personalizar u ocultar el botón de cierre (con el valor `false`) que se muestra en el encabezado de la Modal.
 
 Puede pasar cualquier propiedad del componente [Button](/docs/components/button) para personalizarlo.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @36@title
-  - close.color (en inglés)
-  - close.variante
-Props:
-  Título:'Modal con botón de cierre'
-  Cerrado:
-    Color: Primario
-    Categoría: Outline
-    Categoría:"Round-full"
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+  - close.color
+  - close.variant
+props:
+  title: 'Modal with close button'
+  close:
+    color: primary
+    variant: outline
+    class: 'rounded-full'
+slots:
+  default: |
 
-    @@@ 39 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  cuerpo:|
+  body: |
 
-    @@ 40 @
+    <Placeholder class="h-48" />
 ---
 
-Botón {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 
-#cuerpo
-por @ph042
+#body
+:placeholder{class="h-48"}
 ::
 
 ::tip
-El botón de cierre no se muestra si se utiliza la ranura `#content`, ya que es parte del encabezado.
+El botón de cierre no se muestra si se usa la ranura `#content`, ya que es parte del encabezado.
 ::
 
 ### Cerrar Icono
@@ -140,97 +140,97 @@ Utilice el prop `close-icon` para personalizar el botón de cierre [Icon](/docs/
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@501@title
-Props:
-  Título:'Modal con botón de cierre'
-  Icono: 'i-lucide-arrow-right'
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Modal with close button'
+  closeIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
-    @@ 52 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  cuerpo:|
+  body: |
 
-    @@@ 53 @
+    <Placeholder class="h-48" />
 ---
 
-Botón {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 
-#cuerpo
-por: placeholder{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
 ::framework-only
-#Nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.close`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.close`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.close`.
+Puede personalizar este icono de forma global en su Xph115x bajo la tecla Xph116x.
 :::
 ::
 
-### transición
+### Transición
 
-Utilice el prop `transition` para controlar si el Modal está animado o no. Por defecto a `true`.
-
-::component-code
----
-Categoría: true
-Ignora:
-  @@pH063@título
-Props:
-  Transición: Falso
-  Título:"Modal sin transición"
-Los slots:
-  Default:|
-
-    @@@ 064 @
-
-  cuerpo:|
-
-    @@@ 065 @
----
-
-El botón {label="Open" color="neutral" variant="subtle"}
-
-#cuerpo
-por @ph067
-::
-
-@068@@espanol
-
-Utilice el prop `overlay` para controlar si el Modal tiene una superposición o no. Por defecto a `true`.
+Utilice el prop `transition` para controlar si el Modal está animado o no. Por defecto `true`.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@701@title
-Props:
-  Reseña: False
-  Título:"Sin la sombra"
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+props:
+  transition: false
+  title: 'Modal without transition'
+slots:
+  default: |
 
-    @2007
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  cuerpo:|
+  body: |
 
-    @@pf073 @
+    <Placeholder class="h-48" />
 ---
 
-por: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 
-#cuerpo
-por @ph075
+#body
+:placeholder{class="h-48"}
 ::
 
-@766@@Models
+### Superpuesto
+
+Utilice el prop `overlay` para controlar si el Modal tiene una superposición o no. Por defecto `true`.
+
+::component-code
+---
+prettier: true
+ignore:
+  - title
+props:
+  overlay: false
+  title: 'Modal without overlay'
+slots:
+  default: |
+
+    <UButton label="Open" color="neutral" variant="subtle" />
+
+  body: |
+
+    <Placeholder class="h-48" />
+---
+
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
+
+#body
+:placeholder{class="h-48"}
+::
+
+### Modalidad
 
 Utilice el prop `modal` para controlar si el Modal bloquea la interacción con el contenido externo.
 
@@ -240,29 +240,29 @@ Cuando `modal` se establece en `false`, la superposición se deshabilita automá
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @081@title (Edición española)
-Props:
-  Modalidad: Falso
-  Categoría: Modal Interactive
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+props:
+  modal: false
+  title: 'Modal interactive'
+slots:
+  default: |
 
-    @@2008 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  cuerpo:|
+  body: |
 
-    @@pf083 @
+    <Placeholder class="h-48" />
 ---
 
-El botón {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 
-#cuerpo
-por @ph085
+#body
+:placeholder{class="h-48"}
 ::
 
-@086@@descalificación
+### Dismissible
 
 Utilice el prop `dismissible` para controlar si el Modal es descartable al hacer clic fuera de él o al presionar escape.
 
@@ -276,121 +276,121 @@ Puede combinar `modal: false` con `dismissible: false` para hacer que el fondo d
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@2009@título
-Props:
-  Desaparición: Falso
-  Modalidad: True
-  Título:"Indestructible"
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+props:
+  dismissible: false
+  modal: true
+  title: 'Modal non-dismissible'
+slots:
+  default: |
 
-    @@pf093 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  cuerpo:|
+  body: |
 
-    @@pf094 @
+    <Placeholder class="h-48" />
 ---
 
-Botón {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 
-#cuerpo
-por @ph096
+#body
+:placeholder{class="h-48"}
 ::
 
-### Scrollable: badge{label="4.2+" class="align-text-top"}
+### Scrollable: badge{label="4.2+" class="align-text-top"} (en inglés)
 
-Utilice el prop `scrollable` para hacer que el contenido del Modal se pueda desplazar dentro de la superposición.
+Utilice el accesorio `scrollable` para hacer que el contenido de la Modal se pueda desplazar dentro de la superposición.
 
 ::warning
-Como la superposición es necesaria para el desplazamiento,`modal: false` no es compatible y `overlay: false` solo elimina el fondo.
+Como la superposición es necesaria para el desplazamiento, `modal: false` no es compatible y `overlay: false` sólo elimina el fondo.
 ::
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @2010@título
-Props:
-  Descripcion: true
-  Reseña: True
-  Categoría: Modal Scrollable
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+props:
+  scrollable: true
+  overlay: true
+  title: 'Modal scrollable'
+slots:
+  default: |
 
-    @@pH103 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  cuerpo:|
+  body: |
 
-    @@@ 104 @
+    <Placeholder class="h-full" />
 ---
 
-Botón {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 
-#cuerpo
-por: placeholder{class="h-screen"}
+#body
+:placeholder{class="h-screen"}
 ::
 
 ::caution
-Hay un [known issue](https://reka-ui.com/docs/components/dialog#scrollable-overlay) donde hacer clic en la barra de desplazamiento puede cerrar involuntariamente el diálogo en algunos sistemas operativos.
+Hay un problema [known e](https://reka-ui.com/docs/components/dialog#scrollable-overlay) en el que hacer clic en la barra de desplazamiento puede cerrar involuntariamente el diálogo en algunos sistemas operativos.
 ::
 
-@@111@Fullscreen (Edición española)
+### Pantalla completa
 
-Utilice el `fullscreen` prop para hacer que la pantalla completa Modal.
+Utilice el accesorio `fullscreen` para hacer que el Modal sea pantalla completa.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @113@title
-  @@F114@@fullscreen (Edición española)
-Props:
-  Archivo de la etiqueta: True
-  Categoría: Modal Fullscreen
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+  - fullscreen
+props:
+  fullscreen: true
+  title: 'Modal fullscreen'
+slots:
+  default: |
 
-    @@@ 115 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  cuerpo:|
+  body: |
 
-    @116 @
+    <Placeholder class="h-full" />
 ---
 
-Botón {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 
-#cuerpo
-por @ph118 @
+#body
+:placeholder{class="h-full"}
 ::
 
 ### Unmount: badge{label="4.10+" class="align-text-top"}
 
-Utilice el prop `unmount-on-hide` para evitar que el contenido de la Modal se desmonte cuando se cierra.
+Utilice el prop `unmount-on-hide` para evitar que el contenido de la Modal se desmonte cuando está cerrada.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @123@title
-Props:
-  Desconocido: Falso
-  Título: Modal
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+props:
+  unmountOnHide: false
+  title: 'Modal'
+slots:
+  default: |
 
-    @@ 124 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  cuerpo:|
+  body: |
 
-    @@@ 125 @
+    <Placeholder class="h-48" />
 ---
 
-Botón {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 
-#cuerpo
-por @ph127 @
+#body
+:placeholder{class="h-48"}
 ::
 
 ::note
@@ -398,18 +398,18 @@ Puede inspeccionar el DOM para ver el contenido del Modal que se está renderiza
 ::
 
 ::tip
-Cuando el `portal` prop se establece en `false`, el contenido también se representa en el servidor. Esto es útil para representar un modal abierto durante SSR sin un flash en la carga de la página, o para exponer su contenido para SEO.
+Cuando el prop `portal` se establece en `false`, el contenido también se representa en el servidor. Esto es útil para representar un Modal abierto durante SSR sin un flash en la carga de la página, o para exponer su contenido para SEO.
 ::
 
-@@pH130@Ejemplos
+##  Ejemplos
 
 ### Control estado abierto
 
-Puede controlar el estado abierto mediante la directiva `default-open` o la directiva `v-model:open`.
+Puede controlar el estado abierto utilizando la prop `default-open` o la directiva `v-model:open`.
 
 ::component-example
 ---
-Nombre: 'modal-open-example'
+name: 'modal-open-example'
 ---
 ::
 
@@ -421,9 +421,9 @@ En este ejemplo, aprovechando [`defineShortcuts`](/docs/composables/define-short
 Esto le permite mover el disparador fuera del modal o eliminarlo por completo.
 ::
 
-### Uso de programación
+### Uso programático
 
-Puede utilizar el [`useOverlay`](/docs/composables/use-overlay) composable para abrir un Modal programáticamente.
+Puede usar el composable [`useOverlay`](/docs/composables/use-overlay) para abrir un Modal programáticamente.
 
 ::warning
 Asegúrese de envolver su aplicación con el componente [`App`](/docs/components/app) que utiliza el componente [`OverlayProvider`](https://github.com/nuxt/ui/blob/v4/src/runtime/components/OverlayProvider.vue).
@@ -433,81 +433,81 @@ En primer lugar, crear un componente modal que se abrirá por programación:
 
 ::component-example
 ---
-Categoría: true
-Nombre: 'Modelo'
-Reseña: Falso
+prettier: true
+name: 'modal-example'
+preview: false
 ---
 ::
 
 ::note
-Estamos emitiendo un evento `close` cuando el modal está cerrado o despedido aquí. Puede emitir cualquier dato a través del evento `close`, y esos datos se convierten en el valor resuelto de `open()`. El evento debe emitirse para que la promesa se resuelva.
+Estamos emitiendo un evento `close` cuando el modal está cerrado o despedido aquí. Puede emitir cualquier dato a través del evento `close`, y esos datos se convierten en el valor resuelto de `open()`.
 ::
 
 A continuación, utilízalo en tu app:
 
 ::component-example
 ---
-Nombre: 'modal-programático-ejemplo'
+name: 'modal-programmatic-example'
 ---
 ::
 
 ::tip
-Puede cerrar el modal dentro del componente modal emitiendo `emit('close')`.
+Se puede cerrar el modal dentro del componente modal emitiendo `emit('close')`.
 ::
 
-### Anidados modales
+### Modalidades anidadas
 
 Puedes anidar modales entre sí.
 
 ::component-example
 ---
-Nombre: 'modal-nided-example'
+name: 'modal-nested-example'
 ---
 ::
 
-### Con ranura de pie de página
+### Con ranura de pie
 
 Utilice la ranura `#footer` para añadir contenido después del cuerpo del Modal.
 
 ::component-example
 ---
-Nombre: 'modal-footer-slot-example'
+name: 'modal-footer-slot-example'
 ---
 ::
 
-### Con la paleta de comandos
+### With paleta de comandos
 
 Puede utilizar un componente [CommandPalette](/docs/components/command-palette) dentro del contenido del Modal.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'modal-command-palette-example'
+collapse: true
+name: 'modal-command-palette-example'
 ---
 ::
 
 ::note
-Este ejemplo utiliza `useLazyFetch` con `immediate: false` para obtener datos solo cuando se abre el Modal.
+Este ejemplo usa `useLazyFetch` con `immediate: false` para obtener datos solo cuando se abre el Modal.
 ::
 
-@@pH170@@pH170
+## API (Edición española)
 
-@171@171@171
+### Props
 
-Componentes Props
+:component-props
 
-@2017@espanol
+### Slots en línea
 
-Componentes de slots
+:component-slots
 
-@@173@173@173
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@174 @@ Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@175@Changelog en Español
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

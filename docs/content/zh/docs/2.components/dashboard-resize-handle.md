@@ -8,17 +8,17 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardResizeHandle.vue
 ---
 
-## 使用情况
+## 用法
 
-DashboardResizeHandle组件由[DashboardSidebar](/docs/components/dashboard-sidebar)和[DashboardPanel]()组件使用。
+DashboardResizeHandle组件由[DashboardSidebar](/docs/components/dashboard-sidebar)和[DashboardPanel](/docs/components/dashboard-panel)组件使用。
 
-设置`resizable`道具时自动显示，**无需手动添加**
+当`resizable`道具被设置时，它会自动显示，**你不必手动添加**。
 
-## Examples
+## 示例
 
-### `resize-handle`插槽内
+###  `resize-handle`插槽内
 
-即使在设置`resizable`属性时自动显示此组件，您也可以使用[DashboardSidebar/docs/components/dashboard-sidebar)和[DashboardPanel](/docs/components/dashboard-panel)组件的`resize-handle`插槽来自定义手柄。
+即使在设置`resizable`属性时自动显示此组件，您也可以使用[DashboardSidebar](/docs/components/dashboard-sidebar)和[DashboardPanel](/docs/components/dashboard-panel)组件的`resize-handle`插槽来自定义句柄。
 
 ::code-group
 
@@ -72,16 +72,16 @@ definePageMeta({
 
 ### Props
 
-：组件-支柱
+:component-props
 
 ### Slots
 
-：组件插槽
+:component-slots
 
 ## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

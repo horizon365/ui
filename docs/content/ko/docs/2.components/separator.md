@@ -6,7 +6,7 @@ keywords:
   - hr
   - horizontal rule
 links:
-  - label: 구분 자
+  - label: 구분 기호
     icon: i-custom-reka-ui
     to: https://reka-ui.com/docs/components/separator
   - label: Github (GitHub)
@@ -14,138 +14,138 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Separator.vue
 ---
 
-##  사용
+## Usage
 
 구분 기호 구성 요소를 있는 그대로 사용하여 내용을 구분합니다.
 
 ::component-code
 ---
-분류: P-8
+class: 'p-8'
 ---
 ::
 
-###  방향
+### 방향
 
-`orientation`prop을 사용하여 Separator.기본값은 `horizontal`로 변경합니다.
+`orientation` 소품을 사용하여 Separator의 방향을 변경합니다. 기본값은 `horizontal`입니다.
 
 ::component-code
 ---
-무시하기:
-  -  클래스
-클래스: P-8
-소품 :
-  방향: 수직
-  클래스: H-48
+ignore:
+  - class
+class: 'p-8'
+props:
+  orientation: vertical
+  class: 'h-48'
 ---
 ::
 
-###  레이블
+### Label 태그
 
-`label`prop을 사용하여 구분 기호 가운데에 레이블을 표시합니다.
+`label` 소품을 사용하여 구분 기호의 중간에 레이블을 표시합니다.
 
 ::component-code
 ---
-클래스: P-8
-소품 :
-  사진: "Hello world"
+class: 'p-8'
+props:
+  label: 'Hello World'
 ---
 ::
 
-### 위치: badge{label="4.8+" class="align-text-top"}
+### Position : badge{label="4.8+" class="align-text-top"}
 
-`position`prop을 사용하여 Separator. 기본값은 `center`로 변경합니다.
+`position` 소품을 사용하여 Separator의 내용 위치를 변경합니다. 기본값은 `center`입니다.
 
 ::component-code
 ---
-무시하기:
-  - class 클래스
-클래스: P-8
-소품 :
-  위치: 시작
-  사진: "Hello World"
+ignore:
+  - class
+class: 'p-8'
+props:
+  position: start
+  label: 'Hello World'
 ---
 ::
 
-###  아이콘
+### Icon 이미지
 
-`icon`prop을 사용하여 구분 기호 가운데에 아이콘을 표시합니다.
+`icon` 소품을 사용하여 구분 기호 가운데에 아이콘을 표시합니다.
 
 ::component-code
 ---
-클래스: P-8
-소품 :
-  아이콘 : 'i-simple-icons-nuxtdotjs'
+class: 'p-8'
+props:
+  icon: 'i-simple-icons-nuxtdotjs'
 ---
 ::
 
-###  Avatar
+### Avatar 이미지
 
-`avatar`prop을 사용하여 구분자 중간에 아바타를 표시합니다.
+`avatar` 소품을 사용하여 구분자 가운데에 아바타를 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-클래스: P-8
-무시하기:
-  - avatar.loading - avatar.loading
-소품 :
-  아바타 (Avatar):
+prettier: true
+class: 'p-8'
+ignore:
+  - avatar.loading
+props:
+  avatar:
     src: 'https://github.com/nuxt.png'
-    로드: Lazy
+    loading: lazy
 ---
 ::
 
-###  색상
+### Color
 
-`color`prop을 사용하여 Separator. 기본값은 `neutral`로 변경합니다.
+`color` 소품을 사용하여 구분 기호의 색상을 변경합니다. 기본값은 `neutral`입니다.
 
 ::component-code
 ---
-분류: P-8
-소품 :
-  색상: 기본
-  문자: 솔리드
+class: 'p-8'
+props:
+  color: primary
+  type: solid
 ---
 ::
 
-###  타입
+### Type
 
-`type`prop을 사용하여 Separator.default의 유형을 `solid`로 변경합니다.
+`type` prop을 사용하여 Separator.기본값은 `solid`로 변경합니다.
 
 ::component-code
 ---
-분류: P-8
-소품 :
-  문자: 파선
+class: 'p-8'
+props:
+  type: dashed
 ---
 ::
 
-###  크기
+### Size 크기
 
-`size`prop을 사용하여 Separator.기본값을 `xs`로 변경합니다.
+`size` prop을 사용하여 Separator. 기본값은 `xs`입니다.
 
 ::component-code
 ---
-분류: P-8
-소품 :
-  사이즈: LG
+class: 'p-8'
+props:
+  size: lg
 ---
 ::
 
-##  API
+## API 파일
 
-###  Props
+### Props 코드 코드
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### Slots
 
-:구성요소 - 슬롯
+:component-slots
 
-##  테마
+## Theme 테마
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## Changelog 파일
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

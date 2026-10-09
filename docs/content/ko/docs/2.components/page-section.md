@@ -8,30 +8,30 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageSection.vue
 ---
 
-##  사용
+## Usage
 
-PageSection 구성 요소는 콘텐츠를 [Container](/docs/components/container)로 래핑하면서 전체 폭의 유연성을 유지하여 배경색, 이미지 또는 패턴을 쉽게 추가할 수 있습니다. 기본 슬롯에 그림과 함께 콘텐츠를 표시하는 유연한 방법을 제공합니다.
+PageSection 구성 요소는 전체 너비 유연성을 유지하면서 배경색, 이미지 또는 패턴을 쉽게 추가할 수 있도록 컨텐츠를 [Container](/docs/components/containerxph04x로 래핑합니다. 이 구성 요소는 기본 슬롯에 그림과 함께 컨텐츠를 표시하는 유연한 방법을 제공합니다.
 
 ::code-preview
 
 ::u-page-section
 ---
-제목 : Beautiful Vue UI Components
-설명 :"Nuxt UI는 Vue 및 Nuxt를 사용하여 아름답고 액세스 가능한 웹 응용 프로그램을 빌드하는 데 도움이되는 포괄적 인 구성 요소 및 유틸리티 제품군을 제공합니다."
-사진: "Features"
-특징:
-  - title: '아이콘'
-    Nuxt UI는 Nuxt Icon과 통합되어 Iconify에서 200,000개 이상의 아이콘에 액세스합니다.
-    사진: "i-lucide-smile"
-    to: '/docs/getting-started/integrations/icons' /docs/getting-started/integrations/icons'에 해당되는 글 1건
-  - title: '글꼴'
-    설명: 'Nuxt UI는 Nuxt Fonts와 통합되어 플러그인 앤 플레이 글꼴 최적화를 제공합니다.'
-    아이콘 : i-lucide-a-large-small
-    to: '/docs/getting-started/integrations/fonts' 로 이동
-  - title: '컬러 모드'
-    설명: 'Nuxt UI는 Nuxt Color Mode와 통합되어 빛과 어둠 사이를 전환합니다.'
-    아이콘 : i-lucide-sun-moon
-    to: '/docs/getting-started/integrations/color-mode' /docs/getting-started/integrations/color-mode' 로 이동
+title: 'Beautiful Vue UI components'
+description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+headline: 'Features'
+features:
+  - title: 'Icons'
+    description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
+    icon: 'i-lucide-smile'
+    to: '/docs/getting-started/integrations/icons'
+  - title: 'Fonts'
+    description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
+    icon: 'i-lucide-a-large-small'
+    to: '/docs/getting-started/integrations/fonts'
+  - title: 'Color Mode'
+    description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.'
+    icon: 'i-lucide-sun-moon'
+    to: '/docs/getting-started/integrations/color-mode'
 ---
 ::
 
@@ -47,257 +47,257 @@ PageSection 구성 요소는 콘텐츠를 [Container](/docs/components/container
 </template>
 ```
 
-###  제목
+### Title 파일
 
-`title`prop을 사용하여 섹션의 제목을 설정합니다.
+`title` prop 을 사용하여 섹션의 제목을 설정합니다.
 
 ::component-code
 ---
-소품 :
-  제목 : Beautiful Vue UI Components
+props:
+  title: 'Beautiful Vue UI components'
 ---
 ::
 
-###  설명
+### 설명
 
-`description`prop을 사용하여 섹션에 대한 설명을 설정합니다.
+`description` prop 을 사용하여 섹션에 대한 설명을 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  title
-소품 :
-  제목 : Beautiful Vue UI Components
-  설명 :"Nuxt UI는 Vue 및 Nuxt를 사용하여 아름답고 액세스 가능한 웹 응용 프로그램을 빌드하는 데 도움이되는 포괄적 인 구성 요소 및 유틸리티 제품군을 제공합니다."
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
 ---
 ::
 
-###  헤드라인
+### 헤더 라인
 
-`headline`prop을 사용하여 섹션의 헤드 라인을 설정합니다.
+`headline` Prop을 사용하여 섹션의 제목을 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  title
-  -  설명
-소품 :
-  제목 : Beautiful Vue UI Components
-  설명 :"Nuxt UI는 Vue 및 Nuxt를 사용하여 아름답고 액세스 가능한 웹 응용 프로그램을 빌드하는 데 도움이되는 포괄적 인 구성 요소 및 유틸리티 제품군을 제공합니다."
-  사진: "Features"
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  headline: 'Features'
 ---
 ::
 
-###  아이콘
+### Icon
 
-`icon`prop을 사용하여 섹션 아이콘을 설정합니다.
+`icon` prop 을 사용하여 섹션의 아이콘을 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  title
-  -  설명
-소품 :
-  제목 : Beautiful Vue UI Components
-  설명 :"Nuxt UI는 Vue 및 Nuxt를 사용하여 아름답고 액세스 가능한 웹 응용 프로그램을 빌드하는 데 도움이되는 포괄적 인 구성 요소 및 유틸리티 제품군을 제공합니다."
-  아이콘 : i-lucide-rocket
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  icon: 'i-lucide-rocket'
 ---
 ::
 
-###  특징
+### 기능
 
-`features`prop을 사용하여 설명 아래에 [PageFeature](/docs/components/page-feature) 목록을 다음 속성을 가진 객체 배열로 표시합니다.
+`features` 소품을 사용하여 설명 아래에 [PageFeature](/docs/components/page-feature) 목록을 다음 속성을 가진 객체 배열로 표시합니다.
 
--  @ `title?: string` @ {lang="ts-type"}
-- `description?: string` {lang="ts-type"} @
--  @ `icon?: string` @ {lang="ts-type"} @
--  @ `orientation?: 'horizontal' | 'vertical'` @ {lang="ts-type"}
+- `title?: string`{lang="ts-type"} (- `title?: string`{lang="ts-type"})
+- `description?: string`{lang="ts-type"} - {lang="ts-type"}
+- `icon?: string`{lang="ts-type"} (- `icon?: string`{lang="ts-type"})
+- `orientation?: 'horizontal' | 'vertical'`{lang="ts-type"} / - {lang="ts-type"}
 
-당신은 [Link](/docs/components/link#props) 구성 요소에서 모든 속성을 전달 할 수 있습니다 `to`, `target` 등.
+[Link](/docs/components/link#props) 구성 요소(예: `to`, `target` 등)에서 모든 속성을 전달할 수 있습니다.
 
 ::component-code
 ---
-상품명 : True
-외부:
-  -  기능
+prettier: true
+external:
+  - features
 externalTypes:
-  -  PageFeatureProps []
-무시하기:
-  -  title
-  -  설명
-  -  기능
-소품 :
-  제목 : Beautiful Vue UI Components
-  설명 :"Nuxt UI는 Vue 및 Nuxt를 사용하여 아름답고 액세스 가능한 웹 응용 프로그램을 빌드하는 데 도움이되는 포괄적 인 구성 요소 및 유틸리티 제품군을 제공합니다."
-  특징:
-    - title: '아이콘'
-      Nuxt UI는 Nuxt Icon과 통합되어 Iconify에서 200,000개 이상의 아이콘에 액세스합니다.
-      사진: "i-lucide-smile"
-      to: '/docs/getting-started/integrations/icons' /docs/getting-started/integrations/icons'에 해당되는 글 1건
-    - title: '글꼴'
-      설명: 'Nuxt UI는 Nuxt Fonts와 통합되어 플러그인 앤 플레이 글꼴 최적화를 제공합니다.'
-      아이콘 : i-lucide-a-large-small
-      to: '/docs/getting-started/integrations/fonts' 로 이동
-    - title: '색상 모드'
-      설명: 'Nuxt UI는 Nuxt Color Mode와 통합되어 빛과 어둠 사이를 전환합니다.'
-      아이콘: i-lucide-sun-moon
-      to: '/docs/getting-started/integrations/color-mode' /docs/getting-started/integrations/color-mode' 로 이동
+  - PageFeatureProps[]
+ignore:
+  - title
+  - description
+  - features
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  features:
+    - title: 'Icons'
+      description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
+      icon: 'i-lucide-smile'
+      to: '/docs/getting-started/integrations/icons'
+    - title: 'Fonts'
+      description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
+      icon: 'i-lucide-a-large-small'
+      to: '/docs/getting-started/integrations/fonts'
+    - title: 'Color Mode'
+      description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.'
+      icon: 'i-lucide-sun-moon'
+      to: '/docs/getting-started/integrations/color-mode'
 ---
 ::
 
-###  링크
+### 링크 링크
 
-`links`prop을 사용하여 설명 아래에 [Button](/docs/components/button)의 목록을 표시합니다.
+`links` prop을 사용하여 설명 아래에 [Button](/docs/components/button) 목록을 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-외부:
-  -  링크
+prettier: true
+external:
+  - links
 externalTypes:
-  - ButtonProps []
-무시하기:
-  -  title
-  -  설명
-  -  링크
-소품 :
-  제목 : Beautiful Vue UI Components
-  설명 :"Nuxt UI는 Vue 및 Nuxt를 사용하여 아름답고 액세스 가능한 웹 응용 프로그램을 빌드하는 데 도움이되는 포괄적 인 구성 요소 및 유틸리티 제품군을 제공합니다."
-  링크:
-    - label: '시작하기'
-      to: '/docs/getting-started' 로 이동
-      아이콘: i-lucide-square-play
-      색상 : Neutral
-    - label: '구성 요소 탐색'
-      대상: '/docs/components/app'
-      색상: Neutral
-      variant: '미묘한'
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  links:
+    - label: 'Get started'
+      to: '/docs/getting-started'
+      icon: 'i-lucide-square-play'
+      color: 'neutral'
+    - label: 'Explore components'
+      to: '/docs/components/app'
+      color: 'neutral'
+      variant: 'subtle'
       trailingIcon: 'i-lucide-arrow-right'
 ---
 ::
 
-###  방향
+### 방향 성
 
-`orientation`prop을 사용하여 기본 슬롯을 사용하여 방향을 변경합니다. 기본값은 `vertical`입니다.
+`orientation` 소품을 사용하여 기본 슬롯을 사용하여 방향을 변경합니다. 기본값은 `vertical`입니다.
 
 ::component-code
 ---
-상품명 : True
-외부:
-  -  기능
-  -  링크
+prettier: true
+external:
+  - features
+  - links
 externalTypes:
-  -  PageFeatureProps []
-  - ButtonProps []
-무시하기:
-  -  title
-  -  설명
-  -  icon
-  -  기능
-  -  링크
-소품 :
-  제목 : Beautiful Vue UI Components
-  설명 :"Nuxt UI는 Vue 및 Nuxt를 사용하여 아름답고 액세스 가능한 웹 응용 프로그램을 빌드하는 데 도움이되는 포괄적 인 구성 요소 및 유틸리티 제품군을 제공합니다."
-  아이콘 : i-lucide-rocket
-  방향: 수평
-  특징:
-    - title: '아이콘'
-      Nuxt UI는 Nuxt Icon과 통합되어 Iconify에서 200,000개 이상의 아이콘에 액세스합니다.
-      사진: "i-lucide-smile"
-      to: '/docs/getting-started/integrations/icons' /docs/getting-started/integrations/icons'에 해당되는 글 1건
-    - title: '글꼴'
-      설명: 'Nuxt UI는 Nuxt Fonts와 통합되어 플러그인 앤 플레이 글꼴 최적화를 제공합니다.'
-      아이콘 : i-lucide-a-large-small
-      to: '/docs/getting-started/integrations/fonts' 로 이동
-    - title: '컬러 모드'
-      설명: 'Nuxt UI는 Nuxt Color Mode와 통합되어 빛과 어둠 사이를 전환합니다.'
-      아이콘: i-lucide-sun-moon
-      to: '/docs/getting-started/integrations/color-mode' /docs/getting-started/integrations/color-mode' 로 이동
-  링크:
-    - label: '구성 요소 탐색'
-      대상: '/docs/components/app'
-      색상 : Neutral
-      variant: '미묘한'
+  - PageFeatureProps[]
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - icon
+  - features
+  - links
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  icon: 'i-lucide-rocket'
+  orientation: horizontal
+  features:
+    - title: 'Icons'
+      description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
+      icon: 'i-lucide-smile'
+      to: '/docs/getting-started/integrations/icons'
+    - title: 'Fonts'
+      description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
+      icon: 'i-lucide-a-large-small'
+      to: '/docs/getting-started/integrations/fonts'
+    - title: 'Color Mode'
+      description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.'
+      icon: 'i-lucide-sun-moon'
+      to: '/docs/getting-started/integrations/color-mode'
+  links:
+    - label: 'Explore components'
+      to: '/docs/components/app'
+      color: 'neutral'
+      variant: 'subtle'
       trailingIcon: 'i-lucide-arrow-right'
-슬롯 :
-  기본 값:|
+slots:
+  default: |
 
     <img src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy" />
 ---
 
-: img{src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
+:img{src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
 ::
 
-###  반전
+### 역
 
-`reverse`prop 을 사용하여 기본 슬롯의 방향을 반대로 바꿉니다.
+`reverse` 소품을 사용하여 기본 슬롯의 방향을 반대로 합니다.
 
 ::component-code
 ---
-상품명 : True
-외부:
-  -  기능
-  -  링크
+prettier: true
+external:
+  - features
+  - links
 externalTypes:
-  -  PageFeatureProps []
-  - ButtonProps []
-무시하기:
-  -  title
-  -  설명
-  -  icon
-  -  기능
-  -  링크
-소품 :
-  제목 : Beautiful Vue UI Components
-  설명 :"Nuxt UI는 Vue 및 Nuxt를 사용하여 아름답고 액세스 가능한 웹 응용 프로그램을 빌드하는 데 도움이되는 포괄적 인 구성 요소 및 유틸리티 제품군을 제공합니다."
-  아이콘 : i-lucide-rocket
-  방향: 수평
-  반전: true
-  특징:
-    - title: '아이콘'
-      Nuxt UI는 Nuxt Icon과 통합되어 Iconify에서 200,000개 이상의 아이콘에 액세스합니다.
-      사진: "i-lucide-smile"
-      to: '/docs/getting-started/integrations/icons' /docs/getting-started/integrations/icons'에 해당되는 글 1건
-    - title: '글꼴'
-      설명: 'Nuxt UI는 Nuxt Fonts와 통합되어 플러그인 앤 플레이 글꼴 최적화를 제공합니다.'
-      아이콘 : i-lucide-a-large-small
-      to: '/docs/getting-started/integrations/fonts' 로 이동
-    - title: '색상 모드'
-      설명: 'Nuxt UI는 Nuxt Color Mode와 통합되어 빛과 어둠 사이를 전환합니다.'
-      아이콘: i-lucide-sun-moon
-      to: '/docs/getting-started/integrations/color-mode' /docs/getting-started/integrations/color-mode' 로 이동
-  링크:
-    - label: '구성 요소 탐색'
-      대상: '/docs/components/app'
-      색상: Neutral
-      variant: '미묘한'
+  - PageFeatureProps[]
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - icon
+  - features
+  - links
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  icon: 'i-lucide-rocket'
+  orientation: horizontal
+  reverse: true
+  features:
+    - title: 'Icons'
+      description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
+      icon: 'i-lucide-smile'
+      to: '/docs/getting-started/integrations/icons'
+    - title: 'Fonts'
+      description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
+      icon: 'i-lucide-a-large-small'
+      to: '/docs/getting-started/integrations/fonts'
+    - title: 'Color Mode'
+      description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.'
+      icon: 'i-lucide-sun-moon'
+      to: '/docs/getting-started/integrations/color-mode'
+  links:
+    - label: 'Explore components'
+      to: '/docs/components/app'
+      color: 'neutral'
+      variant: 'subtle'
       trailingIcon: 'i-lucide-arrow-right'
-슬롯 :
-  기본값 :|
+slots:
+  default: |
 
     <img src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy" />
 ---
 
-: img{src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
+:img{src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
 ::
 
-##  API
+## API 파일
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### Slots
 
-:구성요소 - 슬롯
+:component-slots
 
-##  테마
+## Theme (## Theme)
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

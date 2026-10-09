@@ -1,5 +1,5 @@
 ---
-title: Pagerid
+title: PageGrid
 description: 'Ein responsives Grid-System zur Darstellung von Inhalten in einem flexiblen Layout.'
 category: page
 links:
@@ -8,41 +8,41 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageGrid.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Die PageGrid-Komponente bietet ein responsives Rasterlayout zum Anzeigen von [PageCard](/docs/components/page-card) Komponenten oder anderen Elementen, wobei automatisch 1 bis 3 Spalten basierend auf der Bildschirmgröße angepasst werden.
-
-::component-example
----
-name: 'page-grid-example'(Seiten-Grid-Beispiel)
-Klasse: 'P-8'
----
-::
-
-Sie können es auch verwenden, um eine Liste von Karten in einem Bento-Stil-Layout anzuzeigen, indem Sie `col-span-*` und `row-span-*` Utility-Klassen verwenden.
+Die PageGrid-Komponente bietet ein reaktionsschnelles Rasterlayout zum Anzeigen von [PageCard](/docs/components/page-card)-Komponenten oder anderen Elementen, das automatisch von 1 bis 3 Spalten basierend auf der Bildschirmgröße angepasst wird.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'page-grid-bento-example'(Seiten-Gitter-Bento-Beispiel)
-Klasse: 'P-8'
+name: 'page-grid-example'
+class: 'p-8'
 ---
 ::
 
-@@007@bpb
+Sie können es auch verwenden, um eine Liste von Karten in einem Bento-Stil-Layout anzuzeigen, indem Sie die Dienstprogrammklassen `col-span-*` und `row-span-*` verwenden.
 
-@@@@@@@@@ph008@@props
+::component-example
+---
+collapse: true
+name: 'page-grid-bento-example'
+class: 'p-8'
+---
+::
 
-Komponenten Props
+## API (Englisch)
 
-@@ph009@gmail.de
+### Props (nicht)
 
-Die Komponenten-Slots
+:component-props
 
-@@ph010@@gmail.de
+### Slots (englisch)
 
-Das Komponenten-Theme
+:component-slots
 
-@@ph011@@changelog @@ changelog
+## Theme (englisch)
 
-Das Component-Changelog
+:component-theme
+
+## Changelog (englisch)
+
+:component-changelog

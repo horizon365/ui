@@ -19,76 +19,76 @@ ContextMenuのデフォルトスロットで好きなものを使用し、右ク
 
 ::component-code
 ---
-きれい真
-崩壊真
-無視
-  - アイテム
-  メール：info @ ui.content
-外部
-  - アイテム
-externalTypes
-  -  ContextMenuItem [][]
-小道具
-  アイテム
-    - —ラベル外観
-        子供：
-          -  labelシステム
-            アイコンi—lucideモニター
-          -  labelライト
-            アイコンi—lucide太陽
-          -  labelダーク
-            アイコンi—lucide月
-    - —ラベルShow Sidebar
-        kbds
-          -  meta
-          お問い合わせ_- 
-      -  labelツールバーを表示
-        kbds
-          - シフト
-          - メタ
-          -  d
-      -  label折りたたみピン留めタブ
-        無効true
-    - —labelページを更新
-      -  label：Cookieの消去とリフレッシュ
-      -  labelキャッシュの消去とリフレッシュ
-      -  typeセパレーター
-      -  label開発者
-        子供：
-          - —ラベルソースを表示
-              kbds
-                - メタ
-                - シフト
-                -  u
-            -  label開発ツール
-              kbds
-                - オプション
-                - メタ
-                -  i
-            -  label：要素を検査する
-              kbds
-                - オプション
-                - メタ
-                -  c
-          - —ラベルJavaScriptコンソール
-              kbds
-                - オプション
-                - メタ
-                日本語
-スロット
-  デフォルト|
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[][]
+props:
+  items:
+    - - label: Appearance
+        children:
+          - label: System
+            icon: i-lucide-monitor
+          - label: Light
+            icon: i-lucide-sun
+          - label: Dark
+            icon: i-lucide-moon
+    - - label: Show Sidebar
+        kbds:
+          - meta
+          - s
+      - label: Show Toolbar
+        kbds:
+          - shift
+          - meta
+          - d
+      - label: Collapse Pinned Tabs
+        disabled: true
+    - - label: Refresh the Page
+      - label: Clear Cookies and Refresh
+      - label: Clear Cache and Refresh
+      - type: separator
+      - label: Developer
+        children:
+          - - label: View Source
+              kbds:
+                - meta
+                - shift
+                - u
+            - label: Developer Tools
+              kbds:
+                - option
+                - meta
+                - i
+            - label: Inspect Elements
+              kbds:
+                - option
+                - meta
+                - c
+          - - label: JavaScript Console
+              kbds:
+                - option
+                - meta
+                - j
+slots:
+  default: |
 
     <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
-      右クリックはこちら
+      Right click here
     </div>
 ---
 
-dv {class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[右クリック]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
 ### アイテム
 
-`items` propを、次のプロパティを持つオブジェクトの配列として使用します。
+`items`プロパティを次のプロパティを持つオブジェクトの配列として使用します。
 
 - `label?: string`{lang="ts-type"}
 - `icon?: string`{lang="ts-type"}
@@ -105,77 +105,77 @@ dv {class="flex items-center justify-center rounded-md border border-dashed bord
 - `class?: any`{lang="ts-type"}
 - `ui?: { item?: ClassNameValue, label?: ClassNameValue, separator?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLabel?: ClassNameValue, itemLabelExternalIcon?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingIcon?: ClassNameValue, itemTrailingKbds?: ClassNameValue, itemTrailingKbdsSize?: ClassNameValue }`{lang="ts-type"}
 
-[ Link ](/docs/components/link#props)コンポーネントから、`to`、`target`などのプロパティを渡すことができます。
+`to`、`target`など、[Link](/docs/components/link#props)コンポーネントから任意のプロパティを渡すことができます。
 
 ::component-code
 ---
-きれい真
-崩壊真
-無視
-  - アイテム
-  メール：info @ ui.content
-外部
-  - アイテム
-externalTypes
-  -  ContextMenuItem [][]
-小道具
-  アイテム
-    - —ラベル外観
-        子供：
-          -  labelシステム
-            アイコンi—lucideモニター
-          -  labelライト
-            アイコンi—lucide太陽
-          -  labelダーク
-            アイコンi—lucide月
-    - —ラベルサイドバーを表示
-        kbds
-          - メタ
-          -  s
-      -  labelツールバーを表示
-        kbds
-          - シフト
-          - メタ
-          -  d
-      -  label折りたたみピン留めタブ
-        無効true
-    - —labelページを更新
-      -  label：Cookieの消去とリフレッシュ
-      -  label：キャッシュの消去とリフレッシュ
-      - タイプセパレーター
-      -  label開発者
-        子供：
-          - —ラベルソースを表示
-              kbds
-                - メタ
-                - シフト
-                -  u
-            -  label開発ツール
-              kbds
-                - オプション
-                - メタ
-                -  i
-            -  label：要素の検査
-              kbds
-                - オプション
-                - メタ
-                -  c
-          - —ラベルJavaScriptコンソール
-              kbds
-                - オプション
-                - メタ
-                -  j
-  UI
-    内容'w—48'
-スロット
-  デフォルト|
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[][]
+props:
+  items:
+    - - label: Appearance
+        children:
+          - label: System
+            icon: i-lucide-monitor
+          - label: Light
+            icon: i-lucide-sun
+          - label: Dark
+            icon: i-lucide-moon
+    - - label: Show Sidebar
+        kbds:
+          - meta
+          - s
+      - label: Show Toolbar
+        kbds:
+          - shift
+          - meta
+          - d
+      - label: Collapse Pinned Tabs
+        disabled: true
+    - - label: Refresh the Page
+      - label: Clear Cookies and Refresh
+      - label: Clear Cache and Refresh
+      - type: separator
+      - label: Developer
+        children:
+          - - label: View Source
+              kbds:
+                - meta
+                - shift
+                - u
+            - label: Developer Tools
+              kbds:
+                - option
+                - meta
+                - i
+            - label: Inspect Elements
+              kbds:
+                - option
+                - meta
+                - c
+          - - label: JavaScript Console
+              kbds:
+                - option
+                - meta
+                - j
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
     <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
-      右クリックはこちら
+      Right click here
     </div>
 ---
 
-dv {class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[右クリック]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
 ::note
@@ -183,152 +183,152 @@ dv {class="flex items-center justify-center rounded-md border border-dashed bord
 ::
 
 ::tip
-各アイテムは、`items`プロパティと同じプロパティを持つオブジェクトの`children`配列を取り、ネストされたメニューを作成し、`open`、`defaultOpen`、および`content`プロパティを使用して制御できます。
+各アイテムは、`items`プロパティと同じプロパティを持つオブジェクトの`children`配列を取り、`open`、`defaultOpen`、`content`プロパティを使用して制御できるネストされたメニューを作成できます。
 ::
 
 ### サイズ
 
-ContextMenuのサイズを変更するには、`size`プロパティを使用します。
+`size`プロパティを使用してContextMenuのサイズを変更します。
 
 ::component-code
 ---
-きれい真
-崩壊真
-無視
-  - アイテム
-  メール：info @ ui.content
-外部
-  - アイテム
-externalTypes
-  -  ContextMenuItem []
-小道具
-  サイズXL
-  アイテム
-    -  labelシステム
-      アイコンi—lucideモニター
-    -  labelライト
-      アイコンi—lucide太陽
-    -  labelダーク
-      アイコンi—lucide月
-  UI
-    内容'w—48'
-スロット
-  デフォルト|
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[]
+props:
+  size: xl
+  items:
+    - label: System
+      icon: i-lucide-monitor
+    - label: Light
+      icon: i-lucide-sun
+    - label: Dark
+      icon: i-lucide-moon
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
     <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
-      右クリックはこちら
+      Right click here
     </div>
 ---
 
-dv {class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[右クリック]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
-###  Modal
+### Modal
 
-ContextMenuが外部コンテンツとのインタラクションをブロックするかどうかを制御するには、`modal`プロパティを使用します。デフォルトは`true`です。
+`modal`プロパティを使用して、ContextMenuが外部コンテンツとのインタラクションをブロックするかどうかを制御します。デフォルトは`true`です。
 
 ::component-code
 ---
-きれい真
-崩壊真
-無視
-  - アイテム
-  メール：info @ ui.content
-外部
-  - アイテム
-externalTypes
-  -  ContextMenuItem []
-小道具
-  モーダルfalse
-  アイテム
-    -  labelシステム
-      アイコンi—lucideモニター
-    -  labelライト
-      アイコンi—lucide太陽
-    -  labelダーク
-      アイコンi—lucide月
-  UI
-    内容'w—48'
-スロット
-  デフォルト|
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[]
+props:
+  modal: false
+  items:
+    - label: System
+      icon: i-lucide-monitor
+    - label: Light
+      icon: i-lucide-sun
+    - label: Dark
+      icon: i-lucide-moon
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
     <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
-      右クリックはこちら
+      Right click here
     </div>
 ---
 
-dv {class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[右クリック]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
 
 ### 無効
 
-ContextMenuを無効にするには、`disabled`プロパティを使用します。
+`disabled`プロパティを使用してContextMenuを無効にします。
 
 ::component-code
 ---
-きれい真
-崩壊真
-無視
-  - アイテム
-  メール：info @ ui.content
-外部
-  - アイテム
-externalTypes
-  -  ContextMenuItem []
-小道具
-  無効true
-  アイテム
-    -  labelシステム
-      アイコンi—lucideモニター
-    -  labelライト
-      アイコンi—lucide太陽
-    -  labelダーク
-      アイコンi—lucide月
-  UI
-    内容'w—48'
-スロット
-  デフォルト|
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[]
+props:
+  disabled: true
+  items:
+    - label: System
+      icon: i-lucide-monitor
+    - label: Light
+      icon: i-lucide-sun
+    - label: Dark
+      icon: i-lucide-moon
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
     <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
-      右クリックはこちら
+      Right click here
     </div>
 ---
 
-dv {class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[ここを右クリック]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
 ## 例
 
 ### チェックボックス項目付き
 
-`type`プロパティを`checkbox`とともに使用し、`checked`/`onUpdateChecked`プロパティを使用して項目のチェック状態を制御できます。
+`checkbox`で`type`プロパティを使用し、`checked`/`onUpdateChecked`プロパティを使用して項目のチェック状態を制御できます。
 
 ::component-example
 ---
-崩壊真
-名前'context—menu—checkbox—items—example'
+collapse: true
+name: 'context-menu-checkbox-items-example'
 ---
 ::
 
 ::note
-アイテムの`checked`状態に対する反応性を確保するために、`items`配列を`computed`の中でラップすることをお勧めします。
+アイテムの`checked`状態に対する反応性を確保するには、`items`配列を`computed`内でラップすることをお勧めします。
 ::
 
 ### カラーアイテム付き
 
-`color`プロパティを使用して、特定のアイテムを色でハイライトすることができます。
+`color`プロパティを使用して、特定のアイテムを色でハイライトできます。
 
 ::component-example
 ---
-崩壊真
-名前'context—menu—color—items—example'
+collapse: true
+name: 'context-menu-color-items-example'
 ---
 ::
 
 ### カスタムスロット付き
 
-特定の項目をカスタマイズするには、`slot`プロパティを使用します。
+`slot`プロパティを使用して、特定の項目をカスタマイズします。
 
 以下のスロットにアクセスできます：
 
@@ -339,18 +339,18 @@ dv {class="flex items-center justify-center rounded-md border border-dashed bord
 
 ::component-example
 ---
-崩壊真
-名前'context—menu—custom—slot—example'
+collapse: true
+name: 'context-menu-custom-slot-example'
 ---
 ::
 
 ::tip{to="#slots"}
-また、`#item`、`#item-leading`、`#item-label`、および`#item-trailing`スロットを使用して、すべてのアイテムをカスタマイズすることもできます。
+`#item`、`#item-leading`、`#item-label`、`#item-trailing`スロットを使用して、すべてのアイテムをカスタマイズすることもできます。
 ::
 
-### 抽出ショートカット
+### ショートカットを抽出
 
-[ extractShortcuts ](/docs/composables/extract-shortcuts)ユーティリティを使用して、メニュー項目から`kbds`プロパティでショートカットを自動的に定義します。ショートカットを再帰的に抽出し、[ defineShortcuts ](/docs/composables/define-shortcuts)と互換性のあるオブジェクトを返します。
+[extractShortcuts](/docs/composables/extract-shortcuts)ユーティリティを使用して、メニュー項目から自動的にショートカットを`kbds`プロパティで定義します。ショートカットを再帰的に抽出し、[defineShortcuts](/docs/composables/define-shortcuts)と互換性のあるオブジェクトを返します。
 
 ```vue
 <script setup lang="ts">
@@ -413,27 +413,27 @@ defineShortcuts(extractShortcuts(items))
 ```
 
 ::note
-この例では、kbd {value="meta"} kbd {value="S" class="ms-px"} kbd {value="shift"} kbd {value="meta" class="ms-px"} kbd {value="D" class="ms-px"} kbd {value="option"} kbd {value="meta" class="ms-px"} kbd {value="U" class="ms-px"} kbd {value="option"} kbd {value="meta" class="ms-px"} kbd {value="I" class="ms-px"} kbd {value="option"} kbd {value="meta" class="ms-px"} kbd {value="C" class="ms-px"} and kbd {value="option"} kbd {value="meta" class="ms-px"} kbd {value="J" class="ms-px"}は、対応するアイテムの`select`関数をトリガーします。
+この例では、kbd{value="meta"} kbd{value="S" class="ms-px"} kbd{value="shift"} kbd{value="meta" class="ms-px"} kbd{value="D" class="ms-px"} kbd{value="option"} kbd{value="meta" class="ms-px"} kbd{value="U" class="ms-px"} kbd{value="option"} kbd{value="meta" class="ms-px"} kbd{value="I" class="ms-px"} kbd{value="option"} kbd{value="meta" class="ms-px"} kbd{value="C" class="ms-px"}およびkbd{value="option"} kbd{value="meta" class="ms-px"}は対応するアイテムの`select`関数をトリガーします。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

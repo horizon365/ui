@@ -1,5 +1,5 @@
 ---
-title: DashboardBearbeiten
+title: Dashboard-Anzeige
 description: 'Eine responsive Navbar, die in einem Dashboard angezeigt wird.'
 category: dashboard
 links:
@@ -8,11 +8,11 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardNavbar.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Die DashboardNavbar-Komponente ist eine responsive Navigationsleiste, die in die Komponente [DashboardSidebar](/docs/components/dashboard-sidebar) integriert ist.
+Die DashboardNavbar-Komponente ist eine responsive Navigationsleiste, die in die [DashboardSidebar](/docs/components/dashboard-sidebar)-Komponente integriert ist.
 
-Verwenden Sie es innerhalb des `header`-Schlitzes der [DashboardPanel](/docs/components/dashboard-panel) Komponente:
+Verwenden Sie es im `header`-Steckplatz der [DashboardPanel](/docs/components/dashboard-panel)-Komponente:
 
 ```vue [pages/index.vue]{9-11}
 <script setup lang="ts">
@@ -30,15 +30,15 @@ definePageMeta({
 </template>
 ```
 
-Verwenden Sie die `left`,`default` und `right` Slots, um die Navigationsleiste anzupassen.
+Verwenden Sie die `left`, `default` und `right` Steckplätze, um die Navigationsleiste anzupassen.
 
 ::component-example
 ---
-Schöner: wahr
-Name: 'Dashboard-Navbar-Beispiel'
-Klasse: '! px-0! pt-0'
-Props:
-  Klasse: "W-voll"
+prettier: true
+name: 'dashboard-navbar-example'
+class: '!px-0 !pt-0'
+props:
+  class: 'w-full'
 ---
 ::
 
@@ -46,85 +46,85 @@ Props:
 In diesem Beispiel verwenden wir die Komponente [Tabs](/docs/components/tabs) im rechten Steckplatz, um einige Registerkarten anzuzeigen.
 ::
 
-@@ph032@title @ Übersetzung
+### title Übersetzung
 
-Verwenden Sie `title` prop, um den Titel der Navbar festzulegen.
-
-::component-code
----
-Hide:
-  @@34@Klasse
-Props:
-  Titel: „ Dashboard "
-  Klasse: "W-voll"
-Klasse: '! px-0! pt-0'
----
-::
-
-@@ph035@@gmail.de
-
-Verwenden Sie `icon` prop, um das Symbol der Navigationsleiste zu setzen.
+Verwenden Sie die `title`-prop, um den Titel der Navigationsleiste festzulegen.
 
 ::component-code
 ---
-Hide:
-  @@@@@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@class@class@class@class@classclass@class@class@class@classclassclass@classclass@class@class
-Ignoriert:
-  @@@@@@38@title
-Props:
-  Titel: „ Dashboard "
-  Das I-Lucide-Haus
-  Klasse: "W-voll"
-Klasse: '! px-0! pt-0'
+hide:
+  - class
+props:
+  title: 'Dashboard'
+  class: 'w-full'
+class: '!px-0 !pt-0'
 ---
 ::
 
-@@ph039@@@toggle
+### Icon (englisch)
 
-Verwenden Sie `toggle` prop, um die auf dem Handy angezeigte Umschalttaste anzupassen, die die Komponente [DashboardSidebar](/docs/components/dashboard-sidebar) öffnet.
+Verwenden Sie die `icon` prop, um das Symbol der Navigationsleiste festzulegen.
 
-Sie können jede Eigenschaft aus der Komponente [Button](/docs/components/button) übergeben, um sie anzupassen.
+::component-code
+---
+hide:
+  - class
+ignore:
+  - title
+props:
+  title: 'Dashboard'
+  icon: 'i-lucide-house'
+  class: 'w-full'
+class: '!px-0 !pt-0'
+---
+::
+
+### Toggle (nicht)
+
+Verwenden Sie die `toggle`-Prop, um die Umschalttaste anzupassen, die auf dem Handy angezeigt wird und die die Komponente [DashboardSidebar](/docs/components/dashboard-sidebar) öffnet.
+
+Sie können jede Eigenschaft der Komponente [Button](/docs/components/button) übergeben, um sie anzupassen.
 
 ::component-example
 ---
-iframe: wahr
-iframeMobile: Richtig
-Übertreibungen: wahr
-name: 'dashboard-navbar-toggle-example'(Beispiel für die Dashboard-Navbar-Toggle-Example)
-Props:
-  Klasse: "W-voll"
+iframe: true
+iframeMobile: true
+overflowHidden: true
+name: 'dashboard-navbar-toggle-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-@@ph049@@toggle Seite
+### Toggle Side Seite
 
-Verwenden Sie `toggle-side` prop, um die Seite der Toggle-Taste zu ändern. Standardmäßig `right`.
+Verwenden Sie die `toggle-side`-Stütze, um die Seite der Toggle-Taste zu wechseln. Standardmäßig ist `right`.
 
 ::component-example
 ---
-iframe: wahr
-iframeMobile: Richtig
-Übertreibungen: wahr
-Name: 'Dashboard-Navbar-Toggle-Side-Beispiel'
-Props:
-  Klasse: "W-voll"
+iframe: true
+iframeMobile: true
+overflowHidden: true
+name: 'dashboard-navbar-toggle-side-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-@@@@@@522@@@bpb
+## API (englisch)
 
-@@ph053@@gmail.de
+### Props (englisch)
 
-Komponenten Props
+:component-props
 
-@@ph054@gmail.de
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@@@@@@555@@@@@@555@55@@@555@@@@55@@@@555@@@@55@@@@@@55@@@@@@@@@@@@@Themes
+## Theme (englisch)
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph056@@changelog @@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

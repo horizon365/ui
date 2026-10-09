@@ -10,15 +10,15 @@ links:
 
 ## 使用法
 
-DashboardResizeHandleコンポーネントは、[ DashboardSidebar ](/docs/components/dashboard-sidebar)および[ DashboardPanel ]( PH07 )コンポーネントで使用されます。
+DashboardResizeHandleコンポーネントは、[DashboardSidebar](/docs/components/dashboard-sidebar)および[DashboardPanel](/docs/components/dashboard-panel)コンポーネントで使用されます。
 
-`resizable` propが設定されていると自動的に表示されます。**は手動で追加する必要はありません。
+`resizable`プロパティが設定されていると自動的に表示されます。**手動で追加する必要はありません。
 
 ## 例
 
-### 内`resize-handle`スロット
+### x`resize-handle`スロット内
 
-`resizable` propが設定されていると、このコンポーネントが自動的に表示されますが、[ DashboardSidebar ](/docs/components/dashboard-sidebar)および[ DashboardPanel ](/docs/components/dashboard-panel)コンポーネントの`resize-handle`スロットを使用してハンドルをカスタマイズできます。
+`resizable`プロパティが設定されているときにこのコンポーネントが自動的に表示されますが、[DashboardSidebar](/docs/components/dashboard-sidebar)および[DashboardPanel](/docs/components/dashboard-panel)コンポーネントの`resize-handle`スロットを使用してハンドルをカスタマイズできます。
 
 ::code-group
 
@@ -65,23 +65,23 @@ definePageMeta({
 ::
 
 ::note
-この例では、ホバー時に垂直線を表示するために`after`疑似要素を追加しています。
+この例では、ホバー時に垂直線を表示する`after`疑似要素を追加しています。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

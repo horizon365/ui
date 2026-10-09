@@ -7,20 +7,20 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Footer.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Le composant Footer rend un élément `<footer>`.
+Le composant Pied de page rend un élément `<footer>`.
 
-Utilisez les emplacements `left`,`default` et `right` pour personnaliser le pied de page.
+Utilisez les fentes `left`, `default` et `right` pour personnaliser le pied de page.
 
 ::component-example
 ---
-Étiquette: true
-Collapse: vrai
-nom: 'exemple'
-classe: '! p-0'
-Props:
-  Catégorie: w-full
+prettier: true
+collapse: true
+name: 'footer-example'
+class: '!p-0'
+props:
+  class: 'w-full'
 ---
 ::
 
@@ -29,12 +29,12 @@ Dans cet exemple, nous utilisons le composant [NavigationMenu](/docs/components/
 ::
 
 ::tip{to="/docs/components/footer-columns"}
-Vous pouvez utiliser le composant `FooterColumns` pour afficher une liste de liens à l'intérieur du slot `top`.
+Vous pouvez utiliser le composant `FooterColumns` pour afficher une liste de liens à l'intérieur de l'emplacement `top`.
 ::
 
-@@ph011@@exemples
+## Exemples
 
-### Dans `app.vue`
+### Avec `app.vue`
 
 Utilisez le composant Pied de page dans votre `app.vue` ou dans une mise en page:
 
@@ -113,20 +113,20 @@ const items: NavigationMenuItem[] = [{
 Dans cet exemple, nous utilisons le composant [Separator](/docs/components/separator) pour ajouter une bordure au-dessus du pied de page.
 ::
 
-@@ph089@api
+## api
 
-@@ph090@@props
+### Props
 
-Composants-props
+:component-props
 
-@@ph091@@slot
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph092@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

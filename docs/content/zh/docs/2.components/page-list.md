@@ -8,46 +8,46 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageList.vue
 ---
 
-## 使用情况
+## 用法
 
-PageList组件提供了一种以垂直列表布局显示内容的灵活方式。它非常适合创建[PageCard](/docs/components/page-card)组件或任何其他元素的堆叠列表，并且在项目之间使用可选分隔符。
+PageList组件提供了一种灵活的方式来以垂直列表布局显示内容。它非常适合创建[PageCard](/docs/components/page-card)组件或任何其他元素的堆叠列表，项目之间具有可选的分隔符。
 
 ::component-example
 ---
-收阖：true
-名称：'页面列表示例'
-道具类：
-  类别：'w-完整'
+collapse: true
+name: 'page-list-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-分帐
+### 分割
 
 使用`divide`属性在每个子元素之间添加分隔符。
 
 ::component-example
 ---
-收阖：true
-名称：'页面列表分隔示例'
-道具：
-  类别：'w-完整'
+collapse: true
+name: 'page-list-divide-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-活性成分
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽
+### 老虎机
 
-：组件插槽
+:component-slots
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

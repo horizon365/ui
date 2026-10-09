@@ -8,7 +8,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageCTA.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 El componente PageCTA proporciona una forma flexible de mostrar una llamada a la acción en sus páginas con una ilustración en la ranura predeterminada.
 
@@ -16,24 +16,24 @@ El componente PageCTA proporciona una forma flexible de mostrar una llamada a la
 
 ::u-page-c-t-a
 ---
-Título:"Confiable y apoyado por nuestra increíble comunidad"
-Vista previa de la última Tailwind CSS y empezar con Nuxt UI.
-Orientación: Horizontal
-izquierda:
-  - label:"Inicio"
-    Categoría:"Neutral"
-  - label:'Más información'
-    Categoría:"Neutral"
-    Variación:"Sutil"
-    Icono: 'i-lucide-arrow-right'
+title: 'Trusted and supported by our amazing community'
+description: 'Preview the latest Tailwind CSS and get started with Nuxt UI.'
+orientation: horizontal
+links:
+  - label: 'Get started'
+    color: 'neutral'
+  - label: 'Learn more'
+    color: 'neutral'
+    variant: 'subtle'
+    trailingIcon: 'i-lucide-arrow-right'
 ---
 
-Vía: img{src="https://picsum.photos/640/616" width="320" height="308" alt="Illustration" class="w-full rounded-lg"}
+:img{src="https://picsum.photos/640/616" width="320" height="308" alt="Illustration" class="w-full rounded-lg"}
 ::
 
 ::
 
-Úselo dentro de un [PageSection](/docs/components/page-section) componente o directamente en su página:
+Úselo dentro de un componente [PageSection](/docs/components/page-section) o directamente en su página:
 
 ```vue {4,8-10}
 <template>
@@ -52,89 +52,89 @@ Vía: img{src="https://picsum.photos/640/616" width="320" height="308" alt="Illu
 ```
 
 ::tip
-Utilice `px-0` y `rounded-none` clases para hacer que el CTA llene el borde de la página en el móvil.
+Utilice las clases `px-0` y `rounded-none` para hacer que el CTA llene el borde de la página en el móvil.
 ::
 
-@@25@Título
+### Nombre
 
-Utilice el prop `title` para establecer el título de la CTA.
+Utilice el prop `title` para establecer el título del CTA.
 
 ::component-code{slug="page-CTA"}
 ---
-Props:
-  Título:"Confiable y apoyado por nuestra increíble comunidad"
+props:
+  title: 'Trusted and supported by our amazing community'
 ---
 ::
 
-@27@Descripción
+### Descripción
 
 Utilice el prop `description` para establecer la descripción de la CTA.
 
 ::component-code{slug="page-CTA"}
 ---
-Categoría: true
-Ignora:
-  @29@title
-Props:
-  Título:"Confiable y apoyado por nuestra increíble comunidad"
-  "Hemos construido una asociación fuerte y duradera, su confianza es nuestra fuerza motriz, que nos impulsa hacia el éxito compartido".
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Trusted and supported by our amazing community'
+  description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
 ---
 ::
 
-@@pH030@enlaces
+### Enlaces
 
-Utilice el prop `links` para mostrar una lista de [Button](/docs/components/button) bajo la descripción.
+Utilice el prop `links` para mostrar una lista de [Button](/docs/components/button) debajo de la descripción.
 
 ::component-code{slug="page-CTA"}
 ---
-Categoría: true
-Externo:
-  @36@enlaces
-Externalidades:
-  @@@P37@@P37@@P37@@P37@@@P37@@P37@@P37@@P37@P37@@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37@P37)
-Ignora:
-  @38@title
-  @@ph039@descripción
-  @400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Título:"Confiable y apoyado por nuestra increíble comunidad"
-  "Hemos construido una asociación fuerte y duradera, su confianza es nuestra fuerza motriz, que nos impulsa hacia el éxito compartido".
-  izquierda:
-    - label:'Empezando'
-      Categoría:"Neutral"
-    - label:'Más información'
-      Categoría:"Neutral"
-      Variación:"Sutil"
-      Icono: 'i-lucide-arrow-right'
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Trusted and supported by our amazing community'
+  description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
+  links:
+    - label: 'Get started'
+      color: 'neutral'
+    - label: 'Learn more'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
 ---
 ::
 
-@@43@Variante
+### Variante en español
 
-Utilice el prop `variant` para cambiar el estilo de la CTA.
+Utilice el accesorio `variant` para cambiar el estilo de la CTA.
 
 ::component-code{slug="page-CTA"}
 ---
-Categoría: true
-Externo:
-  @@45000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externalidades:
-  @@@P046@@BotónProps []
-Ignora:
-  @@47@title
-  @@ph048@descripción
-  @494@enlaces
-Props:
-  Título:"Confiable y apoyado por nuestra increíble comunidad"
-  "Hemos construido una asociación fuerte y duradera, su confianza es nuestra fuerza motriz, que nos impulsa hacia el éxito compartido".
-  Categoría: Soft
-  izquierda:
-    - label:"Empezando"
-      Categoría:"Neutral"
-    - label:'Más información'
-      Categoría:"Neutral"
-      Variación:"Sutil"
-      Icono: 'i-lucide-arrow-right'
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Trusted and supported by our amazing community'
+  description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
+  variant: soft
+  links:
+    - label: 'Get started'
+      color: 'neutral'
+    - label: 'Learn more'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
 ---
 ::
 
@@ -142,91 +142,91 @@ Props:
 Puede aplicar la clase `light` o `dark` a la ranura `links` cuando se utiliza la variante `solid` para invertir los colores.
 ::
 
-@@P056@Orientación
+### Orientación
 
 Utilice el prop `orientation` para cambiar la orientación con la ranura predeterminada.
 
 ::component-code{slug="page-CTA"}
 ---
-Categoría: true
-Externo:
-  @@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externalidades:
-  @@@P060@@BotónProps []
-Ignora:
-  @@pH061@title (en inglés)
-  @@ph062@descripción
-  @@pH063@enlaces
-Props:
-  Título:"Confiable y apoyado por nuestra increíble comunidad"
-  "Hemos construido una asociación fuerte y duradera, su confianza es nuestra fuerza motriz, que nos impulsa hacia el éxito compartido".
-  Orientación: Horizontal
-  izquierda:
-    - label:"Empezando"
-      Categoría:"Neutral"
-    - label:'Más información'
-      Categoría:"Neutral"
-      Variación:"Sutil"
-      Icono: 'i-lucide-arrow-right'
-Los slots:
-  Default:|
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Trusted and supported by our amazing community'
+  description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
+  orientation: horizontal
+  links:
+    - label: 'Get started'
+      color: 'neutral'
+    - label: 'Learn more'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
-    @@@ 66 @
+    <img src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy" />
 ---
 
-Vía: img{src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
+:img{src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
 ::
 
-### Reverse (Edición española)
+Xph134xReverse (Edición española)
 
-Utilice el prop `reverse` para invertir la orientación de la ranura predeterminada.
+Utilice el accesorio `reverse` para invertir la orientación de la ranura predeterminada.
 
 ::component-code{slug="page-CTA"}
 ---
-Categoría: true
-Externo:
-  @700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externalidades:
-  @@701@@buttonprops (en inglés)
-Ignora:
-  @@2007@título
-  @@pH073@descripción
-  @@74@enlaces
-Props:
-  Título:"Confiable y apoyado por nuestra increíble comunidad"
-  "Hemos construido una asociación fuerte y duradera, su confianza es nuestra fuerza motriz, que nos impulsa hacia el éxito compartido".
-  Orientación: Horizontal
-  Reverso: Verdad
-  izquierda:
-    - label:"Empezando"
-      Categoría:"Neutral"
-    - label:'Más información'
-      Categoría:"Neutral"
-      Variación:"Sutil"
-      Icono: 'i-lucide-arrow-right'
-Los slots:
-  Default:|
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Trusted and supported by our amazing community'
+  description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
+  orientation: horizontal
+  reverse: true
+  links:
+    - label: 'Get started'
+      color: 'neutral'
+    - label: 'Learn more'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
-    @@777 @
+    <img src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy" />
 ---
 
-Vía: img{src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
+:img{src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
 ::
 
-@799@@pccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+## API (Edición española)
 
-@080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Propciones
 
-Artículo siguienteCOMPONENTES {slug="page-CTA"}
+:component-props{slug="page-CTA"}
 
-@@82000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots
 
-Componentes: {slug="page-CTA"}
+:component-slots{slug="page-CTA"}
 
-@084@@Proyecto
+## Temas
 
-Artículo siguiente{slug="page-CTA"}
+:component-theme{slug="page-CTA"}
 
-@86@@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

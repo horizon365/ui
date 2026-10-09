@@ -8,30 +8,30 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageSection.vue
 ---
 
-## 使用情况
+## 用法
 
-PageSection组件将您的内容包装在[Container](/docs/components/container)中，同时保持了全宽灵活性，使您可以轻松地添加背景色、图像或图案。它提供了一种灵活的方式来显示内容，并在默认插槽中显示插图。
+PageSection组件将您的内容包装在[Container](/docs/components/container)中，同时保持全宽度的灵活性，使您可以轻松添加背景颜色、图像或图案。它提供了一种灵活的方式来显示内容，并在默认插槽中显示插图。
 
 ::code-preview
 
 ::u-page-section
 ---
-title：'美丽的Vue UI组件'
-产品说明："Nuxt UI提供了一套全面的组件和实用程序，可帮助您使用Vue和Nuxt构建美观且易于访问的Web应用程序。"
-标题："功能"
-特点：
-  - title："图标"
-    描述："Nuxt UI与Nuxt Icon集成，可从Iconify访问超过200，000个图标。"
-    图标："我-透明-微笑"
-    到：'/docs/入门/集成/图标'
-  - title："字体"
-    描述：'Nuxt UI与Nuxt字体集成，以提供即插即用字体优化。'
-    图标："i-lucide-a-大-小"
-    到："/docs/入门/集成/字体"
-  - title："彩色模式"
-    描述："Nuxt UI与Nuxt颜色模式集成，可在亮暗之间切换。"
-    图标："i-lucide-日月"
-    到：'/docs/入门/整合/色彩模式'
+title: 'Beautiful Vue UI components'
+description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+headline: 'Features'
+features:
+  - title: 'Icons'
+    description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
+    icon: 'i-lucide-smile'
+    to: '/docs/getting-started/integrations/icons'
+  - title: 'Fonts'
+    description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
+    icon: 'i-lucide-a-large-small'
+    to: '/docs/getting-started/integrations/fonts'
+  - title: 'Color Mode'
+    description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.'
+    icon: 'i-lucide-sun-moon'
+    to: '/docs/getting-started/integrations/color-mode'
 ---
 ::
 
@@ -49,255 +49,255 @@ title：'美丽的Vue UI组件'
 
 ### 标题
 
-使用`title`道具设置节的标题。
+使用`title` prop设置节的标题。
 
 ::component-code
 ---
-道具：
-  title：'美丽的Vue UI组件'
+props:
+  title: 'Beautiful Vue UI components'
 ---
 ::
 
-说明：
+### 说明
 
-使用`description`属性设置节的说明。
+使用`description` prop设置该部分的描述。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标题：
-道具：
-  title：'美丽的Vue UI组件'
-  产品说明："Nuxt UI提供了一套全面的组件和实用程序，可帮助您使用Vue和Nuxt构建美观且易于访问的Web应用程序。"
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
 ---
 ::
 
-标题：
+### 标题
 
-使用`headline`道具设置节的标题。
+使用`headline` prop设置该节的标题。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标题
-  描述：
-道具：
-  title：'美丽的Vue UI组件'
-  产品说明："Nuxt UI提供了一套全面的组件和实用程序，可帮助您使用Vue和Nuxt构建美观且易于访问的Web应用程序。"
-  标题：“功能”
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  headline: 'Features'
 ---
 ::
 
-### 图标
+### Icon
 
-使用`icon`道具来设定区段的图标。
+使用`icon` prop设置分区的图标。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 标题
-  描述：
-道具类：
-  title：'美丽的Vue UI组件'
-  产品说明：“Nuxt UI提供了一套全面的组件和实用程序，可帮助您使用Vue和Nuxt构建美观且易于访问的Web应用程序。”
-  图标：“i-lucide-火箭”
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  icon: 'i-lucide-rocket'
 ---
 ::
 
-功能特性
+### 特点
 
-使用`features`属性可在说明下将[PageFeature](/docs/components/page-feature)的列表显示为具有下列属性的对象数组：
+使用`features` prop在描述下显示[PageService](/docs/components/page-feature)的列表，作为具有以下属性的对象数组：
 
-我的天啊！
-我的天啊！
-我的天啊！
-我的天啊！
+- `title?: string`{lang="ts-type"}
+085x年12月15日星期一
+088x年12月15日星期一
+090{lang="ts-type"}的字符串
 
-您可以从[Link](/docs/components/link#props)元件传递任何属性，例如`to`、`target`等。
+您可以从[Link](/docs/components/link#props)组件传递任何属性，如`to`、`target`等。
 
 ::component-code
 ---
-更漂亮：真的
-外部：
-  功能特性
-外部类型：
-  - 页面功能属性[]
-忽略：
-  标题
-  描述
-  功能特性
-道具：
-  title：'美丽的Vue UI组件'
-  产品说明：“Nuxt UI提供了一套全面的组件和实用程序，可帮助您使用Vue和Nuxt构建美观且易于访问的Web应用程序。”
-  特点：
-    - title：“图标”
-      描述：“Nuxt UI与Nuxt Icon集成，可从Iconify访问超过200，000个图标。”
-      图标：“我-透明-微笑”
-      到：'/docs/入门/集成/图标'
-    标题：“字体”
-      描述：'Nuxt UI与Nuxt字体集成，以提供即插即用字体优化。'
-      图标：“i-lucide-a-大-小”
-      到：“/docs/入门/集成/字体”
-    - title：“彩色模式”
-      描述：“Nuxt UI与Nuxt颜色模式集成，可在亮暗之间切换。”
-      图标：“i-lucide-日月”
-      到：'/docs/入门/整合/色彩模式'
+prettier: true
+external:
+  - features
+externalTypes:
+  - PageFeatureProps[]
+ignore:
+  - title
+  - description
+  - features
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  features:
+    - title: 'Icons'
+      description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
+      icon: 'i-lucide-smile'
+      to: '/docs/getting-started/integrations/icons'
+    - title: 'Fonts'
+      description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
+      icon: 'i-lucide-a-large-small'
+      to: '/docs/getting-started/integrations/fonts'
+    - title: 'Color Mode'
+      description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.'
+      icon: 'i-lucide-sun-moon'
+      to: '/docs/getting-started/integrations/color-mode'
 ---
 ::
 
-链接
+### 链接
 
-使用`links`属性在描述下显示[按钮](/docs/components/button的列表。
+使用`links`属性在描述下显示[Button](/docs/components/button)的列表。
 
 ::component-code
 ---
-更漂亮：真的
-外部：
-  链接
-外部类型：
-  - 按钮属性[]
-忽略：
-  标题：
-  描述：
-  链接
-道具：
-  title：'美丽的Vue UI组件'
-  产品说明：“Nuxt UI提供了一套全面的组件和实用程序，可帮助您使用Vue和Nuxt构建美观且易于访问的Web应用程序。”
-  链接：
-    - 标签：“开始使用”
-      收件人：“/docs/开始使用”
-      图标：“i-lucide-square-play”（透明方块游戏）
-      颜色：“中性”
-    - label：“浏览组件”
-      到：“/docs/组件/应用程序”
-      颜色：“中性”
-      变体：“细微”
-      尾部图标：'i-透明箭头-右'
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  links:
+    - label: 'Get started'
+      to: '/docs/getting-started'
+      icon: 'i-lucide-square-play'
+      color: 'neutral'
+    - label: 'Explore components'
+      to: '/docs/components/app'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
 ---
 ::
 
-方向
+### 方向
 
-使用`orientation`道具更改默认插槽的方向。默认为`vertical`。
+使用`orientation`属性将默认的slot. px的方向更改为`vertical`。
 
 ::component-code
 ---
-更漂亮：真的
-外部：
-  功能特性
-  链接
-外部类型：
-  - 页面功能属性[]
-  - 按钮属性[]
-忽略：
-  标题：
-  描述：
-  图标
-  功能特性
-  链接
-道具：
-  title：'美丽的Vue UI组件'
-  产品说明：“Nuxt UI提供了一套全面的组件和实用程序，可帮助您使用Vue和Nuxt构建美观且易于访问的Web应用程序。”
-  图标：“i-lucide-火箭”
-  方向：水平
-  特点：
-    “图标”
-      描述：“Nuxt UI与Nuxt Icon集成，可从Iconify访问超过200，000个图标。”
-      图标：“我-透明-微笑”
-      到：'/docs/入门/集成/图标'
-    “字体”
-      描述：'Nuxt UI与Nuxt字体集成，以提供即插即用字体优化。'
-      图标：“i-lucide-a-大-小”
-      到：“/docs/入门/集成/字体”
-    - title：“彩色模式”
-      描述：“Nuxt UI与Nuxt颜色模式集成，可在亮暗之间切换。”
-      图标：“i-lucide-日月”
-      到：'/docs/入门/整合/色彩模式'
-  链接：
-    - label：“浏览组件”
-      到：“/docs/组件/应用程序”
-      颜色：“中性”
-      变体：“细微”
-      尾部图标：'i-透明箭头-右'
-插槽：
-  默认值：|
+prettier: true
+external:
+  - features
+  - links
+externalTypes:
+  - PageFeatureProps[]
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - icon
+  - features
+  - links
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  icon: 'i-lucide-rocket'
+  orientation: horizontal
+  features:
+    - title: 'Icons'
+      description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
+      icon: 'i-lucide-smile'
+      to: '/docs/getting-started/integrations/icons'
+    - title: 'Fonts'
+      description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
+      icon: 'i-lucide-a-large-small'
+      to: '/docs/getting-started/integrations/fonts'
+    - title: 'Color Mode'
+      description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.'
+      icon: 'i-lucide-sun-moon'
+      to: '/docs/getting-started/integrations/color-mode'
+  links:
+    - label: 'Explore components'
+      to: '/docs/components/app'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
-    第093章
+    <img src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy" />
 ---
 
-：img{src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
+:img{src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
 ::
 
-反向
+### 反向
 
 使用`reverse`道具反转默认插槽的方向。
 
 ::component-code
 ---
-更漂亮：真的
-外部：
-  功能特性
-  链接链接
-外部类型：
-  - 页面功能属性[]
-  - 按钮属性[]
-忽略：
-- 标题
-  描述：
-- 图标
-  功能特性
-  链接
-道具：
-  title：'美丽的Vue UI组件'
-  产品说明：“Nuxt UI提供了一套全面的组件和实用程序，可帮助您使用Vue和Nuxt构建美观且易于访问的Web应用程序。”
-  图标：“i-lucide-火箭”
-  方向：水平
-  反转：真
-  特点：
-    - title：“图标”
-      描述：“Nuxt UI与Nuxt Icon集成，可从Iconify访问超过200，000个图标。”
-      图标：“我-透明-微笑”
-      到：'/docs/入门/集成/图标'
-    “字体”
-      描述：'Nuxt UI与Nuxt字体集成，以提供即插即用字体优化。'
-      图标：“i-lucide-a-大-小”
-      到：“/docs/入门/集成/字体”
-    - title：“彩色模式”
-      描述：“Nuxt UI与Nuxt颜色模式集成，可在亮暗之间切换。”
-      图标：“i-lucide-日月”
-      到：'/docs/入门/整合/色彩模式'
-  链接：
-    - label：“浏览组件”
-      到：“/docs/组件/应用程序”
-      颜色：“中性”
-      变体：“细微”
-      尾部图标：'i-透明箭头-右'
-插槽：
-  默认值：|
+prettier: true
+external:
+  - features
+  - links
+externalTypes:
+  - PageFeatureProps[]
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - icon
+  - features
+  - links
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  icon: 'i-lucide-rocket'
+  orientation: horizontal
+  reverse: true
+  features:
+    - title: 'Icons'
+      description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
+      icon: 'i-lucide-smile'
+      to: '/docs/getting-started/integrations/icons'
+    - title: 'Fonts'
+      description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
+      icon: 'i-lucide-a-large-small'
+      to: '/docs/getting-started/integrations/fonts'
+    - title: 'Color Mode'
+      description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.'
+      icon: 'i-lucide-sun-moon'
+      to: '/docs/getting-started/integrations/color-mode'
+  links:
+    - label: 'Explore components'
+      to: '/docs/components/app'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
-    110华氏度
+    <img src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy" />
 ---
 
-：img{src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
+:img{src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
 ::
 
-## 活性成分
+## API
 
-### 道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

@@ -9,7 +9,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodeCollapse.vue
 ---
 
-## 使用情况
+## 用法
 
 使用`code-collapse`组件包装代码块以显示可折叠的代码块。
 
@@ -42,7 +42,7 @@ links:
 
 ::
 
-#代码
+#code
 
 ````mdc
 ::code-collapse
@@ -79,16 +79,16 @@ links:
 
 ### Props
 
-：组件-道具{prose}
+:component-props{prose}
 
-插槽
+### 老虎机
 
-：组件插槽{prose}
+:component-slots{prose}
 
-主题
+## Theme
 
-：组件主题{prose}
+:component-theme{prose}
 
 ## Changelog
 
-：component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

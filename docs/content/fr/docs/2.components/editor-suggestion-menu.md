@@ -8,44 +8,44 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/EditorSuggestionMenu.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Le composant EditorSuggestionMenu affiche un menu de suggestions de mise en forme et d'actions lors de la saisie d'un caractère de déclenchement dans l'éditeur et exécute le [handler](/docs/components/editor#handlers) correspondant lorsqu 'un élément est sélectionné.
+Le composant EditorSuggestionMenu affiche un menu de suggestions de mise en forme et d'action lors de la saisie d'un caractère de déclenchement dans l'éditeur et exécute le [handler](/docs/components/editor#handlers) correspondant lorsqu 'un élément est sélectionné.
 
 ::note
-Il utilise l'utilitaire `useEditorMenu` composable construit sur [Suggestion](https://tiptap.dev/docs/editor/api/utilities/suggestion) de TipTap pour filtrer les éléments lorsque vous tapez et prendre en charge la navigation au clavier (touches fléchées, entrée pour sélectionner, échappement pour fermer).
+Il utilise le composable `useEditorMenu` construit sur l'utilitaire [Suggestion](https://tiptap.dev/docs/editor/api/utilities/suggestion) de TipTap pour filtrer les éléments lorsque vous tapez et prendre en charge la navigation au clavier (touches fléchées, entrée pour sélectionner, échappement pour fermer).
 ::
 
 ::caution
-Il doit être utilisé dans l'emplacement par défaut d'un composant [Editor](/docs/components/editor) pour avoir accès à l'instance de l'éditeur.
+Il doit être utilisé à l'intérieur de l'emplacement par défaut d'un composant [Editor](/docs/components/editor) pour avoir accès à l'instance de l'éditeur.
 ::
 
 ::component-example
 ---
-Élevé: True
-Collapse: vrai
-nom: 'rédacteur-suggestion-menu-exemple'
-Catégorie: P-8
+elevated: true
+collapse: true
+name: 'editor-suggestion-menu-example'
+class: 'p-8'
 ---
 ::
 
-@@ph014@référencement
+### Détails
 
-Utilisez le `items` prop comme un tableau d'objets avec les propriétés suivantes:
+Utilisez le prop `items` comme un tableau d'objets avec les propriétés suivantes:
 
-@@
-@@
-@@
-@@
-@@
-@@
+Xph022xx[x`kind?: "textAlign" | "heading" | "link" | "image" | "blockquote" | "bulletList" | "orderedList" | "taskList" | "codeBlock" | "horizontalRule" | "paragraph" | "clearFormatting" | "duplicate" | "delete" | "moveUp" | "moveDown" | "suggestion" | "mention" | "emoji"`x{lang="ts-type"}x](x/docs/components/editor#handlersx)
+- x`label?: string`x{lang="ts-type"}
+- xx`description?: string`xx{lang="ts-type"}
+- x`icon?: string`xx{lang="ts-type"}
+- x`type?: "label" | "separator"`x{lang="ts-type"}
+- x`disabled?: boolean`x{lang="ts-type"}
 
 ::component-example
 ---
-Élevé: True
-Collapse: vrai
-name: 'rédacteur-suggestion-menu-items-exemple'
-Catégorie: P-8
+elevated: true
+collapse: true
+name: 'editor-suggestion-menu-items-example'
+class: 'p-8'
 ---
 ::
 
@@ -54,12 +54,12 @@ Vous pouvez également passer un tableau de tableaux à la prop `items` pour cr�
 ::
 
 ::tip
-Utilisez `type: 'label'` pour les en-têtes de section et `type: 'separator'` pour les séparateurs visuels afin d'organiser les commandes en groupes logiques pour une meilleure découverte.
+Utilisez `type: 'label'` pour les en-têtes de section et `type: 'separator'` pour les séparateurs visuels pour organiser les commandes en groupes logiques pour une meilleure découverte.
 ::
 
-@@ph041@@char
+### Char
 
-Utilisez la prop `char` pour changer le caractère de déclenchement. Par défaut à `/`{lang="ts-type"}.
+Utilisez la prop `char` pour changer le caractère de déclenchement. Par défaut, `/`{lang="ts-type"}.
 
 ```vue
 <template>
@@ -69,9 +69,9 @@ Utilisez la prop `char` pour changer le caractère de déclenchement. Par défau
 </template>
 ```
 
-### Suggestion: badge{label="4.7+" class="align-text-top"}
+Suggestion: badge{label="4.7+" class="align-text-top"}
 
-Utilisez le prop `suggestion` pour personnaliser le comportement de correspondance [Suggestion de TipTap ](https://tiptap.dev/docs/editor/api/utilities/suggestion#settings).
+Utilisez la prop `suggestion` pour personnaliser le comportement de correspondance [Suggestion de TipTap ](https://tiptap.dev/docs/editor/api/utilities/suggestion#settings).
 
 Ceci est utile lorsque le caractère de déclenchement doit s'ouvrir directement après d'autres caractères au lieu d'exiger le préfixe d'espace par défaut.
 
@@ -90,9 +90,9 @@ Ceci est utile lorsque le caractère de déclenchement doit s'ouvrir directement
 </template>
 ```
 
-@@73@options
+### Options
 
-Utilisez le prop `options` pour personnaliser le comportement de positionnement en utilisant les options d'interface utilisateur flottante ](https://floating-ui.com/docs/computeposition#options).
+Utilisez la prop `options` pour personnaliser le comportement de positionnement à l'aide des options d'interface utilisateur flottante ](https://floating-ui.com/docs/computeposition#options).
 
 ```vue
 <template>
@@ -109,16 +109,16 @@ Utilisez le prop `options` pour personnaliser le comportement de positionnement 
 </template>
 ```
 
-@@ph093@@api
+## API
 
-@@ph094@@projets
+### Props équipements
 
-Composants-props
+:component-props
 
-@@ph095@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

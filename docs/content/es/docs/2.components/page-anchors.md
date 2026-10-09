@@ -8,87 +8,87 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageAnchors.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-Utilice el componente PageAnchors para mostrar una lista de enlaces .
+Utilice el componente PageAnchors para mostrar una lista de enlaces.
 
 ::component-code
 ---
-Colapso : Verdad
-Categoría : true
-Ignora :
-  @@pH001@enlaces
-Externo :
-  @@2002@enlaces
-Externalidades :
-  @@@P2003@@P2003 [ en inglés ]
-Props :
-  izquierda :
-    - label : ' Documentación '
-      icon : i-lucide - book-open
-      Inicio/docs/Getting-started
-    - label : ' Componentes '
-      Icono : i-lucide - box
-      Archivo :/docs/components
-    - label : ' Figma Kit ' (Edición española)
-      icon : i-simple - icons-figma
-      Dos :https://go.nuxt.com/figma-ui
-      Nombre : _ blank
-    - label : ' Lanzamiento '
-      icon : i-simple - icons-github
-      Dos :https://github.com/nuxt/ui/releases
-      Nombre: _blank
+collapse: true
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageAnchor[]
+props:
+  links:
+    - label: 'Documentation'
+      icon: i-lucide-book-open
+      to: /docs/getting-started
+    - label: 'Components'
+      icon: i-lucide-box
+      to: /docs/components
+    - label: 'Figma Kit'
+      icon: i-simple-icons-figma
+      to: https://go.nuxt.com/figma-ui
+      target: _blank
+    - label: 'Releases'
+      icon: i-simple-icons-github
+      to: https://github.com/nuxt/ui/releases
+      target: _blank
 ---
 ::
 
-@0008@izquierda
+### Enlaces
 
 Utilice el prop `links` como una matriz de objetos con las siguientes propiedades:
 
-@@
-@@
-@@
-@@
+- xx`label: string`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xxx`icon?: string`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`class?: any`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-Puede pasar cualquier propiedad del componente [Link](/docs/components/link#props), como `to`,`target`, etc.
+Puede pasar cualquier propiedad del componente [Link](/docs/components/link#props) como `to`, `target`, etc.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@28@enlaces
-Externo:
-  @@29@enlaces
-Externalidades:
-  @@@P200@@P2000 [en línea]
-Props:
-  izquierda:
-    - label:'Documentación'
-      Icono: i-lucide-book-open
-      Inicio/docs/Getting-started
-    - label:'Componentes'
-      Icono: i-lucide-box
-      Archivo: /docs/components
-    - label:'Figma Kit'(Edición española)
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageAnchor[]
+props:
+  links:
+    - label: 'Documentation'
+      icon: i-lucide-book-open
+      to: /docs/getting-started
+    - label: 'Components'
+      icon: i-lucide-box
+      to: /docs/components
+    - label: 'Figma Kit'
       icon: i-simple-icons-figma
-      Dos :https://go.nuxt.com/figma-ui
-      Nombre : _ blank
-    - label : ' Lanzamiento '
-      icon : i-simple - icons-github
-      Dos :https://github.com/nuxt/ui/releases
-      Nombre : _ blank
+      to: https://go.nuxt.com/figma-ui
+      target: _blank
+    - label: 'Releases'
+      icon: i-simple-icons-github
+      to: https://github.com/nuxt/ui/releases
+      target: _blank
 ---
 ::
 
-@@P035@Ejemplos
+## Ejemplos
 
 ::note
-Si bien estos ejemplos utilizan[Nuxt Content](https://content.nuxt.com), los componentes se pueden integrar con cualquier sistema de gestión de contenido .
+Si bien estos ejemplos utilizan [Nuxt Content](https://content.nuxt.com), los componentes se pueden integrar con cualquier sistema de gestión de contenido.
 ::
 
-### Dentro de un diseño .
+### Dentro de un diseño
 
-Utilice el componente PageAnchors dentro del componente[PageAside](/docs/components/page-aside)para mostrar una lista de enlaces por encima de la navegación .
+Utilice el componente PageAnchors dentro del componente [PageAside](/docs/components/page-aside) para mostrar una lista de enlaces encima de la navegación.
 
 ```vue [layouts/docs.vue]{35}
 <script setup lang="ts">
@@ -135,20 +135,20 @@ const links: PageAnchor[] = [{
 </template>
 ```
 
-@@pH089
+## API (Edición española)
 
-@090000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props (Edición española)
 
-Componentes Props
+:component-props
 
-@091@091@0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots en línea
 
-Componentes de slots
+:component-slots
 
-@092@@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@@changelog
+## Changelog (Edición española)
 
-Categoría : component-changelog
+:component-changelog

@@ -11,19 +11,19 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/locale/LocaleSelect.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Die LocaleSelect-Komponente erweitert die Komponente [SelectMenu](/docs/components/select-menu), so dass Sie jede Eigenschaft wie `color`,`variant`,`size`, etc. übergeben können
+Die LocaleSelect-Komponente erweitert die [SelectMenu](/docs/components/select-menu)-Komponente, sodass Sie jede Eigenschaft wie `color`, `variant`, `size` usw. übergeben können.
 
 ::framework-only
-#nuxt sein
+#nuxt
 ::note{to="/docs/getting-started/integrations/i18n/nuxt"}
-Diese Komponente ist für die Verwendung mit dem **i18n** system gedacht.
+Diese Komponente ist für die Verwendung mit dem System **i18n** vorgesehen. Weitere Informationen finden Sie in der Anleitung.
 ::
 
-#Ansehen
+#vue
 ::note{to="/docs/getting-started/integrations/i18n/vue"}
-Diese Komponente ist für die Verwendung mit dem System **i18n** gedacht.
+Diese Komponente ist für die Verwendung mit dem **i18n**-System vorgesehen. Weitere Informationen finden Sie in der Anleitung.
 ::
 
 ::
@@ -32,17 +32,17 @@ Diese Komponente ist für die Verwendung mit dem System **i18n** gedacht.
 Dies kann zu einer anderen Anzeige führen, z. B. zeigt Microsoft Edge unter Windows stattdessen den ISO 3166 - 1 Alpha-2-Code an, da keine Flaggensymbole mit den OS-Schriftarten ausgeliefert werden.
 ::
 
-### Ortsansässige
+### Locales Bearbeiten
 
-Verwenden Sie `locales` prop mit einem Array von Gebietsschemata von `@nuxt/ui/locale`.
+Verwenden Sie die `locales`-Prop mit einem Array von Locales von `@nuxt/ui/locale`.
 
 ::component-example
 ---
-locale-select-example (locale-select-beispiel)
+name: 'locale-select-example'
 ---
 ::
 
-Sie können nur die Locales übergeben, die Sie in Ihrer Anwendung benötigen:
+Sie können nur die Gebietsschemas übergeben, die Sie in Ihrer Anwendung benötigen:
 
 ```vue
 <script setup lang="ts">
@@ -56,10 +56,10 @@ const locale = ref('en')
 </template>
 ```
 
-### Dynamisches Gebietsschema
+### Dynamic locale (Deutsche Ausgabe)
 
 ::framework-only
-#nuxt sein
+#nuxt
 ::div
 Sie können es mit Nuxt i18n verwenden:
 
@@ -81,7 +81,7 @@ const { locale, setLocale } = useI18n()
 
 ::
 
-#Ansehen
+#vue
 ::div
 Sie können es mit Vue i18n verwenden:
 
@@ -106,12 +106,12 @@ const { locale, setLocale } = useI18n()
 
 ::
 
-@@@@@@58@@bmmwh
+## API (englisch)
 
-@@ph059@@gmail.de
+### Props (englisch)
 
-Komponenten Props
+:component-props
 
-@@ph060@@changelog @@changelog
+## Changelog Übersetzung
 
-: component-changelog {prefix="locale"}
+:component-changelog{prefix="locale"}

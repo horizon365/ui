@@ -13,50 +13,50 @@ links:
 Ce composant est uniquement disponible lorsque le module `@nuxt/content` est installé.
 ::
 
-@@ph001@@utilisation
+## Utilisation
 
 Utilisez la prop `surround` avec la valeur `surround`{lang="ts-type"} que vous obtenez lors de la récupération d'un surround de page.
 
 ::component-example
 ---
-nom: 'content-surround-exemple'
-Props:
-  Catégorie: w-full
+name: 'content-surround-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-@@@P2005@@Prev/Suivant
+### Prev/Suivant
 
-Utilisez les accessoires `prev-icon` et `next-icon` pour personnaliser les boutons [Icon](/docs/components/icon).
+Utilisez les props `prev-icon` et `next-icon` pour personnaliser les boutons [Icon](/docs/components/icon).
 
 ::component-code{prefix="content"}
 ---
-Étiquette: true
-Collapse: vrai
-Ignorer:
-  @@ph012@surround
-Extérieure:
-  @@ph013@surround
-Extérieurs:
-  - ContentSurroundLink []
-Props:
-  préviseur:'i-lucide-chevron-left'
-  nextIcône:'i-lucide-chevron-right'
-  Surround:
-  - titre: ContentSearchButton
-    chemin: /docs/composants/content-search-button
+prettier: true
+collapse: true
+ignore:
+  - surround
+external:
+  - surround
+externalTypes:
+  - ContentSurroundLink[]
+props:
+  prevIcon: 'i-lucide-chevron-left'
+  nextIcon: 'i-lucide-chevron-right'
+  surround:
+  - title: ContentSearchButton
+    path: /docs/components/content-search-button
     stem: docs/2.components/content-search-button
-    Description: Un bouton pré-stylisé pour ouvrir le modal ContentSearch.
-  - titre: ContentToc
-    chemin: /docs/composants/content-toc
+    description: A pre-styled Button to open the ContentSearch modal.
+  - title: ContentToc
+    path: /docs/components/content-toc
     stem: docs/2.components/content-toc
-    Description: Une table des matières collante avec des slots personnalisables.
+    description: A sticky Table of Contents with customizable slots.
 ---
 ::
 
-@@ph017@exemples
+## Exemples
 
-### Dans une page
+### Au sein d'une page
 
 Utilisez le composant ContentSurround dans une page pour afficher les liens précédent et suivant:
 
@@ -89,20 +89,20 @@ if (!page.value) {
 </template>
 ```
 
-@@ph047@@api
+## API
 
-@@ph048@@props
+### Props
 
-Composants-props
+:component-props
 
-@@ph049@@Slots
+### Slots électronique
 
-Composants slots
+:component-slots
 
-@@ph050@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement.com
+## Changelog écrit
 
-: composant-changelog {prefix="content"}
+:component-changelog{prefix="content"}

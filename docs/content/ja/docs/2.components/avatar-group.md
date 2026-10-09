@@ -14,21 +14,21 @@ links:
 
 ## 使用法
 
-複数の[ Avatar ](/docs/components/avatar)をAvatarGroup内でラップしてスタックします。
+複数の[Avatar](/docs/components/avatar)をAvatarGroup内でラップしてスタックします。
 
 ::component-code
 ---
-きれい真
-スロット
-  デフォルト|
+prettier: true
+slots:
+  default: |
 
     <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" />
     <UAvatar src="https://github.com/HugoRCD.png" alt="Hugo Richard" />
     <UAvatar src="https://github.com/atinux.png" alt="Sébastien Chopin" />
 ---
-u—avatar {src="https://github.com/benjamincanac.png" alt="Benjamin Canac"}
-u—avatar {src="https://github.com/HugoRCD.png" alt="Hugo Richard"}
-u—avatar {src="https://github.com/atinux.png" alt="Sébastien Chopin"}
+:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac"}
+:u-avatar{src="https://github.com/HugoRCD.png" alt="Hugo Richard"}
+:u-avatar{src="https://github.com/atinux.png" alt="Sébastien Chopin"}
 ::
 
 ### サイズ
@@ -37,107 +37,107 @@ u—avatar {src="https://github.com/atinux.png" alt="Sébastien Chopin"}
 
 ::component-code
 ---
-きれい真
-小道具
-  サイズXL
-スロット
-  デフォルト|
+prettier: true
+props:
+  size: xl
+slots:
+  default: |
 
     <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy" />
     <UAvatar src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy" />
     <UAvatar src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy" />
 ---
-u—avatar {src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
-u—avatar {src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
-u—avatar {src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
+:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
+:u-avatar{src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
+:u-avatar{src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
 ::
 
-###  Max
+### Max
 
-`max`プロパティを使用して、表示されるアバターの数を制限します。残りは`+X`アバターとして表示されます。
+`max`プロパティを使用して、表示するアバターの数を制限します。残りは`+X`アバターとして表示されます。
 
 ::component-code
 ---
-きれい真
-小道具
-  最高2
-スロット
-  デフォルト|
+prettier: true
+props:
+  max: 2
+slots:
+  default: |
 
     <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy" />
     <UAvatar src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy" />
     <UAvatar src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy" />
 ---
-u—avatar {src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
-u—avatar {src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
-u—avatar {src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
+:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
+:u-avatar{src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
+:u-avatar{src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
 ::
 
-### 色バッジ{label="4.8+" class="align-text-top"}
+### Color badge{label="4.8+" class="align-text-top"}
 
 `color`プロパティを使用して、すべてのアバターの色を変更します。
 
 ::component-code
 ---
-きれい真
-小道具
-  色プライマリ
-スロット
-  デフォルト|
+prettier: true
+props:
+  color: primary
+slots:
+  default: |
 
     <UAvatar alt="Benjamin Canac" />
     <UAvatar alt="Hugo Richard" />
     <UAvatar alt="Sébastien Chopin" />
 ---
-u—avatar {alt="Benjamin Canac"}
-u—avatar {alt="Hugo Richard"}
-u—avatar {alt="Sébastien Chopin"}
+:u-avatar{alt="Benjamin Canac"}
+:u-avatar{alt="Hugo Richard"}
+:u-avatar{alt="Sébastien Chopin"}
 ::
 
-## 例
+## サンプル
 
 ### ツールチップ付き
 
-各アバターを[ Tooltip ](/docs/components/tooltip)でラップして、ホバー時にツールチップを表示します。
+各アバターを[Tooltip](/docs/components/tooltip)でラップし、ホバー時にツールチップを表示します。
 
-component—example {name="avatar-group-tooltip-example"}
+:component-example{name="avatar-group-tooltip-example"}
 
-### チップ付き
+### Withチップ
 
-各アバターを[ Chip ](/docs/components/chip)で包むと、アバターの周りにチップが表示されます。
+各アバターを[ Chip](/docs/components/chip)でラップし、アバターの周りにチップを表示します。
 
-component—example {name="avatar-group-chip-example"}
+:component-example{name="avatar-group-chip-example"}
 
 ### リンク付き
 
-各アバターを[ Link ](/docs/components/link)でラップしてクリック可能にします。
+各アバターを[Link](/docs/components/link)でラップしてクリック可能にします。
 
-component—example {name="avatar-group-link-example"}
+:component-example{name="avatar-group-link-example"}
 
 ### マスク付き
 
 アバターをCSSマスクでラップして、カスタム形状で表示します。
 
-component—example {name="avatar-group-mask-example"}
+:component-example{name="avatar-group-mask-example"}
 
 ::warning
-`chip` propがマスク使用時に正しく動作しません。マスク形状によってはチップがカットされる場合があります。
+`chip`プロパティがマスクを使用すると正しく動作しません。マスクの形状によってはチップがカットされる場合があります。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

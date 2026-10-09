@@ -11,21 +11,21 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/color-mode/ColorModeSwitch.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente ColorModeSwitch extiende el componente [Switch](/docs/components/switch), por lo que puede pasar cualquier propiedad como `color`,`size`, etc.
+El componente ColorModeSwitch extiende el componente [Switch](/docs/components/switch), por lo que puede pasar cualquier propiedad como `color`, `size`, etc.
 
-: código de componentes {prefix="color-mode"}
+:component-code{prefix="color-mode"}
 
-@008@Ejemplos
+xph007XEjemplos
 
 ### Con iconos personalizados
 
 ::framework-only
-#nuxidad
+#nuxt
 ::div
 
-Utilice el `app.config.ts` para personalizar el icono con la propiedad `ui.icons`:
+Utilice el icono `app.config.ts` para personalizar el icono con la propiedad `ui.icons`:
 
 ```ts [app/app.config.ts]
 export default defineAppConfig({
@@ -40,7 +40,7 @@ export default defineAppConfig({
 
 ::
 
-#vista
+#vue
 ::div
 Utilice el `vite.config.ts` para personalizar el icono con la propiedad `ui.icons`:
 
@@ -68,12 +68,12 @@ export default defineConfig({
 
 ::
 
-@@pH043
+## API (Edición española)
 
-@@444@444@444
+### Accesorios
 
-Componentes Props
+:component-props
 
-@@40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Changelog (Edición española)
 
-por: component-changelog {prefix="color-mode"}
+:component-changelog{prefix="color-mode"}

@@ -7,405 +7,405 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Sidebar.vue
 ---
 
-## 使用情况
+## 用法
 
-侧边栏组件是一个独立的、固定的侧边栏，用于推送页面内容。在桌面上，它呈现为内联，并可以折叠;在移动的上，它会打开一个[Modal](/docs/components/modal)，请将幻灯片移到](/docs/components/slideover)或[](/docs/components/drawer)的抽屉上。
+侧边栏组件是一个独立的、固定的侧边栏，用于推送页面内容。在桌面上，它可以内联呈现，也可以折叠;在移动的上，它可以打开[Modal](/docs/components/modal)、[Slideover](/docs/components/slideover)或[Drawer](/docs/components/drawer)组件。
 
 ::tip{to="/docs/components/dashboard-sidebar"}
-**侧边栏与仪表板侧边栏**：此组件是一个简单的独立侧栏，您可以将其放在任何位置（聊天面板、设置、导航）。如果您需要通过拖动来调整大小、状态持久性以及与[DashboardGroup](/docs/components/dashboard-group)的集成，请使用“仪表板边栏”。
+**Sidebar vs DashboardSidebar**：这个组件是一个简单的独立侧边栏，你可以放在任何地方（聊天面板，设置，导航）。如果你需要拖动调整大小，状态持久化和与[DashboardGroup](/docs/components/dashboard-group)集成，请使用[DashboardSidebar](/docs/components/dashboard-sidebar)。
 ::
 
-使用`header`、`default`和`footer`插槽自定义侧栏内容。`v-model:open`指令是可感知视口的：在桌面上，它控制展开/折叠状态;在移动的设备上，它控制菜单。
+使用`header`、`default`和`footer`插槽来自定义侧边栏内容。`v-model:open`指令是视口感知的：在桌面上它控制展开/折叠状态，在移动的上它控制菜单。
 
 ::component-example
 ---
-收阖：true
-更漂亮：真的
-名称：'边栏示例'
-overflowHidden：真的
-类：“！p-0！对齐-开始h-[500 px]包含-[绘制]转换-图形处理器”
+collapse: true
+prettier: true
+name: 'sidebar-example'
+overflowHidden: true
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 ::
 
-变体
+### Variant
 
-使用`variant`道具来变更提要字段的视觉样式。预设为`sidebar`。
+使用`variant`属性将侧边栏. xml 2的视觉样式更改为`sidebar`。
 
 ::component-example
 ---
-收阖：true
-更漂亮：真的
-名称：'边栏-道具-示例'
-overflowHidden：真的
-可选项：
-- 名称：“变量”
-    标签：'variant'
-    项目名称：
-      边栏
-      浮动的
-      插入式
-    默认值：'inset'
-类：“！p-0！对齐-开始h-[500 px]包含-[绘制]转换-图形处理器”
+collapse: true
+prettier: true
+name: 'sidebar-props-example'
+overflowHidden: true
+options:
+  - name: 'variant'
+    label: 'variant'
+    items:
+      - sidebar
+      - floating
+      - inset
+    default: 'inset'
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 ::
 
-可折叠的
+### 可折叠
 
-使用`collapsible`属性更改边栏的折叠行为。默认为`offcanvas`。
+使用`collapsible`属性将侧边栏. xml 2的折叠行为更改为`offcanvas`。
 
-- `offcanvas`：侧栏完全滑出视图。
-- `icon`：侧栏收缩为仅图标宽度。
-- `none`：侧栏不可折叠。
+- `offcanvas`：侧边栏完全滑出视图。
+- `icon`：侧边栏缩小到图标宽度。
+- `none`：侧边栏不可折叠。
 
 ::component-example
 ---
-收阖：true
-更漂亮：真的
-名称：'边栏-道具-示例'
-overflowHidden：真的
-可选项：
-  - 名称：“可折叠”
-    标签：“可折叠”
-    项目名称：
-      画布外的
-      图标
-      无
-    默认值：'icon'
-  名称：'变量'
-    标签：'variant'
-    项目名称：
-      边栏
-      浮动的
-      插入式
-    默认值：“边栏”
-类：“！p-0！对齐-开始h-[500 px]包含-[绘制]转换-图形处理器”
+collapse: true
+prettier: true
+name: 'sidebar-props-example'
+overflowHidden: true
+options:
+  - name: 'collapsible'
+    label: 'collapsible'
+    items:
+      - offcanvas
+      - icon
+      - none
+    default: 'icon'
+  - name: 'variant'
+    label: 'variant'
+    items:
+      - sidebar
+      - floating
+      - inset
+    default: 'sidebar'
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 ::
 
 ::tip{to="#slots"}
-您可以访问插槽道具中的`state`，以自定义折叠侧栏时的内容。
+您可以在插槽道具中访问`state`，以自定义边栏折叠时的内容。
 ::
 
-### 侧边
+### Side
 
-使用`side`道具来变更侧边栏的侧边。预设值为`left`。
+使用`side`属性将侧边栏的边更改为`left`。
 
 ::component-example
 ---
-收阖：true
-更漂亮：真的
-名称：'边栏-道具-示例'
-overflowHidden：真的
-可选项：
-  名称：“边”
-    标签：'边'
-    项目名称：
-      左边的
-      对了
-    默认值：'right'
-类：“！p-0！对齐-开始h-[500 px]包含-[绘制]转换-图形处理器”
+collapse: true
+prettier: true
+name: 'sidebar-props-example'
+overflowHidden: true
+options:
+  - name: 'side'
+    label: 'side'
+    items:
+      - left
+      - right
+    default: 'right'
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 ::
 
-标题：
+### 标题
 
-使用`title`道具设置侧栏标题的标题。
+使用`title`属性设置侧边栏标题。
 
 ::component-code
 ---
-更漂亮：真的
-隐藏：
-  班级
-  你好
-忽略：
-  - 用户界面容器
-道具：
-  标题：导航
-  用户界面：
-    容器：h-满
-插槽：
-  默认值：|
+prettier: true
+hide:
+  - class
+  - ui
+ignore:
+  - ui.container
+props:
+  title: Navigation
+  ui:
+    container: h-full
+slots:
+  default: |
 
-    063号
-类：“！p-0！对齐-开始h-[500 px]包含-[绘制]转换-图形处理器”
+    <Placeholder class="h-full" />
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 
-：占位符{class="h-full"}
+:placeholder{class="h-full"}
 ::
 
-说明：
+### 说明
 
-使用`description`属性设置侧栏标题的说明。
+使用`description` prop设置侧边栏标题的描述。
 
 ::component-code
 ---
-更漂亮：真的
-隐藏：
-  班级
-  你好
-忽略：
-  标题：
-  集装箱
-道具：
-  标题：导航
-  description：浏览您的工作区
-  用户界面：
-    容器：h-满
-插槽：
-  默认值：|
+prettier: true
+hide:
+  - class
+  - ui
+ignore:
+  - title
+  - ui.container
+props:
+  title: Navigation
+  description: Browse your workspace
+  ui:
+    container: h-full
+slots:
+  default: |
 
-    071号
-类：“！p-0！对齐-开始h-[500 px]包含-[绘制]转换-图形处理器”
+    <Placeholder class="h-full" />
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 
-：占位符{class="h-full"}
+:placeholder{class="h-full"}
 ::
 
-轨道
+### Rail
 
-使用`rail`道具可在边栏上显示一个交互式细边，单击该边栏可切换折叠状态。仅当`collapsible`不是`none`时，才会呈现扶手。
+使用`rail`属性在侧边栏上显示一条交互式的窄边，点击时切换折叠状态。只有当`collapsible`不是`none`时，才会呈现栏杆。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标题：
-  集装箱
-隐藏：
-  你好
-  班级
-道具：
-  轨道：真
-  可折叠：图标
-  标题：导航
-  ui.容器：h-满
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - title
+  - ui.container
+hide:
+  - ui
+  - class
+props:
+  rail: true
+  collapsible: icon
+  title: Navigation
+  ui.container: h-full
+slots:
+  default: |
 
-<Placeholder class="h-full" />，你好
-类：“！p-0！对齐-开始h-[500 px]包含-[绘制]转换-图形处理器”
+    <Placeholder class="h-full" />
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 
-：占位符{class="h-full"}
+:placeholder{class="h-full"}
 ::
 
 ### 关闭
 
-使用`close`属性在提要字段标题中显示关闭按钮。只有当`collapsible`不是`none`时，才会显示关闭按钮。
+使用`close` prop在侧边栏标题中显示关闭按钮。关闭按钮仅在`collapsible`不是`none`时呈现。
 
-您可以从[Button](/docs/components/button)组件传递任何属性来自订该组件。
+您可以从[Button](/docs/components/button)组件传递任何属性来对其进行自定义。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标题：
-  轨道
-  用户界面容器
-隐藏：
-  我的天
-  班级
-道具：
-  关闭：true
-  轨道：真
-  可折叠：图标
-  标题：导航
-  用户界面：
-    容器：h-已满
-项目名称：
-  结束语：
-    真的
-    不对
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - title
+  - rail
+  - ui.container
+hide:
+  - ui
+  - class
+props:
+  close: true
+  rail: true
+  collapsible: icon
+  title: Navigation
+  ui:
+    container: h-full
+items:
+  close:
+    - true
+    - false
+slots:
+  default: |
 
-    098号
-类：“！p-0！对齐-开始h-[500 px]包含-[绘制]转换-图形处理器”
+    <Placeholder class="h-full" />
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 
-：占位符{class="h-full"}
+:placeholder{class="h-full"}
 ::
 
 ### 关闭图标
 
-使用`close-icon`道具来自订关闭按钮[Icon](/docs/components/icon)。预设值为`i-lucide-x`。
+使用`close-icon`道具自定义关闭按钮[Icon](/docs/components/icon).exe到`i-lucide-x`。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标题
-- 钢轨
-- 侧
-- 关闭
-- ui.container容器
-隐藏：
-- 用户界面
-  班级
-道具：
-  关闭：true
-  关闭图标：i-lucide-面板-右-关闭
-  轨道：真
-  可折叠：图标
-  侧面：右侧
-  标题：导航
-  用户界面：
-    容器：h-满
-项目名称：
-  结束语：
-    真的
-    错误的
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - title
+  - rail
+  - side
+  - close
+  - ui.container
+hide:
+  - ui
+  - class
+props:
+  close: true
+  closeIcon: i-lucide-panel-right-close
+  rail: true
+  collapsible: icon
+  side: right
+  title: Navigation
+  ui:
+    container: h-full
+items:
+  close:
+    - true
+    - false
+slots:
+  default: |
 
-<Placeholder class="h-full" />级
-类："! p-0!对齐-开始h-[500px]包含-[绘制]转换-图形处理器"
+    <Placeholder class="h-full" />
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 
-：占位符{class="h-full"}
+:placeholder{class="h-full"}
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`app.config.ts`的`ui.icons.close`键下全局自定此图标。
+你可以在你的`app.config.ts`下的`ui.icons.close`键全局自定义这个图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`vite.config.ts`的`ui.icons.close`键下全局自定此图标。
+你可以在你的`vite.config.ts`下的`ui.icons.close`键全局自定义这个图标。
 :::
 ::
 
-模式
+### Mode
 
-使用`mode`属性更改移动设备上的侧边栏菜单模式。默认为`slideover`。
+使用`mode`属性将移动的. exe上的侧边栏菜单的模式更改为`slideover`。
 
 ::component-example
 ---
-收阖：true
-iframe：
-  高度：500px;
-iframeMobile：真的
-overflowHidden：真的
-名称：'边栏模式示例'
-可选项：
-  - 名称：'模式'
-    标签：'模式'
-    预设值：“滑过”
-    项目名称：
-- 模态
-- 滑过
-      抽屉
-道具：
-  类别：'w-完整'
+collapse: true
+iframe:
+  height: 500px;
+iframeMobile: true
+overflowHidden: true
+name: 'sidebar-mode-example'
+options:
+  - name: 'mode'
+    label: 'mode'
+    default: 'slideover'
+    items:
+      - modal
+      - slideover
+      - drawer
+props:
+  class: 'w-full'
 ---
 ::
 
 ::tip{to="#props"}
-您可以使用`menu`道具来自定义边栏的菜单，它会根据您选择的模式进行调整。
+您可以使用`menu`道具来自定义侧边栏的菜单，它会根据您选择的模式进行调整。
 ::
 
-示例：
+## 示例
 
 ### 控制打开状态
 
-您可以使用`open`属性或`v-model:open`指示词来控制开启状态。在桌面上，它会控制展开/折迭状态，在行动装置上，它会开启/关闭工作表功能表。
+您可以使用`open` prop或`v-model:open`指令控制打开状态。在桌面上，它控制展开/折叠状态，在移动的上，它打开/关闭工作表菜单。
 
 ::component-example
 ---
-收阖：true
-更漂亮：真的
-名称：'边栏-打开-示例'
-overflowHidden：真的
-类："! p-0!对齐-开始h-[500px]包含-[绘制]转换-图形处理器"
+collapse: true
+prettier: true
+name: 'sidebar-open-example'
+overflowHidden: true
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 ::
 
 ::note
-在此示例中，利用[`defineShortcuts`](/docs/composables/define-shortcuts)，您可以通过按下：kbd{value="O"}来切换边栏的打开状态。
+在此示例中，利用[`defineShortcuts`](/docs/composables/define-shortcuts)，您可以通过按：kbd{value="O"}切换侧边栏的打开状态。
 ::
 
-### 保持打开状态
+### Persistopen state
 
-使用VueUse中的[`useLocalStorage`](https://vueuse.org/core/useLocalStorage/)或[`useCookie`](https://nuxt.com/docs/4.x/api/composables/use-cookie)（而不是`ref`），可在页面重新加载过程中保持侧边栏状态。
+使用VueUse的[`useLocalStorage`](https://vueuse.org/core/useLocalStorage/)或[`useCookie`](https://nuxt.com/docs/4.x/api/composables/use-cookie)而不是`ref`来在页面重新加载时保持侧边栏状态。
 
 ::component-example
 ---
-收阖：true
-更漂亮：真的
-名称：'侧栏持久性示例'
-overflowHidden：真的
-类："! p-0!对齐-开始h-[500px]包含-[绘制]转换-图形处理器"
+collapse: true
+prettier: true
+name: 'sidebar-persist-example'
+overflowHidden: true
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 ::
 
 ::note
-与上一个示例的唯一区别是将`ref(true)`替换为`useLocalStorage('sidebar-open', true)`。
+与前一个示例的唯一区别是将`ref(true)`替换为`useLocalStorage('sidebar-open', true)`。
 ::
 
-### 使用自定义宽度
+### 自定义宽度
 
-侧边栏宽度由`--sidebar-width`CSS变量控制（默认为`16rem`）。折叠图标宽度由`--sidebar-width-icon`控制（默认为`4rem`）。
+侧边栏宽度由`--sidebar-width` CSS变量控制（默认为`16rem`）。折叠图标宽度由`--sidebar-width-icon`控制（默认为`4rem`）。
 
-使用`style`属性在CSS中全局覆盖它们或按实例覆盖它们。
+在CSS中全局重命名它们，或者使用`style`属性按实例重命名它们。
 
 ::component-example
 ---
-收阖：true
-更漂亮：真的
-名称：'边栏宽度示例'
-overflowHidden：真的
-类："! p-0!对齐-开始h-[500px]包含-[绘制]转换-图形处理器"
+collapse: true
+prettier: true
+name: 'sidebar-width-example'
+overflowHidden: true
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 ::
 
-### 带页眉
+### 带标题
 
-若要将提要字段放置在[标题](/docs/components/header)下方，请使用`ui`属性自订`gap`和`container`。
+要将侧边栏定位在[Header](/docs/components/header)下方，请使用`ui`属性自定义`gap`和`container`。
 
 ::component-example
 ---
-收阖：true
-更漂亮：真的
-名称：'边栏标题示例'
-overflowHidden：真的
-类："! p-0!对齐-开始h-[500px]包含-[绘制]转换-图形处理器"
+collapse: true
+prettier: true
+name: 'sidebar-header-example'
+overflowHidden: true
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 ::
 
 ::note
-`--ui-header-height`变量默认为`4rem`，并由标题使用。如果导航栏使用不同的高度，请调整该变量。
+`--ui-header-height`变量默认为`4rem`，用于页眉。如果您的导航栏使用不同的高度，请调整它。
 ::
 
-### 使用人工智能聊天
+### 带AI聊天
 
-使用右侧的侧边栏和[ChatMessages](/docs/components/chat-messages)和[ChatPrompt](/docs/components/chat-prompt)来创建人工智能聊天面板。
+使用[ChatMessages](/docs/components/chat-messages)和[ChatMessages](/docs/components/chat-prompt)右侧的侧边栏创建AI聊天面板。
 
 ::component-example
 ---
-收阖：true
-更漂亮：真的
-名称：'边栏-聊天-示例'
-overflowHidden：真的
-类："! p-0!对齐-开始h-[500px]包含-[绘制]转换-图形处理器"
+collapse: true
+prettier: true
+name: 'sidebar-chat-example'
+overflowHidden: true
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 ::
 
-美国石油学会
+## API
 
 ### Props
 
-：组件-支柱
+:component-props
 
 ### Slots
 
-：组件插槽
+:component-slots
 
 ## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

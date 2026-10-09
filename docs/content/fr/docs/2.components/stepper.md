@@ -12,70 +12,70 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Stepper.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
 Utilisez le composant Stepper pour afficher une liste d'éléments dans un stepper.
 
 ::component-code
 ---
-Collapse: vrai
-Caché:
-  @@ph001@classe
-Ignorer:
-  @@ph002@articles
-  @@ph003@classe
-Extérieure:
-  @@ph004@articles
-Extérieurs:
-  @@@@@@@@@@@@@@@@@@@@@@@@
-Props:
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - StepperItem[]
+props:
   items:
-    - title:« Adresse »
-      Description: "Ajoutez votre adresse ici"
-      Icône:'i-lucide-house'
-    - title:"Découverte"
-      Description: 'Définissez votre méthode d'expédition préférée'
-      Icône: i-lucide-truck
-    - title:"Dépannage"
-      Description: "Confirmer votre commande"
-  Catégorie: w-full
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
+  class: 'w-full'
 ---
 ::
 
-@0009@@écrivains
+### Éléments
 
-Utilisez le `items` prop comme un tableau d'objets avec les propriétés suivantes:
+Utilisez le prop `items` comme un tableau d'objets avec les propriétés suivantes:
 
-@@
-@@
-@@
-@@
-@@
-@@
-@@
-@@
-@@
+- x`title?: string`x{lang="ts-type"}
+- x`description?: AvatarProps`x{lang="ts-type"}
+- x`content?: string`xx{lang="ts-type"}
+- x`icon?: string`xx{lang="ts-type"}
+- x`value?: string | number`x{lang="ts-type"}
+- x`disabled?: boolean`x{lang="ts-type"}
+Xph044xx[x`slot?: string`x{lang="ts-type"}x](x#with-custom-slotx)
+- x`class?: any`x{lang="ts-type"}
+- x`ui?: { item?: ClassNameValue, container?: ClassNameValue, trigger?: ClassNameValue, indicator?: ClassNameValue, icon?: ClassNameValue, separator?: ClassNameValue, wrapper?: ClassNameValue, title?: ClassNameValue, description?: ClassNameValue }`x{lang="ts-type"}
 
 ::component-code
 ---
-Ignorer:
-  @@ph042@articles
-  @@classe 43
-Extérieur:
-  @@ph044@articles
-Extérieurs:
-  @@@P045@@Papier [résolu]
-Props:
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - StepperItem[]
+props:
   items:
-    - title:"Référence"
-      Description: "Ajoutez votre adresse ici"
-      Icône:'i-lucide-house'
-    - title:"Déménagement"
-      Description: 'Définissez votre méthode d'expédition préférée'
-      Icône: i-lucide-truck
-    - title:"Dépannage"
-      Description: "Confirmer votre commande"
-  Catégorie: w-full
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
+  class: 'w-full'
 ---
 ::
 
@@ -83,118 +83,118 @@ Props:
 Cliquez sur les éléments pour naviguer à travers les étapes.
 ::
 
-@@pH049@couleur
+### Couleur
 
 Utilisez le prop `color` pour changer la couleur du Stepper.
 
 ::component-code
 ---
-Ignorer:
-  @@ph051@contenu
-  @@502@articles
-  @@classe 500
-Extérieure:
-  @@500@articles
-Extérieurs:
-  @@555@555@555 [réf. nécessaire]
-Props:
-  Couleur: Neutre
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - StepperItem[]
+props:
+  color: neutral
   items:
-    - title:"Référence"
-      Description: "Ajoutez votre adresse ici"
-      Icône:'i-lucide-house'
-    - title:"Découverte"
-      Description: 'Définissez votre méthode d'expédition préférée'
-      Icône: i-lucide-truck
-    - title:"Dépannage"
-      Description: "Confirmer votre commande"
-  Catégorie: w-full
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
+  class: 'w-full'
 ---
 ::
 
-@@pH059@@Size
+### Size
 
-Utilice el prop `size` para cambiar el tamaño del Stepper.
+Utilisez le prop `size` pour modifier la taille du Stepper.
 
 ::component-code
 ---
-Ignorer:
-  @@pH061@contenido
-  @@ph062@articles
-  @@ph063@classe
-Extérieure:
-  @@ph064@articles
-Extérieurs:
-  @@@P065@@Papier [résolu]
-Props:
-  Taille: XL
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - StepperItem[]
+props:
+  size: xl
   items:
-    - title:"Référence"
-      Description: "Ajoutez votre adresse ici"
-      Icône:'i-lucide-house'
-    - title:"Déménagement"
-      Description: 'Définissez votre méthode d'expédition préférée'
-      Icône: i-lucide-truck
-    - title:"Dépannage"
-      Description: "Confirmer votre commande"
-  Catégorie: w-full
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
+  class: 'w-full'
 ---
 ::
 
-### Référencement
+### Orientation
 
 Utilisez la prop `orientation` pour modifier l'orientation du Stepper. Defaults à `horizontal`.
 
 ::component-code
 ---
-ignorer:
-  @@ph072@contenu
-  @@ph073@articles
-  @@ph074@classe
-Extérieur:
-  @@75@éléments
-Extérieurs:
-  @@776@@étape []
-Props:
-  Orientation: verticale
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - StepperItem[]
+props:
+  orientation: vertical
   items:
-    - title:"Référence"
-      Description: "Ajoutez votre adresse ici"
-      Icône:'i-lucide-house'
-    - title:"Déménagement"
-      Description: 'Définissez votre méthode d'expédition préférée'
-      Icône: i-lucide-truck
-    - title:"Dépannage"
-      Description: "Confirmer votre commande"
-  Catégorie: w-full
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
+  class: 'w-full'
 ---
 ::
 
-### désactivé
+### Disabled
 
-Utilisez la prop `disabled` pour désactiver la navigation à travers les étapes.
+Utilisez le prop `disabled` pour désactiver la navigation à travers les étapes.
 
 ::component-code
 ---
-Ignorer:
-  @@ph082@contenu
-  @@ph083@articles
-  @@ph084@classe
-Extérieur:
-  @@ph085@articles
-Extérieurs:
-  @@886@@étape []
-Props:
-  handicapés: vrai
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - StepperItem[]
+props:
+  disabled: true
   items:
-    - title:"Référence"
-      Description: "Ajoutez votre adresse ici"
-      Icône:'i-lucide-house'
-    - title:"Déménagement"
-      Description: 'Définissez votre méthode d'expédition préférée'
-      Icône: i-lucide-truck
-    - title:"Dépannage"
-      Description: "Confirmer votre commande"
+    - title: 'Address'
+      description: 'Add your address here'
+      icon: 'i-lucide-house'
+    - title: 'Shipping'
+      description: 'Set your preferred shipping method'
+      icon: 'i-lucide-truck'
+    - title: 'Checkout'
+      description: 'Confirm your order'
 ---
 ::
 
@@ -202,55 +202,55 @@ Props:
 Cela peut être utile lorsque vous souhaitez forcer la navigation avec des contrôles.
 ::
 
-@@ph090@exemples
+## exemples
 
 ### Avec contrôles
 
 Vous pouvez ajouter des contrôles supplémentaires pour le stepper à l'aide de boutons.
 
-: exemple de composant {name="stepper-with-controls-example"}
+:component-example{name="stepper-with-controls-example"}
 
-### Contrôle élément actif
+### Control élément actif
 
 Vous pouvez contrôler l'élément actif à l'aide de la prop `default-value` ou de la directive `v-model` avec le `value` de l'élément.
 
-: exemple de composant {name="stepper-model-value-example"}
+:component-example{name="stepper-model-value-example"}
 
 ::tip
 Utilisez la prop `value-key` pour modifier la clé utilisée pour faire correspondre les éléments lorsqu 'un `v-model` ou `default-value` est fourni.
 ::
 
-### Avec emplacement de contenu
+### With slot de contenu
 
-Utilisez l'emplacement `#content` pour personnaliser le contenu de chaque élément.
+Utilisez le slot `#content` pour personnaliser le contenu de chaque élément.
 
-: composant-exemple {name="stepper-content-slot-example"}
+:component-example{name="stepper-content-slot-example"}
 
-### Avec slot custom
+### With slot personnalisé
 
 Utilisez la propriété `slot` pour personnaliser un élément spécifique.
 
 Vous aurez accès aux slots suivants:
 
-@@
+- x`#{{ item.slot }}`x{lang="ts-type"}
 
-: composant-exemple {name="stepper-custom-slot-example"}
+:component-example{name="stepper-custom-slot-example"}
 
-@@ph111@api
+## API
 
-@112@propriétés
+### Props électrique
 
-Composants-props
+:component-props
 
-@@ph113@@Slots
+### Slots
 
-Composants slots
+:component-slots
 
-@114@114@114
+### Emis
 
-Composants émetteurs
+:component-emits
 
-@@ph115@@exposé
+### Expose à
 
 Vous pouvez accéder à l'instance du composant typé en utilisant [`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref).
 
@@ -268,15 +268,15 @@ Cela vous donnera accès à ce qui suit:
 
 | nom| type|
 | ---- | ---- |
-| @@|@@|
-| @@|@@|
-| @@|@@|
-| @@|@@|
+| `next`x{lang="ts-type"}| `() => void`x{lang="ts-type"}|
+| `prev`{lang="ts-type"}| `() => void`x{lang="ts-type"}|
+| `hasNext`x{lang="ts-type"}| `Ref<boolean>`x{lang="ts-type"}|
+| `hasPrev`{lang="ts-type"}| `Ref<boolean>`x{lang="ts-type"}|
 
-@@ph146@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement147
+## Changelog
 
-Composant-changelog
+:component-changelog

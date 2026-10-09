@@ -12,108 +12,108 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Tooltip.vue
 ---
 
-## 使用情况
+## 用法
 
-使用[Button](/docs/components/button)或[工具提示]的预设位置中的任何其他元件。
+在工具提示的默认插槽中使用[Button](/docs/components/button)或任何其他组件。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  - 文本
-道具：
-  text：'在GitHub上打开'
-插槽：
-  默认值为：|
+prettier: true
+ignore:
+  - text
+props:
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-<UButton label="Open" color="neutral" variant="subtle" />的
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-：U形按钮{label="Open" color="neutral" variant="subtle"}
+:u-button{label="开放" color="neutral" variant="subtle"}
 ::
 
 ::warning
-请确保使用[`App`](/docs/components/app)组件包装您的应用程序，该组件使用来自Reka UI的[`TooltipProvider`](https://reka-ui.com/docs/components/tooltip#provider)组件。
+请确保使用[`App`](/docs/components/app)组件包装您的应用程序，该组件使用Reka UI中的[`TooltipProvider`](https://reka-ui.com/docs/components/tooltip#provider)组件。
 ::
 
 ::tip{to="/docs/components/app#props"}
-您可以检查`App`元件`tooltip`属性，以了解如何全域设定工具提示。
+您可以查看`App`组件`tooltip` prop，了解如何全局配置工具提示。
 ::
 
-文字
+### Text
 
-使用`text`道具设置工具提示的内容。
+使用`text`属性设置工具提示的内容。
 
 ::component-code
 ---
-更漂亮：真的
-道具：
-  text：'在GitHub上打开'
-插槽：
-  默认值：|
+prettier: true
+props:
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-    022号
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-：U型按钮{label="Open" color="neutral" variant="subtle"}
+:u-button{label="开放" color="neutral" variant="subtle"}
 ::
 
-### 千桶
+### Kbds
 
-使用`kbds`属性在工具提示中呈现[Kbd](/docs/components/kbd)组件。
+使用`kbds`道具渲染工具提示中的[Kbd](/docs/components/kbd)组件。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  - 文本
-- 千桶
-道具：
-  text：'在GitHub上打开'
-  千字节数：
-    - 元数据
-    第33章G
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - text
+  - kbds
+props:
+  text: 'Open on GitHub'
+  kbds:
+    - meta
+    - G
+slots:
+  default: |
 
-    034号
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-：U型按钮{label="Open" color="neutral" variant="subtle"}
+:u-button{label="开放" color="neutral" variant="subtle"}
 ::
 
 ::tip
-您可以使用特殊键，如`meta`（在macOS上显示为`⌘`）和`Ctrl`（在其他平台上显示为`Ctrl`）。
+您可以使用特殊键，如`meta`，在macOS上显示为`⌘`，在其他平台上显示为`Ctrl`。
 ::
 
-延迟时间
+### 延迟
 
-使用`delay-duration`属性来变更工具提示出现之前的延迟。例如，您可以将其设定为`0`，让工具提示立即出现。
+使用`delay-duration`属性更改工具提示出现前的延迟。例如，您可以通过将其设置为`0`来使其立即出现。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  - 文本
-道具：
-  延迟持续时间：0
-  text：'在GitHub上打开'
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - text
+props:
+  delayDuration: 0
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-    043号
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-：U型按钮{label="Open" color="neutral" variant="subtle"}
+:u-button{label="开放" color="neutral" variant="subtle"}
 ::
 
 ::tip
-您可以透过[`App`](/docs/components/app)元件中的`tooltip.delayDuration`选项，全域设定此设定。
+这可以通过[`App`](/docs/components/app)组件中的`tooltip.delayDuration`选项进行全局配置。
 ::
 
-内容
+### 内容
 
-使用`content`属性来控制工具提示内容的呈现方式，例如`align`或`side`。
+使用`content`属性控制工具提示内容的呈现方式，例如`align`或`side`。
 
 ::tip
 这可以通过[`App`](/docs/components/app)组件中的`tooltip.content`选项进行全局配置。
@@ -121,121 +121,121 @@ links:
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  - 文本
-项目名称：
+prettier: true
+ignore:
+  - text
+items:
   content.align:
-    开始
-    中心位置
-    结束！
+    - start
+    - center
+    - end
   content.side:
-    对了
-    左侧
-    顶部
-    底部
-道具：
-  主要内容：
-    对齐：置中
-    侧面：底部
-    侧面偏移：8
-  text：'在GitHub上打开'
-插槽：
-  默认值：|
+    - right
+    - left
+    - top
+    - bottom
+props:
+  content:
+    align: center
+    side: bottom
+    sideOffset: 8
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-    069号
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-：U型按钮{label="Open" color="neutral" variant="subtle"}
+:u-button{label="开放" color="neutral" variant="subtle"}
 ::
 
-箭头
+### 箭头
 
-使用`arrow`道具在工具提示上显示箭头。
+使用`arrow`道具在工具提示上显示一个箭头。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  - 文本
-  箭头
-道具：
-  箭头：true
-  text：'在GitHub上打开'
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - text
+  - arrow
+props:
+  arrow: true
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-    075号
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-：U型按钮{label="Open" color="neutral" variant="subtle"}
+:u-button{label="开放" color="neutral" variant="subtle"}
 ::
 
-### 已禁用
+### 禁用
 
-使用`disabled`道具禁用工具提示。
+使用`disabled`属性禁用工具提示。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  - 文本
-道具：
-  已禁用：true
-  text：'在GitHub上打开'
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - text
+props:
+  disabled: true
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-<UButton label="Open" color="neutral" variant="subtle" />的
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-：U型按钮{label="Open" color="neutral" variant="subtle"}
+:u-button{label="开放" color="neutral" variant="subtle"}
 ::
 
-示例
+## 示例
 
 ### 控制打开状态
 
-您可以使用`default-open`属性或`v-model:open`指示词来控制开启状态。
+您可以使用`default-open` prop或`v-model:open`指令控制打开状态。
 
 ::component-example
 ---
-名称：'工具提示-打开-示例'
+name: 'tooltip-open-example'
 ---
 ::
 
 ::note
-在此示例中，利用[`defineShortcuts`](/docs/composables/define-shortcuts)，您可以通过按下：kbd{value="O"}来切换工具提示。
+在本例中，利用[`defineShortcuts`](/docs/composables/define-shortcuts)，您可以通过按：kbd{value="O"}来切换工具提示。
 ::
 
-### 使用跟随光标
+### 使用以下光标
 
-您可以使用[`reference`](https://reka-ui.com/docs/components/tooltip#trigger)属性，使“工具提示”在游标停留在元素上时跟随游标：
+您可以使用[`reference`](https://reka-ui.com/docs/components/tooltip#trigger)属性使工具提示在悬停在元素上时跟随光标：
 
 ::component-example
 ---
-名称：'工具提示-光标-示例'
+name: 'tooltip-cursor-example'
 ---
 ::
 
-美国石油学会
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-### 插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-### 排放
+### Emits
 
-：组件发射
+:component-emits
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

@@ -8,69 +8,69 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatShimmer.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Le composant ChatShimmer rend un élément avec un gradient de miroitement animé sur le texte, couramment utilisé pour indiquer les états de streaming ou de chargement dans les interfaces de chat.
 
 ::note
-Ce composant est automatiquement utilisé par les composants `ChatTool`](/docs/components/chat-tool) et [`ChatReasoning`](/docs/components/chat-reasoning) lors du streaming.
+Ce composant est automatiquement utilisé par les composants [`ChatTool`](/docs/components/chat-tool) et [`ChatReasoning`](/docs/components/chat-reasoning) lors de la diffusion en streaming.
 ::
 
 ::tip
 L'animation est automatiquement désactivée lorsque l'utilisateur préfère un mouvement réduit, le texte est affiché sous forme de texte statique en sourdine à la place.
 ::
 
-@@ph011@texte
+### Texte écrit
 
-Utilisez la prop `text` pour définir le texte de miroitement.
-
-::component-code
----
-Props:
-  Texte: "Réfléchir..."
----
-::
-
-@@pH013@@Durée
-
-Utilisez le prop `duration` pour contrôler la vitesse d'animation en secondes.
+Utilisez le prop `text` pour définir le texte de miroitement.
 
 ::component-code
 ---
-Props:
-  Texte: "Réfléchir..."
-  Durée: 4
+props:
+  text: 'Thinking...'
 ---
 ::
 
-@@P015@@référencement
+### Durée
 
-Utilisez la prop `spread` pour contrôler la largeur de la mise en évidence. La propagation réelle est calculée comme `text.length * spread` en pixels.
+Utilisez le prop `duration` pour contrôler la vitesse d'animation en quelques secondes.
 
 ::component-code
 ---
-Props:
-  Texte: "Réfléchir..."
-  Répartition: 5
+props:
+  text: 'Thinking...'
+  duration: 4
 ---
 ::
 
-@@ph018@exemples
+### Répartition
+
+Utilisez la prop `spread` pour contrôler la largeur de la mise en lumière. La propagation réelle est calculée comme `text.length * spread` en pixels.
+
+::component-code
+---
+props:
+  text: 'Thinking...'
+  spread: 5
+---
+::
+
+## exemples
 
 ::tip{to="/docs/components/chat"}
-Consultez la page d'aperçu **Chat** pour connaître les instructions d'installation, la configuration du serveur et les exemples d'utilisation.
+Consultez la page d'aperçu **Chat** pour les instructions d'installation, la configuration du serveur et les exemples d'utilisation.
 ::
 
-@@2012@@api
+## api
 
-@@222@Projets
+### Props
 
-Composants-props
+:component-props
 
-@@ph023@thème
+## thème
 
-Composant-thème
+:component-theme
 
-@@changelog
+## Changelog
 
-Composant-changelog
+:component-changelog

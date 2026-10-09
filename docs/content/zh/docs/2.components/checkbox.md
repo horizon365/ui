@@ -14,246 +14,246 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Checkbox.vue
 ---
 
-## 使用情况
+## 用法
 
 使用`v-model`指令控制复选框的选中状态。
 
 ::component-code
 ---
-忽略：
-  - 模型值
-外部：
-  - 模型值
-道具：
-  模型值：true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: true
 ---
 ::
 
-当您不需要控制其状态时，请使用`default-value`属性来设定初始值。
+当不需要控制其状态时，使用`default-value`属性设置初始值。
 
 ::component-code
 ---
-忽略：
-  - 默认值
-道具：
-  默认值：真
+ignore:
+  - defaultValue
+props:
+  defaultValue: true
 ---
 ::
 
-不确定
+### 不确定
 
-在`v-model`指令或`default-value`属性中使用`indeterminate`值，将复选框设置为[indeterminate状态](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes)。
+使用`v-model`指令或`default-value`属性中的`indeterminate`值将复选框设置为[indeterminate state](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes)。
 
 ::component-code
 ---
-忽略：
-  - 默认值
-道具：
-  defaultValue：'不确定'
+ignore:
+  - defaultValue
+props:
+  defaultValue: 'indeterminate'
 ---
 ::
 
 ### 不确定图标
 
-使用`indeterminate-icon`属性自定义不确定图标。默认为`i-lucide-minus`。
+使用`indeterminate-icon` prop将indeterminate icon.xml自定义为`i-lucide-minus`。
 
 ::component-code
 ---
-忽略：
-  - 默认值
-道具：
-  defaultValue：'不确定'
-  不确定图标：“i-lucide-plus”
+ignore:
+  - defaultValue
+props:
+  defaultValue: 'indeterminate'
+  indeterminateIcon: 'i-lucide-plus'
 ---
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 您可以在`ui.icons.minus`键下的`app.config.ts`中全局自定义此图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`ui.icons.minus`键下的`vite.config.ts`中全局自定义此图标。
+你可以在你的`ui.icons.minus`下的`ui.icons.minus`键中全局自定义这个图标。
 :::
 ::
 
-标签
+### Label
 
-使用`label`属性来设定核取方块的标签。
+使用`label`属性设置复选框的标签。
 
 ::component-code
 ---
-道具：
-  label：检查我
+props:
+  label: Check me
 ---
 ::
 
-使用`required`道具时，会在标签旁边添加一个星号。
+当使用`required`属性时，标签旁边会添加一个星号。
 
 ::component-code
 ---
-忽略：
-  标签
-道具：
-  必填项：true
-  label：检查我
+ignore:
+  - label
+props:
+  required: true
+  label: Check me
 ---
 ::
 
-说明：
+### 说明
 
-使用`description`属性设置复选框的说明。
+使用`description`属性设置复选框的描述。
 
 ::component-code
 ---
-忽略：
-  标签
-道具：
-  label：检查我
-  description：'这是一个复选框。'
+ignore:
+  - label
+props:
+  label: Check me
+  description: 'This is a checkbox.'
 ---
 ::
 
-图标
+### Icon
 
-使用`icon`属性来设定核取方块被核取时的图标。预设为`i-lucide-check`。
+使用`icon`属性将复选框的图标设置为`i-lucide-check`。
 
 ::component-code
 ---
-忽略：
-  标签
-  - 默认值
-道具：
-  图标：“i-lucide-heart”（我的心）
-  默认值：真
-  label：检查我
+ignore:
+  - label
+  - defaultValue
+props:
+  icon: 'i-lucide-heart'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`ui.icons.check`键下的`app.config.ts`中全局自定义此图标。
+你可以在你的`app.config.ts`中的`ui.icons.check`键下全局自定义这个图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`vite.config.ts`的`ui.icons.check`键下全局自定此图标。
+您可以在`ui.icons.check`键下的`vite.config.ts`中全局自定义此图标。
 :::
 ::
 
-颜色
+### Color
 
-使用`color`道具更改复选框的颜色。
-
-::component-code
----
-忽略：
-  标签
-  - 默认值
-道具：
-  颜色：中性
-  默认值：真
-  label：检查我
----
-::
-
-### 变体
-
-使用`variant`属性来变更核取方块的变体。
+使用`color`属性更改复选框的颜色。
 
 ::component-code
 ---
-忽略：
-  标签
-  - 默认值
-道具：
-  颜色：'主要'
-  变体：'card'
-  默认值：真
-  label：检查我
+ignore:
+  - label
+  - defaultValue
+props:
+  color: neutral
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-尺寸
+### Variant
 
-使用`size`道具更改复选框的大小。
+使用`variant` prop更改Checkbox的变体。
 
 ::component-code
 ---
-忽略：
-  标签
-  - 默认值
-道具：
-  尺寸：xl
-  变量：列表
-  默认值：真
-  label：检查我
+ignore:
+  - label
+  - defaultValue
+props:
+  color: 'primary'
+  variant: 'card'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-### 指标
+### Size
 
-使用`indicator`道具来变更位置或隐藏指标。预设值为`start`。
+使用`size`属性更改复选框的大小。
+
+::component-code
+---
+ignore:
+  - label
+  - defaultValue
+props:
+  size: xl
+  variant: list
+  defaultValue: true
+  label: Check me
+---
+::
+
+### 指示灯
+
+使用`indicator`道具更改位置或隐藏指示器. `start`。
 
 ::note
-当`indicator`为`hidden`时，图标会显示在标签上方。
+当`indicator`为`hidden`时，图标将显示在标签上方。
 ::
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标签：
-  图标
-  - 默认值
-道具：
-  指示器：“隐藏”
-  变体：'card'
-  图标：“i-lucide-heart”（我的心）
-  默认值：真
-  label：检查我
+prettier: true
+ignore:
+  - label
+  - icon
+  - defaultValue
+props:
+  indicator: 'hidden'
+  variant: 'card'
+  icon: 'i-lucide-heart'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-### 已停用
+### 禁用
 
-使用`disabled`道具禁用复选框。
+使用`disabled` prop禁用复选框。
 
 ::component-code
 ---
-忽略：
-  标签
-道具：
-  已禁用：true
-  label：检查我
+ignore:
+  - label
+props:
+  disabled: true
+  label: Check me
 ---
 ::
 
-活性成分
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-此组件还支持所有本机`<button>`HTML属性。
+此组件还支持所有原生`<button>` HTML属性。
 ::
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-发射器
+### Emits
 
-：组件发射
+:component-emits
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

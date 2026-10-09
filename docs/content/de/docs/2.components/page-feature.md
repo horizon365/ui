@@ -8,122 +8,122 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageFeature.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Die PageFeature-Komponente wird von der Komponente [PageSection](/docs/components/page-section) verwendet, um [features](/docs/components/page-section#features) anzuzeigen.
+Die Komponente PageFeature wird von der Komponente [PageSection](/docs/components/page-section) verwendet, um [features](/docs/components/page-section#features) anzuzeigen.
 
-@@ph009@title @ Übersetzung
+### title
 
-Verwenden Sie `title` prop, um den Titel des Features festzulegen.
-
-::component-code
----
-Hide:
-  @@11@Klasse
-Props:
-  Titel: „ Thema "
-  Klasse: W-96
----
-::
-
-@@ph012 @ Beschreibung
-
-Verwenden Sie `description` prop, um die Beschreibung der Funktion festzulegen.
+Verwenden Sie die `title`-Prop, um den Titel des Features festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@14@Klasse
-Ignoriert:
-  @@ph015@title
-Props:
-  Titel: "Das Thema"
-  Beschreibung: 'Passen Sie Nuxt UI mit Ihren eigenen Farben, Schriftarten und mehr.'
-  Klasse: W-96
+hide:
+  - class
+props:
+  title: 'Theme'
+  class: 'w-96'
 ---
 ::
 
-@@ph016@@@Icon-Seite
+### Beschreibung
 
-Verwenden Sie `icon` prop, um das Symbol der Funktion festzulegen.
+Verwenden Sie die `description`-Prop, um die Beschreibung des Features festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@@@@18@18@18
-Ignoriert:
-  @@ph019@title
-  @@ph020@beschreibung
-Props:
-  Titel: „ Thema "
-  Beschreibung: 'Passen Sie Nuxt UI mit Ihren eigenen Farben, Schriftarten und mehr.'
-  I-Lucide-Swatch-Book (englisch)
-  Klasse: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+props:
+  title: 'Theme'
+  description: 'Customize Nuxt UI with your own colors, fonts, and more.'
+  class: 'w-96'
 ---
 ::
 
-@@ph021@@Link
+### Icon Bearbeiten
 
-Sie können jede Eigenschaft von der [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) Komponente wie `to`,`target`,`rel`, etc. übergeben.
+Verwenden Sie die `icon`-Prop, um das Symbol der Funktion festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @30@Klasse
-Ignoriert:
-  @@ph031@title
-  @@ph032@beschreibung
-  @@ph033@@gmail.de
-  @@ph034@@zielgerichteter
-Props:
-  Titel: "Das Thema"
-  Beschreibung: 'Passen Sie Nuxt UI mit Ihren eigenen Farben, Schriftarten und mehr.'
-  I-Lucide-Swatch-Book (englisch)
-  zu: '/docs/getting-started/theme/design-system'
-  Ziel: _blank
-  Klasse: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Theme'
+  description: 'Customize Nuxt UI with your own colors, fonts, and more.'
+  icon: 'i-lucide-swatch-book'
+  class: 'w-96'
 ---
 ::
 
-@@ph035@@Orientierung
+### Link auf
 
-Verwenden Sie `orientation` prop, um die Ausrichtung des Features zu ändern. Standardmäßig auf `horizontal`.
+Sie können jede Eigenschaft der Komponente [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) übergeben, z. B. `to`, `target`, `rel` usw.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@@@@@38@38@38@38@38@38@38@38@38@38@38@38@38@38@38@38@@38@38@@38@38@@38@@38@@38@@38@@38@@38@@38@@38@@38@38@@38@@38@38@@38@@@38@@@38@@@38@@@38@@@38@@@38@@@@@38@@@@@@38@@@@@@@@@@@@@@@@@3838@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@3833338
-Ignoriert:
-  @@ph039@title
-  @@ph040@beschreibung
-  @@ph041@@gmail.de
-Props:
-  Orientierung: "vertikal"
-  Titel: "Das Thema"
-  Beschreibung: 'Passen Sie Nuxt UI mit Ihren eigenen Farben, Schriftarten und mehr.'
-  I-Lucide-Swatch-Book (englisch)
-  Klasse: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - target
+props:
+  title: 'Theme'
+  description: 'Customize Nuxt UI with your own colors, fonts, and more.'
+  icon: 'i-lucide-swatch-book'
+  to: '/docs/getting-started/theme/design-system'
+  target: _blank
+  class: 'w-96'
 ---
 ::
 
-## api
+### Ausrichtung
 
-@@ph043@@gmail.de
+Verwenden Sie die `orientation`-prop, um die Ausrichtung des Features zu ändern. Standardmäßig ist `horizontal`.
 
-Komponenten-Props
+::component-code
+---
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+props:
+  orientation: 'vertical'
+  title: 'Theme'
+  description: 'Customize Nuxt UI with your own colors, fonts, and more.'
+  icon: 'i-lucide-swatch-book'
+  class: 'w-96'
+---
+::
 
-@@ph044@gmail.de
+## API (englisch)
 
-Die Komponenten-Slots
+### Props (englisch)
 
-@@ph045@gmail.de
+:component-props
 
-Das Komponenten-Theme
+### Slots Bearbeiten
 
-@@ph046@@changelog @@changelog
+:component-slots
 
-Das Component-Changelog
+## Theme (englisch)
+
+:component-theme
+
+## Changelog (englisch)
+
+:component-changelog

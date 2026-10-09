@@ -10,30 +10,30 @@ links:
 
 ## 使用法
 
-PageColumnsコンポーネントは、応答性の高い複数列レイアウトでコンテンツを表示します。[ PageCard ](/docs/components/page-card)コンポーネントやその他の要素とうまく連携し、モバイルの単一列から大きな画面の複数列に適応します。
+PageColumnsコンポーネントは、応答性の高い複数列レイアウトでコンテンツを表示します。[PageCard](/docs/components/page-card)コンポーネントやその他の要素とうまく連携し、モバイルでは1列から大きな画面では複数列に対応します。
 
 ::component-example
 ---
-崩壊真
-名前'ページ列—example'
-クラス'p—8'
+collapse: true
+name: 'page-columns-example'
+class: 'p-8'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

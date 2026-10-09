@@ -10,160 +10,160 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Avatar.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-L'Avatar utilise le composant `<NuxtImg>` lorsque [`@nuxt/image`](https://github.com/nuxt/image) est installé, retombant à `img` sinon.
+L'Avatar utilise le composant `<NuxtImg>` lorsque [`@nuxt/image`](https://github.com/nuxt/image) est installé, revenant à `img` sinon.
 
 ::component-code
 ---
-ignorer:
-  @@pH008@src
-Props:
+ignore:
+  - src
+props:
   src: 'https://github.com/benjamincanac.png'
 ---
 ::
 
 ::note
-Vous pouvez passer n'importe quelle propriété de l'élément HTML `<img>` comme `alt`,`loading`, etc.
+Vous pouvez passer n'importe quelle propriété de l'élément HTML `<img>` telle que `alt`, `loading`, etc.
 ::
 
 ::tip
-Pour vous désinscrire de `@nuxt/image`, utilisez le prop `as`:`:as="{ img: 'img' }"`.
+Pour désactiver `@nuxt/image`, utilisez le prop `as`: `:as="{ img: 'img' }"`.
 ::
 
-@@@ph015 @@ réseau
+### src
 
 Utilisez la prop `src` pour définir l'URL de l'image.
 
 ::component-code
 ---
-Ignorer:
-  @@17@chargement
-Props:
+ignore:
+  - loading
+props:
   src: 'https://github.com/benjamincanac.png'
-  Étiquette: Lazy
+  loading: lazy
 ---
 ::
 
-@@ph018@size
+### taille
 
-Utilisez la prop `size` pour définir la taille de l'avatar.
+Utilisez le prop `size` pour définir la taille de l'avatar.
 
 ::component-code
 ---
-Ignorer:
-  @@20@src
-  @@21@chargement
-Props:
+ignore:
+  - src
+  - loading
+props:
   src: 'https://github.com/benjamincanac.png'
-  Taille: XL
-  Étiquette: Lazy
+  size: xl
+  loading: lazy
 ---
 ::
 
 ::note
-Les éléments `<img>``width` et `height` sont automatiquement définis sur la base de la prop `size`.
+Les valeurs `width` et `height` de l'élément `<img>` sont automatiquement définies en fonction de la valeur `size`.
 ::
 
-@@226@Icon
+### icône
 
-Utilisez la prop `icon` pour afficher une solution de secours [Icon](/docs/components/icon).
+Utilisez le prop `icon` pour afficher un repli [Icon](/docs/components/icon).
 
 ::component-code
 ---
-Props:
+props:
   icon: 'i-lucide-image'
-  Étiquette: MD
+  size: md
 ---
 ::
 
-@@ph032@texte
+### Texte écrit
 
-Utilisez la prop `text` pour afficher un texte de secours.
+Utilisez le prop `text` pour afficher un texte de secours.
 
 ::component-code
 ---
-Props:
-  Référence:"+1"
-  Taille: MD
+props:
+  text: '+1'
+  size: md
 ---
 ::
 
-@@ph034@@Alt
+### Alt
 
-Lorsqu 'aucune icône ou texte n'est fourni, le **initials** de l'accessoire `alt` est utilisé comme solution de secours.
+Lorsqu 'aucune icône ou texte n'est fourni, le **initials** de la prop `alt` est utilisé comme repli.
 
 ::component-code
 ---
-Props:
-  Auteur: Benjamin Canac
-  Taille: MD
+props:
+  alt: 'Benjamin Canac'
+  size: md
 ---
 ::
 
 ::note
-Le prop `alt` est passé à l'élément `img` comme attribut `alt`.
+La prop `alt` est passée à l'élément `img` comme attribut `alt`.
 ::
 
-### Couleur: badge{label="4.8+" class="align-text-top"}
+Couleur: badge{label="4.8+" class="align-text-top"}
 
 Utilisez le prop `color` pour changer la couleur de l'avatar.
 
 ::component-code
 ---
-Props:
-  Couleur: primaire
-  Auteur: Benjamin Canac
+props:
+  color: primary
+  alt: 'Benjamin Canac'
 ---
 ::
 
-@@444@pseudo
+### Chip
 
-Utilisez le prop `chip` pour afficher une puce autour de l'Avatar.
+Utilisez le prop `chip` pour afficher une puce autour de l'avatar.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@pH046@src
-  - chargement
-  - chip.insert
-Props:
+prettier: true
+ignore:
+  - src
+  - loading
+  - chip.inset
+props:
   src: 'https://github.com/benjamincanac.png'
-  Étiquette: Lazy
-  Chipé:
-    Inset: vrai
+  loading: lazy
+  chip:
+    inset: true
 ---
 ::
 
-@@ph049@exemples
+## Exemples
 
 ### Avec tooltip
 
-Vous pouvez utiliser un composant [Tooltip](/docs/components/tooltip) pour afficher une infobulle lorsque vous survolez l'Avatar.
+Vous pouvez utiliser un composant [Tooltip](/docs/components/tooltip) pour afficher une infobulle lorsque vous survolez l'avatar.
 
-: exemple de composant {name="avatar-tooltip-example"}
+:component-example{name="avatar-tooltip-example"}
 
 ### Avec masque
 
 Vous pouvez utiliser un masque CSS pour afficher un avatar avec une forme personnalisée au lieu d'un simple cercle.
 
-: exemple de composant {name="avatar-mask-example"}
+:component-example{name="avatar-mask-example"}
 
-@@pH058@@api
+## API écrit
 
-@@509@@propriété
+### Props équipements
 
-Composants-props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes" target="_blank"}
 Ce composant prend également en charge tous les attributs HTML natifs `<img>`.
 ::
 
-@@ph061@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

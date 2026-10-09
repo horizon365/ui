@@ -1,5 +1,5 @@
 ---
-title: Feldgruppe
+title: Fieldgroup Bearbeiten
 description: Gruppieren Sie mehrere knopfähnliche Elemente zusammen.
 category: element
 keywords:
@@ -13,113 +13,113 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/FieldGroup.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Wickeln Sie mehrere [Button](/docs/components/button) innerhalb einer Feldgruppe ein, um sie zusammenzufassen.
-
-::component-code
----
-Schöner: wahr
-Die Slots:
-  Default:|
-
-    @@@@005
-    @@@@006 @
----
-: u-button {color="neutral" variant="subtle" label="Button"}
-: u-button {color="neutral" variant="outline" icon="i-lucide-chevron-down"}
-::
-
-@@ph009 @ Größe
-
-Verwenden Sie die `size` prop, um die Größe aller Tasten zu ändern.
+Wickeln Sie mehrere [Button](/docs/components/button) in eine FieldGroup, um sie zu gruppieren.
 
 ::component-code
 ---
-Schöner: wahr
-Props:
-  Größe: XL
-Slots auf:
-  Default:|
+prettier: true
+slots:
+  default: |
 
-    @@11
-    @@ph012
+    <UButton color="neutral" variant="subtle" label="Button" />
+    <UButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
 ---
-: u-button {color="neutral" variant="subtle" label="Button"}
-: u-button {color="neutral" variant="outline" icon="i-lucide-chevron-down"}
+:u-button{color="neutral" variant="subtle" label="Der Button"}
+:u-button{color="neutral" variant="outline" icon="i-lucide-chevron-down"}
 ::
 
-@@ph015@@Orientierung
+### Größe
 
-Verwenden Sie `orientation` prop, um die Ausrichtung der Schaltflächen zu ändern. Standardmäßig `horizontal`.
+Verwenden Sie die `size`-Prop, um die Größe aller Tasten zu ändern.
 
 ::component-code
 ---
-Schöner: wahr
-Props:
-  Ausrichtung: vertikal
-Slots auf:
-  Default:|
+prettier: true
+props:
+  size: xl
+slots:
+  default: |
 
-    @@ph018
-    @@ph019
+    <UButton color="neutral" variant="subtle" label="Button" />
+    <UButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
 ---
-: u-button {color="neutral" variant="subtle" label="Submit"}
-: u-button {color="neutral" variant="outline" label="Cancel"}
+:u-button{color="neutral" variant="subtle" label="Der Button"}
+:u-button{color="neutral" variant="outline" icon="i-lucide-chevron-down"}
 ::
 
-@@ph022@@@Beispiele
+### Ausrichtung
 
-@@ph023@@Mit Eingabe
-
-Sie können Komponenten wie [Input](/docs/components/input),[InputMenu](/docs/components/input-menu),[](/docs/components/select)[](PH03))))))))))))))))))))PH0339@
+Verwenden Sie die `orientation`-prop, um die Ausrichtung der Tasten zu ändern. Standardmäßig `horizontal`.
 
 ::component-code
 ---
-Schöner: wahr
-Die Slots:
-  Default:|
+prettier: true
+props:
+  orientation: vertical
+slots:
+  default: |
 
-    @@040
-
-    @@041
+    <UButton color="neutral" variant="subtle" label="Submit" />
+    <UButton color="neutral" variant="outline" label="Cancel" />
 ---
-: u-input {color="neutral" variant="outline" placeholder="Enter token"}
-: u-button {color="neutral" variant="subtle" icon="i-lucide-clipboard"}
+:u-button{color="neutral" variant="subtle" label="submit"}
+:u-button{color="neutral" variant="outline" label="Annullierung"}
 ::
 
-@@ph044@@mit tooltip
+## Examples (Beispiele)
 
-Sie können ein [Tooltip](/docs/components/tooltip) innerhalb einer Feldgruppe verwenden.
+### Mit Input
 
-: component-example {name="field-group-tooltip-example"}
+Sie können Komponenten wie [Input](/docs/components/input), [InputMenu](/docs/components/input-menu), [Select](/docs/components/select) [SelectMenu](/docs/components/select-menu) usw. in einer Feldgruppe verwenden.
 
-### Mit Dropdown-Menü
+::component-code
+---
+prettier: true
+slots:
+  default: |
 
-Sie können ein [DropdownMenu](/docs/components/dropdown-menu) innerhalb einer Feldgruppe verwenden.
+    <UInput color="neutral" variant="outline" placeholder="Enter token" />
 
-: component-beispiel {name="field-group-dropdown-example"}
+    <UButton color="neutral" variant="subtle" icon="i-lucide-clipboard" />
+---
+:u-input{color="neutral" variant="outline" placeholder="Enter token"}
+:u-button{color="neutral" variant="subtle" icon="i-lucide-clipboard"}
+::
 
-### Mit Abzeichen
+### With Tooltip Übersetzung
 
-Sie können ein [Badge](/docs/components/badge) innerhalb einer Feldgruppe verwenden.
+Sie können einen [Tooltip](/docs/components/tooltip) innerhalb einer Feldgruppe verwenden.
 
-: component-beispiel {name="field-group-badge-example"}
+:component-example{name="field-group-tooltip-example"}
 
-## api
+### Mit dem Dropdown-Menü
 
-### Props
+Sie können ein [DropdownMenu](/docs/components/dropdown-menu) in einer Feldgruppe verwenden.
 
-Komponenten Props
+:component-example{name="field-group-dropdown-example"}
 
-### Slots
+### Mit Badge
 
-Die Komponenten-Slots
+Sie können einen [Badge](/docs/components/badge) innerhalb einer Feldgruppe verwenden.
 
-@@ph065@gmail.de
+:component-example{name="field-group-badge-example"}
 
-Das Komponenten-Theme
+## API (englisch)
 
-@@ph066@@changelog @@changelog
+### Props (nicht)
 
-Das Component-Changelog
+:component-props
+
+### Slots Bearbeiten
+
+:component-slots
+
+## Theme Bearbeiten
+
+:component-theme
+
+## Changelog Übersetzung
+
+:component-changelog

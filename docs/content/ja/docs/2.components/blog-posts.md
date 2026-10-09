@@ -8,9 +8,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/BlogPosts.vue
 ---
 
-## 使用 法
+## 使用法
 
-BlogPosts コンポーネント は 、[BlogPost](/docs/components/blog-post))コンポーネント の リスト を 表示 する 柔軟 な レイアウト を 提供 し ます 。
+BlogPostsコンポーネントは、[BlogPost](/docs/components/blog-post)コンポーネントのリストをデフォルトスロットまたは`posts` propを使用して表示する柔軟なレイアウトを提供します。
 
 ```vue {2,8}
 <template>
@@ -26,78 +26,78 @@ BlogPosts コンポーネント は 、[BlogPost](/docs/components/blog-post))�
 
 ### 投稿
 
-`posts`prop を 、[BlogPost](/docs/components/blog-post#props)コンポーネント の プロ パティ を 持つ オブジェクト の 配列 として 使用 し ます 。
+`posts`プロパティを[BlogPost](/docs/components/blog-post#props)コンポーネントのプロパティを持つオブジェクトの配列として使用します。
 
 ::component-code
 ---
-崩壊 真
-無視
-  - 投稿
-外部
-  - 投稿
-externalTypes
-  - BlogPostProps [ ]
-小道具
-  投稿
-    - title Nuxt アイコン v1
-      説明 ' Discover Nuxt Icon v1 ! '
-      画像https://nuxt.com/assets/blog/nuxt-icon/cover.png
-      日 付 2024 - 11 - 25
-    - title Nuxt 3.14
-      説明 ： ' Nuxt 3.14 が 出 まし た ! '
-      画像https://nuxt.com/assets/blog/v3.14.png
-      日 付 2024 - 11 - 04
-    - title Nuxt 3.13
-      説明 ： ' Nuxt 3.13 が 出 まし た ! '
-      画像https://nuxt.com/assets/blog/v3.13.png
-      日 付 2024 - 08 - 22
+collapse: true
+ignore:
+  - posts
+external:
+  - posts
+externalTypes:
+  - BlogPostProps[]
+props:
+  posts:
+    - title: Nuxt Icon v1
+      description: 'Discover Nuxt Icon v1!'
+      image: https://nuxt.com/assets/blog/nuxt-icon/cover.png
+      date: 2024-11-25
+    - title: Nuxt 3.14
+      description: 'Nuxt 3.14 is out!'
+      image: https://nuxt.com/assets/blog/v3.14.png
+      date: 2024-11-04
+    - title: Nuxt 3.13
+      description: 'Nuxt 3.13 is out!'
+      image: https://nuxt.com/assets/blog/v3.13.png
+      date: 2024-08-22
 ---
 ::
 
-### オリエンテーション
+### Orientation
 
-`orientation`プロ パティ を 使用 し て BlogPosts の 向き を 変更 し ます 。 デフォルト は`horizontal`です 。
+BlogPostsの向きを変更するには、`orientation`プロパティを使用します。デフォルトは`horizontal`です。
 
 ::component-code
 ---
-崩壊 真
-無視
-  - 投稿
-外部
-  - 投稿
-externalTypes
-  - BlogPostProps [ ]
-小道具
-  オリエンテーション 垂直
-  投稿
-    - title Nuxt アイコン v1
-      説明 ' Discover Nuxt Icon v1 ! '
-      画像https://nuxt.com/assets/blog/nuxt-icon/cover.png
-      日 付 2024 - 11 - 25
-    - title Nuxt 3.14
-      説明 ： ' Nuxt 3.14 が 出 まし た ! '
-      画像https://nuxt.com/assets/blog/v3.14.png
-      日 付 2024 - 11 - 04
-    - title Nuxt 3.13
-      説明 ： ' Nuxt 3.13 が 出 まし た ! '
-      画像https://nuxt.com/assets/blog/v3.13.png
-      日 付 2024 - 08 - 22
+collapse: true
+ignore:
+  - posts
+external:
+  - posts
+externalTypes:
+  - BlogPostProps[]
+props:
+  orientation: vertical
+  posts:
+    - title: Nuxt Icon v1
+      description: 'Discover Nuxt Icon v1!'
+      image: https://nuxt.com/assets/blog/nuxt-icon/cover.png
+      date: 2024-11-25
+    - title: Nuxt 3.14
+      description: 'Nuxt 3.14 is out!'
+      image: https://nuxt.com/assets/blog/v3.14.png
+      date: 2024-11-04
+    - title: Nuxt 3.13
+      description: 'Nuxt 3.13 is out!'
+      image: https://nuxt.com/assets/blog/v3.13.png
+      date: 2024-08-22
 ---
 ::
 
 ::tip
-デフォルト スロット の 代わり に`posts`prop を 使用 する と 、 投稿 の`orientation`は 自動的 に 反転 し ます 。`horizontal`から`vertical`、 その 逆 も 同様 です 。
+デフォルトスロットの代わりに`posts`プロパティを使用すると、投稿の`orientation`は自動的に逆になります。`horizontal`は`vertical`に、その逆も同様です。
 ::
 
 ## 例
 
 ::note
-これら の 例 で は[Nuxt Content](https://content.nuxt.com)を 使用 し て い ます が 、 コンポーネント は 任意 の コンテンツ 管理 システム と 統合 する こと が でき ます 。
+これらの例は[Nuxt Content](https://content.nuxt.com)を使用していますが、コンポーネントは任意のコンテンツ管理システムと統合できます。
 ::
 
-### ページ 内
+### ページ内
 
-ブログ ページ を 作成 する に は 、 ページ 内 の BlogPosts コンポーネント を 使用 し ます 。
+ブログページを作成するには、ページ内のBlogPostsコンポーネントを使用します。
 
 ```vue [pages/blog/index.vue]{11-18}
 <script setup lang="ts">
@@ -125,27 +125,27 @@ const { data: posts } = await useAsyncData('posts', () => queryCollection('posts
 ```
 
 ::note
-この 例 で は 、`@nuxt/content`モジュール の`queryCollection`を 使用 し て`posts`を 取得 し ます 。
+この例では、`@nuxt/content`モジュールの`queryCollection`を使用して`posts`をフェッチします。
 ::
 
 ::tip
-`@nuxt/content`は`path`プロ パティ を 使用 し て いる ため 、`to`プロ パティ は 上書き さ れ ます 。
+`@nuxt/content`は`path`プロパティを使用するため、`to`プロパティはオーバーライドされます。
 ::
 
 ## API
 
 ### Props
 
-component-props
+:component-props
 
 ### スロット
 
-コンポーネント スロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネント テーマ
+:component-theme
 
 ## Changelog
 
-component-changelog
+:component-changelog

@@ -15,222 +15,222 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DropdownMenu.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
 Utilisez un [Button](/docs/components/button) ou tout autre composant dans l'emplacement par défaut du menu déroulant.
 
 ::component-code
 ---
-Étiquette: true
-Collapse: vrai
-Ignorer:
-  @@ph005@articles
-  @@ph006@ui.content
-Extérieur:
-  @@ph007@articles
-Extérieurs:
-  @@@P008@@@DropdownMenuItem [][]
-Props:
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[][]
+props:
   items:
-    - -étiquette: Benjamin
-        Avatar:
+    - - label: Benjamin
+        avatar:
           src: 'https://github.com/benjamincanac.png'
-          Étiquette: Lazy
-        Type: étiquette
-    - -étiquette: Profil
-        Icône: i-lucide-user
-      - label: Facturation
-        icon: i-lucide-carte de crédit
-      - label: Réglages
-        Icône: i-lucide-cog
+          loading: lazy
+        type: label
+    - - label: Profile
+        icon: i-lucide-user
+      - label: Billing
+        icon: i-lucide-credit-card
+      - label: Settings
+        icon: i-lucide-cog
         kbds:
-          @@ph013 @@','
-      - label: Raccourcis clavier
-        Icône: i-lucide-moniteur
-    - -étiquette: Équipe
-        icon: i-lucide-utilisateurs
-        filtre:
-          placeholder: 'Rechercher des membres...'
-        Enfants:
-          - -étiquette: benjamincanac
-              Avatar:
+          - ','
+      - label: Keyboard shortcuts
+        icon: i-lucide-monitor
+    - - label: Team
+        icon: i-lucide-users
+        filter:
+          placeholder: 'Search members...'
+        children:
+          - - label: benjamincanac
+              avatar:
                 src: 'https://github.com/benjamincanac.png'
-                Étiquette: Lazy
-            - étiquette: HugoRCD
-              Avatar:
+                loading: lazy
+            - label: HugoRCD
+              avatar:
                 src: 'https://github.com/HugoRCD.png'
-                Étiquette: Lazy
-            - label: étiquette
-              Avatar:
+                loading: lazy
+            - label: atinux
+              avatar:
                 src: 'https://github.com/atinux.png'
-                Étiquette: Lazy
+                loading: lazy
             - label: romhml
-              Avatar:
+              avatar:
                 src: 'https://github.com/romhml.png'
-                Étiquette: Lazy
+                loading: lazy
             - label: sandros94
-              Avatar :
-                src : ' https://github.com/sandros94.png '
-                Étiquette : Lazy
-            - label : J-Michalek
-              Avatar :
-                src : ' https://github.com/J-Michalek.png '
-                Étiquette : Lazy
-            - label : hywax
-              Avatar :
-                src : ' https://github.com/hywax.png '
-                Étiquette : Lazy
-      - label : Inviter les utilisateurs
-        Icône : i-lucide - user-plus
-        Enfants :
-          - - étiquette : Email
-              Icône : i-lucide - mail
-            - label : message
-              Icône : i-lucide - message-square
-          - - étiquette : Plus
-              Icône : i-lucide - circle-plus
-              Enfants :
-                - label : Importer depuis Slack
-                  Icône : i-simple - icons-slack
-                  à : ' https://slack.com'
-                  Référence : _ blank
-                - label: Importer depuis Trello
-                  Icône: i-simple-icons-trello
-                - label: Importer depuis Asana
-                  Icône: i-simple-icons-asana
-      - label: Nouvelle équipe
-        Étiquette: i-lucide-plus
+              avatar:
+                src: 'https://github.com/sandros94.png'
+                loading: lazy
+            - label: J-Michalek
+              avatar:
+                src: 'https://github.com/J-Michalek.png'
+                loading: lazy
+            - label: hywax
+              avatar:
+                src: 'https://github.com/hywax.png'
+                loading: lazy
+      - label: Invite users
+        icon: i-lucide-user-plus
+        children:
+          - - label: Email
+              icon: i-lucide-mail
+            - label: Message
+              icon: i-lucide-message-square
+          - - label: More
+              icon: i-lucide-circle-plus
+              children:
+                - label: Import from Slack
+                  icon: i-simple-icons-slack
+                  to: 'https://slack.com'
+                  target: _blank
+                - label: Import from Trello
+                  icon: i-simple-icons-trello
+                - label: Import from Asana
+                  icon: i-simple-icons-asana
+      - label: New team
+        icon: i-lucide-plus
         kbds:
-          @@ph031@méta
-          @@ph032@n
-    - -étiquette: GitHub
+          - meta
+          - n
+    - - label: GitHub
         icon: i-simple-icons-github
-        à l'adresse:'https://github.com/nuxt/ui'
-        Référence:_blank
-      - label: Aide à l'emploi
-        Icône: i-lucide-life-buoy
-        à:'/docs/components/menu déroulant'
-      - label: api
-        Étiquette: i-lucide-cloud
-        handicapés: vrai
-    - -étiquette: Déconnexion
-        Icône: i-lucide-log-out
-        Couleur: erreur
+        to: 'https://github.com/nuxt/ui'
+        target: _blank
+      - label: Support
+        icon: i-lucide-life-buoy
+        to: '/docs/components/dropdown-menu'
+      - label: API
+        icon: i-lucide-cloud
+        disabled: true
+    - - label: Logout
+        icon: i-lucide-log-out
+        color: error
         kbds:
-          @@ph037@shift
-          @@ph038@méta
-          @@pH039@@q
-Slots:
-  Défaut:|
+          - shift
+          - meta
+          - q
+slots:
+  default: |
 
-    @@@ 040 @
+    <UButton icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-Référence: u-button {icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
-@@ph042@référencement
+### Articles
 
-Utilisez le `items` prop comme un tableau d'objets avec les propriétés suivantes:
+Utilisez le prop `items` comme un tableau d'objets avec les propriétés suivantes:
 
-@@
-@@
-@@
-@@
-@@
-@@
-- [`checked?: boolean`{lang="ts-type"}](#with-checkbox-items)
-@@
-@@
-@@
-- [`onUpdateChecked?: (checked: boolean) => void`{lang="ts-type"}](#with-checkbox-items)
-@@
-- [`filter?: boolean | InputProps`{lang="ts-type"}](#with-filter-items)
-@@
-@@
-@@
-@@
+- x`label?: string`x{lang="ts-type"}
+- x`icon?: string`x{lang="ts-type"}
+- x`avatar?: AvatarProps`x{lang="ts-type"}
+- `kbds?: string[] | KbdProps[]`x{lang="ts-type"}
+- x[x`type?: "link" | "label" | "separator" | "checkbox"`x{lang="ts-type"}](x#with-checkbox-itemsx)
+- x[`color?: "error" | "primary" | "secondary" | "success" | "info" | "warning" | "neutral"`x{lang="ts-type"}x](x#with-color-itemsx)
+- x[x`checked?: boolean`x{lang="ts-type"}](x#with-checkbox-items)
+- x`disabled?: boolean`x{lang="ts-type"}
+- x[x`slot?: string`x{lang="ts-type"}](x#with-custom-slotx)
+- x`onSelect?: (e: Event) => void`x{lang="ts-type"}
+- x[x`onUpdateChecked?: (checked: boolean) => void`x{lang="ts-type"}](x#with-checkbox-itemsx)
+- x`children?: DropdownMenuItem[] | DropdownMenuItem[][]`{lang="ts-type"}
+- [x`filter?: boolean | InputProps`x{lang="ts-type"}](x#with-filter-itemsx)
+- x`filterFields?: string[]`x{lang="ts-type"}
+- x`ignoreFilter?: boolean`x{lang="ts-type"}
+- `class?: any`x{lang="ts-type"}
+- x`ui?: { item?: ClassNameValue, label?: ClassNameValue, separator?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLabel?: ClassNameValue, itemLabelExternalIcon?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingIcon?: ClassNameValue, itemTrailingKbds?: ClassNameValue, itemTrailingKbdsSize?: ClassNameValue }`x{lang="ts-type"}
 
-Vous pouvez passer n'importe quelle propriété du composant [Link](/docs/components/link#props) comme `to`,`target`, etc.
+Vous pouvez passer n'importe quelle propriété du composant [Link](/docs/components/link#props) telle que `to`, `target`, etc.
 
 ::component-code
 ---
-Étiquette: true
-Collapse: vrai
-ignorer:
-  @@ph125@articles
+prettier: true
+collapse: true
+ignore:
+  - items
   - ui.content
-Extérieure:
-  @@ph127@articles
-Extérieurs:
-  - DropdownMenuItem [][]
-Props:
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[][]
+props:
   items:
-    - -étiquette: Benjamin
-        Avatar:
+    - - label: Benjamin
+        avatar:
           src: 'https://github.com/benjamincanac.png'
-          Étiquette: Lazy
-        Type: étiquette
-    - -étiquette: Profil
-        Icône: i-lucide-user
-      - label: Facturation
-        icon: i-lucide-carte de crédit
-      - label: Réglages
-        Icône: i-lucide-cog
+          loading: lazy
+        type: label
+    - - label: Profile
+        icon: i-lucide-user
+      - label: Billing
+        icon: i-lucide-credit-card
+      - label: Settings
+        icon: i-lucide-cog
         kbds:
-          @@ph133 @','
-      - label: Raccourcis clavier
-        Icône : i-lucide - moniteur
-    - - étiquette : Équipe
-        icon : i-lucide - utilisateurs
-      - label : Inviter des utilisateurs
-        Icône : i-lucide - user-plus
-        Enfants :
-          - - étiquette : Email
-              Icône : i-lucide - mail
-            - label : Réponse
-              Icône : i-lucide - message-square
-          - - label : Plus d'informations
-              Icône : i-lucide - circle-plus
-              Enfants :
-                - label : Importer depuis Slack
-                  Icône : i-simple - icons-slack
-                  à : ' https://slack.com'
-                  Référence : _ blank
-                - label : Importer depuis Trello
-                  Icône : i-simple - icons-trello
-                - label : Importer depuis Asana
-                  Icône : i-simple - icons-asana
-      - label : Nouvelle équipe
-        Icône : i-lucide - plus
-        kbds :
-          @@ph144@méta
-          @@ph145@n
-    - -étiquette: GitHub
+          - ','
+      - label: Keyboard shortcuts
+        icon: i-lucide-monitor
+    - - label: Team
+        icon: i-lucide-users
+      - label: Invite users
+        icon: i-lucide-user-plus
+        children:
+          - - label: Email
+              icon: i-lucide-mail
+            - label: Message
+              icon: i-lucide-message-square
+          - - label: More
+              icon: i-lucide-circle-plus
+              children:
+                - label: Import from Slack
+                  icon: i-simple-icons-slack
+                  to: 'https://slack.com'
+                  target: _blank
+                - label: Import from Trello
+                  icon: i-simple-icons-trello
+                - label: Import from Asana
+                  icon: i-simple-icons-asana
+      - label: New team
+        icon: i-lucide-plus
+        kbds:
+          - meta
+          - n
+    - - label: GitHub
         icon: i-simple-icons-github
-        à l'adresse:'https://github.com/nuxt/ui'
-        Référence:_blank
-      - label: Aide à l'emploi
-        Icône: i-lucide-life-buoy
-        à:'/docs/components/menu déroulant'
-      - label: api
-        Étiquette: i-lucide-cloud
-        handicapés: vrai
-    - -étiquette: Déconnexion
-        Icône: i-lucide-log-out
+        to: 'https://github.com/nuxt/ui'
+        target: _blank
+      - label: Support
+        icon: i-lucide-life-buoy
+        to: '/docs/components/dropdown-menu'
+      - label: API
+        icon: i-lucide-cloud
+        disabled: true
+    - - label: Logout
+        icon: i-lucide-log-out
         kbds:
-          @@ph150@shift
-          @@ph151@méta
-          @@ph152 @
-  UI:
-    Contenu: 'W-48'
-Slots:
-  Défaut:|
+          - shift
+          - meta
+          - q
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@@ 153 @
+    <UButton icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-Référence: u-button {icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ::note
@@ -238,316 +238,316 @@ Vous pouvez également passer un tableau de tableaux à la prop `items` pour cr�
 ::
 
 ::tip
-Chaque élément peut prendre un tableau `children` d'objets avec les mêmes propriétés que le prop `items` pour créer un menu imbriqué qui peut être contrôlé à l'aide des propriétés `open`,`defaultOpen` et `content`.
+Chaque élément peut prendre un tableau d'objets `children` avec les mêmes propriétés que le prop `items` pour créer un menu imbriqué qui peut être contrôlé à l'aide des propriétés `open`, `defaultOpen` et `content`.
 ::
 
-@@ph161@contenu
+### contenu
 
 Utilisez la prop `content` pour contrôler la façon dont le contenu du menu déroulant est rendu, comme son `align` ou `side` par exemple.
 
 ::component-code
 ---
-Étiquette: true
-Collapse: vrai
-ignorer:
-  @@ph165@articles
+prettier: true
+collapse: true
+ignore:
+  - items
   - ui.content
-Extérieur:
-  @@ph167@articles
-Extérieurs:
-  - DropdownMenuItem []
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[]
 items:
   content.align:
-    @@ph169@départ
-    @@P170@réseau
-    @@ph171@fin
+    - start
+    - center
+    - end
   content.side:
-    @@ph172@droite
-    @@ph173@left
-    @@ph174@top
-    @@ph175@réduit
-Props:
+    - right
+    - left
+    - top
+    - bottom
+props:
   items:
-    - label: Profil
-      Icône: i-lucide-user
-    - label: Facturation
-      icon: i-lucide-carte de crédit
-    - label: Réglages
-      Icône: i-lucide-cog
-  contenu:
-    Alignement: départ
-    Étiquette: bottom
-    Décalage: 8
-  UI:
-    Contenu: 'W-48'
-Slots:
-  Default:|
+    - label: Profile
+      icon: i-lucide-user
+    - label: Billing
+      icon: i-lucide-credit-card
+    - label: Settings
+      icon: i-lucide-cog
+  content:
+    align: start
+    side: bottom
+    sideOffset: 8
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@@ 179 @
+    <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-Le bouton {label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{label="ouvert" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
-### Filtre: badge{label="4.6+" class="align-text-top"}
+### Filter: badge{label="4.6+" class="align-text-top"}
 
-Utilisez la prop `filter` pour afficher une entrée de filtre dans le menu déroulant. Par défaut à `false`.
+Utilisez la prop `filter` pour afficher une entrée de filtre à l'intérieur du menu déroulant.
 
 ::note{to="#with-ignore-filter"}
-Utilisez la prop `ignore-filter` pour désactiver la recherche interne et utiliser votre propre logique de recherche.
+Utilisez le prop `ignore-filter` pour désactiver la recherche interne et utiliser votre propre logique de recherche.
 ::
 
 ::note{to="#with-filter-fields"}
 Utilisez la prop `filter-fields` pour spécifier les champs à filtrer. Par défaut, il utilise la prop `labelKey`.
 ::
 
-Vous pouvez passer n'importe quelle propriété du composant [Input](/docs/components/input) pour la personnaliser.
+Vous pouvez passer n'importe quelle propriété du composant [Input](/docs/components/input) pour le personnaliser.
 
 ::component-code
 ---
-Étiquette: true
-Collapse: vrai
-ignorer:
-  @@ph192@articles
+prettier: true
+collapse: true
+ignore:
+  - items
   - filter.icon
   - content.align
   - ui.content
-Extérieur:
-  @@ph196@articles
-Extérieurs:
-  - DropdownMenuItem []
-Props:
-  filtre:
-    Icône: i-lucide-search
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[]
+props:
+  filter:
+    icon: i-lucide-search
   items:
-    - label: Profil
-      Icône: i-lucide-user
-    - label: Facturation
-      icon: i-lucide-carte de crédit
-    - label: Réglages
-      Icône: i-lucide-cog
-    - label: Équipe
-      icon: i-lucide-utilisateurs
-    - label: Inviter des utilisateurs
-      Icône: i-lucide-user-plus
-    - label: Nouvelle équipe
-      Icône: i-lucide-plus
-  contenu:
-    Alignement: départ
-  UI:
-    Contenu: 'W-48'
-Slots:
-  Défaut:|
+    - label: Profile
+      icon: i-lucide-user
+    - label: Billing
+      icon: i-lucide-credit-card
+    - label: Settings
+      icon: i-lucide-cog
+    - label: Team
+      icon: i-lucide-users
+    - label: Invite users
+      icon: i-lucide-user-plus
+    - label: New team
+      icon: i-lucide-plus
+  content:
+    align: start
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@@ 204 @
+    <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-Référence: u-button {label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{label="ouvert" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ::tip{to="#with-filter-items"}
 Vous pouvez également activer le filtre sur des sous-menus spécifiques en utilisant le champ `filter` sur les éléments avec `children`.
 ::
 
-@208@@Fédération
+### Arrow équipé
 
 Utilisez la prop `arrow` pour afficher une flèche dans le menu déroulant.
 
 ::component-code
 ---
-Étiquette: true
-Collapse: vrai
-ignorer:
-  @@ph210@@flèche
-  @@ph211@articles
+prettier: true
+collapse: true
+ignore:
+  - arrow
+  - items
   - ui.content
-Extérieure:
-  @@ph213@articles
-Extérieurs:
-  - DropdownMenuItem []
-Props:
-  Arrow: vrai
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[]
+props:
+  arrow: true
   items:
-    - label: Profil
-      Icône: i-lucide-user
-    - label: Facturation
-      icon: i-lucide-carte de crédit
-    - label: Réglages
-      Icône: i-lucide-cog
-  UI:
-    Contenu: 'W-48'
-Slots:
-  Default:|
+    - label: Profile
+      icon: i-lucide-user
+    - label: Billing
+      icon: i-lucide-credit-card
+    - label: Settings
+      icon: i-lucide-cog
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@@ 218 @
+    <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-Référence: u-button {label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{label="ouvert" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
-@220@Size
+### Size
 
-Utilisez la prop `size` pour contrôler la taille du menu déroulant.
+Utilisez le prop `size` pour contrôler la taille du menu déroulant.
 
 ::component-code
 ---
-Étiquette: true
-Collapse: vrai
-Ignorer:
-  @@222@articles
+prettier: true
+collapse: true
+ignore:
+  - items
   - content.align
   - ui.content
-Extérieur:
-  @@225@articles
-Extérieurs:
-  @@226@@DropdownMenuItem []
-Props:
-  Taille: XL
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[]
+props:
+  size: xl
   items:
-    - label: Profil
-      Icône: i-lucide-user
-    - label: Facturation
-      icon: i-lucide-carte de crédit
-    - label: Réglages
-      Icône: i-lucide-cog
-  contenu:
-    Alignement: départ
-  UI:
-    Contenu: 'W-48'
-Slots:
-  Default:|
+    - label: Profile
+      icon: i-lucide-user
+    - label: Billing
+      icon: i-lucide-credit-card
+    - label: Settings
+      icon: i-lucide-cog
+  content:
+    align: start
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@@ 230 @
+    <UButton size="xl" label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-Référence: u-button {size="xl" label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{size="xl" label="ouvert" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ::warning
-Le prop `size` ne sera pas associé au bouton, vous devez le définir vous-même.
+Le prop `size` ne sera pas associé au bouton, vous devez le configurer vous-même.
 ::
 
 ::note
 En utilisant la même taille, les éléments du menu déroulant seront parfaitement alignés avec le bouton.
 ::
 
-@@ph233@@mode
+### Modale
 
 Utilisez la prop `modal` pour contrôler si le menu déroulant bloque l'interaction avec le contenu extérieur.
 
 ::component-code
 ---
-Étiquette: true
-Collapse: vrai
-ignorer:
-  @@ph236@articles
+prettier: true
+collapse: true
+ignore:
+  - items
   - ui.content
-Extérieure:
-  @@ph238@articles
-Extérieurs:
-  - DropdownMenuItem []
-Props:
-  Modalité: Faux
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[]
+props:
+  modal: false
   items:
-    - label: Profil
-      Icône: i-lucide-user
-    - label: Facturation
-      icon: i-lucide-carte de crédit
-    - label: Réglages
-      Icône: i-lucide-cog
-  UI:
-    Contenu: 'W-48'
-Slots:
-  Default:|
+    - label: Profile
+      icon: i-lucide-user
+    - label: Billing
+      icon: i-lucide-credit-card
+    - label: Settings
+      icon: i-lucide-cog
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@@ 243 @
+    <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-Référence: u-button {label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{label="ouvert" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
-### désactivé
+### Désactivé
 
 Utilisez la prop `disabled` pour désactiver le menu déroulant.
 
 ::component-code
 ---
-Étiquette: true
-Collapse: vrai
-ignorer:
-  @@ph247@articles
+prettier: true
+collapse: true
+ignore:
+  - items
   - ui.content
-Extérieur:
-  @@ph249@articles
-Extérieurs:
-  - DropdownMenuItem []
-Props:
-  handicapés: vrai
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[]
+props:
+  disabled: true
   items:
-    - label: Profil
-      Icône: i-lucide-user
-    - label: Facturation
-      icon: i-lucide-carte de crédit
-    - label: Réglages
-      Icône: i-lucide-cog
-  UI:
-    Contenu: 'W-48'
-Slots:
-  Défaut:|
+    - label: Profile
+      icon: i-lucide-user
+    - label: Billing
+      icon: i-lucide-credit-card
+    - label: Settings
+      icon: i-lucide-cog
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@@ 254 @
+    <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-Référence: u-button {label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{label="ouvert" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
-@@ph256@exemple
+## Exemples
 
-### Avec checkbox items
+### With checkbox éléments
 
 Vous pouvez utiliser la propriété `type` avec `checkbox` et utiliser les propriétés `checked`/`onUpdateChecked` pour contrôler l'état vérifié de l'élément.
 
 ::component-example
 ---
-Collapse: vrai
-name: 'menu déroulant-checkbox-items-exemple'
+collapse: true
+name: 'dropdown-menu-checkbox-items-example'
 ---
 ::
 
 ::note
-Pour assurer la réactivité de l'état `checked` des éléments, il est recommandé d'envelopper votre tableau `items` dans un `computed`.
+Pour assurer la réactivité de l'état des éléments `checked`, il est recommandé d'envelopper votre tableau `items` dans un `computed`.
 ::
 
-### Avec les éléments de couleur
+### Avec éléments de couleur
 
-Vous pouvez utiliser la propriété `color` pour mettre en surbrillance certains éléments avec une couleur.
+Vous pouvez utiliser la propriété `color` pour mettre en évidence certains éléments avec une couleur.
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'drop-menu-color-items-exemple'
+collapse: true
+name: 'dropdown-menu-color-items-example'
 ---
 ::
 
 ### Avec éléments de filtre: badge{label="4.6+" class="align-text-top"}
 
-Vous pouvez utiliser la propriété `filter` sur les éléments contenant `children` pour afficher une entrée de filtre dans le sous-menu.
+Vous pouvez utiliser la propriété `filter` sur les éléments avec `children` pour afficher une entrée de filtre dans le sous-menu.
 
 ::component-example
 ---
-Collapse: vrai
-name: 'menu déroulant-filtre-items-exemple'
+collapse: true
+name: 'dropdown-menu-filter-items-example'
 ---
 ::
 
-### Contrôle état ouvert
+### Control État ouvert
 
 Vous pouvez contrôler l'état ouvert en utilisant la prop `default-open` ou la directive `v-model:open`.
 
 ::component-example
 ---
-Collapse: vrai
-nommé:'drop-menu-open-exemple'
+collapse: true
+name: 'dropdown-menu-open-example'
 ---
 ::
 
@@ -555,52 +555,52 @@ nommé:'drop-menu-open-exemple'
 Dans cet exemple, en utilisant [`defineShortcuts`](/docs/composables/define-shortcuts), vous pouvez basculer le menu déroulant en appuyant sur: kbd{value="O"}.
 ::
 
-### Avec slot custom
+### With slot personnalisé
 
 Utilisez la propriété `slot` pour personnaliser un élément spécifique.
 
 Vous aurez accès aux slots suivants:
 
-@@
-@@
-@@
-@@
+- x`#{{ item.slot }}`x{lang="ts-type"}
+- x`#{{ item.slot }}-leading`x{lang="ts-type"}
+- x`#{{ item.slot }}-label`x{lang="ts-type"}
+- x`#{{ item.slot }}-trailing`x{lang="ts-type"}
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'drop-menu-custom-slot-example'
+collapse: true
+name: 'dropdown-menu-custom-slot-example'
 ---
 ::
 
 ::tip{to="#slots"}
-Vous pouvez également utiliser les emplacements `#item`,`#item-leading`,`#item-label` et `#item-trailing` pour personnaliser tous les articles.
+Vous pouvez également utiliser les emplacements `#item`, `#item-leading`, `#item-label` et `#item-trailing` pour personnaliser tous les éléments.
 ::
 
-### Avec commutateur dans les articles
+### With Switch dans les articles
 
 Vous pouvez utiliser la propriété `slot` avec un emplacement `#{{ slot }}-trailing` pour rendre un [Switch](/docs/components/switch) à l'intérieur d'un élément.
 
 ::component-example
 ---
-Collapse: vrai
-name: 'menu déroulant-itements-exemple'
+collapse: true
+name: 'dropdown-menu-switch-items-example'
 ---
 ::
 
 ### Avec ignorer le filtre: badge{label="4.6+" class="align-text-top"}
 
-Lorsque vous utilisez le champ `filter` ou le champ `filter` sur des éléments contenant `children`, vous pouvez définir le champ `ignore-filter` sur `true` pour désactiver la recherche interne et utiliser votre propre logique de recherche.
+Lorsque vous utilisez la prop `filter` ou le champ `filter` sur des éléments avec `children`, vous pouvez définir la prop `ignore-filter` sur `true` pour désactiver la recherche interne et utiliser votre propre logique de recherche.
 
 ::component-example
 ---
-Collapse: vrai
-name: 'menu-déroulant-ignore-filtre-exemple'
+collapse: true
+name: 'dropdown-menu-ignore-filter-example'
 ---
 ::
 
 ::note
-Cet exemple utilise [`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced) pour déboulonner les appels d'API. La récupération est différée avec `immediate: false` donc aucune demande n'est faite jusqu'à ce que le menu s'ouvre.
+Cet exemple utilise [`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced) pour déboulonner les appels de l'API. La récupération est différée avec `immediate: false` afin qu 'aucune demande ne soit faite jusqu'à ce que le menu s'ouvre.
 ::
 
 ### Avec les champs de filtre: badge{label="4.6+" class="align-text-top"}
@@ -609,19 +609,19 @@ Lorsque vous utilisez la prop `filter` ou le champ `filter` sur des éléments a
 
 ::component-example
 ---
-Collapse: vrai
-name: 'menu déroulant-filtre-champs-exemple'
+collapse: true
+name: 'dropdown-menu-filter-fields-example'
 ---
 ::
 
-### Avec largeur de contenu de déclencheur
+### Avec largeur de contenu de déclenchement
 
 Vous pouvez développer le contenu sur toute la largeur de son bouton en ajoutant la classe `w-(--reka-dropdown-menu-trigger-width)` sur l'emplacement `ui.content`.
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'dropdown-menu-content-width-example'
+collapse: true
+name: 'dropdown-menu-content-width-example'
 ---
 ::
 
@@ -641,9 +641,9 @@ export default defineAppConfig({
 ```
 ::
 
-### Extrait des raccourcis
+### Extract raccourcis
 
-Utilisez l'utilitaire [extractShortcuts](/docs/composables/extract-shortcuts) pour définir automatiquement des raccourcis à partir d'éléments de menu avec une propriété `kbds`. Il extrait récursivement des raccourcis et renvoie un objet compatible avec [defineShortcuts](/docs/composables/define-shortcuts).
+Utilisez l'utilitaire [extractShortcuts](/docs/composables/extract-shortcuts) pour définir automatiquement des raccourcis à partir d'éléments de menu avec une propriété `kbds`. Il extrait récursivement des raccourcis et renvoie un objet compatible avec [defineShortcuts](xph619).
 
 ```vue
 <script setup lang="ts">
@@ -681,27 +681,27 @@ defineShortcuts(extractShortcuts(items))
 ```
 
 ::note
-Dans cet exemple,: kbd{value="meta"}: kbd{value="E" class="ms-px"},: kbd{value="meta"}: kbd{value="I" class="ms-px"} et: kbd{value="meta"}: kbd{value="N" class="ms-px"} déclencherait la fonction `select` de l'élément correspondant.
+Dans cet exemple,: kbd{value="meta"}: kbd{value="E" class="ms-px"},: kbd{value="meta"}: kbd{value="I" class="ms-px"} et: kbd{value="meta"}: kbd{value="N" class="ms-px"} déclencheraient la fonction `select` de l'élément correspondant.
 ::
 
-@@ph391@@api
+## API and
 
-@@ph392@@props
+### Props équipements
 
-Composants-props
+:component-props
 
-@@ph393@@Slots
+### Slots
 
-Composants slots
+:component-slots
 
-@394@émissions
+### Emis
 
-Composants émetteurs
+:component-emits
 
-@@P395@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@396@changements
+## Changelog
 
-Composant-changelog
+:component-changelog

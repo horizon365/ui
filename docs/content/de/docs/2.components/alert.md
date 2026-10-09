@@ -10,299 +10,299 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Alert.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-@@ph001@title
+### Titel
 
-Verwenden Sie `title` prop, um den Titel des Alerts festzulegen.
-
-::component-code
----
-Props:
-  Titel: „ Kopf hoch!"
----
-::
-
-@@ph003 @ Beschreibung
-
-Verwenden Sie `description` prop, um die Beschreibung des Alerts festzulegen.
+Verwenden Sie die `title`-prop, um den Titel des Alarms festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Props:
-  Titel: „ Kopf hoch!"
-  Beschreibung: 'Sie können die Primärfarbe in Ihrer App-Konfiguration ändern.'
+props:
+  title: 'Heads up!'
 ---
 ::
 
-@@ph005@@gmail.de
+### Beschreibung
 
-Verwenden Sie die `icon` prop, um eine [Icon](/docs/components/icon) anzuzeigen.
+Verwenden Sie die `description` prop, um die Beschreibung der Warnung festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@11@Titel
-  @@ph012@beschreibung
-Props:
-  Titel: "Kopf hoch!"
-  Beschreibung: 'Sie können die Primärfarbe in Ihrer App-Konfiguration ändern.'
-  I-Lucide-Terminal-Symbol
+prettier: true
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
 ---
 ::
 
-@@@@@avatar@@avatar@@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avataratar@avataratar@avatarataratar@avataratar@avataratar@avataratar@avataratar@avatar@avataratar@avatar@avataratar@avatar@avataratar@avatarataratar@avatar@avataratar@avatarataratar@avataratar@avatar@avatar@avataratarataratar@@avatarataratar@avatar@avatarataratar@@@@avatarataratarataratar
+### Icon (englisch)
 
-Verwenden Sie die `avatar` prop, um eine [Avatar](/docs/components/avatar) anzuzeigen.
+Verwenden Sie die `icon`-Prop, um eine [Icon](/docs/components/icon) anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph019@title
-  @@ph020@beschreibung
-Props:
-  Titel: "Kopf hoch!"
-  Beschreibung: "Sie können die Primärfarbe in Ihrer App-Konfiguration ändern."
-  avatar. src: 'https://github.com/nuxt.png'(englisch)
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  icon: 'i-lucide-terminal'
 ---
 ::
 
-@@ph021@@gmail.de
+### Avatar (englisch)
 
-Verwenden Sie `color` prop, um die Farbe des Alerts zu ändern.
+Verwenden Sie die `avatar`-Prop, um eine [Avatar](/docs/components/avatar) anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph023@title
-  @@ph024@beschreibung
-  @@ph025@@gmail.de
-Props:
-  Farbe: neutral
-  Titel: "Kopf hoch!"
-  Beschreibung: "Sie können die Primärfarbe in Ihrer App-Konfiguration ändern."
-  I-Lucide-Terminal-Symbol
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  avatar.src: 'https://github.com/nuxt.png'
 ---
 ::
 
-@@ph026@@@Variantentyp
+### Farbe
 
-Verwenden Sie `variant` prop, um die Variante des Alerts zu ändern.
+Verwenden Sie die `color` prop, um die Farbe des Alarms zu ändern.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph028@title
-  @@ph029@beschreibung
-  @@ph030@@gmail.de
-Props:
-  Farbe: neutral
-  Variante: subtil
-  Titel: "Kopf hoch!"
-  Beschreibung: 'Sie können die Primärfarbe in Ihrer App-Konfiguration ändern.'
-  I-Lucide-Terminal-Symbol
+prettier: true
+ignore:
+  - title
+  - description
+  - icon
+props:
+  color: neutral
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  icon: 'i-lucide-terminal'
 ---
 ::
 
-@@ph031@@abschluss@abschluss.de
+### Variant Bearbeiten
 
-Verwenden Sie die `close` prop, um eine [Button](/docs/components/button) anzuzeigen, um die Warnung abzuweisen.
+Verwenden Sie die `variant`-prop, um die Variante des Alarms zu ändern.
+
+::component-code
+---
+prettier: true
+ignore:
+  - title
+  - description
+  - icon
+props:
+  color: neutral
+  variant: subtle
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  icon: 'i-lucide-terminal'
+---
+::
+
+### Close
+
+Verwenden Sie die `close`-Prop, um eine [Button](/docs/components/button) anzuzeigen, um die Warnung zu beenden.
 
 ::tip
-Ein `update:open`-Ereignis wird ausgegeben, wenn der Schließen-Button angeklickt wird.
+Ein `update:open`-Ereignis wird ausgegeben, wenn die Schaltfläche Schließen geklickt wird.
 ::
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@@@@@38@title
-  @@ph039 @ Beschreibung
-  @@ph040@@schließen
-  @@ph041@gmail.de
-  @@ph042@@variantenreich
-Props:
-  Titel: "Kopf hoch!"
-  Beschreibung: 'Sie können die Primärfarbe in Ihrer App-Konfiguration ändern.'
-  Farbe: neutral
-  Variante: Übersicht
-  Schließen: true
----
-::
-
-Sie können jede Eigenschaft aus der Komponente [Button](/docs/components/button) übergeben, um sie anzupassen.
-
-::component-code
----
-Schöner: wahr
-Ignoriert:
-  @@ph047@title
-  @@ph048@beschreibung
-  - close.color (@ close. color) Bearbeiten
-  @@ph050@close.variant (nicht)
-  @@ph051@gmail.de
-  @@ph052@@variantenreich
-Props:
-  Titel: "Kopf hoch!"
-  Beschreibung: "Sie können die Primärfarbe in Ihrer App-Konfiguration ändern."
-  Farbe: neutral
-  Variante: Übersicht
-  Schließen:
-    Farbe: Primary
-    Beschreibung: Outline
-    Klasse: 'rounded-full'
----
-::
-
-@@ph053@Schließen-Symbol
-
-Verwenden Sie die `close-icon` prop, um die Schließen-Taste anzupassen [Icon](/docs/components/icon). Standardmäßig auf `i-lucide-x`.
-
-::component-code
----
-Schöner: wahr
-Ignoriert:
-  @@ph060@@title
+prettier: true
+ignore:
+  - title
   - description
-  -  schließen
-  @@ph063@gmail.de
-  @@ph064@@variantenreich
-Props:
-  Titel: "Kopf hoch!"
-  Beschreibung: "Sie können die Primärfarbe in Ihrer App-Konfiguration ändern."
-  Farbe: neutral
-  Beschreibung: Outline
-  Schließen: true
-  closeIcon: 'i-lucide-arrow-right'(I-lucide-arrow-rechts)
+  - close
+  - color
+  - variant
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  color: neutral
+  variant: outline
+  close: true
+---
+::
+
+Sie können jede Eigenschaft der Komponente [Button](/docs/components/button) übergeben, um sie anzupassen.
+
+::component-code
+---
+prettier: true
+ignore:
+  - title
+  - description
+  - close.color
+  - close.variant
+  - color
+  - variant
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  color: neutral
+  variant: outline
+  close:
+    color: primary
+    variant: outline
+    class: 'rounded-full'
+---
+::
+
+### Close Icon (nicht vorhanden)
+
+Verwenden Sie die `close-icon`-Prop, um die Schließen-Taste [Icon](/docs/components/icon). Defaults auf `i-lucide-x` anzupassen.
+
+::component-code
+---
+prettier: true
+ignore:
+  - title
+  - description
+  - close
+  - color
+  - variant
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  color: neutral
+  variant: outline
+  close: true
+  closeIcon: 'i-lucide-arrow-right'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.close` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.close` Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.close` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.close` Schlüssel anpassen.
 :::
 ::
 
-@@ph069@@Aktion
+### Actions Bearbeiten
 
-Verwenden Sie die `actions` prop, um einige [Button](/docs/components/button) Aktionen zur Warnung hinzuzufügen.
-
-::component-code
----
-Schöner: wahr
-Ignoriert:
-  @@ph075@title
-  @@ph076@Aktion
-  @@@@@@@@@@@@@@@@colour@colour@colour@colour@colour@colour@colour@colour@colour@colour@colour@colour@colour@colour@colour@colour@colour@colour@colour@colour@colour@colour@colour@colour@colourcolour@colour@colour@colourcolour@colour@colourcolour@colourcolour@colourcolour@colourcolour@colourcolour@colourcolourcolour@colourcolour@colourcolour@colourcolourcolour@colourcolour@colourcolourcolour@colourcolourcolour@colourcolour@colourcolourcolour
-  @@@ph078@@variantenreich
-Props:
-  Titel: "Kopf hoch!"
-  Beschreibung: "Sie können die Primärfarbe in Ihrer App-Konfiguration ändern."
-  Farbe: neutral
-  Variante: Übersicht
-  Aktionen:
-    - label: Aktion 1
-    - label: Aktion 2
-      Farbe: neutral
-      Variante: subtil
----
-::
-
-@@@@@@@@@@@ph081@@Orientierung
-
-Verwenden Sie `orientation` prop, um die Ausrichtung des Alerts zu ändern.
+Verwenden Sie die `actions`-Prop, um einige [Button](/docs/components/button)-Aktionen zur Warnung hinzuzufügen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@@@@83@title
-  @@@@@@@@@844@actions
-  @@@@@@@@@@@@@@ph085@color
-  @@ph086@@variantenreich
-Props:
-  Titel: "Kopf hoch!"
-  Beschreibung: "Sie können die Primärfarbe in Ihrer App-Konfiguration ändern."
-  Farbe: neutral
-  Variante: Übersicht
-  Ausrichtung: horizontal
-  Aktionen:
-    - label: Aktion 1
-    - label: Aktion 2
-      Farbe: neutral
-      Variante: subtil
+prettier: true
+ignore:
+  - title
+  - actions
+  - color
+  - variant
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  color: neutral
+  variant: outline
+  actions:
+    - label: Action 1
+    - label: Action 2
+      color: neutral
+      variant: subtle
 ---
 ::
 
-@@ph089@@Beispiele
+### Orientierung.
 
-`class` prop
-
-Verwenden Sie `class` prop, um die Basisstile des Alerts zu überschreiben.
+Verwenden Sie die `orientation`-Prop, um die Ausrichtung des Alarms zu ändern.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph093@title
-  @@ph094@beschreibung
-Props:
-  Titel: "Kopf hoch!"
-  Beschreibung: "Sie können die Primärfarbe in Ihrer App-Konfiguration ändern."
-  Klasse: 'rounded-none'(nicht gerundet)
+prettier: true
+ignore:
+  - title
+  - actions
+  - color
+  - variant
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  color: neutral
+  variant: outline
+  orientation: horizontal
+  actions:
+    - label: Action 1
+    - label: Action 2
+      color: neutral
+      variant: subtle
 ---
 ::
 
-`ui` prop
+## Examples [Bearbeiten]
 
-Verwenden Sie `ui` prop, um die Slots-Stile des Alerts zu überschreiben.
+### `class` prop (Deutsche Ausgabe)
+
+Verwenden Sie die `class` prop, um die Basisstile der Warnung zu überschreiben.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@@@@@@@@@@@ph098@@ui
-  @@999@Titel
-  @@@ph100@beschreibung
-  @@@@@@@@icon101
-Props:
-  Titel: "Kopf hoch!"
-  Beschreibung: 'Sie können die Primärfarbe in Ihrer App-Konfiguration ändern.'
-  I-Lucide-Rakete
-  ui: ist
-    Icon: "Größe-11"
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  class: 'rounded-none'
 ---
 ::
 
-@@102@btw
+### `ui` prop (englisch)
 
-@@@@@@@@ph103@props
+Verwenden Sie die `ui`-Prop, um die Slots-Stile des Alerts zu überschreiben.
 
-Komponenten Props
+::component-code
+---
+prettier: true
+ignore:
+  - ui
+  - title
+  - description
+  - icon
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  icon: i-lucide-rocket
+  ui:
+    icon: 'size-11'
+---
+::
 
-### Slots
+## API (Englisch)
 
-Die Komponenten-Slots
+### Props Bearbeiten
 
-@@ph105@@emits
+:component-props
 
-Komponenten emittieren
+### Slots Bearbeiten
 
-@@106@@Einsteiger
+:component-slots
 
-Das Komponenten-Theme
+### Emits (englisch)
 
-@@ph107@@changelog (auf Englisch)
+:component-emits
 
-Das Component-Changelog
+## Theme Bearbeiten
+
+:component-theme
+
+## Changelog (englisch)
+
+:component-changelog

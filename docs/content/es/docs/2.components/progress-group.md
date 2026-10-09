@@ -15,173 +15,173 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ProgressGroup.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice el componente ProgressGroup para mostrar varios valores como segmentos de una sola barra de progreso.
 
 ::component-code
 ---
-Colapso: Verdad
-Ignora:
-  @0001@artículos
-  @2000@Max
-  @003@clase
-Externo:
-  @0004@artículos
-Externalidades:
-  @@P005@@Grupo de Trabajo []
-Props:
-  Categoría: 128
+collapse: true
+ignore:
+  - items
+  - max
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  max: 128
   items:
-    - label:'El sistema'
-      Valoración: 24
-      Categoría:"Neutral"
-      icono: 'i-lucide-cog'
-    - label:'Aplicaciones'
-      Valoración: 8
-      Categoría:"Error"
-      icono: 'i-lucide-app-window'
-    - label:'Artículos'
-      Valoración: 12
-      Color: "Advertencia"
-      icono: 'i-lucide-file'
-    - label:'Multimedia'(Edición española)
-      Valoración: 42
-      Categoría:"Éxito"
+    - label: 'System'
+      value: 24
+      color: 'neutral'
+      icon: 'i-lucide-cog'
+    - label: 'Apps'
+      value: 8
+      color: 'error'
+      icon: 'i-lucide-app-window'
+    - label: 'Documents'
+      value: 12
+      color: 'warning'
+      icon: 'i-lucide-file'
+    - label: 'Multimedia'
+      value: 42
+      color: 'success'
       icon: 'i-lucide-film'
-  Categoría: W-96
+  class: 'w-96'
 ---
 ::
 
-@100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Artículos
 
 Utilice el prop `items` como una matriz de objetos con las siguientes propiedades:
 
-@@
-@@
-@@
-@@
-@@
-@@
-@@
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`value?: number`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- x`slot?: string`xx{lang="ts-type"}
+- xx`class?: any`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`ui?: { segment?: ClassNameValue, indicator?: ClassNameValue, item?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingDot?: ClassNameValue, itemLabel?: ClassNameValue, itemTrailing?: ClassNameValue }`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ::component-code
 ---
-Colapso: Verdad
-Ignora:
-  @373@artículos
-  @38@clase
-Externo:
-  @@pH039@artículos
-Externalidades:
-  - ProgressGroupItem (en inglés)
-Props:
-  Items:
-    - label:'Computación'
-      Valoración: 42
-      Categoría:"Primary"
-    - label:'Almacenamiento'
-      Valoración: 18
-      Categoría:'info'
-    - label:'Ancho de banda'
-      Valoración: 9
-      Color: "Advertencia"
-  Categoría: W-96
----
-::
-
-::note
-Los elementos sin `icon` obtienen un punto de color en la lista.
-::
-
-@450000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-
-Utilice la prop `max` para establecer el valor que todos los elementos suman.
-
-::component-code
----
-Colapso: Verdad
-Ignora:
-  @@48000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @494@clase
-Externo:
-  @500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externalidades:
-  - ProgressGroupItem (en inglés)
-Props:
-  Categoría: 512
-  Items:
-    - label:'Usado'
-      Cantidad: 128
-      Categoría:"Primary"
-    - label:'Reservado'
-      Valoración: 64
-      Categoría:"Neutral"
-  Categoría: W-96
----
-::
-
-::note
-Los valores están sujetos entre `0` y `max`, y los segmentos que suman más de `max` comparten la pista proporcionalmente.
-::
-
-@@ph057@status
-
-Utilice el prop `status` para mostrar el valor sumado por encima de la barra.
-
-::component-code
----
-Colapso: Verdad
-Ignora:
-  @@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @060@clase
-Externo:
-  @061 @ artículos
-Externalidades:
-  - ProgressGroupItem (en inglés)
-Props:
-  Estado: Verdadero
-  Categoría: 128
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
   items:
-    - label:'El sistema'
-      Valoración: 24
-      Categoría:"Neutral"
-    - label:'Aplicaciones'
-      Valoración: 8
-      Categoría:"Error"
-    - label:'Multimedia'(Edición española)
-      Valoración: 42
-      Categoría:"Éxito"
-  Categoría: W-96
+    - label: 'Compute'
+      value: 42
+      color: 'primary'
+    - label: 'Storage'
+      value: 18
+      color: 'info'
+    - label: 'Bandwidth'
+      value: 9
+      color: 'warning'
+  class: 'w-96'
+---
+::
+
+::note
+Los elementos sin un `icon` obtienen un punto de color en la lista.
+::
+
+### Max (Edición española)
+
+Utilice el prop `max` para establecer el valor que suman todos los elementos.
+
+::component-code
+---
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  max: 512
+  items:
+    - label: 'Used'
+      value: 128
+      color: 'primary'
+    - label: 'Reserved'
+      value: 64
+      color: 'neutral'
+  class: 'w-96'
+---
+::
+
+::note
+Los valores se sujetan entre `0` y `max`, y los segmentos que suman más de `max` comparten la pista proporcionalmente.
+::
+
+### Status (Edición española)
+
+Utilice el prop `status` para mostrar el valor sumado sobre la barra.
+
+::component-code
+---
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  status: true
+  max: 128
+  items:
+    - label: 'System'
+      value: 24
+      color: 'neutral'
+    - label: 'Apps'
+      value: 8
+      color: 'error'
+    - label: 'Multimedia'
+      value: 42
+      color: 'success'
+  class: 'w-96'
 ---
 ::
 
 ::tip
-El estado rastrea el final de la barra, utilice `:ui="{ status: 'w-full' }"` para que abarque todo el ancho.
+El estado rastrea el final de la barra, use `:ui="{ status: 'w-full' }"` para que abarque todo el ancho.
 ::
 
-@@pH067@color
+### Color (Edición española)
 
-Utilice el prop `color` para cambiar el color de cada segmento que no establece su propio color.
+Utilisez le prop `color` pour changer la couleur de chaque segment qui ne se définit pas.
 
 ::component-code
 ---
-Colapso: Verdad
-Ignora:
-  @@pH069@artículos
-  @070@clase
-Externo:
-  @071@artículos
-Externalidades:
-  - ProgressGroupItem (en inglés)
-Props:
-  Color: Neutro
-  Items:
-    - label:'Leer'(en inglés)
-      Valoración: 42
-    - label:'Escribir'
-      Valoración: 18
-  Categoría: W-96
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  color: neutral
+  items:
+    - label: 'Read'
+      value: 42
+    - label: 'Write'
+      value: 18
+  class: 'w-96'
 ---
 ::
 
@@ -189,81 +189,81 @@ Props:
 Tanto este accesorio como el `color` de cada elemento aceptan cualquier valor de color CSS, lo cual es útil para paletas fuera del tema.
 ::
 
-@766@766.
+### Tamaño
 
-Utilice la prop `size` para cambiar el tamaño del ProgressGroup.
+Utilice el prop `size` para cambiar el tamaño del ProgressGroup.
 
 ::component-code
 ---
-Colapso: Verdad
-Ignora:
-  @788@artículos
-  @079@clase
-Externo:
-  @080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externalidades:
-  - ProgressGroupItem (en inglés)
-Props:
-  Tamaño: XL
-  Items:
-    - label:'Leer'(en inglés)
-      Valoración: 42
-      Categoría:"Primary"
-    - label:'Escribir'
-      Valoración: 18
-      Categoría:'info'
-  Categoría: W-96
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  size: xl
+  items:
+    - label: 'Read'
+      value: 42
+      color: 'primary'
+    - label: 'Write'
+      value: 18
+      color: 'info'
+  class: 'w-96'
 ---
 ::
 
-@084@Orientación
+### Orientación
 
 Utilice el prop `orientation` para cambiar la orientación del ProgressGroup. Defaults a `horizontal`.
 
 ::component-code
 ---
-Colapso: Verdad
-Ignora:
-  @087 @ Artículos
-  @888@clase
-Externo:
-  @089 @ artículos
-Externalidades:
-  - ProgressGroupItem (en inglés)
-Props:
-  Orientación: Vertical
-  Items:
-    - label:'Leer'(en inglés)
-      Valoración: 42
-      Categoría:"Primary"
-    - label:'Escribir'
-      Valoración: 18
-      Categoría:"info"
-  Categoría: H-48
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  orientation: vertical
+  items:
+    - label: 'Read'
+      value: 42
+      color: 'primary'
+    - label: 'Write'
+      value: 18
+      color: 'info'
+  class: 'h-48'
 ---
 ::
 
-@@pH093@Ejemplos
+## Ejemplos
 
-### Con ranura de estado
+### With ranura de estado
 
 Utilice la ranura `#status` para reemplazar el porcentaje sumado con su propio contenido.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: progreso-grupo-estado-ejemplo
+collapse: true
+name: progress-group-status-example
 ---
 ::
 
-### Con ranuras de artículos
+### Con ranuras de elementos
 
-Utilice los `#item-label` y `#item-trailing` ranuras para cambiar lo que cada entrada muestra. Ambos reciben el `item`, su `index` y su `percent`.
+Utilice las ranuras `#item-label` y `#item-trailing` para cambiar lo que muestra cada entrada. Ambos reciben el `item`, su `index` y su `percent`.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: progreso-grupo-ítemo-ejemplo
+collapse: true
+name: progress-group-item-example
 ---
 ::
 
@@ -273,25 +273,25 @@ Dale a cada elemento un color CSS para crear un desglose fuera de la paleta de t
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: progress-group-custom-color-example
+collapse: true
+name: progress-group-custom-color-example
 ---
 ::
 
-@@pH103
+## API
 
-@104@104@104
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots en línea
 
-Componentes de slots
+:component-slots
 
-@106 @@ Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@107@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

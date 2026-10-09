@@ -9,7 +9,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Badge.vue
 ---
 
-## 使用情况
+## 用法
 
 在`badge`组件的默认插槽中使用markdown可在内容中显示[Badge](/docs/components/badge)。
 
@@ -19,7 +19,7 @@ links:
 **v4.0.0**
 :::
 
-#代码
+#code
 
 ```mdc
 ::badge
@@ -33,16 +33,16 @@ links:
 
 ### Props
 
-：组件-道具{prose}
+:component-props{prose}
 
 ### Slots
 
-：组件插槽{prose}
+:component-slots{prose}
 
 ## Theme
 
-：component-theme{prose}
+:component-theme{prose}
 
 ## Changelog
 
-：组件-更改日志{prefix="prose"}
+:component-changelog{prefix="prose"}

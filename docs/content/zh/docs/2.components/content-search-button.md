@@ -13,77 +13,77 @@ links:
 ---
 
 ::warning{to="/docs/getting-started/integrations/content"}
-此组件仅在安装了`@nuxt/content`模块时可用。
+此组件仅在安装`@nuxt/content`模块时可用。
 ::
 
 ## 用法
 
-内容搜索按钮组件用于打开[内容搜索](/docs/components/content-search)模式。
+ContentSearchButton组件用于打开[ContentSearch](/docs/components/content-search)模型。
 
-：组件代码{prefix="content"}
+:component-code{prefix="content"}
 
-它扩展了[Button](/docs/components/button)组件，因此您可以传递任何属性，如`color`、`variant`、`size`等。
+它扩展了[Button](/docs/components/button)组件，因此您可以传递任何属性，如`color`，`variant`，`size`等。
 
 ::component-code{prefix="content"}
 ---
-忽略：
-- 变体
-道具：
-  变体：“细微”
+ignore:
+  - variant
+props:
+  variant: 'subtle'
 ---
 ::
 
 ::note{to="#collapsed"}
-未折叠时，按钮默认为`color="neutral"`和`variant="outline"`，折叠时默认为`variant="ghost"`。
+按钮在未折叠时默认为`color="neutral"`和`variant="outline"`，折叠时默认为`variant="ghost"`。
 ::
 
-已折叠
+### 崩溃
 
-使用`collapsed`属性来显示按钮的标签和[kbds](#kbds)。预设值为`true`。
+使用`collapsed`道具显示按钮的标签，并将[kbds](#kbds). `true`转换为`true`。
 
 ::component-code{prefix="content"}
 ---
-更漂亮：真的
-道具：
-  折叠：false
+prettier: true
+props:
+  collapsed: false
 ---
 ::
 
-### 千桶
+### Kbds
 
-使用`kbds`属性可在按钮中显示键盘键。默认为`['meta', 'K']`{lang="ts-type"}，以匹配[ContentSearch](/docs/components/content-search#shortcut)组件的默认快捷方式。
+使用`kbds` prop在button中显示键盘键。将`['meta', 'K']`{lang="ts-type"}替换为[ContentSearch](/docs/components/content-search#shortcut)组件的默认快捷方式。
 
 ::component-code{prefix="content"}
 ---
-更漂亮：真的
-忽略：
-- 千桶
-道具：
-  折叠：false
-  千字节数：
-    - '替换'
-    - 'O'号
+prettier: true
+ignore:
+  - kbds
+props:
+  collapsed: false
+  kbds:
+    - 'alt'
+    - 'O'
 ---
 ::
 
-美国石油学会
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-此组件还支持所有本机`<button>`HTML属性。
+此组件还支持所有原生`<button>` HTML属性。
 ::
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志{prefix="content"}
+:component-changelog{prefix="content"}

@@ -8,9 +8,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChangelogVersions.vue
 ---
 
-## 使用 法
+## 使用法
 
-ChangelogVersions コンポーネント は 、[ChangelogVersion](/docs/components/changelog-version))コンポーネント の リスト を 表示 する 柔軟 な レイアウト を 提供 し ます 。
+ChangelogVersionsコンポーネントは、[ChangelogVersion](/docs/components/changelog-version)コンポーネントのリストを、デフォルトスロットまたは`versions` propを使用して表示する柔軟なレイアウトを提供します。
 
 ```vue {2,8}
 <template>
@@ -24,147 +24,147 @@ ChangelogVersions コンポーネント は 、[ChangelogVersion](/docs/componen
 </template>
 ```
 
-### バージョン
+### Versions
 
-`versions`prop を 、[ChangelogVersion](/docs/components/changelog-version#props)コンポーネント の プロ パティ を 持つ オブジェクト の 配列 として 使用 し ます 。
+`versions`プロパティを[ChangelogVersion](/docs/components/changelog-version#props)コンポーネントのプロパティを持つオブジェクトの配列として使用します。
 
 ::component-code
 ---
-崩壊 真
-無視
-  - バージョン
-外部
-  - バージョン
-externalTypes
-  - ChangelogVersionProps [ ]
-隠す
-  - クラス
-小道具
-  バージョン
-    - title Nuxt 3.17
-      説明Nuxt 3.17 が リリース さ れ まし た 。 非 同期 データレイヤー の 大幅 な 改良 、 新しい 組み込み コンポーネント 、 より 良い 警告 、 パフォーマンス の 向上 が 含ま れ て い ます 。
-      画像https://nuxt.com/assets/blog/v3.17.png
-      日 付 2025 - 04 - 27
-      へ ' https//nuxt.com/blog/v3 - 17 '
-      ターゲット ' _blank '
-      ui . コンテナ ' max-w-lg '
-    - title Nuxt 3.16
-      説明 ： ' Nuxt 3.16 が リリース さ れ まし た - 機能 と パフォーマンス の 改善 が 満載 ! '
-      画像https://nuxt.com/assets/blog/v3.16.png
-      日 付 2025 - 03 - 07
-      へ ' https//nuxt.com/blog/v3 - 16 '
-      ターゲット ' _blank '
-      ui . コンテナ ' max-w-lg '
-    - title Nuxt 3.15
-      説明 ： ' Nuxt 3.15 が リリース さ れ まし た -Vite 6 、 より 良い HMR と 高速 な パフォーマンス ! '
-      画像https://nuxt.com/assets/blog/v3.15.png
-      日 付 2024 - 12 - 24
-      へ ' https//nuxt.com/blog/v3 - 15 '
-      ターゲット ' _blank '
-      ui . コンテナ ' max-w-lg '
-  クラス ' w-full '
+collapse: true
+ignore:
+  - versions
+external:
+  - versions
+externalTypes:
+  - ChangelogVersionProps[]
+hide:
+  - class
+props:
+  versions:
+    - title: Nuxt 3.17
+      description: 'Nuxt 3.17 is out - bringing a major reworking of the async data layer, a new built-in component, better warnings, and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.17.png
+      date: 2025-04-27
+      to: 'https://nuxt.com/blog/v3-17'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.16
+      description: 'Nuxt 3.16 is out - packed with features and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.16.png
+      date: 2025-03-07
+      to: 'https://nuxt.com/blog/v3-16'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.15
+      description: 'Nuxt 3.15 is out - with Vite 6, better HMR and faster performance!'
+      image: https://nuxt.com/assets/blog/v3.15.png
+      date: 2024-12-24
+      to: 'https://nuxt.com/blog/v3-15'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+  class: 'w-full'
 ---
 ::
 
-### インジケータ
+### Indicator
 
-`indicator`プロ パティ を 使用 し て 、 左側 の インジケータバー を 非 表示 に し ます 。 デフォルト は`true`です 。
+`indicator`プロパティを使用して左側のインディケータバーを非表示にします。デフォルトは`true`です。
 
 ::component-code
 ---
-崩壊 真
-無視
-  - バージョン
-外部
-  - バージョン
-externalTypes
-  - ChangelogVersionProps [ ]
-隠す
-  - クラス
-小道具
-  インジケータ 偽
-  バージョン
-    - title Nuxt 3.17
-      説明Nuxt 3.17 が リリース さ れ まし た 。 非 同期 データレイヤー の 大幅 な 改良 、 新しい 組み込み コンポーネント 、 より 良い 警告 、 パフォーマンス の 向上 が 含ま れ て い ます 。
-      画像https://nuxt.com/assets/blog/v3.17.png
-      日 付 2025 - 04 - 27
-      へ ' https//nuxt.com/blog/v3 - 17 '
-      ターゲット ' _blank '
-      ui . コンテナ ' max-w-lg '
-    - title Nuxt 3.16
-      説明 ： ' Nuxt 3.16 が リリース さ れ まし た - 機能 と パフォーマンス の 改善 が 満載 ! '
-      画像https://nuxt.com/assets/blog/v3.16.png
-      日 付 2025 - 03 - 07
-      へ ' https//nuxt.com/blog/v3 - 16 '
-      ターゲット ' _blank '
-      ui . コンテナ ' max-w-lg '
-    - title Nuxt 3.15
-      説明 ： ' Nuxt 3.15 が リリース さ れ まし た -Vite 6 、 より 良い HMR と 高速 な パフォーマンス ! '
-      画像https://nuxt.com/assets/blog/v3.15.png
-      日 付 2024 - 12 - 24
-      へ ' https//nuxt.com/blog/v3 - 15 '
-      ターゲット ' _blank '
-      ui . コンテナ ' max-w-lg '
-  クラス ' w-full '
+collapse: true
+ignore:
+  - versions
+external:
+  - versions
+externalTypes:
+  - ChangelogVersionProps[]
+hide:
+  - class
+props:
+  indicator: false
+  versions:
+    - title: Nuxt 3.17
+      description: 'Nuxt 3.17 is out - bringing a major reworking of the async data layer, a new built-in component, better warnings, and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.17.png
+      date: 2025-04-27
+      to: 'https://nuxt.com/blog/v3-17'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.16
+      description: 'Nuxt 3.16 is out - packed with features and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.16.png
+      date: 2025-03-07
+      to: 'https://nuxt.com/blog/v3-16'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.15
+      description: 'Nuxt 3.15 is out - with Vite 6, better HMR and faster performance!'
+      image: https://nuxt.com/assets/blog/v3.15.png
+      date: 2024-12-24
+      to: 'https://nuxt.com/blog/v3-15'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+  class: 'w-full'
 ---
 ::
 
-### インジケーター モーション
+### インジケーターモーション
 
-`indicator-motion`プロ パティ を 使用 し て 、 インジケータバー の モーション エフェクト を カスタマイズ また は 非 表示 に し ます 。 デフォルト は`true``{ damping: 30, restDelta: 0.001 }`[spring 遷移 オプション](https://motion.dev/docs/vue-transitions#spring)です 。
+`indicator-motion`プロパティを使用して、インジケータバーのモーションエフェクトをカスタマイズまたは非表示にします。デフォルトは`true`で、`{ damping: 30, restDelta: 0.001 }` [spring遷移オプション](https://motion.dev/docs/vue-transitions#spring)です。
 
 ::component-code
 ---
-崩壊 真
-無視
-  - バージョン
-外部
-  - バージョン
-externalTypes
-  - ChangelogVersionProps [ ]
-隠す
-  - クラス
-アイテム
-  indicatorMotion
+collapse: true
+ignore:
+  - versions
+external:
+  - versions
+externalTypes:
+  - ChangelogVersionProps[]
+hide:
+  - class
+items:
+  indicatorMotion:
     - true
     - false
-小道具
-  indicatorMotion true
-  バージョン
-    - title Nuxt 3.17
-      説明Nuxt 3.17 が リリース さ れ まし た 。 非 同期 データレイヤー の 大幅 な 改良 、 新しい 組み込み コンポーネント 、 より 良い 警告 、 パフォーマンス の 向上 が 含ま れ て い ます 。
-      画像https://nuxt.com/assets/blog/v3.17.png
-      日 付 2025 - 04 - 27
-      へ ' https//nuxt.com/blog/v3 - 17 '
-      ターゲット ' _blank '
-      ui . コンテナ ' max-w-lg '
-    - title Nuxt 3.16
-      説明 ： ' Nuxt 3.16 が リリース さ れ まし た - 機能 と パフォーマンス の 改善 が 満載 ! '
-      画像https://nuxt.com/assets/blog/v3.16.png
-      日 付 2025 - 03 - 07
-      へ ' https//nuxt.com/blog/v3 - 16 '
-      ターゲット ' _blank '
-      ui . コンテナ ' max-w-lg '
-    - title Nuxt 3.15
-      説明 ： ' Nuxt 3.15 が リリース さ れ まし た -Vite 6 、 より 良い HMR と 高速 な パフォーマンス ! '
-      画像https://nuxt.com/assets/blog/v3.15.png
-      日 付 2024 - 12 - 24
-      へ ' https//nuxt.com/blog/v3 - 15 '
-      ターゲット ' _blank '
-      ui . コンテナ ' max-w-lg '
-  クラス ' w-full '
+props:
+  indicatorMotion: true
+  versions:
+    - title: Nuxt 3.17
+      description: 'Nuxt 3.17 is out - bringing a major reworking of the async data layer, a new built-in component, better warnings, and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.17.png
+      date: 2025-04-27
+      to: 'https://nuxt.com/blog/v3-17'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.16
+      description: 'Nuxt 3.16 is out - packed with features and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.16.png
+      date: 2025-03-07
+      to: 'https://nuxt.com/blog/v3-16'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.15
+      description: 'Nuxt 3.15 is out - with Vite 6, better HMR and faster performance!'
+      image: https://nuxt.com/assets/blog/v3.15.png
+      date: 2024-12-24
+      to: 'https://nuxt.com/blog/v3-15'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+  class: 'w-full'
 ---
 ::
 
-## 例
+## の例
 
 ::note
-これら の 例 で は[Nuxt Content](https://content.nuxt.com)を 使用 し て い ます が 、 コンポーネント は 任意 の コンテンツ 管理 システム と 統合 でき ます 。
+これらの例は[Nuxt Content](https://content.nuxt.com)を使用していますが、コンポーネントは任意のコンテンツ管理システムと統合できます。
 ::
 
-### ページ 内
+### ページ内
 
-ページ 内 の ChangelogVersions コンポーネント を 使用 し て 、 変更 履歴 ページ を 作成 し ます 。
+ページ内のChangelogVersionsコンポーネントを使用して、変更履歴ページを作成します。
 
 ```vue [pages/changelog.vue]{10-17}
 <script setup lang="ts">
@@ -190,31 +190,31 @@ const { data: versions } = await useAsyncData('versions', () => queryCollection(
 ```
 
 ::note
-この 例 で は 、`@nuxt/content`モジュール の`queryCollection`を 使用 し て`versions`を 取得 し て い ます 。
+この例では、`@nuxt/content`モジュールの`queryCollection`を使用して`versions`をフェッチします。
 ::
 
 ::tip
-`@nuxt/content`は`path`プロ パティ を 使用 し て いる ため 、`to`プロ パティ は 上書き さ れ ます 。
+`@nuxt/content`は`path`プロパティを使用するため、`to`プロパティはオーバーライドされます。
 ::
 
-### 粘着 性 インジケータ 付き
+### 粘着性インジケータ付き
 
-`ui` propと異なるスロットを使用して、インジケータをスティッキーにすることができます。
+`ui`プロパティと異なるスロットを使用して、インジケータをスティッキーにすることができます。
 
 ::component-example
 ---
-きれい真
-崩壊真
-名前'changelog—versions—sticky'
-クラス'p—8'
-小道具
-  クラス'w—full'
+prettier: true
+collapse: true
+name: 'changelog-versions-sticky-example'
+class: 'p-8'
+props:
+  class: 'w-full'
 ---
 ::
 
-### スクロールコンテナ付き：badge {label="4.4+" class="align-text-top"}
+### スクロールコンテナ付きbadge{label="4.4+" class="align-text-top"}
 
-スクロールコンテナを構成するために、`indicator` propにオブジェクトを渡します。デフォルトでは、インジケータはウィンドウ/ページのスクロールを追跡しますhttps//motion.dev/docs/vue—use—scroll #page—scroll。
+`indicator`プロパティにオブジェクトを渡してスクロールコンテナを設定します。デフォルトでは、インジケータはウィンドウ/ページスクロールを追跡しますhttps//motion.dev/docs/vue—use—scroll #page—scroll。
 
 ```vue
 <script setup lang="ts">
@@ -229,21 +229,21 @@ const scrollContainer = ref<HTMLElement>()
 ```
 
 ::warning
-カスタム`container`を使用する場合は、コンテナ要素が`UChangelogVersions`の前にマウントされていることを確認してください。
+カスタム`container`を使用する場合は、コンテナ要素が`UChangelogVersions`よりも前にマウントされていることを確認してください。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
 ::tip
-[`ChangelogVersion`](/docs/components/changelog-version#slots))コンポーネントのすべてのスロットを使用できます。`versions` propを使用するときに個々のバージョンをカスタマイズできるように自動的に転送されます。
+[`ChangelogVersion`](/docs/components/changelog-version#slots)コンポーネントのすべてのスロットはChangelogVersions内で使用できます。これらのスロットは自動的に転送されるので、`versions` propを使用する際に個々のバージョンをカスタマイズできます。
 
 ```vue{3-5}
 <template>
@@ -256,10 +256,10 @@ component—props
 ```
 ::
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

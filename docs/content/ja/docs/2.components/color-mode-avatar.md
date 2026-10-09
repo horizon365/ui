@@ -13,32 +13,32 @@ links:
 
 ## 使用法
 
-ColorModeAvatarコンポーネントは[ Avatar ](/docs/components/avatar)コンポーネントを拡張しているので、`size`、`icon`などのプロパティを渡すことができます。
+ColorModeAvatarコンポーネントは[Avatar](/docs/components/avatar)コンポーネントを拡張しているため、`size`、`icon`などの任意のプロパティを渡すことができます。
 
-`light`および`dark` propsを使用して、ライトモードとダークモードのソースを定義します。
+`light`と`dark`プロパティを使用して、ライトモードとダークモードのソースを定義します。
 
 ::component-code{prefix="color-mode"}
 ---
-小道具
-  ライト'https//github.com/vuejs.png'
-  ダーク'https//github.com/nuxt.png'
+props:
+  light: 'https://github.com/vuejs.png'
+  dark: 'https://github.com/nuxt.png'
 ---
 ::
 
 ::note
-ライトモードとダークモードを切り替えて、異なる画像を表示します：：u—color—mode—select {size="sm"}
+ライトモードとダークモードを切り替えて、異なる画像を表示します：：u—color—mode—select{size="sm"}
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes" target="_blank"}
-このコンポーネントは、すべてのネイティブ`<img>` HTML属性もサポートします。
+このコンポーネントはすべてのネイティブ`<img>` HTML属性もサポートします。
 ::
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="color-mode"}
+:component-changelog{prefix="color-mode"}

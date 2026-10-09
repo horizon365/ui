@@ -11,7 +11,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Empty.vue
 ---
 
-##  사용
+## Usage
 
 표시할 내용이 없을 때 빈 구성 요소를 사용하여 자리 표시자 상태를 표시합니다.
 
@@ -19,237 +19,237 @@ links:
 
 :::u-empty
 ---
-아이콘: i-lucide-file
-제목: No projects found
-설명: 프로젝트를 추가하지 않은 것처럼 보입니다. 시작하려면 하나를 만듭니다.
-동작:
+icon: i-lucide-file
+title: No projects found
+description: It looks like you haven't added any projects. Create one to get started.
+actions:
   - icon: i-lucide-plus
-    레이블: 새로 만들기
-  - 아이콘: i-lucide-refresh-cw
-    레이블:새로 고침
-    색상: 중립
-    변형: 미묘함
+    label: Create new
+  - icon: i-lucide-refresh-cw
+    label: Refresh
+    color: neutral
+    variant: subtle
 ---
 :::
 
 ::
 
-###  제목
+### Title 파일
 
-`title`prop 을 사용하여 빈 상태의 제목을 설정합니다.
+`title` prop 을 사용하여 빈 상태의 제목을 설정합니다.
 
 ::component-code
 ---
-소품 :
-  제목: No projects found
+props:
+  title: No projects found
 ---
 ::
 
-###  설명
+### 설명
 
-`description`prop 을 사용하여 빈 상태에 대한 설명을 설정합니다.
+`description` prop을 사용하여 빈 상태에 대한 설명을 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  title
-소품 :
-  제목: No projects found
-  설명: 프로젝트를 추가하지 않은 것처럼 보입니다. 시작하려면 하나를 만듭니다.
+prettier: true
+ignore:
+  - title
+props:
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
 ---
 ::
 
-###  아이콘
+### Icon
 
-`icon`prop 을 사용하여 빈 상태의 아이콘을 설정합니다.
+`icon` prop 을 사용하여 빈 상태의 아이콘을 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  title
-  -  설명
-소품 :
-  아이콘: i-lucide-file
-  제목: No projects found
-  설명: 프로젝트를 추가하지 않은 것처럼 보입니다. 시작하려면 하나를 만듭니다.
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  icon: i-lucide-file
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
 ---
 ::
 
 ### Avatar 이미지
 
-`avatar`prop 을 사용하여 빈 상태의 아바타를 설정합니다.
+`avatar` prop을 사용하여 빈 상태의 아바타를 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  icon
-  -  title
-  -  설명
-소품 :
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+props:
   avatar.src: 'https://github.com/nuxt.png'
-  제목: No projects found
-  설명: 프로젝트를 추가하지 않은 것처럼 보입니다. 시작하려면 하나를 만듭니다.
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
 ---
 ::
 
-### 로드 중: badge{label="4.10+" class="align-text-top"}
+### loading: badge{label="4.10+" class="align-text-top"} 로드 중
 
-`loading`prop을 사용하여 아이콘 대신 로드 아이콘을 표시합니다. 레이아웃은 동일하게 유지되므로 레이아웃을 이동하지 않고 로드 상태와 빈 상태 사이를 전환할 수 있습니다.
+`loading` 소품을 사용하여 아이콘 대신 로드 아이콘을 표시합니다. 레이아웃은 동일하게 유지되므로 레이아웃을 이동하지 않고도 로드 상태와 빈 상태 사이를 전환할 수 있습니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  icon
-  -  title
-  -  설명
-소품 :
-  아이콘: i-lucide-file
-  로드: true
-  제목: Loading Projects
-  설명: 프로젝트를 가져오는 동안 잠시 기다려 주십시오.
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+props:
+  icon: i-lucide-file
+  loading: true
+  title: Loading projects
+  description: Please wait while we fetch your projects.
 ---
 ::
 
-### Loading Icon:badge{label="4.10+" class="align-text-top"}
+### Loading 아이콘: badge{label="4.10+" class="align-text-top"}
 
-`loading-icon`prop을 사용하여 로드 아이콘을 사용자 정의합니다. 기본값은 `i-lucide-loader-circle`입니다.
+`loading-icon` 소품을 사용하여 로드 아이콘을 사용자 정의합니다. 기본값은 `i-lucide-loader-circle`입니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  icon
-  -  title
-  -  설명
-  -  loading
-소품 :
-  아이콘: i-lucide-file
-  로드: true
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - loading
+props:
+  icon: i-lucide-file
+  loading: true
   loadingIcon: 'i-lucide-loader'
-  제목: Loading Projects
-  설명: 프로젝트를 가져오는 동안 잠시 기다려 주십시오.
+  title: Loading projects
+  description: Please wait while we fetch your projects.
 ---
 ::
 
 ::framework-only
-#nuxt 코드
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.loading` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.loading` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.loading` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.loading` 키 아래의 `vite.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-###  작업
+### Actions 작업
 
-`actions`prop을 사용하여 일부 [Button](/docs/components/button)액션을 빈 상태에 추가합니다.
+`actions` prop를 사용하여 일부 [Button](/docs/components/button) 액션을 빈 상태에 추가합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  icon
-  -  title
-  -  설명
-  -  actions
-소품 :
-  아이콘: i-lucide-file
-  제목: No projects found
-  설명: 프로젝트를 추가하지 않은 것처럼 보입니다. 시작하려면 하나를 만듭니다.
-  작업:
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - actions
+props:
+  icon: i-lucide-file
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
+  actions:
     - icon: i-lucide-plus
-      레이블: 새로 만들기
+      label: Create new
     - icon: i-lucide-refresh-cw
-      레이블: 새로 고침
-      색상: 중립
-      변형: 미묘함
+      label: Refresh
+      color: neutral
+      variant: subtle
 ---
 ::
 
-###  변형
+### Variant
 
-`variant`prop 을 사용하여 빈 상태의 변형을 변경합니다.
+`variant` prop을 사용하여 빈 상태의 변형을 변경합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  icon
-  -  title
-  -  설명
-  -  actions
-소품 :
-  변형: 벌거벗은
-  아이콘 : i-lucide-bell
-  제목: 알림 없음
-  설명: 모두 잡혔습니다. 새 알림이 여기에 나타납니다.
-  작업:
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - actions
+props:
+  variant: naked
+  icon: i-lucide-bell
+  title: No notifications
+  description: You're all caught up. New notifications will appear here.
+  actions:
     - icon: i-lucide-refresh-cw
-      레이블: 새로 고침
-      색상: 중립
-      변형: 미묘한
+      label: Refresh
+      color: neutral
+      variant: subtle
 ---
 ::
 
-###  크기
+### Size 크기
 
-`size`prop 을 사용하여 빈 상태의 크기를 변경합니다.
+`size` prop을 사용하여 빈 상태의 크기를 변경합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  icon
-  -  title
-  -  설명
-  -  actions
-소품 :
-  크기: xl
-  아이콘 : i-lucide-bell
-  제목: 알림 없음
-  설명: 모두 잡혔습니다. 새 알림이 여기에 나타납니다.
-  동작:
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - actions
+props:
+  size: xl
+  icon: i-lucide-bell
+  title: No notifications
+  description: You're all caught up. New notifications will appear here.
+  actions:
     - icon: i-lucide-refresh-cw
-      레이블: 새로 고침
-      색상: 중립
-      변형: 미묘함
+      label: Refresh
+      color: neutral
+      variant: subtle
 ---
 ::
 
-##  예제
+## examples 예제
 
-###  슬롯 포함
+### With 슬롯 사용
 
 사용 가능한 슬롯을 사용하여 보다 복잡한 빈 상태를 만듭니다.
 
 ::component-example
 ---
-축소: true
-이름: empty-slots-example
+collapse: true
+name: 'empty-slots-example'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### 슬롯
 
-:구성요소 - 슬롯
+:component-slots
 
-##  테마
+## Theme 테마
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

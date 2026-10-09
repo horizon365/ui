@@ -10,44 +10,44 @@ links:
 
 ## 使用法
 
-PageListコンポーネントは、垂直のリストレイアウトでコンテンツを表示する柔軟な方法を提供します。[ PageCard ](/docs/components/page-card)コンポーネントやその他の要素の積み重ねリストを作成するのに最適です。
+PageListコンポーネントは、垂直のリストレイアウトでコンテンツを表示する柔軟な方法を提供します。[PageCard](/docs/components/page-card)コンポーネントやその他の要素の積み重ねリストを作成し、項目間のオプションの仕切りを使用するのに最適です。
 
 ::component-example
 ---
-崩壊真
-名前'ページリストの例'
-小道具
-  クラス'w—full'
+collapse: true
+name: 'page-list-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-###  Divide
+### Divide
 
-`divide`プロパティを使用して、各子要素の間に区切り文字を追加します。
+`divide`プロパティを使用して、各子要素の間に仕切りを追加します。
 
 ::component-example
 ---
-崩壊真
-名前'page—list—divide—example'
-小道具
-  クラス'w—full'
+collapse: true
+name: 'page-list-divide-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

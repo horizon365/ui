@@ -10,55 +10,55 @@ links:
 ---
 
 ::warning{to="/docs/getting-started/integrations/content"}
-此组件仅在安装了`@nuxt/content`模块时可用。
+此组件仅在安装`@nuxt/content`模块时可用。
 ::
 
 ## 用法
 
-将`surround`属性与获取页面环绕时获得的`surround`{lang="ts-type"}值一起使用。
+使用`surround` prop和`surround`{lang="ts-type"}值来获取页面环绕。
 
 ::component-example
 ---
-名称：'内容环绕范例'
-道具类：
-  类别：'w-完整'
+name: 'content-surround-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-### 上一个/下一个
+### 上一页/下一页
 
-使用`prev-icon`和`next-icon`道具来自定义按钮[](/docs/components/icon)。
+使用`prev-icon`和`next-icon`道具自定义按钮[Icon](/docs/components/icon)。
 
 ::component-code{prefix="content"}
 ---
-更漂亮：真的
-收阖：true
-忽略：
-  环绕声
-外部：
-  环绕声
-外部类型：
-  - 内容环绕链接[]
-道具：
-  prevIcon：'i-透明-V形-左'
-  nextIcon：'i-透明-V形-右'
-  环绕：
-  - title：内容搜索按钮
-    路径：/docs/组件/内容搜索按钮
-    stem：docs/2.组件/内容搜索按钮
-    描述：一个打开ContentSearch模式的预样式按钮。
-  标题：目录
-    路径：/docs/组件/内容目录
-    股骨柄：文件/2.组件/内容物-目录
-    描述：一个带有可定制插槽的粘性目录。
+prettier: true
+collapse: true
+ignore:
+  - surround
+external:
+  - surround
+externalTypes:
+  - ContentSurroundLink[]
+props:
+  prevIcon: 'i-lucide-chevron-left'
+  nextIcon: 'i-lucide-chevron-right'
+  surround:
+  - title: ContentSearchButton
+    path: /docs/components/content-search-button
+    stem: docs/2.components/content-search-button
+    description: A pre-styled Button to open the ContentSearch modal.
+  - title: ContentToc
+    path: /docs/components/content-toc
+    stem: docs/2.components/content-toc
+    description: A sticky Table of Contents with customizable slots.
 ---
 ::
 
-示例
+## 示例
 
-### 在页面内
+### 页面内
 
-在页面中使用ContentSurround组件可显示上一个和下一个链接：
+在页面中使用ContentSurround组件可以显示上一个和下一个链接：
 
 ```vue [pages/\[...slug\\].vue]{19}
 <script setup lang="ts">
@@ -89,20 +89,20 @@ if (!page.value) {
 </template>
 ```
 
-美国石油学会
+## API
 
-道具
+### Props
 
-：组件支柱
+:component-props
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志{prefix="content"}
+:component-changelog{prefix="content"}

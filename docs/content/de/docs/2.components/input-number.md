@@ -15,29 +15,29 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputNumber.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Verwenden Sie die `v-model`-Direktive, um den Wert der Eingabenummer zu steuern.
+Verwenden Sie die `v-model`-Direktive, um den Wert der InputNumber zu steuern.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: 5
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
 ---
 ::
 
-Verwenden Sie `default-value` prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
+Verwenden Sie die `default-value` prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - defaultValue
-Props:
-  Defaultwert: 5
+props:
+  defaultValue: 5
 ---
 ::
 
@@ -45,273 +45,273 @@ Props:
 Diese Komponente basiert auf dem Paket [`@internationalized/number`](https://react-spectrum.adobe.com/internationalized/number/index.html), das Dienstprogramme zum Formatieren und Parsen von Zahlen in Gebietsschemata und Nummerierungssystemen bereitstellt.
 ::
 
-@@ph011@@min/max
+### Min/Max (nicht verfügbar)
 
-Verwenden Sie die Props `min` und `max`, um die Mindest-und Höchstwerte der Eingabezahl festzulegen.
+Verwenden Sie die Props `min` und `max`, um die minimalen und maximalen Werte der Eingabezahl festzulegen.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: 5
-  von: 0
-  max: 10 Jahre
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  min: 0
+  max: 10
 ---
 ::
 
-@@ph016@Schritt
+### step (englisch)
 
-Verwenden Sie `step` prop, um den Schrittwert der InputNumber festzulegen.
+Verwenden Sie die `step`-prop, um den Schrittwert der Eingabezahl festzulegen.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellgröße: 5
-  Schritt: 2
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  step: 2
 ---
 ::
 
-@@ph020@@Orientierung
+### Ausrichtung
 
-Verwenden Sie `orientation` prop, um die Ausrichtung der InputNumber zu ändern.
+Verwenden Sie die `orientation`-prop, um die Ausrichtung der Eingabezahl zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellgröße: 5
-  Ausrichtung: Vertikal
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  orientation: vertical
 ---
 ::
 
-### Platzhalter
+### Platzhalter.
 
-Verwenden Sie `placeholder` prop, um einen Platzhaltertext zu setzen.
+Verwenden Sie die `placeholder`-Prop, um einen Platzhaltertext festzulegen.
 
 ::component-code
 ---
-Props:
-  Platzhalter: 'Geben Sie eine Nummer ein'
+props:
+  placeholder: 'Enter a number'
 ---
 ::
 
-@@ph026@@gmail.de
+### Farbe
 
-Verwenden Sie `color` prop, um die Ringfarbe zu ändern, wenn die InputNumber fokussiert ist.
+Verwenden Sie die `color`-prop, um die Ringfarbe zu ändern, wenn die InputNumber fokussiert ist.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: 5
-  Farbe: neutral
-  Highlight: Wahr
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  color: neutral
+  highlight: true
 ---
 ::
 
-@@ph030@@Variantentabelle
+### Variant Bearbeiten
 
-Verwenden Sie `variant` prop, um die Variante der InputNumber zu ändern.
+Verwenden Sie die `variant`-prop, um die Variante der Eingabezahl zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellgröße: 5
-  Variante: subtil
-  Farbe: neutral
-  Markiert: false
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  variant: subtle
+  color: neutral
+  highlight: false
 ---
 ::
 
-@@ph034@@Größe
+### Größe
 
-Verwenden Sie `size` prop, um die Größe der InputNumber zu ändern.
+Verwenden Sie die `size`-Prop, um die Größe der Eingabezahl zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: 5
-  Größe: XL
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  size: xl
 ---
 ::
 
-@@ph038@disabled @ disabled
+### Disabled (nicht verfügbar)
 
-Verwenden Sie `disabled` prop, um die InputNumber zu deaktivieren.
+Verwenden Sie die `disabled`-prop, um die Eingabenummer zu deaktivieren.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: 5
-  Behindert: Wahr
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  disabled: true
 ---
 ::
 
-### increment/decrement/
+### Increment/Decrement (Erhöhung/Abnahme)
 
-Verwenden Sie die `increment` und `decrement` props, um die Inkrement-und Dekrementschaltflächen mit beliebigen [Button](/docs/components/button) props. Defaults auf `{ variant: 'link' }`{lang="ts-type"}.
+Verwenden Sie die `increment`-und `decrement`-Props, um die Inkrement-und Dekrementschaltflächen mit beliebigen [Button](/docs/components/button)-Props anzupassen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  - modellWert
+prettier: true
+ignore:
+  - modelValue
   - increment.size
-  - increment.color @ increment.color @increment.color @ increment.color
-  @@ph054@inkrement.variant
+  - increment.color
+  - increment.variant
   - decrement.size
   - decrement.color
-  @@ph057@decrement.variant
-Außen:
-  - modellWert
-Props:
-  Modellgröße: 5
-  Erhöhung:
-    Farbe: neutral
-    Variante: solide
-    Größe: XS
-  Dekrement:
-    Farbe: neutral
-    Variante: solide
-    Größe: XS
+  - decrement.variant
+external:
+  - modelValue
+props:
+  modelValue: 5
+  increment:
+    color: neutral
+    variant: solid
+    size: xs
+  decrement:
+    color: neutral
+    variant: solid
+    size: xs
 ---
 ::
 
-### Inkrement/Decrement Icons (auf Englisch)
+### Increment/Decrement Icons (Deutsche Ausgabe)
 
-Verwenden Sie die Props `increment-icon` und `decrement-icon`, um die Schaltflächen [Icon](/docs/components/icon). Standardmäßig auf `i-lucide-plus`/`i-lucide-minus`.
+Verwenden Sie die Props `increment-icon` und `decrement-icon`, um die Schaltflächen [Icon](/docs/components/icon) anzupassen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: 5
-  incrementIcon: 'i-lucide-arrow-right'(I-lucide-arrow-rechts)
-  decrementIcon: 'i-lucide-arrow-left'(I-lucide-arrow-left) auf Englisch
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  incrementIcon: 'i-lucide-arrow-right'
+  decrementIcon: 'i-lucide-arrow-left'
 ---
 ::
 
-@@ph070@@Beispiele
+## Beispiele
 
-### Mit Dezimalformat
+### Im Dezimalformat
 
-Verwenden Sie `format-options` prop, um das Format des Werts anzupassen.
+Verwenden Sie die `format-options`-prop, um das Format des Werts anzupassen.
 
 ::component-example
 ---
-Name: 'input-number-decimal-example'(Eingabe-Zahl-Dezimal-Beispiel)
+name: 'input-number-decimal-example'
 ---
 ::
 
-### Mit Prozentformat
+### Mit Prozentsatzformat
 
-Verwenden Sie `format-options` prop mit `style: 'percent'`, um das Format des Werts anzupassen.
+Verwenden Sie die `format-options`-Prop mit `style: 'percent'`, um das Format des Werts anzupassen.
 
 ::component-example
 ---
-name: 'input-number-percentage-example'(Eingabe-Zahl-Prozent-Beispiel)
+name: 'input-number-percentage-example'
 ---
 ::
 
 ### Mit Währungsformat
 
-Verwenden Sie `format-options` prop mit `style: 'currency'`, um das Format des Werts anzupassen.
+Verwenden Sie die `format-options`-Prop mit `style: 'currency'`, um das Format des Werts anzupassen.
 
 ::component-example
 ---
-name: 'input-number-currency-example'(Eingabe-Nummer-Währung-Beispiel)
+name: 'input-number-currency-example'
 ---
 ::
 
-### ohne Buttons
+### Ohne Buttons
 
-Sie können die Requisiten `increment` und `decrement` verwenden, um die Sichtbarkeit der Schaltflächen zu steuern.
+Sie können die `increment`-und `decrement`-Requisiten verwenden, um die Sichtbarkeit der Tasten zu steuern.
 
 ::component-example
 ---
-name: 'input-number-without-buttons-example'(Eingabe-Nummer-ohne-Schaltflächen-Beispiel)
+name: 'input-number-without-buttons-example'
 ---
 ::
 
-### Innerhalb eines FormFeldes
+### Innerhalb eines Formularfelds
 
-Sie können die InputNumber innerhalb einer [FormField](/docs/components/form-field) Komponente verwenden, um ein Etikett, einen Hilfetext, einen erforderlichen Indikator usw. anzuzeigen.
+Sie können die InputNumber innerhalb einer [FormField](/docs/components/form-field)-Komponente verwenden, um eine Beschriftung, einen Hilfetext, eine erforderliche Anzeige usw. anzuzeigen.
 
 ::component-example
 ---
-name: 'input-number-form-field-example'(Eingabe-Nummer-Form-Feld-Beispiel)
+name: 'input-number-form-field-example'
 ---
 ::
 
-### Mit Slots
+### Mit Steckplätze
 
-Verwenden Sie die `#increment` und `#decrement` Slots, um die Schaltflächen anzupassen.
+Verwenden Sie die `#increment` und `#decrement` Steckplätze, um die Tasten anzupassen.
 
 ::component-example
 ---
-name: 'input-number-slots-example'(Eingabe-Nummer-Slots-Beispiel)
+name: 'input-number-slots-example'
 ---
 ::
 
-@@900@bpb
+## API Bearbeiten
 
-@@ph091@@@props
+### Props für
 
-Komponenten Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
-Diese Komponente unterstützt auch alle nativen `<input>` HTML-Attribute.
+Diese Komponente unterstützt auch alle nativen `<input>`-HTML-Attribute.
 ::
 
-@@ph093@gmail.de
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph094@@emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-@@ph095@@@expose
+### Expose Bearbeiten
 
 Beim Zugriff auf die Komponente über eine Template-Referenz können Sie Folgendes verwenden:
 
 | Vorname| Typen|
 | ---- | ---- |
-| @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|{lang="ts-type"}|
+| `inputRef`{lang="ts-type"} (englisch)| `Ref<HTMLInputElement \| null>`{lang="ts-type"} nicht|
 
-@@ph100@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph101@@changelog @@@ changelog @@@ changelog @ changelog @ changelog @ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

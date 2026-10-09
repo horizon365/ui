@@ -16,7 +16,7 @@ links:
 
 FooterColumnsコンポーネントは、Footerに表示する列のリストをレンダリングします。
 
-[ Footer ](/docs/components/footer)コンポーネントの`top`スロットで使用します。
+[Footer](/docs/components/footer)コンポーネントの`top`スロットで使用します。
 
 ```vue {3-7}
 <template>
@@ -30,46 +30,46 @@ FooterColumnsコンポーネントは、Footerに表示する列のリストを�
 </template>
 ```
 
-### カラム
+### Columns
 
-`columns` propを、次のプロパティを持つオブジェクトの配列として使用します。
+`columns`プロパティを次のプロパティを持つオブジェクトの配列として使用します。
 
 - `label: string`{lang="ts-type"}
 - `children?: FooterColumnLink[]`{lang="ts-type"}
 
-各列には、リンクを定義するオブジェクトの`children`配列が含まれています。各リンクは以下のプロパティを持つことができます。
+各列には、リンクを定義するオブジェクトの`children`配列が含まれます。各リンクは以下のプロパティを持つことができます。
 
 - `label?: string`{lang="ts-type"}
 - `icon?: string`{lang="ts-type"}
 - `class?: any`{lang="ts-type"}
 - `ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkLeadingIcon?: ClassNameValue }`{lang="ts-type"}
 
-[ Link ](/docs/components/link#props)コンポーネントから、`to`、`target`などのプロパティを渡すことができます。
+[Link](/docs/components/link#props)コンポーネントから、`to`、`target`などの任意のプロパティを渡すことができます。
 
 ::component-example
 ---
-きれい真
-名前'footer—columns—example'
-クラス'p—8'
-小道具
-  クラス'w—full'
+prettier: true
+name: 'footer-columns-example'
+class: 'p-8'
+props:
+  class: 'w-full'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

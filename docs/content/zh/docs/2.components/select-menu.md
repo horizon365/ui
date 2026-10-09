@@ -15,164 +15,164 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/SelectMenu.vue
 ---
 
-## 使用情况
+## 用法
 
-使用`v-model`指示词来控制SelectMenu的值，或使用`default-value`属性来设定初始值（如果不需要控制其状态）。
+使用`v-model`指令控制SelectMenu的值，或使用`default-value` prop在不需要控制其状态时设置初始值。
 
 ::component-code
 ---
-更漂亮：真的
-隐藏：
-  班级
-忽略：
-  - 模型值
-  项目数
-  第006章班级
-外部：
-  项目
-  - 模型值
-道具：
-  模型值：'积压'
-  项目名称：
-    积压工作
-- 待办事项
-    - 正在进行中
-    完成了
-  类别：'w-48'
+prettier: true
+hide:
+  - class
+ignore:
+  - modelValue
+  - items
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 ::tip
-在[`Select`](/docs/components/select)上使用此选项，以充分利用Reka UI的[`Combobox`](https://reka-ui.com/docs/components/combobox)组件，该组件提供搜索功能和多重选择。
+在[`Select`](/docs/components/select)上使用此功能，可充分利用Reka UI的[`Combobox`](https://reka-ui.com/docs/components/combobox)组件，该组件提供搜索功能和多项选择。
 ::
 
 ::note
-此组件类似于[`InputMenu`](/docs/components/input-menu)，但它使用的是Select而不是Input，并在菜单内进行搜索。
+此组件类似于[`InputMenu`](/docs/components/input-menu)，但它使用的是Select（选择）而不是Input（输入），并在菜单内进行搜索。
 ::
 
-项目
+### 项目
 
 将`items`属性用作字符串、数字或布尔值的数组：
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  - 型号值
-  项目
-  班级
-外部：
-  项目
-- 模型值
-道具：
-  模型值：'积压'
-  项目名称：
-    积压工作
-    未完成
-- 进行中
-    完成了
-  类别：'w-48'
+prettier: true
+ignore:
+  - modelValue
+  - items
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 您也可以传递具有下列属性的物件数组：
 
-我的天啊！
-我的天啊！
-我的天啊，我的天啊！
-我的天啊！
-我的天啊！
-我的天啊！
-我的天啊！
-我的天啊！
-我的天啊！
+060 x的字符串
+066 x年061月063日062月067日064日065日066 x年066月067日064日065月066日
+073 x年07月07日星期一
+080x-081x-080x
+087 x年082月084日083日088 x年085 x年086 x年087 x年087 x年087 x月087 x日087 x年087 x月087 x日087 x年087 x月087 x日087 x年0877 x月087 x日087 x年087 x月087 x月087 x日087 x月087 x月087 x日087 x月087 x日087 x月087 x日
+090 {lang="ts-type"}的字符串
+094 x年12月15日
+097 x年12月15日星期一
+100 x个字符
 
 ::component-code
 ---
-忽略：
-- 模型值标签
-  项目数
-  班级
-外部：
-  项目数
-  模型值
-外部类型：
-  - Select菜单项[]
-道具：
-  型号值：
-    标签：'待办事项'
-  项目名称：
-    - 标签：“积压”
-    标签：“待办事项”
-    - 标签：“进行中”
-    @@标签：“完成”
-  类别：'w-48'
+ignore:
+  - modelValue.label
+  - items
+  - class
+external:
+  - items
+  - modelValue
+externalTypes:
+  - SelectMenuItem[]
+props:
+  modelValue:
+    label: 'Todo'
+  items:
+    - label: 'Backlog'
+    - label: 'Todo'
+    - label: 'In Progress'
+    - label: 'Done'
+  class: 'w-48'
 ---
 ::
 
 ::caution
-与[`Select`](/docs/components/select)组件不同，SelectMenu默认情况下需要将整个对象传递给`v-model`指令或`default-value`属性。
+与[`Select`](/docs/components/select)组件不同，默认情况下，SelectMenu希望将整个对象传递给`v-model`指令或`default-value`属性。
 ::
 
-您也可以将数组的数组传递给`items`属性，以显示分隔的项目群组。
+您也可以将数组的数组传递给`items` prop，以显示分开的项目群组。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  - 型号值
-- 个项目
-- 类
-外部：
-  103个项目
-- 模型值
-道具：
-  型号值：'Apple'
-  项目名称：
-- -苹果公司
-      香蕉树
-      蓝莓色
-      葡萄
-      菠萝
-    - -紫红色
-      西兰花
-      胡萝卜
-      小胡瓜
-      韭菜
-  类别：'w-48'
+prettier: true
+ignore:
+  - modelValue
+  - items
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Apple'
+  items:
+    - - Apple
+      - Banana
+      - Blueberry
+      - Grapes
+      - Pineapple
+    - - Aubergine
+      - Broccoli
+      - Carrot
+      - Courgette
+      - Leek
+  class: 'w-48'
 ---
 ::
 
-### 数值键
+### 值键
 
 您可以选择使用`value-key`属性来系结物件的单一属性，而非整个物件。预设值为`undefined`。
 
 ::component-code
 ---
-收阖：true
-忽略：
-- 型号值
-- 值键
-  120个项目
-- 类
-外部：
-  122个项目
-- 模型值
-外部类型：
-  - Select菜单项[]
-道具：
-  模型值：'todo'
-  值键：'id'
-  项目名称：
-    - 标签：“积压”
-      id：'待办事项'
-    - 标签：“待办事项”
-      id：'待办事项'
-    - 标签：“进行中”
-      id：'进行中'
-    - 标签：“完成”
-      id：'完成'
-  类别：'w-48'
+collapse: true
+ignore:
+  - modelValue
+  - valueKey
+  - items
+  - class
+external:
+  - items
+  - modelValue
+externalTypes:
+  - SelectMenuItem[]
+props:
+  modelValue: 'todo'
+  valueKey: 'id'
+  items:
+    - label: 'Backlog'
+      id: 'backlog'
+    - label: 'Todo'
+      id: 'todo'
+    - label: 'In Progress'
+      id: 'in_progress'
+    - label: 'Done'
+      id: 'done'
+  class: 'w-48'
 ---
 ::
 
@@ -180,610 +180,610 @@ links:
 当`model-value`是对象时，使用`by`属性按字段而不是按引用来比较对象。
 ::
 
-多个
+### 多重
 
-使用`multiple`属性允许多重选择，在触发器中将用逗号分隔选定的项目。
+使用`multiple`道具可进行多项选择，所选项目将在触发器中以逗号分隔。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 模型值
-  134个项目
-  多个
-  班级
-外部：
-  137个项目
-- 模型值
-道具：
-  型号值：
-    积压工作
-- 待办事项
-  多个：真
-  项目名称：
-    积压工作
-    第142章托多
-- 进行中
-    完成了
-  类别：'w-48'
+prettier: true
+ignore:
+  - modelValue
+  - items
+  - multiple
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue:
+    - Backlog
+    - Todo
+  multiple: true
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 ::caution
-请确定将数组传递至`default-value`属性或`v-model`指示词。
+请确保将数组传递给`default-value`属性或`v-model`指令。
 ::
 
 ### 占位符
 
-使用`placeholder`道具来设定占位符文本。
+使用`placeholder`属性设置占位符文本。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  149个项目
-- 级
-外部：
-  151个项目
-道具：
-  占位符：'选择状态'
-  项目名称：
-    积压工作
-    第153章托多
-- 进行中
-    完成了
-  类别：'w-48'
+prettier: true
+ignore:
+  - items
+  - class
+external:
+  - items
+props:
+  placeholder: 'Select status'
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 ### 搜索输入
 
-使用`search-input`属性自定义或隐藏搜索输入（使用`false`值）。
+使用`search-input` prop自定义或隐藏搜索输入（使用`false`值）。
 
-您可以从[Input](/docs/components/input)组件传递任何属性来自订它。
+您可以从[Input](/docs/components/input)组件传递任何属性来对其进行自定义。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  - 模型值.标签
-  - 模型值.图标
-  165个项目
-  班级
-外部：
-  167个项目
-- 模型值
-外部类型：
-  - Select菜单项[]
-道具：
-  型号值：
-    标签：'积压'
-    图标：“i-透明-圆圈-帮助”
-  搜索输入：
-    占位符：'筛选器...'
-    图标：“i-lucide-搜索”
-  项目名称：
-    @标签：积压
-      图标：“i-透明-圆圈-帮助”
-    @标签：待办事项
-      图标：“i-lucide-圆圈+”
-    - 标签：进行中
-      图标：“i-透明-圆圈-箭头-向上”
-    @标签：完成
-      图标：“i-透明-圆圈-检查”
-  类别：'w-48'
+prettier: true
+ignore:
+  - modelValue.label
+  - modelValue.icon
+  - items
+  - class
+external:
+  - items
+  - modelValue
+externalTypes:
+  - SelectMenuItem[]
+props:
+  modelValue:
+    label: 'Backlog'
+    icon: 'i-lucide-circle-help'
+  searchInput:
+    placeholder: 'Filter...'
+    icon: 'i-lucide-search'
+  items:
+    - label: Backlog
+      icon: 'i-lucide-circle-help'
+    - label: Todo
+      icon: 'i-lucide-circle-plus'
+    - label: In Progress
+      icon: 'i-lucide-circle-arrow-up'
+    - label: Done
+      icon: 'i-lucide-circle-check'
+  class: 'w-48'
 ---
 ::
 
 ::tip
-您可以将`search-input`属性设定为`false`来隐藏搜寻输入。
+您可以将`search-input`属性设置为`false`以隐藏搜索输入。
 ::
 
 ::note
-使用`:search-input="{ autofocus: false }"`可防止在菜单打开时聚焦搜索输入，例如，避免打开触摸设备上的虚拟键盘。
+使用`:search-input="{ autofocus: false }"`可防止在菜单打开时聚焦搜索输入，例如避免在触摸设备上打开虚拟键盘。
 ::
 
-内容
+### 内容
 
 使用`content`属性来控制SelectMenu内容的呈现方式，例如`align`或`side`。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  181个项目
-- 模型值
-  班级
-外部：
-  184个项目
-- 型号值
-项目名称：
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+items:
   content.align:
-    开始
-    中心位置
-- 结束
+    - start
+    - center
+    - end
   content.side:
-- 右侧
-- 左侧
-- 顶部
-- 底部
-道具：
-  模型值：'积压'
-  主要内容：
-    对齐：置中
-    侧面：底部
-    侧面偏移：8
-  项目名称：
-    积压工作
-- 待办事项
-- 进行中
-    完成了
-  类别：'w-48'
+    - right
+    - left
+    - top
+    - bottom
+props:
+  modelValue: 'Backlog'
+  content:
+    align: center
+    side: bottom
+    sideOffset: 8
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-箭头
+### Arrow
 
-使用`arrow`道具在“选择菜单”上显示箭头。
+使用`arrow` prop在SelectMenu上显示一个箭头。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  199个项目
-- 型号价值
-- 类
-  箭头所示
-外部：
-- 个项目
-- 型号值
-道具：
-  模型值：'积压'
-  箭头：true
-  项目名称：
-    积压工作
-- 待办事项
-- 进行中
-    完成了
-  类别：'w-48'
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+  - arrow
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  arrow: true
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-颜色
+### Color
 
-使用`color`道具更改SelectMenu聚焦时的圆环颜色。
+使用`color`道具来改变选择菜单聚焦时的环颜色。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 个项目
-- 型号价值
-  213班
-外部：
-  214个项目
-- 型号价值
-道具：
-  modelValue：'积压'
-  颜色：中性
-  高亮显示：真
-  项目名称：
-    积压工作
-- 待办事项
-- 进行中
-    完成了
-  类别：'w-48'
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  color: neutral
+  highlight: true
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 ::note
-`highlight`属性在这里用来显示焦点状态。当发生验证错误时，它会在内部使用。
+这里使用`highlight`属性来显示焦点状态。当发生验证错误时，在内部使用它。
 ::
 
-### 变体
+### Variant
 
-使用`variant`属性更改SelectMenu的变体。
+使用`variant` prop更改SelectMenu的变体。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  223个项目
-- 型号值
-  225班
-外部：
-  226个项目
-- 模型值
-道具：
-  模型值：'积压'
-  颜色：中性
-  变体：细微
-  突出显示：假
-  项目名称：
-    积压工作
-- 待办事项
-- 进行中
-- 完成
-  类别：'w-48'
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  color: neutral
+  variant: subtle
+  highlight: false
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-尺寸232
+### Size
 
 使用`size`属性更改SelectMenu的大小。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  234个项目
-- 型号价值
-  班级
-外部：
-  237个项目
-- 型号值
-道具类：
-  模型值：'积压'
-  尺寸：xl
-  项目名称：
-    积压工作
-- 待办事项
-- 进行中
-    完成了
-  类别：'w-48'
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  size: xl
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-图标
+### Icon
 
-使用`icon`道具在“选择”菜单中显示[](/docs/components/icon)图标。
+使用`icon`道具在SelectMenu中显示[Icon](/docs/components/icon)。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  249个项目
-- 型号价值
-  251班
-外部：
-  252个项目
-- 模型值
-道具：
-  模型值：'积压'
-  图标：“i-lucide-搜索”
-  尺寸：md
-  项目名称：
-    积压工作
-    第255章托多
-- 进行中
-    完成了
-  类别：'w-48'
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  icon: 'i-lucide-search'
+  size: md
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-### 结尾图标
+### 拖尾图标
 
-使用`trailing-icon`属性来自订结尾的[图标](/docs/components/icon)。预设值为`i-lucide-chevron-down`。
+使用`trailing-icon` prop将尾随的[Icon](/docs/components/icon).xml自定义为`i-lucide-chevron-down`。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  265个项目
-- 型号值
-  班级
-外部：
-  268个项目
-- 模型值
-道具：
-  模型值：'积压'
-  尾部图标：'i-lucide-箭头向下'
-  尺寸：md
-  项目名称：
-    积压工作
-    第271章托多
-- 进行中
-- 完成
-  类别：'w-48'
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  trailingIcon: 'i-lucide-arrow-down'
+  size: md
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`app.config.ts`的`ui.icons.chevronDown`键下全局自定此图标。
+你可以在你的`ui.icons.chevronDown`键下的`app.config.ts`中全局自定义这个图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`ui.icons.chevronDown`键下的`vite.config.ts`中全局自定义此图标。
+你可以在你的`vite.config.ts`中的`ui.icons.chevronDown`键下全局自定义这个图标。
 :::
 ::
 
-### 选定的图标
+### 选定图标
 
-使用`selected-icon`属性来自订选取项目时的图标。预设值为`i-lucide-check`。
+使用`selected-icon`道具自定义选中项目时的图标。将其转换为`i-lucide-check`。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  281个项目
-- 型号值
-  班级
-外部：
-  284个项目
-- 型号价值
-道具：
-  模型值：'积压'
-  选定图标：“i-lucide-火焰”
-  尺寸：md
-  项目名称：
-    积压工作
-    待处理
-- 进行中
-    完成了
-  类别：'w-48'
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  selectedIcon: 'i-lucide-flame'
+  size: md
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`app.config.ts`的`ui.icons.check`键下全局自定此图标。
+你可以在你的`app.config.ts`中的`ui.icons.check`键下全局自定义这个图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`ui.icons.check`键下的`vite.config.ts`中全局自定此图标。
+你可以在你的`ui.icons.check`键下的`vite.config.ts`中全局自定义这个图标。
 :::
 ::
 
-清除：标记
+### 清除：badge{label="4.4+" class="align-text-top"}
 
-使用`clear`属性可在选定值时显示清除按钮。
+使用`clear` prop在选择值时显示清除按钮。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  297个项目
-- 型号值
-  班级
-外部：
-- 个项目
-- 型号值
-项目名称：
-  清除：
-    真的
-    错了
-道具类：
-  模型值：'积压'
-  清除：true
-  项目名称：
-    积压工作
-- 待办事项
-- 进行中
-    完成了
-  类别：'w-48'
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+items:
+  clear:
+    - true
+    - false
+props:
+  modelValue: 'Backlog'
+  clear: true
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-### 清除图标：徽标{label="4.4+" class="align-text-top"}
+### 清除图标：badge{label="4.4+" class="align-text-top"}
 
-使用`clear-icon`属性来自订清除按钮[图标](/docs/components/icon)。预设值为`i-lucide-x`。
+使用`clear-icon`道具自定义清除按钮[Icon](/docs/components/icon)。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 个项目
-- 型号价值
-  班级
-外部：
-- 个项目
-- 型号价值
-项目名称：
-  清除：
-    真的
-    错了
-道具：
-  模型值：'积压'
-  清除：true
-  clearIcon：'i-lucide-垃圾桶'
-  项目名称：
-    积压工作
-- 待办事项
-- 进行中
-- 完成
-  类别：'w-48'
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+items:
+  clear:
+    - true
+    - false
+props:
+  modelValue: 'Backlog'
+  clear: true
+  clearIcon: 'i-lucide-trash'
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`app.config.ts`的`ui.icons.close`键下全局自定此图标。
+你可以在你的`ui.icons.close`键下的`app.config.ts`中全局自定义这个图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`vite.config.ts`的`ui.icons.close`键下全局自定此图标。
+您可以在`ui.icons.close`键下在`vite.config.ts`中全局自定义此图标。
 :::
 ::
 
-虚拟人偶
+### Avatar
 
-使用`avatar`道具在"选择"菜单中显示[Avatar](/docs/components/avatar)。
+使用`avatar`道具在选择菜单中显示[Avatar](/docs/components/avatar)。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 个项目
-- 型号价值
-  班级
-- 头像.正在加载
-外部：
-- 个项目
-- 型号值
-道具：
-  模型值：'Nuxt'
-  头像：
-    来源：'https：//github.com/nuxt.png'
-    加载：惰性
-  项目名称：
-    343号
-- 网络中心
-    Nuxt实验室
-    - Nux模块
-    新社区
-  类别：'w-48'
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+  - avatar.loading
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Nuxt'
+  avatar:
+    src: 'https://github.com/nuxt.png'
+    loading: lazy
+  items:
+    - Nuxt
+    - NuxtHub
+    - NuxtLabs
+    - Nuxt Modules
+    - Nuxt Community
+  class: 'w-48'
 ---
 ::
 
-正在载入
+### 加载中
 
-使用`loading`道具在“选择菜单”上显示加载图标。
+使用`loading` prop在SelectMenu上显示加载图标。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 个项目
-- 型号值
-  班级
-外部：
-- 个项目
-- 型号价值
-道具：
-  模型值：'积压'
-  载入：true
-  结尾：false
-  项目名称：
-    积压工作
-    第356章托多
-- 进行中
-    完成了
-  类别：'w-48'
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  loading: true
+  trailing: false
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-### 载入图标
+### 加载图标
 
-使用`loading-icon`属性来自订载入图标。预设为`i-lucide-loader-circle`。
+使用`loading-icon`道具自定义加载图标. `i-lucide-loader-circle`。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 个项目
-- 型号价值
-  班级
-外部：
-- 个项目
-- 型号价值
-道具：
-  模型值：'积压'
-  载入：true
-  加载图标：“i-lucide加载程序”
-  项目名称：
-    积压工作
-    待处理
-- 进行中
-    完成了
-  类别：'w-48'
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`app.config.ts`的`ui.icons.loading`键下全局自定此图标。
+你可以在你的`app.config.ts`中的`ui.icons.loading`键下全局自定义这个图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`ui.icons.loading`键下的`vite.config.ts`中全局自定义此图标。
+你可以在你的`ui.icons.loading`键下的`vite.config.ts`中全局自定义这个图标。
 :::
 ::
 
-### 已停用
+### 禁用
 
-使用`disabled`道具禁用“选择菜单”。
+使用`disabled` prop禁用选择菜单。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  377个项目
-  预留位置
-  班级
-外部：
-- 个项目
-道具：
-  已禁用：true
-  占位符：“选择状态”
-  项目名称：
-    积压工作
-    待处理
-- 进行中
-    完成了
-  类别：'w-48'
+prettier: true
+ignore:
+  - items
+  - placeholder
+  - class
+external:
+  - items
+props:
+  disabled: true
+  placeholder: 'Select status'
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-示例
+## 示例
 
-### 使用项目类型
+### 带项目类型
 
 可以将`type`属性与`separator`一起使用，以显示项之间的分隔符，或将`label`一起使用，以显示标签。
 
 ::component-code
 ---
-收阖：true
-忽略：
-- 型号价值
-- 个项目
-  第392课
-外部：
-- 个项目
-- 型号值
-外部类型：
-  - Select菜单项[]
-道具：
-  型号值：'Apple'
-  项目名称：
-    - -类型：“标签”
-        标签：“水果”
-      苹果公司
-      香蕉树
-      蓝莓色
-- 葡萄
-      菠萝，菠萝
-    - -类型：“标签”
-        标签：“蔬菜”
-- 紫红色
-      西兰花
-      胡萝卜
-      小胡瓜
-      韭菜
-  类别：'w-48'
+collapse: true
+ignore:
+  - modelValue
+  - items
+  - class
+external:
+  - items
+  - modelValue
+externalTypes:
+  - SelectMenuItem[]
+props:
+  modelValue: 'Apple'
+  items:
+    - - type: 'label'
+        label: 'Fruits'
+      - Apple
+      - Banana
+      - Blueberry
+      - Grapes
+      - Pineapple
+    - - type: 'label'
+        label: 'Vegetables'
+      - Aubergine
+      - Broccoli
+      - Carrot
+      - Courgette
+      - Leek
+  class: 'w-48'
 ---
 ::
 
 ::note
-使用`label`项目做为群组标题时，请传递数组的数组，以便在搜寻时将标签与其群组一起筛选出来。
+当使用`label`项目作为组标题时，传递一个数组数组，以便在搜索时将标签与其组一起过滤掉。
 ::
 
-### 在项目中使用图标
+### 项目中带有图标
 
-您可以使用`icon`属性在项目内显示[图标](/docs/components/icon)。
+可以使用`icon`属性在项目中显示[Icon](/docs/components/icon)。
 
 ::component-example
 ---
-收阖：true
-名称：'选择菜单项图标示例'
+collapse: true
+name: 'select-menu-items-icon-example'
 ---
 ::
 
@@ -791,137 +791,137 @@ links:
 您也可以使用`#leading`插槽来显示选定的图标。
 ::
 
-### 在项目中使用头像
+### 物品中有头像
 
-您可以使用`avatar`属性在项目内显示[Avatar](/docs/components/avatar)。
+您可以使用`avatar`属性在项目中显示[Avatar](/docs/components/avatar)。
 
 ::component-example
 ---
-收阖：true
-名称：'选择菜单项头像示例'
+collapse: true
+name: 'select-menu-items-avatar-example'
 ---
 ::
 
 ::tip
-您也可以使用`#leading`插槽来显示所选的虚拟形象。
+您也可以使用`#leading`插槽来显示选定的头像。
 ::
 
-带芯片的物品
+### 带芯片的物品
 
-您可以使用`chip`属性来显示项目内的[Chip](/docs/components/chip)。
+您可以使用`chip`属性在项目中显示[Chip](/docs/components/chip)。
 
 ::component-example
 ---
-收阖：true
-名称：“选择菜单项目芯片示例”
+collapse: true
+name: 'select-menu-items-chip-example'
 ---
 ::
 
 ::note
-在本例中，`#leading`插槽用于显示选定的筹码。
+在本例中，`#leading`插槽用于显示所选筹码。
 ::
 
 ### 控制打开状态
 
-您可以使用`default-open`属性或`v-model:open`指示词来控制开启状态。
+您可以使用`default-open` prop或`v-model:open`指令控制打开状态。
 
 ::component-example
 ---
-名称：“选择菜单打开示例”
+name: 'select-menu-open-example'
 ---
 ::
 
 ::note
-在此示例中，利用[`defineShortcuts`](/docs/composables/define-shortcuts)，您可以通过按下：kbd{value="O"}来切换“选择菜单”。
+在本例中，利用[`defineShortcuts`](/docs/composables/define-shortcuts)，您可以通过按：kbd{value="O"}切换选择菜单。
 ::
 
-### 控制搜索词
+### 控件搜索词
 
 使用`v-model:search-term`指令控制搜索词。
 
 ::component-example
 ---
-名称：'选择菜单搜索术语示例'
+name: 'select-menu-search-term-example'
 ---
 ::
 
-### 带有旋转图标
+### 带旋转图标
 
 下面是一个带有旋转图标的示例，该图标指示SelectMenu的打开状态。
 
 ::component-example
 ---
-名称：“选择菜单图标示例”
+name: 'select-menu-icon-example'
 ---
 ::
 
-### 使用创建项目
+### 带创建项
 
-使用`create-item`属性可让使用者新增不在预先定义选项中的自订值。
+使用`create-item`属性可以让用户添加预定义选项中没有的自定义值。
 
 ::component-example
 ---
-收阖：true
-名称：'选择菜单创建项目示例'
+collapse: true
+name: 'select-menu-create-item-example'
 ---
 ::
 
 ::note
-默认情况下，如果未找到匹配项，则会显示创建选项。将其设置为`always`，即使存在相似的值也会显示。
+默认情况下，create选项在没有找到匹配项时显示。将其设置为`always`，即使存在类似的值也会显示。
 ::
 
 ::tip{to="#emits"}
-使用`@create`事件来行程项目的建立。您将收到事件和项目做为参数。
+使用`@create`事件来处理项目的创建。您将接收事件和项目作为参数。
 ::
 
-### 使用已提取的项目
+### 使用获取的项目
 
-您可以从API中获取项目，并在SelectMenu中使用它们。
+您可以从API获取项目并在选择菜单中使用它们。
 
 ::component-example
 ---
-收阖：true
-名称：'选择菜单提取示例'
+collapse: true
+name: 'select-menu-fetch-example'
 ---
 ::
 
 ::note
-此示例将`useLazyFetch`与`immediate: false`一起使用，以便仅在菜单打开时提取数据，从而避免在页面加载时调用不必要的API。
+本例使用`useLazyFetch`和`immediate: false`，仅在菜单打开时获取数据，避免了页面加载时不必要的API调用。
 ::
 
-### 使用忽略筛选
+### 带忽略过滤器
 
 将`ignore-filter`属性设置为`true`以禁用内部搜索并使用您自己的搜索逻辑。
 
 ::component-example
 ---
-收阖：true
-名称：'选择菜单忽略过滤器示例'
+collapse: true
+name: 'select-menu-ignore-filter-example'
 ---
 ::
 
 ::note
-此示例使用[`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced)来消除API调用的抖动。提取被`immediate: false`延迟，因此在菜单打开之前不会发出任何请求。
+本例使用[`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced)对API调用进行反跳。`immediate: false`延迟提取，因此在菜单打开之前不会发出请求。
 ::
 
-### 使用筛选字段
+### 带过滤器字段
 
-使用`filter-fields`属性搭配字段数组来筛选。预设值为`[labelKey]`。
+使用`filter-fields` prop和一个字段数组来过滤. `[labelKey]`。
 
 ::component-example
 ---
-收阖：true
-名称：“选择菜单筛选字段示例”
+collapse: true
+name: 'select-menu-filter-fields-example'
 ---
 ::
 
 ::note
-此示例将`useLazyFetch`与`immediate: false`一起使用，以便仅在菜单打开时提取数据，从而避免在页面加载时调用不必要的API。
+本例使用`useLazyFetch`和`immediate: false`，仅在菜单打开时获取数据，避免了页面加载时不必要的API调用。
 ::
 
-### 借助虚拟化：徽标{label="4.1+" class="align-text-top"}
+### 虚拟化：badge{label="4.1+" class="align-text-top"}
 
-使用`virtualize`属性为大型列表启用虚拟化，将其作为布尔值或带有`{ estimateSize: 32, overscan: 12 }`等选项的对象。
+使用`virtualize` prop将大型列表虚拟化为布尔值或带有`{ estimateSize: 32, overscan: 12 }`等选项的对象。
 
 ::warning{to="https://github.com/unovue/reka-ui/issues/1885" target="_blank"}
 启用后，由于Reka UI的限制，所有组将被展平为单个列表。
@@ -929,44 +929,44 @@ links:
 
 ::component-example
 ---
-更漂亮：真的
-名称：“选择菜单虚拟化示例”
+prettier: true
+name: 'select-menu-virtualize-example'
 ---
 ::
 
-### 无限滚动：徽章{label="4.4+" class="align-text-top"}
+### 无限滚动：badge{label="4.4+" class="align-text-top"}
 
-您可以使用[`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/)组合式，在使用者卷动时载入更多数据。
+您可以使用[`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/)组合文件在用户滚动时加载更多数据。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-亮点：
-  41岁
-  51岁
-overflowHidden：真的
-名称：'选择菜单-无限滚动-示例'
+prettier: true
+collapse: true
+highlights:
+  - 41
+  - 51
+overflowHidden: true
+name: 'select-menu-infinite-scroll-example'
 ---
 ::
 
 ::note
-此示例将`useLazyFetch`与`immediate: false`一起使用，以便仅在用户滚动时加载数据。
+本例使用`useLazyFetch`和`immediate: false`，因此数据仅在用户滚动时加载。
 ::
 
-### 使用完整内容长度
+### 具有完整内容宽度
 
-通过在`ui.content`槽中添加`min-w-fit`类，可以将内容扩展到其项目的整个宽度。
+您可以通过在`ui.content`插槽上添加`min-w-fit`类来将内容扩展到其项目的全宽。
 
 ::component-example
 ---
-名称：'选择菜单内容宽度示例'
-收阖：true
+name: 'select-menu-content-width-example'
+collapse: true
 ---
 ::
 
 ::tip
-您也可以在`app.config.ts`中全局更改内容宽度：
+您还可以在`app.config.ts`中全局更改内容宽度：
 
 ```
 export default defineAppConfig({
@@ -981,52 +981,52 @@ export default defineAppConfig({
 ```
 ::
 
-### 作为国家/地区选择器
+### 作为国家选择器
 
 您可以使用SelectMenu作为国家/地区选择器，并进行延迟加载。只有在首次打开菜单时才会提取国家/地区。
 
 ::component-example
 ---
-收阖：true
-名称：'选择菜单-国家/地区-示例'
+collapse: true
+name: 'select-menu-countries-example'
 ---
 ::
 
 ::note
-本示例将`useLazyFetch`与`immediate: false`一起使用，以便仅在首次打开菜单时加载国家/地区。
+本例使用`useLazyFetch`和`immediate: false`，仅在菜单首次打开时加载国家/地区。
 ::
 
-活性成分
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-此组件还支持所有本机`<button>`HTML属性。
+此组件还支持所有原生`<button>` HTML属性。
 ::
 
-插槽数
+### Slots
 
-：组件插槽
+:component-slots
 
-### 排放量
+### Emits
 
-：组件发射
+:component-emits
 
-暴露于
+### 曝光
 
 通过模板引用访问组件时，可以使用以下命令：
 
 | 名称|类型|
 | ---- | ---- |
-|`triggerRef`，504，504，504|`Ref<HTMLButtonElement \| null>`，{lang="ts-type"}，`Ref<HTMLButtonElement \| null>`，{lang="ts-type"}|
-| 508号公路|509号公路|
+| `triggerRef`{lang="ts-type"}| `Ref<HTMLButtonElement \| null>`{lang="ts-type"}|
+| `viewportRef`{lang="ts-type"}| `Ref<HTMLDivElement \| null>`{lang="ts-type"}|
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

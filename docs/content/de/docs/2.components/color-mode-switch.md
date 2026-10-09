@@ -3,7 +3,7 @@ title: Colormode-Umschaltung
 description: 'Ein Schalter zum Umschalten zwischen Hell-und Dunkelmodus.'
 category: color-mode
 links:
-  - label: Switch ist
+  - label: Switch
     to: /docs/components/switch
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub
@@ -11,21 +11,21 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/color-mode/ColorModeSwitch.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Die ColorModeSwitch-Komponente erweitert die Komponente [Switch](/docs/components/switch), so dass Sie jede Eigenschaft wie `color`,`size`, etc. übergeben können
+Die ColorModeSwitch-Komponente erweitert die [Switch](/docs/components/switch)-Komponente, sodass Sie jede Eigenschaft wie `color`, `size` usw. übergeben können.
 
-: component-code {prefix="color-mode"}
+:component-code{prefix="color-mode"}
 
-@@ph008@@Beispiele
+## Examples (Beispiele)
 
-@@ph009@@Mit benutzerdefinierten Icons
+### Mit benutzerdefinierten Icons
 
 ::framework-only
-#nuxt sein
+#nuxt
 ::div
 
-Verwenden Sie `app.config.ts`, um das Symbol mit der `ui.icons`-Eigenschaft anzupassen:
+Verwenden Sie die `app.config.ts`, um das Symbol mit der Eigenschaft `ui.icons` anzupassen:
 
 ```ts [app/app.config.ts]
 export default defineAppConfig({
@@ -40,9 +40,9 @@ export default defineAppConfig({
 
 ::
 
-#Ansehen
+#vue
 ::div
-Verwenden Sie `vite.config.ts`, um das Symbol mit der `ui.icons`-Eigenschaft anzupassen:
+Verwenden Sie das `vite.config.ts`, um das Symbol mit der Eigenschaft `ui.icons` anzupassen:
 
 ```ts [vite.config.ts]
 import { defineConfig } from 'vite'
@@ -68,12 +68,12 @@ export default defineConfig({
 
 ::
 
-## api
+## API (Englisch)
 
-@@ph044@@@gmail.de
+### Props (nicht)
 
-Komponenten Props
+:component-props
 
-@@ph045@@changelog @@@ changelog @@@ changelog @@ changelog @ changelog @ changelog
+## Changelog (englisch)
 
-: component-changelog {prefix="color-mode"}
+:component-changelog{prefix="color-mode"}

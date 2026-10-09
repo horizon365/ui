@@ -16,18 +16,18 @@ links:
 
 ## 使用法
 
-`v-model`ディレクティブを使用して、選択した日付を制御します。
+`v-model`ディレクティブを使用して選択した日付を制御します。
 
 ::component-code
 ---
-キャスト
-  modelValue DateValue
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue [2022 2 3]
+cast:
+  modelValue: DateValue
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: [2022, 2, 3]
 ---
 ::
 
@@ -35,14 +35,14 @@ links:
 
 ::component-code
 ---
-キャスト
-  defaultValue DateValue
-無視
-  -  defaultValue
-外部
-  -  defaultValue
-小道具
-  defaultValue [2022 2 6]
+cast:
+  defaultValue: DateValue
+ignore:
+  - defaultValue
+external:
+  - defaultValue
+props:
+  defaultValue: [2022, 2, 6]
 ---
 ::
 
@@ -58,107 +58,107 @@ links:
 :::
 ::
 
-### タイプbadge {label="4.9+" class="align-text-top"}
+### タイプbadge{label="4.9+" class="align-text-top"}
 
-カレンダーが選択するものを変更するには、`type`プロパティを使用します。デフォルトは`date`です。
+`type`プロパティを使用して、カレンダーが選択するものを変更します。デフォルトは`date`です。
 
-`date`を使用している場合は、見出しをクリックして日表示から月表示、年表示に切り替え、ドリルダウンして日付を選択します。
+`date`を使用する場合は、見出しをクリックして日表示から月表示、年表示に切り替え、ドリルダウンして日付を選択します。
 
 ::component-code
 ---
-キャスト
-  modelValue DateValue
-無視
-  - タイプ
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  タイプ月
-  modelValue [2022 2 1]
+cast:
+  modelValue: DateValue
+ignore:
+  - type
+  - modelValue
+external:
+  - modelValue
+props:
+  type: month
+  modelValue: [2022, 2, 1]
 ---
 ::
 
-スタンドアロンの年ピッカーをレンダリングするには、`type="year"`を使用します。
+`type="year"`を使用してスタンドアロンの年ピッカーをレンダリングします。
 
 ::component-code
 ---
-キャスト
-  modelValue DateValue
-無視
-  - タイプ
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  タイプ年
-  modelValue [2022 1 1]
+cast:
+  modelValue: DateValue
+ignore:
+  - type
+  - modelValue
+external:
+  - modelValue
+props:
+  type: year
+  modelValue: [2022, 1, 1]
 ---
 ::
 
 ### 複数
 
-`multiple`プロパティを使用して複数選択を許可します。
+`multiple`プロパティを使用して複数選択できます。
 
 ::component-code
 ---
-きれい真
-キャスト
-  modelValue DateValue []
-無視
-  - 複数
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  複数true
-  modelValue [[2022 2 4][2022 2 6][2022 2 8]
+prettier: true
+cast:
+  modelValue: DateValue[]
+ignore:
+  - multiple
+  - modelValue
+external:
+  - modelValue
+props:
+  multiple: true
+  modelValue: [[2022, 2, 4], [2022, 2, 6], [2022, 2, 8]]
 ---
 ::
 
-### 範囲
+### Range
 
 `range`プロパティを使用して、日付の範囲を選択します。
 
 ::component-code
 ---
-きれい真
-キャスト
-  modelValue DateRange
-無視
-  -  range
-  -  modelValue.start
-  -  modelValue.end
-外部
-  -  modelValue
-小道具
-  範囲真
-  modelValue
-    開始[2022年2月3日]
-    終了[2022年2月20日]
+prettier: true
+cast:
+  modelValue: DateRange
+ignore:
+  - range
+  - modelValue.start
+  - modelValue.end
+external:
+  - modelValue
+props:
+  range: true
+  modelValue:
+    start: [2022, 2, 3]
+    end: [2022, 2, 20]
 ---
 ::
 
-`range` propは`type="month"`と`type="year"`でも動作し、月や年の範囲を選択できます。
+`range`プロパティは`type="month"`と`type="year"`でも動作し、月または年の範囲を選択できます。
 
 ::component-code
 ---
-きれい真
-キャスト
-  modelValue DateRange
-無視
-  - タイプ
-  - 範囲
-  -  modelValue.start
-  -  modelValue.end
-外部
-  -  modelValue
-小道具
-  タイプ月
-  範囲真
-  modelValue
-    開始[2022年2月1日]
-    終了[2022年6月1日]
+prettier: true
+cast:
+  modelValue: DateRange
+ignore:
+  - type
+  - range
+  - modelValue.start
+  - modelValue.end
+external:
+  - modelValue
+props:
+  type: month
+  range: true
+  modelValue:
+    start: [2022, 2, 1]
+    end: [2022, 6, 1]
 ---
 ::
 
@@ -168,100 +168,100 @@ links:
 
 ::component-code
 ---
-小道具
-  月数3
+props:
+  numberOfMonths: 3
 ---
 ::
 
-### 月コントロール
+### Monthコントロール
 
-月コントロールを表示するには、`month-controls`プロパティを使用します。デフォルトは`true`です。
+`month-controls`プロパティを使用して月コントロールを表示します。デフォルトは`true`です。
 
 ::component-code
 ---
-小道具
-  monthControls false
+props:
+  monthControls: false
 ---
 ::
 
-月ボタンを上書きするには、`prev-month`および`next-month` propsを使用します。
+`prev-month`と`next-month`の小道具を使用して月ボタンを上書きします。
 
 ::component-code
 ---
-きれい真
-無視
-  メールinfo @ ph049 @ prevMonth.color
-  -  prevMonth.variant
-  -  nextMonth. color
-  -  nextMonth.variant
-小道具
-  前月
-    色プライマリ
-    バリアントソフト
-  次の月
-    色プライマリ
-    バリアントソフト
+prettier: true
+ignore:
+  - prevMonth.color
+  - prevMonth.variant
+  - nextMonth.color
+  - nextMonth.variant
+props:
+  prevMonth:
+    color: primary
+    variant: soft
+  nextMonth:
+    color: primary
+    variant: soft
 ---
 ::
 
-### 年コントロール
+### Yearコントロール
 
-年コントロールを表示するには、`year-controls`プロパティを使用します。デフォルトは`true`です。
+`year-controls`プロパティを使用して年コントロールを表示します。デフォルトは`true`です。
 
 ::component-code
 ---
-小道具
-  yearControls false
+props:
+  yearControls: false
 ---
 ::
 
-年ボタンを上書きするには、`prev-year`と`next-year` propsを使用します。
+`prev-year`と`next-year`の小道具を使用して年ボタンを上書きします。
 
 ::component-code
 ---
-きれい真
-無視
-  メール：info @ ph058 @ prevyear.color
-  -  prevYear.variant
-  -  NextYear.color
-  -  nextyear.variant
-小道具
-  前年
-    色プライマリ
-    バリアントソフト
-  次の年
-    色プライマリ
-    バリアントソフト
+prettier: true
+ignore:
+  - prevYear.color
+  - prevYear.variant
+  - nextYear.color
+  - nextYear.variant
+props:
+  prevYear:
+    color: primary
+    variant: soft
+  nextYear:
+    color: primary
+    variant: soft
 ---
 ::
 
-###  View Control badge {label="4.9+" class="align-text-top"}
+### Viewコントロールbadge{label="4.9+" class="align-text-top"}
 
 `view-control`プロパティを使用して、見出しを日、月、年ビューを切り替えるボタンにします。デフォルトは`true`です。
 
 ::component-code
 ---
-アイテム
-  ビューコントロール
-    -  true
-    -  false
-小道具
-  viewControl false
+items:
+  viewControl:
+    - true
+    - false
+props:
+  viewControl: false
 ---
 ::
 
-見出しボタンを上書きするオブジェクトに`view-control` propを設定します。
+見出しボタンをオーバーライドするオブジェクトに`view-control`プロパティを設定します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  viewControl.color
-  -  viewControl.variant
-小道具
-  ビューコントロール
-    色プライマリ
-    バリアントソフト
+prettier: true
+ignore:
+  - viewControl.color
+  - viewControl.variant
+props:
+  viewControl:
+    color: primary
+    variant: soft
 ---
 ::
 
@@ -271,203 +271,203 @@ links:
 
 ::component-code
 ---
-小道具
-  fixedWeeks false
+props:
+  fixedWeeks: false
 ---
 ::
 
-### 週番号badge {label="4.4+" class="align-text-top"}
+### 週番号badge{label="4.4+" class="align-text-top"}
 
 `week-numbers`プロパティを使用して、カレンダーに週番号を表示します。
 
 ::component-code
 ---
-小道具
-  weekNumbers true
-  fixedWeeks true
+props:
+  weekNumbers: true
+  fixedWeeks: true
 ---
 ::
 
-### カラー
+### Color
 
 `color`プロパティを使用してカレンダーの色を変更します。
 
 ::component-code
 ---
-キャスト
-  defaultValue DateRange
-隠す
-  - 範囲
-  -  defaultValue
-  -  defaultValue.start
-  -  defaultvalue.end
-小道具
-  色ニュートラル
-  範囲真
-  defaultValue
-    開始[2022年2月3日]
-    終了[2022年2月20日]
+cast:
+  defaultValue: DateRange
+hide:
+  - range
+  - defaultValue
+  - defaultValue.start
+  - defaultValue.end
+props:
+  color: neutral
+  range: true
+  defaultValue:
+    start: [2022, 2, 3]
+    end: [2022, 2, 20]
 ---
 ::
 
-### バリアント
+### Variant
 
 `variant`プロパティを使用して、カレンダーのバリアントを変更します。
 
 ::component-code
 ---
-キャスト
-  defaultValue DateRange
-隠す
-  - 範囲
-  -  defaultValue
-  -  defaultValue.start
-  -  defaultvalue.end
-小道具
-  バリアント：微妙
-  範囲真
-  defaultValue
-    開始[2022年2月3日]
-    終了[2022年2月20日]
+cast:
+  defaultValue: DateRange
+hide:
+  - range
+  - defaultValue
+  - defaultValue.start
+  - defaultValue.end
+props:
+  variant: subtle
+  range: true
+  defaultValue:
+    start: [2022, 2, 3]
+    end: [2022, 2, 20]
 ---
 ::
 
 ### サイズ
 
-カレンダーのサイズを変更するには、`size`プロパティを使用します。
+`size`プロパティを使用してカレンダーのサイズを変更します。
 
 ::component-code
 ---
-小道具
-  サイズXL
+props:
+  size: xl
 ---
 ::
 
 ### 無効
 
-カレンダーを無効にするには、`disabled`プロパティを使用します。
+`disabled`プロパティを使用してカレンダーを無効にします。
 
 ::component-code
 ---
-小道具
-  無効true
+props:
+  disabled: true
 ---
 ::
 
 ## 例
 
-### チップイベント付き
+### Withチップイベント
 
-[ Chip ](/docs/components/chip)コンポーネントを使用して、特定の日にイベントを追加します。
+[Chip](/docs/components/chip)コンポーネントを使用して、特定の日にイベントを追加します。
 
 ::component-example
 ---
-name 'calendar—events—example'
+name: 'calendar-events-example'
 ---
 ::
 
-### 無効な日付
+### 無効な日付付き
 
-`is-date-disabled` propを使用して、特定の日付を無効としてマークします。`type="month"`または`type="year"`を使用する場合は、代わりに`is-month-disabled`または`is-year-disabled` propを使用します。
+特定の日付を無効にする関数で`is-date-disabled`プロパティを使用します。`type="month"`または`type="year"`を使用する場合は、代わりに`is-month-disabled`または`is-year-disabled`プロパティを使用します。
 
 ::component-example
 ---
-名前'calendar—disabled dates—example'
+name: 'calendar-disabled-dates-example'
 ---
 ::
 
 ### 利用できない日付
 
-`is-date-unavailable` propを使用して、特定の日付を利用できないとマークします。`type="month"`または`type="year"`を使用する場合は、代わりに`is-month-unavailable`または`is-year-unavailable` propを使用します。
+特定の日付を利用できないとマークする関数を使って`is-date-unavailable`プロパティを使用します。`type="month"`または`type="year"`を使用する場合は、代わりに`is-month-unavailable`または`is-year-unavailable`プロパティを使用します。
 
 ::component-example
 ---
-名前'calendar—unavailable—dates—example'
+name: 'calendar-unavailable-dates-example'
 ---
 ::
 
-### 最小/最大日付
+### 最小/最大日付付き
 
-`min-value`と`max-value` propsを使用して日付を制限します。
+`min-value`と`max-value`の小道具を使用して日付を制限します。
 
 ::component-example
 ---
-名前'calendar—min—max—date—example'
+name: 'calendar-min-max-dates-example'
 ---
 ::
 
-### 他のカレンダーシステムと
+### その他のカレンダーシステム
 
 `@internationalized/date`の他のカレンダーを使用して、別のカレンダーシステムを実装できます。
 
 ::component-example
 ---
-名前'calendar—other—system—example'
+name: 'calendar-other-system-example'
 ---
 ::
 
 ::note{to="https://react-spectrum.adobe.com/internationalized/date/Calendar.html#implementations"}
-利用可能なカレンダーは`@internationalized/date` docsで確認できます。
+利用可能なカレンダーは`@internationalized/date`ドキュメントで確認できます。
 ::
 
 ### 外部コントロール付き
 
-`v-model`で渡された日付を操作することで、外部コントロールでカレンダーを制御することができます。
+`v-model`で渡された日付を操作することで、外部コントロールでカレンダーを制御できます。
 
 ::component-example
 ---
-名前'calendar—external controls—example'
+name: 'calendar-external-controls-example'
 ---
 ::
 
 ### 今日の日付付き
 
-`@internationalized/date`から`getLocalTimeZone`関数を使用して、値を現在の日付に設定します。
+`@internationalized/date`と`getLocalTimeZone`の`today`関数を使用して、値を現在の日付に設定します。
 
 ::component-example
 ---
-名前'カレンダー今日の例'
+name: 'calendar-today-example'
 ---
 ::
 
 ### 日付ピッカーとして
 
-[ Button ](/docs/components/button)と[ Popover ](/docs/components/popover)コンポーネントを使用して、日付ピッカーを作成します。
+日付ピッカーを作成するには、[Button](/docs/components/button)と[Popover](/docs/components/popover)コンポーネントを使用します。
 
 ::component-example
 ---
-名前'カレンダー日付ピッカー例'
+name: 'calendar-date-picker-example'
 ---
 ::
 
 ### 日付範囲ピッカーとして
 
-[ Button ](/docs/components/button)[ Popover ](/docs/components/popover)コンポーネントを使用して、プリセット範囲を持つ日付範囲ピッカーを作成します。
+[Button](/docs/components/button)コンポーネントと[Popover](/docs/components/popover)コンポーネントを使用して、プリセット範囲を持つ日付範囲ピッカーを作成します。
 
 ::component-example
 ---
-名前'カレンダー—日付—範囲—ピッカー—例'
+name: 'calendar-date-range-picker-example'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

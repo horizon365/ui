@@ -15,19 +15,19 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PinInput.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Utilisez la directive `v-model` pour contrôler la valeur de la PinInput.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  - modèleValeur
-Extérieur:
-  - modèleValeur
-Props:
-  Modèle:[]
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: []
 ---
 ::
 
@@ -35,26 +35,26 @@ Utilisez la prop `default-value` pour définir la valeur initiale lorsque vous n
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@@ph005@@defaultValue
-Props:
-  valeur par défaut:['1 ','2','3 ']
+prettier: true
+ignore:
+  - defaultValue
+props:
+  defaultValue: ['1','2','3']
 ---
 ::
 
-@@ph006@type
+### Type écrit
 
 Utilisez la prop `type` pour changer le type d'entrée. Defaults à `text`.
 
 ::component-code
 ---
 items:
-  Type:
-    @@ph009@texte
-    @@ph010@numéro de téléphone
-Props:
-  Type: « Numéro »
+  type:
+    - text
+    - number
+props:
+  type: 'number'
 ---
 ::
 
@@ -62,55 +62,55 @@ Props:
 Lorsque `type` est défini sur `number`, il n'accepte que les caractères numériques.
 ::
 
-@@pH013@@masque
+### Masque
 
-Utilisez la prop `mask` pour traiter l'entrée comme un mot de passe.
+Utilisez le prop `mask` pour traiter l'entrée comme un mot de passe.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph015@@placeholder
+prettier: true
+ignore:
+  - placeholder
   - defaultValue
-Props:
-  Masque: vrai
-  defaultValue: ['1 ','2','3 ','4','5 ']
+props:
+  mask: true
+  defaultValue: ['1','2','3','4','5']
 ---
 ::
 
-@@P2017 @@OTP
+### OTP
 
-Utilisez la prop `otp` pour activer la fonctionnalité de mot de passe à usage unique. Lorsqu 'elle est activée, les appareils mobiles peuvent détecter et remplir automatiquement les codes OTP à partir de messages SMS ou de contenu du presse-papiers, avec la prise en charge de la saisie automatique.
+Utilisez la prop `otp` pour activer la fonctionnalité de mot de passe à usage unique. Lorsqu 'elle est activée, les appareils mobiles peuvent détecter et remplir automatiquement les codes OTP à partir de messages SMS ou du contenu du presse-papiers, avec la prise en charge de la saisie automatique.
 
 ::component-code
 ---
-Props:
-  OTP: vrai
+props:
+  otp: true
 ---
 ::
 
-### Placeholder
+### Référencement
 
 Utilisez la prop `placeholder` pour définir un texte d'espace réservé.
 
 ::component-code
 ---
-Props:
-  réservé:'○'
+props:
+  placeholder: '○'
 ---
 ::
 
-@@ph021@@longueur
+### longueur
 
-Utilisez la prop `length` pour modifier la quantité d'entrées.
+Utilisez le prop `length` pour changer la quantité d'entrées.
 
 ::component-code
 ---
-ignorer:
-  @@ph023@@placeholder
-Props:
-  Longueur: 6
-  réservé:'○'
+ignore:
+  - placeholder
+props:
+  length: 6
+  placeholder: '○'
 ---
 ::
 
@@ -120,12 +120,12 @@ Utilisez la prop `separator` pour insérer un séparateur entre les groupes d'en
 
 ::component-code
 ---
-Ignorer:
-  @27@@réservé
-Props:
-  Longueur: 6
-  Séparateur: 3
-  réservé:'○'
+ignore:
+  - placeholder
+props:
+  length: 6
+  separator: 3
+  placeholder: '○'
 ---
 ::
 
@@ -133,119 +133,119 @@ Vous pouvez également passer un tableau de positions pour insérer des séparat
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@28@réservé
-  @@ph029@longueur
-  - séparateur
-Props:
-  Longueur: 7
-  Séparateur:[3, 4]
-  réservé:'○'
+prettier: true
+ignore:
+  - placeholder
+  - length
+  - separator
+props:
+  length: 7
+  separator: [3, 4]
+  placeholder: '○'
 ---
 ::
 
 ### Couleur
 
-Utilisez la prop `color` pour changer la couleur de l'anneau lorsque la PinInput est focalisée.
+Utilisez le prop `color` pour changer la couleur de l'anneau lorsque l'Input PinInput est focalisée.
 
 ::component-code
 ---
-ignorer:
-  @@ph033@placeholder
-Props:
-  Couleur: Neutre
-  Highlight: vrai
-  réservé:'○'
+ignore:
+  - placeholder
+props:
+  color: neutral
+  highlight: true
+  placeholder: '○'
 ---
 ::
 
 ::note
-Le `highlight` prop est utilisé ici pour afficher l'état de mise au point. Il est utilisé en interne lorsqu 'une erreur de validation se produit.
+La prop `highlight` est utilisée ici pour afficher l'état de mise au point. Il est utilisé en interne lorsqu 'une erreur de validation se produit.
 ::
 
-### Variant
+### Variant équivalent
 
-Utilisez la prop `variant` pour modifier la variante de la PinInput.
+Utilisez le prop `variant` pour modifier la variante de la PinInput.
 
 ::component-code
 ---
-Ignorer:
-  @@ph037@@placeholder
-Props:
-  Couleur: Neutre
-  Variante: subtile
-  Étiquette: false
-  réservé:'○'
+ignore:
+  - placeholder
+props:
+  color: neutral
+  variant: subtle
+  highlight: false
+  placeholder: '○'
 ---
 ::
 
-@@ph038@@Size
+### Size
 
-Utilisez la prop `size` pour modifier la taille de la PinInput.
+Utilisez le prop `size` pour modifier la taille de la PinInput.
 
 ::component-code
 ---
-Ignorer:
-  @@ph040@réservoir
-Props:
-  Taille: XL
-  réservé:"○"
+ignore:
+  - placeholder
+props:
+  size: xl
+  placeholder: '○'
 ---
 ::
 
-### désactivé
+### Désactivé
 
-Utilisez la prop `disabled` pour désactiver la PinInput.
+Utilisez le prop `disabled` pour désactiver la PinInput.
 
 ::component-code
 ---
-ignorer:
-  @@ph043@@placeholder
-Props:
-  handicapés: vrai
-  réservé:'○'
+ignore:
+  - placeholder
+props:
+  disabled: true
+  placeholder: '○'
 ---
 ::
 
-@@ph044@exemples
+## Exemples
 
 ### Avec fente de séparation: badge{label="4.9+" class="align-text-top"}
 
-Utilisez l'emplacement `separator` pour personnaliser l'apparence du séparateur.
+Utilisez le slot `separator` pour personnaliser l'apparence du séparateur.
 
 ::component-example
 ---
-nom: 'pin-input-separator-slot-example'
+name: 'pin-input-separator-slot-example'
 ---
 ::
 
-@@ph048@@api
+## API écrit
 
-@@ph049@@props
+### Props équipements
 
-Composants-props
+:component-props
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots
 
-Composants slots
+:component-slots
 
-@@501@@émetteur
+### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph052@@exposé
+### Expose à
 
 Lorsque vous accédez au composant via une référence de modèle, vous pouvez utiliser les éléments suivants:
 
 | nom| type|
 | ---- | ---- |
-| @@|@@|
+| `inputsRef`x{lang="ts-type"}| `Ref<ComponentPublicInstance[]>`{lang="ts-type"}|
 
-@@ph057@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

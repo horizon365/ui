@@ -16,7 +16,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Popover.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice un [Button](/docs/components/button) o cualquier otro componente en la ranura predeterminada del Popover.
 
@@ -24,153 +24,153 @@ A continuación, utilice la ranura `#content` para añadir el contenido que se m
 
 ::component-code
 ---
-Categoría: true
-Los slots:
-  Default:|
+prettier: true
+slots:
+  default: |
 
-    @@ 006 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Contenido:|
+  content: |
 
-    @@@ 007 @
+    <Placeholder class="size-48 m-4 inline-flex" />
 ---
 
-El botón {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 
-#Contenido
-por: placeholder{class="size-48 m-4 inline-flex"}
+#content
+:placeholder{class="size-48 m-4 inline-flex"}
 ::
 
-@100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Modo
 
-Utilice el `mode` prop para cambiar el modo de la Popover. Defaults a `click`.
+Utilice el prop `mode` para cambiar el modo del Popover. Defaults a `click`.
 
 ::tip
-En el modo `hover`, configure el accesorio `enable-touch` para que los usuarios alternen el Popover tocando el disparador en dispositivos táctiles, o use el modo `click` para los disparadores destinados a ser tocados.
+En el modo `hover`, configure el accesorio `enable-touch` para permitir a los usuarios alternar el Popover tocando el disparador en dispositivos táctiles, o use el modo `click` para los disparadores destinados a ser tocados.
 ::
 
 ::component-code
 ---
-Categoría: true
+prettier: true
 items:
-  Moda:
-    @16@click16
-    @170@hover (en inglés)
-Props:
-  Categoría:"Hover"
-  EnableTouch: Verdad
-Los slots:
-  Default:|
+  mode:
+    - click
+    - hover
+props:
+  mode: 'hover'
+  enableTouch: true
+slots:
+  default: |
 
-    @@@ 18 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Contenido:|
+  content: |
 
-    @@@ 19 @
+    <Placeholder class="size-48 m-4 inline-flex" />
 ---
 
-Botón {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 
-#Contenido
-por placeholder{class="size-48 m-4 inline-flex"}
+#content
+:placeholder{class="size-48 m-4 inline-flex"}
 ::
 
 ::note
 Cuando se utiliza el modo `hover`, se utiliza el componente Reka UI [`HoverCard`](https://reka-ui.com/docs/components/hover-card) en lugar del componente [`Popover`](https://reka-ui.com/docs/components/popover).
 ::
 
-@@333@3333@3333@3333
+### Delay (Edición española)
 
-Cuando se utiliza el modo `hover`, puede utilizar los accesorios `open-delay` y `close-delay` para controlar el retardo antes de que se abra o cierre el Popover.
+Al utilizar el modo `hover`, puede utilizar los accesorios `open-delay` y `close-delay` para controlar el retardo antes de que se abra o cierre el Popover.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @37@@mode
-Props:
-  Categoría:"Hover"
-  Desplazamiento: 500
-  Desplazamiento: 300
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - mode
+props:
+  mode: 'hover'
+  openDelay: 500
+  closeDelay: 300
+slots:
+  default: |
 
-    @@@ 38 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Contenido:|
+  content: |
 
-    @@@ 39 @
+    <Placeholder class="size-48 m-4 inline-flex" />
 ---
 
-Botón {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 
-#of content
-por: placeholder{class="size-48 m-4 inline-flex"}
+#content
+:placeholder{class="size-48 m-4 inline-flex"}
 ::
 
-@@42@Contenido
+### Contenido
 
-Utilice el prop `content` para controlar cómo se representa el contenido de Popover, como su `align` o `side` por ejemplo.
+Utilice el prop `content` para controlar cómo se representa el contenido de Popover, como su `align` o `side`, por ejemplo.
 
 ::component-code
 ---
-Categoría: true
+prettier: true
 items:
   content.align:
-    @46@Inicio
-    @474@Centro de Información
-    @48@@final
+    - start
+    - center
+    - end
   content.side:
-    @49@@derecha
-    @@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @51@Top
-    @525@abajo
-Props:
-  Contenido:
-    Alineación: Centro
-    Categoría: Bottom
-    Desplazamiento: 8
-Los slots:
-  Default:|
+    - right
+    - left
+    - top
+    - bottom
+props:
+  content:
+    align: center
+    side: bottom
+    sideOffset: 8
+slots:
+  default: |
 
-    @@@ 53 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Contenido:|
+  content: |
 
-    @@ 54 @
+    <Placeholder class="size-48 m-4 inline-flex" />
 ---
 
-by: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 
-#of content
-por {class="size-48 m-4 inline-flex"}
+#content
+:placeholder{class="size-48 m-4 inline-flex"}
 ::
 
-@@F057@Flecha
+### Flecha
 
-Utilice el prop `arrow` para mostrar una flecha en el Popover.
+Utilice el soporte `arrow` para mostrar una flecha en el Popover.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@509@Arreaza
-Props:
-  Arrow: Verdad
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - arrow
+props:
+  arrow: true
+slots:
+  default: |
 
-    @@@ 060 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Contenido:|
+  content: |
 
-    @@@ 061
+    <Placeholder class="size-48 m-4 inline-flex" />
 ---
 
-El botón {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 
-#Contenido
-por: placeholder{class="size-48 m-4 inline-flex"}
+#content
+:placeholder{class="size-48 m-4 inline-flex"}
 ::
 
 ### Modal
@@ -179,30 +179,30 @@ Utilice el prop `modal` para controlar si el Popover bloquea la interacción con
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@767@título
-Props:
-  Modalidad: True
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+props:
+  modal: true
+slots:
+  default: |
 
-    @@@ 068
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Contenido:|
+  content: |
 
-    @@pf069 @
+    <Placeholder class="size-48 m-4 inline-flex" />
 ---
 
-Botón {label="Open" color="neutral" variant="subtle"}
+:u-button{label="Abiertos" color="neutral" variant="subtle"}
 
-#Contenido
-por @ph071
+#content
+:placeholder{class="size-48 m-4 inline-flex"}
 ::
 
-@@72@@descalificación
+### Dismissible
 
-Utilice el prop `dismissible` para controlar si el Popover es descartable al hacer clic fuera de él o al presionar escape.
+Utilice el prop `dismissible` para controlar si el Popover es descartable al hacer clic fuera de él o presionar escape.
 
 ::note
 Se emitirá un evento `close:prevent` cuando el usuario intente cerrarlo.
@@ -210,19 +210,19 @@ Se emitirá un evento `close:prevent` cuando el usuario intente cerrarlo.
 
 ::component-example
 ---
-nombre: 'popover-dismissible-example'
+name: 'popover-dismissible-example'
 ---
 ::
 
-@@pH076@Ejemplos
+## Examples
 
 ### Control estado abierto
 
-Puede controlar el estado abierto utilizando la directiva `default-open` o la directiva `v-model:open`.
+Puede controlar el estado abierto usando la prop `default-open` o la directiva `v-model:open`.
 
 ::component-example
 ---
-Nombre: 'popover-open-example'
+name: 'popover-open-example'
 ---
 ::
 
@@ -232,62 +232,62 @@ En este ejemplo, aprovechando [`defineShortcuts`](/docs/composables/define-short
 
 ### Con paleta de comandos
 
-Puede usar un componente [CommandPalette](/docs/components/command-palette) dentro del contenido del Popover.
+Puede utilizar un componente [CommandPalette](/docs/components/command-palette) dentro del contenido del Popover.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'popover-command-palette-example'
+collapse: true
+name: 'popover-command-palette-example'
 ---
 ::
 
-### Con el siguiente cursor
+### Con el cursor siguiente
 
-Puede hacer que el Popover siga el cursor al pasar el cursor sobre un elemento usando el prop [`reference`](https://reka-ui.com/docs/components/tooltip#trigger):
+Puede hacer que el Popover siga el cursor al pasar el cursor sobre un elemento usando la prop [`reference`](https://reka-ui.com/docs/components/tooltip#trigger):
 
 ::component-example
 ---
-Nombre: 'popover-cursor-ejemplo'
+name: 'popover-cursor-example'
 ---
 ::
 
 ### Con ranura de anclaje
 
-Puede utilizar la ranura `#anchor` para posicionar el Popover contra un elemento personalizado.
+You can use the `#anchor` slot to position the Popover against a custom element.
 
 ::warning
-Esta ranura sólo funciona cuando `mode` es `click`.
+Esta ranura solo funciona cuando `mode` es `click`.
 ::
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'popover-anchor-slot-example'
+collapse: true
+name: 'popover-anchor-slot-example'
 ---
 ::
 
-@101
+Xph190xAPI (Edición española)
 
-@200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props
 
-Componentes Props
+:component-props
 
-@103@103@103
+### Slots
 
-Componentes de slots
+:component-slots
 
 ::note
-La función `close` solo está disponible cuando `mode` está configurada en `click` porque Reka UI expone esto para [`Popover`](PH1112 @ pero no para [`HoverCard`](https://reka-ui.com/docs/components/hover-card).
+La función `close` sólo está disponible cuando `mode` está configurado en `click` porque Reka UI expone esto para [`Popover`](https://reka-ui.com/docs/components/popover#close-using-slot-props) pero no para [`HoverCard`](https://reka-ui.com/docs/components/hover-card).
 ::
 
-@117@117@117
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@118
+## Temas
 
-Componente Tema
+:component-theme
 
-@@111@Changelog en Español
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

@@ -12,132 +12,132 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/AvatarGroup.vue
 ---
 
-## 使用情况
+## 用法
 
-将多个[Avatar](/docs/components/avatar)包含在一个虚拟化身组中以进行堆叠。
+将多个[Avatar](/docs/components/avatar)包装在一个AvatarGroup中以堆叠它们。
 
 ::component-code
 ---
-更漂亮：真的
-插槽：
-  默认值：|
+prettier: true
+slots:
+  default: |
 
-<UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" />的
-<UAvatar src="https://github.com/HugoRCD.png" alt="Hugo Richard" />的
-<UAvatar src="https://github.com/atinux.png" alt="Sébastien Chopin" />的
+    <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" />
+    <UAvatar src="https://github.com/HugoRCD.png" alt="Hugo Richard" />
+    <UAvatar src="https://github.com/atinux.png" alt="Sébastien Chopin" />
 ---
-：u-头像{src="https://github.com/benjamincanac.png" alt="Benjamin Canac"}
-：u-头像{src="https://github.com/HugoRCD.png" alt="Hugo Richard"}
-：u-头像{src="https://github.com/atinux.png" alt="Sébastien Chopin"}
+:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac"}
+:u-avatar{src="https://github.com/HugoRCD.png" alt="Hugo Richard"}
+:u-avatar{src="https://github.com/atinux.png" alt="Sébastien Chopin"}
 ::
 
-尺寸：
+### Size
 
 使用`size`道具更改所有头像的大小。
 
 ::component-code
 ---
-更漂亮：真的
-道具：
-  尺寸：xl
-插槽：
-  默认值：|
+prettier: true
+props:
+  size: xl
+slots:
+  default: |
 
-<UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy" />的
-<UAvatar src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy" />的
-<UAvatar src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy" />的
+    <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy" />
+    <UAvatar src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy" />
+    <UAvatar src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy" />
 ---
-：u-头像{src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
-：u-头像{src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
-：u-头像{src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
+:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
+:u-avatar{src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
+:u-avatar{src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
 ::
 
-最大值
+### Max
 
-使用`max`道具来限制显示的虚拟形象数目。其他的虚拟形象会显示为`+X`虚拟形象。
+使用`max`道具来限制头像的显示数量。剩余的头像将显示为`+X`头像。
 
 ::component-code
 ---
-更漂亮：真的
-道具：
-  最大值：2
-插槽：
-  默认值：|
+prettier: true
+props:
+  max: 2
+slots:
+  default: |
 
-    022号
-    023号
-    024号
+    <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy" />
+    <UAvatar src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy" />
+    <UAvatar src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy" />
 ---
-：u-头像{src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
-：u-头像{src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
-：u-头像{src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
+:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
+:u-avatar{src="https://github.com/HugoRCD.png" alt="Hugo Richard" loading="lazy"}
+:u-avatar{src="https://github.com/atinux.png" alt="Sébastien Chopin" loading="lazy"}
 ::
 
-颜色：徽章
+### 颜色：badge{label="4.8+" class="align-text-top"}
 
-使用`color`道具更改所有头像的颜色。
+使用`color`道具改变所有头像的颜色。
 
 ::component-code
 ---
-更漂亮：真的
-道具：
-  颜色：原色
-插槽：
-  默认值：|
+prettier: true
+props:
+  color: primary
+slots:
+  default: |
 
     <UAvatar alt="Benjamin Canac" />
     <UAvatar alt="Hugo Richard" />
     <UAvatar alt="Sébastien Chopin" />
 ---
-：u-avatar{alt="Benjamin Canac"}
-：u-avatar{alt="Hugo Richard"}
-：u-avatar{alt="Sébastien Chopin"}
+:u-avatar{alt="Benjamin Canac"}
+:u-avatar{alt="Hugo Richard"}
+:u-avatar{alt="Sébastien Chopin"}
 ::
 
-## Examples
+## 示例
 
-### With tooltip
+### 带工具提示
 
 用[Tooltip](/docs/components/tooltip)包裹每个化身，以在悬停时显示工具提示。
 
-：组件示例{name="avatar-group-tooltip-example"}
+:component-example{name="avatar-group-tooltip-example"}
 
-### With chip
+### 带芯片
 
 用[Chip](/docs/components/chip)包裹每个头像，以在头像周围显示一个芯片。
 
-：组件示例{name="avatar-group-chip-example"}
+:component-example{name="avatar-group-chip-example"}
 
-### With link
+### 带链接
 
-用[Link](/docs/components/link)将每个头像包裹起来，使其可点击。
+用[Link](/docs/components/link)包装每个头像，使其可点击。
 
-：component-example{name="avatar-group-link-example"}
+:component-example{name="avatar-group-link-example"}
 
-### With mask
+### 带面罩
 
 使用CSS蒙版包装头像，以自定义形状显示头像。
 
-：组件示例{name="avatar-group-mask-example"}
+:component-example{name="avatar-group-mask-example"}
 
 ::warning
-使用面具时，`chip`道具无法正常工作。根据面具形状，可能会切割碎片。
+当使用面具时，`chip`道具不能正常工作。根据面具的形状，芯片可能会被切割。
 ::
 
 ## API
 
 ### Props
 
-：组件-支柱
+:component-props
 
 ### Slots
 
-：组件插槽
+:component-slots
 
 ## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

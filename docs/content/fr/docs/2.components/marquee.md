@@ -11,29 +11,29 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Marquee.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Utilisez l'emplacement par défaut de votre contenu pour créer une animation à défilement infini.
 
 ::component-code
 ---
-Étiquette: true
-Slots:
-  Défaut:|
+prettier: true
+slots:
+  default: |
 
-    @@@ 001 @
-    @@@ 002 @
-    @@@ 003 @
-    @@@ 004 @
-    @@@ 005 @
-    @@@ 006 @
+    <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-x" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-instagram" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
 ---
-par: u-icon {name="i-simple-icons-github" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-discord" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-x" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-instagram" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-linkedin" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-instagram" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-linkedin" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-facebook" class="size-10 shrink-0"}
 ::
 
 ::tip
@@ -42,184 +42,184 @@ L'animation est automatiquement désactivée lorsque l'utilisateur préfère un 
 
 ### Pause sur Hover
 
-Utilisez la prop `pause-on-hover` pour mettre en pause l'animation lorsque l'utilisateur survole le contenu.
+Utilisez le prop `pause-on-hover` pour mettre en pause l'animation lorsque l'utilisateur survole le contenu.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  PauseOnHover: vrai
-Slots:
-  Défaut:|
+prettier: true
+props:
+  pauseOnHover: true
+slots:
+  default: |
 
-    @@
-    @@@@ 016 @
-    @@@ 017 @
-    @@@@ 018 @
-    @@@@ 019 @
-    @@@ 2019 @
+    <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-x" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-instagram" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
 ---
-par: u-icon {name="i-simple-icons-github" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-discord" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-x" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-instagram" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-linkedin" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-instagram" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-linkedin" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-facebook" class="size-10 shrink-0"}
 ::
 
-@27@@Reverse
+### Reverse
 
-Utilisez la prop `reverse` pour inverser la direction de l'animation.
+Utilisez le prop `reverse` pour inverser la direction de l'animation.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Revers: vrai
-Slots:
-  Default:|
+prettier: true
+props:
+  reverse: true
+slots:
+  default: |
 
-    @@@ 29 @
-    @@@ 030 @
-    @@@ 031 @
-    @@@ 032 @
-    @@@@ 33 @
-    @@@ 034 @
+    <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-x" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-instagram" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
 ---
-par: u-icon {name="i-simple-icons-github" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-discord" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-x" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-instagram" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-linkedin" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-instagram" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-linkedin" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-facebook" class="size-10 shrink-0"}
 ::
 
-### Référencement
+### Orientation
 
-Utilisez la prop `orientation` pour changer la direction du défilement.
+Utilisez le prop `orientation` pour changer la direction du défilement.
 
 ::component-code
 ---
-Étiquette: true
-Catégorie: H-96
-Props:
-  Orientation: "Vertical"
-Slots:
-  Défaut:|
+prettier: true
+class: 'h-96'
+props:
+  orientation: 'vertical'
+slots:
+  default: |
 
-    @@@ 043 @
-    @@@ 44 @
-    @@@ 045 @
-    @@@ 046 @
-    @@@ 047 @
-    @@@ 048 @
+    <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-x" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-instagram" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
 ---
-par: u-icon {name="i-simple-icons-github" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-discord" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-x" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-instagram" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-linkedin" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-instagram" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-linkedin" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-facebook" class="size-10 shrink-0"}
 ::
 
-@@55@Répétez
+### Répéter
 
 Utilisez la prop `repeat` pour spécifier combien de fois le contenu doit être répété dans l'animation.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Répétition: 6
-Slots:
-  Default:|
+prettier: true
+props:
+  repeat: 6
+slots:
+  default: |
 
-    @@@ 57 @
-    @@@ 58 @
-    @@@ 59 @
-    @@@ 060 @
-    @@@ 061 @
-    @@@ 062 @
+    <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-x" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-instagram" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
 ---
-par: u-icon {name="i-simple-icons-github" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-discord" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-x" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-instagram" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-linkedin" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-instagram" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-linkedin" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-facebook" class="size-10 shrink-0"}
 ::
 
-### L'étoile
+### Découverte
 
 Utilisez le prop `overlay` pour enlever les superpositions de dégradé sur les bords de la marquise.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Définition: Faux
-Slots:
-  Default:|
+prettier: true
+props:
+  overlay: false
+slots:
+  default: |
 
-    @@@ 071 @
-    @@@ph072 @
-    @@@ 073 @
-    @@@ 74 @
-    @@@ 75 @
-    @@@ph076 @
+    <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-x" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-instagram" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
 ---
-par: u-icon {name="i-simple-icons-github" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-discord" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-x" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-instagram" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-linkedin" class="size-10 shrink-0"}
-par: u-icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-instagram" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-linkedin" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-facebook" class="size-10 shrink-0"}
 ::
 
-@@ph083@exemples
+## Exemples
 
-@084@Témoignages
+### Témoignages
 
 Utilisez le composant `Marquee` pour créer une animation de défilement infini pour vos témoignages.
 
-::component-example{label="Con los items"}
+::component-example{label="Avec items"}
 ---
-Étiquette: true
-nom: 'marque-témoignages'
-Collapse: vrai
-dépassement: true
-Classe: px-0
+prettier: true
+name: 'marquee-testimonials'
+collapse: true
+overflowHidden: true
+class: 'px-0'
 ---
 ::
 
-### captures d'écran
+### Captures d'écran
 
 Utilisez le composant `Marquee` pour créer une animation de défilement infini pour vos captures d'écran.
 
 ::component-example{label="Avec Screenshots"}
 ---
-Étiquette: true
-nom: 'marquee-screenshots'
-Collapse: vrai
-dépassement: true
-classe: '! p-0'
+prettier: true
+name: 'marquee-screenshots'
+collapse: true
+overflowHidden: true
+class: '!p-0'
 ---
 ::
 
-@@P090@@écrivain
+## API
 
-@@ph091@@props
+### Props équipements
 
-Composants-props
+:component-props
 
-@@ph092@@Slots
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph093@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

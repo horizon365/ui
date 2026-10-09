@@ -9,7 +9,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Accordion.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
 Verwenden Sie die Komponenten `accordion` und `accordion-item`, um ein [Accordion](/docs/components/accordion) in Ihrem Inhalt anzuzeigen.
 
@@ -17,8 +17,8 @@ Verwenden Sie die Komponenten `accordion` und `accordion-item`, um ein [Accordio
 
 :::accordion
 ---
-Defaultwert:
-  @@@007 @ 1
+defaultValue:
+  - '1'
 ---
 
 ::accordion-item{label="Ist Nuxt UI kostenlos zu verwenden?" icon="i-lucide-circle-help"}
@@ -26,16 +26,16 @@ Ja! Nuxt UI ist völlig kostenlos und Open Source unter der MIT-Lizenz. Alle 125
 ::
 
 ::accordion-item{label="Kann ich Nuxt UI mit Vue ohne Nuxt verwenden?" icon="i-lucide-circle-help"}
-ja! Während für Nuxt optimiert, funktioniert Nuxt UI perfekt mit Standalone-Vue-Projekten über unsere Vite plugin. You können die [installation guide](/docs/getting-started/installation/vue) folgen, um loszulegen.
+ja! Während für Nuxt optimiert, funktioniert Nuxt UI perfekt mit Standalone-Vue-Projekten über unsere Vite plugin. You können die [installation guide](/docs/getting-started/installation/vue) folgen, um zu beginnen.
 ::
 
-::accordion-item{label="Ist Nuxt UI produktionsreif?" icon="i-lucide-circle-help"}
-Nuxt UI wird in der Produktion von Tausenden von Anwendungen mit umfangreichen Tests, regelmäßigen Updates und aktiver Wartung eingesetzt.
+::accordion-item{label="Ist Nuxt UI produktionsbereit?" icon="i-lucide-circle-help"}
+Nuxt UI wird in der Produktion von Tausenden von Anwendungen mit umfangreichen Tests, regelmäßigen Updates und aktiver Wartung verwendet.
 ::
 
 :::
 
-#Der Code
+#code
 
 ```mdc
 ::accordion
@@ -61,25 +61,25 @@ Yes! Nuxt UI is used in production by thousands of applications with extensive t
 
 ::
 
-@@@@@@b36@b36
+## API (englisch)
 
-@@@@@@@@@@ph037@@props
+### Props (nicht)
 
-{prose}
+:component-props{prose}
 
-@@ph039@gmail.de
+### Slots Bearbeiten
 
-: component-slots {prose}
+:component-slots{prose}
 
-@@ph041@@gmail.de
+## Theme Bearbeiten
 
 ::component-theme{prose}
 ---
-Zusätzliches:
-  @@ph042@accordionArtikel
+extra:
+  - accordionItem
 ---
 ::
 
-@@ph043@@changelog @ changelog
+## Changelog Übersetzung
 
-: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

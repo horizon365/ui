@@ -1,5 +1,5 @@
 ---
-title: Chatmensajes
+title: ChatMensajes
 description: 'Muestra una lista de mensajes de chat, diseñados para funcionar sin problemas con Vercel AI SDK.'
 category: chat
 links:
@@ -8,9 +8,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatMessages.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente ChatMessages muestra una lista de [ChatMessage](/docs/components/chat-message) componentes utilizando la ranura predeterminada o el `messages` prop.
+El componente ChatMessages muestra una lista de componentes [ChatMessage](/docs/components/chat-message) utilizando la ranura predeterminada o el accesorio `messages`.
 
 ```vue {2,8}
 <template>
@@ -28,272 +28,272 @@ El componente ChatMessages muestra una lista de [ChatMessage](/docs/components/c
 Este componente está diseñado específicamente para chatbots de IA con características como:
 
 - Desplazamiento inicial hasta la parte inferior al cargar ([`shouldScrollToBottom`](#should-scroll-to-bottom)).
-Desplazamiento continuo hacia abajo a medida que llegan nuevos mensajes ([`shouldAutoScroll`](#should-auto-scroll)).
-- Un botón de "Auto scroll" aparece cuando se desplaza hacia arriba, permitiendo a los usuarios volver a los últimos mensajes ([`autoScroll`](#auto-scroll)).
+- Desplazamiento continuo hacia abajo a medida que llegan nuevos mensajes ([`shouldAutoScroll`](#should-auto-scroll))
+- Un botón "Auto scroll" aparece cuando se desplaza hacia arriba, permitiendo a los usuarios volver a los últimos mensajes ([`autoScroll`](xph033)).
 - Un indicador de carga se muestra mientras el asistente está procesando ([`status`](#status)).
-- Los mensajes enviados se desplazan hasta la parte superior de la ventana y la altura del último mensaje del usuario se ajusta dinámicamente.
+- Los mensajes enviados se desplazan hasta la parte superior de la ventana gráfica y la altura del último mensaje del usuario se ajusta dinámicamente.
 ::
 
-@@42@Mensajes
+### mensajes
 
 Utilice el prop `messages` para mostrar una lista de mensajes de chat.
 
 ::component-code
 ---
-Categoría: true
-Externo:
-  @@44@mensajes
-Ignora:
-  @@pH045@mensajes
-Escondido:
-  - shouldScrollToBottom (Edición española)
-Colapso: Verdad
-Categoría: Overflow-y-auto
-Props:
-  mensajes:
-    - id:'6045235a-a435 - 46b8 - 989d-2df38ca2eb47'
-      Rol: Usuario
-      partes:
-        - tipo:'texto'
-          Texto: "Hola,¿ cómo estás?"
-    - id:'7a92b3c1-d5f8 - 4e76-b8a9 - 3c1e5fb2e0d8'
-      Función: Asistente
-      partes:
-        - tipo:'texto'
-          Texto: "Estoy bien, gracias por preguntar,¿ cómo puedo ayudarle hoy?"
-    - id:'9c84d6a7 - 8b23 - 4f12-a1d5-e7f3b9c05e2a'
-      Rol: usuario
-      partes:
-        - type:'texto'
-          Texto: "¿ Cuál es el clima actual en Tokio?"
-    - id:'b2e5f8c3-a1d9 - 4e67-b3f2-c9d8e7a6b5f4'
-      Función: Asistente
-      partes:
-        - tipo:'texto'
-          Texto:"Según los últimos datos, Tokio está experimentando actualmente un clima soleado con temperaturas de alrededor de 24 ° C (75 ° F).
-  Tablero: Falso
+prettier: true
+external:
+  - messages
+ignore:
+  - messages
+hide:
+  - shouldScrollToBottom
+collapse: true
+class: 'overflow-y-auto'
+props:
+  messages:
+    - id: '6045235a-a435-46b8-989d-2df38ca2eb47'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Hello, how are you?'
+    - id: '7a92b3c1-d5f8-4e76-b8a9-3c1e5fb2e0d8'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: 'I am doing well, thank you for asking! How can I assist you today?'
+    - id: '9c84d6a7-8b23-4f12-a1d5-e7f3b9c05e2a'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'What is the current weather in Tokyo?'
+    - id: 'b2e5f8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: "Based on the latest data, Tokyo is currently experiencing sunny weather with temperatures around 24°C (75°F). It's a beautiful day with clear skies."
+  shouldScrollToBottom: false
 ---
 ::
 
-@@505@@Estado
+### Estado
 
-Utilice el prop `status` para mostrar un indicador visual cuando el asistente está procesando.
+Utilice el accesorio `status` para mostrar un indicador visual cuando el asistente está procesando.
 
 ::component-code
 ---
-Categoría: true
-Externo:
-  @@57@mensajes
-Ignora:
-  @@58@mensajes
-  @@500@@estado
-Escondido:
-  @@ph060@shouldScrollToBottom (Edición española)
-Categoría: Overflow-y-auto
-Props:
-  Estado: "Presentado"
-  Mensajes:
-    - id:'6045235a-a435 - 46b8 - 989d-2df38ca2eb47'
-      Rol: usuario
-      partes:
-        - tipo:'texto'
-          Texto: "Hola,¿ cómo estás?"
-  Tablero: Falso
+prettier: true
+external:
+  - messages
+ignore:
+  - messages
+  - status
+hide:
+  - shouldScrollToBottom
+class: 'overflow-y-auto'
+props:
+  status: 'submitted'
+  messages:
+    - id: '6045235a-a435-46b8-989d-2df38ca2eb47'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Hello, how are you?'
+  shouldScrollToBottom: false
 ---
 ::
 
 ::note
-Aquí está el detalle de los diferentes estados del SDK de IA `useChat` composable:
+Aquí está el detalle de los diferentes estados del AI SDK `useChat` composable:
 
 - `submitted`: El mensaje ha sido enviado a la API y estamos esperando el inicio del flujo de respuesta.
 - `streaming`: La respuesta se transmite activamente desde la API, recibiendo fragmentos de datos.
-- `ready`: La respuesta completa ha sido recibida y procesada; un nuevo mensaje de usuario puede ser enviado.
+- `ready`: La respuesta completa ha sido recibida y procesada; se puede enviar un nuevo mensaje de usuario.
 - `error`: Se produjo un error durante la solicitud de API, lo que impidió su finalización exitosa.
 ::
 
-@@2007@usuario
+### Usuario
 
-Utilice el prop `user` para cambiar el prop [ChatMessage](/docs/components/chat-message) para los mensajes `user`.
+Utilice la prop `user` para cambiar la prop [ChatMessage](/docs/components/chat-message) para mensajes `user`.
 
-@@ph080@@@ph081
-@@
+- x`side: 'right'`x{lang="ts-type"}
+- x`variant: 'soft'`x{lang="ts-type"}
 
 ::component-code
 ---
-Categoría: true
-Externo:
-  @@pH085@mensajes
-Ignora:
-  @@pH086@mensajes
-  - avatar.src (en inglés)
-  - avatar.carga
-Escondido :
-  - shouldScrollToBottom (Edición española)
-Colapso : Verdad
-Items :
+prettier: true
+external:
+  - messages
+ignore:
+  - messages
+  - avatar.src
+  - avatar.loading
+hide:
+  - shouldScrollToBottom
+collapse: true
+items:
   user.variant:
-    @@pH090@@sólido
-    @091@espanol
-    @2009@subtil
-    @@pH093@
-    @@pH094@naked (en inglés)
+    - solid
+    - outline
+    - subtle
+    - soft
+    - naked
   user.side:
-    @095@izquierda
-    @@pH096@@derecha
-Categoría : Overflow-y - auto
-Props :
-  Usuario :
-    Categoría : Left
-    Variante : Sólido
-    El avatar :
-      El src :https://github.com/benjamincanac.png
-      Categoría : Lazy
-  mensajes :
-    - id:'6045235a-a435 - 46b8 - 989d-2df38ca2eb47'
-      Rol: usuario
-      partes:
-        - tipo:'texto'
-          Texto: "Hola,¿ cómo estás?"
-    - id:'7a92b3c1-d5f8 - 4e76-b8a9 - 3c1e5fb2e0d8'
-      Función: Asistente
-      partes:
-        - tipo:'texto'
-          Texto: "Estoy bien, gracias por preguntar,¿ cómo puedo ayudarle hoy?"
-    - id:'9c84d6a7 - 8b23 - 4f12-a1d5-e7f3b9c05e2a'
-      Rol: usuario
-      partes:
-        - tipo:'texto'
-          Texto: "¿ Cuál es el clima actual en Tokio?"
-    - id:'b2e5f8c3-a1d9 - 4e67-b3f2-c9d8e7a6b5f4'
-      Función: Asistente
-      partes:
-        - tipo:'texto'
-          Texto:"Según los últimos datos, Tokio está experimentando actualmente un clima soleado con temperaturas de alrededor de 24 ° C (75 ° F).
-  Tablero: Falso
+    - left
+    - right
+class: 'overflow-y-auto'
+props:
+  user:
+    side: left
+    variant: solid
+    avatar:
+      src: https://github.com/benjamincanac.png
+      loading: lazy
+  messages:
+    - id: '6045235a-a435-46b8-989d-2df38ca2eb47'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Hello, how are you?'
+    - id: '7a92b3c1-d5f8-4e76-b8a9-3c1e5fb2e0d8'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: 'I am doing well, thank you for asking! How can I assist you today?'
+    - id: '9c84d6a7-8b23-4f12-a1d5-e7f3b9c05e2a'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'What is the current weather in Tokyo?'
+    - id: 'b2e5f8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: "Based on the latest data, Tokyo is currently experiencing sunny weather with temperatures around 24°C (75°F). It's a beautiful day with clear skies."
+  shouldScrollToBottom: false
 ---
 ::
 
-@@P105@Asistente de usuario
+### Asistente
 
-Utilice el prop `assistant` para cambiar el prop [ChatMessage](/docs/components/chat-message) para los mensajes `assistant`.
+Utilice la prop `assistant` para cambiar la prop [ChatMessage](/docs/components/chat-message) para mensajes `assistant`.
 
-@@112@@@113@@114 @
-@@115@@116@117
+- x`side: 'left'`x{lang="ts-type"}
+- x`variant: 'naked'`x{lang="ts-type"}
 
 ::component-code
 ---
-Categoría: true
-Externo:
-  @118@mensajes
-Ignora:
-  @@119@mensajes
+prettier: true
+external:
+  - messages
+ignore:
+  - messages
   - avatar.icon
-  - assistant.acciones
-Escondido:
-  - shouldScrollToBottom (Edición española)
-Colapso: Verdad
+  - assistant.actions
+hide:
+  - shouldScrollToBottom
+collapse: true
 items:
   assistant.variant:
-    @@ph123@@sólido
-    @124 @ Proyecto
-    @125 @ subtil
-    @126 @@ de nuevo
-    @127 @@ Desconocido
+    - solid
+    - outline
+    - subtle
+    - soft
+    - naked
   assistant.side:
-    @128 @ izquierda
-    @@pH129@@derecha
-Categoría: Overflow-y-auto
-Props:
-  Asistente:
-    Categoría: Left
-    Categoría: Outline
-    El avatar:
-      Icono: i-lucide-bot
-    Acciones:
-      - label:'Copiar al portapapeles'
-        Archivo de la etiqueta: i-lucide-copy
-  Mensajes:
-    - id:'6045235a-a435 - 46b8 - 989d-2df38ca2eb47'
-      Rol: usuario
-      partes:
-        - tipo:'texto'
-          Texto: "Hola,¿ cómo estás?"
-    - id:'7a92b3c1-d5f8 - 4e76-b8a9 - 3c1e5fb2e0d8'
-      Función: Asistente
-      partes:
-        - tipo:'texto'
-          Texto: "Estoy bien, gracias por preguntar,¿ cómo puedo ayudarle hoy?"
-    - id:'9c84d6a7 - 8b23 - 4f12-a1d5-e7f3b9c05e2a'
-      Rol: usuario
-      partes:
-        - tipo:'texto'
-          Texto: "¿ Cuál es el clima actual en Tokio?"
-    - id:'b2e5f8c3-a1d9 - 4e67-b3f2-c9d8e7a6b5f4'
-      Función: Asistente
-      partes:
-        - tipo:'texto'
-          Texto:"Según los últimos datos, Tokio está experimentando actualmente un clima soleado con temperaturas de alrededor de 24 ° C (75 ° F).
-  Tablero: Falso
+    - left
+    - right
+class: 'overflow-y-auto'
+props:
+  assistant:
+    side: left
+    variant: outline
+    avatar:
+      icon: i-lucide-bot
+    actions:
+      - label: 'Copy to clipboard'
+        icon: i-lucide-copy
+  messages:
+    - id: '6045235a-a435-46b8-989d-2df38ca2eb47'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Hello, how are you?'
+    - id: '7a92b3c1-d5f8-4e76-b8a9-3c1e5fb2e0d8'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: 'I am doing well, thank you for asking! How can I assist you today?'
+    - id: '9c84d6a7-8b23-4f12-a1d5-e7f3b9c05e2a'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'What is the current weather in Tokyo?'
+    - id: 'b2e5f8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: "Based on the latest data, Tokyo is currently experiencing sunny weather with temperatures around 24°C (75°F). It's a beautiful day with clear skies."
+  shouldScrollToBottom: false
 ---
 ::
 
 ### Auto Scroll (Edición española)
 
-Utilice el prop `auto-scroll` para personalizar u ocultar el botón de desplazamiento automático (con el valor `false`) que se muestra al desplazarse hasta la parte superior del chat.
+Utilice el prop `auto-scroll` para personalizar u ocultar el botón de desplazamiento automático (con valor `false`) que se muestra al desplazarse hasta la parte superior del chat.
 
-@@ph142@@@ph143 @
-- `variant: 'outline'`{lang="ts-type"}
+- x`color: 'neutral'`x{lang="ts-type"} (Edición española)
+- x`variant: 'outline'`x{lang="ts-type"}
 
 Puede pasar cualquier propiedad del componente [Button](/docs/components/button) para personalizarlo.
 
 ::component-code
 ---
-Categoría: true
-Colapso: Verdad
-Externo:
-  @@ph152@mensajes
-Ignora:
-  @@pH153@mensajes
+prettier: true
+collapse: true
+external:
+  - messages
+ignore:
+  - messages
   - autoScroll.color
-  - autoScroll.variante
-  - shouldScrollToBottom (Edición española)
-clase: 'overflow-y-auto max-h-[341px] static'
-Props:
-  Autoscroll:
-    Color: Neutral
-    Categoría: Outline
-  Tablero: Falso
-  mensajes:
-    - id:'6045235a-a435 - 46b8 - 989d-2df38ca2eb47'
-      Rol: usuario
-      partes:
-        - tipo:'texto'
-          Texto: "Hola,¿ cómo estás?"
-    - id:'7a92b3c1-d5f8 - 4e76-b8a9 - 3c1e5fb2e0d8'
-      Función: Asistente
-      partes:
-        - tipo:'texto'
-          Texto: "Estoy bien, gracias por preguntar,¿ cómo puedo ayudarle hoy?"
-    - id:'9c84d6a7 - 8b23 - 4f12-a1d5-e7f3b9c05e2a'
-      Rol: usuario
-      partes:
-        - tipo:'texto'
-          Texto: "¿ Cuál es el clima actual en Tokio?"
-    - id:'b2e5f8c3-a1d9 - 4e67-b3f2-c9d8e7a6b5f4'
-      Función: Asistente
-      partes:
-        - tipo:'texto'
-          Texto: Según los últimos datos, Tokio está experimentando actualmente un clima soleado con temperaturas de alrededor de 24 ° C (75 ° F). Es un hermoso día con cielos despejados.El pronóstico para el resto de la semana muestra una ligera posibilidad de lluvia el jueves, con temperaturas que aumentan gradualmente a 28 ° C para el fin de semana. Los niveles de humedad son moderados en torno al 65%, y las velocidades del viento son ligeras a 8 km/h desde el sureste. La calidad del aire es buena con un índice de 42. El índice UV es alto a 7, por lo que se recomienda usar protector solar si planea pasar tiempo al aire libre. El amanecer fue a las 5:24 AM y la puesta del sol será a las 6:24: 48 PM, dando a Tokio aproximadamente 13 horas y 24 minutos de luz del día de hoy. La luna está actualmente en su fase gibosa creciente.
-    - id:'c3e5f8c3-a1d9 - 4e67-b3f2-c9d8e7a6b5f4'
-      Rol: usuario
-      partes:
-        - type:'texto'(en inglés)
-          texto: '¿ Puede recomendar algunas atracciones turísticas populares en Kyoto?'
-    - id:'d4f5g8c3-a1d9 - 4e67-b3f2-c9d8e7a6b5f4'
-      Función: Asistente
-      partes:
-        - tipo:'texto'
-          Texto: Kioto es conocida por sus hermosos templos, casas de té tradicionales y jardines.Algunas atracciones populares incluyen Kinkaku-ji.(Pabellón Dorado) con su impresionante exterior de pan de oro que se refleja en el estanque de espejo, el santuario Fushimi Inari con sus miles de puertas torii bermellón que serpentean por la ladera de la montaña, Arashiyama Bamboo Grove donde los tallos imponentes crean una atmósfera de otro mundo, El templo Kiyomizu-dera se alza en una ladera que ofrece vistas panorámicas de la ciudad, y el histórico distrito de Gion, donde es posible ver a las geishas apresurándose a las citas nocturnas a través de estrechas calles pavimentadas de piedra bordeadas de casas tradicionales de madera machiya.
+  - autoScroll.variant
+  - shouldScrollToBottom
+class: 'overflow-y-auto max-h-[341px] static'
+props:
+  autoScroll:
+    color: neutral
+    variant: outline
+  shouldScrollToBottom: false
+  messages:
+    - id: '6045235a-a435-46b8-989d-2df38ca2eb47'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Hello, how are you?'
+    - id: '7a92b3c1-d5f8-4e76-b8a9-3c1e5fb2e0d8'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: 'I am doing well, thank you for asking! How can I assist you today?'
+    - id: '9c84d6a7-8b23-4f12-a1d5-e7f3b9c05e2a'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'What is the current weather in Tokyo?'
+    - id: 'b2e5f8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: "Based on the latest data, Tokyo is currently experiencing sunny weather with temperatures around 24°C (75°F). It's a beautiful day with clear skies. The forecast for the rest of the week shows a slight chance of rain on Thursday, with temperatures gradually rising to 28°C by the weekend. Humidity levels are moderate at around 65%, and wind speeds are light at 8 km/h from the southeast. Air quality is good with an index of 42. The UV index is high at 7, so it's recommended to wear sunscreen if you're planning to spend time outdoors. Sunrise was at 5:24 AM and sunset will be at 6:48 PM, giving Tokyo approximately 13 hours and 24 minutes of daylight today. The moon is currently in its waxing gibbous phase."
+    - id: 'c3e5f8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Can you recommend some popular tourist attractions in Kyoto?'
+    - id: 'd4f5g8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: 'Kyoto is known for its beautiful temples, traditional tea houses, and gardens. Some popular attractions include Kinkaku-ji (Golden Pavilion) with its stunning gold leaf exterior reflecting in the mirror pond, Fushimi Inari Shrine with its thousands of vermilion torii gates winding up the mountainside, Arashiyama Bamboo Grove where towering stalks create an otherworldly atmosphere, Kiyomizu-dera Temple perched on a hillside offering panoramic views of the city, and the historic Gion district where you might spot geisha hurrying to evening appointments through narrow stone-paved streets lined with traditional wooden machiya houses.'
 ---
 ::
 
@@ -303,66 +303,66 @@ Utilice el prop `auto-scroll-icon` para personalizar el botón de desplazamiento
 
 ::component-code
 ---
-Categoría: true
-Colapso: Verdad
-Externo:
-  @176@mensajes
-Ignora:
-  @177@mensajes
+prettier: true
+collapse: true
+external:
+  - messages
+ignore:
+  - messages
   - autoScroll.color
-  - autoScroll.variante
-  - shouldScrollToBottom (Edición española)
-clase: 'overflow-y-auto max-h-[341px] static'
-Props:
+  - autoScroll.variant
+  - shouldScrollToBottom
+class: 'overflow-y-auto max-h-[341px] static'
+props:
   autoScrollIcon: 'i-lucide-chevron-down'
-  Tablero: Falso
-  mensajes:
-    - id:'6045235a-a435 - 46b8 - 989d-2df38ca2eb47'
-      Rol: usuario
-      partes:
-        - tipo:'texto'
-          Texto: "Hola,¿ cómo estás?"
-    - id:'7a92b3c1-d5f8 - 4e76-b8a9 - 3c1e5fb2e0d8'
-      Función: Asistente
-      partes:
-        - tipo:'texto'
-          Texto: "Estoy bien, gracias por preguntar,¿ cómo puedo ayudarle hoy?"
-    - id:'9c84d6a7 - 8b23 - 4f12-a1d5-e7f3b9c05e2a'
-      Rol: usuario
-      partes:
-        - tipo:'texto'
-          Texto: "¿ Cuál es el clima actual en Tokio?"
-    - id:'b2e5f8c3-a1d9 - 4e67-b3f2-c9d8e7a6b5f4'
-      Función: Asistente
-      partes:
-        - tipo:'texto'
-          Texto: Según los últimos datos, Tokio está experimentando actualmente un clima soleado con temperaturas de alrededor de 24 ° C (75 ° F). Es un hermoso día con cielos despejados.El pronóstico para el resto de la semana muestra una ligera posibilidad de lluvia el jueves, con temperaturas que aumentan gradualmente a 28 ° C para el fin de semana. Los niveles de humedad son moderados en torno al 65%, y las velocidades del viento son ligeras a 8 km/h desde el sureste. La calidad del aire es buena con un índice de 42. El índice UV es alto a 7, por lo que se recomienda usar protector solar si planea pasar tiempo al aire libre. El amanecer fue a las 5:24 AM y la puesta del sol será a las 6:24: 48 PM, dando a Tokio aproximadamente 13 horas y 24 minutos de luz del día de hoy. La luna está actualmente en su fase gibosa creciente.
-    - id:'c3e5f8c3-a1d9 - 4e67-b3f2-c9d8e7a6b5f4'
-      Rol: usuario
-      partes:
-        - tipo:'texto'
-          texto: '¿ Puede recomendar algunas atracciones turísticas populares en Kyoto?'
-    - id:'d4f5g8c3-a1d9 - 4e67-b3f2-c9d8e7a6b5f4'
-      Función: Asistente
-      partes:
-        - tipo:'texto'
-          Texto: Kioto es conocida por sus hermosos templos, casas de té tradicionales y jardines.Algunas atracciones populares incluyen Kinkaku-ji.(Pabellón Dorado) con su impresionante exterior de pan de oro que se refleja en el estanque de espejo, el santuario Fushimi Inari con sus miles de puertas torii bermellón que serpentean por la ladera de la montaña, Arashiyama Bamboo Grove donde los tallos imponentes crean una atmósfera de otro mundo, El templo Kiyomizu-dera se alza en una ladera que ofrece vistas panorámicas de la ciudad, y el histórico distrito de Gion, donde es posible ver a las geishas apresurándose a las citas nocturnas a través de estrechas calles pavimentadas de piedra bordeadas de casas tradicionales de madera machiya.
+  shouldScrollToBottom: false
+  messages:
+    - id: '6045235a-a435-46b8-989d-2df38ca2eb47'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Hello, how are you?'
+    - id: '7a92b3c1-d5f8-4e76-b8a9-3c1e5fb2e0d8'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: 'I am doing well, thank you for asking! How can I assist you today?'
+    - id: '9c84d6a7-8b23-4f12-a1d5-e7f3b9c05e2a'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'What is the current weather in Tokyo?'
+    - id: 'b2e5f8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: "Based on the latest data, Tokyo is currently experiencing sunny weather with temperatures around 24°C (75°F). It's a beautiful day with clear skies. The forecast for the rest of the week shows a slight chance of rain on Thursday, with temperatures gradually rising to 28°C by the weekend. Humidity levels are moderate at around 65%, and wind speeds are light at 8 km/h from the southeast. Air quality is good with an index of 42. The UV index is high at 7, so it's recommended to wear sunscreen if you're planning to spend time outdoors. Sunrise was at 5:24 AM and sunset will be at 6:48 PM, giving Tokyo approximately 13 hours and 24 minutes of daylight today. The moon is currently in its waxing gibbous phase."
+    - id: 'c3e5f8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
+      role: user
+      parts:
+        - type: 'text'
+          text: 'Can you recommend some popular tourist attractions in Kyoto?'
+    - id: 'd4f5g8c3-a1d9-4e67-b3f2-c9d8e7a6b5f4'
+      role: assistant
+      parts:
+        - type: 'text'
+          text: 'Kyoto is known for its beautiful temples, traditional tea houses, and gardens. Some popular attractions include Kinkaku-ji (Golden Pavilion) with its stunning gold leaf exterior reflecting in the mirror pond, Fushimi Inari Shrine with its thousands of vermilion torii gates winding up the mountainside, Arashiyama Bamboo Grove where towering stalks create an otherworldly atmosphere, Kiyomizu-dera Temple perched on a hillside offering panoramic views of the city, and the historic Gion district where you might spot geisha hurrying to evening appointments through narrow stone-paved streets lined with traditional wooden machiya houses.'
 ---
 ::
 
 ::framework-only
-#nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.arrowDown`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.arrowDown`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.arrowDown`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.arrowDown`.
 :::
 ::
 
-### Debería Auto Scroll
+### Should Auto Scroll (Edición española)
 
 Utilice el prop `should-auto-scroll` para habilitar/deshabilitar el desplazamiento automático continuo mientras los mensajes están transmitiendo.
 
@@ -372,9 +372,9 @@ Utilice el prop `should-auto-scroll` para habilitar/deshabilitar el desplazamien
 </template>
 ```
 
-### Debería desplazarse hacia abajo
+### Should scroll to bottom (Edición española)
 
-Utilice el prop `should-scroll-to-bottom` para habilitar/deshabilitar el desplazamiento automático inferior cuando el componente esté montado.
+Utilice el accesorio `should-scroll-to-bottom` para habilitar/deshabilitar el desplazamiento automático inferior cuando el componente esté montado.
 
 ```vue
 <template>
@@ -382,36 +382,36 @@ Utilice el prop `should-scroll-to-bottom` para habilitar/deshabilitar el desplaz
 </template>
 ```
 
-@@213@Ejemplos
+## Ejemplos
 
 ::tip{to="/docs/components/chat"}
-Consulte la página de descripción general **Chat** para obtener instrucciones de instalación, configuración del servidor y ejemplos de uso.
+Consulte la página de descripción general de **Chat** para obtener instrucciones de instalación, configuración del servidor y ejemplos de uso.
 ::
 
-### Con ranura de indicador
+### Con ranura indicadora
 
 Utilice la ranura `#indicator` para personalizar el indicador de carga con un efecto [`ChatShimmer`](/docs/components/chat-shimmer).
 
 ::component-example
 ---
-Nombre: 'chat-mensajes-indicador-slot-ejemplo'
-Categoría: Overflow-y-auto
-Colapso: Verdad
+name: 'chat-messages-indicator-slot-example'
+class: 'overflow-y-auto'
+collapse: true
 ---
 ::
 
-@223
+## API (Edición española)
 
-@224@224@224
+### Props (Edición española)
 
-Componentes Props
+:component-props
 
-@225@225@225
+### Slots en línea
 
-Componentes de slots
+:component-slots
 
 ::tip
-Puede usar todas las ranuras del componente [`ChatMessage`](/docs/components/chat-message#slots) dentro de ChatMessages, se reenvían automáticamente para que pueda personalizar mensajes individuales cuando usa el `messages` prop.
+Puede usar todas las ranuras del componente [`ChatMessage`](/docs/components/chat-message#slots) dentro de ChatMessages, se reenvían automáticamente para que pueda personalizar mensajes individuales cuando usa el accesorio `messages`.
 
 ```vue{7-15}
 <script setup lang="ts">
@@ -435,18 +435,18 @@ import { isTextUIPart } from 'ai'
 ```
 ::
 
-@@252@@Exposición25
+### Exposición
 
 Al acceder al componente a través de una referencia de plantilla, puede utilizar lo siguiente:
 
 | Nombre| Tipo|
 | ---- | ---- |
-| @@|@@@ 256 @|
+| `registerMessageRef(id: string, element: ComponentPublicInstance \| null)`x{lang="ts-type"} (Edición española)| `void`{lang="ts-type"} (Edición española)|
 
-@257 @@ Temas
+## Temas
 
-Componente Tema
+:component-theme
 
-@@258@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

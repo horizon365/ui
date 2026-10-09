@@ -18,199 +18,199 @@ links:
 
 ## 使用法
 
-[ Button ](/docs/components/button)または、Popoverのデフォルトスロットにあるその他のコンポーネントを使用します。
+ポップオーバーのデフォルトスロットにある[Button](/docs/components/button)またはその他のコンポーネントを使用します。
 
-次に、`#content`スロットを使用して、ポップオーバーを開いたときに表示されるコンテンツを追加します。
+次に、`#content`スロットを使用して、ポップオーバーが開いたときに表示されるコンテンツを追加します。
 
 ::component-code
 ---
-きれい真
-スロット
-  デフォルト|
+prettier: true
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  内容：|
+  content: |
 
     <Placeholder class="size-48 m-4 inline-flex" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
-#コンテンツ
-placeholder {class="size-48 m-4 inline-flex"}
+#content
+:placeholder{class="size-48 m-4 inline-flex"}
 ::
 
-### モード
+### Mode
 
-`mode`プロパティを使用して、ポップオーバーのモードを変更します。デフォルトは`click`です。
+ポップオーバーのモードを変更するには、`mode`プロパティを使用します。デフォルトは`click`です。
 
 ::tip
-`hover`モードでは、タッチデバイスのトリガーをタップしてポップオーバーを切り替えるように`enable-touch`プロパティを設定するか、タップするトリガーに`click`モードを使用します。
+`hover`モードでは、ユーザーがタッチデバイスのトリガーをタップしてポップオーバーを切り替えられるように`enable-touch`プロパティを設定するか、タップするトリガーに`click`モードを使用します。
 ::
 
 ::component-code
 ---
-きれい真
-アイテム
-  モード
-    - クリック
-    -  hover
-小道具
-  モード'ホバー'
-  enableTouch true
-スロット
-  デフォルト|
+prettier: true
+items:
+  mode:
+    - click
+    - hover
+props:
+  mode: 'hover'
+  enableTouch: true
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  内容：|
+  content: |
 
     <Placeholder class="size-48 m-4 inline-flex" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
-#コンテンツ
-placeholder {class="size-48 m-4 inline-flex"}
+#content
+:placeholder{class="size-48 m-4 inline-flex"}
 ::
 
 ::note
-`hover`モードを使用する場合、[`Popover`](https://reka-ui.com/docs/components/popover)](https://reka-ui.com/docs/components/hover-card)コンポーネントの代わりに使用されます。
+`hover`モードを使用する場合、[`Popover`](https://reka-ui.com/docs/components/popover)の代わりにReka UI [`HoverCard`](https://reka-ui.com/docs/components/hover-card)コンポーネントが使用されます。
 ::
 
-###  Delay
+### Delay
 
-`hover`モードを使用する場合、`open-delay`と`close-delay` propsを使用して、ポップオーバーを開くか閉じる前の遅延を制御できます。
+`hover`モードを使用する場合、`open-delay`と`close-delay`プロップを使用して、ポップオーバーを開くか閉じる前のディレイを制御できます。
 
 ::component-code
 ---
-きれい真
-無視
-  -  mode
-小道具
-  モード'ホバー'
-  openDelay 500
-  closeDelay 300
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - mode
+props:
+  mode: 'hover'
+  openDelay: 500
+  closeDelay: 300
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  内容：|
+  content: |
 
     <Placeholder class="size-48 m-4 inline-flex" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
-#コンテンツ
-placeholder {class="size-48 m-4 inline-flex"}
+#content
+:placeholder{class="size-48 m-4 inline-flex"}
 ::
 
 ### コンテンツ
 
-`content`プロパティを使用して、Popoverコンテンツのレンダリング方法を制御します。たとえば、`align`や`side`などです。
+`content`プロパティを使用して、`align`や`side`など、Popoverコンテンツのレンダリング方法を制御します。
 
 ::component-code
 ---
-きれい真
-アイテム
+prettier: true
+items:
   content.align:
-    -  start
-    - センター
-    -  end
+    - start
+    - center
+    - end
   content.side:
-    - 右
-    - 左
-    -  top
-    -  bottom
-小道具
-  内容：
-    整列センター
-    側面底
-    sideOffset 8
-スロット
-  デフォルト|
+    - right
+    - left
+    - top
+    - bottom
+props:
+  content:
+    align: center
+    side: bottom
+    sideOffset: 8
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  内容：|
+  content: |
 
     <Placeholder class="size-48 m-4 inline-flex" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
-#コンテンツ
-placeholder {class="size-48 m-4 inline-flex"}
+#content
+:placeholder{class="size-48 m-4 inline-flex"}
 ::
 
-### アロー
+### Arrow
 
 `arrow`プロパティを使用して、ポップオーバーに矢印を表示します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  arrow
-小道具
-  矢印true
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - arrow
+props:
+  arrow: true
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  内容：|
+  content: |
 
     <Placeholder class="size-48 m-4 inline-flex" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
-#コンテンツ
-placeholder {class="size-48 m-4 inline-flex"}
+#content
+:placeholder{class="size-48 m-4 inline-flex"}
 ::
 
-###  Modal
+### Modal
 
 `modal`プロパティを使用して、Popoverが外部コンテンツとのインタラクションをブロックするかどうかを制御します。デフォルトは`false`です。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  モーダルtrue
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+props:
+  modal: true
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  内容：|
+  content: |
 
     <Placeholder class="size-48 m-4 inline-flex" />
 ---
 
-uボタン{label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
-#コンテンツ
-placeholder {class="size-48 m-4 inline-flex"}
+#content
+:placeholder{class="size-48 m-4 inline-flex"}
 ::
 
 ###  Dismissible
 
-`dismissible`プロパティを使用して、ポップオーバーの外側をクリックしたりescapeを押したりしたときにポップオーバーがdismissibleかどうかを制御します。デフォルトは`true`です。
+`dismissible`プロパティを使用して、ポップオーバーの外側をクリックするか、escapeを押したときにポップオーバーを拒否するかどうかを制御します。デフォルトは`true`です。
 
 ::note
-`close:prevent`イベントは、ユーザーがそれを閉じようとすると発行されます。
+`close:prevent`イベントは、ユーザーがクローズしようとすると発行されます。
 ::
 
 ::component-example
 ---
-名前'popover—dismission—example'
+name: 'popover-dismissible-example'
 ---
 ::
 
@@ -218,76 +218,76 @@ placeholder {class="size-48 m-4 inline-flex"}
 
 ###  Controlオープンステート
 
-`default-open` propまたは`v-model:open`ディレクティブを使用してオープン状態を制御できます。
+オープン状態を制御するには、`default-open`プロパティまたは`v-model:open`ディレクティブを使用します。
 
 ::component-example
 ---
-名前'popover—open—example'
+name: 'popover-open-example'
 ---
 ::
 
 ::note
-この例では、[`defineShortcuts`](/docs/composables/define-shortcuts)を活用して、kbd {value="O"}を押してポップオーバーを切り替えることができます。
+この例では、[`defineShortcuts`](/docs/composables/define-shortcuts)を活用して、kbd{value="O"}を押してポップオーバーを切り替えることができます。
 ::
 
-### コマンドパレット付き
+### Withコマンドパレット
 
-[ CommandPalette ](/docs/components/command-palette)コンポーネントをPopoverのコンテンツ内で使用できます。
+Popoverのコンテンツ内で[ CommandPalette](/docs/components/command-palette)コンポーネントを使用できます。
 
 ::component-example
 ---
-崩壊真
-名前'popover—command—palette—example'
+collapse: true
+name: 'popover-command-palette-example'
 ---
 ::
 
 ### 次のカーソルで
 
-[`reference`](https://reka-ui.com/docs/components/tooltip#trigger) propを使用して、要素にカーソルを合わせるとポップオーバーができます。
+[`reference`](https://reka-ui.com/docs/components/tooltip#trigger)プロパティを使用して、要素にカーソルを合わせるとポップオーバーができます。
 
 ::component-example
 ---
-名前'popover—curs—example'
+name: 'popover-cursor-example'
 ---
 ::
 
-### アンカースロット付き
+### アンカースロット付
 
 `#anchor`スロットを使用して、ポップオーバーをカスタム要素に対して配置できます。
 
 ::warning
-このスロットは、`mode`が`click`の場合にのみ機能します。
+このスロットは`mode`が`click`の場合にのみ動作します。
 ::
 
 ::component-example
 ---
-崩壊真
-名前'popover—anchor—slot—example'
+collapse: true
+name: 'popover-anchor-slot-example'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
 ::note
-`close`関数は`mode``click`に設定されている場合にのみ使用できます。なぜなら、Reka UIは[`Popover`](https://reka-ui.com/docs/components/popover#close-using-slot-props PH12 @では公開されていますが、[`HoverCard`]( PH15 )には公開されていないからです。
+なぜなら、Reka UIは[`Popover`](https://reka-ui.com/docs/components/popover#close-using-slot-props)に対してこれを公開し、[`HoverCard`](https://reka-ui.com/docs/components/hover-card)に対しては公開しないからです。
 ::
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

@@ -1,5 +1,5 @@
 ---
-title: DashboardSearchButton
+title: Dashboardsearchbutton
 description: 'Un bouton prédéfini pour ouvrir le modal DashboardSearch.'
 category: dashboard
 links:
@@ -11,78 +11,78 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardSearchButton.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Le composant DashboardSearchButton est utilisé pour ouvrir le [DashboardSearch](/docs/components/dashboard-search) modal.
+Le composant DashboardSearchButton est utilisé pour ouvrir le modal [DashboardSearch](/docs/components/dashboard-search).
 
-Composants de code
+:component-code
 
-Il étend le [Button](/docs/components/button) composant, de sorte que vous pouvez passer n'importe quelle propriété telle que `color`,`variant`,`size`, etc.
+Il étend le composant [Button](/docs/components/button), de sorte que vous pouvez passer n'importe quelle propriété telle que `color`, `variant`, `size`, etc.
 
 ::component-code
 ---
-Ignorer:
+ignore:
   - variant
-Props:
-  Étiquette:"subtil"
+props:
+  variant: 'subtle'
 ---
 ::
 
 ::note{to="#collapsed"}
-Le bouton par défaut est `color="neutral"` et `variant="outline"` lorsqu 'il n'est pas réduit,`variant="ghost"` lorsqu' il est réduit.
+Le bouton par défaut est `color="neutral"` et `variant="outline"` lorsqu 'il n'est pas réduit, `variant="ghost"` lorsqu' il est réduit.
 ::
 
-@16@16@16@16@16@16@16
+### Défaillant
 
 Utilisez la prop `collapsed` pour masquer l'étiquette du bouton et [kbds](#kbds).
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Effondrement: vrai
+prettier: true
+props:
+  collapsed: true
 ---
 ::
 
 ::tip{to="/docs/components/dashboard-sidebar#slots"}
-Lorsque vous utilisez le bouton dans le composant **DashboardSidebar**, utilisez directement le prop de l'emplacement `collapsed`.
+Lorsque vous utilisez le bouton dans le composant **DashboardSidebar**, utilisez directement le prop de fente `collapsed`.
 ::
 
-@26@260000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### xKbds
 
-Utilisez le prop `kbds` pour afficher les touches du clavier dans le bouton. Par défaut à `['meta', 'K']`{lang="ts-type"} pour correspondre au raccourci par défaut du composant [DashboardSearch](/docs/components/dashboard-search#shortcut).
+Utilisez la prop `kbds` pour afficher les touches du clavier dans le bouton. Par défaut, `['meta', 'K']`{lang="ts-type"} correspond au raccourci par défaut du composant [DashboardSearch](/docs/components/dashboard-search#shortcut).
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph034@kbds
-Props:
-  Effondrement: faux
+prettier: true
+ignore:
+  - kbds
+props:
+  collapsed: false
   kbds:
-    @@pH035 @@"nouveau"
-    @@pH036 @@« O »
+    - 'alt'
+    - 'O'
 ---
 ::
 
-@@ph037@api
+## api
 
-@@ph038@@props
+### Props
 
-Composants-props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
 Ce composant prend également en charge tous les attributs HTML natifs `<button>`.
 ::
 
-@@ph040@@réglages
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph041@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

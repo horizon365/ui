@@ -7,36 +7,36 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Container.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Verwenden Sie den Standard-Slot, um die Breite Ihres Inhalts zu zentrieren und einzuschränken.
+Verwenden Sie den Standardsteckplatz, um die Breite Ihres Inhalts zu zentrieren und einzuschränken.
 
 ::tip{to="/docs/getting-started/theme/css-variables#container"}
-Die maximale Breite wird durch die `--ui-container` CSS-Variable gesteuert.
+Seine maximale Breite wird durch die CSS-Variable `--ui-container` gesteuert.
 ::
 
 ::component-example
 ---
-Name: "Container-Beispiel"
-Props:
-  Klasse: "W-voll"
+name: 'container-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-@@002@api
+## API (englisch)
 
-@@ph003@@@props
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
-@@ph004@gmail.de
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph005@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph006@@changelog @ changelog
+## Changelog (deutsch)
 
-Das Component-Changelog
+:component-changelog

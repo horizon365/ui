@@ -11,15 +11,15 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Marquee.vue
 ---
 
-##  사용
+## Usage
 
 콘텐츠와 함께 기본 슬롯을 사용하여 무한 스크롤 애니메이션을 만듭니다.
 
 ::component-code
 ---
-상품명 : True
-슬롯 :
-  기본 값:|
+prettier: true
+slots:
+  default: |
 
     <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
@@ -28,29 +28,29 @@ links:
     <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
 ---
-: u-icon {name="i-simple-icons-github" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-discord" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-x" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-instagram" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-linkedin" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-instagram" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-linkedin" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-facebook" class="size-10 shrink-0"}
 ::
 
 ::tip
 사용자가 모션을 줄이는 것을 선호하면 애니메이션이 자동으로 비활성화되고 대신 정적으로 내용이 나타납니다.
 ::
 
-### Hover에서 일시 중지
+### Hover 에서 일시 중지
 
-`pause-on-hover`prop을 사용하여 사용자가 콘텐츠 위에 마우스를 놓을 때 애니메이션을 일시 중지합니다.
+`pause-on-hover` 소품을 사용하여 사용자가 내용 위에 마우스를 놓을 때 애니메이션을 일시 중지합니다.
 
 ::component-code
 ---
-상품명 : True
-소품 :
-  pauseOnHover: true : puseOnHover : true
-슬롯 :
-  기본값 :|
+prettier: true
+props:
+  pauseOnHover: true
+slots:
+  default: |
 
     <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
@@ -59,25 +59,25 @@ links:
     <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
 ---
-: u-icon {name="i-simple-icons-github" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-discord" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-x" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-instagram" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-linkedin" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-instagram" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-linkedin" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-facebook" class="size-10 shrink-0"}
 ::
 
-###  반전
+### 역
 
-`reverse`prop 을 사용하여 애니메이션의 방향을 반대로 바꿉니다.
+`reverse` 소품을 사용하여 애니메이션의 방향을 반전합니다.
 
 ::component-code
 ---
-상품명 : True
-소품 :
-  반전: true
-슬롯 :
-  기본값 :|
+prettier: true
+props:
+  reverse: true
+slots:
+  default: |
 
     <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
@@ -86,26 +86,26 @@ links:
     <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
 ---
-: u-icon {name="i-simple-icons-github" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-discord" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-x" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-instagram" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-linkedin" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-instagram" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-linkedin" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-facebook" class="size-10 shrink-0"}
 ::
 
-###  방향
+### 방향 지정
 
-`orientation`prop을 사용하여 스크롤 방향을 변경합니다.
+`orientation` Prop을 사용하여 스크롤 방향을 변경합니다.
 
 ::component-code
 ---
-상품명 : True
-클래스: H-96
-소품 :
-  방향: 수직
-슬롯 :
-  기본 값:|
+prettier: true
+class: 'h-96'
+props:
+  orientation: 'vertical'
+slots:
+  default: |
 
     <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
@@ -114,25 +114,25 @@ links:
     <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
 ---
-: u-icon {name="i-simple-icons-github" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-discord" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-x" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-instagram" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-linkedin" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-instagram" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-linkedin" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-facebook" class="size-10 shrink-0"}
 ::
 
-###  반복
+### 반복
 
-`repeat`prop을 사용하여 애니메이션에서 내용이 반복되는 횟수를 지정합니다.
+`repeat` 소품을 사용하여 애니메이션에서 내용이 반복되는 횟수를 지정합니다.
 
 ::component-code
 ---
-상품명 : True
-소품 :
-  반복 : 6
-슬롯 :
-  기본 값:|
+prettier: true
+props:
+  repeat: 6
+slots:
+  default: |
 
     <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
@@ -141,25 +141,25 @@ links:
     <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
 ---
-: u-icon {name="i-simple-icons-github" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-discord" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-x" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-instagram" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-linkedin" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-instagram" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-linkedin" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-facebook" class="size-10 shrink-0"}
 ::
 
-###  오버레이
+### 오버레이
 
-`overlay`prop 을 사용하여 선택 윤곽의 가장자리에서 그라디언트 오버레이를 제거합니다.
+`overlay` 소품을 사용하여 선택 윤곽의 가장자리에서 그라디언트 오버레이를 제거합니다.
 
 ::component-code
 ---
-상품명 : True
-소품 :
-  오버레이: false
-슬롯 :
-  기본값 :|
+prettier: true
+props:
+  overlay: false
+slots:
+  default: |
 
     <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
@@ -168,58 +168,58 @@ links:
     <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
 ---
-: u-icon {name="i-simple-icons-github" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-discord" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-x" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-instagram" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-linkedin" class="size-10 shrink-0"}
-: u-icon {name="i-simple-icons-facebook" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-instagram" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-linkedin" class="size-10 shrink-0"}
+:u-icon{name="i-simple-icons-facebook" class="size-10 shrink-0"}
 ::
 
-##  예제
+## 예제
 
-###  평가
+### 리뷰
 
-`Marquee` 구성 요소를 사용하여 평가에 대한 무한 스크롤 애니메이션을 만듭니다.
+`Marquee` 구성 요소를 사용하여 평가에 대한 무한 스크롤 애니메이션을 만들 수 있습니다.
 
 ::component-example{label="항목 사용"}
 ---
-상품명 : True
-사진: "marquee-testimonials"
-축소: true
+prettier: true
+name: 'marquee-testimonials'
+collapse: true
 overflowHidden: true
-클래스 : 'px-0'
+class: 'px-0'
 ---
 ::
 
-###  스크린샷
+### Screenshots 이미지
 
-`Marquee` 구성 요소를 사용하여 스크린 샷에 대한 무한 스크롤 애니메이션을 만듭니다.
+`Marquee` 구성 요소를 사용하여 스크린샷의 무한 스크롤 애니메이션을 만듭니다.
 
 ::component-example{label="스크린샷 사용Using Screenshots"}
 ---
-상품명 : True
-제목: "marquee-screenshots"
-축소: true
+prettier: true
+name: 'marquee-screenshots'
+collapse: true
 overflowHidden: true
-클래스 : "!p-0"
+class: '!p-0'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### Slots
 
-:컴포넌트 - 슬롯
+:component-slots
 
-##  테마
+## Theme 테마
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

@@ -3,7 +3,7 @@ title: カラーモード選択
 description: 'システム、ダークモード、ライトモードを切り替えるための選択。'
 category: color-mode
 links:
-  - label: メニューを選択
+  - label: 選択メニュー
     to: /docs/components/select-menu
     icon: i-simple-icons-nuxtdotjs
   - label: サイトマップ
@@ -13,9 +13,9 @@ links:
 
 ## 使用法
 
-ColorModeSelectコンポーネントは[ SelectMenu ](/docs/components/select-menu)コンポーネントを拡張しているので、`color`、`variant`、`size`などのプロパティを渡すことができます。
+ColorModeSelectコンポーネントは[SelectMenu](/docs/components/select-menu)コンポーネントを拡張しているため、`color`、`variant`、`size`などのプロパティを渡すことができます。
 
-コンポーネントコード{prefix="color-mode"}
+:component-code{prefix="color-mode"}
 
 ## 例
 
@@ -25,7 +25,7 @@ ColorModeSelectコンポーネントは[ SelectMenu ](/docs/components/select-me
 #nuxt
 ::div
 
-`app.config.ts`を使用して、`ui.icons`プロパティを使用してアイコンをカスタマイズします。
+`app.config.ts`を使用して、`ui.icons`プロパティでアイコンをカスタマイズします。
 
 ```ts [app/app.config.ts]
 export default defineAppConfig({
@@ -69,12 +69,12 @@ export default defineConfig({
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="color-mode"}
+:component-changelog{prefix="color-mode"}

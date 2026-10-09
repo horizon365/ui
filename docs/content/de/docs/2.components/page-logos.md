@@ -8,125 +8,125 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageLogos.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Die PageLogos Komponente bietet eine flexible Möglichkeit, eine Liste von Logos oder Bildern auf Ihren Seiten anzuzeigen.
 
 ::component-code
 ---
-Einsturz: wahr
-Schöner: wahr
-Hide:
-  @@001@Klasse
-Ignoriert:
-  @@ph002@@gmail.de
-Props:
-  Items:
-    -  i-simple-icons-github (auf Englisch)
-    -  i-simple-icons-discord @ i-simple-icons-discord -  i-simple-icons-discord
-    -  i-simple-icons-x (Deutsche Übersetzung)
-    -  i-simple-icons-instagram (auf Englisch)
-    -  i-simple-icons-linkedin (auf Englisch)
-    -  i-simple-icons-facebook
-  Klasse: 'MB-10'
+collapse: true
+prettier: true
+hide:
+  - class
+ignore:
+  - items
+props:
+  items:
+    - i-simple-icons-github
+    - i-simple-icons-discord
+    - i-simple-icons-x
+    - i-simple-icons-instagram
+    - i-simple-icons-linkedin
+    - i-simple-icons-facebook
+  class: 'mb-10'
 ---
 ::
 
-@@ph009@title
+### Titel
 
-Verwenden Sie die `title` prop, um den Titel über den Logos zu setzen.
+Verwenden Sie die `title`-Stütze, um den Titel über den Logos zu setzen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph011@@gmail.de
-Hide:
-  @@12@Klasse
-Props:
-  title: 'Vertraut von den besten Frontend-Teams'
-  Items:
-    -  i-simple-icons-github (auf Englisch)
-    -  i-simple-icons-discord @@ i-simple-icons-discord @@ i-simple-icons-discord -  i-simple-icons-discord
-    -  i-simple-icons-x (auf Englisch)
-    -  i-simple-icons-instagram (auf Englisch)
-    -  i-simple-icons-linkedin (englisch)
-    -  i-simple-icons-facebook
-  Klasse: 'Mein-10'
+prettier: true
+ignore:
+  - items
+hide:
+  - class
+props:
+  title: 'Trusted by the best front-end teams'
+  items:
+    - i-simple-icons-github
+    - i-simple-icons-discord
+    - i-simple-icons-x
+    - i-simple-icons-instagram
+    - i-simple-icons-linkedin
+    - i-simple-icons-facebook
+  class: 'my-10'
 ---
 ::
 
-@@ph019@gmail.de
+### Einträge
 
-Sie können Logos auf zwei Arten darstellen:
+Sie können Logos auf zwei Arten anzeigen:
 
-1. `items` prop, um eine Liste von logos. Each Element kann entweder:
-  - Ein Icon-Name (z.B.`i-simple-icons-github`)
-  - Ein Objekt, das `src` und `alt` Eigenschaften für Bilder enthält, die in einer `UAvatar` Komponente verwendet werden.
-2. Verwenden des Standard-Steckplatzes, um die vollständige Kontrolle über den Inhalt zu haben
+1. Verwenden Sie die `items`-Prop, um eine Liste von Logos bereitzustellen. Jedes Element kann entweder:
+  - Ein Icon-Name (z. B. `i-simple-icons-github`)
+  - Ein Objekt mit den Eigenschaften `src` und `alt` für Bilder, das in einer `UAvatar`-Komponente verwendet wird.
+2. Verwenden des Standard-Steckplatzes, um vollständige Kontrolle über den Inhalt zu haben
 
 ::tabs{class="gap-0"}
 
 ::component-example{label="mit Items"}
 ---
-Bezeichnung: page-logos-with-items
-Klasse: '[&> div]: mein-10'
+name: 'page-logos-with-items'
+class: '[&>div]:my-10'
 ---
 ::
 
 ::component-example{label="mit Slot"}
 ---
-Bezeichnung: page-logos-with-slot
-class: '[&> div]: mein-10'
+name: 'page-logos-with-slot'
+class: '[&>div]:my-10'
 ---
 ::
 
 ::
 
-@@ph031@@marquee
+### Marquee (nicht)
 
-Verwenden Sie `marquee` prop, um einen Festzelteffekt für die Logos zu aktivieren.
+Verwenden Sie die `marquee`-Stütze, um einen Markierungseffekt für die Logos zu aktivieren.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph033@gmail.de
-  @@ph034@marquee
-Hide:
-  @@35@Klasse
-Props:
-  title: 'Vertraut von den besten Frontend-Teams'
-  Markiert: true
-  Items:
-    -  i-simple-icons-github (auf Englisch)
-    -  i-simple-icons-discord (auf Englisch)
-    -  i-simple-icons-x (Deutsche Ausgabe)
-    -  i-simple-icons-instagram (auf Englisch)
-    -  i-simple-icons-linkedin (englisch)
-    -  i-simple-icons-facebook
-  Klasse: 'Mein-10'
+prettier: true
+ignore:
+  - items
+  - marquee
+hide:
+  - class
+props:
+  title: 'Trusted by the best front-end teams'
+  marquee: true
+  items:
+    - i-simple-icons-github
+    - i-simple-icons-discord
+    - i-simple-icons-x
+    - i-simple-icons-instagram
+    - i-simple-icons-linkedin
+    - i-simple-icons-facebook
+  class: 'my-10'
 ---
 ::
 
 ::note{to="/docs/components/marquee"}
-Wenn Sie den `marquee`-Modus verwenden, können Sie sein Verhalten anpassen, indem Sie Requisiten übergeben. Weitere Informationen finden Sie in der Komponente `Marquee`.
+Wenn Sie den `marquee`-Modus verwenden, können Sie sein Verhalten anpassen, indem Sie Requisiten übergeben. Weitere Informationen finden Sie in der `Marquee`-Komponente.
 ::
 
-@@044@bpgbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvbvb
+## API Bearbeiten
 
-@@ph045@@gmail.de
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
-### Slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph047@@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph048@@changelog
+## Changelog Übersetzung
 
-Das Component-Changelog
+:component-changelog

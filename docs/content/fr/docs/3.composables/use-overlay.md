@@ -3,35 +3,35 @@ title: Utilisateur
 description: 'Une superposition composable pour le contrôle programmatique.'
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Utilisez le composant `useOverlay` auto-importé pour contrôler par programmation les composants [](/docs/components/modal) et [Slideover](/docs/components/slideover).
+Utilisez le composable `useOverlay` auto-importé pour contrôler par programmation les composants [Modal](/docs/components/modal) et [Slideoverxph007/docs/components/slideover).
 
 ::component-example
 ---
-nommé:'use-overlay-example'
+name: 'use-overlay-example'
 ---
 ::
 
 - Le composable `useOverlay` est créé à l'aide de `createSharedComposable`, garantissant que le même état de superposition est partagé sur l'ensemble de votre application.
 
 ::note
-Attendez `overlay.open()` pour obtenir une valeur de retour de la superposition. Cela ne fonctionne que si le composant de superposition **émet un `close` event**. Voir l'exemple ci-dessous pour les détails.
+Attendez `overlay.open()` pour obtenir une valeur de retour de l'overlay. Cela ne fonctionne que si le composant **overlay émet un événement `close` **.
 ::
 
-@@P017@@Paix
+## api
 
-@@
+`useOverlay()`x{lang="ts-type"}
 
 Le composable `useOverlay` fournit des méthodes pour gérer les superpositions globalement. Chaque superposition créée renvoie une instance avec ses propres méthodes.
 
-@@21@@créer ()
+### create ()
 
-@@
+Xph025xx{lang="ts-type"}
 
 Créez une superposition et renvoyez une instance d'usine.
 
-@@ph024@@Paramètres
+#### Paramètres
 
 ::field-group
 
@@ -46,7 +46,7 @@ Créez une superposition et renvoyez une instance d'usine.
 
       ::field-group
         ::field{name="defaultOpen" type="boolean"}
-        Ouvrez la superposition immédiatement après sa création. Par défaut à `false`.
+        Ouvrez la superposition immédiatement après sa création. Par défaut, `false`.
         ::
 
         ::field{name="props" type="ComponentProps"}
@@ -54,20 +54,20 @@ Créez une superposition et renvoyez une instance d'usine.
         ::
 
         ::field{name="destroyOnClose" type="boolean"}
-        Supprime la superposition de la mémoire à la fermeture. Par défaut à `false`.
+        Supprime la superposition de la mémoire à la fermeture. Par défaut `false`.
         ::
       ::
     ::
   ::
 ::
 
-@@27@ouvert ()
+### open (référence)
 
-@@
+`open(id: symbol, props?: ComponentProps<T>): OpenedOverlay<T>`x{lang="ts-type"}
 
 Ouvrez une superposition par son `id`.
 
-@@ph031@@Paramètres
+#### Paramètres
 
 ::field-group
   ::field{name="id" type="symbol" required}
@@ -79,13 +79,13 @@ Ouvrez une superposition par son `id`.
   ::
 ::
 
-@@ph032@close ()
+### close ()
 
-@@
+`close(id: symbol, value?: any): void`x{lang="ts-type"}
 
 Fermez une superposition par son `id`.
 
-@@ph036@paramètres
+#### Paramètres
 
 ::field-group
   ::field{name="id" type="symbol" required}
@@ -97,19 +97,19 @@ Fermez une superposition par son `id`.
   ::
 ::
 
-@@ph037@@closeAll ()
+### closeAll ()
 
-@@
+`closeAll(): void`x{lang="ts-type"}
 
 Fermez toutes les ouvertures.
 
-@@ph040@patch ()
+### patch (résolu)
 
-@@
+`patch(id: symbol, props: Partial<ComponentProps<T>>): void`x{lang="ts-type"}
 
 Mettre à jour une superposition par son `id`.
 
-@@ph044@@Paramètres
+#### Paramètres
 
 ::field-group
   ::field{name="id" type="symbol" required}
@@ -123,11 +123,11 @@ Mettre à jour une superposition par son `id`.
 
 ### unmount ()
 
-@@
+`unmount(id: symbol): void`x{lang="ts-type"}
 
-Retirer une superposition du DOM par son `id`.
+Supprimer une superposition du DOM par son `id`.
 
-@@ph049@@Paramètres
+#### Paramètres
 
 ::field-group
   ::field{name="id" type="symbol" required}
@@ -137,7 +137,7 @@ Retirer une superposition du DOM par son `id`.
 
 ### isOuvert ()
 
-@@
+`isOpen(id: symbol): boolean`x{lang="ts-type"} référence
 
 Vérifiez si une superposition est ouverte en utilisant son `id`.
 
@@ -149,23 +149,23 @@ Vérifiez si une superposition est ouverte en utilisant son `id`.
   ::
 ::
 
-@@555@référencement
+### superpositions
 
-@@
+`overlays: Overlay[]`x{lang="ts-type"}
 
 Liste en mémoire de toutes les superpositions créées.
 
-## Instance API (en anglais)
+API ## Instance
 
 Ce sont les méthodes disponibles sur l'instance retournée par `create()`.
 
-@@ph060@open ()
+### open (résolu)
 
-@@
+`open(props?: ComponentProps<T>): OpenedOverlay<T>`x{lang="ts-type"}
 
-Ouvrez la superposition. Renvoie un `OpenedOverlay`, une promesse qui se résout avec la valeur émise par l'événement `close`. La même promesse est également exposée en tant que `result`, donc `const { result } = modal.open()` fonctionne aussi.
+Ouvrez la superposition. Renvoie un `OpenedOverlay`, une promesse qui se résout avec la valeur émise par l'événement `close`.La même promesse est également exposée en tant que `result`, donc `const { result } = modal.open()` fonctionne aussi.
 
-@@ph067@paramètres
+#### Paramètres
 
 ::field-group
   ::field{name="props" type="ComponentProps<T>"}
@@ -189,13 +189,13 @@ function openModal() {
 </script>
 ```
 
-@@ph083@@close ()
+### close ()
 
-@@
+`close(value?: any): void`x{lang="ts-type"}
 
 Fermez l'overlay.
 
-@@ph086@paramètres
+#### Paramètres
 
 ::field-group
   ::field{name="value" type="any"}
@@ -203,9 +203,9 @@ Fermez l'overlay.
   ::
 ::
 
-### patch ()
+### patch (équivalent)
 
-@@
+`patch(props: Partial<ComponentProps<T>>): void`x{lang="ts-type"}
 
 Mise à jour des appareils de l'Overlay.
 
@@ -237,7 +237,7 @@ function updateModalTitle() {
 </script>
 ```
 
-@@ph110@exemples
+## Exemples
 
 ### Avec plusieurs superpositions
 
@@ -273,7 +273,7 @@ const openModalB = async () => {
 </template>
 ```
 
-### Confirmez le dialogue
+### Confirmar diálogo
 
 Cet exemple montre comment créer un modèle de dialogue de confirmation réutilisable à l'aide d'un composable `useConfirmDialog` personnalisé qui enveloppe `useOverlay`. Cette approche permet des dialogues opinionnés adaptés aux exigences métier spécifiques et aux préférences de conception.
 
@@ -308,7 +308,7 @@ const emits = defineEmits<{
 </template>
 ```
 
-2. Créer un `useConfirmDialog` composable qui renvoie une promesse:
+2. Créer un composable `useConfirmDialog` qui renvoie une promesse:
 
 ```ts [composables/useConfirmDialog.ts]
 import { ConfirmDialog } from '#components'
@@ -355,13 +355,13 @@ const handleDelete = async () => {
 </template>
 ```
 
-@218@@référencement
+## Détails
 
-### Provide/Injecter
+### Provide/Injecter (en anglais)
 
-Lors de l'ouverture des superpositions par programme (modaux, diapositives, etc.), le composant de superposition ne peut accéder qu 'aux valeurs injectées du composant contenant `UApp`(généralement `app.vue` ou des composants de mise en page).
+Lors de l'ouverture des superpositions par programme (modaux, diapositives, etc.), le composant de superposition ne peut accéder qu 'aux valeurs injectées du composant contenant `UApp` (généralement des composants `app.vue` ou de mise en page).
 
-En tant que tel, l'utilisation de `provide()` dans les pages ou les composants parents n'est pas prise en charge directement. Pour passer les valeurs fournies aux superpositions, l'approche recommandée consiste à utiliser des props à la place:
+En tant que tel, l'utilisation de `provide()` dans les pages ou les composants parents n'est pas prise en charge directement.Pour transmettre les valeurs fournies aux superpositions, l'approche recommandée consiste à utiliser des props à la place:
 
 ```vue
 <script setup lang="ts">

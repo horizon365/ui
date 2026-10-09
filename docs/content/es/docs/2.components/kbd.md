@@ -11,130 +11,130 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Kbd.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice la ranura predeterminada para establecer el valor del Kbd.
 
 ::component-code
 ---
-Los slots:
-  por defecto: K
+slots:
+  default: K
 ---
 ::
 
-@@pH001@valor
+### Valor
 
-Utilice el prop `value` para establecer el valor del Kbd.
+Utilice el prop `value` para establecer el valor de Kbd.
 
 ::component-code
 ---
-Props:
-  Valoración: K
+props:
+  value: K
 ---
 ::
 
-Puede pasar claves especiales a la `value` prop que pasa a través de la [`useKbd`](https://github.com/nuxt/ui/blob/v4/src/runtime/composables/useKbd.ts) componible. Por ejemplo, la `meta` muestra como `⌘` en macOS y `Ctrl` en otras plataformas.
+Puede pasar teclas especiales a la hélice `value` que pasa por el componente [`useKbd`](https://github.com/nuxt/ui/blob/v4/src/runtime/composables/useKbd.ts). Por ejemplo, la tecla `meta` se muestra como `⌘` en macOS y `Ctrl` en otras plataformas.
 
 ::component-code
 ---
-Props:
-  Categoría: meta
+props:
+  value: meta
 items:
-  Valor:
-    @12@meta
-    @13@@WINN
-    @@pH014@comando
-    @150000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @ctrl @ ctrl
-    @@17@opción
-    @180000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @@pH019@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada@entrada
-    @200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @@2011@backspace (en inglés)
-    @222@escapismo
-    @23@tab
-    @@24@capslock (en inglés)
-    @25@@Arruño
-    @260000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @@27@Arruño
-    @@28@Arruño
-    @@29@2009
-    @@pH030@paginación
-    @31@@casa
-    @32@@final
+  value:
+    - meta
+    - win
+    - command
+    - shift
+    - ctrl
+    - option
+    - alt
+    - enter
+    - delete
+    - backspace
+    - escape
+    - tab
+    - capslock
+    - arrowup
+    - arrowright
+    - arrowdown
+    - arrowleft
+    - pageup
+    - pagedown
+    - home
+    - end
 ---
 ::
 
-@333@color
+### color (Edición española)
 
-Utilice el prop `color` para cambiar el color de la Kbd.
+Utilice el prop `color` para cambiar el color del Kbd.
 
 ::component-code
 ---
-Props:
-  Color: Neutral
-Los slots:
-  por defecto: K
+props:
+  color: neutral
+slots:
+  default: K
 ---
 ::
 
-@@P250@Variante
+### Variante
 
 Utilice el prop `variant` para cambiar la variante de la Kbd.
 
 ::component-code
 ---
-Props:
-  Color: Neutral
-  Variante: Sólido
-Los slots:
-  por defecto: k
+props:
+  color: neutral
+  variant: solid
+slots:
+  default: K
 ---
 ::
 
-@37@@Tamaño
+### Tamaño
 
-Utilice el prop `size` para cambiar el tamaño del Kbd.
+Utilice el prop `size` para cambiar el tamaño de la Kbd.
 
 ::component-code
 ---
-Props:
-  Tamaño: LG
-Los slots:
-  por defecto: K
+props:
+  size: lg
+slots:
+  default: K
 ---
 ::
 
-@@pH039@Ejemplos
+## Ejemplos
 
-@@
+### x`class`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-Utilice el prop `class` para anular los estilos de base de la insignia.
+Utilice el accesorio `class` para anular los estilos base de la insignia.
 
 ::component-code
 ---
-Props:
-  Archivo de la etiqueta: font-bold round-full
-  Variación: Sutil
-Los slots:
-  por defecto: k
+props:
+  class: 'font-bold rounded-full'
+  variant: subtle
+slots:
+  default: K
 ---
 ::
 
-@@pH043
+## API (Edición española)
 
-@@444@444@444
+### Accesorios
 
-Componentes Props
+:component-props
 
-@@45000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots (Edición española)
 
-Componentes de slots
+:component-slots
 
-@466@466
+## Temas
 
-Componente Tema
+:component-theme
 
-@@40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

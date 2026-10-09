@@ -17,121 +17,121 @@ links:
 
 ## 使用法
 
-[ Button ](/docs/components/button)またはDropdownMenuのデフォルトスロットにあるその他のコンポーネントを使用します。
+DropdownMenuのデフォルトスロットにある[Button](/docs/components/button)またはその他のコンポーネントを使用します。
 
 ::component-code
 ---
-きれい真
-崩壊真
-無視
-  - アイテム
-  メール：info @ ui.content
-外部
-  - アイテム
-externalTypes
-  -  DropdownMenuItem [][]
-小道具
-  アイテム
-    - —ラベルベンジャミン
-        アバター
-          https//github.com/benjamincanac.png
-          読み込み怠惰
-        タイプラベル
-    - —ラベルプロフィール
-        アイコンi—lucide—user
-      -  label請求
-        アイコンi—lucideクレジットカード
-      -  label設定
-        アイコンi—lucide—cog
-        kbds
-          - ''
-      -  labelキーボードショートカット
-        アイコンi—lucideモニター
-    - —ラベルチーム
-        アイコンi—lucide—users
-        フィルター
-          プレースホルダー 'メンバーを検索...'
-        子供：
-          - —ラベルbenjamincanac
-              アバター
-                https//github.com/benjamincanac.png
-                読み込み怠惰
-            -  label HugoRCD
-              アバター
-                https//github.com/HugoRCD.png
-                読み込み 怠惰
-            - ラベル atinux
-              アバター
-                https//github.com/atinux.png
-                読み込み 怠惰
-            - label romhml
-              アバター
-                https//github.com/romhml.png
-                読み込み 怠惰
-            - label sandros94
-              アバター
-                https//github.com/sandros94.png
-                読み込み 怠惰
-            - label J-Michalek
-              アバター
-                https//github.com/J-Michalek.png
-                読み込み 怠惰
-            - label hywax
-              アバター
-                https//github.com/hywax.png
-                読み込み 怠惰
-      - label ユーザー を 招待
-        アイコン i-lucide-user-plus
-        子供 ：
-          - - ラベル 電子 メール
-              アイコン i-lucide-mail
-            - label メッセージ
-              アイコン i-lucide メッセージ スクエア
-          - - ラベル もっと 見る
-              アイコン i-lucide-circle-plus
-              子供 ：
-                - label Slack から インポート
-                  アイコン i-simple-icons-slack
-                  “ https//”slack.com'
-                  ターゲット _blank
-                - label Trello から インポート
-                  アイコン i-simple-icons trello
-                - label Asana から インポート
-                  アイコン i-simple-icons asana
-      - label 新 チーム
-        アイコンi—lucide—plus
-        kbds
-          -  meta
-          -  n
-    - —ラベルGitHub
-        アイコンi—simple—icons—github
-        「https//github.com/nuxt/ui」
-        ターゲット_blank
-      -  labelサポート
-        アイコンi—lucide—ライフブイ
-        to '/docs/components/ドロップダウンメニュー'
-      -  label API
-        アイコンi—lucideクラウド
-        無効true
-    - —ラベルログアウト
-        アイコンi—lucideログアウト
-        色エラー
-        kbds
-          - シフト
-          - メタ
-          お問い合わせ：-  q
-スロット
-  デフォルト|
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[][]
+props:
+  items:
+    - - label: Benjamin
+        avatar:
+          src: 'https://github.com/benjamincanac.png'
+          loading: lazy
+        type: label
+    - - label: Profile
+        icon: i-lucide-user
+      - label: Billing
+        icon: i-lucide-credit-card
+      - label: Settings
+        icon: i-lucide-cog
+        kbds:
+          - ','
+      - label: Keyboard shortcuts
+        icon: i-lucide-monitor
+    - - label: Team
+        icon: i-lucide-users
+        filter:
+          placeholder: 'Search members...'
+        children:
+          - - label: benjamincanac
+              avatar:
+                src: 'https://github.com/benjamincanac.png'
+                loading: lazy
+            - label: HugoRCD
+              avatar:
+                src: 'https://github.com/HugoRCD.png'
+                loading: lazy
+            - label: atinux
+              avatar:
+                src: 'https://github.com/atinux.png'
+                loading: lazy
+            - label: romhml
+              avatar:
+                src: 'https://github.com/romhml.png'
+                loading: lazy
+            - label: sandros94
+              avatar:
+                src: 'https://github.com/sandros94.png'
+                loading: lazy
+            - label: J-Michalek
+              avatar:
+                src: 'https://github.com/J-Michalek.png'
+                loading: lazy
+            - label: hywax
+              avatar:
+                src: 'https://github.com/hywax.png'
+                loading: lazy
+      - label: Invite users
+        icon: i-lucide-user-plus
+        children:
+          - - label: Email
+              icon: i-lucide-mail
+            - label: Message
+              icon: i-lucide-message-square
+          - - label: More
+              icon: i-lucide-circle-plus
+              children:
+                - label: Import from Slack
+                  icon: i-simple-icons-slack
+                  to: 'https://slack.com'
+                  target: _blank
+                - label: Import from Trello
+                  icon: i-simple-icons-trello
+                - label: Import from Asana
+                  icon: i-simple-icons-asana
+      - label: New team
+        icon: i-lucide-plus
+        kbds:
+          - meta
+          - n
+    - - label: GitHub
+        icon: i-simple-icons-github
+        to: 'https://github.com/nuxt/ui'
+        target: _blank
+      - label: Support
+        icon: i-lucide-life-buoy
+        to: '/docs/components/dropdown-menu'
+      - label: API
+        icon: i-lucide-cloud
+        disabled: true
+    - - label: Logout
+        icon: i-lucide-log-out
+        color: error
+        kbds:
+          - shift
+          - meta
+          - q
+slots:
+  default: |
 
     <UButton icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-u—button {icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ### アイテム
 
-`items` propを、次のプロパティを持つオブジェクトの配列として使用します。
+`items`プロパティを次のプロパティを持つオブジェクトの配列として使用します。
 
 - `label?: string`{lang="ts-type"}
 - `icon?: string`{lang="ts-type"}
@@ -142,7 +142,7 @@ u—button {icon="i-lucide-menu" color="neutral" variant="outline"}
 - [`checked?: boolean`{lang="ts-type"}](#with-checkbox-items)
 - `disabled?: boolean`{lang="ts-type"}
 - [`slot?: string`{lang="ts-type"}](#with-custom-slot)
-- `onSelect?: (e: Event) => void`{lang="ts-type"}
+- ph156{lang="ts-type"}
 - [`onUpdateChecked?: (checked: boolean) => void`{lang="ts-type"}](#with-checkbox-items)
 - `children?: DropdownMenuItem[] | DropdownMenuItem[][]`{lang="ts-type"}
 - [`filter?: boolean | InputProps`{lang="ts-type"}](#with-filter-items)
@@ -151,145 +151,145 @@ u—button {icon="i-lucide-menu" color="neutral" variant="outline"}
 - `class?: any`{lang="ts-type"}
 - `ui?: { item?: ClassNameValue, label?: ClassNameValue, separator?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLabel?: ClassNameValue, itemLabelExternalIcon?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingIcon?: ClassNameValue, itemTrailingKbds?: ClassNameValue, itemTrailingKbdsSize?: ClassNameValue }`{lang="ts-type"}
 
-[ Link ](/docs/components/link#props)コンポーネントから、`to`、`target`などのプロパティを渡すことができます。
+[Link](/docs/components/link#props)コンポーネントから、`to`、`target`などの任意のプロパティを渡すことができます。
 
 ::component-code
 ---
-きれい真
-崩壊真
-無視
-  - アイテム
-  メール：info @ ui.content
-外部
-  - アイテム
-externalTypes
-  -  DropdownMenuItem [][]
-小道具
-  アイテム
-    - —ラベルベンジャミン
-        アバター
-          https//github.com/benjamincanac.png
-          読み込み怠惰
-        タイプラベル
-    - —ラベルプロフィール
-        アイコンi—lucide—user
-      -  label請求
-        アイコンi—lucideクレジットカード
-      -  label設定
-        アイコンi—lucide—cog
-        kbds
-          - ''
-      -  labelキーボードショートカット
-        アイコンi—lucideモニター
-    - —ラベルチーム
-        アイコンi—lucide—users
-      -  labelユーザーを招待
-        アイコンi—lucide—user—plus
-        子供：
-          - —ラベルメールアドレス
-              アイコンi—lucide—mail
-            -  labelメッセージ
-              アイコンi—lucideメッセージスクエア
-          - - ラベル もっと 見る
-              アイコン i-lucide-circle-plus
-              子供 ：
-                - label Slack から インポート
-                  アイコン i-simple-icons-slack
-                  “ https//”slack.com'
-                  ターゲット _blank
-                - label Trello から インポート
-                  アイコン i-simple-icons trello
-                - label Asana から インポート
-                  アイコン i-simple-icons asana
-      - label 新 チーム
-        アイコン i-lucide-plus
-        kbds
-          - メタ
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[][]
+props:
+  items:
+    - - label: Benjamin
+        avatar:
+          src: 'https://github.com/benjamincanac.png'
+          loading: lazy
+        type: label
+    - - label: Profile
+        icon: i-lucide-user
+      - label: Billing
+        icon: i-lucide-credit-card
+      - label: Settings
+        icon: i-lucide-cog
+        kbds:
+          - ','
+      - label: Keyboard shortcuts
+        icon: i-lucide-monitor
+    - - label: Team
+        icon: i-lucide-users
+      - label: Invite users
+        icon: i-lucide-user-plus
+        children:
+          - - label: Email
+              icon: i-lucide-mail
+            - label: Message
+              icon: i-lucide-message-square
+          - - label: More
+              icon: i-lucide-circle-plus
+              children:
+                - label: Import from Slack
+                  icon: i-simple-icons-slack
+                  to: 'https://slack.com'
+                  target: _blank
+                - label: Import from Trello
+                  icon: i-simple-icons-trello
+                - label: Import from Asana
+                  icon: i-simple-icons-asana
+      - label: New team
+        icon: i-lucide-plus
+        kbds:
+          - meta
           - n
-    - - ラベル GitHub
-        アイコン i-simple-icons-github
-        “ https//github.com/nuxt/ui ”
-        ターゲット _blank
-      - label サポート
-        アイコン i- lucide - ライフ ブイ
-        to '/docs/components/ドロップダウン メニュー '
-      - label API
-        アイコン i-lucide クラウド
-        無効 true
-    - - ラベル ログアウト
-        アイコン i-lucide ログアウト
-        kbds
-          - シフト
-          - メタ
+    - - label: GitHub
+        icon: i-simple-icons-github
+        to: 'https://github.com/nuxt/ui'
+        target: _blank
+      - label: Support
+        icon: i-lucide-life-buoy
+        to: '/docs/components/dropdown-menu'
+      - label: API
+        icon: i-lucide-cloud
+        disabled: true
+    - - label: Logout
+        icon: i-lucide-log-out
+        kbds:
+          - shift
+          - meta
           - q
-  UI
-    内容 ' w-48 '
-スロット
-  デフォルト|
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
     <UButton icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-u-button{icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ::note
-`items`プロ パティ に 配列 の 配列 を 渡し て 、 項目 の 分離 グループ を 作成 する こと も でき ます 。
+`items`プロパティに配列の配列を渡して、項目の分離グループを作成することもできます。
 ::
 
 ::tip
-各 アイテム は 、`items`プロ パティ と 同じ プロ パティ を 持つ オブジェクト の`children`配列 を 取り 、 ネスト さ れ た メニュー を 作成 し 、`open`、`defaultOpen`、 および`content`プロ パティ を 使用 し て 制御 でき ます 。
+各アイテムは、`items`プロパティと同じプロパティを持つオブジェクトの`children`配列を取り、`open`、`defaultOpen`、`content`プロパティを使用して制御できるネストされたメニューを作成できます。
 ::
 
 ### コンテンツ
 
-`content`プロパティを使用して、DropdownMenuコンテンツのレンダリング方法を制御します。たとえば、`align`や`side`などです。
+`content`プロパティを使用して、DropdownMenuコンテンツのレンダリング方法を制御します。例えば、`align`や`side`です。
 
 ::component-code
 ---
-きれい真
-崩壊真
-無視
-  - アイテム
-  メール：info @ ui.content
-外部
-  - アイテム
-externalTypes
-  -  DropdownMenuItem []
-アイテム
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[]
+items:
   content.align:
-    -  start
-    - センター
-    -  end
+    - start
+    - center
+    - end
   content.side:
-    - 右
-    - 左
-    - トップ
-    -  bottom
-小道具
-  アイテム
-    -  labelプロフィール
-      アイコンi—lucide—user
-    -  label請求
-      アイコンi—lucideクレジットカード
-    -  label設定
-      アイコンi—lucide—cog
-  内容：
-    align開始
-    側面底
-    sideOffset 8
-  UI
-    内容'w—48'
-スロット
-  デフォルト|
+    - right
+    - left
+    - top
+    - bottom
+props:
+  items:
+    - label: Profile
+      icon: i-lucide-user
+    - label: Billing
+      icon: i-lucide-credit-card
+    - label: Settings
+      icon: i-lucide-cog
+  content:
+    align: start
+    side: bottom
+    sideOffset: 8
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
     <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-uボタン{label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{label="オープン" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
-### フィルター badge {label="4.6+" class="align-text-top"}
+### フィルター badge{label="4.6+" class="align-text-top"}
 
 `filter`プロパティを使用して、DropdownMenu内にフィルター入力を表示します。デフォルトは`false`です。
 
@@ -298,266 +298,266 @@ uボタン{label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ::note{to="#with-filter-fields"}
-フィルター対象フィールドを指定するには、`filter-fields` propを使用します。デフォルトでは、`labelKey` propを使用します。
+`filter-fields`プロパティを使用して、フィルターするフィールドを指定します。デフォルトでは`labelKey`プロパティを使用します。
 ::
 
-[ Input ](/docs/components/input)コンポーネントから任意のプロパティを渡してカスタマイズできます。
+[Input](/docs/components/input)コンポーネントの任意のプロパティを渡してカスタマイズできます。
 
 ::component-code
 ---
-きれい真
-崩壊真
-無視
-  - アイテム
-  -  filter.icon
-  -  content.align
-  メール：info @ ui.content
-外部
-  - アイテム
-externalTypes
-  -  DropdownMenuItem []
-小道具
-  フィルター
-    アイコンi—lucide—search
-  アイテム
-    -  labelプロフィール
-      アイコンi—lucide—user
-    -  label請求
-      アイコンi—lucideクレジットカード
-    -  label設定
-      アイコンi—lucide—cog
-    -  labelチーム
-      アイコンi—lucide—users
-    -  labelユーザーを招待
-      アイコンi—lucide—user—plus
-    -  label新チーム
-      アイコンi—lucide—plus
-  内容：
-    align開始
-  UI
-    内容'w—48'
-スロット
-  デフォルト|
+prettier: true
+collapse: true
+ignore:
+  - items
+  - filter.icon
+  - content.align
+  - ui.content
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[]
+props:
+  filter:
+    icon: i-lucide-search
+  items:
+    - label: Profile
+      icon: i-lucide-user
+    - label: Billing
+      icon: i-lucide-credit-card
+    - label: Settings
+      icon: i-lucide-cog
+    - label: Team
+      icon: i-lucide-users
+    - label: Invite users
+      icon: i-lucide-user-plus
+    - label: New team
+      icon: i-lucide-plus
+  content:
+    align: start
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
     <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-uボタン{label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{label="オープン" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ::tip{to="#with-filter-items"}
-`children`が付いている項目の`filter`フィールドを使用して、特定のサブメニューでフィルターを有効にすることもできます。
+`children`を含む項目の`filter`フィールドを使用して、特定のサブメニューでフィルターを有効にすることもできます。
 ::
 
-### アロー
+### Arrow
 
 `arrow`プロパティを使用して、DropdownMenuに矢印を表示します。
 
 ::component-code
 ---
-きれい真
-崩壊真
-無視
-  -  arrow
-  - アイテム
-  メール：info @ ui.content
-外部
-  - アイテム
-externalTypes
-  -  DropdownMenuItem []
-小道具
-  矢印true
-  アイテム
-    -  labelプロフィール
-      アイコンi—lucide—user
-    -  label請求
-      アイコンi—lucideクレジットカード
-    -  label設定
-      アイコンi—lucide—cog
-  UI
-    内容'w—48'
-スロット
-  デフォルト|
+prettier: true
+collapse: true
+ignore:
+  - arrow
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[]
+props:
+  arrow: true
+  items:
+    - label: Profile
+      icon: i-lucide-user
+    - label: Billing
+      icon: i-lucide-credit-card
+    - label: Settings
+      icon: i-lucide-cog
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
     <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-u—button {label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{label="オープン" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ### サイズ
 
-`size`プロパティを使用して、DropdownMenuのサイズを制御します。
+DropdownMenuのサイズを制御するには、`size`プロパティを使用します。
 
 ::component-code
 ---
-きれい真
-崩壊真
-無視
-  - アイテム
-  -  content.align
-  メール：info @ ui.content
-外部
-  - アイテム
-externalTypes
-  -  DropdownMenuItem []
-小道具
-  サイズXL
-  アイテム
-    -  labelプロフィール
-      アイコンi—lucide—user
-    -  label請求
-      アイコンi—lucideクレジットカード
-    -  label設定
-      アイコンi—lucide—cog
-  内容：
-    align開始
-  UI
-    内容'w—48'
-スロット
-  デフォルト|
+prettier: true
+collapse: true
+ignore:
+  - items
+  - content.align
+  - ui.content
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[]
+props:
+  size: xl
+  items:
+    - label: Profile
+      icon: i-lucide-user
+    - label: Billing
+      icon: i-lucide-credit-card
+    - label: Settings
+      icon: i-lucide-cog
+  content:
+    align: start
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
     <UButton size="xl" label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-u—button {size="xl" label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{size="xl" label="オープン" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ::warning
-`size` propはButtonにプロキシされません。自分で設定する必要があります。
+`size`プロパティはButtonにプロキシされません。自分で設定する必要があります。
 ::
 
 ::note
 同じサイズを使用すると、DropdownMenuアイテムはボタンと完全に整列します。
 ::
 
-###  Modal
+### Modal
 
 `modal`プロパティを使用して、DropdownMenuが外部コンテンツとのインタラクションをブロックするかどうかを制御します。デフォルトは`true`です。
 
 ::component-code
 ---
-きれい真
-崩壊真
-無視
-  - アイテム
-  メール：info @ ui.content
-外部
-  - アイテム
-externalTypes
-  -  DropdownMenuItem []
-小道具
-  モーダルfalse
-  アイテム
-    -  labelプロフィール
-      アイコンi—lucide—user
-    -  label請求
-      アイコンi—lucideクレジットカード
-    -  label設定
-      アイコンi—lucide—cog
-  UI
-    内容'w—48'
-スロット
-  デフォルト|
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[]
+props:
+  modal: false
+  items:
+    - label: Profile
+      icon: i-lucide-user
+    - label: Billing
+      icon: i-lucide-credit-card
+    - label: Settings
+      icon: i-lucide-cog
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
     <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-uボタン{label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{label="オープン" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ### 無効
 
-`disabled`プロパティを使用して、DropdownMenuを無効にします。
+`disabled`プロパティを使用してDropdownMenuを無効にします。
 
 ::component-code
 ---
-きれい真
-崩壊真
-無視
-  - アイテム
-  メール：info @ ui.content
-外部
-  - アイテム
-externalTypes
-  -  DropdownMenuItem []
-小道具
-  無効true
-  アイテム
-    -  labelプロフィール
-      アイコンi—lucide—user
-    -  label請求
-      アイコンi—lucideクレジットカード
-    -  label設定
-      アイコンi—lucide—cog
-  UI
-    内容'w—48'
-スロット
-  デフォルト|
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - DropdownMenuItem[]
+props:
+  disabled: true
+  items:
+    - label: Profile
+      icon: i-lucide-user
+    - label: Billing
+      icon: i-lucide-credit-card
+    - label: Settings
+      icon: i-lucide-cog
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
     <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 ---
 
-u—button {label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:u-button{label="オープン" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ## 例
 
 ### チェックボックス項目付き
 
-`type`プロパティを`checkbox`とともに使用し、`checked`/`onUpdateChecked`プロパティを使用して項目のチェック状態を制御できます。
+`checkbox`で`type`プロパティを使用し、`checked`/`onUpdateChecked`プロパティを使用して項目のチェック状態を制御できます。
 
 ::component-example
 ---
-崩壊真
-名前'ドロップダウンメニューチェックボックス項目例'
+collapse: true
+name: 'dropdown-menu-checkbox-items-example'
 ---
 ::
 
 ::note
-アイテムの`checked`状態に対する反応性を確保するために、`items`配列を`computed`の中でラップすることをお勧めします。
+アイテムの`checked`状態に対する反応性を確保するには、`items`配列を`computed`内でラップすることをお勧めします。
 ::
 
 ### カラーアイテム付き
 
-`color`プロパティを使用して、特定の項目を色でハイライトできます。
+`color`プロパティを使用して、特定のアイテムを色でハイライトできます。
 
 ::component-example
 ---
-崩壊真
-名前'ドロップダウンメニューカラーアイテム例'
+collapse: true
+name: 'dropdown-menu-color-items-example'
 ---
 ::
 
-### フィルター項目付き：バッジ{label="4.6+" class="align-text-top"}
+### フィルター項目付き：badge{label="4.6+" class="align-text-top"}
 
-`children`を含む項目の@@プロパティを使用して、サブメニュー内にフィルター入力を表示できます。
+`children`を持つアイテムの`filter`プロパティを使用して、サブメニュー内にフィルター入力を表示できます。
 
 ::component-example
 ---
-崩壊真
-名前'ドロップダウンメニューフィルターアイテムの例'
+collapse: true
+name: 'dropdown-menu-filter-items-example'
 ---
 ::
 
-###  Controlオープンステート
+### Controlオープンステート
 
-`default-open` propまたは`v-model:open`ディレクティブを使用してオープン状態を制御できます。
+オープン状態は`default-open`プロパティまたは`v-model:open`ディレクティブを使用して制御できます。
 
 ::component-example
 ---
-崩壊真
-名前'ドロップダウンメニューオープン例'
+collapse: true
+name: 'dropdown-menu-open-example'
 ---
 ::
 
 ::note
-この例では、[`defineShortcuts`](/docs/composables/define-shortcuts)を活用して、kbd {value="O"}を押してDropdownMenuを切り替えることができます。
+この例では、[`defineShortcuts`](/docs/composables/define-shortcuts)を活用して、kbd{value="O"}を押してDropdownMenuを切り替えることができます。
 ::
 
 ### カスタムスロット付き
 
-特定の項目をカスタマイズするには、`slot`プロパティを使用します。
+`slot`プロパティを使用して、特定の項目をカスタマイズします。
 
 以下のスロットにアクセスできます：
 
@@ -568,34 +568,34 @@ u—button {label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
 
 ::component-example
 ---
-崩壊真
-名前'ドロップダウンメニューカスタムスロットサンプル'
+collapse: true
+name: 'dropdown-menu-custom-slot-example'
 ---
 ::
 
 ::tip{to="#slots"}
-また、`#item`、`#item-leading`、`#item-label`、および`#item-trailing`スロットを使用して、すべての項目をカスタマイズすることもできます。
+`#item`、`#item-leading`、`#item-label`、`#item-trailing`スロットを使用して、すべてのアイテムをカスタマイズすることもできます。
 ::
 
 ### アイテムのスイッチ付き
 
-`slot`プロパティを`#{{ slot }}-trailing`スロットとともに使用して、アイテム内の[ Switch ](/docs/components/switch)をレンダリングできます。
+`slot`プロパティを`#{{ slot }}-trailing`スロットとともに使用して、アイテム内の[Switch](/docs/components/switch)をレンダリングできます。
 
 ::component-example
 ---
-崩壊真
-名前'ドロップダウンメニュー—スイッチアイテム—例'
+collapse: true
+name: 'dropdown-menu-switch-items-example'
 ---
 ::
 
-### 無視フィルタ付き：badge {label="4.6+" class="align-text-top"}
+### 無視フィルタ付きbadge{label="4.6+" class="align-text-top"}
 
-`filter` propまたは`children`を含む項目の`filter`フィールドを使用する場合、`ignore-filter` propを`true`に設定して内部検索を無効にし、独自の検索ロジックを使用できます。
+`children`を持つアイテムで`filter`プロパティまたは`filter`フィールドを使用する場合、`ignore-filter`プロパティを`true`に設定して内部検索を無効にし、独自の検索ロジックを使用できます。
 
 ::component-example
 ---
-崩壊真
-名前'ドロップダウンメニュー—ignore—filter—example'
+collapse: true
+name: 'dropdown-menu-ignore-filter-example'
 ---
 ::
 
@@ -603,14 +603,14 @@ u—button {label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
 この例では、[`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced)を使用してAPI呼び出しをデバウンスします。フェッチは`immediate: false`で延期されるため、メニューが開くまでリクエストは行われません。
 ::
 
-### フィルターフィールド付き：badge {label="4.6+" class="align-text-top"}
+### フィルタフィールド付きbadge{label="4.6+" class="align-text-top"}
 
-`filter` propまたは`filter`フィールドを`children`を含む項目で使用する場合、`filter-fields` propにフィルターをかけるフィールドの配列を設定できます。デフォルトは`[labelKey]`です。
+`filter`プロパティまたは`filter`フィールドを`children`でアイテムに使用する場合、`filter-fields`プロパティにフィルターをかけるフィールドの配列を設定できます。デフォルトは`[labelKey]`です。
 
 ::component-example
 ---
-崩壊真
-名前'ドロップダウンメニューフィルターフィールドの例'
+collapse: true
+name: 'dropdown-menu-filter-fields-example'
 ---
 ::
 
@@ -620,13 +620,13 @@ u—button {label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
 
 ::component-example
 ---
-崩壊真
-名前'ドロップダウンメニューの内容幅の例'
+collapse: true
+name: 'dropdown-menu-content-width-example'
 ---
 ::
 
 ::tip
-また、`app.config.ts`でコンテンツの幅をグローバルに変更することもできます。
+`app.config.ts`でコンテンツ幅をグローバルに変更することもできます：
 
 ```
 export default defineAppConfig({
@@ -641,9 +641,9 @@ export default defineAppConfig({
 ```
 ::
 
-### 抽出ショートカット
+### ショートカットを抽出
 
-[ extractShortcuts ](/docs/composables/extract-shortcuts))ユーティリティを使用して、メニュー項目から自動的にショートカットを定義します。このユーティリティは、ショートカットを再帰的に抽出し、[ defineShortcuts ](/docs/composables/define-shortcuts)と互換性のあるオブジェクトを返します。
+[extractShortcuts](/docs/composables/extract-shortcuts)ユーティリティを使用して、メニュー項目から自動的にショートカットを`kbds`プロパティで定義します。ショートカットを再帰的に抽出し、[defineShortcuts](/docs/composables/define-shortcuts)と互換性のあるオブジェクトを返します。
 
 ```vue
 <script setup lang="ts">
@@ -681,27 +681,27 @@ defineShortcuts(extractShortcuts(items))
 ```
 
 ::note
-この例では、kbd {value="meta"} kbd {value="E" class="ms-px"} kbd {value="meta"} kbd {value="I" class="ms-px"} kbd {value="meta"} kbd {value="N" class="ms-px"}は、対応するアイテムの`select`関数をトリガーします。
+この例では、kbd{value="meta"} kbd{value="E" class="ms-px"} kbd{value="meta"} kbd{value="I" class="ms-px"}およびkbd{value="meta"} kbd{value="N" class="ms-px"}は、対応するアイテムの`select`関数をトリガーします。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

@@ -15,283 +15,283 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ProgressGroup.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Verwenden Sie die ProgressGroup-Komponente, um mehrere Werte als Segmente eines einzelnen Fortschrittsbalkens anzuzeigen.
 
 ::component-code
 ---
-Einsturz: wahr
-Ignoriert:
-  @@ph001@@gmail.de
-  @@@@002@max
-  @@003@Klasse
-Außen:
-  @@ph004@gmail.de
-Externe Typen:
-  - ProgressGroupItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Gesamt: 128
-  Items:
-    - label:'System'
-      Wert: 24
-      Farbe: "neutral"
-      Icon: 'i-lucide-cog'(englisch)
-    - label:'Apps'(auf Englisch)
-      Wert: 8
-      Farbe: „ Fehler "
-      Icon: 'i-lucide-app-window'(i-lucide-app-Fenster)
-    - label:'Dokumente'
-      Wert: 12
-      Farbe: "Warnung"
-      Icon: 'i-lucide-Datei'
-    - label:'Multimedia'(auf Englisch)
-      Wert: 42
-      Farbe: „ Erfolg "
-      Bildnachweis: i-Lucide-Film
-  Klasse: W-96
+collapse: true
+ignore:
+  - items
+  - max
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  max: 128
+  items:
+    - label: 'System'
+      value: 24
+      color: 'neutral'
+      icon: 'i-lucide-cog'
+    - label: 'Apps'
+      value: 8
+      color: 'error'
+      icon: 'i-lucide-app-window'
+    - label: 'Documents'
+      value: 12
+      color: 'warning'
+      icon: 'i-lucide-file'
+    - label: 'Multimedia'
+      value: 42
+      color: 'success'
+      icon: 'i-lucide-film'
+  class: 'w-96'
 ---
 ::
 
-@@ph010@gmail.de
+### Einträge
 
-Verwenden Sie `items` prop als Array von Objekten mit den folgenden Eigenschaften:
+Verwenden Sie die `items`-prop als Array von Objekten mit den folgenden Eigenschaften:
 
-`label?: string``label?: string``label?: string`{lang="ts-type"}
-`icon?: string``icon?: string``icon?: string`{lang="ts-type"}{lang="ts-type"}`icon?: string``icon?: string``icon?: string`
-`value?: number``value?: number`PH02020
-- PH0222{lang="ts-type"}](#with-custom-colors)
-`slot?: string`PH03030
-`class?: any`PH03333 @
-`ui?: { segment?: ClassNameValue, indicator?: ClassNameValue, item?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingDot?: ClassNameValue, itemLabel?: ClassNameValue, itemTrailing?: ClassNameValue }``ui?: { segment?: ClassNameValue, indicator?: ClassNameValue, item?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingDot?: ClassNameValue, itemLabel?: ClassNameValue, itemTrailing?: ClassNameValue }``ui?: { segment?: ClassNameValue, indicator?: ClassNameValue, item?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingDot?: ClassNameValue, itemLabel?: ClassNameValue, itemTrailing?: ClassNameValue }`{lang="ts-type"}{lang="ts-type"}
+- `label?: string`{lang="ts-type"} (englisch)
+- `icon?: string`{lang="ts-type"} (nicht vorhanden)
+- `value?: number`{lang="ts-type"} (englisch)
+04.04.2018 00:43:45 00:45:46 00:46:47:48
+- `slot?: string`{lang="ts-type"} (englisch)
+- `class?: any`{lang="ts-type"} (englisch)
+- `ui?: { segment?: ClassNameValue, indicator?: ClassNameValue, item?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingDot?: ClassNameValue, itemLabel?: ClassNameValue, itemTrailing?: ClassNameValue }`{lang="ts-type"} (nicht vorhanden)
 
 ::component-code
 ---
-Einsturz: wahr
-Ignoriert:
-  @@ph037@gmail.de
-  @@@@@@38@38@38@38@38@38@38@38@38@38@38@38@38@38@38@38@@38@38@@38@38@@38@@38@@38@@38@@38@@38@@38@@38@@38@@38@@38@@38@@38@38@@38@@38@@@38@@@38@@@38@@@38@@@@@38@@@@@38@@@@@@@@@@@@@@@@@@38338@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@383338
-Außen:
-  @@ph039@gmail.de
-Externe Typen:
-  - ProgressGroupItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Items:
-    - label:'Berechnen'
-      Wert: 42
-      Farbe: "Primär"
-    - label:'Lagerung'
-      Wert: 18
-      Farbe: "Info"
-    - label:'Bandbreite'
-      Wert: 9
-      Farbe: "Warnung"
-  Klasse: W-96
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  items:
+    - label: 'Compute'
+      value: 42
+      color: 'primary'
+    - label: 'Storage'
+      value: 18
+      color: 'info'
+    - label: 'Bandwidth'
+      value: 9
+      color: 'warning'
+  class: 'w-96'
 ---
 ::
 
 ::note
-Elemente ohne `icon` erhalten stattdessen einen farbigen Punkt in der Liste.
+Elemente ohne einen `icon` erhalten stattdessen einen farbigen Punkt in der Liste.
 ::
 
-@@045@@Max
+### Max ist
 
-Verwenden Sie `max` prop, um den Wert aller Elemente auf. Defaults auf `100` zu setzen.
+Verwenden Sie die Prop `max`, um den Wert aller Elemente auf. Defaults auf `100` zu setzen.
 
 ::component-code
 ---
-Einsturz: wahr
-Ignoriert:
-  @@ph048@gmail.de
-  @@@@@@49@class
-Außen:
-  @@@ph050@gmail.de
-Externe Typen:
-  - ProgressGroupItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Gesamt: 512
-  Items:
-    - label:'Gebraucht'
-      Wert: 128
-      Farbe: "Primär"
-    - label:'Reserviert'
-      Wert: 64
-      Farbe: "neutral"
-  Klasse: W-96
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  max: 512
+  items:
+    - label: 'Used'
+      value: 128
+      color: 'primary'
+    - label: 'Reserved'
+      value: 64
+      color: 'neutral'
+  class: 'w-96'
 ---
 ::
 
 ::note
-Die Werte werden zwischen `0` und `max` eingeklemmt, und Segmente, die sich zu mehr als `max` addieren, teilen sich die Spur proportional.
+Die Werte werden zwischen `0` und `max` eingespannt, und Segmente, die sich zu mehr als `max` addieren, teilen sich die Spur proportional.
 ::
 
-### Status
+### Status Bearbeiten
 
-Verwenden Sie `status` prop, um den Summenwert über dem Balken anzuzeigen.
+Verwenden Sie die `status`-Prop, um den summierten Wert über dem Balken anzuzeigen.
 
 ::component-code
 ---
-Einsturz: wahr
-Ignoriert:
-  @@ph059@gmail.de
-  @@@@@@class060@@class060@class@class060@class@class060@class@class@class@class060@class@class@class@class@class@class060@class@class@class@class@class@class@class060@class@class@class@class@class@class@class@class@classclass@class@class@class@class@classclass@classclass@classclass@classclassclassclassclass@classclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassc@c@classclassclassclassc@classclassclassclassclassc@classclassclassclassc@classclassclassclass
-Außen:
-  - Artikel
-Externe Typen:
-  - ProgressGroupItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Status: wahr
-  Gesamt: 128
-  Items:
-    - label:'System'
-      Wert: 24
-      Farbe: "neutral"
-    - label:'Apps'(auf Englisch)
-      Wert: 8
-      Farbe: „ Fehler "
-    - label:'Multimedia'(auf Englisch)
-      Wert: 42
-      Farbe: "Erfolg"
-  Klasse: W-96
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  status: true
+  max: 128
+  items:
+    - label: 'System'
+      value: 24
+      color: 'neutral'
+    - label: 'Apps'
+      value: 8
+      color: 'error'
+    - label: 'Multimedia'
+      value: 42
+      color: 'success'
+  class: 'w-96'
 ---
 ::
 
 ::tip
-Verwenden Sie `:ui="{ status: 'w-full' }"`, um stattdessen die gesamte Breite zu überspannen.
+Der Status verfolgt das Ende der Leiste, verwenden Sie stattdessen `:ui="{ status: 'w-full' }"`, um die volle Breite zu überspannen.
 ::
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#######################################################################################################################################################################################
+### Color (englisch)
 
-Verwenden Sie `color` prop, um die Farbe jedes Segments zu ändern, das keine eigene Farbe hat.
+Verwenden Sie die `color`-prop, um die Farbe jedes Segments zu ändern, das keine eigene setzt.
 
 ::component-code
 ---
-Einsturz: wahr
-Ignoriert:
-  @@ph069@gmail.de
-  @@@@@@@class070@class@class070@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@classclassclass@classclassclass@class@class@class@classclassclassclassclassclass@classclass
-Außen:
-  - Artikel
-Externe Typen:
-  - ProgressGroupItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Farbe: neutral
-  Items:
-    - label:'Lesen'
-      Wert: 42
-    - label:'Schreiben'
-      Wert: 18
-  Klasse: W-96
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  color: neutral
+  items:
+    - label: 'Read'
+      value: 42
+    - label: 'Write'
+      value: 18
+  class: 'w-96'
 ---
 ::
 
 ::tip
-Sowohl diese Requisite als auch die `color` jedes Elements akzeptieren jeden CSS-Farbwert, was für Paletten außerhalb des Themas praktisch ist.
+Sowohl diese Requisite als auch das `color` jedes Elements akzeptieren jeden CSS-Farbwert, was für Paletten außerhalb des Themas praktisch ist.
 ::
 
-@@@@@@@@@@076@@Größe
+### Size ist
 
-Verwenden Sie die `size` prop, um die Größe der ProgressGroup zu ändern.
+Verwenden Sie die `size`-Prop, um die Größe der ProgressGroup zu ändern.
 
 ::component-code
 ---
-Einsturz: wahr
-Ignoriert:
-  @@@ph078@@gmail.de
-  @@@@@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@class@class@class@class@classclass@class@class@class@classclassclassclassclass@class@classc
-Außen:
-  @@ph080@@gmail.de
-Externe Typen:
-  - ProgressGroupItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Größe: XL
-  Items:
-    - label:'Lesen'
-      Wert: 42
-      Farbe: "Primär"
-    - label:'Schreiben'
-      Wert: 18
-      Farbe: "Info"
-  Klasse: W-96
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  size: xl
+  items:
+    - label: 'Read'
+      value: 42
+      color: 'primary'
+    - label: 'Write'
+      value: 18
+      color: 'info'
+  class: 'w-96'
 ---
 ::
 
-@@@@@@@@@@@@@@@ph084@@Orientierung
+### Orientierung.
 
-Verwenden Sie `orientation` prop, um die Ausrichtung der ProgressGroup. Defaults auf `horizontal` zu ändern.
+Verwenden Sie die `orientation` prop, um die Ausrichtung der ProgressGroup. Defaults auf `horizontal` zu ändern.
 
 ::component-code
 ---
-Einsturz: wahr
-Ignoriert:
-  @@@ph087@gmail.de
-  @@@@888@@@class
-Außen:
-  @@ph089@@gmail.de
-Externe Personen:
-  - ProgressGroupItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Ausrichtung: Vertikal
-  Items:
-    - label:'Lesen'
-      Wert: 42
-      Farbe: "Primär"
-    - label:'Schreiben'
-      Wert: 18
-      Farbe: "Info"
-  Klasse: H-48
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  orientation: vertical
+  items:
+    - label: 'Read'
+      value: 42
+      color: 'primary'
+    - label: 'Write'
+      value: 18
+      color: 'info'
+  class: 'h-48'
 ---
 ::
 
-@@ph093@@Beispiele
+## Examples Bearbeiten
 
-### Mit Status-Slot
+### With Status-Steckplatz
 
 Verwenden Sie den `#status`-Slot, um den summierten Prozentsatz durch Ihren eigenen Inhalt zu ersetzen.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: Progress-Gruppe-Status-Beispiel
+collapse: true
+name: progress-group-status-example
 ---
 ::
 
-### Mit Artikel-Slots
+### With item-Steckplätze
 
-Verwenden Sie die `#item-label` und `#item-trailing` Slots zu ändern, was jeder Eintrag displays. Both erhalten die `item`, seine `index` und seine `percent`.
+Verwenden Sie die `#item-label` und `#item-trailing` Steckplätze zu ändern, was jeder Eintrag displays. Both empfangen die `item`, seine `index` und seine `percent`.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: Progress-Gruppe-Item-Beispiel
+collapse: true
+name: progress-group-item-example
 ---
 ::
 
-### Mit benutzerdefinierten Farben
+### With benutzerdefinierte Farben
 
-Geben Sie jedem Element eine CSS-Farbe, um eine Aufschlüsselung außerhalb der Themenpalette zu erstellen.
+Geben Sie jedem Element eine CSS-Farbe, um eine Gliederung außerhalb der Themenpalette zu erstellen.
 
 ::component-example
 ---
-Einsturz: wahr
-Bezeichnung: progress-group-custom-color-example
+collapse: true
+name: progress-group-custom-color-example
 ---
 ::
 
-@@103@bpb
+## API Bearbeiten
 
-@@@@@@@@104@@props
+### Props Bearbeiten
 
-Komponenten Props
+:component-props
 
-### Spielautomaten
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@106@@Einsteiger
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph107@@changelog (auf Englisch)
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

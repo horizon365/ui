@@ -15,46 +15,46 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PinInput.vue
 ---
 
-## 使用情况
+## 用法
 
-使用`v-model`指令来控制PinInput的值。
+使用`v-model`指令控制PinInput的值。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  - 模型值
-外部：
-  - 模型值
-道具：
-  型号值：[]
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: []
 ---
 ::
 
-当您不需要控制其状态时，请使用`default-value`属性来设定初始值。
+当不需要控制其状态时，使用`default-value`属性设置初始值。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  - 默认值
-道具：
-  默认值：['1'，'2'，'3']
+prettier: true
+ignore:
+  - defaultValue
+props:
+  defaultValue: ['1','2','3']
 ---
 ::
 
-### 类型
+### Type
 
-使用`type`属性更改输入类型。默认为`text`。
+使用`type` prop将输入类型. png更改为`text`。
 
 ::component-code
 ---
-项目名称：
-  字体：
-    - 文本
-- 编号
-道具：
-  类型：'number'
+items:
+  type:
+    - text
+    - number
+props:
+  type: 'number'
 ---
 ::
 
@@ -62,190 +62,190 @@ links:
 当`type`设置为`number`时，它将只接受数字字符。
 ::
 
-屏蔽
+### Mask
 
-使用`mask`属性将输入视为密码。
+使用`mask` prop将输入视为密码。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 占位符
-  - 默认值
-道具：
-  遮罩：true
-  默认值：[“1”、“2”、“3”、“4”、“5”]
+prettier: true
+ignore:
+  - placeholder
+  - defaultValue
+props:
+  mask: true
+  defaultValue: ['1','2','3','4','5']
 ---
 ::
 
-一步法
+### OTP
 
-使用`otp`属性启用一次性密码功能。启用后，移动的设备可以自动检测并填充SMS消息或剪贴板内容中的OTP代码，并支持自动完成功能。
+使用`otp`属性启用一次性密码功能。启用后，移动的设备可以自动检测并填充SMS消息或剪贴板内容中的OTP代码，并支持自动完成。
 
 ::component-code
 ---
-道具：
-  OTP：真
+props:
+  otp: true
 ---
 ::
 
-### 预留位置
+### 占位符
 
-使用`placeholder`道具来设定预留位置文字。
+使用`placeholder`属性设置占位符文本。
 
 ::component-code
 ---
-道具类：
-  占位符：'○'
+props:
+  placeholder: '○'
 ---
 ::
 
-长度
+### Length
 
-使用`length`道具更改输入量。
+使用`length` prop更改输入的数量。
 
 ::component-code
 ---
-忽略：
-- 占位符
-道具：
-  长度：6
-  占位符：'○'
+ignore:
+  - placeholder
+props:
+  length: 6
+  placeholder: '○'
 ---
 ::
 
-分隔符：徽标
+### 分隔符：badge{label="4.9+" class="align-text-top"}
 
-使用`separator`属性在输入组之间插入分隔符。传递一个数字可在每N个输入后插入一个分隔符。
+使用`separator` prop在输入组之间插入分隔符。传递一个数字以在每第N个输入后插入一个。
 
 ::component-code
 ---
-忽略：
-  占位符
-道具：
-  长度：6
-  分隔符：3
-  占位符：'○'
+ignore:
+  - placeholder
+props:
+  length: 6
+  separator: 3
+  placeholder: '○'
 ---
 ::
 
-您也可以传递位置数组，以便在特定输入之后插入分隔符号。
+您还可以传递一个位置数组，以便在特定输入后插入分隔符。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  占位符
-  长度
-- 分隔符
-道具：
-  长度：7
-  分隔符：[3，4]
-  占位符：'○'
+prettier: true
+ignore:
+  - placeholder
+  - length
+  - separator
+props:
+  length: 7
+  separator: [3, 4]
+  placeholder: '○'
 ---
 ::
 
-彩色的
+### Color
 
-使用`color`道具更改PinInput聚焦时的圆环颜色。
+使用`color`道具更改PinInput聚焦时的环颜色。
 
 ::component-code
 ---
-忽略：
-- 占位符
-道具：
-  颜色：中性
-  高亮显示：真
-  占位符：'○'
+ignore:
+  - placeholder
+props:
+  color: neutral
+  highlight: true
+  placeholder: '○'
 ---
 ::
 
 ::note
-`highlight`属性在这里用来显示焦点状态。当发生验证错误时，它会在内部使用。
+这里使用`highlight`属性来显示焦点状态。当发生验证错误时，在内部使用它。
 ::
 
-### 变体
+### Variant
 
-使用`variant`属性更改PinInput的变体。
+使用`variant` prop更改PinInput的变体。
 
 ::component-code
 ---
-忽略：
-  占位符
-道具：
-  颜色：中性
-  变体：细微
-  突出显示：假
-  占位符：'○'
+ignore:
+  - placeholder
+props:
+  color: neutral
+  variant: subtle
+  highlight: false
+  placeholder: '○'
 ---
 ::
 
-尺寸
+### Size
 
 使用`size`属性更改PinInput的大小。
 
 ::component-code
 ---
-忽略：
-- 占位符
-道具：
-  尺寸：xl
-  占位符：'○'
+ignore:
+  - placeholder
+props:
+  size: xl
+  placeholder: '○'
 ---
 ::
 
-### 已停用
+### 禁用
 
-使用`disabled`属性禁用PinInput。
+使用`disabled` prop禁用PinInput。
 
 ::component-code
 ---
-忽略：
-  占位符
-道具：
-  已禁用：true
-  占位符：'○'
+ignore:
+  - placeholder
+props:
+  disabled: true
+  placeholder: '○'
 ---
 ::
 
-示例
+## 示例
 
-### 带分隔符插槽：徽标{label="4.9+" class="align-text-top"}
+### 带分隔槽：badge{label="4.9+" class="align-text-top"}
 
-使用`separator`插槽自定分隔符外观。
+使用`separator`插槽自定义分隔符外观。
 
 ::component-example
 ---
-名称：'引脚-输入-分隔符-插槽-示例'
+name: 'pin-input-separator-slot-example'
 ---
 ::
 
-美国石油学会
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-发射器
+### Emits
 
-：组件发射
+:component-emits
 
-暴露
+### 曝光
 
 通过模板引用访问组件时，可以使用以下命令：
 
 | 名称|类型|
 | ---- | ---- |
-| 我的天啊|我的天啊|
+| `inputsRef`{lang="ts-type"}| `Ref<ComponentPublicInstance[]>`{lang="ts-type"}|
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

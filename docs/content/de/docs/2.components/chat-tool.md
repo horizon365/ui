@@ -3,7 +3,7 @@ title: Das Chattool
 description: Zeigt den Status eines zusammenklappbaren AI-Tools an.
 category: chat
 links:
-  - label: Kollapsfähig
+  - label: Kollapsibel
     icon: i-custom-reka-ui
     to: https://reka-ui.com/docs/components/collapsible
   - label: GitHub
@@ -11,292 +11,292 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatTool.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
 Die ChatTool-Komponente rendert einen zusammenklappbaren Block, der den Aufrufstatus des KI-Tools anzeigt, z. B. „ Komponenten suchen "oder „ Dokumentation lesen". Wenn ein Standard-Slot bereitgestellt wird, wird er zusammenklappbar, um die Werkzeugausgabe anzuzeigen.
 
 ::component-example
 ---
-Einsturz: wahr
-Schöner: wahr
-Name: 'Chat-Tool-Beispiel'
+collapse: true
+prettier: true
+name: 'chat-tool-example'
 ---
 ::
 
-@@ph001@@text
+### Text Bearbeiten
 
-Verwenden Sie `text` prop, um den Werkzeugstatustext festzulegen.
+Verwenden Sie die `text`-Prop, um den Werkzeugstatustext festzulegen.
 
 ::component-code
 ---
-Hide:
-  @@003@Klasse
-Props:
-  Text: 'Gesuchte Komponenten'
-  Bezeichnung: W-60
+hide:
+  - class
+props:
+  text: 'Searched components'
+  class: 'w-60'
 ---
 ::
 
-@@ph004@@suffix
+### Suffix (englisch)
 
-Verwenden Sie die `suffix` prop, um sekundären Text nach dem Hauptlabel anzuzeigen.
+Verwenden Sie die `suffix`-Prop, um sekundären Text nach dem Hauptlabel anzuzeigen.
 
 ::component-code
 ---
-Hide:
-  @@006@Klasse
-Ignoriert:
-  @@ph007@@text
-Props:
-  Text: 'Lesekomponente'
-  Zitat von » Button «
-  Klasse: W-60
+hide:
+  - class
+ignore:
+  - text
+props:
+  text: 'Reading component'
+  suffix: 'Button'
+  class: 'w-60'
 ---
 ::
 
-@@ph008@streaming@streaming@ph008@@streaming@@streaming@@streaming@@streaming@streaming@@streaming@streaming@streaming@streaming@streaming@streaming@@streaming@streaming@@streaming@streaming@streaming@@streaming@@streaming@@@streaming@@@@@streaming@@@@@@@streaming@@@@@@@@@@@@@streamingstreaming@streaming@@@@streaming@@@@@@streaming@@@@@@@@@streaming@@@@@@@@@@@@@@@streaming@@@@@@@@@@@@@@@@@@@streaming@@@@@@@@@@@@@@@@@streaming@@@@@@@@@@@@@
+### Streaming (englisch)
 
-Verwenden Sie die `streaming` prop, um anzuzeigen, dass das Tool aktiv ausgeführt wird.
+Verwenden Sie die `streaming`-Prop, um anzuzeigen, dass das Tool aktiv ausgeführt wird. Der Text zeigt eine Schimmer-Animation an.
 
 ::component-code
 ---
-Hide:
-  @@10@Klasse
-Ignoriert:
-  @@ph011@@text
-Props:
-  Streaming: Richtig
-  Text: 'Komponenten suchen...'
-  Klasse: W-60
+hide:
+  - class
+ignore:
+  - text
+props:
+  streaming: true
+  text: 'Searching components...'
+  class: 'w-60'
 ---
 ::
 
 ::tip
-Verwenden Sie das Dienstprogramm `isToolStreaming` von `@nuxt/ui/utils/ai`, um festzustellen, ob ein Werkzeugteil noch läuft. Es gibt `false` zurück, wenn das Werkzeug auf eine Benutzergenehmigung wartet.
+Verwenden Sie das Dienstprogramm `isToolStreaming` von `@nuxt/ui/utils/ai`, um festzustellen, ob ein Werkzeugteil noch läuft.
 ::
 
-@@ph015@@schimmernummer
+### Shimmer (nicht)
 
-Beim Streamen verwendet das Trigger-Label die Komponente [`ChatShimmer`](/docs/components/chat-shimmer). Verwenden Sie die `shimmer` prop, um die Komponenten `duration` und `spread` anzupassen.
+Beim Streamen verwendet das Trigger-Label die Komponente [`ChatShimmer`](/docs/components/chat-shimmer). Verwenden Sie die `shimmer`-Prop, um die `duration` und `spread` anzupassen.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@ph024@gmail.de
-Ignoriert:
-  @@ph025@@text (nicht übersetzt)
-Props:
-  Streaming: Richtig
-  Text: 'Komponenten suchen...'
-  Shimmer:
-    Dauer: 2
-    Verbreitung: 2
-  Bezeichnung: W-60
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+props:
+  streaming: true
+  text: 'Searching components...'
+  shimmer:
+    duration: 2
+    spread: 2
+  class: 'w-60'
 ---
 ::
 
-@@ph026@@@Ikonen-Seite
+### Icon (nicht)
 
-Verwenden Sie die `icon` prop, um eine [Icon](/docs/components/icon) Komponente neben dem Trigger anzuzeigen.
+Verwenden Sie die `icon`-Prop, um eine [Icon](/docs/components/icon)-Komponente neben dem Trigger anzuzeigen.
 
 ::component-code
 ---
-Hide:
-  @@@@@@@@@@@class
-Ignoriert:
-  @@ph033@@text @ Übersetzung
-Props:
-  I-Lucide-Suche
-  Text: 'Gesuchte Komponenten'
-  Bezeichnung: W-60
+hide:
+  - class
+ignore:
+  - text
+props:
+  icon: i-lucide-search
+  text: 'Searched components'
+  class: 'w-60'
 ---
 ::
 
-@@ph034@Aufladen
+### loading (englisch)
 
-Verwenden Sie `loading` prop, um eine Ladeanzeige anzuzeigen.
+Verwenden Sie die `loading`-prop, um eine Ladeanzeige anzuzeigen. Verwenden Sie die `loading-icon`-prop, um das Ladesymbol anzupassen.
 
 ::component-code
 ---
-Hide:
-  @@@@@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@class@class@class@class@classclass@class@class@class@classclassclass@classclass@class@class
-Ignoriert:
-  @@ph038@@text @ Übersetzung
-Props:
-  Aufladung: true
-  Text: 'Komponenten suchen...'
-  Bezeichnung: W-60
+hide:
+  - class
+ignore:
+  - text
+props:
+  loading: true
+  text: 'Searching components...'
+  class: 'w-60'
 ---
 ::
 
-@@ph039@@Icon-Anzeige
+### Loading Icon [Bearbeiten | Quelltext bearbeiten
 
-Verwenden Sie `loading-icon` prop, um das Ladesymbol anzupassen. Standardmäßig ist `i-lucide-loader-circle`.
+Verwenden Sie die `loading-icon`-prop, um das Ladesymbol anzupassen. Standardmäßig ist `i-lucide-loader-circle`.
 
 ::component-code
 ---
-Hide:
-  @@ph042@gmail.de
-Ignoriert:
-  @@ph043@@text
-Props:
-  Aufladung: true
-  loadingIcon: 'i-lucide-loader'(englisch)
-  Text: 'Komponenten suchen...'
-  Bezeichnung: W-60
+hide:
+  - class
+ignore:
+  - text
+props:
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  text: 'Searching components...'
+  class: 'w-60'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.loading` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.loading` Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.loading` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.loading` Schlüssel anpassen.
 :::
 ::
 
-@@ph048@@chvrn
+### Chevron Bearbeiten
 
-Verwenden Sie die `chevron` prop, um die Position des Chevron-Symbols zu ändern.
+Verwenden Sie die `chevron`-Prop, um die Position des Chevron-Symbols zu ändern.
 
 ::note
-Wenn `chevron` auf `leading` mit einem `icon` gesetzt ist, wechselt das Symbol mit dem Chevron auf Hover und wenn es geöffnet ist.
+Wenn `chevron` mit einem `icon` auf `leading` gesetzt ist, wechselt das Symbol mit dem Chevron auf Hover und wenn es geöffnet ist.
 ::
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@53@Klasse
-Ignoriert:
-  @@ph054@@text
-Props:
-  Chevron: Führung
-  I-Lucide-Suche
-  Text: 'Gesuchte Komponenten'
-  Klasse: W-60
-Die Slots:
-  Default:|
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+props:
+  chevron: leading
+  icon: i-lucide-search
+  text: 'Searched components'
+  class: 'w-60'
+slots:
+  default: |
 
-    Tool für Output Content
+    Tool output content
 ---
 ::
 
-@@ph055@@Chevron Icon (nicht bekannt)
+### Chevron Icon (Deutsche Ausgabe)
 
-Verwenden Sie die `chevron-icon` prop, um den Chevron [Icon](/docs/components/icon). Standardmäßig auf `i-lucide-chevron-down`.
+Verwenden Sie die `chevron-icon`-Prop, um den chevron [Icon](/docs/components/icon). Defaults auf `i-lucide-chevron-down`.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@@@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@c
-Ignoriert:
-  @@ph063@@text (nicht übersetzt)
-Props:
-  chevronIcon: 'i-lucide-arrow-down'(deutsch: 'i-lucide-arrow-down')
-  Text: 'Gesuchte Komponenten'
-  Klasse: W-60
-Slots auf:
-  Default:|
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+props:
+  chevronIcon: 'i-lucide-arrow-down'
+  text: 'Searched components'
+  class: 'w-60'
+slots:
+  default: |
 
-    Tool für Output Content
+    Tool output content
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.chevronDown` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.chevronDown` Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.chevronDown` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.chevronDown` Schlüssel anpassen.
 :::
 ::
 
-@@@ph068@@@Variant-Variante
+### Variant Bearbeiten
 
-Verwenden Sie `variant` prop, um den visuellen Stil zu ändern. Standardmäßig auf `inline`.
-
-::component-code
----
-Schöner: wahr
-Hide:
-  @@@@@@@@@@class
-Ignoriert:
-  @@ph072@@@text @@@ Übersetzung
-  @@@@@@@@@@@icon.de
-Props:
-  Variante: Karte
-  Text: 'Gesuchte Komponenten'
-  I-Lucide-Suche
-  Deutschland: Trailing
-  Bezeichnung: W-60
-Slots auf:
-  Default:|
-
-    Tool für Content Output
----
-::
-
-### Aktionen: badge{label="4.10+" class="align-text-top"}
-
-Verwenden Sie `actions` prop, um eine Liste von [Button](/docs/components/button) unter dem Auslöser anzuzeigen, was für Tools nützlich ist, die vor der Ausführung eine Benutzerbestätigung benötigen.
+Verwenden Sie die `variant`-prop, um den visuellen Stil zu ändern. Standardmäßig auf `inline`.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@@@@@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclassclass@classclassclass@classclassclass@class@classclass@classclassclassclass@class@classclassclass
-Ignoriert:
-  @@@@@@@@82@@text
-  @@@@@@@@@@@icon_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-  @@@@@@@@@@@@@@@@@@@@@@ph084@@@variant
-  @@@@@@85@actions
-Props:
-  Aktionen:
-    - label:'Genehmigen'
-    - label:'Leugnen'
-      Farbe: neutral
-      Die Variante: Soft
-  Text: "Terminalbefehl ausführen"
-  Variante: Karte
-  Bezeichnung: i-Lucide-Terminal
-  Bezeichnung: W-60
-Die Slots:
-  Default:|
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+  - icon
+props:
+  variant: card
+  text: 'Searched components'
+  icon: i-lucide-search
+  chevron: trailing
+  class: 'w-60'
+slots:
+  default: |
 
-    $pnpm Run Lint Ubersetzungen
+    Tool output content
 ---
 ::
 
-@@@@@@@88@@@Beispiele
+### Actions: badge{label="4.10+" class="align-text-top"} (Aktion)
+
+Verwenden Sie die `actions`-Prop, um eine Liste von [Button](/docs/components/button) unterhalb des Auslösers anzuzeigen, nützlich für Tools, die vor der Ausführung eine Benutzerbestätigung benötigen.
+
+::component-code
+---
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+  - icon
+  - variant
+  - actions
+props:
+  actions:
+    - label: 'Approve'
+    - label: 'Deny'
+      color: neutral
+      variant: soft
+  text: 'Run terminal command'
+  variant: card
+  icon: i-lucide-terminal
+  class: 'w-60'
+slots:
+  default: |
+
+    $ pnpm run lint
+---
+::
+
+## Beispiele
 
 ::tip{to="/docs/components/chat"}
-Auf der Übersichtsseite **Chat** finden Sie Installationsanweisungen, Server-Setup und Anwendungsbeispiele.
+Auf der Übersichtsseite von **Chat** finden Sie Installationsanweisungen, Server-Setup und Anwendungsbeispiele.
 ::
 
-### Mit Genehmigungsfluss: badge{label="4.10+" class="align-text-top"}
+### With Genehmigungsfluss: badge{label="4.10+" class="align-text-top"}
 
-Verwenden Sie `actions` prop, um einen Werkzeuggenehmigungsfluss mit dem [AI SDK]()) zu erstellen.
+Verwenden Sie die `actions`-Prop, um einen Werkzeuggenehmigungsfluss mit dem [AI SDK](https://ai-sdk.dev/docs/agents/tool-approvalsxph22x zu erstellen. Wenn sich ein Werkzeugteil im `approval-requested`-Status befindet, zeigen Sie die Aktionen zum Genehmigen und Ablehnen an und antworten Sie mit `addToolApprovalResponse`.
 
 ::component-example
 ---
-Einsturz: wahr
-Schöner: wahr
-name: 'chat-tool-approval-example'(Chat-Tool-Approbationsbeispiel)
+collapse: true
+prettier: true
+name: 'chat-tool-approval-example'
 ---
 ::
 
 ::tip
-Verwenden Sie das Dienstprogramm `isToolApprovalPending` von `@nuxt/ui/utils/ai`, um eine ausstehende Genehmigung zu erkennen, und `isToolStreaming` gibt `false` in diesem Zustand zurück.
+Verwenden Sie das `isToolApprovalPending`-Dienstprogramm von `@nuxt/ui/utils/ai`, um eine ausstehende Genehmigung zu erkennen, `isToolStreaming` gibt `false` in diesem Zustand zurück.
 
 ```vue
 <script setup lang="ts">
@@ -322,24 +322,24 @@ const { messages, addToolApprovalResponse } = useChat({
 ```
 ::
 
-@@126@bmw.de
+## API
 
-@@@@@@@@@@@@@@ph127@@props
+### Props (nicht)
 
-Komponenten-Props
+:component-props
 
-### Spielautomaten
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph129@@emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-@@ph130@gmail.de @ Seite
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph131@@changelog @ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

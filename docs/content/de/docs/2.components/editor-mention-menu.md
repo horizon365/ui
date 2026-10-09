@@ -8,24 +8,24 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/EditorMentionMenu.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Die EditorMentionMenu-Komponente zeigt ein Menü mit Benutzervorschlägen an, wenn Sie ein Triggerzeichen (standardmäßig `@`) im Editor eingeben, und fügt die ausgewählte Erwähnung mit dem @@@@-Paket ein.
+Die EditorMentionMenu-Komponente zeigt ein Menü mit Benutzervorschlägen an, wenn Sie ein Triggerzeichen (standardmäßig `@`) im Editor eingeben, und fügt die ausgewählte Erwähnung mit dem Paket `@tiptap/extension-mention` ein.
 
 ::note
-Es verwendet das `useEditorMenu` composable, das auf TipTaps [Suggestion](https://tiptap.dev/docs/editor/api/utilities/suggestion) Utility aufbaut, um Elemente während der Eingabe zu filtern und die Tastaturnavigation zu unterstützen (Pfeiltasten, eingeben, um auszuwählen, entkommen, um zu schließen).
+Es verwendet das `useEditorMenu` composable, das auf dem Dienstprogramm [Suggestion](https://tiptap.dev/docs/editor/api/utilities/suggestion) von TipTap aufbaut, um Elemente während der Eingabe zu filtern und die Tastaturnavigation zu unterstützen (Pfeiltasten, zum Auswählen eingeben, zum Schließen entkommen).
 ::
 
 ::caution
-Es muss innerhalb eines [Editor](/docs/components/editor) Komponente verwendet werden, um Zugriff auf die Editor-Instanz zu haben.
+Es muss innerhalb eines [Editor](/docs/components/editor)-Komponentensteckplatzes verwendet werden, um Zugriff auf die Editorinstanz zu haben.
 ::
 
 ::component-example
 ---
-Höhe: true
-Einsturz: wahr
-Name: 'editor-mention-menu-example'(Bearbeiten)
-Klasse: 'P-8'
+elevated: true
+collapse: true
+name: 'editor-mention-menu-example'
+class: 'p-8'
 ---
 ::
 
@@ -33,32 +33,32 @@ Klasse: 'P-8'
 Erfahren Sie mehr über die Mention-Erweiterung in der TipTap-Dokumentation.
 ::
 
-@@ph012@gmail.de
+### Items Bearbeiten
 
-Verwenden Sie `items` prop als Array von Objekten mit den folgenden Eigenschaften:
+Verwenden Sie die `items`-prop als Array von Objekten mit den folgenden Eigenschaften:
 
-`label: string`{lang="ts-type"}`label: string`{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}
-`avatar?: AvatarProps``avatar?: AvatarProps``avatar?: AvatarProps`{lang="ts-type"}
-`icon?: string`PH0221{lang="ts-type"}
-`description?: string``description?: string``description?: string`{lang="ts-type"}
-`disabled?: boolean`{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}PH028027@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+- `label: string`xph0222x (nicht vorhanden)
+- `avatar?: AvatarProps`{lang="ts-type"} (englisch)
+- `icon?: string`{lang="ts-type"} (nicht)
+- `description?: string`{lang="ts-type"} (nicht vorhanden)
+- `disabled?: boolean`{lang="ts-type"} (nicht vorhanden)
 
 ::component-example
 ---
-Höhe: true
-Einsturz: wahr
-name: 'editor-mention-menu-items-example'(Editor-Erwähnung-Menu-Elemente-Beispiel)
-Klasse: 'P-8'
+elevated: true
+collapse: true
+name: 'editor-mention-menu-items-example'
+class: 'p-8'
 ---
 ::
 
 ::note
-Sie können auch ein Array von Arrays an `items` prop übergeben, um getrennte Gruppen von Elementen zu erstellen.
+Sie können auch ein Array von Arrays an die `items`-prop übergeben, um getrennte Gruppen von Elementen zu erstellen.
 ::
 
-@@ph030@@char
+### Char (nicht)
 
-Verwenden Sie `char` prop, um das Triggerzeichen zu ändern. Standardmäßig ist `@`{lang="ts-type"}. Das Triggerzeichen wird auch als Präfix verwendet, wenn die eingefügte Erwähnung wiedergegeben wird (z. B.`#channel` anstelle von `@channel`).
+Verwenden Sie die prop `char`, um das Triggerzeichen zu ändern. Standardmäßig ist es `@`{lang="ts-type"}. Das Triggerzeichen wird auch als Präfix verwendet, wenn die eingefügte Erwähnung wiedergegeben wird (z. B. `#channel` anstelle von `@channel`).
 
 ```vue
 <template>
@@ -69,7 +69,7 @@ Verwenden Sie `char` prop, um das Triggerzeichen zu ändern. Standardmäßig ist
 ```
 
 ::note
-Sie können mehrere `EditorMentionMenu`-Komponenten im selben Editor mit verschiedenen `char` und `plugin-key`-Props verwenden, um verschiedene Erwähnungstypen zu unterstützen.
+Sie können mehrere `EditorMentionMenu`-Komponenten im selben Editor mit verschiedenen `char`-und `plugin-key`-Requisiten verwenden, um verschiedene Erwähnungstypen zu unterstützen.
 
 ```vue
 <template>
@@ -83,7 +83,7 @@ Sie können mehrere `EditorMentionMenu`-Komponenten im selben Editor mit verschi
 
 ### Vorschlag: badge{label="4.7+" class="align-text-top"}
 
-Verwenden Sie die `suggestion` prop, um TipTap's [Suggestion matching behavior](https://tiptap.dev/docs/editor/api/utilities/suggestion#settings) anzupassen.
+Verwenden Sie die `suggestion`-Prop, um TipTaps [Suggestion-Übereinstimmungsverhalten ](https://tiptap.dev/docs/editor/api/utilities/suggestion#settings) anzupassen.
 
 Dies ist nützlich, wenn das Triggerzeichen direkt nach anderen Zeichen geöffnet werden soll, anstatt das Standard-Whitespace-Präfix zu erfordern.
 
@@ -102,9 +102,9 @@ Dies ist nützlich, wenn das Triggerzeichen direkt nach anderen Zeichen geöffne
 </template>
 ```
 
-@@ph075@Optionen
+### Options (Deutsche Übersetzung)
 
-Verwenden Sie `options` prop, um das Positionierungsverhalten mit [Floating UI options](https://floating-ui.com/docs/computeposition#options) anzupassen.
+Verwenden Sie die `options`-Prop, um das Positionierungsverhalten mit [Floating UI-Optionen ](https://floating-ui.com/docs/computeposition#options) anzupassen.
 
 ```vue
 <template>
@@ -121,35 +121,35 @@ Verwenden Sie `options` prop, um das Positionierungsverhalten mit [Floating UI o
 </template>
 ```
 
-@@ph095@@Beispiele
+## Examples (Beispiele)
 
-### Mit Ignorierfilter: badge{label="4.4+" class="align-text-top"}
+### With ignore filter: badge{label="4.4+" class="align-text-top"} (mit Ignorierfilter)
 
-Sie können `ignore-filter` prop auf `true` setzen, um die interne Suche zu deaktivieren und Ihre eigene Suchlogik zu verwenden. Verwenden Sie `v-model:search-term`, um auf den aktuellen Suchbegriff zuzugreifen und Elemente aus einer API zu holen.
+Sie können die `ignore-filter`-prop auf `true` setzen, um die interne Suche zu deaktivieren und Ihre eigene Suchlogik zu verwenden. Verwenden Sie `v-model:search-term`, um auf den aktuellen Suchbegriff zuzugreifen und Elemente aus einer API zu holen.
 
 ::component-example
 ---
-Höhe: wahr
-Einsturz: wahr
-name: 'editor-mention-menu-ignore-filter-example'(editor-erwähnung-menu-ignorieren-filter-beispiel)
-Klasse: 'P-8'
+elevated: true
+collapse: true
+name: 'editor-mention-menu-ignore-filter-example'
+class: 'p-8'
 ---
 ::
 
 ::note
-Dieses Beispiel verwendet [`refDebounced`](https://vueuse.org/shared/refDebounced/), um die API-Aufrufe zu entkräften.
+In diesem Beispiel wird [`refDebounced`](https://vueuse.org/shared/refDebounced/) verwendet, um die API-Aufrufe zu entkräften.
 ::
 
-@@106@btw
+## API (englisch)
 
-@@@@@@@@@@@@@@ph107@@props
+### Props (nicht)
 
-Komponenten Props
+:component-props
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@################################################################################################################################################################################################
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph109@@changelog (auf Englisch)
+## Changelog (deutsch)
 
-Das Component-Changelog
+:component-changelog

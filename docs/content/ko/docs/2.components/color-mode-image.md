@@ -8,38 +8,38 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/color-mode/ColorModeImage.vue
 ---
 
-##  사용
+## Usage
 
-ColorModeImage 구성 요소는 [`@nuxt/image`PH05https://github.com/nuxt/image)가 설치되어 있으면 `img`로 다시 돌아갑니다.
+ColorModeImage 구성 요소는 [`@nuxt/image`](https://github.com/nuxt/image)를 설치할 때 `<NuxtImg>` 구성 요소를 사용하며 그렇지 않으면 `img`로 대체됩니다.
 
 ::component-code{prefix="color-mode"}
 ---
-상품명 : True
-무시하기:
-  -  width
-  -  높이
-소품 :
-  라이트: 'https://picsum.photos/id/29/400'
+prettier: true
+ignore:
+  - width
+  - height
+props:
+  light: 'https://picsum.photos/id/29/400'
   dark: 'https://picsum.photos/id/46/400'
-  폭: 200
-  높이 : 200
+  width: 200
+  height: 200
 ---
 ::
 
 ::note
-밝은 모드와 어두운 모드 사이를 전환하여 다른 이미지를 보십시오. :u-color-mode-select {size="sm"}
+밝은 모드와 어두운 모드 사이를 전환하여 다른 이미지를 확인합니다. :u-color-mode-select{size="sm"}
 ::
 
-##  API
+## API 사용
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes" target="_blank"}
-이 컴포넌트는 모든 네이티브 `<img>`HTML 속성을 지원합니다.
+이 구성 요소는 모든 기본 `<img>` HTML 속성도 지원합니다.
 ::
 
-##  Changelog
+## 변경 로그
 
-: component-changelog {prefix="color-mode"}
+:component-changelog{prefix="color-mode"}

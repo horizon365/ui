@@ -1,5 +1,5 @@
 ---
-title: Seitensektion
+title: Pagesection
 description: 'Eine responsive Seite für Ihre Seiten.'
 category: page
 links:
@@ -8,36 +8,36 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageSection.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Die PageSection-Komponente umhüllt Ihren Inhalt in einem [Container](/docs/components/container), während die Flexibilität der vollen Breite beibehalten wird, wodurch es einfach ist, Hintergrundfarben, Bilder oder Muster hinzuzufügen.
+Die PageSection-Komponente umhüllt Ihren Inhalt in einem [Container](/docs/components/container) und behält dabei die Flexibilität der vollen Breite bei, wodurch es einfach ist, Hintergrundfarben, Bilder oder Muster hinzuzufügen.
 
 ::code-preview
 
 ::u-page-section
 ---
-Titel: 'Schöne Vue UI-Komponenten
-Beschreibung: Nuxt UI bietet eine umfassende Suite von Komponenten und Dienstprogrammen, die Ihnen helfen, schöne und zugängliche Webanwendungen mit Vue und Nuxt zu erstellen.
-Überschrift:"Features"
-Features:
-  - title:'Icons'(auf Englisch)
-    Beschreibung: 'Nuxt UI integriert sich mit Nuxt Icon, um auf über 200.000 Icons von Iconify zuzugreifen.
-    I-Lucide-Smile (englisch)
-    zu: '/docs/getting-started/integrations/icons'
-  - title:'Schriftarten'
-    Beschreibung: 'Nuxt UI integriert sich mit Nuxt Fonts, um Plug-and-Play-Schriftoptimierung zu ermöglichen.'
-    I-Lucide-A-Large-Small (Deutsche Ausgabe)
-    zu: '/docs/getting-started/integrations/fonts'
-  - title:'Farbmodus'
-    Beschreibung: 'Nuxt UI integriert sich in den Nuxt Color Mode, um zwischen hell und dunkel zu wechseln.'
-    I-lucide-sun-moon (I-lucide-Sonne-Mond)
-    zu: '/docs/getting-started/integrations/color-mode'
+title: 'Beautiful Vue UI components'
+description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+headline: 'Features'
+features:
+  - title: 'Icons'
+    description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
+    icon: 'i-lucide-smile'
+    to: '/docs/getting-started/integrations/icons'
+  - title: 'Fonts'
+    description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
+    icon: 'i-lucide-a-large-small'
+    to: '/docs/getting-started/integrations/fonts'
+  - title: 'Color Mode'
+    description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.'
+    icon: 'i-lucide-sun-moon'
+    to: '/docs/getting-started/integrations/color-mode'
 ---
 ::
 
 ::
 
-Verwenden Sie es nach einer [PageHero](/docs/components/page-hero) Komponente:
+Verwenden Sie es nach einer [PageHero](/docs/components/page-hero)-Komponente.
 
 ```vue {4}
 <template>
@@ -47,257 +47,257 @@ Verwenden Sie es nach einer [PageHero](/docs/components/page-hero) Komponente:
 </template>
 ```
 
-@@ph019@titel@title
+### title
 
-Verwenden Sie `title` prop, um den Titel des Abschnitts zu setzen.
-
-::component-code
----
-Props:
-  Titel: 'Schöne Vue UI-Komponenten
----
-::
-
-@@ph021@@Beschreibung
-
-Verwenden Sie `description` prop, um die Beschreibung des Abschnitts festzulegen.
+Verwenden Sie die `title`-Prop, um den Titel des Abschnitts festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph023@title
-Props:
-  Titel: 'Schöne Vue UI Komponenten'
-  Beschreibung: : Nuxt UI bietet eine umfassende Suite von Komponenten und Dienstprogrammen, die Ihnen helfen, schöne und zugängliche Webanwendungen mit Vue und Nuxt zu erstellen.
+props:
+  title: 'Beautiful Vue UI components'
 ---
 ::
 
-@@ph024@Überschrift
+### Beschreibung
 
-Verwenden Sie die `headline` prop, um die Überschrift des Abschnitts festzulegen.
+Verwenden Sie die `description`-Prop, um die Beschreibung des Abschnitts festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph026@title
-  @@ph027@beschreibung
-Props:
-  Titel: 'Schöne Vue UI Komponenten'
-  Beschreibung: : Nuxt UI bietet eine umfassende Suite von Komponenten und Dienstprogrammen, die Ihnen helfen, schöne und zugängliche Webanwendungen mit Vue und Nuxt zu erstellen.
-  Überschrift:"Features"
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
 ---
 ::
 
-@@ph028@@@Icon-Seite
+### Überschrift
 
-Verwenden Sie `icon` prop, um das Symbol des Abschnitts zu setzen.
+Verwenden Sie die `headline`-Prop, um die Überschrift des Abschnitts festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph030@title
-  @@ph031@beschreibung
-Props:
-  Titel: 'Schöne Vue UI Komponenten'
-  Beschreibung: : Nuxt UI bietet eine umfassende Suite von Komponenten und Dienstprogrammen, die Ihnen helfen, schöne und zugängliche Webanwendungen mit Vue und Nuxt zu erstellen.
-  Icon: 'I-Lucide-Rakete'
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  headline: 'Features'
 ---
 ::
 
-@@ph032@@Eigenschaften
+### Icon (englisch)
 
-Verwenden Sie `features` prop, um eine Liste von [PageFeature](/docs/components/page-feature) unter der Beschreibung als Array von Objekten mit den folgenden Eigenschaften anzuzeigen:
-
-`title?: string`{lang="ts-type"}
-`description?: string``description?: string``description?: string`{lang="ts-type"}
-`icon?: string``icon?: string``icon?: string``icon?: string`{lang="ts-type"}
-`orientation?: 'horizontal' | 'vertical'``orientation?: 'horizontal' | 'vertical'``orientation?: 'horizontal' | 'vertical'`{lang="ts-type"}PH0499@@@@@@@@@PH0499@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-Sie können jede Eigenschaft von der [Link](/docs/components/link#props) Komponente wie `to`,`target`, etc. übergeben.
+Verwenden Sie die `icon`-Prop, um das Symbol des Abschnitts festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Außen:
-  @@ph056@@gmail.de
-Externe Typen:
-  - PageFeatureProps [Bearbeiten | Quelltext bearbeiten]
-Ignoriert:
-  @@@@@@58@title
-  @@@ph059@beschreibung
-  @@ph060@@gmail.de
-Props:
-  Titel: 'Schöne Vue UI-Komponenten
-  Beschreibung: : Nuxt UI bietet eine umfassende Suite von Komponenten und Dienstprogrammen, die Ihnen helfen, schöne und zugängliche Webanwendungen mit Vue und Nuxt zu erstellen.
-  Features:
-    - title:'Icons'(Deutsche Übersetzung)
-      Beschreibung: 'Nuxt UI integriert sich mit Nuxt Icon, um auf über 200.000 Icons von Iconify zuzugreifen.
-      I-Lucide-Smile (englisch)
-      zu: '/docs/getting-started/integrations/icons'
-    - title:'Schriftarten'
-      Beschreibung: 'Nuxt UI integriert sich mit Nuxt Fonts, um Plug-and-Play-Schriftoptimierung zu ermöglichen.'
-      I-Lucide-A-Large-Small (Deutsche Ausgabe)
-      zu: '/docs/getting-started/integrations/fonts'
-    - title:'Farbmodus'
-      Beschreibung: 'Nuxt UI integriert sich in den Nuxt Color Mode, um zwischen hell und dunkel zu wechseln.'
-      I-lucide-sun-moon (I-lucide-Sonne-Mond)
-      zu: '/docs/getting-started/integrations/color-mode'
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  icon: 'i-lucide-rocket'
 ---
 ::
 
-@@@@@@@64@@@Links
+### Eigenschaften
 
-Verwenden Sie `links` prop, um eine Liste von [Button](/docs/components/button) unter der Beschreibung anzuzeigen.
+Verwenden Sie die `features`-prop, um eine Liste von [PageFeature](/docs/components/page-feature) unter der Beschreibung als Array von Objekten mit den folgenden Eigenschaften anzuzeigen:
+
+- `title?: string`{lang="ts-type"} (englisch)
+- `description?: string`{lang="ts-type"} (englisch)
+- `icon?: string`{lang="ts-type"} (nicht vorhanden)
+- `orientation?: 'horizontal' | 'vertical'`{lang="ts-type"} (nicht vorhanden)
+
+Sie können jede Eigenschaft aus der [Link](/docs/components/link#props)-Komponente übergeben, z. B. `to`, `target` usw.
 
 ::component-code
 ---
-Schöner: wahr
-Außen:
-  @@@@@@@70@@links
-Externe Personen:
-  @@@buttonprops [Bearbeiten | Quelltext bearbeiten]
-Ignoriert:
-  @@ph072@@title
-  @@ph073@beschreibung
-  @@@@@@@@@@@@@@@@Links
-Props:
-  Titel: 'Schöne Vue UI Komponenten'
-  Beschreibung: Nuxt UI bietet eine umfassende Suite von Komponenten und Dienstprogrammen, die Ihnen helfen, schöne und zugängliche Webanwendungen mit Vue und Nuxt zu erstellen.
-  Links auf:
-    - label:'Fangen Sie an'
-      nach/docs/getting-started
-      I-Lucide-Square-Play (Deutsche Ausgabe)
-      Farbe: „ neutral "
-    - label:'Komponenten erkunden'
-      zu: '/docs/components/app'
-      Farbe: „ neutral "
-      Variante: „ subtil "
-      trailingIcon: 'i-lucide-arrow-right'(englisch)
+prettier: true
+external:
+  - features
+externalTypes:
+  - PageFeatureProps[]
+ignore:
+  - title
+  - description
+  - features
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  features:
+    - title: 'Icons'
+      description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
+      icon: 'i-lucide-smile'
+      to: '/docs/getting-started/integrations/icons'
+    - title: 'Fonts'
+      description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
+      icon: 'i-lucide-a-large-small'
+      to: '/docs/getting-started/integrations/fonts'
+    - title: 'Color Mode'
+      description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.'
+      icon: 'i-lucide-sun-moon'
+      to: '/docs/getting-started/integrations/color-mode'
 ---
 ::
 
-### Orientierung
+### Links (Englisch)
 
-Verwenden Sie die `orientation` prop, um die Ausrichtung mit dem Standardslot zu ändern.
+Verwenden Sie die `links`-Prop, um eine Liste von [Button](/docs/components/button) unter der Beschreibung anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Außen:
-  @@@@@@@@@@@ph080@@features
-  @@@@@@@81@@links
-Externe Typen:
-  - PageFeatureProps [Bearbeiten | Quelltext bearbeiten]
-  @@ph083@buttonprops [Bearbeiten | Quelltext bearbeiten]
-Ignoriert:
-  @@@@@84@title
-  @@85@description@85@description@@description@description@@description@description@description@description@description@description@description@description@description@description@description@description@description@ph085@description@description@description@description@description@description@ph085@description@description
-  @@@@@@@@@@icon______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-  @@@@@@@@@ph087@@features
-  @@@@88@88@88@@88@@888@@@888@@@@888@@@888@@88@@@888@@@888@@888@@@@@links
-Props:
-  Titel: 'Schöne Vue UI-Komponenten
-  Beschreibung: : Nuxt UI bietet eine umfassende Suite von Komponenten und Dienstprogrammen, die Ihnen helfen, schöne und zugängliche Webanwendungen mit Vue und Nuxt zu erstellen.
-  Icon: 'I-Lucide-Rakete'
-  Ausrichtung: horizontal
-  Features:
-    - title:'Icons'(Deutsche Übersetzung)
-      Beschreibung: 'Nuxt UI integriert sich mit Nuxt Icon, um auf über 200.000 Icons von Iconify zuzugreifen.
-      I-Lucide-Smile (englisch)
-      zu: '/docs/getting-started/integrations/icons'
-    - title:'Schriftarten'
-      Beschreibung: 'Nuxt UI integriert sich mit Nuxt Fonts, um Plug-and-Play-Schriftoptimierung zu ermöglichen.'
-      I-Lucide-A-Large-Small (Deutsche Ausgabe)
-      zu: '/docs/getting-started/integrations/fonts'
-    - title:'Farbmodus'
-      Beschreibung: 'Nuxt UI integriert sich in den Nuxt Color Mode, um zwischen hell und dunkel zu wechseln.'
-      I-lucide-sun-moon (I-lucide-Sonne-Mond)
-      zu: '/docs/getting-started/integrations/color-mode'
-  Linke:
-    - label:'Komponenten erkunden'
-      zu: '/docs/components/app'
-      Farbe: „ neutral "
-      Variante: "Unterwürfig"
-      trailingIcon: 'i-lucide-arrow-right'(englisch)
-Slots auf:
-  Default:|
-
-    @@@@@@@@@@@@@@@@093
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  links:
+    - label: 'Get started'
+      to: '/docs/getting-started'
+      icon: 'i-lucide-square-play'
+      color: 'neutral'
+    - label: 'Explore components'
+      to: '/docs/components/app'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
 ---
-
-: img@@ph094
 ::
 
-@@ph095@umgekehrt.de
+### Orientierung.
 
-Verwenden Sie die `reverse` prop, um die Ausrichtung des Standardsteckplatzes umzukehren.
+Verwenden Sie die `orientation`-Prop, um die Ausrichtung mit dem Standardslot zu ändern. Standardmäßig ist `vertical`.
 
 ::component-code
 ---
-Schöner: wahr
-Außen:
-  @@ph097@gmail.de
-  @@@@@@98@@links
-Externe Personen:
-  @@ph099@@gmail.de [Bearbeiten | Quelltext bearbeiten]
-  @@ph100@buttonprops [Bearbeiten | Quelltext bearbeiten]
-Ignoriert:
-  @@101@Titel
-  @@ph102@beschreibung
-  @@ph103@@gmail.de
-  @@ph104@gmail.de
-  @@105@105@105@105@105@105@105@105@105@105@105@@105@@105@@105@@105@@105@@105@@105@@105@@105@@105@@105@105@1000@100@1000@@1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Titel: 'Schöne Vue UI Komponenten'
-  Beschreibung: Nuxt UI bietet eine umfassende Suite von Komponenten und Dienstprogrammen, die Ihnen helfen, schöne und zugängliche Webanwendungen mit Vue und Nuxt zu erstellen.
-  Icon: 'I-Lucide-Rakete'
-  Ausrichtung: horizontal
-  umgekehrt: wahr
-  Features:
-    - title:'Icons'(Deutsche Übersetzung)
-      Beschreibung: 'Nuxt UI integriert sich mit Nuxt Icon, um auf über 200.000 Icons von Iconify zuzugreifen.
-      I-Lucide-Smile (englisch)
-      zu: '/docs/getting-started/integrations/icons'
-    - title:'Schriftarten'
-      Beschreibung: 'Nuxt UI integriert sich mit Nuxt Fonts, um Plug-and-Play-Schriftoptimierung zu ermöglichen.'
-      I-Lucide-A-Large-Small (Deutsche Ausgabe)
-      zu: '/docs/getting-started/integrations/fonts'
-    - title:'Farbmodus'
-      Beschreibung: 'Nuxt UI integriert sich in den Nuxt Color Mode, um zwischen hell und dunkel zu wechseln.'
-      I-lucide-sun-moon (I-lucide-Sonne-Mond)
-      zu: '/docs/getting-started/integrations/color-mode'
-  Links auf:
-    - label:'Komponenten erkunden'
-      zu: '/docs/components/app'
-      Farbe: „ neutral "
-      Variante: "Unterwürfig"
-      trailingIcon: 'i-lucide-arrow-right'(englisch)
-Slots auf:
-  Default:|
+prettier: true
+external:
+  - features
+  - links
+externalTypes:
+  - PageFeatureProps[]
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - icon
+  - features
+  - links
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  icon: 'i-lucide-rocket'
+  orientation: horizontal
+  features:
+    - title: 'Icons'
+      description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
+      icon: 'i-lucide-smile'
+      to: '/docs/getting-started/integrations/icons'
+    - title: 'Fonts'
+      description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
+      icon: 'i-lucide-a-large-small'
+      to: '/docs/getting-started/integrations/fonts'
+    - title: 'Color Mode'
+      description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.'
+      icon: 'i-lucide-sun-moon'
+      to: '/docs/getting-started/integrations/color-mode'
+  links:
+    - label: 'Explore components'
+      to: '/docs/components/app'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
-    @@@@110 @
+    <img src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy" />
 ---
 
-: img{src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
+:img{src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
 ::
 
-@@112@btw
+### Reverse (Rückwärts)
 
-@@@@@@@@113@@props
+Verwenden Sie die `reverse`-Prop, um die Ausrichtung des Standardsteckplatzes umzukehren.
 
-Komponenten Props
+::component-code
+---
+prettier: true
+external:
+  - features
+  - links
+externalTypes:
+  - PageFeatureProps[]
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - icon
+  - features
+  - links
+props:
+  title: 'Beautiful Vue UI components'
+  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  icon: 'i-lucide-rocket'
+  orientation: horizontal
+  reverse: true
+  features:
+    - title: 'Icons'
+      description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
+      icon: 'i-lucide-smile'
+      to: '/docs/getting-started/integrations/icons'
+    - title: 'Fonts'
+      description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
+      icon: 'i-lucide-a-large-small'
+      to: '/docs/getting-started/integrations/fonts'
+    - title: 'Color Mode'
+      description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.'
+      icon: 'i-lucide-sun-moon'
+      to: '/docs/getting-started/integrations/color-mode'
+  links:
+    - label: 'Explore components'
+      to: '/docs/components/app'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
-### Slots
+    <img src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy" />
+---
 
-Die Komponenten-Slots
+:img{src="https://picsum.photos/704/1294" width="352" height="647" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
+::
 
-@@115@Einsteigertipps
+## API
 
-Das Komponenten-Theme
+### Props Bearbeiten
 
-## Changelog (Deutsche Übersetzung)
+:component-props
 
-Das Component-Changelog
+### Slots Bearbeiten
+
+:component-slots
+
+## Theme Bearbeiten
+
+:component-theme
+
+## Changelog (englisch)
+
+:component-changelog

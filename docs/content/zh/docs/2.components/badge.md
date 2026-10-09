@@ -11,14 +11,14 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Badge.vue
 ---
 
-## 使用情况
+## 用法
 
 使用默认插槽设置Badge的标签。
 
 ::component-code
 ---
-插槽：
-  默认值：徽章
+slots:
+  default: Badge
 ---
 ::
 
@@ -28,35 +28,35 @@ links:
 
 ::component-code
 ---
-道具：
-  标签：徽章
+props:
+  label: Badge
 ---
 ::
 
-### Color
+### 颜色
 
-使用`color`道具改变徽章的颜色。
+使用`color`道具来改变徽章的颜色。
 
 ::component-code
 ---
-道具：
-  颜色：中性
-插槽：
-  默认值：徽章
+props:
+  color: neutral
+slots:
+  default: Badge
 ---
 ::
 
 ### Variant
 
-使用`variant`道具更改徽章的变体。
+使用`variant`道具来改变徽章的变体。
 
 ::component-code
 ---
-道具：
-  颜色：中性
-  变体：轮廓
-插槽：
-  默认值：徽章
+props:
+  color: neutral
+  variant: outline
+slots:
+  default: Badge
 ---
 ::
 
@@ -66,10 +66,10 @@ links:
 
 ::component-code
 ---
-道具：
-  尺寸：xl
-插槽：
-  默认值：标记
+props:
+  size: xl
+slots:
+  default: Badge
 ---
 ::
 
@@ -79,13 +79,13 @@ links:
 
 ::component-code
 ---
-道具：
-  图标：i-lucide-火箭
-  尺寸：md
-  颜色：原色
-  变体：实心
-插槽：
-  默认值：徽章
+props:
+  icon: i-lucide-rocket
+  size: md
+  color: primary
+  variant: solid
+slots:
+  default: Badge
 ---
 ::
 
@@ -93,66 +93,66 @@ links:
 
 ::component-code
 ---
-道具：
-  trailingIcon：i-lucide-arrow-right
-  尺寸：md
-插槽：
-  默认值：徽章
+props:
+  trailingIcon: i-lucide-arrow-right
+  size: md
+slots:
+  default: Badge
 ---
 ::
 
-阿凡达
+### 头像
 
-使用`avatar`道具在徽章内显示[](/docs/components/avatar)。
+使用`avatar`道具在徽章内显示[Avatar](/docs/components/avatar)。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 头像.加载中
-道具：
-  头像：
-    来源：'https：//github.com/nuxt.png'
-    加载：惰性
-  尺寸：md
-  颜色：中性
-  变体：轮廓
-插槽：
-  默认值：|
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
+    src: 'https://github.com/nuxt.png'
+    loading: lazy
+  size: md
+  color: neutral
+  variant: outline
+slots:
+  default: |
 
-    徽章
+    Badge
 ---
 ::
 
-示例
+## 示例
 
-道具：
+### `class`道具
 
 使用`class`道具覆盖徽章的基本样式。
 
 ::component-code
 ---
-道具：
-  类别：'粗体四舍五入完整字型'
-插槽：
-  默认值：徽章
+props:
+  class: 'font-bold rounded-full'
+slots:
+  default: Badge
 ---
 ::
 
-## 活性成分
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

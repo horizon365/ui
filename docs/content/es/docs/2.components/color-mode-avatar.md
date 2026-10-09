@@ -11,34 +11,34 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/color-mode/ColorModeAvatar.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente ColorModeAvatar extiende el componente [Avatar](/docs/components/avatar), de modo que puede pasar cualquier propiedad como `size`,`icon`, etc.
+El componente ColorModeAvatar extiende el componente [Avatar](/docs/components/avatar), por lo que puede pasar cualquier propiedad como `size`, `icon`, etc.
 
 Utilice los accesorios `light` y `dark` para definir la fuente para el modo claro y oscuro.
 
 ::component-code{prefix="color-mode"}
 ---
-Props:
-  luz: 'https://github.com/vuejs.png'
-  oscuro: 'https://github.com/nuxt.png'
+props:
+  light: 'https://github.com/vuejs.png'
+  dark: 'https://github.com/nuxt.png'
 ---
 ::
 
 ::note
-Cambiar entre el modo claro y oscuro para ver las diferentes imágenes:: u-color-mode-select {size="sm"}
+Cambiar entre el modo claro y oscuro para ver las diferentes imágenes:: u-color-mode-select{size="sm"}
 ::
 
-@@pH000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## API (Edición española)
 
-@1111@11111
+### Propciones
 
-Componentes Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes" target="_blank"}
-Este componente también soporta todos los atributos HTML nativos `<img>`.
+Este componente también admite todos los atributos HTML nativos de `<img>`.
 ::
 
-@@changelog
+## Changelog (Edición española)
 
-por: component-changelog {prefix="color-mode"}
+:component-changelog{prefix="color-mode"}

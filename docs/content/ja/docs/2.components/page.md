@@ -25,10 +25,10 @@ links:
 スロットが指定されていない場合、ページは中央の単列レイアウトとして表示されます。
 ::
 
-## 例
+## サンプル
 
 ::note
-これらの例では[ Nuxt Content ](https://content.nuxt.com)を使用していますが、コンポーネントは任意のコンテンツ管理システムと統合することができます。
+これらの例は[Nuxt Content](https://content.nuxt.com)を使用していますが、コンポーネントは任意のコンテンツ管理システムと統合できます。
 ::
 
 ### レイアウト内
@@ -61,7 +61,7 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 
 ### ページ内
 
-`right`スロットがあるページでPageコンポーネントを使用して、目次を表示します。
+`right`スロットを持つページでPageコンポーネントを使用して、目次を表示します。
 
 ```vue [pages/\[...slug\\].vue]{29-31}
 <script setup lang="ts">
@@ -103,20 +103,20 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 この例では、`ContentToc`コンポーネントを使用して目次を表示しています。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

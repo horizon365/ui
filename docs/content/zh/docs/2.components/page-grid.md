@@ -8,41 +8,41 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageGrid.vue
 ---
 
-## 使用情况
+## 用法
 
-PageGrid组件为显示[PageCard](/docs/components/page-card)组件或任何其他元素提供了一个响应式网格布局，并根据屏幕大小自动调整为1到3列。
-
-::component-example
----
-名称：'页面网格示例'
-类别：'p-8'
----
-::
-
-您也可以使用`col-span-*`和`row-span-*`公用程式类别，在便当样式版面配置中显示卡片清单。
+PageGrid组件提供了一个响应式网格布局，用于显示[PageCard](/docs/components/page-card)组件或任何其他元素，根据屏幕大小自动调整1到3列。
 
 ::component-example
 ---
-收阖：true
-名称：'页面-网格-便当-示例'
-类别：'p-8'
+name: 'page-grid-example'
+class: 'p-8'
 ---
 ::
 
-活性成分
+您还可以使用`col-span-*`和`row-span-*`实用程序类来使用它以便当样式布局显示卡片列表。
 
-道具
+::component-example
+---
+collapse: true
+name: 'page-grid-bento-example'
+class: 'p-8'
+---
+::
 
-：组件-支柱
+## API
 
-插槽
+### Props
 
-：组件插槽
+:component-props
 
-主题
+### Slots
 
-：组件主题
+:component-slots
 
-## 变更日志
+## Theme
 
-：组件更改日志
+:component-theme
+
+## Changelog
+
+:component-changelog

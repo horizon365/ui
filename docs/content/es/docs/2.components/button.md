@@ -11,81 +11,81 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Button.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice la ranura predeterminada para establecer la etiqueta del botón.
 
 ::component-code
 ---
-Los slots:
-  por defecto: Button
+slots:
+  default: Button
 ---
 ::
 
-@0001@etiqueta
+### Label
 
 Utilice el prop `label` para establecer la etiqueta del botón.
 
 ::component-code
 ---
-Props:
-  Categoría: Button
+props:
+  label: Button
 ---
 ::
 
-@000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Color (Edición española)
 
 Utilice el prop `color` para cambiar el color del botón.
 
 ::component-code
 ---
-Props:
-  Color: Neutro
-Los slots:
-  por defecto: Button
+props:
+  color: neutral
+slots:
+  default: Button
 ---
 ::
 
-@@500@Variante
+### Variante
 
 Utilice el prop `variant` para cambiar la variante del botón.
 
 ::component-code
 ---
-Props:
-  Color: Neutral
-  Categoría: Outline
-Los slots:
-  por defecto: Button
+props:
+  color: neutral
+  variant: outline
+slots:
+  default: Button
 ---
 ::
 
-@0007@Nombre
+### Tamaño
 
 Utilice el prop `size` para cambiar el tamaño del botón.
 
 ::component-code
 ---
-Props:
-  Tamaño: XL
-Los slots:
-  por defecto: Button
+props:
+  size: xl
+slots:
+  default: Button
 ---
 ::
 
-@009@Icon
+### Icon
 
 Utilice el prop `icon` para mostrar un [Icon](/docs/components/icon) dentro del botón.
 
 ::component-code
 ---
-Props:
-  Archivo de la etiqueta: i-lucide-rocket
-  Tamaño: MD
-  Color: Primario
-  Variante: Sólido
-Los slots:
-  por defecto: Button
+props:
+  icon: i-lucide-rocket
+  size: md
+  color: primary
+  variant: solid
+slots:
+  default: Button
 ---
 ::
 
@@ -93,11 +93,11 @@ Utilice los accesorios `leading` y `trailing` para establecer la posición del i
 
 ::component-code
 ---
-Props:
-  Archivo de la etiqueta: i-lucide-arrow-right
-  Tamaño: MD
-Los slots:
-  por defecto: Button
+props:
+  trailingIcon: i-lucide-arrow-right
+  size: md
+slots:
+  default: Button
 ---
 ::
 
@@ -105,126 +105,126 @@ El `label` como accesorio o ranura es opcional, por lo que puede usar el botón 
 
 ::component-code
 ---
-Props:
-  Icono: i-lucide-search
-  Tamaño: MD
-  Color: Primario
-  Variante: Sólido
+props:
+  icon: i-lucide-search
+  size: md
+  color: primary
+  variant: solid
 ---
 ::
 
-@200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Avatar en Español
 
-Utilice el prop `avatar` para mostrar un [Avatar](/docs/components/avatar) dentro del botón.
+Use the `avatar` prop to show an [Avatar](/docs/components/avatar) inside the Button.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  - avatar.carga
-Props:
-  El avatar:
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
     src: 'https://github.com/nuxt.png'
-    Categoría: Lazy
-  Tamaño: MD
-  Color: Neutral
-  Categoría: Outline
-Los slots:
-  Default:|
+    loading: lazy
+  size: md
+  color: neutral
+  variant: outline
+slots:
+  default: |
 
-    botón
+    Button
 ---
 ::
 
-El `label` como utilería o ranura es opcional, por lo que puede usar el botón como un botón solo para avatar.
+El `label` como accesorio o ranura es opcional, por lo que puede usar el botón como un botón solo para avatar.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  - avatar.carga
-Props:
-  El avatar:
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
     src: 'https://github.com/nuxt.png'
-    Categoría: Lazy
-  Tamaño: MD
-  Color: Neutral
-  Categoría: Outline
+    loading: lazy
+  size: md
+  color: neutral
+  variant: outline
 ---
 ::
 
-@29@enlace
+### Link (Edición española)
 
-Puede pasar cualquier propiedad del componente[Link](/docs/components/link#props)como`to`,`target`, etc.
+You can pass any property from the [Link](xph110) component such as `to`, `target`, etc.
 
 ::component-code
 ---
-Ignora :
-  @36@target en Español
-Props :
-  Dos :https://github.com/nuxt/ui
-  Nombre : _ blank
-Los slots :
-  por defecto : Button
+ignore:
+  - target
+props:
+  to: https://github.com/nuxt/ui
+  target: _blank
+slots:
+  default: Button
 ---
 ::
 
-Cuando el botón es un enlace o cuando se utiliza el prop`active`, se puede utilizar el prop`active-color`y`active-variant`para personalizar el estado activo .
+Cuando el botón es un enlace o cuando se utiliza el prop `active`, puede utilizar los props `active-color` y `active-variant` para personalizar el estado activo.
 
 ::component-code
 ---
-Categoría : true
-Ignora :
-  @@pH040@color (Edición española)
-  - variante
-items :
-  Activo :
-    - primary (en inglés)
-    @@443@secondary
-    @@444@éxito
-    @@45@info
-    @@pH046@advertencia
-    @@F047@error
-    @@48000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  Activación :
-    @@pH049@@sólido
-    @500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @510000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @@ghost05
-    @@54@enlace
-Props:
-  Activo: Verdadero
-  Color: Neutro
-  Categoría: Outline
-  Activo: Primario
-  Actividad: Sólido
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - color
+  - variant
+items:
+  activeColor:
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
+  activeVariant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+    - link
+props:
+  active: true
+  color: neutral
+  variant: outline
+  activeColor: primary
+  activeVariant: solid
+slots:
+  default: |
 
-    Botón
+    Button
 ---
 
-botón
+Botón
 ::
 
 También puede utilizar los accesorios `active-class` y `inactive-class` para personalizar el estado activo.
 
 ::component-code
 ---
-Props:
-  Activo: Verdadero
-  Categoría:'font-bold'
-  Categoría:'font-light'
-Los slots:
-  por defecto: Button
+props:
+  active: true
+  activeClass: 'font-bold'
+  inactiveClass: 'font-light'
+slots:
+  default: Button
 ---
 
-Botón
+botón
 ::
 
 ::tip
-Puede configurar estos estilos de forma global en su archivo `app.config.ts` bajo la tecla `ui.button.variants.active`.
+Puede configurar estos estilos de forma global en su archivo `app.config.ts` bajo la clave `ui.button.variants.active`.
 
 ```ts
 export default defineAppConfig({
@@ -243,133 +243,133 @@ export default defineAppConfig({
 ```
 ::
 
-@@70000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Cargando
 
-Utilice el prop `loading` para mostrar un icono de carga y desactivar el botón.
+Utilice el accesorio `loading` para mostrar un icono de carga y desactivar el botón.
 
 ::component-code
 ---
-Props:
-  Carga: Verdad
-  Trayectoria: Falso
-Los slots:
-  por defecto: Button
+props:
+  loading: true
+  trailing: false
+slots:
+  default: Button
 ---
-Botón
+botón
 ::
 
 Utilice el prop `loading-auto` para mostrar el icono de carga automáticamente mientras la promesa `@click` está pendiente.
 
-Ejemplo de componente {name="button-loading-auto-example"}
+:component-example{name="button-loading-auto-example"}
 
 Esto también funciona con el componente [Form](/docs/components/form).
 
-Ejemplo de componente {name="button-loading-auto-form-example"}
+:component-example{name="button-loading-auto-form-example"}
 
 ### Loading Icon (en inglés)
 
-Utilice el prop `loading-icon` para personalizar el icono de carga. Prevalue a `i-lucide-loader-circle`.
+Utilice el prop `loading-icon` para personalizar el icono de carga.
 
 ::component-code
 ---
-Props:
-  Carga: Verdad
-  LoadingIcon: 'i-lucide-loader'(en inglés)
-Los slots:
-  por defecto: Button
+props:
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+slots:
+  default: Button
 ---
 Botón
 ::
 
 ::framework-only
-#nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.loading`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.loading`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.loading`.
+Puede personalizar este icono globalmente en su Xph210x bajo la tecla Xph211x.
 :::
 ::
 
-### Desactivado
+### Disabled
 
 Utilice el prop `disabled` para desactivar el botón.
 
 ::component-code
 ---
-Props:
-  Discapacidad: Verdadero
-Los slots:
-  por defecto: Button
+props:
+  disabled: true
+slots:
+  default: Button
 ---
 
 Botón
 ::
 
-@@pH093@Ejemplos
+## Ejemplos
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+### x`class`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 Utilice el prop `class` para anular los estilos base del botón.
 
 ::component-code
 ---
-Props:
-  Archivo de la etiqueta: font-bold round-full
-Los slots:
-  por defecto: Button
+props:
+  class: 'font-bold rounded-full'
+slots:
+  default: Button
 ---
 ::
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+### x`ui` Prop (Edición española)
 
 Utilice el prop `ui` para anular los estilos de ranuras del botón.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH100@uy
-  @101 @ color
-  @@2010@Variación
-  @@pH103@icon
-Props:
-  Archivo de la etiqueta: i-lucide-rocket
-  Color: Neutral
-  Categoría: Outline
-  UU.:
-    leadingIcon: 'texto primario'
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - ui
+  - color
+  - variant
+  - icon
+props:
+  icon: i-lucide-rocket
+  color: neutral
+  variant: outline
+  ui:
+    leadingIcon: 'text-primary'
+slots:
+  default: |
 
-    botón
+    Button
 ---
 ::
 
-@@pH104
+## API (Versión)
 
-@500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-Este componente también soporta todos los atributos HTML nativos `<button>`.
+Este componente también soporta todos los atributos HTML `<button>` nativos.
 ::
 
 ::callout{icon="i-simple-icons-github" to="https://github.com/nuxt/ui/blob/v4/src/runtime/components/Link.vue#L13"}
-El componente `Button` extiende el componente `Link`. Echa un vistazo al código fuente en GitHub.
+El componente `Button` extiende el componente `Link`.Echa un vistazo al código fuente en GitHub.
 ::
 
-@109@109@109
+### Slots en línea
 
-Componentes de slots
+:component-slots
 
-@110@@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@@111@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

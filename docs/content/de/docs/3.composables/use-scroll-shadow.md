@@ -3,25 +3,25 @@ title: UseScrollShadow Bearbeiten
 description: 'Ein Composable, um Scroll-Schatteneffekte auf jedes scrollbare Element anzuwenden.'
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Verwenden Sie das automatisch importierte `useScrollShadow` composable, um Fade-Schatten an den Rändern eines scrollbaren Elements anzuwenden, um anzuzeigen, dass mehr Inhalt in der Scrollrichtung verfügbar ist.
+Verwenden Sie das automatisch importierte `useScrollShadow`-Composable, um Fade-Schatten an den Rändern eines scrollbaren Elements anzuwenden, um anzuzeigen, dass mehr Inhalt in der Scrollrichtung verfügbar ist.
 
 ::component-example
 ---
-Name: 'use-scroll-shadow-example'(use-scroll-shadow-Beispiel)
+name: 'use-scroll-shadow-example'
 ---
 ::
 
-- Verwendet CSS `mask-image`, um Inhalte an den Rändern zu verblassen, anstatt Elemente zu überlagern, so dass es auf jedem Hintergrund funktioniert.
-- erkennt automatisch, ob das Element überläuft, und wendet nur Schatten an, wenn es nötig ist.
-- Unterstützt sowohl vertikale als auch horizontale Orientierungen.
+- Verwendet CSS `mask-image`, um Inhalte an den Rändern anstelle von Overlay-Elementen zu verblassen, sodass es auf jedem Hintergrund funktioniert.
+- Erkennt automatisch, ob das Element überläuft und wendet Schatten nur bei Bedarf an.
+- Unterstützt sowohl vertikale als auch horizontale Ausrichtungen.
 
-@@006@btw
+## API (Englisch)
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@PH0008
+`useScrollShadow(element, options?)`{lang="ts-type"} (nicht)
 
-@@ph009@@Parameter Bearbeiten
+### Parameters (englisch)
 
 ::field-group
 
@@ -40,33 +40,33 @@ Name: 'use-scroll-shadow-example'(use-scroll-shadow-Beispiel)
         ::
 
         ::field{name="orientation" type="MaybeRefOrGetter<'vertical' | 'horizontal'>" default="'vertical'"}
-        Die Scrollrichtung, um Schatten anzuwenden.
+        Die Scroll-Richtung, um Schatten anzuwenden.
         ::
       ::
     ::
   ::
 ::
 
-@@1010 @ zurück
+### Return zurück
 
 ::field-group
 
   ::field{name="style" type="ComputedRef<CSSProperties | undefined>"}
-  Ein reaktives Style-Objekt zum Binden an das scrollbare Element mit `:style`. Enthält `maskImage`, wenn Schatten aktiv sind,`undefined` ansonsten.
+  Ein reaktives Style-Objekt, das mit `:style` an das scrollbare Element gebunden werden soll. Enthält `maskImage`, wenn Schatten aktiv sind, ansonsten `undefined`.
   ::
 
   ::field{name="isOverflowing" type="ComputedRef<boolean>"}
-  Ob der Inhalt des Elements seinen sichtbaren Bereich überläuft.
+  Ob der Inhalt des Elements den sichtbaren Bereich überläuft.
   ::
 
   ::field{name="arrivedState" type="{ top: boolean, bottom: boolean, left: boolean, right: boolean }"}
-  [`useScroll`](https://vueuse.org/core/useScroll/).
+  Reaktiver Scroll-Ankunftsstatus von [`useScroll`](https://vueuse.org/core/useScroll/).
   ::
 ::
 
-@@ph019@@Beispiele
+## Examples (Beispiele)
 
-@@ph020@@Horizontal
+### Horizontal
 
 Verwenden Sie die `orientation`-Option für horizontal scrollbare Container:
 

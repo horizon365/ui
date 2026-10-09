@@ -11,47 +11,47 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/User.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-@@pH001@Nombre
+### Nombre
 
 Utilice el prop `name` para mostrar un nombre para el usuario.
 
 ::component-code
 ---
-Props:
-  Nombre: John Doe
+props:
+  name: 'John Doe'
 ---
 ::
 
-@@pH003@Descripción
+### Descripción
 
 Utilice el prop `description` para mostrar una descripción para el usuario.
 
 ::component-code
 ---
-Props:
-  Nombre: John Doe
-  Descripción:"Ingeniero de Software"
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
 ---
 ::
 
-@005@Avatara
+### Avatar en Español
 
 Utilice el prop `avatar` para mostrar un componente [Avatar](/docs/components/avatar).
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @11@Nombre
-  @@ph012@descripción
-Props:
-  Nombre: John Doe
-  Descripción:"Ingeniero de Software"
-  El avatar:
+prettier: true
+ignore:
+  - name
+  - description
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
+  avatar:
     src: 'https://i.pravatar.cc/150?u=john-doe'
-    Categoría: Lazy
+    loading: lazy
     icon: i-lucide-image
 ---
 ::
@@ -60,47 +60,47 @@ Props:
 
 ::component-props
 ---
-Nombre: Avatar
-Ignora:
-  @130000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @@pH014@como
+name: Avatar
+ignore:
+  - size
+  - as
 ---
 ::
 
 ::
 
-@@pH015@@chipseudo
+### Chip (Edición española)
 
 Utilice el prop `chip` para mostrar un componente [Chip](/docs/components/chip).
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @21@nombre
-  @@ph022@descripción
-  @@23@avatar.src
-Items:
+prettier: true
+ignore:
+  - name
+  - description
+  - avatar.src
+items:
   chip.color:
-    @@ph024@primary
-    @@250@25 años
-    @@26@@éxito
-    @27@info
-    @28@Advertencia
-    @@29@error
-    @000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
   chip.position:
-    -  arriba a la izquierda
-    -  arriba a la derecha
-    -  abajo a la izquierda
-    -  abajo a la derecha
-Props:
-  Nombre: John Doe
-  Descripción:"Ingeniero de Software"
-  avatar. src: 'https://i.pravatar.cc/150?u=john-doe'
-  El chip:
-    Categoría:"Primary"
-    Posición: Top-Right
+    - top-left
+    - top-right
+    - bottom-left
+    - bottom-right
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
+  avatar.src: 'https://i.pravatar.cc/150?u=john-doe'
+  chip:
+    color: 'primary'
+    position: top-right
 ---
 ::
 
@@ -108,72 +108,72 @@ Props:
 
 ::component-props
 ---
-Nombre: Chip
-Ignora:
-  @@pH035@como
-  @@36@tamaño
-  @373@@autonome
+name: Chip
+ignore:
+  - as
+  - size
+  - standalone
 ---
 ::
 
 ::
 
-@@380@Tamaño
+### Tamaño
 
 Utilice el prop `size` para cambiar el tamaño del avatar del usuario y el texto.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH040@nombre
-  @@ph041@descripción
-  - avatar.src (en inglés)
-  @@pH043@@chip (en inglés)
-Props:
-  Nombre: John Doe
-  Descripción:"Ingeniero de Software"
-  avatar. src: 'https://i.pravatar.cc/150?u=john-doe'
-  Chip: Verdad
-  Tamaño: xl
+prettier: true
+ignore:
+  - name
+  - description
+  - avatar.src
+  - chip
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
+  avatar.src: 'https://i.pravatar.cc/150?u=john-doe'
+  chip: true
+  size: xl
 ---
 ::
 
-@@444@Dirección
+### Orientación
 
 Utilice el prop `orientation` para cambiar la orientación. Predeterminados a `horizontal`.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  - avatar.src (en inglés)
-Props:
-  Categoría:"Vertical"
-  Nombre: John Doe
-  Descripción:"Ingeniero de Software"
-  avatar. src: 'https://i.pravatar.cc/150?u=john-doe'
+prettier: true
+ignore:
+  - avatar.src
+props:
+  orientation: 'vertical'
+  name: 'John Doe'
+  description: 'Software Engineer'
+  avatar.src: 'https://i.pravatar.cc/150?u=john-doe'
 ---
 ::
 
-@@48000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Link (Edición española)
 
-Puede pasar cualquier propiedad del componente [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) como `to`,`target`,`rel`, etc.
+Puede pasar cualquier propiedad del componente [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) como `to`, `target`, `rel`, etc.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH057@nombre
-  @@pH058@descripción
-  - avatar.src (en inglés)
-  @000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  en: 'https://github.com/benjamincanac'
-  Nombre: '_blanco'
-  Nombre: Benjamin Canac
-  Descripción:"Ingeniero de Software"
-  avatar. src: 'https://github.com/benjamincanac.png'
+prettier: true
+ignore:
+  - name
+  - description
+  - avatar.src
+  - target
+props:
+  to: 'https://github.com/benjamincanac'
+  target: '_blank'
+  name: 'Benjamin Canac'
+  description: 'Software Engineer'
+  avatar.src: 'https://github.com/benjamincanac.png'
 ---
 ::
 
@@ -181,20 +181,20 @@ Props:
 El componente `NuxtLink` heredará todos los demás atributos que pase al componente `User`.
 ::
 
-@@pH063
+## API (Edición española)
 
-@@pH064@@Propuestas
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
-@@P065@@Escenarios
+### Slots en línea
 
-Componentes de slots
+:component-slots
 
-@@666@@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@@changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

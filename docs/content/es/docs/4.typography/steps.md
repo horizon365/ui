@@ -9,16 +9,16 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Steps.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Envuelva los encabezados con el componente Pasos para mostrar una lista de pasos.
 
-Utilice la prop `level` para definir qué encabezado se utilizará para los pasos.
+Utilice el prop `level` para definir qué encabezado se utilizará para los pasos.
 
 :::code-preview{class="[&>div]:*:w-full"}
 ::steps{level="4"}
 
-#### Agregue el módulo de interfaz de usuario de Nuxt en su `nuxt.config.ts`
+#### Añadir el módulo de interfaz de usuario de Nuxt en su `nuxt.config.ts`
 
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
@@ -26,13 +26,13 @@ export default defineNuxtConfig({
 })
 ```
 
-#### Importar CSS Tailwind en su CSS
+#### Importe Tailwind CSS en su CSS
 
 ```css [app/assets/css/main.css]
 @import "tailwindcss";
 ```
 
-#### Inicia tu servidor de desarrollo
+#### Iniciar el servidor de desarrollo
 
 ```bash
 npm run dev
@@ -40,7 +40,7 @@ npm run dev
 
 ::
 
-#El Código
+#code
 
 ````mdc
 ::steps{level="4"}
@@ -70,20 +70,20 @@ npm run dev (en español)
 
 :::
 
-@37@@Apid
+## API (Edición española)
 
-@380@38000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Accesorios
 
-Artículo siguienteCOMPONENTES {prose}
+:component-props{prose}
 
-@400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots
 
-Componentes: {prose}
+:component-slots{prose}
 
-@@2042@@Proyecto
+## Temas
 
-Artículo siguiente{prose}
+:component-theme{prose}
 
-@@40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Changelog (Edición española)
 
-por: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

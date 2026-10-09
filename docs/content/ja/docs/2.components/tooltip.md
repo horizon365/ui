@@ -14,228 +14,228 @@ links:
 
 ## 使用法
 
-[ Button ](/docs/components/button)またはツールチップのデフォルトスロットにある他のコンポーネントを使用します。
+ツールチップのデフォルトスロットにある[Button](/docs/components/button)またはその他のコンポーネントを使用します。
 
 ::component-code
 ---
-きれい真
-無視
-  - テキスト
-小道具
-  text 'GitHubで開く'
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - text
+props:
+  text: 'Open on GitHub'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-uボタン{label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 ::
 
 ::warning
-[`App`](/docs/components/app))コンポーネントでアプリをラップしてください。このコンポーネントは、Reka UIの[`TooltipProvider`](https://reka-ui.com/docs/components/tooltip#provider)コンポーネントを使用しています。
+Reka UIの[`TooltipProvider`](https://reka-ui.com/docs/components/tooltip#provider)コンポーネントを使用する[`App`](/docs/components/app)コンポーネントでアプリをラップしてください。
 ::
 
 ::tip{to="/docs/components/app#props"}
-`App` component `tooltip` propを確認して、Tooltipをグローバルに設定する方法を確認できます。
+Tooltipをグローバルに設定する方法は、`App`コンポーネント`tooltip`プロパティを確認できます。
 ::
 
-### テキスト
+### Text
 
-`text`プロパティを使用して、ツールチップの内容を設定します。
+`text`プロパティを使用して、Tooltipの内容を設定します。
 
 ::component-code
 ---
-きれい真
-小道具
-  text 'GitHubで開く'
-スロット
-  デフォルト|
+prettier: true
+props:
+  text: 'Open on GitHub'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 ::
 
-###  Kbds
+### Kbds
 
-`kbds`プロパティを使用して、[ Kbd ](/docs/components/kbd)コンポーネントをツールチップでレンダリングします。
+`kbds`プロパティを使用して、[Kbd](/docs/components/kbd)コンポーネントをTooltipでレンダリングします。
 
 ::component-code
 ---
-きれい真
-無視
-  - テキスト
-  -  kbds
-小道具
-  text 'GitHubで開く'
-  kbds
-    - メタ
-    -  G
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - text
+  - kbds
+props:
+  text: 'Open on GitHub'
+  kbds:
+    - meta
+    - G
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 ::
 
 ::tip
-macOSでは`⌘`、その他のプラットフォームでは`Ctrl`として表示される`meta`のような特別なキーを使用できます。
+macOSでは`⌘`、その他のプラットフォームでは`Ctrl`と表示される`meta`のような特別なキーを使用できます。
 ::
 
-###  Delay
+### Delay
 
-`delay-duration`プロパティを使用して、Tooltipが表示される前の遅延を変更します。たとえば、`0`に設定すると、ツールチップが表示されるようにすることができます。
+`delay-duration`プロパティを使用して、Tooltipが表示される前の遅延を変更します。例えば、`0`に設定することで、ツールチップを即座に表示させることができます。
 
 ::component-code
 ---
-きれい真
-無視
-  - テキスト
-小道具
-  delayDuration 0
-  text 'GitHubで開く'
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - text
+props:
+  delayDuration: 0
+  text: 'Open on GitHub'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 ::
 
 ::tip
-これは、[`App`](/docs/components/app)コンポーネント内の`tooltip.delayDuration`オプションを使用してグローバルに設定できます。
+これは[`App`](/docs/components/app)コンポーネントの`tooltip.delayDuration`オプションでグローバルに設定できます。
 ::
 
 ### コンテンツ
 
-`content`プロパティを使用して、Tooltipコンテンツのレンダリング方法を制御します。たとえば、`align`や`side`などです。
+`content`プロパティを使用して、`align`や`side`など、Tooltipコンテンツのレンダリング方法を制御します。
 
 ::tip
-これは、[`App`](/docs/components/app)コンポーネント内の`tooltip.content`オプションを使用してグローバルに設定できます。
+これは、[`App`](/docs/components/app)コンポーネントの`tooltip.content`オプションでグローバルに設定できます。
 ::
 
 ::component-code
 ---
-きれい真
-無視
-  - テキスト
-アイテム
+prettier: true
+ignore:
+  - text
+items:
   content.align:
-    -  start
-    - センター
-    -  end
+    - start
+    - center
+    - end
   content.side:
-    - 右
-    - 左
-    -  top
-    -  bottom
-小道具
-  内容：
-    整列センター
-    側面底
-    sideOffset 8
-  text 'GitHubで開く'
-スロット
-  デフォルト|
+    - right
+    - left
+    - top
+    - bottom
+props:
+  content:
+    align: center
+    side: bottom
+    sideOffset: 8
+  text: 'Open on GitHub'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-uボタン{label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 ::
 
-### アロー
+### Arrow
 
 `arrow`プロパティを使用して、ツールチップに矢印を表示します。
 
 ::component-code
 ---
-きれい真
-無視
-  - テキスト
-  -  arrow
-小道具
-  矢印true
-  text 'GitHubで開く'
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - text
+  - arrow
+props:
+  arrow: true
+  text: 'Open on GitHub'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-uボタン{label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 ::
 
 ### 無効
 
-`disabled`プロパティを使用して、Tooltipを無効にします。
+ツールチップを無効にするには、`disabled`プロパティを使用します。
 
 ::component-code
 ---
-きれい真
-無視
-  - テキスト
-小道具
-  無効true
-  text 'GitHubで開く'
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - text
+props:
+  disabled: true
+  text: 'Open on GitHub'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 ::
 
 ## 例
 
-###  Controlオープンステート
+### Controlオープンステート
 
-`default-open` propまたは`v-model:open`ディレクティブを使用してオープン状態を制御できます。
+オープン状態は`default-open`プロパティまたは`v-model:open`ディレクティブを使用して制御できます。
 
 ::component-example
 ---
-名前'tooltip—open—example'
+name: 'tooltip-open-example'
 ---
 ::
 
 ::note
-この例では、[`defineShortcuts`](/docs/composables/define-shortcuts)を活用して、kbd {value="O"}を押してツールチップを切り替えることができます。
+この例では、[`defineShortcuts`](/docs/composables/define-shortcuts)を活用して、kbd{value="O"}を押してツールチップを切り替えることができます。
 ::
 
 ### 次のカーソルで
 
-[`reference`](https://reka-ui.com/docs/components/tooltip#trigger) propを使用して、ツールチップをカーソルに追従させることができます。
+[`reference`](https://reka-ui.com/docs/components/tooltip#trigger)プロパティを使用して、要素にカーソルを合わせるとツールチップをカーソルに追従させることができます。
 
 ::component-example
 ---
-名前'tooltipカーソル—example'
+name: 'tooltip-cursor-example'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-###  Emits
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

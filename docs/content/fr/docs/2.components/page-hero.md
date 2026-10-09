@@ -8,21 +8,21 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageHero.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Le composant PageHero enveloppe votre contenu dans un [Container](/docs/components/container) tout en conservant une flexibilité sur toute la largeur, ce qui facilite l'ajout de couleurs, d'images ou de motifs d'arrière-plan. Il offre un moyen flexible d'afficher du contenu avec une illustration dans l'emplacement par défaut.
+Le composant PageHero enveloppe votre contenu dans un conteneur [Container](xph003) tout en conservant une flexibilité pleine largeur, ce qui facilite l'ajout de couleurs d'arrière-plan, d'images ou de motifs.
 
 ::code-preview
 
 :::u-page-hero
 ---
-Étiquette: Ultimate Vue UI Library
-Description: Une bibliothèque d'interface utilisateur intégrée à Nuxt/Vue fournissant un riche ensemble de composants entièrement stylisés, accessibles et hautement personnalisables pour la création d'applications Web modernes.
+title: 'Ultimate Vue UI library'
+description: 'A Nuxt/Vue-integrated UI library providing a rich set of fully-styled, accessible and highly customizable components for building modern web applications.'
 ---
 
 ::::u-page-card{variant="subtle" class="rounded-lg"}
 
-![App capture d'écran ](/blocks/image4.png){width="960" height="540" class="rounded-sm shadow-2xl ring ring-default"}
+![App capture d'écran ](x/blocks/image4.png){width="960" height="540" class="rounded-sm shadow-2xl ring ring-default"}
 
 ::::
 
@@ -30,76 +30,76 @@ Description: Une bibliothèque d'interface utilisateur intégrée à Nuxt/Vue fo
 
 ::
 
-@@ph010@titre
+### Titre
 
-Utilisez la prop `title` pour définir le titre du héros.
+Utilisez le prop `title` pour définir le titre du héros.
 
 ::component-code
 ---
-Props:
-  Étiquette: Ultimate Vue UI Library
+props:
+  title: 'Ultimate Vue UI library'
 ---
 ::
 
-@@ph012@Description
+### Description
 
-Utilisez la prop `description` pour définir la description du héros.
+Utilisez le prop `description` pour définir la description du héros.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph014@titre
-Props:
-  Étiquette: Ultimate Vue UI Library
-  Description: Une bibliothèque d'interface utilisateur intégrée à Nuxt/Vue fournissant un riche ensemble de composants entièrement stylisés, accessibles et hautement personnalisables pour la création d'applications Web modernes.
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Ultimate Vue UI library'
+  description: 'A Nuxt/Vue-integrated UI library providing a rich set of fully-styled, accessible and highly customizable components for building modern web applications.'
 ---
 ::
 
-@@ph015@@titre
+### Référencement
 
-Utilisez la prop `headline` pour définir le titre du héros.
+Utilisez le prop `headline` pour définir le titre du héros.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph017@titre
-  @@ph018@description
-Props:
-  Étiquette: Ultimate Vue UI Library
-  Description: Une bibliothèque d'interface utilisateur intégrée à Nuxt/Vue fournissant un riche ensemble de composants entièrement stylisés, accessibles et hautement personnalisables pour la création d'applications Web modernes.
-  Titre: Nouvelle libération
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  title: 'Ultimate Vue UI library'
+  description: 'A Nuxt/Vue-integrated UI library providing a rich set of fully-styled, accessible and highly customizable components for building modern web applications.'
+  headline: 'New release'
 ---
 ::
 
-@@ph019@liens
+### Liens
 
-Utilisez le prop `links` pour afficher une liste de [Button](/docs/components/button) sous la description.
+Utilisez la prop `links` pour afficher une liste de [Button](/docs/components/button) sous la description.
 
 ::component-code
 ---
-Étiquette: true
-Extérieur:
-  @@25@liens
-Extérieurs:
-  @@26@26@26@26@26@26@26@26@26@26@26@26@26@26@26@26@26@26@26@26@26@26@26@26@26@26@26@26@26@26@26@26@26)
-Ignorer:
-  @@27@titre
-  @@ph028@description
-  @@229@liens
-Props:
-  Étiquette: Ultimate Vue UI Library
-  Description: Une bibliothèque d'interface utilisateur intégrée à Nuxt/Vue fournissant un riche ensemble de composants entièrement stylisés, accessibles et hautement personnalisables pour la création d'applications Web modernes.
-  à gauche:
-    - label:« Démarrer »
-      à:'/docs/getting-started'
-      Icône: i-lucide-square-play
-    - label:"En savoir plus"
-      à:'/docs/getting-started/theme/design-system'
-      Couleur: "Neutre"
-      Étiquette:"subtil"
-      trailingIcône:'i-lucide-arrow-right'
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Ultimate Vue UI library'
+  description: 'A Nuxt/Vue-integrated UI library providing a rich set of fully-styled, accessible and highly customizable components for building modern web applications.'
+  links:
+    - label: 'Get started'
+      to: '/docs/getting-started'
+      icon: 'i-lucide-square-play'
+    - label: 'Learn more'
+      to: '/docs/getting-started/theme/design-system'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
 ---
 ::
 
@@ -109,34 +109,34 @@ Utilisez la prop `orientation` pour changer l'orientation avec l'emplacement par
 
 ::component-code
 ---
-Étiquette: true
-Extérieure:
-  @@ph035@liens
-Extérieurs:
-  - ButtonProps [réf. nécessaire]
-ignorer:
-  @@ph037@titre
-  @@ph038@description
-  @@ph039@headline
-  @@ph040@liens
-Props:
-  Étiquette: Ultimate Vue UI Library
-  Description: Une bibliothèque d'interface utilisateur intégrée à Nuxt/Vue fournissant un riche ensemble de composants entièrement stylisés, accessibles et hautement personnalisables pour la création d'applications Web modernes.
-  Titre: Nouvelle libération
-  Orientation: horizontale
-  à gauche:
-    - label:« Démarrer »
-      à:'/docs/getting-started'
-      Icône: i-lucide-square-play
-    - label:"En savoir plus"
-      à:'/docs/getting-started/theme/design-system'
-      Couleur: "Neutre"
-      Étiquette:"subtil"
-      trailingIcône:'i-lucide-arrow-right'
-Slots:
-  Default:|
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - headline
+  - links
+props:
+  title: 'Ultimate Vue UI library'
+  description: 'A Nuxt/Vue-integrated UI library providing a rich set of fully-styled, accessible and highly customizable components for building modern web applications.'
+  headline: 'New release'
+  orientation: horizontal
+  links:
+    - label: 'Get started'
+      to: '/docs/getting-started'
+      icon: 'i-lucide-square-play'
+    - label: 'Learn more'
+      to: '/docs/getting-started/theme/design-system'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
-    @@@ 043 @
+    <img src="/blocks/image4.png" alt="App screenshot" class="rounded-lg shadow-2xl ring ring-default" />
 ---
 
 ![App capture d'écran ](/blocks/image4.png){class="rounded-lg shadow-2xl ring ring-default"}
@@ -144,58 +144,58 @@ Slots:
 
 ### Reverse
 
-Utilisez la prop `reverse` pour inverser l'orientation de l'emplacement par défaut.
+Utilisez le prop `reverse` pour inverser l'orientation de la fente par défaut.
 
 ::component-code
 ---
-Étiquette: true
-Extérieur:
-  @@ph051@liens
-Extérieurs:
-  - ButtonProps [réf. nécessaire]
-Ignorer:
-  @@P053@titre
-  @@ph054@description
-  @@555@headline
-  @@ph056@liens
-Props:
-  Étiquette: Ultimate Vue UI Library
-  Description: Une bibliothèque d'interface utilisateur intégrée à Nuxt/Vue fournissant un riche ensemble de composants entièrement stylisés, accessibles et hautement personnalisables pour la création d'applications Web modernes.
-  Titre: Nouvelle libération
-  Orientation: horizontale
-  Revers: vrai
-  à gauche:
-    - label:« Démarrer »
-      à:'/docs/getting-started'
-      Icône: i-lucide-square-play
-    - label:"En savoir plus"
-      à:'/docs/getting-started/theme/design-system'
-      Couleur: "Neutre"
-      Étiquette:"subtil"
-      trailingIcône:'i-lucide-arrow-right'
-Slots:
-  Défaut:|
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - headline
+  - links
+props:
+  title: 'Ultimate Vue UI library'
+  description: 'A Nuxt/Vue-integrated UI library providing a rich set of fully-styled, accessible and highly customizable components for building modern web applications.'
+  headline: 'New release'
+  orientation: horizontal
+  reverse: true
+  links:
+    - label: 'Get started'
+      to: '/docs/getting-started'
+      icon: 'i-lucide-square-play'
+    - label: 'Learn more'
+      to: '/docs/getting-started/theme/design-system'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
-    @@@ 59 @
+    <img src="/blocks/image4.png" alt="App screenshot" class="rounded-lg shadow-2xl ring ring-default" />
 ---
 
 ![App capture d'écran ](/blocks/image4.png){class="rounded-lg shadow-2xl ring ring-default"}
 ::
 
-@@ph065
+## API équipement
 
-@@ph066@@props
+### Props
 
-Composants-props
+:component-props
 
-@@ph067@@réseaux sociaux
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph068@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

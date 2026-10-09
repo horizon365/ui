@@ -1,5 +1,5 @@
 ---
-title: PageList
+title: Seite
 description: 'Ein vertikales Listenlayout zur Anzeige von Inhalten in einem gestapelten Format.'
 category: page
 links:
@@ -8,46 +8,46 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageList.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Die PageList-Komponente bietet eine flexible Möglichkeit, Inhalte in einem vertikalen Listenlayout anzuzeigen. Es ist perfekt für die Erstellung von gestapelten Listen von [PageCard](/docs/components/page-card) Komponenten oder anderen Elementen mit optionalen Trennern zwischen den Elementen.
-
-::component-example
----
-Einsturz: wahr
-Name: 'Beispielseite'
-Props:
-  Klasse: "W-voll"
----
-::
-
-@@ph005@split
-
-Verwenden Sie `divide` prop, um einen Teiler zwischen jedem untergeordneten Element hinzuzufügen.
+Die PageList-Komponente bietet eine flexible Möglichkeit, Inhalte in einem vertikalen Listenlayout anzuzeigen. Sie eignet sich perfekt zum Erstellen gestapelter Listen von [PageCard](/docs/components/page-card)-Komponenten oder anderen Elementen mit optionalen Trennern zwischen Elementen.
 
 ::component-example
 ---
-Einsturz: wahr
-name: 'page-list-divide-example'(Beispiel für eine Seite)
-Props:
-  Klasse: "W-voll"
+collapse: true
+name: 'page-list-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-@@007@bpb
+### Divide (nicht)
 
-@@@@@@@@@ph008@@props
+Verwenden Sie die `divide` prop, um einen Teiler zwischen jedem Kindelement hinzuzufügen.
 
-Komponenten Props
+::component-example
+---
+collapse: true
+name: 'page-list-divide-example'
+props:
+  class: 'w-full'
+---
+::
 
-@@ph009@gmail.de
+## API (Englisch)
 
-Die Komponenten-Slots
+### Props (nicht)
 
-@@ph010@@gmail.de
+:component-props
 
-Das Komponenten-Theme
+### Slots Bearbeiten
 
-@@ph011@@changelog @@ changelog
+:component-slots
 
-Das Component-Changelog
+## Theme Bearbeiten
+
+:component-theme
+
+## Changelog (englisch)
+
+:component-changelog

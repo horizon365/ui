@@ -15,260 +15,260 @@ links:
 
 ::component-code
 ---
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue ''
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ''
 ---
 ::
 
-###  Rows
+### Rows
 
 行数を設定するには`rows`プロパティを使用します。デフォルトは`3`です。
 
 ::component-code
 ---
-小道具
-  列12
+props:
+  rows: 12
 ---
 ::
 
-### プレースホルダー
+### Placeholder
 
-プレースホルダーテキストを設定するには、`placeholder`プロパティを使用します。
+`placeholder`プロパティを使用してプレースホルダーテキストを設定します。
 
 ::component-code
 ---
-小道具
-  プレースホルダー：'何かを入力...'
+props:
+  placeholder: 'Type something...'
 ---
 ::
 
-###  Autorisize
+### Autoresize
 
-`autoresize`プロパティを使用して、テキストエリアの高さを自動リサイズできます。
+`autoresize`プロパティを使用して、Textareaの高さを自動リサイズできます。
 
 ::component-code
 ---
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue：'これはテキストエリアの高さを自動サイズ変更する長いテキストです。
-  自動サイズ変更true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 'This is a long text that will autoresize the height of the Textarea.'
+  autoresize: true
 ---
 ::
 
-`maxrows`プロパティを使用して、自動サイズ変更時の最大行数を設定します。`0`に設定すると、Textareaは無期限に成長します。
+`maxrows`プロパティを使用して、自動サイズ変更時の最大行数を設定します。`0`に設定すると、Textareaは無限に成長します。
 
 ::component-code
 ---
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue：'これは長いテキストで、Textareaの高さを最大4行まで自動サイズ変更します。
-  maxrows 4
-  自動サイズ変更true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 'This is a long text that will autoresize the height of the Textarea with a maximum of 4 rows.'
+  maxrows: 4
+  autoresize: true
 ---
 ::
 
-### カラー
+### Color
 
 `color`プロパティを使用して、Textareaがフォーカスされたときにリングの色を変更します。
 
 ::component-code
 ---
-無視
-  - プレースホルダー
-小道具
-  色ニュートラル
-  ハイライト真
-  プレースホルダー：'何かを入力...'
+ignore:
+  - placeholder
+props:
+  color: neutral
+  highlight: true
+  placeholder: 'Type something...'
 ---
 ::
 
 ::note
-`highlight` propはフォーカス状態を表示するために使用されます。これは、バリデーションエラーが発生したときに内部で使用されます。
+`highlight`プロパティはフォーカスの状態を示すために使用されます。バリデーションエラーが発生したときに内部で使用されます。
 ::
 
-### バリアント
+### Variant
 
 `variant`プロパティを使用して、Textareaのバリアントを変更します。
 
 ::component-code
 ---
-無視
-  - プレースホルダー
-小道具
-  色ニュートラル
-  バリアント：微妙
-  ハイライトfalse
-  プレースホルダー：'何かを入力...'
+ignore:
+  - placeholder
+props:
+  color: neutral
+  variant: subtle
+  highlight: false
+  placeholder: 'Type something...'
 ---
 ::
 
 ### サイズ
 
-`size`プロパティを使用して、Textareaのサイズを変更します。
+`size`プロパティを使用してTextareaのサイズを変更します。
 
 ::component-code
 ---
-無視
-  - プレースホルダー
-小道具
-  サイズXL
-  プレースホルダー：'何かを入力...'
+ignore:
+  - placeholder
+props:
+  size: xl
+  placeholder: 'Type something...'
 ---
 ::
 
-### アイコン
+### Icon
 
-`icon` propを使用して、[ Icon ](/docs/components/icon)をテキストエリア内に表示します。
+`icon`プロパティを使用して、[Icon](/docs/components/icon)をTextarea内に表示します。
 
 ::component-code
 ---
-きれい真
-無視
-  - プレースホルダー
-小道具
-  アイコン'i—lucide'
-  サイズMD
-  variantアウトライン
-  プレースホルダー '検索...'
-  列1
+prettier: true
+ignore:
+  - placeholder
+props:
+  icon: 'i-lucide-search'
+  size: md
+  variant: outline
+  placeholder: 'Search...'
+  rows: 1
 ---
 ::
 
-アイコンの位置を設定するには`leading`および`trailing` propsを使用し、位置ごとに異なるアイコンを設定するには`leading-icon`および`trailing-icon` propsを使用します。
+アイコンの位置を設定するには`leading`と`trailing`のプロップを使用し、位置ごとに異なるアイコンを設定するには`leading-icon`と`trailing-icon`のプロップを使用します。
 
 ::component-code
 ---
-きれい真
-無視
-  - プレースホルダー
-小道具
-  trailingIcon i—lucide—at—sign
-  プレースホルダー 'メールアドレスを入力'
-  サイズMD
-  列1
+prettier: true
+ignore:
+  - placeholder
+props:
+  trailingIcon: i-lucide-at-sign
+  placeholder: 'Enter your email'
+  size: md
+  rows: 1
 ---
 ::
 
 ### アバター
 
-`avatar` propを使用して、[ Avatar ](/docs/components/avatar)をテキストエリア内に表示します。
+`avatar`プロパティを使用して、[Avatar](/docs/components/avatar)をTextarea内に表示します。
 
 ::component-code
 ---
-きれい真
-無視
-  - プレースホルダー
-  -  avatar.loading
-小道具
-  アバター
-    https//github.com/nuxt.png
-    読み込み怠惰
-  サイズMD
-  variantアウトライン
-  プレースホルダー '検索...'
-  列1
+prettier: true
+ignore:
+  - placeholder
+  - avatar.loading
+props:
+  avatar:
+    src: 'https://github.com/nuxt.png'
+    loading: lazy
+  size: md
+  variant: outline
+  placeholder: 'Search...'
+  rows: 1
 ---
 ::
 
-### ローディング
+### Loading
 
-`loading` propを使用して、Textareaにロードアイコンを表示します。
+`loading`プロパティを使用して、Textareaにロードアイコンを表示します。
 
 ::component-code
 ---
-無視
-  - プレースホルダー
-小道具
-  読み込み真
-  トレーリングfalse
-  プレースホルダー '検索...'
-  列1
+ignore:
+  - placeholder
+props:
+  loading: true
+  trailing: false
+  placeholder: 'Search...'
+  rows: 1
 ---
 ::
 
-###  Loadingアイコン
+### Loading Icon
 
-読み込みアイコンをカスタマイズするには、`loading-icon`プロパティを使用します。デフォルトは`i-lucide-loader-circle`です。
+`loading-icon`プロパティを使用して、ロードアイコンをカスタマイズします。デフォルトは`i-lucide-loader-circle`です。
 
 ::component-code
 ---
-無視
-  - プレースホルダー
-小道具
-  読み込み真
-  loadingIcon 'i—lucide—loader'
-  プレースホルダー '検索...'
-  列1
+ignore:
+  - placeholder
+props:
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  placeholder: 'Search...'
+  rows: 1
 ---
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.loading`キーの下の`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`app.config.ts`の`ui.icons.loading`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.loading`キーの下の`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`vite.config.ts`の`ui.icons.loading`キーでグローバルにカスタマイズできます。
 :::
 ::
 
 ### 無効
 
-`disabled`プロパティを使用して、Textareaを無効にします。
+`disabled`プロパティを使用してTextareaを無効にします。
 
 ::component-code
 ---
-無視
-  - プレースホルダー
-小道具
-  無効true
-  プレースホルダー：'何かを入力...'
+ignore:
+  - placeholder
+props:
+  disabled: true
+  placeholder: 'Type something...'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attributes" target="_blank"}
-このコンポーネントは、すべてのネイティブ`<textarea>` HTML属性もサポートします。
+このコンポーネントはすべてのネイティブ`<textarea>` HTML属性もサポートします。
 ::
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-### エクスポーズ
+### Expose
 
 テンプレート参照を介してコンポーネントにアクセスする場合、以下を使用できます：
 
 | 名前|タイプ|
 | ---- | ---- |
 | `textareaRef`{lang="ts-type"}| `Ref<HTMLTextAreaElement \| null>`{lang="ts-type"}|
-| `autoResize`{lang="ts-type"}|`() => void`{lang="ts-type"}|
+| `autoResize`{lang="ts-type"}| `() => void`{lang="ts-type"}|
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

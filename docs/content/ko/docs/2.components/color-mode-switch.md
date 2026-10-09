@@ -11,18 +11,18 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/color-mode/ColorModeSwitch.vue
 ---
 
-##  사용
+## Usage
 
 ColorModeSwitch 구성 요소는 [Switch](/docs/components/switch) 구성 요소를 확장하므로 `color`, `size` 등의 속성을 전달할 수 있습니다.
 
-: component-code {prefix="color-mode"}
+:component-code{prefix="color-mode"}
 
-##  예제
+## 예
 
-### 사용자 지정 아이콘
+### 사용자 정의 아이콘 포함
 
 ::framework-only
-#nuxt #nuxt
+#nuxt
 ::div
 
 `app.config.ts`를 사용하여 `ui.icons` 속성을 사용하여 아이콘을 사용자 정의합니다.
@@ -40,7 +40,7 @@ export default defineAppConfig({
 
 ::
 
-#vue #vue
+#vue
 ::div
 `vite.config.ts`를 사용하여 `ui.icons` 속성을 사용하여 아이콘을 사용자 정의합니다.
 
@@ -68,12 +68,12 @@ export default defineConfig({
 
 ::
 
-##  API
+## API 파일
 
-### Props 이미지
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-##  Changelog
+## Changelog 파일
 
-: component-changelog{prefix="color-mode"}
+:component-changelog{prefix="color-mode"}

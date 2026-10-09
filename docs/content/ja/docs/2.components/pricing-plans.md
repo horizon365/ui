@@ -10,7 +10,7 @@ links:
 
 ## 使用法
 
-PricingPlansコンポーネントは、[ PricingPlan ](/docs/components/pricing-plan)コンポーネントのリストを、デフォルトスロットまたは`plans` propを使用して表示する柔軟なレイアウトを提供します。
+PricingPlansコンポーネントは、[PricingPlan](/docs/components/pricing-plan)コンポーネントのリストをデフォルトスロットまたは`plans`プロパティのいずれかを使用して表示する柔軟なレイアウトを提供します。
 
 ```vue {2,8}
 <template>
@@ -25,197 +25,197 @@ PricingPlansコンポーネントは、[ PricingPlan ](/docs/components/pricing-
 ```
 
 ::tip
-グリッド列は計画の数に基づいて自動的に計算されます。これは`plans` propで動作しますが、デフォルトスロットでも動作します。
+グリッド列は計画の数に基づいて自動的に計算されます。これは`plans`プロパティだけでなく、デフォルトのスロットでも動作します。
 ::
 
-### プラン
+### Plans
 
-`plans` propを、[ PricingPlan ](/docs/components/pricing-plan#props)コンポーネントのプロパティを持つオブジェクトの配列として使用します。
+`plans`プロパティを[PricingPlan](/docs/components/pricing-plan#props)コンポーネントのプロパティを持つオブジェクトの配列として使用します。
 
 ::component-code
 ---
-崩壊真
-無視
-  - プラン
-外部
-  - プラン
-externalTypes
-  -  PricingPlanProps []
-小道具
-  プラン：
-    -  titleソロ
-      説明：「インディーハッカーのためのテーラード」
-      価格'$249'
-      特徴
-        - '開発者1名
-        - '生涯アクセス'
-      ボタン
-        ラベル'今すぐ購入'
-    -  titleスタートアップ
-      説明：「小規模チームに最適」
-      価格'$499'
-      特徴
-        - '最大5人の開発者'
-        - 'ソロのすべて'
-      ボタン
-        ラベル'今すぐ購入'
-    -  title組織
-      説明：'より大きなチームや組織に最適です。
-      価格'$999'
-      特徴
-        - '最大20名の開発者
-        - 'スタートアップのすべて'
-      ボタン
-        ラベル'今すぐ購入'
+collapse: true
+ignore:
+  - plans
+external:
+  - plans
+externalTypes:
+  - PricingPlanProps[]
+props:
+  plans:
+    - title: Solo
+      description: 'Tailored for indie hackers.'
+      price: '$249'
+      features:
+        - 'One developer'
+        - 'Lifetime access'
+      button:
+        label: 'Buy now'
+    - title: Startup
+      description: 'Best suited for small teams.'
+      price: '$499'
+      features:
+        - 'Up to 5 developers'
+        - 'Everything in Solo'
+      button:
+        label: 'Buy now'
+    - title: Organization
+      description: 'Ideal for larger teams and organizations.'
+      price: '$999'
+      features:
+        - 'Up to 20 developers'
+        - 'Everything in Startup'
+      button:
+        label: 'Buy now'
 ---
 ::
 
-### オリエンテーション
+### Orientation
 
 `orientation`プロパティを使用してPricingPlansの向きを変更します。デフォルトは`horizontal`です。
 
 ::component-code
 ---
-崩壊真
-隠す
-  - クラス
-無視
-  - プラン
-外部
-  - プラン
-externalTypes
-  -  PricingPlanProps []
-小道具
-  オリエンテーション垂直
-  プラン：
-    -  titleソロ
-      説明：「インディーハッカーのためのテーラード」
-      価格'$249'
-      特徴
-        - '開発者1名
-        - '生涯アクセス'
-      ボタン
-        ラベル'今すぐ購入'
-    -  titleスタートアップ
-      説明：「小規模チームに最適」
-      価格'$499'
-      特徴
-        - '最大5人の開発者'
-        - 'ソロでのすべて'
-      ボタン
-        ラベル'今すぐ購入'
-    -  title組織
-      説明：'より大きなチームや組織に最適です。
-      価格'$999'
-      特徴
-        - '最大20名の開発者
-        - 'スタートアップのすべて'
-      ボタン
-        ラベル'今すぐ購入'
-  クラス'w—full'
+collapse: true
+hide:
+  - class
+ignore:
+  - plans
+external:
+  - plans
+externalTypes:
+  - PricingPlanProps[]
+props:
+  orientation: vertical
+  plans:
+    - title: Solo
+      description: 'Tailored for indie hackers.'
+      price: '$249'
+      features:
+        - 'One developer'
+        - 'Lifetime access'
+      button:
+        label: 'Buy now'
+    - title: Startup
+      description: 'Best suited for small teams.'
+      price: '$499'
+      features:
+        - 'Up to 5 developers'
+        - 'Everything in Solo'
+      button:
+        label: 'Buy now'
+    - title: Organization
+      description: 'Ideal for larger teams and organizations.'
+      price: '$999'
+      features:
+        - 'Up to 20 developers'
+        - 'Everything in Startup'
+      button:
+        label: 'Buy now'
+  class: 'w-full'
 ---
 ::
 
 ::tip
-デフォルトスロットの代わりに`plans` propを使用すると、プランの`orientation`は自動的に逆になり、`horizontal`から`vertical`、その逆も同様です。
+デフォルトスロットの代わりに`plans`プロパティを使用すると、プランの`orientation`が自動的に逆になり、`horizontal`から`vertical`、その逆も同様です。
 ::
 
-### コンパクト
+### Compact
 
-`compact`プロパティを使用して、1つのプランが視覚的なバランスを改善するために拡大縮小されたときに、プラン間のパディングを減らします。
+`compact`プロパティを使用して、1つのプランが視覚的なバランスを改善するためにスケーリングされたときに、プラン間のパディングを減らします。
 
 ::component-code
 ---
-崩壊真
-無視
-  - プラン
-  -  compact
-外部
-  - プラン
-externalTypes
-  -  PricingPlanProps []
-クラス'p—8'
-小道具
-  コンパクト真
-  プラン：
-    -  titleソロ
-      説明：「インディーハッカーのためのテーラード」
-      価格'$249'
-      特徴
-        - '開発者1名
-        - '生涯アクセス'
-      ボタン
-        ラベル'今すぐ購入'
-    -  titleスタートアップ
-      説明：「小規模チームに最適」
-      価格'$499'
-      スケール本当の
-      特徴
-        - '最大5人の開発者'
-        - 'ソロのすべて'
-      ボタン
-        ラベル'今すぐ購入'
-    -  title組織
-      説明：'より大きなチームや組織に最適です。
-      価格'$999'
-      特徴
-        - '最大20名の開発者
-        - 'スタートアップのすべて'
-      ボタン
-        ラベル'今すぐ購入'
+collapse: true
+ignore:
+  - plans
+  - compact
+external:
+  - plans
+externalTypes:
+  - PricingPlanProps[]
+class: 'p-8'
+props:
+  compact: true
+  plans:
+    - title: Solo
+      description: 'Tailored for indie hackers.'
+      price: '$249'
+      features:
+        - 'One developer'
+        - 'Lifetime access'
+      button:
+        label: 'Buy now'
+    - title: Startup
+      description: 'Best suited for small teams.'
+      price: '$499'
+      scale: true
+      features:
+        - 'Up to 5 developers'
+        - 'Everything in Solo'
+      button:
+        label: 'Buy now'
+    - title: Organization
+      description: 'Ideal for larger teams and organizations.'
+      price: '$999'
+      features:
+        - 'Up to 20 developers'
+        - 'Everything in Startup'
+      button:
+        label: 'Buy now'
 ---
 ::
 
-### スケール
+### Scale
 
-`scale`プロパティを使用して、1つのプランが拡大縮小されて視覚的なバランスを改善するときに、プラン間の間隔を調整します。
+`scale`プロパティを使用して、1つの平面が拡大縮小されたときに平面間の間隔を調整し、視覚的なバランスを改善します。
 
 ::component-code
 ---
-崩壊真
-無視
-  - プラン
-  - スケール
-外部
-  - プラン
-externalTypes
-  -  PricingPlanProps []
-クラス'p—8'
-小道具
-  スケール本当の
-  プラン：
-    -  titleソロ
-      説明：「インディーハッカーのためのテーラード」
-      価格'$249'
-      特徴
-        - '開発者1名
-        - '生涯アクセス'
-      ボタン
-        ラベル'今すぐ購入'
-    -  titleスタートアップ
-      説明：「小規模チームに最適」
-      価格'$499'
-      スケール本当の
-      特徴
-        - '最大5人の開発者'
-        - 'ソロのすべて'
-      ボタン
-        ラベル'今すぐ購入'
-    -  title組織
-      説明：'より大きなチームや組織に最適です。
-      価格'$999'
-      特徴
-        - '最大20名の開発者
-        - 'スタートアップのすべて'
-      ボタン
-        ラベル'今すぐ購入'
+collapse: true
+ignore:
+  - plans
+  - scale
+external:
+  - plans
+externalTypes:
+  - PricingPlanProps[]
+class: 'p-8'
+props:
+  scale: true
+  plans:
+    - title: Solo
+      description: 'Tailored for indie hackers.'
+      price: '$249'
+      features:
+        - 'One developer'
+        - 'Lifetime access'
+      button:
+        label: 'Buy now'
+    - title: Startup
+      description: 'Best suited for small teams.'
+      price: '$499'
+      scale: true
+      features:
+        - 'Up to 5 developers'
+        - 'Everything in Solo'
+      button:
+        label: 'Buy now'
+    - title: Organization
+      description: 'Ideal for larger teams and organizations.'
+      price: '$999'
+      features:
+        - 'Up to 20 developers'
+        - 'Everything in Startup'
+      button:
+        label: 'Buy now'
 ---
 ::
 
 ## 例
 
 ::note
-これらの例では[ Nuxt Content ](https://content.nuxt.com)を使用していますが、コンポーネントは任意のコンテンツ管理システムと統合できます。
+これらの例は[Nuxt Content](https://content.nuxt.com)を使用していますが、コンポーネントは任意のコンテンツ管理システムと統合できます。
 ::
 
 ### ページ内
@@ -241,23 +241,23 @@ const { data: plans } = await useAsyncData('plans', () => queryCollection('plans
 ```
 
 ::note
-この例では、`@nuxt/content`モジュールの`queryCollection`を使用して`plans`を取得しています。
+この例では、`@nuxt/content`モジュールの`queryCollection`を使用して`plans`をフェッチします。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

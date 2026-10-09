@@ -11,32 +11,32 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardSidebarToggle.vue
 ---
 
-## 使用情况
+## 用法
 
 DashboardSidebarToggle组件由[DashboardNavbar](/docs/components/dashboard-navbar)和[DashboardSidebar](/docs/components/dashboard-sidebar)组件使用。
 
-在移动的上自动显示切换侧边栏，**无需手动添加**。
+它是自动显示在移动的切换侧边栏，**你不必手动添加**。
 
 ::component-code
 ---
-隐藏：
+hide:
   - class
-道具：
-  class：'lg：flex'
+props:
+  class: 'lg:flex'
 ---
 ::
 
-它扩展了[Button](/docs/components/button)组件，因此您可以传递任何属性，如`color`、`variant`、`size`等。
+它扩展了[Button](/docs/components/button)组件，因此您可以传递任何属性，如`color`，`variant`，`size`等。
 
 ::component-code
 ---
-隐藏：
+hide:
   - class
-忽略：
+ignore:
   - variant
-道具：
-  变体：“细微”
-  class：'lg：flex'
+props:
+  variant: 'subtle'
+  class: 'lg:flex'
 ---
 ::
 
@@ -46,9 +46,9 @@ DashboardSidebarToggle组件由[DashboardNavbar](/docs/components/dashboard-navb
 
 ## 示例
 
-### `toggle`插槽内
+###  `toggle`插槽内
 
-即使此组件自动显示在移动的上，您也可以使用[DashboardNavbar](/docs/components/dashboard-navbar)和[DashboardSidebar](/docs/components/dashboard-sidebar)组件的`toggle`插槽自定义按钮。
+即使此组件自动显示在移动的上，您也可以使用[仪表板Navbar](/docs/components/dashboard-navbar)和[仪表板Sidebar](/docs/components/dashboard-sidebar)组件的`toggle`插槽来自定义按钮。
 
 ::code-group
 
@@ -96,16 +96,16 @@ definePageMeta({
 
 ### Props
 
-：组件-支柱
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-此组件还支持所有本机`<button>`HTML属性。
+此组件还支持所有原生`<button>` HTML属性。
 ::
 
 ## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

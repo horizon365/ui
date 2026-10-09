@@ -1,5 +1,5 @@
 ---
-title: Pagetería
+title: Pageón
 description: 'Componente de tarjeta prediseñado que muestra un título, descripción y enlace opcional.'
 category: page
 links:
@@ -8,7 +8,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageCard.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 El componente PageCard proporciona una forma flexible de mostrar el contenido en una tarjeta con una ilustración en la ranura predeterminada.
 
@@ -16,240 +16,240 @@ El componente PageCard proporciona una forma flexible de mostrar el contenido en
 
 ::u-page-card
 ---
-Archivo de la etiqueta: Tailwind CSS
-La interfaz de usuario de Nuxt se integra con la última versión de Tailwind CSS, aportando mejoras significativas.
+title: 'Tailwind CSS'
+description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
 icon: 'i-simple-icons-tailwindcss'
-Categoría: W-96
+class: 'w-96'
 ---
 
-Vía: img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
 ::
 
 ::
 
 ::tip
-Utilice los componentes [PageGrid](/docs/components/page-grid),[PageColumns](/docs/components/page-columns) o [](/docs/components/page-list) para mostrar varias PageCard.
+Utilice los componentes [PageGrid](/docs/components/page-grid), [PageColumns](/docs/components/page-columns) o [PageList](/docs/components/page-list) para mostrar varias PageCard.
 ::
 
-@@14@Título
+### Nombre
 
 Utilice el prop `title` para establecer el título de la tarjeta.
 
 ::component-code
 ---
-Escondido:
-  @16@clase
-Props:
-  Archivo de la etiqueta: Tailwind CSS
-  Categoría: W-96
+hide:
+  - class
+props:
+  title: 'Tailwind CSS'
+  class: 'w-96'
 ---
 ::
 
-@17@Descripción
+### Descripción
 
 Utilice el prop `description` para establecer la descripción de la tarjeta.
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @1919@clase
-Ignora:
-  @200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Archivo de la etiqueta: Tailwind CSS
-  La interfaz de usuario de Nuxt se integra con la última versión de Tailwind CSS, aportando mejoras significativas.
-  Categoría: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  class: 'w-96'
 ---
 ::
 
-@21@Icon
+### Icono
 
-Utilice el prop `icon` para configurar el icono de la tarjeta.
+Utilice el accesorio `icon` para configurar el icono de la tarjeta.
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @@23@clase
-Ignora:
-  @24@title
-  @@25@Descripción
-Props:
-  Archivo de la etiqueta: Tailwind CSS
-  La interfaz de usuario de Nuxt se integra con la última versión de Tailwind CSS, aportando mejoras significativas.
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
-  Categoría: W-96
+  class: 'w-96'
 ---
 ::
 
-@@26@enlace
+### Link (en inglés)
 
-Puede pasar cualquier propiedad del componente [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) como `to`,`target`,`rel`, etc.
+Puede pasar cualquier propiedad del componente [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) como `to`, `target`, `rel`, etc.
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @35@clase
-Ignora:
-  @36@title
-  @@ph037@descripción
-  @@icon 38
-  @39@target (en inglés)
-Props:
-  Archivo de la etiqueta: Tailwind CSS
-  La interfaz de usuario de Nuxt se integra con la última versión de Tailwind CSS, aportando mejoras significativas.
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - target
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
-  en: 'https://tailwindcss.com/blog/tailwindcss-v4'
-  Nombre: _blank
-  Categoría: W-96
+  to: 'https://tailwindcss.com/blog/tailwindcss-v4'
+  target: _blank
+  class: 'w-96'
 ---
 ::
 
-@@P2000@Variación
+### Variante
 
-Utilice el prop `variant` para cambiar el estilo de la tarjeta.
+Utilice el accesorio `variant` para cambiar el estilo de la tarjeta.
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @@42@clase
-Ignora:
-  @@pH043@título
-  @@ph044@descripción
-  @@icon 45
-  @4646 @
-  @47@target en Español
-Props:
-  Archivo de la etiqueta: Tailwind CSS
-  La interfaz de usuario de Nuxt se integra con la última versión de Tailwind CSS, aportando mejoras significativas.
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - to
+  - target
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
-  en: 'https://tailwindcss.com/blog/tailwindcss-v4'
-  Nombre: _blank
-  Categoría: Soft
-  Categoría: W-96
+  to: 'https://tailwindcss.com/blog/tailwindcss-v4'
+  target: _blank
+  variant: soft
+  class: 'w-96'
 ---
 ::
 
 ::tip
-Puede aplicar la clase `light` o `dark` a la ranura `links` cuando utilice la variante `solid` para invertir los colores.
+Puede aplicar la clase `light` o `dark` a la ranura `links` cuando se utiliza la variante `solid` para invertir los colores.
 ::
 
-@@P052@@Orientación
+### Orientación
 
-Utilice el prop `orientation` para cambiar la orientación con la ranura por defecto.
+Utilice el prop `orientation` para cambiar la orientación con la ranura predeterminada.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@505@título
-  @@pH056@descripción
-  @@57@icon
-Props:
-  Archivo de la etiqueta: Tailwind CSS
-  La interfaz de usuario de Nuxt se integra con la última versión de Tailwind CSS, aportando mejoras significativas.
+prettier: true
+ignore:
+  - title
+  - description
+  - icon
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
-  Orientación: Horizontal
-Los slots:
-  Default:|
+  orientation: horizontal
+slots:
+  default: |
 
-    @@@ 58 @
+    <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
 ---
 
-Vía: img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
 ::
 
-### reversa
+### Reverse (Edición española)
 
 Utilice el prop `reverse` para invertir la orientación de la ranura predeterminada.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@2006@título
-  @@ph063@descripción
-  @@icon 64
-Props:
-  Archivo de la etiqueta: Tailwind CSS
-  La interfaz de usuario de Nuxt se integra con la última versión de Tailwind CSS, aportando mejoras significativas.
+prettier: true
+ignore:
+  - title
+  - description
+  - icon
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
-  Orientación: Horizontal
-  Reverso: Verdad
-Los slots:
-  Default:|
+  orientation: horizontal
+  reverse: true
+slots:
+  default: |
 
-    @@@ 065 @
+    <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
 ---
 
-Vía: img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
 ::
 
-@067 @ Destacado
+### Highlight (Edición española)
 
-Utilice los props `highlight` y `highlight-color` para mostrar un borde resaltado alrededor de la tarjeta.
+Utilice los accesorios `highlight` y `highlight-color` para mostrar un borde resaltado alrededor de la tarjeta.
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @070@clase
-Ignora:
-  @@701@title
-  @@ph072@descripción
-  @073@icon
-  @@700@orientación
-Props:
-  Archivo de la etiqueta: Tailwind CSS
-  La interfaz de usuario de Nuxt se integra con la última versión de Tailwind CSS, aportando mejoras significativas.
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - orientation
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
-  Orientación: Horizontal
-  Destacado: Verdadero
-  highlightColor: 'primario'
-Los slots:
-  Default:|
+  orientation: horizontal
+  highlight: true
+  highlightColor: 'primary'
+slots:
+  default: |
 
-    @@@ 75 @
+    <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
 ---
 
-Vía: img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
 ::
 
-@@777@Atención
+### Spotlight (Edición española)
 
 Utilice los accesorios `spotlight` y `spotlight-color` para mostrar un efecto de foco que sigue el cursor del ratón y resalta los bordes al flotar.
 
 ::note
-El efecto de foco se hará cargo de los efectos de desplazamiento cuando se utilice un `to` prop. Es mejor usarlo con la variante `outline`.
+El efecto de foco se hará cargo de los efectos de desplazamiento cuando se use un accesorio `to`.
 ::
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @082@clase
-Ignora:
-  @083@title (Edición española)
-  @@ph084@descripción
-  @@icon 85
-  @@86000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Archivo de la etiqueta: Tailwind CSS
-  La interfaz de usuario de Nuxt se integra con la última versión de Tailwind CSS, aportando mejoras significativas.
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - orientation
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
-  Orientación: Horizontal
-  Categoría: True
-  spotlightColor: 'primario'
-Los slots:
-  Default:|
+  orientation: horizontal
+  spotlight: true
+  spotlightColor: 'primary'
+slots:
+  default: |
 
-    @@pf087 @
+    <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
 ---
 
-Vía: img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
 ::
 
 ::tip
@@ -262,15 +262,15 @@ También puede personalizar el color y el tamaño mediante el uso de las variabl
 ```
 ::
 
-@@pH096@Ejemplos
+## Ejemplos
 
-### Como testimonio
+### Como un testimonio
 
-Utilice el componente [User](/docs/components/user) en la ranura `header` o `footer` para que la tarjeta parezca un testimonio.
+Utilice el componente [User](/docs/components/user) en la ranura `header` o `footer` para que la tarjeta se vea como un testimonio.
 
 ::component-example
 ---
-Nombre: 'pagina-tarjeta-testimonio-ejemplo'
+name: 'page-card-testimonial-example'
 ---
 ::
 
@@ -278,20 +278,20 @@ Nombre: 'pagina-tarjeta-testimonio-ejemplo'
 Puede utilizar el componente `PageColumns` para mostrar varias PageCard en un diseño de varias columnas.
 ::
 
-@@pH105
+## API
 
-@106@106@106
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
-@107@107@107@107
+### Slots
 
-Componentes de slots
+:component-slots
 
-@108 @@ Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@109@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

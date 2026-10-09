@@ -7,36 +7,36 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Footer.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Die Footer-Komponente rendert ein `<footer>`-Element.
+Die Footer Komponente rendert ein `<footer>` Element.
 
-Verwenden Sie die `left`,`default` und `right` Slots, um die Fußzeile anzupassen.
+Verwenden Sie die Slots `left`, `default` und `right`, um die Fußzeile anzupassen.
 
 ::component-example
 ---
-Schöner: wahr
-Einsturz: wahr
-Name: 'Beispiel-Fußzeile'
-Klasse: '! p-0'
-Props:
-  Klasse: "W-voll"
+prettier: true
+collapse: true
+name: 'footer-example'
+class: '!p-0'
+props:
+  class: 'w-full'
 ---
 ::
 
 ::note
-In diesem Beispiel verwenden wir die Komponente [NavigationMenu](/docs/components/navigation-menu), um die Fußzeilenlinks in der Mitte zu rendern.
+In diesem Beispiel verwenden wir die Komponente [NavigationMenu](/docs/components/navigation-menu), um die Fußzeilenlinks in der Mitte darzustellen.
 ::
 
 ::tip{to="/docs/components/footer-columns"}
-Sie können die Komponente `FooterColumns` verwenden, um eine Liste von Links innerhalb des `top`-Slots anzuzeigen.
+Sie können die `FooterColumns`-Komponente verwenden, um eine Liste von Links innerhalb des `top`-Steckplatzes anzuzeigen.
 ::
 
-@@ph011@@Beispiele
+## Examples (Beispiele)
 
-@@ph012@@@ph013@@@ph013@@@@ph012@@@@@@ph013@@@@@ph013@@@@@ph013@@@@@@ph013@@@@@ph013@@@@@ph013@@@@@ph013@@@@@@ph013 @
+### Innerhalb `app.vue`
 
-Verwenden Sie die Fußzeilenkomponente in Ihrem `app.vue` oder in einem Layout:
+Verwenden Sie die Footer-Komponente in Ihrem `app.vue` oder in einem Layout:
 
 ```vue [app.vue]{32-67}
 <script setup lang="ts">
@@ -113,20 +113,20 @@ const items: NavigationMenuItem[] = [{
 In diesem Beispiel verwenden wir die Komponente [Separator](/docs/components/separator), um einen Rahmen über der Fußzeile hinzuzufügen.
 ::
 
-@@@@@@899@@bmdbb
+## API (Englisch)
 
-@@@@@@@@@@@ph090@@@props
+### Props (nicht)
 
-Komponenten-Props
+:component-props
 
-@@ph091@@slots
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph092@@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph093@@changelog @@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

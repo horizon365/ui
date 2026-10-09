@@ -12,77 +12,77 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Slider.vue
 ---
 
-## 使用情况
+## 用法
 
 使用`v-model`指令控制滑块的值。
 
 ::component-code
 ---
-外部：
-  - 模型值
-道具：
-  型号值：50
+external:
+  - modelValue
+props:
+  modelValue: 50
 ---
 ::
 
-当不需要控制其状态时，使用`default-value`prop设置初始值。
+当不需要控制其状态时，使用`default-value`属性设置初始值。
 
 ::component-code
 ---
-忽略：
-  - 默认值
-道具：
-  默认值：50
+ignore:
+  - defaultValue
+props:
+  defaultValue: 50
 ---
 ::
 
 ::tip
 使用`aria-label`或`aria-labelledby`命名单个thumb Slider，它们将被转发到具有`slider`角色的thumb元素。
 
-多个拇指滑块的拇指按其位置命名，因此可以区分它们，`Minimum` / `Maximum`表示两个拇指，`Value n of m`表示三个或更多拇指。这些名称将保留，并且`aria-label`通过根上的`group`角色将滑块作为一个整体命名，而不是在每个拇指上重复。
+多个拇指滑块的拇指按其位置命名，因此可以区分它们，`Minimum`/`Maximum`用于两个拇指，`Value n of m`用于三个或更多拇指。这些名称将保留，`aria-label`通过根上的`group`角色命名整个滑块，而不是在每个拇指上重复。
 ::
 
-### Min / Max
+### 最小/最大
 
-使用`min`和`max`道具将Slider. slide的最小值和最大值设置为`0`和`100`。
+使用`min`和`max`属性将Slider. slide的最小值和最大值设置为`0`和`100`。
 
 ::component-code
 ---
-忽略：
+ignore:
   - defaultValue
-道具：
-  最小值：0
-  最大值：50
-  默认值：50
+props:
+  min: 0
+  max: 50
+  defaultValue: 50
 ---
 ::
 
 ### Step
 
-使用`step`道具将Slider. slider的增量值设置为`1`。
+使用`step`属性将Slider.xml的增量值设置为`1`。
 
 ::component-code
 ---
-忽略：
+ignore:
   - defaultValue
-道具：
-  步骤：10
-  默认值：50
+props:
+  step: 10
+  defaultValue: 50
 ---
 ::
 
-多个
+### 多个
 
-使用`v-model`指令或带有值数组的`default-value`prop创建范围滑块。
+使用`v-model`指令或`default-value` prop和一个值数组来创建范围滑块。
 
 ::component-code
 ---
-忽略：
-- 模型值
-外部：
-- 模型值
-道具：
-  modelValue：[25，75]
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: [25, 75]
 ---
 ::
 
@@ -90,117 +90,117 @@ links:
 
 ::component-code
 ---
-忽略：
-  模型值
-外部：
-  - 型号值
-道具：
-  型号值：[25、50、75]
-  拇指之间的最小步长：10
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: [25, 50, 75]
+  minStepsBetweenThumbs: 10
 ---
 ::
 
-方向
+### 定向
 
-使用`orientation`道具更改滑块的方向。默认为`horizontal`。
+使用`orientation`道具将Slider.xml.的方向更改为`horizontal`。
 
 ::component-code
 ---
-忽略：
-  - 默认值
-  班级
-道具：
-  方向：垂直
-  默认值：50
-  类别：'h-48'
+ignore:
+  - defaultValue
+  - class
+props:
+  orientation: vertical
+  defaultValue: 50
+  class: 'h-48'
 ---
 ::
 
-颜色
+### Color
 
-使用`color`道具更改Slider的颜色。
+使用`color`道具更改滑块的颜色。
 
 ::component-code
 ---
-忽略：
-  - 默认值
-道具：
-  颜色：中性
-  默认值：50
+ignore:
+  - defaultValue
+props:
+  color: neutral
+  defaultValue: 50
 ---
 ::
 
-尺寸
+### Size
 
-使用`size`道具更改Slider的大小。
+使用`size`道具更改滑块的大小。
 
 ::component-code
 ---
-忽略：
-  - 默认值
-道具：
-  尺寸：xl
-  默认值：50
+ignore:
+  - defaultValue
+props:
+  size: xl
+  defaultValue: 50
 ---
 ::
 
-工具提示
+### 工具提示
 
-使用`tooltip`属性在Slider缩图周围显示具有目前值的[Tooltip](/docs/components/tooltip)。您可以将它设定为`true`以取得预设行为，或传递物件以使用[Tooltip](/docs/components/tooltip#props)元件中的任何属性自订它。
+使用`tooltip` prop以当前值在Slider拇指周围显示[Tooltip](/docs/components/tooltip)。您可以将其设置为`true`以获得默认行为，或传递一个对象以使用[Tooltip](/docs/components/tooltip#props)组件中的任何属性对其进行自定义。
 
 ::component-code
 ---
-忽略：
-  - 默认值
-  工具提示
-道具：
-  默认值：50
-  工具提示：true
+ignore:
+  - defaultValue
+  - tooltip
+props:
+  defaultValue: 50
+  tooltip: true
 ---
 ::
 
-### 已停用
+### 禁用
 
 使用`disabled`道具禁用滑块。
 
 ::component-code
 ---
-忽略：
-  - 默认值
-道具类：
-  已禁用：true
-  默认值：50
+ignore:
+  - defaultValue
+props:
+  disabled: true
+  defaultValue: 50
 ---
 ::
 
-倒置的
+### 倒置
 
-使用`inverted`道具以视觉方式反转Slider。
+使用`inverted` prop在视觉上反转滑块。
 
 ::component-code
 ---
-忽略：
-  - 默认值
-道具：
-  反转：true
-  默认值：25
+ignore:
+  - defaultValue
+props:
+  inverted: true
+  defaultValue: 25
 ---
 ::
 
-活性成分
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-发射器
+### Emits
 
-：组件发射
+:component-emits
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

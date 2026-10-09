@@ -13,46 +13,46 @@ links:
 
 ## 使用法
 
-### 名前
+### Name
 
 `name`プロパティを使用して、ユーザの名前を表示します。
 
 ::component-code
 ---
-小道具
-  名前：'ジョン·ドウ'
+props:
+  name: 'John Doe'
 ---
 ::
 
-### 説明
+### Description
 
 `description`プロパティを使用して、ユーザの説明を表示します。
 
 ::component-code
 ---
-小道具
-  名前：'ジョン·ドウ'
-  説明：'ソフトウェアエンジニア'
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
 ---
 ::
 
 ### アバター
 
-`avatar` propを使用して、[ Avatar ](/docs/components/avatar)コンポーネントを表示します。
+`avatar`プロパティを使用して、[Avatar](/docs/components/avatar)コンポーネントを表示します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  name
-  - 説明
-小道具
-  名前：'ジョン·ドウ'
-  説明：'ソフトウェアエンジニア'
-  アバター
-    src 'https//i.pravatar.cc/150 u = john—doe'
-    読み込み怠惰
-    アイコンi—lucide—image
+prettier: true
+ignore:
+  - name
+  - description
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
+  avatar:
+    src: 'https://i.pravatar.cc/150?u=john-doe'
+    loading: lazy
+    icon: i-lucide-image
 ---
 ::
 
@@ -60,47 +60,47 @@ links:
 
 ::component-props
 ---
-名前アバター
-無視
-  - サイズ
-  -  as
+name: Avatar
+ignore:
+  - size
+  - as
 ---
 ::
 
 ::
 
-### チップ
+### Chip
 
-`chip` propを使用して、[ Chip ](/docs/components/chip)コンポーネントを表示します。
+`chip`プロパティを使用して、[Chip](/docs/components/chip)コンポーネントを表示します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  name
-  - 説明
-  @@ avatar.src @ ph023 @ avatar.src
-アイテム
+prettier: true
+ignore:
+  - name
+  - description
+  - avatar.src
+items:
   chip.color:
-    - プライマリ
-    - セカンダリ
-    - 成功
-    -  info
-    -  warning
-    - エラー
-    - ニュートラル
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
   chip.position:
-    - 左上
-    - 右上
-    -  bottom—left
-    -  bottom—right
-小道具
-  名前：'ジョン·ドウ'
-  説明：'ソフトウェアエンジニア'
-  avatar.src 'https//i.pravatar.cc/150 u = john—doe'
-  チップ
-    色'プライマリ'
-    位置右上
+    - top-left
+    - top-right
+    - bottom-left
+    - bottom-right
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
+  avatar.src: 'https://i.pravatar.cc/150?u=john-doe'
+  chip:
+    color: 'primary'
+    position: top-right
 ---
 ::
 
@@ -108,11 +108,11 @@ links:
 
 ::component-props
 ---
-名前チップ
-無視
-  -  as
-  - サイズ
-  - スタンドアロン
+name: Chip
+ignore:
+  - as
+  - size
+  - standalone
 ---
 ::
 
@@ -124,77 +124,77 @@ links:
 
 ::component-code
 ---
-きれい真
-無視
-  - 名前
-  - 説明
-  @@ avatar.src @ ph042 @ avatar.src
-  - チップ
-小道具
-  名前：'ジョン·ドウ'
-  説明：'ソフトウェアエンジニア'
-  avatar.src 'https//i.pravatar.cc/150 u = john—doe'
-  チップ本当
-  サイズXL
+prettier: true
+ignore:
+  - name
+  - description
+  - avatar.src
+  - chip
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
+  avatar.src: 'https://i.pravatar.cc/150?u=john-doe'
+  chip: true
+  size: xl
 ---
 ::
 
-### オリエンテーション
+### Orientation
 
 向きを変更するには`orientation`プロパティを使用します。デフォルトは`horizontal`です。
 
 ::component-code
 ---
-きれい真
-無視
-  @@ avatar.src @ ph047 @ avatar.src
-小道具
-  オリエンテーション'垂直'
-  名前：'ジョン·ドウ'
-  説明：'ソフトウェアエンジニア'
-  avatar.src 'https//i.pravatar.cc/150 u = john—doe'
+prettier: true
+ignore:
+  - avatar.src
+props:
+  orientation: 'vertical'
+  name: 'John Doe'
+  description: 'Software Engineer'
+  avatar.src: 'https://i.pravatar.cc/150?u=john-doe'
 ---
 ::
 
-### リンク
+### Link
 
-[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)コンポーネントから、`to`、`target`、`rel`などのプロパティを渡すことができます。
+`to`、`target`、`rel`など、[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)コンポーネントから任意のプロパティを渡すことができます。
 
 ::component-code
 ---
-きれい真
-無視
-  - 名前
-  - 説明
-  日本語
-  - ターゲット
-小道具
-  「https//github.com/benjamincanac」
-  ターゲット'_blank'
-  名前：ベンジャミン·カナック
-  説明：'ソフトウェアエンジニア'
-  avatar.src 'https//github.com/benjamincanac.png'
+prettier: true
+ignore:
+  - name
+  - description
+  - avatar.src
+  - target
+props:
+  to: 'https://github.com/benjamincanac'
+  target: '_blank'
+  name: 'Benjamin Canac'
+  description: 'Software Engineer'
+  avatar.src: 'https://github.com/benjamincanac.png'
 ---
 ::
 
 ::note
-`NuxtLink`コンポーネントは、`User`コンポーネントに渡した他のすべての属性を継承します。
+`NuxtLink`コンポーネントは、`User`コンポーネントに渡す他のすべての属性を継承します。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

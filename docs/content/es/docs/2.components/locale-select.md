@@ -11,19 +11,19 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/locale/LocaleSelect.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente LocaleSelect extiende el componente [SelectMenu](/docs/components/select-menu), de modo que pueda pasar cualquier propiedad como `color`,`variant`,`size`, etc.
+El componente LocaleSelect extiende el componente [SelectMenu](/docs/components/select-menu), de modo que puede pasar cualquier propiedad como `color`, `variant`, `size`, etc.
 
 ::framework-only
-#Nuxidad
+#nuxt
 ::note{to="/docs/getting-started/integrations/i18n/nuxt"}
 Este componente está destinado a ser utilizado con el sistema **i18n**. Obtenga más información sobre él en la guía.
 ::
 
-#vista
+#vue
 ::note{to="/docs/getting-started/integrations/i18n/vue"}
-Este componente está destinado a ser utilizado con el sistema **i18n**. Obtenga más información sobre él en la guía.
+Este componente está destinado a ser utilizado con el sistema **i18n**. Más información sobre él en la guía.
 ::
 
 ::
@@ -32,13 +32,13 @@ Este componente está destinado a ser utilizado con el sistema **i18n**. Obtenga
 Esto puede resultar en una pantalla diferente, por ejemplo, Microsoft Edge en Windows muestra el código ISO 3166 - 1 alfa-2 en su lugar, ya que no se envían iconos de bandera con las fuentes del sistema operativo.
 ::
 
-@@120@locales
+### Locales
 
 Utilice el prop `locales` con una matriz de locales de `@nuxt/ui/locale`.
 
 ::component-example
 ---
-Nombre: 'locale-select-example'
+name: 'locale-select-example'
 ---
 ::
 
@@ -59,7 +59,7 @@ const locale = ref('en')
 ### Localización dinámica
 
 ::framework-only
-#nuxidad
+#nuxt
 ::div
 Puedes usarlo con Nuxt i18n:
 
@@ -81,7 +81,7 @@ const { locale, setLocale } = useI18n()
 
 ::
 
-#vista
+#vue
 ::div
 Puedes usarlo con Vue i18n:
 
@@ -106,12 +106,12 @@ const { locale, setLocale } = useI18n()
 
 ::
 
-@@pH058
+## API (Edición española)
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Accesorios
 
-Componentes Props
+:component-props
 
-@060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Changelog (Edición española)
 
-por: component-changelog {prefix="locale"}
+:component-changelog{prefix="locale"}

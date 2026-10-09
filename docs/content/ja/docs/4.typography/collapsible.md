@@ -11,7 +11,7 @@ links:
 
 ## 使用法
 
-コンテンツを`collapsible`コンポーネントでラップして、コンテンツ内に[ Collapsible ](/docs/components/collapsible)を表示します。
+コンテンツを`collapsible`コンポーネントでラップして、[Collapsible](/docs/components/collapsible)をコンテンツに表示します。
 
 ::code-preview{class="[&>div]:*:w-full [&>div]:*:my-0"}
 
@@ -20,12 +20,12 @@ links:
 | プロップ    |デフォルト   |タイプ                     |
 |---------|-----------|--------------------------|
 | `name`|           | `string`{lang="ts-type"}|
-| `size`| `md`| `string`{lang="ts-type"}|
+| `size`| `md`      | `string`{lang="ts-type"}|
 | `color`| `neutral`| `string`{lang="ts-type"}|
 
 ::
 
-#コード
+#code
 
 ```mdc
 ::collapsible
@@ -41,20 +41,20 @@ links:
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props {prose}
+:component-props{prose}
 
 ### スロット
 
-component—slots {prose}
+:component-slots{prose}
 
-## テーマ
+## Theme
 
-component—theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

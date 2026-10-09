@@ -8,9 +8,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardGroup.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente DashboardGroup es el diseño principal que envuelve los componentes [DashboardSidebar](/docs/components/dashboard-sidebar) y [DashboardPanel](/docs/components/dashboard-panel) para crear una interfaz de tablero sensible.
+El componente DashboardGroup es el diseño principal que envuelve los componentes [DashboardSidebar](/docs/components/dashboard-sidebar) y [DashboardPanel](/docs/components/dashboard-panel) para crear una interfaz de panel sensible.
 
 Úselo en un diseño o en su `app.vue`:
 
@@ -24,20 +24,20 @@ El componente DashboardGroup es el diseño principal que envuelve los componente
 </template>
 ```
 
-@@pH019
+## API (Edición española)
 
-@200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props (Edición española)
 
-Componentes Props
+:component-props
 
-@@21@2000 puntos
+### Slots (Edición española)
 
-Componentes de slots
+:component-slots
 
-@@2222222222222222012
+## Temas
 
-Componente Tema
+:component-theme
 
-@@2002@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

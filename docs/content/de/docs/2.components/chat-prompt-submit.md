@@ -11,18 +11,18 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatPromptSubmit.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Die ChatPromptSubmit-Komponente wird innerhalb der Komponente [ChatPrompt](/docs/components/chat-prompt) verwendet, um die Eingabeaufforderung zu senden.
+Die ChatPromptSubmit-Komponente wird in der Komponente [ChatPrompt](/docs/components/chat-prompt) verwendet, um die Eingabeaufforderung zu senden.
 
-Es erweitert die Komponente [Button](/docs/components/button), so dass Sie jede Eigenschaft wie `color`,`variant`,`size` usw. übergeben können.
+Es erweitert die Komponente [Button](/docs/components/button), so dass Sie jede Eigenschaft wie `color`, `variant`, `size` usw. übergeben können.
 
 ::code-preview
 
-#DefaultBearbeiten
-: u-chat-prompt-submit
+#default
+:u-chat-prompt-submit
 
-#Der Code
+#code
 ```vue
 <template>
   <UChatPrompt>
@@ -33,111 +33,60 @@ Es erweitert die Komponente [Button](/docs/components/button), so dass Sie jede 
 ::
 
 ::note
-Sie können es auch innerhalb des `footer`-Schlitzes der Komponente [`ChatPrompt`](/docs/components/chat-prompt) verwenden.
+Sie können es auch innerhalb des `footer`-Steckplatzes der [`ChatPrompt`](/docs/components/chat-prompt)-Komponente verwenden.
 ::
 
-@@ph026 @ bereit
+### ready ist verfügbar
 
-Wenn der Status `ready`{lang="ts-type"} ist, verwenden Sie die Props `color`,`variant` und `icon`, um den Button anzupassen.
+Wenn der Status `ready`{lang="ts-type"} ist, verwenden Sie die Props `color`, `variant` und `icon`, um die Schaltfläche anzupassen.
 
-@@@@@@@@@@@@@@@@@@@@@@PH0333@@@@@@@@@@@@@@PH03333@@@@@@@@@@@@@@@PH0334{lang="ts-type"}{lang="ts-type"}PH03334@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`variant="solid"``variant="solid"``variant="solid"`{lang="ts-type"}
-`icon="i-lucide-arrow-up"`{lang="ts-type"}
+- `color="primary"`{lang="ts-type"} (nicht vorhanden)
+- `variant="solid"`{lang="ts-type"} (nicht vorhanden)
+- `icon="i-lucide-arrow-up"`{lang="ts-type"} (nicht vorhanden)
 
 ::component-code
 ---
-Schöner: wahr
-Items:
-  Farbe:
-    - vorallem
-    @@ph042@zweitrangig
-    @@ph043@Erfolg
-    @@ph044@@warning
-    @@ph045@Fehler
-    @@ph046@neutral.de
-  Varianten:
-    @@ph047@@gmail.de
-    @@ph048@@aufräumen
-    @@ph049@gmail.de
-    @@@ph050@unterschwellig
-    @@ph051@ghost@ghost@ghost.com
-Props:
-  Farbe: "Primär"
-  Variante: "solide"
-  I-Lucide-Arrow-Up (englisch)
+prettier: true
+items:
+  color:
+    - primary
+    - secondary
+    - success
+    - warning
+    - error
+    - neutral
+  variant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+props:
+  color: 'primary'
+  variant: 'solid'
+  icon: 'i-lucide-arrow-up'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.arrowUp` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.arrowUp` Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
 Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.arrowUp` Schlüssel anpassen.
 :::
 ::
 
-@@@ph056@einreichung@
+### Eingereicht
 
-Wenn der Status `submitted`{lang="ts-type"} ist, verwenden Sie die Props `submitted-color`,`submitted-variant` und `submitted-icon`, um den Button anzupassen.
+Wenn der Status `submitted`{lang="ts-type"} ist, verwenden Sie die Props `submitted-color`, `submitted-variant` und `submitted-icon`, um die Schaltfläche anzupassen.
 
-`submittedColor="neutral"``submittedColor="neutral"``submittedColor="neutral"`{lang="ts-type"}
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@PH0666@@@@@@@@@@@@@PH0667 @@
-`submittedIcon="i-lucide-square"``submittedIcon="i-lucide-square"`{lang="ts-type"}
-
-::note
-Das `stop`-Ereignis wird ausgegeben, wenn der Benutzer auf den Button klickt.
-::
-
-::component-code
----
-Schöner: wahr
-Ignoriert:
-  @@@@@@@@@@@@@@@@ph072@@status
-Items:
-  Unterschriftenfarbe:
-    - vorallem
-    @@ph074@zweitrangig
-    @@ph075@@Erfolg
-    @@ph076@@warning
-    @@@ph077@Fehler
-    @@@ph078@neutral.de
-  Untergebener Variant:
-    @@ph079@@gmail.de
-    @@@@@@@@@@@ph080@@outline
-    @@@@@@@@@@@ph081@@soft
-    @@ph082@untenstehend
-    @@ph083@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost.com
-Props:
-  Farbe: "Neutral"
-  Untertitel: „ Subtil "
-  Bildnachweis: i-Lucide-Square
-  Status: "eingereicht"
----
-::
-
-::framework-only
-#nuxt sein
-:::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.stop` key anpassen.
-:::
-
-#Ansehen
-:::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.stop` key anpassen.
-:::
-::
-
-### streaming
-
-Wenn der Status `streaming`{lang="ts-type"} ist, verwenden Sie die Props `streaming-color`,`streaming-variant` und `streaming-icon`, um den Button anzupassen.
-
-`streamingColor="neutral"``streamingColor="neutral"``streamingColor="neutral"`{lang="ts-type"}
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`streamingIcon="i-lucide-square"`PH10101@@@@@@PH10102 @
+- `submittedColor="neutral"`{lang="ts-type"} (nicht vorhanden)
+- `submittedVariant="subtle"`{lang="ts-type"}x077xx07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x007x07x07x007x07x007x07x007x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+- `submittedIcon="i-lucide-square"`{lang="ts-type"} (nicht vorhanden)
 
 ::note
 Das `stop`-Ereignis wird ausgegeben, wenn der Benutzer auf den Button klickt.
@@ -145,50 +94,101 @@ Das `stop`-Ereignis wird ausgegeben, wenn der Benutzer auf den Button klickt.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@@@@@@@104@status
-Items:
-  Streaming-Farben:
-    @105@1
-    @@106@secondary
-    @@107@Erfolg
-    @@108@warning
-    @@ph109@Fehler
-    @@110@Neutral
-  Streaming-Möglichkeiten:
-    @@111@1111@11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
-    - outline (@ Übersicht)
-    - swiss
-    - unterschwellig
-    @@ph115@ghost.de
-Props:
-  Farbe: 'neutral'
-  Schlagwörter:"subtiler"
-  streamingIcon: 'i-lucide-square'(auf Englisch)
-  Kategorie: „ Streaming "
+prettier: true
+ignore:
+  - status
+items:
+  submittedColor:
+    - primary
+    - secondary
+    - success
+    - warning
+    - error
+    - neutral
+  submittedVariant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+props:
+  submittedColor: 'neutral'
+  submittedVariant: 'subtle'
+  submittedIcon: 'i-lucide-square'
+  status: 'submitted'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.stop` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.stop` Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.stop` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.stop` Schlüssel anpassen.
 :::
 ::
 
-@@ph120@@Fehler
+### streaming (englisch)
 
-Wenn der Status `error`{lang="ts-type"} ist, verwenden Sie die Props `error-color`,`error-variant` und `error-icon`, um den Button. Defaults anzupassen:
+Wenn der Status `streaming`{lang="ts-type"} ist, verwenden Sie die Props `streaming-color`, `streaming-variant` und `streaming-icon`, um die Schaltfläche anzupassen.
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@###############################################################################################################################
-`errorVariant="soft"``errorVariant="soft"``errorVariant="soft"`PH13131 @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@PH13333@@@@@@@@@@@PH13334@@@@@@@@@PH1334.
+- `streamingColor="neutral"`{lang="ts-type"} (nicht)
+- `streamingVariant="subtle"`{lang="ts-type"} (nicht)
+- `streamingIcon="i-lucide-square"`{lang="ts-type"} (nicht)
+
+::note
+Das `stop`-Ereignis wird ausgegeben, wenn der Benutzer auf den Button klickt.
+::
+
+::component-code
+---
+prettier: true
+ignore:
+  - status
+items:
+  streamingColor:
+    - primary
+    - secondary
+    - success
+    - warning
+    - error
+    - neutral
+  streamingVariant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+props:
+  streamingColor: 'neutral'
+  streamingVariant: 'subtle'
+  streamingIcon: 'i-lucide-square'
+  status: 'streaming'
+---
+::
+
+::framework-only
+#nuxt
+:::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.stop` Schlüssel anpassen.
+:::
+
+#vue
+:::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.stop` Schlüssel anpassen.
+:::
+::
+
+### Fehler
+
+Wenn der Status `error`{lang="ts-type"} ist, verwenden Sie die Props `error-color`, `error-variant` und `error-icon`, um die Schaltfläche anzupassen.
+
+- `errorColor="error"`{lang="ts-type"} (englisch)
+- `errorVariant="soft"`{lang="ts-type"} (englisch)
+- `errorIcon="i-lucide-rotate-ccw"`{lang="ts-type"} (englisch)
 
 ::note
 Das `reload`-Ereignis wird ausgegeben, wenn der Benutzer auf den Button klickt.
@@ -196,71 +196,71 @@ Das `reload`-Ereignis wird ausgegeben, wenn der Benutzer auf den Button klickt.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@@@@@136@136@136@136@136@136@136@136@@136@136@@136@@136@@136@136@136@136@136@136@136@136@136@@136@136@@136@136@@@000000@@00000@@@00000
-Items:
-  Fehlerfarbe:
-    @137@1
-    @@138@138@138@138@138@138@138@138@138@138@138@138@138@@138@138@138@138@138@138@@138@@138@@138@138@138@138@138@138@@@@@@1338@@@@@138@138@@@@@@@138@@@@@@@@@@@@@@@@@1338@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    @139@@Erfolg
-    @@140@warning
-    @@141@Fehler
-    @@142@Neutral
-  Fehlervariante:
-    @@143@Einmannsstraße
-    @@144 @ Übersicht
-    @@ph145@gmail.de
-    @146@Unterföhring
-    @@ph147@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost@ghost
-Props:
-  Fehler: "Fehler"
-  Fehler: "Soft"
-  errorIcon: 'i-lucide-rotate-ccw'(I-lucide-rotate-ccw)(I-lucide-rotate-ccw)
-  Status: "Fehler"
+prettier: true
+ignore:
+  - status
+items:
+  errorColor:
+    - primary
+    - secondary
+    - success
+    - warning
+    - error
+    - neutral
+  errorVariant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+props:
+  errorColor: 'error'
+  errorVariant: 'soft'
+  errorIcon: 'i-lucide-rotate-ccw'
+  status: 'error'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.reload` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter der `ui.icons.reload`-Taste.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.reload` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.reload` Schlüssel anpassen.
 :::
 ::
 
 ## Beispiele
 
 ::tip{to="/docs/components/chat"}
-Auf der Übersichtsseite **Chat** finden Sie Installationsanweisungen, Server-Setup und Anwendungsbeispiele.
+Auf der Übersichtsseite von **Chat** finden Sie Installationsanweisungen, Server-Setup und Anwendungsbeispiele.
 ::
 
-@155@btw
+## API
 
-### Props
+### Props (englisch)
 
-Komponenten Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-Diese Komponente unterstützt auch alle nativen `<button>` HTML-Attribute.
+Diese Komponente unterstützt auch alle nativen `<button>`-HTML-Attribute.
 ::
 
-### Spielautomaten
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph159@@emits
+### Emits Bearbeiten
 
-Komponenten emittieren
+:component-emits
 
-@@ph160@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-## Changelog (Deutsche Übersetzung)
+## Changelog (deutsch)
 
-Das Component-Changelog
+:component-changelog

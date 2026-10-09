@@ -12,346 +12,346 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/FileUpload.vue
 ---
 
-## 使用情况
+## 用法
 
-使用`v-model`指令来控制FileUpload的值。
-
-::component-code
----
-忽略：
-  - 模型值
-  班级
-外部：
-  - 模型值
-道具：
-  模型值：空
-  等级：'w-96分钟-h-48'
----
-::
-
-多个
-
-使用`multiple`属性可以选择多个文件。
+使用`v-model`指令控制FileUpload的值。
 
 ::component-code
 ---
-忽略：
-  班级
-道具：
-  多个：真
-  等级：'w-96分钟-h-48'
+ignore:
+  - modelValue
+  - class
+external:
+  - modelValue
+props:
+  modelValue: null
+  class: 'w-96 min-h-48'
 ---
 ::
 
-放置区
+### 多个
 
-使用`dropzone`属性启用/禁用可拖放区域。默认为`true`。
+使用`multiple`属性允许选择多个文件。
 
 ::component-code
 ---
-忽略：
-  班级
-道具：
-  放置区：假
-  等级：'w-96分钟-h-48'
+ignore:
+  - class
+props:
+  multiple: true
+  class: 'w-96 min-h-48'
 ---
 ::
 
-### 互动式
+### Dropzone
 
-使用`interactive`属性启用/禁用可点击区域。默认为`true`。
+使用`dropzone` prop来启用/禁用可拖放区域。
+
+::component-code
+---
+ignore:
+  - class
+props:
+  dropzone: false
+  class: 'w-96 min-h-48'
+---
+::
+
+### 互动
+
+使用`interactive`属性来启用/禁用可单击区域。将其设置为`true`。
 
 ::tip{to="#with-files-bottom-slot"}
-在`#actions`插槽中添加`Button`组件时，此功能非常有用。
+在`#actions`插槽中添加`Button`组件时，这可能很有用。
 ::
 
 ::component-code
 ---
-忽略：
-  班级
-道具：
-  交互式：假
-  等级：'w-96分钟-h-48'
+ignore:
+  - class
+props:
+  interactive: false
+  class: 'w-96 min-h-48'
 ---
 ::
 
-接受
+### 接受
 
-使用`accept`属性来指定输入所允许的档案类型。请提供以逗号分隔的[MIME类型清单](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types)或副档名（例如`image/png,application/pdf,.jpg`）。预设值为`*`（所有档案类型）。
+使用`accept`属性指定输入允许的文件类型。提供一个逗号分隔的[MIME类型](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types)或文件扩展名（例如`image/png,application/pdf,.jpg`）的列表。`*`（所有文件类型）。
 
 ::component-code
 ---
-忽略：
-  接受
-  班级
-道具：
-  接受：'image/*'
-  等级：'w-96分钟-h-48'
+ignore:
+  - accept
+  - class
+props:
+  accept: 'image/*'
+  class: 'w-96 min-h-48'
 ---
 ::
 
-标签
+### Label
 
 使用`label`属性设置FileUpload的标签。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  班级
-道具：
-  label：'将图像拖到此处'
-  等级：'w-96分钟-h-48'
+prettier: true
+ignore:
+  - class
+props:
+  label: 'Drop your image here'
+  class: 'w-96 min-h-48'
 ---
 ::
 
-说明：
+### 说明
 
 使用`description`属性设置FileUpload的描述。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标签
-  班级
-道具：
-  label：'将图像拖到此处'
-  描述：'SVG、PNG、JPG或GIF（最大2 MB）'
-  等级：'w-96分钟-h-48'
+prettier: true
+ignore:
+  - label
+  - class
+props:
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96 min-h-48'
 ---
 ::
 
-### 图标
+### Icon
 
-使用`icon`属性设置文件上载的图标。默认为`i-lucide-upload`。
+使用`icon`属性将FileUpload.xml的图标设置为`i-lucide-upload`。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标签
-  描述：
-  班级
-道具类：
-  图标：“i-lucide-图像”
-  label：'将图像拖到此处'
-  描述：'SVG、PNG、JPG或GIF（最大2 MB）'
-  等级：'w-96分钟-h-48'
+prettier: true
+ignore:
+  - label
+  - description
+  - class
+props:
+  icon: 'i-lucide-image'
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96 min-h-48'
 ---
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`ui.icons.upload`键下的`app.config.ts`中全局自定义此图标。
+你可以在你的`app.config.ts`中的`ui.icons.upload`键下全局自定义这个图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
 您可以在`ui.icons.upload`键下的`vite.config.ts`中全局自定义此图标。
 :::
 ::
 
-颜色
+### Color
 
 使用`color`属性更改FileUpload的颜色。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标签
-  描述
-  班级
-道具：
-  颜色：中性
-  高亮显示：真
-  label：'将图像拖到此处'
-  描述：'SVG、PNG、JPG或GIF（最大2 MB）'
-  等级：'w-96分钟-h-48'
+prettier: true
+ignore:
+  - label
+  - description
+  - class
+props:
+  color: neutral
+  highlight: true
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96 min-h-48'
 ---
 ::
 
 ::note
-`highlight`属性在这里用来显示焦点状态。当发生验证错误时，它会在内部使用。
+这里使用`highlight`属性来显示焦点状态。当发生验证错误时，在内部使用它。
 ::
 
-### 变体
+### Variant
 
-使用`variant`属性更改FileUpload的变体。
+使用`variant` prop更改FileUpload的变量。
 
 ::component-code
 ---
-忽略：
-  班级
-道具：
-  变体：按钮
+ignore:
+  - class
+props:
+  variant: button
 ---
 ::
 
-尺寸
+### Size
 
 使用`size`属性更改FileUpload的大小。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标签
-  描述
-  班级
-道具：
-  尺寸：xl
-  变量：区域
-  label：'将图像拖到此处'
-  描述：'SVG、PNG、JPG或GIF（最大2 MB）'
+prettier: true
+ignore:
+  - label
+  - description
+  - class
+props:
+  size: xl
+  variant: area
+  label: 'Drop your image here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
 ---
 ::
 
-版面配置
+### Layout
 
-使用`layout`属性可更改文件在FileUpload中的显示方式。默认为`grid`。
+使用`layout`属性将文件在FileUpload.xml中的显示方式更改为`grid`。
 
 ::warning
-此道具仅在`variant`为`area`时有效。
+这个道具只有在`variant`是`area`时才有效。
 ::
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标签
-  描述：
-  多个
-  班级
-  用户名：
-道具：
-  布局：列表
-  多个：真
-  label：'将图像拖到此处'
-  描述：'SVG、PNG、JPG或GIF（最大2 MB）'
-  类别：'w-96'
-  用户界面：
-    基底：'min-h-48'
+prettier: true
+ignore:
+  - label
+  - description
+  - multiple
+  - class
+  - ui.base
+props:
+  layout: list
+  multiple: true
+  label: 'Drop your images here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96'
+  ui:
+    base: 'min-h-48'
 ---
 ::
 
-位置：
+### 位置
 
-使用`position`属性更改文件在FileUpload中的位置。默认为`outside`。
+使用`position`属性将文件在FileUpload.xml中的位置更改为`outside`。
 
 ::warning
-此道具仅在`variant`为`area`且`layout`为`list`时有效。
+此属性仅在`variant`为`area`和`layout`为`list`时有效。
 ::
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标签
-  描述：
-  多个
-  版面配置
-  班级
-  用户名：
-道具：
-  位置：内部
-  布局：列表
-  多个：真
-  label：'将图像拖到此处'
-  描述：'SVG、PNG、JPG或GIF（最大2 MB）'
-  类别：'w-96'
-  用户界面：
-    基底：'min-h-48'
+prettier: true
+ignore:
+  - label
+  - description
+  - multiple
+  - layout
+  - class
+  - ui.base
+props:
+  position: inside
+  layout: list
+  multiple: true
+  label: 'Drop your images here'
+  description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+  class: 'w-96'
+  ui:
+    base: 'min-h-48'
 ---
 ::
 
-示例
+## 示例
 
-### 使用表单验证
+### 带表单验证
 
 您可以在[Form](/docs/components/form)和[FormField](/docs/components/form-field)组件中使用FileUpload来处理验证和错误处理。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'文件-上载-表单-验证-示例'
+prettier: true
+collapse: true
+name: 'file-upload-form-validation-example'
 ---
 ::
 
-### 使用默认插槽
+### 带默认插槽
 
 您可以使用默认插槽来创建自己的FileUpload组件。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'文件上载默认插槽示例'
+prettier: true
+collapse: true
+name: 'file-upload-default-slot-example'
 ---
 ::
 
-### 带文件夹底部插槽
+### 带文件-底部插槽
 
 例如，您可以使用`files-bottom`插槽在文件列表下添加[Button](/docs/components/button)以删除所有文件。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'文件-上载-文件-底部-插槽-示例'
+prettier: true
+collapse: true
+name: 'file-upload-files-bottom-slot-example'
 ---
 ::
 
 ::note{to="#interactive"}
-在此示例中，`interactive`属性设置为`false`以阻止默认的可单击区域。
+在本例中，`interactive`属性被设置为`false`，以防止出现默认的可单击区域。
 ::
 
-### 带文件夹顶部插槽
+### 带文件顶槽
 
-例如，您可以使用`files-top`插槽在文件列表上方添加[按钮](/docs/components/button)以添加新文件。
+例如，您可以使用`files-top`插槽在文件列表上方添加[Button](/docs/components/button)以添加新文件。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'文件-上载-文件-顶部插槽-示例'
+prettier: true
+collapse: true
+name: 'file-upload-files-top-slot-example'
 ---
 ::
 
-## 活性药物成分
+## API
 
-### 道具
+### Props
 
-：组件-支柱
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
-此组件还支持所有本机`<input>`HTML属性。
+此组件还支持所有原生`<input>` HTML属性。
 ::
 
-### 插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-### 排放
+### Emits
 
-：组件发射
+:component-emits
 
-暴露
+### 曝光
 
 通过模板引用访问组件时，可以使用以下命令：
 
 | 名称|类型|
 | ---- | ---- |
-|`inputRef`，{lang="ts-type"}| 114小时116小时|
-| 第117章【第119章】|`Ref<HTMLDivElement \| null>`，{lang="ts-type"}|
+| `inputRef`{lang="ts-type"}| `Ref<HTMLInputElement \| null>`{lang="ts-type"}|
+| `dropzoneRef`{lang="ts-type"}| `Ref<HTMLDivElement \| null>`{lang="ts-type"}|
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

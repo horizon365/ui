@@ -9,16 +9,16 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodePreview.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Wickeln Sie alle Inhalte mit der `code-preview` Komponente ein, um eine Live-Vorschau neben dem Quellcode mit dem `code` Slot anzuzeigen.
+Wickeln Sie alle Inhalte mit der `code-preview`-Komponente ein, um eine Live-Vorschau neben dem Quellcode mit dem `code`-Steckplatz anzuzeigen.
 
 ::code-preview{class="[&>div]:*:my-0 [&>div]:*:w-full" label="Vorschau Preview"}
 
 ::code-preview{class="[&>div]:*:my-0"}
-@@@@004
+x004x Bearbeiten
 
-#Der Code
+#code
 
 ```mdc
 `inline code`
@@ -26,7 +26,7 @@ Wickeln Sie alle Inhalte mit der `code-preview` Komponente ein, um eine Live-Vor
 
 ::
 
-#Der Code
+#code
 
 ````mdc
 ::code-preview
@@ -34,27 +34,27 @@ Wickeln Sie alle Inhalte mit der `code-preview` Komponente ein, um eine Live-Vor
 
 #code
 ```mdc
-@@ph013 @
+x014x ist
 ```
 ::
 ````
 
 ::
 
-@@@@@@18@18@1999
+## API (Englisch)
 
-@@ph019@@@props
+### Props (englisch)
 
-: component-props {prose}
+:component-props{prose}
 
-### Slots
+### Slots (englisch)
 
-: component-slots {prose}
+:component-slots{prose}
 
-@@ph023@gmail.de
+## Theme Bearbeiten
 
-: component-theme {prose}
+:component-theme{prose}
 
-@@ph025@@changelog @ changelog
+## Changelog (englisch)
 
-: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

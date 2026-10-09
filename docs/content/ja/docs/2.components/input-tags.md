@@ -16,17 +16,17 @@ links:
 
 ## 使用法
 
-`v-model`ディレクティブを使用して、InputTagsの値を制御します。
+`v-model`ディレクティブを使用してInputTagsの値を制御します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue ['Vue']
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
 ---
 ::
 
@@ -34,56 +34,56 @@ links:
 
 ::component-code
 ---
-きれい真
-無視
-  -  defaultValue
-小道具
-  defaultValue ['Vue']
+prettier: true
+ignore:
+  - defaultValue
+props:
+  defaultValue: ['Vue']
 ---
 ::
 
-### プレースホルダー
+### Placeholder
 
-プレースホルダーテキストを設定するには、`placeholder`プロパティを使用します。
+`placeholder`プロパティを使用してプレースホルダーテキストを設定します。
 
 ::component-code
 ---
-小道具
-  プレースホルダー 'タグを入力...'
+props:
+  placeholder: 'Enter tags...'
 ---
 ::
 
-### 最大長
+### Max長さ
 
 `max-length`プロパティを使用して、タグで許可される最大文字数を設定します。
 
 ::component-code
 ---
-小道具
-  maxLength 4
+props:
+  maxLength: 4
 ---
 ::
 
-### カラー
+### Color
 
-`color`プロパティを使用して、InputTagsがフォーカスされたときにリングの色を変更します。
+InputTagsがフォーカスされたときにリングの色を変更するには、`color`プロパティを使用します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue ['Vue']
-  色ニュートラル
-  ハイライト真
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  color: neutral
+  highlight: true
 ---
 ::
 
 ::note
-`highlight` propはフォーカス状態を表示するために使用されます。これはバリデーションエラーが発生したときに内部で使用されます。
+`highlight`プロパティはフォーカスの状態を示すために使用されます。バリデーションエラーが発生したときに内部で使用されます。
 ::
 
 ### バリアント
@@ -92,16 +92,16 @@ links:
 
 ::component-code
 ---
-きれい真
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue ['Vue']
-  バリアント：微妙
-  色ニュートラル
-  ハイライトfalse
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  variant: subtle
+  color: neutral
+  highlight: false
 ---
 ::
 
@@ -111,153 +111,153 @@ links:
 
 ::component-code
 ---
-きれい真
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue ['Vue']
-  サイズXL
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  size: xl
 ---
 ::
 
-### アイコン
+### Icon
 
-`icon` propを使用して、[ Icon ](/docs/components/icon)をInputTags内に表示します。
+`icon`プロパティを使用して、InputTags内に[Icon](/docs/components/icon)を表示します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue ['Vue']
-  アイコン'i—lucide'
-  サイズMD
-  variantアウトライン
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  icon: 'i-lucide-search'
+  size: md
+  variant: outline
 ---
 ::
 
 ::note
-アイコンの位置を設定するには`leading`および`trailing` propsを使用し、位置ごとに異なるアイコンを設定するには`leading-icon`および`trailing-icon` propsを使用します。
+アイコンの位置を設定するには`leading`と`trailing`のプロップを使用し、位置ごとに異なるアイコンを設定するには`leading-icon`と`trailing-icon`のプロップを使用します。
 ::
 
 ### アバター
 
-`avatar` propを使用して、[ Avatar ](/docs/components/avatar)をInputTags内に表示します。
+`avatar`プロパティを使用して、[Avatar](/docs/components/avatar)をInputTags内に表示します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  modelValue
-  -  avatar.loading
-外部
-  -  modelValue
-小道具
-  modelValue ['Vue']
-  アバター
-    http//github.com/vuejs.png/
-    読み込み怠惰
-  サイズMD
-  variantアウトライン
+prettier: true
+ignore:
+  - modelValue
+  - avatar.loading
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  avatar:
+    src: 'https://github.com/vuejs.png'
+    loading: lazy
+  size: md
+  variant: outline
 ---
 ::
 
-### アイコンを削除
+### Deleteアイコン
 
-`delete-icon`プロパティを使用して、タグ内の[ Icon ](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-x`です。
+`delete-icon`プロパティを使用して、タグ内の削除[Icon](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-x`です。
 
 ::component-code
 ---
-きれい真
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue ['Vue']
-  deleteIcon 'i—lucide—trash'
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  deleteIcon: 'i-lucide-trash'
 ---
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.close`キーの下の`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`app.config.ts`の`ui.icons.close`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.close`キーの下の`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは、`vite.config.ts`の`ui.icons.close`キーでグローバルにカスタマイズできます。
 :::
 ::
 
-### ローディング
+### Loading
 
-`loading`プロパティを使用して、InputTagsに読み込み中のアイコンを表示します。
+`loading`プロパティを使用して、InputTagsにロードアイコンを表示します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue ['Vue']
-  読み込み真
-  トレーリングfalse
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  loading: true
+  trailing: false
 ---
 ::
 
-###  Loadingアイコン
+### Loading Icon
 
-読み込みアイコンをカスタマイズするには、`loading-icon`プロパティを使用します。デフォルトは`i-lucide-loader-circle`です。
+`loading-icon`プロパティを使用してロードアイコンをカスタマイズします。デフォルトは`i-lucide-loader-circle`です。
 
 ::component-code
 ---
-きれい真
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue ['Vue']
-  読み込み真
-  loadingIcon 'i—lucide—loader'
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  loading: true
+  loadingIcon: 'i-lucide-loader'
 ---
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.loading`キーの下の`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`app.config.ts`の`ui.icons.loading`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.loading`キーの下の`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`vite.config.ts`の`ui.icons.loading`キーでグローバルにカスタマイズできます。
 :::
 ::
 
 ### 無効
 
-`disabled`プロパティを使用して、InputTagsを無効にします。
+`disabled`プロパティを使用してInputTagsを無効にします。
 
 ::component-code
 ---
-きれい真
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue ['Vue']
-  無効true
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  disabled: true
 ---
 ::
 
@@ -265,33 +265,33 @@ links:
 
 ###  FormField内
 
-[ FormField ](/docs/components/form-field)コンポーネント内のInputTagsを使用して、ラベル、ヘルプテキスト、必要なインジケータなどを表示できます。
+[FormField](/docs/components/form-field)コンポーネント内のInputTagsを使用して、ラベル、ヘルプテキスト、必須インジケータなどを表示できます。
 
 ::component-example
 ---
-名前'入力タグフォームフィールド例'
+name: 'input-tags-form-field-example'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
-このコンポーネントは、すべてのネイティブ`<input>` HTML属性もサポートします。
+このコンポーネントはすべてのネイティブ`<input>` HTML属性もサポートします。
 ::
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-### エクスポーズ
+### Expose
 
 テンプレート参照を介してコンポーネントにアクセスする場合、以下を使用できます：
 
@@ -299,10 +299,10 @@ component—emits
 | ---- | ---- |
 | `inputRef`{lang="ts-type"}| `Ref<HTMLInputElement \| null>`{lang="ts-type"}|
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

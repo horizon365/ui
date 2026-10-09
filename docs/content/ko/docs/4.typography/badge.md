@@ -9,17 +9,17 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Badge.vue
 ---
 
-##  사용
+## Usage
 
-`badge` 구성 요소의 기본 슬롯에 markdown을 사용하여 콘텐츠에 [Badge](/docs/components/badge)를 표시합니다.
+`badge` 구성 요소의 기본 슬롯에 markdown을 사용하여 콘텐츠에 [Badge](xph04xxph05x를 표시합니다.
 
 ::code-preview
 
 :::badge
-** v 4. 0. 0 **
+**v4.0.0**
 :::
 
-# 코드
+#code
 
 ```mdc
 ::badge
@@ -29,20 +29,20 @@ links:
 
 ::
 
-##  API
+## API 파일
 
-###  Props
+### Props (### Props)
 
-: component-props {prose}
+:component-props{prose}
 
-###  슬롯
+### 슬롯
 
-: component-slots {prose}
+:component-slots{prose}
 
-##  테마
+## Theme (## 테마)
 
-:component-theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## 변경 로그
 
-: component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

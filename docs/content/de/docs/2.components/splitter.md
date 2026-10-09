@@ -11,14 +11,14 @@ links:
 navigation.badge: New
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
 Verwenden Sie die Splitter-Komponente, um eine Liste von Panels anzuzeigen, die durch ziehbare Griffe getrennt sind.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: "Splitter-Beispiel"
+collapse: true
+name: 'splitter-example'
 ---
 ::
 
@@ -26,137 +26,137 @@ Name: "Splitter-Beispiel"
 Der Splitter füllt die Höhe seines Containers aus, also stellen Sie sicher, dass ein Elternelement einen definiert.
 ::
 
-@@ph001@gmail.de
+### Items Bearbeiten
 
-Verwenden Sie `items` prop als Array von Objekten mit den folgenden Eigenschaften:
+Verwenden Sie die `items`-prop als Array von Objekten mit den folgenden Eigenschaften:
 
-`defaultSize?: number`PH0004@@@@@@@@@@@PH0005 @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@PH0007@@@@@@@@@@@PH0008@@@@@PH0008@@@@@@PH00008 @
-`maxSize?: number``maxSize?: number`PH0111 @@
-`collapsible?: boolean``collapsible?: boolean``collapsible?: boolean`{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}`collapsible?: boolean`{lang="ts-type"}
-`collapsedSize?: number``collapsedSize?: number``collapsedSize?: number`{lang="ts-type"}{lang="ts-type"}`collapsedSize?: number``collapsedSize?: number``collapsedSize?: number`
-`sizeUnit?: '%' | 'px'``sizeUnit?: '%' | 'px'`PH02020
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`id?: string``id?: string`{lang="ts-type"}
-`slot?: string``slot?: string``slot?: string`{lang="ts-type"}
-`class?: any``class?: any``class?: any`{lang="ts-type"}
-`ui?: { panel?: ClassNameValue }``ui?: { panel?: ClassNameValue }``ui?: { panel?: ClassNameValue }`{lang="ts-type"}
+- `defaultSize?: number`{lang="ts-type"} (nicht vorhanden)
+- `minSize?: number`{lang="ts-type"} (englisch)
+- `maxSize?: number`{lang="ts-type"} (englisch)
+- `collapsible?: boolean`{lang="ts-type"} (nicht vorhanden)
+- `collapsedSize?: number`{lang="ts-type"} (nicht vorhanden)
+- `sizeUnit?: '%' | 'px'`{lang="ts-type"} (nicht)
+- `order?: number`{lang="ts-type"} (Deutsche Ausgabe)
+- `id?: string`{lang="ts-type"} (nicht)
+- `slot?: string`xph0333x (englisch)
+- `class?: any`{lang="ts-type"} (englisch)
+- `ui?: { panel?: ClassNameValue }`{lang="ts-type"} (nicht vorhanden)
 
-Verwenden Sie den `slot`-Schlüssel, um den Inhalt eines Panels zu füllen, und den `class`-Schlüssel, um ihn zu stylen. Elemente ohne einen `slot`-Schlüssel fallen auf einen `panel-{index}`-Slot zurück.
+Verwenden Sie die `slot`-Taste, um den Inhalt eines Panels zu füllen und die `class`-Taste, um es zu stylen. Elemente ohne `slot`-Taste fallen auf einen `panel-{index}`-Steckplatz zurück. Größen sind standardmäßig Prozentwerte, setzen Sie `sizeUnit: 'px'` für ein Element für Pixelwerte.
 
 ::caution
-Beim Rendern auf dem Server setzen Sie die `id` prop und geben Sie `defaultSize` an alle Elemente oder an none. IDs werden automatisch generiert, ansonsten können Server und Client widersprechen, was das Layout bei Hydratation unterbricht. Ein Element ohne `defaultSize` fällt auf einen gleichen Anteil auf dem Server zurück, so Mischen der beiden macht Panels springen einmal hydratisiert. Pixelgrößen werden auf dem Client gemessen und verschieben sich immer ein wenig.
+Beim Rendern auf dem Server, setzen Sie die `id` prop und geben Sie `defaultSize` für alle Elemente oder zu none. IDs werden automatisch generiert, sonst und der Server und der Client können nicht zustimmen, die das Layout auf Hydratation bricht. Ein Element ohne eine `defaultSize` fällt zurück zu einem gleichen Anteil auf dem Server, so dass das Mischen der beiden macht Panels springen einmal hydratisiert. Pixelgrößen werden auf dem Client gemessen und immer ein wenig verschieben.
 ::
 
 ::component-code
 ---
-Einsturz: wahr
-Klasse: H-96
-Schöner: wahr
-Ignoriert:
-  @@ph044@gmail.de
-  @@ph045@@gmail.de
-Außen:
-  @@ph046@gmail.de
-Externe Typen:
-  @@ph047@spalteritem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  id: 'Splitter-Elemente'
-  Items:
-    - slot:'Seitenleiste'
-      Minus: 15
-      Größe: 40
-      Fehlerquote: 25
-      class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'(bg-elevated/50 border-default rounded-xl items-center justify-center text-muted font-medium)'(englisch)
-    - slot:'main'(auf Englisch)
-      Anzahl der Fehler: 75
-      class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'(bg-elevated/50 border-default rounded-xl items-center justify-center text-muted font-medium)'(englisch)
-Die Slots:
-  Seitentitel: Sidebar
-  von: Main
+collapse: true
+class: 'h-96'
+prettier: true
+ignore:
+  - items
+  - id
+external:
+  - items
+externalTypes:
+  - SplitterItem[]
+props:
+  id: 'splitter-items'
+  items:
+    - slot: 'sidebar'
+      minSize: 15
+      maxSize: 40
+      defaultSize: 25
+      class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
+    - slot: 'main'
+      defaultSize: 75
+      class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
+slots:
+  sidebar: Sidebar
+  main: Main
 ---
 
-#Seitenleiste
+#sidebar
 Sidebar
 
-#Hauptsache
+#main
 Main ist
 ::
 
-@@ph050@@Orientierung
+### Orientierung
 
-Verwenden Sie die `orientation` prop, um die Richtung des Splitters zu ändern.
+Verwenden Sie die `orientation`-Stütze, um die Richtung des Splitters zu ändern. Standardmäßig ist `horizontal`.
 
 ::component-code
 ---
-Einsturz: wahr
-Klasse: H-96
-Schöner: wahr
-Ignoriert:
-  @@ph053@gmail.de
-  @@ph054@@gmail.de
-Außen:
-  @@@ph055@gmail.de
-Externe Personen:
-  @@ph056@spalteritem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  id: 'Splitter-Orientierung'
-  Ausrichtung: "vertikal"
-  Items:
-    - slot:'zuerst'
-      class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'(bg-elevated/50 border-default rounded-xl items-center justify-center text-muted font-medium)'(englisch)
-    - slot:'Zweiter'
-      class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'(bg-elevated/50 border-default rounded-xl items-center justify-center text-muted font-medium)'(englisch)
-Die Slots:
-  Erstens: zuerst
-  Zweitens: Second
+collapse: true
+class: 'h-96'
+prettier: true
+ignore:
+  - items
+  - id
+external:
+  - items
+externalTypes:
+  - SplitterItem[]
+props:
+  id: 'splitter-orientation'
+  orientation: 'vertical'
+  items:
+    - slot: 'first'
+      class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
+    - slot: 'second'
+      class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
+slots:
+  first: First
+  second: Second
 ---
 
-#erste
+#first
 zuerst
 
-#Zweiter
-zweite
+#second
+Zweite
 ::
 
-@@ph059@@Beispiele
+## Beispiele
 
 ### Mit zusammenklappbaren Panel
 
-Setzen Sie `collapsible: true` auf ein Element, damit es an seinem `minSize` vorbei kollabiert, und verwenden Sie `collapsedSize`, um einen Teil des Panels sichtbar zu halten, wenn es kollabiert ist.`expand` und `resize` Ereignisse Feuer mit dem Panel-Index.
+Setzen Sie `collapsible: true` auf ein Element, damit es an seinem `minSize` vorbeibricht, und verwenden Sie `collapsedSize`, um einen Teil des Panels sichtbar zu halten, wenn es zusammengeklappt wird. Der Panel-Slot macht `collapsed`, `collapse` und `expand` sichtbar, damit Sie es programmgesteuert steuern können, und die Ereignisse `collapse`, `expand` und `resize` werden mit dem Panel-Index ausgelöst.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'Splitter-zusammenklappbares-Beispiel'
+collapse: true
+name: 'splitter-collapsible-example'
 ---
 ::
 
 ### Mit verschachtelten Splittern
 
-Verschachteln Sie ein `Splitter` in einem Panel, um zweidimensionale Layouts im IDE-Stil zu erstellen.
+Verschachteln Sie einen `Splitter` in einem Panel, um zweidimensionale Layouts im IDE-Stil zu erstellen.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'Splitter-Nested-Example'(Beispiel)
+collapse: true
+name: 'splitter-nested-example'
 ---
 ::
 
-### Mit benutzerdefiniertem Handle
+### Mit benutzerdefiniertem Griff
 
-Verwenden Sie den `ui` prop, um ihn neu zu gestalten, z. B. als sichtbaren Trenner für bündige Layouts, und den `resize-handle`-Steckplatz, um den Inhalt darin wie einen Griff darzustellen.
+Verwenden Sie die `ui`-Stütze, um sie neu zu gestalten, z. B. als sichtbare Trennwand für bündige Layouts, und den `resize-handle`-Steckplatz, um Inhalte darin wie einen Griff darzustellen.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'Splitter-Custom-Handle-Beispiel'
+collapse: true
+name: 'splitter-custom-handle-example'
 ---
 ::
 
-### Mit Ausdauer
+### With Persistenz
 
-Geben Sie ein `auto-save-id` ein, um das Layout auf `localStorage` zu belassen und beim Nachladen wiederherzustellen.
+Geben Sie ein `auto-save-id` ein, um das Layout auf `localStorage` zu erhalten und beim Neuladen wiederherzustellen.
 
 ```vue
 <template>
@@ -166,24 +166,24 @@ Geben Sie ein `auto-save-id` ein, um das Layout auf `localStorage` zu belassen u
 </template>
 ```
 
-@@@@@@85@@bpb
+## API Bearbeiten
 
-@@@@@@@@@@@@ph086@@props
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
-@@ph087@gmail.de
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-@@@@@@@@@@@@@ph089@@theme
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph090@@changelog @ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

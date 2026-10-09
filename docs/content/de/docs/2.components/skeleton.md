@@ -10,26 +10,26 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Skeleton.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Verwenden Sie die Skeleton-Komponente im Istzustand, um einen Platzhalter anzuzeigen.
 
-: component-beispiel {name="skeleton-example"}
+:component-example{name="skeleton-example"}
 
-@@002@api
+## API (Englisch)
 
-@@ph003@@@props
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
-@@ph004@gmail.de
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph005@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph006@@changelog @ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

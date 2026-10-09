@@ -7,25 +7,25 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Header.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Die Header-Komponente rendert ein `<header>`-Element.
 
 ::tip{to="/docs/getting-started/theme/css-variables#header"}
-Seine Höhe wird durch eine `--ui-header-height` CSS-Variable definiert.
+Die Höhe wird durch eine CSS-Variable `--ui-header-height` definiert.
 ::
 
-Verwenden Sie die `left`,`default` und `right` Slots, um den Header anzupassen und die `body` oder `content` Slots, um das Header-Menü anzupassen.
+Verwenden Sie die Slots `left`, `default` und `right`, um den Header und die Slots `body` oder `content` anzupassen, um das Header-Menü anzupassen.
 
 ::component-example
 ---
-Einsturz: wahr
-Schöner: wahr
-Name: "Header-Beispiel"
-Klasse: '! px-0! pt-0'
-Übertreibungen: wahr
-Props:
-  Klasse: "W-voll"
+collapse: true
+prettier: true
+name: 'header-example'
+class: '!px-0 !pt-0'
+overflowHidden: true
+props:
+  class: 'w-full'
 ---
 ::
 
@@ -33,173 +33,173 @@ Props:
 In diesem Beispiel verwenden wir die Komponente [NavigationMenu](/docs/components/navigation-menu), um die Header-Links in der Mitte zu rendern.
 ::
 
-@@ph012@title
+### title Übersetzung
 
-Verwenden Sie `title` prop, um den Titel des Headers zu ändern. Defaults zu `Nuxt UI`.
+Verwenden Sie die `title`-prop, um den Titel des Headers zu ändern. Standardmäßig auf `Nuxt UI`.
 
 ::component-code
 ---
-Hide:
-  @@15@Klasse
-Props:
-  Titel: Nuxt UI
-  Klasse: "W-voll"
-Klasse: '! px-0! pt-0'
+hide:
+  - class
+props:
+  title: 'Nuxt UI'
+  class: 'w-full'
+class: '!px-0 !pt-0'
 ---
 ::
 
-Sie können auch den `title` Slot verwenden, um Ihr eigenes Logo hinzuzufügen.
+Sie können auch den `title`-slot verwenden, um ihr eigenes logo hinzuzufügen.
 
 ::tip{to="#props"}
-Sie sollten immer noch das `title` prop hinzufügen, um das Standard-`aria-label` des Links zu ersetzen.
+Sie sollten immer noch die `title`-prop hinzufügen, um die standardmäßige `aria-label` des Links zu ersetzen.
 ::
 
 ::component-code
 ---
-Schöner: wahr
-Übertreibungen: wahr
-Hide:
-  @@ph019@class
-Props:
-  Klasse: "W-voll"
-Slots auf:
-  Titel:|
+prettier: true
+overflowHidden: true
+hide:
+  - class
+props:
+  class: 'w-full'
+slots:
+  title: |
 
-    @@ph020 von mir
-Klasse: '! px-0! pt-0'
+    <Logo class="h-6 w-auto" />
+class: '!px-0 !pt-0'
 ---
 
-#Überschrift
-: logo{class="h-6 w-auto"}
+#title
+:logo{class="h-6 w-auto"}
 ::
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@######################################################################################################################################################################################################################
+### To Bearbeiten
 
-Verwenden Sie `to` prop, um den Link des titles. Defaults auf `/` zu ändern.
+Verwenden Sie die `to`-prop, um den Link des Titels zu ändern. Standardmäßig zu `/`.
 
 ::component-code
 ---
-Hide:
-  @@@@@@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@class@classclass@classclass@class@classclass@class@class@class@classc
-Klasse: '! px-0! pt-0'
-Props:
-  zu: '/docs'
-  Klasse: "W-voll"
+hide:
+  - class
+class: '!px-0 !pt-0'
+props:
+  to: '/docs'
+  class: 'w-full'
 ---
 ::
 
-Sie können auch den `left`-Slot verwenden, um den Link vollständig zu überschreiben.
+Sie können auch den `left`-Steckplatz verwenden, um den Link vollständig zu überschreiben.
 
 ::component-code
 ---
-Schöner: wahr
-Übertreibungen: wahr
-Hide:
-  @@ph027@gmail.de
-Klasse: '! px-0! pt-0'
-Props:
-  Klasse: "W-voll"
-Slots auf:
-  links:|
+prettier: true
+overflowHidden: true
+hide:
+  - class
+class: '!px-0 !pt-0'
+props:
+  class: 'w-full'
+slots:
+  left: |
 
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@028
-      @@@@@@@@@@@029
-    @030
+    <NuxtLink to="/docs">
+      <Logo class="h-6 w-auto" />
+    </NuxtLink>
 ---
 
-#links
+#left
 ::nuxt-link{to="/docs"}
-: logo{class="h-6 w-auto"}
+:logo{class="h-6 w-auto"}
 ::
 ::
 
-@@ph032@mode.de
+### Mode Bearbeiten
 
-Verwenden Sie `mode` prop, um den Modus des Header-Menüs zu ändern. Standardmäßig auf `modal`.
+Verwenden Sie die `mode`-prop, um den Modus des Header-Menüs zu ändern. Standardmäßig ist `modal`.
 
 Verwenden Sie den `body`-Steckplatz, um den Menükörper (unter der Kopfzeile) oder den `content`-Steckplatz zu füllen, um das gesamte Menü zu füllen.
 
 ::tip{to="#props"}
-Sie können das `menu` prop verwenden, um das Menü des Headers anzupassen, es passt sich je nach gewähltem Modus an.
+Sie können die `menu`-prop verwenden, um das Menü des Headers anzupassen, es wird sich je nach dem von Ihnen gewählten Modus anpassen.
 ::
 
 ::component-example
 ---
-Einsturz: wahr
-IFrame:
-  Größe: 300px
-iframeMobile: wahr
-Übertreibungen: wahr
-Name: 'header-menu-example'(header-menu-beispiel)
-Optionen:
-  - name:'Modus'
-    Markiert: "mode"
-    Default: „ Schublade "
-    Items:
-      @@@399@modal
-      @@ph040@slideover@slideover.de
-      @@ph041@gmail.de
-Props:
-  Klasse: "W-voll"
+collapse: true
+iframe:
+  height: 300px;
+iframeMobile: true
+overflowHidden: true
+name: 'header-menu-example'
+options:
+  - name: 'mode'
+    label: 'mode'
+    default: 'drawer'
+    items:
+      - modal
+      - slideover
+      - drawer
+props:
+  class: 'w-full'
 ---
 ::
 
-@@@ph042@@toggle
+### Toggle (nicht)
 
-Verwenden Sie `toggle` prop, um die auf dem Handy angezeigte Umschalttaste anzupassen.
+Verwenden Sie die `toggle`-Prop, um die auf dem Handy angezeigte Umschalttaste anzupassen.
 
-Sie können jede Eigenschaft aus der Komponente [Button](/docs/components/button) übergeben, um sie anzupassen.
+Sie können jede Eigenschaft der Komponente [Button](/docs/components/button) übergeben, um sie anzupassen.
 
 ::component-example
 ---
-Einsturz: wahr
-IFrame:
-  Größe: 300px
-iframeMobile: wahr
-Übertreibungen: wahr
-Name: 'header-toggle-example'(Header-Toggle-Beispiel)
-Props:
-  Klasse: "W-voll"
+collapse: true
+iframe:
+  height: 300px;
+iframeMobile: true
+overflowHidden: true
+name: 'header-toggle-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-### Toggle Side (auf Englisch)
+### Toggle Side Seite
 
-Verwenden Sie `toggle-side` prop, um die Seite der Toggle-Taste zu ändern. Standardmäßig `right`.
+Verwenden Sie die `toggle-side`-Stütze, um die Seite der Kipptaste zu wechseln. Standardmäßig ist `right`.
 
 ::component-example
 ---
-Einsturz: wahr
-IFrame:
-  Größe: 300px
-iframeMobile: wahr
-Übertreibungen: wahr
-Name: 'header-toggle-side-example'(header-toggle-side-Beispiel)
-Props:
-  Klasse: "W-voll"
+collapse: true
+iframe:
+  height: 300px;
+iframeMobile: true
+overflowHidden: true
+name: 'header-toggle-side-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-## Beispiele
+## Examples [Bearbeiten]
 
-### Mit animierten Toggle
+### Mit animiertem Kippschalter
 
-Verwenden Sie den `#toggle`-Slot, um die Standard-Umschalttaste durch ein benutzerdefiniertes animiertes Hamburger-Symbol zu ersetzen, indem Sie [Motion Vue](https://motion.dev/docs/vue/motion-component) verwenden.
+Verwenden Sie den `#toggle`-Steckplatz, um die Standard-Umschalttaste durch ein benutzerdefiniertes animiertes Hamburger-Symbol mit [Motion Vue](https://motion.dev/docs/vue/motion-component) zu ersetzen.
 
 ::component-example
 ---
-Einsturz: wahr
-IFrame:
-  Größe: 300px
-iframeMobile: Richtig
-Übertreibungen: wahr
-Header-Toggle-Animated-Example (englisch)
-Props:
-  Klasse: "W-voll"
+collapse: true
+iframe:
+  height: 300px;
+iframeMobile: true
+overflowHidden: true
+name: 'header-toggle-animated-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-@@ph058@@@ph059@@@ph058@@@@ph059@@@@@ph059@@@@ph059@@@@@ph059@@@@@ph059@@@@@ph059@@@@@ph059@@@@@ph059@@@@@@ph059@@@@@@@ph059@@@@@@@@@@@@ph059@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+### Innerhalb von `app.vue`
 
 Verwenden Sie die Header-Komponente in Ihrem `app.vue` oder in einem Layout:
 
@@ -266,24 +266,24 @@ const items = computed<NavigationMenuItem[]>(() => [{
 </template>
 ```
 
-@@123@bpb
+## API Bearbeiten
 
-@@@@@@@@ph124@@Props
+### Props (englisch)
 
-Komponenten Props
+:component-props
 
-### Spielautomaten
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-### Emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-## Themes
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph128@@changelog (auf Englisch)
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

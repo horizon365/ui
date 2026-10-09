@@ -6,7 +6,7 @@ keywords:
   - snackbar
   - flash message
 links:
-  - label: Der Toast
+  - label: Toast auf
     icon: i-custom-reka-ui
     to: https://reka-ui.com/docs/components/toast
   - label: GitHub
@@ -14,222 +14,222 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Toast.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Verwenden Sie das [useToast](/docs/composables/use-toast) composable, um einen Toast in Ihrer Anwendung anzuzeigen.
+Verwenden Sie die [useToast](/docs/composables/use-toast) composable, um einen Toast in Ihrer Anwendung anzuzeigen.
 
 ::component-example
 ---
-Einsturz: wahr
-Schöner: wahr
-Name: 'Toast-Beispiel'
+collapse: true
+prettier: true
+name: 'toast-example'
 ---
 ::
 
 ::warning
-Stellen Sie sicher, dass Sie Ihre App mit der Komponente [`App`](/docs/components/app) Komponente umwickeln, die unsere Komponente [`Toaster`](https://github.com/nuxt/ui/blob/v4/src/runtime/components/Toaster.vue) Komponente verwendet, die die Komponente [`ToastProvider`](](https://reka-ui.com/docs/components/toast#providerhttps://reka-ui.com/docs/components/toast#provider)))verwendet Komponente von Reka UI.
+Stellen Sie sicher, dass Sie Ihre App mit der Komponente [`App`](/docs/components/app) umhüllen, die unsere Komponente [`Toaster``Toaster`https://github.com/nuxt/ui/blob/v4/src/runtime/components/Toaster.vue) verwendet, die die Komponente [`ToastProvider`](https://reka-ui.com/docs/components/toast#provider) von Reka UI verwendet.
 ::
 
 ::tip{to="/docs/components/app#props"}
-Sie können die `App` Komponente `toaster` prop überprüfen, um zu sehen, wie Sie den Toaster global konfigurieren.
+Sie können die `App`-Komponente `toaster` prop überprüfen, um zu sehen, wie der Toaster global konfiguriert wird.
 ::
 
-@@ph022@title @ Übersetzung
+### title Übersetzung
 
-Übergeben Sie ein `title`-Feld an die `toast.add`-Methode, um einen Titel anzuzeigen.
+Übergeben Sie ein Feld `title` an die Methode `toast.add`, um einen Titel anzuzeigen.
 
 ::component-example
 ---
-Optionen:
-  @@@ph025@name:'Titel'
-    Titel: "Titel"
-    P.S.:"Oh, da ist was schief gelaufen."
-Name: 'Toast-Titel-Beispiel'
+options:
+  - name: 'title'
+    label: 'title'
+    default: 'Uh oh! Something went wrong.'
+name: 'toast-title-example'
 ---
 ::
 
-@@ph026 @ Beschreibung
+### Beschreibung
 
-Übergeben Sie ein `description`-Feld an die `toast.add`-Methode, um eine Beschreibung anzuzeigen.
+Übergeben Sie ein Feld `description` an die Methode `toast.add`, um eine Beschreibung anzuzeigen.
 
 ::component-example
 ---
-Optionen:
-  @@@ph029@name:'Titel'
-    Titel: "Titel"
-    P.S.:"Oh, da ist was schief gelaufen!"
-  @@@ph030@name:'Beschreibung'
-    Label: 'Beschreibung'
-    Default: "Es gab ein Problem mit Ihrer Anfrage."
-Name: 'Toast-Beschreibung-Beispiel'
+options:
+  - name: 'title'
+    label: 'title'
+    default: 'Uh oh! Something went wrong.'
+  - name: 'description'
+    label: 'description'
+    default: 'There was a problem with your request.'
+name: 'toast-description-example'
 ---
 ::
 
-@@ph031@@gmail.de
+### Icon (nicht)
 
-Übergeben Sie ein `icon`-Feld an die `toast.add`-Methode, um ein [Icon](/docs/components/icon) anzuzeigen.
+Übergeben Sie ein `icon`-Feld an die `toast.add`-Methode, um eine [Icon](/docs/components/icon) anzuzeigen.
 
 ::component-example
 ---
-Optionen:
-  @@ph038@@name:'Icon'(auf Englisch)
-    Bezeichnung: Icon
-    Standardeinstellung: 'i-lucide-wifi'
-Name: 'Toast-Icon-Beispiel'
+options:
+  - name: 'icon'
+    label: 'icon'
+    default: 'i-lucide-wifi'
+name: 'toast-icon-example'
 ---
 ::
 
-@@@@@@Avatar@@@@@Avatar@@@@@@@@Avatar@@Avatar@@@Avatar@@Avatar@@Avatar@@Avatar@@Avatar@@Avatar@@Avatar@@Avatar@Avatar@@Avatar@@Avatar@Avatar@@Avatar@Avatar@@@Avatar@@Avatar@@@@Avatar@@@@@Avatar@@@@@@Avatar@@@@@@@@@Avatar@@@@@@@@@@@@Avatar@@@@@@@@@@@@@@@@Avatar@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+### Avatar (englisch)
 
-Geben Sie ein `avatar`-Feld an die `toast.add`-Methode weiter, um ein [Avatar](/docs/components/avatar) anzuzeigen.
+Übergeben Sie ein `avatar`-Feld an die `toast.add`-Methode, um einen [Avatar](/docs/components/avatar) anzuzeigen.
 
 ::component-example
 ---
-Optionen:
-  - name:'avatar. src'(auf Englisch)
-    Suche nach: Avatar
-    Bezeichnung: avatar. src
-    Default:
+options:
+  - name: 'avatar.src'
+    alias: 'avatar'
+    label: 'avatar.src'
+    default:
       src: 'https://github.com/benjamincanac.png'
-Name: 'Avatar-Beispiel'
+name: 'toast-avatar-example'
 ---
 ::
 
-@@ph047@gmail.de
+### color kaufen
 
 Übergeben Sie ein `color`-Feld an die `toast.add`-Methode, um die Farbe des Toast zu ändern.
 
 ::component-example
 ---
-Optionen:
-  @@@ph050@name:'Farbe'
-    Markiert: "color"
-    Defaultwert: neutral
-    Items:
-      @@@@@@@51@1@@101@101@101@101@101@11@101@101@101@1011@1011@1011@1011@1011@1011@111@111@111@1011@1111@1111@1111@1111@1111@1111@1111@11111@1111@11111@1@11111@1111@11111@11111@1111111@11111@1111111@1111111@11111@11111111@111111@@@1111111111@@@11111111111
-      @@ph052@zweitrangig
-      @@ph053@Erfolg
-      @@@54@info@@info@@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info@info
-      @@555@warning
-      @@ph056@Fehler
-      @@ph057@neutral.de
-Name: 'Toast-Color-Beispiel'
+options:
+  - name: 'color'
+    label: 'color'
+    default: neutral
+    items:
+      - primary
+      - secondary
+      - success
+      - info
+      - warning
+      - error
+      - neutral
+name: 'toast-color-example'
 ---
 ::
 
 ### Schließen
 
-Übergeben Sie ein `close`-Feld, um den Abschluss [Button](/docs/components/button)(mit `false`-Wert) anzupassen oder auszublenden.
+Übergeben Sie ein `close`-Feld zum Anpassen oder Ausblenden des schließenden [Button](/docs/components/button) (mit dem Wert `false`).
 
 ::component-example
 ---
-Name: "Toast-Close-Beispiel"
+name: 'toast-close-example'
 ---
 ::
 
-### Schließen-Symbol
+### Close Icon (nicht vorhanden)
 
-Geben Sie ein `closeIcon`-Feld ein, um die Schaltfläche zum Schließen anzupassen [Icon](/docs/components/icon). Standardmäßig auf `i-lucide-x`.
+Übergeben Sie ein `closeIcon`-Feld, um die Schaltfläche zum Schließen [Icon](/docs/components/icon) anzupassen. Standardmäßig `i-lucide-x`.
 
 ::component-example
 ---
-Optionen:
-  - name:'closeIcon'(auf Englisch)
-    Markiert: "closeIcon"
-    Standardeinstellung: 'i-lucide-arrow-right'
-Name: 'Toast-Close-Icon-Beispiel'
+options:
+  - name: 'closeIcon'
+    label: 'closeIcon'
+    default: 'i-lucide-arrow-right'
+name: 'toast-close-icon-example'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.close` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.close` Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.close` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.close` Schlüssel anpassen.
 :::
 ::
 
-@@ph077@@Aktionen
+### Actions Bearbeiten
 
-Übergeben Sie ein `actions` Feld, um einige [Button](/docs/components/button) Aktionen zum Toast hinzuzufügen.
+Übergeben Sie ein `actions`-Feld, um einige [Button](/docs/components/button)-Aktionen zum Toast hinzuzufügen.
 
 ::component-example
 ---
-Optionen:
-  @@@ph083@name:'Beschreibung'
-    Label: 'Beschreibung'
-    Default: "Es gab ein Problem mit Ihrer Anfrage."
-Name: "Toast-Aktionen-Beispiel"
+options:
+  - name: 'description'
+    label: 'description'
+    default: 'There was a problem with your request.'
+name: 'toast-actions-example'
 ---
 ::
 
-@@@@@84@Zeitumstellung
+### Duration Bearbeiten
 
-Übergeben Sie ein `duration`-Feld an die `toast.add`-Methode, um zu ändern, wie lange der Toast sichtbar bleibt (in Millisekunden).
+Übergeben Sie ein `duration`-Feld an die `toast.add`-Methode, um zu ändern, wie lange der Toast sichtbar bleibt (in Millisekunden). Standardmäßig auf `5000`.
 
 ::tip
-Setzen Sie das Feld `duration` auf `0`, um den Toast offen zu halten, bis er manuell geschlossen wird.
+Setzen Sie das Feld `duration` auf `0`, um Toast offen zu halten, bis es manuell geschlossen wird.
 ::
 
 ::component-example
 ---
-Optionen:
-  - name:'Dauer'
-    Labels: 'Dauer'
-    Defaultwert: 0
-    Items:
-      @@@091@00
-      @@@@1000@1000@1000@1000@1000@1000@10000
-      @@3000@3000@3000@3000@3000@3000@300@3000@3000@3000@30000@30000
-      @@@@994@5000
-Name: 'Toast-Dauer-Beispiel'
+options:
+  - name: 'duration'
+    label: 'duration'
+    default: 0
+    items:
+      - 0
+      - 1000
+      - 3000
+      - 5000
+name: 'toast-duration-example'
 ---
 ::
 
-@@@@@@@@@@@ph095@@progress
+### Progress (englisch)
 
-Übergeben Sie ein `progress`-Feld, um den [Progress](/docs/components/progress)-Balken anzupassen oder auszublenden (mit `false`-Wert).
+Übergeben Sie ein `progress`-Feld, um die [Progress](/docs/components/progress)-Leiste (mit dem Wert `false`) anzupassen oder auszublenden
 
 ::tip
-Der Fortschrittsbalken erbt standardmäßig die Toastfarbe, Sie können sie jedoch mit dem `progress.color`-Feld überschreiben.
+Der Fortschrittsbalken erbt standardmäßig die Toastfarbe, Sie können sie jedoch mit dem Feld `progress.color` überschreiben.
 ::
 
 ::component-example
 ---
-Name: "Toast-Progress-Beispiel"
+name: 'toast-progress-example'
 ---
 ::
 
-### Orientierung
+### Orientierung.
 
 Übergeben Sie ein `orientation`-Feld an die `toast.add`-Methode, um die Ausrichtung des Toast zu ändern.
 
 ::component-example
 ---
-Optionen:
-  - name:'Orientierung'
-    Labels: "Orientierung"
-    Default: „ Horizontal "
-    Items:
-      @@ph107@@gmail.de
-      @@108@Vertikale
-Name: 'Toast-Orientierungs-Beispiel'
+options:
+  - name: 'orientation'
+    label: 'orientation'
+    default: 'horizontal'
+    items:
+      - horizontal
+      - vertical
+name: 'toast-orientation-example'
 ---
 ::
 
-@@ph109@@Beispiele
+## Examples [Bearbeiten]
 
 ::note{to="/docs/components/app"}
-Nuxt UI bietet eine **App**-Komponente, die Ihre App umschließt, um globale Konfigurationen bereitzustellen.
+Die Nuxt-Benutzeroberfläche bietet eine **App**-Komponente, die Ihre App umhüllt, um globale Konfigurationen bereitzustellen.
 ::
 
-### Änderung der globalen Position
+### Globale Position ändern.
 
-Ändern Sie die `toaster.position` prop auf der [App](/docs/components/app#props) Komponente, um die Position der Toast zu ändern.
+Ändern Sie die `toaster.position`-Prop auf der [App](/docs/components/app#props)-Komponente, um die Position der Toasts zu ändern.
 
 ```vue [app.vue]
 <script setup lang="ts">
@@ -245,18 +245,18 @@ const toaster = { position: 'bottom-right' }
 
 ::component-example
 ---
-Schöner: wahr
-Name: 'Toast-Beispiel'
+prettier: true
+name: 'toast-example'
 ---
 
-#Optionen
-: Toaster-Position-Beispiel
+#options
+:toaster-position-example
 ::
 
 
-### Globale Dauer ändern
+### Change global duration (globale Dauer ändern)
 
-Ändern Sie die `toaster.duration` prop auf der [App](/docs/components/app#props) Komponente, um die Dauer der Toast zu ändern.
+Ändern Sie die `toaster.duration`-Prop auf der [App](/docs/components/app#props)-Komponente, um die Dauer der Toast zu ändern.
 
 ```vue [app.vue]
 <script setup lang="ts">
@@ -272,18 +272,18 @@ const toaster = { duration: 5000 }
 
 ::component-example
 ---
-Schöner: wahr
-Name: 'Toast-Beispiel'
+prettier: true
+name: 'toast-example'
 ---
 
-#Optionen
-: Toaster-Duration-Beispiel
+#options
+:toaster-duration-example
 ::
 
 
-### Change global max: badge{label="4.1+" class="align-text-top"}
+### Change global max: badge{label="4.1+" class="align-text-top"} (Globale max ändern: badge{label="4.1+" class="align-text-top"})
 
-Ändern Sie die `toaster.max` prop auf der [App](/docs/components/app#props) Komponente, um die maximale Anzahl der gleichzeitig angezeigten Toasts zu ändern.
+Ändern Sie die `toaster.max`-Prop auf der [App](/docs/components/app#props)-Komponente, um die maximale Anzahl von Toasts zu ändern, die gleichzeitig angezeigt werden.
 
 ```vue [app.vue]
 <script setup lang="ts">
@@ -299,18 +299,18 @@ const toaster = { max: 3 }
 
 ::component-example
 ---
-Schöner: wahr
-Name: 'Toast-Beispiel'
+prettier: true
+name: 'toast-example'
 ---
 
-#Optionen
-: Toaster-Max-Beispiel
+#options
+:toaster-max-example
 ::
 
 
-@@@@@@@@164@@gestapelte Toasts
+### Stacked Toasts (Deutsche Übersetzung)
 
-Stellen Sie die `toaster.expand` prop auf `false` auf die Komponente [App](/docs/components/app#props), um gestapelte Toasts anzuzeigen (inspiriert von [Sonner](https://sonner.emilkowal.ski/)).
+Setzen Sie die `toaster.expand`-Prop auf `false` auf der [App](/docs/components/app#props)-Komponente, um gestapelte Toasts anzuzeigen (inspiriert von [Sonner](https://sonner.emilkowal.ski/)).
 
 ```vue [app.vue]
 <script setup lang="ts">
@@ -330,74 +330,74 @@ Sie können den Mauszeiger über die Toasts bewegen, um sie zu erweitern. Dies w
 
 ::component-example
 ---
-Schöner: wahr
-Name: 'Toast-Beispiel'
+prettier: true
+name: 'toast-example'
 ---
 
-#Optionen
-: Toaster-Expand-Beispiel
+#options
+:toaster-expand-example
 ::
 
 
-### deduplizierte Toast: badge{label="4.5+" class="align-text-top"}
+### Deduplizierte Toasts: badge{label="4.5+" class="align-text-top"}
 
 Wenn Sie `toast.add` mit einem bereits vorhandenen `id` aufrufen, wird der vorhandene Toast gepulst, anstatt ein Duplikat zu erstellen.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'Toast-Duplikat-Beispiel'
+collapse: true
+name: 'toast-duplicate-example'
 ---
 ::
 
-@@ph190@@mit Rückruf
+### Mit Rückruf
 
-Übergeben Sie ein `onUpdateOpen`-Feld, um einen Rückruf auszuführen, wenn der Toast geschlossen ist (entweder durch Ablauf oder Benutzerkündigung).
+Übergeben Sie ein `onUpdateOpen`-Feld, um einen Rückruf auszuführen, wenn der Toast geschlossen ist (entweder durch Ablauf oder Benutzerentlassung).
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'toast-callback-example'(Toast-Rückruf-Beispiel)
+collapse: true
+name: 'toast-callback-example'
 ---
 ::
 
-### Mit HTML-Inhalt
+### Mit HTML-Inhalten
 
-Verwenden Sie die [`h()` render function](https://vuejs.org/api/render-function.html#h) in den Feldern `title` oder `description`, um HTML-Elemente oder Vue-Komponenten mit benutzerdefiniertem Styling zu rendern.
+Verwenden Sie die Renderfunktion [`h()` ](https://vuejs.org/api/render-function.html#h) in den Feldern `title` oder `description`, um HTML-Elemente oder Vue-Komponenten mit benutzerdefiniertem Styling zu rendern.
 
 ::component-example
 ---
-Einsturz: wahr
-name: 'toast-html-example'(Beispiel)
+collapse: true
+name: 'toast-html-example'
 ---
 ::
 
-@@ph200@@btw
+## API Bearbeiten
 
-@@ph201@@@props
+### Props (nicht)
 
-Komponenten-Props
+:component-props
 
-### Slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph203@@emits
+### Emits Bearbeiten
 
-Komponenten emittieren
+:component-emits
 
-### Aufdecken
+### Expose (englisch)
 
 Beim Zugriff auf die Komponente über eine Template-Referenz können Sie Folgendes verwenden:
 
 | Vorname| Typ|
 | ---- | ---- |
-| {lang="ts-type"}| @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@######################################################################################################################|
+| `height`{lang="ts-type"} nicht| `Ref<number>`{lang="ts-type"} nicht|
 
-@@ph209@@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph210@@changelog (auf Englisch)
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

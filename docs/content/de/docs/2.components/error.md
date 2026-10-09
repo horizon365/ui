@@ -7,59 +7,59 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Error.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Die Error-Komponente rendert ein `<main>`-Element, das zusammen mit der Komponente [Header](/docs/components/header) ein Layout in voller Höhe erstellt, das sich auf die verfügbare Höhe des Ansichtsfensters erstreckt.
+Die Error-Komponente rendert ein `<main>`-Element, das zusammen mit der [Header](/docs/components/header)-Komponente ein Layout in voller Höhe erstellt, das sich auf die verfügbare Höhe des Ansichtsfensters erstreckt.
 
 ::tip{to="/docs/getting-started/theme/css-variables#header"}
-Die Error-Komponente verwendet die `--ui-header-height` CSS-Variable, um sich korrekt unter dem `Header` zu positionieren.
+Die Error-Komponente verwendet die CSS-Variable `--ui-header-height`, um sich korrekt unter dem `Header` zu positionieren.
 ::
 
-@@@008@@Fehler
+### Fehler
 
-Verwenden Sie `error` prop, um eine Fehlermeldung anzuzeigen.
+Verwenden Sie die `error`-Prop, um eine Fehlermeldung anzuzeigen.
 
 ::framework-only
-#nuxt sein
+#nuxt
 ::note{to="https://nuxt.com/docs/guide/directory-structure/error" target="_blank"}
-In den meisten Fällen erhalten Sie die `error` prop in Ihrer `error.vue`-Datei.
+In den meisten Fällen erhalten Sie die `error`-Prop in Ihrer `error.vue`-Datei.
 ::
 ::
 
 ::component-code
 ---
-Hide:
-  @@12@Klasse
-Schöner: wahr
-Props:
-  Fehler:
-    Statuscode: 404
-    Meldung: "Seite nicht gefunden"
-    Meldung: "Die Seite, die Sie suchen, existiert nicht."
-  Klasse: '! min-h-96'
+hide:
+  - class
+prettier: true
+props:
+  error:
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
+  class: '!min-h-96'
 ---
 ::
 
-### Icon: badge{label="4.8+" class="align-text-top"}
+### Icon: badge{label="4.8+" class="align-text-top"} (englisch)
 
-Verwenden Sie das `icon` prop, um ein Symbol über dem Statuscode anzuzeigen.
+Verwenden Sie die `icon`-Prop, um ein Symbol über dem Statuscode anzuzeigen.
 
 ::component-code
 ---
-Hide:
-  @@16@Klasse
-Schöner: wahr
-Ignoriert:
-  - error.statusCode (nicht vorhanden)
-  - error.statusNachricht
-  @@ph019@fehler.nachricht
-Props:
-  Icon: 'i-lucide-file-x'(I-lucide-Datei-x)
-  Irrtum:
-    Statuscode: 404
-    Meldung: "Seite nicht gefunden"
-    Meldung: "Die Seite, die Sie suchen, existiert nicht."
-  Klasse: '! min-h-96'
+hide:
+  - class
+prettier: true
+ignore:
+  - error.statusCode
+  - error.statusMessage
+  - error.message
+props:
+  icon: 'i-lucide-file-x'
+  error:
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
+  class: '!min-h-96'
 ---
 ::
 
@@ -67,89 +67,89 @@ Verwenden Sie den `#leading`-Steckplatz, um ein benutzerdefiniertes Element, z. 
 
 ::component-code
 ---
-Hide:
-  @@ph021@class
-Schöner: wahr
-Ignoriert:
-  @@ph022@@error.statusCode (nicht vorhanden)
-  @@ph023@error.statusNachricht
-  @@ph024@fehler.nachricht
-Props:
-  Fehler:
-    Statuscode: 404
-    Meldung: "Seite nicht gefunden"
-    Meldung: "Die Seite, die Sie suchen, existiert nicht."
-  Klasse: '! min-h-96'
-Slots auf:
-  Führung:|
+hide:
+  - class
+prettier: true
+ignore:
+  - error.statusCode
+  - error.statusMessage
+  - error.message
+props:
+  error:
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
+  class: '!min-h-96'
+slots:
+  leading: |
 
-    @@@@@@@@@@@@@@@@@025 @
+    <img src="https://github.com/nuxt.png" alt="Logo" class="size-10 rounded-full">
 ---
-#Führung
-: img{src="https://github.com/nuxt.png" alt="Logo" class="size-10 rounded-full"}
+#leading
+:img{src="https://github.com/nuxt.png" alt="Logo" class="size-10 rounded-full"}
 ::
 
-### Clear
+### Clear ist ein
 
-Verwenden Sie `clear` prop, um die Schaltfläche zum Löschen anzupassen oder auszublenden (mit `false`-Wert).
+Verwenden Sie die `clear`-Prop, um die Schaltfläche zum Löschen (mit dem Wert `false`) anzupassen oder auszublenden.
 
-Sie können jede Eigenschaft aus der Komponente [Button](/docs/components/button) übergeben, um sie anzupassen.
+Sie können jede Eigenschaft der Komponente [Button](/docs/components/button) übergeben, um sie anzupassen.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@34@Klasse
-Ignoriert:
-  - error.statusCode (nicht vorhanden)
-  @@ph036@@error.statusNachricht
-  @@ph037@fehler.nachricht
-  - clear.color (auf Englisch)
+prettier: true
+hide:
+  - class
+ignore:
+  - error.statusCode
+  - error.statusMessage
+  - error.message
+  - clear.color
   - clear.size
-  @@ph040@@clear.icon (nicht bekannt)
+  - clear.icon
   - clear.class
-Props:
-  Eindeutig:
-    Farbe: neutral
-    Größe: XL
-    Icon: I-Lucide-Arrow-Left (englisch)
-    Klasse: 'rounded-full'
-  Fehler:
-    Statuscode: 404
-    Meldung: "Seite nicht gefunden"
-    Meldung: "Die Seite, die Sie suchen, existiert nicht."
-  Klasse: '! min-h-96'
+props:
+  clear:
+    color: neutral
+    size: xl
+    icon: i-lucide-arrow-left
+    class: 'rounded-full'
+  error:
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
+  class: '!min-h-96'
 ---
 ::
 
-@@ph042@@Umleitung
+### Weiterleitung
 
-Verwenden Sie `redirect` prop, um den Benutzer auf eine andere Seite umzuleiten, wenn die Schaltfläche zum Löschen angeklickt wird.
+Verwenden Sie die `redirect`-Prop, um den Benutzer auf eine andere Seite umzuleiten, wenn auf die Schaltfläche zum Löschen geklickt wird. Standardmäßig `/`.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@@@@@45@gmail.de
-Ignoriert:
-  - error.statusCode (nicht vorhanden)
-  - error.statusNachricht
-  @@ph048@fehler.nachricht
-Props:
-  redirect: '/docs/getting-started'(auf Englisch)
-  Fehler:
-    Statuscode: 404
-    Meldung: "Seite nicht gefunden"
-    Meldung: "Die Seite, die Sie suchen, existiert nicht."
-  Klasse: '! min-h-96'
+prettier: true
+hide:
+  - class
+ignore:
+  - error.statusCode
+  - error.statusMessage
+  - error.message
+props:
+  redirect: '/docs/getting-started'
+  error:
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
+  class: '!min-h-96'
 ---
 ::
 
-@@ph049@@Beispiele
+## Examples [Bearbeiten]
 
-@@ph050@@@ph050@@@ph050@@@@ph050@@@@@@ph050@@@@@ph050@@@@@@ph051 @@
+### Innerhalb `error.vue`
 
-Verwenden Sie die Error-Komponente in Ihrem `error.vue`:
+Verwenden Sie die Komponente Error in Ihrem `error.vue`:
 
 ```vue [error.vue]{13}
 <script setup lang="ts">
@@ -172,11 +172,11 @@ const props = defineProps<{
 ```
 
 ::tip
-Vielleicht möchten Sie den Code Ihres `app.vue` in Ihrer `error.vue` Datei replizieren, um das gleiche Layout und die gleichen Funktionen zu haben, hier ist ein Beispiel: <https://github.com/nuxt/ui/blob/v4/docs/app/error.vue>
+Vielleicht möchten Sie den Code Ihres `app.vue` in Ihrer `error.vue`-Datei replizieren, um das gleiche Layout und die gleichen Funktionen zu haben, hier ist ein Beispiel: <https://github.com/nuxt/ui/blob/v4/docs/app/error.vue>
 ::
 
 ::note
-Weitere Informationen zum Umgang mit Fehlern finden Sie in der Dokumentation [Nuxt ](https://nuxt.com/docs/getting-started/error-handling#error-page), aber bei Verwendung von `nuxt generate` wird empfohlen,`fatal: true` in Ihrem `createError`-Aufruf hinzuzufügen, um sicherzustellen, dass die Fehlerseite angezeigt wird:
+Sie können mehr darüber lesen, wie Sie Fehler in der [Nuxt-Dokumentation ](https://nuxt.com/docs/getting-started/error-handling#error-page) behandeln, aber wenn Sie `nuxt generate` verwenden, wird empfohlen, `fatal: true` in Ihren `createError`-Aufruf einzufügen, um sicherzustellen, dass die Fehlerseite angezeigt wird:
 
 ```vue [pages/\[...slug\\].vue]
 <script setup lang="ts">
@@ -193,20 +193,20 @@ if (!page.value) {
 
 ::
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@api
+## API
 
-@@@@@@@@@@@ph095@@@props
+### Props Bearbeiten
 
-Komponenten Props
+:component-props
 
-@@ph096@@slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@@@@@@@@ph097@@theme
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph098@@changelog @@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

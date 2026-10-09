@@ -17,189 +17,189 @@ links:
 
 ## 使用法
 
-[ Button ](/docs/components/button)またはModalのデフォルトスロットにある他のコンポーネントを使用します。
+[Button](/docs/components/button)、またはモーダルのデフォルトスロットにある他のコンポーネントを使用します。
 
 次に、`#content`スロットを使用して、Modalが開いているときに表示されるコンテンツを追加します。
 
 ::component-code
 ---
-きれい真
-スロット
-  デフォルト|
+prettier: true
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  内容：|
+  content: |
 
     <Placeholder class="h-48 m-4" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
-#コンテンツ
-placeholder {class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-また、`#header`{lang="ts-type"}、`#body`{lang="ts-type"}、`#footer`{lang="ts-type"}スロットを使用して、Modalのコンテンツをカスタマイズすることもできます。
+`#header`{lang="ts-type"}、`#body`{lang="ts-type"}、`#footer`{lang="ts-type"}スロットを使用してModalのコンテンツをカスタマイズすることもできます。
 
-### タイトル
+### Title
 
 `title`プロパティを使用して、Modalのヘッダーのタイトルを設定します。
 
 ::component-code
 ---
-きれい真
-小道具
-  タイトル：「タイトル付きモーダル」
-スロット
-  デフォルト|
+prettier: true
+props:
+  title: 'Modal with title'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-48" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="h-48"}
+:placeholder{class="h-48"}
 ::
 
-### 説明
+### Description
 
 `description`プロパティを使用して、Modalのヘッダーの説明を設定します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  タイトル：「説明のあるモーダル」
-  「Lorem ipsum dolor sit amet consectetur adipiscing elit」
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Modal with description'
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-48" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="h-48"}
+:placeholder{class="h-48"}
 ::
 
 ### 閉じる
 
-`close`プロパティを使用して、Modalのヘッダーに表示される閉じるボタン`false`値をカスタマイズまたは非表示にします。
+`close`プロパティを使用して、Modalのヘッダーに表示される閉じるボタン（`false`値）をカスタマイズまたは非表示にします。
 
-[ Button ](/docs/components/button)コンポーネントから任意のプロパティを渡してカスタマイズできます。
+[Button](/docs/components/button)コンポーネントから任意のプロパティを渡してカスタマイズできます。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-  -  close.color
-  -  close.variant
-小道具
-  title '閉じるボタン付きモーダル'
-  閉じる
-    色プライマリ
-    variantアウトライン
-    クラス：'rounded—full'
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+  - close.color
+  - close.variant
+props:
+  title: 'Modal with close button'
+  close:
+    color: primary
+    variant: outline
+    class: 'rounded-full'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-48" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="h-48"}
+:placeholder{class="h-48"}
 ::
 
 ::tip
 `#content`スロットがヘッダの一部であるため、閉じるボタンは表示されません。
 ::
 
-### 閉じるアイコン
+### アイコンを閉じる
 
-`close-icon`プロパティを使用して、閉じるボタン[ Icon ](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-x`です。
+`close-icon`プロパティを使用して、閉じるボタン[Icon](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-x`です。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  title '閉じるボタン付きモーダル'
-  closeIcon 'i—lucide—arrow—right'
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Modal with close button'
+  closeIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-48" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="h-48"}
+:placeholder{class="h-48"}
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.close`キーの下の`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`app.config.ts`の`ui.icons.close`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.close`キーの`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`vite.config.ts`の`ui.icons.close`キーでグローバルにカスタマイズできます。
 :::
 ::
 
-### トランジション
+### Transition
 
 `transition`プロパティを使用して、モーダルがアニメーション化されているかどうかを制御します。デフォルトは`true`です。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  遷移false
-  タイトル：「移行のないモーダル」
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+props:
+  transition: false
+  title: 'Modal without transition'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-48" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="h-48"}
+:placeholder{class="h-48"}
 ::
 
 ### オーバーレイ
@@ -208,29 +208,29 @@ placeholder {class="h-48"}
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  オーバーレイfalse
-  タイトル：「オーバーレイのないモーダル」
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+props:
+  overlay: false
+  title: 'Modal without overlay'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-48" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="h-48"}
+:placeholder{class="h-48"}
 ::
 
-###  Modal
+### Modal
 
 `modal`プロパティを使用して、Modalが外部コンテンツとのインタラクションをブロックするかどうかを制御します。デフォルトは`true`です。
 
@@ -240,26 +240,26 @@ placeholder {class="h-48"}
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  モーダルfalse
-  title「モーダル·インタラクティブ」
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+props:
+  modal: false
+  title: 'Modal interactive'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-48" />
 ---
 
-u—button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="h-48"}
+:placeholder{class="h-48"}
 ::
 
 ###  Dismissible
@@ -267,7 +267,7 @@ placeholder {class="h-48"}
 `dismissible`プロパティを使用して、Modalの外側をクリックしたりescapeを押したりしたときにDismissibleかどうかを制御します。デフォルトは`true`です。
 
 ::note
-`close:prevent`イベントは、ユーザーがそれを閉じようとすると発行されます。
+`close:prevent`イベントは、ユーザーがクローズしようとすると発行されます。
 ::
 
 ::tip
@@ -276,30 +276,30 @@ placeholder {class="h-48"}
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  dismissible false
-  モーダルtrue
-  タイトル「モーダル·ノン·ディスミブル」
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+props:
+  dismissible: false
+  modal: true
+  title: 'Modal non-dismissible'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-48" />
 ---
 
-uボタン{label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="h-48"}
+:placeholder{class="h-48"}
 ::
 
-###  Scrollable badge {label="4.2+" class="align-text-top"}
+### スクロール可能badge{label="4.2+" class="align-text-top"}
 
 `scrollable`プロパティを使用して、モーダルのコンテンツをオーバーレイ内でスクロールできるようにします。
 
@@ -309,88 +309,88 @@ placeholder {class="h-48"}
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  scrollable true
-  オーバーレイtrue
-  title「モーダルスクロール可能」
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+props:
+  scrollable: true
+  overlay: true
+  title: 'Modal scrollable'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-full" />
 ---
 
-uボタン{label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="h-screen"}
+:placeholder{class="h-screen"}
 ::
 
 ::caution
-[既知の問題](https://reka-ui.com/docs/components/dialog#scrollable-overlay)があります。
+オペレーティングシステムによってはスクロールバーをクリックすると意図せずダイアログが閉じてしまう[known issue](https://reka-ui.com/docs/components/dialog#scrollable-overlay)があります。
 ::
 
 ### フルスクリーン
 
-`fullscreen`プロパティを使用して、Modalをフルスクリーンにします。
+`fullscreen`プロパティを使用してModalをフルスクリーンにします。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-  - フルスクリーン
-小道具
-  フルスクリーン真
-  タイトル「モーダルフルスクリーン」
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+  - fullscreen
+props:
+  fullscreen: true
+  title: 'Modal fullscreen'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-full" />
 ---
 
-uボタン{label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="h-full"}
+:placeholder{class="h-full"}
 ::
 
-### アンマウントbadge {label="4.10+" class="align-text-top"}
+### アンマウントbadge{label="4.10+" class="align-text-top"}
 
-`unmount-on-hide`プロパティを使用して、Modalのコンテンツがクローズ時にアンマウントされないようにします。デフォルトは`true`です。
+`unmount-on-hide`プロパティを使用して、Modalのコンテンツがクローズされたときにアンマウントされないようにします。デフォルトは`true`です。
 
 ::component-code
 ---
-きれい真
-無視
-  -  title
-小道具
-  unmountOnHide false
-  title 'モーダル'
-スロット
-  デフォルト|
+prettier: true
+ignore:
+  - title
+props:
+  unmountOnHide: false
+  title: 'Modal'
+slots:
+  default: |
 
     <UButton label="Open" color="neutral" variant="subtle" />
 
-  ボディ|
+  body: |
 
     <Placeholder class="h-48" />
 ---
 
-uボタン{label="Open" color="neutral" variant="subtle"}
+:u-button{label="オープン" color="neutral" variant="subtle"}
 
 #body
-placeholder {class="h-48"}
+:placeholder{class="h-48"}
 ::
 
 ::note
@@ -398,70 +398,70 @@ DOMを調べると、Modalのコンテンツが閉じている間でもレンダ
 ::
 
 ::tip
-`portal` propが`false`に設定されている場合、コンテンツはサーバー上でもレンダリングされます。これはSSR中にページ読み込み時にフラッシュなしで開いているModalをレンダリングしたり、SEOのためにコンテンツを公開したりするのに便利です。
+`portal`プロパティが`false`に設定されている場合、コンテンツもサーバー上でレンダリングされます。これはSSR中に開いているModalをページ読み込み時にフラッシュなしでレンダリングしたり、SEOのためにコンテンツを公開したりするのに便利です。
 ::
 
 ## 例
 
-###  Controlオープンステート
+### Controlオープンステート
 
-`default-open` propまたは`v-model:open`ディレクティブを使用してオープン状態を制御できます。
+オープン状態は`default-open`プロパティまたは`v-model:open`ディレクティブを使用して制御できます。
 
 ::component-example
 ---
-名前'modal—open—example'
+name: 'modal-open-example'
 ---
 ::
 
 ::note
-この例では、[`defineShortcuts`](/docs/composables/define-shortcuts)を活用して、kbd {value="O"}を押してモーダルを切り替えることができます。
+この例では、[`defineShortcuts`](/docs/composables/define-shortcuts)を活用して、kbd{value="O"}を押してモーダルを切り替えることができます。
 ::
 
 ::tip
 これにより、トリガーをモーダルの外側に移動したり、完全に削除したりできます。
 ::
 
-###  Programmatic使用法
+### プログラムの使用法
 
-[`useOverlay`](/docs/composables/use-overlay)を使って、プログラムでModalを開くことができます。
+[`useOverlay`](/docs/composables/use-overlay)コンポーザブルを使用して、プログラムでModalを開くことができます。
 
 ::warning
-[`App`](/docs/components/app)コンポーネントでアプリをラップしてください。このコンポーネントは[`OverlayProvider`](https://github.com/nuxt/ui/blob/v4/src/runtime/components/OverlayProvider.vue)コンポーネントを使用しています。
+[`OverlayProvider`](https://github.com/nuxt/ui/blob/v4/src/runtime/components/OverlayProvider.vue)コンポーネントを使用する[`App`](/docs/components/app)コンポーネントでアプリをラップしてください。
 ::
 
 まず、プログラムで開くモーダルコンポーネントを作成します。
 
 ::component-example
 ---
-きれい真
-name 'modal—example'
-プレビュー false
+prettier: true
+name: 'modal-example'
+preview: false
 ---
 ::
 
 ::note
-ここでは、モーダルがクローズまたは却下されたときに`close`イベントを発行しています。`close`イベントを通じて任意のデータを発行でき、そのデータは`open()`の解決済み値になります。Promiseが解決されるにはイベントが発行されなければなりません。
+モーダルがクローズまたは却下されたときに`close`イベントを発行しています。`close`イベントを通じて任意のデータを発行でき、そのデータが`open()`の解決された値になります。Promiseが解決されるためには、イベントを発行する必要があります。
 ::
 
 次に、アプリで使用します。
 
 ::component-example
 ---
-名前'modal—programic—example'
+name: 'modal-programmatic-example'
 ---
 ::
 
 ::tip
-モーダルコンポーネント内でモーダルを閉じるには、`emit('close')`を出力します。
+`emit('close')`を出力することで、モーダルコンポーネント内でモーダルを閉じることができます。
 ::
 
-### ネストされたモーダル
+### Nestedモーダル
 
 お互いにモーダルをネストできます。
 
 ::component-example
 ---
-name 'modal—nested—example'
+name: 'modal-nested-example'
 ---
 ::
 
@@ -471,43 +471,43 @@ name 'modal—nested—example'
 
 ::component-example
 ---
-名前'modal—footer—slot—example'
+name: 'modal-footer-slot-example'
 ---
 ::
 
-### コマンドパレット付き
+### Withコマンドパレット
 
-[ CommandPalette ](/docs/components/command-palette)コンポーネントをModalのコンテンツ内で使用できます。
+[CommandPalette](/docs/components/command-palette)コンポーネントをModalのコンテンツ内で使用できます。
 
 ::component-example
 ---
-崩壊真
-名前'modal—command—palette—example'
+collapse: true
+name: 'modal-command-palette-example'
 ---
 ::
 
 ::note
-この例では、`useLazyFetch`と`immediate: false`を使用して、Modalが開いたときにのみデータを取得します。
+この例では`useLazyFetch`と`immediate: false`を使用して、Modalが開いたときにのみデータをフェッチします。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

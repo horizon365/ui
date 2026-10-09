@@ -14,598 +14,598 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Listbox.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Verwenden Sie die Direktive `v-model`, um den Wert der Listbox zu steuern, oder die Direktive `default-value` prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
+Verwenden Sie die `v-model`-Direktive, um den Wert der Listbox zu steuern, oder die `default-value`-Prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
-  @@003@Klasse
-Ignoriert:
+collapse: true
+hide:
+  - class
+ignore:
   - modelValue.label
-  - modelValue.icon (auf Englisch)
+  - modelValue.icon
   - modelValue.value
-  @@ph007@gmail.de
-Außen:
-  @@ph008@@gmail.de
-  - modellWert
-Externe Typen:
-  - ListboxItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Modellwert:
-    Label: "Frankreich"
-    Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-    Wert: "fr"
-  Items:
-    - label:'Frankreich'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: 'fr'
-    - label:'Deutschland'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ de "
-    - label:'Italien'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ IT "
-    - label:'Deutschland'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ es "
-    - label:'Niederlande'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: "NL"
-    - label:'Deutschland'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: "PL"
-    - label:'Belgien'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ Be "
-    - label:'Deutschland'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: "PT"
-    - label:'Österreich'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ AT "
-    - label:'Schweden'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: "SE"
-  Klasse: "W-voll"
+  - items
+external:
+  - items
+  - modelValue
+externalTypes:
+  - ListboxItem[]
+props:
+  modelValue:
+    label: 'France'
+    icon: 'i-lucide-map-pin'
+    value: 'FR'
+  items:
+    - label: 'France'
+      icon: 'i-lucide-map-pin'
+      value: 'FR'
+    - label: 'Germany'
+      icon: 'i-lucide-map-pin'
+      value: 'DE'
+    - label: 'Italy'
+      icon: 'i-lucide-map-pin'
+      value: 'IT'
+    - label: 'Spain'
+      icon: 'i-lucide-map-pin'
+      value: 'ES'
+    - label: 'Netherlands'
+      icon: 'i-lucide-map-pin'
+      value: 'NL'
+    - label: 'Poland'
+      icon: 'i-lucide-map-pin'
+      value: 'PL'
+    - label: 'Belgium'
+      icon: 'i-lucide-map-pin'
+      value: 'BE'
+    - label: 'Portugal'
+      icon: 'i-lucide-map-pin'
+      value: 'PT'
+    - label: 'Austria'
+      icon: 'i-lucide-map-pin'
+      value: 'AT'
+    - label: 'Sweden'
+      icon: 'i-lucide-map-pin'
+      value: 'SE'
+  class: 'w-full'
 ---
 ::
 
-@@ph021@gmail.de
+### Items Bearbeiten
 
-Verwenden Sie `items` prop als Array von Objekten mit den folgenden Eigenschaften:
+Verwenden Sie die `items`-prop als Array von Objekten mit den folgenden Eigenschaften:
 
-`label?: string``label?: string``label?: string`{lang="ts-type"}
-`description?: string`))))))PH03131@@
-- `type?: "label" | "separator" | "item"`{lang="ts-type"}]())
-[`icon?: string`{lang="ts-type"}))
-`avatar?: AvatarProps`{lang="ts-type"}PH0552)
-- [PH0555@@@@@@@PH0559)PH05999
-`disabled?: boolean``disabled?: boolean`{lang="ts-type"}
-`onSelect?: (e: Event) => void``onSelect?: (e: Event) => void`PH06666 @
-`class?: any``class?: any`{lang="ts-type"}
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+- `label?: string`{lang="ts-type"} (nicht vorhanden)
+- [`description?: string`{lang="ts-type"}](#with-description-in-items)
+- [`type?: "label" | "separator" | "item"`{lang="ts-type"}](#with-items-type)
+074x[`icon?: string`{lang="ts-type"}xph0777x#with-icon-in-items) |
+- [`avatar?: AvatarProps`{lang="ts-type"}](#with-avatar-in-items)
+- [`chip?: ChipProps`{lang="ts-type"}](#with-chip-in-items)
+- `disabled?: boolean`{lang="ts-type"} (nicht vorhanden)
+- `onSelect?: (e: Event) => void`{lang="ts-type"} (nicht)
+- `class?: any`{lang="ts-type"} (nicht)
+- `ui?: { label?: ClassNameValue, separator?: ClassNameValue, item?: ClassNameValue, itemLeadingIcon?: ClassNameValue, ... }`{lang="ts-type"} (nicht)
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
-  @@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classc
-Ignoriert:
-  @@ph074@gmail.de
-Außen:
-  @@ph075@gmail.de
-Externe Typen:
-  - ListboxItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Items:
-    - label:'Frankreich'
-      Titel: "Das Hexagon"
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: 'fr'
-    - label:'Deutschland'
-      Stichwort: "Bundesrepublik"
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ de "
-    - label:'Italien'
-      Beschreibung: "Das Boot"
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ IT "
-    - label:'Deutschland'
-      Inhaltsangabe zu "The Bull Skin"
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ es "
-  Klasse: "W-voll"
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - ListboxItem[]
+props:
+  items:
+    - label: 'France'
+      description: 'The Hexagon'
+      icon: 'i-lucide-map-pin'
+      value: 'FR'
+    - label: 'Germany'
+      description: 'The Federal Republic'
+      icon: 'i-lucide-map-pin'
+      value: 'DE'
+    - label: 'Italy'
+      description: 'The Boot'
+      icon: 'i-lucide-map-pin'
+      value: 'IT'
+    - label: 'Spain'
+      description: 'The Bull Skin'
+      icon: 'i-lucide-map-pin'
+      value: 'ES'
+  class: 'w-full'
 ---
 ::
 
-Sie können auch ein Array von Arrays an `items` prop übergeben, um getrennte Gruppen von Elementen anzuzeigen.
+Sie können auch ein Array von Arrays an die `items`-Prop übergeben, um getrennte Gruppen von Elementen anzuzeigen.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
-  @@@@@@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@classclassclass@class@class@class@class@class@class
-Ignoriert:
-  @@ph083@gmail.de
-Außen:
-  @@@ph084@gmail.de
-Externe Typen:
-  @@ph085@@@listboxItem [][]
-Props:
-  Items:
-    - -label: 'Frankreich'
-        Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-        Wert: 'fr'
-      - label:'Deutschland'
-        Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-        Wert: „ de "
-      - label:'Italien'
-        Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-        Wert: „ IT "
-    - -label: 'Deutschland'
-        Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-        Wert: "BR"
-      - label:'Argentinien'
-        Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-        Wert: "AR"
-  Klasse: "W-voll"
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - ListboxItem[][]
+props:
+  items:
+    - - label: 'France'
+        icon: 'i-lucide-map-pin'
+        value: 'FR'
+      - label: 'Germany'
+        icon: 'i-lucide-map-pin'
+        value: 'DE'
+      - label: 'Italy'
+        icon: 'i-lucide-map-pin'
+        value: 'IT'
+    - - label: 'Brazil'
+        icon: 'i-lucide-map-pin'
+        value: 'BR'
+      - label: 'Argentina'
+        icon: 'i-lucide-map-pin'
+        value: 'AR'
+  class: 'w-full'
 ---
 ::
 
-@@ph091@@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-
+### Mehrfach
 
-Verwenden Sie `multiple` prop, um die Auswahl mehrerer Elemente zu ermöglichen. Bei Aktivierung ist `v-model` ein Array.
+Verwenden Sie die `multiple`-prop, um die Auswahl mehrerer Elemente zu ermöglichen. Wenn aktiviert, wird die `v-model` ein Array sein.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
-  @@@@@@@@@@@class
-Ignoriert:
-  @@ph095@gmail.de
-  @@ph096@@mehrfache
-Außen:
-  @@ph097@gmail.de
-Externe Typen:
-  @@ph098@@listboxItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Anzahl: true
-  Items:
-    - label:'Frankreich'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: 'fr'
-    - label:'Deutschland'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ de "
-    - label:'Italien'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ IT "
-    - label:'Deutschland'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ Es "
-  Klasse: "W-voll"
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+  - multiple
+external:
+  - items
+externalTypes:
+  - ListboxItem[]
+props:
+  multiple: true
+  items:
+    - label: 'France'
+      icon: 'i-lucide-map-pin'
+      value: 'FR'
+    - label: 'Germany'
+      icon: 'i-lucide-map-pin'
+      value: 'DE'
+    - label: 'Italy'
+      icon: 'i-lucide-map-pin'
+      value: 'IT'
+    - label: 'Spain'
+      icon: 'i-lucide-map-pin'
+      value: 'ES'
+  class: 'w-full'
 ---
 ::
 
-### Wertschlüssel
+### value Schlüsselwort
 
-Sie können eine einzelne Eigenschaft des Objekts anstelle des gesamten Objekts binden, indem Sie die `value-key` prop. Defaults auf `undefined` verwenden.
+Sie können eine einzelne Eigenschaft des Objekts anstelle des gesamten Objekts binden, indem Sie die `value-key`-Prop verwenden.
 
 ::component-code
 ---
-Einsturz: wahr
-Ignoriert:
-  - modellWert
+collapse: true
+ignore:
+  - modelValue
   - valueKey
-  @@@@@@@108@108@108@108@108@108@108@108@108@108@108@108@108@108@100@1000@108@108@10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @@109@Klasse
-Außen:
-  - Artikel
-  - modellWert
-Externe Typen:
-  - ListboxItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Modellwert: 'FR'
-  valueKey: 'Wert'
-  Items:
-    - label:'Frankreich'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: "fr"
-    - label:'Deutschland'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ de "
-    - label:'Italien'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ IT "
-    - label:'Spanien'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ es "
-  Klasse: "W-voll"
+  - items
+  - class
+external:
+  - items
+  - modelValue
+externalTypes:
+  - ListboxItem[]
+props:
+  modelValue: 'FR'
+  valueKey: 'value'
+  items:
+    - label: 'France'
+      icon: 'i-lucide-map-pin'
+      value: 'FR'
+    - label: 'Germany'
+      icon: 'i-lucide-map-pin'
+      value: 'DE'
+    - label: 'Italy'
+      icon: 'i-lucide-map-pin'
+      value: 'IT'
+    - label: 'Spain'
+      icon: 'i-lucide-map-pin'
+      value: 'ES'
+  class: 'w-full'
 ---
 ::
 
-@@117@Filter Bearbeiten
+### Filter (englisch)
 
-Verwenden Sie `filter` prop, um eine Filtereingabe anzuzeigen, oder übergeben Sie ein Objekt, um die Komponente [Input](/docs/components/input) zu personalisieren.
+Verwenden Sie die `filter`-Prop, um eine Filtereingabe anzuzeigen, oder übergeben Sie ein Objekt, um die [Input](/docs/components/input)-Komponente anzupassen.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
-  @@124@Klasse
-Ignoriert:
-  @@ph125@gmail.de
-Außen:
-  - Artikel
-Externe Typen:
-  - ListboxItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Filterung:
-    Platzhalter: "Filter..."
-    Icon: 'i-lucide-search'(auf Englisch)
-  Items:
-    - label:'Frankreich'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: 'fr'
-    - label:'Deutschland'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ de "
-    - label:'Italien'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ IT "
-    - label:'Spanien'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ Es "
-    - label:'Niederlande'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: 'NL'
-    - label:'Deutschland'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: "PL"
-  Klasse: "W-voll"
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - ListboxItem[]
+props:
+  filter:
+    placeholder: 'Filter...'
+    icon: 'i-lucide-search'
+  items:
+    - label: 'France'
+      icon: 'i-lucide-map-pin'
+      value: 'FR'
+    - label: 'Germany'
+      icon: 'i-lucide-map-pin'
+      value: 'DE'
+    - label: 'Italy'
+      icon: 'i-lucide-map-pin'
+      value: 'IT'
+    - label: 'Spain'
+      icon: 'i-lucide-map-pin'
+      value: 'ES'
+    - label: 'Netherlands'
+      icon: 'i-lucide-map-pin'
+      value: 'NL'
+    - label: 'Poland'
+      icon: 'i-lucide-map-pin'
+      value: 'PL'
+  class: 'w-full'
 ---
 ::
 
-@@ph134@@selected Icon (englisch)
+### Selected Icon auswählen
 
-Verwenden Sie `selected-icon` prop, um das Symbol anzupassen, wenn ein Element ausgewählt wird.
+Verwenden Sie die `selected-icon` prop, um das Symbol anzupassen, wenn ein Element ausgewählt ist. Standardmäßig `i-lucide-check`.
 
 ::component-code
 ---
-Einsturz: wahr
-Ignoriert:
-  - Artikel
-  - modellWert
+collapse: true
+ignore:
+  - items
+  - modelValue
   - valueKey
-  @@140@Klasse
-Außen:
-  - Artikel
-  - modellWert
-Externe Typen:
-  - ListboxItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Modellwert: 'fr'
-  selectedIcon: 'i-lucide-flame'(I-Lucide-Flamme)
-  valueKey: 'Wert'
-  Items:
-    - label:'Frankreich'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: "fr"
-    - label:'Deutschland'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ de "
-    - label:'Italien'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ IT "
-    - label:'Spanien'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ Es "
-  Klasse: "W-voll"
+  - class
+external:
+  - items
+  - modelValue
+externalTypes:
+  - ListboxItem[]
+props:
+  modelValue: 'FR'
+  selectedIcon: 'i-lucide-flame'
+  valueKey: 'value'
+  items:
+    - label: 'France'
+      icon: 'i-lucide-map-pin'
+      value: 'FR'
+    - label: 'Germany'
+      icon: 'i-lucide-map-pin'
+      value: 'DE'
+    - label: 'Italy'
+      icon: 'i-lucide-map-pin'
+      value: 'IT'
+    - label: 'Spain'
+      icon: 'i-lucide-map-pin'
+      value: 'ES'
+  class: 'w-full'
 ---
 ::
 
-@@148@148@148
+x307xSize
 
-Verwenden Sie die `size` prop, um die Größe der Listbox zu ändern.
+Verwenden Sie die `size`-Prop, um die Größe der Listbox zu ändern.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
-  @150@Klasse
-Ignoriert:
-  - Artikel
-Außen:
-  - Artikel
-Externe Typen:
-  - ListboxItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Größe: XL
-  Items:
-    - label:'Frankreich'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: 'fr'
-    - label:'Deutschland'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ de "
-    - label:'Italien'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ IT "
-    - label:'Spanien'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ Es "
-  Klasse: "W-voll"
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - ListboxItem[]
+props:
+  size: xl
+  items:
+    - label: 'France'
+      icon: 'i-lucide-map-pin'
+      value: 'FR'
+    - label: 'Germany'
+      icon: 'i-lucide-map-pin'
+      value: 'DE'
+    - label: 'Italy'
+      icon: 'i-lucide-map-pin'
+      value: 'IT'
+    - label: 'Spain'
+      icon: 'i-lucide-map-pin'
+      value: 'ES'
+  class: 'w-full'
 ---
 ::
 
-@@158@Aufladen
+### Loading (englisch)
 
-Verwenden Sie `loading` prop, um eine Ladeanzeige anzuzeigen.
+Verwenden Sie die `loading`-prop, um eine Ladeanzeige anzuzeigen. Verwenden Sie die `loading-icon`-prop, um das Symbol anzupassen.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
-  @@161@161@161@161@161@161@161@161@161@161@161@161@@161@@161@161@@161@@161@@@161@@@161@@161@@161@@161@@161@@161@@161@@@161@@@@161@@@@@@@@@@@@16161@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Klasse
-Ignoriert:
-  -  Artikel
-Außen:
-  - Artikel
-Externe Personen:
-  - ListboxItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Aufladung: true
-  Items:
-    - label:'Frankreich'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: "fr"
-    - label:'Deutschland'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ de "
-  Klasse: "W-voll"
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - ListboxItem[]
+props:
+  loading: true
+  items:
+    - label: 'France'
+      icon: 'i-lucide-map-pin'
+      value: 'FR'
+    - label: 'Germany'
+      icon: 'i-lucide-map-pin'
+      value: 'DE'
+  class: 'w-full'
 ---
 ::
 
-### disabled
+### Disabled (englisch)
 
-Verwenden Sie `disabled` prop, um jegliche Benutzerinteraktion mit der Listbox zu verhindern.
+Verwenden Sie die `disabled`-Prop, um Benutzerinteraktionen mit der Listbox zu verhindern.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
-  @@@@@@169@class
-Ignoriert:
-  - Artikel
-Außen:
-  @@@@@@@171@171@171@171@171@171@@171@17@17@@171@17@@@171@@17@@17@@17@1@17@1@@17@@17@1@@17@1@@17@@@17@@17@@17@1@17@1@177@@1@@@177@1@@@@177@@1@@@@@1777@@@@@1@@@@@@@@Artikel
-Externe Personen:
-  - ListboxItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Behindert: Wahr
-  Items:
-    - label:'Frankreich'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: 'fr'
-    - label:'Deutschland'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ de "
-    - label:'Italien'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ IT "
-    - label:'Spanien'
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ Es "
-  Klasse: "W-voll"
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - ListboxItem[]
+props:
+  disabled: true
+  items:
+    - label: 'France'
+      icon: 'i-lucide-map-pin'
+      value: 'FR'
+    - label: 'Germany'
+      icon: 'i-lucide-map-pin'
+      value: 'DE'
+    - label: 'Italy'
+      icon: 'i-lucide-map-pin'
+      value: 'IT'
+    - label: 'Spain'
+      icon: 'i-lucide-map-pin'
+      value: 'ES'
+  class: 'w-full'
 ---
 ::
 
-@@177@@Beispiele
+## Examples [Bearbeiten]
 
-### Mit Artikeltyp
+### With items type (Deutsche Übersetzung)
 
 Sie können die `type`-Eigenschaft mit `separator` verwenden, um ein Trennzeichen zwischen Elementen anzuzeigen, oder `label`, um eine Beschriftung anzuzeigen.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
-  @@182@gmail.de
-Ignoriert:
-  @@ph183@gmail.de
-Außen:
-  @@ph184@gmail.de
-Externe Typen:
-  @@ph185@@listboxItem [][Bearbeiten | Quelltext bearbeiten]
-Props:
-  Items:
-    - -type: 'kennzeichnung'
-        Schlagwort: "Früchte"
-      - label:'Apple'(auf Englisch)
-      - label:'Banane'
-      - label:'Blaubeere'
-      - label:'Trauben'
-      - label:'Ananas'
-    - -type: 'kennzeichnung'
-        Kategorie: „ Gemüse "
-      - label:'Aubergine'(Englisch)
-      - label:'Brokkoli'(auf Englisch)
-      - label:'Karotte'
-      - label:'Zucchini'
-      - label:'Leek'(auf Englisch)
-  Klasse: "W-voll"
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - ListboxItem[][]
+props:
+  items:
+    - - type: 'label'
+        label: 'Fruits'
+      - label: 'Apple'
+      - label: 'Banana'
+      - label: 'Blueberry'
+      - label: 'Grapes'
+      - label: 'Pineapple'
+    - - type: 'label'
+        label: 'Vegetables'
+      - label: 'Aubergine'
+      - label: 'Broccoli'
+      - label: 'Carrot'
+      - label: 'Courgette'
+      - label: 'Leek'
+  class: 'w-full'
 ---
 ::
 
 ::note
-Wenn Sie `label` Elemente als Gruppenüberschriften verwenden, übergeben Sie ein Array von Arrays, damit ein Label zusammen mit seiner Gruppe bei der Suche herausgefiltert wird.
+Wenn Sie `label`-Elemente als Gruppenüberschriften verwenden, übergeben Sie ein Array von Arrays, damit ein Label bei der Suche zusammen mit seiner Gruppe herausgefiltert wird.
 ::
 
-### Mit Icon in den Artikeln
+### With Icon in items (Deutsche Ausgabe)
 
 Sie können die `icon`-Eigenschaft verwenden, um ein [Icon](/docs/components/icon) innerhalb der Elemente anzuzeigen.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
-  @@ph205@gmail.de
-Ignoriert:
-  @@ph206@@gmail.de
-Außen:
-  @@ph207@gmail.de
-Externe Typen:
-  - ListboxItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Items:
-    - label:'Backlog'
-      Icon: 'i-lucide-circle-help'(I-lucide-Kreis-Hilfe)
-      Bedeutung: Backlog
-    - label:'Todo'(auf Englisch)
-      Symbol: 'i-lucide-circle-plus'(I-lucide-Kreis-Plus)
-      Wert: "alles"
-    - label:'In Bearbeitung'
-      Icon: 'i-lucide-circle-arrow-up'(I-lucide-Kreis-Pfeil-nach oben)
-      Wert: 'in_progress'(in_progress)
-    - label:'Fertig'
-      Icon: 'i-lucide-circle-check'(I-luzide-Kreis-Check)
-      Wert: „ Done "
-  Klasse: "W-voll"
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - ListboxItem[]
+props:
+  items:
+    - label: 'Backlog'
+      icon: 'i-lucide-circle-help'
+      value: 'backlog'
+    - label: 'Todo'
+      icon: 'i-lucide-circle-plus'
+      value: 'todo'
+    - label: 'In Progress'
+      icon: 'i-lucide-circle-arrow-up'
+      value: 'in_progress'
+    - label: 'Done'
+      icon: 'i-lucide-circle-check'
+      value: 'done'
+  class: 'w-full'
 ---
 ::
 
-### Mit Avatar in den Artikeln
+### With avatar in items (Mit Avatar in Elementen)
 
-Sie können die `avatar`-Eigenschaft verwenden, um ein [Avatar](/docs/components/avatar) innerhalb der Elemente anzuzeigen.
+Sie können die `avatar`-Eigenschaft verwenden, um ein [Avatar](/docs/components/avatar) in den Elementen anzuzeigen.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
-  @@ph219@class
-Ignoriert:
-  @@ph220@@gmail.de
-Außen:
-  @@ph221@gmail.de
-Externe Personen:
-  - ListboxItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Items:
-    - label:'benjamincanac'(auf Englisch)
-      Avatare sind:
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - ListboxItem[]
+props:
+  items:
+    - label: 'benjamincanac'
+      avatar:
         src: 'https://github.com/benjamincanac.png'
-    - label:'HugoRCD'(Englisch)
-      Avatare sind:
+    - label: 'HugoRCD'
+      avatar:
         src: 'https://github.com/HugoRCD.png'
-    - label:'atinux'(auf Englisch)
-      Avatare sind:
-        src: 'https://github.com/atinux.png'(https://github.com/atinux.png)
-    - label:'romhml'(Englisch)
-      Avatare sind:
-        src: 'https://github.com/romhml.png'(auf Englisch)
-  Klasse: "W-voll"
+    - label: 'atinux'
+      avatar:
+        src: 'https://github.com/atinux.png'
+    - label: 'romhml'
+      avatar:
+        src: 'https://github.com/romhml.png'
+  class: 'w-full'
 ---
 ::
 
-### Mit Chip in Artikeln
+### Mit Chip in den Gegenständen
 
-Sie können die `chip`-Eigenschaft verwenden, um ein [Chip](/docs/components/chip) innerhalb der Elemente anzuzeigen.
+Sie können die `chip`-Eigenschaft verwenden, um ein [Chip](/docs/components/chip) in den Elementen anzuzeigen.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
-  @@ph233@gmail.de
-Ignoriert:
-  @@ph234@gmail.de
-Außen:
-  @@ph235@gmail.de
-Externe Personen:
-  - ListboxItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Items:
-    - label:'bug'
-      Der CHIP:
-        Farbe: „ Fehler "
-    - label:'Funktion'
-      Der CHIP:
-        Farbe: „ Erfolg "
-    - label:'Verbesserung'
-      Der CHIP:
-        Farbe: "Info"
-  Klasse: "W-voll"
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - ListboxItem[]
+props:
+  items:
+    - label: 'bug'
+      chip:
+        color: 'error'
+    - label: 'feature'
+      chip:
+        color: 'success'
+    - label: 'enhancement'
+      chip:
+        color: 'info'
+  class: 'w-full'
 ---
 ::
 
-### Mit Beschreibung in Artikeln
+### With description in items (Beschreibung in Elementen)
 
-Sie können die `description`-Eigenschaft verwenden, um zusätzlichen Text unter dem Etikett anzuzeigen.
+Sie können die `description`-Eigenschaft verwenden, um zusätzlichen Text unterhalb der Beschriftung anzuzeigen.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
-  @@@@@@@@class242@class242@class@class242@class@class@class@class@class242@class@class@class@class@class@class@class242@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@class@classclassclassclass@class@classclassclassclassclassclass@class@class@classclassclassclass@classclassclassclass@classclassclassclassclassclassclassclassclassclass@classclassclassclassclassclassclassclass@classclassclassclassc
-Ignoriert:
-  @@ph243@gmail.de
-Außen:
-  @@ph244@gmail.de
-Externe Personen:
-  - ListboxItem [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Items:
-    - label:'Frankreich'
-      Titel: "Das Hexagon"
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: "fr"
-    - label:'Deutschland'
-      Beschreibung: "Bundesrepublik"
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ de "
-    - label:'Italien'
-      Beschreibung: "Das Boot"
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ IT "
-    - label:'Deutschland'
-      Inhaltsangabe zu "The Bull Skin"
-      Icon: 'i-lucide-map-pin'(I-lucide-map-pin) auf der Seite
-      Wert: „ es "
-  Klasse: "W-voll"
+collapse: true
+hide:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - ListboxItem[]
+props:
+  items:
+    - label: 'France'
+      description: 'The Hexagon'
+      icon: 'i-lucide-map-pin'
+      value: 'FR'
+    - label: 'Germany'
+      description: 'The Federal Republic'
+      icon: 'i-lucide-map-pin'
+      value: 'DE'
+    - label: 'Italy'
+      description: 'The Boot'
+      icon: 'i-lucide-map-pin'
+      value: 'IT'
+    - label: 'Spain'
+      description: 'The Bull Skin'
+      icon: 'i-lucide-map-pin'
+      value: 'ES'
+  class: 'w-full'
 ---
 ::
 
-### Control ausgewählte (n) Artikel
+### Control selected item (s) Ausgewähltes Element
 
-Sie können das ausgewählte Element mit der `default-value` prop oder der `v-model` Direktive steuern.
+Sie können das ausgewählte Element mit der `default-value`-prop-oder der `v-model`-Direktive steuern.
 
 ::component-example
 ---
-Name: 'listbox-model-value-example'(Listenbox-Modell-Wert-Beispiel)
-Einsturz: wahr
+name: 'listbox-model-value-example'
+collapse: true
 ---
 ::
 
-### Kontrollsuchbegriff
+### Control Suchbegriff
 
 Verwenden Sie die `v-model:search-term`-Direktive, um den Suchbegriff zu steuern.
 
 ::component-example
 ---
-Name: 'listbox-search-term-example'(Listbox-Suchbegriff-Beispiel)
+name: 'listbox-search-term-example'
 ---
 ::
 
-### Mit Ignorierfilter
+### With ignore filter (Filter ignorieren)
 
-Setzen Sie `ignore-filter` prop auf `true`, um die interne Suche zu deaktivieren und Ihre eigene Suchlogik zu verwenden.
+Setzen Sie die `ignore-filter` prop auf `true`, um die interne Suche zu deaktivieren und Ihre eigene Suchlogik zu verwenden.
 
 ::component-example
 ---
-Einsturz: wahr
-Listbox-Ignore-Filter-Beispiel
+collapse: true
+name: 'listbox-ignore-filter-example'
 ---
 ::
 
@@ -613,57 +613,57 @@ Listbox-Ignore-Filter-Beispiel
 In diesem Beispiel wird [`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced) verwendet, um die API-Aufrufe zu entkräften.
 ::
 
-### Mit Filterfeldern
+### With Filterfelder
 
-Verwenden Sie `filter-fields` prop mit einem Array von Feldern, um nach. Defaults zu `[labelKey]` zu filtern.
+Verwenden Sie die `filter-fields`-Prop mit einem Array von Feldern, um nach. Defaults auf `[labelKey]` zu filtern.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'listbox-filter-fields-example'(Listbox-Filter-Feld-Beispiel)
+collapse: true
+name: 'listbox-filter-fields-example'
 ---
 ::
 
 ### Mit Virtualisierung
 
-Verwenden Sie `virtualize` prop, um die Virtualisierung für große Listen als Boolean oder ein Objekt mit Optionen wie `{ estimateSize: 32, overscan: 12 }` zu aktivieren.
+Verwenden Sie die `virtualize`-Prop, um die Virtualisierung für große Listen als Boolean oder ein Objekt mit Optionen wie `{ estimateSize: 32, overscan: 12 }` zu aktivieren.
 
 ::component-example
 ---
-Listbox-Virtualize-Example (Virtualisierungs-Beispiel)
-Einsturz: wahr
+name: 'listbox-virtualize-example'
+collapse: true
 ---
 ::
 
-### Als Übertragungsliste
+### As eine Übertragungsliste
 
-Sie können zwei Listbox-Komponenten mit [Button](/docs/components/button) Steuerelementen zusammenstellen, um ein Übertragungslistenmuster zu erstellen.
+Sie können zwei Listbox-Komponenten mit [Button](/docs/components/button)-Steuerelementen zusammenstellen, um ein Übertragungslistenmuster zu erstellen.
 
 ::component-example
 ---
-Name: 'listbox-transfer-list-example'(Listbox-Transfer-Listen-Beispiel)
-Einsturz: wahr
+name: 'listbox-transfer-list-example'
+collapse: true
 ---
 ::
 
-@@@@@@@@b274@b274@b274.de
+## API (englisch)
 
-@@@@@@@@ph275@@Props
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
-### Spielautomaten
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@@ph277@@emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@######################################################################################################################################################################################
+## Theme (englisch)
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph279@@changelog (auf Englisch)
+## Changelog Bearbeiten
 
-Das Component-Changelog
+:component-changelog

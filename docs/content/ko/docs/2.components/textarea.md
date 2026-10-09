@@ -9,266 +9,266 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Textarea.vue
 ---
 
-##  사용
+## Usage
 
-`v-model` 지시문을 사용하여 Textarea 값을 제어합니다.
+`v-model` 명령어를 사용하여 Textarea의 값을 제어합니다.
 
 ::component-code
 ---
-무시하기:
-  - modelValue - modelValue 이미지
-외부:
-  - modelValue - modelValue 이미지
-소품 :
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: ''
 ---
 ::
 
-###  행
+### 행
 
-`rows`prop을 사용하여 행 수를 설정합니다. 기본값은 `3`입니다.
+`rows` 소품을 사용하여 행 수를 설정합니다. 기본값은 `3`입니다.
 
 ::component-code
 ---
-소품 :
-  행 : 12
+props:
+  rows: 12
 ---
 ::
 
 ### 자리 표시자
 
-`placeholder`prop을 사용하여 자리 표시자 텍스트를 설정합니다.
+`placeholder` Prop을 사용하여 자리 표시자 텍스트를 설정합니다.
 
 ::component-code
 ---
-소품 :
-  placeholder: 'Type something...' (어떤 것을 입력하십시오...)
+props:
+  placeholder: 'Type something...'
 ---
 ::
 
 ### 자동 크기 조정
 
-`autoresize`prop을 사용하여 Textarea의 높이 자동 크기 조정을 활성화합니다.
+`autoresize` prop을 사용하여 Textarea의 높이 자동 크기 조정을 활성화합니다.
 
 ::component-code
 ---
-무시하기:
-  - modelValue - modelValue
-외부:
-  - modelValue - modelValue 이미지
-소품 :
-  modelValue: '텍스트의 높이를 자동으로 조정하는 긴 텍스트입니다.'
-  자동 크기 조정:true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 'This is a long text that will autoresize the height of the Textarea.'
+  autoresize: true
 ---
 ::
 
-`maxrows`prop을 사용하여 자동 크기 조정 시 최대 행 수를 설정합니다. `0`로 설정하면 Textarea가 무한히 증가합니다.
+자동 크기 조정 시 `maxrows` Prop을 사용하여 최대 행 수를 설정합니다. `0`로 설정하면 Textarea가 무한히 증가합니다.
 
 ::component-code
 ---
-무시하기:
-  - modelValue - modelValue 이미지
-외부:
-  - modelValue - modelValue 이미지
-소품 :
-  ModelValue: '이 텍스트는 Textarea의 높이를 최대 4개의 행으로 자동 크기 조정하는 긴 텍스트입니다.'
-  maxrows: 4 개
-  자동 크기 조정: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 'This is a long text that will autoresize the height of the Textarea with a maximum of 4 rows.'
+  maxrows: 4
+  autoresize: true
 ---
 ::
 
-###  색상
+### Color
 
-`color`prop을 사용하여 Textarea에 초점을 맞출 때 링 색상을 변경합니다.
+`color` Prop을 사용하여 Textarea에 초점을 맞출 때 링 색상을 변경합니다.
 
 ::component-code
 ---
-무시하기:
-  - 자리 표시자
-소품 :
-  색상: 중립
-  강조 표시:true
-  placeholder: 'Type something...' (어떤 것을 입력하십시오...)
+ignore:
+  - placeholder
+props:
+  color: neutral
+  highlight: true
+  placeholder: 'Type something...'
 ---
 ::
 
 ::note
-`highlight`prop은 초점 상태를 보여주기 위해 사용됩니다. 검증 오류가 발생할 때 내부적으로 사용됩니다.
+`highlight` prop은 초점 상태를 표시하기 위해 사용되며, 유효성 검사 오류가 발생할 때 내부적으로 사용됩니다.
 ::
 
-### Variant 변수
+### 변형
 
-`variant`prop을 사용하여 Textarea의 변형을 변경합니다.
+`variant` prop 를 사용하여 Textarea 의 변형을 변경합니다.
 
 ::component-code
 ---
-무시하기:
-  - 자리 표시자
-소품 :
-  색상: 중립
-  변형: 미묘한
-  강조 표시:거짓
-  placeholder: 'Type something...' (어떤 것을 입력하십시오...)
+ignore:
+  - placeholder
+props:
+  color: neutral
+  variant: subtle
+  highlight: false
+  placeholder: 'Type something...'
 ---
 ::
 
-###  크기
+### Size 크기
 
-`size`prop을 사용하여 Textarea의 크기를 변경합니다.
+`size` prop 을 사용하여 Textarea 의 크기를 변경합니다.
 
 ::component-code
 ---
-무시하기:
-  - 자리 표시자
-소품 :
-  크기: xl
-  placeholder: 'Type something...' (어떤 것을 입력하세요...)
+ignore:
+  - placeholder
+props:
+  size: xl
+  placeholder: 'Type something...'
 ---
 ::
 
-###  아이콘
+### Icon 이미지
 
-`icon`prop을 사용하여 Textarea 내부에 [Icon](/docs/components/icon)를 표시합니다.
+`icon` prop을 사용하여 Textarea 내부에 [Icon](/docs/components/icon)를 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  - 자리 표시자
-소품 :
-  아이콘: 'i-lucide-search'
-  크기: md
-  변형: 윤곽선
-  자리 표시자: 검색...
-  행 : 1
+prettier: true
+ignore:
+  - placeholder
+props:
+  icon: 'i-lucide-search'
+  size: md
+  variant: outline
+  placeholder: 'Search...'
+  rows: 1
 ---
 ::
 
-`leading` 및 `trailing`props를 사용하여 아이콘 위치를 설정하거나 `leading-icon` 및 `trailing-icon`props를 사용하여 각 위치에 대해 다른 아이콘을 설정합니다.
+`leading` 및 `trailing` props를 사용하여 아이콘 위치를 설정하거나 `leading-icon` 및 `trailing-icon` props를 사용하여 각 위치에 대해 다른 아이콘을 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  - 자리 표시자
-소품 :
+prettier: true
+ignore:
+  - placeholder
+props:
   trailingIcon: i-lucide-at-sign
-  자리 표시자: "Enter your email"
-  크기: MD
-  행 : 1
+  placeholder: 'Enter your email'
+  size: md
+  rows: 1
 ---
 ::
 
 ### Avatar 이미지
 
-`avatar`prop을 사용하여 Textarea 내부에 [Avatar](/docs/components/avatar)를 표시합니다.
+`avatar` prop을 사용하여 Textarea 내부에 [Avatar](xph12x)를 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  - 자리 표시자
-  - avatar.loading - avatar.loading
-소품 :
-  아바타 (Avatar):
+prettier: true
+ignore:
+  - placeholder
+  - avatar.loading
+props:
+  avatar:
     src: 'https://github.com/nuxt.png'
-    로드: Lazy
-  크기: MD
-  변형: 외곽 선
-  자리 표시자: 검색...
-  행: 1
+    loading: lazy
+  size: md
+  variant: outline
+  placeholder: 'Search...'
+  rows: 1
 ---
 ::
 
-### 로드 중
+### loading 중
 
-`loading`prop을 사용하여 Textarea에 로드 아이콘을 표시합니다.
+`loading` prop을 사용하여 Textarea에 로딩 아이콘을 표시합니다.
 
 ::component-code
 ---
-무시하기:
-  - 자리 표시자
-소품 :
-  로드: true
-  트레일링: false
-  자리 표시자: 검색...
-  행 : 1
+ignore:
+  - placeholder
+props:
+  loading: true
+  trailing: false
+  placeholder: 'Search...'
+  rows: 1
 ---
 ::
 
-### Loading icon 아이콘
+### Loading 아이콘
 
-`loading-icon`prop을 사용하여 로드 아이콘을 사용자 정의합니다. 기본값은 `i-lucide-loader-circle`입니다.
+`loading-icon` 소품을 사용하여 로드 아이콘을 사용자 정의합니다. 기본값은 `i-lucide-loader-circle`입니다.
 
 ::component-code
 ---
-무시하기:
-  - 자리 표시자
-소품 :
-  로드: true
+ignore:
+  - placeholder
+props:
+  loading: true
   loadingIcon: 'i-lucide-loader'
-  자리 표시자: 검색...
-  행: 1
+  placeholder: 'Search...'
+  rows: 1
 ---
 ::
 
 ::framework-only
-#nuxt 코드
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.loading` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.loading` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.loading` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.loading` 키 아래의 `vite.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-###  비활성 화
+### 비활성 화 됨
 
-`disabled`prop 을 사용하여 Textarea 를 비활성화합니다.
+`disabled` prop 을 사용하여 Textarea 를 비활성화합니다.
 
 ::component-code
 ---
-무시하기:
-  - 자리 표시자
-소품 :
-  사용 안 함:true
-  placeholder: 'Type something...' (어떤 것을 입력하십시오...)
+ignore:
+  - placeholder
+props:
+  disabled: true
+  placeholder: 'Type something...'
 ---
 ::
 
-##  API
+## API 파일
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attributes" target="_blank"}
-이 컴포넌트는 모든 네이티브 `<textarea>`HTML 속성을 지원합니다.
+이 구성 요소는 모든 기본 `<textarea>` HTML 속성을 지원합니다.
 ::
 
-###  슬롯
+### 슬롯
 
-:컴포넌트 - 슬롯
+:component-slots
 
-###  Emits
+### Emits 파일
 
-:구성요소 - 방사
+:component-emits
 
-###  노출
+### 노출
 
 템플릿 참조를 통해 컴포넌트에 액세스하는 경우 다음을 사용할 수 있습니다.
 
-| 이름 Name| 유형 (Type)|
+| 이름 (Name)| 유형 (Type)|
 | ---- | ---- |
-| `textareaRef`{lang="ts-type"}| `Ref<HTMLTextAreaElement \| null>`{lang="ts-type"}|
-| `autoResize`{lang="ts-type"}| `() => void`{lang="ts-type"}|
+| `textareaRef`{lang="ts-type"}| `Ref<HTMLTextAreaElement \| null>`{lang="ts-type"} (`Ref<HTMLTextAreaElement \| null>`{lang="ts-type"})|
+| `autoResize`{lang="ts-type"} 공식| `() => void`{lang="ts-type"} (`() => void`{lang="ts-type"})|
 
-##  테마
+## 테마
 
-:구성요소 주제
+:component-theme
 
-##  Changelog
+## Changelog 파일
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

@@ -8,17 +8,17 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardResizeHandle.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Die DashboardResizeHandle-Komponente wird von den Komponenten [DashboardSidebar](/docs/components/dashboard-sidebar) und [DashboardPanel](/docs/components/dashboard-panel) verwendet.
 
-Es wird automatisch angezeigt, wenn `resizable` prop gesetzt ist,**Sie müssen es nicht manuell hinzufügen **.
+Es wird automatisch angezeigt, wenn die `resizable` prop gesetzt ist, **Sie müssen es nicht manuell hinzufügen **.
 
-@@ph012 @ Beispiele
+## Examples (Beispiele)
 
-### Within `resize-handle` slot
+### Within `resize-handle` slot (auf Deutsch)
 
-Obwohl diese Komponente automatisch angezeigt wird, wenn die `resizable` prop gesetzt ist, können Sie den `resize-handle`-Steckplatz der [DashboardSidebar](/docs/components/dashboard-sidebar) und [DashboardPanel](/docs/components/dashboard-panel) Komponenten verwenden, um den Griff anzupassen.
+Obwohl diese Komponente automatisch angezeigt wird, wenn die `resizable`-Stütze gesetzt ist, können Sie den `resize-handle`-Steckplatz der [DashboardSidebar](/docs/components/dashboard-sidebar) und [DashboardPanel](/docs/components/dashboard-panel)-Komponenten verwenden, um den Griff anzupassen.
 
 ::code-group
 
@@ -65,23 +65,23 @@ definePageMeta({
 ::
 
 ::note
-In diesem Beispiel fügen wir ein `after` Pseudo-Element hinzu, um eine vertikale Linie beim Hover anzuzeigen.
+In diesem Beispiel fügen wir ein Pseudo-Element `after` hinzu, um eine vertikale Linie beim Hover anzuzeigen.
 ::
 
-## api
+## API (Englisch)
 
-@@@@@@ph065@@Props
+### Props (nicht)
 
-Komponenten Props
+:component-props
 
-### Schlitze
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-## Thema
+## Theme (englisch)
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph068@@changelog @@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

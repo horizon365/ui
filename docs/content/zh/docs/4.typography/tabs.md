@@ -9,7 +9,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Tabs.vue
 ---
 
-## 使用情况
+## 用法
 
 使用`tabs`和`tabs-item`组件在内容中显示[Tabs](/docs/components/tabs)。
 
@@ -37,7 +37,7 @@ Lorem velit voluptate ex reversed derit ullamco et culpa.
 
 :::
 
-#代码
+#code
 
 ````mdc
 ::tabs
@@ -69,21 +69,21 @@ Lorem velit voluptate ex reprehenderit ullamco et culpa.
 
 ### Props
 
-：组件-道具{prose}
+:component-props{prose}
 
 ### Slots
 
-：组件插槽{prose}
+:component-slots{prose}
 
 ## Theme
 
 ::component-theme{prose}
 ---
-额外：
+extra:
   - tabsItem
 ---
 ::
 
 ## Changelog
 
-：组件更改日志{prefix="prose"}
+:component-changelog{prefix="prose"}

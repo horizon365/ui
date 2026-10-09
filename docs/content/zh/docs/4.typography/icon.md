@@ -9,14 +9,14 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Icon.vue
 ---
 
-## 使用情况
+## 用法
 
-使用`icon`组件可在内容中显示[Icon](/docs/components/icon)。
+使用`icon`组件在内容中显示[Icon](/docs/components/icon)。
 
 ::code-preview
-：icon{name="i-simple-icons-nuxtdotjs"}
+:icon{name="i-simple-icons-nuxtdotjs"}
 
-#代码
+#code
 
 ```mdc
 :icon{name="i-simple-icons-nuxtdotjs"}
@@ -28,12 +28,12 @@ links:
 
 ### Props
 
-：组件-道具{prose}
+:component-props{prose}
 
 ## Theme
 
-：组件主题{prose}
+:component-theme{prose}
 
 ## Changelog
 
-：component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

@@ -1,5 +1,5 @@
 ---
-title: Scrollbereich
+title: Scrollarea
 description: Ein flexibler Scroll-Container mit Virtualisierungsunterstützung.
 category: data
 keywords:
@@ -17,234 +17,234 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ScrollArea.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
 Die ScrollArea-Komponente erstellt scrollbare Container mit optionaler Virtualisierung für große Listen.
 
 ::component-example
 ---
-Einsturz: wahr
-Übertreibungen: wahr
-name: 'scroll-area-example'(scroll-Bereich-Beispiel)
-Klasse: '! p-0'
+collapse: true
+overflowHidden: true
+name: 'scroll-area-example'
+class: '!p-0'
 ---
 ::
 
-@@ph001@gmail.de
+### Einträge
 
-Verwenden Sie `items` prop als Array und rendern Sie jedes Element mit dem Standard-Slot:
+Verwenden Sie die `items`-Prop als Array und rendern Sie jedes Element mit dem Standard-Slot:
 
 ::component-example
 ---
-Einsturz: wahr
-Übertreibungen: wahr
-name: 'scroll-area-items-example'(scroll-area-items-beispiel)
-Klasse: '! p-0'
+collapse: true
+overflowHidden: true
+name: 'scroll-area-items-example'
+class: '!p-0'
 ---
 ::
 
 ::tip{to="#with-default-slot"}
-Sie können den Standardslot auch ohne `items` prop verwenden, um benutzerdefinierte scrollbare Inhalte direkt darzustellen.
+Sie können den Standard-Slot auch ohne die `items`-Prop verwenden, um benutzerdefinierte scrollbare Inhalte direkt zu rendern.
 ::
 
-@@ph004@Orientierung
+### Ausrichtung
 
-Verwenden Sie `orientation` prop, um die Bildlaufrichtung zu ändern. Standardmäßig ist `vertical`.
+Verwenden Sie die `orientation`-prop, um die Scrollrichtung zu ändern. Standardmäßig ist `vertical`.
 
 ::component-example
 ---
-Einsturz: wahr
-Übertreibungen: wahr
-Name: 'scroll-area-orientierung-example'
-Klasse: '! p-0'
-Optionen:
-  - name: Orientierung
-    Label: Orientierung
-    Default: Horizontal
-    Items:
-      @@ph008@vertikal
-      @@ph009@heine-heine-heine.de
+collapse: true
+overflowHidden: true
+name: 'scroll-area-orientation-example'
+class: '!p-0'
+options:
+  - name: orientation
+    label: orientation
+    default: horizontal
+    items:
+      - vertical
+      - horizontal
 ---
 ::
 
-@@ph010@virtualisieren
+### Virtualize Bearbeiten
 
-Verwenden Sie `virtualize` prop, um nur die aktuell angezeigten Elemente zu rendern, wodurch die Leistung bei der Arbeit mit großen Datensätzen erheblich gesteigert wird.
+Verwenden Sie die `virtualize`-Prop, um nur die aktuell angezeigten Elemente zu rendern, wodurch die Leistung bei der Arbeit mit großen Datensätzen erheblich gesteigert wird.
 
 ::note
-Wenn die Virtualisierung **enabled** ist, passen Sie den Abstand über die `virtualize` prop-Optionen wie `gap`,`paddingStart` und `paddingEnd` an.
+Wenn die Virtualisierung **enabled** ist, passen Sie den Abstand über die `virtualize`-Prop-Optionen wie `gap`, `paddingStart` und `paddingEnd` an.
 ::
 
 ::tip
-Wenn alle Ihre Artikel die **gleiche Höhe ** haben, setzen Sie `skipMeasurement` auf `true` in der `virtualize` prop, um die DOM-Messung pro Artikel zu überspringen und sich stattdessen auf `estimateSize` zu verlassen.
+Wenn alle Ihre Elemente die **same height** haben, setzen Sie `skipMeasurement` auf `true` in der `virtualize`-Prop, um die DOM-Messung pro Element zu überspringen und sich stattdessen auf `estimateSize` zu verlassen.
 ::
 
 ::component-example
 ---
-Einsturz: wahr
-Übertreibungen: wahr
-'scroll-area-virtualize-example'(scroll-area-virtualize-beispiel)
-Klasse: '! p-0'
-Optionen:
-  - name: Orientierung
-    Label: Orientierung
-    Default: Vertikal
-    Items:
-      @@ph028@vertikal
-      @@ph029@@gmail.com
+collapse: true
+overflowHidden: true
+name: 'scroll-area-virtualize-example'
+class: '!p-0'
+options:
+  - name: orientation
+    label: orientation
+    default: vertical
+    items:
+      - vertical
+      - horizontal
 ---
 ::
 
-@@ph030@@shadow@ph031@@shadow@ph031 @@
+### Shadow: badge{label="4.9+" class="align-text-top"} (englisch).
 
-Verwenden Sie `shadow` prop, um Fade-Schatten an den scrollbaren Rändern anzuzeigen, um anzuzeigen, dass mehr Inhalt in Scroll-Richtung verfügbar ist.
+Verwenden Sie die `shadow` prop, um Fade-Schatten an den scrollbaren Kanten anzuzeigen, was darauf hinweist, dass mehr Inhalt in der Scroll-Richtung verfügbar ist. Die Fade folgt automatisch der `orientation` und erscheint nur, wenn der Inhalt überläuft.
 
 ::component-example
 ---
-Einsturz: wahr
-'scroll-area-shadow-example'(scroll-Bereich-Schatten-Beispiel)
+collapse: true
+name: 'scroll-area-shadow-example'
 ---
 ::
 
 ::tip
-Übergeben Sie ein Objekt an `shadow` prop, um die Überblendungsgröße zu konfigurieren, z. B.`:shadow="{ size: 48 }"`.
+Übergeben Sie ein Objekt an die `shadow`-Prop, um die Fade-Größe zu konfigurieren, z. B. `:shadow="{ size: 48 }"`.
 ::
 
-@@ph036@@Beispiele
+## Examples [Bearbeiten]
 
-### Als Mauerwerk Layout
+### As Maurer-Layout
 
-Verwenden Sie die Optionen `virtualize` prop mit `lanes`,`gap` und `estimateSize`, um Pinterest-Stil-Mauerwerkslayouts mit Elementen mit variabler Höhe zu erstellen.
+Verwenden Sie die `virtualize`-Stütze mit den Optionen `lanes`, `gap` und `estimateSize`, um Pinterest-Stil-Mauerwerkslayouts mit Elementen mit variabler Höhe zu erstellen.
 
 ::component-example
 ---
-Einsturz: wahr
-Übertreibungen: wahr
-name: 'scroll-area-masonry-layout-example'(scroll-area-masonry-layout-beispiel)
-Klasse: '! p-0'
-Optionen:
-  - name: Orientierung
-    Labels: Orientierung
-    Default: Vertikal
-    Items:
-      @@ph043@vertikal
-      @@ph044@@gmail.de
+collapse: true
+overflowHidden: true
+name: 'scroll-area-masonry-layout-example'
+class: '!p-0'
+options:
+  - name: orientation
+    label: orientation
+    default: vertical
+    items:
+      - vertical
+      - horizontal
   - name: lanes
-    Typ: Nummer
-    Markiert: LANES
-    Default-Zustand: 3
-  - name: Lücke
-    Typ: Anzahl
-    Markiert: Gap
-    Fehlbetrag: 16
+    type: number
+    label: lanes
+    default: 3
+  - name: gap
+    type: number
+    label: gap
+    default: 16
 ---
 ::
 
 ::tip
-Für eine optimale Leistung setzen Sie `estimateSize` in der Nähe Ihrer durchschnittlichen Artikelhöhe. Die Erhöhung von `overscan` verbessert die Laufruhe beim Scrollen, rendert jedoch mehr Elemente außerhalb des Bildschirms.
+Für eine optimale Leistung stellen Sie `estimateSize` nahe an Ihre durchschnittliche Artikelhöhe. `overscan` zu erhöhen verbessert die Laufruhe beim Scrollen, rendert aber mehr Elemente außerhalb des Bildschirms.
 ::
 
-### Mit responsiven Lanes
+### With responsive lanes (Antwortspuren)
 
-Sie können die Kompositionsmaterialien [`useWindowSize`](https://vueuse.org/core/useWindowSize/)(für containerbasierte) verwenden, um die `lanes`](https://vueuse.org/core/useElementSize/)(für containerbasierte) zu machen.
+Sie können die [`useWindowSize`](https://vueuse.org/core/useWindowSize/) (für Viewport-basierte) oder [`useElementSize`](https://vueuse.org/core/useElementSize/xph12x (für Container-basierte) Composites verwenden, um die `lanes` reaktiv zu machen.
 
 ::component-example
 ---
-Einsturz: wahr
-Übertreibungen: wahr
-Beschreibung: scroll-area-responsive-lanes-example
-Klasse: '! p-0'
+collapse: true
+overflowHidden: true
+name: 'scroll-area-responsive-lanes-example'
+class: '!p-0'
 ---
 ::
 
 ### Mit externem Scroll-Element: badge{label="4.10+" class="align-text-top"}
 
-Übergeben Sie eine `getScrollElement`-Funktion in der `virtualize` prop, um gegen einen Vorgänger-Scroll-Container anstelle des eigenen Viewports der Komponente zu virtualisieren. Setzen Sie `scrollMargin` auf den Offset der Liste vom Start des Scroll-Elements (z. B. die Höhe des Inhalts darüber).
+Übergeben Sie eine `getScrollElement`-Funktion in der `virtualize`-Prop, um gegen einen Vorgänger-Scroll-Container anstelle des eigenen Viewports der Komponente zu virtualisieren. Setzen Sie `scrollMargin` auf den Offset der Liste vom Start des Scroll-Elements (z. B. die Höhe des Inhalts darüber).
 
 ::component-example
 ---
-Schöner: wahr
-Einsturz: wahr
-Übertreibungen: wahr
-Name: 'scroll-area-external-scroll-example'(scroll-Bereich-external-scroll-Beispiel)
-Klasse: '! p-0'
-Optionen:
-  - name: Orientierung
-    Labels: Orientierung
-    Default: Vertikal
-    Items:
-      - vertikal
-      @@ph068@@gmail.de
+prettier: true
+collapse: true
+overflowHidden: true
+name: 'scroll-area-external-scroll-example'
+class: '!p-0'
+options:
+  - name: orientation
+    label: orientation
+    default: vertical
+    items:
+      - vertical
+      - horizontal
 ---
 ::
 
 ::note
-Da der Container die Schriftrolle besitzt, scrollen die Schaltflächen "Suchen" und "Oben" der Symbolleiste direkt mit `container.scrollTo`.
+Da der Container die Schriftrolle besitzt, scrollen die Schaltflächen "Suchen" und "Top" der Symbolleiste direkt mit `container.scrollTo`.
 ::
 
 ::caution
-Das `shadow` prop hat in diesem Modus keine Wirkung, da der Stamm nicht mehr die Rolle besitzt.
+Die `shadow`-Prop hat in diesem Modus keine Wirkung, da der Root nicht mehr den Scroll besitzt.
 ::
 
-### Mit programmatischer Scroll
+### Mit Programmatic Scroll
 
-Sie können das exponierte `virtualizer` verwenden, um die Scrollposition programmgesteuert zu steuern.
+Sie können die exponierte `virtualizer` verwenden, um die Bildlaufposition programmgesteuert zu steuern.
 
 ::component-example
 ---
-Einsturz: wahr
-Übertreibungen: wahr
-Name: 'scroll-area-scroll-to-example'(scroll-Bereich-scroll-zum-Beispiel)
-Klasse: '! p-0'
+collapse: true
+overflowHidden: true
+name: 'scroll-area-scroll-to-example'
+class: '!p-0'
 ---
 ::
 
-### Mit unendlicher Bildlauf
+### Mit unendlichem Scrollen
 
-Sie können das [`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/) composable verwenden, um mehr Daten zu laden, während der Benutzer scrollt.
+Sie können das Composable [`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/) verwenden, um mehr Daten zu laden, während der Benutzer scrollt.
 
 ::component-example
 ---
-Schöner: wahr
-Einsturz: wahr
-Übertreibungen: wahr
-Name: 'scroll-area-infinite-scroll-example'(scroll-Bereich-infinite-scroll-Beispiel)
-Klasse: '! p-0'
+prettier: true
+collapse: true
+overflowHidden: true
+name: 'scroll-area-infinite-scroll-example'
+class: '!p-0'
 ---
 ::
 
 ::note
-In diesem Beispiel wird `useLazyFetch` mit `server: false` verwendet, um Daten auf dem Client abzurufen, ohne das anfängliche Rendern zu blockieren. Der Ladezustand überprüft sowohl `pending` als auch `idle` status, um eine Ladeanzeige vor und während des Abrufs anzuzeigen.
+In diesem Beispiel wird `useLazyFetch` mit `server: false` verwendet, um Daten auf dem Client abzurufen, ohne das anfängliche Rendern zu blockieren. Der Ladezustand überprüft sowohl den `pending`-als auch den `idle`-Status, um eine Ladeanzeige vor und während des Abrufs anzuzeigen. Zusätzliche Seiten werden geladen, wenn der Benutzer scrollt.
 ::
 
-### Mit Default-Slot
+### Mit Default Slot
 
-Sie können den Standard-Slot ohne `items` prop verwenden, um benutzerdefinierte scrollbare Inhalte direkt zu rendern.
+Sie können den Standard-Slot ohne die `items`-Prop verwenden, um benutzerdefinierte scrollbare Inhalte direkt zu rendern.
 
 ::component-example
 ---
-Name: 'scroll-area-default-slot-example'(scroll-Bereich-Standard-Steckplatz-Beispiel)
-Klasse: '! p-0'
+name: 'scroll-area-default-slot-example'
+class: '!p-0'
 ---
 ::
 
-@@@@@@85@@bpb
+## API (englisch)
 
-@@@@@@@@@@@@ph086@@props
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
-@@ph087@gmail.de
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-@@ph089@@untenstehenbleiben
+### Expose (englisch)
 
-Sie können auf die typisierte Komponenteninstanz zugreifen, indem Sie [`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref).
+Sie können auf die typisierte Komponenteninstanz mit [`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref) zugreifen.
 
 ```vue
 <script setup lang="ts">
@@ -265,13 +265,13 @@ Dies gibt Ihnen Zugang zu den folgenden:
 
 | Vorname| Typ| Description|
 | ---- | ---- | ----------- |
-| @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##################################################################################################################|@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@################################################################################################################################|Die Wurzel der Komponente.|
-| {lang="ts-type"}|{lang="ts-type"}| Die [TanStack Virtual](https://tanstack.com/virtual/latest/docs/api/virtualizer) virtualizer-Instanz (`undefined` wenn die Virtualisierung deaktiviert ist).|
+| `$el`{lang="ts-type"} (nicht)| `HTMLElement`{lang="ts-type"} (nicht)| Die Wurzel der Komponente.|
+| `virtualizer`{lang="ts-type"} nicht| `Ref<Virtualizer> \| undefined`{lang="ts-type"} (nicht)| Die Virtualizer-Instanz [TanStack Virtual](https://tanstack.com/virtual/latest/docs/api/virtualizer) (`undefined`, wenn die Virtualisierung deaktiviert ist).|
 
-@@ph122@@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph123@@changelog @ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

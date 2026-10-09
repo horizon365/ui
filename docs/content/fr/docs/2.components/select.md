@@ -13,187 +13,187 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Select.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Utilisez la directive `v-model` pour contrôler la valeur de Select ou la prop `default-value` pour définir la valeur initiale lorsque vous n'avez pas besoin de contrôler son état.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@ph003@classe
-Ignorer:
-  - modèleValeur
-  @@ph005@articles
-  @@ph006@classe
-Extérieure:
-  @@ph007@articles
-  - modèleValeur
-Props:
-  Valeur: 'Backlog'
+prettier: true
+hide:
+  - class
+ignore:
+  - modelValue
+  - items
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
   items:
     - Backlog
-    @@ph010@tout
-    - En cours
-    @@ph012@@fait
-  Catégorie: W-48
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-@@ph013@référencement
+### Éléments
 
-Utilisez la prop `items` comme un tableau de chaînes, de nombres ou de booléens:
+Utilisez la prop `items` comme tableau de chaînes, de nombres ou de booléens:
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  - modèleValeur
-  @@ph016@articles
-  @@classe 17
-Extérieure:
-  @@ph018@articles
-  - modèleValeur
-Props:
-  Valeur: 'Backlog'
+prettier: true
+ignore:
+  - modelValue
+  - items
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
   items:
-    @@20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @@21@tout
-    - En cours
-    @@ph023@fait
-  Catégorie: W-48
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 Vous pouvez également passer un tableau d'objets avec les propriétés suivantes:
 
-@@
-@@
-@@
-- `icon?: string`{lang="ts-type"}](#with-icons-in-items)
-@@
-@@
-@@
-@@
-@@
+- x`label?: string`x{lang="ts-type"}
+Xph046xx[x`value?: string`x{lang="ts-type"}](x#value-keyx)
+Xph053xxx[x`type?: "label" | "separator" | "item"`x{lang="ts-type"}x](x#with-items-typex)
+Xph060xx[x`icon?: string`x{lang="ts-type"}x](x#with-icons-in-itemsx)
+Xph067xx[x`avatar?: AvatarProps`x{lang="ts-type"}x](x#with-avatar-in-items)
+Xph074xx[x`chip?: ChipProps`x{lang="ts-type"}x](x#with-chip-in-itemsx)
+- x`disabled?: boolean`xx{lang="ts-type"}
+- x`class?: any`xx{lang="ts-type"}
+- xx`ui?: { label?: ClassNameValue, separator?: ClassNameValue, item?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLeadingChipSize?: ClassNameValue, itemLeadingChip?: ClassNameValue, itemLabel?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingIcon?: ClassNameValue }`xxx{lang="ts-type"}
 
 ::component-code
 ---
-ignorer:
-  - modèleValeur
-  @@ph072@articles
-  @@ph073@classe
-Extérieure:
-  @@ph074@articles
-  - modèleValeur
-Extérieurs:
-  @@776@sélectionnées []
-Props:
-  Valeur: 'Backlog'
+ignore:
+  - modelValue
+  - items
+  - class
+external:
+  - items
+  - modelValue
+externalTypes:
+  - SelectItem[]
+props:
+  modelValue: 'backlog'
   items:
-    - label:'Backlog'
-      Valeur: Backlog
-    - label:« Tout »
-      Valeur: 'tout'
-    - label:« En cours »
-      valeur: 'in_progress'
-    - label:« Réalisé »
-      Valeur: "Done"
-  Catégorie: W-48
+    - label: 'Backlog'
+      value: 'backlog'
+    - label: 'Todo'
+      value: 'todo'
+    - label: 'In Progress'
+      value: 'in_progress'
+    - label: 'Done'
+      value: 'done'
+  class: 'w-48'
 ---
 ::
 
 ::caution
-Lorsque vous utilisez des objets, vous devez faire référence à la propriété `value` de l'objet dans la directive `v-model` ou dans la propriété `default-value`.
+Lorsque vous utilisez des objets, vous devez faire référence à la propriété `value` de l'objet dans la directive `v-model` ou la prop `default-value`.
 ::
 
 Vous pouvez également passer un tableau de tableaux à la prop `items` pour afficher des groupes d'éléments séparés.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  - modèleValeur
-  @@ph086@articles
-  @@ph087@classe
-Extérieur:
-  @@888@articles
-  - modèleValeur
-Props:
-  Modèle:"Apple"
+prettier: true
+ignore:
+  - modelValue
+  - items
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Apple'
   items:
-    - -Développeur
-      - Banane
-      @@ph092@blueberry
-      @@P093@@Référencement
-      @@Pineapple 94@Pineapple
-    - -Aubergine
+    - - Apple
+      - Banana
+      - Blueberry
+      - Grapes
+      - Pineapple
+    - - Aubergine
       - Broccoli
-      - étoile
-      @098@courgette
-      @099@@Lénine
-  Catégorie: W-48
+      - Carrot
+      - Courgette
+      - Leek
+  class: 'w-48'
 ---
 ::
 
-### Clé de valeur
+Clé ### Value
 
-Vous pouvez modifier la propriété utilisée pour définir la valeur en utilisant la propriété `value-key`.
+Vous pouvez modifier la propriété qui est utilisée pour définir la valeur en utilisant la prop. `value-key`.
 
 ::component-code
 ---
-Ignorer:
-  - modèle
+ignore:
+  - modelValue
   - valueKey
-  @@ph105@articles
-  @@ph106@classe
-Extérieur:
-  @@ph107@articles
-  - modelValeur
-Extérieurs:
-  @109@@sélectionné []
-Props:
-  Valeur: 'Backlog'
-  Valeur: 'id'
+  - items
+  - class
+external:
+  - items
+  - modelValue
+externalTypes:
+  - SelectItem[]
+props:
+  modelValue: 'backlog'
+  valueKey: 'id'
   items:
-    - label:'Backlog'
-      Définition: Backlog
-    - label:« Tout »
-      ID: « tout »
-    - label:« En cours »
+    - label: 'Backlog'
+      id: 'backlog'
+    - label: 'Todo'
+      id: 'todo'
+    - label: 'In Progress'
       id: 'in_progress'
-    - label:« Réalisé »
-      ID: "fait"
-  Catégorie: W-48
+    - label: 'Done'
+      id: 'done'
+  class: 'w-48'
 ---
 ::
 
-@@ph114@@multiple
+### multiple
 
-Utilisez la prop `multiple` pour permettre des sélections multiples, les éléments sélectionnés seront séparés par une virgule dans le déclencheur.
+Use the `multiple` prop to allow multiple selections, the selected items will be separated by a comma in the trigger.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  - modelValeur
-  @@ph117@articles
-  @@ph118@multiple
-  @@classe 119
-Extérieure:
-  @120@120@120
-  - modèleValeur
-Props:
-  Modèle:
-    @@2012@Backlog
-    @@ph123@tout
-  Multiple: Vrai
+prettier: true
+ignore:
+  - modelValue
+  - items
+  - multiple
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue:
+    - Backlog
+    - Todo
+  multiple: true
   items:
-    @124@Backlog
-    @@ph125@tout
-    - En cours
-    @@ph127@fait
-  Catégorie: W-48
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
@@ -201,239 +201,239 @@ Props:
 Assurez-vous de passer un tableau à la prop `default-value` ou à la directive `v-model`.
 ::
 
-### Placeholder
+### Placeholder électronique
 
 Utilisez la prop `placeholder` pour définir un texte d'espace réservé.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph132@articles
-  @@ph133@classe
-Extérieure:
-  @@ph134@articles
-Props:
-  placeholder: "Sélectionner le statut"
+prettier: true
+ignore:
+  - items
+  - class
+external:
+  - items
+props:
+  placeholder: 'Select status'
   items:
     - Backlog
-    @@ph136@tout
-    - En cours
-    @@ph138@fait
-  Catégorie: W-48
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-@@ph139@contenu
+### Contenu
 
 Utilisez la prop `content` pour contrôler la façon dont le contenu Select est rendu, comme son `align` ou `side` par exemple.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph143@articles
-  - modèleValeur
-  @@ph145@classe
-Extérieur:
-  @@ph146@articles
-  - modèleValeur
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
 items:
   content.align:
-    @@ph148@départ
-    -  réseau
-    @@ph150@fin
+    - start
+    - center
+    - end
   content.side:
-    @@ph151@@droite
-    @@ph152@left
-    @@ph153@top
-    @@ph154@réduit
-Props:
-  Valeur: 'Backlog'
-  contenu:
-    Alignement: Centre
-    Étiquette: bottom
-    Décalage: 8
+    - right
+    - left
+    - top
+    - bottom
+props:
+  modelValue: 'Backlog'
+  content:
+    align: center
+    side: bottom
+    sideOffset: 8
   items:
-    @@P155@@référencement
-    @@ph156@tout
-    - En cours
-    @@ph158@fait
-  Catégorie: W-48
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 ::note
-Ces options s'appliquent uniquement lorsque `content.position` est `popper`(par défaut).
+Ces options s'appliquent uniquement lorsque `content.position` est `popper` (par défaut).
 ::
 
 ### Position: badge{label="4.7+" class="align-text-top"}
 
-Utilisez la prop `content.position` pour contrôler le positionnement du contenu Sélectionner par rapport au déclencheur. Par défaut à `popper`, qui positionne le contenu comme les autres popovers. Définissez-le sur `item-aligned` pour aligner le contenu avec l'élément sélectionné (similaire à un menu natif de macOS).
+Utilisez la prop `content.position` pour contrôler le positionnement du contenu Sélectionner par rapport au déclencheur. Par défaut, `popper`, qui positionne le contenu comme les autres popovers. Définissez-le sur `item-aligned` pour aligner le contenu avec l'élément sélectionné (similaire à un menu natif de macOS).
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph166@éléments
-  - modèleValeur
-  @@ph168@classe
-Extérieure:
-  @@ph169@articles
-  - modèleValeur
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
 items:
   content.position:
-    -  item-aligné
-    @@ph172@popper
-Props:
-  Modèle:'Tout'
-  contenu:
-    Étiquette: item-aligned
+    - item-aligned
+    - popper
+props:
+  modelValue: 'Todo'
+  content:
+    position: item-aligned
   items:
-    @173@Backlog
-    @@ph174@tout
-    - En cours
-    @@ph176@fait
-  Catégorie: W-48
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-### Arrivée
+### Arrow
 
-Utilisez la prop `arrow` pour afficher une flèche sur la sélection.
+Utilisez la prop `arrow` pour afficher une flèche sur le bouton Sélectionner.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph179@articles
-  - modèleValeur
-  @@ph181@classe
-  @@ph182@@flèche
-Extérieur:
-  @@ph183@articles
-  - modèleValeur
-Props:
-  Valeur: 'Backlog'
-  Arrow: vrai
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+  - arrow
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  arrow: true
   items:
-    @185@Backlog
-    @@ph186@tout
-    - En cours
-    @@ph188@fait
-  Catégorie: W-48
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-### couleur
+### Couleur
 
-Utilisez la prop `color` pour changer la couleur de la bague lorsque le sélecteur est mis au point.
+Utilisez le prop `color` pour changer la couleur de la bague lorsque le sélecteur est mis au point.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph191@articles
-  - modelValeur
-  @@ph193@classe
-Extérieur:
-  @@ph194@articles
-  - modelValeur
-Props:
-  Valeur: 'Backlog'
-  Couleur: Neutre
-  Highlight: vrai
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  color: neutral
+  highlight: true
   items:
-    @196@Backlog
-    @@ph197@tout
-    - En cours
-    @@ph199@fait
-  Catégorie: W-48
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 ::note
-Le `highlight` prop est utilisé ici pour afficher l'état de mise au point. Il est utilisé en interne lorsqu 'une erreur de validation se produit.
+La prop `highlight` est utilisée ici pour afficher l'état de mise au point. Il est utilisé en interne lorsqu 'une erreur de validation se produit.
 ::
 
-@@201@@Variant
+### Variant
 
-Utilisez la prop `variant` pour modifier la variante du Select.
+Utilisez le prop `variant` pour changer la variante du Select.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph203@articles
-  - modèleValeur
-  @@ph205@classe
-Extérieure:
-  @@ph206@articles
-  - modelValeur
-Props:
-  Valeur: 'Backlog'
-  Couleur: Neutre
-  Variante: subtile
-  Étiquette: false
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  color: neutral
+  variant: subtle
+  highlight: false
   items:
-    @@208@Backlog
-    @209@tout
-    - En cours
-    @@ph211@fait
-  Catégorie: W-48
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-@@ph212@Size
+### Size
 
-Utilisez la prop `size` pour modifier la taille du Select.
+Utilisez le prop `size` pour modifier la taille du Select.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph214@articles
-  - modelValeur
-  @@ph216@classe
-Extérieur:
-  @@ph217@articles
-  - modelValeur
-Props:
-  Valeur: 'Backlog'
-  Taille: XL
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  size: xl
   items:
-    @@219@Backlog
-    @220@tout
-    @@221@En cours
-    @@222@réponse
-  Catégorie: W-48
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-@223@Icon
+### Icône
 
-Utilisez le prop `icon` pour afficher un [Icon](/docs/components/icon) à l'intérieur de la sélection.
+Utilisez la prop `icon` pour afficher un [Icon](/docs/components/icon) à l'intérieur du Sélectionner.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@229@articles
-  - modèleValeur
-  @@ph231@@classe
-Extérieure:
-  @@232@articles
-  - modèleValeur
-Props:
-  Valeur: 'Backlog'
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
   icon: 'i-lucide-search'
-  Taille: MD
+  size: md
   items:
-    @@234@Backlog
-    @@P235@tout
-    - En cours
-    @@ph237@fait
-  Catégorie: W-48
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
@@ -443,31 +443,31 @@ Utilisez le prop `trailing-icon` pour personnaliser le [Icon](/docs/components/i
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@245@articles
-  - modèleValeur
-  @@ph247@classe
-Extérieur:
-  @@ph248@articles
-  - modèleValeur
-Props:
-  Valeur: 'Backlog'
-  trailingIcône:'i-lucide-arrow-down'
-  Taille: MD
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  trailingIcon: 'i-lucide-arrow-down'
+  size: md
   items:
-    @@250@Backlog
-    @@ph251@@tout
-    - En cours
-    @@ph253@réalisé
-  Catégorie: W-48
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.chevronDown`.
+Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la clé `ui.icons.chevronDown`.
 :::
 
 #vue
@@ -476,131 +476,131 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 :::
 ::
 
-### Icône sélectionnée
+### Selected Icône
 
-Utilisez la prop `selected-icon` pour personnaliser l'icône lorsqu 'un élément est sélectionné. Par défaut,`i-lucide-check`.
+Utilisez la prop `selected-icon` pour personnaliser l'icône lorsqu 'un élément est sélectionné. Par défaut `i-lucide-check`.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph261@articles
-  - modèleValeur
-  @@ph263@classe
-Extérieur:
-  @@ph264@articles
-  - modèleValeur
-Props:
-  Valeur: 'Backlog'
-  sélectionnéIcône:'i-lucide-flame'
-  Étiquette: MD
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  selectedIcon: 'i-lucide-flame'
+  size: md
   items:
-    @@266@Backlog
-    @267@tout
-    - En cours
-    @@ph269@fait
-  Catégorie: W-48
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.check`.
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` sous `ui.icons.check` touche.
+Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` sous la touche `ui.icons.check`.
 :::
 ::
 
-@@274@avatars
+### Avatars
 
 Utilisez la prop `avatar` pour afficher un [Avatar](/docs/components/avatar) à l'intérieur du Sélectionner.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph280@articles
-  - modèleValeur
-  @@ph282@classe
-  - avatar.chargement
-Extérieur:
-  @@ph284@articles
-  - modèleValeur
-Props:
-  Valeur: 'Nuxt'
-  Avatar:
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+  - avatar.loading
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Nuxt'
+  avatar:
     src: 'https://github.com/nuxt.png'
-    Étiquette: Lazy
+    loading: lazy
   items:
-    @@ph286@nuxt
+    - Nuxt
     - NuxtHub
     - NuxtLabs
-    - Nuxt Modules de sécurité
-    - Nuxt Communauté
-  Catégorie: W-48
+    - Nuxt Modules
+    - Nuxt Community
+  class: 'w-48'
 ---
 ::
 
-@@291@chargement
+### Chargement
 
 Utilisez la prop `loading` pour afficher une icône de chargement sur le Select.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph293@articles
-  - modèleValeur
-  @@ph295@classe
-Extérieure:
-  @@ph296@articles
-  - modèleValeur
-Props:
-  Valeur: 'Backlog'
-  Chargement: vrai
-  Traînée: Faux
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  loading: true
+  trailing: false
   items:
-    @@298@Backlog
-    @299@tout
-    - En cours
-    @@ph301@fait
-  Catégorie: W-48
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 ### Icône de chargement
 
-Utilisez la prop `loading-icon` pour personnaliser l'icône de chargement. Par défaut,`i-lucide-loader-circle`.
+Utilisez le prop `loading-icon` pour personnaliser l'icône de chargement. Par défaut, `i-lucide-loader-circle`.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph305@articles
-  - modèleValeur
-  @classe 307
-Extérieure:
-  @@ph308@articles
-  - modèle
-Props:
-  Valeur: 'Backlog'
-  Chargement: vrai
+prettier: true
+ignore:
+  - items
+  - modelValue
+  - class
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'Backlog'
+  loading: true
   loadingIcon: 'i-lucide-loader'
   items:
-    @@P310@Backlog
-    @@ph311@tout
-    - En cours
-    @@ph313@fait
-  Catégorie: W-48
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.loading`.
 :::
@@ -611,32 +611,32 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 :::
 ::
 
-### Disabled
+### Désactivé
 
-Utilisez la prop `disabled` pour désactiver la fonction Select.
+Utilisez le prop `disabled` pour désactiver la fonction Select.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph320@articles
-  @@ph321@réservoir
-  @@ph322@classe
-Extérieure:
-  @@ph323@articles
-Props:
-  handicapés: vrai
-  placeholder: "Sélectionner le statut"
+prettier: true
+ignore:
+  - items
+  - placeholder
+  - class
+external:
+  - items
+props:
+  disabled: true
+  placeholder: 'Select status'
   items:
-    @@224@Backlog
-    @@P325@tout
-    - En cours
-    @@ph327@fait
-  Catégorie: W-48
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
+  class: 'w-48'
 ---
 ::
 
-@@ph328@exemples
+## Exemples
 
 ### Avec type d'éléments
 
@@ -644,46 +644,46 @@ Vous pouvez utiliser la propriété `type` avec `separator` pour afficher un sé
 
 ::component-code
 ---
-Collapse: vrai
-ignorer:
-  - modèleValeur
-  @@ph334@articles
-  @@ph335@classe
-Extérieur:
-  @@ph336@articles
-  - modèleValeur
-Extérieurs:
-  @@338@@Sélectionner []
-Props:
-  Modèle:"Apple"
+collapse: true
+ignore:
+  - modelValue
+  - items
+  - class
+external:
+  - items
+  - modelValue
+externalTypes:
+  - SelectItem[]
+props:
+  modelValue: 'Apple'
   items:
-    - type:'étiquette'
-      Étiquette: fruits
-    @P340 @ Apple
-    - Banane
-    @ph342@blueberry
-    @@343@@référencement
-    @@Pineapple 344@@Pineapple
-    - type:'séparateur'
-    - type:'étiquette'
-      Étiquette:"légumes"
+    - type: 'label'
+      label: 'Fruits'
+    - Apple
+    - Banana
+    - Blueberry
+    - Grapes
+    - Pineapple
+    - type: 'separator'
+    - type: 'label'
+      label: 'Vegetables'
     - Aubergine
-    @348@broccoli
-    - Carotte
-    @@P350@@courgette
-    @@ph351@@leek
-  Catégorie: W-48
+    - Broccoli
+    - Carrot
+    - Courgette
+    - Leek
+  class: 'w-48'
 ---
 ::
 
-### Avec icône dans les éléments
+### With icône dans les éléments
 
-Vous pouvez utiliser la propriété `icon` pour afficher une [Icon](/docs/components/icon) à l'intérieur des éléments.
+Vous pouvez utiliser la propriété `icon` pour afficher un [Icon](/docs/components/icon) à l'intérieur des éléments.
 
 ::component-example
 ---
-Collapse: vrai
-nommé:'select-items-icon-example'
+collapse: true
+name: 'select-items-icon-example'
 ---
 ::
 
@@ -692,7 +692,7 @@ Dans cet exemple, l'icône est calculée à partir de la propriété `value` de 
 ::
 
 ::tip
-Vous pouvez également utiliser l'emplacement `#leading` pour afficher l'icône sélectionnée.
+Vous pouvez également utiliser le slot `#leading` pour afficher l'icône sélectionnée.
 ::
 
 ### Avec avatar dans les éléments
@@ -701,8 +701,8 @@ Vous pouvez utiliser la propriété `avatar` pour afficher un [Avatar](/docs/com
 
 ::component-example
 ---
-Collapse: vrai
-nommé:'select-items-avatar-example'
+collapse: true
+name: 'select-items-avatar-example'
 ---
 ::
 
@@ -711,17 +711,17 @@ Dans cet exemple, l'avatar est calculé à partir de la propriété `value` de l
 ::
 
 ::tip
-Vous pouvez également utiliser l'emplacement `#leading` pour afficher l'avatar sélectionné.
+Vous pouvez également utiliser le slot `#leading` pour afficher l'avatar sélectionné.
 ::
 
-### Avec puce dans des articles
+### With chip dans les articles
 
-Vous pouvez utiliser la propriété `chip` pour afficher une [Chip](/docs/components/chip) à l'intérieur des éléments.
+Vous pouvez utiliser la propriété `chip` pour afficher un [Chip](/docs/components/chip) à l'intérieur des éléments.
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'select-items-chip-example'
+collapse: true
+name: 'select-items-chip-example'
 ---
 ::
 
@@ -735,7 +735,7 @@ Vous pouvez contrôler l'état ouvert en utilisant la prop `default-open` ou la 
 
 ::component-example
 ---
-nom: 'select-open-example'
+name: 'select-open-example'
 ---
 ::
 
@@ -749,7 +749,7 @@ Voici un exemple avec une icône tournante qui indique l'état ouvert du Select.
 
 ::component-example
 ---
-nom: 'select-icon-example'
+name: 'select-icon-example'
 ---
 ::
 
@@ -759,8 +759,8 @@ Vous pouvez récupérer des éléments à partir d'une API et les utiliser dans 
 
 ::component-example
 ---
-nom: 'select-fetch-exemple'
-Collapse: vrai
+name: 'select-fetch-example'
+collapse: true
 ---
 ::
 
@@ -768,19 +768,19 @@ Collapse: vrai
 Cet exemple utilise `useLazyFetch` avec `immediate: false` pour récupérer les données uniquement lorsque le menu s'ouvre, évitant ainsi les appels d'API inutiles lors du chargement de la page.
 ::
 
-### Avec défilement infini: badge{label="4.4+" class="align-text-top"}
+### Avec scroll infini: badge{label="4.4+" class="align-text-top"}
 
-Vous pouvez utiliser le [`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/) pour charger plus de données au fur et à mesure que l'utilisateur fait défiler.
+Vous pouvez utiliser le composable [`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/) pour charger plus de données au fur et à mesure que l'utilisateur fait défiler.
 
 ::component-example
 ---
-Étiquette: true
-Collapse: vrai
-Highlights:
-  @@395@39
-  @@396@51
-dépassement: true
-nom: 'select-infinite-scroll-example'
+prettier: true
+collapse: true
+highlights:
+  - 41
+  - 51
+overflowHidden: true
+name: 'select-infinite-scroll-example'
 ---
 ::
 
@@ -794,8 +794,8 @@ Vous pouvez étendre le contenu à toute la largeur de ses éléments en ajoutan
 
 ::component-example
 ---
-nom: 'select-content-width-example'
-Collapse: vrai
+name: 'select-content-width-example'
+collapse: true
 ---
 ::
 
@@ -815,11 +815,11 @@ export default defineAppConfig({
 ```
 ::
 
-@@ph414@@api
+## API
 
-@@ph415@@Props
+### Props
 
-Composants-props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
 Ce composant prend également en charge tous les attributs HTML natifs `<button>`.
@@ -827,25 +827,25 @@ Ce composant prend également en charge tous les attributs HTML natifs `<button>
 
 ### Slots
 
-Composants slots
+:component-slots
 
-@@ph418@@émissions
+### Emis
 
-Composants émetteurs
+:component-emits
 
-@@ph419@@exposé
+### Exposer
 
 Lorsque vous accédez au composant via une référence de modèle, vous pouvez utiliser les éléments suivants:
 
 | nom| type|
 | ---- | ---- |
-| @@|@@|
-| @@|@@|
+| `triggerRef`x{lang="ts-type"}| `Ref<HTMLButtonElement \| null>`x{lang="ts-type"}|
+| `viewportRef`x{lang="ts-type"}| `Ref<HTMLDivElement \| null>`x{lang="ts-type"}|
 
-@@ph428@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@29@changements
+## Changelog
 
-Composant-changelog
+:component-changelog

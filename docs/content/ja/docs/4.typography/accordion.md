@@ -1,6 +1,6 @@
 ---
 title: プロセアコーディオン
-description: '拡張可能なコンテンツセクションを作成します。'
+description: '情報整理のための拡張可能なコンテンツセクションを作成。'
 category: components
 navigation.title: Accordion
 links:
@@ -11,13 +11,13 @@ links:
 
 ## 使用法
 
-`accordion`および`accordion-item`コンポーネントを使用して、[ Accordion ](/docs/components/accordion)をコンテンツに表示します。
+`accordion`および`accordion-item`コンポーネントを使用して、[ Accordion](/docs/components/accordion)をコンテンツに表示します。
 
 ::code-preview{class="[&>div]:*:my-0"}
 
 :::accordion
 ---
-defaultValue
+defaultValue:
   - '1'
 ---
 
@@ -26,7 +26,7 @@ defaultValue
 ::
 
 ::accordion-item{label="NuxtなしでVueでNuxt UIを使用できますか？" icon="i-lucide-circle-help"}
-はい！Nuxt用に最適化されていますが、Nuxt UIはViteプラグインを介してスタンドアロンのVueプロジェクトと完全に連携します。[インストールガイド](/docs/getting-started/installation/vue)に従って開始してください。
+はい！Nuxt用に最適化されていますが、Nuxt UIはViteプラグインを介してスタンドアロンのVueプロジェクトと完全に連携します。[installation guide](/docs/getting-started/installation/vue)に従って開始できます。
 ::
 
 ::accordion-item{label="Nuxt UIはプロダクション対応ですか？" icon="i-lucide-circle-help"}
@@ -35,7 +35,7 @@ defaultValue
 
 :::
 
-#コード
+#code
 
 ```mdc
 ::accordion
@@ -61,25 +61,25 @@ Yes! Nuxt UI is used in production by thousands of applications with extensive t
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props {prose}
+:component-props{prose}
 
 ### スロット
 
-component—slots {prose}
+:component-slots{prose}
 
-## テーマ
+## Theme
 
 ::component-theme{prose}
 ---
-追加
-  -  accordionItem
+extra:
+  - accordionItem
 ---
 ::
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

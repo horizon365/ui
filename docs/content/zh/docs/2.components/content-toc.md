@@ -10,262 +10,262 @@ links:
 ---
 
 ::warning{to="/docs/getting-started/integrations/content"}
-此组件仅在安装了`@nuxt/content`模块时可用。
+此组件仅在安装`@nuxt/content`模块时可用。
 ::
 
 ## 用法
 
-将`links`道具与获取页面时获得的`page?.body?.toc?.links`{lang="ts-type"}配合使用。
+使用`links`属性和`page?.body?.toc?.links`{lang="ts-type"}属性获取页面。
 
 ::component-example
 ---
-名称：'内容目录范例'
-道具：
-  类别：'w-完整'
+name: 'content-toc-example'
+props:
+  class: 'w-full'
 ---
 ::
 
 ### 标题
 
-使用`title`道具更改目录的标题。
+使用`title`属性更改目录的标题。
 
 ::component-code{prefix="content"}
 ---
-更漂亮：真的
-收阖：true
-隐藏：
-  班级
-忽略：
-  链接
-外部：
-  链接
-外部类型：
-  - ContentTocLink[]内容目录链接
-道具：
-  title：'在此页上'
-  类别：'w-完整'
-  链接：
-  - id：用法
-    深度：2
-    text：用法
-    孩子们：
-- id：标题
-      深度：3
-      text：标题
-- id：颜色
-      深度：3
-      文字：颜色
-    - id：高亮显示
-      深度：3
-      文本：突出显示
-    - id：'突出显示颜色'
-      深度：3
-      文字：反白色彩
-    - id：“突出显示的变量”
-      深度：3
-      文本：突出显示变量
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  title: 'On this page'
+  class: 'w-full'
+  links:
+  - id: usage
+    depth: 2
+    text: Usage
+    children:
+    - id: title
+      depth: 3
+      text: Title
+    - id: color
+      depth: 3
+      text: Color
+    - id: highlight
+      depth: 3
+      text: Highlight
+    - id: 'highlight-color'
+      depth: 3
+      text: Highlight Color
+    - id: 'highlight-variant'
+      depth: 3
+      text: Highlight Variant
 ---
 ::
 
-颜色
+### Color
 
-使用`color`道具更改链接的颜色。
+使用`color`属性更改链接的颜色。
 
 ::component-code{prefix="content"}
 ---
-更漂亮：真的
-收阖：true
-隐藏：
-  班级
-忽略：
-  链接链接
-外部：
-  链接
-外部类型：
-  - 内容目录链接[]
-道具：
-  颜色："中性"
-  类别：'w-完整'
-  链接：
-- id：用法
-      深度：2
-      text：用法
-      孩子们：
-        @ID：标题
-          深度：3
-          text：标题
-- id：颜色
-          深度：3
-          文字：颜色
-        - id：高亮显示
-          深度：3
-          文本：突出显示
-        - id：'突出显示颜色'
-          深度：3
-          文字：反白色彩
-        - id："突出显示的变体"
-          深度：3
-          文本：突出显示变量
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  color: 'neutral'
+  class: 'w-full'
+  links:
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
+        - id: highlight
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
 ---
 ::
 
-醒目提示
+### 亮点
 
-使用`highlight`道具来显示现用项目的反白边框。
+使用`highlight`属性显示活动项的高亮边框。
 
 ::component-code{prefix="content"}
 ---
-更漂亮：真的
-收阖：true
-隐藏：
-  班级
-忽略：
-  链接
-外部：
-  链接
-外部类型：
-  - ContentTocLink[]内容目录链接
-道具类：
-  高亮显示：真
-  类别：'w-完整'
-  链接：
-- id：用法
-      深度：2
-      text：用法
-      孩子们：
-        @ ID：标题
-          深度：3
-          text：标题
-        - id：颜色
-          深度：3
-          文字：颜色
-        - id：高亮显示
-          深度：3
-          文本：突出显示
-        - id：'突出显示颜色'
-          深度：3
-          文字：反白色彩
-        - id：“突出显示的变体”
-          深度：3
-          文本：突出显示变量
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  highlight: true
+  class: 'w-full'
+  links:
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
+        - id: highlight
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
 ---
 ::
 
-### Highlight色彩
+### 高亮颜色
 
-使用`highlight-color`属性更改突出显示的颜色。默认为`color`属性。
+使用`highlight-color`属性来改变高亮的颜色。默认为`color`属性。
 
 ::component-code{prefix="content"}
 ---
-更漂亮：真的
-收阖：true
-隐藏：
-  班级
-忽略：
-  链接
-  突出显示
-外部：
-  链接
-外部类型：
-  - 内容目录链接[]
-道具：
-  高亮显示：真
-  highlightColor：'中性色'
-  类别：'w-完整'
-  链接：
-    @ ID：用法
-      深度：2
-      text：用法
-      孩子们：
-        我的天啊
-          深度：3
-          text：标题
-- 的颜色
-          深度：3
-          文字：颜色
-        - id：高亮显示
-          深度：3
-          文本：突出显示
-        - id：'突出显示颜色'
-          深度：3
-          文字：反白色彩
-        - id：“突出显示的变体”
-          深度：3
-          文本：突出显示变量
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+  - highlight
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  highlight: true
+  highlightColor: 'neutral'
+  class: 'w-full'
+  links:
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
+        - id: highlight
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
 ---
 ::
 
-### 突出显示变量：徽标{label="4.6+" class="align-text-top"}
+### 突出显示变体：badge{label="4.6+" class="align-text-top"}
 
-使用`highlight-variant`道具更改高亮显示的样式。默认为`straight`。
+使用`highlight-variant`属性将highlight.xml的样式更改为`straight`。
 
 ::component-code{prefix="content"}
 ---
-更漂亮：真的
-收阖：true
-隐藏：
-  班级
-忽略：
-  链接
-  突出显示
-外部：
-  链接
-外部类型：
-  - ContentTocLink[]内容目录链接
-道具类：
-  高亮显示：真
-  highlightColor：“主要”
-  highlightVariant：'电路'
-  类别：'w-完整'
-  链接：
-    @@ ID：用法
-      深度：2
-      text：用法
-      孩子们：
-        @ ID：标题
-          深度：3
-          text：标题
-        - id：颜色
-          深度：3
-          文字：颜色
-        - id：高亮显示
-          深度：3
-          文本：突出显示
-        - id：'突出显示颜色'
-          深度：3
-          文字：反白色彩
-        - id：“突出显示的变体”
-          深度：3
-          文本：突出显示变量
-    - id：示例
-      深度：2
-      文本：示例
-      孩子们：
-        - id：在一页内
-          深度：3
-          text：在页面内
-    @ ID：API的一个字符串
-      深度：2
-      文本：API
-      孩子们：
-        我的天
-          深度：3
-          text：属性
-        - id：slots
-          深度：3
-          文本：插槽
-        - id：emits
-          深度：3
-          文本：发射
-    - id：theme
-      深度：2
-      主题：Theme
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+  - highlight
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  highlight: true
+  highlightColor: 'primary'
+  highlightVariant: 'circuit'
+  class: 'w-full'
+  links:
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
+        - id: highlight
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
+    - id: examples
+      depth: 2
+      text: Examples
+      children:
+        - id: within-a-page
+          depth: 3
+          text: Within a Page
+    - id: api
+      depth: 2
+      text: API
+      children:
+        - id: props
+          depth: 3
+          text: Props
+        - id: slots
+          depth: 3
+          text: Slots
+        - id: emits
+          depth: 3
+          text: Emits
+    - id: theme
+      depth: 2
+      text: Theme
 ---
 ::
 
-## Examples
+## 示例
 
-### 页内
+### 页面内
 
 在页面中使用ContentToc组件可显示目录：
 
@@ -302,20 +302,20 @@ if (!page.value) {
 
 ### Props
 
-：组件支柱
+:component-props
 
 ### Slots
 
-：组件插槽
+:component-slots
 
 ### Emits
 
-：组件发射
+:component-emits
 
 ## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件-更改日志{prefix="content"}
+:component-changelog{prefix="content"}

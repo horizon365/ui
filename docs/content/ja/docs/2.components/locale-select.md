@@ -13,17 +13,17 @@ links:
 
 ## 使用法
 
-LocaleSelectコンポーネントは[ SelectMenu ](/docs/components/select-menu)`color``variant``size`などのプロパティを渡すことができます。
+LocaleSelectコンポーネントは[SelectMenu](/docs/components/select-menu)コンポーネントを拡張しているため、`color`、`variant`、`size`などのプロパティを渡すことができます。
 
 ::framework-only
 #nuxt
 ::note{to="/docs/getting-started/integrations/i18n/nuxt"}
-このコンポーネントは、** i18n **システムで使用することを意図しています。詳細については、ガイドを参照してください。
+このコンポーネントは**i18n**システムで使用することを意図しています。詳細については、ガイドを参照してください。
 ::
 
 #vue
 ::note{to="/docs/getting-started/integrations/i18n/vue"}
-このコンポーネントは、** i18n **システムで使用することを意図しています。詳細については、ガイドを参照してください。
+このコンポーネントは**i18n**システムで使用することを意図しています。詳細はガイドを参照してください。
 ::
 
 ::
@@ -32,13 +32,13 @@ LocaleSelectコンポーネントは[ SelectMenu ](/docs/components/select-menu)
 フラグはUnicode文字を使用して表示されます。これにより、異なる表示になる可能性があります。例えば、WindowsのMicrosoft Edgeでは、OSフォントにはフラグアイコンが付属していないため、代わりにISO 3166—1 alpha—2コードが表示されます。
 ::
 
-###  Locales
+### ロケール
 
-`locales` propを`@nuxt/ui/locale`からのロケールの配列で使用します。
+`locales`プロパティを`@nuxt/ui/locale`のロケールの配列で使用します。
 
 ::component-example
 ---
-name 'ロケール選択例'
+name: 'locale-select-example'
 ---
 ::
 
@@ -106,12 +106,12 @@ const { locale, setLocale } = useI18n()
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="locale"}
+:component-changelog{prefix="locale"}

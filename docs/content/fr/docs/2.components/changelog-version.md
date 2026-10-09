@@ -1,5 +1,5 @@
 ---
-title: ChangelogVersion
+title: Changelogversión
 description: 'Un article personnalisable à afficher dans un changelog.'
 category: page
 links:
@@ -8,355 +8,355 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChangelogVersion.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Le composant ChangelogVersion fournit un moyen flexible d'afficher un élément`<article>`avec un contenu personnalisable , y compris le titre , la description , l'image , etc.
+Le composant ChangelogVersion fournit un moyen flexible d'afficher un élément `<article>` avec un contenu personnalisable, y compris le titre, la description, l'image, etc.
 
 ::code-preview
 
 ::u-changelog-version
 ---
-Titre : Introduction à Nuxt UI v3
-Description : Nuxt UI v3 est sorti ! Après plus de 1500 commits , cette refonte majeure apporte une accessibilité améliorée , un support CSS Tailwind et une compatibilité complète avec Vue .
-image : ' https://nuxt.com/assets/blog/nuxt-ui-v3.png '
-Date du 2025 - 03 - 12
-Auteurs :
-  - prénom : Benjamin Canac
-    Étiquette :@benjamincanac
-    Avatar :
-      src :https://github.com/benjamincanac.png
-      Étiquette : Lazy
-    Deux :https://x.com/benjamincanac
-    Référence : _ blank
-  - nom : Sébastien Chopin
-    Description :@atinux
-    Avatar :
-      src :https://github.com/atinux.png
-      Étiquette : Lazy
-    Deux :https://x.com/atinux
-    Référence : _ blank
-  - prénom : Hugo Richard
-    Description : '@hugorcd '
-    Avatar :
-      src :https://github.com/hugorcd.png
-      Étiquette : Lazy
-    Deux :https://x.com/hugorcd
-    Référence : _ blank
-à : https://nuxt.com/blog/nuxt-ui-v3
-cible : _ blanc
-Catégorie : w-full
-Conteneur : ' max-w - lg '
+title: 'Introducing Nuxt UI v3'
+description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+image: 'https://nuxt.com/assets/blog/nuxt-ui-v3.png'
+date: 2025-03-12
+authors:
+  - name: Benjamin Canac
+    description: '@benjamincanac'
+    avatar:
+      src: https://github.com/benjamincanac.png
+      loading: lazy
+    to: https://x.com/benjamincanac
+    target: _blank
+  - name: Sebastien Chopin
+    description: '@atinux'
+    avatar:
+      src: https://github.com/atinux.png
+      loading: lazy
+    to: https://x.com/atinux
+    target: _blank
+  - name: Hugo Richard
+    description: '@hugorcd'
+    avatar:
+      src: https://github.com/hugorcd.png
+      loading: lazy
+    to: https://x.com/hugorcd
+    target: _blank
+to: 'https://nuxt.com/blog/nuxt-ui-v3'
+target: '_blank'
+class: 'w-full'
+ui.container: 'max-w-lg'
 ---
 ::
 
 ::
 
 ::tip{to="/docs/components/changelog-versions"}
-Utilisez le composant`ChangelogVersions`pour afficher plusieurs versions du journal des modifications dans une chronologie avec une barre d'indicateur à gauche .
+Utilisez le composant `ChangelogVersions` pour afficher plusieurs versions du journal des modifications dans une timeline avec une barre d'indicateur à gauche.
 ::
 
-@@ph006@titre
+### titre
 
-Utilisez la prop`title`pour afficher le titre de la version de changement .
+Utilisez la prop `title` pour afficher le titre du Changelog Version.
 
 ::component-code
 ---
-Caché :
-  @@ph008@classe
-  @@ph009@@ui
+hide:
+  - class
+  - ui
   - ui.container
-Props :
-  Titre : Introduction à Nuxt UI v3
-  Catégorie : w-full
-  Conteneur : ' max-w - lg '
+props:
+  title: 'Introducing Nuxt UI v3'
+  class: 'w-full'
+  ui.container: 'max-w-lg'
 ---
 ::
 
-@@ph011@Description
+### description of
 
-Utilisez la prop`description`pour afficher la description du ChangelogVersion .
+Utilisez la prop `description` pour afficher la description du ChangelogVersion.
 
 ::component-code
 ---
-Étiquette : true
-Caché :
-  @@classe
-  @@ph014@ui
+prettier: true
+hide:
+  - class
+  - ui
   - ui.container
-ignorer:
-  @@ph016@titre
-Props:
-  Titre: Introduction à Nuxt UI v3
-  Description: Nuxt UI v3 est sorti! Après plus de 1500 commits, cette refonte majeure apporte une accessibilité améliorée, un support CSS Tailwind et une compatibilité complète avec Vue.
-  Catégorie: w-full
-  Conteneur: 'max-w-lg'
+ignore:
+  - title
+props:
+  title: 'Introducing Nuxt UI v3'
+  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+  class: 'w-full'
+  ui.container: 'max-w-lg'
 ---
 ::
 
-@@ph017@date
+### Date
 
 Utilisez la prop `date` pour afficher la date de la version du changement.
 
 ::tip
-La date est automatiquement formatée à la [current locale](/docs/getting-started/integrations/i18n/nuxt#locale). Vous pouvez soit passer un objet `Date` ou une chaîne.
+La date est automatiquement mise en forme avec la valeur locale](/docs/getting-started/integrations/i18n/nuxt#locale). Vous pouvez passer un objet `Date` ou une chaîne.
 ::
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@ph024@classe
-  @@25 @
+prettier: true
+hide:
+  - class
+  - ui
   - ui.container
-ignorer:
-  @@27@titre
-  @@ph028@description
-Props:
-  Titre: Introduction à Nuxt UI v3
-  Description: Nuxt UI v3 est sorti! Après plus de 1500 commits, cette refonte majeure apporte une accessibilité améliorée, un support CSS Tailwind et une compatibilité complète avec Vue.
-  Date: 2025 - 03 - 12
-  Catégorie: w-full
-  Conteneur: 'max-w-lg'
+ignore:
+  - title
+  - description
+props:
+  title: 'Introducing Nuxt UI v3'
+  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+  date: 2025-03-12
+  class: 'w-full'
+  ui.container: 'max-w-lg'
 ---
 ::
 
-@29@badge
+### badge référence
 
 Utilisez la prop `badge` pour afficher un [Badge](/docs/components/badge) sur le ChangelogVersion.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@classe 35
-  @@pH036@@ui
+prettier: true
+hide:
+  - class
+  - ui
   - ui.container
-ignorer:
-  @@ph038@titre
-  @@ph039@description
-  @@ph040@date
-Props:
-  Titre: Introduction à Nuxt UI v3
-  Description: Nuxt UI v3 est sorti! Après plus de 1500 commits, cette refonte majeure apporte une accessibilité améliorée, un support CSS Tailwind et une compatibilité complète avec Vue.
-  Date du 2025 - 03 - 12
-  badge: "Libération"
-  Catégorie: w-full
-  Conteneur: 'max-w-lg'
+ignore:
+  - title
+  - description
+  - date
+props:
+  title: 'Introducing Nuxt UI v3'
+  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+  date: 2025-03-12
+  badge: 'Release'
+  class: 'w-full'
+  ui.container: 'max-w-lg'
 ---
 ::
 
-Vous pouvez passer n'importe quelle propriété du composant [Badge](/docs/components/badge#props) pour la personnaliser.
+Vous pouvez passer n'importe quelle propriété du composant [Badge](/docs/components/badge#props) pour le personnaliser.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@classe 45
-  @@ph046 @
+prettier: true
+hide:
+  - class
+  - ui
   - ui.container
-ignorer:
-  @@ph048@titre
-  @@ph049@description
-  @@ph050@date
+ignore:
+  - title
+  - description
+  - date
   - badge.label
-  - badge.couleur
+  - badge.color
   - badge.variant
-Props:
-  Titre: Introduction à Nuxt UI v3
-  Description: Nuxt UI v3 est sorti! Après plus de 1500 commits, cette refonte majeure apporte une accessibilité améliorée, un support CSS Tailwind et une compatibilité complète avec Vue.
-  Date du 2025 - 03 - 12
+props:
+  title: 'Introducing Nuxt UI v3'
+  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+  date: 2025-03-12
   badge:
-    Étiquette:"Libération"
-    Couleur: Primaire
-    Étiquette: Outline
-  Catégorie: w-full
-  Conteneur: 'max-w-lg'
+    label: 'Release'
+    color: primary
+    variant: outline
+  class: 'w-full'
+  ui.container: 'max-w-lg'
 ---
 ::
 
-@@photographie54@image
+### image à
 
 Utilisez le prop `image` pour afficher une image dans le BlogPost.
 
 ::note
-Si [`@nuxt/image`](https://image.nuxt.com/get-started/installation) est installé, le composant `<NuxtImg>` sera utilisé à la place du tag natif `img`.
+Si [`@nuxt/image`](https://image.nuxt.com/get-started/installation) est installé, le composant `<NuxtImg>` sera utilisé à la place de la balise native `img`.
 ::
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@ph063@classe
-  @@pH064@@ui
+prettier: true
+hide:
+  - class
+  - ui
   - ui.container
-ignorer:
-  @@ph066@titre
-  @@ph067@description
-  @@ph068@date
-Props:
-  Titre: Introduction à Nuxt UI v3
-  Description: Nuxt UI v3 est sorti! Après plus de 1500 commits, cette refonte majeure apporte une accessibilité améliorée, un support CSS Tailwind et une compatibilité complète avec Vue.
-  Date: 2025 - 03 - 12
+ignore:
+  - title
+  - description
+  - date
+props:
+  title: 'Introducing Nuxt UI v3'
+  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+  date: 2025-03-12
   image: 'https://nuxt.com/assets/blog/nuxt-ui-v3.png'
-  Catégorie: w-full
-  Conteneur: 'max-w-lg'
+  class: 'w-full'
+  ui.container: 'max-w-lg'
 ---
 ::
 
-@@P069@Auteurs
+### Auteurs
 
-Utilisez la prop `authors` pour afficher une liste de [User](/docs/components/user) dans le ChangelogVersion sous forme d'un tableau d'objets avec les propriétés suivantes:
+Utilisez la prop `authors` pour afficher une liste de [User](/docs/components/user) dans le Changelog Version sous forme d'un tableau d'objets avec les propriétés suivantes:
 
-@@
-@@
-@@
-@@
-@@
-@@
+- x`name?: string`x{lang="ts-type"}
+- x`description?: string`x{lang="ts-type"}
+- x`avatar?: Omit<AvatarProps, 'size'>`x{lang="ts-type"}
+- x`chip?: boolean | Omit<ChipProps, 'size' | 'inset'>`x{lang="ts-type"}
+- x`size?: UserProps['size']`x{lang="ts-type"}
+- `orientation?: UserProps['orientation']`x{lang="ts-type"}
 
-Vous pouvez transmettre n'importe quelle propriété du composant [Link](/docs/components/link#props) comme `to`,`target`, etc.
-
-::component-code
----
-Étiquette: true
-Caché:
-  @@ph099@classe
-  @@ph100 @
-  - ui.container
-Extérieur:
-  @@P102@auteurs
-Extérieurs :
-  - UserProps [ réf . nécessaire ]
-ignorer :
-  @@ph104@titre
-  @@ph105@description
-  @@ph106@date
-  @photographie107@image
-  @@ph108@auteurs
-Props :
-  Titre : Introduction à Nuxt UI v3
-  Description : Nuxt UI v3 est sorti ! Après plus de 1500 commits , cette refonte majeure apporte une accessibilité améliorée , un support CSS Tailwind et une compatibilité complète avec Vue .
-  Date du 2025 - 03 - 12
-  image : ' https://nuxt.com/assets/blog/nuxt-ui-v3.png '
-  Auteurs :
-    - nom : Benjamin Canac
-      Étiquette :@benjamincanac
-      Avatar :
-        src :https://github.com/benjamincanac.png
-        Étiquette : Lazy
-      Deux :https://x.com/benjamincanac
-      Référence : _ blank
-    - nom : Sébastien Chopin
-      Description :@atinux
-      Avatar :
-        src :https://github.com/atinux.png
-        Étiquette : Lazy
-      Deux :https://x.com/atinux
-      Référence : _ blank
-    - prénom : Hugo Richard
-      Description : '@hugorcd '
-      Avatar :
-        src :https://github.com/hugorcd.png
-        Étiquette : Lazy
-      Deux :https://x.com/hugorcd
-      Référence : _ blank
-  Catégorie : w-full
-  Conteneur : ' max-w - lg '
----
-::
-
-@@ph112@liaison
-
-Vous pouvez transmettre n'importe quelle propriété du composant[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)comme`to`,`target`,`rel`, etc.
+Vous pouvez passer n'importe quelle propriété du composant [Link](/docs/components/link#props) telle que `to`, `target`, etc.
 
 ::component-code
 ---
-Étiquette : true
-Caché :
-  @@ph121@classe
-  @@ph122@ui
+prettier: true
+hide:
+  - class
+  - ui
   - ui.container
-ignorer :
-  @@ph124@titre
-  @@ph125@description
-  @@ph126@date
-  @photographie127@image
-  @@ph128@cible
-Props:
-  Titre: Introduction à Nuxt UI v3
-  Description: Nuxt UI v3 est sorti! Après plus de 1500 commits, cette refonte majeure apporte une accessibilité améliorée, un support CSS Tailwind et une compatibilité complète avec Vue.
-  Date: 2025 - 03 - 12
+external:
+  - authors
+externalTypes:
+  - UserProps[]
+ignore:
+  - title
+  - description
+  - date
+  - image
+  - authors
+props:
+  title: 'Introducing Nuxt UI v3'
+  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+  date: 2025-03-12
   image: 'https://nuxt.com/assets/blog/nuxt-ui-v3.png'
-  à: https://nuxt.com/blog/nuxt-ui-v3
-  Référence:_blank
-  Catégorie: w-full
-  Conteneur: 'max-w-lg'
+  authors:
+    - name: Benjamin Canac
+      description: '@benjamincanac'
+      avatar:
+        src: https://github.com/benjamincanac.png
+        loading: lazy
+      to: https://x.com/benjamincanac
+      target: _blank
+    - name: Sebastien Chopin
+      description: '@atinux'
+      avatar:
+        src: https://github.com/atinux.png
+        loading: lazy
+      to: https://x.com/atinux
+      target: _blank
+    - name: Hugo Richard
+      description: '@hugorcd'
+      avatar:
+        src: https://github.com/hugorcd.png
+        loading: lazy
+      to: https://x.com/hugorcd
+      target: _blank
+  class: 'w-full'
+  ui.container: 'max-w-lg'
 ---
 ::
 
-### indicateur
+### Lien
 
-Utilisez la prop `indicator` pour masquer le point indicateur sur la gauche. Par défaut à `true`.
+Vous pouvez passer n'importe quelle propriété du composant [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) telle que `to`, `target`, `rel`, etc.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@ph132@classe
-  @@ph133@ui
+prettier: true
+hide:
+  - class
+  - ui
   - ui.container
-ignorer:
-  @@ph135@titre
-  @@ph136@description
-  @@ph137@date
-  @@ph138@image
-Props:
-  Titre: Introduction à Nuxt UI v3
-  Description: Nuxt UI v3 est sorti! Après plus de 1500 commits, cette refonte majeure apporte une accessibilité améliorée, un support CSS Tailwind et une compatibilité complète avec Vue.
-  Date du 2025 - 03 - 12
+ignore:
+  - title
+  - description
+  - date
+  - image
+  - target
+props:
+  title: 'Introducing Nuxt UI v3'
+  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+  date: 2025-03-12
   image: 'https://nuxt.com/assets/blog/nuxt-ui-v3.png'
-  Indicateur: Faux
-  Catégorie: w-full
-  Conteneur: 'max-w-lg'
+  to: 'https://nuxt.com/blog/nuxt-ui-v3'
+  target: _blank
+  class: 'w-full'
+  ui.container: 'max-w-lg'
+---
+::
+
+### Indicateur
+
+Utilisez la prop `indicator` pour masquer le point indicateur sur la gauche. Par défaut, `true`.
+
+::component-code
+---
+prettier: true
+hide:
+  - class
+  - ui
+  - ui.container
+ignore:
+  - title
+  - description
+  - date
+  - image
+props:
+  title: 'Introducing Nuxt UI v3'
+  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+  date: 2025-03-12
+  image: 'https://nuxt.com/assets/blog/nuxt-ui-v3.png'
+  indicator: false
+  class: 'w-full'
+  ui.container: 'max-w-lg'
 ---
 ::
 
 ::note
-Lorsque le `indicator` prop est `false`, la date sera affichée au-dessus du titre.
+Lorsque la prop `indicator` est `false`, la date sera affichée sur le titre.
 ::
 
-@@ph141@@Exemples
+## exemples
 
-### Avec fente pour le corps
+### Avec slot pour le corps
 
-Vous pouvez utiliser l'emplacement `body` pour afficher du contenu personnalisé entre l'image et les auteurs avec:
+You can use the `body` slot to display custom content between the image and the authors with:
 
-- le composant [Markdown](https://comark.dev/rendering/vue) de `@comark/vue` pour afficher une certaine réduction.
-- le composant [ContentRenderer](https://content.nuxt.com/docs/components/content-renderer) de `@nuxt/content` pour rendre le contenu de la page ou de la liste.
-- ou utilisez le composant `:u-changelog-version` directement dans votre contenu avec une réduction à l'intérieur de l'emplacement `body`, car l'interface utilisateur Nuxt fournit des composants de prose pré-stylisés.
+-  Le composant [Markdown](https://comark.dev/rendering/vue) de `@comark/vue` pour afficher une certaine démarche.
+-  Le composant [ContentRenderer](https://content.nuxt.com/docs/components/content-renderer) de `@nuxt/content` pour rendre le contenu de la page ou de la liste.
+- or utiliser le composant `:u-changelog-version` directement dans votre contenu avec markdown à l'intérieur de l'emplacement `body` comme Nuxt UI fournit des composants de prose pré-stylisés.
 
 ::component-example
 ---
-Étiquette: true
-nom: 'changelog-version-markdown-exemple'
-Collapse: vrai
+prettier: true
+name: 'changelog-version-markdown-example'
+collapse: true
 ---
 ::
 
-@@ph159@@api
+## API équipement
 
-@@ph160@props
+### Props équipement
 
-Composants-props
+:component-props
 
-@@ph161@@réseaux sociaux
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph162@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement.com
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

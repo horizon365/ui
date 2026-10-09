@@ -9,9 +9,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodeGroup.vue
 ---
 
-## 使用情况
+## 用法
 
-将您的代码块围绕`code-group`组件，以将它们组合在选项卡中。
+将您的代码块包装在`code-group`组件周围，以便在选项卡中将它们分组在一起。
 
 ::code-preview{class="[&>div]:*:my-0 [&>div]:*:w-full"}
 
@@ -35,7 +35,7 @@ bun add @nuxt/ui
 
 :::
 
-#代码
+#code
 
 ````mdc
 ::code-group
@@ -65,20 +65,20 @@ bun add @nuxt/ui
 与`ProsePre`组件一样，`CodeGroup`处理文件名、图标和复制按钮。
 ::
 
-活性成分
+## API
 
 ### Props
 
-：组件-道具{prose}
+:component-props{prose}
 
 ### Slots
 
-：组件插槽{prose}
+:component-slots{prose}
 
 ## Theme
 
-：组件主题{prose}
+:component-theme{prose}
 
 ## Changelog
 
-：component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

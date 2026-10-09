@@ -1,5 +1,5 @@
 ---
-description: Indicateur d'une valeur numérique ou d'un état.
+description: Un indicateur d'une valeur numérique ou d'un état.
 category: element
 keywords:
   - notification dot
@@ -10,153 +10,153 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Chip.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
 Enveloppez tout composant avec une puce pour afficher un indicateur.
 
 ::component-code
 ---
-Étiquette: true
-Slots:
-  Défaut:|
+prettier: true
+slots:
+  default: |
 
-    @@@ 001 @
+    <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-Référence: u-button {icon="i-lucide-mail" color="neutral" variant="subtle"}
+:u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
-@@pH003@couleur
+### Couleur
 
 Utilisez le prop `color` pour changer la couleur de la puce.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Couleur: Neutre
-Slots:
-  Default:|
+prettier: true
+props:
+  color: neutral
+slots:
+  default: |
 
-    @@@ 005 @
+    <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-Référence: u-button {icon="i-lucide-mail" color="neutral" variant="subtle"}
+:u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
-@@ph007@série
+### taille
 
 Utilisez le prop `size` pour changer la taille de la puce.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Taille: 3xl
-Slots:
-  Default:|
+prettier: true
+props:
+  size: 3xl
+slots:
+  default: |
 
-    @@@ 009 @
+    <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-Référence: u-button {icon="i-lucide-mail" color="neutral" variant="subtle"}
+:u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
-@@ph011@texte
+### Texte écrit
 
 Utilisez le prop `text` pour définir le texte de la puce.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Texte: 5
-  Taille: 3xl
-Slots:
-  Défaut:|
+prettier: true
+props:
+  text: 5
+  size: 3xl
+slots:
+  default: |
 
-    @@
+    <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-Référence: u-button {icon="i-lucide-mail" color="neutral" variant="subtle"}
+:u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
-@@@P015@Positionnement
+### Position
 
 Utilisez le prop `position` pour changer la position de la puce.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Position: "gauche"
-Slots:
-  Default:|
+prettier: true
+props:
+  position: 'bottom-left'
+slots:
+  default: |
 
-    @@@ 017 @
+    <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-Référence: u-button {icon="i-lucide-mail" color="neutral" variant="subtle"}
+:u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
-@@ph019@intérieur
+### Inset
 
 Utilisez le prop `inset` pour afficher la puce à l'intérieur du composant. Ceci est utile lorsque vous traitez avec des composants arrondis.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Inset: vrai
-Slots:
-  Défaut:|
+prettier: true
+props:
+  inset: true
+slots:
+  default: |
 
-    @@@ 21 @
+    <UAvatar src="https://github.com/benjamincanac.png" loading="lazy" />
 ---
-: u-avatar {src="https://github.com/benjamincanac.png" loading="lazy"}
+:u-avatar{src="https://github.com/benjamincanac.png" loading="lazy"}
 ::
 
 ### Séparé
 
-Utilisez le `standalone` prop à côté du `inset` prop pour afficher la puce en ligne.
+Utilisez le prop `standalone` à côté du prop `inset` pour afficher la puce en ligne.
 
 ::component-code
 ---
-Props:
-  Standalone: Vrai
-  Inset: vrai
+props:
+  standalone: true
+  inset: true
 ---
 ::
 
 ::note
-Il est utilisé de cette façon dans le [`CommandPalette`](/docs/components/command-palette),[`InputMenu`](/docs/components/input-menu),[`Select`](/docs/components/select) ou [`SelectMenu`](/docs/components/select-menu) par exemple.
+Il est utilisé de cette façon dans les composants [x`CommandPalette`](/docs/components/command-palette), [`InputMenu`](/docs/components/input-menu), [`Select`](xph086) ou xph0888x`SelectMenu`x](/docs/components/select-menux) par exemple.
 ::
 
-@@ph046@exemples
+## Exemples
 
-### Contrôle de la visibilité
+### Control visibilité
 
-Vous pouvez contrôler la visibilité de la puce en utilisant le `show` prop.
+Vous pouvez contrôler la visibilité de la puce en utilisant le prop `show`.
 
-: exemple de composant {name="chip-show-example"}
+:component-example{name="chip-show-example"}
 
 ::note
 Dans cet exemple, la puce a une couleur par état et est affichée lorsque l'état n'est pas `offline`.
 ::
 
-@@P501 @@ référence
+## api
 
-@@502@@propriété
+### Props équipement
 
-Composants-props
+:component-props
 
-@@53@@séries
+### Slots
 
-Composants slots
+:component-slots
 
-@@54@@émetteur
+### Emis
 
-Composants émetteurs
+:component-emits
 
-@@505@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement.com
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

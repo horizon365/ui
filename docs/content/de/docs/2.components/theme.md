@@ -7,130 +7,130 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Theme.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Die Theme-Komponente überschreibt die Standardeinstellungen **slotclasses** und **props** aller untergeordneten Komponenten, ohne jede einzelne einzeln zu modifizieren.
+Die Theme-Komponente überschreibt die Standardklassen **slot classes** und **props** aller untergeordneten Komponenten, ohne jede einzeln zu modifizieren. Es verwendet den Mechanismus `provide`/`inject` von Vue unter der Haube, sodass die Überschreibungen in jeder Tiefe angewendet werden.
 
 ::note
 Die Theme-Komponente rendert kein HTML-Element, sondern bietet nur Theme-Overrides für ihre Kinder.
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip
-Für die Konfiguration des Designs auf App-Ebene empfehlen wir stattdessen die `app.config.ts`-Datei.
+Für die Konfiguration des Designs auf App-Ebene empfehlen wir stattdessen die Verwendung der Datei `app.config.ts`.
 :::
 
-#Ansehen
+#vue
 :::tip
-Für die Konfiguration des Designs auf App-Ebene empfehlen wir stattdessen die `vite.config.ts`-Datei.
+Für die Konfiguration des Designs auf App-Ebene empfehlen wir stattdessen die Verwendung der Datei `vite.config.ts`.
 :::
 ::
 
 ### Slot-Klassen
 
-Verwenden Sie `ui` prop, um Slot-Klassen von untergeordneten Komponenten zu überschreiben. Schlüssel sind Komponentennamen (camelCase) und Werte sind ihre Slot-Klassen-Überschreibungen.
+Verwenden Sie die `ui`-prop, um Slot-Klassen von nachgeordneten Komponenten zu überschreiben. Schlüssel sind Komponentennamen (camelCase) und Werte sind ihre Slot-Klassen-Überschreibungen.
 
 ::component-example
 ---
-Name: 'Theme-ui-Beispiel'
+name: 'theme-ui-example'
 ---
 ::
 
 ### Prop Standardeinstellungen: badge{label="4.8+" class="align-text-top"}
 
-Verwenden Sie `props` prop, um den Standardwert einer beliebigen prop auf den untergeordneten Komponenten zu überschreiben.
+Verwenden Sie die `props` prop, um den Standardwert einer beliebigen prop auf den untergeordneten Komponenten zu überschreiben. Jede Taste wird einem Teil der props dieser Komponente zugeordnet.
 
 ::component-example
 ---
-Name: 'theme-props-example'(Beispiel)
+name: 'theme-props-example'
 ---
 ::
 
 ::tip
-Explizite Props auf einer Komponente (z.B.`<UButton color="primary" />`) gewinnen immer über `<UTheme :props>`. Theme-Standardeinstellungen gelten nur, wenn die Prop nicht explizit übergeben wurde.
+Explizite Requisiten auf einer Komponente (z.B. `<UButton color="primary" />`) gewinnen immer über `<UTheme :props>`. Theme-Standardeinstellungen gelten nur, wenn die Prop nicht explizit übergeben wurde.
 ::
 
-@@ph016 @ Beispiele
+## Examples (Beispiele)
 
-### Mehrere Komponenten
+### Multiple Komponenten
 
 Verwenden Sie verschiedene Tasten in `ui` oder `props`, um mehrere Komponententypen gleichzeitig zu gestalten.
 
 ::component-example
 ---
-Name: "Themen-Mehrfachbeispiel"
+name: 'theme-multiple-example'
 ---
 ::
 
-@@ph020@geschachtelten Themen
+### Verschachtelte Themen
 
 Verschachteln Sie mehrere Theme-Komponenten, um Overrides zu erstellen. Das innerste Theme hat Vorrang, während nicht überschriebene Schlüssel vom äußeren Theme geerbt werden.
 
 ::component-example
 ---
-Name: 'Theme-nested-example'(Beispiel)
+name: 'theme-nested-example'
 ---
 ::
 
-### Explizite Priorität
+### Explicit priority (Priorität)
 
-Das explizite Setzen einer beliebigen Prop (einschließlich `ui`) auf eine einzelne Komponente hat immer Vorrang vor der Theme-Komponente.
+Das explizite Setzen einer Prop (einschließlich `ui`) auf eine einzelne Komponente hat immer Vorrang vor der Theme-Komponente.
 
 ::component-example
 ---
-Name: 'Themen-Vorrangbeispiel'
+name: 'theme-priority-example'
 ---
 ::
 
-### Deep propagation
+### Deep Propagation (Tiefenausbreitung)
 
 Die Overrides sind für alle abgeleiteten Komponenten verfügbar, unabhängig davon, wie tief sie verschachtelt sind.
 
 ::component-example
 ---
-Name: 'Themen-Tiefbeispiel'
+name: 'theme-deep-example'
 ---
 ::
 
 ::note
-In diesem Beispiel ist `MyButton` eine benutzerdefinierte Komponente, die ein `UButton` intern rendert. Die Theme-Overrides gelten weiterhin, da sie sich durch den gesamten Komponentenbaum ausbreiten.
+In diesem Beispiel ist `MyButton` eine benutzerdefinierte Komponente, die eine `UButton` intern rendert. Die Theme-Overrides gelten weiterhin, da sie sich über den gesamten Komponentenbaum ausbreiten.
 ::
 
-### Formkomponenten
+### Form Komponenten
 
-Verwenden Sie die Designkomponente, um ein konsistentes Styling für eine Gruppe von Formularkomponenten anzuwenden.
+Verwenden Sie die Designkomponente, um ein konsistentes Styling auf eine Gruppe von Formularkomponenten anzuwenden.
 
 ::component-example
 ---
-Name: 'Themen-Form-Beispiel'
+name: 'theme-form-example'
 ---
 ::
 
 ::tip
-`<UFormField>`,`<UFieldGroup>` und `<UAvatarGroup>` haben Vorrang vor `<UTheme :props>` für `size`,`color` und `highlight`.
+`<UFormField>`, `<UFieldGroup>` und `<UAvatarGroup>` behalten Vorrang vor `<UTheme :props>` für `size`, `color` und `highlight`.
 ::
 
-### prosa-komponenten
+### Prose-Komponenten
 
-Verwenden Sie den `prose` Namespace, um Typografiekomponenten zu gestalten. Schlüssel werden unter `prose` verschachtelt (z. B.`prose.p`,`prose.code`).
+Verwenden Sie den Namensraum `prose`, um Typografiekomponenten zu gestalten. Schlüssel werden unter `prose` verschachtelt (z. B. `prose.p`, `prose.code`).
 
 ::component-example
 ---
-Name: 'Theme-Prosa-Beispiel'
+name: 'theme-prose-example'
 ---
 ::
 
-@@ph040@@api
+## API (Englisch)
 
-@@ph041@@@props
+### Props (nicht)
 
-Komponenten-Props
+:component-props
 
-@@ph042@@slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph043@@changelog @ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

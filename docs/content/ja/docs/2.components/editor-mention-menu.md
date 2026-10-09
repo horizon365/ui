@@ -10,22 +10,22 @@ links:
 
 ## 使用法
 
-EditorMentionMenuコンポーネントは、エディタでトリガー文字デフォルトは`@`を入力すると、ユーザー候補のメニューを表示し、`@tiptap/extension-mention`パッケージを使用して選択したメンションを挿入します。トリガー文字は、挿入されたメンションをレンダリングする際のプレフィックスとしても使用されます。
+EditorMentionMenuコンポーネントは、エディタでトリガー文字デフォルトは`@`を入力すると、ユーザー提案のメニューを表示し、`@tiptap/extension-mention`パッケージを使用して選択されたメンションを挿入します。トリガー文字は、挿入されたメンションをレンダリングする際のプレフィックスとしても使用されます。
 
 ::note
-TipTapの[ Suggestion ](https://tiptap.dev/docs/editor/api/utilities/suggestion))ユーティリティの上に構築された`useEditorMenu` composableを使用して、入力時に項目をフィルタリングし、キーボードナビゲーション（矢印キー、入力して選択、エスケープして閉じる）をサポートします。
+TipTapの[ Suggestion](https://tiptap.dev/docs/editor/api/utilities/suggestion)ユーティリティ上に構築された`useEditorMenu`コンポーザブルを使用して、入力時に項目をフィルタリングし、キーボードナビゲーション（矢印キー、Enterから選択、エスケープから閉じる）をサポートします。
 ::
 
 ::caution
-エディタインスタンスにアクセスするには、[ Editor ](/docs/components/editor)コンポーネントのデフォルトスロット内で使用する必要があります。
+エディタインスタンスにアクセスするには、[Editor](/docs/components/editor)コンポーネントのデフォルトスロット内で使用する必要があります。
 ::
 
 ::component-example
 ---
-昇格：true
-崩壊真
-名前'editor—mention—menu—example'
-クラス'p—8'
+elevated: true
+collapse: true
+name: 'editor-mention-menu-example'
+class: 'p-8'
 ---
 ::
 
@@ -35,7 +35,7 @@ Mention拡張機能の詳細については、TipTapのドキュメントをご�
 
 ### アイテム
 
-`items` propを、次のプロパティを持つオブジェクトの配列として使用します。
+`items`プロパティを次のプロパティを持つオブジェクトの配列として使用します。
 
 - `label: string`{lang="ts-type"}
 - `avatar?: AvatarProps`{lang="ts-type"}
@@ -45,10 +45,10 @@ Mention拡張機能の詳細については、TipTapのドキュメントをご�
 
 ::component-example
 ---
-昇格：真
-崩壊真
-名前'editor—mention—menu—items—example'
-クラス'p—8'
+elevated: true
+collapse: true
+name: 'editor-mention-menu-items-example'
+class: 'p-8'
 ---
 ::
 
@@ -56,7 +56,7 @@ Mention拡張機能の詳細については、TipTapのドキュメントをご�
 `items`プロパティに配列の配列を渡して、項目の分離グループを作成することもできます。
 ::
 
-###  Char
+### Char
 
 トリガー文字を変更するには、`char`プロパティを使用します。デフォルトは`@`{lang="ts-type"}です。トリガー文字は挿入された言及をレンダリングする際のプレフィックスとしても使用されます（例：`@channel`の代わりに`#channel`）。
 
@@ -69,7 +69,7 @@ Mention拡張機能の詳細については、TipTapのドキュメントをご�
 ```
 
 ::note
-同じエディタで複数の`EditorMentionMenu`コンポーネントを使用して、異なる`char`および`plugin-key` propsを使用して、異なるメンションタイプをサポートできます。
+異なるメンションタイプをサポートするために、異なる`char`および`plugin-key`プロップを使用して、同じエディタ上で複数の`EditorMentionMenu`コンポーネントを使用できます。
 
 ```vue
 <template>
@@ -81,9 +81,9 @@ Mention拡張機能の詳細については、TipTapのドキュメントをご�
 ```
 ::
 
-### 提案：badge {label="4.7+" class="align-text-top"}
+### 提案badge{label="4.7+" class="align-text-top"}
 
-`suggestion` propを使用して、TipTapの[ Suggestion ](https://tiptap.dev/docs/editor/api/utilities/suggestion#settings)をカスタマイズします。
+`suggestion`プロパティを使用して、TipTapの[ Suggestionマッチ動作](https://tiptap.dev/docs/editor/api/utilities/suggestion#settings)をカスタマイズします。
 
 これは、デフォルトの空白プレフィックスを必要とせず、トリガー文字が他の文字の直後に開く場合に便利です。
 
@@ -102,9 +102,9 @@ Mention拡張機能の詳細については、TipTapのドキュメントをご�
 </template>
 ```
 
-### オプション
+### Options
 
-`options` propを使用して、[ Floating UI options ](https://floating-ui.com/docs/computeposition#options)を使用して位置決めの動作をカスタマイズします。
+`options`プロパティを使用して、[Floating UIオプション](https://floating-ui.com/docs/computeposition#options)を使用して位置決めの動作をカスタマイズします。
 
 ```vue
 <template>
@@ -123,33 +123,33 @@ Mention拡張機能の詳細については、TipTapのドキュメントをご�
 
 ## 例
 
-### 無視フィルタ付き：badge {label="4.4+" class="align-text-top"}
+### 無視フィルタ付きbadge{label="4.4+" class="align-text-top"}
 
-`ignore-filter` propを`true`に設定すると、内部検索を無効にして独自の検索ロジックを使用できます。`v-model:search-term`を使用して、現在の検索語にアクセスし、APIから項目を取得します。
+`ignore-filter`プロパティを`true`に設定すると、内部検索を無効にして独自の検索ロジックを使用できます。`v-model:search-term`を使用して、現在の検索語にアクセスし、APIから項目を取得します。
 
 ::component-example
 ---
-昇格：true
-崩壊真
-名前'editor—mention—menu—ignore—filter—example'
-クラス'p—8'
+elevated: true
+collapse: true
+name: 'editor-mention-menu-ignore-filter-example'
+class: 'p-8'
 ---
 ::
 
 ::note
-この例では、[`refDebounced`](https://vueuse.org/shared/refDebounced/)を使用してAPI呼び出しをデバウンスします。
+この例では[`refDebounced`](https://vueuse.org/shared/refDebounced/)を使用してAPI呼び出しをデバウンスします。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

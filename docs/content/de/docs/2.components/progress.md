@@ -6,7 +6,7 @@ keywords:
   - loading bar
   - meter
 links:
-  - label: Fortschritt
+  - label: Progress
     icon: i-custom-reka-ui
     to: https://reka-ui.com/docs/components/progress
   - label: GitHub
@@ -14,16 +14,16 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Progress.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Verwenden Sie die `v-model`-Direktive, um den Wert des Progress-Elements zu steuern.
 
 ::component-code
 ---
-Außen:
-  - modellWert
-Props:
-  Modellwert: 50
+external:
+  - modelValue
+props:
+  modelValue: 50
 ---
 ::
 
@@ -31,156 +31,156 @@ Props:
 Verwenden Sie die Komponente [`ProgressGroup`](/docs/components/progress-group), um einen einzelnen Balken in mehrere Segmente aufzuteilen, die sich zu einer Summe addieren.
 ::
 
-@@@008@@Max
+### Max ist
 
-Verwenden Sie `max` prop, um den maximalen Wert für den Fortschritt festzulegen.
+Verwenden Sie die Prop `max`, um den maximalen Wert des Progress festzulegen.
 
 ::component-code
 ---
-Außen:
-  - modellWert
-Props:
-  Modellgröße: 3
-  max: vier
+external:
+  - modelValue
+props:
+  modelValue: 3
+  max: 4
 ---
 ::
 
-Verwenden Sie `max` prop mit einem Array von Strings, um den aktiven Schritt unter dem Balken anzuzeigen, der maximale Wert des Fortschritts ist die Länge des Arrays.
+Verwenden Sie die `max` prop mit einem Array von Strings, um den aktiven Schritt unter der Leiste anzuzeigen, der maximale Wert des Fortschritts ist die Länge des Arrays.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@@@@12@12@12@12@12@12@12
-Außen:
-  - modellWert
-Props:
-  Modellgröße: 3
-  Max:
-    @@ph014 @@"Warten auf..."
-    @@ph015 @@@'Klonen...'
-    - 'Migration...'
-    - 'Bereitstellen...'
-    @@ph018 @@"Fertig!"
+prettier: true
+ignore:
+  - max
+external:
+  - modelValue
+props:
+  modelValue: 3
+  max:
+    - 'Waiting...'
+    - 'Cloning...'
+    - 'Migrating...'
+    - 'Deploying...'
+    - 'Done!'
 ---
 ::
 
-@@ph019@@zum-Zustand
+### Status Bearbeiten
 
-Verwenden Sie `status` prop, um den aktuellen Fortschrittswert über der Leiste anzuzeigen.
+Verwenden Sie die `status` prop, um den aktuellen Fortschrittswert über dem Balken anzuzeigen.
 
 ::component-code
 ---
-Außen:
-  - modellWert
-Props:
-  Modellwert: 50
-  Status: wahr
+external:
+  - modelValue
+props:
+  modelValue: 50
+  status: true
 ---
 ::
 
 ::tip
-Der Status verfolgt das Ende der Leiste, verwenden Sie `:ui="{ status: 'w-full' }"`, um sie stattdessen über die gesamte Breite zu erstrecken.
+Der Status verfolgt das Ende der Leiste, verwenden Sie stattdessen `:ui="{ status: 'w-full' }"`, um die gesamte Breite zu überspannen.
 ::
 
-@@ph023@unbestimmt
+### Indeterminate (unbestimmt)
 
-Wenn kein `v-model` gesetzt ist oder der Wert `null` ist, wird der Fortschritt_unbestimmt_. Der Fortschrittsbalken wird als `carousel` animiert, aber Sie können ihn mit dem [`animation`](#animation) prop.
+Wenn kein `v-model` gesetzt ist oder der Wert `null` ist, wird der Progress_indeterminate_. Der Fortschrittsbalken wird als `carousel` animiert, aber Sie können ihn mit dem [`animation`](#animation) prop.
 
 ::component-code
 ---
-Außen:
-  - modellWert
-Props:
-  Modellwert: Null
+external:
+  - modelValue
+props:
+  modelValue: null
 ---
 ::
 
-### Animation Bearbeiten
+### Animation (Englisch)
 
-Verwenden Sie die `animation` prop, um die Animation des Progress in ein inverses Karussell, eine schwingende Leiste oder eine elastische Leiste zu ändern.
+Verwenden Sie die `animation`-Prop, um die Animation des Progress in ein inverses Karussell, eine schwingende Leiste oder eine elastische Leiste zu ändern.
 
 ::component-code
 ---
-Props:
-  Animation: Schaukel
+props:
+  animation: swing
 ---
 ::
 
 ::tip
-Die Animation wird automatisch deaktiviert, wenn der Benutzer eine reduzierte Bewegung bevorzugt, der unbestimmte Balken wird stattdessen als Impuls in voller Breite angezeigt.
+Die Animation wird automatisch deaktiviert, wenn der Benutzer eine reduzierte Bewegung bevorzugt, der unbestimmte Balken wird stattdessen als Puls in voller Breite angezeigt.
 ::
 
-@@ph036@Orientierung
+### Orientierung.
 
-Verwenden Sie `orientation` prop, um die Ausrichtung des Progress. Defaults auf `horizontal` zu ändern.
+Verwenden Sie die `orientation`-Prop, um die Ausrichtung des Progress. Defaults auf `horizontal` zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@@@@@399@@class
-Props:
-  Ausrichtung: Vertikal
-  Klasse: H-48
+ignore:
+  - class
+props:
+  orientation: vertical
+  class: 'h-48'
 ---
 ::
 
-@@ph040@@gmail.de
+### color kaufen
 
-Verwenden Sie `color` prop, um die Farbe des Progress-Elements zu ändern.
+Verwenden Sie die `color`-Prop, um die Farbe des Progress zu ändern.
 
 ::component-code
 ---
-Props:
-  Farbe: neutral
+props:
+  color: neutral
 ---
 ::
 
 ::tip
-Diese Requisite akzeptiert auch jeden CSS-Farbwert für Paletten außerhalb des Themas.
+Diese Prop akzeptiert auch jeden CSS-Farbwert für Paletten außerhalb des Themas.
 ::
 
-@@ph042@@Größe
+### Größe
 
-Verwenden Sie `size` prop, um die Größe des Progress-Elements zu ändern.
+Verwenden Sie die `size`-Prop, um die Größe des Progress zu ändern.
 
 ::component-code
 ---
-Props:
-  Größe: XL
+props:
+  size: xl
 ---
 ::
 
 ### invertiert
 
-Verwenden Sie `inverted` prop, um den Fortschritt visuell umzukehren.
+Verwenden Sie die `inverted` prop, um den Fortschritt visuell umzukehren.
 
 ::component-code
 ---
-Props:
-  invertiert: wahr
-  Modellwert: 25
+props:
+  inverted: true
+  modelValue: 25
 ---
 ::
 
-## api
+## API (englisch)
 
-@@@@@@@@@@ph047@@props
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
-@@ph048@gmail.de
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph049@@emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-@@ph050@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph051@@changelog @@@ changelog @@@ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

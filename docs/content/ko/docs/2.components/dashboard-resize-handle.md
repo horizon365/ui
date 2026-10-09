@@ -1,5 +1,5 @@
 ---
-title: DashboardResizeHandle 대시보드 ResizeHandle
+title: DashboardResizeHandle 대시보드ResizeHandle
 description: '사이드바 또는 패널의 크기를 조정하는 핸들입니다.'
 category: dashboard
 links:
@@ -8,17 +8,17 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardResizeHandle.vue
 ---
 
-##  사용
+## Usage
 
-DashboardResizeHandle 구성 요소는 [DashboardSidebar](/docs/components/dashboard-sidebar) 및 [DashboardPanel](/docs/components/dashboard-panel) 구성 요소에 사용됩니다.
+DashboardResizeHandle 구성 요소는 [DashboardSidebar](/docs/components/dashboard-sidebar) 및 [DashboardPanel](xph07x) 구성 요소에 사용됩니다.
 
-`resizable`prop이 설정되면 자동으로 표시됩니다. ** 수동으로 추가할 필요가 없습니다.
+`resizable` prop이 설정되면 자동으로 표시되며, **manualy**를 추가 할 필요가 없습니다.
 
-##  예
+## examples 예
 
-###  Within `resize-handle` slot
+### x`resize-handle` 슬롯 내
 
-`resizable`prop이 설정될 때 이 구성요소가 자동으로 표시되더라도 [DashboardSidebar](/docs/components/dashboard-sidebar) 및 [DashboardPanel]()의 @@ 슬롯을 사용하여 구성요소를 사용자 정의할 수 있습니다.
+`resizable` 소품을 설정하면 이 구성 요소가 자동으로 표시되지만 [DashboardSidebar](/docs/components/dashboard-sidebar) 및 [DashboardPanel](/docs/components/dashboard-panel) 구성 요소의 `resize-handle` 슬롯을 사용하여 핸들을 사용자 정의할 수 있습니다.
 
 ::code-group
 
@@ -65,23 +65,23 @@ definePageMeta({
 ::
 
 ::note
-이 예제에서는 `after`pseudo-element를 추가하여 마우스 위에 수직선을 표시합니다.
+이 예제에서는 `after` 유사 요소를 추가하여 마우스를 가리키는 수직 선을 표시합니다.
 ::
 
-##  API
+## API 사용
 
-### Props 이미지
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### 슬롯
 
-:컴포넌트 - 슬롯
+:component-slots
 
-##  테마
+## Theme 주제
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

@@ -9,14 +9,14 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodePreview.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Enveloppez tout contenu avec le composant `code-preview` pour afficher un aperçu en direct à côté de son code source à l'aide de l'emplacement `code`.
 
 ::code-preview{class="[&>div]:*:my-0 [&>div]:*:w-full" label="preview"}
 
 ::code-preview{class="[&>div]:*:my-0"}
-@@@ 004 @
+`inline code`
 
 #code
 
@@ -34,27 +34,27 @@ Enveloppez tout contenu avec le composant `code-preview` pour afficher un aperç
 
 #code
 ```mdc
-@@
+`inline code`
 ```
 ::
 ````
 
 ::
 
-@@ph018 @@ réponse
+## api
 
-@@ph019@@props
+### Props équipement
 
-: composants {prose}
+:component-props{prose}
 
-@@2011@@Slots
+### Slots
 
-: composant-slots {prose}
+:component-slots{prose}
 
-@@ph023@thème
+## Thème
 
-: composant-thème {prose}
+:component-theme{prose}
 
-@@changelog
+## Changelog
 
-: composant-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

@@ -5,7 +5,7 @@ keywords:
   - toggle
   - toggle switch
 links:
-  - label: Switch ist
+  - label: Switch
     icon: i-custom-reka-ui
     to: https://reka-ui.com/docs/components/switch
   - label: GitHub
@@ -13,200 +13,200 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Switch.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
 Verwenden Sie die `v-model`-Direktive, um den geprüften Zustand des Switches zu steuern.
 
 ::component-code
 ---
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Wert: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: true
 ---
 ::
 
-Verwenden Sie `default-value` prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
+Verwenden Sie die `default-value`-prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
 
 ::component-code
 ---
-Ignoriert:
+ignore:
   - defaultValue
-Props:
-  DefaultWert: true
+props:
+  defaultValue: true
 ---
 ::
 
-@@ph006@@bmdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdb
+### Label ist
 
-Verwenden Sie `label` prop, um die Bezeichnung des Switches festzulegen.
+Verwenden Sie die `label` prop, um das Label des Switches festzulegen.
 
 ::component-code
 ---
-Props:
-  Titel: Check Me
+props:
+  label: Check me
 ---
 ::
 
-Bei Verwendung von `required` prop wird neben dem Etikett ein Sternchen hinzugefügt.
+Wenn Sie die `required`-Prop verwenden, wird neben dem Label ein Sternchen hinzugefügt.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph009@@aufkleber
-Props:
-  Erforderlich: true
-  Titel: Check Me
+ignore:
+  - label
+props:
+  required: true
+  label: Check me
 ---
 ::
 
-@@ph010 @ Beschreibung
+x31xBeschreibung
 
-Verwenden Sie `description` prop, um die Beschreibung des Switches festzulegen.
+Verwenden Sie die `description`-Prop, um die Beschreibung des Switches festzulegen.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph012@@aufkleber
-Props:
-  Titel: Check Me
-  Beschreibung: 'Dies ist eine Checkbox.'
+ignore:
+  - label
+props:
+  label: Check me
+  description: 'This is a checkbox.'
 ---
 ::
 
-@@ph013@@Icon-Seite
+### Icon (englisch)
 
-Verwenden Sie die `checked-icon` und `unchecked-icon` props, um die Symbole des Switches zu setzen, wenn sie aktiviert und deaktiviert sind.
+Verwenden Sie die `checked-icon`-und `unchecked-icon`-Requisiten, um die Symbole des Switches festzulegen, wenn sie aktiviert und deaktiviert sind.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph016@@aufkleber
+prettier: true
+ignore:
+  - label
   - defaultValue
-Props:
-  uncheckedIcon: 'i-lucide-x'(nicht markiert)
-  checkedIcon: 'i-lucide-check'(auf Englisch)
-  DefaultValue: true ist wahr
-  Titel: Check Me
+props:
+  uncheckedIcon: 'i-lucide-x'
+  checkedIcon: 'i-lucide-check'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-@@ph018@Aufladen
+### Loading (nicht verfügbar)
 
-Verwenden Sie das `loading` prop, um ein Ladesymbol auf dem Switch anzuzeigen.
+Verwenden Sie die `loading`-Prop, um ein Ladesymbol auf dem Switch anzuzeigen.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph020@@aufkleber
+ignore:
+  - label
   - defaultValue
-Props:
-  Aufladung: true
-  DefaultWert: true
-  Titel: Check Me
+props:
+  loading: true
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-@@ph022@@Icon-Aufladung
+### Loading Icon [Bearbeiten | Quelltext bearbeiten
 
-Verwenden Sie `loading-icon` prop, um das Ladesymbol anzupassen. Standardmäßig auf `i-lucide-loader-circle`.
+Verwenden Sie die `loading-icon`-Prop, um das Ladesymbol anzupassen. Standardmäßig `i-lucide-loader-circle`.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph025@@aufkleber
+ignore:
+  - label
   - defaultValue
-Props:
-  Aufladung: true
-  loadingIcon: 'i-lucide-loader'(englisch)
-  DefaultValue: true ist wahr
-  Titel: Check Me
+props:
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.loading` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter der `ui.icons.loading`-Taste anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.loading` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter der `ui.icons.loading`-Taste.
 :::
 ::
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@###############################################################################################################################################################################################
+### Color (englisch)
 
-Verwenden Sie die `color` prop, um die Farbe des Schalters zu ändern.
+Verwenden Sie die `color`-Prop, um die Farbe des Switches zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph033@@aufkleber
+ignore:
+  - label
   - defaultValue
-Props:
-  Farbe: neutral
-  DefaultWert: true
-  Titel: Check Me
+props:
+  color: neutral
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-@@ph035 @ Größe
+### Größe
 
-Verwenden Sie die `size` prop, um die Größe des Switches zu ändern.
+Verwenden Sie die `size`-Prop, um die Größe des Switches zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph037@@aufkleber
+ignore:
+  - label
   - defaultValue
-Props:
-  Größe: XL
-  DefaultValue: true ist wahr
-  Titel: Check Me
+props:
+  size: xl
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-@@ph039@disabled @ disabled
+### Disabled (nicht verfügbar)
 
-Verwenden Sie die `disabled` prop, um den Switch zu deaktivieren.
+Verwenden Sie die `disabled`-Prop, um den Switch zu deaktivieren.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph041@@aufkleber
-Props:
-  Behindert: Wahr
-  Titel: Check Me
+ignore:
+  - label
+props:
+  disabled: true
+  label: Check me
 ---
 ::
 
-## api
+## API (Englisch)
 
-@@ph043@@gmail.de
+### Props (englisch)
 
-Komponenten Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-Diese Komponente unterstützt auch alle nativen `<button>` HTML-Attribute.
+Diese Komponente unterstützt auch alle nativen `<button>`-HTML-Attribute.
 ::
 
-@@ph045@gmail.de
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph046@@emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-@@ph047@@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph048@@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

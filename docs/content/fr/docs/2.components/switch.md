@@ -13,18 +13,18 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Switch.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
 Utilisez la directive `v-model` pour contrôler l'état vérifié du commutateur.
 
 ::component-code
 ---
-Ignorer:
-  - modèleValeur
-Extérieure:
-  - modèleValeur
-Props:
-  Modèle: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: true
 ---
 ::
 
@@ -32,21 +32,21 @@ Utilisez la prop `default-value` pour définir la valeur initiale lorsque vous n
 
 ::component-code
 ---
-ignorer:
-  @@@ph005@@defaultValue
-Props:
-  valeur: true
+ignore:
+  - defaultValue
+props:
+  defaultValue: true
 ---
 ::
 
-@@ph006@étiquette
+### étiquette
 
-Utilisez le prop `label` pour définir l'étiquette du commutateur.
+Utilisez le prop `label` pour définir l'étiquette du Switch.
 
 ::component-code
 ---
-Props:
-  Étiquette: check me
+props:
+  label: Check me
 ---
 ::
 
@@ -54,83 +54,83 @@ Lorsque vous utilisez le prop `required`, un astérisque est ajouté à côté d
 
 ::component-code
 ---
-Ignorer:
-  @@ph009@label
-Props:
-  Requis: Vrai
-  Étiquette: check me
+ignore:
+  - label
+props:
+  required: true
+  label: Check me
 ---
 ::
 
-@@ph010@Description
+### Description
 
-Utilisez la prop `description` pour définir la description du commutateur.
+Utilisez le prop `description` pour définir la description du Switch.
 
 ::component-code
 ---
-Ignorer:
-  @@ph012@étiquette
-Props:
-  Étiquette: check me
-  Description: "Ceci est une case à cocher."
+ignore:
+  - label
+props:
+  label: Check me
+  description: 'This is a checkbox.'
 ---
 ::
 
-@@ph013@@Icon
+### icône
 
 Utilisez les accessoires `checked-icon` et `unchecked-icon` pour définir les icônes du commutateur lorsqu 'elles sont cochées ou non.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph016@label
+prettier: true
+ignore:
+  - label
   - defaultValue
-Props:
-  UncheckedIcon: 'i-lucide-x'
+props:
+  uncheckedIcon: 'i-lucide-x'
   checkedIcon: 'i-lucide-check'
-  valeur: true
-  Étiquette: check me
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-@@18@chargement
+### Loading
 
 Utilisez le prop `loading` pour afficher une icône de chargement sur le Switch.
 
 ::component-code
 ---
-Ignorer:
-  @@ph020@label
+ignore:
+  - label
   - defaultValue
-Props:
-  Chargement: vrai
-  valeur: true
-  Étiquette: check me
+props:
+  loading: true
+  defaultValue: true
+  label: Check me
 ---
 ::
 
 ### Icône de chargement
 
-Utilisez la prop `loading-icon` pour personnaliser l'icône de chargement. Par défaut,`i-lucide-loader-circle`.
+Utilisez la prop `loading-icon` pour personnaliser l'icône de chargement. Par défaut, `i-lucide-loader-circle`.
 
 ::component-code
 ---
-Ignorer:
-  @@ph025@label
-  - valeur défaillante
-Props:
-  Chargement: vrai
+ignore:
+  - label
+  - defaultValue
+props:
+  loading: true
   loadingIcon: 'i-lucide-loader'
-  valeur: true
-  Étiquette: check me
+  defaultValue: true
+  label: Check me
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.loading`.
+Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la clé `ui.icons.loading`.
 :::
 
 #vue
@@ -141,55 +141,55 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 
 ### Couleur
 
-Utilisez le prop `color` pour changer la couleur du commutateur.
+Utilisez le prop `color` pour changer la couleur du Switch.
 
 ::component-code
 ---
-ignorer:
-  @@ph033@label
-  - valeur défaillante
-Props:
-  Couleur: Neutre
-  valeur: true
-  Étiquette: check me
+ignore:
+  - label
+  - defaultValue
+props:
+  color: neutral
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-@@pH035@@Size
+### Size
 
 Utilisez le prop `size` pour modifier la taille du commutateur.
 
 ::component-code
 ---
-ignorer:
-  @@ph037@label
+ignore:
+  - label
   - defaultValue
-Props:
-  Taille: XL
-  valeur: true
-  Étiquette: check me
+props:
+  size: xl
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-### désactivé
+### Désactivé
 
-Utilisez le prop `disabled` pour désactiver le commutateur.
+Utilisez le prop `disabled` pour désactiver le Switch.
 
 ::component-code
 ---
-Ignorer:
-  @@ph041@@label
-Props:
-  handicapés: vrai
-  Étiquette: check me
+ignore:
+  - label
+props:
+  disabled: true
+  label: Check me
 ---
 ::
 
-@@ph042 @ référencement
+## API
 
-@@ph043@@props
+### Props équipements
 
-Composants-props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
 Ce composant prend également en charge tous les attributs HTML natifs `<button>`.
@@ -197,16 +197,16 @@ Ce composant prend également en charge tous les attributs HTML natifs `<button>
 
 ### Slots
 
-Composants slots
+:component-slots
 
 ### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph047@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changelog 48
+## Changelog
 
-Composant-changelog
+:component-changelog

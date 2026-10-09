@@ -9,7 +9,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Tabs.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Utilisez les composants `tabs` et `tabs-item` pour afficher [Tabs](/docs/components/tabs) dans votre contenu.
 
@@ -65,25 +65,25 @@ Lorem velit voluptate ex reprehenderit ullamco et culpa.
 
 ::
 
-@@ph034@@api
+## api
 
-@@@ph035@@props
+### Props
 
-: composant-props {prose}
+:component-props{prose}
 
-@@ph037@@Slots
+### Slots
 
-: composant {prose}
+:component-slots{prose}
 
-@@ph039@thème
+## Thème
 
 ::component-theme{prose}
 ---
-supplémentaire:
-  @@ph040@@tabsItem
+extra:
+  - tabsItem
 ---
 ::
 
-@changement@changement@changement@changement.com
+## Changelog
 
-: composant-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

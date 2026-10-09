@@ -3,7 +3,7 @@ title: Couleur ModeSelect
 description: 'A Sélectionnez pour basculer entre le mode système, sombre et clair.'
 category: color-mode
 links:
-  - label: Sélectionnez Menu
+  - label: SélectionneMenu
     to: /docs/components/select-menu
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub à
@@ -11,18 +11,18 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/color-mode/ColorModeSelect.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Le composant ColorModeSelect étend le composant [SelectMenu](/docs/components/select-menu), afin que vous puissiez passer n'importe quelle propriété telle que `color`,`variant`,`size`, etc.
+Le composant ColorModeSelect étend le composant [SelectMenu](/docs/components/select-menu), de sorte que vous pouvez passer n'importe quelle propriété telle que `color`, `variant`, `size`, etc.
 
-: composant code {prefix="color-mode"}
+:component-code{prefix="color-mode"}
 
-@@ph009@exemples
+## exemples
 
-### Avec des icônes personnalisées
+### Avec icônes personnalisées
 
 ::framework-only
-#numérique
+#nuxt
 ::div
 
 Utilisez le `app.config.ts` pour personnaliser l'icône avec la propriété `ui.icons`:
@@ -69,12 +69,12 @@ export default defineConfig({
 
 ::
 
-## Phénix
+## api
 
-@@ph046@@props
+### Props
 
-Composants-props
+:component-props
 
-@changement@changement@changement@changement.com
+## Changelog
 
-: composant-changelog {prefix="color-mode"}
+:component-changelog{prefix="color-mode"}

@@ -8,11 +8,11 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageBody.vue
 ---
 
-## 使用情况
+## 用法
 
 PageBody组件包装您的主要内容并添加一些填充以保持一致的间距。
 
-在[Page](/docs/components/page)组件的默认插槽中，在[PageHeader](/docs/components/page-header)组件之后使用：
+在[PageHeader](/docs/components/page-header)组件之后的[Page](/docs/components/page)组件的默认插槽中使用它：
 
 ```vue {5}
 <template>
@@ -24,13 +24,13 @@ PageBody组件包装您的主要内容并添加一些填充以保持一致的间
 </template>
 ```
 
-## Examples
+## 示例
 
 ::note
 虽然这些示例使用[Nuxt Content](https://content.nuxt.com)，但这些组件可以与任何内容管理系统集成。
 ::
 
-### @1页内
+### 页面内
 
 使用页面中的PageBody组件来显示页面的内容：
 
@@ -71,23 +71,23 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 ```
 
 ::note
-在本例中，我们使用来自`@nuxt/content`的[`ContentRenderer`](https://content.nuxt.com/docs/components/content-renderer)组件来呈现页面内容。
+在本例中，我们使用`@nuxt/content`中的[`ContentRenderer`](https://content.nuxt.com/docs/components/content-renderer)组件来呈现页面内容。
 ::
 
 ## API
 
 ### Props
 
-：组件-支柱
+:component-props
 
-### Slots
+### 老虎机
 
-：组件插槽
+:component-slots
 
 ## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

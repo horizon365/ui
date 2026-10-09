@@ -9,46 +9,46 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Card.vue
 ---
 
-## 使用 法
+## 使用法
 
-`card`コンポーネント の デフォルト スロット で markdown を 使用 し て 、 コンテンツ を ハイライト し ます 。
+`card`コンポーネントのデフォルトスロットでmarkdownを使用して、コンテンツを強調表示します。
 
-`title`、`icon`、`color`props を 使用 し て カスタマイズ し ます 。[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)[`<RouterLink>`](https://router.vuejs.org/api/interfaces/RouterLinkProps.html)コンポーネント から 任意 の プロ パティ を 渡す こと も でき ます 。
+`title`、`icon`、`color`プロパティを使用してカスタマイズします。[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)または[`<RouterLink>`](https://router.vuejs.org/api/interfaces/RouterLinkProps.html)コンポーネントから任意のプロパティを渡すこともできます。
 
 ::component-code{slug="card" prose}
 ---
-隠す
-  - クラス
-無視
-  - ターゲット
-小道具
-  クラス ' my-0 w-96 '
-  title スタート アップ
-  アイコン i-lucide-users
-  色 プライマリ
-  “ https//”nuxt.lemonsqueezy.com'
-  ターゲット ' _blank '
-スロット
-  default ： 最大 5 人 の 開発 者 を 持つ 小規模 チーム 、 スタート アップ 、 代理 店 に 最適 です 。
+hide:
+  - class
+ignore:
+  - target
+props:
+  class: 'my-0 w-96'
+  title: Startup
+  icon: i-lucide-users
+  color: primary
+  to: 'https://nuxt.lemonsqueezy.com'
+  target: '_blank'
+slots:
+  default: Best suited for small teams, startups and agencies with up to 5 developers.
 ---
 
-最大 5 人 の 開発 者 を 持つ 小規模 チーム 、 スタート アップ 、 代理 店 に 最適 です 。
+最大5人の開発者を持つ小規模チーム、スタートアップ、代理店に最適です。
 ::
 
 ## API
 
 ### Props
 
-component-props{prose}
+:component-props{prose}
 
 ### スロット
 
-component-slots{prose}
+:component-slots{prose}
 
-## テーマ
+## Theme
 
-component-theme{prose}
+:component-theme{prose}
 
 ## Changelog
 
-component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

@@ -15,19 +15,19 @@ links:
 
 ## 使用法
 
-FieldGroup内で複数の[ Button ](/docs/components/button)をラップしてグループ化します。
+複数の[Button](/docs/components/button)をFieldGroup内でラップしてグループ化します。
 
 ::component-code
 ---
-きれい真
-スロット
-  デフォルト|
+prettier: true
+slots:
+  default: |
 
     <UButton color="neutral" variant="subtle" label="Button" />
     <UButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
 ---
-uボタン{color="neutral" variant="subtle" label="Button"}
-u—button {color="neutral" variant="outline" icon="i-lucide-chevron-down"}
+:u-button{color="neutral" variant="subtle" label="ボタン"}
+:u-button{color="neutral" variant="outline" icon="i-lucide-chevron-down"}
 ::
 
 ### サイズ
@@ -36,90 +36,90 @@ u—button {color="neutral" variant="outline" icon="i-lucide-chevron-down"}
 
 ::component-code
 ---
-きれい真
-小道具
-  サイズXL
-スロット
-  デフォルト|
+prettier: true
+props:
+  size: xl
+slots:
+  default: |
 
     <UButton color="neutral" variant="subtle" label="Button" />
     <UButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
 ---
-uボタン{color="neutral" variant="subtle" label="Button"}
-uボタン{color="neutral" variant="outline" icon="i-lucide-chevron-down"}
+:u-button{color="neutral" variant="subtle" label="ボタン"}
+:u-button{color="neutral" variant="outline" icon="i-lucide-chevron-down"}
 ::
 
-### オリエンテーション
+### Orientation
 
-`orientation`プロパティを使用して、ボタンの向きを変更します。デフォルトは`horizontal`です。
+`orientation`プロパティを使用してボタンの向きを変更します。デフォルトは`horizontal`です。
 
 ::component-code
 ---
-きれい真
-小道具
-  オリエンテーション垂直
-スロット
-  デフォルト|
+prettier: true
+props:
+  orientation: vertical
+slots:
+  default: |
 
     <UButton color="neutral" variant="subtle" label="Submit" />
     <UButton color="neutral" variant="outline" label="Cancel" />
 ---
-u—button {color="neutral" variant="subtle" label="Submit"}
-u—button {color="neutral" variant="outline" label="Cancel"}
+:u-button{color="neutral" variant="subtle" label="コンテンツ"}
+:u-button{color="neutral" variant="outline" label="キャンセル"}
 ::
 
 ## 例
 
 ### 入力あり
 
-[ Input ](/docs/components/input)[ InputMenu ](/docs/components/input-menu)[ Select ](/docs/components/select)[ SelectMenu ](/docs/components/select-menu)などのコンポーネントをフィールドグループ内で使用できます。
+[Input](/docs/components/input)、[InputMenu](/docs/components/input-menu)、[Select](/docs/components/select) [SelectMenu](/docs/components/select-menu)などのコンポーネントをフィールドグループ内で使用できます。
 
 ::component-code
 ---
-きれい真
-スロット
-  デフォルト|
+prettier: true
+slots:
+  default: |
 
     <UInput color="neutral" variant="outline" placeholder="Enter token" />
 
     <UButton color="neutral" variant="subtle" icon="i-lucide-clipboard" />
 ---
-u—input {color="neutral" variant="outline" placeholder="Enter token"}
-u—button {color="neutral" variant="subtle" icon="i-lucide-clipboard"}
+:u-input{color="neutral" variant="outline" placeholder="Enter token"}
+:u-button{color="neutral" variant="subtle" icon="i-lucide-clipboard"}
 ::
 
 ### ツールチップ付き
 
-フィールドグループ内で[ Tooltip ](/docs/components/tooltip)を使用できます。
+フィールドグループ内で[Tooltip](/docs/components/tooltip)を使用できます。
 
-component—example {name="field-group-tooltip-example"}
+:component-example{name="field-group-tooltip-example"}
 
 ### ドロップダウンメニュー付き
 
-フィールドグループ内で[ DropdownMenu ](/docs/components/dropdown-menu)を使用できます。
+フィールドグループ内で[DropdownMenu](/docs/components/dropdown-menu)を使用できます。
 
-component—example {name="field-group-dropdown-example"}
+:component-example{name="field-group-dropdown-example"}
 
 ### バッジ付き
 
-フィールドグループ内で[ Badge ](/docs/components/badge)を使用できます。
+フィールドグループ内で[Badge](/docs/components/badge)を使用できます。
 
-component—example {name="field-group-badge-example"}
+:component-example{name="field-group-badge-example"}
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

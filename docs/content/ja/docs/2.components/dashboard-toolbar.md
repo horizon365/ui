@@ -10,9 +10,9 @@ links:
 
 ## 使用法
 
-DashboardToolbarコンポーネントは、[ DashboardNavbar ](/docs/components/dashboard-navbar)コンポーネントの下にツールバーを表示するために使用されます。
+DashboardToolbarコンポーネントは、[DashboardNavbar](/docs/components/dashboard-navbar)コンポーネントの下にツールバーを表示するために使用されます。
 
-[ DashboardPanel ](/docs/components/dashboard-panel)コンポーネントの`header`スロット内で使用します。
+[DashboardPanel](/docs/components/dashboard-panel)コンポーネントの`header`スロット内で使用します。
 
 ```vue [pages/index.vue]{9-13}
 <script setup lang="ts">
@@ -32,36 +32,36 @@ definePageMeta({
 </template>
 ```
 
-ツールバーをカスタマイズするには、`left`、`default`、および`right`スロットを使用します。
+ツールバーをカスタマイズするには、`left`、`default`、`right`スロットを使用します。
 
 ::component-example
 ---
-きれい真
-名前'dashboard—toolbar'
-クラス'！px—0！pt—0'
-小道具
-  クラス'w—full'
+prettier: true
+name: 'dashboard-toolbar-example'
+class: '!px-0 !pt-0'
+props:
+  class: 'w-full'
 ---
 ::
 
 ::note
-この例では、[ NavigationMenu ](/docs/components/navigation-menu)コンポーネントを使用して、いくつかのリンクをレンダリングします。
+この例では、[NavigationMenu](/docs/components/navigation-menu)コンポーネントを使用してリンクをレンダリングします。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

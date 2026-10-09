@@ -3,7 +3,7 @@ title: chatpromptsubmit
 description: 'Un botón para enviar mensajes de chat con manejo automático de estado.'
 category: chat
 links:
-  - label: Botón
+  - label: botón
     to: /docs/components/button
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub también
@@ -11,18 +11,18 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatPromptSubmit.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 El componente ChatPromptSubmit se utiliza dentro del componente [ChatPrompt](/docs/components/chat-prompt) para enviar el mensaje.
 
-Se extiende el [Button](/docs/components/button) componente, por lo que puede pasar cualquier propiedad, como `color`,`variant`,`size`, etc
+Extiende el componente [Button](/docs/components/button), por lo que puede pasar cualquier propiedad como `color`, `variant`, `size`, etc.
 
 ::code-preview
 
-#por defecto
-U-Chat-Prompt-Submit (en inglés)
+#default
+:u-chat-prompt-submit
 
-#El Código
+#code
 ```vue
 <template>
   <UChatPrompt>
@@ -33,111 +33,60 @@ U-Chat-Prompt-Submit (en inglés)
 ::
 
 ::note
-También puede usarlo dentro de la ranura `footer` del componente [`ChatPrompt`](/docs/components/chat-prompt).
+También se puede utilizar dentro de la ranura `footer` del componente [`ChatPrompt`](/docs/components/chat-prompt).
 ::
 
-@@26@26@26@26
+### Listado
 
-Cuando su estado es `ready`{lang="ts-type"}, utilice los accesorios `color`,`variant` y `icon` para personalizar el botón.
+Cuando su estado es `ready`{lang="ts-type"}, utilice los accesorios `color`, `variant` y `icon` para personalizar el botón.
 
-@@
-@@
-@@
+- xxx`color="primary"`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`variant="solid"`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ::component-code
 ---
-Categoría: true
+prettier: true
 items:
-  Color:
+  color:
     - primary
-    @@442@secondary
-    @@43@@éxito
-    @@44@Advertencia
-    @@F045@error
-    @@46000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  Variante:
-    @@474@477
-    @@48000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @@499@somier
-    @500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @ghost051
-Props:
-  Categoría:"Primary"
-  Variante: "sólido"
-  icono: 'i-lucide-arrow-up'
+    - secondary
+    - success
+    - warning
+    - error
+    - neutral
+  variant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+props:
+  color: 'primary'
+  variant: 'solid'
+  icon: 'i-lucide-arrow-up'
 ---
 ::
 
 ::framework-only
-#nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.arrowUp`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.arrowUp`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
 Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.arrowUp`.
 :::
 ::
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Enviado
 
-Cuando su estado es `submitted`{lang="ts-type"}, utilice los accesorios `submitted-color`,`submitted-variant` y `submitted-icon` para personalizar el botón.
+Cuando su estado es `submitted`{lang="ts-type"}, utilice los accesorios `submitted-color`, `submitted-variant` y `submitted-icon` para personalizar el botón.
 
-@@
-@@
-@@@ph068@@@ph069@@@ph070
-
-::note
-El evento `stop` se emite cuando el usuario hace clic en el botón.
-::
-
-::component-code
----
-Categoría: true
-Ignora:
-  @@2007@estado
-Items:
-  Subordinación:
-    @@P073@primary
-    @@774@secondary
-    @@75@éxito
-    @@760@Advertencia
-    @@777@error
-    @@78@neutralización
-  Variante Subpuesta:
-    @@799@solido
-    @080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @081 @@ Trabajo
-    @2018@subtil
-    @ghost083 @
-Props:
-  Categoría:"Neutral"
-  Variante: "subrepticia"
-  Archivo de la etiqueta: i-lucide-square
-  Estado: "Presentado"
----
-::
-
-::framework-only
-#Nuxidad
-:::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.stop`.
-:::
-
-#vista
-:::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.stop`.
-:::
-::
-
-@@888@vía
-
-Cuando su estado es `streaming`{lang="ts-type"}, utilice los accesorios `streaming-color`,`streaming-variant` y `streaming-icon` para personalizar el botón.
-
-@@
-@@
-@100@@101@102
+- xx`submittedColor="neutral"`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`submittedVariant="subtle"`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ::note
 El evento `stop` se emite cuando el usuario hace clic en el botón.
@@ -145,50 +94,101 @@ El evento `stop` se emite cuando el usuario hace clic en el botón.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH104@estado
-Items:
-  Streaming de colores:
-    @@P105@primary (en inglés)
-    @106@106@106
-    @@70000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @@P108@Advertencia
-    @@pH109@error
-    @110@Neutral
-  Variaciones de Streaming:
-    @@ph111@@sólido
-    @112@@Escenario
-    @113 @@ de nuevo
-    @114@@subtil
-    @115 @ Fantasía
-Props:
-  Categoría:'Neutral'
-  Categoría:'Subtil'
-  Archivo de la etiqueta: i-lucide-square
-  Categoría:"Streaming"
+prettier: true
+ignore:
+  - status
+items:
+  submittedColor:
+    - primary
+    - secondary
+    - success
+    - warning
+    - error
+    - neutral
+  submittedVariant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+props:
+  submittedColor: 'neutral'
+  submittedVariant: 'subtle'
+  submittedIcon: 'i-lucide-square'
+  status: 'submitted'
 ---
 ::
 
 ::framework-only
-#Nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.stop`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.stop`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.stop`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.stop`.
 :::
 ::
 
-@@pH120@@error
+### Streaming en vivo
 
-Cuando su estado es `error`{lang="ts-type"}, utilice los accesorios `error-color`,`error-variant` y `error-icon` para personalizar el botón.
+Cuando su estado es `streaming`{lang="ts-type"}, utilice los accesorios `streaming-color`, `streaming-variant` y `streaming-icon` para personalizar el botón.
 
-@126@@127@128
-@@ph129@@@ph130@@ph131 @
-@@ph132@@@ph133@@ph134 @
+- x`streamingColor="neutral"`x{lang="ts-type"}
+- x`streamingVariant="subtle"`x{lang="ts-type"}
+- x`streamingIcon="i-lucide-square"`x{lang="ts-type"}
+
+::note
+El evento `stop` se emite cuando el usuario hace clic en el botón.
+::
+
+::component-code
+---
+prettier: true
+ignore:
+  - status
+items:
+  streamingColor:
+    - primary
+    - secondary
+    - success
+    - warning
+    - error
+    - neutral
+  streamingVariant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+props:
+  streamingColor: 'neutral'
+  streamingVariant: 'subtle'
+  streamingIcon: 'i-lucide-square'
+  status: 'streaming'
+---
+::
+
+::framework-only
+#nuxt
+:::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.stop`.
+:::
+
+#vue
+:::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.stop`.
+:::
+::
+
+### Error en
+
+Cuando su estado es `error`{lang="ts-type"}, utilice los accesorios `error-color`, `error-variant` y `error-icon` para personalizar el botón.
+
+- x`errorColor="error"`x{lang="ts-type"} (Edición española)
+- x`errorVariant="soft"`x{lang="ts-type"} (Edición española)
+- x`errorIcon="i-lucide-rotate-ccw"`xx{lang="ts-type"}
 
 ::note
 El evento `reload` se emite cuando el usuario hace clic en el botón.
@@ -196,71 +196,71 @@ El evento `reload` se emite cuando el usuario hace clic en el botón.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @136@estado
-Items:
-  errores-color:
-    @@ph137@primary (en inglés)
-    @138@138 años
-    @139 @ El éxito
-    @@pH140@advertencia
-    @@141@@error
-    @@ph142@neutralización
-  Variante de error:
-    @@ph143@@sólido
-    @@ph144@outline (Edición española)
-    @145 @@ de nuevo
-    @146@@subtil
-    @ph147@ghost (en inglés)
-Props:
-  error: "error"
-  Categoría:"Soft"
-  Icono de error: 'i-lucide-rotate-ccw'
-  Categoría:"Error"
+prettier: true
+ignore:
+  - status
+items:
+  errorColor:
+    - primary
+    - secondary
+    - success
+    - warning
+    - error
+    - neutral
+  errorVariant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+props:
+  errorColor: 'error'
+  errorVariant: 'soft'
+  errorIcon: 'i-lucide-rotate-ccw'
+  status: 'error'
 ---
 ::
 
 ::framework-only
-#nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.reload`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.reload`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.reload`.
+Puede personalizar este icono globalmente en su `vite.config.ts` en la tecla `ui.icons.reload`.
 :::
 ::
 
-@@ph152@Ejemplos
+##  Ejemplos
 
 ::tip{to="/docs/components/chat"}
 Consulte la página de descripción general de **Chat** para obtener instrucciones de instalación, configuración del servidor y ejemplos de uso.
 ::
 
-@@pH155
+## API (Versión)
 
-@156@156@156
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-Este componente también soporta todos los atributos HTML nativos `<button>`.
+Este componente también admite todos los atributos HTML nativos de `<button>`.
 ::
 
-@158@158@158
+### Slots (Edición española)
 
-Componentes de slots
+:component-slots
 
-@159 @@ Emisiones
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@160 @@ Proyecto
+## Theme (en inglés)
 
-Componente Tema
+:component-theme
 
-@161@Changelog (Edición española)
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

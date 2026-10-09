@@ -8,11 +8,11 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageHeader.vue
 ---
 
-## 使用情况
+## 用法
 
 PageHeader组件显示页面的页眉。
 
-请在[Page](/docs/components/page)组件的默认插槽中使用它，然后在[PageBody](/docs/components/page-body)组件之前使用它：
+在[PageBody](/docs/components/page-body)组件之前的[Page](/docs/components/page)组件的默认插槽中使用它：
 
 ```vue {3}
 <template>
@@ -26,94 +26,94 @@ PageHeader组件显示页面的页眉。
 
 ### 标题
 
-使用`title`道具在页眉中显示标题。
+使用`title`属性在标题中显示标题。
 
 ::component-code
 ---
-隐藏：
-  班级
-道具：
-  标题：'页面标题'
-  类别：'w-完整'
+hide:
+  - class
+props:
+  title: 'PageHeader'
+  class: 'w-full'
 ---
 ::
 
-说明：
+### 说明
 
-使用`description`属性在标题中显示说明。
+使用`description` prop在标题中显示描述。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标题：
-隐藏：
-  班级
-道具：
-  标题：'页面标题'
-  description：'带有标题、描述和操作的响应页面标题。'
-  类别：'w-完整'
+prettier: true
+ignore:
+  - title
+hide:
+  - class
+props:
+  title: 'PageHeader'
+  description: 'A responsive page header with title, description and actions.'
+  class: 'w-full'
 ---
 ::
 
-标题：
+### 标题
 
-使用`headline`道具在页眉中显示标题。
+使用`headline`属性在标题中显示标题。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标题：
-  描述：
-隐藏：
-  班级
-道具：
-  标题：'页面标题'
-  description：'带有标题、描述和操作的响应页面标题。'
-  标题：“组件”
-  类别：'w-完整'
+prettier: true
+ignore:
+  - title
+  - description
+hide:
+  - class
+props:
+  title: 'PageHeader'
+  description: 'A responsive page header with title, description and actions.'
+  headline: 'Components'
+  class: 'w-full'
 ---
 ::
 
-链接
+### Links
 
-使用`links`属性可在标题中显示[按钮](/docs/components/button的列表。
+使用`links`属性在标题中显示[Button](/docs/components/button)的列表。
 
 ::component-code
 ---
-更漂亮：真的
-外部：
-  链接
-外部类型：
-  - 按钮属性[]
-忽略：
-  标题
-  描述：
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
   - headline
   - links
-隐藏：
-  班级
-道具：
-  标题：'页面标题'
-  description：'带有标题、描述和操作的响应页面标题。'
-  标题：“组件”
-  链接：
-    - label：'GitHub'
-      图标：i-simple-图标-github
-      到：'https：//github.com/nuxt/ui/tree/v4/src/runtime/components/PageHeader.vue'
-      目的：'_blank'
-  类别：'w-完整'
+hide:
+  - class
+props:
+  title: 'PageHeader'
+  description: 'A responsive page header with title, description and actions.'
+  headline: 'Components'
+  links:
+    - label: 'GitHub'
+      icon: i-simple-icons-github
+      to: 'https://github.com/nuxt/ui/tree/v4/src/runtime/components/PageHeader.vue'
+      target: '_blank'
+  class: 'w-full'
 ---
 ::
 
-示例
+## 示例
 
 ::note
 虽然这些示例使用[Nuxt Content](https://content.nuxt.com)，但这些组件可以与任何内容管理系统集成。
 ::
 
-### 页内
+### 页面内
 
 使用页面中的PageHeader组件可显示页面的页眉：
 
@@ -162,16 +162,16 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 
 ### Props
 
-：组件-支柱
+:component-props
 
 ### Slots
 
-：组件插槽
+:component-slots
 
 ## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

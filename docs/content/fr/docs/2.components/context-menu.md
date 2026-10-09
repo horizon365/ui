@@ -13,169 +13,169 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ContextMenu.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Utilisez tout ce que vous voulez dans l'emplacement par défaut du menu contextuel, et cliquez avec le bouton droit dessus pour afficher le menu.
 
 ::component-code
 ---
-Étiquette: true
-Collapse: vrai
-ignorer:
-  @@ph001@articles
-  @@ph002@ui.content
-Extérieure:
-  @@ph003@articles
-Extérieurs:
-  @@@@@ContextMenuItem [][]
-Props:
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[][]
+props:
   items:
-    - -étiquette: Apparence
-        Enfants:
-          - label: Système
-            Icône: i-lucide-moniteur
-          - label: Lumière
-            Étiquette: i-lucide-sun
-          - label: Noir
-            Étiquette: i-lucide-moon
-    - -label: Afficher la barre latérale
+    - - label: Appearance
+        children:
+          - label: System
+            icon: i-lucide-monitor
+          - label: Light
+            icon: i-lucide-sun
+          - label: Dark
+            icon: i-lucide-moon
+    - - label: Show Sidebar
         kbds:
-          @@ph010@méta
-          @@ph011@s
-      - label: Afficher la barre d'outils
+          - meta
+          - s
+      - label: Show Toolbar
         kbds:
-          @@ph013@@shift
-          @@ph014@méta
-          @@ph015@d
-      - label: Effondrement des onglets épinglés
-        handicapés: vrai
-    - -label: Actualiser la page
-      - label: Effacer les cookies et actualiser
-      - label: Effacer le cache et actualiser
-      - type: séparateur
-      - label: Développeur
-        Enfants:
-          - -label: Voir la source
+          - shift
+          - meta
+          - d
+      - label: Collapse Pinned Tabs
+        disabled: true
+    - - label: Refresh the Page
+      - label: Clear Cookies and Refresh
+      - label: Clear Cache and Refresh
+      - type: separator
+      - label: Developer
+        children:
+          - - label: View Source
               kbds:
-                @@ph023@méta
-                @@24@changement
-                @@ph025@fr
-            - label: Outils de développement
+                - meta
+                - shift
+                - u
+            - label: Developer Tools
               kbds:
-                @@227@option
-                @@ph028@méta
-                @@229@notre
-            - label: Inspecter les éléments
+                - option
+                - meta
+                - i
+            - label: Inspect Elements
               kbds:
-                @@ph031@option
-                @@ph032@méta
-                @@ph033@@c
-          - -label: Console JavaScript
+                - option
+                - meta
+                - c
+          - - label: JavaScript Console
               kbds:
-                @@pH035@option
-                @@ph036@méta
-                @@pH037@@j
-Slots:
-  Default:|
+                - option
+                - meta
+                - j
+slots:
+  default: |
 
-    @@@ 038 @
-      Clic droit ici
-    @@@ 039 @
+    <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
+      Right click here
+    </div>
 ---
 
-: div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[clic droit ici]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
-@@ph041@@articles
+### Éléments
 
-Utilisez le `items` prop comme un tableau d'objets avec les propriétés suivantes:
+Utilisez le prop `items` comme un tableau d'objets avec les propriétés suivantes:
 
-@@
-@@
-@@
-@@
-@@
-[`color?: "error" | "primary" | "secondary" | "success" | "info" | "warning" | "neutral"`{lang="ts-type"}](PH0667
-[`checked?: boolean`{lang="ts-type"}](#with-checkbox-items)
-@@
-[`slot?: string`{lang="ts-type"}](#with-custom-slot)
-@@
-[`onUpdateChecked?: (checked: boolean) => void`{lang="ts-type"}](#with-checkbox-items)
-@@
-@@
-@@
+- x`label?: string`xx{lang="ts-type"}
+- x`icon?: string`x{lang="ts-type"}
+- x`avatar?: AvatarProps`x{lang="ts-type"}
+- xx`kbds?: string[] | KbdProps[]`xx{lang="ts-type"}
+Xph079xx[x`type?: "link" | "label" | "separator" | "checkbox"`x{lang="ts-type"}x](x#with-checkbox-itemsx)
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- x`disabled?: boolean`x{lang="ts-type"}
+- x[x`slot?: string`x{lang="ts-type"}x](x#with-custom-slotx)
+- x`onSelect?: (e: Event) => void`{lang="ts-type"}
+Xph113xx[x`onUpdateChecked?: (checked: boolean) => void`x{lang="ts-type"}x](x#with-checkbox-itemsx)
+- `children?: ContextMenuItem[] | ContextMenuItem[][]`{lang="ts-type"}
+- x`class?: any`x{lang="ts-type"}
+- x`ui?: { item?: ClassNameValue, label?: ClassNameValue, separator?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLabel?: ClassNameValue, itemLabelExternalIcon?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingIcon?: ClassNameValue, itemTrailingKbds?: ClassNameValue, itemTrailingKbdsSize?: ClassNameValue }`x{lang="ts-type"}
 
-Vous pouvez transmettre n'importe quelle propriété du composant [Link](/docs/components/link#props) comme `to`,`target`, etc.
+Vous pouvez passer n'importe quelle propriété du composant [Link](xph133) telle que `to`, `target`, etc.
 
 ::component-code
 ---
-Étiquette: true
-Collapse: vrai
-ignorer:
-  @@ph111@articles
+prettier: true
+collapse: true
+ignore:
+  - items
   - ui.content
-Extérieure:
-  @@ph113@articles
-Extérieurs:
-  @@114@@ContextMenuItem [][]
-Props:
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[][]
+props:
   items:
-    - -étiquette: Apparence
-        Enfants:
-          - label: Système
-            Icône: i-lucide-moniteur
-          - label: Lumière
-            Étiquette: i-lucide-sun
-          - label: Noir
-            Étiquette: i-lucide-moon
-    - -label: Afficher la barre latérale
+    - - label: Appearance
+        children:
+          - label: System
+            icon: i-lucide-monitor
+          - label: Light
+            icon: i-lucide-sun
+          - label: Dark
+            icon: i-lucide-moon
+    - - label: Show Sidebar
         kbds:
-          @@ph120@méta
-          @@ph121
-      - label: Afficher la barre d'outils
+          - meta
+          - s
+      - label: Show Toolbar
         kbds:
-          @@ph123@@shift
-          @@ph124@méta
-          @@ph125 @
-      - label: Collapse des onglets épinglés
-        handicapés: vrai
-    - -label: actualiser la page
-      - label: Effacer les cookies et actualiser
-      - label: Effacer le cache et actualiser
-      - type: séparateur
-      - label: Développeur
-        Enfants:
-          - -label: Voir la source
+          - shift
+          - meta
+          - d
+      - label: Collapse Pinned Tabs
+        disabled: true
+    - - label: Refresh the Page
+      - label: Clear Cookies and Refresh
+      - label: Clear Cache and Refresh
+      - type: separator
+      - label: Developer
+        children:
+          - - label: View Source
               kbds:
-                @@ph133@méta
-                @@ph134@@shift
-                @@ph135@fr
-            - label: Outils de développement
-              kbds:
-                - option
-                @@ph138@méta
-                @@ph139 @
-            - label: Inspecter les éléments
+                - meta
+                - shift
+                - u
+            - label: Developer Tools
               kbds:
                 - option
-                @@ph142@méta
-                @@ph143@c
-          - -label: Console JavaScript
+                - meta
+                - i
+            - label: Inspect Elements
               kbds:
                 - option
-                @@ph146@méta
-                @@ph147 @
-  UI:
-    Contenu: 'W-48'
-Slots:
-  Default:|
+                - meta
+                - c
+          - - label: JavaScript Console
+              kbds:
+                - option
+                - meta
+                - j
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@@ 148 @
-      Clic droit ici
-    @@@ 149 @
+    <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
+      Right click here
+    </div>
 ---
 
-: div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[clic droit ici]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
 ::note
@@ -183,7 +183,7 @@ Vous pouvez également passer un tableau de tableaux à la prop `items` pour cr�
 ::
 
 ::tip
-Chaque élément peut prendre un tableau `children` d'objets avec les mêmes propriétés que le prop `items` pour créer un menu imbriqué qui peut être contrôlé à l'aide des propriétés `open`,`defaultOpen` et `content`.
+Chaque élément peut prendre un tableau d'objets `children` avec les mêmes propriétés que le prop `items` pour créer un menu imbriqué qui peut être contrôlé à l'aide des propriétés `open`, `defaultOpen` et `content`.
 ::
 
 ### Size
@@ -192,165 +192,165 @@ Utilisez la prop `size` pour modifier la taille du menu contextuel.
 
 ::component-code
 ---
-Étiquette: true
-Collapse: vrai
-Ignorer:
-  @@ph159@articles
+prettier: true
+collapse: true
+ignore:
+  - items
   - ui.content
-Extérieure:
-  @@ph161@articles
-Extérieurs:
-  - ContextMenuItem []
-Props:
-  Taille: XL
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[]
+props:
+  size: xl
   items:
-    - label: Système
-      Icône: i-lucide-moniteur
-    - label: Lumière
-      Étiquette: i-lucide-sun
-    - label: Noir
-      Étiquette: i-lucide-moon
-  UI:
-    Contenu: 'W-48'
-Slots:
-  Défaut:|
+    - label: System
+      icon: i-lucide-monitor
+    - label: Light
+      icon: i-lucide-sun
+    - label: Dark
+      icon: i-lucide-moon
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@@ 166 @
-      Clic droit ici
-    @@@ 167 @
+    <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
+      Right click here
+    </div>
 ---
 
-: div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[clic droit ici]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
-### Modal
+### Modale
 
 Utilisez la prop `modal` pour contrôler si le ContextMenu bloque l'interaction avec le contenu extérieur.
 
 ::component-code
 ---
-Étiquette: true
-Collapse: vrai
-ignorer:
-  @@ph172@articles
+prettier: true
+collapse: true
+ignore:
+  - items
   - ui.content
-Extérieur:
-  @@ph174@articles
-Extérieurs:
-  - ContextMenuItem []
-Props:
-  Modalité: Faux
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[]
+props:
+  modal: false
   items:
-    - label: Système
-      Icône: i-lucide-moniteur
-    - label: Lumière
-      Étiquette: i-lucide-sun
-    - label: Noir
-      Étiquette: i-lucide-moon
-  UI:
-    Contenu: 'W-48'
-Slots:
-  Défaut:|
+    - label: System
+      icon: i-lucide-monitor
+    - label: Light
+      icon: i-lucide-sun
+    - label: Dark
+      icon: i-lucide-moon
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@@ 179 @
-      Clic droit ici
-    @@@ 180 @
+    <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
+      Right click here
+    </div>
 ---
 
-: div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[clic droit ici]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
 
-### désactivé
+### Désactivé
 
-Utilisez la prop `disabled` pour désactiver le menu contextuel.
+Utilisez la prop `disabled` pour désactiver le Menu contextuel.
 
 ::component-code
 ---
-Étiquette: true
-Collapse: vrai
-ignorer:
-  @@ph184@articles
+prettier: true
+collapse: true
+ignore:
+  - items
   - ui.content
-Extérieur:
-  @@ph186@articles
-Extérieurs:
-  - ContextMenuItem []
-Props:
-  handicapés: vrai
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[]
+props:
+  disabled: true
   items:
-    - label: Système
-      Icône: i-lucide-moniteur
-    - label: Lumière
-      Étiquette: i-lucide-sun
-    - label: Noir
-      Étiquette: i-lucide-moon
-  UI:
-    Contenu: 'W-48'
-Slots:
-  Défaut:|
+    - label: System
+      icon: i-lucide-monitor
+    - label: Light
+      icon: i-lucide-sun
+    - label: Dark
+      icon: i-lucide-moon
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@@ 191 @
-      Clic droit ici
-    @@@ 2019 @
+    <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
+      Right click here
+    </div>
 ---
 
-: div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[clic droit ici]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
-@@ph194@Exemples
+## exemples
 
-### Avec checkbox items
+### With checkbox éléments
 
 Vous pouvez utiliser la propriété `type` avec `checkbox` et utiliser les propriétés `checked`/`onUpdateChecked` pour contrôler l'état vérifié de l'élément.
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'context-menu-checkbox-items-example'
+collapse: true
+name: 'context-menu-checkbox-items-example'
 ---
 ::
 
 ::note
-Pour assurer la réactivité de l'état `checked` des éléments, il est recommandé d'envelopper votre `items` array dans un `computed`.
+Pour assurer la réactivité de l'état des éléments `checked`, il est recommandé d'envelopper votre baie `items` dans un `computed`.
 ::
 
-### Avec des éléments de couleur
+### Avec éléments de couleur
 
-Vous pouvez utiliser la propriété `color` pour mettre en surbrillance certains éléments avec une couleur.
+Vous pouvez utiliser la propriété `color` pour mettre en évidence certains éléments avec une couleur.
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'context-menu-color-items-exemple'
+collapse: true
+name: 'context-menu-color-items-example'
 ---
 ::
 
-### Avec slot custom
+### With slot personnalisé
 
 Utilisez la propriété `slot` pour personnaliser un élément spécifique.
 
 Vous aurez accès aux slots suivants:
 
-@@
-@@
-@@
-@@
+- x`#{{ item.slot }}`{lang="ts-type"}
+- x`#{{ item.slot }}-leading`x{lang="ts-type"}
+- x`#{{ item.slot }}-label`x{lang="ts-type"}
+- x`#{{ item.slot }}-trailing`x{lang="ts-type"}
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'context-menu-custom-slot-example'
+collapse: true
+name: 'context-menu-custom-slot-example'
 ---
 ::
 
 ::tip{to="#slots"}
-Vous pouvez également utiliser les emplacements `#item`,`#item-leading`,`#item-label` et `#item-trailing` pour personnaliser tous les éléments.
+Vous pouvez également utiliser les emplacements `#item`, `#item-leading`, `#item-label` et `#item-trailing` pour personnaliser tous les éléments.
 ::
 
-### Extrait des raccourcis
+### Extract Raccourcis
 
-Utilisez l'utilitaire [extractShortcuts](/docs/composables/extract-shortcuts) pour définir automatiquement des raccourcis à partir d'éléments de menu avec une propriété `kbds`. Il extrait récursivement des raccourcis et renvoie un objet compatible avec [defineShortcuts]().
+Utilisez l'utilitaire [extractShortcuts](/docs/composables/extract-shortcuts) pour définir automatiquement des raccourcis à partir d'éléments de menu avec une propriété `kbds`. Il extrait récursivement les raccourcis et renvoie un objet compatible avec [defineShortcuts](xph347).
 
 ```vue
 <script setup lang="ts">
@@ -413,27 +413,27 @@ defineShortcuts(extractShortcuts(items))
 ```
 
 ::note
-Dans cet exemple,: kbd{value="meta"}: kbd{value="S" class="ms-px"},: kbd{value="shift"}: kbd{value="meta" class="ms-px"}: kbd{value="D" class="ms-px"},:{value="option"}:{value="meta" class="ms-px"}:{value="U" class="ms-px"}:{value="option"}:{value="meta" class="ms-px"}::{value="meta" class="ms-px"}:: kbd{value="I" class="ms-px"},: kbd{value="option"}: kbd{value="meta" class="ms-px"}: kbd{value="C" class="ms-px"} et: kbd{value="option"}: kbd{value="meta" class="ms-px"}: kbd{value="J" class="ms-px"} déclencherait la fonction `select` de l'élément correspondant.
+Dans cet exemple,: kbd{value="meta"}: kbd{value="S" class="ms-px"},: kbd{value="shift"}: kbd{value="meta" class="ms-px"}: kbd{value="D" class="ms-px"},: kbd{value="option"}: kbd{value="meta" class="ms-px"}: kbd{value="U" class="ms-px"},: kbd{value="option"}: kbd{value="meta" class="ms-px"}: kbd{value="I" class="ms-px"},: kbd{value="option"}: kbd{value="meta" class="ms-px"}: kbd{value="C" class="ms-px"} et: kbd{value="option"}: kbd{value="meta" class="ms-px"}: kbd{value="J" class="ms-px"} déclencherait la fonction `select` de l'élément correspondant.
 ::
 
-@@ph310@api
+## API
 
-@@ph311@@props
+### Props équipements
 
-Composants-props
+:component-props
 
 ### Slots
 
-Composants slots
+:component-slots
 
-### émissions
+### Emis
 
-Composants émetteurs
+:component-emits
 
-@@ph314@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement.com
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

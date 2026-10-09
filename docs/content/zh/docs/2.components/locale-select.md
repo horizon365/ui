@@ -11,19 +11,19 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/locale/LocaleSelect.vue
 ---
 
-## 使用情况
+## 用法
 
 LocaleSelect组件扩展了[SelectMenu](/docs/components/select-menu)组件，因此您可以传递任何属性，如`color`、`variant`、`size`等。
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 ::note{to="/docs/getting-started/integrations/i18n/nuxt"}
-此组件适用于**i18n**系统。请在指南中了解有关此组件的详细信息。
+此组件适用于**i 18 n**系统。在指南中了解更多信息。
 ::
 
-版本号
+#vue
 ::note{to="/docs/getting-started/integrations/i18n/vue"}
-此组件适用于**i18n**系统。请在指南中了解有关此组件的详细信息。
+此组件适用于**i 18 n**系统。在指南中了解更多信息。
 ::
 
 ::
@@ -32,13 +32,13 @@ LocaleSelect组件扩展了[SelectMenu](/docs/components/select-menu)组件，�
 标志使用Unicode字符显示。这可能导致不同的显示，例如Windows下的微软Edge显示ISO 3166-1 alpha-2代码，因为OS字体没有附带标志图标。
 ::
 
-### Locales
+### 区域设置
 
-将`locales`道具与来自`@nuxt/ui/locale`的区域设置数组一起使用。
+使用`locales` prop和来自`@nuxt/ui/locale`的区域设置数组。
 
 ::component-example
 ---
-name：'locale-select-example'
+name: 'locale-select-example'
 ---
 ::
 
@@ -56,10 +56,10 @@ const locale = ref('en')
 </template>
 ```
 
-### Dynamic locale
+### 动态语言环境
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 ::div
 您可以使用它与Nuxt i18 n：
 
@@ -81,7 +81,7 @@ const { locale, setLocale } = useI18n()
 
 ::
 
-版本号
+#vue
 ::div
 你可以在Vue i18 n中使用它：
 
@@ -106,12 +106,12 @@ const { locale, setLocale } = useI18n()
 
 ::
 
-美国石油学会
+## API
 
 ### Props
 
-：组件支柱
+:component-props
 
 ## Changelog
 
-：component-changelog{prefix="locale"}
+:component-changelog{prefix="locale"}

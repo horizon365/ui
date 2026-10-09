@@ -9,9 +9,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Collapsible.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-Envuelva su contenido con el componente `collapsible` para mostrar un [Collapsible](/docs/components/collapsible) en su contenido.
+Envuelva el contenido con el componente `collapsible` para mostrar un [Collapsible](/docs/components/collapsible) en el contenido.
 
 ::code-preview{class="[&>div]:*:w-full [&>div]:*:my-0"}
 
@@ -19,13 +19,13 @@ Envuelva su contenido con el componente `collapsible` para mostrar un [Collapsib
 
 | El Prop    | por defecto   | Tipo                     |
 |---------|-----------|--------------------------|
-| @@ 006 @|           |@@|
-| @@ 009 @|@@@ 010      | @@|
-| @@@ 013| @@@ 14 @|@@|
+| xf006x|           | `string`xxxph000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000|
+| xf009x| xf010x      | `string`x{lang="ts-type"} (Edición española)|
+| xf013x| `neutral` (Edición española)| `string`xx{lang="ts-type"} (Edición española)|
 
 ::
 
-#Código
+#code
 
 ```mdc
 ::collapsible
@@ -41,20 +41,20 @@ Envuelva su contenido con el componente `collapsible` para mostrar un [Collapsib
 
 ::
 
-@@28000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## API (Edición española)
 
-@@29@29000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props (Edición española)
 
-Artículo siguienteComponentes {prose}
+:component-props{prose}
 
-@@301@3000 puntos
+### Slots
 
-Componentes: @ph032 @
+:component-slots{prose}
 
-@@333@@Proyecto
+## Temas
 
-: Componente {prose}
+:component-theme{prose}
 
-@@changelog
+## Changelog (Edición española)
 
-por: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

@@ -15,10 +15,10 @@ links:
 
 ::code-preview
 ::field{name="name" type="string" required class="w-full"}
-`description`はプロップとして設定することも、** markdown **を完全にサポートするデフォルトスロットに設定することもできます。
+`description`はプロパティとして設定するか、**markdown**をフルサポートするデフォルトスロットに設定できます。
 ::
 
-#コード
+#code
 
 ```mdc
 ::field{name="name" type="string" required}
@@ -28,20 +28,20 @@ The `description` can be set as prop or in the default slot with full **markdown
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props {prose}
+:component-props{prose}
 
 ### スロット
 
-component—slots {prose}
+:component-slots{prose}
 
-## テーマ
+## Theme
 
-component—theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

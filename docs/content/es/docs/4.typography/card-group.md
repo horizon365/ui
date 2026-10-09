@@ -9,9 +9,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CardGroup.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-Envuelva los componentes`card`con el componente`card-group`para agruparlos en un diseño de cuadrícula .
+Envuelva los componentes `card` con el componente `card-group` para agruparlos en un diseño de cuadrícula.
 
 ::code-preview
 
@@ -19,47 +19,47 @@ Envuelva los componentes`card`con el componente`card-group`para agruparlos en un
 
 ::card
 ---
-Categoría : Dashboard
-icon : i-simple - icons-github
-Dos :https://github.com/nuxt-ui-templates/dashboard
-Nombre : _ blank
+title: Dashboard
+icon: i-simple-icons-github
+to: https://github.com/nuxt-ui-templates/dashboard
+target: _blank
 ---
-Dashboard con diseño multicolumna .
+Dashboard con diseño multicolumna.
 ::
 
 ::card
 ---
-Categoría : SaaS
-icon : i-simple - icons-github
-Dos :https://github.com/nuxt-ui-templates/saas
-Nombre : _ blank
+title: SaaS
+icon: i-simple-icons-github
+to: https://github.com/nuxt-ui-templates/saas
+target: _blank
 ---
-Una plantilla con aterrizaje , precios , documentos y blog .
+Una plantilla con aterrizaje, precios, documentos y blog.
 ::
 
 ::card
 ---
-Categoría : Docs
-icon : i-simple - icons-github
-Dos :https://github.com/nuxt-ui-templates/docs
-Nombre : _ blank
+title: Docs
+icon: i-simple-icons-github
+to: https://github.com/nuxt-ui-templates/docs
+target: _blank
 ---
-Una documentación con`@nuxt/content`.
+Una documentación con `@nuxt/content`.
 ::
 
 ::card
 ---
-Título : Desembarco
-icon : i-simple - icons-github
-Dos :https://github.com/nuxt-ui-templates/landing
-Nombre : _ blank
+title: Landing
+icon: i-simple-icons-github
+to: https://github.com/nuxt-ui-templates/landing
+target: _blank
 ---
-Una landing page que puedes utilizar como punto de partida .
+Una landing page que puedes utilizar como punto de partida.
 ::
 
 :::
 
-# El Código
+#code
 
 ```mdc
 ::card-group
@@ -109,20 +109,20 @@ A landing page you can use as starting point.
 
 ::
 
-@499000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## API (Edición española)
 
-@500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Accesorios
 
-by: component-props {prose}
+:component-props{prose}
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots (Edición española)
 
-by: component-slots {prose}
+:component-slots{prose}
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Temas
 
-: component-theme {prose}
+:component-theme{prose}
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Changelog (Edición española)
 
-por: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

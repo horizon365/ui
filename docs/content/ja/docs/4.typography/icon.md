@@ -11,12 +11,12 @@ links:
 
 ## 使用法
 
-`icon`コンポーネントを使用して、コンテンツ内に[ Icon ](/docs/components/icon)を表示します。
+`icon`コンポーネントを使用して、[Icon](/docs/components/icon)をコンテンツに表示します。
 
 ::code-preview
-icon {name="i-simple-icons-nuxtdotjs"}
+:icon{name="i-simple-icons-nuxtdotjs"}
 
-#コード
+#code
 
 ```mdc
 :icon{name="i-simple-icons-nuxtdotjs"}
@@ -24,16 +24,16 @@ icon {name="i-simple-icons-nuxtdotjs"}
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props {prose}
+:component-props{prose}
 
-## テーマ
+## Theme
 
-component—theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

@@ -13,200 +13,200 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Switch.vue
 ---
 
-##  사용
+## Usage
 
-`v-model` 디렉티브를 사용하여 스위치의 확인 상태를 제어합니다.
+`v-model` 지시어를 사용하여 스위치의 확인된 상태를 제어합니다.
 
 ::component-code
 ---
-무시하기:
-  - modelValue - modelValue 이미지
-외부:
-  - modelValue - modelValue 이미지
-소품 :
-  modelValue: true 모델
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: true
 ---
 ::
 
-상태를 제어할 필요가 없을 때는 `default-value`prop을 사용하여 초기값을 설정합니다.
+상태를 제어할 필요가 없을 때 `default-value` prop을 사용하여 초기 값을 설정합니다.
 
 ::component-code
 ---
-무시하기:
-  - defaultValue - defaultValue
-소품 :
-  defaultValue : true : true
+ignore:
+  - defaultValue
+props:
+  defaultValue: true
 ---
 ::
 
-###  레이블
+### Label 태그
 
-`label`prop 을 사용하여 스위치의 레이블을 설정합니다.
+`label` prop을 사용하여 Switch의 레이블을 설정합니다.
 
 ::component-code
 ---
-소품 :
-  레이블 : Check Me
+props:
+  label: Check me
 ---
 ::
 
-`required`prop을 사용할 때 레이블 옆에 별표가 추가됩니다.
+`required` 소품을 사용할 때 레이블 옆에 별표가 추가됩니다.
 
 ::component-code
 ---
-무시하기:
-  -  label
-소품 :
+ignore:
+  - label
+props:
   required: true
-  레이블 : Check Me
+  label: Check me
 ---
 ::
 
-###  설명
+### Description
 
-`description`prop을 사용하여 스위치에 대한 설명을 설정합니다.
+`description` prop 를 사용하여 Switch 에 대한 설명을 설정합니다.
 
 ::component-code
 ---
-무시하기:
-  -  label
-소품 :
-  레이블 : Check Me
-  사진: "This is a checkbox."
+ignore:
+  - label
+props:
+  label: Check me
+  description: 'This is a checkbox.'
 ---
 ::
 
-###  아이콘
+### Icon
 
-`checked-icon` 및 `unchecked-icon`props를 사용하여 선택 및 선택 취소 시 스위치 아이콘을 설정합니다.
+`checked-icon` 및 `unchecked-icon` props를 사용하여 스위치 아이콘을 선택하거나 선택하지 않을 때 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  label
-  -  defaultValue
-소품 :
+prettier: true
+ignore:
+  - label
+  - defaultValue
+props:
   uncheckedIcon: 'i-lucide-x'
-  checkedIcon : 'i-lucide-check'
-  defaultValue : true : true
-  레이블 : Check Me
+  checkedIcon: 'i-lucide-check'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-### 로드 중
+### Loading 중
 
-`loading`prop 을 사용하여 스위치에 로드 아이콘을 표시합니다.
+`loading` prop를 사용하여 스위치에 로드 아이콘을 표시합니다.
 
 ::component-code
 ---
-무시하기:
-  -  label
-  - defaultValue - defaultValue
-소품 :
-  로드: true
-  defaultValue : true : true
-  레이블 : Check Me
+ignore:
+  - label
+  - defaultValue
+props:
+  loading: true
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-### Loading Icon 이미지
+### loading 아이콘
 
-`loading-icon`prop을 사용하여 로드 아이콘을 사용자 정의합니다. 기본값은 `i-lucide-loader-circle`입니다.
+`loading-icon` 소품을 사용하여 로드 아이콘을 사용자 정의합니다. 기본값은 `i-lucide-loader-circle`입니다.
 
 ::component-code
 ---
-무시하기:
-  -  label
-  - defaultValue - defaultValue
-소품 :
-  로드: true
+ignore:
+  - label
+  - defaultValue
+props:
+  loading: true
   loadingIcon: 'i-lucide-loader'
-  defaultValue : true : true
-  레이블 : Check Me
+  defaultValue: true
+  label: Check me
 ---
 ::
 
 ::framework-only
-#nuxt 코드
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.loading` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.loading` 키 아래의 `app.config.ts` 내에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.loading` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.loading` 키 아래의 `vite.config.ts` 내에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-###  색상
+### Color 이미지
 
-`color`prop을 사용하여 스위치의 색상을 변경합니다.
-
-::component-code
----
-무시하기:
-  -  label
-  - defaultValue - defaultValue
-소품 :
-  색상: 중립
-  defaultValue : true : true
-  레이블 : Check Me
----
-::
-
-###  크기
-
-`size`prop을 사용하여 스위치 크기를 변경합니다.
+`color` Prop을 사용하여 스위치의 색상을 변경합니다.
 
 ::component-code
 ---
-무시하기:
-  -  label
-  - defaultValue - defaultValue
-소품 :
-  크기: xl
-  defaultValue : true : true
-  레이블 : Check Me
+ignore:
+  - label
+  - defaultValue
+props:
+  color: neutral
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-###  비활성 화
+### Size
 
-`disabled`prop을 사용하여 스위치를 비활성화합니다.
+`size` prop을 사용하여 스위치의 크기를 변경합니다.
 
 ::component-code
 ---
-무시하기:
-  -  label
-소품 :
-  사용 안 함:true
-  레이블 : Check Me
+ignore:
+  - label
+  - defaultValue
+props:
+  size: xl
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-##  API
+### Disabled 사용 안 함
 
-### Props ### Props
+`disabled` prop을 사용하여 스위치를 비활성화합니다.
 
-:컴포넌트 - 소품
+::component-code
+---
+ignore:
+  - label
+props:
+  disabled: true
+  label: Check me
+---
+::
+
+## API 파일
+
+### Props (### Props)
+
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-이 컴포넌트는 모든 네이티브 `<button>`HTML 속성을 지원합니다.
+이 구성 요소는 모든 기본 `<button>` HTML 속성을 지원합니다.
 ::
 
-###  슬롯
+### 슬롯
 
-:구성요소 - 슬롯
+:component-slots
 
-### Emits @ 에미츠
+### Emits
 
-:구성요소 - 방사
+:component-emits
 
-##  테마
+## Theme 테마
 
-:구성요소 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

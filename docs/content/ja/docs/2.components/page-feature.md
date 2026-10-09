@@ -10,120 +10,120 @@ links:
 
 ## 使用法
 
-PageFeatureコンポーネントは、[ PageSection ](/docs/components/page-section)[ features ](/docs/components/page-section#features)を表示するために使用されます。
+PageFeatureコンポーネントは[ PageSection](/docs/components/page-section)コンポーネントで使用され、[features](/docs/components/page-section#features)を表示します。
 
-### タイトル
+### Title
 
-`title`プロパティを使用して、フィーチャーのタイトルを設定します。
+`title`プロパティを使用してフィーチャーのタイトルを設定します。
 
 ::component-code
 ---
-隠す
-  - クラス
-小道具
-  タイトル：「テーマ」
-  クラス'w—96'
+hide:
+  - class
+props:
+  title: 'Theme'
+  class: 'w-96'
 ---
 ::
 
-### 説明
+### Description
 
 `description`プロパティを使用して、フィーチャーの説明を設定します。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-小道具
-  タイトル：「テーマ」
-  説明'独自の色、フォントなどでNuxt UIをカスタマイズします。'
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+props:
+  title: 'Theme'
+  description: 'Customize Nuxt UI with your own colors, fonts, and more.'
+  class: 'w-96'
 ---
 ::
 
-### アイコン
+### Icon
 
-`icon`プロパティを使用して、フィーチャーのアイコンを設定します。
+`icon`プロパティを使用してフィーチャーのアイコンを設定します。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-小道具
-  タイトル：「テーマ」
-  説明'独自の色、フォントなどでNuxt UIをカスタマイズします。'
-  アイコン'i—lucide—swatch—book'
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Theme'
+  description: 'Customize Nuxt UI with your own colors, fonts, and more.'
+  icon: 'i-lucide-swatch-book'
+  class: 'w-96'
 ---
 ::
 
-### リンク
+### Link
 
 [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)コンポーネントから、`to`、`target`、`rel`などのプロパティを渡すことができます。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-  - アイコン
-  - ターゲット
-小道具
-  タイトル：「テーマ」
-  説明'独自の色、フォントなどでNuxt UIをカスタマイズします。'
-  アイコン'i—lucide—swatch—book'
-  to '/docs/getting—started/theme/design—system'
-  ターゲット_blank
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - target
+props:
+  title: 'Theme'
+  description: 'Customize Nuxt UI with your own colors, fonts, and more.'
+  icon: 'i-lucide-swatch-book'
+  to: '/docs/getting-started/theme/design-system'
+  target: _blank
+  class: 'w-96'
 ---
 ::
 
-### オリエンテーション
+### Orientation
 
-`orientation`プロパティを使用して、フィーチャーの向きを変更します。デフォルトは`horizontal`です。
+フィーチャーの向きを変更するには、`orientation`プロパティを使用します。デフォルトは`horizontal`です。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-無視
-  -  title
-  - 説明
-  - アイコン
-小道具
-  オリエンテーション'垂直'
-  タイトル：「テーマ」
-  説明'独自の色、フォントなどでNuxt UIをカスタマイズします。'
-  アイコン'i—lucide—swatch—book'
-  クラス'w—96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+props:
+  orientation: 'vertical'
+  title: 'Theme'
+  description: 'Customize Nuxt UI with your own colors, fonts, and more.'
+  icon: 'i-lucide-swatch-book'
+  class: 'w-96'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

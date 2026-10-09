@@ -15,29 +15,29 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputNumber.vue
 ---
 
-## 使用情况
+## 用法
 
 使用`v-model`指令控制InputNumber的值。
 
 ::component-code
 ---
-忽略：
-  - 模型值
-外部的：
+ignore:
   - modelValue
-道具：
-  modelValue：5
+external:
+  - modelValue
+props:
+  modelValue: 5
 ---
 ::
 
-当您不需要控制其状态时，请使用`default-value`属性来设定初始值。
+当不需要控制其状态时，使用`default-value`属性设置初始值。
 
 ::component-code
 ---
-忽略：
-  - 默认值
-道具：
-  默认值：5
+ignore:
+  - defaultValue
+props:
+  defaultValue: 5
 ---
 ::
 
@@ -45,230 +45,230 @@ links:
 此组件依赖于[`@internationalized/number`](https://react-spectrum.adobe.com/internationalized/number/index.html)包，该包提供跨区域设置和编号系统格式化和解析数字的实用程序。
 ::
 
-### Min / Max
+### 最小/最大
 
 使用`min`和`max`属性设置InputNumber的最小值和最大值。
 
 ::component-code
 ---
-忽略：
+ignore:
   - modelValue
-外部：
+external:
   - modelValue
-道具：
-  modelValue：5
-  最小值：0
-  最大值：10
+props:
+  modelValue: 5
+  min: 0
+  max: 10
 ---
 ::
 
 ### Step
 
-使用`step`prop设置InputNumber的步长值。
+使用`step`属性设置InputNumber的步长值。
 
 ::component-code
 ---
-忽略：
+ignore:
   - modelValue
-外部的：
+external:
   - modelValue
-道具：
-  modelValue：5
-  步骤：2
+props:
+  modelValue: 5
+  step: 2
 ---
 ::
 
-定位
+### 定向
 
-使用`orientation`道具更改InputNumber的方向。
+使用`orientation`属性更改InputNumber的方向。
 
 ::component-code
 ---
-忽略：
+ignore:
   - modelValue
-外部的：
+external:
   - modelValue
-道具：
-  型号值：5
-  方向：垂直
+props:
+  modelValue: 5
+  orientation: vertical
 ---
 ::
 
-### 预留位置
+### 占位符
 
-使用`placeholder`道具来设定预留位置文字。
+使用`placeholder` prop设置占位符文本。
 
 ::component-code
 ---
-道具：
-  占位符：'输入一个数字'
+props:
+  placeholder: 'Enter a number'
 ---
 ::
 
-颜色
+### Color
 
-使用`color`道具可在InputNumber成为焦点时更改圆环颜色。
+使用`color`属性在InputNumber聚焦时更改环颜色。
 
 ::component-code
 ---
-忽略：
-- 模型值
-外部：
-  模型值
-道具：
-  型号值：5
-  颜色：中性
-  高亮显示：真
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  color: neutral
+  highlight: true
 ---
 ::
 
-### 变体
+### Variant
 
-使用`variant`属性更改InputNumber的变量。
+使用`variant` prop更改InputNumber的变量。
 
 ::component-code
 ---
-忽略：
-  - 模型值
-外部：
-  - 模型值
-道具：
-  型号值：5
-  变体：细微
-  颜色：中性
-  突出显示：假
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  variant: subtle
+  color: neutral
+  highlight: false
 ---
 ::
 
-尺寸
+### Size
 
 使用`size`属性更改InputNumber的大小。
 
 ::component-code
 ---
-忽略：
-- 模型值
-外部：
-- 模型值
-道具：
-  型号值：5
-  尺寸：xl
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  size: xl
 ---
 ::
 
-### 已停用
+### 已禁用
 
-使用`disabled`道具禁用输入编号。
+使用`disabled`属性禁用InputNumber。
 
 ::component-code
 ---
-忽略：
-- 模型值
-外部：
-- 模型值
-道具：
-  型号值：5
-  已禁用：true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  disabled: true
 ---
 ::
 
-递增/递减
+### 增量/减量
 
-使用`increment`和`decrement`属性，以任何[按钮](/docs/components/button)属性自订递增和递减按钮。预设值为`{ variant: 'link' }`{lang="ts-type"}。
+使用`increment`和`decrement` props自定义递增和递减按钮，并使用[Button](/docs/components/button) props. `{ variant: 'link' }`{lang="ts-type"}。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 模型值
-- 增量大小
-- 增量.颜色
-- 增量变量
-  减小尺寸
-  递减.颜色
-- 递减变量
-外部：
-  模型值
-道具：
-  型号值：5
-  增量：
-    颜色：中性
-    变体：实体
-    尺寸：xs
-  递减量：
-    颜色：中性
-    变体：实体
-    尺寸：xs
+prettier: true
+ignore:
+  - modelValue
+  - increment.size
+  - increment.color
+  - increment.variant
+  - decrement.size
+  - decrement.color
+  - decrement.variant
+external:
+  - modelValue
+props:
+  modelValue: 5
+  increment:
+    color: neutral
+    variant: solid
+    size: xs
+  decrement:
+    color: neutral
+    variant: solid
+    size: xs
 ---
 ::
 
-### 递增/递减图标
+### 增量/减量图标
 
-使用`increment-icon`和`decrement-icon`道具来自定义按钮[图标](。默认为`i-lucide-plus` / `i-lucide-minus`。
+使用`increment-icon`和`decrement-icon`道具自定义按钮[Icon](/docs/components/icon).exe到`i-lucide-plus`/`i-lucide-minus`。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  模型值
-外部：
-  模型值
-道具：
-  型号值：5
-  增量图标：'i-lucide-箭头-右'
-  decrementIcon：'向左箭头'
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: 5
+  incrementIcon: 'i-lucide-arrow-right'
+  decrementIcon: 'i-lucide-arrow-left'
 ---
 ::
 
-示例
+## 示例
 
-### 十进制格式
+### 采用十进制格式
 
-使用`format-options`prop自定义值的格式。
+使用`format-options` prop自定义值的格式。
 
 ::component-example
 ---
-name：'input-number-decimal-example'
+name: 'input-number-decimal-example'
 ---
 ::
 
-### With percentage format
+### 采用百分比格式
 
-将`format-options`prop与`style: 'percent'`一起使用，以自定义值的格式。
+使用`format-options` prop和`style: 'percent'`来自定义值的格式。
 
 ::component-example
 ---
-name：'输入-数字-存储-示例'
+name: 'input-number-percentage-example'
 ---
 ::
 
 ### 带货币格式
 
-将`format-options`prop与`style: 'currency'`一起使用，以自定义值的格式。
+使用`format-options` prop和`style: 'currency'`来自定义值的格式。
 
 ::component-example
 ---
-name：'输入数字货币示例'
+name: 'input-number-currency-example'
 ---
 ::
 
-### No buttons
+### 无按钮
 
 您可以使用`increment`和`decrement`道具来控制按钮的可见性。
 
 ::component-example
 ---
-name：'input-number-without-buttons-example'
+name: 'input-number-without-buttons-example'
 ---
 ::
 
-### FormField内
+### 在表单域中
 
-您可以在[FormField](/docs/components/form-field)组件中使用InputNumber来显示标签、帮助文本、所需指示符等。
+您可以在[FormField](/docs/components/form-field)组件中使用InputNumber来显示标签、帮助文本、必需的指示符等。
 
 ::component-example
 ---
-name：'input-number-form-field-example'
+name: 'input-number-form-field-example'
 ---
 ::
 
@@ -278,7 +278,7 @@ name：'input-number-form-field-example'
 
 ::component-example
 ---
-name：'input-number-slots-example'
+name: 'input-number-slots-example'
 ---
 ::
 
@@ -286,32 +286,32 @@ name：'input-number-slots-example'
 
 ### Props
 
-：组件-支柱
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
-此组件还支持所有本机`<input>`HTML属性。
+此组件还支持所有原生`<input>` HTML属性。
 ::
 
 ### Slots
 
-：组件插槽
+:component-slots
 
 ### Emits
 
-：组件发射
+:component-emits
 
-### Expose
+### 曝光
 
 通过模板引用访问组件时，可以使用以下命令：
 
 | 名称|类型|
 | ---- | ---- |
-| `inputRef`{lang="ts-type"}|`Ref<HTMLInputElement \| null>`{lang="ts-type"}|
+| `inputRef`{lang="ts-type"}| `Ref<HTMLInputElement \| null>`{lang="ts-type"}|
 
 ## Theme
 
-：组件主题
+:component-theme
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

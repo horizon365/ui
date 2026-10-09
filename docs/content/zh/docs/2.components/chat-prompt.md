@@ -1,6 +1,6 @@
 ---
-title: ChatPrompt
-description: '用于在 AI 聊天界面中提交提示词的增强型 Textarea。'
+title: 聊天提示
+description: '增强的文本区域，用于在AI聊天界面中提交提示。'
 category: chat
 links:
   - label: Textarea
@@ -10,9 +10,10 @@ links:
     icon: i-simple-icons-github
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatPrompt.vue
 ---
+
 ## 用法
 
-ChatPrompt 组件渲染一个 `<form>` 元素，并扩展了 [Textarea](/docs/components/textarea) 组件，因此你可以传入 `icon`、`placeholder`、`autofocus` 等任意属性。
+ChatPrompt组件呈现`<form>`元素并扩展[Textarea](/docs/components/textarea)组件，以便您可以传递任何属性，如`icon`，`placeholder`，`autofocus`等。
 
 ::component-example
 ---
@@ -22,15 +23,15 @@ name: 'chat-prompt-example'
 ::
 
 ::note
-ChatPrompt 会处理以下事件：
+ChatPrompt处理以下事件：
 
-- 当用户按下 :kbd{value="enter"} 或点击提交按钮时，表单会被提交。将 `submit-on-enter` 属性设置为 `false` 后，可以使用 :kbd{value="ctrl"} + :kbd{value="enter"}（在 macOS 上为 :kbd{value="cmd"} + :kbd{value="enter"}）提交，从而允许 :kbd{value="enter"} 插入换行。
-- 当按下 :kbd{value="escape"} 时，textarea 会失去焦点，并发出 `close` 事件。
+- 当用户按下：kbd{value="enter"}或单击提交按钮时，表单将被提交。将`submit-on-enter`属性设置为`false`，以使用：kbd{value="ctrl"}+：kbd{value="enter"}（或macOS上的：kbd{value="cmd"}+：kbd{value="enter"}）提交，允许：kbd{value="enter"}插入换行符。
+- 当按下：kbd{value="escape"}并发出`close`事件时，文本区域模糊。
 ::
 
-### 变体
+### Variant
 
-使用 `variant` 属性可以更改提示框的样式。默认值为 `outline`。
+使用`variant`属性将提示符的样式更改为`outline`。
 
 ::component-code
 ---
@@ -45,12 +46,12 @@ props:
 ## 示例
 
 ::tip{to="/docs/components/chat"}
-查看 **Chat** 概览页面以获取安装说明、服务器设置和使用示例。
+查看**Chat**概述页面以获取安装说明、服务器设置和使用示例。
 ::
 
-### 搭配编辑器 :badge{label="4.10+" class="align-text-top"}
+### 与编辑器：badge{label="4.10+" class="align-text-top"}
 
-组合 `#header`、`#body` 和 `#footer` 插槽以构建功能丰富的提示框：文件附件、带有 `@` 提及和 `/` 命令的 [Editor](/docs/components/editor)（通过 [EditorMentionMenu](/docs/components/editor-mention-menu) 实现），以及模式选择器。
+编写`#header`、`#body`和`#footer`插槽以构建丰富的提示：文件附件、带有`@`提及的[Editor](/docs/components/editor)以及通过[EditorMentionMenu](/docs/components/editor-mention-menu)的`/`命令，以及模式选择器。
 
 ::component-example
 ---
@@ -61,12 +62,12 @@ class: 'justify-center'
 ::
 
 ::note
-`#body` 插槽会替换内部 textarea，并暴露 `submit` 和 `close` 处理函数，因此你可以将编辑器的键盘快捷键连接到表单。当提及菜单处于打开状态时，按下 :kbd{value="enter"} 会选择高亮项，而不是提交表单。
+`#body`插槽替换了内部文本区域，并公开了`submit`和`close`处理程序，因此您可以将编辑器的键盘快捷键连接到表单。当提及菜单打开时，按：kbd{value="enter"}选择突出显示的项目，而不是提交。
 ::
 
-### 用作主页
+### As主页
 
-你也可以将其用于聊天界面的主页。
+您也可以在聊天界面主页中使用它。
 
 ```vue [pages/index.vue] {2,4,8-15,24,26}
 <script setup lang="ts">
@@ -93,18 +94,7 @@ async function onSubmit() {
         <h1>How can I help you today?</h1>
 
         <UChatPrompt v-model="input" @submit="onSubmit">
-          <UChatTextarea v-model="input" placeholder="Ask me anything..." />
-
-          <template #footer>
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-1">
-                <UButton icon="i-lucide-paperclip" color="neutral" variant="ghost" />
-                <UButton icon="i-lucide-mic" color="neutral" variant="ghost" />
-              </div>
-
-              <UChatSubmitButton :disabled="!input.trim()" />
-            </div>
-          </template>
+          <UChatPromptSubmit :status="status" />
         </UChatPrompt>
       </UContainer>
     </template>
@@ -114,16 +104,34 @@ async function onSubmit() {
 
 ## API
 
-### 属性
+### Props
 
 :component-props
 
-::callout{icon="i-lucide-info" color="info"}
-此组件还支持所有 [Textarea](/docs/components/textarea) 属性。
+::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attributes" target="_blank"}
+此组件还支持所有原生`<textarea>` HTML属性。
 ::
 
-### 暴露
+### Slots
 
-:component-expose
+:component-slots
 
-你可以通过模板 ref 访问以下方法和属性。
+### Emits
+
+:component-emits
+
+### 曝光
+
+通过模板引用访问组件时，可以使用以下命令：
+
+| 名称|类型|
+| ---- | ---- |
+| `textareaRef`{lang="ts-type"}| `Ref<HTMLTextAreaElement \| null>`{lang="ts-type"}|
+
+## Theme
+
+:component-theme
+
+## Changelog
+
+:component-changelog

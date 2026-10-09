@@ -3,7 +3,7 @@ title: chattool
 description: Afficher un état d'invocation d'outil AI pliable.
 category: chat
 links:
-  - label: Collapsif
+  - label: Collapsible
     icon: i-custom-reka-ui
     to: https://reka-ui.com/docs/components/collapsible
   - label: GitHub à
@@ -11,145 +11,145 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatTool.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Le composant ChatTool rend un bloc pliable qui affiche le statut d'appel de l'outil d'IA, tel que "Recherche de composants" ou "Lecture de documentation". Lorsqu 'un emplacement par défaut est fourni, il devient pliable pour révéler la sortie de l'outil.
 
 ::component-example
 ---
-Collapse: vrai
-Étiquette: true
-nom: 'chat-outil-exemple'
+collapse: true
+prettier: true
+name: 'chat-tool-example'
 ---
 ::
 
-@@ph001@texte
+### Texte écrit
 
 Utilisez la prop `text` pour définir le texte d'état de l'outil.
 
 ::component-code
 ---
-Caché:
-  @@ph003@classe
-Props:
-  text: 'Composants recherchés'
-  Catégorie: W-60
+hide:
+  - class
+props:
+  text: 'Searched components'
+  class: 'w-60'
 ---
 ::
 
-@@ph004@@suffix
+### suffixe
 
-Utilisez la prop `suffix` pour afficher le texte secondaire après l'étiquette principale.
+Utilisez le prop `suffix` pour afficher le texte secondaire après l'étiquette principale.
 
 ::component-code
 ---
-Caché:
-  @@ph006@classe
-ignorer:
-  @@ph007@texte
-Props:
-  texte: 'Composante de lecture'
-  Sujet: "bouton"
-  Catégorie: W-60
+hide:
+  - class
+ignore:
+  - text
+props:
+  text: 'Reading component'
+  suffix: 'Button'
+  class: 'w-60'
 ---
 ::
 
-@08@Streaming
+### Streaming écouter
 
 Utilisez la prop `streaming` pour indiquer que l'outil est activement en cours d'exécution. Le texte affiche une animation de miroitement.
 
 ::component-code
 ---
-Caché:
-  @@classe 1000
-ignorer:
-  @@ph011@texte
-Props:
-  Étiquette: true
-  text: 'Recherche de composants...'
-  Catégorie: W-60
+hide:
+  - class
+ignore:
+  - text
+props:
+  streaming: true
+  text: 'Searching components...'
+  class: 'w-60'
 ---
 ::
 
 ::tip
-Utilisez l'utilitaire `isToolStreaming` de `@nuxt/ui/utils/ai` pour déterminer si une partie de l'outil est toujours en cours d'exécution. Il renvoie `false` lorsque l'outil attend l'approbation de l'utilisateur.
+Utilisez l'utilitaire `isToolStreaming` de `@nuxt/ui/utils/ai` pour déterminer si une pièce d'outil est toujours en cours d'exécution. Il renvoie `false` lorsque l'outil est en attente d'une approbation de l'utilisateur.
 ::
 
-### Phénix
+### écran
 
-Lors de la diffusion en continu, l'étiquette de déclenchement utilise le composant [`ChatShimmer`](/docs/components/chat-shimmer). Utilisez le prop `shimmer` pour personnaliser ses `duration` et `spread`.
+Lors du streaming, l'étiquette de déclenchement utilise le composant [`ChatShimmer`](/docs/components/chat-shimmer). Utilisez la prop `shimmer` pour personnaliser ses `duration` et `spread`.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@ph024@classe
-Ignorer:
-  @@ph025@texte
-Props:
-  Étiquette: true
-  text: 'Recherche de composants...'
-  Shimmer:
-    Durée: 2
-    Répartition: 2
-  Catégorie: W-60
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+props:
+  streaming: true
+  text: 'Searching components...'
+  shimmer:
+    duration: 2
+    spread: 2
+  class: 'w-60'
 ---
 ::
 
-@@226@Icon
+### icône
 
 Utilisez la prop `icon` pour afficher un composant [Icon](/docs/components/icon) à côté du déclencheur.
 
 ::component-code
 ---
-Caché:
-  @@classe 32
-Ignorer:
-  @@ph033@texte
-Props:
-  Icône: i-lucide-search
-  text: 'Composants recherchés'
-  Catégorie: W-60
+hide:
+  - class
+ignore:
+  - text
+props:
+  icon: i-lucide-search
+  text: 'Searched components'
+  class: 'w-60'
 ---
 ::
 
-### chargement
+### Chargement
 
-Utilisez la prop `loading` pour afficher un indicateur de chargement. Utilisez la prop `loading-icon` pour personnaliser l'icône de chargement.
+Utilisez le prop `loading` pour afficher un indicateur de chargement. Utilisez le prop `loading-icon` pour personnaliser l'icône de chargement.
 
 ::component-code
 ---
-Caché:
-  @@ph037@classe
-Ignorer:
-  @@ph038@texte
-Props:
-  Chargement: vrai
-  text: 'Recherche de composants...'
-  Catégorie: W-60
+hide:
+  - class
+ignore:
+  - text
+props:
+  loading: true
+  text: 'Searching components...'
+  class: 'w-60'
 ---
 ::
 
 ### Icône de chargement
 
-Utilisez la prop `loading-icon` pour personnaliser l'icône de chargement. Par défaut,`i-lucide-loader-circle`.
+Utilisez la prop `loading-icon` pour personnaliser l'icône de chargement. Par défaut, `i-lucide-loader-circle`.
 
 ::component-code
 ---
-Caché:
-  @@classe 42
-Ignorer:
-  @@ph043@texte
-Props:
-  Chargement: vrai
+hide:
+  - class
+ignore:
+  - text
+props:
+  loading: true
   loadingIcon: 'i-lucide-loader'
-  text: 'Recherche de composants...'
-  Catégorie: W-60
+  text: 'Searching components...'
+  class: 'w-60'
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.loading`.
 :::
@@ -160,57 +160,57 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 :::
 ::
 
-@@ph048@chevron
+### chevron
 
-Utilisez la prop `chevron` pour modifier la position de l'icône du chevron.
+Utilisez le prop `chevron` pour modifier la position de l'icône du chevron.
 
 ::note
-Lorsque `chevron` est réglé sur `leading` avec un `icon`, l'icône change avec le chevron en survol stationnaire et lorsqu 'elle est ouverte.
+Lorsque `chevron` est réglé sur `leading` avec un `icon`, l'icône change avec le chevron en survol et lorsqu 'il est ouvert.
 ::
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@classe 500
-ignorer:
-  @@ph054@texte
-Props:
-  Chevron: leader
-  Icône: i-lucide-search
-  text: 'Composants recherchés'
-  Catégorie: W-60
-Slots:
-  Default:|
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+props:
+  chevron: leading
+  icon: i-lucide-search
+  text: 'Searched components'
+  class: 'w-60'
+slots:
+  default: |
 
-    Outil de sortie de contenu
+    Tool output content
 ---
 ::
 
-### Chevron Icône
+Icône ### Chevron
 
-Utilisez le prop `chevron-icon` pour personnaliser le chevron [Icon](/docs/components/icon).
+Utilisez la prop `chevron-icon` pour personnaliser le chevron [Icon](/docs/components/icon).
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@ph062@classe
-ignorer:
-  @@ph063@texte
-Props:
-  chevronIcône:'i-lucide-arrow-down'
-  text: 'Composants recherchés'
-  Catégorie: W-60
-Slots:
-  Défaut:|
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+props:
+  chevronIcon: 'i-lucide-arrow-down'
+  text: 'Searched components'
+  class: 'w-60'
+slots:
+  default: |
 
-    Outil de sortie de contenu
+    Tool output content
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.chevronDown`.
 :::
@@ -223,26 +223,26 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 
 ### Variant
 
-Utilisez la prop `variant` pour modifier le style visuel. Par défaut à `inline`.
+Utilisez la prop `variant` pour modifier le style visuel. Par défaut, `inline`.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@ph071@classe
-ignorer:
-  @@ph072@texte
-  @@ph073@icon
-Props:
-  Variante: carte
-  text: 'Composants recherchés'
-  Icône: i-lucide-search
-  Étiquette: trailing
-  Catégorie: W-60
-Slots:
-  Défaut:|
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+  - icon
+props:
+  variant: card
+  text: 'Searched components'
+  icon: i-lucide-search
+  chevron: trailing
+  class: 'w-60'
+slots:
+  default: |
 
-    Outil de sortie de contenu
+    Tool output content
 ---
 ::
 
@@ -252,51 +252,51 @@ Utilisez la prop `actions` pour afficher une liste de [Button](/docs/components/
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@ph081@classe
-Ignorer:
-  @@ph082@texte
-  @@pH083@icon
+prettier: true
+hide:
+  - class
+ignore:
+  - text
+  - icon
   - variant
-  @@85@actions
-Props:
+  - actions
+props:
   actions:
-    - label:« Approuver »
-    - label:"Démenti"
-      Couleur: Neutre
-      Variété: Soft
-  text: "Exécuter la commande terminal"
-  Variante: carte
-  Icône: i-lucide-terminal
-  Catégorie: W-60
-Slots:
-  Défaut:|
+    - label: 'Approve'
+    - label: 'Deny'
+      color: neutral
+      variant: soft
+  text: 'Run terminal command'
+  variant: card
+  icon: i-lucide-terminal
+  class: 'w-60'
+slots:
+  default: |
 
-    $pnpm fonctionne lint
+    $ pnpm run lint
 ---
 ::
 
-@@ph088@exemples
+## Exemples
 
 ::tip{to="/docs/components/chat"}
-Consultez la page d'aperçu **Chat** pour connaître les instructions d'installation, la configuration du serveur et les exemples d'utilisation.
+Consultez la page d'aperçu **Chat** pour les instructions d'installation, la configuration du serveur et les exemples d'utilisation.
 ::
 
 ### Avec flux d'approbation: badge{label="4.10+" class="align-text-top"}
 
-Utilisez la prop `actions` pour créer un flux d'approbation d'outil avec le [AI SDK](). Lorsqu 'une pièce d'outil est dans l'état `approval-requested`, affichez les actions approuver et refuser et répondez avec `addToolApprovalResponse`.
+Utilisez la prop `actions` pour créer un flux d'approbation d'outil avec le [AI SDK](https://ai-sdk.dev/docs/agents/tool-approvals). Lorsqu 'une pièce d'outil est dans l'état `approval-requested`, affichez les actions approuver et refuser et répondez avec `addToolApprovalResponse`.
 
 ::component-example
 ---
-Collapse: vrai
-Étiquette: true
-nom: 'chat-outil-approuve-exemple'
+collapse: true
+prettier: true
+name: 'chat-tool-approval-example'
 ---
 ::
 
 ::tip
-Utilisez l'utilitaire `isToolApprovalPending` de `@nuxt/ui/utils/ai` pour détecter une approbation en attente,`isToolStreaming` retourne `false` dans cet état.
+Utilisez l'utilitaire `isToolApprovalPending` de `@nuxt/ui/utils/ai` pour détecter une approbation en attente, `isToolStreaming` renvoie `false` dans cet état.
 
 ```vue
 <script setup lang="ts">
@@ -322,24 +322,24 @@ const { messages, addToolApprovalResponse } = useChat({
 ```
 ::
 
-@@ph126@api
+## API
 
-@@ph127@@props
+### Props
 
-Composants-props
+:component-props
 
-@@ph128@@réseaux sociaux
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph129@@émissions
+### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph130@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@change131 @ changement
+## Changelog
 
-Composant-changelog
+:component-changelog

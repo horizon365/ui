@@ -9,87 +9,87 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Callout.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-Utilice la reducción de valor en la ranura predeterminada del componente `callout` para agregar un contexto llamativo a su contenido.
-
-::component-code{slug="callout" prose}
----
-Props:
-  clase: 'w-full my-0'
-Escondido:
-  @@clase002
-Los slots:
-  Por defecto: Este es un `callout` con soporte completo **markdown**.
----
-::
-
-@@pH006@Icono
-
-Utilice el prop `icon` para mostrar un icono al lado del contenido.
+Utilice el descuento en la ranura predeterminada del componente `callout` para agregar un contexto llamativo a su contenido.
 
 ::component-code{slug="callout" prose}
 ---
-Props:
-  Icono: i-lucide-square-play
-  clase: 'w-full my-0'
-Escondido:
-  @008@clase
-Los slots:
-  Por defecto: Se trata de un `callout` con un icono.
+props:
+  class: 'w-full my-0'
+hide:
+  - class
+slots:
+  default: This is a `callout` with full **markdown** support.
 ---
 ::
 
-@000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Icon
+
+Utilice el accesorio `icon` para mostrar un icono junto al contenido.
+
+::component-code{slug="callout" prose}
+---
+props:
+  icon: i-lucide-square-play
+  class: 'w-full my-0'
+hide:
+  - class
+slots:
+  default: This is a `callout` with an icon.
+---
+::
+
+### Color (Edición española)
 
 Utilice el prop `color` para cambiar el color de la llamada.
 
 ::component-code{slug="callout" prose}
 ---
-Ignora:
-  @@icon 12@icon
-Props:
-  Icono: i-lucide-info
-  Categoría: Info
-  clase: 'w-full my-0'
-Escondido:
-  @@13@clase
-Los slots:
-  por defecto: Este es un `callout` con un color personalizado.
+ignore:
+  - icon
+props:
+  icon: i-lucide-info
+  color: info
+  class: 'w-full my-0'
+hide:
+  - class
+slots:
+  default: This is a `callout` with a custom color.
 ---
 ::
 
-@15@enlace
+### Link (Edición española)
 
-Puede pasar cualquier propiedad del componente [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) como `to` y `target` para hacer que la llamada sea un enlace.
+Puede pasar cualquier propiedad del componente [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link), como `to` y `target`, para hacer que la llamada sea un enlace.
 
 ::component-code{slug="callout" prose}
 ---
-Escondido:
-  @@23@clase
-Ignora:
-  @24@icon
-  @@25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Icono: i-lucide-square-play
-  en/docs/getting-started/installation/nuxt
-  Color: Neutro
-  clase: 'w-full my-0'
-Los slots:
-  Por defecto: Aprenda cómo instalar `@nuxt/ui` en su proyecto.
+hide:
+  - class
+ignore:
+  - icon
+  - target
+props:
+  icon: i-lucide-square-play
+  to: '/docs/getting-started/installation/nuxt'
+  color: neutral
+  class: 'w-full my-0'
+slots:
+  default: Learn how to install `@nuxt/ui` in your project.
 ---
 ::
 
-@@27@@atajos
+## Atajos
 
-También puede utilizar los atajos `note`,`tip`,`warning` y `caution` con iconos y colores predefinidos.
+También puede utilizar los accesos directos `note`, `tip`, `warning` y `caution` con iconos y colores predefinidos.
 
 ::code-preview
 
 :::div{class="flex flex-col gap-4 w-full"}
 
 ::note{class="w-full my-0"}
-Aquí hay información adicional para usted.
+Aquí hay alguna información adicional para usted.
 ::
 
 ::tip{class="w-full my-0"}
@@ -106,7 +106,7 @@ Esta acción no se puede deshacer.
 
 :::
 
-#Código
+#code
 
 ```mdc
 ::note
@@ -128,20 +128,20 @@ This action cannot be undone.
 
 ::
 
-@499000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## API (Edición española)
 
-@500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props (Edición española)
 
-Artículo siguienteCOMPONENTES {prose}
+:component-props{prose}
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots (Edición española)
 
-Componentes: {prose}
+:component-slots{prose}
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Temas
 
-Artículo principal: {prose}
+:component-theme{prose}
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Changelog (Edición española)
 
-por: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

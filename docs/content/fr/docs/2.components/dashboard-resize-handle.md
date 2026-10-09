@@ -8,17 +8,17 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardResizeHandle.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Le composant DashboardResizeHandle est utilisé par les composants [DashboardSidebar](/docs/components/dashboard-sidebar) et [DashboardPanel](/docs/components/dashboard-panel).
 
-Il est automatiquement affiché lorsque le `resizable` prop est réglé,**vous n'avez pas à l'ajouter manuellement **.
+Il s'affiche automatiquement lorsque le prop `resizable` est défini, **vous n'avez pas à l'ajouter manuellement **.
 
-@@ph012@exemples
+## exemples
 
-### Dans `resize-handle`
+### Dans le slot `resize-handle`
 
-Même si ce composant s'affiche automatiquement lorsque l'accessoire `resizable` est réglé, vous pouvez utiliser l'emplacement `resize-handle` des composants [DashboardSidebar](/docs/components/dashboard-sidebar) et [DashboardPanel](/docs/components/dashboard-panel) pour personnaliser la poignée.
+Même si ce composant s'affiche automatiquement lorsque l'accessoire `resizable` est défini, vous pouvez utiliser l'emplacement `resize-handle` des composants [DashboardSidebar](/docs/components/dashboard-sidebar) et [DashboardPanelxph0222xxph023) pour personnaliser la poignée.
 
 ::code-group
 
@@ -68,20 +68,20 @@ definePageMeta({
 Dans cet exemple, nous ajoutons un pseudo-élément `after` pour afficher une ligne verticale en survol.
 ::
 
-@@ph064@@api
+## api
 
-@@@ph065@@props
+### Props
 
-Composants-props
+:component-props
 
-@@ph066@@réseaux sociaux
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph067@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog
 
-Composant-changelog
+:component-changelog

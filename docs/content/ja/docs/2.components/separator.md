@@ -20,61 +20,61 @@ links:
 
 ::component-code
 ---
-クラス'p—8'
+class: 'p-8'
 ---
 ::
 
-### オリエンテーション
+### Orientation
 
-`orientation`プロパティを使用して、セパレータの向きを変更します。デフォルトは`horizontal`です。
+separatorの向きを変更するには、`orientation`プロパティを使用します。デフォルトは`horizontal`です。
 
 ::component-code
 ---
-無視
-  - クラス
-クラス'p—8'
-小道具
-  オリエンテーション垂直
-  クラス'h—48'
+ignore:
+  - class
+class: 'p-8'
+props:
+  orientation: vertical
+  class: 'h-48'
 ---
 ::
 
-### ラベル
+### Label
 
 `label`プロパティを使用して、セパレータの中央にラベルを表示します。
 
 ::component-code
 ---
-クラス'p—8'
-小道具
-  label 'Hello World'
+class: 'p-8'
+props:
+  label: 'Hello World'
 ---
 ::
 
-### ポジションbadge {label="4.8+" class="align-text-top"}
+### ポジションbadge{label="4.8+" class="align-text-top"}
 
-`position`プロパティを使用して、セパレータのコンテンツの位置を変更します。デフォルトは`center`です。
+separatorのコンテンツの位置を変更するには、`position`プロパティを使用します。デフォルトは`center`です。
 
 ::component-code
 ---
-無視
-  - クラス
-クラス'p—8'
-小道具
-  位置開始
-  label 'Hello World'
+ignore:
+  - class
+class: 'p-8'
+props:
+  position: start
+  label: 'Hello World'
 ---
 ::
 
-### アイコン
+### Icon
 
 `icon`プロパティを使用して、セパレータの中央にアイコンを表示します。
 
 ::component-code
 ---
-クラス'p—8'
-小道具
-  アイコン'i—simple—icons nuxtdotjs'
+class: 'p-8'
+props:
+  icon: 'i-simple-icons-nuxtdotjs'
 ---
 ::
 
@@ -84,68 +84,68 @@ links:
 
 ::component-code
 ---
-きれい真
-クラス'p—8'
-無視
-  -  avatar.loading
-小道具
-  アバター
-    https//github.com/nuxt.png
-    読み込み怠惰
+prettier: true
+class: 'p-8'
+ignore:
+  - avatar.loading
+props:
+  avatar:
+    src: 'https://github.com/nuxt.png'
+    loading: lazy
 ---
 ::
 
-### カラー
+### Color
 
-`color`プロパティを使用して、セパレータの色を変更します。デフォルトは`neutral`です。
+separatorの色を変更するには、`color`プロパティを使用します。デフォルトは`neutral`です。
 
 ::component-code
 ---
-クラス'p—8'
-小道具
-  色プライマリ
-  タイプ固体
+class: 'p-8'
+props:
+  color: primary
+  type: solid
 ---
 ::
 
-### タイプ
+### Type
 
-`type`プロパティを使用して、セパレータのタイプを変更します。デフォルトは`solid`です。
+separatorのタイプを変更するには、`type`プロパティを使用します。デフォルトは`solid`です。
 
 ::component-code
 ---
-クラス'p—8'
-小道具
-  タイプ破線
+class: 'p-8'
+props:
+  type: dashed
 ---
 ::
 
 ### サイズ
 
-セパレータのサイズを変更するには、`size`プロパティを使用します。デフォルトは`xs`です。
+separatorのサイズを変更するには、`size`プロパティを使用します。デフォルトは`xs`です。
 
 ::component-code
 ---
-クラス'p—8'
-小道具
-  サイズLG
+class: 'p-8'
+props:
+  size: lg
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

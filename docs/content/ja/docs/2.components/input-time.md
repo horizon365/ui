@@ -20,18 +20,18 @@ links:
 
 ## 使用法
 
-`v-model`ディレクティブを使用して、選択した時刻を制御します。
+`v-model`ディレクティブを使用して選択時刻を制御します。
 
 ::component-code
 ---
-キャスト
-  modelValue TimeValue
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue [12 30 0]
+cast:
+  modelValue: TimeValue
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: [12, 30, 0]
 ---
 ::
 
@@ -39,95 +39,95 @@ links:
 
 ::component-code
 ---
-キャスト
-  defaultValue TimeValue
-無視
-  -  defaultValue
-外部
-  -  defaultValue
-小道具
-  defaultValue [9 45 0]
+cast:
+  defaultValue: TimeValue
+ignore:
+  - defaultValue
+external:
+  - defaultValue
+props:
+  defaultValue: [9, 45, 0]
 ---
 ::
 
 ::framework-only
 #nuxt
 :::note{to="/docs/getting-started/integrations/i18n/nuxt#locale"}
-このコンポーネントは`@internationalized/date`パッケージを使用します。時間フォーマットはAppコンポーネントの`locale`プロパティによって決定されます。
+このコンポーネントは、ロケールに対応したフォーマットのために`@internationalized/date`パッケージを使用します。時間フォーマットはAppコンポーネントの`locale`プロパティによって決定されます。
 :::
 
 #vue
 :::note{to="/docs/getting-started/integrations/i18n/vue#locale"}
-このコンポーネントは、ロケールに対応した書式設定のために`@internationalized/date`パッケージを使用します。時間フォーマットは、Appコンポーネントの`locale`プロパティによって決定されます。
+このコンポーネントは、ロケールに対応したフォーマットのために`@internationalized/date`パッケージを使用します。時間フォーマットはAppコンポーネントの`locale`プロパティによって決定されます。
 :::
 ::
 
-### 範囲
+### Range
 
 `range`プロパティを使用して、開始時刻と終了時刻の時間範囲選択を有効にします。
 
 ::component-code
 ---
-きれい真
-キャスト
-  modelValue TimeRangeValue
-無視
-  -  range
-  -  modelValue.start
-  -  modelValue.end
-外部
-  -  modelValue
-小道具
-  範囲真
-  modelValue
-    開始[9 0 0]
-    終了[17 30 0]
+prettier: true
+cast:
+  modelValue: TimeRangeValue
+ignore:
+  - range
+  - modelValue.start
+  - modelValue.end
+external:
+  - modelValue
+props:
+  range: true
+  modelValue:
+    start: [9, 0, 0]
+    end: [17, 30, 0]
 ---
 ::
 
-### 時間サイクル
+### Hourサイクル
 
 `hour-cycle`プロパティを使用して、InputTimeの時間サイクルを変更します。デフォルトは`12`です。
 
 ::component-code
 ---
-キャスト
-  defaultValue TimeValue
-無視
-  -  hourCycle
-  -  defaultValue
-外部
-  -  defaultValue
-小道具
-  時間サイクル：24
-  defaultValue [16 30 0]
+cast:
+  defaultValue: TimeValue
+ignore:
+  - hourCycle
+  - defaultValue
+external:
+  - defaultValue
+props:
+  hourCycle: 24
+  defaultValue: [16, 30, 0]
 ---
 ::
 
-### カラー
+### Color
 
 `color`プロパティを使用して、InputTimeの色を変更します。
 
 ::component-code
 ---
-小道具
-  色ニュートラル
-  ハイライト真
+props:
+  color: neutral
+  highlight: true
 ---
 ::
 
 ::note
-`highlight` propはフォーカス状態を表示するために使用されます。これは、バリデーションエラーが発生したときに内部で使用されます。
+`highlight`プロパティはフォーカスの状態を示すために使用されます。バリデーションエラーが発生したときに内部で使用されます。
 ::
 
-### バリアント
+### Variant
 
 `variant`プロパティを使用して、InputTimeのバリアントを変更します。
 
 ::component-code
 ---
-小道具
-  バリアント：微妙
+props:
+  variant: subtle
 ---
 ::
 
@@ -137,111 +137,111 @@ links:
 
 ::component-code
 ---
-小道具
-  サイズXL
+props:
+  size: xl
 ---
 ::
 
-### アイコン
+### Icon
 
-`icon` propを使用して、[ Icon ](/docs/components/icon)をInputTime内に表示します。
+`icon`プロパティを使用して、[Icon](/docs/components/icon)をInputTime内に表示します。
 
 ::component-code
 ---
-小道具
-  アイコン'i—lucide—clock'
+props:
+  icon: 'i-lucide-clock'
 ---
 ::
 
 ::note
-アイコンの位置を設定するには`leading`および`trailing` propsを使用し、位置ごとに異なるアイコンを設定するには`leading-icon`および`trailing-icon` propsを使用します。
+アイコンの位置を設定するには`leading`と`trailing`のプロップを使用し、位置ごとに異なるアイコンを設定するには`leading-icon`と`trailing-icon`のプロップを使用します。
 ::
 
-### セパレータアイコン
+### Separatorアイコン
 
-`separator-icon`プロパティを使用して、範囲区切り文字の[ Icon ](/docs/components/icon)を変更します。デフォルトは`i-lucide-minus`です。
+`separator-icon`プロパティを使用して、範囲区切り文字の[Icon](/docs/components/icon)を変更します。デフォルトは`i-lucide-minus`です。
 
 ::component-code
 ---
-無視
-  - 範囲
-小道具
-  範囲真
-  separatorIcon 'i—lucide—arrow—right'
+ignore:
+  - range
+props:
+  range: true
+  separatorIcon: 'i-lucide-arrow-right'
 ---
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.minus`キーの下の`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`app.config.ts`の`ui.icons.minus`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.minus`キーの下の`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`vite.config.ts`の`ui.icons.minus`キーでグローバルにカスタマイズできます。
 :::
 ::
 
 ### アバター
 
-`avatar` propを使用して、[ Avatar ](/docs/components/avatar)をInputTime内に表示します。
+`avatar`プロパティを使用して、InputTime内に[Avatar](/docs/components/avatar)を表示します。
 
 ::component-code
 ---
-きれい真
-無視
-  -  avatar.ローディング
-小道具
-  アバター
-    http//github.com/vuejs.png/
-    読み込み怠惰
-  サイズMD
-  variantアウトライン
+prettier: true
+ignore:
+  - avatar.loading
+props:
+  avatar:
+    src: 'https://github.com/vuejs.png'
+    loading: lazy
+  size: md
+  variant: outline
 ---
 ::
 
 ### 無効
 
-`disabled`プロパティを使用して、InputTimeを無効にします。
+`disabled`プロパティを使用してInputTimeを無効にします。
 
 ::component-code
 ---
-小道具
-  無効true
+props:
+  disabled: true
 ---
 ::
 
-## 例
+## サンプル
 
-###  FormField内
+### FormField内
 
-[ FormField ](/docs/components/form-field)コンポーネント内のInputTimeを使用して、ラベル、ヘルプテキスト、必須インジケータなどを表示できます。
+[FormField](/docs/components/form-field)コンポーネント内でInputTimeを使用して、ラベル、ヘルプテキスト、必須インジケータなどを表示できます。
 
 ::component-example
 ---
-名前'入力時間フォームフィールド例'
+name: 'input-time-form-field-example'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

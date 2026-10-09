@@ -9,7 +9,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Field.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Ein Feld, eine Stütze oder ein Parameter, der in Ihrem Inhalt angezeigt werden soll.
 
@@ -18,7 +18,7 @@ Ein Feld, eine Stütze oder ein Parameter, der in Ihrem Inhalt angezeigt werden 
 Das `description` kann als Prop oder im Standard-Slot mit voller **markdown**-Unterstützung eingestellt werden.
 ::
 
-#Der Code
+#code
 
 ```mdc
 ::field{name="name" type="string" required}
@@ -28,20 +28,20 @@ The `description` can be set as prop or in the default slot with full **markdown
 
 ::
 
-@@009@bmw
+## API (Englisch)
 
-@@ph010@@@props
+### Props Bearbeiten
 
-: component-props {prose}
+:component-props{prose}
 
-### Slots
+### Slots Bearbeiten
 
-: component-slots {prose}
+:component-slots{prose}
 
-@@ph014@gmail.de
+## Themes Bearbeiten
 
-: component-theme {prose}
+:component-theme{prose}
 
-@@ph016@@changelog @ changelog
+## Changelog (englisch)
 
-: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

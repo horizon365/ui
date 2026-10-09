@@ -9,84 +9,84 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Prompt.vue
 ---
 
-## 使用情况
+## 用法
 
-使用`prompt`组件可以显示一个预构建的AI提示，用户可以将其复制到剪贴板或直接在IDE中打开。`description`prop显示为可见标签，而默认插槽包含复制的提示文本。
+使用`prompt`组件显示一个预构建的AI提示，用户可以将其复制到剪贴板或直接在IDE中打开。`description`道具显示为可见标签，而默认插槽包含复制的提示文本。
 
 ::component-code{slug="prompt" prose}
 ---
-道具：
-  描述：使用Nuxt UI构建仪表板布局。
-  class：'w-full my-0'
-隐藏：
-  班级
-插槽：
-  默认值：|
-    你是一个Nuxt UI专家。帮我构建一个带有可折叠侧边栏和粘性顶部导航栏的仪表板布局。
+props:
+  description: Build a dashboard layout with Nuxt UI.
+  class: 'w-full my-0'
+hide:
+  - class
+slots:
+  default: |
+    You are a Nuxt UI expert. Help me build a dashboard layout with a collapsible sidebar and a sticky top navbar.
 
-    要求：
-    - 使用`UDashboardPanel`、`UDashboardSidebar`和`UDashboardNavbar`
-    - 使用语义颜色标记（如`bg-elevated`和`text-muted`）进行主题化
-    - The sidebar should include navigation links with icons using`UNavigationMenu`
-    - 导航栏应显示面包屑、搜索按钮和用户菜单
-    - The layout must be fully responsive and collapse the sidebar on移动的
+    Requirements:
+    - Use `UDashboardPanel`, `UDashboardSidebar`, and `UDashboardNavbar`
+    - Use semantic color tokens like `bg-elevated` and `text-muted` for theming
+    - The sidebar should include navigation links with icons using `UNavigationMenu`
+    - The navbar should display a breadcrumb, a search button, and a user dropdown menu
+    - The layout must be fully responsive and collapse the sidebar on mobile
 ---
 ::
 
 ### Icon
 
-使用`icon`道具在描述旁边显示图标。
+使用`icon`道具在描述旁边显示一个图标。
 
 ::component-code{slug="prompt" prose}
 ---
-忽略：
+ignore:
   - description
-隐藏：
-  班级
-道具：
-  描述：创建带有验证的表单。
-  图标：i-lucide-file-pen-line
-  class：'w-full my-0'
-插槽：
-  默认值：|
-    使用带有Zod模式验证的Nuxt UI创建注册表单。
+hide:
+  - class
+props:
+  description: Create a form with validation.
+  icon: i-lucide-file-pen-line
+  class: 'w-full my-0'
+slots:
+  default: |
+    Create a registration form using Nuxt UI with Zod schema validation.
 
-    要求：
-    - 将`UForm`与Zod架构一起使用以进行验证
-    - 添加`UFormField`包装每个输入：名称（`UInput`）、电子邮件（`UInput`type email）、角色（`USelect`，带有选项Admin、Editor、Viewer）
-    - 包括一个带有加载状态的提交`UButton`
+    Requirements:
+    - Use `UForm` with a Zod schema for validation
+    - Add `UFormField` wrapping each input: name (`UInput`), email (`UInput` type email), role (`USelect` with options Admin, Editor, Viewer)
+    - Include a submit `UButton` with loading state
     - Display inline error messages below each field
-    - 成功提交后，显示`UToast`通知
+    - On successful submit, show a `UToast` notification
 ---
 ::
 
 ### Actions
 
-使用`actions`道具可显示其他按钮。始终显示`copy`按钮。可用操作为`cursor`、`windsurf`和`claude`。
+使用`actions`属性显示其他按钮。`copy`按钮始终显示。可用操作为`cursor`、`windsurf`和`claude`。
 
 ::component-code{slug="prompt" prose}
 ---
-忽略：
-  描述：
+ignore:
+  - description
   - icon
-隐藏：
-  班级
-道具：
-  描述：添加颜色模式切换。
-  图标：i-lucide-sun-moon
-  动作：
+hide:
+  - class
+props:
+  description: Add a color mode toggle.
+  icon: i-lucide-sun-moon
+  actions:
     - cursor
     - claude
-  class：'w-full my-0'
-插槽：
-  默认值：|
-    添加一个颜色模式切换到我的Nuxt应用程序。
+  class: 'w-full my-0'
+slots:
+  default: |
+    Add a color mode toggle to my Nuxt app.
 
-    要求：
-    - 使用`@nuxtjs/color-mode`中的`useColorMode`管理当前模式
-    - 使用在`light`、`dark`和`system`之间循环的`variant="ghost"`渲染一个`UButton`
-    - 动态更新按钮图标：`i-lucide-sun`为亮，`i-lucide-moon`为暗，`i-lucide-monitor`为系统
-    - 使用`UTooltip`添加显示当前活动模式的工具提示
+    Requirements:
+    - Use `useColorMode` from `@nuxtjs/color-mode` to manage the current mode
+    - Render a `UButton` with `variant="ghost"` that cycles between `light`, `dark`, and `system` on click
+    - Update the button icon dynamically: `i-lucide-sun` for light, `i-lucide-moon` for dark, `i-lucide-monitor` for system
+    - Add a tooltip using `UTooltip` that shows the current active mode
 ---
 ::
 
@@ -94,16 +94,16 @@ links:
 
 ### Props
 
-：组件-道具{prose}
+:component-props{prose}
 
 ### Slots
 
-：组件插槽{prose}
+:component-slots{prose}
 
 ## Theme
 
-：component-theme{prose}
+:component-theme{prose}
 
 ## Changelog
 
-：component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

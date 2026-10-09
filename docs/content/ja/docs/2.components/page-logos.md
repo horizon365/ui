@@ -14,45 +14,45 @@ PageLogosコンポーネントは、ページ内にロゴや画像のリスト�
 
 ::component-code
 ---
-崩壊真
-きれい真
-隠す
-  - クラス
-無視
-  - アイテム
-小道具
-  アイテム
-    -  i—simple—icons—github
-    -  i—simple—icons—discord
-    -  i—simple—icons—x
-    -  i—simple—icons—instagram
-    -  i—simple—icons—Linkedin
-    -  i—simple—icons—facebook
-  クラス'MB—10'
+collapse: true
+prettier: true
+hide:
+  - class
+ignore:
+  - items
+props:
+  items:
+    - i-simple-icons-github
+    - i-simple-icons-discord
+    - i-simple-icons-x
+    - i-simple-icons-instagram
+    - i-simple-icons-linkedin
+    - i-simple-icons-facebook
+  class: 'mb-10'
 ---
 ::
 
-### タイトル
+### Title
 
 `title`プロパティを使用して、ロゴの上にタイトルを設定します。
 
 ::component-code
 ---
-きれい真
-無視
-  - アイテム
-隠す
-  - クラス
-小道具
-  タイトル：「最高のフロントエンドチームに信頼される」
-  アイテム
-    -  i—simple—icons—github
-    -  i—simple—icons—discord
-    -  i—simple—icons—x
-    -  i—simple—icons—instagram
-    -  i—simple—icons—リンク
-    -  i—simple—icons—facebook
-  クラス'my—10'
+prettier: true
+ignore:
+  - items
+hide:
+  - class
+props:
+  title: 'Trusted by the best front-end teams'
+  items:
+    - i-simple-icons-github
+    - i-simple-icons-discord
+    - i-simple-icons-x
+    - i-simple-icons-instagram
+    - i-simple-icons-linkedin
+    - i-simple-icons-facebook
+  class: 'my-10'
 ---
 ::
 
@@ -60,73 +60,73 @@ PageLogosコンポーネントは、ページ内にロゴや画像のリスト�
 
 ロゴは2つの方法で表示できます。
 
-1. `items` propを使用してロゴのリストを提供します。各項目は以下のいずれかになります。
+1.  `items`プロパティを使用してロゴのリストを提供します。各項目は以下のいずれかになります
   - アイコン名（例：`i-simple-icons-github`）
-  - 画像のプロパティ`src`と`alt`を含むオブジェクトで、`UAvatar`コンポーネントで利用されます。
+  -  `UAvatar`コンポーネントで利用される画像の`src`および`alt`プロパティを含むオブジェクト。
 2. デフォルトスロットを使用してコンテンツを完全に制御
 
 ::tabs{class="gap-0"}
 
 ::component-example{label="アイテム付き"}
 ---
-名前'ページロゴ付きアイテム'
-クラス'[&> div] my—10'
+name: 'page-logos-with-items'
+class: '[&>div]:my-10'
 ---
 ::
 
 ::component-example{label="スロット付き"}
 ---
-名前'スロット付きページロゴ'
-クラス'[&> div] my—10'
+name: 'page-logos-with-slot'
+class: '[&>div]:my-10'
 ---
 ::
 
 ::
 
-###  Marquee
+### マーキー
 
 `marquee`プロパティを使用して、ロゴのマーキー効果を有効にします。
 
 ::component-code
 ---
-きれい真
-無視
-  - アイテム
-  -  marquee
-隠す
-  - クラス
-小道具
-  タイトル：「最高のフロントエンドチームに信頼される」
-  マーキー true
-  アイテム
-    -  i—simple—icons—github
-    -  i—simple—icons—discord
-    -  i—simple—icons—x
-    -  i—simple—icons—instagram
-    -  i—simple—icons—リンク
-    -  i—simple—icons—facebook
-  クラス'my—10'
+prettier: true
+ignore:
+  - items
+  - marquee
+hide:
+  - class
+props:
+  title: 'Trusted by the best front-end teams'
+  marquee: true
+  items:
+    - i-simple-icons-github
+    - i-simple-icons-discord
+    - i-simple-icons-x
+    - i-simple-icons-instagram
+    - i-simple-icons-linkedin
+    - i-simple-icons-facebook
+  class: 'my-10'
 ---
 ::
 
 ::note{to="/docs/components/marquee"}
-`marquee`モードを使用する場合、propsを渡すことで動作をカスタマイズできます。詳細については、`Marquee`コンポーネントを参照してください。
+`marquee`モードを使用する場合、propsを渡すことで動作をカスタマイズできます。詳細は`Marquee`コンポーネントを参照してください。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

@@ -8,112 +8,112 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/BlogPost.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente BlogPost proporciona una forma flexible de mostrar un elemento`<article>`con contenido personalizable que incluye título , descripción , imagen , etc.
+El componente BlogPost proporciona una forma flexible de mostrar un elemento `<article>` con contenido personalizable que incluye título, descripción, imagen, etc.
 
 ::code-preview
 
 ::u-blog-post
 ---
-Introducción a Nuxt Icon v1
-Descubre Nuxt Icon v1 : una solución de iconos moderna , versátil y personalizable para tus proyectos de Nuxt .
-imagen : ' https://nuxt.com/assets/blog/nuxt-icon/cover.png '
-Fecha : 2024 - 11 - 25
-Autores :
-  - nombre : Anthony Fu
-    Categoría : antfu7
-    El avatar :
-      El src :https://github.com/antfu.png
-      Categoría : Lazy
-    Dos :https://github.com/antfu
-    Nombre : _ blank
-en : ' https://nuxt.com/blog/nuxt-icon-v1-0 '
-Nombre : ' _ blanco '
-Categoría : W - 96
+title: 'Introducing Nuxt Icon v1'
+description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
+date: 2024-11-25
+authors:
+  - name: Anthony Fu
+    description: antfu7
+    avatar:
+      src: https://github.com/antfu.png
+      loading: lazy
+    to: https://github.com/antfu
+    target: _blank
+to: 'https://nuxt.com/blog/nuxt-icon-v1-0'
+target: '_blank'
+class: 'w-96'
 ---
 ::
 
 ::
 
 ::tip{to="/docs/components/blog-posts"}
-Utilice el componente`BlogPosts`para mostrar varias entradas de blog en un diseño de cuadrícula sensible .
+Utilice el componente `BlogPosts` para mostrar varias entradas de blog en un diseño de cuadrícula sensible.
 ::
 
-@@pH004@@Nombre
+### Nombre
 
-Utilice el prop`title`para mostrar el título del BlogPost .
+Utilice el prop `title` para mostrar el título de la entrada de blog.
 
 ::component-code
 ---
-Categoría : true
-Escondido :
-  @06@clase
-Props :
-  Introducción a Nuxt Icon v1
-  Categoría: W-96
+prettier: true
+hide:
+  - class
+props:
+  title: 'Introducing Nuxt Icon v1'
+  class: 'w-96'
 ---
 ::
 
-@@pH007@Descripción
+### Descripción
 
-Utilice el prop `description` para mostrar la descripción del BlogPost.
+Utilice el prop `description` para mostrar la descripción de la entrada de blog.
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @009@clase
-Ignora:
-  @@10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Presentación de Nuxt Icon v1
-  Descubre Nuxt Icon v1: una solución de iconos moderna, versátil y personalizable para tus proyectos de Nuxt.
-  Categoría: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+props:
+  title: 'Introducing Nuxt Icon v1'
+  description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+  class: 'w-96'
 ---
 ::
 
-@111@fecha
+### Fecha
 
-Utilice el prop `date` para mostrar la fecha del BlogPost.
+Utilice el prop `date` para mostrar la fecha de la entrada de blog.
 
 ::tip
-La fecha se formatea automáticamente a la [current locale](/docs/getting-started/integrations/i18n/nuxt#locale). Puede pasar un objeto `Date` o una cadena.
+La fecha se formatea automáticamente con el locale](/docs/getting-started/integrations/i18n/nuxt#locale). Puede pasar un objeto `Date` o una cadena.
 ::
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @1800@clase
-Ignora:
-  @19@title
-  @@ph020@descripción
-Props:
-  Presentación de Nuxt Icon v1
-  Descubre Nuxt Icon v1: una solución de iconos moderna, versátil y personalizable para tus proyectos de Nuxt.
-  Fecha: 2024 - 11 - 25
-  Categoría: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Introducing Nuxt Icon v1'
+  description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+  date: 2024-11-25
+  class: 'w-96'
 ---
 ::
 
-@@21@badge
+### Badge (Edición española)
 
 Utilice el prop `badge` para mostrar un [Badge](/docs/components/badge) en el BlogPost.
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @27@clase
-Ignora:
-  @28@title
-  @@ph029@descripción
-Props:
-  Presentación de Nuxt Icon v1
-  Descubre Nuxt Icon v1: una solución de iconos moderna, versátil y personalizable para tus proyectos de Nuxt.
-  Tags: "liberación"
-  Categoría: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Introducing Nuxt Icon v1'
+  description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+  badge: 'Release'
+  class: 'w-96'
 ---
 ::
 
@@ -121,238 +121,238 @@ Puede pasar cualquier propiedad del componente [Badge](/docs/components/badge#pr
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @34@@clase
-Ignora:
-  @@35@título
-  @@ph036@descripción
-  @badge.label @badge.label
-  - badge.color (en inglés)
-  - badge.variante
-Props:
-  Presentación de Nuxt Icon v1
-  Descubre Nuxt Icon v1: una solución de iconos moderna, versátil y personalizable para tus proyectos de Nuxt.
-  El Badge:
-    Etiqueta: "liberación"
-    Color: Primario
-    Variante: Sólido
-  Categoría: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - badge.label
+  - badge.color
+  - badge.variant
+props:
+  title: 'Introducing Nuxt Icon v1'
+  description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+  badge:
+    label: 'Release'
+    color: primary
+    variant: solid
+  class: 'w-96'
 ---
 ::
 
-@@pH040@imagen
+### imagen
 
 Utilice el prop `image` para mostrar una imagen en el BlogPost.
 
 ::note
-Si [`@nuxt/image`](https://image.nuxt.com/get-started/installation) está instalado, se utilizará el componente `<NuxtImg>` en lugar de la etiqueta nativa `img`.
+Si está instalado [`@nuxt/image`xph11xhttps://image.nuxt.com/get-started/installation), se utilizará el componente `<NuxtImg>` en lugar de la etiqueta nativa `img`.
 ::
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @494@clase
-Ignora:
-  @@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @@ph051@descripción
-  @@2005@fecha
-Props:
-  Presentación de Nuxt Icon v1
-  Descubre Nuxt Icon v1: una solución de iconos moderna, versátil y personalizable para tus proyectos de Nuxt.
-  imagen: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
-  Fecha: 2024 - 11 - 25
-  Categoría: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - date
+props:
+  title: 'Introducing Nuxt Icon v1'
+  description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+  image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
+  date: 2024-11-25
+  class: 'w-96'
 ---
 ::
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Artículos
 
-Utilice el prop `authors` para mostrar una lista de [User](/docs/components/user) en el BlogPost como una matriz de objetos con las siguientes propiedades:
+Utilice la prop `authors` para mostrar una lista de [User](xph133) en el BlogPost como una matriz de objetos con las siguientes propiedades:
 
-@@
-@@
-@@
-@@@ph068@@@ph069@@@ph070
-@@
-@@
+- x`name?: string`x{lang="ts-type"}
+- x`description?: string`x{lang="ts-type"} (Edición española)
+- x`avatar?: Omit<AvatarProps, 'size'>`x{lang="ts-type"} (Edición española)
+- x`chip?: boolean | Omit<ChipProps, 'size' | 'inset'>`x{lang="ts-type"}
+- x`size?: UserProps['size']`x{lang="ts-type"} (Edición española)
+- x`orientation?: UserProps['orientation']`x{lang="ts-type"} (Edición española)
 
-Puede pasar cualquier propiedad del componente [Link](/docs/components/link#props) como `to`,`target`, etc.
+Puede pasar cualquier propiedad del componente [Link](/docs/components/link#props) como `to`, `target`, etc.
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @083@clase
-Externo:
-  @084@Artículos
-Externalidades:
-  @@@P085@@UserProps [en inglés]
-Ignora:
-  @86@title
-  @@ph087@descripción
-  @888@fecha
-  @@pH089@imagen
-  @090000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Presentación de Nuxt Icon v1
-  Descubre Nuxt Icon v1: una solución de iconos moderna, versátil y personalizable para tus proyectos de Nuxt.
-  imagen: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
-  Fecha: 2024 - 11 - 25
-  Autores :
-    - nombre : Anthony Fu
-      Categoría : antfu7
-      El avatar :
-        El src :https://github.com/antfu.png
-        Categoría : Lazy
-      Dos :https://github.com/antfu
-      Nombre : _ blank
-  Categoría : W - 96
+prettier: true
+hide:
+  - class
+external:
+  - authors
+externalTypes:
+  - UserProps[]
+ignore:
+  - title
+  - description
+  - date
+  - image
+  - authors
+props:
+  title: 'Introducing Nuxt Icon v1'
+  description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+  image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
+  date: 2024-11-25
+  authors:
+    - name: Anthony Fu
+      description: antfu7
+      avatar:
+        src: https://github.com/antfu.png
+        loading: lazy
+      to: https://github.com/antfu
+      target: _blank
+  class: 'w-96'
 ---
 ::
 
-Cuando el prop`authors`tiene más de un elemento , se utiliza el componente[AvatarGroup](/docs/components/avatar-group).
+Cuando el prop `authors` tiene más de un elemento, se utiliza el componente [AvatarGroup](/docs/components/avatar-group).
 
 ::component-code
 ---
-Categoría : true
-Escondido :
-  @097@clase
-Externo :
-  @098@Artículos
-Externalidades :
-  @@P299@@UserProps (en inglés)
-Ignora :
-  @@F100@título
-  @@ph101@descripción
-  @2010@fecha
-  @@pH103@imagen
-  @104@autores
-Props :
-  Presentación de Nuxt Icon v1
-  Descubre Nuxt Icon v1 : una solución de iconos moderna , versátil y personalizable para tus proyectos de Nuxt .
-  imagen : ' https://nuxt.com/assets/blog/nuxt-icon/cover.png '
-  Fecha : 2024 - 11 - 25
-  Autores :
-    - nombre : Anthony Fu
-      Categoría : antfu7
-      El avatar :
-        El src :https://github.com/antfu.png
-        Categoría : Lazy
-      Dos :https://github.com/antfu
-      Nombre : _ blank
-    - nombre : Benjamin Canac
-      Categoría : benjamincanac
-      El avatar :
-        El src :https://github.com/benjamincanac.png
-        Categoría : Lazy
-      Dos :https://github.com/benjamincanac
-      Nombre : _ blank
-  Categoría : W - 96
+prettier: true
+hide:
+  - class
+external:
+  - authors
+externalTypes:
+  - UserProps[]
+ignore:
+  - title
+  - description
+  - date
+  - image
+  - authors
+props:
+  title: 'Introducing Nuxt Icon v1'
+  description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+  image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
+  date: 2024-11-25
+  authors:
+    - name: Anthony Fu
+      description: antfu7
+      avatar:
+        src: https://github.com/antfu.png
+        loading: lazy
+      to: https://github.com/antfu
+      target: _blank
+    - name: Benjamin Canac
+      description: benjamincanac
+      avatar:
+        src: https://github.com/benjamincanac.png
+        loading: lazy
+      to: https://github.com/benjamincanac
+      target: _blank
+  class: 'w-96'
 ---
 ::
 
-@107@enlace
+### Enlace
 
-Puede pasar cualquier propiedad del componente[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link)como`to`,`target`,`rel`, etc.
+Puede pasar cualquier propiedad del componente [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) como `to`, `target`, `rel`, etc.
 
 ::component-code
 ---
-Categoría : true
-Escondido :
-  @116@clase
-Ignora :
-  @117@título
-  @@ph118@descripción
-  @119@fecha
-  @@pH120@imagen
-  @121 @ objetivo
-Props:
-  Presentación de Nuxt Icon v1
-  Descubre Nuxt Icon v1: una solución de iconos moderna, versátil y personalizable para tus proyectos de Nuxt.
-  imagen: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
-  Fecha: 2024 - 11 - 25
-  en: 'https://nuxt.com/blog/nuxt-icon-v1-0'
-  Nombre: _blank
-  Categoría: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - date
+  - image
+  - target
+props:
+  title: 'Introducing Nuxt Icon v1'
+  description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+  image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
+  date: 2024-11-25
+  to: 'https://nuxt.com/blog/nuxt-icon-v1-0'
+  target: _blank
+  class: 'w-96'
 ---
 ::
 
-@@222@Variante
+### Variante
 
-Utilice el prop `variant` para cambiar el estilo de la entrada de blog.
+Utilice el soporte `variant` para cambiar el estilo del BlogPost.
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @124 @ clase
-Ignora:
-  @125 @ Título
-  @@ph126@descripción
-  @127 @ fecha
-  @@pH128@imagen
-  @129 @
-  @P130 @ objetivo
-Props:
-  Presentación de Nuxt Icon v1
-  Descubre Nuxt Icon v1: una solución de iconos moderna, versátil y personalizable para tus proyectos de Nuxt.
-  imagen: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
-  Fecha: 2024 - 11 - 25
-  en: 'https://nuxt.com/blog/nuxt-icon-v1-0'
-  Nombre: _blank
-  Categoría: Desnudo
-  Categoría: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - date
+  - image
+  - to
+  - target
+props:
+  title: 'Introducing Nuxt Icon v1'
+  description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+  image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
+  date: 2024-11-25
+  to: 'https://nuxt.com/blog/nuxt-icon-v1-0'
+  target: _blank
+  variant: naked
+  class: 'w-96'
 ---
 ::
 
 ::note
-El estilo será diferente ya sea que proporcione un `to` prop o un `image`.
+El estilo será diferente si proporciona un accesorio `to` o un `image`.
 ::
 
-@@333@Orientación
+### Orientación
 
 Utilice el prop `orientation` para cambiar la orientación de BlogPost. Predeterminados a `vertical`.
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @136 @ clase
-Ignora:
-  @137 @ Título
-  @@ph138@descripción
-  @139 @ fecha
-  @@pH140@imagen
-  @141
-  @2014@objetivo
-Props:
-  Presentación de Nuxt Icon v1
-  Descubre Nuxt Icon v1: una solución de iconos moderna, versátil y personalizable para tus proyectos de Nuxt.
-  imagen: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
-  Fecha: 2024 - 11 - 25
-  en: 'https://nuxt.com/blog/nuxt-icon-v1-0'
-  Nombre: _blank
-  Orientación: Horizontal
-  Categoría: Outline
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - date
+  - image
+  - to
+  - target
+props:
+  title: 'Introducing Nuxt Icon v1'
+  description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
+  image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
+  date: 2024-11-25
+  to: 'https://nuxt.com/blog/nuxt-icon-v1-0'
+  target: _blank
+  orientation: horizontal
+  variant: outline
 ---
 ::
 
-@@pH143
+## API (Edición española)
 
-@@40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
-@145@@espanol
+### Slots
 
-Componentes de slots
+:component-slots
 
-@146 @@ Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@147@Changelog (Edición española)
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

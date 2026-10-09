@@ -11,245 +11,245 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Empty.vue
 ---
 
-## 使用情况
+## 用法
 
-当没有要显示得内容时，使用“空”组件显示占位符状态.
+使用Empty组件可以在没有要显示的内容时显示占位符状态。
 
 ::code-preview
 
 :::u-empty
 ---
-图标：i-lucide文件
-title：找不到项目
-描述：您似乎尚未新增任何项目。请建立一个项目以开始。
-动作：
-  i-lucide-plus（氯苄氨基糖苷+）
-    label：新建
-  - 图标：i-透明质酸-刷新-cw
-    标签：刷新
-    颜色：中性
-    变体：细微
+icon: i-lucide-file
+title: No projects found
+description: It looks like you haven't added any projects. Create one to get started.
+actions:
+  - icon: i-lucide-plus
+    label: Create new
+  - icon: i-lucide-refresh-cw
+    label: Refresh
+    color: neutral
+    variant: subtle
 ---
 :::
 
 ::
 
-标题：
+### 标题
 
-使用`title`道具设置空状态的标题。
+使用`title`属性设置空状态的标题。
 
 ::component-code
 ---
-道具：
-  title：找不到项目
+props:
+  title: No projects found
 ---
 ::
 
-说明：
+### 说明
 
-使用`description`属性来设定空白状态的描述。
+使用`description`属性设置空状态的描述。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标题：
-道具：
-  title：找不到项目
-  描述：您似乎尚未新增任何项目。请建立一个项目以开始。
+prettier: true
+ignore:
+  - title
+props:
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
 ---
 ::
 
-### 图标
+### Icon
 
-使用`icon`道具将图标设置为空状态。
+使用`icon` prop设置空状态的图标。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 标题
-  说明：
-道具：
-  图标：i-lucide文件
-  title：找不到项目
-  描述：您似乎尚未新增任何项目。请建立一个项目以开始。
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  icon: i-lucide-file
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
 ---
 ::
 
-虚拟人偶
+### Avatar
 
-使用`avatar`道具将头像设置为空状态。
+使用`avatar`道具设置头像为空状态。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 图标
-- 标题
-  说明：
-道具类：
-  虚拟化身.src：“https：//github.com/nuxt.png”（网址：http：//github.com/nuxt.png）
-  title：找不到项目
-  描述：您似乎尚未新增任何项目。请建立一个项目以开始。
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+props:
+  avatar.src: 'https://github.com/nuxt.png'
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
 ---
 ::
 
-正在加载：徽标
+### 加载中：badge{label="4.10+" class="align-text-top"}
 
-使用`loading`道具来显示载入中的图标来取代图标。版面配置会保持不变，因此您可以在载入和清空状态之间切换，而不需变更版面配置。
+使用`loading`道具显示一个加载图标来代替图标。布局保持不变，所以你可以在加载和清空状态之间切换而不会改变布局。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 图标
-- 标题
-  描述：
-道具：
-  图标：i-lucide文件
-  载入：true
-  title：载入项目
-  description：正在获取您的项目，请稍候。
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+props:
+  icon: i-lucide-file
+  loading: true
+  title: Loading projects
+  description: Please wait while we fetch your projects.
 ---
 ::
 
-### 正在载入图标：徽章{label="4.10+" class="align-text-top"}
+### 加载图标：badge{label="4.10+" class="align-text-top"}
 
-使用`loading-icon`属性来自订载入图标。预设为`i-lucide-loader-circle`。
+使用`loading-icon`道具自定义加载图标. `i-lucide-loader-circle`。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  图标
-  标题
-  描述
-  正在加载
-道具：
-  图标：i-lucide文件
-  载入：true
-  加载图标：“i-lucide加载程序”
-  title：载入项目
-  description：正在获取您的项目，请稍候。
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - loading
+props:
+  icon: i-lucide-file
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  title: Loading projects
+  description: Please wait while we fetch your projects.
 ---
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 您可以在`ui.icons.loading`键下的`app.config.ts`中全局自定义此图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`ui.icons.loading`键下的`vite.config.ts`中全局自定义此图标。
+你可以在你的`vite.config.ts`中的`ui.icons.loading`键下全局自定义这个图标。
 :::
 ::
 
-操作
+### Actions
 
-使用`actions`属性将一些[按钮](/docs/components/button)操作添加到空状态。
-
-::component-code
----
-更漂亮：真的
-忽略：
-  “- ”图标
-  标题：
-  描述：
-  操作
-道具：
-  图标：i-lucide文件
-  title：找不到项目
-  描述：您似乎尚未新增任何项目。请建立一个项目以开始。
-  动作：
-    碘苯磺酰脲
-      label：新建
-    - 图标：碘苯丙氨酸-刷新-cw
-      标签：刷新
-      颜色：中性
-      变体：细微
----
-::
-
-变体
-
-使用`variant`属性更改空状态的变量。
+使用`actions`属性向空状态添加一些[Button](/docs/components/button)操作。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  图标
-  标题：
-  描述：
-  操作
-道具：
-  变体：裸
-  图标：i-lucide-铃
-  title：无通知
-  描述：你已经赶上了。新的通知将出现在这里。
-  动作：
-    - 图标：碘苯丙氨酸-刷新-cw
-      标签：刷新
-      颜色：中性
-      变体：细微
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - actions
+props:
+  icon: i-lucide-file
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
+  actions:
+    - icon: i-lucide-plus
+      label: Create new
+    - icon: i-lucide-refresh-cw
+      label: Refresh
+      color: neutral
+      variant: subtle
 ---
 ::
 
-尺寸
+### Variant
 
-使用`size`属性更改空状态的大小。
+使用`variant` prop更改空状态的变量。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  图标
-  标题
-  描述
-  操作
-道具：
-  尺寸：xl
-  图标：i-lucide-铃
-  title：无通知
-  描述：你已经赶上了。新的通知将出现在这里。
-  处理措施：
-    i-lucide-刷新-cw
-      标签：刷新
-      颜色：中性色
-      变体：细微
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - actions
+props:
+  variant: naked
+  icon: i-lucide-bell
+  title: No notifications
+  description: You're all caught up. New notifications will appear here.
+  actions:
+    - icon: i-lucide-refresh-cw
+      label: Refresh
+      color: neutral
+      variant: subtle
 ---
 ::
 
-示例
+### Size
 
-带插槽
+使用`size`属性来更改空状态的大小。
+
+::component-code
+---
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - actions
+props:
+  size: xl
+  icon: i-lucide-bell
+  title: No notifications
+  description: You're all caught up. New notifications will appear here.
+  actions:
+    - icon: i-lucide-refresh-cw
+      label: Refresh
+      color: neutral
+      variant: subtle
+---
+::
+
+## 示例
+
+### 带插槽
 
 使用可用插槽创建更复杂的空状态。
 
 ::component-example
 ---
-收阖：true
-名称：'空插槽示例'
+collapse: true
+name: 'empty-slots-example'
 ---
 ::
 
-活性成分
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

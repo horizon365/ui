@@ -10,23 +10,23 @@ links:
 
 ## 使用法
 
-ChatMessageコンポーネントは、`user`または`assistant`チャットメッセージの`<article>`要素をレンダリングします。
+ChatMessageコンポーネントは、`user`または`assistant`チャットメッセージ用の`<article>`要素をレンダリングします。
 
 ::code-preview
 
 ::u-chat-message
 ---
-パーツ
-  - タイプ'text'
-    ID '1'
-    text 'こんにちは！Nuxt UIを使ったAIチャットボットの構築について詳しく教えてください。'
-サイド'右'
-バリアント'ソフト'
-ロール'ユーザー'
-ID '1'
-アバター
-  https//github.com/benjamincanac.png
-  読み込み怠惰
+parts:
+  - type: 'text'
+    id: '1'
+    text: 'Hello! Tell me more about building AI chatbots with Nuxt UI.'
+side: 'right'
+variant: 'soft'
+role: 'user'
+id: '1'
+avatar:
+  src: 'https://github.com/benjamincanac.png'
+  loading: lazy
 ---
 ::
 
@@ -36,231 +36,231 @@ ID '1'
 `ChatMessages`コンポーネントを使用して、チャットメッセージのリストを表示します。
 ::
 
-### パーツ
+### Parts
 
 `parts`プロパティを使用して、AI SDK形式を使用してメッセージコンテンツを表示します。
 
 ::component-code
 ---
-きれい真
-無視
-  - パーツ
-  -  role
-  -  id
-小道具
-  パーツ
-    - タイプ'text'
-      ID '1'
-      text 'こんにちは！Nuxt UIを使ったAIチャットボットの構築について詳しく教えてください。'
-  ロール'ユーザー'
-  ID '1'
+prettier: true
+ignore:
+  - parts
+  - role
+  - id
+props:
+  parts:
+    - type: 'text'
+      id: '1'
+      text: 'Hello! Tell me more about building AI chatbots with Nuxt UI.'
+  role: 'user'
+  id: '1'
 ---
 ::
 
 ::note
-`parts` propはAI SDKで推奨されるフォーマットです。各パートには`type`例'text'と対応するコンテンツがあります。ChatMessageコンポーネントは後方互換性のため、廃止予定の`content` propもサポートしています。
+`parts`プロパティは、AI SDKの推奨フォーマットです。各パートは`type`例'text'と対応するコンテンツを持っています。ChatMessageコンポーネントは、後方互換性のため、非推奨の`content`プロパティもサポートしています。
 ::
 
-### サイド
+### Side
 
-`side`プロパティを使用して、メッセージを左または右に表示します。
+`side`プロパティを使用して、メッセージを左右に表示します。
 
 ::component-code
 ---
-きれい真
-無視
-  - パーツ
-  - ロール
-  -  id
-小道具
-  サイド'右'
-  パーツ
-    - タイプ'text'
-      ID '1'
-      text 'こんにちは！Nuxt UIを使ったAIチャットボットの構築について詳しく教えてください。'
-  ロール'ユーザー'
-  ID '1'
+prettier: true
+ignore:
+  - parts
+  - role
+  - id
+props:
+  side: 'right'
+  parts:
+    - type: 'text'
+      id: '1'
+      text: 'Hello! Tell me more about building AI chatbots with Nuxt UI.'
+  role: 'user'
+  id: '1'
 ---
 ::
 
 ::note
-[`ChatMessages`](/docs/components/chat-messages)コンポーネントを使用する場合、`side` propは`assistant`メッセージの場合は`left`、`user`メッセージの場合は`right`に設定されます。
+[`ChatMessages`](/docs/components/chat-messages)コンポーネントを使用する場合、`side`プロパティは`assistant`メッセージに対して`left`、`user`メッセージに対して`right`に設定されます。
 ::
 
-### バリアント
+### Variant
 
-メッセージのスタイルを変更するには、`variant`プロパティを使用します。
+メッセージのスタイルを変更するには`variant`プロパティを使用します。
 
 ::component-code
 ---
-きれい真
-無視
-  - パーツ
-  - ロール
-  -  id
-小道具
-  バリアント'ソフト'
-  パーツ
-    - タイプ'text'
-      ID '1'
-      text 'こんにちは！Nuxt UIを使ったAIチャットボットの構築について詳しく教えてください。'
-  ロール'ユーザー'
-  ID '1'
+prettier: true
+ignore:
+  - parts
+  - role
+  - id
+props:
+  variant: 'soft'
+  parts:
+    - type: 'text'
+      id: '1'
+      text: 'Hello! Tell me more about building AI chatbots with Nuxt UI.'
+  role: 'user'
+  id: '1'
 ---
 ::
 
 ::note
-[`ChatMessages`](/docs/components/chat-messages)コンポーネントを使用する場合、`variant` propは`assistant`メッセージの場合は`naked`、`user`メッセージの場合は`soft`に設定されます。
+[`ChatMessages`](/docs/components/chat-messages)コンポーネントを使用する場合、`variant`プロパティは`assistant`メッセージに対して`naked`、`user`メッセージに対して`soft`に設定されます。
 ::
 
-### 色バッジ{label="4.8+" class="align-text-top"}
+### Color badge{label="4.8+" class="align-text-top"}
 
-`color`プロパティを使用して、メッセージの色を変更します。
+`color`プロパティを使用してメッセージの色を変更します。
 
 ::component-code
 ---
-きれい真
-無視
-  - パーツ
-  - ロール
-  -  id
-小道具
-  バリアント'ソフト'
-  色'プライマリ'
-  パーツ
-    - タイプ'text'
-      ID '1'
-      text 'こんにちは！Nuxt UIを使ったAIチャットボットの構築について詳しく教えてください。'
-  ロール'ユーザー'
-  ID '1'
+prettier: true
+ignore:
+  - parts
+  - role
+  - id
+props:
+  variant: 'soft'
+  color: 'primary'
+  parts:
+    - type: 'text'
+      id: '1'
+      text: 'Hello! Tell me more about building AI chatbots with Nuxt UI.'
+  role: 'user'
+  id: '1'
 ---
 ::
 
-### アイコン
+### Icon
 
-`icon` propを使用して、メッセージの横に[ Icon ](/docs/components/icon)コンポーネントを表示します。
+`icon`プロパティを使用して、メッセージの横に[Icon](/docs/components/icon)コンポーネントを表示します。
 
 ::component-code
 ---
-きれい真
-無視
-  - パーツ
-  - サイド
-  - バリアント
-  - ロール
-  -  id
-小道具
-  アイコンi—lucide—user
-  バリアント'ソフト'
-  サイド'右'
-  パーツ
-    - タイプ'text'
-      ID '1'
-      text 'こんにちは！Nuxt UIを使ったAIチャットボットの構築について詳しく教えてください。'
-  ロール'ユーザー'
-  ID '1'
+prettier: true
+ignore:
+  - parts
+  - side
+  - variant
+  - role
+  - id
+props:
+  icon: i-lucide-user
+  variant: 'soft'
+  side: 'right'
+  parts:
+    - type: 'text'
+      id: '1'
+      text: 'Hello! Tell me more about building AI chatbots with Nuxt UI.'
+  role: 'user'
+  id: '1'
 ---
 ::
 
 ### アバター
 
-`avatar` propを使用して、メッセージの横に[ Avatar ](/docs/components/avatar)コンポーネントを表示します。
+`avatar`プロパティを使用して、メッセージの横に[Avatar](/docs/components/avatar)コンポーネントを表示します。
 
 ::component-code
 ---
-きれい真
-無視
-  - パーツ
-  - サイド
-  - バリアント
-  - ロール
-  -  id
-  -  avatar.loading
-小道具
-  アバター
-    https//github.com/benjamincanac.png
-    読み込み怠惰
-  バリアント'ソフト'
-  サイド'右'
-  パーツ
-    - タイプ'text'
-      ID '1'
-      text 'こんにちは！Nuxt UIを使ったAIチャットボットの構築について詳しく教えてください。'
-  ロール'ユーザー'
-  ID '1'
+prettier: true
+ignore:
+  - parts
+  - side
+  - variant
+  - role
+  - id
+  - avatar.loading
+props:
+  avatar:
+    src: 'https://github.com/benjamincanac.png'
+    loading: lazy
+  variant: 'soft'
+  side: 'right'
+  parts:
+    - type: 'text'
+      id: '1'
+      text: 'Hello! Tell me more about building AI chatbots with Nuxt UI.'
+  role: 'user'
+  id: '1'
 ---
 ::
 
-`avatar.icon` propを使用して、アイコンをアバターとして表示することもできます。
+`avatar.icon`プロパティを使用してアイコンをアバターとして表示することもできます。
 
 ::component-code
 ---
-きれい真
-無視
-  - パーツ
-  - ロール
-  -  ID
-小道具
-  アバター
-    アイコンi—lucide—bot
-  パーツ
-    - タイプ'text'
-      ID '1'
-      テキスト「Nuxt UIには、ChatMessage、ChatMessages、ChatPromptコンポーネントなど、AIチャットボットを構築するためのいくつかの機能があります。ベストプラクティスには、AI SDKのChatクラスの使用、バリアントによる適切なメッセージスタイルの実装、メッセージインタラクションのための組み込みアクションの利用などがあります。コンポーネントは、テーマ設定のサポートとレスポンシブデザインで完全にカスタマイズ可能です。」
-  役割'アシスタント'
-  ID '1'
+prettier: true
+ignore:
+  - parts
+  - role
+  - id
+props:
+  avatar:
+    icon: i-lucide-bot
+  parts:
+    - type: 'text'
+      id: '1'
+      text: 'Nuxt UI offers several features for building AI chatbots including the ChatMessage, ChatMessages, and ChatPrompt components. Best practices include using the Chat class from AI SDK, implementing proper message styling with variants, and utilizing the built-in actions for message interactions. The components are fully customizable with theming support and responsive design.'
+  role: 'assistant'
+  id: '1'
 ---
 ::
 
-### アクション
+### Actions
 
-`actions`プロパティを使用して、メッセージの上にカーソルを合わせたときに表示されるアクションをメッセージの下に表示します。
+`actions`プロパティを使用して、メッセージの上にマウスオーバーしたときに表示されるアクションをメッセージの下に表示します。
 
 ::component-code
 ---
-きれい真
-外部
-  - アクション
-externalTypes
-  -  ButtonProps []
-無視
-  - パーツ
-  - アクション
-  - ロール
-  -  id
-小道具
-  アクション
-    -  label 'クリップボードにコピー'
-      アイコンi—lucide—copy
-  パーツ
-    - タイプ'text'
-      ID '1'
-      テキスト「Nuxt UIには、ChatMessage、ChatMessages、ChatPromptコンポーネントなど、AIチャットボットを構築するためのいくつかの機能があります。ベストプラクティスには、AI SDKのChatクラスの使用、バリアントによる適切なメッセージスタイルの実装、メッセージインタラクションのための組み込みアクションの利用などがあります。コンポーネントは、テーマ設定のサポートとレスポンシブデザインで完全にカスタマイズ可能です。」
-  ロール'ユーザー'
-  ID '1'
+prettier: true
+external:
+  - actions
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - parts
+  - actions
+  - role
+  - id
+props:
+  actions:
+    - label: 'Copy to clipboard'
+      icon: i-lucide-copy
+  parts:
+    - type: 'text'
+      id: '1'
+      text: 'Nuxt UI offers several features for building AI chatbots including the ChatMessage, ChatMessages, and ChatPrompt components. Best practices include using the Chat class from AI SDK, implementing proper message styling with variants, and utilizing the built-in actions for message interactions. The components are fully customizable with theming support and responsive design.'
+  role: 'user'
+  id: '1'
 ---
 ::
 
-## 例
+## サンプル
 
 ::tip{to="/docs/components/chat"}
-インストール手順、サーバー設定、使用例については、** Chat **概要ページをご覧ください。
+インストール手順、サーバーのセットアップ、使用例については、**Chat**の概要ページをご覧ください。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

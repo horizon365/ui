@@ -7,25 +7,25 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Header.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente Header representa un elemento `<header>`.
+The Header component renders an element `<header>`.
 
 ::tip{to="/docs/getting-started/theme/css-variables#header"}
-Su altura se define mediante una variable CSS `--ui-header-height`.
+Su altura se define a través de una variable CSS `--ui-header-height`.
 ::
 
-Utilice las ranuras `left`,`default` y `right` para personalizar el encabezado y las ranuras `body` o `content` para personalizar el menú del encabezado.
+Utilice las ranuras `left`, `default` y `right` para personalizar el encabezado y las ranuras `body` o `content` para personalizar el menú del encabezado.
 
 ::component-example
 ---
-Colapso: Verdad
-Categoría: true
-Nombre: 'Ejemplo'
-clase: '! px-0! pt-0'
-Desconocido: true
-Props:
-  Categoría: w-full
+collapse: true
+prettier: true
+name: 'header-example'
+class: '!px-0 !pt-0'
+overflowHidden: true
+props:
+  class: 'w-full'
 ---
 ::
 
@@ -33,58 +33,58 @@ Props:
 En este ejemplo, usamos el componente [NavigationMenu](/docs/components/navigation-menu) para representar los enlaces de encabezado en el centro.
 ::
 
-@12@Título
+### Nombre
 
-Utilice el prop `title` para cambiar el título de la cabecera. Defaults a `Nuxt UI`.
+Utilice la prop `title` para cambiar el título del encabezado. Defaults a `Nuxt UI`.
 
 ::component-code
 ---
-Escondido:
-  @@15@clase
-Props:
-  Nombre: Nuxt UI
-  Categoría: w-full
-clase: '! px-0! pt-0'
+hide:
+  - class
+props:
+  title: 'Nuxt UI'
+  class: 'w-full'
+class: '!px-0 !pt-0'
 ---
 ::
 
 También puede utilizar la ranura `title` para agregar su propio logotipo.
 
 ::tip{to="#props"}
-Todavía debe agregar el prop `title` para reemplazar el `aria-label` predeterminado del enlace.
+Aún debe agregar el prop `title` para reemplazar el `aria-label` predeterminado del enlace.
 ::
 
 ::component-code
 ---
-Categoría: true
-Desconocido: true
-Escondido:
-  @1919@clase
-Props:
-  Categoría: w-full
-Los slots:
-  Título:|
+prettier: true
+overflowHidden: true
+hide:
+  - class
+props:
+  class: 'w-full'
+slots:
+  title: |
 
-    @@ 20
-clase: '! px-0! pt-0'
+    <Logo class="h-6 w-auto" />
+class: '!px-0 !pt-0'
 ---
 
-#Título
-Vía: logo{class="h-6 w-auto"}
+#title
+:logo{class="h-6 w-auto"}
 ::
 
-@222222222222222200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### xxxxxxto
 
 Utilice el prop `to` para cambiar el enlace del título. Defaults a `/`.
 
 ::component-code
 ---
-Escondido:
-  @@25@clase
-clase: '! px-0! pt-0'
-Props:
-  Archivo: /docs
-  Categoría: w-full
+hide:
+  - class
+class: '!px-0 !pt-0'
+props:
+  to: '/docs'
+  class: 'w-full'
 ---
 ::
 
@@ -92,95 +92,95 @@ También puede utilizar la ranura `left` para anular el enlace por completo.
 
 ::component-code
 ---
-Categoría: true
-Desconocido: true
-Escondido:
-  @27@clase
-clase: '! px-0! pt-0'
-Props:
-  Categoría: w-full
-Los slots:
-  izquierda:|
+prettier: true
+overflowHidden: true
+hide:
+  - class
+class: '!px-0 !pt-0'
+props:
+  class: 'w-full'
+slots:
+  left: |
 
-    @@ 28
-      @@ 29
-    @@@ 30 @
+    <NuxtLink to="/docs">
+      <Logo class="h-6 w-auto" />
+    </NuxtLink>
 ---
 
-#izquierda
+#left
 ::nuxt-link{to="/docs"}
-Vía: logo{class="h-6 w-auto"}
+:logo{class="h-6 w-auto"}
 ::
 ::
 
-@322@mode
+### Modo
 
-Utilice el prop `mode` para cambiar el modo del menú de encabezado. Predeterminados a `modal`.
+Utilice el prop `mode` para cambiar el modo del menú de encabezado.
 
 Utilice la ranura `body` para rellenar el cuerpo del menú (debajo del encabezado) o la ranura `content` para rellenar todo el menú.
 
 ::tip{to="#props"}
-Puede utilizar el prop `menu` para personalizar el menú de la cabecera, se adaptará dependiendo del modo que elija.
+Puedes usar el prop `menu` para personalizar el menú de la cabecera, se adaptará dependiendo del modo que elijas.
 ::
 
 ::component-example
 ---
-Colapso: Verdad
+collapse: true
 iframe:
-  Tamaño: 300px
-iframeMobile: Verdad
-Desconocido: true
-Nombre: 'header-menu-ejemplo'
-Opciones:
-  - name:'modo'(en inglés)
-    Categoría:"Moda"
-    por defecto: "Drawer"
-    Items:
-      @399@Modal
-      @400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-      @@pH041@@ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-Props:
-  Categoría: w-full
+  height: 300px;
+iframeMobile: true
+overflowHidden: true
+name: 'header-menu-example'
+options:
+  - name: 'mode'
+    label: 'mode'
+    default: 'drawer'
+    items:
+      - modal
+      - slideover
+      - drawer
+props:
+  class: 'w-full'
 ---
 ::
 
-@@2014@Toggle
+xph0999xTélam
 
-Utilice el prop `toggle` para personalizar el botón de alternancia que se muestra en el móvil.
+Utilice el accesorio `toggle` para personalizar el botón de alternancia que se muestra en el móvil.
 
 Puede pasar cualquier propiedad del componente [Button](/docs/components/button) para personalizarlo.
 
 ::component-example
 ---
-Colapso: Verdad
+collapse: true
 iframe:
-  Tamaño: 300px
-iframeMobile: Verdad
-Desconocido: true
-Nombre del archivo: 'header-toggle-example'
-Props:
-  Categoría: w-full
+  height: 300px;
+iframeMobile: true
+overflowHidden: true
+name: 'header-toggle-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-### Toggle Lado de la foto
+### Toggle Lado
 
-Utilice el prop `toggle-side` para cambiar el lado del botón de alternancia. Predeterminados a `right`.
+Utilice el prop `toggle-side` para cambiar el lado del botón de alternancia.
 
 ::component-example
 ---
-Colapso: Verdad
+collapse: true
 iframe:
-  Tamaño: 300px
-iframeMobile: Verdad
-Desconocido: true
-Nombre: 'header-toggle-side-example'
-Props:
-  Categoría: w-full
+  height: 300px;
+iframeMobile: true
+overflowHidden: true
+name: 'header-toggle-side-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-@@P051@Ejemplos
+## Ejemplos
 
 ### Con toggle animado
 
@@ -188,18 +188,18 @@ Utilice la ranura `#toggle` para reemplazar el botón de alternancia predetermin
 
 ::component-example
 ---
-Colapso: Verdad
+collapse: true
 iframe:
-  Tamaño: 300px
-iframeMobile: Verdad
-Desconocido: true
-Nombre del archivo: 'header-toggle-animated-example'
-Props:
-  Categoría: w-full
+  height: 300px;
+iframeMobile: true
+overflowHidden: true
+name: 'header-toggle-animated-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-### Dentro de `app.vue`
+### Dentro del `app.vue`
 
 Utilice el componente Encabezado en su `app.vue` o en un diseño:
 
@@ -266,24 +266,24 @@ const items = computed<NavigationMenuItem[]>(() => [{
 </template>
 ```
 
-@@pH123
+## API (Edición española)
 
-@124@124@124
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
-@125@125@125@125
+### Slots
 
-Componentes de slots
+:component-slots
 
-@126@126@126
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@127 @@ Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@128@Changelog (Edición española)
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

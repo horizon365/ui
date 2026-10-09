@@ -1,6 +1,6 @@
 ---
-title: ChatReasoning
-description: 显示可折叠的 AI 推理或思考过程。
+title: 聊天推理
+description: 显示可折叠的AI推理或思维过程。
 category: chat
 links:
   - label: 可折叠
@@ -10,9 +10,10 @@ links:
     icon: i-simple-icons-github
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatReasoning.vue
 ---
+
 ## 用法
 
-ChatReasoning 组件渲染一个可折叠块，用于显示 AI 推理或思考内容。它在流式输出期间自动展开，并在结束后自动收起。
+ChatReasoning组件呈现一个可折叠的块，显示AI推理或思考内容。它在流式传输期间自动打开，并在流式传输后自动关闭。
 
 ::component-example
 ---
@@ -24,12 +25,12 @@ class: 'h-[252px]'
 ::
 
 ::note{to="/docs/composables/use-scroll-shadow"}
-主体内容使用 `useScrollShadow` 组合式函数，在溢出时应用淡出阴影。
+body内容使用`useScrollShadow`组合工具在溢出时应用渐变阴影。
 ::
 
-### 文本
+### Text
 
-使用 `text` 属性设置推理内容。文本显示在可折叠主体内。
+使用`text`属性设置推理内容，文本显示在可折叠的正文中。
 
 ::component-code
 ---
@@ -42,9 +43,9 @@ props:
 ---
 ::
 
-### 流式输出
+### 流媒体
 
-使用 `streaming` 属性表示正在进行的推理。组件会在流式输出开始时自动展开，并在结束时自动收起。
+使用`streaming` prop来表示主动推理。该组件在流式传输开始时自动打开，在流式传输结束时自动关闭。
 
 ::component-code
 ---
@@ -61,12 +62,12 @@ props:
 ::
 
 ::tip
-使用来自 `@nuxt/ui/utils/ai` 的 `isPartStreaming` 工具来判断某个部分当前是否正在流式输出。
+使用`@nuxt/ui/utils/ai`中的`isPartStreaming`实用程序确定当前是否正在流式传输部件。
 ::
 
-### 微光
+### Shimmer
 
-在流式输出时，触发器标签会使用 [`ChatShimmer`](/docs/components/chat-shimmer) 组件。使用 `shimmer` 属性来自定义其 `duration` 和 `spread`。
+在流式传输时，触发器标签使用[`ChatShimmer`](/docs/components/chat-shimmer)组件。使用`shimmer`道具可以自定义其`duration`和`spread`。
 
 ::component-code
 ---
@@ -85,9 +86,9 @@ props:
 ---
 ::
 
-### 图标
+### Icon
 
-使用 `icon` 属性在触发器旁边显示 [Icon](/docs/components/icon) 组件。
+使用`icon`道具在触发器旁边显示[Icon](/docs/components/icon)组件。
 
 ::component-code
 ---
@@ -103,12 +104,12 @@ props:
 ---
 ::
 
-### 箭头
+### 雪佛龙
 
-使用 `chevron` 属性更改箭头图标的位置。
+使用`chevron`道具改变V形图标的位置。
 
 ::note
-当 `chevron` 设置为 `leading` 并带有 `icon` 时，图标会在悬停和展开时与箭头交换。
+当`chevron`被设置为`leading`和`icon`时，图标在悬停和打开时与V形符号交换。
 ::
 
 ::component-code
@@ -126,9 +127,9 @@ props:
 ---
 ::
 
-### 箭头图标
+### Chevron图标
 
-使用 `chevron-icon` 属性来自定义箭头 [Icon](/docs/components/icon)。默认为 `i-lucide-chevron-down`。
+使用`chevron-icon`道具将chevron [Icon](/docs/components/icon).exe自定义为`i-lucide-chevron-down`。
 
 ::component-code
 ---
@@ -147,39 +148,39 @@ props:
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-你可以在 `app.config.ts` 中的 `ui.icons.chevronDown` 键下全局自定义此图标。
+你可以在你的`app.config.ts`中的`ui.icons.chevronDown`键下全局自定义这个图标。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-你可以在 `vite.config.ts` 中的 `ui.icons.chevronDown` 键下全局自定义此图标。
+你可以在你的`ui.icons.chevronDown`键下的`vite.config.ts`中全局自定义这个图标。
 :::
 ::
 
 ## 示例
 
 ::tip{to="/docs/components/chat"}
-查看 **Chat** 概览页面以获取安装说明、服务器设置和使用示例。
+查看**Chat**概述页面以获取安装说明、服务器设置和使用示例。
 ::
 
 ## API
 
-### 属性
+### Props
 
 :component-props
 
-### 插槽
+### Slots
 
 :component-slots
 
-### 事件
+### 发射
 
 :component-emits
 
-## 主题
+## Theme
 
 :component-theme
 
-## 更新日志
+## Changelog
 
 :component-changelog

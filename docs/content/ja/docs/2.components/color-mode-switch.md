@@ -13,9 +13,9 @@ links:
 
 ## 使用法
 
-ColorModeSwitchコンポーネントは[ Switch ](/docs/components/switch)コンポーネントを拡張しているので、`color`、`size`などのプロパティを渡すことができます。
+ColorModeSwitchコンポーネントは[Switch](/docs/components/switch)コンポーネントを拡張するため、`color`、`size`などの任意のプロパティを渡すことができます。
 
-コンポーネントコード{prefix="color-mode"}
+:component-code{prefix="color-mode"}
 
 ## 例
 
@@ -68,12 +68,12 @@ export default defineConfig({
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="color-mode"}
+:component-changelog{prefix="color-mode"}

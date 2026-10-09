@@ -10,9 +10,9 @@ links:
 
 ## 使用法
 
-DashboardGroupコンポーネントは、[ DashboardSidebar ](/docs/components/dashboard-sidebar)および[ DashboardPanel ](/docs/components/dashboard-panel)コンポーネントをラップして、応答性の高いダッシュボードインターフェイスを作成するメインレイアウトです。
+DashboardGroupコンポーネントは、[DashboardSidebar](/docs/components/dashboard-sidebar)および[DashboardPanel](/docs/components/dashboard-panel)コンポーネントをラップして応答性の高いダッシュボードインターフェイスを作成するメインレイアウトです。
 
-レイアウトまたは`app.vue`で使用してください。
+レイアウトまたは`app.vue`で使用してください：
 
 ```vue [layouts/dashboard.vue]{2,6}
 <template>
@@ -24,20 +24,20 @@ DashboardGroupコンポーネントは、[ DashboardSidebar ](/docs/components/d
 </template>
 ```
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

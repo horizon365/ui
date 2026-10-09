@@ -1,5 +1,5 @@
 ---
-title: Pininput hinzufügen
+title: PinEingang
 description: Ein Eingabeelement, um einen Pin einzugeben.
 category: form
 keywords:
@@ -7,7 +7,7 @@ keywords:
   - one-time password
   - verification code
 links:
-  - label: PinEingang
+  - label: Pininput hinzufügen
     icon: i-custom-reka-ui
     to: https://reka-ui.com/docs/components/pin-input
   - label: GitHub
@@ -15,46 +15,46 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PinInput.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Verwenden Sie die `v-model`-Direktive, um den Wert des PinInput zu steuern.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  - modellWert
-Außen:
-  - modellWert
-Props:
-  Modellwert: []
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: []
 ---
 ::
 
-Verwenden Sie `default-value` prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
+Verwenden Sie die `default-value`-prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
+prettier: true
+ignore:
   - defaultValue
-Props:
-  DefaultValue: ['1','2','3']
+props:
+  defaultValue: ['1','2','3']
 ---
 ::
 
-@@@@@@@006@0000@000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### type ist ein
 
-Verwenden Sie `type` prop, um den Eingabetyp zu ändern. Standardmäßig ist `text`.
+Verwenden Sie die `type`-prop, um den Eingabetyp zu ändern. Standardmäßig `text`.
 
 ::component-code
 ---
-Items:
-  Typen:
-    @@ph009@@text
-    @@ph010@@Nummer
-Props:
-  Typ: 'Anzahl'
+items:
+  type:
+    - text
+    - number
+props:
+  type: 'number'
 ---
 ::
 
@@ -62,70 +62,70 @@ Props:
 Wenn `type` auf `number` gesetzt ist, werden nur numerische Zeichen akzeptiert.
 ::
 
-@@@@@13@13.13.2013
+### Maske
 
-Verwenden Sie `mask` prop, um die Eingabe wie ein Passwort zu behandeln.
+Verwenden Sie die `mask`-Prop, um die Eingabe wie ein Passwort zu behandeln.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph015@gmail.de
+prettier: true
+ignore:
+  - placeholder
   - defaultValue
-Props:
-  Maske: wahr
+props:
+  mask: true
   defaultValue: ['1','2','3','4','5']
 ---
 ::
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##########################################################################################################################################################################################################
+### OTP
 
-Verwenden Sie `otp` prop, um die One-Time Password-Funktion zu aktivieren. Wenn diese Funktion aktiviert ist, können mobile Geräte OTP-Codes automatisch aus SMS-Nachrichten oder Zwischenablage-Inhalten erkennen und ausfüllen, wobei die automatische Vervollständigung unterstützt wird.
+Verwenden Sie die `otp`-prop, um One-Time Password-Funktionalität zu aktivieren. Wenn aktiviert, können mobile Geräte OTP-Codes automatisch aus SMS-Nachrichten oder Zwischenablage-Inhalten erkennen und ausfüllen, mit Autocomplete-Unterstützung.
 
 ::component-code
 ---
-Props:
-  OTP: Wahr
+props:
+  otp: true
 ---
 ::
 
 ### Platzhalter
 
-Verwenden Sie `placeholder` prop, um einen Platzhaltertext zu setzen.
+Verwenden Sie die `placeholder`-Prop, um einen Platzhaltertext festzulegen.
 
 ::component-code
 ---
-Props:
-  Beispiel: „ Platzhalter "
+props:
+  placeholder: '○'
 ---
 ::
 
-### Länge
+### Length Übersetzung
 
-Verwenden Sie `length` prop, um die Anzahl der Eingaben zu ändern.
+Verwenden Sie die `length`-prop, um die Anzahl der Eingänge zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph023@gmail.de
-Props:
-  Länge: 6
-  Beispiel: „ Platzhalter "
+ignore:
+  - placeholder
+props:
+  length: 6
+  placeholder: '○'
 ---
 ::
 
-### Separator: badge{label="4.9+" class="align-text-top"}
+### Separator: badge{label="4.9+" class="align-text-top"} (englisch)
 
-Verwenden Sie `separator` prop, um ein Trennzeichen zwischen Gruppen von Eingängen einzufügen.
+Verwenden Sie die `separator` prop, um ein Trennzeichen zwischen Gruppen von Eingängen einzufügen. Geben Sie eine Zahl ein, um nach jeder N-ten Eingabe eins einzufügen.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph027@gmail.de
-Props:
-  Länge: 6
-  Trennung: 3
-  Beispiel: „ Platzhalter "
+ignore:
+  - placeholder
+props:
+  length: 6
+  separator: 3
+  placeholder: '○'
 ---
 ::
 
@@ -133,119 +133,119 @@ Sie können auch ein Array von Positionen übergeben, um Trennzeichen nach besti
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph028@@gmail.de
-  @@ph029@@Länge
-  @@ph030@@trennzeichen
-Props:
-  Dauer: 7
-  Trennzeichen: [3, 4]
-  Beispiel: „ Platzhalter "
+prettier: true
+ignore:
+  - placeholder
+  - length
+  - separator
+props:
+  length: 7
+  separator: [3, 4]
+  placeholder: '○'
 ---
 ::
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@###############################################################################################################################################################################################
+### Color (englisch)
 
-Verwenden Sie `color` prop, um die Ringfarbe zu ändern, wenn der PinInput fokussiert ist.
+Verwenden Sie die `color` prop, um die Ringfarbe zu ändern, wenn der PinInput fokussiert ist.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph033@gmail.de
-Props:
-  Farbe: neutral
-  Highlight: Wahr
-  Beispiel: "Platzhalter"
+ignore:
+  - placeholder
+props:
+  color: neutral
+  highlight: true
+  placeholder: '○'
 ---
 ::
 
 ::note
-`highlight` prop wird hier verwendet, um den Fokuszustand anzuzeigen. Es wird intern verwendet, wenn ein Validierungsfehler auftritt.
+Die `highlight`-prop wird hier verwendet, um den Fokusstatus anzuzeigen. Es wird intern verwendet, wenn ein Validierungsfehler auftritt.
 ::
 
-@@ph035@@Variantentabelle
+### Variant Übersetzung
 
-Verwenden Sie `variant` prop, um die Variante der PinInput zu ändern.
+Verwenden Sie die `variant`-prop, um die Variante des PinInput zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph037@gmail.de
-Props:
-  Farbe: neutral
-  Variante: subtil
-  Markiert: false
-  Beispiel: "Platzhalter"
+ignore:
+  - placeholder
+props:
+  color: neutral
+  variant: subtle
+  highlight: false
+  placeholder: '○'
 ---
 ::
 
-@@@@@@38@38
+### Size
 
-Verwenden Sie `size` prop, um die Größe der PinInput zu ändern.
+Verwenden Sie die `size`-prop, um die Größe des PinInput zu ändern.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph040@@gmail.de
-Props:
-  Größe: XL
-  Beispiel: "Platzhalter"
+ignore:
+  - placeholder
+props:
+  size: xl
+  placeholder: '○'
 ---
 ::
 
-### disabled @ disabled
+### Disabled (nicht verfügbar)
 
-Verwenden Sie `disabled` prop, um die PinInput zu deaktivieren.
+Verwenden Sie die `disabled` prop, um den PinInput zu deaktivieren.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph043@gmail.de
-Props:
-  Behindert: Wahr
-  Beispiel: "Platzhalter"
+ignore:
+  - placeholder
+props:
+  disabled: true
+  placeholder: '○'
 ---
 ::
 
-@@ph044@@Beispiele
+## Beispiele
 
-### Mit Trennschlitz: badge{label="4.9+" class="align-text-top"}
+### Mit Separator-Slot: badge{label="4.9+" class="align-text-top"}
 
 Verwenden Sie den `separator`-Steckplatz, um das Erscheinungsbild des Separators anzupassen.
 
 ::component-example
 ---
-Name: 'Pin-Input-Separator-Slot-Beispiel'
+name: 'pin-input-separator-slot-example'
 ---
 ::
 
-@@048@gbt-gbt.de
+## API Bearbeiten
 
-@@ph049@@@gmail.de
+### Props (englisch)
 
-Komponenten Props
+:component-props
 
-@@ph050@gmail.de
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph051@emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-### Aufdecken
+### Expose (englisch)
 
 Beim Zugriff auf die Komponente über eine Template-Referenz können Sie Folgendes verwenden:
 
 | Vorname| Typ|
 | ---- | ---- |
-| {lang="ts-type"}| {lang="ts-type"}|
+| `inputsRef`{lang="ts-type"}| `Ref<ComponentPublicInstance[]>`{lang="ts-type"} (nicht)|
 
-@@ph057@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph058@@changelog @@@ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

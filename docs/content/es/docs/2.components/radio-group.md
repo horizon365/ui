@@ -14,286 +14,286 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/RadioGroup.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice la directiva `v-model` para controlar el valor del RadioGroup o la prop `default-value` para establecer el valor inicial cuando no necesite controlar su estado.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  - modelValue (Edición española)
-  @@pH004@artículos
-Externo:
-  @@0005@artículos
-  - modelValue (Edición española)
-Props:
-  Categoría:"Sistema"
+prettier: true
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'System'
   items:
-    - "Proyecto"
-    - "La luz"
-    @0009 @@"La verdad"
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-@100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Artículos
 
 Utilice el prop `items` como una matriz de cadenas o números:
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@P2012@modelValue (Edición española)
-  @@13000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externo:
-  @140000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @@P015@modelValue (Edición española)
-Props:
-  Categoría:"Sistema"
-  Items:
-    - "Proyecto"
-    - "La luz"
-    - "El sueño"
+prettier: true
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+props:
+  modelValue: 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
 También puede pasar una matriz de objetos con las siguientes propiedades:
 
-@@
-@@
-@@
-@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@
-@@
+- xx`label?: string`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`class?: any`xxx{lang="ts-type"}
+- xx`ui?: { item?: ClassNameValue, container?: ClassNameValue, base?: ClassNameValue, 'indicator'?: ClassNameValue, wrapper?: ClassNameValue, label?: ClassNameValue, icon?: ClassNameValue, description?: ClassNameValue }`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ::component-code
 ---
-Ignora:
-  - modelValue (Edición española)
-  @494@artículos
-Externo:
-  @500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  @@P051@@modelValue (Edición española)
-Externalidades:
-  @@R2005@R2005 [en línea]
-Props:
-  Categoría:'Sistema'
-  Items:
-    - label:'El sistema'
-      Descripción:'Coincide con la configuración de su dispositivo.'
-      Categoría:"Sistema"
-    - label:"La luz"
-      Descripción:"Utiliza siempre el tema de la luz".
-      Categoría:'Light'
-    - label:"Oscuridad"
-      Descripción:"Siempre usa el tema oscuro".
-      Categoría:"Dark"
+ignore:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+externalTypes:
+  - RadioGroupItem[]
+props:
+  modelValue: 'system'
+  items:
+    - label: 'System'
+      description: 'Matches your device settings.'
+      value: 'system'
+    - label: 'Light'
+      description: 'Always uses the light theme.'
+      value: 'light'
+    - label: 'Dark'
+      description: 'Always uses the dark theme.'
+      value: 'dark'
 ---
 ::
 
 ::caution
-Cuando se utilizan objetos, es necesario hacer referencia a la propiedad `value` del objeto en la directiva `v-model` o en la prop.
+Cuando se usan objetos, es necesario hacer referencia a la propiedad `value` del objeto en la directiva `v-model` o en la prop. `default-value`.
 ::
 
 ### Clave de valor
 
-Puede cambiar la propiedad que se utiliza para establecer el valor utilizando la prop.`value-key`.
+Puede cambiar la propiedad que se utiliza para establecer el valor mediante el uso de la prop. `value-key`.
 
 ::component-code
 ---
-Ignora:
-  @@pH062@modelValue (Edición española)
-  @@pH063@artículos
-  @@pH064@valueKey
-Externo:
-  @065 @ artículos
-  @@pH066@modelValue (Edición española)
-Externalidades:
-  @@@RF067@RF067 [en]
-Props:
-  Categoría:'Light'
-  ValueKey: 'id'
+ignore:
+  - modelValue
+  - items
+  - valueKey
+external:
+  - items
+  - modelValue
+externalTypes:
+  - RadioGroupItem[]
+props:
+  modelValue: 'light'
+  valueKey: 'id'
   items:
-    - label:'El sistema'
-      Descripción:'Coincide con la configuración de su dispositivo.'
-      Nombre: "Sistema"
-    - label:"La luz"
-      Descripción:"Utiliza siempre el tema de la luz".
-      Nombre: "Light"
-    - label:"La oscuridad"
-      Descripción:"Utiliza siempre el tema oscuro".
-      Categoría:"Dark"
+    - label: 'System'
+      description: 'Matches your device settings.'
+      id: 'system'
+    - label: 'Light'
+      description: 'Always uses the light theme.'
+      id: 'light'
+    - label: 'Dark'
+      description: 'Always uses the dark theme.'
+      id: 'dark'
 ---
 ::
 
-@71@@leyenda
+### leyenda
 
-Utilice el prop `legend` para establecer la leyenda del RadioGroup.
+Utilice el accesorio `legend` para configurar la leyenda del RadioGroup.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH073@defaultValue (en inglés)
-  @@70000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externo:
-  @@75 @ puntos
-Props:
-  Categoría:"Tema"
-  Valoración:'Sistema'
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+props:
+  legend: 'Theme'
+  defaultValue: 'System'
   items:
-    - "Proyecto"
-    - "La luz"
-    - 'oscuro'
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-@@79@color
+### Color en línea
 
-Utilice el prop `color` para cambiar el color del RadioGroup.
+Utilice el accesorio `color` para cambiar el color del RadioGroup.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH081@@defaultValue (en inglés)
-  @082@artículos
-Externo:
-  @083@artículos
-Props:
-  Color: Neutral
-  Valoración:'Sistema'
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+props:
+  color: neutral
+  defaultValue: 'System'
   items:
-    - "Proyecto"
-    - "La luz"
-    - 'oscuro'
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-@@708@Variante
+### Variante
 
-Utilice la prop `variant` para cambiar la variante del RadioGroup.
+Utilice el prop `variant` para cambiar la variante del RadioGroup.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH089@defaultValue (en inglés)
-  @090000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externo:
-  @091@artículos
-Externalidades:
-  @@R2002 @R2000 [en línea]
-Props:
-  Categoría:"Primary"
-  Variación:"tarjeta"
-  defaultValue: 'sistema'
-  Items:
-    - label:'El sistema'
-      Categoría:"Sistema"
-      Descripción:'Coincide con la configuración de su dispositivo.'
-    - label:"La luz"
-      Categoría:'Light'
-      Descripción:"Utiliza siempre el tema de la luz".
-    - label:"La oscuridad"
-      Categoría:"Dark"
-      Descripción:"Siempre usa el tema oscuro".
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+externalTypes:
+  - RadioGroupItem[]
+props:
+  color: 'primary'
+  variant: 'card'
+  defaultValue: 'system'
+  items:
+    - label: 'System'
+      value: 'system'
+      description: 'Matches your device settings.'
+    - label: 'Light'
+      value: 'light'
+      description: 'Always uses the light theme.'
+    - label: 'Dark'
+      value: 'dark'
+      description: 'Always uses the dark theme.'
 ---
 ::
 
-@096 @@ Tamaño
+### Tamaño
 
-Utilice la prop `size` para cambiar el tamaño del RadioGroup.
+Utilice el prop `size` para cambiar el tamaño del RadioGroup.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH098@defaultValue (en inglés)
-  @099 @ artículos
-Externo:
-  @100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Tamaño:"XL"
-  Variación:"lista"
-  Valoración:'Sistema'
-  Items:
-    - "Proyecto"
-    - "La luz"
-    - "El secreto"
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+props:
+  size: 'xl'
+  variant: 'list'
+  defaultValue: 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
 ### Orientación
 
-Utilice el prop `orientation` para cambiar la orientación del RadioGroup. Defaults a `vertical`.
+Utilice el prop `orientation` para cambiar la orientación del RadioGroup. Predeterminados a `vertical`.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH107@defaultValue (en inglés)
-  @108@artículos
-Externo:
-  @109 @ artículos
-Props:
-  Categoría:"Horizontal"
-  Variación:"lista"
-  Valoración:'Sistema'
-  Items:
-    - "Proyecto"
-    - "La luz"
-    - 'El sueño'
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+props:
+  orientation: 'horizontal'
+  variant: 'list'
+  defaultValue: 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
 ### Indicador
 
-Utilice el prop `indicator` para cambiar la posición u ocultar el indicador. Predeterminados a `start`.
+Utilice el prop `indicator` para cambiar la posición u ocultar el indicador.
 
 ::note
-El `icon` de un artículo solo se muestra cuando el `indicator` es `hidden`, encima de la etiqueta, ya que una radio no tiene icono dentro de su indicador.
+El `icon` de un artículo solo se muestra cuando `indicator` es `hidden`, por encima de la etiqueta, ya que una radio no tiene icono dentro de su indicador.
 ::
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH119@@defaultValue
-  @120@artículos
-Externo:
-  @121@artículos
-Externalidades:
-  - RadioGroupItem (en inglés)
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+externalTypes:
+  - RadioGroupItem[]
 items:
-  Indicador:
-    @123 @ Inicio
-    @F124 @@ Inicio
-    @125 @ oculto
-  Variante:
-    @126 @@ Proyecto
-    @127 @@ Dirección
-    @128@Tablero
-Props:
-  Categoría:"Hidden"
-  Categoría:"Horizontal"
-  Categoría:"Mesa"
-  Valoración:'Sistema'
-  Items:
-    - label:'El sistema'
-      Icono: 'i-lucide-monitor'
-      Categoría:"Sistema"
-      Categoría: W-20
-    - label:'Luz'(Edición española)
-      icono: 'i-lucide-sun'
-      Categoría:"Light"
-      Categoría: W-20
-    - label:"La oscuridad"
-      Icono: 'i-lucide-moon'
-      Categoría:"Dark"
-      Categoría: W-20
+  indicator:
+    - start
+    - end
+    - hidden
+  variant:
+    - list
+    - card
+    - table
+props:
+  indicator: 'hidden'
+  orientation: 'horizontal'
+  variant: 'table'
+  defaultValue: 'System'
+  items:
+    - label: 'System'
+      icon: 'i-lucide-monitor'
+      value: 'System'
+      class: 'w-20'
+    - label: 'Light'
+      icon: 'i-lucide-sun'
+      value: 'Light'
+      class: 'w-20'
+    - label: 'Dark'
+      icon: 'i-lucide-moon'
+      value: 'Dark'
+      class: 'w-20'
 ---
 ::
 
@@ -303,40 +303,40 @@ Utilice el prop `disabled` para desactivar el RadioGroup.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH134@@defaultValue
-  @135 @ puntos
-Externo:
-  @136@artículos
-Props:
-  Discapacitados: Verdadero
-  Valoración:'Sistema'
-  Items:
-    - "Proyecto"
-    - 'La luz'
-    - "El secreto"
+prettier: true
+ignore:
+  - defaultValue
+  - items
+external:
+  - items
+props:
+  disabled: true
+  defaultValue: 'System'
+  items:
+    - 'System'
+    - 'Light'
+    - 'Dark'
 ---
 ::
 
-@@pH140
+## API
 
-@141@141@141
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
-@@ph142@@esencias
+### Slots
 
-Componentes de slots
+:component-slots
 
-@@143@143@143
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@144 @@ Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@145@Changelog (Edición española)
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

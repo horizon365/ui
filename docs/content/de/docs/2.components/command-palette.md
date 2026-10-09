@@ -20,73 +20,73 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/CommandPalette.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Verwenden Sie die Direktive `v-model`, um den Wert der CommandPalette zu steuern, oder die Direktive `default-value` prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
+Verwenden Sie die `v-model`-Direktive, um den Wert der CommandPalette zu steuern, oder die `default-value`-Prop, um den Anfangswert festzulegen, wenn Sie den Zustand nicht steuern müssen.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
+collapse: true
+hide:
   - autofocus
-Ignoriert:
-  @@ph004@@gmail.de
-  - modellWert
-  @@006@Klasse
-Außen:
-  @@ph007@@gmail.de
-  - modellWert
-Externe Personen:
-  - CommandPaletteGroup [Bearbeiten | Quelltext bearbeiten]
-Klasse: '! p-0'
-Props:
-  Modellwert: {}
-  Autofokus: false
-  Gruppen:
-    - id:'Benutzer'
-      Label: "Benutzer"
-      Items:
-        - label:'Benjamin Canac'(auf Englisch)
-          Zitat von » Benjamincanac «
-          Avatare sind:
+ignore:
+  - groups
+  - modelValue
+  - class
+external:
+  - groups
+  - modelValue
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  modelValue: {}
+  autofocus: false
+  groups:
+    - id: 'users'
+      label: 'Users'
+      items:
+        - label: 'Benjamin Canac'
+          suffix: 'benjamincanac'
+          avatar:
             src: 'https://github.com/benjamincanac.png'
-            Aufladung: Lazy
-        - label:'Hugo Richard'(auf Englisch)
-          Suffix: 'HugoRCD'(Englisch)
-          Avatare sind:
+            loading: lazy
+        - label: 'Hugo Richard'
+          suffix: 'HugoRCD'
+          avatar:
             src: 'https://github.com/HugoRCD.png'
-            Aufladung: Lazy
-        - label:'Sébastien Chopin'(Deutsche Übersetzung)
-          Zitat von » atinox «
-          Avatare sind:
-            src: 'https://github.com/atinux.png'(https://github.com/atinux.png)
-            Aufladung: Lazy
-        - label:'Romain Hamel'(auf Englisch)
-          Zitat von » romhml «
-          Avatare sind:
-            src: 'https://github.com/romhml.png'(auf Englisch)
-            Aufladung: Lazy
-        - label:'Sandro Circi'(auf Englisch)
-          Zitat von » Sandros94 «
-          Avatare sind:
-            src: 'https://github.com/sandros94.png'(auf Englisch)
-            Aufladung: Lazy
-        - label:'Jakub Michálek'(auf Englisch)
-          Nachsilbe: 'J-Michalek'
-          Avatare sind:
+            loading: lazy
+        - label: 'Sébastien Chopin'
+          suffix: 'atinux'
+          avatar:
+            src: 'https://github.com/atinux.png'
+            loading: lazy
+        - label: 'Romain Hamel'
+          suffix: 'romhml'
+          avatar:
+            src: 'https://github.com/romhml.png'
+            loading: lazy
+        - label: 'Sandro Circi'
+          suffix: 'sandros94'
+          avatar:
+            src: 'https://github.com/sandros94.png'
+            loading: lazy
+        - label: 'Jakub Michálek'
+          suffix: 'J-Michalek'
+          avatar:
             src: 'https://github.com/J-Michalek.png'
-            Aufladung: Lazy
-        @@ph018@@label:'Alex'(auf Englisch)
-          Zitat von » Hywax «
-          Avatare sind:
-            src: 'https://github.com/hywax.png'(auf Englisch)
-            Aufladung: Lazy
-        - label:'Maxime Pauvert'(auf Englisch)
-          Zitat von » Maximepvrt «
-          Avatare sind:
+            loading: lazy
+        - label: 'Alex'
+          suffix: 'hywax'
+          avatar:
+            src: 'https://github.com/hywax.png'
+            loading: lazy
+        - label: 'Maxime Pauvert'
+          suffix: 'maximepvrt'
+          avatar:
             src: 'https://github.com/maximepvrt.png'
-            Aufladung: Lazy
-  Klasse: 'flex-1 h-80'(Einheit)
+            loading: lazy
+  class: 'flex-1 h-80'
 ---
 ::
 
@@ -94,106 +94,106 @@ Props:
 Sie können auch das `@update:model-value`-Ereignis verwenden, um die ausgewählten Elemente anzuhören.
 ::
 
-@@@ph021@@Gruppen
+### Groups (englisch)
 
-Die CommandPalette-Komponente filtert Gruppen und ordnet übereinstimmende Befehle nach Relevanz, wenn Benutzer sie eingeben. Sie bietet dynamische, sofortige Suchergebnisse für eine effiziente Befehlsermittlung. Verwenden Sie `groups` prop als Array von Objekten mit den folgenden Eigenschaften:
+Die CommandPalette-Komponente filtert Gruppen und ordnet übereinstimmende Befehle nach Relevanz, wenn Benutzer sie eingeben. Sie bietet dynamische, sofortige Suchergebnisse für eine effiziente Befehlsermittlung. Verwenden Sie die `groups`-Prop als Array von Objekten mit den folgenden Eigenschaften:
 
-`id: string``id: string``id: string`{lang="ts-type"}
-`label?: string`{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}PH028027@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`slot?: string``slot?: string`PH03030{lang="ts-type"}{lang="ts-type"}
-@@@@@@@@@@@@@@@@@@@@@@PH0333@@@@@@@@@@@@@@PH03333@@@@@@@@@@@@@@@PH0334{lang="ts-type"}{lang="ts-type"}PH03334@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-- [`ignoreFilter?: boolean`{lang="ts-type"}]()
-[`postFilter?: (searchTerm: string, items: T[]) => T[]`{lang="ts-type"}]()
-`highlightedIcon?: string``highlightedIcon?: string``highlightedIcon?: string``highlightedIcon?: string``highlightedIcon?: string`{lang="ts-type"}PH05051 @
+- `id: string`{lang="ts-type"} (nicht vorhanden)
+- `label?: string`{lang="ts-type"} (nicht vorhanden)
+- `slot?: string`{lang="ts-type"}x077xx07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x07x007x07x07x007x07x007x07x007x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+- `items?: CommandPaletteItem[]`{lang="ts-type"} (nicht vorhanden)
+- [`ignoreFilter?: boolean`{lang="ts-type"}](#with-ignore-filter)
+- [`postFilter?: (searchTerm: string, items: T[]) => T[]`{lang="ts-type"}](#with-post-filtered-items)
+- `highlightedIcon?: string`{lang="ts-type"} (nicht vorhanden)
 
 ::caution
-Sie müssen für jede Gruppe ein `id` angeben, sonst wird die Gruppe ignoriert.
+Sie müssen für jede Gruppe ein `id` angeben, da die Gruppe sonst ignoriert wird.
 ::
 
-Jede Gruppe enthält ein `items`-Array von Objekten, die die Befehle definieren.
+Jede Gruppe enthält ein `items`-Array von Objekten, die die Befehle definieren. Jedes Element kann die folgenden Eigenschaften haben:
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@PH0555@@@@@@@@@@@PH05555@@@@@@@@@@@PH0556
-`label?: string`{lang="ts-type"}`label?: string`PH0599{lang="ts-type"}PH0599@@@@@@@@@@@@@PH05999@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`suffix?: string``suffix?: string`{lang="ts-type"}
-`icon?: string``icon?: string``icon?: string`{lang="ts-type"}
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#########################################################################################
-`chip?: ChipProps``chip?: ChipProps``chip?: ChipProps``chip?: ChipProps`{lang="ts-type"}PH07070@@@@@@@@@@@@@@PH0707070@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`kbds?: string[] | KbdProps[]``kbds?: string[] | KbdProps[]``kbds?: string[] | KbdProps[]`{lang="ts-type"}
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`slot?: string``slot?: string`PH08999@@@@@PH0899@@@@@PH0899@@@@@PH08999@@@@@@@PH089999@@@@@@@@@PH089999999@@@@@@@@@@@@@@@@@@@@@@@@@@@PH089999999999999999999@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`children?: CommandPaletteItem[]``children?: CommandPaletteItem[]``children?: CommandPaletteItem[]`{lang="ts-type"}
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`class?: any`PH10101@@@@@@PH10102 @
-`ui?: { item?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLeadingChipSize?: ClassNameValue, itemLeadingChip?: ClassNameValue, itemLabel?: ClassNameValue, itemLabelPrefix?: ClassNameValue, itemLabelBase?: ClassNameValue, itemLabelSuffix?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingKbds?: ClassNameValue, itemTrailingKbdsSize?: ClassNameValue, itemTrailingHighlightedIcon?: ClassNameValue, itemTrailingIcon?: ClassNameValue }``ui?: { item?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLeadingChipSize?: ClassNameValue, itemLeadingChip?: ClassNameValue, itemLabel?: ClassNameValue, itemLabelPrefix?: ClassNameValue, itemLabelBase?: ClassNameValue, itemLabelSuffix?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingKbds?: ClassNameValue, itemTrailingKbdsSize?: ClassNameValue, itemTrailingHighlightedIcon?: ClassNameValue, itemTrailingIcon?: ClassNameValue }``ui?: { item?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLeadingChipSize?: ClassNameValue, itemLeadingChip?: ClassNameValue, itemLabel?: ClassNameValue, itemLabelPrefix?: ClassNameValue, itemLabelBase?: ClassNameValue, itemLabelSuffix?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingKbds?: ClassNameValue, itemTrailingKbdsSize?: ClassNameValue, itemTrailingHighlightedIcon?: ClassNameValue, itemTrailingIcon?: ClassNameValue }`{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}.@
+- `prefix?: string`{lang="ts-type"} (nicht)
+- `label?: string`{lang="ts-type"} | mehr
+- `suffix?: string`{lang="ts-type"} (nicht)
+- `icon?: string`{lang="ts-type"}
+- `avatar?: AvatarProps`{lang="ts-type"} (nicht)
+- `chip?: ChipProps`{lang="ts-type"} (nicht)
+- `kbds?: string[] | KbdProps[]`{lang="ts-type"} (nicht)
+- `active?: boolean`{lang="ts-type"} (nicht)
+- `loading?: boolean`{lang="ts-type"} (nicht)
+- `disabled?: boolean`{lang="ts-type"} (nicht)
+- [`slot?: string`{lang="ts-type"}](](#with-custom-slot)
+- `placeholder?: string`{lang="ts-type"} (nicht)
+- `children?: CommandPaletteItem[]`{lang="ts-type"} (englisch)
+- `onSelect?: (e: Event) => void`{lang="ts-type"} | mehr
+- `class?: any`{lang="ts-type"} (nicht)
+- `ui?: { item?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLeadingChipSize?: ClassNameValue, itemLeadingChip?: ClassNameValue, itemLabel?: ClassNameValue, itemLabelPrefix?: ClassNameValue, itemLabelBase?: ClassNameValue, itemLabelSuffix?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingKbds?: ClassNameValue, itemTrailingKbdsSize?: ClassNameValue, itemTrailingHighlightedIcon?: ClassNameValue, itemTrailingIcon?: ClassNameValue }`{lang="ts-type"} (englisch)
 
-Sie können jede Eigenschaft von der [Link](/docs/components/link#props) Komponente wie `to`,`target` usw. übergeben.
+Sie können jede Eigenschaft der Komponente [Link](/docs/components/link#props) übergeben, z. B. `to`, `target` usw.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
+collapse: true
+hide:
   - autofocus
-Ignoriert:
-  - gruppen
-  - modellWert
-  @@115@Klasse
-Außen:
-  - gruppen
-  - modellWert
-Externe Typen:
-  - CommandPaletteGroup [Bearbeiten | Quelltext bearbeiten]
-Klasse: '! p-0'
-Props:
-  Nachricht: {}
-  Autofokus: falsch
-  Fraktionen:
-    - id:'Benutzer'
-      Label: "Benutzer"
-      Items:
-        - label:'Benjamin Canac'(auf Englisch)
-          Zitat von » Benjamincanac «
-          Avatare sind:
+ignore:
+  - groups
+  - modelValue
+  - class
+external:
+  - groups
+  - modelValue
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  modelValue: {}
+  autofocus: false
+  groups:
+    - id: 'users'
+      label: 'Users'
+      items:
+        - label: 'Benjamin Canac'
+          suffix: 'benjamincanac'
+          avatar:
             src: 'https://github.com/benjamincanac.png'
-            Aufladung: Lazy
-        - label:'Hugo Richard'(auf Englisch)
-          Suffix: 'HugoRCD'(englisch)
-          Avatare sind:
+            loading: lazy
+        - label: 'Hugo Richard'
+          suffix: 'HugoRCD'
+          avatar:
             src: 'https://github.com/HugoRCD.png'
-            Aufladung: Lazy
-        - label:'Sébastien Chopin'(Deutsche Übersetzung)
-          Zitat von » atinox «
-          Avatare sind:
-            src: 'https://github.com/atinux.png'(https://github.com/atinux.png)
-            Aufladung: Lazy
-        - label:'Romain Hamel'(auf Englisch)
-          Zitat von » romhml «
-          Avatare sind:
-            src: 'https://github.com/romhml.png'(auf Englisch)
-            Aufladung: Lazy
-        - label:'Sandro Circi'(auf Englisch)
-          Zitat von » Sandros94 «
-          Avatare sind:
-            src: 'https://github.com/sandros94.png'(auf Englisch)
-            Aufladung: Lazy
-        - label:'Jakub Michálek'(auf Englisch)
-          Nachsilbe: 'J-Michalek'
-          Avatare sind:
+            loading: lazy
+        - label: 'Sébastien Chopin'
+          suffix: 'atinux'
+          avatar:
+            src: 'https://github.com/atinux.png'
+            loading: lazy
+        - label: 'Romain Hamel'
+          suffix: 'romhml'
+          avatar:
+            src: 'https://github.com/romhml.png'
+            loading: lazy
+        - label: 'Sandro Circi'
+          suffix: 'sandros94'
+          avatar:
+            src: 'https://github.com/sandros94.png'
+            loading: lazy
+        - label: 'Jakub Michálek'
+          suffix: 'J-Michalek'
+          avatar:
             src: 'https://github.com/J-Michalek.png'
-            Aufladung: Lazy
-        @@ph127@@label:'Alex'(auf Englisch)
-          Zitat von » Hywax «
-          Avatare sind:
-            src: 'https://github.com/hywax.png'(auf Englisch)
-            Aufladung: Lazy
-        - label:'Maxime Pauvert'(auf Englisch)
-          Zitat von » Maximepvrt «
-          Avatare sind:
+            loading: lazy
+        - label: 'Alex'
+          suffix: 'hywax'
+          avatar:
+            src: 'https://github.com/hywax.png'
+            loading: lazy
+        - label: 'Maxime Pauvert'
+          suffix: 'maximepvrt'
+          avatar:
             src: 'https://github.com/maximepvrt.png'
-            Aufladung: Lazy
-  Klasse: Flex-1
+            loading: lazy
+  class: 'flex-1'
 ---
 ::
 
@@ -201,764 +201,764 @@ Props:
 Jedes Element kann ein `children`-Array von Objekten mit den folgenden Eigenschaften zum Erstellen von Untermenüs verwenden:
 ::
 
-@130@130@130
+### multiple (Mehrfach)
 
-Verwenden Sie `multiple` prop, um Mehrfachauswahl zu ermöglichen.
+Verwenden Sie die `multiple`-Prop, um mehrere Auswahlen zu ermöglichen.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
+collapse: true
+hide:
   - autofocus
-Ignoriert:
-  - Gruppen
-  - modellWert
-  @@135@mehrfache135@mehrfache135@mehrfache135
-  @@136@Klasse
-Außen:
-  @@@@@@@137@@gruppen
-  - modellWert
-Externe Typen:
-  - CommandPaletteGroup [Bearbeiten | Quelltext bearbeiten]
-Klasse: '! p-0'
-Props:
-  Anzahl: true
-  Autofokus: false
-  Modellwert: []
-  Gruppen:
-    - id:'Benutzer'
-      Label: "Benutzer"
-      Items:
-        - label:'Benjamin Canac'(auf Englisch)
-          Zitat von » benjamincanac «
-          Avatare sind:
+ignore:
+  - groups
+  - modelValue
+  - multiple
+  - class
+external:
+  - groups
+  - modelValue
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  multiple: true
+  autofocus: false
+  modelValue: []
+  groups:
+    - id: 'users'
+      label: 'Users'
+      items:
+        - label: 'Benjamin Canac'
+          suffix: 'benjamincanac'
+          avatar:
             src: 'https://github.com/benjamincanac.png'
-            Aufladung: Lazy
-        - label:'Hugo Richard'(auf Englisch)
-          Suffix: 'HugoRCD'(englisch)
-          Avatare sind:
+            loading: lazy
+        - label: 'Hugo Richard'
+          suffix: 'HugoRCD'
+          avatar:
             src: 'https://github.com/HugoRCD.png'
-            Aufladung: Lazy
-        - label:'Sébastien Chopin'(Deutsche Übersetzung)
-          Zitat von » atinox «
-          Avatare sind:
-            src: 'https://github.com/atinux.png'(https://github.com/atinux.png)
-            Aufladung: Lazy
-        - label:'Romain Hamel'(auf Englisch)
-          Zitat von » romhml «
-          Avatare sind:
-            src: 'https://github.com/romhml.png'(auf Englisch)
-            Aufladung: Lazy
-        - label:'Sandro Circi'(auf Englisch)
-          Zitat von » Sandros94 «
-          Avatare sind:
-            src: 'https://github.com/sandros94.png'(auf Englisch)
-            Aufladung: Lazy
-        - label:'Jakub Michálek'(auf Englisch)
-          Suffix: 'J-Michalek'(englisch)
-          Avatare sind:
+            loading: lazy
+        - label: 'Sébastien Chopin'
+          suffix: 'atinux'
+          avatar:
+            src: 'https://github.com/atinux.png'
+            loading: lazy
+        - label: 'Romain Hamel'
+          suffix: 'romhml'
+          avatar:
+            src: 'https://github.com/romhml.png'
+            loading: lazy
+        - label: 'Sandro Circi'
+          suffix: 'sandros94'
+          avatar:
+            src: 'https://github.com/sandros94.png'
+            loading: lazy
+        - label: 'Jakub Michálek'
+          suffix: 'J-Michalek'
+          avatar:
             src: 'https://github.com/J-Michalek.png'
-            Aufladung: Lazy
-        @@ph147@@label:'Alex'(auf Englisch)
-          Zitat von » Hywax «
-          Avatare sind:
-            src: 'https://github.com/hywax.png'(auf Englisch)
-            Aufladung: Lazy
-        - label:'Maxime Pauvert'(auf Englisch)
-          Zitat von » Maximepvrt «
-          Avatare sind:
+            loading: lazy
+        - label: 'Alex'
+          suffix: 'hywax'
+          avatar:
+            src: 'https://github.com/hywax.png'
+            loading: lazy
+        - label: 'Maxime Pauvert'
+          suffix: 'maximepvrt'
+          avatar:
             src: 'https://github.com/maximepvrt.png'
-            Aufladung: Lazy
-  Klasse: Flex-1
+            loading: lazy
+  class: 'flex-1'
 ---
 ::
 
 ::caution
-Stellen Sie sicher, dass Sie ein Array an die `default-value` prop oder die `v-model`-Direktive übergeben.
+Stellen Sie sicher, dass Sie ein Array an die `default-value`-prop-oder die `v-model`-Direktive übergeben.
 ::
 
 ### Platzhalter
 
-Verwenden Sie die `placeholder` prop, um den Platzhaltertext zu ändern.
+Verwenden Sie die `placeholder`-Prop, um den Platzhaltertext zu ändern.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
+collapse: true
+hide:
   - autofocus
-Ignoriert:
-  @@154@Klasse
-  - gruppen
-Außen:
-  - gruppen
-Externe Personen:
-  - CommandPaletteGroup [Bearbeiten | Quelltext bearbeiten]
-Klasse: '! p-0'
-Props:
-  Autofokus: false
-  Platzhalter: "Suche eine App..."
-  Gruppen:
-    - id:'Apps'
-      Items:
-        - label:'Kalender'
-          Icon: 'i-lucide-Kalender'
-        - label:'Musik'
-          Icon: 'i-lucide-music'(Deutsche Übersetzung)
-        - label:'Karten'
-          Icon: 'i-lucide-map'(auf Englisch)
-  Klasse: 'Flex-1'
+ignore:
+  - class
+  - groups
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  placeholder: 'Search an app...'
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
-@@162@163@163@163@163@163@163@163@163@163@163@163@163@163@@163@163@163@163@163@163@163@163@163@163@163@163@163@@163@163@163@163@@163@@163@163@@163@@163@@@163@@163@@@@163@@@@@@163@@@@@@@@@@@@@@@@@@@@@1633333333333@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Größe: badge{label="4.4+" class="align-text-top"}
 
-Verwenden Sie `size` prop, um die Größe der CommandPalette zu ändern.
+Verwenden Sie die `size`-prop, um die Größe der CommandPalette zu ändern.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
+collapse: true
+hide:
   - autofocus
-Ignoriert:
-  @@166@166@166@166@166@166@166@1666@166@166@166@166@166@166@166@16@166@16@16@16@16@16@16@16@166@@@166@@@166@16@16@16@16@@@@1666@@@@@@@@1666@@@@@@@@@@@@@@@@@@@@166666@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Klasse
-  @@@@@@@167@@gruppen
-Außen:
-  @@@@@@@168@@gruppen
-Externe Personen:
-  - CommandPaletteGroup [Bearbeiten | Quelltext bearbeiten]
-Klasse: '! p-0'
-Props:
-  Autofokus: false
-  Größe:'xl'
-  Fraktionen:
-    - id:'Apps'
-      Items:
-        - label:'Kalender'
-          Icon: 'i-lucide-Kalender'
-        - label:'Musik'
-          Icon: 'i-lucide-music'(Deutsche Übersetzung)
-        - label:'Karten'
-          Icon: 'i-lucide-map'(auf Englisch)
-  Klasse: 'Flex-1'
+ignore:
+  - class
+  - groups
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  size: 'xl'
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
-@@@@@@@@@@@@@@@@@@@@@@ICON
+### Icon (englisch)
 
-Verwenden Sie `icon` prop, um die Eingabe [Icon](/docs/components/icon). Standardmäßig auf `i-lucide-search`.
+Verwenden Sie die `icon`-Prop, um die Eingabe [Icon](/docs/components/icon) anzupassen.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
+collapse: true
+hide:
   - autofocus
-Ignoriert:
-  @@182@gmail.de
-  @@@@@@@183@@gruppen
-Außen:
-  @@@@@@@184@@gruppen
-Externe Personen:
-  - CommandPaletteGroup [Bearbeiten | Quelltext bearbeiten]
-Klasse: '! p-0'
-Props:
-  Autofokus: false
-  Icon: 'i-lucide-box'(I-lucide-Box) auf Englisch
-  Gruppen:
-    - id:'Apps'
-      Items:
-        - label:'Kalender'
-          Icon: 'i-lucide-Kalender'
-        - label:'Musik'
-          Icon: 'i-lucide-music'(Deutsche Übersetzung)
-        - label:'Karten'
-          Icon: 'i-lucide-map'(auf Englisch)
-  Klasse: 'Flex-1'
+ignore:
+  - class
+  - groups
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  icon: 'i-lucide-box'
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.search` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter der `ui.icons.search`-Taste.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.search` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter dem `ui.icons.search`-Schlüssel anpassen.
 :::
 ::
 
-@@ph194@@ausgewählte Ikone
+### Selected Icon auswählen
 
-Verwenden Sie die `selected-icon` prop, um das ausgewählte Element anzupassen [Icon](/docs/components/icon). Standardmäßig auf `i-lucide-check`.
+Verwenden Sie die `selected-icon`-Prop, um das ausgewählte Element anzupassen [Icon](/docs/components/icon). Standardmäßig `i-lucide-check`.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
+collapse: true
+hide:
   - autofocus
-Ignoriert:
-  - Gruppen
-  - modellWert
-  @@ph204@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache@mehrfache204@mehrfache@mehrfache@mehrfache@mehrfache-fache-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e-e
-  @@ph205@gmail.de
-Außen:
-  - Gruppen
-  - modellWert
-Externe Typen:
-  - CommandPaletteGroup [Bearbeiten | Quelltext bearbeiten]
-Klasse: '! p-0'
-Props:
-  Vielfach: wahr
-  Autofokus: false
-  Modellwert:
-    - label:'Benjamin Canac'(auf Englisch)
-      Zitat von » benjamincanac «
-      Avatare sind:
+ignore:
+  - groups
+  - modelValue
+  - multiple
+  - class
+external:
+  - groups
+  - modelValue
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  multiple: true
+  autofocus: false
+  modelValue:
+    - label: 'Benjamin Canac'
+      suffix: 'benjamincanac'
+      avatar:
         src: 'https://github.com/benjamincanac.png'
-        Aufladung: Lazy
-  selectedIcon: 'i-lucide-circle-check'(I-lucide-Kreis-Check)
-  Fraktionen:
-    - id:'Benutzer'
-      Label: "Benutzer"
-      Items:
-        - label:'Benjamin Canac'(auf Englisch)
-          Zitat von » benjamincanac «
-          Avatare sind:
+        loading: lazy
+  selectedIcon: 'i-lucide-circle-check'
+  groups:
+    - id: 'users'
+      label: 'Users'
+      items:
+        - label: 'Benjamin Canac'
+          suffix: 'benjamincanac'
+          avatar:
             src: 'https://github.com/benjamincanac.png'
-            Aufladung: Lazy
-        - label:'Hugo Richard'(auf Englisch)
-          Suffix: 'HugoRCD'(englisch)
-          Avatare sind:
+            loading: lazy
+        - label: 'Hugo Richard'
+          suffix: 'HugoRCD'
+          avatar:
             src: 'https://github.com/HugoRCD.png'
-            Aufladung: Lazy
-        - label:'Sébastien Chopin'(auf Englisch)
-          Zitat von » atinux «
-          Avatare sind:
-            src: 'https://github.com/atinux.png'(https://github.com/atinux.png)
-            Aufladung: Lazy
-        - label:'Romain Hamel'(auf Englisch)
-          Zitat von » romhml «
-          Avatare sind:
-            src: 'https://github.com/romhml.png'(auf Englisch)
-            Aufladung: Lazy
-        - label:'Sandro Circi'(auf Englisch)
-          Zitat von » Sandros94 «
-          Avatare sind:
-            src: 'https://github.com/sandros94.png'(auf Englisch)
-            Aufladung: Lazy
-        - label:'Jakub Michálek'(auf Englisch)
-          Nachsilbe: 'J-Michalek'
-          Avatare sind:
+            loading: lazy
+        - label: 'Sébastien Chopin'
+          suffix: 'atinux'
+          avatar:
+            src: 'https://github.com/atinux.png'
+            loading: lazy
+        - label: 'Romain Hamel'
+          suffix: 'romhml'
+          avatar:
+            src: 'https://github.com/romhml.png'
+            loading: lazy
+        - label: 'Sandro Circi'
+          suffix: 'sandros94'
+          avatar:
+            src: 'https://github.com/sandros94.png'
+            loading: lazy
+        - label: 'Jakub Michálek'
+          suffix: 'J-Michalek'
+          avatar:
             src: 'https://github.com/J-Michalek.png'
-            Aufladung: Lazy
-        @@ph217@@label:'Alex'(auf Englisch)
-          Zitat von » Hywax «
-          Avatare sind:
-            src: 'https://github.com/hywax.png'(auf Englisch)
-            Aufladung: Lazy
-        - label:'Maxime Pauvert'(auf Englisch)
-          Zitat von » Maximepvrt «
-          Avatare sind:
+            loading: lazy
+        - label: 'Alex'
+          suffix: 'hywax'
+          avatar:
+            src: 'https://github.com/hywax.png'
+            loading: lazy
+        - label: 'Maxime Pauvert'
+          suffix: 'maximepvrt'
+          avatar:
             src: 'https://github.com/maximepvrt.png'
-            Aufladung: Lazy
-  Klasse: Flex-1
+            loading: lazy
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.check` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter der `ui.icons.check`-Taste.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.check` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter der `ui.icons.check`-Taste.
 :::
 ::
 
-@@ph223@trailing-icon @ trailing-symbol
+### Trailing Icon (Deutsche Übersetzung)
 
-Verwenden Sie die `trailing-icon` prop, um die nachlaufende [Icon](/docs/components/icon) anzupassen, wenn ein Element Kinder hat.
+Verwenden Sie die `trailing-icon`-Prop, um die nachlaufende [Icon](/docs/components/icon) anzupassen, wenn ein Element untergeordnete Elemente hat.
 
 ::component-code
 ---
-Einsturz: wahr
-Schöner: wahr
-Hide:
+collapse: true
+prettier: true
+hide:
   - autofocus
-Ignoriert:
-  - Gruppen
-  @@232@Klasse
-Außen:
-  @@ph233@@gmbh
-Externe Personen:
-  - CommandPaletteGroup [Bearbeiten | Quelltext bearbeiten]
-Klasse: '! p-0'
-Props:
-  Autofokus: false
-  trailingIcon: 'i-lucide-arrow-right'(englisch)
-  Fraktionen:
-    - id:'Aktionen'
-      Items:
-        - label:'Teilen'
-          Icon: 'i-lucide-share'(auf Englisch)
-          Kinder:
-            - label:'E-Mail'
-              Icon: 'i-lucide-mail'(auf Englisch)
-            - label:'Kopieren'
-              Icon: 'i-lucide-copy'(auf Englisch)
-            - label:'Link'(auf Englisch)
-              Icon: 'i-lucide-link'(I-lucide-Verbindung)
-  Klasse: 'Flex-1'
+ignore:
+  - groups
+  - class
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  trailingIcon: 'i-lucide-arrow-right'
+  groups:
+    - id: 'actions'
+      items:
+        - label: 'Share'
+          icon: 'i-lucide-share'
+          children:
+            - label: 'Email'
+              icon: 'i-lucide-mail'
+            - label: 'Copy'
+              icon: 'i-lucide-copy'
+            - label: 'Link'
+              icon: 'i-lucide-link'
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.chevronRight` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter dem `ui.icons.chevronRight`-Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.chevronRight` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter dem `ui.icons.chevronRight`-Schlüssel anpassen.
 :::
 ::
 
-@@ph244@Aufladen
+### Loading (nicht verfügbar)
 
-Verwenden Sie `loading` prop, um ein Ladesymbol in der CommandPalette anzuzeigen.
+Verwenden Sie die `loading` prop, um ein Ladesymbol auf der CommandPalette anzuzeigen.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
+collapse: true
+hide:
   - autofocus
-Ignoriert:
-  @@@@@@@class247@class247@class@class247@class@class@class@class@class247@class@class@class@class@class@class@class247@class@class@class@class@class@class@class@class247@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@class@class@classclass@class@classclassclassclass@class@class@class@classclassclassclass@classclassclass@classclassclassclass@classclassclassclassclassclassclassclassclassclassclassclass@classclassclassclassclassclassclassclassclassclassclassclassclassc
-  @@@@@@@248@@@gruppen
-Außen:
-  @@ph249@@gmail.de
-Externe Typen:
-  - CommandPaletteGroup [Bearbeiten | Quelltext bearbeiten]
-Klasse: '! p-0'
-Props:
-  Autofokus: falsch
-  Aufladung: true
-  Fraktionen:
-    - id:'Apps'
-      Items:
-        - label:'Kalender'
-          Icon: 'i-lucide-Kalender'
-        - label:'Musik'
-          Icon: 'i-lucide-music'(Deutsche Übersetzung)
-        - label:'Karten'
-          Icon: 'i-lucide-map'(auf Englisch)
-  Klasse: Flex-1
+ignore:
+  - class
+  - groups
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  loading: true
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
-@@ph255@@Icon-Anzeige
+### Loading Icon (englisch)
 
-Verwenden Sie `loading-icon` prop, um das Ladesymbol anzupassen. Standardmäßig ist `i-lucide-loader-circle`.
+Verwenden Sie die `loading-icon`-Prop, um das Ladesymbol anzupassen. Standardmäßig ist `i-lucide-loader-circle`.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
+collapse: true
+hide:
   - autofocus
-Ignoriert:
-  @@ph259@gmail.de
-  - Gruppen
-Außen:
-  - gruppen
-Externe Personen:
-  - CommandPaletteGroup [Bearbeiten | Quelltext bearbeiten]
-Klasse: '! p-0'
-Props:
-  Autofokus: false
-  Aufladung: true
-  loadingIcon: 'i-lucide-loader'(englisch)
-  Fraktionen:
-    - id:'Apps'
-      Items:
-        - label:'Kalender'
-          Icon: 'i-lucide-Kalender'
-        - label:'Musik'
-          Icon: 'i-lucide-music'(Deutsche Ausgabe)
-        - label:'Karten'
-          Icon: 'i-lucide-map'(auf Englisch)
-  Klasse: Flex-1
+ignore:
+  - class
+  - groups
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.loading` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter dem `ui.icons.loading`-Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.loading` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter der `ui.icons.loading`-Taste.
 :::
 ::
 
-### Schließen
+### Close Bearbeiten
 
-Verwenden Sie die `close` prop, um eine [Button](/docs/components/button) anzuzeigen, um die CommandPalette zu schließen.
+Verwenden Sie die `close`-Prop, um eine [Button](/docs/components/button) anzuzeigen, um die CommandPalette zu beenden.
 
 ::tip
-Ein `update:open`-Ereignis wird ausgegeben, wenn der Schließen-Button angeklickt wird.
+Ein `update:open`-Ereignis wird ausgegeben, wenn die Schaltfläche Schließen geklickt wird.
 ::
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
+collapse: true
+hide:
   - autofocus
-Ignoriert:
-  @@@@@@@class279@@class279@class@class279@class@class@class279@class@class@class279@class@class@class@class@class@class@class279@class@class@class@class@class@class@class279@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@class@classclassclass@classclassclassclass@classclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassclassc@classc@classclassclassc@classclassclassclassclassclassclassclass
-  @@ph280@@gmail.de
-  @@ph281@gmail.de
-Außen:
-  @@@@@@@@@282@@@@gruppen
-Externe Personen:
-  - CommandPaletteGroup [Bearbeiten | Quelltext bearbeiten]
-Klasse: '! p-0'
-Props:
-  Autofokus: false
-  Schließen: true
-  Gruppen:
-    - id:'Apps'
-      Items:
-        - label:'Kalender'
-          Icon: 'i-lucide-Kalender'
-        - label:'Musik'
-          Icon: 'i-lucide-music'(Deutsche Ausgabe)
-        - label:'Karten'
-          Icon: 'i-lucide-map'(auf Englisch)
-  Klasse: Flex-1
+ignore:
+  - class
+  - groups
+  - close
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  close: true
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
-Sie können jede Eigenschaft von der [Button](/docs/components/button) Komponente übergeben, um sie anzupassen.
+Sie können jede Eigenschaft der Komponente [Button](/docs/components/button) übergeben, um sie anzupassen.
 
 ::component-code
 ---
-Einsturz: wahr
-Schöner: wahr
-Hide:
+collapse: true
+prettier: true
+hide:
   - autofocus
-Ignoriert:
-  - close.color (@@ close. color) Bearbeiten
-  @@ph294@close.variant (nicht verfügbar)
-  @@@ph295@@gruppen
-  @@@@@@@@class296@@class296@class@class@class@class@class296@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@class@classclass@classclass@classclassclass@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classc
-Außen:
-  @@@ph297@@gruppen
-Externe Personen:
-  - CommandPaletteGroup [Bearbeiten | Quelltext bearbeiten]
-Klasse: '! p-0'
-Props:
-  Autofokus: falsch
-  Schließen:
-    Farbe: Primär
-    Beschreibung: Outline
-    Klasse: 'rounded-full'
-  Fraktionen:
-    - id:'Apps'
-      Items:
-        - label:'Kalender'
-          Icon: 'i-lucide-Kalender'
-        - label:'Musik'
-          Icon: 'i-lucide-music'(Deutsche Ausgabe)
-        - label:'Karten'
-          Icon: 'i-lucide-map'(auf Englisch)
-  Klasse: Flex-1
+ignore:
+  - close.color
+  - close.variant
+  - groups
+  - class
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  close:
+    color: primary
+    variant: outline
+    class: 'rounded-full'
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
-@@ph303@Schließen-Icon
+### Close Icon (nicht vorhanden)
 
-Verwenden Sie die `close-icon` prop, um die Schließen-Schaltfläche anzupassen [Icon](/docs/components/icon). Standardmäßig auf `i-lucide-x`.
+Verwenden Sie die `close-icon`-Prop, um die Schließen-Taste [Icon](/docs/components/icon). Defaults auf `i-lucide-x`.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
-  - Autofokus
-Ignoriert:
-  @@311@Klasse
-  - Gruppen
-  @@ph313@abschluss@abschluss.de
-Außen:
-  - Gruppen
-Externe Personen:
-  - CommandPaletteGroup [Bearbeiten | Quelltext bearbeiten]
-Klasse: '! p-0'
-Props:
-  Autofokus: false
-  Schließen: true
-  closeIcon: 'i-lucide-arrow-right'(I-lucide-arrow-rechts)
-  Gruppen:
-    - id:'Apps'
-      Items:
-        - label:'Kalender'
-          Icon: 'i-lucide-Kalender'
-        - label:'Musik'
-          Icon: 'i-lucide-music'(Deutsche Ausgabe)
-        - label:'Karten'
-          Icon: 'i-lucide-map'(auf Englisch)
-  Klasse: Flex-1
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - class
+  - groups
+  - close
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  close: true
+  closeIcon: 'i-lucide-arrow-right'
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.close` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.close` Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.close` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter dem `ui.icons.close`-Schlüssel anpassen.
 :::
 ::
 
-@@324@zurück
+### Back (englisch)
 
-Verwenden Sie `back` prop, um die Zurück-Schaltfläche (mit `false`-Wert) anzupassen oder auszublenden, die angezeigt wird, wenn Sie in ein Untermenü navigieren.
+Verwenden Sie die `back`-Prop, um die Zurück-Schaltfläche (mit dem `false`-Wert) anzupassen oder auszublenden, die beim Navigieren in ein Untermenü angezeigt wird.
 
-Sie können jede Eigenschaft aus der Komponente [Button](/docs/components/button) übergeben, um sie anzupassen.
+Sie können jede Eigenschaft der Komponente [Button](/docs/components/button) übergeben, um sie anzupassen.
 
 ::component-code
 ---
-Einsturz: wahr
-Schöner: wahr
-Hide:
+collapse: true
+prettier: true
+hide:
   - autofocus
-Ignoriert:
-  @@ph332@back.color @ zurück
-  @@@@@@@@333@@gmail.de
-  @@334@Klasse
-Außen:
-  @@335@gmail.de
-Externe Typen:
-  - CommandPaletteGroup [Bearbeiten]
-Klasse: '! p-0'
-Props:
-  Autofokus: false
-  zurück:
-    Farbe: Primär
-  Fraktionen:
-    - id:'Aktionen'
-      Items:
-        - label:'Teilen'
-          Icon: 'i-lucide-share'(auf Englisch)
-          Kinder:
-            - label:'E-Mail'(E-Mail-Adresse)
-              Icon: 'i-lucide-mail'(auf Englisch)
-            - label:'Kopieren'
-              Icon: 'i-lucide-copy'(auf Englisch)
-            - label:'Link'
-              Icon: 'i-lucide-link'(I-lucide-Verbindung)
-  Klasse: 'Flex-1'
+ignore:
+  - back.color
+  - groups
+  - class
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  back:
+    color: primary
+  groups:
+    - id: 'actions'
+      items:
+        - label: 'Share'
+          icon: 'i-lucide-share'
+          children:
+            - label: 'Email'
+              icon: 'i-lucide-mail'
+            - label: 'Copy'
+              icon: 'i-lucide-copy'
+            - label: 'Link'
+              icon: 'i-lucide-link'
+  class: 'flex-1'
 ---
 ::
 
-@@ph342@@zurück Icon
+### Back Icon (englisch)
 
-Verwenden Sie die `back-icon` prop, um die Zurück-Taste anzupassen [Icon](/docs/components/icon). Standardmäßig auf `i-lucide-arrow-left`.
+Verwenden Sie die `back-icon`-Prop, um die Zurück-Taste [Icon](/docs/components/icon). Defaults auf `i-lucide-arrow-left`.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
-  - Autofokus
-Ignoriert:
-  @350@Klasse
-  @@@@@@@351@@@gruppen
-  @@352@zurück
-Außen:
-  @@@@@@@353@@gmail.de
-Externe Personen:
-  - CommandPaletteGroup [Bearbeiten | Quelltext bearbeiten]
-Klasse: '! p-0'
-Props:
-  Autofokus: false
-  Zurück: True
-  zurück Icon: 'i-lucide-house'
-  Gruppen:
-    - id:'Aktionen'
-      Items:
-        - label:'Teilen'
-          Icon: 'i-lucide-share'(auf Englisch)
-          Kinder:
-            - label:'E-Mail'
-              Icon: 'i-lucide-mail'(auf Englisch)
-            - label:'Kopieren'
-              Icon: 'i-lucide-copy'(auf Englisch)
-            - label:'Link'(auf Englisch)
-              Icon: 'i-lucide-link'(I-lucide-Verbindung)
-  Klasse: Flex-1
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - class
+  - groups
+  - back
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  back: true
+  backIcon: 'i-lucide-house'
+  groups:
+    - id: 'actions'
+      items:
+        - label: 'Share'
+          icon: 'i-lucide-share'
+          children:
+            - label: 'Email'
+              icon: 'i-lucide-mail'
+            - label: 'Copy'
+              icon: 'i-lucide-copy'
+            - label: 'Link'
+              icon: 'i-lucide-link'
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.arrowLeft` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter dem `ui.icons.arrowLeft`-Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.arrowLeft` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter dem `ui.icons.arrowLeft`-Schlüssel anpassen.
 :::
 ::
 
-### disabled @ disabled
+### Disabled (englisch)
 
-Verwenden Sie `disabled` prop, um die CommandPalette zu deaktivieren.
+Verwenden Sie die `disabled`-prop, um die CommandPalette zu deaktivieren.
 
 ::component-code
 ---
-Einsturz: wahr
-Hide:
+collapse: true
+hide:
   - autofocus
-Ignoriert:
-  @@@@@@@367@@@gruppen
-  @@368@gmail.de
-Außen:
-  @@@@@@@369@@gmail.de
-Externe Typen:
-  - CommandPaletteGroup [Bearbeiten | Quelltext bearbeiten]
-Klasse: '! p-0'
-Props:
-  Autofokus: falsch
-  Behindert: Wahr
-  Fraktionen:
-    - id:'Apps'
-      Items:
-        - label:'Kalender'
-          Icon: 'i-lucide-Kalender'
-        - label:'Musik'
-          Icon: 'i-lucide-music'(Deutsche Ausgabe)
-        - label:'Karten'
-          Icon: 'i-lucide-map'(auf Englisch)
-  Klasse: Flex-1
+ignore:
+  - groups
+  - class
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  disabled: true
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
-@@375@Beispiele
+## Examples [Bearbeiten]
 
-### Control ausgewählte (n) Artikel
+### Control selected item (s) Ausgewähltes Element
 
-Sie können die ausgewählten Elemente steuern, indem Sie die `default-value` prop-oder die `v-model`-Direktive verwenden, indem Sie das Feld `onSelect` auf jedem Element verwenden oder indem Sie das `@update:model-value`-Ereignis verwenden.
+Sie können die ausgewählten Elemente steuern, indem Sie die `default-value`-prop-oder die `v-model`-Direktive verwenden, indem Sie das `onSelect`-Feld für jedes Element verwenden oder das `@update:model-value`-Ereignis verwenden.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'Kommandozeilen-Auswahl-Beispiel'.
-Klasse: '! p-0'
-Props:
-  Autofokus: falsch
+collapse: true
+name: 'command-palette-select-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::tip
-Verwenden Sie `value-key` prop, um ein Feld eines Elements auszuwählen, das als Wert anstelle des Objekts selbst verwendet werden soll.
+Verwenden Sie die `value-key`-prop, um ein Feld eines Elements auszuwählen, das anstelle des Objekts selbst als Wert verwendet werden soll.
 ::
 
-### Kontroll-Suchbegriff
+### Control Suchbegriff
 
 Verwenden Sie die `v-model:search-term`-Direktive, um den Suchbegriff zu steuern.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'command-palette-search-term-example'(Befehlspalette-Suchbegriff-Beispiel)
-Klasse: '! p-0'
-Props:
-  Autofokus: falsch
+collapse: true
+name: 'command-palette-search-term-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
-In diesem Beispiel wird das `@update:model-value`-Ereignis verwendet, um den Suchbegriff zurückzusetzen, wenn ein Element ausgewählt wird.
+In diesem Beispiel wird das Ereignis `@update:model-value` verwendet, um den Suchbegriff zurückzusetzen, wenn ein Element ausgewählt wird.
 ::
 
-### Mit Kindern in Sachen
+### With children in items (Mit Kindern in Gegenständen)
 
 Sie können hierarchische Menüs erstellen, indem Sie die `children`-Eigenschaft in items verwenden. Wenn ein Element untergeordnete Elemente hat, wird automatisch ein Chevron-Symbol angezeigt und die Navigation in ein Untermenü aktiviert.
 
 ::component-example
 ---
-Einsturz: wahr
-Schöner: wahr
-Name: 'command-palette-items-children-example'(Befehlszeilen-Palette-Item-Kinder-Beispiel)
-Klasse: '! p-0'
-Props:
-  Autofokus: falsch
+collapse: true
+prettier: true
+name: 'command-palette-items-children-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
 Navigieren Sie in ein Untermenü:
 - Der Suchbegriff wird zurückgesetzt
-- Ein Zurück-Button erscheint in der Eingabe
-- Sie können zur vorherigen Gruppe zurückkehren, indem Sie die Taste kbd{value="backspace"} drücken
+- A Zurück-Taste erscheint im Eingang
+- Sie können zur vorherigen Gruppe zurückkehren, indem Sie die Taste: kbd{value="backspace"} drücken
 ::
 
-### Mit hergeholten Gegenständen
+### Mit hergeholten Objekten
 
 Sie können Elemente von einer API abrufen und in der CommandPalette verwenden.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'Kommandozeilen-Beispiel'
-Klasse: '! p-0'
-Props:
-  Autofokus: falsch
+collapse: true
+name: 'command-palette-fetch-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
-In diesem Beispiel wird `useLazyFetch` mit `server: false` verwendet, um Daten auf dem Client abzurufen, ohne das anfängliche Rendern zu blockieren. Der Ladezustand überprüft sowohl `pending` als auch `idle` status, um eine Ladeanzeige vor und während des Abrufs anzuzeigen.
+In diesem Beispiel wird `useLazyFetch` mit `server: false` verwendet, um Daten auf dem Client abzurufen, ohne das anfängliche Rendern zu blockieren. Der Ladezustand überprüft sowohl den `pending`-als auch den `idle`-Status, um vor und während des Abrufs einen Ladeindikator anzuzeigen.
 ::
 
-### Mit Ignorierfilter
+### With ignore filter (Filter ignorieren)
 
-Sie können das Feld `ignoreFilter` auf `true` in einer Gruppe setzen, um die interne Suche zu deaktivieren und Ihre eigene Suchlogik zu verwenden.
+Sie können das Feld `ignoreFilter` auf `true` für eine Gruppe setzen, um die interne Suche zu deaktivieren und Ihre eigene Suchlogik zu verwenden.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'command-palette-ignore-filter-example'(Befehls-Palette-Ignore-Filter-Beispiel)
-Klasse: '! p-0'
-Props:
-  Autofokus: falsch
+collapse: true
+name: 'command-palette-ignore-filter-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
-In diesem Beispiel wird [`refDebounced`]() verwendet, um die API-Aufrufe zu entkräften.
+In diesem Beispiel wird [`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced) verwendet, um die API-Aufrufe zu debouncen. Der Ladezustand überprüft sowohl den `pending`-als auch den `idle`-Status, um eine Ladeanzeige vor und während des Abrufs anzuzeigen.
 ::
 
-### Mit Post-gefilterten Elementen
+### With nachgefilterte Elemente
 
-Sie können das Feld `postFilter` in einer Gruppe verwenden, um Elemente zu filtern, nachdem die Suche stattgefunden hat.
+Sie können das Feld `postFilter` in einer Gruppe verwenden, um Elemente zu filtern, nachdem die Suche durchgeführt wurde.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'Kommando-Palette-Post-Filter-Beispiel'
-Klasse: '! p-0'
-Props:
-  Autofokus: false
+collapse: true
+name: 'command-palette-post-filter-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
@@ -966,9 +966,9 @@ Props:
 Beginnen Sie mit der Eingabe, um Elemente mit höherer Ebene zu sehen.
 ::
 
-### Mit benutzerdefinierten Sicherung Suche
+### With Custom Fuse Search (Deutsche Übersetzung)
 
-Sie können die `fuse` prop verwenden, um die Optionen von [useFuse](https://vueuse.org/integrations/useFuse) zu überschreiben, die standardmäßig auf:
+Sie können die `fuse`-Prop verwenden, um die Optionen von [useFuse](https://vueuse.org/integrations/useFuse) zu überschreiben, die standardmäßig wie folgt lautet:
 
 ```ts
 {
@@ -983,24 +983,24 @@ Sie können die `fuse` prop verwenden, um die Optionen von [useFuse](https://vue
 ```
 
 ::tip
-Die `fuseOptions` sind die Optionen von [Fuse.js](https://www.fusejs.io/),`resultLimit` ist die maximale Anzahl der Ergebnisse, die zurückgegeben werden sollen, und `matchAllWhenSearchEmpty` ist ein Boolean, um alle Elemente zu finden, wenn der Suchbegriff leer ist.
+Die `fuseOptions` sind die Optionen von [Fuse.js](https://www.fusejs.io/), die `resultLimit` ist die maximale Anzahl der Ergebnisse, die zurückgegeben werden sollen, und die `matchAllWhenSearchEmpty` ist ein Boolean, um alle Elemente zu finden, wenn der Suchbegriff leer ist.
 ::
 
-Sie können zum Beispiel `{ fuseOptions: { includeMatches: true } }`{lang="ts-type"} einstellen, um den Suchbegriff in den Elementen hervorzuheben.
+Sie können zum Beispiel `{ fuseOptions: { includeMatches: true } }`{lang="ts-type"} festlegen, um den Suchbegriff in den Elementen hervorzuheben.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'Kommandopalette-Fuse-Beispiel'
-Klasse: '! p-0'
-Props:
-  Autofokus: falsch
+collapse: true
+name: 'command-palette-fuse-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ### Mit Virtualisierung: badge{label="4.1+" class="align-text-top"}
 
-Verwenden Sie `virtualize` prop, um die Virtualisierung für große Listen als Boolean oder ein Objekt mit Optionen wie `{ estimateSize: 32, overscan: 12 }` zu aktivieren.
+Verwenden Sie die `virtualize`-Prop, um die Virtualisierung für große Listen als Boolean oder ein Objekt mit Optionen wie `{ estimateSize: 32, overscan: 12 }` zu aktivieren.
 
 ::warning{to="https://github.com/unovue/reka-ui/issues/1885" target="_blank"}
 Wenn diese Option aktiviert ist, werden alle Gruppen aufgrund einer Einschränkung der Reka-Benutzeroberfläche in eine einzige Liste zusammengefasst.
@@ -1008,54 +1008,54 @@ Wenn diese Option aktiviert ist, werden alle Gruppen aufgrund einer Einschränku
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'Kommando-Palette-Virtualisierungs-Beispiel'
-Klasse: '! p-0'
-Props:
-  Autofokus: falsch
+collapse: true
+name: 'command-palette-virtualize-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
-### Innerhalb eines Popovers
+### Within a Popover (Deutsche Ausgabe)
 
-Sie können die CommandPalette-Komponente innerhalb eines Inhalts von [Popover](/docs/components/popover) verwenden.
+Sie können die CommandPalette-Komponente innerhalb des Inhalts eines [Popover](/docs/components/popover) verwenden.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'popoor-command-palette-example'(Popoor-Befehl-Palette-Beispiel)
-Props:
-  Autofokus: false
+collapse: true
+name: 'popover-command-palette-example'
+props:
+  autofocus: false
 ---
 ::
 
-### Innerhalb eines Modals
+### In einem Modal
 
-Sie können die CommandPalette-Komponente innerhalb eines [Modal](/docs/components/modal)'s Inhalts verwenden.
+Sie können die CommandPalette-Komponente innerhalb eines [Modal](/docs/components/modal)x-Inhalts verwenden.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'modal-command-palette-example'(modal-Befehl-Paletten-Beispiel)
-Props:
-  Autofokus: falsch
+collapse: true
+name: 'modal-command-palette-example'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
-In diesem Beispiel wird `useLazyFetch` mit `immediate: false` verwendet, um Daten nur beim Öffnen des Modal abzurufen.
+In diesem Beispiel wird `useLazyFetch` mit `immediate: false` verwendet, um nur Daten abzurufen, wenn das Modal geöffnet wird.
 ::
 
 ### Innerhalb einer Schublade
 
-Sie können die CommandPalette-Komponente innerhalb eines Inhalts von [Drawer](/docs/components/drawer) verwenden.
+Sie können die CommandPalette-Komponente innerhalb eines [Drawer](/docs/components/drawer)x-Inhalts verwenden.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'drawer-command-palette-example'(Zeiger-Befehl-Paletten-Beispiel)
-Props:
-  Autofokus: falsch
+collapse: true
+name: 'drawer-command-palette-example'
+props:
+  autofocus: false
 ---
 ::
 
@@ -1063,85 +1063,85 @@ Props:
 In diesem Beispiel wird `useLazyFetch` mit `immediate: false` verwendet, um Daten nur beim Öffnen der Schublade abzurufen.
 ::
 
-### Listen offener Zustand
+### Listen Open State (englisch)
 
-Wenn Sie die `close` prop verwenden, können Sie das `update:open`-Ereignis anhören, wenn Sie auf die Schaltfläche klicken.
+Wenn Sie die `close`-Prop verwenden, können Sie das `update:open`-Ereignis hören, wenn Sie auf die Schaltfläche klicken.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'Beispiel-Befehlspalette-Open-Beispiel'
-Props:
-  Autofokus: false
+collapse: true
+name: 'command-palette-open-example'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
-Dies kann nützlich sein, wenn Sie die CommandPalette in einem [`Modal`](/docs/components/modal) zum Beispiel verwenden.
+Dies kann beispielsweise nützlich sein, wenn Sie die CommandPalette in einem [`Modal`](/docs/components/modal) verwenden.
 ::
 
-### Mit Fußzeilensteckplatz
+### With Fußzeilen-Slot
 
-Verwenden Sie den `#footer`-Steckplatz, um benutzerdefinierte Inhalte am unteren Rand der CommandPalette hinzuzufügen, z. B. Hilfe für Tastaturkürzel oder zusätzliche Aktionen.
+Verwenden Sie den `#footer`-Steckplatz, um benutzerdefinierte Inhalte am unteren Rand der CommandPalette hinzuzufügen, z. B. Tastaturkürzel oder zusätzliche Aktionen.
 
 ::component-example
 ---
-Einsturz: wahr
-name: 'command-palette-footer-slot-example'(Befehlszeilen-Palette-Fußzeilen-Slot-Beispiel)
-Klasse: '! p-0'
-Props:
-  Autofokus: false
+collapse: true
+name: 'command-palette-footer-slot-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
-### Mit benutzerdefinierten Steckplatz
+### Mit benutzerdefiniertem Slot
 
 Verwenden Sie die `slot`-Eigenschaft, um ein bestimmtes Element oder eine bestimmte Gruppe anzupassen.
 
 Sie haben Zugriff auf folgende Slots:
 
-`#{{ item.slot }}``#{{ item.slot }}`{lang="ts-type"}
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#######################################################################################
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@########################################################################################
-`#{{ item.slot }}-trailing``#{{ item.slot }}-trailing``#{{ item.slot }}-trailing`{lang="ts-type"}
+- `#{{ item.slot }}`{lang="ts-type"} (englisch)
+- `#{{ item.slot }}-leading`{lang="ts-type"} (englisch)
+- `#{{ item.slot }}-label`{lang="ts-type"} (nicht vorhanden)
+- `#{{ item.slot }}-trailing`{lang="ts-type"} (englisch)
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@########################################################################################
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@######################################################################################################
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`#{{ group.slot }}-trailing``#{{ group.slot }}-trailing`{lang="ts-type"}
+- `#{{ group.slot }}`{lang="ts-type"} (nicht)
+- `#{{ group.slot }}-leading`{lang="ts-type"}xx38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x38x3
+- `#{{ group.slot }}-label`{lang="ts-type"} (nicht vorhanden)
+- `#{{ group.slot }}-trailing`{lang="ts-type"} (englisch)
 
 ::component-example
 ---
-Einsturz: wahr
-name: 'command-palette-custom-slot-example'(Befehlszeilen-Palette-Benutzerdefinitions-Slot-Beispiel)
-Klasse: '! p-0'
-Props:
-  Autofokus: falsch
+collapse: true
+name: 'command-palette-custom-slot-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::tip{to="#slots"}
-Sie können auch die `#item`,`#item-leading`,`#item-label` und `#item-trailing` Slots verwenden, um alle Elemente anzupassen.
+Sie können auch die `#item`, `#item-leading`, `#item-label` und `#item-trailing` Steckplätze verwenden, um alle Elemente anzupassen.
 ::
 
-## api
+## API (Englisch)
 
-@@@@@@@@999@@@@@@@@@@s3
+### Props (nicht)
 
-Komponenten Props
+:component-props
 
-@@@ph500@@slots
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph501@@emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-@@ph502@@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph503@@changelog @ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

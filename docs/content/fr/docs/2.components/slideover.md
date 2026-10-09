@@ -6,7 +6,7 @@ keywords:
   - side panel
   - off-canvas
 links:
-  - label: dialogue
+  - label: Dialogue
     icon: i-custom-reka-ui
     to: https://reka-ui.com/docs/components/dialog
   - label: GitHub à
@@ -14,155 +14,155 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Slideover.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Utilisez un [Button](/docs/components/button) ou tout autre composant dans l'emplacement par défaut du Slideover.
+Use a [Button](/docs/components/button) or any other component in the default slot of the Slideover.
 
 Ensuite, utilisez l'emplacement `#content` pour ajouter le contenu affiché lorsque le Slideover est ouvert.
 
 ::component-code
 ---
-Étiquette: true
-Slots:
-  Défaut:|
+prettier: true
+slots:
+  default: |
 
-    @@@ 006 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  contenu:|
+  content: |
 
-    @@@ 007 @
+    <Placeholder class="h-full m-4" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="ouvert" color="neutral" variant="subtle"}
 
-#contenu
-par placeholder{class="h-full m-4"}
+#content
+:placeholder{class="h-full m-4"}
 ::
 
-Vous pouvez également utiliser les emplacements `#header`{lang="ts-type"},`#body`{lang="ts-type"} et `#footer`{lang="ts-type"} pour personnaliser le contenu du Slideover.
+Vous pouvez également utiliser les emplacements `#header`{lang="ts-type"}, `#body`{lang="ts-type"} et `#footer`{lang="ts-type"} pour personnaliser le contenu du Slideover.
 
-@@ph016@titre
+### Titre
 
 Utilisez la prop `title` pour définir le titre de l'en-tête du Slideover.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  title: "Slideover avec titre"
-Slots:
-  Défaut:|
+prettier: true
+props:
+  title: 'Slideover with title'
+slots:
+  default: |
 
-    @@@@ 018 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Corps:|
+  body: |
 
-    @@@@ 019 @
+    <Placeholder class="h-full" />
 ---
 
-Le bouton {label="Open" color="neutral" variant="subtle"}
+:u-button{label="ouvert" color="neutral" variant="subtle"}
 
-#corps
-par placeholder{class="h-full"}
+#body
+:placeholder{class="h-full"}
 ::
 
-@@22@Description
+### Description
 
 Utilisez la prop `description` pour définir la description de l'en-tête du Slideover.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@24@titre
-Props:
-  Titre: Slideover avec description
-  « Lorem ipsum dolor sit amet, consectetur adipiscing elit ».
-Slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Slideover with description'
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+slots:
+  default: |
 
-    @@@ 25 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Corps:|
+  body: |
 
-    @@@ 26 @
+    <Placeholder class="h-full" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="ouvert" color="neutral" variant="subtle"}
 
-#corps
-par placeholder{class="h-full"}
+#body
+:placeholder{class="h-full"}
 ::
 
-@29@@fermer
+### Fermeture
 
 Utilisez la prop `close` pour personnaliser ou masquer le bouton de fermeture (avec la valeur `false`) affiché dans l'en-tête du Slideover.
 
-Vous pouvez passer n'importe quelle propriété du composant [Button](/docs/components/button) pour le personnaliser.
+Puede pasar cualquier propiedad del componente [Button](/docs/components/button) para personalizarlo.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph036@titre
+prettier: true
+ignore:
+  - title
   - close.color
   - close.variant
-Props:
-  Titre: Slideover with Close Button
-  proche:
-    Couleur: Primaire
-    Étiquette: Outline
-    Catégorie:"round-full"
-Slots:
-  Default:|
+props:
+  title: 'Slideover with close button'
+  close:
+    color: primary
+    variant: outline
+    class: 'rounded-full'
+slots:
+  default: |
 
-    @@@ 039 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Corps:|
+  body: |
 
-    @@@ 040 @
+    <Placeholder class="h-full" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="ouvert" color="neutral" variant="subtle"}
 
-#corps
-by placeholder{class="h-full"}
+#body
+:placeholder{class="h-full"}
 ::
 
 ::note
-Le bouton de fermeture n'est pas affiché si l'emplacement `#content` est utilisé car il fait partie de l'en-tête.
+El botón de cierre no se muestra si se utiliza la ranura `#content`, ya que es parte del encabezado.
 ::
 
 ### Fermer l'icône
 
-Utilisez le prop `close-icon` pour personnaliser le bouton de fermeture [Icon](/docs/components/icon).
+Utilisez la prop `close-icon` pour personnaliser le bouton de fermeture [Icon](/docs/components/icon).
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph051@titre
-Props:
-  Titre: Slideover with Close Button
-  closeIcône:'i-lucide-arrow-right'
-Slots:
-  Défaut:|
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Slideover with close button'
+  closeIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
-    @@@ 52 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Corps:|
+  body: |
 
-    @@@ 53 @
+    <Placeholder class="h-full" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="ouvert" color="neutral" variant="subtle"}
 
-#corps
-par: placeholder{class="h-full"}
+#body
+:placeholder{class="h-full"}
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser cette icône globalement dans votre `app.config.ts` sous la touche `ui.icons.close`.
 :::
@@ -173,32 +173,32 @@ Vous pouvez personnaliser cette icône globalement dans votre `vite.config.ts` s
 :::
 ::
 
-@@pH060@@côté
+### Side
 
 Utilisez le prop `side` pour définir le côté de l'écran où le Slideover va glisser de. Defaults à `right`.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph063@titre
-Props:
-  Catégorie:"Left"
-  Titre original: Slideover With Side
-Slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+props:
+  side: 'left'
+  title: 'Slideover with side'
+slots:
+  default: |
 
-    @@@@ 064 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Corps:|
+  body: |
 
-    @@
+    <Placeholder class="h-full min-h-48" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="ouvert" color="neutral" variant="subtle"}
 
-#corps
-par: placeholder{class="h-full min-h-48"}
+#body
+:placeholder{class="h-full min-h-48"}
 ::
 
 ### Inset: badge{label="4.3+" class="align-text-top"}
@@ -207,88 +207,88 @@ Utilisez le prop `inset` pour insérer le Slideover depuis les bords.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph071@titre
-Props:
-  Étiquette:"Right"
-  Inset: vrai
-  Titre: Slideover with Inset
-Slots:
-  Défaut:|
+prettier: true
+ignore:
+  - title
+props:
+  side: 'right'
+  inset: true
+  title: 'Slideover with inset'
+slots:
+  default: |
 
-    @@@ph072 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Corps:|
+  body: |
 
-    @@@ 073 @
+    <Placeholder class="min-w-96 min-h-96 size-full" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="ouvert" color="neutral" variant="subtle"}
 
-#corps
-par: placeholder{class="min-w-96 min-h-96 size-full"}
+#body
+:placeholder{class="min-w-96 min-h-96 size-full"}
 ::
 
-@@776@@référencement
+### Transition
 
-Utilisez la prop `transition` pour contrôler si le Slideover est animé ou non. Par défaut à `true`.
+Utilisez la prop `transition` pour contrôler si le Slideover est animé ou non.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph079@titre
-Props:
-  Transition: Faux
-  Titre: Slideover sans transition
-Slots:
-  Défaut:|
+prettier: true
+ignore:
+  - title
+props:
+  transition: false
+  title: 'Slideover without transition'
+slots:
+  default: |
 
-    @@@ 80 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Corps:|
+  body: |
 
-    @@@ 081 @
+    <Placeholder class="h-full" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="ouvert" color="neutral" variant="subtle"}
 
-#corps
-par: placeholder{class="h-full"}
+#body
+:placeholder{class="h-full"}
 ::
 
-@084@@récupération
+### Overlay
 
-Utilisez la prop `overlay` pour contrôler si le Slideover a une superposition ou non. Par défaut à `true`.
+Utilisez la prop `overlay` pour contrôler si le Slideover a une superposition ou non. Par défaut, `true`.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph087@titre
-Props:
-  Définition: Faux
-  Titre original: Slideover Without Overlay
-Slots:
-  Défaut:|
+prettier: true
+ignore:
+  - title
+props:
+  overlay: false
+  title: 'Slideover without overlay'
+slots:
+  default: |
 
-    @@@ 88 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Corps:|
+  body: |
 
-    @@@ 089 @
+    <Placeholder class="h-full" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="ouvert" color="neutral" variant="subtle"}
 
-#corps
-par: placeholder{class="h-full"}
+#body
+:placeholder{class="h-full"}
 ::
 
-@092@modélisme
+### Modale
 
-Utilisez la prop `modal` pour contrôler si le Slideover bloque l'interaction avec le contenu extérieur. Par défaut à `true`.
+Utilisez la prop `modal` pour contrôler si le Slideover bloque l'interaction avec le contenu extérieur.
 
 ::note
 Lorsque `modal` est défini sur `false`, la superposition est automatiquement désactivée et le contenu extérieur devient interactif.
@@ -296,31 +296,31 @@ Lorsque `modal` est défini sur `false`, la superposition est automatiquement d�
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph097@titre
-Props:
-  Modalité: Faux
-  Étiquette: slideover interactive
-Slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+props:
+  modal: false
+  title: 'Slideover interactive'
+slots:
+  default: |
 
-    @@@ 098 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Corps:|
+  body: |
 
-    @@@ 099 @
+    <Placeholder class="h-full" />
 ---
 
-Le bouton {label="Open" color="neutral" variant="subtle"}
+:u-button{label="ouvert" color="neutral" variant="subtle"}
 
-#corps
-par placeholder{class="h-full"}
+#body
+:placeholder{class="h-full"}
 ::
 
-@102@désactivé
+### Dismissible
 
-Utilisez la prop `dismissible` pour contrôler si le Slideover est éliminable lorsque vous cliquez en dehors de celui-ci ou appuyez sur escape. Par défaut à `true`.
+Utilisez la prop `dismissible` pour contrôler si le Slideover est éliminable lorsque vous cliquez en dehors de celui-ci ou appuyez sur escape.
 
 ::note
 Un événement `close:prevent` sera émis lorsque l'utilisateur essaiera de le fermer.
@@ -332,55 +332,55 @@ Vous pouvez combiner `modal: false` avec `dismissible: false` pour rendre l'arri
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph108@titre
-Props:
-  Désactivé: Faux
-  Modalité: true
-  Titre original: Slideover Non-Dismissible
-Slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+props:
+  dismissible: false
+  modal: true
+  title: 'Slideover non-dismissible'
+slots:
+  default: |
 
-    @@@ 109 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Corps:|
+  body: |
 
-    @@@ 110 @
+    <Placeholder class="h-full" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="ouvert" color="neutral" variant="subtle"}
 
-#corps
-par placeholder{class="h-full"}
+#body
+:placeholder{class="h-full"}
 ::
 
 ### Unmount: badge{label="4.10+" class="align-text-top"}
 
-Utilisez la prop `unmount-on-hide` pour empêcher le contenu du Slideover d'être démonté lorsqu 'il est fermé. Par défaut à `true`.
+Utilisez la prop `unmount-on-hide` pour empêcher que le contenu du Slideover ne soit démonté lorsqu 'il est fermé. Par défaut, `true`.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph117@titre
-Props:
-  Défaut: False
-  Titre: Slideover
-Slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+props:
+  unmountOnHide: false
+  title: 'Slideover'
+slots:
+  default: |
 
-    @@@ 118 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Corps:|
+  body: |
 
-    @@@ 119 @
+    <Placeholder class="h-full" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="ouvert" color="neutral" variant="subtle"}
 
-#corps
-par placeholder{class="h-full"}
+#body
+:placeholder{class="h-full"}
 ::
 
 ::note
@@ -391,7 +391,7 @@ Vous pouvez inspecter le DOM pour voir le contenu du Slideover en cours de rendu
 Lorsque la prop `portal` est définie sur `false`, le contenu est également rendu sur le serveur. Ceci est utile pour rendre un slideover ouvert pendant SSR sans flash sur le chargement de la page, ou pour exposer son contenu pour le référencement.
 ::
 
-@@ph124@@exemples
+## Exemples
 
 ### Control état ouvert
 
@@ -399,7 +399,7 @@ Vous pouvez contrôler l'état ouvert en utilisant la prop `default-open` ou la 
 
 ::component-example
 ---
-nom: 'slideover-open-example'
+name: 'slideover-open-example'
 ---
 ::
 
@@ -413,31 +413,31 @@ Cela vous permet de déplacer le déclencheur en dehors du Slideover ou de le su
 
 ### Utilisation programmatique
 
-Vous pouvez utiliser le [`useOverlay`](/docs/composables/use-overlay) pour ouvrir un Slideover par programmation.
+Vous pouvez utiliser le composable [`useOverlay`](/docs/composables/use-overlay) pour ouvrir un Slideover par programmation.
 
 ::warning
-Assurez-vous d'envelopper votre application avec le composant [`App`](/docs/components/app`OverlayProvider`](https://github.com/nuxt/ui/blob/v4/src/runtime/components/OverlayProvider.vue).
+Assurez-vous d'envelopper votre application avec le composant [`App`](/docs/components/app) qui utilise le composant [`OverlayProvider`](https://github.com/nuxt/ui/blob/v4/src/runtime/components/OverlayProvider.vue).
 ::
 
 Tout d'abord, créez un composant de glissement qui sera ouvert par programme:
 
 ::component-example
 ---
-Étiquette: true
-nom: 'exemple de slide'
-Prévision: Faux
+prettier: true
+name: 'slideover-example'
+preview: false
 ---
 ::
 
 ::note
-Nous émettons un événement `close` lorsque le glissement est fermé ou rejeté ici. Vous pouvez émettre n'importe quelle donnée via l'événement `close`, et ces données deviennent la valeur résolue de `open()`. L'événement doit être émis pour que la promesse se se résolve.
+Nous émettons un événement `close` lorsque le slideover est fermé ou rejeté ici. Vous pouvez émettre n'importe quelle donnée via l'événement `close`, et ces données deviennent la valeur résolue de `open()`. L'événement doit être émis pour que la promesse se résolve.
 ::
 
 Ensuite, utilisez-le dans votre app:
 
 ::component-example
 ---
-nom: 'slideover-programmatique-exemple'
+name: 'slideover-programmatic-example'
 ---
 ::
 
@@ -445,44 +445,44 @@ nom: 'slideover-programmatique-exemple'
 Vous pouvez fermer le coulissant dans le composant coulissant en émettant `emit('close')`.
 ::
 
-### Nested glissières
+### Slide-overs imbriqués
 
 Vous pouvez imbriquer des glissières les unes dans les autres.
 
 ::component-example
 ---
-nom: 'slideover-nested-exemple'
+name: 'slideover-nested-example'
 ---
 ::
 
-### Avec fente de pied de page
+### With slot de pied de page
 
-Utilisez l'emplacement `#footer` pour ajouter du contenu après le corps du Slideover.
+Utilisez le slot `#footer` pour ajouter du contenu après le corps du Slideover.
 
 ::component-example
 ---
-nom: 'slideover-footer-slot-example'
+name: 'slideover-footer-slot-example'
 ---
 ::
 
-@@ph157@api
+## API équipement
 
-@@ph158@@props
+### Props
 
-Composants-props
+:component-props
 
-@@ph159@@Slots
+### Slots
 
-Composants slots
+:component-slots
 
-@@P160@@émissions
+### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph161@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement@changement.com
+## Changelog écrit.
 
-Composant-changelog
+:component-changelog

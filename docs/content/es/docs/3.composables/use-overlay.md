@@ -3,35 +3,35 @@ title: UseOverlay
 description: 'Un composable para superposiciones de control programático.'
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-Utilice el componente autoimportado `useOverlay` para controlar mediante programación los componentes [](/docs/components/modal) y [Slideover](/docs/components/slideover).
+Utilice el componente `useOverlay` autoimportado para controlar programáticamente los componentes [Modal](/docs/components/modal) y [Slideover](/docs/components/slideover).
 
 ::component-example
 ---
-Nombre: 'use-overlay-example'
+name: 'use-overlay-example'
 ---
 ::
 
-- El componente `useOverlay` se crea utilizando `createSharedComposable`, asegurando que el mismo estado de superposición se comparta en toda su aplicación.
+El componente `useOverlay` se crea utilizando `createSharedComposable`, asegurando que el mismo estado de superposición se comparta en toda su aplicación.
 
 ::note
-Espere `overlay.open()` para obtener un valor de la superposición. Esto solo funciona si el componente de superposición **emite un `close` event**. Vea el ejemplo a continuación para obtener más detalles.
+Espere `overlay.open()` para obtener un valor de la superposición. Esto solo funciona si el componente **overlay emite un evento `close` **.
 ::
 
-@170000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## API
 
-@@
+`useOverlay()`x{lang="ts-type"} (Edición española)
 
 El composable `useOverlay` proporciona métodos para administrar superposiciones globalmente. Cada superposición creada devuelve una instancia con sus propios métodos.
 
-@@21@create ()
+### crear ()
 
-@@
+`create(component: T, options?: OverlayOptions<ComponentProps<T>>): OverlayInstance<T>`x{lang="ts-type"} (Edición española)
 
 Crear una superposición y devolver una instancia de fábrica.
 
-@@20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+#### Parámetros
 
 ::field-group
 
@@ -46,7 +46,7 @@ Crear una superposición y devolver una instancia de fábrica.
 
       ::field-group
         ::field{name="defaultOpen" type="boolean"}
-        Abra la superposición inmediatamente después de crearla. Por defecto a `false`.
+        Abra la superposición inmediatamente después de crearla. Por defecto `false`.
         ::
 
         ::field{name="props" type="ComponentProps"}
@@ -54,16 +54,16 @@ Crear una superposición y devolver una instancia de fábrica.
         ::
 
         ::field{name="destroyOnClose" type="boolean"}
-        Elimina la superposición de la memoria cuando se cierra. Por defecto a `false`.
+        Elimina la superposición de la memoria cuando se cierra. Por defecto `false`.
         ::
       ::
     ::
   ::
 ::
 
-@@27@@abierto ()
+### open (en inglés)
 
-@@28@28@29@29
+`open(id: symbol, props?: ComponentProps<T>): OpenedOverlay<T>`x{lang="ts-type"} (Edición española)
 
 Abra una superposición por su `id`.
 
@@ -79,13 +79,13 @@ Abra una superposición por su `id`.
   ::
 ::
 
-@@2003@close ()
+### close (en inglés)
 
-@@
+`close(id: symbol, value?: any): void`xx{lang="ts-type"} (Edición española)
 
-Cerrar una superposición por su `id`.
+Cierre una superposición con su `id`.
 
-@@pH036@@Parámetros
+#### Parámetros
 
 ::field-group
   ::field{name="id" type="symbol" required}
@@ -97,19 +97,19 @@ Cerrar una superposición por su `id`.
   ::
 ::
 
-@@ph037@closeAll ()
+### closeAll ()
 
-@@
+`closeAll(): void`x{lang="ts-type"} (Edición española)
 
-Cierre todas las extensiones abiertas.
+Cierre todas las superficies abiertas.
 
-@@pH040@patch ()
+### patch (en inglés)
 
-@@
+`patch(id: symbol, props: Partial<ComponentProps<T>>): void`xx{lang="ts-type"} (Edición española)
 
 Actualizar una superposición por su `id`.
 
-@@40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+#### Parámetros
 
 ::field-group
   ::field{name="id" type="symbol" required}
@@ -121,13 +121,13 @@ Actualizar una superposición por su `id`.
   ::
 ::
 
-@@pH045@unmount ()
+### unmount (en inglés)
 
-@@
+`unmount(id: symbol): void`xx{lang="ts-type"} (Edición española)
 
-Eliminar una superposición del DOM por su `id`.
+Quitar una superposición del DOM por su `id`.
 
-@@pH049@@Parámetros
+#### Parámetros
 
 ::field-group
   ::field{name="id" type="symbol" required}
@@ -135,9 +135,9 @@ Eliminar una superposición del DOM por su `id`.
   ::
 ::
 
-@@P5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### isAbierto ()
 
-@@
+`isOpen(id: symbol): boolean`xx{lang="ts-type"} (Edición española)
 
 Compruebe si una superposición está abierta utilizando su `id`.
 
@@ -149,9 +149,9 @@ Compruebe si una superposición está abierta utilizando su `id`.
   ::
 ::
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### superposiciones
 
-@@
+`overlays: Overlay[]`xx{lang="ts-type"} (Edición española)
 
 Lista en memoria de todas las superposiciones que se crearon.
 
@@ -159,11 +159,11 @@ Lista en memoria de todas las superposiciones que se crearon.
 
 Estos son los métodos disponibles en la instancia devuelta por `create()`.
 
-@@P060@@abierto ()
+### open (en inglés)
 
-@@
+`open(props?: ComponentProps<T>): OpenedOverlay<T>`xx{lang="ts-type"} (Edición española)
 
-Abre la superposición. Devuelve un `OpenedOverlay`, una promesa que se resuelve con el valor emitido por el evento `close`. La misma promesa también se expone como `result`, por lo que `const { result } = modal.open()` también funciona.
+Abre la superposición. Devuelve un `OpenedOverlay`, una promesa que se resuelve con el valor emitido por el evento `close`.La misma promesa también se expone como `result`, por lo que `const { result } = modal.open()` también funciona.
 
 #### Parámetros
 
@@ -189,9 +189,9 @@ function openModal() {
 </script>
 ```
 
-@@883@close ()
+### close ()(en español)
 
-@@
+`close(value?: any): void`xx{lang="ts-type"} (Edición española)
 
 Cierra el overlay.
 
@@ -203,13 +203,13 @@ Cierra el overlay.
   ::
 ::
 
-@@ph087@patch ()
+### patch (Edición española)
 
-@@
+`patch(props: Partial<ComponentProps<T>>): void`x{lang="ts-type"} (Edición española)
 
 Actualizar los soportes de la superposición.
 
-@@pH090@@Parámetros
+#### Parámetros
 
 ::field-group
   ::field{name="props" type="Partial<ComponentProps<T>>" required}
@@ -237,7 +237,7 @@ function updateModalTitle() {
 </script>
 ```
 
-@110@ejemplos
+## Ejemplos
 
 ### Con múltiples superposiciones
 
@@ -277,7 +277,7 @@ const openModalB = async () => {
 
 Este ejemplo demuestra cómo crear un patrón de diálogo de confirmación reutilizable utilizando un componente personalizado `useConfirmDialog` que envuelve `useOverlay`. Este enfoque permite diálogos obstinados adaptados a requisitos comerciales específicos y preferencias de diseño.
 
-1. Crear un componente `ConfirmDialog` que emite un valor booleano cuando está cerrado:
+1. Crear un componente `ConfirmDialog` que emite un valor booleano cuando se cierra:
 
 ```vue [components/ConfirmDialog.vue]
 <script lang="ts" setup>
@@ -308,7 +308,7 @@ const emits = defineEmits<{
 </template>
 ```
 
-2. Crear un `useConfirmDialog` componible que devuelva una promesa:
+2. Crear un composable `useConfirmDialog` que devuelva una promesa:
 
 ```ts [composables/useConfirmDialog.ts]
 import { ConfirmDialog } from '#components'
@@ -332,7 +332,7 @@ export const useConfirmDialog = () => {
 }
 ```
 
-3. Use el componente en sus componentes:
+3. Use el composable en sus componentes:
 
 ```vue
 <script setup lang="ts">
@@ -355,13 +355,13 @@ const handleDelete = async () => {
 </template>
 ```
 
-@@218@218@218
+## Cavanías
 
 ### Provide/Inyectar
 
-Al abrir las superposiciones mediante programación (modales, deslizamientos, etc.), el componente de superposición solo puede acceder a los valores inyectados del componente que contiene `UApp`(normalmente `app.vue` o componentes de diseño).
+Al abrir las superposiciones mediante programación (modales, deslizamientos, etc.), el componente de superposición solo puede acceder a los valores inyectados desde el componente que contiene `UApp` (normalmente `app.vue` o componentes de diseño).
 
-Como tal, el uso de `provide()` en páginas o componentes padres no es compatible directamente.Para pasar los valores proporcionados a las superposiciones, el enfoque recomendado es usar props en su lugar:
+Como tal, el uso de `provide()` en páginas o componentes principales no es compatible directamente.Para pasar los valores proporcionados a las superposiciones, el enfoque recomendado es usar props en su lugar:
 
 ```vue
 <script setup lang="ts">

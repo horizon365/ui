@@ -7,17 +7,17 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Main.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Die Hauptkomponente rendert ein `<main>`-Element, das mit der Komponente [Header](/docs/components/header) zusammenarbeitet, um ein Layout in voller Höhe zu erstellen, das sich bis zur verfügbaren Höhe des Ansichtsfensters erstreckt.
+Die Hauptkomponente rendert ein `<main>`-Element, das zusammen mit der [Header](/docs/components/header)-Komponente ein Layout in voller Höhe erstellt, das sich auf die verfügbare Höhe des Ansichtsfensters erstreckt.
 
 ::tip{to="/docs/getting-started/theme/css-variables#header"}
 Die Hauptkomponente verwendet die CSS-Variable `--ui-header-height`, um sich korrekt unter der `Header` zu positionieren.
 ::
 
-@@ph008 @ Beispiele
+## Examples (Beispiele)
 
-@@ph009@@@ph010@@@ph010@@@@ph010@@@@@ph010@@@@ph010@@@@@ph010 @
+### Innerhalb `app.vue`
 
 Verwenden Sie die Main-Komponente in Ihrem `app.vue` oder in einem Layout:
 
@@ -37,20 +37,20 @@ Verwenden Sie die Main-Komponente in Ihrem `app.vue` oder in einem Layout:
 </template>
 ```
 
-@@ph027@@api
+## API (englisch)
 
-@@@ph028@@Props
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
-@@ph029@@slots
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph030@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph031@@changelog @ changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

@@ -13,77 +13,77 @@ links:
 ---
 
 ::warning{to="/docs/getting-started/integrations/content"}
-Diese Komponente ist nur verfügbar, wenn das `@nuxt/content`-Modul installiert ist.
+Diese Komponente ist nur verfügbar, wenn das Modul `@nuxt/content` installiert ist.
 ::
 
-@@ph001@@Nutzung
+## Usage (Verwendung)
 
-Die ContentSearchButton-Komponente wird verwendet, um das [ContentSearch](/docs/components/content-search) modal zu öffnen.
+Die Komponente ContentSearchButton wird verwendet, um das Modal [ContentSearch](/docs/components/content-search) zu öffnen.
 
-: component-code {prefix="content"}
+:component-code{prefix="content"}
 
-Es erweitert die Komponente [Button](/docs/components/button), so dass Sie jede Eigenschaft wie `color`,`variant`,`size` usw. übergeben können.
+Es erweitert die Komponente [Button](/docs/components/button), so dass Sie jede Eigenschaft wie `color`, `variant`, `size` usw. übergeben können.
 
 ::component-code{prefix="content"}
 ---
-Ignoriert:
-  @@ph014@@variantenreich
-Props:
-  Variante: „ subtil "
+ignore:
+  - variant
+props:
+  variant: 'subtle'
 ---
 ::
 
 ::note{to="#collapsed"}
-Die Schaltfläche ist standardmäßig auf `color="neutral"` und `variant="outline"` eingestellt, wenn sie nicht kollabiert ist, und `variant="ghost"`, wenn sie kollabiert ist.
+Die Schaltfläche ist standardmäßig auf `color="neutral"` und `variant="outline"` eingestellt, wenn sie nicht zusammengeklappt ist, und `variant="ghost"`, wenn sie zusammengeklappt ist.
 ::
 
-@@ph018@gmail.de ist kaputt
+### Abgebrochen
 
-Verwenden Sie `collapsed` prop, um die Beschriftung der Schaltfläche anzuzeigen, und [kbds](#kbds). Standardmäßig `true`.
+Verwenden Sie die `collapsed`-Prop, um die Beschriftung der Schaltfläche anzuzeigen, und [kbds](#kbds). Standardmäßig `true`.
 
 ::component-code{prefix="content"}
 ---
-Schöner: wahr
-Props:
-  untergegangen: false
+prettier: true
+props:
+  collapsed: false
 ---
 ::
 
-### Kbds
+### kbds (nicht)
 
-Verwenden Sie `kbds` prop, um Tastaturtasten in der Schaltfläche anzuzeigen. Standardmäßig auf `['meta', 'K']`{lang="ts-type"} entspricht die Standardverknüpfung der Komponente [ContentSearch](/docs/components/content-search#shortcut).
+Verwenden Sie die `kbds`-prop, um Tastaturtasten in der Schaltfläche anzuzeigen. Standardmäßig auf `['meta', 'K']`{lang="ts-type"}, um der Standardverknüpfung der Komponente [ContentSearch](/docs/components/content-search#shortcut) zu entsprechen.
 
 ::component-code{prefix="content"}
 ---
-Schöner: wahr
-Ignoriert:
+prettier: true
+ignore:
   - kbds
-Props:
-  untergegangen: false
-  Die KBD:
+props:
+  collapsed: false
+  kbds:
     - 'alt'
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@####################################################################################################################################
+    - 'O'
 ---
 ::
 
-@@@@@@b36@b36
+## API (englisch)
 
-@@@@@@@@@@ph037@@props
+### Props (nicht)
 
-Komponenten Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-Diese Komponente unterstützt auch alle nativen `<button>` HTML-Attribute.
+Diese Komponente unterstützt auch alle nativen `<button>`-HTML-Attribute.
 ::
 
-@@ph039@gmail.de
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph040@@theme@@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@the
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph041@@changelog @ changelog
+## Changelog (englisch)
 
-: component-changelog {prefix="content"}
+:component-changelog{prefix="content"}

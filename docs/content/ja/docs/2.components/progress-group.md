@@ -21,41 +21,41 @@ ProgressGroupコンポーネントを使用して、複数の値を1つのプロ
 
 ::component-code
 ---
-崩壊真
-無視
-  - アイテム
-  -  max
-  - クラス
-外部
-  - アイテム
-externalTypes
-  -  ProgressGroupItem []
-小道具
-  最高128
-  アイテム
-    -  label 'System'
-      値24
-      色'中立'
-      アイコン'i—lucide—cog'
-    -  label 'Apps'
-      値8
-      色'エラー'
-      アイコン'i—lucide—app—window'
-    -  label 'Documents'
-      値12
-      色'警告'
-      アイコン'i—lucide—file'
-    -  label 'マルチメディア'
-      値42
-      色'成功'
-      アイコン'i—lucide—film'
-  クラス'w—96'
+collapse: true
+ignore:
+  - items
+  - max
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  max: 128
+  items:
+    - label: 'System'
+      value: 24
+      color: 'neutral'
+      icon: 'i-lucide-cog'
+    - label: 'Apps'
+      value: 8
+      color: 'error'
+      icon: 'i-lucide-app-window'
+    - label: 'Documents'
+      value: 12
+      color: 'warning'
+      icon: 'i-lucide-file'
+    - label: 'Multimedia'
+      value: 42
+      color: 'success'
+      icon: 'i-lucide-film'
+  class: 'w-96'
 ---
 ::
 
 ### アイテム
 
-`items`プロパティを、次のプロパティを持つオブジェクトの配列として使用します。
+`items`プロパティを次のプロパティを持つオブジェクトの配列として使用します。
 
 - `label?: string`{lang="ts-type"}
 - `icon?: string`{lang="ts-type"}
@@ -67,121 +67,121 @@ externalTypes
 
 ::component-code
 ---
-崩壊真
-無視
-  - アイテム
-  - クラス
-外部
-  - アイテム
-externalTypes
-  -  ProgressGroupItem []
-小道具
-  アイテム
-    -  label 'Compute'
-      値42
-      色'プライマリ'
-    -  label 'ストレージ'
-      値18
-      色'情報'
-    -  label '帯域幅'
-      値9
-      色'警告'
-  クラス'w—96'
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  items:
+    - label: 'Compute'
+      value: 42
+      color: 'primary'
+    - label: 'Storage'
+      value: 18
+      color: 'info'
+    - label: 'Bandwidth'
+      value: 9
+      color: 'warning'
+  class: 'w-96'
 ---
 ::
 
 ::note
-`icon`のない項目は、代わりにリストに色付きのドットが表示されます。
+`icon`がないアイテムは、代わりにリストに色付きドットが表示されます。
 ::
 
-### マックス
+### Max
 
 `max`プロパティを使用して、すべてのアイテムが加算される値を設定します。デフォルトは`100`です。
 
 ::component-code
 ---
-崩壊真
-無視
-  - アイテム
-  - クラス
-外部
-  - アイテム
-externalTypes
-  -  ProgressGroupItem []
-小道具
-  最高512
-  アイテム
-    -  label 'Used'
-      値128
-      色'プライマリ'
-    -  label '予約済み'
-      値64
-      色'ニュートラル'
-  クラス'w—96'
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  max: 512
+  items:
+    - label: 'Used'
+      value: 128
+      color: 'primary'
+    - label: 'Reserved'
+      value: 64
+      color: 'neutral'
+  class: 'w-96'
 ---
 ::
 
 ::note
-値は`0`と`max`の間でクランプされ、`max`以上のセグメントは比例してトラックを共有します。
+値は`0`と`max`の間でクランプされ、`max`を超えるセグメントは比例してトラックを共有します。
 ::
 
-### ステータス
+### Status
 
 `status`プロパティを使用して、バーの上に合計値を表示します。
 
 ::component-code
 ---
-崩壊真
-無視
-  - アイテム
-  - クラス
-外部
-  - アイテム
-externalTypes
-  -  ProgressGroupItem []
-小道具
-  ステータス真
-  最高128
-  アイテム
-    -  label 'System'
-      値24
-      色'中立'
-    -  label 'Apps'
-      値8
-      色'エラー'
-    -  label 'マルチメディア'
-      値42
-      色'成功'
-  クラス'w—96'
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  status: true
+  max: 128
+  items:
+    - label: 'System'
+      value: 24
+      color: 'neutral'
+    - label: 'Apps'
+      value: 8
+      color: 'error'
+    - label: 'Multimedia'
+      value: 42
+      color: 'success'
+  class: 'w-96'
 ---
 ::
 
 ::tip
-ステータスはバーの終わりを追跡します。代わりに幅いっぱいにするには`:ui="{ status: 'w-full' }"`を使用します。
+ステータスはバーの終わりを追跡します。`:ui="{ status: 'w-full' }"`を使用して、代わりに幅いっぱいにします。
 ::
 
-### カラー
+### Color
 
 `color`プロパティを使用して、独自の色を設定していないすべてのセグメントの色を変更します。
 
 ::component-code
 ---
-崩壊真
-無視
-  - アイテム
-  - クラス
-外部
-  - アイテム
-externalTypes
-  -  ProgressGroupItem []
-小道具
-  色ニュートラル
-  アイテム
-    -  label 'Read'
-      値42
-    -  label 'Write'
-      値18
-  クラス'w—96'
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  color: neutral
+  items:
+    - label: 'Read'
+      value: 42
+    - label: 'Write'
+      value: 18
+  class: 'w-96'
 ---
 ::
 
@@ -191,59 +191,59 @@ externalTypes
 
 ### サイズ
 
-ProgressGroupのサイズを変更するには、`size`プロパティを使用します。
+`size`プロパティを使用してProgressGroupのサイズを変更します。
 
 ::component-code
 ---
-崩壊真
-無視
-  - アイテム
-  - クラス
-外部
-  - アイテム
-externalTypes
-  -  ProgressGroupItem []
-小道具
-  サイズXL
-  アイテム
-    -  label 'Read'
-      値42
-      色'プライマリ'
-    -  label 'Write'
-      値18
-      色'情報'
-  クラス'w—96'
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  size: xl
+  items:
+    - label: 'Read'
+      value: 42
+      color: 'primary'
+    - label: 'Write'
+      value: 18
+      color: 'info'
+  class: 'w-96'
 ---
 ::
 
-### オリエンテーション
+### Orientation
 
-ProgressGroupの向きを変更するには、`orientation`プロパティを使用します。デフォルトは`horizontal`です。
+`orientation`プロパティを使用してProgressGroupの向きを変更します。デフォルトは`horizontal`です。
 
 ::component-code
 ---
-崩壊真
-無視
-  - アイテム
-  - クラス
-外部
-  - アイテム
-externalTypes
-  -  ProgressGroupItem []
-小道具
-  オリエンテーション垂直
-  アイテム
-    -  label 'Read'
-      値42
-      色'プライマリ'
-    -  label 'Write'
-      値18
-      色'情報'
-  クラス'h—48'
+collapse: true
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - ProgressGroupItem[]
+props:
+  orientation: vertical
+  items:
+    - label: 'Read'
+      value: 42
+      color: 'primary'
+    - label: 'Write'
+      value: 18
+      color: 'info'
+  class: 'h-48'
 ---
 ::
 
-## 例
+## Example
 
 ### ステータススロット付き
 
@@ -251,19 +251,19 @@ externalTypes
 
 ::component-example
 ---
-崩壊真
-名前progress—group—status—example
+collapse: true
+name: progress-group-status-example
 ---
 ::
 
 ### アイテムスロット付き
 
-各エントリの表示内容を変更するには、`#item-label`および`#item-trailing`スロットを使用します。どちらも`item`、`index`、`percent`を受け取ります。
+`#item-label`と`#item-trailing`スロットを使用して、各エントリの表示内容を変更します。どちらも`item`、`index`、`percent`を受け取ります。
 
 ::component-example
 ---
-崩壊真
-名前progress—group—item—example
+collapse: true
+name: progress-group-item-example
 ---
 ::
 
@@ -273,25 +273,25 @@ externalTypes
 
 ::component-example
 ---
-崩壊真
-名前progress—group—custom—colorの例
+collapse: true
+name: progress-group-custom-color-example
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

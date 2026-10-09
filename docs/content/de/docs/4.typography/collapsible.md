@@ -9,23 +9,23 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Collapsible.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Wickeln Sie Ihren Inhalt mit der Komponente `collapsible` ein, um ein [Collapsible](/docs/components/collapsible) in Ihrem Inhalt anzuzeigen.
+Wickeln Sie Ihren Inhalt mit der `collapsible`-Komponente ein, um einen [Collapsible](/docs/components/collapsible) in Ihrem Inhalt anzuzeigen.
 
 ::code-preview{class="[&>div]:*:w-full [&>div]:*:my-0"}
 
 ::collapsible
 
-| Prop    | Default sein   | Typen                     |
+| Prop    | Default ist   | Typen                     |
 |---------|-----------|--------------------------|
-| @@@@006 @|           |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@PH0008|
-| @@009 @|@@10 @      |{lang="ts-type"}|
-| @@ph013 @|@@ph013 @|{lang="ts-type"}|
+| x006x ist|           | `string`{lang="ts-type"} nicht|
+| x009x nicht| x010x ist      | `string`{lang="ts-type"} (nicht)|
+| x013x Bearbeiten| x014x ist| `string`{lang="ts-type"} nicht|
 
 ::
 
-#Der Code
+#code
 
 ```mdc
 ::collapsible
@@ -41,20 +41,20 @@ Wickeln Sie Ihren Inhalt mit der Komponente `collapsible` ein, um ein [Collapsib
 
 ::
 
-@@@@@@b28@b28
+## API Bearbeiten
 
-@@@ph029@@Props
+### Props (englisch)
 
-: component-props {prose}
+:component-props{prose}
 
-### Slots
+### Slots Bearbeiten
 
-: component-slots {prose}
+:component-slots{prose}
 
-@@ph033@gmail.de
+## Theme Bearbeiten
 
-: component-theme {prose}
+:component-theme{prose}
 
-@@ph035@changelog @ changelog
+## Changelog (englisch)
 
-: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

@@ -14,130 +14,130 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputTags.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice la directiva `v-model` para controlar el valor de las InputTags.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  - modelValoración
-Externo:
-  - modelValue (Edición española)
-Props:
-  Valor: ['Vista ']
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
 ---
 ::
 
-Utilice la prop `default-value` para establecer el valor inicial cuando no necesite controlar su estado.
+Utilice el prop `default-value` para establecer el valor inicial cuando no necesite controlar su estado.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH005@@defaultValue
-Props:
-  defaultValue: ['Vista ']
+prettier: true
+ignore:
+  - defaultValue
+props:
+  defaultValue: ['Vue']
 ---
 ::
 
-@@@PHO006@@PHOENOS
+### Placeholder (Edición española)
 
 Utilice el prop `placeholder` para establecer un texto de marcador de posición.
 
 ::component-code
 ---
-Props:
-  marcador de posición:'Enter tags...'
+props:
+  placeholder: 'Enter tags...'
 ---
 ::
 
-### Longitud máxima
+### Max longitud
 
-Utilice la prop `max-length` para establecer el número máximo de caracteres permitidos en una etiqueta.
+Utilice el prop `max-length` para establecer el número máximo de caracteres permitidos en una etiqueta.
 
 ::component-code
 ---
-Props:
-  Tamaño: 4
+props:
+  maxLength: 4
 ---
 ::
 
-@000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### color (Edición española)
 
-Utilice el prop `color` para cambiar el color del anillo cuando se enfoca la InputTags.
+Utilice el accesorio `color` para cambiar el color del anillo cuando se enfoca la InputTags.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@P2012@modelValue (Edición española)
-Externo:
-  - modelValue (Edición española)
-Props:
-  Valor: ['Vista ']
-  Color: Neutral
-  Destacado: Verdadero
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  color: neutral
+  highlight: true
 ---
 ::
 
 ::note
-El `highlight` prop se utiliza aquí para mostrar el estado de enfoque. Se utiliza internamente cuando se produce un error de validación.
+El prop `highlight` se utiliza aquí para mostrar el estado de enfoque. Se utiliza internamente cuando se produce un error de validación.
 ::
 
-@@15@Variaciones
+### Variaciones
 
-Utilice el prop `variant` para cambiar la apariencia de las InputTags.
+Utilice el prop `variant` para cambiar la apariencia de las etiquetas de entrada.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@P2017@modelValoración
-Externo:
-  @@P018@modelValue (Edición española)
-Props:
-  Valor: ['Vista ']
-  Variación: Sutil
-  Color: Neutral
-  Destacado: Falso
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  variant: subtle
+  color: neutral
+  highlight: false
 ---
 ::
 
-@190000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Tamaño
 
-Utilice el prop `size` para ajustar el tamaño de las InputTags.
+Utilice el accesorio `size` para ajustar el tamaño de las etiquetas de entrada.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  - modelValue (Edición española)
-Externo:
-  @@2222@22222@2222@2222222222222222200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Valor: ['Vista ']
-  Tamaño: xl
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  size: xl
 ---
 ::
 
-@@23@Icon
+### Icono
 
-Utilice el prop `icon` para mostrar un [Icon](/docs/components/icon) dentro de las etiquetas de entrada.
+Utilice el prop `icon` para mostrar un [Icon](/docs/components/icon) dentro de las InputTags.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@20029@modelValoración
-Externo:
-  - modelValue (Edición española)
-Props:
-  Valor: ['Vista ']
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
   icon: 'i-lucide-search'
-  Tamaño: MD
-  Categoría: Outline
+  size: md
+  variant: outline
 ---
 ::
 
@@ -145,164 +145,164 @@ Props:
 Utilice los accesorios `leading` y `trailing` para establecer la posición del icono o los accesorios `leading-icon` y `trailing-icon` para establecer un icono diferente para cada posición.
 ::
 
-@35@avatar
+### Avatar en Español
 
-Utilice el prop `avatar` para mostrar un [Avatar](/docs/components/avatar) dentro de las etiquetas de entrada.
+Utilice el prop `avatar` para mostrar un [Avatar](/docs/components/avatar) dentro de las InputTags.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  - modelValue (Edición española)
-  - avatar.carga
-Externo:
-  - modelValue (Edición española)
-Props:
-  Valor: ['Vista ']
-  El avatar:
+prettier: true
+ignore:
+  - modelValue
+  - avatar.loading
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  avatar:
     src: 'https://github.com/vuejs.png'
-    Categoría: Lazy
-  Tamaño: MD
-  Categoría: Outline
+    loading: lazy
+  size: md
+  variant: outline
 ---
 ::
 
-### Delete Icon (en inglés)
+### Delete Icono
 
 Utilice el prop `delete-icon` para personalizar la eliminación [Icon](/docs/components/icon) en las etiquetas.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@P051@@modelValue (Edición española)
-Externo:
-  @@P052@modelValue (Edición española)
-Props:
-  Valor: ['Vista ']
-  Archivo de la etiqueta: i-lucide-trash
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  deleteIcon: 'i-lucide-trash'
 ---
 ::
 
 ::framework-only
-#nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.close`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.close`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.close`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.close`.
 :::
 ::
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Cargando
 
-Utilice el prop `loading` para mostrar un icono de carga en las InputTags.
+Utilice el prop `loading` para mostrar un icono de carga en las etiquetas de entrada.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@P059@@modelValue (Edición española)
-Externo:
-  @@pH060@modelValue (Edición española)
-Props:
-  Valor: ['Vista ']
-  Carga: Verdad
-  Trayectoria: Falso
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  loading: true
+  trailing: false
 ---
 ::
 
-### Icono de carga
+### Loading Icon (en inglés)
 
-Utilice el prop `loading-icon` para personalizar el icono de carga. Por defecto a `i-lucide-loader-circle`.
+Utilice el prop `loading-icon` para personalizar el icono de carga.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH064@modelValue (Edición española)
-Externo:
-  - modelValue (Edición española)
-Props:
-  Valor: ['Vista ']
-  Carga: Verdad
-  LoadingIcon: 'i-lucide-loader'(en inglés)
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  loading: true
+  loadingIcon: 'i-lucide-loader'
 ---
 ::
 
 ::framework-only
-#Nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.loading`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.loading`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.loading`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.loading`.
 :::
 ::
 
-@700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Desactivado
 
-Utilice el prop `disabled` para desactivar las etiquetas de entrada.
+Utilice el accesorio `disabled` para desactivar las etiquetas de entrada.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@P072@modelValue (Edición española)
-Externo:
-  @@P073@modelValue (Edición española)
-Props:
-  Valor: ['Vista ']
-  Discapacitados: Verdadero
+prettier: true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: ['Vue']
+  disabled: true
 ---
 ::
 
-@@P074@Ejemplos
+## Ejemplos
 
-### Dentro de un campo de formato
+### Dentro de un FormField
 
-Puede utilizar las etiquetas de entrada dentro de un componente [FormField](/docs/components/form-field) para mostrar una etiqueta, texto de ayuda, indicador requerido, etc.
+Puede usar las InputTags dentro de un componente [FormField](/docs/components/form-field) para mostrar una etiqueta, texto de ayuda, indicador requerido, etc.
 
 ::component-example
 ---
-Nombre: 'input-tags-form-field-example'
+name: 'input-tags-form-field-example'
 ---
 ::
 
-@080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## API
 
-@081@081@081@081
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"}
-Este componente también soporta todos los atributos HTML nativos `<input>`.
+Este componente también soporta todos los atributos HTML `<input>` nativos.
 ::
 
-@083@espanol
+### Slots
 
-Componentes de slots
+:component-slots
 
-@@84000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@085@@Exposicion
+### Exposición
 
 Al acceder al componente a través de una referencia de plantilla, puede utilizar lo siguiente:
 
 | Nombre| Tipo|
 | ---- | ---- |
-| @@|@@@ph087 @|
+| `inputRef`x{lang="ts-type"} (Edición española)| `Ref<HTMLInputElement \| null>`x{lang="ts-type"} (Edición española)|
 
-@090000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Temas
 
-Componente Tema
+:component-theme
 
-@@changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

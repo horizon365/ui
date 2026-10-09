@@ -14,125 +14,125 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputRating.vue
 ---
 
-## 使用情况
+## 用法
 
-使用`v-model`指令可控制InputRating组件的评级值。
+使用`v-model`指令控制InputRating组件的评级值。
 
 ::component-code
 ---
-外部：
-  - 模型值
-道具：
-  型号值：3
+external:
+  - modelValue
+props:
+  modelValue: 3
 ---
 ::
 
-当您不需要控制其状态时，请使用`default-value`属性来设定初始值。
+当不需要控制其状态时，使用`default-value`属性设置初始值。
 
 ::component-code
 ---
-忽略：
-  - 默认值
-道具：
-  默认值：3
+ignore:
+  - defaultValue
+props:
+  defaultValue: 3
 ---
 ::
 
-第五步
+### Step
 
-使用`step`属性来控制每颗星星的粒度。将其设置为`0.5`可允许半星评级。
+使用`step`道具控制每个星星的粒度。将其设置为`0.5`以允许半颗星星评级。
 
 ::component-code
 ---
-忽略：
-  - 默认值
-道具类：
-  步长：0.5
-  默认值：3.5
+ignore:
+  - defaultValue
+props:
+  step: 0.5
+  defaultValue: 3.5
 ---
 ::
 
-长度
+### Length
 
-使用`length`道具来设定星星的数目。预设值为`5`。
+使用`length`道具将stars.xml2的数量设置为`5`。
 
 ::component-code
 ---
-忽略：
-  - 默认值
-道具：
-  长度：10
-  步长：0.5
-  默认值：7.5
+ignore:
+  - defaultValue
+props:
+  length: 10
+  step: 0.5
+  defaultValue: 7.5
 ---
 ::
 
 ### 可清除
 
-使用`clearable`道具，允许使用者按一下目前选取的值来清除分级。预设值为`false`。
+使用`clearable`道具允许用户通过点击当前选择的值来清除评级。
 
 ::component-code
 ---
-忽略：
-  - 默认值
-道具：
-  可清除：true
-  默认值：3
+ignore:
+  - defaultValue
+props:
+  clearable: true
+  defaultValue: 3
 ---
 ::
 
 ### 可悬停
 
-使用`hoverable`道具可控制评分是否在悬停在星星上时预览值。默认值为`false`。
+使用`hoverable`道具来控制当鼠标悬停在星星上时评级是否预览该值。
 
 ::component-code
 ---
-忽略：
-  - 默认值
-道具：
-  可悬停：true
-  默认值：3
+ignore:
+  - defaultValue
+props:
+  hoverable: true
+  defaultValue: 3
 ---
 ::
 
 ### Icon
 
-使用`icon`道具自定义用于星星的图标。将其添加到`i-lucide-star`。
+使用`icon`道具自定义用于星星的图标。
 
 ::component-code
 ---
-忽略：
+ignore:
   - defaultValue
-道具：
-  图标：“i-lucide-heart”（我的心）
-  默认值：4
+props:
+  icon: 'i-lucide-heart'
+  defaultValue: 4
 ---
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`app.config.ts`中的`ui.icons.star`键下全局自定义默认的星星图标。
+您可以自定义默认的星星图标全球在您的`app.config.ts`下`ui.icons.star`的关键。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`vite.config.ts`中的`ui.icons.star`键下全局自定义默认的星星图标。
+您可以自定义默认的星星图标全球在您的`vite.config.ts`下`ui.icons.star`键。
 :::
 ::
 
-### Empty图标
+### 空图标
 
-使用`empty-icon`prop自定义空星的图标。如果未提供，则使用与`icon`相同的图标。
+使用`empty-icon`道具自定义空星星的图标。如果没有提供，则使用与`icon`相同的图标。
 
 ::component-code
 ---
-忽略：
+ignore:
   - defaultValue
-道具：
-  emptyIcon：'i-lucide-circle'
-  图标：'i-lucide-circle-check'
-  默认值：3
+props:
+  emptyIcon: 'i-lucide-circle'
+  icon: 'i-lucide-circle-check'
+  defaultValue: 3
 ---
 ::
 
@@ -142,95 +142,95 @@ links:
 
 ::component-code
 ---
-忽略：
+ignore:
   - defaultValue
-道具：
-  颜色：中性
-  默认值：4
+props:
+  color: neutral
+  defaultValue: 4
 ---
 ::
 
 ### Size
 
-使用`size`道具更改星星的大小。
+使用`size`道具来改变星星的大小。
 
 ::component-code
 ---
-忽略：
+ignore:
   - defaultValue
-项目名称：
-  尺寸：
+items:
+  size:
     - xs
     - sm
     - md
     - lg
     - xl
-道具：
-  尺寸：xl
-  默认值：4
+props:
+  size: xl
+  defaultValue: 4
 ---
 ::
 
-方向
+### 定向
 
-使用`orientation`道具更改评级的方向。默认为`horizontal`。
+使用`orientation`属性将rating. xm的方向更改为`horizontal`。
 
 ::component-code
 ---
-忽略：
-  - 默认值
-道具：
-  方向：垂直
-  默认值：4
+ignore:
+  - defaultValue
+props:
+  orientation: vertical
+  defaultValue: 4
 ---
 ::
 
-### 已禁用
+### 禁用
 
-使用`disabled`道具来停用InputRating组件。停用时，该组件的不透明度会降低（75%），并显示`not-allowed`游标来表示它不是互动式的。
+使用`disabled`属性禁用InputRating组件。禁用时，该组件的不透明度降低（75%），并显示`not-allowed`光标以指示它不是交互式的。
 
 ::component-code
 ---
-忽略：
-  - 默认值
-道具：
-  已禁用：true
-  默认值：3
+ignore:
+  - defaultValue
+props:
+  disabled: true
+  defaultValue: 3
 ---
 ::
 
 ### 只读
 
-使用`readonly`道具可在不允许使用者互动的情况下显示评等。与`disabled`不同的是，它会维持正常的外观（完全不透明，预设游标）。当您要显示无法变更但看起来正常的评等时，请使用此道具。
+使用`readonly`属性显示评级，而不允许用户交互。与`disabled`不同，它保持正常外观（完全不透明，默认光标）。当您希望显示无法更改但应正常显示的评级时使用。
 
 ::component-code
 ---
-忽略：
-  - 默认值
-道具：
-  只读：true
-  默认值：4.5
+ignore:
+  - defaultValue
+props:
+  readonly: true
+  defaultValue: 4.5
 ---
 ::
 
-美国石油学会
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-发射器
+### Emits
 
-：组件发射
+:component-emits
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

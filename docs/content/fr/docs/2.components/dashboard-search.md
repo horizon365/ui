@@ -11,9 +11,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardSearch.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Le composant DashboardSearch étend le composant [CommandPalette](/docs/components/command-palette), de sorte que vous pouvez passer n'importe quelle propriété telle que `icon`,`placeholder`, etc.
+Le composant DashboardSearch étend le composant [CommandPalette](/docs/components/command-palette), de sorte que vous pouvez passer n'importe quelle propriété telle que `icon`, `placeholder`, etc.
 
 Utilisez-le à l'intérieur de l'emplacement par défaut du composant [DashboardGroup](/docs/components/dashboard-group):
 
@@ -32,12 +32,12 @@ Utilisez-le à l'intérieur de l'emplacement par défaut du composant [Dashboard
 ```
 
 ::tip
-Vous pouvez ouvrir la CommandPalette en appuyant sur: kbd{value="meta"}: kbd{value="K" class="ms-px"}, en utilisant le bouton [DashboardSearchButton](/docs/components/dashboard-search-button) ou en utilisant une directive `v-model:open`{lang="ts"}.
+Vous pouvez ouvrir la CommandPalette en appuyant sur: kbd{value="meta"}: kbd{value="K" class="ms-px"}, en utilisant le composant [DashboardSearchButton](xph027) ou en utilisant une directive `v-model:open`{lang="ts"}.
 ::
 
-@@ph032@@raccourci
+### Raccourci
 
-Utilisez la prop `shortcut` pour modifier le raccourci utilisé dans [defineShortcuts/docs/composables/define-shortcuts) pour ouvrir le composant ContentSearch. Par défaut à `meta_k`(: kbd{value="meta"}: kbd{value="K"}).
+Utilisez la prop `shortcut` pour modifier le raccourci utilisé dans [defineShortcuts](/docs/composables/define-shortcuts) pour ouvrir le composant ContentSearch. Defaults à `meta_k` (: kbd{value="meta"}: kbd{value="K"}).
 
 ```vue [app.vue]{4}
 <template>
@@ -50,9 +50,9 @@ Utilisez la prop `shortcut` pour modifier le raccourci utilisé dans [defineShor
 </template>
 ```
 
-### Mode couleur
+### Couleur Mode
 
-Par défaut, un groupe de commandes sera ajouté à la palette de commandes afin que vous puissiez basculer entre le mode clair et le mode sombre. Cela ne prendra effet que si le `colorMode` n'est pas forcé dans une page spécifique qui peut être réalisé via `definePageMeta`:
+Par défaut, un groupe de commandes sera ajouté à la palette de commandes afin que vous puissiez basculer entre le mode clair et sombre. Cela ne prendra effet que si le `colorMode` n'est pas forcé dans une page spécifique, ce qui peut être réalisé via `definePageMeta`:
 
 ```vue [pages/index.vue]
 <script setup lang="ts">
@@ -62,7 +62,7 @@ definePageMeta({
 </script>
 ```
 
-Vous pouvez désactiver ce comportement en définissant la prop `color-mode` à `false`:
+Vous pouvez désactiver ce comportement en définissant la prop `color-mode` sur `false`:
 
 ```vue [app.vue]{4}
 <template>
@@ -75,32 +75,32 @@ Vous pouvez désactiver ce comportement en définissant la prop `color-mode` à 
 </template>
 ```
 
-@@ph073@@api
+## api
 
-@@774@référencement
+### Projets
 
-Composants-props
+:component-props
 
-@@75@@séries
+### Slots électroniques
 
-Composants slots
+:component-slots
 
-@@776@@émissions
+### Emis
 
-Composants émetteurs
+:component-emits
 
-@@777@réponse
+### Exposé
 
 Lorsque vous accédez au composant via une référence de modèle, vous pouvez utiliser les éléments suivants:
 
 | nom| type|
 | ---- | ---- |
-| @@|@@ph081 @|
+| `commandPaletteRef`x{lang="ts-type"}| `Ref<InstanceType<typeof UCommandPalette> \| null>`x{lang="ts-type"}|
 
-@@ph082@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changelog @changelog
+## Changelog
 
-Composant-changelog
+:component-changelog

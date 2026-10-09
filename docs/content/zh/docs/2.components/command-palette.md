@@ -20,73 +20,73 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/CommandPalette.vue
 ---
 
-## 使用情况
+## 用法
 
-使用`v-model`指示词来控制CommandPalette的值，或使用`default-value`属性来设定初始值（如果不需要控制其状态）。
+使用`v-model`指令来控制命令行的值，或使用`default-value`属性来设置初始值，当您不需要控制其状态时。
 
 ::component-code
 ---
-收阖：true
-隐藏：
-  自动对焦
-忽略：
-- 组
-  - 模型值
-  班级
-外部：
-- 群组
-  - 模型值
-外部类型：
-  - 命令调色板组[]
-类：“！p-0”
-道具：
-  型号值：{}
-  自动对焦：假
-  群组：
-    - id：“用户”
-      标签：“用户”
-      项目名称：
-        - 标签：“本杰明·卡纳克”
-          后缀：'benjamincanac'
-          头像：
-            来源：'https：//github.com/benjamincanac.png'
-            载入：惰性
-        @标签：“雨果理查德”
-          后缀：“HugoRCD”
-          头像：
-            来源：“https：//github.com/HugoRCD.png”（网址：http：//github.com/HugoRCD.png）
-            加载：惰性
-        - 标签：“塞巴斯蒂安·肖邦”
-          后缀：'atinux'
-          头像：
-            第一个字符串
-            加载：惰性
-        - 标签：“罗曼·哈默尔”
-          后缀：“romhml”
-          头像：
-            src：'https：//github.com/romhml.png'
-            加载：惰性
-        - label：'Sandro Circi'
-          后缀：'sandros 94'
-          头像：
-            src：'https：//github.com/sandros94.png'
-            加载：惰性
-        - label：'Jakub Michálek'
-          后缀：'J-Michalek'
-          头像：
-            src：'https：//github.com/J-Michalek.png'
-            加载：惰性
-        - label：'Alex'
-          后缀：'hywax'
-          头像：
-            src：'https：//github.com/hywax.png'
-            加载：惰性
-        - label：'Maxime Pauvert'
-          后缀：'maximepvrt'
-          头像：
-            src：'https：//github.com/maximepvrt.png'
-            加载：惰性
-  class：'flex-1 h-80'
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - groups
+  - modelValue
+  - class
+external:
+  - groups
+  - modelValue
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  modelValue: {}
+  autofocus: false
+  groups:
+    - id: 'users'
+      label: 'Users'
+      items:
+        - label: 'Benjamin Canac'
+          suffix: 'benjamincanac'
+          avatar:
+            src: 'https://github.com/benjamincanac.png'
+            loading: lazy
+        - label: 'Hugo Richard'
+          suffix: 'HugoRCD'
+          avatar:
+            src: 'https://github.com/HugoRCD.png'
+            loading: lazy
+        - label: 'Sébastien Chopin'
+          suffix: 'atinux'
+          avatar:
+            src: 'https://github.com/atinux.png'
+            loading: lazy
+        - label: 'Romain Hamel'
+          suffix: 'romhml'
+          avatar:
+            src: 'https://github.com/romhml.png'
+            loading: lazy
+        - label: 'Sandro Circi'
+          suffix: 'sandros94'
+          avatar:
+            src: 'https://github.com/sandros94.png'
+            loading: lazy
+        - label: 'Jakub Michálek'
+          suffix: 'J-Michalek'
+          avatar:
+            src: 'https://github.com/J-Michalek.png'
+            loading: lazy
+        - label: 'Alex'
+          suffix: 'hywax'
+          avatar:
+            src: 'https://github.com/hywax.png'
+            loading: lazy
+        - label: 'Maxime Pauvert'
+          suffix: 'maximepvrt'
+          avatar:
+            src: 'https://github.com/maximepvrt.png'
+            loading: lazy
+  class: 'flex-1 h-80'
 ---
 ::
 
@@ -94,881 +94,881 @@ links:
 您还可以使用`@update:model-value`事件来侦听所选项目。
 ::
 
-### Group
+### 组
 
-CommandCommand组件根据用户类型的相关性对匹配命令进行分组和分级。它提供动态、即时的搜索结果，以实现高效的命令发现。将`groups`prop用作具有以下属性的对象数组：
+CommandCommand组件根据用户类型的相关性对匹配命令进行分组和排名。它提供动态、即时的搜索结果，以实现高效的命令发现。使用`groups` prop作为具有以下属性的对象数组：
 
-我的天啊！
+- `id: string`{lang="ts-type"}
 - `label?: string`{lang="ts-type"}
-我的天啊！
+- `slot?: string`{lang="ts-type"}
 - `items?: CommandPaletteItem[]`{lang="ts-type"}
-我的天啊，我的天啊
+- [`ignoreFilter?: boolean`{lang="ts-type"}](#with-ignore-filter)
 - [`postFilter?: (searchTerm: string, items: T[]) => T[]`{lang="ts-type"}](#with-post-filtered-items)
-- `highlightedIcon?: string`{lang="ts-type"}
+097x年12月27日
 
 ::caution
 您必须为每个组提供一个`id`，否则该组将被忽略。
 ::
 
-每个组包含一个定义命令的对象的`items`数组。每个项可以具有以下属性：
+每个组包含一个`items`对象数组，用于定义命令。每个项可以具有以下属性：
 
 - `prefix?: string`{lang="ts-type"}
 - `label?: string`{lang="ts-type"}
 - `suffix?: string`{lang="ts-type"}
 - `icon?: string`{lang="ts-type"}
 - `avatar?: AvatarProps`{lang="ts-type"}
-我的天啊!
-我的天啊!
-我的天啊!
-我的天啊!
-我的天啊!
-我的天啊，我的天啊!
-我的天啊!
-我的天啊!
-我的天啊!
-- `class?: any`{lang="ts-type"}{lang="ts-type"}
-105号公路
+- `chip?: ChipProps`{lang="ts-type"}
+- `kbds?: string[] | KbdProps[]`{lang="ts-type"}
+- `active?: boolean`{lang="ts-type"}
+- `loading?: boolean`{lang="ts-type"}
+- `disabled?: boolean`{lang="ts-type"}
+- [`slot?: string`{lang="ts-type"}](#with-custom-slot)
+- `placeholder?: string`{lang="ts-type"}
+- `children?: CommandPaletteItem[]`{lang="ts-type"}
+- `onSelect?: (e: Event) => void`{lang="ts-type"}
+- `class?: any`{lang="ts-type"}
+- `ui?: { item?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLeadingChipSize?: ClassNameValue, itemLeadingChip?: ClassNameValue, itemLabel?: ClassNameValue, itemLabelPrefix?: ClassNameValue, itemLabelBase?: ClassNameValue, itemLabelSuffix?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingKbds?: ClassNameValue, itemTrailingKbdsSize?: ClassNameValue, itemTrailingHighlightedIcon?: ClassNameValue, itemTrailingIcon?: ClassNameValue }`{lang="ts-type"}
 
-您可以从[Link](/docs/components/link#props)元件传递任何属性，例如`to`、`target`等。
+您可以从[Link](/docs/components/link#props)组件传递任何属性，如`to`、`target`等。
 
 ::component-code
 ---
-收阖：true
-隐藏：
-  自动对焦
-忽略：
-- 组
-- 模型值
-  115班
-外部的：
-- 组
-- 模型值
-外部类型：
-  - 命令调色板组[]
-类："! p-0"
-道具：
-  型号值：{}
-  自动对焦：假
-  群组：
-    - id："用户"
-      标签："用户"
-      项目名称：
-        @标签："本杰明·卡纳克"
-          后缀：'benjamincanac'
-          头像：
-            来源：'https：//github.com/benjamincanac.png'
-            加载：惰性
-        @标签："雨果·理查德"
-          后缀："HugoRCD"
-          头像：
-            来源：“https：//github.com/HugoRCD.png”（网址：http：//github.com/HugoRCD.png）
-            加载：惰性
-        - 标签：“塞巴斯蒂安·肖邦”
-          后缀：'atinux'
-          头像：
-            第一个字符串
-            加载：惰性
-        @标签：“罗曼·哈默尔”
-          后缀：“romhml”
-          头像：
-            第一个字符串
-            加载：惰性
-        - 标签：“山德鲁马戏团”
-          后缀：“sandros 94”
-          头像：
-            第一个问题：
-            加载：惰性
-        @标签：“雅各布·米夏莱克”
-          后缀：'J-Michalek'
-          头像：
-            用户名：'//
-            加载：惰性
-        @标签：“亚历克斯”
-          后缀：'hywax'
-          头像：
-            用户名：'http：//github.com/hywax.png'
-            加载：惰性
-        - 标签：“马克西姆·穷人”
-          后缀：“maximepvrt”
-          头像：
-            第一个字符串：
-            加载：惰性
-  类别：'flex-1'
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - groups
+  - modelValue
+  - class
+external:
+  - groups
+  - modelValue
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  modelValue: {}
+  autofocus: false
+  groups:
+    - id: 'users'
+      label: 'Users'
+      items:
+        - label: 'Benjamin Canac'
+          suffix: 'benjamincanac'
+          avatar:
+            src: 'https://github.com/benjamincanac.png'
+            loading: lazy
+        - label: 'Hugo Richard'
+          suffix: 'HugoRCD'
+          avatar:
+            src: 'https://github.com/HugoRCD.png'
+            loading: lazy
+        - label: 'Sébastien Chopin'
+          suffix: 'atinux'
+          avatar:
+            src: 'https://github.com/atinux.png'
+            loading: lazy
+        - label: 'Romain Hamel'
+          suffix: 'romhml'
+          avatar:
+            src: 'https://github.com/romhml.png'
+            loading: lazy
+        - label: 'Sandro Circi'
+          suffix: 'sandros94'
+          avatar:
+            src: 'https://github.com/sandros94.png'
+            loading: lazy
+        - label: 'Jakub Michálek'
+          suffix: 'J-Michalek'
+          avatar:
+            src: 'https://github.com/J-Michalek.png'
+            loading: lazy
+        - label: 'Alex'
+          suffix: 'hywax'
+          avatar:
+            src: 'https://github.com/hywax.png'
+            loading: lazy
+        - label: 'Maxime Pauvert'
+          suffix: 'maximepvrt'
+          avatar:
+            src: 'https://github.com/maximepvrt.png'
+            loading: lazy
+  class: 'flex-1'
 ---
 ::
 
 ::tip{to="#with-children-in-items"}
-每个项目都可以使用具有下列属性的`children`物件数组来建立子功能表：
+每个项目都可以使用具有以下属性的`children`对象数组来创建子菜单：
 ::
 
-多个
+### 多个
 
-使用`multiple`道具可进行多个选择。
+使用`multiple`属性允许多个选择。
 
 ::component-code
 ---
-收阖：true
-隐藏：
-  自动对焦
-忽略：
-- 组
-- 模型值
-  多个
-  班级
-外部：
-- 组
-- 模型值
-外部类型：
-  - 命令调色板组[]
-类：“！p-0”
-道具：
-  多个：真
-  自动对焦：假
-  型号值：[]
-  群组：
-    - id：“用户”
-      标签：“用户”
-      项目名称：
-        @标签：“本杰明·卡纳克”
-          后缀：'benjamincanac'
-          头像：
-            来源：'https：//github.com/benjamincanac.png'
-            加载：惰性
-        @标签：“雨果·理查德”
-          后缀：“HugoRCD”
-          头像：
-            来源：“https：//github.com/HugoRCD.png”（网址：http：//github.com/HugoRCD.png）
-            加载：惰性
-        @标签：“塞巴斯蒂安·肖邦”
-          后缀：'atinux'
-          头像：
-            第一个字符串
-            加载：惰性
-        @标签：“罗曼·哈默尔”
-          后缀：“romhml”
-          头像：
-            第一个字符串
-            加载：惰性
-        - 标签：“山德鲁马戏团”
-          后缀：“sandros 94”
-          头像：
-            第一个问题：
-            加载：惰性
-        @标签：“雅各布·米夏莱克”
-          后缀：'J-Michalek'
-          头像：
-            用户名：'//
-            加载：惰性
-        @标签：“亚历克斯”
-          后缀：'hywax'
-          头像：
-            用户名：'http：//github.com/hywax.png'
-            加载：惰性
-        - 标签：“马克西姆·穷光蛋”
-          后缀：“maximepvrt”
-          头像：
-            第一个字符串：
-            加载：惰性
-  类别：'flex-1'
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - groups
+  - modelValue
+  - multiple
+  - class
+external:
+  - groups
+  - modelValue
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  multiple: true
+  autofocus: false
+  modelValue: []
+  groups:
+    - id: 'users'
+      label: 'Users'
+      items:
+        - label: 'Benjamin Canac'
+          suffix: 'benjamincanac'
+          avatar:
+            src: 'https://github.com/benjamincanac.png'
+            loading: lazy
+        - label: 'Hugo Richard'
+          suffix: 'HugoRCD'
+          avatar:
+            src: 'https://github.com/HugoRCD.png'
+            loading: lazy
+        - label: 'Sébastien Chopin'
+          suffix: 'atinux'
+          avatar:
+            src: 'https://github.com/atinux.png'
+            loading: lazy
+        - label: 'Romain Hamel'
+          suffix: 'romhml'
+          avatar:
+            src: 'https://github.com/romhml.png'
+            loading: lazy
+        - label: 'Sandro Circi'
+          suffix: 'sandros94'
+          avatar:
+            src: 'https://github.com/sandros94.png'
+            loading: lazy
+        - label: 'Jakub Michálek'
+          suffix: 'J-Michalek'
+          avatar:
+            src: 'https://github.com/J-Michalek.png'
+            loading: lazy
+        - label: 'Alex'
+          suffix: 'hywax'
+          avatar:
+            src: 'https://github.com/hywax.png'
+            loading: lazy
+        - label: 'Maxime Pauvert'
+          suffix: 'maximepvrt'
+          avatar:
+            src: 'https://github.com/maximepvrt.png'
+            loading: lazy
+  class: 'flex-1'
 ---
 ::
 
 ::caution
-请确定将数组传递给`default-value`属性或`v-model`指示词。
+确保将数组传递给`default-value` prop或`v-model`指令。
 ::
 
-### 预留位置
+### 占位符
 
-使用`placeholder`道具更改占位符文本。
+使用`placeholder`属性更改占位符文本。
 
 ::component-code
 ---
-收阖：true
-隐藏：
-  自动对焦
-忽略：
-  班级
-  155个组
-外部：
-- 组
-外部类型：
-  - 命令调色板组[]
-类：“！p-0”
-道具：
-  自动对焦：假
-  占位符：'搜索应用程序...'
-  群组：
-    - id：“应用程序”
-      项目名称：
-        - 标签：“日历”
-          图标：“i-lucide日历”
-        标签：“音乐”
-          图标：“i-lucide-音乐”
-        - 标签：“地图”
-          图标：“i-lucide-图”
-  类别：'flex-1'
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - class
+  - groups
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  placeholder: 'Search an app...'
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
-尺寸：徽章
+### 尺寸：badge{label="4.4+" class="align-text-top"}
 
-使用`size`属性更改CommandPalette的大小。
+使用`size`属性更改命令行的大小。
 
 ::component-code
 ---
-收阖：true
-隐藏：
-  自动对焦
-忽略：
-  班级
-- 组
-外部：
-- 组
-外部类型：
-  - 命令调色板组[]
-类：“！p-0”
-道具：
-  自动对焦：假
-  尺寸：'xl'
-  群组：
-    - id：“应用程序”
-      项目名称：
-        - 标签：“日历”
-          图标：“i-lucide日历”
-        标签：“音乐”
-          图标：“i-lucide-音乐”
-        @@标签：“地图”
-          图标：“i-lucide-图”
-  类别：'flex-1'
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - class
+  - groups
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  size: 'xl'
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
-图标
+### Icon
 
-使用`icon`属性来自订输入[图标](/docs/components/icon)。预设值为`i-lucide-search`。
+使用`icon` prop将输入[Icon](/docs/components/icon).exe自定义为`i-lucide-search`。
 
 ::component-code
 ---
-收阖：true
-隐藏：
-  自动对焦
-忽略：
-  182级
-- 组
-外部的：
-- 组
-外部类型：
-  - 命令调色板组[]
-类：“！p-0”
-道具：
-  自动对焦：假
-  图标：“i-lucide盒”
-  群组：
-    - id：“应用程序”
-      项目名称：
-        - 标签：“日历”
-          图标：“i-lucide日历”
-        @标签：“音乐”
-          图标：“i-lucide-音乐”
-        - 标签：“地图”
-          图标：“i-lucide-图”
-  类别：'flex-1'
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - class
+  - groups
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  icon: 'i-lucide-box'
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`app.config.ts`的`ui.icons.search`键下全局自定此图标。
+你可以在你的`app.config.ts`中的`ui.icons.search`键下全局自定义这个图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`vite.config.ts`的`ui.icons.search`键下全局自定此图标。
+你可以在你的`vite.config.ts`中的`ui.icons.search`键下全局自定义这个图标。
 :::
 ::
 
-### 选定的图标
+### 选定图标
 
-使用`selected-icon`属性来自订选取的项目[Icon](/docs/components/icon)。预设值为`i-lucide-check`。
+使用`selected-icon`属性将所选项目[Icon](/docs/components/icon).exe自定义为`i-lucide-check`。
 
 ::component-code
 ---
-收阖：true
-隐藏：
-- 自动对焦
-忽略：
-- 组
-- 型号值
-  多个
-- 类
-外部：
-- 组
-- 型号值
-外部类型：
-  - 命令调色板组[]
-类：“！p-0”
-道具：
-  多个：真
-  自动对焦：假
-  型号值：
-    - 标签：“本杰明·卡纳克”
-      后缀：'benjamincanac'
-      头像：
-        来源：'https：//github.com/benjamincanac.png'
-        加载：惰性
-  选定图标：“i-lucide-圆圈-检查”
-  群组：
-    - id：“用户”
-      标签：“用户”
-      项目名称：
-        @标签：“本杰明·卡纳克”
-          后缀：'benjamincanac'
-          头像：
-            来源：'https：//github.com/benjamincanac.png'
-            加载：惰性
-        @标签：“雨果·理查德”
-          后缀：“HugoRCD”
-          头像：
-            来源：“https：//github.com/HugoRCD.png”（网址：http：//github.com/HugoRCD.png）
-            加载：惰性
-        @标签：“塞巴斯蒂安·肖邦”
-          后缀：'atinux'
-          头像：
-            第一个字符串
-            加载：惰性
-        @标签：“罗曼·哈默尔”
-          后缀：“romhml”
-          头像：
-            第一个字符串
-            加载：惰性
-        - 标签：“山德鲁马戏团”
-          后缀：“sandros 94”
-          头像：
-            第一个问题：
-            加载：惰性
-        @标签：“雅各布·米夏莱克”
-          后缀：'J-Michalek'
-          头像：
-            用户名：'//
-            加载：惰性
-        @标签：“亚历克斯”
-          后缀：'hywax'
-          头像：
-            用户名：'http：//github.com/hywax.png'
-            加载：惰性
-        - 标签：“马克西姆·穷光蛋”
-          后缀：“maximepvrt”
-          头像：
-            第一个字符串：
-            载入：惰性
-  类别：'flex-1'
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - groups
+  - modelValue
+  - multiple
+  - class
+external:
+  - groups
+  - modelValue
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  multiple: true
+  autofocus: false
+  modelValue:
+    - label: 'Benjamin Canac'
+      suffix: 'benjamincanac'
+      avatar:
+        src: 'https://github.com/benjamincanac.png'
+        loading: lazy
+  selectedIcon: 'i-lucide-circle-check'
+  groups:
+    - id: 'users'
+      label: 'Users'
+      items:
+        - label: 'Benjamin Canac'
+          suffix: 'benjamincanac'
+          avatar:
+            src: 'https://github.com/benjamincanac.png'
+            loading: lazy
+        - label: 'Hugo Richard'
+          suffix: 'HugoRCD'
+          avatar:
+            src: 'https://github.com/HugoRCD.png'
+            loading: lazy
+        - label: 'Sébastien Chopin'
+          suffix: 'atinux'
+          avatar:
+            src: 'https://github.com/atinux.png'
+            loading: lazy
+        - label: 'Romain Hamel'
+          suffix: 'romhml'
+          avatar:
+            src: 'https://github.com/romhml.png'
+            loading: lazy
+        - label: 'Sandro Circi'
+          suffix: 'sandros94'
+          avatar:
+            src: 'https://github.com/sandros94.png'
+            loading: lazy
+        - label: 'Jakub Michálek'
+          suffix: 'J-Michalek'
+          avatar:
+            src: 'https://github.com/J-Michalek.png'
+            loading: lazy
+        - label: 'Alex'
+          suffix: 'hywax'
+          avatar:
+            src: 'https://github.com/hywax.png'
+            loading: lazy
+        - label: 'Maxime Pauvert'
+          suffix: 'maximepvrt'
+          avatar:
+            src: 'https://github.com/maximepvrt.png'
+            loading: lazy
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`app.config.ts`的`ui.icons.check`键下全局自定此图标。
+你可以在你的`app.config.ts`中的`ui.icons.check`键下全局自定义这个图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`ui.icons.check`键下的`vite.config.ts`中全局自定此图标。
+你可以在你的`ui.icons.check`下的`ui.icons.check`键中全局自定义这个图标。
 :::
 ::
 
-### 结尾图标
+### 拖尾图标
 
-当项目有子系时，请使用`trailing-icon`属性来自订尾端[Icon](/docs/components/icon)。预设值为`i-lucide-chevron-right`。
+使用`trailing-icon`属性可以在项目有子项时自定义尾随的[Icon](/docs/components/icon)。
 
 ::component-code
 ---
-收阖：true
-更漂亮：真的
-隐藏：
-  自动对焦
-忽略：
-- 组
-  232班
-外部：
-- 组
-外部类型：
-  - 命令调色板组[]
-类：“！p-0”
-道具：
-  自动对焦：假
-  尾部图标：'i-透明箭头-右'
-  群组：
-    - id：“操作”
-      项目名称：
-        - 标签：“共享”
-          图标：“i-lucide-共享”
-          孩子们：
-            - 标签：“电子邮件”
-              图标：“i-lucide邮件”
-            - 标签：“复制”
-              图标：“i-lucide-副本”
-            - 标签：“链接”
-              图标：“i-lucide链接”
-  类别：'flex-1'
+collapse: true
+prettier: true
+hide:
+  - autofocus
+ignore:
+  - groups
+  - class
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  trailingIcon: 'i-lucide-arrow-right'
+  groups:
+    - id: 'actions'
+      items:
+        - label: 'Share'
+          icon: 'i-lucide-share'
+          children:
+            - label: 'Email'
+              icon: 'i-lucide-mail'
+            - label: 'Copy'
+              icon: 'i-lucide-copy'
+            - label: 'Link'
+              icon: 'i-lucide-link'
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`app.config.ts`的`ui.icons.chevronRight`键下全局自定此图标。
+你可以在你的`app.config.ts`中的`ui.icons.chevronRight`键下全局自定义这个图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`ui.icons.chevronRight`键下的`vite.config.ts`中全局自定义此图标。
+你可以在你的`vite.config.ts`中的`ui.icons.chevronRight`键下全局自定义这个图标。
 :::
 ::
 
-正在载入
+### 加载中
 
-使用`loading`道具在CommandPalette上显示加载图标。
+使用`loading`道具在命令行上显示一个加载图标。
 
 ::component-code
 ---
-收阖：true
-隐藏：
-  自动对焦
-忽略：
-  班级
-  248个群组
-外部：
-  249个群组
-外部类型：
-  - 命令调色板组[]
-类：“！p-0”
-道具：
-  自动对焦：假
-  载入：true
-  群组：
-    - id：“应用程序”
-      项目名称：
-        - 标签：“日历”
-          图标：“i-lucide日历”
-        @标签：“音乐”
-          图标：“i-lucide-音乐”
-        @@标签：“地图”
-          图标：“i-lucide-图”
-  类别：'flex-1'
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - class
+  - groups
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  loading: true
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
-### 载入图标
+### 加载图标
 
-使用`loading-icon`属性来自订载入图标。预设为`i-lucide-loader-circle`。
+使用`loading-icon`道具自定义加载图标. `i-lucide-loader-circle`。
 
 ::component-code
 ---
-收阖：true
-隐藏：
-  自动对焦
-忽略：
-  班级
-- 组
-外部：
-- 组
-外部类型：
-  - 命令调色板组[]
-类：“！p-0”
-道具类：
-  自动对焦：假
-  载入：true
-  加载图标：“i-lucide加载程序”
-  群组：
-    - id：“应用程序”
-      项目名称：
-        - 标签：“日历”
-          图标：“i-lucide日历”
-        @标签：“音乐”
-          图标：“i-lucide-音乐”
-        @@标签：“地图”
-          图标：“i-lucide-图”
-  类别：'flex-1'
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - class
+  - groups
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`app.config.ts`的`ui.icons.loading`键下全局自定义此图标。
+你可以在你的`app.config.ts`中的`ui.icons.loading`键下全局自定义这个图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`vite.config.ts`的`ui.icons.loading`键下全局自定义此图标。
+你可以在你的`ui.icons.loading`键下的`vite.config.ts`中全局自定义这个图标。
 :::
 ::
 
 ### 关闭
 
-使用`close`属性来显示[按钮](/docs/components/button来关闭CommandPalette。
+使用`close` prop显示[Button](/docs/components/button)以关闭CommandList。
 
 ::tip
-单击关闭按钮时将发出`update:open`事件。
+当单击关闭按钮时，将发出`update:open`事件。
 ::
 
 ::component-code
 ---
-收阖：true
-隐藏：
-  自动对焦
-忽略：
-  班级
-- 组
-  关闭
-外部：
-- 组
-外部类型：
-  - 命令调色板组[]
-类：“！p-0”
-道具类：
-  自动对焦：假
-  关闭：true
-  群组：
-    - id：“应用程序”
-      项目名称：
-        - 标签：“日历”
-          图标：“i-lucide日历”
-        @标签：“音乐”
-          图标：“i-lucide-音乐”
-        @@标签：“地图”
-          图标：“i-lucide-图”
-  类别：'flex-1'
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - class
+  - groups
+  - close
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  close: true
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
-您可以从[Button](/docs/components/button)组件传递任何属性来自订它。
+您可以从[Button](/docs/components/button)组件传递任何属性来对其进行自定义。
 
 ::component-code
 ---
-收阖：true
-更漂亮：真的
-隐藏：
-  自动对焦
-忽略：
-  关闭. color
-  关闭.变量
-  295个群组
-  班级
-外部：
-- 组
-外部类型：
-  - 命令调色板组[]
-类：“！p-0”
-道具：
-  自动对焦：假
-  结束语：
-    颜色：原色
-    变体：轮廓
-    类别：'四舍五入-完整'
-  群组：
-    - id：“应用程序”
-      项目名称：
-        - 标签：“日历”
-          图标：“i-lucide日历”
-        - 标签：“音乐”
-          图标：“i-lucide-音乐”
-        - 标签：“地图”
-          图标：“i-lucide-图”
-  类别：'flex-1'
+collapse: true
+prettier: true
+hide:
+  - autofocus
+ignore:
+  - close.color
+  - close.variant
+  - groups
+  - class
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  close:
+    color: primary
+    variant: outline
+    class: 'rounded-full'
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
 ### 关闭图标
 
-使用`close-icon`属性来自订关闭按钮[Icon](/docs/components/icon)。预设值为`i-lucide-x`。
+使用`close-icon`道具自定义关闭按钮[Icon](/docs/components/icon)。
 
 ::component-code
 ---
-收阖：true
-隐藏：
-  自动对焦
-忽略：
-- 类
-- 组
-  关闭
-外部的：
-  组数
-外部类型：
-  - 命令调色板组[]
-类：“！p-0”
-道具：
-  自动对焦：假
-  关闭：true
-  关闭图标：'i-透明箭头-右'
-  群组：
-    - id：“应用程序”
-      项目名称：
-        - 标签：“日历”
-          图标：“i-lucide日历”
-        - 标签：“音乐”
-          图标：“i-lucide-音乐”
-        - 标签：“地图”
-          图标：“i-lucide-图”
-  类别：'flex-1'
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - class
+  - groups
+  - close
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  close: true
+  closeIcon: 'i-lucide-arrow-right'
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`app.config.ts`的`ui.icons.close`键下全局自定此图标。
+你可以在你的`ui.icons.close`键下的`app.config.ts`中全局自定义这个图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`vite.config.ts`的`ui.icons.close`键下全局自定此图标。
+你可以在你的`vite.config.ts`中的`ui.icons.close`键下全局自定义这个图标。
 :::
 ::
 
 ### 返回
 
-使用`back`属性可自定义或隐藏导航到子菜单时显示的后退按钮（带有`false`值）。
+使用`back` prop自定义或隐藏导航到导航栏时显示的后退按钮（具有`false`值）。
 
-您可以从[Button](/docs/components/button)组件传递任何属性来自订它。
+您可以从[Button](/docs/components/button)组件传递任何属性来对其进行自定义。
 
 ::component-code
 ---
-收阖：true
-更漂亮：真的
-隐藏：
-  自动对焦
-忽略：
-  背景颜色
-  组
-  班级
-外部：
-  组数
-外部类型：
-  - 命令调色板组[]
-类：“！p-0”
-道具：
-  自动对焦：假
-  背面：
-    颜色：原色
-  群组：
-    - id：“操作”
-      项目名称：
-        - 标签：“共享”
-          图标：“i-lucide-共享”
-          孩子们：
-            - 标签：“电子邮件”
-              图标：“i-lucide邮件”
-            - 标签：“复制”
-              图标：“i-lucide-副本”
-            - 标签：“链接”
-              图标：“i-lucide链接”
-  类别：'flex-1'
+collapse: true
+prettier: true
+hide:
+  - autofocus
+ignore:
+  - back.color
+  - groups
+  - class
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  back:
+    color: primary
+  groups:
+    - id: 'actions'
+      items:
+        - label: 'Share'
+          icon: 'i-lucide-share'
+          children:
+            - label: 'Email'
+              icon: 'i-lucide-mail'
+            - label: 'Copy'
+              icon: 'i-lucide-copy'
+            - label: 'Link'
+              icon: 'i-lucide-link'
+  class: 'flex-1'
 ---
 ::
 
-### 后退图标
+### 返回图标
 
-使用`back-icon`属性自定义后退按钮[Icon](/docs/components/icon)。默认值为`i-lucide-arrow-left`。
+使用`back-icon`道具自定义后退按钮[Icon](/docs/components/icon)。
 
 ::component-code
 ---
-收阖：true
-隐藏：
-  自动对焦
-忽略：
-- 类
-- 组
-- 返回
-外部：
-- 组
-外部类型：
-  - 命令调色板组[]
-类：“！p-0”
-道具：
-  自动对焦：假
-  返回：true
-  backIcon：“i-lucide-house”（智能家居）
-  群组：
-    - id：'动作'
-      项目名称：
-        - 标签：“共享”
-          图标：“i-lucide-共享”
-          孩子们：
-            - 标签：“电子邮件”
-              图标：“i-lucide邮件”
-            - 标签：“复制”
-              图标：“i-lucide-副本”
-            - 标签：“链接”
-              图标：“i-lucide链接”
-  类别：'flex-1'
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - class
+  - groups
+  - back
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  back: true
+  backIcon: 'i-lucide-house'
+  groups:
+    - id: 'actions'
+      items:
+        - label: 'Share'
+          icon: 'i-lucide-share'
+          children:
+            - label: 'Email'
+              icon: 'i-lucide-mail'
+            - label: 'Copy'
+              icon: 'i-lucide-copy'
+            - label: 'Link'
+              icon: 'i-lucide-link'
+  class: 'flex-1'
 ---
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`app.config.ts`的`ui.icons.arrowLeft`键下全局自定此图标。
+你可以在你的`ui.icons.arrowLeft`键下的`app.config.ts`中全局自定义这个图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`vite.config.ts`的`ui.icons.arrowLeft`键下全局自定此图标。
+您可以在`ui.icons.arrowLeft`键下在`vite.config.ts`中全局自定义此图标。
 :::
 ::
 
-### 已停用
+### 禁用
 
-使用`disabled`属性来停用CommandPalette。
+使用`disabled` prop来禁用命令行。
 
 ::component-code
 ---
-收阖：true
-隐藏：
-  自动对焦
-忽略：
-  组数
-  班级
-外部的：
-  组数
-外部类型：
-  - 命令调色板组[]
-类：“！p-0”
-道具：
-  自动对焦：假
-  已禁用：true
-  群组：
-    - id：“应用程序”
-      项目名称：
-        - 标签：“日历”
-          图标：“i-lucide日历”
-        标签：“音乐”
-          图标：“i-lucide-音乐”
-        @@标签：“地图”
-          图标：“i-lucide-图”
-  类别：'flex-1'
+collapse: true
+hide:
+  - autofocus
+ignore:
+  - groups
+  - class
+external:
+  - groups
+externalTypes:
+  - CommandPaletteGroup[]
+class: '!p-0'
+props:
+  autofocus: false
+  disabled: true
+  groups:
+    - id: 'apps'
+      items:
+        - label: 'Calendar'
+          icon: 'i-lucide-calendar'
+        - label: 'Music'
+          icon: 'i-lucide-music'
+        - label: 'Maps'
+          icon: 'i-lucide-map'
+  class: 'flex-1'
 ---
 ::
 
-示例
+## 示例
 
-### Control（控制）选定的项目
+### 控制选定项目
 
-您可以使用`default-value`属性或`v-model`指示词、使用每个项目上的`onSelect`字段或使用`@update:model-value`事件，来控制选取的项目。
+您可以通过使用`default-value` prop或`v-model`指令，通过使用每个项目上的`onSelect`字段或通过使用`@update:model-value`事件来控制所选项目。
 
 ::component-example
 ---
-收阖：true
-名称：'命令调色板选择示例'
-类：“！p-0”
-道具：
-  自动对焦：假
+collapse: true
+name: 'command-palette-select-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::tip
-使用`value-key`属性可选择要用作值的项目字段，而不是对象本身。使用`by`属性可按字段而不是按引用比较对象。
+使用`value-key`属性选择一个项目的字段作为值，而不是对象本身。使用`by`属性通过字段而不是引用来比较对象。
 ::
 
-### 控制搜索词
+### Control搜索词
 
 使用`v-model:search-term`指令控制搜索词。
 
 ::component-example
 ---
-收阖：true
-名称：'命令调色板搜索术语示例'
-类：“！p-0”
-道具：
-  自动对焦：假
+collapse: true
+name: 'command-palette-search-term-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
-本示例使用`@update:model-value`事件在选定项目时重置搜索词。
+此示例使用`@update:model-value`事件在选择某个项目时重置搜索词。
 ::
 
-### 在项中包含子项
+### 在项目中包含子项
 
-您可以使用项目中的`children`属性来建立阶层式功能表。当项目有子系时，它会自动显示V形图标，并启用子功能表的巡览。
+您可以使用项目中的`children`属性创建层次菜单。当项目有子项时，它将自动显示一个V形图标并启用导航到菜单。
 
 ::component-example
 ---
-收阖：true
-更漂亮：真的
-名称：'命令-调色板-项目-子项-示例'
-类：“！p-0”
-道具：
-  自动对焦：假
+collapse: true
+prettier: true
+name: 'command-palette-items-children-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
 导航到子菜单时：
 - 搜索词已重置
-- 返回按钮出现在输入中
-- 您可以通过按：kbd{value="backspace"}键返回到上一组
+- 输入中出现后退按钮
+- 您可以通过按：kbd{value="backspace"}键返回到上一个组
 ::
 
-### 使用提取的项目
+### 使用获取的项目
 
-您可以从API撷取项目，并在CommandPalette中使用它们。
+您可以从API中获取项并在命令行中使用它们。
 
 ::component-example
 ---
-收阖：true
-名称：'命令调色板提取示例'
-类：“！p-0”
-道具：
-  自动对焦：假
+collapse: true
+name: 'command-palette-fetch-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
-此示例使用`useLazyFetch`和`server: false`在客户端上提取数据，而不阻止初始呈现。加载状态检查`pending`和`idle`的状态，以在提取之前和提取过程中显示加载指示器。
+这个例子使用`useLazyFetch`和`server: false`在客户端获取数据，而不会阻塞初始渲染。加载状态检查`pending`和`idle`的状态，以在获取之前和期间显示加载指示符。
 ::
 
-### 使用忽略筛选器
+### 带忽略过滤器
 
-您可以将组上的`ignoreFilter`字段设置为`true`，以禁用内部搜索并使用您自己的搜索逻辑。
+您可以在组上将`ignoreFilter`字段设置为`true`，以禁用内部搜索并使用您自己的搜索逻辑。
 
 ::component-example
 ---
-收阖：true
-名称：'命令调色板忽略过滤器示例'
-类：“！p-0”
-道具类：
-  自动对焦：假
+collapse: true
+name: 'command-palette-ignore-filter-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
-此示例使用[`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced)来消除API调用的抖动。加载状态将检查`pending`和`idle`的状态，以便在提取之前和提取过程中显示加载指示器。
+此示例使用[`refDebounced`](https://vueuse.org/shared/refDebounced/#refdebounced)对API调用进行反跳。加载状态检查`pending`和`idle`状态，以在提取之前和提取期间显示加载指示符。
 ::
 
-### 使用筛选后的项目
+### 带有后过滤项目
 
-您可以使用群组上的`postFilter`字段，在搜寻完成后筛选项目。
+您可以使用组上的`postFilter`字段在搜索发生后过滤项目。
 
 ::component-example
 ---
-收阖：true
-名称：'命令调色板后置过滤器示例'
-类：“！p-0”
-道具：
-  自动对焦：假
+collapse: true
+name: 'command-palette-post-filter-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
-开始键入以查看显示的更高级别的项目。
+开始键入以查看出现的更高级别的项目。
 ::
 
-### 使用自定义融合搜索
+### 带自定义fuse搜索
 
-您可以使用`fuse`属性来覆写[useFuse](https://vueuse.org/integrations/useFuse)的选项，其预设值为：
+您可以使用`fuse` prop覆盖[useFuse](https://vueuse.org/integrations/useFuse)的选项，默认值为：
 
 ```ts
 {
@@ -983,24 +983,24 @@ CommandCommand组件根据用户类型的相关性对匹配命令进行分组和
 ```
 
 ::tip
-`fuseOptions`是[Fuse.js](https://www.fusejs.io/)的选项，`resultLimit`是要返回的最大结果数，`matchAllWhenSearchEmpty`是一个布尔值，用于在搜索项为空时匹配所有项目。
+`fuseOptions`是[Fuse.js](https://www.fusejs.io/)的选项，`resultLimit`是要返回的最大结果数，`matchAllWhenSearchEmpty`是当搜索项为空时匹配所有项目的布尔值。
 ::
 
-例如，您可以设定`{ fuseOptions: { includeMatches: true } }`{lang="ts-type"}来反白项目中的搜寻字词。
+例如，您可以设置`{ fuseOptions: { includeMatches: true } }`{lang="ts-type"}以突出显示项目中的搜索项。
 
 ::component-example
 ---
-收阖：true
-名称：'命令调色板熔丝示例'
-类：“！p-0”
-道具：
-  自动对焦：假
+collapse: true
+name: 'command-palette-fuse-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
-### 借助虚拟化：徽标{label="4.1+" class="align-text-top"}
+### 虚拟化：badge{label="4.1+" class="align-text-top"}
 
-使用`virtualize`属性为大型列表启用虚拟化，将其作为布尔值或带有`{ estimateSize: 32, overscan: 12 }`等选项的对象。
+使用`virtualize` prop将大型列表虚拟化为布尔值或带有`{ estimateSize: 32, overscan: 12 }`等选项的对象。
 
 ::warning{to="https://github.com/unovue/reka-ui/issues/1885" target="_blank"}
 启用后，由于Reka UI的限制，所有组将被展平为单个列表。
@@ -1008,140 +1008,140 @@ CommandCommand组件根据用户类型的相关性对匹配命令进行分组和
 
 ::component-example
 ---
-收阖：true
-名称：'命令调色板虚拟化示例'
-类：“！p-0”
-道具：
-  自动对焦：假
+collapse: true
+name: 'command-palette-virtualize-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
-在弹出窗口中
+### Within a Popover
 
-您可以在[Popover](/docs/components/popover)的内容中使用CommandPalette组件。
+您可以在[Pover](/docs/components/popover)的内容中使用CommandSort组件。
 
 ::component-example
 ---
-收阖：true
-名称：'popover-command-palette-example'（弹出命令调色板示例）
-道具类：
-  自动对焦：假
+collapse: true
+name: 'popover-command-palette-example'
+props:
+  autofocus: false
 ---
 ::
 
-### 在模态中
+### Within a Modal
 
-您可以在[Modal](/docs/components/modal)的内容中使用CommandPalette组件。
+您可以在[Modal](/docs/components/modal)的内容中使用CommandList组件。
 
 ::component-example
 ---
-收阖：true
-名称：'模式命令调色板示例'
-道具：
-  自动对焦：假
+collapse: true
+name: 'modal-command-palette-example'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
-此示例使用`useLazyFetch`和`immediate: false`，以便仅在Modal打开时提取数据。
+这个例子使用`useLazyFetch`和`immediate: false`来只在Modal打开时获取数据。
 ::
 
-在抽屉中
+### 抽屉内
 
-您可以在[Drawer](/docs/components/drawer)的内容中使用CommandPalette组件。
+您可以在[Drawer](/docs/components/drawer)的内容中使用CommandList组件。
 
 ::component-example
 ---
-收阖：true
-名称：'绘图器命令调色板示例'
-道具：
-  自动对焦：假
+collapse: true
+name: 'drawer-command-palette-example'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
-此示例将`useLazyFetch`与`immediate: false`一起使用，以便仅在抽屉打开时提取数据。
+此示例使用`useLazyFetch`和`immediate: false`仅在抽屉打开时获取数据。
 ::
 
-### 接听开启状态
+### Listen打开状态
 
-使用`close`属性时，您可以在按一下按钮时接听`update:open`事件。
+当使用`close` prop时，您可以在单击按钮时侦听`update:open`事件。
 
 ::component-example
 ---
-收阖：true
-名称：'命令调色板打开示例'
-道具：
-  自动对焦：假
+collapse: true
+name: 'command-palette-open-example'
+props:
+  autofocus: false
 ---
 ::
 
 ::note
-例如，在[`Modal`](/docs/components/modal)中使用CommandPalette时，这可能会很有用。
+例如，当在[`Modal`](/docs/components/modal)中使用命令行时，这可能很有用。
 ::
 
-### 使用页脚插槽
+### 带页脚插槽
 
-使用`#footer`插槽在CommandPalette底部添加自定内容，如键盘快捷键帮助或附加操作。
+使用`#footer`插槽可以在命令栏底部添加自定义内容，例如键盘快捷键帮助或其他操作。
 
 ::component-example
 ---
-收阖：true
-名称：'命令调色板页脚插槽示例'
-类：“！p-0”
-道具：
-  自动对焦：假
+collapse: true
+name: 'command-palette-footer-slot-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
-### 使用自定义插槽
+### 带自定义插槽
 
-使用`slot`属性来自订特定的项目或群组。
+使用`slot`属性可以自定义特定的项或组。
 
 您将可以访问以下插槽：
 
-472号公路
-475号公路
-我的天啊！
-479，480，481，480，481，480，480，481，480，481，480，480，481，480，481，480，480，481，480，480，481，480，481，480，480，48
+- `#{{ item.slot }}`{lang="ts-type"}
+- `#{{ item.slot }}-leading`{lang="ts-type"}
+- `#{{ item.slot }}-label`{lang="ts-type"}
+- `#{{ item.slot }}-trailing`{lang="ts-type"}
 
-484号线
-485号，486号，487号
-488小时489小时490小时
-493号公路
+- `#{{ group.slot }}`{lang="ts-type"}
+- `#{{ group.slot }}-leading`{lang="ts-type"}
+- `#{{ group.slot }}-label`{lang="ts-type"}
+- `#{{ group.slot }}-trailing`{lang="ts-type"}
 
 ::component-example
 ---
-收阖：true
-名称：'命令调色板自定义插槽示例'
-类：“！p-0”
-道具类：
-  自动对焦：假
+collapse: true
+name: 'command-palette-custom-slot-example'
+class: '!p-0'
+props:
+  autofocus: false
 ---
 ::
 
 ::tip{to="#slots"}
-您也可以使用`#item`、`#item-leading`、`#item-label`和`#item-trailing`插槽来自定所有项目。
+您还可以使用`#item`、`#item-leading`、`#item-label`和`#item-trailing`插槽来自定义所有项目。
 ::
 
-活性成分
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-### 插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-### 排放
+### Emits
 
-：组件发射
+:component-emits
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

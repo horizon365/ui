@@ -8,83 +8,83 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageFeature.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 El componente PageFeature es utilizado por el componente [PageSection](/docs/components/page-section) para mostrar [features](/docs/components/page-section#features).
 
-@@pH009@@título
+### Título
 
 Utilice el prop `title` para establecer el título de la característica.
 
 ::component-code
 ---
-Escondido:
-  @@11@clase
-Props:
-  Título:"Tema"
-  Categoría: W-96
+hide:
+  - class
+props:
+  title: 'Theme'
+  class: 'w-96'
 ---
 ::
 
-@@pH012@Descripción
+### Descripción
 
 Utilice el prop `description` para establecer la descripción de la característica.
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @@clase014
-Ignora:
-  @@15@título
-Props:
-  Título:"Tema"
-  Descripción: Personaliza la interfaz de usuario de Nuxt con tus propios colores, fuentes y más.
-  Categoría: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+props:
+  title: 'Theme'
+  description: 'Customize Nuxt UI with your own colors, fonts, and more.'
+  class: 'w-96'
 ---
 ::
 
-@16@Icon
+### Icon
 
-Utilice el prop `icon` para establecer el icono de la función.
+Utilice el prop `icon` para configurar el icono de la función.
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @1800@clase
-Ignora:
-  @19@title
-  @@ph020@descripción
-Props:
-  Título:"Tema"
-  Descripción: Personaliza la interfaz de usuario de Nuxt con tus propios colores, fuentes y más.
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Theme'
+  description: 'Customize Nuxt UI with your own colors, fonts, and more.'
   icon: 'i-lucide-swatch-book'
-  Categoría: W-96
+  class: 'w-96'
 ---
 ::
 
-@@21@enlace
+### Enlace
 
-Puede pasar cualquier propiedad del componente [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) como `to`,`target`,`rel`, etc.
+Puede pasar cualquier propiedad del componente [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) como `to`, `target`, `rel`, etc.
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Ignora:
-  @@301@title
-  @@ph032@descripción
-  @@303@icon
-  @34@target
-Props:
-  Título:"Tema"
-  Descripción: Personaliza la interfaz de usuario de Nuxt con tus propios colores, fuentes y más.
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - target
+props:
+  title: 'Theme'
+  description: 'Customize Nuxt UI with your own colors, fonts, and more.'
   icon: 'i-lucide-swatch-book'
-  en: '/docs/getting-started/theme/design-system'
-  Nombre: _blank
-  Categoría: W-96
+  to: '/docs/getting-started/theme/design-system'
+  target: _blank
+  class: 'w-96'
 ---
 ::
 
@@ -94,36 +94,36 @@ Utilice el prop `orientation` para cambiar la orientación de la entidad. Predet
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @38@clase
-Ignora:
-  @@pH039@título
-  @@ph040@descripción
-  @@icon 41
-Props:
-  Categoría:"Vertical"
-  Título:"Tema"
-  Descripción: Personaliza la interfaz de usuario de Nuxt con tus propios colores, fuentes y más.
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+props:
+  orientation: 'vertical'
+  title: 'Theme'
+  description: 'Customize Nuxt UI with your own colors, fonts, and more.'
   icon: 'i-lucide-swatch-book'
-  Categoría: W-96
+  class: 'w-96'
 ---
 ::
 
-@2014@@Apid
+Xph090xAPI (Edición española)
 
-@@40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Accesorios
 
-Componentes Props
+:component-props
 
-@@444@444@444
+### Slots (Edición española)
 
-Componentes de slots
+:component-slots
 
-@450000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Temas
 
-Componente Tema
+:component-theme
 
-@@40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+xph04xChangelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

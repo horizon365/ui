@@ -13,113 +13,113 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/FieldGroup.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Envuelva varios [Button](/docs/components/button) dentro de un FieldGroup para agruparlos juntos.
 
 ::component-code
 ---
-Categoría: true
-Los slots:
-  Default:|
+prettier: true
+slots:
+  default: |
 
-    @@@ 005 @
-    @@ 006 @
+    <UButton color="neutral" variant="subtle" label="Button" />
+    <UButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
 ---
-El botón {color="neutral" variant="subtle" label="Button"}
-El botón {color="neutral" variant="outline" icon="i-lucide-chevron-down"}
+:u-button{color="neutral" variant="subtle" label="botón"}
+:u-button{color="neutral" variant="outline" icon="i-lucide-chevron-down"}
 ::
 
-@000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Tamaño
 
-Utilice el prop `size` para cambiar el tamaño de todos los botones.
+Utilice el accesorio `size` para cambiar el tamaño de todos los botones.
 
 ::component-code
 ---
-Categoría: true
-Props:
-  Tamaño: XL
-Los slots:
-  Default:|
+prettier: true
+props:
+  size: xl
+slots:
+  default: |
 
-    @@@ 11 @
-    @@@ 12 @
+    <UButton color="neutral" variant="subtle" label="Button" />
+    <UButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
 ---
-por: u-button {color="neutral" variant="subtle" label="Button"}
-por: u-button {color="neutral" variant="outline" icon="i-lucide-chevron-down"}
+:u-button{color="neutral" variant="subtle" label="Botón"}
+:u-button{color="neutral" variant="outline" icon="i-lucide-chevron-down"}
 ::
 
-@@P015@Orientación
+### Orientación
 
 Utilice el prop `orientation` para cambiar la orientación de los botones. Predeterminados a `horizontal`.
 
 ::component-code
 ---
-Categoría: true
-Props:
-  Orientación: Vertical
-Los slots:
-  Default:|
+prettier: true
+props:
+  orientation: vertical
+slots:
+  default: |
 
-    @@@ 18 @
-    @@@ 19 @
+    <UButton color="neutral" variant="subtle" label="Submit" />
+    <UButton color="neutral" variant="outline" label="Cancel" />
 ---
-Botón {color="neutral" variant="subtle" label="Submit"}
-Botón {color="neutral" variant="outline" label="Cancel"}
+:u-button{color="neutral" variant="subtle" label="Supuesto"}
+:u-button{color="neutral" variant="outline" label="Cancelación"}
 ::
 
-@222@Ejemplos
+## ejemplos
 
-### Con información
+### Con entrada
 
-Puede utilizar componentes como [Input](/docs/components/input),[InputMenu](),[SelectMenu/docs/components/select)[](/docs/components/select-menu), etc. dentro de un grupo de campos.
+Puede usar componentes como [Input](/docs/components/input), [InputMenu](/docs/components/input-menu), [Select](ph054) [SelectMenu](xph058), etc. dentro de un grupo de campos.
 
 ::component-code
 ---
-Categoría: true
-Los slots:
-  Default:|
+prettier: true
+slots:
+  default: |
 
-    @@ 40 @
+    <UInput color="neutral" variant="outline" placeholder="Enter token" />
 
-    @@@ 41 @
+    <UButton color="neutral" variant="subtle" icon="i-lucide-clipboard" />
 ---
-por: u-input {color="neutral" variant="outline" placeholder="Enter token"}
-Botón {color="neutral" variant="subtle" icon="i-lucide-clipboard"}
+:u-input{color="neutral" variant="outline" placeholder="Enter token"}
+:u-button{color="neutral" variant="subtle" icon="i-lucide-clipboard"}
 ::
 
-### Con información útil
+### Con herramienta
 
-Puede utilizar un [Tooltip](/docs/components/tooltip) dentro de un grupo de campos.
+Puede usar un [Tooltip](/docs/components/tooltip) dentro de un grupo de campos.
 
-Ejemplo de componente {name="field-group-tooltip-example"}
+:component-example{name="field-group-tooltip-example"}
 
-### Con el menú desplegable
+### Con menú desplegable
 
-Puede utilizar un [DropdownMenu](/docs/components/dropdown-menu) dentro de un grupo de campos.
+Puede usar un [DropdownMenu](/docs/components/dropdown-menu) dentro de un grupo de campos.
 
-Ejemplo de componente {name="field-group-dropdown-example"}
+:component-example{name="field-group-dropdown-example"}
 
-### Con el logotipo
+### Con insignia
 
-Puede utilizar un [Badge](/docs/components/badge) dentro de un grupo de campo.
+Puede usar un [Badge](/docs/components/badge) dentro de un grupo de campos.
 
-Ejemplo de componente {name="field-group-badge-example"}
+:component-example{name="field-group-badge-example"}
 
-@@pH062
+## API
 
-@@pH063@@Propuestas
+### Accesorios
 
-Componentes Props
+:component-props
 
-### Escenarios
+### Slots
 
-Componentes de slots
+:component-slots
 
-@065 @@ Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@666@changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

@@ -11,214 +11,214 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/FormField.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-Utilizado en un [Form](/docs/components/form), proporciona validación y manejo de errores.
+Se utiliza en un [Form](xph003), proporciona validación y manejo de errores.
 
-@@pH005@etiqueta
+### Label
 
-Utilice el prop `label` para establecer la etiqueta para el control de formulario.
+Utilice el prop `label` para establecer la etiqueta del control de formulario.
 
 ::component-code
 ---
-Categoría: true
-Props:
-  Etiqueta: correo electrónico
-Los slots:
-  Default:|
+prettier: true
+props:
+  label: Email
+slots:
+  default: |
 
-    @@@ 007 @
+    <UInput placeholder="Enter your email" />
 ---
 
-por: u-input {placeholder="Enter your email"}
+:u-input{placeholder="Enter your email"}
 ::
 
 ::note
-La etiqueta `for` atributo y el formulario de control se asocian con un único `id` si no se proporciona.
+El atributo de etiqueta `for` y el control de formulario se asocian con un `id` único si no se proporciona.
 ::
 
 Cuando se utiliza el prop `required`, se añade un asterisco junto a la etiqueta.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH012@etiqueta
-Props:
-  Etiqueta: correo electrónico
-  Requerido: Verdadero
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - label
+props:
+  label: Email
+  required: true
+slots:
+  default: |
 
-    @@@ 013
+    <UInput placeholder="Enter your email" />
 ---
 
-por: u-input {placeholder="Enter your email"}
+:u-input{placeholder="Enter your email"}
 ::
 
-@@pH015@Descripción
+### Descripción
 
 Utilice el prop `description` para proporcionar información adicional debajo de la etiqueta.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @1700@etiqueta
-Props:
-  Etiqueta: correo electrónico
-  Descripción: Nunca compartiremos su correo electrónico con nadie más.
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - label
+props:
+  label: Email
+  description: We'll never share your email with anyone else.
+slots:
+  default: |
 
-    @@@ 18 @
+    <UInput placeholder="Enter your email" class="w-full" />
 ---
 
-por: u-input {placeholder="Enter your email" class="w-full"}
+:u-input{placeholder="Enter your email" class="w-full"}
 ::
 
-@200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Hint (en inglés)
 
-Utilice el prop `hint` para mostrar un mensaje de sugerencia junto a la etiqueta.
+Utilice el accesorio `hint` para mostrar un mensaje de sugerencia junto a la etiqueta.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @222@etiqueta
-Props:
-  Etiqueta: correo electrónico
-  Indice: Opcional
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - label
+props:
+  label: Email
+  hint: Optional
+slots:
+  default: |
 
-    @@ 23 @
+    <UInput placeholder="Enter your email" />
 ---
 
-por: u-input {placeholder="Enter your email"}
+:u-input{placeholder="Enter your email"}
 ::
 
-@2500@ayuda
+### Ayuda
 
 Utilice el prop `help` para mostrar un mensaje de ayuda debajo del control de formulario. Cuando se usa junto con el prop `error`, el prop `error` tiene prioridad.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@29@etiqueta
-Props:
-  Etiqueta: correo electrónico
-  Ayuda: Por favor, introduzca una dirección de correo electrónico válida.
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - label
+props:
+  label: Email
+  help: Please enter a valid email address.
+slots:
+  default: |
 
-    @@@ 30 @
+    <UInput placeholder="Enter your email" class="w-full" />
 ---
 
-por: u-input {placeholder="Enter your email" class="w-full"}
+:u-input{placeholder="Enter your email" class="w-full"}
 ::
 
-@@pH032@@error
+### Error (en inglés)
 
-Utilice el prop `error` para mostrar un mensaje de error debajo del control de formulario. Cuando se usa junto con el prop `help`, el prop `error` tiene prioridad.
+Utilice la prop `error` para mostrar un mensaje de error debajo del control de formulario. Cuando se usa junto con la prop `help`, la prop `error` tiene prioridad.
 
-Cuando se utiliza dentro de un [Form](/docs/components/form), esto se establece automáticamente cuando se produce un error de validación.
+Cuando se utiliza dentro de un [Form](/docs/components/form), se establece automáticamente cuando se produce un error de validación.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH040@etiqueta
-Props:
-  Etiqueta: correo electrónico
-  error: Por favor, introduzca una dirección de correo electrónico válida.
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - label
+props:
+  label: Email
+  error: Please enter a valid email address.
+slots:
+  default: |
 
-    @@@ 41 @
+    <UInput placeholder="Enter your email" class="w-full" />
 ---
 
-por: u-input {placeholder="Enter your email" class="w-full"}
+:u-input{placeholder="Enter your email" class="w-full"}
 ::
 
 ::tip{to="/docs/getting-started/theme/design-system#color-system"}
 Esto establece el `color` a `error` en el control de formulario. Puede cambiarlo globalmente en su `app.config.ts`.
 ::
 
-### Patrón de error
+### Patrón de Error
 
-Esto es especialmente relevante para componentes con valores de matriz como [InputTags](/docs/components/input-tags), donde los errores incluyen índices de matriz en su nombre (por ejemplo,`tags.0`).
+Esto es especialmente relevante para los componentes con valores de matriz como [InputTags](/docs/components/input-tags), donde los errores incluyen índices de matriz en su nombre (por ejemplo, `tags.0`).
 
 ::tip{to="/docs/components/form#error-reporting"}
 Vea un ejemplo de cómo usar `error-pattern` dentro de un formulario.
 ::
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Tamaño
 
-Utilice el prop `size` para cambiar el tamaño del FormField, el `size` está vinculado al control de formulario.
+Utilice el prop `size` para cambiar el tamaño del FormField, el `size` se proxy para el control de formulario.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@57@etiqueta
-  @@pH058@descripción
-  @595@huef
-  @060@ayuda
-Props:
-  Etiqueta: correo electrónico
-  Descripción: Nunca compartiremos su correo electrónico con nadie más.
-  Indice: Opcional
-  Ayuda: Por favor, introduzca una dirección de correo electrónico válida.
-  Tamaño: xl
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - label
+  - description
+  - hint
+  - help
+props:
+  label: Email
+  description: We'll never share your email with anyone else.
+  hint: Optional
+  help: Please enter a valid email address.
+  size: xl
+slots:
+  default: |
 
-    @@@ 061
+    <UInput placeholder="Enter your email" class="w-full" />
 ---
 
-por: u-input {placeholder="Enter your email" class="w-full"}
+:u-input{placeholder="Enter your email" class="w-full"}
 ::
 
 ### Orientación: badge{label="4.3+" class="align-text-top"}
 
-Utilice la prop `orientation` para cambiar el diseño del FormField. Defaults a `vertical`.
+Utilice el prop `orientation` para cambiar el diseño del FormField. Defaults a `vertical`.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@pH067@etiqueta
-  @068@clase
-Props:
-  Orientación: Horizontal
-  Etiqueta: correo electrónico
-  Ayuda: Por favor, introduzca una dirección de correo electrónico válida.
-  Categoría: W-72
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - label
+  - class
+props:
+  orientation: horizontal
+  label: Email
+  help: Please enter a valid email address.
+  class: w-72
+slots:
+  default: |
 
-    @@pf069 @
+    <UInput placeholder="Enter your email" class="w-full" />
 ---
 
-por: u-input {placeholder="Enter your email" class="w-full"}
+:u-input{placeholder="Enter your email" class="w-full"}
 ::
 
-@7101 @
+## API (Edición española)
 
-@@2007@@Propuestas
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
-@@70000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots en línea
 
-Componentes de slots
+:component-slots
 
-@@74000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Temas
 
-Componente Tema
+:component-theme
 
-@@750@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

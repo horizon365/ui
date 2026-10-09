@@ -11,78 +11,78 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardSearchButton.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente DashboardSearchButton se utiliza para abrir el [DashboardSearch](/docs/components/dashboard-search) modal.
+El componente DashboardSearchButton se utiliza para abrir el modal [DashboardSearch](/docs/components/dashboard-search).
 
-Componentes de código
+:component-code
 
-Se extiende el [Button](/docs/components/button) componente, por lo que puede pasar cualquier propiedad como `color`,`variant`,`size`, etc.
+Extiende el componente [Button](/docs/components/button), por lo que puede pasar cualquier propiedad como `color`, `variant`, `size`, etc.
 
 ::component-code
 ---
-Ignora:
-  @@P2012@Variación
-Props:
-  Variación:"Sutil"
+ignore:
+  - variant
+props:
+  variant: 'subtle'
 ---
 ::
 
 ::note{to="#collapsed"}
-El botón por defecto a `color="neutral"` y `variant="outline"` cuando no colapsado,`variant="ghost"` cuando colapsado.
+El botón por defecto es `color="neutral"` y `variant="outline"` cuando no está colapsado, `variant="ghost"` cuando está colapsado.
 ::
 
-@16000 @ Desaparecido
+### Colapsado
 
 Utilice el prop `collapsed` para ocultar la etiqueta del botón y [kbds](#kbds).
 
 ::component-code
 ---
-Categoría: true
-Props:
-  Colapsado: Cierto
+prettier: true
+props:
+  collapsed: true
 ---
 ::
 
 ::tip{to="/docs/components/dashboard-sidebar#slots"}
-Cuando utilice el botón en el componente **DashboardSidebar**, utilice el accesorio de ranura `collapsed` directamente.
+Cuando utilice el botón en el componente **DashboardSidebar**, utilice directamente el soporte de la ranura `collapsed`.
 ::
 
-@@26000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### kbds (en inglés)
 
-Utilice el `kbds` prop para mostrar las teclas del teclado en el botón. Predeterminados a `['meta', 'K']`{lang="ts-type"} para que coincida con el acceso directo predeterminado del componente [DashboardSearch](/docs/components/dashboard-search#shortcut).
+Utilice el prop `kbds` para mostrar las teclas del teclado en el botón. Predeterminados a `['meta', 'K']`{lang="ts-type"} para que coincida con el acceso directo predeterminado del componente [DashboardSearch](/docs/components/dashboard-search#shortcut).
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @34@34@34@34
-Props:
-  Colapsado: Falso
-  kbd:
-    @@pH035 @@'nuevo'
-    @@pH036 @@'y'
+prettier: true
+ignore:
+  - kbds
+props:
+  collapsed: false
+  kbds:
+    - 'alt'
+    - 'O'
 ---
 ::
 
-@@pH037@@pH037
+## API (Edición española)
 
-@380@38000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Accesorios
 
-Componentes Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-Este componente también soporta todos los atributos HTML nativos `<button>`.
+Este componente también admite todos los atributos HTML nativos de `<button>`.
 ::
 
-@400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots (Español)
 
-Componentes de slots
+:component-slots
 
-@410000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Temas
 
-Componente Tema
+:component-theme
 
-@@2004@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

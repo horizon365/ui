@@ -1,5 +1,5 @@
 ---
-title: Seite CTA
+title: Seite
 description: 'Ein Call-to-Action-Abschnitt, der auf Ihren Seiten angezeigt werden soll.'
 category: page
 links:
@@ -8,7 +8,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageCTA.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
 Die PageCTA-Komponente bietet eine flexible Möglichkeit, einen Aufruf zum Handeln in Ihren Seiten mit einer Illustration im Standard-Slot anzuzeigen.
 
@@ -16,24 +16,24 @@ Die PageCTA-Komponente bietet eine flexible Möglichkeit, einen Aufruf zum Hande
 
 ::u-page-c-t-a
 ---
-Titel: "Vertraut und unterstützt von unserer erstaunlichen Community"
-description: 'Vorschau des neuesten Tailwind CSS und erste Schritte mit Nuxt UI.'
-Ausrichtung: horizontal
-Links auf:
-  - label:'Mach den Anfang'
-    Farbe: "neutral"
-  - label:'Mehr erfahren'
-    Farbe: "neutral"
-    Variante: „ subtil "
-    trailingIcon: 'i-lucide-arrow-right'(englisch)
+title: 'Trusted and supported by our amazing community'
+description: 'Preview the latest Tailwind CSS and get started with Nuxt UI.'
+orientation: horizontal
+links:
+  - label: 'Get started'
+    color: 'neutral'
+  - label: 'Learn more'
+    color: 'neutral'
+    variant: 'subtle'
+    trailingIcon: 'i-lucide-arrow-right'
 ---
 
-: img@@ph003
+:img{src="https://picsum.photos/640/616" width="320" height="308" alt="Illustration" class="w-full rounded-lg"}
 ::
 
 ::
 
-Verwenden Sie es in einer [PageSection](/docs/components/page-section) Komponente oder direkt auf Ihrer Seite:
+Verwenden Sie es in einer [PageSection](/docs/components/page-section)-Komponente oder direkt auf Ihrer Seite:
 
 ```vue {4,8-10}
 <template>
@@ -52,181 +52,181 @@ Verwenden Sie es in einer [PageSection](/docs/components/page-section) Komponent
 ```
 
 ::tip
-Verwenden Sie `px-0` und `rounded-none` classes, damit der CTA den Rand der Seite auf dem Handy ausfüllt.
+Verwenden Sie die Klassen `px-0` und `rounded-none`, damit der CTA den Rand der Seite auf dem Handy ausfüllt.
 ::
 
-@@ph025@title
+### title
 
-Verwenden Sie `title` prop, um den Titel des CTA zu setzen.
+Verwenden Sie die `title`-Prop, um den Titel des CTA festzulegen.
 
 ::component-code{slug="page-CTA"}
 ---
-Props:
-  Titel: "Vertraut und unterstützt von unserer erstaunlichen Community"
+props:
+  title: 'Trusted and supported by our amazing community'
 ---
 ::
 
-@@ph027@@Beschreibung
+### Beschreibung
 
-Verwenden Sie die `description` prop, um die Beschreibung des CTA festzulegen.
+Verwenden Sie die `description`-Prop, um die Beschreibung des CTA festzulegen.
 
 ::component-code{slug="page-CTA"}
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph029@title
-Props:
-  Titel: "Vertraut und unterstützt von unserer erstaunlichen Community"
-  Beschreibung: "Wir haben eine starke, dauerhafte Partnerschaft aufgebaut. Ihr Vertrauen ist unsere treibende Kraft und treibt uns zum gemeinsamen Erfolg an."
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Trusted and supported by our amazing community'
+  description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
 ---
 ::
 
-@@@300@link30
+### Links (englisch)
 
-Verwenden Sie `links` prop, um eine Liste von [Button](/docs/components/button) unter der Beschreibung anzuzeigen.
+Verwenden Sie die `links`-Prop, um eine Liste von [Button](/docs/components/button) unter der Beschreibung anzuzeigen.
 
 ::component-code{slug="page-CTA"}
 ---
-Schöner: wahr
-Außen:
-  @@@@@36@@links
-Externe Personen:
-  @@ph037@buttonprops [Bearbeiten | Quelltext bearbeiten]
-Ignoriert:
-  @@@@@@38@title
-  @@ph039 @ Beschreibung
-  @@@@@40@@links
-Props:
-  Titel: "Vertraut und unterstützt von unserer erstaunlichen Community"
-  Beschreibung: "Wir haben eine starke, dauerhafte Partnerschaft aufgebaut. Ihr Vertrauen ist unsere treibende Kraft und treibt uns zum gemeinsamen Erfolg an."
-  Linke:
-    - label:'Fangen Sie an'
-      Farbe: „ neutral "
-    - label:'Mehr erfahren'
-      Farbe: "neutral"
-      Variante: "Unterwürfig"
-      trailingIcon: 'i-lucide-arrow-right'(englisch)
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Trusted and supported by our amazing community'
+  description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
+  links:
+    - label: 'Get started'
+      color: 'neutral'
+    - label: 'Learn more'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
 ---
 ::
 
-@@ph043@@Variantentyp
+### Variant Übersetzung
 
 Verwenden Sie die `variant` prop, um den Stil des CTA zu ändern.
 
 ::component-code{slug="page-CTA"}
 ---
-Schöner: wahr
-Außen:
-  @@@@@45@links
-Externe Personen:
-  @@ph046@buttonprops [Bearbeiten | Quelltext bearbeiten]
-Ignoriert:
-  @@ph047@title
-  @@ph048@beschreibung
-  @@@@@49@@links
-Props:
-  Titel: "Vertraut und unterstützt von unserer erstaunlichen Community"
-  Beschreibung: "Wir haben eine starke, dauerhafte Partnerschaft aufgebaut. Ihr Vertrauen ist unsere treibende Kraft und treibt uns zum gemeinsamen Erfolg an."
-  Variante: weich
-  Links auf:
-    - label:'Fangen Sie an'
-      Farbe: "neutral"
-    - label:'Mehr erfahren'
-      Farbe: "neutral"
-      Variante: "Unterwürfig"
-      trailingIcon: 'i-lucide-arrow-right'(englisch)
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Trusted and supported by our amazing community'
+  description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
+  variant: soft
+  links:
+    - label: 'Get started'
+      color: 'neutral'
+    - label: 'Learn more'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
 ---
 ::
 
 ::tip
-Sie können die Klasse `light` oder `dark` auf den Slot `links` anwenden, wenn Sie die Variante `solid` verwenden, um die Farben umzukehren.
+Sie können die `light`-oder `dark`-Klasse auf den `links`-Steckplatz anwenden, wenn Sie die `solid`-Variante verwenden, um die Farben umzukehren.
 ::
 
-@@ph056@Orientierung
+### Orientierung
 
-Verwenden Sie die `orientation` prop, um die Ausrichtung mit dem Standardslot zu ändern.
+Verwenden Sie die `orientation`-Prop, um die Ausrichtung mit dem Standardslot zu ändern. Standardmäßig ist `vertical`.
 
 ::component-code{slug="page-CTA"}
 ---
-Schöner: wahr
-Außen:
-  @@@@59@@@links
-Externe Typen:
-  @@ph060@@buttonprops [Bearbeiten | Quelltext bearbeiten]
-Ignoriert:
-  @@ph061@@title
-  @@ph062@beschreibung
-  @@@@@@@63@@links
-Props:
-  Titel: "Vertraut und unterstützt von unserer erstaunlichen Community"
-  Beschreibung: "Wir haben eine starke, dauerhafte Partnerschaft aufgebaut. Ihr Vertrauen ist unsere treibende Kraft und treibt uns zum gemeinsamen Erfolg an."
-  Ausrichtung: horizontal
-  Links auf:
-    - label:'Mach den Anfang'
-      Farbe: „ neutral "
-    - label:'Mehr erfahren'
-      Farbe: "neutral"
-      Variante: "Unterwürfig"
-      trailingIcon: 'i-lucide-arrow-right'(englisch)
-Die Slots:
-  Default:|
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Trusted and supported by our amazing community'
+  description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
+  orientation: horizontal
+  links:
+    - label: 'Get started'
+      color: 'neutral'
+    - label: 'Learn more'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
-    @@@@@@@66 @
+    <img src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy" />
 ---
 
-: img{src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
+:img{src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
 ::
 
-@@ph068@umgekehrt.de
+### Reverse (Rückwärtsgang)
 
-Verwenden Sie `reverse` prop, um die Ausrichtung des Standard-Steckplatzes umzukehren.
+Verwenden Sie die `reverse`-Prop, um die Ausrichtung des Standardsteckplatzes umzukehren.
 
 ::component-code{slug="page-CTA"}
 ---
-Schöner: wahr
-Außen:
-  @@@@@@@70@@links
-Externe Typen:
-  @@@buttonprops [Bearbeiten | Quelltext bearbeiten]
-Ignoriert:
-  @@ph072@@title
-  @@ph073@beschreibung
-  @@@@@@@@@@@@@@@@Links
-Props:
-  Titel: "Vertraut und unterstützt von unserer erstaunlichen Community"
-  Beschreibung: "Wir haben eine starke, dauerhafte Partnerschaft aufgebaut. Ihr Vertrauen ist unsere treibende Kraft und treibt uns zum gemeinsamen Erfolg an."
-  Ausrichtung: horizontal
-  umgekehrt: wahr
-  Linke:
-    - label:'Fangen Sie an'
-      Farbe: „ neutral "
-    - label:'Mehr erfahren'
-      Farbe: "neutral"
-      Variante: "Unterwürfig"
-      trailingIcon: 'i-lucide-arrow-right'(englisch)
-Die Slots:
-  Default:|
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
+  title: 'Trusted and supported by our amazing community'
+  description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
+  orientation: horizontal
+  reverse: true
+  links:
+    - label: 'Get started'
+      color: 'neutral'
+    - label: 'Learn more'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    <img src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy" />
 ---
 
-: img{src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
+:img{src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
 ::
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@api
+## API (Englisch)
 
-@@@@@@@@@@@ph080@@@props
+### Props (englisch)
 
-{slug="page-CTA"}
+:component-props{slug="page-CTA"}
 
-@@ph082@@slots
+### Slots Bearbeiten
 
-: component-slots {slug="page-CTA"}
+:component-slots{slug="page-CTA"}
 
-@@@@@@@@@@@ph084@@theme
+## Theme Bearbeiten
 
-: component-theme {slug="page-CTA"}
+:component-theme{slug="page-CTA"}
 
-@@ph086@@changelog @@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

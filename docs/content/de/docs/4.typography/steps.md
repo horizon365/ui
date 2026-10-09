@@ -9,16 +9,16 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Steps.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Umschließen Sie Ihre Überschriften mit der Komponente Schritte, um eine Liste von Schritten anzuzeigen.
 
-Verwenden Sie `level` prop, um zu definieren, welche Überschrift für die Schritte verwendet wird.
+Verwenden Sie die `level`-prop, um zu definieren, welche Überschrift für die Schritte verwendet wird.
 
 :::code-preview{class="[&>div]:*:w-full"}
 ::steps{level="4"}
 
-#### Fügen Sie das Nuxt UI-Modul in Ihrem `nuxt.config.ts`
+#### Fügen Sie das Nuxt UI Modul in Ihrem `nuxt.config.ts` hinzu
 
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
@@ -26,7 +26,7 @@ export default defineNuxtConfig({
 })
 ```
 
-#### Import Tailwind CSS in Ihrem CSS
+#### Tailwind CSS in CSS importieren
 
 ```css [app/assets/css/main.css]
 @import "tailwindcss";
@@ -40,7 +40,7 @@ npm run dev
 
 ::
 
-#Der Code
+#code
 
 ````mdc
 ::steps{level="4"}
@@ -62,7 +62,7 @@ default export defineNuxtConfig ({Dateiendung})
 #### Start your development server
 
 ```bash
-npm Run Dev Bearbeiten
+npm run dev ausführen
 ```
 
 ::
@@ -70,20 +70,20 @@ npm Run Dev Bearbeiten
 
 :::
 
-@@@@@@b37@b37
+## API (englisch)
 
-@@@@@@@@@@@@ph038@@props
+### Props Bearbeiten
 
-@@ ph039
+:component-props{prose}
 
-@@ph040@@Slots
+### Slots Bearbeiten
 
-: component-slots {prose}
+:component-slots{prose}
 
-@@ph042@@theme.de
+## Theme Bearbeiten
 
-: component-theme {prose}
+:component-theme{prose}
 
-@@ph044@@changelog @@changelog
+## Changelog (englisch)
 
-: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

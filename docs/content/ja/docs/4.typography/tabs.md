@@ -11,7 +11,7 @@ links:
 
 ## 使用法
 
-`tabs`および`tabs-item`コンポーネントを使用して、コンテンツ内に[タブ](/docs/components/tabs)を表示します。
+`tabs`および`tabs-item`コンポーネントを使用して、[Tabs](/docs/components/tabs)をコンテンツに表示します。
 
 ::code-preview{class="[&>div]:*:my-0"}
 
@@ -37,7 +37,7 @@ Lorem velit voluptate ex reprehenderit ullamco et culpa.
 
 :::
 
-#コード
+#code
 
 ````mdc
 ::tabs
@@ -65,25 +65,25 @@ Lorem velit voluptate ex reprehenderit ullamco et culpa.
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props {prose}
+:component-props{prose}
 
 ### スロット
 
-component—slots {prose}
+:component-slots{prose}
 
-## テーマ
+## Theme
 
 ::component-theme{prose}
 ---
-追加
-  -  tabsItem
+extra:
+  - tabsItem
 ---
 ::
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

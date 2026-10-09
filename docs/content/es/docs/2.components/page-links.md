@@ -8,105 +8,105 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageLinks.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-Utilice el componente PageLinks para mostrar una lista de enlaces .
+Utilice el componente PageLinks para mostrar una lista de enlaces.
 
 ::component-code
 ---
-Colapso : Verdad
-Categoría : true
-Ignora :
-  @@pH001@enlaces
-Externo :
-  @@2002@enlaces
-Externalidades :
-  @@@P2003 [ en línea ]
-Props :
-  izquierda :
-    - label : ' Editar esta página '
-      Archivo : i-lucide - file-pen
-      Dos :https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
-    - label : ' Estrella en GitHub '
-      Icono : i-lucide - star
-      Dos :https://github.com/nuxt/ui
-    - label : ' Lanzamiento '
-      Archivo de la etiqueta : i-lucide - rocket
-      Dos :https://github.com/nuxt/ui/releases
+collapse: true
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageLink[]
+props:
+  links:
+    - label: 'Edit this page'
+      icon: i-lucide-file-pen
+      to: https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
+    - label: 'Star on GitHub'
+      icon: i-lucide-star
+      to: https://github.com/nuxt/ui
+    - label: 'Releases'
+      icon: i-lucide-rocket
+      to: https://github.com/nuxt/ui/releases
 ---
 ::
 
-@@pH007@enlaces
+### Enlaces
 
-Utilice el prop`links`como una matriz de objetos con las siguientes propiedades :
+Utilice el prop `links` como una matriz de objetos con las siguientes propiedades:
 
-@@
-@@
-@@
-@@
+- xx`label: string`xx{lang="ts-type"}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`class?: any`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xxx`ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkLeadingIcon?: ClassNameValue }`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-Puede pasar cualquier propiedad del componente[Link](/docs/components/link#props)como`to`,`target`, etc.
+Puede pasar cualquier propiedad del componente [Link](/docs/components/link#props) como `to`, `target`, etc.
 
 ::component-code
 ---
-Categoría : true
-Ignora :
-  @@27@enlaces
-Externo :
-  @@28@enlaces
-Externalidades :
-  @@20029@2002 [ en línea ]
-Props :
-  izquierda :
-    - label : ' Editar esta página '
-      Archivo : i-lucide - file-pen
-      Dos :https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
-    - label : ' Estrella en GitHub '
-      Icono : i-lucide - star
-      Dos :https://github.com/nuxt/ui
-    - label : ' Lanzamiento '
-      Archivo de la etiqueta : i-lucide - rocket
-      Dos :https://github.com/nuxt/ui/releases
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageLink[]
+props:
+  links:
+    - label: 'Edit this page'
+      icon: i-lucide-file-pen
+      to: https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
+    - label: 'Star on GitHub'
+      icon: i-lucide-star
+      to: https://github.com/nuxt/ui
+    - label: 'Releases'
+      icon: i-lucide-rocket
+      to: https://github.com/nuxt/ui/releases
 ---
 ::
 
-@@33@Título
+### Nombre
 
-Utilice el prop`title`para mostrar un título encima de los enlaces .
+Utilice el prop `title` para mostrar un título encima de los enlaces.
 
 ::component-code
 ---
-Categoría : true
-Ignora :
-  @@35@enlaces
-Externo :
-  @36@enlaces
-Externalidades :
-  @@P300@@P3000 [ en línea ]
-Props :
-  Título : " Comunidad "
-  izquierda :
-    - label : ' Editar esta página '
-      Archivo : i-lucide - file-pen
-      Dos :https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
-    - label : ' Estrella en GitHub '
-      Icono : i-lucide - star
-      Dos :https://github.com/nuxt/ui
-    - label : ' Lanzamiento '
-      Archivo de la etiqueta : i-lucide - rocket
-      Dos :https://github.com/nuxt/ui/releases
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageLink[]
+props:
+  title: 'Community'
+  links:
+    - label: 'Edit this page'
+      icon: i-lucide-file-pen
+      to: https://github.com/nuxt/ui/blob/v4/docs/content/docs/2.components/page-links.md
+    - label: 'Star on GitHub'
+      icon: i-lucide-star
+      to: https://github.com/nuxt/ui
+    - label: 'Releases'
+      icon: i-lucide-rocket
+      to: https://github.com/nuxt/ui/releases
 ---
 ::
 
 ## Ejemplos
 
 ::note
-Si bien estos ejemplos utilizan[Nuxt Content](https://content.nuxt.com), los componentes se pueden integrar con cualquier sistema de gestión de contenido .
+Si bien estos ejemplos utilizan [Nuxt Content](xph088), los componentes se pueden integrar con cualquier sistema de gestión de contenido.
 ::
 
 ### Dentro de una página
 
-Utilice el componente PageLinks en la ranura`bottom`del componente ContentToc para mostrar una lista de enlaces debajo de la tabla de contenido .
+Utilice el componente PageLinks en la ranura `bottom` del componente ContentToc para mostrar una lista de enlaces debajo de la tabla de contenido.
 
 ```vue [pages/\[...slug\\].vue]{48-52}
 <script setup lang="ts">
@@ -168,20 +168,20 @@ const links = computed<PageLink[]>(() => [{
 </template>
 ```
 
-@@pH107@@Español
+## API
 
-@108@108@108@108
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
-@109@109@109
+### Slots
 
-Componentes de slots
+:component-slots
 
-@110@@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@@111@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

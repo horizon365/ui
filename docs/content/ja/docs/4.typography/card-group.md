@@ -9,9 +9,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CardGroup.vue
 ---
 
-## 使用 法
+## 使用法
 
-`card`コンポーネント を`card-group`コンポーネント で ラップ し て 、 グリッドレイアウト で グループ 化 し ます 。
+`card`コンポーネントを`card-group`コンポーネントでラップして、グリッドレイアウトでグループ化します。
 
 ::code-preview
 
@@ -19,47 +19,47 @@ links:
 
 ::card
 ---
-title ダッシュ ボード
-アイコン i-simple-icons-github
-次 へhttps://github.com/nuxt-ui-templates/dashboard
-ターゲット _blank
+title: Dashboard
+icon: i-simple-icons-github
+to: https://github.com/nuxt-ui-templates/dashboard
+target: _blank
 ---
-複数 列 レイアウト の ダッシュ ボード 。
+複数列レイアウトのダッシュボード。
 ::
 
 ::card
 ---
-title SaaS
-アイコン i-simple-icons-github
-次 へhttps://github.com/nuxt-ui-templates/saas
-ターゲット _blank
+title: SaaS
+icon: i-simple-icons-github
+to: https://github.com/nuxt-ui-templates/saas
+target: _blank
 ---
-ランディング 、 価格 設定 、 ドキュメント 、 ブログ を 含む テンプレート 。
+ランディング、価格設定、ドキュメント、ブログを含むテンプレート。
 ::
 
 ::card
 ---
-title ドキュメント
-アイコン i-simple-icons-github
-次 へhttps://github.com/nuxt-ui-templates/docs
-ターゲット _blank
+title: Docs
+icon: i-simple-icons-github
+to: https://github.com/nuxt-ui-templates/docs
+target: _blank
 ---
-`@nuxt/content`の ドキュメント 。
+`@nuxt/content`のドキュメント。
 ::
 
 ::card
 ---
-title ランディング
-アイコン i-simple-icons-github
-次 へhttps://github.com/nuxt-ui-templates/landing
-ターゲット _blank
+title: Landing
+icon: i-simple-icons-github
+to: https://github.com/nuxt-ui-templates/landing
+target: _blank
 ---
-出発 点 として 使用 できる ランディング ページ 。
+出発点として使用できるランディングページ。
 ::
 
 :::
 
-# コード
+#code
 
 ```mdc
 ::card-group
@@ -113,16 +113,16 @@ A landing page you can use as starting point.
 
 ### Props
 
-component-props{prose}
+:component-props{prose}
 
 ### スロット
 
-component-slots{prose}
+:component-slots{prose}
 
-## テーマ
+## Theme
 
-component-theme{prose}
+:component-theme{prose}
 
 ## Changelog
 
-component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

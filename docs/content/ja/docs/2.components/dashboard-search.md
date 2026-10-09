@@ -13,9 +13,9 @@ links:
 
 ## 使用法
 
-DashboardSearchコンポーネントは[ CommandPalette ](/docs/components/command-palette)コンポーネントを拡張しているため、`icon`、`placeholder`などのプロパティを渡すことができます。
+DashboardSearchコンポーネントは、[CommandPalette](/docs/components/command-palette)コンポーネントを拡張するため、`icon`、`placeholder`などの任意のプロパティを渡すことができます。
 
-[ DashboardGroup ](/docs/components/dashboard-group)コンポーネントのデフォルトスロット内で使用します。
+[DashboardGroup](/docs/components/dashboard-group)コンポーネントのデフォルトスロット内で使用します。
 
 ```vue [layouts/dashboard.vue]{3}
 <template>
@@ -32,12 +32,12 @@ DashboardSearchコンポーネントは[ CommandPalette ](/docs/components/comma
 ```
 
 ::tip
-CommandPaletteを開くには、kbd {value="meta"} kbd {value="K" class="ms-px"}を押すか、[ DashboardSearchButton ](/docs/components/dashboard-search-button)コンポーネントを使用するか、`v-model:open`{lang="ts"}ディレクティブを使用します。
+CommandPaletteを開くには、kbd{value="meta"} kbd{value="K" class="ms-px"}を押すか、[DashboardSearchButton](/docs/components/dashboard-search-button)コンポーネントを使用するか、`v-model:open`{lang="ts"}ディレクティブを使用します。
 ::
 
 ### ショートカット
 
-`shortcut` propを使用して、[ defineShortcuts ](/docs/composables/define-shortcuts)で使用されているショートカットを変更してContentSearchコンポーネントを開きます。デフォルトは`meta_k` kbd {value="meta"} kbd {value="K"}です。
+`shortcut`プロパティを使用して、[defineShortcuts](/docs/composables/define-shortcuts)で使用されているショートカットを変更してContentSearchコンポーネントを開きます。デフォルトは`meta_k` kbd{value="meta"} kbd{value="K"}です。
 
 ```vue [app.vue]{4}
 <template>
@@ -50,9 +50,9 @@ CommandPaletteを開くには、kbd {value="meta"} kbd {value="K" class="ms-px"}
 </template>
 ```
 
-### カラーモード
+### Colorモード
 
-デフォルトでは、コマンドのグループがコマンドパレットに追加され、ライトモードとダークモードを切り替えることができます。これは、`colorMode`が特定のページで強制されていない場合にのみ有効になります。`definePageMeta`で実行できます。
+デフォルトでは、コマンドのグループがコマンドパレットに追加され、ライトモードとダークモードを切り替えることができます。これは、`definePageMeta`で実行できる特定のページで`colorMode`が強制されない場合にのみ有効になります。
 
 ```vue [pages/index.vue]
 <script setup lang="ts">
@@ -62,7 +62,7 @@ definePageMeta({
 </script>
 ```
 
-この動作を無効にするには、`color-mode` propを`false`に設定します。
+`color-mode`プロパティを`false`に設定することで、この動作を無効にできます。
 
 ```vue [app.vue]{4}
 <template>
@@ -75,21 +75,21 @@ definePageMeta({
 </template>
 ```
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-###  Expose
+### Expose
 
 テンプレート参照を介してコンポーネントにアクセスする場合、以下を使用できます：
 
@@ -99,8 +99,8 @@ component—emits
 
 ## テーマ
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

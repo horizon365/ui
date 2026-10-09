@@ -10,51 +10,51 @@ links:
 ---
 
 ::warning{to="/docs/getting-started/integrations/content"}
-Este componente sólo está disponible cuando el módulo `@nuxt/content` está instalado.
+Este componente solo está disponible cuando se instala el módulo `@nuxt/content`.
 ::
 
-@@pH001@@El uso
+## Servicio
 
-Utilice el prop `surround` con el valor `surround`{lang="ts-type"} que se obtiene al buscar un surround de página.
+Utilice el prop `surround` con el valor `surround`{lang="ts-type"} que se obtiene al buscar un entorno de página.
 
 ::component-example
 ---
-Nombre: 'content-surround-example'
-Props:
-  Categoría: w-full
+name: 'content-surround-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-@@P2005 @@Prev/Siguiente
+### Prev/Siguiente
 
 Utilice los accesorios `prev-icon` y `next-icon` para personalizar los botones [Icon](/docs/components/icon).
 
 ::component-code{prefix="content"}
 ---
-Categoría: true
-Colapso: Verdad
-Ignora:
-  @12@surround (en inglés)
-Externo:
-  @@13@surround (en inglés)
-Externalidades:
-  - ContentSurroundLink (en inglés)
-Props:
-  previcon: 'i-lucide-chevron-left'
-  Icono: 'i-lucide-chevron-right'
-  Surround:
-  - title: ContentSearchButton (Edición española)
-    path: /docs/componentes/botón de búsqueda de contenido
-    stem: docs/2.components/botón de búsqueda de contenido
-    Descripción: Un botón prediseñado para abrir el modal ContentSearch.
-  - title: Contenido
-    Dirección:/docs/components/content-toc
+prettier: true
+collapse: true
+ignore:
+  - surround
+external:
+  - surround
+externalTypes:
+  - ContentSurroundLink[]
+props:
+  prevIcon: 'i-lucide-chevron-left'
+  nextIcon: 'i-lucide-chevron-right'
+  surround:
+  - title: ContentSearchButton
+    path: /docs/components/content-search-button
+    stem: docs/2.components/content-search-button
+    description: A pre-styled Button to open the ContentSearch modal.
+  - title: ContentToc
+    path: /docs/components/content-toc
     stem: docs/2.components/content-toc
-    Descripción: Una tabla de contenidos pegajosa con ranuras personalizables.
+    description: A sticky Table of Contents with customizable slots.
 ---
 ::
 
-@17@Ejemplos
+## Ejemplos
 
 ### Dentro de una página
 
@@ -89,20 +89,20 @@ if (!page.value) {
 </template>
 ```
 
-@477@Apid
+## API (Edición española)
 
-@480000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props (Edición española)
 
-Componentes Props
+:component-props
 
-@@49000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots (Español)
 
-Componentes de slots
+:component-slots
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Temas
 
-Componente Tema
+:component-theme
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Changelog (Edición española)
 
-por: component-changelog {prefix="content"}
+:component-changelog{prefix="content"}

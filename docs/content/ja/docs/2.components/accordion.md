@@ -21,36 +21,36 @@ links:
 
 ::component-code
 ---
-崩壊真
-無視
-  - アイテム
-  メール：info @ ui.content
-外部
-  - アイテム
-externalTypes
-  - アコーディオンアイテム[]
-隠す
-  - クラス
-  -  ui
-  -  defaultValue
-小道具
-  defaultValue '0'
-  クラス'px—4 max—w—lg'
-  UI
-    content 'テキストミュート'
-  アイテム
-    -  label 'Nuxt UIは無料で使えますか？'
-      content 'はい！Nuxt UIはMITライセンスのもとで完全にフリーでオープンソースです。125以上のコンポーネントはすべて誰でも利用できます。'
-    -  label 'NuxtなしでVueでNuxt UIを使えますか？'
-      内容：『 Yes！Nuxt用に最適化されていますが、Nuxt UIはViteプラグインを介してスタンドアロンのVueプロジェクトと完全に連携します。[インストールガイド](/docs/getting-started/installation/vue)に従って開始してください。
-    -  label 'Nuxt UIはプロダクション対応ですか？'
-      content 'はい！Nuxt UIは、広範なテスト、定期的なアップデート、アクティブなメンテナンスを経て、何千ものアプリケーションで運用されています。'
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+  - ui
+  - defaultValue
+props:
+  defaultValue: '0'
+  class: 'px-4 max-w-lg'
+  ui:
+    content: 'text-muted'
+  items:
+    - label: 'Is Nuxt UI free to use?'
+      content: 'Yes! Nuxt UI is completely free and open source under the MIT license. All 125+ components are available to everyone.'
+    - label: 'Can I use Nuxt UI with Vue without Nuxt?'
+      content: 'Yes! While optimized for Nuxt, Nuxt UI works perfectly with standalone Vue projects via our Vite plugin. You can follow the [installation guide](/docs/getting-started/installation/vue) to get started.'
+    - label: 'Is Nuxt UI production-ready?'
+      content: 'Yes! Nuxt UI is used in production by thousands of applications with extensive tests, regular updates, and active maintenance.'
 ---
 ::
 
 ### アイテム
 
-`items` propを、次のプロパティを持つオブジェクトの配列として使用します。
+`items`プロパティを次のプロパティを持つオブジェクトの配列として使用します。
 
 - `label?: string`{lang="ts-type"}
 - `icon?: string`{lang="ts-type"}
@@ -64,26 +64,26 @@ externalTypes
 
 ::component-code
 ---
-無視
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  - アコーディオンアイテム[]
-隠す
-  - クラス
-小道具
-  クラス'px—4'
-  アイテム
-    -  label 'アイコン'
-      アイコン'i—lucide—smile'
-      content：'あなたは何もすることはありません。@ nuxt/iconが自動的に処理します。
-    -  label 'Colors'
-      アイコン'i—lucide—swatch—book'
-      content：'Tailwind CSSテーマから原色とニュートラルカラーを選択してください。
-    -  label 'Components'
-      アイコン'i—lucide—box'
-      content 'コンポーネントをカスタマイズするには、`class`/`ui` propsを使用するか、app.config.tsで使用できます。'
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  items:
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    - label: 'Colors'
+      icon: 'i-lucide-swatch-book'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
@@ -93,89 +93,89 @@ externalTypes
 
 ::component-code
 ---
-無視
-  - タイプ
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  - アコーディオンアイテム[]
-隠す
-  - クラス
-小道具
-  クラス'px—4'
-  タイプ'複数'
-  アイテム
-    -  label 'アイコン'
-      アイコン'i—lucide—smile'
-      content：'あなたは何もすることはありません。@ nuxt/iconが自動的に処理します。
-    -  label 'Colors'
-      アイコン'i—lucide—swatch—book'
-      content：'Tailwind CSSテーマから原色とニュートラルカラーを選択してください。
-    -  label 'Components'
-      アイコン'i—lucide—box'
-      content '`class`/`ui` propsを使用するか、app.config.tsでコンポーネントをカスタマイズできます。'
+ignore:
+  - type
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  type: 'multiple'
+  items:
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    - label: 'Colors'
+      icon: 'i-lucide-swatch-book'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
-###  Collapsible
+### Collapsible
 
-`type`が`single`の場合、`collapsible` propを`false`に設定して、アクティブなアイテムが折りたたまれないようにできます。
+`type`が`single`の場合、`collapsible`プロパティを`false`に設定して、アクティブなアイテムが折りたたまれないようにできます。
 
 ::component-code
 ---
-無視
-  - 折りたたみ可能
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  - アコーディオンアイテム[]
-隠す
-  - クラス
-小道具
-  クラス'px—4'
-  折りたたみ式false
-  アイテム
-    -  label 'アイコン'
-      アイコン'i—lucide—smile'
-      content：'あなたは何もすることはありません。@ nuxt/iconが自動的に処理します。
-    -  label 'Colors'
-      アイコン'i—lucide—swatch—book'
-      content：'Tailwind CSSテーマから原色とニュートラルカラーを選択してください。
-    -  label 'Components'
-      アイコン'i—lucide—box'
-      content 'コンポーネントをカスタマイズするには、`class`/`ui` propsを使用するか、app.config.tsで使用できます。'
+ignore:
+  - collapsible
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  collapsible: false
+  items:
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    - label: 'Colors'
+      icon: 'i-lucide-swatch-book'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
 ### アンマウント
 
-アコーディオンが折りたたまれたときにコンテンツがアンマウントされないようにするには、`unmount-on-hide`プロパティを使用します。デフォルトは`true`です。
+`unmount-on-hide`プロパティを使用して、アコーディオンが折りたたまれたときにコンテンツがアンマウントされないようにします。デフォルトは`true`です。
 
 ::component-code
 ---
-無視
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  -  AccordionItem []
-隠す
-  - クラス
-小道具
-  クラス'px—4'
-  unmountOnHide false
-  アイテム
-    -  label 'アイコン'
-      アイコン'i—lucide—smile'
-      content：'あなたは何もすることはありません。@ nuxt/iconが自動的に処理します。
-    -  label 'Colors'
-      アイコン'i—lucide—swatch—book'
-      content：'Tailwind CSSテーマから原色とニュートラルカラーを選択してください。
-    -  label 'Components'
-      アイコン'i—lucide—box'
-      content '`class`/`ui` propsまたはapp.config.tsでコンポーネントをカスタマイズできます。'
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  unmountOnHide: false
+  items:
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    - label: 'Colors'
+      icon: 'i-lucide-swatch-book'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
@@ -185,141 +185,141 @@ DOMを検査して、各項目のコンテンツがレンダリングされて�
 
 ### 無効
 
-アコーディオンを無効にするには、`disabled`プロパティを使用します。
+`disabled`プロパティを使用してアコーディオンを無効にします。
 
-itemオブジェクトの`disabled`プロパティを使用して、特定の項目を無効にすることもできます。
+itemオブジェクトの`disabled`プロパティを使用して、特定のアイテムを無効にすることもできます。
 
 ::component-code
 ---
-無視
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  -  AccordionItem []
-隠す
-  - クラス
-小道具
-  クラス'px—4'
-  無効true
-  アイテム
-    -  label 'アイコン'
-      アイコン'i—lucide—smile'
-      content：'あなたは何もすることはありません。@ nuxt/iconが自動的に処理します。
-    -  label 'Colors'
-      アイコン'i—lucide—swatch—book'
-      content：'Tailwind CSSテーマから原色とニュートラルカラーを選択してください。
-      無効true
-    -  label 'Components'
-      アイコン'i—lucide—box'
-      content 'コンポーネントをカスタマイズするには、`class`/`ui` propsまたはapp.config.tsを使用します。'
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  disabled: true
+  items:
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    - label: 'Colors'
+      icon: 'i-lucide-swatch-book'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+      disabled: true
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
-### トレーリングアイコン
+### Trailingアイコン
 
-`trailing-icon`プロパティを使用して、各アイテムの末尾の[ Icon ](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-chevron-down`です。
+`trailing-icon`プロパティを使用して、各アイテムの末尾の[Icon](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-chevron-down`です。
 
 ::tip
-itemオブジェクトの`trailingIcon`プロパティを使用して、特定のアイテムにアイコンを設定することもできます。
+itemオブジェクトの`trailingIcon`プロパティを使用して、特定のアイテムのアイコンを設定することもできます。
 ::
 
 ::component-code
 ---
-無視
-  - アイテム
-外部
-  - アイテム
-externalTypes
-  -  AccordionItem []
-隠す
-  - クラス
-小道具
-  クラス'px—4'
-  trailingIcon 'i—lucide—arrow—down'
-  アイテム
-    -  label 'アイコン'
-      アイコン'i—lucide—smile'
-      content：'あなたは何もすることはありません。@ nuxt/iconが自動的に処理します。
-      trailingIcon 'i—lucide'
-    -  label 'Colors'
-      アイコン'i—lucide—swatch—book'
-      content：'Tailwind CSSテーマから原色とニュートラルカラーを選択してください。
-    -  label 'コンポーネント'
-      アイコン'i—lucide—box'
-      content 'コンポーネントをカスタマイズするには、`class`/`ui` propsまたはapp.config.tsを使用します。'
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  trailingIcon: 'i-lucide-arrow-down'
+  items:
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+      trailingIcon: 'i-lucide-plus'
+    - label: 'Colors'
+      icon: 'i-lucide-swatch-book'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.chevronDown`キーの下の`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`app.config.ts`の`ui.icons.chevronDown`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.chevronDown`キーの下の`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`vite.config.ts`の`ui.icons.chevronDown`キーでグローバルにカスタマイズできます。
 :::
 ::
 
-## 例
+## サンプル
 
-###  Controlアクティブな項目
+### Controlアクティブなアイテム
 
-`default-value` propまたは`v-model`ディレクティブを使用して、アクティブなアイテムを制御できます。`value`が指定されていない場合、デフォルトでは**としてインデックス**になります。
+`default-value`プロパティを使用するか、`v-model`ディレクティブを使用してアイテムの`value`を指定してアクティブなアイテムを制御できます。`value`が指定されない場合、デフォルトではインデックス**が文字列**として指定されます。
 
 ::component-example
 ---
-名前'accordion—model—value example'
-小道具
-  クラス'px—4'
+name: 'accordion-model-value-example'
+props:
+  class: 'px-4'
 ---
 ::
 
 ::tip
-`v-model`または`default-value`が指定されたときにアイテムにマッチするために使用されるキーを変更するには、`value-key` propを使用します。
+`v-model`または`default-value`が指定されたときにアイテムにマッチするキーを変更するには、`value-key`プロパティを使用します。
 ::
 
 ::caution
-`type="multiple"`の場合は、`default-value` propまたは`v-model`ディレクティブに配列を渡すようにしてください。
+`type="multiple"`の場合は、`default-value`プロパティまたは`v-model`ディレクティブに配列を渡してください。
 ::
 
 ### ドラッグアンドドロップで
 
-アコーディオンでドラッグ&ドロップ機能を有効にするには、[`useSortable`](https://vueuse.org/integrations/useSortable/)[`@vueuse/integrations`](https://vueuse.org/integrations/README.html)から構成可能な[[ Sortable.js ](https://sortablejs.github.io/Sortable/)シームレスなドラッグアンドドロップ体験を提供します
+[`@vueuse/integrations`](https://vueuse.org/integrations/README.html)から構成可能な[](https://vueuse.org/integrations/useSortable/)を使用して、アコーディオン上でドラッグ&ドロップ機能を有効にします。この統合は[Sortable.js](https://sortablejs.github.io/Sortable/)をラップし、シームレスなドラッグ&ドロップ体験を提供します。
 
 ::component-example
 ---
-名前'アコーディオンドラッグアンドドロップサンプル'
+name: 'accordion-drag-and-drop-example'
 ---
 ::
 
-### ボディスロット付き
+### ボディスロット付
 
 `#body`スロットを使用して、各アイテムの本体をカスタマイズします。
 
 ::component-example
 ---
-名前'accordion—body slot—example'
-小道具
-  クラス'px—4'
+name: 'accordion-body-slot-example'
+props:
+  class: 'px-4'
 ---
 ::
 
 ::tip
-`#body`スロットにはいくつかの定義済みのスタイルが含まれています。ゼロから始めたい場合は、[`#content` slot ](#with-content-slot)を使用してください。
+`#body`スロットにはいくつかの定義済みのスタイルが含まれています。ゼロから始めたい場合は[`#content` slot](#with-content-slot)を使用してください。
 ::
 
 ### コンテンツスロット付き
 
-`#content`スロットを使用して、各項目の内容をカスタマイズします。
+`#content`スロットを使用して、各アイテムのコンテンツをカスタマイズします。
 
 ::component-example
 ---
-名前'accordion—content—slot—example'
-小道具
-  クラス'px—4'
+name: 'accordion-content-slot-example'
+props:
+  class: 'px-4'
 ---
 ::
 
@@ -334,42 +334,42 @@ externalTypes
 
 ::component-example
 ---
-名前'accordion—custom—slot example'
-小道具
-  クラス'px—4'
+name: 'accordion-custom-slot-example'
+props:
+  class: 'px-4'
 ---
 ::
 
-### マークダウンコンテンツ付き
+###  with markdown content
 
-`@comark/vue`の[ Markdown ](https://comark.dev/rendering/vue)コンポーネントを使用して、アコーディオンアイテムのマークダウンをレンダリングできます。
+`@comark/vue`の[Markdown](https://comark.dev/rendering/vue)コンポーネントを使用して、アコーディオンアイテムのマークダウンをレンダリングできます。
 
 ::component-example
 ---
-崩壊真
-名前'accordion—markdown'
-クラス'px—8'
+collapse: true
+name: 'accordion-markdown-example'
+class: 'px-8'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

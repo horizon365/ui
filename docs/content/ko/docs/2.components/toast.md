@@ -14,185 +14,185 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Toast.vue
 ---
 
-##  사용
+## Usage
 
-[useToast](/docs/composables/use-toast)컴포지블을 사용하여 응용 프로그램에 토스트를 표시합니다.
+응용 프로그램에 토스트를 표시하려면 [useToast](xph03x) 컴포지블을 사용합니다.
 
 ::component-example
 ---
-축소: true
-상품명 : True
-이름: toast-example
+collapse: true
+prettier: true
+name: 'toast-example'
 ---
 ::
 
 ::warning
-앱을 [`App`](/docs/components/app) 구성 요소로 포장해야 합니다. [`Toaster`](https://github.com/nuxt/ui/blob/v4/src/runtime/components/Toaster.vue) 구성 요소는 https://github.com/nuxt/ui/blob/v4/src/runtime/components/Toaster.vue]( 구성 요소로 포장해야 합니다. ]([ 구성 요소로 포장해야 합니다. Reka UI 의 구성요소.
+앱을 Reka UI의 [`ToastProvider`](https://reka-ui.com/docs/components/toast#provider) 구성 요소를 사용하는 [`Toaster`](https://github.com/nuxt/ui/blob/v4/src/runtime/components/Toaster.vue) 구성 요소를 사용하는 [`App`](/docs/components/app) 구성 요소로 래핑해야 합니다.
 ::
 
 ::tip{to="/docs/components/app#props"}
-`App`component`toaster`prop을 확인하여 Toaster를 전역적으로 구성하는 방법을 확인할 수 있습니다.
+`App` 컴포넌트 `toaster` prop을 확인하여 Toaster를 전역적으로 구성하는 방법을 확인할 수 있습니다.
 ::
 
-###  제목
+### 제목
 
-`title` 필드를 `toast.add` 메소드에 전달하여 제목을 표시합니다.
+`title` 필드를 `toast.add` 메서드에 전달하여 제목을 표시합니다.
 
 ::component-example
 ---
-선택 사항:
-  - 이름: 'title'
-    레이블 : "title"
-    기본값: "어! 뭔가 잘못되었습니다."
-이름: 'toast-title-example'
+options:
+  - name: 'title'
+    label: 'title'
+    default: 'Uh oh! Something went wrong.'
+name: 'toast-title-example'
 ---
 ::
 
-###  설명
+### 설명
 
-`description` 필드를 `toast.add` 메소드에 전달하여 설명을 표시합니다.
+`description` 필드를 `toast.add` 메서드에 전달하여 설명을 표시합니다.
 
 ::component-example
 ---
-선택 사항:
-  - 이름: 'title'
-    레이블 : "title"
-    기본값: '어! 뭔가 잘못되었어.'
-  - name: '설명'
-    레이블: "Description"
-    기본값: "요청에 문제가 있습니다."
-이름: 'toast-description-example'
+options:
+  - name: 'title'
+    label: 'title'
+    default: 'Uh oh! Something went wrong.'
+  - name: 'description'
+    label: 'description'
+    default: 'There was a problem with your request.'
+name: 'toast-description-example'
 ---
 ::
 
-###  아이콘
+### Icon
 
-`icon` 필드를 `toast.add` 메소드에 전달하여 [Icon](/docs/components/icon) 를 표시합니다.
+`icon` 필드를 `toast.add` 메서드에 전달하여 [Icon](/docs/components/icon) 를 표시합니다.
 
 ::component-example
 ---
-선택 사항:
-  - 이름: 'icon'
-    레이블: "icon"
-    기본값: 'i-lucide-wifi'
-이름: 'toast-icon-example'
+options:
+  - name: 'icon'
+    label: 'icon'
+    default: 'i-lucide-wifi'
+name: 'toast-icon-example'
 ---
 ::
 
 ### Avatar 이미지
 
-`avatar` 필드를 `toast.add` 메소드에 전달하여 [Avatar](/docs/components/avatar) 를 표시합니다.
+`avatar` 필드를 `toast.add` 메서드에 전달하여 [Avatar](/docs/components/avatar)를 표시합니다.
 
 ::component-example
 ---
-선택 사항:
-  -  이름: 'avatar.src'
-    제목: Avatar
-    레이블: 'avatar.src'
-    기본 값:
+options:
+  - name: 'avatar.src'
+    alias: 'avatar'
+    label: 'avatar.src'
+    default:
       src: 'https://github.com/benjamincanac.png'
-이름: toast-avatar-example
+name: 'toast-avatar-example'
 ---
 ::
 
-###  색상
+### Color 색상
 
-`color` 필드를 `toast.add` 메소드에 전달하여 토스트의 색상을 변경합니다.
+`color` 필드를 `toast.add` 메서드에 전달하여 Toast의 색상을 변경합니다.
 
 ::component-example
 ---
-선택 사항:
-  - 이름: 'color'
-    레이블: "Color"
-    기본 값: 중립
-    항목:
-      -  primary
-      -  secondary
-      -  성공
-      -  info
-      -  경고
-      -  오류
-      -  neutral
-이름: toast-color-example
+options:
+  - name: 'color'
+    label: 'color'
+    default: neutral
+    items:
+      - primary
+      - secondary
+      - success
+      - info
+      - warning
+      - error
+      - neutral
+name: 'toast-color-example'
 ---
 ::
 
-###  닫기
+### Close 닫기
 
-`close` 필드를 전달하여 닫기 [Button](/docs/components/button) (`false` 값 포함)를 사용자 지정하거나 숨깁니다.
+`close` 필드를 전달하여 닫기 [Button](/docs/components/button) (`false` 값 포함)를 사용자 정의하거나 숨깁니다.
 
 ::component-example
 ---
-이름: toast-close-example (toast-close-example)
+name: 'toast-close-example'
 ---
 ::
 
-### 아이콘 닫기
+### Close 아이콘
 
-`closeIcon` 필드를 전달하여 닫기 단추를 사용자 지정합니다.[Icon](/docs/components/icon). 기본값은`i-lucide-x`입니다.
+`closeIcon` 필드를 전달하여 종료 단추 [Iconxph12x/docs/components/icon)를 사용자 정의합니다. 기본값은 `i-lucide-x`입니다.
 
 ::component-example
 ---
-선택 사항:
-  -  이름: 'closeIcon'
-    태그: 'closeIcon'
-    기본값: 'i-lucide-arrow-right'
-이름: toast-close-icon-example
+options:
+  - name: 'closeIcon'
+    label: 'closeIcon'
+    default: 'i-lucide-arrow-right'
+name: 'toast-close-icon-example'
 ---
 ::
 
 ::framework-only
-#nuxt #nuxt
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.close` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.close` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.close` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.close` 키 아래의 `vite.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-###  액션
+### Actions (### 액션)
 
-`actions` 필드를 전달하여 일부 [Button](/docs/components/button)actions를 토스트에 추가합니다.
+`actions` 필드를 전달하여 일부 [Button](/docs/components/button) 액션을 Toast에 추가합니다.
 
 ::component-example
 ---
-선택 사항:
-  - 이름: '설명'
-    레이블: "Description"
-    기본값: "요청에 문제가 있었습니다."
-이름: toast-actions-example (toast-actions-example)
+options:
+  - name: 'description'
+    label: 'description'
+    default: 'There was a problem with your request.'
+name: 'toast-actions-example'
 ---
 ::
 
-###  지속시간
+### Duration (### 기간)
 
-`duration` 필드를 `toast.add` 메소드에 전달하여 토스트가 표시되는 기간(밀리초)을 변경합니다. 기본값은 `5000`입니다.
+`duration` 필드를 `toast.add` 메소드에 전달하여 Toast가 표시되는 기간(밀리초)을 변경합니다. 기본값은 `5000`입니다.
 
 ::tip
-`duration` 필드를 `0`로 설정하여 토스트가 수동으로 닫힐 때까지 열려 있도록 합니다.
+`duration` 필드를 `0`로 설정하여 Toast가 수동으로 닫힐 때까지 열려 있도록 합니다.
 ::
 
 ::component-example
 ---
-선택 사항:
-  - 이름: 'duration'
-    레이블: "duration"
-    기본값: 0
-    항목:
-      -  0
-      -  1000
-      -  3000
-      -  5000
-이름: toast-duration-example
+options:
+  - name: 'duration'
+    label: 'duration'
+    default: 0
+    items:
+      - 0
+      - 1000
+      - 3000
+      - 5000
+name: 'toast-duration-example'
 ---
 ::
 
-###  진행 률
+### 진행 률
 
-`progress` 필드를 전달하여 [Progresss](/docs/components/progressbar(`false` 값 포함)를 사용자 지정하거나 숨깁니다.
+`progress` 필드를 전달하여 [Progress](/docs/components/progress) 막대(`false` 값 포함)를 사용자 정의하거나 숨깁니다.
 
 ::tip
 진행률 표시줄은 기본적으로 토스트 색상을 상속하지만 `progress.color` 필드를 사용하여 재정의할 수 있습니다.
@@ -200,36 +200,36 @@ links:
 
 ::component-example
 ---
-이름 : toast-progress-example
+name: 'toast-progress-example'
 ---
 ::
 
-###  방향
+### 방향 성
 
-`orientation` 필드를 `toast.add` 메소드에 전달하여 토스트의 방향을 변경합니다.
+`orientation` 필드를 `toast.add` 메서드에 전달하여 Toast의 방향을 변경합니다.
 
 ::component-example
 ---
-선택 사항:
-  - 이름: 'orientation'
-    레이블: "orientation"
-    기본값: '수평'
-    프로젝트:
-      -  수평
-      -  수직
-이름: toast-orientation-example
+options:
+  - name: 'orientation'
+    label: 'orientation'
+    default: 'horizontal'
+    items:
+      - horizontal
+      - vertical
+name: 'toast-orientation-example'
 ---
 ::
 
-##  예제
+## 예제
 
 ::note{to="/docs/components/app"}
-Nuxt UI는 **App** 구성 요소를 제공하여 앱을 래핑하여 글로벌 구성을 제공합니다.
+Nuxt UI는 글로벌 구성을 제공하기 위해 앱을 래핑하는 **App** 구성 요소를 제공합니다.Nuxt UI provides an **App** component that wraps your app to provide global configurations.
 ::
 
-### 글로벌 위치 변경
+### 전역 위치 변경
 
-[App](/docs/components/app#props) 구성 요소에서 `toaster.position`prop을 변경하여 토스트의 위치를 변경합니다.
+[App](/docs/components/app#props) 구성 요소에서 `toaster.position` prop을 변경하여 토스트의 위치를 변경합니다.
 
 ```vue [app.vue]
 <script setup lang="ts">
@@ -245,18 +245,18 @@ const toaster = { position: 'bottom-right' }
 
 ::component-example
 ---
-상품명 : True
-이름: toast-example
+prettier: true
+name: 'toast-example'
 ---
 
-# 옵션
-: toaster-position-예제
+#options
+:toaster-position-example
 ::
 
 
-### 글로벌 기간 변경
+### 전역 기간 변경
 
-변경 [App](/docs/components/app#props) 구성 요소에서 toast의 지속 시간을 변경 합니다.
+[App](/docs/components/app#props) 구성 요소에서 `toaster.duration` prop을 변경하여 토스트의 지속 시간을 변경합니다.
 
 ```vue [app.vue]
 <script setup lang="ts">
@@ -272,18 +272,18 @@ const toaster = { duration: 5000 }
 
 ::component-example
 ---
-상품명 : True
-이름: toast-example
+prettier: true
+name: 'toast-example'
 ---
 
-# 옵션
-:toaster-duration-example (toaster-duration-예제)
+#options
+:toaster-duration-example
 ::
 
 
-###  글로벌 변경 max:badge{label="4.1+" class="align-text-top"}
+### 전역 변경 최대:badge{label="4.1+" class="align-text-top"}
 
-[App](/docs/components/app#props) 구성 요소에서 `toaster.max`prop을 변경하여 한 번에 표시되는 최대 토스트 수를 변경합니다.
+[App](/docs/components/app#props) 구성 요소의 `toaster.max` prop을 변경하여 한 번에 표시되는 최대 토스트 수를 변경합니다.
 
 ```vue [app.vue]
 <script setup lang="ts">
@@ -299,18 +299,18 @@ const toaster = { max: 3 }
 
 ::component-example
 ---
-상품명 : True
-이름: toast-example
+prettier: true
+name: 'toast-example'
 ---
 
-# 옵션
-: toaster-max-예제
+#options
+:toaster-max-example
 ::
 
 
 ### 스택 토스트
 
-[App](/docs/components/app#props) 구성요소에서 [Sonner](https://sonner.emilkowal.ski/)에 저장된 토스트를 표시하기 위해 `false`로 설정합니다.
+[App](/docs/components/app#props) 구성 요소에서 `toaster.expand` Prop을 `false`로 설정하여 스택 토스트를 표시합니다([Sonner](https://sonner.emilkowal.ski/)에서 영감을 받음).
 
 ```vue [app.vue]
 <script setup lang="ts">
@@ -330,74 +330,74 @@ const toaster = { expand: true }
 
 ::component-example
 ---
-상품명 : True
-이름: toast-example
+prettier: true
+name: 'toast-example'
 ---
 
-# 옵션
-:toaster-expand-example (toaster-expand-example) : toaster-expand-example (toaster-expand-example)의 발음을 toaster-expand-example [en]
+#options
+:toaster-expand-example
 ::
 
 
 ### 중복 제거된 토스트: badge{label="4.5+" class="align-text-top"}
 
-`toast.add`를 이미 존재하는 `id`로 호출하면 기존 토스트가 중복을 생성하는 대신 펄스를 생성합니다.
+이미 존재하는 `id`를 사용하여 `toast.add`를 호출할 때, 기존 토스트는 중복을 생성하는 대신 펄스를 생성합니다.
 
 ::component-example
 ---
-축소: true
-이름: 'toast-duplicate-example'
+collapse: true
+name: 'toast-duplicate-example'
 ---
 ::
 
-###  콜백 사용
+### With 콜백 기능
 
-토스트가 닫힐 때 (만료 또는 사용자 해고에 의해) 콜백을 실행하려면 `onUpdateOpen` 필드를 전달합니다.
+토스트가 종료될 때(만료 또는 사용자 삭제에 의해) 콜백을 실행하려면 `onUpdateOpen` 필드를 전달합니다.
 
 ::component-example
 ---
-축소: true
-toast-callback-example 이름: toast-callback-example
+collapse: true
+name: 'toast-callback-example'
 ---
 ::
 
-### HTML 컨텐츠 포함
+### HTML 콘텐츠 포함
 
-`title` 또는 `description` 필드에서 [`h()`render function](https://vuejs.org/api/render-function.html#h) 를 사용하여 HTML 요소 또는 Vue 구성 요소를 사용자 정의 스타일로 렌더링합니다.
+`title` 또는 `description` 필드에서 [`h()` render function](https://vuejs.org/api/render-function.html#h)를 사용하여 사용자 정의 스타일을 사용하여 HTML 요소 또는 Vue 구성 요소를 렌더링합니다.
 
 ::component-example
 ---
-축소: true
-이름: 'toast-html-example'
+collapse: true
+name: 'toast-html-example'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### Slots
 
-:컴포넌트 - 슬롯
+:component-slots
 
-###  Emits
+### Emits
 
-:구성요소 - 방사
+:component-emits
 
-###  노출
+### exose 소개
 
 템플릿 참조를 통해 컴포넌트에 액세스하는 경우 다음을 사용할 수 있습니다.
 
-| 이름 Name| 유형 (Type)|
+| 이름 (Name)| 유형 (Type)|
 | ---- | ---- |
 | `height`{lang="ts-type"}| `Ref<number>`{lang="ts-type"}|
 
-##  테마
+## Theme 테마
 
-:구성요소 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

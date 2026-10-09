@@ -3,25 +3,25 @@ title: useScrollShadow 사용법
 description: '스크롤 가능한 요소에 스크롤 그림자 효과를 적용하기 위한 컴포지션.'
 ---
 
-##  사용
+## Usage
 
-자동으로 가져온 `useScrollShadow`컴포지블을 사용하여 스크롤 가능한 요소의 가장자리에 페이드 그림자를 적용하여 스크롤 방향으로 더 많은 컨텐트를 사용할 수 있음을 나타냅니다.
+자동으로 가져온 `useScrollShadow` 컴포지션을 사용하여 스크롤 가능한 요소의 가장자리에 페이드 그림자를 적용하여 스크롤 방향으로 더 많은 내용을 사용할 수 있음을 나타냅니다.
 
 ::component-example
 ---
-이름: "use-scroll-shadow-example"
+name: 'use-scroll-shadow-example'
 ---
 ::
 
-- CSS `mask-image`를 사용하여 요소를 오버레이하는 대신 가장자리에서 콘텐츠를 페이드하므로 모든 배경에서 작동합니다.
--  요소가 오버플로되었는지 자동으로 감지하고 필요할 때만 그림자를 적용합니다.
--  수직 및 수평 방향 모두 지원합니다.
+- CSS `mask-image`를 사용하여 요소를 오버레이하지 않고 가장자리에서 내용을 페이드하므로 모든 배경에서 작동합니다.
+- 자동으로 요소가 오버플로되었는지 감지하고 필요할 때만 그림자를 적용합니다.
+- 수직 및 수평 방향을 모두 지원합니다.Supports both vertical and horizontal orientions.
 
-##  API
+## API
 
 `useScrollShadow(element, options?)`{lang="ts-type"}
 
-###  매개변수
+### 매개 변수
 
 ::field-group
 
@@ -40,19 +40,19 @@ description: '스크롤 가능한 요소에 스크롤 그림자 효과를 적용
         ::
 
         ::field{name="orientation" type="MaybeRefOrGetter<'vertical' | 'horizontal'>" default="'vertical'"}
-        그림자를 적용할 스크롤 방향.
+        그림자를 적용할 스크롤 방향입니다.
         ::
       ::
     ::
   ::
 ::
 
-###  반환
+### return (### return) (0)
 
 ::field-group
 
   ::field{name="style" type="ComputedRef<CSSProperties | undefined>"}
-  스크롤 가능한 요소에 바인딩할 반응형 스타일 오브젝트입니다. `:style` 섀도우가 활성화되면 `maskImage` 를 포함하고 그렇지 않으면 `undefined` 를 포함합니다.
+  `:style`를 사용하여 스크롤 가능한 요소에 바인딩할 반응형 스타일 오브젝트입니다. 그림자가 활성화된 경우 `maskImage`를 포함하고 그렇지 않으면 `undefined`를 포함합니다.
   ::
 
   ::field{name="isOverflowing" type="ComputedRef<boolean>"}
@@ -60,13 +60,13 @@ description: '스크롤 가능한 요소에 스크롤 그림자 효과를 적용
   ::
 
   ::field{name="arrivedState" type="{ top: boolean, bottom: boolean, left: boolean, right: boolean }"}
-  반응형 스크롤 도착 상태 [`useScroll`](https://vueuse.org/core/useScroll/)
+  [`useScroll`](https://vueuse.org/core/useScroll/)의 반응형 스크롤 도착 상태입니다.
   ::
 ::
 
-##  예
+## 예
 
-###  수평
+### 가로
 
 수평으로 스크롤할 수 있는 컨테이너에 `orientation` 옵션을 사용합니다.
 
@@ -84,7 +84,7 @@ const { style } = useScrollShadow(el, { orientation: 'horizontal' })
 </template>
 ```
 
-### 사용자 정의 크기
+### 사용자 지정 크기
 
 `size` 옵션을 사용하여 그림자 크기를 픽셀 단위로 변경합니다.
 

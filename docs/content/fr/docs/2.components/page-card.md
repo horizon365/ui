@@ -8,7 +8,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageCard.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Le composant PageCard offre un moyen flexible d'afficher le contenu d'une carte avec une illustration dans l'emplacement par défaut.
 
@@ -16,240 +16,240 @@ Le composant PageCard offre un moyen flexible d'afficher le contenu d'une carte 
 
 ::u-page-card
 ---
-Titre: Tailwind CSS
-Nuxt UI s'intègre avec le dernier CSS Tailwind, apportant des améliorations significatives.
+title: 'Tailwind CSS'
+description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
 icon: 'i-simple-icons-tailwindcss'
-Catégorie: W-96
+class: 'w-96'
 ---
 
-par: img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
 ::
 
 ::
 
 ::tip
-Utilisez les composants [PageGrid](/docs/components/page-grid),[PageColumns](/docs/components/page-columns) ou [](/docs/components/page-list) pour afficher plusieurs PageCard.
+Utilisez les composants [PageGrid](/docs/components/page-grid), [PageColumns](/docs/components/page-columns) ou [PageList](/docs/components/page-list) pour afficher plusieurs PageCard.
 ::
 
-@@ph014@titre
+### Titre
 
-Utilisez la prop `title` pour définir le titre de la carte.
+Utilisez le prop `title` pour définir le titre de la carte.
 
 ::component-code
 ---
-Caché:
-  @@ph016@classe
-Props:
-  Titre: Tailwind CSS
-  Catégorie: W-96
+hide:
+  - class
+props:
+  title: 'Tailwind CSS'
+  class: 'w-96'
 ---
 ::
 
-@@ph017@@Description
+### Description
 
-Utilisez la prop `description` pour définir la description de la carte.
+Utilisez le prop `description` pour définir la description de la carte.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@classe 19
-Ignorer:
-  @@20@titre
-Props:
-  Titre: Tailwind CSS
-  Nuxt UI s'intègre avec le dernier CSS Tailwind, apportant des améliorations significatives.
-  Catégorie: W-96
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  class: 'w-96'
 ---
 ::
 
-@@21@Icon
+### icône
 
 Utilisez le prop `icon` pour définir l'icône de la carte.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@classe 23
-ignorer:
-  @@24@titre
-  @@ph025@description
-Props:
-  Titre: Tailwind CSS
-  Nuxt UI s'intègre avec le dernier CSS Tailwind, apportant des améliorations significatives.
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
-  Catégorie: W-96
+  class: 'w-96'
 ---
 ::
 
-@26@lien
+### Lien
 
-Vous pouvez passer n'importe quelle propriété du composant [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) comme `to`,`target`,`rel`, etc.
+Vous pouvez passer n'importe quelle propriété du composant [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) telle que `to`, `target`, `rel`, etc.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@classe 35
-Ignorer:
-  @@ph036@titre
-  @@ph037@description
-  @@pH038@icon
-  @@ph039@cible
-Props:
-  Titre: Tailwind CSS
-  Nuxt UI s'intègre avec le dernier CSS Tailwind, apportant des améliorations significatives.
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - target
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
-  à:'https://tailwindcss.com/blog/tailwindcss-v4'
-  Référence:_blank
-  Catégorie: W-96
+  to: 'https://tailwindcss.com/blog/tailwindcss-v4'
+  target: _blank
+  class: 'w-96'
 ---
 ::
 
 ### Variant
 
-Utilisez le prop `variant` pour changer le style de la carte.
+Utilisez le prop `variant` pour modifier le style de la carte.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@classe 42
-Ignorer:
-  @@ph043@titre
-  @@ph044@description
-  @@ph045@icon
-  @@ph046@à
-  @@ph047@cible
-Props:
-  Titre: Tailwind CSS
-  Nuxt UI s'intègre avec le dernier CSS Tailwind, apportant des améliorations significatives.
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - to
+  - target
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
-  à:'https://tailwindcss.com/blog/tailwindcss-v4'
-  Référence:_blank
-  Variété: Soft
-  Catégorie: W-96
+  to: 'https://tailwindcss.com/blog/tailwindcss-v4'
+  target: _blank
+  variant: soft
+  class: 'w-96'
 ---
 ::
 
 ::tip
-Vous pouvez appliquer la classe `light` ou `dark` à l'emplacement `links` lorsque vous utilisez la variante `solid` pour inverser les couleurs.
+Vous pouvez appliquer la classe `light` ou `dark` au slot `links` lorsque vous utilisez la variante `solid` pour inverser les couleurs.
 ::
 
-### Référencement
+### Orientation
 
 Utilisez la prop `orientation` pour changer l'orientation avec l'emplacement par défaut.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@505@titre
-  @@ph056@description
-  @@57@icon
-Props:
-  Titre: Tailwind CSS
-  Nuxt UI s'intègre avec le dernier CSS Tailwind, apportant des améliorations significatives.
+prettier: true
+ignore:
+  - title
+  - description
+  - icon
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
-  Orientation: horizontale
-Slots:
-  Défaut:|
+  orientation: horizontal
+slots:
+  default: |
 
-    @@@ 58 @
+    <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
 ---
 
-par: img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
 ::
 
 ### Reverse
 
-Utilisez la prop `reverse` pour inverser l'orientation de l'emplacement par défaut.
+Utilisez le prop `reverse` pour inverser l'orientation de la fente par défaut.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph062@titre
-  @@ph063@description
-  @@ph064@icon
-Props:
-  Titre: Tailwind CSS
-  Nuxt UI s'intègre avec le dernier CSS Tailwind, apportant des améliorations significatives.
+prettier: true
+ignore:
+  - title
+  - description
+  - icon
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
-  Orientation: horizontale
-  Revers: vrai
-Slots:
-  Défaut:|
+  orientation: horizontal
+  reverse: true
+slots:
+  default: |
 
-    @@
+    <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
 ---
 
-par: img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
 ::
 
-@@ph067@highlight
+### highlight
 
 Utilisez les accessoires `highlight` et `highlight-color` pour afficher une bordure surlignée autour de la carte.
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@ph070@classe
-Ignorer:
-  @@ph071@titre
-  @@ph072@description
-  @@ph073@icon
-  - référence
-Props:
-  Titre: Tailwind CSS
-  Nuxt UI s'intègre avec le dernier CSS Tailwind, apportant des améliorations significatives.
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - orientation
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
-  Orientation: horizontale
-  Highlights: vrai
-  highlightColor: 'primaire'
-Slots:
-  Défaut:|
+  orientation: horizontal
+  highlight: true
+  highlightColor: 'primary'
+slots:
+  default: |
 
-    @@@ 75 @
+    <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
 ---
 
-par: img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
 ::
 
-@777@éclairage
+### Spotlight écrit
 
 Utilisez les accessoires `spotlight` et `spotlight-color` pour afficher un effet de projecteur qui suit le curseur de votre souris et met en évidence les bordures en survol.
 
 ::note
-L'effet de projecteur prendra le dessus sur les effets de survol lors de l'utilisation d'un `to` prop. Il est préférable de l'utiliser avec la variante `outline`.
+L'effet de projecteur prendra le dessus sur les effets de survol lorsque vous utilisez un accessoire `to`. Il est préférable de l'utiliser avec la variante `outline`.
 ::
 
 ::component-code
 ---
-Étiquette: true
-Caché:
-  @@ph082@classe
-ignorer:
-  @@ph083@titre
-  @@ph084@description
-  @@pH085@icon
-  - référencement
-Props:
-  Titre: Tailwind CSS
-  Nuxt UI s'intègre avec le dernier CSS Tailwind, apportant des améliorations significatives.
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - orientation
+props:
+  title: 'Tailwind CSS'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
-  Orientation: horizontale
-  Critique: True
-  spotlightColor: 'primaire'
-Slots:
-  Default:|
+  orientation: horizontal
+  spotlight: true
+  spotlightColor: 'primary'
+slots:
+  default: |
 
-    @@@ 087 @
+    <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
 ---
 
-par: img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
 ::
 
 ::tip
@@ -262,7 +262,7 @@ Vous pouvez également personnaliser la couleur et la taille en utilisant les va
 ```
 ::
 
-@@ph096@exemples
+## Exemples
 
 ### Comme témoignage
 
@@ -270,7 +270,7 @@ Utilisez le composant [User](/docs/components/user) dans l'emplacement `header` 
 
 ::component-example
 ---
-name: 'témoignage-exemple'
+name: 'page-card-testimonial-example'
 ---
 ::
 
@@ -278,20 +278,20 @@ name: 'témoignage-exemple'
 Vous pouvez utiliser le composant `PageColumns` pour afficher plusieurs PageCard dans une disposition à plusieurs colonnes.
 ::
 
-@@P105 @@ référencement
+## API
 
-@106@propriété
+### Props équipement
 
-Composants-props
+:component-props
 
-@@ph107@@Slots
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph108@thème
+## thème
 
-Composant-thème
+:component-theme
 
-@change109 @ changement
+## Changelog
 
-Composant-changelog
+:component-changelog

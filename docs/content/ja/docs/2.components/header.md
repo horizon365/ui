@@ -12,95 +12,95 @@ links:
 Headerコンポーネントは`<header>`要素をレンダリングします。
 
 ::tip{to="/docs/getting-started/theme/css-variables#header"}
-その高さは`--ui-header-height` CSS変数で定義されます。
+高さはCSS変数`--ui-header-height`で定義されます。
 ::
 
 ヘッダーをカスタマイズするには`left`、`default`、`right`スロットを使用し、ヘッダーメニューをカスタマイズするには`body`または`content`スロットを使用します。
 
 ::component-example
 ---
-崩壊真
-きれい真
-名前'header—example'
-クラス'！px—0！pt—0'
-overflowHidden true
-小道具
-  クラス'w—full'
+collapse: true
+prettier: true
+name: 'header-example'
+class: '!px-0 !pt-0'
+overflowHidden: true
+props:
+  class: 'w-full'
 ---
 ::
 
 ::note
-この例では、[ NavigationMenu ](/docs/components/navigation-menu)コンポーネントを使用して、中央のヘッダーリンクをレンダリングします。
+この例では、[NavigationMenu](/docs/components/navigation-menu)コンポーネントを使用して、中央のヘッダリンクをレンダリングします。
 ::
 
-### タイトル
+### Title
 
 `title`プロパティを使用してヘッダーのタイトルを変更します。デフォルトは`Nuxt UI`です。
 
 ::component-code
 ---
-隠す
-  - クラス
-小道具
-  title 'Nuxt UI'
-  クラス'w—full'
-クラス'！px—0！pt—0'
+hide:
+  - class
+props:
+  title: 'Nuxt UI'
+  class: 'w-full'
+class: '!px-0 !pt-0'
 ---
 ::
 
-`title`スロットを使用して、独自のロゴを追加することもできます。
+`title`スロットを使用して独自のロゴを追加することもできます。
 
 ::tip{to="#props"}
-`title` propを追加して、リンクのデフォルトの`aria-label`を置き換える必要があります。
+リンクのデフォルトの`aria-label`を置き換えるために`title`プロパティを追加する必要があります。
 ::
 
 ::component-code
 ---
-きれい真
-overflowHidden true
-隠す
-  - クラス
-小道具
-  クラス'w—full'
-スロット
-  タイトル|
+prettier: true
+overflowHidden: true
+hide:
+  - class
+props:
+  class: 'w-full'
+slots:
+  title: |
 
     <Logo class="h-6 w-auto" />
-クラス'！px—0！pt—0'
+class: '!px-0 !pt-0'
 ---
 
-#タイトル
-logo {class="h-6 w-auto"}
+#title
+:logo{class="h-6 w-auto"}
 ::
 
-### へ
+### To
 
-タイトルのリンクを変更するには、`to`プロパティを使用します。デフォルトは`/`です。
+`to`プロパティを使用してタイトルのリンクを変更します。デフォルトは`/`です。
 
 ::component-code
 ---
-隠す
-  - クラス
-クラス'！px—0！pt—0'
-小道具
-  to '/docs'
-  クラス'w—full'
+hide:
+  - class
+class: '!px-0 !pt-0'
+props:
+  to: '/docs'
+  class: 'w-full'
 ---
 ::
 
-`left`スロットを使用して、リンクを完全にオーバーライドすることもできます。
+`left`スロットを使用してリンクを完全にオーバーライドすることもできます。
 
 ::component-code
 ---
-きれい真
-overflowHidden true
-隠す
-  - クラス
-クラス'！px—0！pt—0'
-小道具
-  クラス'w—full'
-スロット
-  左|
+prettier: true
+overflowHidden: true
+hide:
+  - class
+class: '!px-0 !pt-0'
+props:
+  class: 'w-full'
+slots:
+  left: |
 
     <NuxtLink to="/docs">
       <Logo class="h-6 w-auto" />
@@ -109,97 +109,97 @@ overflowHidden true
 
 #left
 ::nuxt-link{to="/docs"}
-logo {class="h-6 w-auto"}
+:logo{class="h-6 w-auto"}
 ::
 ::
 
-### モード
+### Mode
 
-`mode`プロパティを使用して、ヘッダーメニューのモードを変更します。デフォルトは`modal`です。
+ヘッダーメニューのモードを変更するには、`mode`プロパティを使用します。デフォルトは`modal`です。
 
-`body`スロットを使用してメニュー本体ヘッダーの下を埋め、`content`スロットを使用してメニュー全体を埋めます。
+メニュー本体（ヘッダー下）を埋めるには`body`スロットを使用し、メニュー全体を埋めるには`content`スロットを使用します。
 
 ::tip{to="#props"}
-`menu` propを使用してヘッダーのメニューをカスタマイズできます。選択したモードに応じて適応します。
+`menu`プロパティを使用してヘッダーのメニューをカスタマイズすることができます。選択したモードに応じて適応します。
 ::
 
 ::component-example
 ---
-崩壊真
-iframe
-  高さ300px；
-iframeモバイルtrue
-overflowHidden true
-名前'ヘッダーメニュー—example'
-オプション
-  -  name 'mode'
-    ラベル'mode'
-    デフォルト'引き出し'
-    アイテム
-      - モーダル
-      - スライドオーバー
-      - ドロワー
-小道具
-  クラス'w—full'
+collapse: true
+iframe:
+  height: 300px;
+iframeMobile: true
+overflowHidden: true
+name: 'header-menu-example'
+options:
+  - name: 'mode'
+    label: 'mode'
+    default: 'drawer'
+    items:
+      - modal
+      - slideover
+      - drawer
+props:
+  class: 'w-full'
 ---
 ::
 
-### トグル
+### Toggle
 
 `toggle`プロパティを使用して、モバイルで表示されるトグルボタンをカスタマイズします。
 
-[ Button ](/docs/components/button)コンポーネントから任意のプロパティを渡してカスタマイズできます。
+[Button](/docs/components/button)コンポーネントから任意のプロパティを渡してカスタマイズできます。
 
 ::component-example
 ---
-崩壊真
-iframe
-  高さ300px；
-iframeモバイルtrue
-overflowHidden true
-名前'header—toggle'
-小道具
-  クラス'w—full'
+collapse: true
+iframe:
+  height: 300px;
+iframeMobile: true
+overflowHidden: true
+name: 'header-toggle-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-### トグル側
+### Toggle側
 
 トグルボタンの側面を変更するには、`toggle-side`プロパティを使用します。デフォルトは`right`です。
 
 ::component-example
 ---
-崩壊真
-iframe
-  高さ300px；
-iframeモバイルtrue
-overflowHidden true
-名前'header—toggle—side—example'
-小道具
-  クラス'w—full'
+collapse: true
+iframe:
+  height: 300px;
+iframeMobile: true
+overflowHidden: true
+name: 'header-toggle-side-example'
+props:
+  class: 'w-full'
 ---
 ::
 
 ## 例
 
-### アニメーショントグル付き
+### Withアニメーショントグル
 
-`#toggle`スロットを使用して、デフォルトのトグルボタンを[ Motion Vue ](https://motion.dev/docs/vue/motion-component)を使用してカスタムアニメーションハンバーガーアイコンに置き換えます。
+`#toggle`スロットを使用して、[Motion Vue](https://motion.dev/docs/vue/motion-component)を使用して、デフォルトのトグルボタンをカスタムアニメーションハンバーガーアイコンに置き換えます。
 
 ::component-example
 ---
-崩壊真
-iframe
-  高さ300px；
-iframeモバイルtrue
-overflowHidden true
-名前'header—toggle—animated—example'
-小道具
-  クラス'w—full'
+collapse: true
+iframe:
+  height: 300px;
+iframeMobile: true
+overflowHidden: true
+name: 'header-toggle-animated-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-### 内`app.vue`
+### x`app.vue`内
 
 `app.vue`またはレイアウトでHeaderコンポーネントを使用します。
 
@@ -266,24 +266,24 @@ const items = computed<NavigationMenuItem[]>(() => [{
 </template>
 ```
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

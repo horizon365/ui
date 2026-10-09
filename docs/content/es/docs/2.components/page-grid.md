@@ -8,41 +8,41 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageGrid.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente PageGrid proporciona un diseño de cuadrícula sensible para mostrar los componentes de [PageCard](/docs/components/page-card) o cualquier otro elemento, ajustando automáticamente de 1 a 3 columnas según el tamaño de la pantalla.
-
-::component-example
----
-Nombre: 'page-grid-example'
-Categoría: P-8
----
-::
-
-También se puede utilizar para mostrar una lista de tarjetas en un diseño de estilo bento mediante el uso de `col-span-*` y `row-span-*` clases de utilidad.
+El componente PageGrid proporciona un diseño de cuadrícula sensible para mostrar componentes [PageCard](/docs/components/page-card) o cualquier otro elemento, ajustando automáticamente de 1 a 3 columnas según el tamaño de la pantalla.
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre del archivo: 'page-grid-bento-example'
-Categoría: P-8
+name: 'page-grid-example'
+class: 'p-8'
 ---
 ::
 
-@@pH007
+También se puede utilizar para mostrar una lista de tarjetas en un diseño de estilo bento mediante el uso de clases de utilidad `col-span-*` y `row-span-*`.
 
-@080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+::component-example
+---
+collapse: true
+name: 'page-grid-bento-example'
+class: 'p-8'
+---
+::
 
-Componentes Props
+## API (Edición española)
 
-@000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props (Edición española)
 
-Componentes de slots
+:component-props
 
-@100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots (Edición española)
 
-Componente Tema
+:component-slots
 
-@111@Changelog
+xph019theme (Edición española)
 
-Categoría: component-changelog
+:component-theme
+
+x020xChangelog (Edición española)
+
+:component-changelog

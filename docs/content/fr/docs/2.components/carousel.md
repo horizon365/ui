@@ -15,16 +15,16 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Carousel.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Utilisez le composant Carrousel pour afficher une liste d'éléments dans un carrousel.
 
 ::component-example
 ---
-Collapse: vrai
-dépassement: true
-nom: 'carousel-exemple'
-classe: '! p-0'
+collapse: true
+overflowHidden: true
+name: 'carousel-example'
+class: '!p-0'
 ---
 ::
 
@@ -32,34 +32,34 @@ classe: '! p-0'
 Utilisez votre souris pour faire glisser le carrousel horizontalement sur le bureau.
 ::
 
-@@ph001@@éléments
+### Éléments
 
-Utilisez le `items` prop comme un tableau et rendre chaque élément en utilisant l'emplacement par défaut:
+Utilisez le prop `items` comme un tableau et rendre chaque élément en utilisant l'emplacement par défaut:
 
 ::component-example
 ---
-nom: 'carousel-items-exemple'
-Catégorie: P-8
+name: 'carousel-items-example'
+class: 'p-8'
 ---
 ::
 
 Vous pouvez également passer un tableau d'objets avec les propriétés suivantes:
 
-@@
-@@
+- x`class?: any`xx{lang="ts-type"}
+- x`ui?: { item?: ClassNameValue }`xx{lang="ts-type"}
 
-Vous pouvez contrôler le nombre d'éléments visibles en utilisant les classes d'utilitaires [`basis`](https://tailwindcss.com/docs/flex-basis)/[](https://tailwindcss.com/docs/width) sur les classes d'utilitaires `item`:
+Vous pouvez contrôler le nombre d'éléments visibles en utilisant les classes d'utilitaires [`basis`](https://tailwindcss.com/docs/flex-basis)/[`width`](https://tailwindcss.com/docs/width) sur le `item`:
 
 ::component-example
 ---
-name: 'carousel-items-multiple-exemple'
-classe: 'p-8 px-16'
+name: 'carousel-items-multiple-example'
+class: 'p-8 px-16'
 ---
 ::
 
-### Référencement
+### Définition
 
-Utilisez la prop `orientation` pour modifier l'orientation de la Progress. Defaults à `horizontal`.
+Utilisez la prop `orientation` pour modifier l'orientation de Progress. Defaults à `horizontal`.
 
 ::note
 Utilisez votre souris pour faire glisser le carrousel verticalement sur le bureau.
@@ -67,8 +67,8 @@ Utilisez votre souris pour faire glisser le carrousel verticalement sur le burea
 
 ::component-example
 ---
-name: 'carousel-orientation-exemple'
-Catégorie: P-8
+name: 'carousel-orientation-example'
+class: 'p-8'
 ---
 ::
 
@@ -76,48 +76,48 @@ Catégorie: P-8
 Vous devez spécifier un `height` sur le conteneur en orientation verticale.
 ::
 
-@@24@@Fouilles
+### flèches
 
 Utilisez le prop `arrows` pour afficher les boutons précédent et suivant.
 
 ::component-example
 ---
-nom: 'carousel-flèches-exemple'
-Catégorie: P-8
+name: 'carousel-arrows-example'
+class: 'p-8'
 ---
 ::
 
 ### Prev/Suivant
 
-Utilisez les accessoires `prev` et `next` pour personnaliser les boutons précédent et suivant avec n'importe quel accessoire [Button](/docs/components/button).
+Utilisez les accessoires `prev` et `next` pour personnaliser les boutons précédent et suivant avec n'importe quel accessoire [Button](xph053).
 
 ::component-example
 ---
-nom: 'carousel-prev-next-exemple'
-Catégorie: P-8
+name: 'carousel-prev-next-example'
+class: 'p-8'
 ---
 ::
 
 ### Prev/Icônes suivantes
 
-Utilisez les props `prev-icon` et `next-icon` pour personnaliser les boutons [Icon](/docs/components/icon).
+Utilisez les accessoires `prev-icon` et `next-icon` pour personnaliser les boutons [Icon](xph0666).
 
 ::component-example
 ---
-nom: 'carousel-prev-next-icon-example'
-Catégorie: P-8
+name: 'carousel-prev-next-icon-example'
+class: 'p-8'
 options:
-  - name:'prévIcon'
-    Étiquette:'previcon'
-    par défaut:'i-lucide-chevron-left'
-  - nom:'nextIcon'
-    Étiquette: nextIcon
-    valeur par défaut:'i-lucide-chevron-right'
+  - name: 'prevIcon'
+    label: 'prevIcon'
+    default: 'i-lucide-chevron-left'
+  - name: 'nextIcon'
+    label: 'nextIcon'
+    default: 'i-lucide-chevron-right'
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Vous pouvez personnaliser ces icônes globalement dans votre `app.config.ts` sous la touche `ui.icons.arrowLeft`/`ui.icons.arrowRight`.
 :::
@@ -128,14 +128,14 @@ Vous pouvez personnaliser ces icônes globalement dans votre `vite.config.ts` so
 :::
 ::
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Dots
 
-Utilisez la prop `dots` pour afficher une liste de points à faire défiler vers une diapositive spécifique.
+Utilisez le prop `dots` pour afficher une liste de points à faire défiler vers une diapositive spécifique.
 
 ::component-example
 ---
-nom: 'carousel-dots-exemple'
-classe: 'p-8 pb-12'
+name: 'carousel-dots-example'
+class: 'p-8 pb-12'
 ---
 ::
 
@@ -143,25 +143,25 @@ Le nombre de points est basé sur le nombre de diapositives affichées dans la v
 
 ::component-example
 ---
-name: 'carousel-dots-multiple-exemple'
-classe: 'p-8 px-16 pb-12'
+name: 'carousel-dots-multiple-example'
+class: 'p-8 px-16 pb-12'
 ---
 ::
 
-@@ph052@@Plugins
+## Plugins
 
 Le composant Carousel implémente le plugin officiel [Embla Carousel ](https://www.embla-carousel.com/docs/v8/plugins).
 
-### Autoplay
+### Autoplay électronique
 
 Ce plugin est utilisé pour étendre Embla Carousel avec la fonctionnalité **autoplay**.
 
-Utilisez la prop `autoplay` comme un booléen ou un objet pour configurer le plugin [Autoplay ](https://www.embla-carousel.com/docs/v8/plugins/autoplay).
+Utilisez la prop `autoplay` en tant que booléen ou objet pour configurer le plugin [Autoplay ](https://www.embla-carousel.com/docs/v8/plugins/autoplay).
 
 ::component-example
 ---
-nom: 'carousel-autoplay-exemple'
-classe: 'p-8 px-16 pb-12'
+name: 'carousel-autoplay-example'
+class: 'p-8 px-16 pb-12'
 ---
 ::
 
@@ -173,12 +173,12 @@ Dans cet exemple, nous utilisons la prop `loop` pour un carrousel infini.
 
 Ce plugin est utilisé pour étendre Embla Carousel avec la fonctionnalité **auto scroll**.
 
-Utilisez la prop `auto-scroll` comme un booléen ou un objet pour configurer le plug-in [Auto Scroll ](https://www.embla-carousel.com/docs/v8/plugins/auto-scroll).
+Utilisez la prop `auto-scroll` en tant que booléen ou objet pour configurer le plugin [Auto Scroll ](https://www.embla-carousel.com/docs/v8/plugins/auto-scroll).
 
 ::component-example
 ---
-nom: 'carousel-auto-scroll-exemple'
-classe: 'p-8 px-16 pb-12'
+name: 'carousel-auto-scroll-example'
+class: 'p-8 px-16 pb-12'
 ---
 ::
 
@@ -188,31 +188,31 @@ Dans cet exemple, nous utilisons la prop `loop` pour un carrousel infini.
 
 ### Auto Hauteur
 
-Ce plugin est utilisé pour étendre Embla Carousel avec la fonctionnalité **auto height**. Il modifie la hauteur du conteneur du carrousel pour s'adapter à la hauteur de la diapositive la plus haute en vue.
+Ce plugin est utilisé pour étendre Embla Carousel avec la fonctionnalité **auto height**. Il modifie la hauteur du conteneur de carrousel pour s'adapter à la hauteur de la diapositive la plus haute en vue.
 
-Utilisez la prop `auto-height` comme un booléen ou un objet pour configurer le plugin [Auto Height ](https://www.embla-carousel.com/docs/v8/plugins/auto-height).
+Utilisez la prop `auto-height` en tant que booléen ou objet pour configurer le plugin [Auto Height ](https://www.embla-carousel.com/docs/v8/plugins/auto-height).
 
 ::component-example
 ---
-nom: 'carousel-auto-height-example'
-Classe: 'p-8 pt-16'
+name: 'carousel-auto-height-example'
+class: 'p-8 pt-16'
 ---
 ::
 
 ::note
-Dans cet exemple, nous ajoutons la classe `transition-[height]` sur le conteneur pour animer le changement de hauteur.
+En este ejemplo, agregamos la clase `transition-[height]` en el contenedor para animar el cambio de altura.
 ::
 
-### Noms des classes
+### Clase
 
 Class Names est un plugin utilitaire **class name toggle** pour Embla Carousel qui vous permet d'automatiser la bascule des noms de classe sur votre carrousel.
 
-Utilisez la prop `class-names` comme un booléen ou un objet pour configurer le plugin [Noms de classe ](https://www.embla-carousel.com/docs/v8/plugins/class-names).
+Utilisez la prop `class-names` en tant que booléen ou objet pour configurer le plugin noms de classe ](https://www.embla-carousel.com/docs/v8/plugins/class-names).
 
 ::component-example
 ---
-name: 'carousel-class-noms-exemple'
-Catégorie: P-8
+name: 'carousel-class-names-example'
+class: 'p-8'
 ---
 ::
 
@@ -220,24 +220,24 @@ Catégorie: P-8
 Dans cet exemple, nous ajoutons les classes `transition-opacity [&:not(.is-snapped)]:opacity-10` sur le `item` pour animer le changement d'opacité.
 ::
 
-@@F094@fait
+### Fade
 
 Ce plugin est utilisé pour remplacer la fonctionnalité de défilement Embla Carousel par **fade transitions**.
 
-Utilisez la prop `fade` comme un booléen ou un objet pour configurer le plugin [Fade ](https://www.embla-carousel.com/docs/v8/plugins/fade).
+Utilisez la prop `fade` en tant que booléen ou objet pour configurer le plugin [Fade ](xph159).
 
 ::component-example
 ---
-nom: 'carousel-fade-exemple'
-classe: 'p-8 pb-12'
+name: 'carousel-fade-example'
+class: 'p-8 pb-12'
 ---
 ::
 
-### Gestes de roue
+### Wheel Gestes
 
-Ce plugin est utilisé pour étendre Embla Carousel avec la possibilité de **utiliser la souris/trackpad wheel** pour naviguer dans le carrousel.
+Ce plugin est utilisé pour étendre Embla Carousel avec la possibilité d'utiliser la souris/trackpad wheel** pour naviguer dans le carrousel.
 
-Utilisez la prop `wheel-gestures` comme un booléen ou un objet pour configurer le plugin [Wheel Gestures ](https://www.embla-carousel.com/docs/v8/plugins/wheel-gestures).
+Utilisez la prop `wheel-gestures` en tant que booléen ou objet pour configurer le plugin [Wheel Gestures ](https://www.embla-carousel.com/docs/v8/plugins/wheel-gestures).
 
 ::note
 Utilisez la molette de votre souris pour faire défiler le carrousel.
@@ -245,41 +245,41 @@ Utilisez la molette de votre souris pour faire défiler le carrousel.
 
 ::component-example
 ---
-nom: 'carousel-roue-gestures-exemple'
-classe: 'p-8 px-16'
+name: 'carousel-wheel-gestures-example'
+class: 'p-8 px-16'
 ---
 ::
 
-@@ph110@exemples
+## Exemples
 
-### Avec miniatures
+### Avec vignettes
 
-Vous pouvez utiliser la méthode [`scrollTo`](https://www.embla-carousel.com/docs/v8/api/methods#scrollto) sur [`emblaApi`](#expose) pour afficher les vignettes sous le carrousel qui mènent à une diapositive spécifique.
+Vous pouvez utiliser la méthode [`scrollTo`](https://www.embla-carousel.com/docs/v8/api/methods#scrollto) sur [`emblaApi`xph186#expose) pour afficher les vignettes sous le carrousel qui naviguent vers une diapositive spécifique.
 
 ::component-example
 ---
-nom: 'carousel-miniatures-exemple'
-classe: 'p-8 px-16'
+name: 'carousel-thumbnails-example'
+class: 'p-8 px-16'
 ---
 ::
 
-@@ph122@api
+## API
 
-@@ph123@@props
+### Props équipements
 
-Composants-props
+:component-props
 
-@@ph124@@réseaux sociaux
+### Slots
 
-Composants slots
+:component-slots
 
-@@P125@@émissions
+### Emis
 
-Composants émetteurs
+:component-emits
 
-@@ph126@@exposé
+### Expose à
 
-Vous pouvez accéder à l'instance du composant typé en utilisant [`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref).
+Vous pouvez accéder à l'instance du composant typé à l'aide de [`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref).
 
 ```vue
 <script setup lang="ts">
@@ -295,13 +295,13 @@ Cela vous donnera accès à ce qui suit:
 
 | nom| type|
 | ---- | ---- |
-| @@|@@|
-| @@|`Ref<EmblaCarouselType \| null>`{lang="ts-type"}](https://www.embla-carousel.com/docs/v8/api/methods#typescript)|
+| `emblaRef`x{lang="ts-type"}| `Ref<HTMLElement \| null>`{lang="ts-type"}|
+| `emblaApi`{lang="ts-type"}| [x`Ref<EmblaCarouselType \| null>`x{lang="ts-type"}x](xhttps://www.embla-carousel.com/docs/v8/api/methods#typescriptx)|
 
-@@ph153@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement154
+## Changelog
 
-Composant-changelog
+:component-changelog

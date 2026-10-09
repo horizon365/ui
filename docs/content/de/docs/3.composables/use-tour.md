@@ -3,18 +3,18 @@ title: Benutzt
 description: 'Ein Kompositionsgerät zum Erstellen von geführten Touren, indem ein einzelner Popover über Stufen hinweg neu verankert wird.'
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Verwenden Sie das automatisch importierte `useTour` composable, um eine geführte Tour mit einem einzigen [Popover](/docs/components/popover) zu fahren, dessen Anker sich zwischen den Schritten bewegt. Dabei behalten Sie die volle Kontrolle über den Inhalt und die Navigation.
+Verwenden Sie das automatisch importierte `useTour` composable, um eine geführte Tour mit einem einzelnen [Popover](/docs/components/popover) durchzuführen, dessen Anker sich zwischen den Schritten bewegt. Das composable besitzt den Schrittstatus und löst den `target` jedes Schritts in einen `reference` auf, den Sie an `<UPopover>` binden, während Sie die volle Kontrolle über den Inhalt und die Navigation behalten.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'use-tour-example'(Beispiel für eine Tour)
+collapse: true
+name: 'use-tour-example'
 ---
 ::
 
-Jeder Schritt erfordert ein `target`, an das das Popover ankettet. Es akzeptiert einen CSS-Selektor, ein Element, ein virtuelles Element (alles mit `getBoundingClientRect`) oder einem ref/getter, der eines dieser Felder zurückgibt. Pass `null`, um den Schritt in der Mitte des Ansichtsfensters zu verankern.(`title`,`body`,`side`,...) wird unangetastet durchgereicht und ist über `current` verfügbar.
+Jeder Schritt erfordert ein `target`, an das der Popover ankettet. Es akzeptiert einen CSS-Selektor, ein Element, ein virtuelles Element (alles mit `getBoundingClientRect`) oder einen Verweis/Getter, der eines dieser Elemente zurückgibt. Übergeben Sie `null`, um den Schritt in der Mitte des Viewports zu verankern. Jedes andere Feld in einem Schritt (`title`, `body`, `side`,...) wird unberührt und über `current` verfügbar übergeben.
 
 ```vue
 <script setup lang="ts">
@@ -40,30 +40,30 @@ const tour = useTour([
 </template>
 ```
 
-- Built auf dem reaktiven `reference` prop des Popovers, so dass sich das Popover reibungslos neu positioniert, wenn sich der aktive Schritt ändert.
+- Built auf der reaktiven `reference`-Prop des Popovers, so dass der Popover reibungslos neu positioniert wird, wenn sich der aktive Schritt ändert.
 - Das aktive Ziel wird automatisch in die Ansicht gescrollt, wenn ein Schritt aktiv wird.
-- Da Sie den Inhalt selbst rendern, müssen Sie kein zusätzliches Thema oder Gebietsschema pflegen.
+- Da Sie den Inhalt selbst rendern, müssen Sie kein zusätzliches Thema oder Gebietsschema verwalten.
 
-## api
+## API (englisch)
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+`useTour(steps, options?)`{lang="ts-type"} nicht
 
-### Parameter Bearbeiten
+### Parameters Bearbeiten
 
 ::field-group
 
   ::field{name="steps" type="MaybeRefOrGetter<TourStep[]>" required}
-  Kann ein statisches Array, ein `ref`, oder ein Getter für reaktive Schritte sein.
+  Die Liste der Tour-Schritte. Kann ein statisches Array, ein `ref` oder ein Getter für reaktive Schritte sein
 
     ::collapsible
 
       ::field-group
         ::field{name="target" type="MaybeRefOrGetter<string | ReferenceElement | null | undefined>"}
-        Akzeptiert einen CSS-Selektor (`'#id'`,`'.class'` oder eine nackte ID, die als `#id` aufgelöst wurde), ein Element, ein virtuelles Element oder einen Verweis/Getter, der einen zurückgibt. Verwenden Sie `null`, um den Schritt im Ansichtsfenster zu zentrieren.
+        Akzeptiert einen CSS-Selektor (`'#id'`, `'.class'` oder eine nackte ID, die als `#id` aufgelöst wurde), ein Element, ein virtuelles Element oder einen Verweis/Getter, der eins zurückgibt. Verwenden Sie `null`, um den Schritt im Viewport zu zentrieren
         ::
 
         ::field{name="[key: string]" type="any"}
-        Alle zusätzlichen Felder (`title`,`body`,`side`,...) werden durchgereicht und sind über `current` verfügbar.
+        Alle zusätzlichen Felder (`title`, `body`, `side`,...) werden durchgereicht und sind über `current` verfügbar.
         ::
       ::
     ::
@@ -76,7 +76,7 @@ const tour = useTour([
 
       ::field-group
         ::field{name="initialStep" type="number" default="0"}
-        Der Stufenindex, auf dem die Tour beginnt.
+        Der Stufenindex, mit dem die Tour beginnt.
         ::
 
         ::field{name="loop" type="boolean" default="false"}
@@ -91,7 +91,7 @@ const tour = useTour([
   ::
 ::
 
-@@@@@56@zurück
+### return
 
 ::field-group
 
@@ -104,7 +104,7 @@ const tour = useTour([
   ::
 
   ::field{name="current" type="ComputedRef<TourStep | undefined>"}
-  Das aktuelle Step-Objekt oder `undefined`, wenn keine Steps vorhanden sind.
+  Das aktuelle step-Objekt oder `undefined`, wenn keine steps vorhanden sind.
   ::
 
   ::field{name="reference" type="ComputedRef<ReferenceElement | undefined>"}
@@ -112,7 +112,7 @@ const tour = useTour([
   ::
 
   ::field{name="total" type="ComputedRef<number>"}
-  Gesamtzahl der Schritte.
+  Die Gesamtzahl der Schritte.
   ::
 
   ::field{name="hasNext" type="ComputedRef<boolean>"}
@@ -124,11 +124,11 @@ const tour = useTour([
   ::
 
   ::field{name="start" type="(index?: number) => void"}
-  Öffnen Sie die Tour, optional mit einem bestimmten Index.
+  Öffnen Sie die Tour, optional bei einem bestimmten Index.
   ::
 
   ::field{name="next" type="() => void"}
-  Gehen Sie zum nächsten Schritt. Schleifen oder endet am Ende, abhängig von der `loop`-Option.
+  Gehen Sie zum nächsten Schritt. Schleift oder endet am Ende, abhängig von der `loop`-Option.
   ::
 
   ::field{name="prev" type="() => void"}
@@ -136,7 +136,7 @@ const tour = useTour([
   ::
 
   ::field{name="goTo" type="(index: number) => void"}
-  Springe zu einem bestimmten Schritt und öffne die Tour.
+  Springen Sie zu einem bestimmten Schritt und öffnen Sie die Tour.
   ::
 
   ::field{name="finish" type="() => void"}

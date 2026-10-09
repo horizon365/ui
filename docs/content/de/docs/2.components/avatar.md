@@ -10,160 +10,160 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Avatar.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Der Avatar verwendet die `<NuxtImg>` Komponente, wenn [`@nuxt/image`](https://github.com/nuxt/image) installiert ist, ansonsten fällt er auf `img` zurück.
+Der Avatar verwendet die `<NuxtImg>`-Komponente, wenn [`@nuxt/image`](https://github.com/nuxt/image) installiert ist, ansonsten fällt er auf `img` zurück.
 
 ::component-code
 ---
-Ignoriert:
-  @@008@@src
-Props:
+ignore:
+  - src
+props:
   src: 'https://github.com/benjamincanac.png'
 ---
 ::
 
 ::note
-Sie können jede Eigenschaft aus dem HTML-Element `<img>` übergeben, z. B.`alt`,`loading`, usw.
+Sie können jede Eigenschaft aus dem HTML-Element `<img>` übergeben, z. B. `alt`, `loading` usw.
 ::
 
 ::tip
-Um sich von `@nuxt/image` abzumelden, verwenden Sie die `as` prop: `:as="{ img: 'img' }"`.
+Um `@nuxt/image` zu deaktivieren, verwenden Sie die `as` prop: `:as="{ img: 'img' }"`.
 ::
 
-@@@@@@15@@src
+### src Bearbeiten
 
-Verwenden Sie `src` prop, um die Bild-URL festzulegen.
+Verwenden Sie die `src` prop, um die Bild-URL festzulegen.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph017@@Aufladen
-Props:
+ignore:
+  - loading
+props:
   src: 'https://github.com/benjamincanac.png'
-  Aufladung: Lazy
+  loading: lazy
 ---
 ::
 
-@@@@@@18@18
+### Größe
 
-Verwenden Sie `size` prop, um die Größe des Avatars einzustellen.
+Verwenden Sie die `size`-Prop, um die Größe des Avatars einzustellen.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph020@@src
-  @@ph021@@Aufladen
-Props:
+ignore:
+  - src
+  - loading
+props:
   src: 'https://github.com/benjamincanac.png'
-  Größe: XL
-  Aufladung: Lazy
+  size: xl
+  loading: lazy
 ---
 ::
 
 ::note
-Die Elemente `<img>` und `height` werden automatisch basierend auf der `size` prop.
+Die `<img>`-Elemente `width` und `height` werden automatisch basierend auf der `size`-Prop gesetzt.
 ::
 
-@@ph026@@@Icon-Seite
+### Icon (nicht vorhanden)
 
-Verwenden Sie die `icon` prop, um einen Fallback anzuzeigen [Icon](/docs/components/icon).
+Verwenden Sie die `icon`-Prop, um ein Fallback [Icon](/docs/components/icon) anzuzeigen.
 
 ::component-code
 ---
-Props:
-  Icon: 'I-Lucide-Bild'
-  Größe: MD
+props:
+  icon: 'i-lucide-image'
+  size: md
 ---
 ::
 
-@@ph032@@text @ Übersetzung
+### Text Übersetzung
 
-Verwenden Sie `text` prop, um einen Fallback-Text anzuzeigen.
+Verwenden Sie die `text`-Prop, um einen Fallback-Text anzuzeigen.
 
 ::component-code
 ---
-Props:
-  Text: "+1"
-  Größe: md
+props:
+  text: '+1'
+  size: md
 ---
 ::
 
-@@@@@34@34
+### Alt ist
 
 Wenn kein Symbol oder Text angegeben ist, wird die **initials** der `alt` prop als Fallback verwendet.
 
 ::component-code
 ---
-Props:
-  Suche nach: Benjamin Canac
-  Größe: md
+props:
+  alt: 'Benjamin Canac'
+  size: md
 ---
 ::
 
 ::note
-Das `alt` prop wird als `alt`-Attribut an das `img`-Element übergeben.
+Die `alt`-prop wird als `alt`-Attribut an das `img`-Element übergeben.
 ::
 
-@@ph041@@@ph042@@@ph042@@@ph042@@@@@@ph042@@@@badge@@ph042@@@@badge@@ph042 @
+### Farbe: badgexx075x
 
 Verwenden Sie die `color` prop, um die Farbe des Avatars zu ändern.
 
 ::component-code
 ---
-Props:
-  Farbe: Primary
-  Suche nach: Benjamin Canac
+props:
+  color: primary
+  alt: 'Benjamin Canac'
 ---
 ::
 
-@@ph044@chip@@@chip@@@chip@@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@chip@@chip@chip@@chip@chip@chip@@@chip@chip@@@chip@@@chip@chip@@chip@@chip@@@chip@chip@chip@@chip@chip@@chip@
+### Chip ist
 
-Verwenden Sie die `chip` prop, um einen Chip um den Avatar herum anzuzeigen.
+Verwenden Sie die `chip`-Prop, um einen Chip um den Avatar herum anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@046@src
-  @@ph047@aufladen.de
-  - chip.inset (nicht vorhanden)
-Props:
+prettier: true
+ignore:
+  - src
+  - loading
+  - chip.inset
+props:
   src: 'https://github.com/benjamincanac.png'
-  Aufladung: Lazy
-  Der CHIP:
-    Einschub: true
+  loading: lazy
+  chip:
+    inset: true
 ---
 ::
 
-@@ph049@@Beispiele
+## Beispiele
 
-@@ph050@@mit tooltip
+### With Tooltip Übersetzung
 
-Sie können eine [Tooltip](/docs/components/tooltip) Komponente verwenden, um einen Tooltip anzuzeigen, wenn Sie den Avatar bewegen.
+Sie können eine [Tooltipxph09x/docs/components/tooltip)-Komponente verwenden, um einen Tooltip anzuzeigen, wenn Sie den Avatar bewegen.
 
-: component-beispiel {name="avatar-tooltip-example"}
+:component-example{name="avatar-tooltip-example"}
 
-### Mit Maske
+### With Maske
 
 Sie können eine CSS-Maske verwenden, um einen Avatar mit einer benutzerdefinierten Form anstelle eines einfachen Kreises anzuzeigen.
 
-: component-beispiel {name="avatar-mask-example"}
+:component-example{name="avatar-mask-example"}
 
-@@@@@@58@@bmmwh
+## API Bearbeiten
 
-@@ph059@@gmail.de
+### Props (nicht)
 
-Komponenten-Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes" target="_blank"}
 Diese Komponente unterstützt auch alle nativen `<img>` HTML-Attribute.
 ::
 
-@@ph061@@theme@@theme@@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@theme@@theme@theme@theme@theme@@theme@@theme@@@theme@theme@theme@theme@@@theme@theme@theme@@theme@theme@theme@theme
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph062@@changelog @@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

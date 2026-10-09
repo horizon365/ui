@@ -1,15 +1,16 @@
 ---
-title: ChatMessage
-description: '显示带有图标、头像和操作项的聊天消息。'
+title: 聊天消息
+description: '显示带有图标、头像和操作的聊天消息。'
 category: chat
 links:
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatMessage.vue
 ---
+
 ## 用法
 
-ChatMessage 组件会为 `user` 或 `assistant` 聊天消息渲染一个 `<article>` 元素。
+ChatMessage组件为`user`或`assistant`聊天消息呈现`<article>`元素。
 
 ::code-preview
 
@@ -32,12 +33,12 @@ avatar:
 ::
 
 ::tip{to="/docs/components/chat-messages"}
-使用 `ChatMessages` 组件来显示聊天消息列表。
+使用`ChatMessages`组件显示聊天消息列表。
 ::
 
-### 部件
+### 零件
 
-使用 `parts` 属性，以 AI SDK 格式显示消息内容。
+使用`parts` prop以AI SDK格式显示消息内容。
 
 ::component-code
 ---
@@ -57,12 +58,12 @@ props:
 ::
 
 ::note
-`parts` 属性是 AI SDK 的推荐格式。每个部件都有一个 `type`（例如 'text'）和对应内容。ChatMessage 组件还支持已弃用的 `content` 属性，以保持向后兼容。
+`parts` prop是AI SDK的推荐格式。每个部分都有一个`type`（例如“text”）和相应的内容。ChatMessage组件也支持弃用的`content` prop，以实现向后兼容。
 ::
 
-### 侧边
+### Side
 
-使用 `side` 属性将消息显示在左侧或右侧。
+使用`side`属性在左侧或右侧显示消息。
 
 ::component-code
 ---
@@ -83,12 +84,12 @@ props:
 ::
 
 ::note
-当使用 [`ChatMessages`](/docs/components/chat-messages) 组件时，`assistant` 消息的 `side` 属性会设置为 `left`，`user` 消息会设置为 `right`。
+当使用[`ChatMessages`](/docs/components/chat-messages)组件时，`side`属性对于`assistant`消息设置为`left`，对于`user`消息设置为`right`。
 ::
 
-### 变体
+### Variant
 
-使用 `variant` 属性更改消息样式。
+使用`variant`属性更改消息的样式。
 
 ::component-code
 ---
@@ -109,12 +110,12 @@ props:
 ::
 
 ::note
-当使用 [`ChatMessages`](/docs/components/chat-messages) 组件时，`assistant` 消息的 `variant` 属性会设置为 `naked`，`user` 消息会设置为 `soft`。
+当使用[`ChatMessages`](/docs/components/chat-messages)组件时，`variant`属性对于`assistant`消息设置为`naked`，对于`user`消息设置为`soft`。
 ::
 
-### 颜色 :badge{label="4.8+" class="align-text-top"}
+### 颜色：badge{label="4.8+" class="align-text-top"}
 
-使用 `color` 属性更改消息颜色。
+使用`color`属性更改消息的颜色。
 
 ::component-code
 ---
@@ -135,9 +136,9 @@ props:
 ---
 ::
 
-### 图标
+### Icon
 
-使用 `icon` 属性在消息旁边显示一个 [Icon](/docs/components/icon) 组件。
+使用`icon`属性在消息旁边显示[Icon](/docs/components/icon)组件。
 
 ::component-code
 ---
@@ -161,9 +162,9 @@ props:
 ---
 ::
 
-### 头像
+### Avatar
 
-使用 `avatar` 属性在消息旁边显示一个 [Avatar](/docs/components/avatar) 组件。
+使用`avatar`道具在消息旁边显示[Avatar](/docs/components/avatar)组件。
 
 ::component-code
 ---
@@ -190,7 +191,7 @@ props:
 ---
 ::
 
-你还可以使用 `avatar.icon` 属性显示一个图标作为头像。
+你也可以使用`avatar.icon`道具来显示一个图标作为头像。
 
 ::component-code
 ---
@@ -211,9 +212,9 @@ props:
 ---
 ::
 
-### 操作
+### Actions
 
-使用 `actions` 属性在消息下方显示操作，这些操作将在鼠标悬停于消息上时显示。
+使用`actions` prop在消息下方显示操作，当鼠标悬停在消息上方时将显示这些操作。
 
 ::component-code
 ---
@@ -243,23 +244,23 @@ props:
 ## 示例
 
 ::tip{to="/docs/components/chat"}
-查看 **Chat** 概览页面以获取安装说明、服务器设置和使用示例。
+查看**Chat**概述页面以获取安装说明、服务器设置和使用示例。
 ::
 
 ## API
 
-### 属性
+### Props
 
 :component-props
 
-### 插槽
+### Slots
 
 :component-slots
 
-## 主题
+## Theme
 
 :component-theme
 
-## 更新日志
+## Changelog
 
 :component-changelog

@@ -1,5 +1,5 @@
 ---
-title: Zufrieden
+title: zufrieden
 description: 'Ein klebriges Inhaltsverzeichnis mit automatischer Hervorhebung aktiver Ankerlinks.'
 category: content
 framework: nuxt
@@ -10,262 +10,262 @@ links:
 ---
 
 ::warning{to="/docs/getting-started/integrations/content"}
-Diese Komponente ist nur verfügbar, wenn das `@nuxt/content`-Modul installiert ist.
+Diese Komponente ist nur verfügbar, wenn das Modul `@nuxt/content` installiert ist.
 ::
 
-@@ph001@@Nutzung
+## Usage (Verwendung)
 
-Verwenden Sie die `links` prop mit der `page?.body?.toc?.links`{lang="ts-type"}, die Sie beim Abrufen einer Seite erhalten.
+Verwenden Sie die `links`-Prop mit der `page?.body?.toc?.links`{lang="ts-type"}, die Sie beim Abrufen einer Seite erhalten.
 
 ::component-example
 ---
-Name: 'content-toc-example'(Beispiel)
-Props:
-  Klasse: "W-voll"
+name: 'content-toc-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-@@ph005@title
+### Titel
 
-Verwenden Sie die `title` prop, um den Titel des Inhaltsverzeichnisses zu ändern.
+Verwenden Sie die `title`-prop, um den Titel des Inhaltsverzeichnisses zu ändern.
 
 ::component-code{prefix="content"}
 ---
-Schöner: wahr
-Einsturz: wahr
-Hide:
-  @@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@class@class@c
-Ignoriert:
-  @@@008@08@08@08@08@08@08@08@08@08@08@08@08@@08@@008@@008@008@@00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Außen:
-  @@@009@link.de
-Externe Typen:
-  - ContentTocLink []
-Props:
-  Titel: "Auf dieser Seite"
-  Klasse: "W-voll"
-  Linke:
-  - id: Verwendung
-    Tiefe: zwei
-    Text: Benutzung
-    Kinder:
-    @@ph012@@id: Titel
-      Tiefe: 3
-      Text: Überschrift
-    @@ph013@id: Farbe
-      Tiefe: 3
-      Text: Farben
-    - id: Hervorhebung
-      Tiefe: 3
-      Vorschau: Highlight
-    - id:'highlight-color'(Hervorhebung durch die Farbe)
-      Tiefe: 3
-      Text: Farbe hervorheben
-    - id:'Highlight-Variante'
-      Tiefe: 3
-      Text: Hervorhebung Variant
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  title: 'On this page'
+  class: 'w-full'
+  links:
+  - id: usage
+    depth: 2
+    text: Usage
+    children:
+    - id: title
+      depth: 3
+      text: Title
+    - id: color
+      depth: 3
+      text: Color
+    - id: highlight
+      depth: 3
+      text: Highlight
+    - id: 'highlight-color'
+      depth: 3
+      text: Highlight Color
+    - id: 'highlight-variant'
+      depth: 3
+      text: Highlight Variant
 ---
 ::
 
-@@@@@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17@17
+### Farbe
 
-Verwenden Sie die `color` prop, um die Farbe der Links zu ändern.
+Verwenden Sie die `color`-Prop, um die Farbe der Links zu ändern.
 
 ::component-code{prefix="content"}
 ---
-Schöner: wahr
-Einsturz: wahr
-Hide:
-  @@ph019@class
-Ignoriert:
-  @@@@@2019 @ links
-Außen:
-  @@@@@@@21@@links
-Externe Typen:
-  - ContentTocLink [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Farbe: "neutral"
-  Klasse: "W-voll"
-  Linke:
-    - id: Verwendung
-      Tiefe: zwei
-      Text: Benutzung
-      Kinder:
-        @@ph024@id: Überschrift
-          Tiefe: 3
-          Text: Überschrift
-        @@ph025@id: Farbe
-          Tiefe: 3
-          Text: Farben
-        - id: Hervorhebung
-          Tiefe: 3
-          Text: Highlight
-        - id:'highlight-color'(Hervorhebung durch die Farbe)
-          Tiefe: 3
-          Text: Farbe hervorheben
-        - id:'Highlight-Variante'
-          Tiefe: 3
-          Text: Hervorhebung Variant
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  color: 'neutral'
+  class: 'w-full'
+  links:
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
+        - id: highlight
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
 ---
 ::
 
-@@ph029@@highlight@@@@ph029@@@@highlight@@@@@ph029@@@highlight@@@highlight
+### Highlight (Englisch)
 
-Verwenden Sie `highlight` prop, um einen hervorgehobenen Rahmen für das aktive Element anzuzeigen.
+Verwenden Sie die `highlight`-Stütze, um einen hervorgehobenen Rahmen für das aktive Element anzuzeigen.
 
 ::component-code{prefix="content"}
 ---
-Schöner: wahr
-Einsturz: wahr
-Hide:
-  @@31@Klasse
-Ignoriert:
-  @@@@@@@32@@links
-Außen:
-  @@@@@@@333 @ Links
-Externe Typen:
-  @@ph034@contenttoclink [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Highlight: Wahr
-  Klasse: "W-voll"
-  Linke:
-    - id: Verwendung
-      Tiefe: 2
-      Text: Benutzung
-      Kinder:
-        @@ph036@@id: Titel
-          Tiefe: 3
-          Text: Titel
-        @@ph037@id: Farbe
-          Tiefe: 3
-          Text: Farbe
-        - id: Hervorhebung
-          Tiefe: 3
-          Text: Highlight
-        - id:'highlight-color'(Hervorhebung durch die Farbe)
-          Tiefe: 3
-          Text: Farbe hervorheben
-        - id:'Highlight-Variante'
-          Tiefe: 3
-          Beschreibung: Highlight Variant
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  highlight: true
+  class: 'w-full'
+  links:
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
+        - id: highlight
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
 ---
 ::
 
-### Highlight Farbe
+### Highlight Color (Deutsche Ausgabe)
 
-Verwenden Sie `highlight-color` prop, um die Farbe des Hervorhebens zu ändern.
+Verwenden Sie die `highlight-color`-prop, um die Farbe der Markierung zu ändern. Es wird standardmäßig die `color`-prop verwendet.
 
 ::component-code{prefix="content"}
 ---
-Schöner: wahr
-Einsturz: wahr
-Hide:
-  @@@@@444@Klasse
-Ignoriert:
-  @@@@@45@links
-  @@ph046@@highlight@@@ph046@@@highlight@@@@ph046@@@highlight@@@highlight.de
-Außen:
-  @@@@@@47@@links
-Externe Typen:
-  - ContentTocLink []
-Props:
-  Highlight: Wahr
-  highlightFarbe: 'neutral'
-  Klasse: "W-voll"
-  Links auf:
-    - id: Verwendung
-      Tiefe: zwei
-      Text: Benutzung
-      Kinder:
-        @@ph050@id: Titel
-          Tiefe: 3
-          Text: Titel
-        @@ph051@id: Farbe
-          Tiefe: 3
-          Text: Farbe
-        - id: Hervorhebung
-          Tiefe: 3
-          Text: Highlight
-        - id:'highlight-color'(Hervorhebung durch die Farbe)
-          Tiefe: 3
-          Text: Farbe hervorheben
-        - id:'Highlight-Variante'
-          Tiefe: 3
-          Text: Hervorhebung Variant
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+  - highlight
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  highlight: true
+  highlightColor: 'neutral'
+  class: 'w-full'
+  links:
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
+        - id: highlight
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
 ---
 ::
 
-### Highlight Variante: badge{label="4.6+" class="align-text-top"}
+### Highlight-Variante: badge{label="4.6+" class="align-text-top"}
 
-Verwenden Sie `highlight-variant` prop, um den Stil der Hervorhebung zu ändern. Standardmäßig zu `straight`.
+Verwenden Sie die `highlight-variant`-prop, um den Stil des highlights zu ändern. Standardmäßig auf `straight`.
 
 ::component-code{prefix="content"}
 ---
-Schöner: wahr
-Einsturz: wahr
-Hide:
-  @@599@Klasse
-Ignoriert:
-  @@@@@@60@@links
-  - highlight@@@ph061@@@highlight@@@ph061@@@@highlight@@@highlight.de
-Außen:
-  @@@@@@@@@62@@links
-Externe Personen:
-  - ContentTocLink [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Highlight: Wahr
-  highlightFarbe: 'primär'
-  highlightVariante: 'Schaltung'
-  Klasse: "W-voll"
-  Linke:
-    - id: Verwendung
-      Tiefe: 2
-      Text: Benutzung
-      Kinder:
-        @@ph065@@id: Titel
-          Tiefe: 3
-          Text: Titel
-        - id: Farbe
-          Tiefe: 3
-          Text: Farben
-        - id: Hervorhebung
-          Tiefe: 3
-          Text: Highlight
-        - id:'highlight-color'(Hervorhebung durch die Farbe)
-          Tiefe: 3
-          Text: Farbe hervorheben
-        - id:'Highlight-Variante'
-          Tiefe: 3
-          Text: Hervorhebung Variant
-    - id: Beispiele
-      Tiefe: 2
-      Text: Beispiele
-      Kinder:
-        - id: auf einer Seite
-          Tiefe: 3
-          Text: innerhalb einer Seite
-    @@ph072@@id: api
-      Tiefe: 2
-      Bezeichnung: API
-      Kinder:
-        @@ph073@@id: props (auf Englisch)
-          Tiefe: 3
-          Bezeichnung: Props
-        - id: Plätze
-          Tiefe: 3
-          Übersicht: Slots
-        - id: gibt aus
-          Tiefe: 3
-          Markiert: Emits
-    - id: Thema
-      Tiefe: 2
-      Text: Thema
+prettier: true
+collapse: true
+hide:
+  - class
+ignore:
+  - links
+  - highlight
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
+  highlight: true
+  highlightColor: 'primary'
+  highlightVariant: 'circuit'
+  class: 'w-full'
+  links:
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
+        - id: highlight
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
+    - id: examples
+      depth: 2
+      text: Examples
+      children:
+        - id: within-a-page
+          depth: 3
+          text: Within a Page
+    - id: api
+      depth: 2
+      text: API
+      children:
+        - id: props
+          depth: 3
+          text: Props
+        - id: slots
+          depth: 3
+          text: Slots
+        - id: emits
+          depth: 3
+          text: Emits
+    - id: theme
+      depth: 2
+      text: Theme
 ---
 ::
 
-## Beispiele
+## Examples (Beispiele)
 
-### Innerhalb einer Seite
+### innerhalb einer Seite
 
 Verwenden Sie die ContentToc-Komponente in einer Seite, um das Inhaltsverzeichnis anzuzeigen:
 
@@ -298,24 +298,24 @@ if (!page.value) {
 </template>
 ```
 
-@@107@bpb
+## API
 
-@@@@@@@@@@@@@@@ph108@@props
+### Props Bearbeiten
 
-Komponenten-Props
+:component-props
 
-### Spielautomaten
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-### Emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-@@111@1111@11111@111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111@@@@@@@@@
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-## Changelog @@ Changelog @@ Changelog
+## Changelog (englisch)
 
-: component-changelog {prefix="content"}
+:component-changelog{prefix="content"}

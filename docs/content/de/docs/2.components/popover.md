@@ -16,278 +16,278 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Popover.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Verwenden Sie eine [Button](/docs/components/button) oder eine andere Komponente im Standardsteckplatz des Popovers.
+Verwenden Sie einen [Button](/docs/components/button) oder eine andere Komponente im Standard-Steckplatz des Popovers.
 
-Verwenden Sie dann den `#content`-Slot, um den Inhalt hinzuzufügen, der angezeigt wird, wenn das Popover geöffnet ist.
+Verwenden Sie dann den `#content`-Steckplatz, um den Inhalt hinzuzufügen, der angezeigt wird, wenn das Popover geöffnet ist.
 
 ::component-code
 ---
-Schöner: wahr
-Slots auf:
-  Default:|
+prettier: true
+slots:
+  default: |
 
-    @@@@006 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Inhalt:|
+  content: |
 
-    @@@@007 @
+    <Placeholder class="size-48 m-4 inline-flex" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="öffnen" color="neutral" variant="subtle"}
 
-#Inhalte
-: placeholder{class="size-48 m-4 inline-flex"}
+#content
+:placeholder{class="size-48 m-4 inline-flex"}
 ::
 
-@@ph010@mode.de Bearbeiten
+### Mode ist
 
-Verwenden Sie `mode` prop, um den Modus des Popover. Defaults in `click` zu ändern.
+Verwenden Sie die `mode`-prop, um den Modus des Popover. Defaults auf `click` zu ändern.
 
 ::tip
-Stellen Sie im `hover`-Modus die `enable-touch` prop so ein, dass Benutzer den Popover durch Antippen des Auslösers auf Touch-Geräten umschalten können, oder verwenden Sie den `click`-Modus für Trigger, die angetippt werden sollen.
+Stellen Sie im `hover`-Modus die `enable-touch`-Prop so ein, dass Benutzer den Popover durch Antippen des Auslösers auf Touch-Geräten umschalten können, oder verwenden Sie den `click`-Modus für Trigger, die angetippt werden sollen.
 ::
 
 ::component-code
 ---
-Schöner: wahr
-Items:
-  Mode sein:
-    @@ph016@@klick
-    @@ph017@gmail.de
-Props:
-  Modus: „ Hover "
-  enableTouch: wahr
-Slots auf:
-  Default:|
+prettier: true
+items:
+  mode:
+    - click
+    - hover
+props:
+  mode: 'hover'
+  enableTouch: true
+slots:
+  default: |
 
-    @@ph018
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Inhalt:|
+  content: |
 
-    @@ph019
+    <Placeholder class="size-48 m-4 inline-flex" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="öffnen" color="neutral" variant="subtle"}
 
-#Inhalte
-: placeholder{class="size-48 m-4 inline-flex"}
+#content
+:placeholder{class="size-48 m-4 inline-flex"}
 ::
 
 ::note
-Bei Verwendung des `hover`-Modus wird die Reka-Benutzeroberfläche [`HoverCard`](https://reka-ui.com/docs/components/hover-card) Komponente anstelle der Komponente [`Popover`](https://reka-ui.com/docs/components/popover) verwendet.
+Wenn Sie den `hover`-Modus verwenden, wird anstelle der Komponente [`Popover`](https://reka-ui.com/docs/components/popover) die Reka-Benutzeroberfläche [xph0444x](https://reka-ui.com/docs/components/hover-card) verwendet.
 ::
 
-@@ph033@delay
+### Delay
 
-Wenn Sie den Modus `hover` verwenden, können Sie die Props `open-delay` und `close-delay` verwenden, um die Verzögerung zu steuern, bevor das Popover geöffnet oder geschlossen wird.
+Wenn Sie den `hover`-Modus verwenden, können Sie die `open-delay`-und `close-delay`-Props verwenden, um die Verzögerung zu steuern, bevor der Popover geöffnet oder geschlossen wird.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph037@mode.de
-Props:
-  Modus: „ Hover "
-  Öffnungszeit: 500
-  Geschlossene Zeit: 300
-Die Slots:
-  Default:|
+prettier: true
+ignore:
+  - mode
+props:
+  mode: 'hover'
+  openDelay: 500
+  closeDelay: 300
+slots:
+  default: |
 
-    @@@@@@@@@@@@@@@@@038 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Inhalte:|
+  content: |
 
-    @@@@@@@39 @
+    <Placeholder class="size-48 m-4 inline-flex" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="öffnen" color="neutral" variant="subtle"}
 
-#Inhalte
-: placeholder{class="size-48 m-4 inline-flex"}
+#content
+:placeholder{class="size-48 m-4 inline-flex"}
 ::
 
-@@ph042 @ Inhalt
+### Inhalt
 
-Verwenden Sie `content` prop, um zu steuern, wie der Popover-Inhalt gerendert wird, z. B.`align` oder `side`.
+Verwenden Sie die `content`-Prop, um zu steuern, wie der Popover-Inhalt gerendert wird, z. B. `align` oder `side`.
 
 ::component-code
 ---
-Schöner: wahr
-Items:
+prettier: true
+items:
   content.align:
-    @@@@@@@@@@starts046@@starts046@starts046@starts046@starts046@starts046@starts046@starts046 @ starts046 @ starts046 @ starts046 @ starts046
-    @@ph047@mitte-center
-    @@048@048@048
+    - start
+    - center
+    - end
   content.side:
-    @@ph049@@gmail.de
-    @@500@left
-    @@@@@551@101@101@101@101@101@101@101@101@101@101@101@101@111@1011@1011@111@1011@111@111@1111@1111@111@11111@1111@1111@1111@11111@111111@11111@1@111111@11111@11111@1111111@11111111@11111111@111111111111@1111111111@@@@111111111111111111@@@@@11111111111
-    @@ph052@bottom
-Props:
-  Inhalte:
-    Ausrichtung: Center
-    Seite: Bottom
-    Seitenversatz: 8
-Die Slots:
-  Default:|
+    - right
+    - left
+    - top
+    - bottom
+props:
+  content:
+    align: center
+    side: bottom
+    sideOffset: 8
+slots:
+  default: |
 
-    @@@@@@@53
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Inhalt:|
+  content: |
 
-    @@@@@@54
+    <Placeholder class="size-48 m-4 inline-flex" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="öffnen" color="neutral" variant="subtle"}
 
-#Inhalte
-: placeholder{class="size-48 m-4 inline-flex"}
+#content
+:placeholder{class="size-48 m-4 inline-flex"}
 ::
 
-@@ph057@Pfeiltasten
+### Arrow Bearbeiten
 
-Verwenden Sie die `arrow` prop, um einen Pfeil auf dem Popover anzuzeigen.
+Verwenden Sie die `arrow`-Prop, um einen Pfeil auf dem Popover anzuzeigen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph059@arrow (nicht bekannt)
-Props:
-  Arrow: wahr
-Slots auf:
-  Default:|
+prettier: true
+ignore:
+  - arrow
+props:
+  arrow: true
+slots:
+  default: |
 
-    @@@@@@@@060
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Inhalt:|
+  content: |
 
-    @@061
+    <Placeholder class="size-48 m-4 inline-flex" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="öffnen" color="neutral" variant="subtle"}
 
-#Inhalte
-: placeholder{class="size-48 m-4 inline-flex"}
+#content
+:placeholder{class="size-48 m-4 inline-flex"}
 ::
 
-### Modal
+### Modal ist
 
-Verwenden Sie `modal` prop, um zu steuern, ob der Popover die Interaktion mit externen Inhalten blockiert.
+Verwenden Sie die `modal`-prop, um zu steuern, ob der Popover die Interaktion mit externen Inhalten blockiert.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@@@@@@title
-Props:
-  Modus: wahr
-Die Slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+props:
+  modal: true
+slots:
+  default: |
 
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@068
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-  Inhalt:|
+  content: |
 
-    @@@@@@@@@@@@@@069 @
+    <Placeholder class="size-48 m-4 inline-flex" />
 ---
 
-: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="öffnen" color="neutral" variant="subtle"}
 
-#Inhalte
-: placeholder{class="size-48 m-4 inline-flex"}
+#content
+:placeholder{class="size-48 m-4 inline-flex"}
 ::
 
-### dismissible @ Unzulässig
+### Dismissible (nicht zulässig)
 
-Verwenden Sie `dismissible` prop, um zu steuern, ob der Popover deaktiviert werden kann, wenn Sie außerhalb des Popovers klicken oder escape drücken.
+Verwenden Sie die `dismissible`-Prop, um zu steuern, ob der Popover deaktiviert werden kann, wenn Sie außerhalb des Popovers klicken oder escape drücken.
 
 ::note
-Ein `close:prevent`-Ereignis wird ausgegeben, wenn der Benutzer versucht, es zu schließen.
+Ein `close:prevent`-Ereignis wird ausgelöst, wenn der Benutzer versucht, es zu schließen.
 ::
 
 ::component-example
 ---
-Name: 'Popoor-dismissible-example'(Popoor-dismissible-Beispiel)
+name: 'popover-dismissible-example'
 ---
 ::
 
 ## Beispiele
 
-### Control offener Zustand
+### Control im offenen Zustand
 
-Sie können den offenen Zustand mit der `default-open` prop oder der `v-model:open`-Direktive steuern.
+Sie können den offenen Zustand mit der Direktive `default-open` prop oder der Direktive `v-model:open` steuern.
 
 ::component-example
 ---
-Name: 'Popoor-Open-Beispiel'
+name: 'popover-open-example'
 ---
 ::
 
 ::note
-In diesem Beispiel können Sie das Popover mithilfe von [`defineShortcuts`]() umschalten, indem Sie: kbd{value="O"} drücken.
+In diesem Beispiel können Sie unter Nutzung von [`defineShortcuts`](/docs/composables/define-shortcuts) das Popover umschalten, indem Sie: kbd{value="O"}.
 ::
 
-### Mit der Befehlspalette
+### Mit Befehlspalette
 
-Sie können eine [CommandPalette](/docs/components/command-palette) Komponente innerhalb des Popover-Inhalts verwenden.
+Sie können eine [CommandPalette](/docs/components/command-palette)-Komponente innerhalb des Popover-Inhalts verwenden.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'popoor-command-palette-example'(Popoor-Befehl-Palette-Beispiel)
+collapse: true
+name: 'popover-command-palette-example'
 ---
 ::
 
-@@ph091@@Mit folgendem Cursor
+### Mit folgendem Cursor
 
-Sie können den Popover dazu bringen, dem Cursor zu folgen, wenn Sie mit dem Mauszeiger über ein Element fahren, indem Sie den Befehl [`reference`](https://reka-ui.com/docs/components/tooltip#trigger) prop verwenden:
+Sie können den Popover dazu bringen, dem Cursor zu folgen, wenn Sie mit der Prop [`reference`](https://reka-ui.com/docs/components/tooltip#trigger) über ein Element fahren:
 
 ::component-example
 ---
-name: 'popover-cursor-example'(Popover-Cursor-Beispiel)
+name: 'popover-cursor-example'
 ---
 ::
 
-### Mit Ankerplatz
+### Mit Anchor-Slot
 
-Sie können den `#anchor`-Slot verwenden, um den Popover gegen ein benutzerdefiniertes Element zu positionieren.
+Sie können den `#anchor`-Steckplatz verwenden, um das Popover gegen ein benutzerdefiniertes Element zu positionieren.
 
 ::warning
-Dieser Slot funktioniert nur, wenn `mode` ist.
+Dieser Slot funktioniert nur, wenn `mode` `click` ist.
 ::
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'popoor-anchor-slot-beispiel'
+collapse: true
+name: 'popover-anchor-slot-example'
 ---
 ::
 
-@@101@bpb
+## API Bearbeiten
 
-@@@@@@@@ph102@@props
+### Props (englisch)
 
-Komponenten-Props
+:component-props
 
-### Spielautomaten
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
 ::note
-Die `close` Funktion ist nur verfügbar, wenn `mode` auf `click` gesetzt ist, da Reka UI dies für [`Popover`](https://reka-ui.com/docs/components/popover#close-using-slot-props) aber nicht für [`HoverCard`]().
+Die `close`-Funktion ist nur verfügbar, wenn `mode` auf `click` gesetzt ist, da die Reka-Benutzeroberfläche dies für [`Popover`](https://reka-ui.com/docs/components/popover#close-using-slot-props), nicht jedoch für [`HoverCard`](https://reka-ui.com/docs/components/hover-card) verfügbar macht.
 ::
 
-@@@@@@@@@@@@@@@@Emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-@@@@@@@118@18@118@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@118@18@18@18@118@18@18@18@118@18@18@18@@@18118@@@1818118@@@@1818111118@@@@@@@@181818111111111111118@@@@@@@@@@@@@@@@@@@@@@@@@@18181818181818181181818
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph119@@changelog (auf Englisch)
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

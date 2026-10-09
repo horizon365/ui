@@ -11,47 +11,47 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/User.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-@@ph001@prénom
+### Nom
 
 Utilisez la prop `name` pour afficher un nom pour l'utilisateur.
 
 ::component-code
 ---
-Props:
-  Prénom: John Doe
+props:
+  name: 'John Doe'
 ---
 ::
 
-@@ph003@Description
+### Description
 
-Utilisez la prop `description` pour afficher une description pour l'utilisateur.
+Utilisez le prop `description` pour afficher une description pour l'utilisateur.
 
 ::component-code
 ---
-Props:
-  Prénom: John Doe
-  Description: 'Ingénieur logiciel'
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
 ---
 ::
 
-### Avatar
+### Avatars
 
 Utilisez la prop `avatar` pour afficher un composant [Avatar](/docs/components/avatar).
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph011@prénom
-  @@ph012@description
-Props:
-  Prénom: John Doe
-  Description: 'Ingénieur logiciel'
-  Avatar:
+prettier: true
+ignore:
+  - name
+  - description
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
+  avatar:
     src: 'https://i.pravatar.cc/150?u=john-doe'
-    Étiquette: Lazy
+    loading: lazy
     icon: i-lucide-image
 ---
 ::
@@ -60,47 +60,47 @@ Props:
 
 ::component-props
 ---
-Prénom: Avatar
-Ignorer:
-  @@ph013@size
-  @@ph014 @
+name: Avatar
+ignore:
+  - size
+  - as
 ---
 ::
 
 ::
 
-@@ph015@ph015
+### Chip équipé
 
-Utilisez le prop `chip` pour afficher un composant [Chip](/docs/components/chip).
+Utilisez le prop `chip` pour afficher un composant [Chip](xph043).
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph021@prénom
-  @@ph022@description
+prettier: true
+ignore:
+  - name
+  - description
   - avatar.src
 items:
   chip.color:
-    @@ph024@primaire
-    @@25@secondaire
-    @@26@réussite
-    @@27@info
-    @@28@avertissement
-    @@29@erreur
-    @@ph030@neutre
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
   chip.position:
-    -  haut à gauche
-    -  en haut à droite
-    -  en bas à gauche
-    -  en bas à droite
-Props:
-  Prénom: John Doe
-  Description: 'Ingénieur logiciel'
-  avatar. src: 'https://i.pravatar.cc/150?u=john-doe'
-  Chipé:
-    Couleur: Primaire
-    Position: top-droite
+    - top-left
+    - top-right
+    - bottom-left
+    - bottom-right
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
+  avatar.src: 'https://i.pravatar.cc/150?u=john-doe'
+  chip:
+    color: 'primary'
+    position: top-right
 ---
 ::
 
@@ -108,72 +108,72 @@ Props:
 
 ::component-props
 ---
-Prénom: Chip
-Ignorer:
-  @@ph035
-  @@ph036@size
-  @@ph037@autonome
+name: Chip
+ignore:
+  - as
+  - size
+  - standalone
 ---
 ::
 
 ::
 
-@@ph038@@Size
+### taille
 
-Utilisez la prop `size` pour modifier la taille de l'avatar de l'utilisateur et du texte.
+Utilisez le prop `size` pour modifier la taille de l'avatar de l'utilisateur et du texte.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph040@prénom
-  @@ph041@description
+prettier: true
+ignore:
+  - name
+  - description
   - avatar.src
-  @@pH043@pH043@pH043@pH043@pH043@pH043@pH0443@pH0443@pH0443pH00pH00pH00pH00pH00pH00pH00pH00pH000pH00pH00pH000pH00pH00pH00pH00pH000pH000pH0pH00phéhéhénomèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèèè
-Props:
-  Prénom: John Doe
-  Description: "Ingénieur logiciel"
-  avatar. src: 'https://i.pravatar.cc/150?u=john-doe'
-  Chip: vrai
-  Taille: XL
+  - chip
+props:
+  name: 'John Doe'
+  description: 'Software Engineer'
+  avatar.src: 'https://i.pravatar.cc/150?u=john-doe'
+  chip: true
+  size: xl
 ---
 ::
 
-### Référencement
+### Définition
 
-Utilisez la prop `orientation` pour changer l'orientation. Par défaut à `horizontal`.
+Utilisez la prop `orientation` pour modifier l'orientation. Par défaut à `horizontal`.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
+prettier: true
+ignore:
   - avatar.src
-Props:
-  Orientation: "Vertical"
-  Prénom: John Doe
-  Description: "Ingénieur logiciel"
-  avatar. src: 'https://i.pravatar.cc/150?u=john-doe'
+props:
+  orientation: 'vertical'
+  name: 'John Doe'
+  description: 'Software Engineer'
+  avatar.src: 'https://i.pravatar.cc/150?u=john-doe'
 ---
 ::
 
-@@ph048@lien
+### Link équipé
 
-Vous pouvez passer n'importe quelle propriété du composant [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) comme `to`,`target`,`rel`, etc.
+Vous pouvez passer n'importe quelle propriété du composant [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) telle que `to`, `target`, `rel`, etc.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph057@prénom
-  @@ph058@description
+prettier: true
+ignore:
+  - name
+  - description
   - avatar.src
-  @@ph060@cible
-Props:
-  à:'https://github.com/benjamincanac'
-  cible: _blanc
-  Prénom: Benjamin Canac
-  Description: 'Ingénieur logiciel'
-  avatar. src: 'https://github.com/benjamincanac.png'
+  - target
+props:
+  to: 'https://github.com/benjamincanac'
+  target: '_blank'
+  name: 'Benjamin Canac'
+  description: 'Software Engineer'
+  avatar.src: 'https://github.com/benjamincanac.png'
 ---
 ::
 
@@ -181,20 +181,20 @@ Props:
 Le composant `NuxtLink` héritera de tous les autres attributs que vous passez au composant `User`.
 ::
 
-@@ph063@@api
+## API
 
-@@ph064@@props
+### Props équipement
 
-Composants-props
+:component-props
 
-### série
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph066@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

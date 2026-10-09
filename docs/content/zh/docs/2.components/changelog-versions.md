@@ -8,9 +8,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChangelogVersions.vue
 ---
 
-## 使用情况
+## 用法
 
-ChangelogVersions组件提供了灵活的布局，可使用默认插槽或`versions`属性显示[ChangelogVersion](/docs/components/changelog-version)组件的列表。
+ChangelogVersions组件提供了一个灵活的布局，可以使用默认插槽或`versions`属性显示[ChangelogVersion](/docs/components/changelog-version)组件的列表。
 
 ```vue {2,8}
 <template>
@@ -24,147 +24,147 @@ ChangelogVersions组件提供了灵活的布局，可使用默认插槽或`versi
 </template>
 ```
 
-版本号
+### 版本
 
-使用`versions`属性作为具有[ChangelogVersion](/docs/components/changelog-version#props)组件属性的对象数组。
-
-::component-code
----
-收阖：true
-忽略：
-  版本号
-外部：
-  版本号
-外部类型：
-  - Changelog版本属性[]
-隐藏：
-  班级
-道具：
-  版本：
-    新版本3.17
-      产品说明：“Nuxt 3.17已经发布--对异步数据层进行了重大改造，添加了一个新的内置组件，提供了更好的警告，并提高了性能！”
-      图片：https://nuxt.com/assets/blog/v3.17.png
-      日期：2025年4月27日
-      发送至：“https：//nuxt.com/blog/v3-17”
-      目的：'_blank'
-      UI.容器：“最大值-w-lg”
-    新版本3.16
-      描述：“Nuxt3.16在功能和性能上都有改进！”
-      图片：https://nuxt.com/assets/blog/v3.16.png
-      日期：2025年3月7日
-      发送至：“https：//nuxt.com/blog/v3-16”
-      目的：'_blank'
-      UI.容器：“最大值-w-lg”
-    新版本3.15
-      描述：“Nuxt 3.15已经过时了--Vite 6，更好的HMR和更快的性能！”
-      图片：https://nuxt.com/assets/blog/v3.15.png
-      日期：2024年12月24日
-      发送至：“https：//nuxt.com/blog/v3-15”
-      目的：'_blank'
-      UI.容器：“最大值-w-lg”
-  类别：'w-完整'
----
-::
-
-### 指标
-
-使用`indicator`道具隐藏左侧的指示器栏。默认为`true`。
+使用`versions` prop作为具有[ChangelogVersion](/docs/components/changelog-version#props)组件属性的对象数组。
 
 ::component-code
 ---
-收阖：true
-忽略：
-  版本号
-外部：
-  版本号
-外部类型：
-  - Changelog版本属性[]
-隐藏：
-  班级
-道具：
-  指示器：假
-  版本：
-    新版本3.17
-      产品说明：“Nuxt 3.17已经发布--对异步数据层进行了重大改造，添加了一个新的内置组件，提供了更好的警告，并提高了性能！”
-      图片：https://nuxt.com/assets/blog/v3.17.png
-      日期：2025年4月27日
-      发送至：“https：//nuxt.com/blog/v3-17”
-      目的：'_blank'
-      UI.容器：“最大值-w-lg”
-    新版本3.16
-      描述：“Nuxt3.16在功能和性能上都有改进！”
-      图片：https://nuxt.com/assets/blog/v3.16.png
-      日期：2025年3月7日
-      发送至：“https：//nuxt.com/blog/v3-16”
-      目的：'_blank'
-      UI.容器：“最大值-w-lg”
-    新版本3.15
-      描述：“Nuxt 3.15已经过时了--Vite 6，更好的HMR和更快的性能！”
-      图片：https://nuxt.com/assets/blog/v3.15.png
-      日期：2024年12月24日
-      发送至：“https：//nuxt.com/blog/v3-15”
-      目的：'_blank'
-      UI.容器：“最大值-w-lg”
-  类别：'w-完整'
+collapse: true
+ignore:
+  - versions
+external:
+  - versions
+externalTypes:
+  - ChangelogVersionProps[]
+hide:
+  - class
+props:
+  versions:
+    - title: Nuxt 3.17
+      description: 'Nuxt 3.17 is out - bringing a major reworking of the async data layer, a new built-in component, better warnings, and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.17.png
+      date: 2025-04-27
+      to: 'https://nuxt.com/blog/v3-17'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.16
+      description: 'Nuxt 3.16 is out - packed with features and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.16.png
+      date: 2025-03-07
+      to: 'https://nuxt.com/blog/v3-16'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.15
+      description: 'Nuxt 3.15 is out - with Vite 6, better HMR and faster performance!'
+      image: https://nuxt.com/assets/blog/v3.15.png
+      date: 2024-12-24
+      to: 'https://nuxt.com/blog/v3-15'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+  class: 'w-full'
 ---
 ::
 
-### 指示器移动
+### 指示灯
 
-使用`indicator-motion`道具可自定义或隐藏指示器栏上的运动效果。默认为`true`，`{ damping: 30, restDelta: 0.001 }`[弹簧切换选项](https://motion.dev/docs/vue-transitions#spring)。
+使用`indicator`道具隐藏左边的指示条。将其隐藏到`true`。
 
 ::component-code
 ---
-收阖：true
-忽略：
-  版本号
-外部：
-  版本号
-外部类型：
-  - Changelog版本属性[]
-隐藏：
-  班级
-项目名称：
-  指示灯运动：
-    真的
-    不对
-道具：
-  指示器运动：真
-  版本：
-    新版本3.17
-      产品说明："Nuxt 3.17已经发布--对异步数据层进行了重大改造，添加了一个新的内置组件，提供了更好的警告，并提高了性能!"
-      图片：www.example.com
-      日期：2025年4月27日
-      发送至："https：//nuxt.com/blog/v3-17"
-      目的：'_blank'
-      UI.容器："最大值-w-lg"
-    新版本3.16
-      描述："Nuxt3.16在功能和性能上都有改进!"
-      图片：www.example.com
-      日期：2025年3月7日
-      发送至："https：//nuxt.com/blog/v3-16"
-      目的：'_blank'
-      UI.容器："最大值-w-lg"
-    新版本3.15
-      描述："Nuxt 3.15已经过时了--Vite 6，更好的HMR和更快的性能!"
-      图片：www.example.com
-      日期：2024年12月24日
-      发送至："https：//nuxt.com/blog/v3-15"
-      目的：'_blank'
-      UI.容器："最大值-w-lg"
-  类别：'w-完整'
+collapse: true
+ignore:
+  - versions
+external:
+  - versions
+externalTypes:
+  - ChangelogVersionProps[]
+hide:
+  - class
+props:
+  indicator: false
+  versions:
+    - title: Nuxt 3.17
+      description: 'Nuxt 3.17 is out - bringing a major reworking of the async data layer, a new built-in component, better warnings, and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.17.png
+      date: 2025-04-27
+      to: 'https://nuxt.com/blog/v3-17'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.16
+      description: 'Nuxt 3.16 is out - packed with features and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.16.png
+      date: 2025-03-07
+      to: 'https://nuxt.com/blog/v3-16'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.15
+      description: 'Nuxt 3.15 is out - with Vite 6, better HMR and faster performance!'
+      image: https://nuxt.com/assets/blog/v3.15.png
+      date: 2024-12-24
+      to: 'https://nuxt.com/blog/v3-15'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+  class: 'w-full'
 ---
 ::
 
-示例
+### 指示器运动
+
+使用`indicator-motion`道具自定义或隐藏指示条上的运动效果。使用`{ damping: 30, restDelta: 0.001 }` [弹簧转换选项](https://motion.dev/docs/vue-transitions#spring)将其转换为`true`。
+
+::component-code
+---
+collapse: true
+ignore:
+  - versions
+external:
+  - versions
+externalTypes:
+  - ChangelogVersionProps[]
+hide:
+  - class
+items:
+  indicatorMotion:
+    - true
+    - false
+props:
+  indicatorMotion: true
+  versions:
+    - title: Nuxt 3.17
+      description: 'Nuxt 3.17 is out - bringing a major reworking of the async data layer, a new built-in component, better warnings, and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.17.png
+      date: 2025-04-27
+      to: 'https://nuxt.com/blog/v3-17'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.16
+      description: 'Nuxt 3.16 is out - packed with features and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.16.png
+      date: 2025-03-07
+      to: 'https://nuxt.com/blog/v3-16'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.15
+      description: 'Nuxt 3.15 is out - with Vite 6, better HMR and faster performance!'
+      image: https://nuxt.com/assets/blog/v3.15.png
+      date: 2024-12-24
+      to: 'https://nuxt.com/blog/v3-15'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+  class: 'w-full'
+---
+::
+
+## 示例
 
 ::note
 虽然这些示例使用[Nuxt Content](https://content.nuxt.com)，但这些组件可以与任何内容管理系统集成。
 ::
 
-### 在页面内
+### 页面内
 
-在页面中使用ChangelogVersions组件创建更改日志页面：
+在页面中使用ChangelogVersions组件来创建一个更新日志页面：
 
 ```vue [pages/changelog.vue]{10-17}
 <script setup lang="ts">
@@ -190,31 +190,31 @@ const { data: versions } = await useAsyncData('versions', () => queryCollection(
 ```
 
 ::note
-在此示例中，`versions`是使用`queryCollection`从`@nuxt/content`模块中提取的。
+在本例中，`versions`是使用`queryCollection`从`@nuxt/content`模块中获取的。
 ::
 
 ::tip
-`to`属性在此处被覆盖，因为`@nuxt/content`使用了`path`属性。
+这里`to`属性被覆盖，因为`@nuxt/content`使用`path`属性。
 ::
 
-### 使用粘性指示器
+### 带粘性指示灯
 
-您可以使用`ui`道具和不同的插槽使指示器具有粘性：
+您可以使用`ui`道具和不同的插槽来使指标具有粘性：
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'变更记录版本固定范例'
-类别：'p-8'
-道具：
-  类别：'w-完整'
+prettier: true
+collapse: true
+name: 'changelog-versions-sticky-example'
+class: 'p-8'
+props:
+  class: 'w-full'
 ---
 ::
 
-### 带有滚动容器：徽标{label="4.4+" class="align-text-top"}
+### 带滚动容器：badge{label="4.4+" class="align-text-top"}
 
-将物件传递至`indicator`属性以设定卷动容器。根据预设，指示器会追踪视窗/页面卷动（https：//motion.dev/docs/vue-use-scroll#page-scroll）。
+将对象传递给`indicator` prop以配置滚动容器。默认情况下，指示器跟踪窗口/页面滚动（https：//motion.dev/docs/vue-use-scroll#page-scroll）。
 
 ```vue
 <script setup lang="ts">
@@ -229,21 +229,21 @@ const scrollContainer = ref<HTMLElement>()
 ```
 
 ::warning
-使用自定义`container`时，请确保在`UChangelogVersions`之前装入容器元素。
+使用自定义`container`时，请确保容器元素在`UChangelogVersions`之前装入。
 ::
 
-## 活性成分
+## API
 
-### 道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
 ::tip
-您可以在ChangelogVersions中使用[`ChangelogVersion`](/docs/components/changelog-version#slots)组件的所有插槽，这些插槽会自动转发，因此您可以在使用`versions`属性时自定义各个版本。
+您可以在ChangelogVersions中使用[`ChangelogVersion`](/docs/components/changelog-version#slots)组件的所有插槽，它们会自动转发，因此您可以在使用`versions` prop时自定义各个版本。
 
 ```vue{3-5}
 <template>
@@ -256,10 +256,10 @@ const scrollContainer = ref<HTMLElement>()
 ```
 ::
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

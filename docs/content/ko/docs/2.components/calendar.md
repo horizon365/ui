@@ -14,68 +14,68 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Calendar.vue
 ---
 
-##  사용
+## Usage
 
-`v-model` 지시문을 사용하여 선택한 날짜를 제어합니다.
+`v-model` 지시어를 사용하여 선택한 날짜를 제어합니다.
 
 ::component-code
 ---
-캐스트 :
-  ModelValue: DateValue 데이터값
-무시하기:
-  - modelValue - modelValue 이미지
-외부:
-  - modelValue - modelValue 이미지
-소품 :
-  모델 가치 [2022, 2, 3]
+cast:
+  modelValue: DateValue
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: [2022, 2, 3]
 ---
 ::
 
-상태를 제어할 필요가 없을 때는 `default-value`prop을 사용하여 초기값을 설정합니다.
+상태를 제어할 필요가 없을 때 `default-value` Prop을 사용하여 초기 값을 설정합니다.
 
 ::component-code
 ---
-캐스트 :
-  defaultValue : DateValue 값
-무시하기:
-  - defaultValue - defaultValue
-외부:
-  - defaultValue - defaultValue
-소품 :
-  defaultValue : [2022, 2, 6]
+cast:
+  defaultValue: DateValue
+ignore:
+  - defaultValue
+external:
+  - defaultValue
+props:
+  defaultValue: [2022, 2, 6]
 ---
 ::
 
 ::framework-only
-#nuxt 코드
+#nuxt
 :::note{to="/docs/getting-started/integrations/i18n/nuxt#locale"}
-이 구성 요소는 `@internationalized/date` 패키지를 사용하여 로케일 인식 형식을 지정합니다. 날짜 형식은 App 구성 요소의 `locale`prop에 의해 결정됩니다.
+이 구성 요소는 `@internationalized/date` 패키지를 로케일 인식 서식에 사용합니다. 날짜 형식은 App 구성 요소의 `locale` 소품에 의해 결정됩니다.
 :::
 
-#vue #vue
+#vue
 :::note{to="/docs/getting-started/integrations/i18n/vue#locale"}
-이 구성 요소는 `@internationalized/date` 패키지를 사용하여 로케일 인식 서식을 지정합니다. 날짜 형식은 App 구성 요소의 `locale`prop에 의해 결정됩니다.
+이 구성 요소는 `@internationalized/date` 패키지를 로케일 인식 서식에 사용합니다. 날짜 형식은 App 구성 요소의 `locale` 소품에 의해 결정됩니다.
 :::
 ::
 
-###  유형: badge {label="4.9+" class="align-text-top"}
+### Type : badge{label="4.9+" class="align-text-top"}
 
-`type`prop을 사용하여 달력에서 선택하는 항목을 변경합니다. 기본값은 `date`입니다.
+`type` prop을 사용하여 달력에서 선택하는 항목을 변경합니다. 기본값은 `date`입니다.
 
-`date`를 사용하는 경우 머리글을 클릭하여 일별 보기에서 월 다음 연도 보기로 전환하여 빠른 탐색을 수행한 다음 드릴다운하여 날짜 선택
+`date`를 사용하는 경우 머리글을 클릭하여 날짜 보기에서 월 다음 연도 보기로 전환한 다음 드릴다운하여 날짜를 선택합니다.
 
 ::component-code
 ---
-캐스트 :
-  ModelValue: DateValue 데이터값
-무시하기:
-  -  type
-  - modelValue - modelValue 이미지
-외부:
-  - modelValue - modelValue 이미지
-소품 :
-  유형: 월
-  모델 값 [2022, 2, 1]
+cast:
+  modelValue: DateValue
+ignore:
+  - type
+  - modelValue
+external:
+  - modelValue
+props:
+  type: month
+  modelValue: [2022, 2, 1]
 ---
 ::
 
@@ -83,391 +83,391 @@ links:
 
 ::component-code
 ---
-캐스트 :
-  ModelValue: DateValue 데이터값
-무시하기:
-  -  type
-  - modelValue - modelValue 이미지
-외부:
-  - modelValue - modelValue 이미지
-소품 :
-  유형: 연도
-  [2022년 1월 1일]
+cast:
+  modelValue: DateValue
+ignore:
+  - type
+  - modelValue
+external:
+  - modelValue
+props:
+  type: year
+  modelValue: [2022, 1, 1]
 ---
 ::
 
-###  다중
+### 다중
 
-`multiple`prop을 사용하여 여러 개의 선택을 허용합니다.
+`multiple` Prop을 사용하여 여러 개의 선택을 허용합니다.
 
 ::component-code
 ---
-상품명 : True
-캐스트 :
-  modelValue: DateValue []
-무시하기:
-  -  multiple
-  - modelValue - modelValue 이미지
-외부:
-  - modelValue - modelValue 이미지
-소품 :
-  다중: True
-  [2012년 12월 22일] [2012년 12월 22일] [2012년 12월 22일] [2012년 12월 12일 12시 12분 12분 12시 12분 12시 12분 12시 12분 12분 12시 12분 12분 12시 12분 12분 12시 12분 12분 ]
+prettier: true
+cast:
+  modelValue: DateValue[]
+ignore:
+  - multiple
+  - modelValue
+external:
+  - modelValue
+props:
+  multiple: true
+  modelValue: [[2022, 2, 4], [2022, 2, 6], [2022, 2, 8]]
 ---
 ::
 
-###  범위
+### 범위
 
-`range`prop을 사용하여 날짜 범위를 선택하십시오.
-
-::component-code
----
-상품명 : True
-캐스트 :
-  modelValue: DateRange (날짜 범위)
-무시하기:
-  -  range
-  -  modelValue. start
-  -  modelValue. end
-외부:
-  - modelValue - modelValue 이미지
-소품 :
-  범위: true
-  ModelValue:
-    [2022, 2, 3]
-    [2022, 2, 20]
----
-::
-
-`range`prop은 `type="month"` 및 `type="year"`와 함께 작동하므로 개월 또는 년 범위를 선택할 수 있습니다.
+`range` prop을 사용하여 날짜 범위를 선택합니다.
 
 ::component-code
 ---
-상품명 : True
-캐스트 :
-  modelValue: DateRange (날짜 범위)
-무시하기:
-  -  type
-  -  range
-  -  modelValue. start
-  -  modelValue. end
-외부:
-  - modelValue - modelValue 이미지
-소품 :
-  유형: 월
-  범위: true
+prettier: true
+cast:
+  modelValue: DateRange
+ignore:
+  - range
+  - modelValue.start
+  - modelValue.end
+external:
+  - modelValue
+props:
+  range: true
   modelValue:
-    [2022, 2, 1]
-    [2022, 6, 1]
+    start: [2022, 2, 3]
+    end: [2022, 2, 20]
+---
+::
+
+`range` prop은 `type="month"` 및 `type="year"`와 함께 작동하므로 개월 또는 년 범위를 선택할 수 있습니다.
+
+::component-code
+---
+prettier: true
+cast:
+  modelValue: DateRange
+ignore:
+  - type
+  - range
+  - modelValue.start
+  - modelValue.end
+external:
+  - modelValue
+props:
+  type: month
+  range: true
+  modelValue:
+    start: [2022, 2, 1]
+    end: [2022, 6, 1]
 ---
 ::
 
 ### 개월 수
 
-`numberOfMonths`prop을 사용하여 달력의 월 수를 변경합니다.
+`numberOfMonths` prop을 사용하여 달력의 월 수를 변경합니다.
 
 ::component-code
 ---
-소품 :
-  numberOfMonths: 3 개월
+props:
+  numberOfMonths: 3
 ---
 ::
 
-### 월 관리
+### Month 제어
 
-`month-controls`prop을 사용하여 월 컨트롤을 표시합니다. 기본값은 `true`입니다.
+`month-controls` prop을 사용하여 월 컨트롤을 표시합니다. 기본값은 `true`입니다.
 
 ::component-code
 ---
-소품 :
+props:
   monthControls: false
 ---
 ::
 
-`prev-month` 및 `next-month`props를 사용하여 월 버튼을 재정의합니다.
+`prev-month` 및 `next-month` props를 사용하여 월 버튼을 재정의합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  prevMonth. color
-  - prevMonth.variant - prevMonth.variant
-  -  nextMonth. color
-  -  nextMonth. variant
-소품 :
+prettier: true
+ignore:
+  - prevMonth.color
+  - prevMonth.variant
+  - nextMonth.color
+  - nextMonth.variant
+props:
   prevMonth:
-    색상: 기본
-    변형: 소프트
-  nextmonth :
-    색상: 기본
-    변형: 소프트
+    color: primary
+    variant: soft
+  nextMonth:
+    color: primary
+    variant: soft
 ---
 ::
 
-###  년 관리
+### Year 컨트롤
 
-`year-controls`prop 을 사용하여 연도 컨트롤을 표시합니다. 기본값은 `true`입니다.
+`year-controls` Prop을 사용하여 연도 컨트롤을 표시합니다. 기본값은 `true`입니다.
 
 ::component-code
 ---
-소품 :
-  yearControls : 거짓
+props:
+  yearControls: false
 ---
 ::
 
-`prev-year` 및 `next-year`props를 사용하여 연도 단추를 재정의합니다.
+`prev-year` 및 `next-year` props를 사용하여 연도 단추를 재정의합니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  prevYear. color
-  -  prevYear. variant
-  -  nextYear. color
-  -  nextYear. variant
-소품 :
+prettier: true
+ignore:
+  - prevYear.color
+  - prevYear.variant
+  - nextYear.color
+  - nextYear.variant
+props:
   prevYear:
-    색상: 기본
-    변형: 소프트
-  nextYear :
-    색상: 기본
-    변형: 소프트
+    color: primary
+    variant: soft
+  nextYear:
+    color: primary
+    variant: soft
 ---
 ::
 
-###  컨트롤 보기: badge{label="4.9+" class="align-text-top"}
+### View 컨트롤:badge{label="4.9+" class="align-text-top"}
 
-`view-control`prop을 사용하여 머리글을 일, 월 및 연도 보기 사이로 전환하는 단추로 만듭니다. 기본값은 `true`입니다.
+`view-control` Prop을 사용하여 제목을 일, 월 및 연도 보기 간에 전환하는 단추로 만듭니다. 기본값은 `true`입니다.
 
 ::component-code
 ---
-항목:
+items:
   viewControl:
-    -  true
-    -  false
-소품 :
+    - true
+    - false
+props:
   viewControl: false
 ---
 ::
 
-`view-control`prop을 객체로 설정하여 머리글 버튼을 덮어씁니다.
+`view-control` Prop을 오브젝트로 설정하여 제목 버튼을 덮어씁니다.
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  viewControl. color
-  -  viewControl. variant
-소품 :
+prettier: true
+ignore:
+  - viewControl.color
+  - viewControl.variant
+props:
   viewControl:
-    색상: 기본
-    변형: 소프트
+    color: primary
+    variant: soft
 ---
 ::
 
-### 고정 주
+### 고정된 주
 
-`fixed-weeks`prop을 사용하여 일정을 고정된 주로 표시합니다.
+`fixed-weeks` prop을 사용하여 일정을 고정된 주로 표시합니다.
 
 ::component-code
 ---
-소품 :
-  fixedweeks : 거짓
+props:
+  fixedWeeks: false
 ---
 ::
 
-###  주 번호: badge{label="4.4+" class="align-text-top"}
+### Week 번호 : badge{label="4.4+" class="align-text-top"}
 
-`week-numbers`prop을 사용하여 달력에 주 번호를 표시합니다.
+`week-numbers` prop을 사용하여 달력에 주 번호를 표시합니다.
 
 ::component-code
 ---
-소품 :
-  주번호: true
-  fixedweeks: true : 진실
+props:
+  weekNumbers: true
+  fixedWeeks: true
 ---
 ::
 
-###  색상
+### Color 색상
 
-`color`prop을 사용하여 달력의 색상을 변경합니다.
+`color` prop을 사용하여 달력의 색상을 변경합니다.
 
 ::component-code
 ---
-캐스트 :
-  defaultValue:DateRange : 날짜 범위
-숨기기 (Hide):
-  -  range
-  - defaultValue - defaultValue
-  -  defaultValue. start
-  -  defaultValue. end
-소품 :
-  색상: 중립
-  범위: true
-  defaultValue :
-    [2022, 2, 3]
-    [2022, 2, 20]
+cast:
+  defaultValue: DateRange
+hide:
+  - range
+  - defaultValue
+  - defaultValue.start
+  - defaultValue.end
+props:
+  color: neutral
+  range: true
+  defaultValue:
+    start: [2022, 2, 3]
+    end: [2022, 2, 20]
 ---
 ::
 
-###  변형
+### Variant 파일
 
-`variant`prop 을 사용하여 달력의 변형을 변경합니다.
+`variant` prop을 사용하여 달력의 변형을 변경합니다.
 
 ::component-code
 ---
-캐스트 :
-  defaultValue:DateRange : 날짜 범위
-숨기기 (Hide):
-  -  range
-  - defaultValue - defaultValue
-  -  defaultValue. start
-  -  defaultValue. end
-소품 :
-  변형: 미묘함
-  범위: true
-  defaultValue :
-    [2022, 2, 3]
-    [2022, 2, 20]
+cast:
+  defaultValue: DateRange
+hide:
+  - range
+  - defaultValue
+  - defaultValue.start
+  - defaultValue.end
+props:
+  variant: subtle
+  range: true
+  defaultValue:
+    start: [2022, 2, 3]
+    end: [2022, 2, 20]
 ---
 ::
 
-###  크기
+### Size 크기
 
-`size`prop을 사용하여 달력의 크기를 변경합니다.
+`size` prop을 사용하여 달력 크기를 변경합니다.
 
 ::component-code
 ---
-소품 :
-  크기: xl
+props:
+  size: xl
 ---
 ::
 
-###  비활성 화
+### Disabled 사용 불가
 
-`disabled`prop을 사용하여 일정을 비활성화합니다.
+`disabled` prop을 사용하여 달력을 비활성화합니다.
 
 ::component-code
 ---
-소품 :
-  사용 안 함:true
+props:
+  disabled: true
 ---
 ::
 
-##  예제
+## examples 예제
 
-### 칩 이벤트 포함
+### With Chip 이벤트 포함
 
 [Chip](/docs/components/chip) 구성 요소를 사용하여 특정 날짜에 이벤트를 추가합니다.
 
 ::component-example
 ---
-이름: calendar-events-example
+name: 'calendar-events-example'
 ---
 ::
 
-###  비활성화 날짜
+### 비활성 날짜 포함
 
-`is-date-disabled`prop을 함수와 함께 사용하여 특정 날짜를 비활성화로 표시합니다. `type="month"` 또는 `type="year"` 을 사용할 때는 `is-month-disabled` 또는 `is-year-disabled`prop을 대신 사용하십시오.
+함수와 함께 `is-date-disabled` Prop을 사용하여 특정 날짜를 비활성화 상태로 표시합니다. `type="month"` 또는 `type="year"`를 사용할 때는 `is-month-disabled` 또는 `is-year-disabled` Prop을 대신 사용합니다.
 
 ::component-example
 ---
-이름: calendar-disabled-dates-example
+name: 'calendar-disabled-dates-example'
 ---
 ::
 
 ###  사용할 수 없는 날짜
 
-특정 날짜를 사용할 수 없음으로 표시하려면 `is-date-unavailable`prop을 함수와 함께 사용하십시오. `type="month"` 또는 `type="year"` 를 사용할 때는 `is-month-unavailable` 또는 `is-year-unavailable`prop을 사용하십시오.
+함수와 함께 `is-date-unavailable` Prop을 사용하여 특정 날짜를 사용할 수 없음으로 표시합니다. `type="month"` 또는 `type="year"`를 사용할 때는 `is-month-unavailable` 또는 `is-year-unavailable` Prop을 대신 사용합니다.
 
 ::component-example
 ---
-이름: calendar-unavailable-dates-example
+name: 'calendar-unavailable-dates-example'
 ---
 ::
 
-###  최소/최대 날짜
+### min/max 날짜 포함
 
-`min-value` 및 `max-value`props를 사용하여 날짜를 제한합니다.
+`min-value` 및 `max-value` props를 사용하여 날짜를 제한합니다.
 
 ::component-example
 ---
-name: calendar-min-max-dates-example (calendar-min-max-dates-example) 이름: calendar-min-max-dates-example
+name: 'calendar-min-max-dates-example'
 ---
 ::
 
-###  다른 달력 시스템
+### 다른 달력 시스템 사용
 
 `@internationalized/date`의 다른 캘린더를 사용하여 다른 캘린더 시스템을 구현할 수 있습니다.
 
 ::component-example
 ---
-이름: 'calendar-other-system-example'
+name: 'calendar-other-system-example'
 ---
 ::
 
 ::note{to="https://react-spectrum.adobe.com/internationalized/date/Calendar.html#implementations"}
-사용 가능한 모든 일정은 `@internationalized/date`docs에서 확인할 수 있습니다.
+`@internationalized/date` 문서에서 사용 가능한 모든 캘린더를 확인할 수 있습니다.
 ::
 
-###  외부 컨트롤
+### 외부 컨트롤 포함
 
-`v-model`에 전달된 날짜를 조작하여 외부 제어를 사용하여 일정을 제어할 수 있습니다.
+`v-model`에서 전달된 날짜를 조작하여 외부 컨트롤을 사용하여 달력을 제어할 수 있습니다.
 
 ::component-example
 ---
-name: 'calendar-external-controls-example' 입니다.
+name: 'calendar-external-controls-example'
 ---
 ::
 
-### 오늘의 날짜
+### 오늘 날짜
 
-`@internationalized/date`의 `getLocalTimeZone` 함수를 사용하여 값을 현재 날짜로 설정합니다.
+`@internationalized/date`에서 `today` 함수를 `getLocalTimeZone`와 함께 사용하여 값을 현재 날짜로 설정합니다.
 
 ::component-example
 ---
-이름 : calendar-today-example
+name: 'calendar-today-example'
 ---
 ::
 
-###  날짜 선택기로
+### as 날짜 선택기
 
-[Button](/docs/components/button) 및 [Popher](/docs/components/popover) 구성 요소를 사용하여 날짜 선택기를 만듭니다.
+[Button](/docs/components/button) 및 [Popover](/docs/components/popover) 구성 요소를 사용하여 날짜 선택기를 만듭니다.
 
 ::component-example
 ---
-이름: calendar-date-picker-example
+name: 'calendar-date-picker-example'
 ---
 ::
 
-###  날짜 범위 선택기로
+### 날짜 범위 선택기Name
 
-[Button](/docs/components/button) 및 [Popher](/docs/components/popover) 구성 요소를 사용하여 사전 설정된 범위를 가진 날짜 범위 선택기를 만듭니다.
+[Button](/docs/components/button) 및 [Popover](/docs/components/popover) 구성 요소를 사용하여 사전 설정된 범위를 가진 날짜 범위 선택기를 만듭니다.
 
 ::component-example
 ---
-이름: 'calendar-date-range-picker-example'
+name: 'calendar-date-range-picker-example'
 ---
 ::
 
-##  API
+## API 파일
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### Slots
 
-:컴포넌트 - 슬롯
+:component-slots
 
-###  에미츠
+### Emits 파일
 
-:구성요소 - 방사
+:component-emits
 
-##  테마
+## 테마
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

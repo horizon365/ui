@@ -8,22 +8,22 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/EditorDragHandle.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 El componente EditorDragHandle proporciona la funcionalidad de arrastrar y soltar para reordenar los bloques del editor utilizando el paquete `@tiptap/extension-drag-handle-vue-3`.
 
 ::caution
-Debe usarse dentro de la ranura predeterminada de un componente [Editor](/docs/components/editor) para tener acceso a la instancia del editor.
+Debe utilizarse dentro de la ranura predeterminada de un componente [Editor](/docs/components/editor) para tener acceso a la instancia del editor.
 ::
 
-Se extiende el [Button](/docs/components/button) componente, por lo que puede pasar cualquier propiedad, como `color`,`variant`,`size`, etc
+Extiende el componente [Button](/docs/components/button), por lo que puede pasar cualquier propiedad como `color`, `variant`, `size`, etc.
 
 ::component-example
 ---
-Colapso: Verdad
-Elevado: verdadero
-Nombre: 'editor-drag-handle-example'
-Categoría: P-8
+collapse: true
+elevated: true
+name: 'editor-drag-handle-example'
+class: 'p-8'
 ---
 ::
 
@@ -31,7 +31,7 @@ Categoría: P-8
 Obtenga más información sobre la extensión Drag Handle en la documentación de TipTap.
 ::
 
-@@pH013@Icon
+### Icon
 
 Utilice el prop `icon` para personalizar el icono de la manija de arrastre.
 
@@ -44,20 +44,20 @@ Utilice el prop `icon` para personalizar el icono de la manija de arrastre.
 ```
 
 ::framework-only
-#nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.drag`.
+Puede personalizar este icono globalmente en su `app.config.ts` bajo la tecla `ui.icons.drag`.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.drag`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.drag`.
 :::
 ::
 
-@@26@Opciones
+### opciones
 
-Utilice el prop `options` para personalizar el comportamiento de posicionamiento utilizando [Floating UI options](https://floating-ui.com/docs/computeposition#options).
+Utilice el prop `options` para personalizar el comportamiento de posicionamiento utilizando las opciones de interfaz de usuario flotante ](https://floating-ui.com/docs/computeposition#options).
 
 ::note
 El desplazamiento se calcula automáticamente para centrar la manija para bloques pequeños y alinearla con la parte superior para bloques más altos.
@@ -76,7 +76,7 @@ El desplazamiento se calcula automáticamente para centrar la manija para bloque
 </template>
 ```
 
-@@44@Ejemplos
+## ejemplos
 
 ### Con menú desplegable
 
@@ -86,50 +86,50 @@ Escuche el evento `@node-change` para rastrear el nodo actualmente suspendido y 
 
 ::component-example
 ---
-Elevado: verdadero
-Colapso: Verdad
-Nombre: 'editor-drag-handle-drop-menu-example'
-Categoría: P-8
+elevated: true
+collapse: true
+name: 'editor-drag-handle-dropdown-menu-example'
+class: 'p-8'
 ---
 ::
 
 ::note
-Este ejemplo utiliza la utilidad `mapEditorItems` de `@nuxt/ui/utils/editor` para asignar automáticamente los tipos de manejadores (como `duplicate`,`delete`,`moveUp`, etc.) a sus comandos de editor correspondientes con una administración de estado adecuada.
+Este ejemplo utiliza la utilidad `mapEditorItems` de `@nuxt/ui/utils/editor` para asignar automáticamente los tipos de manejadores (como `duplicate`, `delete`, `moveUp`, etc.) a sus comandos de editor correspondientes con la administración de estado adecuada.
 ::
 
 ### Con menú de sugerencias
 
-Utilice la ranura predeterminada para agregar un [Button](/docs/components/button) junto al controlador de arrastre para abrir el [EditorSuggestionMenu](/docs/components/editor-suggestion-menu).
+Utilice la ranura predeterminada para agregar un [Button](/docs/components/button) junto a la manija de arrastre para abrir el [EditorSuggestionMenu](xph077).
 
-Llame a la función de ranura `onClick` para obtener la posición actual del nodo, luego use `handlers.suggestion?.execute(editor, { pos: node?.pos }).run()`{lang="ts-type"} para insertar nuevos bloques en esa posición.
+Llamar a la función de ranura `onClick` para obtener la posición actual del nodo, a continuación, utilizar `handlers.suggestion?.execute(editor, { pos: node?.pos }).run()`{lang="ts-type"} para insertar nuevos bloques en esa posición.
 
 ::component-example
 ---
-Elevado: verdadero
-Colapso: Verdad
-Nombre: 'editor-drag-handle-suggestion-menu-example'
-Categoría:! p-0
+elevated: true
+collapse: true
+name: 'editor-drag-handle-suggestion-menu-example'
+class: '!p-0'
 ---
 ::
 
-@@pH070@@pH070
+## API
 
-@@701@@Propuestas
+### Accesorios
 
-Componentes Props
+:component-props
 
-@@722@espanol
+### Slots
 
-Componentes de slots
+:component-slots
 
-@@733@@Emisiones
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@@74000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Temas
 
-Componente Tema
+:component-theme
 
-@@750@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

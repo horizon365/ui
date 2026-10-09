@@ -8,32 +8,32 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageColumns.vue
 ---
 
-## 使用情况
+## 用法
 
-PageColumns组件以响应式多列布局显示内容。它可以很好地与[PageCard](/docs/components/page-card)组件或任何其他元素一起使用，从移动的上的单列适应到更大屏幕上的多列。
+PageColumns组件以响应式多列布局显示内容。它与[PageCard](/docs/components/page-card)组件或任何其他元素配合使用，可以从移动的上的单列调整到更大屏幕上的多列。
 
 ::component-example
 ---
-收阖：true
-名称：'页面-列-示例'
-类别：'p-8'
+collapse: true
+name: 'page-columns-example'
+class: 'p-8'
 ---
 ::
 
-## 活性成分
+## API
 
-道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽
+### 老虎机
 
-：组件插槽
+:component-slots
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

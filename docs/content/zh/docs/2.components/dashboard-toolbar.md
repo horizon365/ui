@@ -8,11 +8,11 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardToolbar.vue
 ---
 
-## 使用情况
+## 用法
 
 仪表板工具栏组件用于在[DashboardNavbar](/docs/components/dashboard-navbar)组件下显示工具栏。
 
-请在[DashboardPanel组件的`header`插槽中使用它：](/docs/components/dashboard-panel)
+请在[仪表板面板](/docs/components/dashboard-panel)组件的`header`插槽中使用该工具：
 
 ```vue [pages/index.vue]{9-13}
 <script setup lang="ts">
@@ -36,32 +36,32 @@ definePageMeta({
 
 ::component-example
 ---
-更漂亮：真的
-名称：'仪表板工具栏示例'
-类：“！px-0！pt-0”
-道具：
-  类别：'w-完整'
+prettier: true
+name: 'dashboard-toolbar-example'
+class: '!px-0 !pt-0'
+props:
+  class: 'w-full'
 ---
 ::
 
 ::note
-在这个范例中，我们会使用[NavigationMenu](/docs/components/navigation-menu)元件来转译一些链接。
+在本例中，我们使用[NavigationMenu](/docs/components/navigation-menu)组件来呈现一些链接。
 ::
 
-活性成分
+应用程序接口
 
-道具
+### 道具
 
-：组件-支柱
+:component-props
 
-插槽
+### 插槽
 
-：组件插槽
+:component-slots
 
-主题
+## 主题
 
-：组件主题
+:component-theme
 
-## 变更日志
+## 更改日志
 
-：组件更改日志
+:component-changelog

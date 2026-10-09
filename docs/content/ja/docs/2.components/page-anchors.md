@@ -8,87 +8,87 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageAnchors.vue
 ---
 
-## 使用 法
+## 使用法
 
-PageAnchors コンポーネント を 使用 し て 、 リンク の リスト を 表示 し ます 。
+PageAnchorsコンポーネントを使用して、リンクのリストを表示します。
 
 ::component-code
 ---
-崩壊 真
-きれい 真
-無視
-  - リンク
-外部
-  - リンク
-externalTypes
-  - PageAnchor [ ]
-小道具
-  リンク
-    - label ' ドキュメンテーション '
-      アイコン i-lucide-book-open
-      to ：/docs/getting-started
-    - label ' コンポーネント '
-      アイコン i-lucide-box
-      to ：/docs/components
-    - label ' Figma Kit '
-      アイコン i-simple-icons-figma
-      次 へhttps://go.nuxt.com/figma-ui
-      ターゲット _blank
-    - label ' リリース '
-      アイコン i-simple-icons-github
-      次 へhttps://github.com/nuxt/ui/releases
-      ターゲット _blank
+collapse: true
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageAnchor[]
+props:
+  links:
+    - label: 'Documentation'
+      icon: i-lucide-book-open
+      to: /docs/getting-started
+    - label: 'Components'
+      icon: i-lucide-box
+      to: /docs/components
+    - label: 'Figma Kit'
+      icon: i-simple-icons-figma
+      to: https://go.nuxt.com/figma-ui
+      target: _blank
+    - label: 'Releases'
+      icon: i-simple-icons-github
+      to: https://github.com/nuxt/ui/releases
+      target: _blank
 ---
 ::
 
-### リンク
+### Links
 
-`links`prop を 、 次 の プロ パティ を 持つ オブジェクト の 配列 として 使用 し ます 。
+`links`プロパティを次のプロパティを持つオブジェクトの配列として使用します。
 
 - `label: string`{lang="ts-type"}
 - `icon?: string`{lang="ts-type"}
 - `class?: any`{lang="ts-type"}
 - `ui?: { item?: ClassNameValue, link?: ClassNameValue, linkLabel?: ClassNameValue, linkLabelExternalIcon?: ClassNameValue, linkLeading?: ClassNameValue, linkLeadingIcon?: ClassNameValue }`{lang="ts-type"}
 
-[Link](/docs/components/link#props)コンポーネント から 、`to`、`target`など の プロ パティ を 渡す こと が でき ます 。
+[Link](/docs/components/link#props)コンポーネントから、`to`、`target`などの任意のプロパティを渡すことができます。
 
 ::component-code
 ---
-きれい 真
-無視
-  - リンク
-外部
-  - リンク
-externalTypes
-  - PageAnchor [ ]
-小道具
-  リンク
-    - label ' ドキュメンテーション '
-      アイコン i-lucide-book-open
-      to ：/docs/getting-started
-    - label ' Components '
-      アイコン i-lucide-box
-      to ：/docs/components
-    - label ' Figma Kit '
-      アイコン i-simple-icons-figma
-      次 へhttps://go.nuxt.com/figma-ui
-      ターゲット _blank
-    - label ' リリース '
-      アイコン i-simple-icons-github
-      次 へhttps://github.com/nuxt/ui/releases
-      ターゲット _blank
+prettier: true
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - PageAnchor[]
+props:
+  links:
+    - label: 'Documentation'
+      icon: i-lucide-book-open
+      to: /docs/getting-started
+    - label: 'Components'
+      icon: i-lucide-box
+      to: /docs/components
+    - label: 'Figma Kit'
+      icon: i-simple-icons-figma
+      to: https://go.nuxt.com/figma-ui
+      target: _blank
+    - label: 'Releases'
+      icon: i-simple-icons-github
+      to: https://github.com/nuxt/ui/releases
+      target: _blank
 ---
 ::
 
 ## 例
 
 ::note
-これら の 例 で は[Nuxt Content](https://content.nuxt.com)を 使用 し て い ます が 、 コンポーネント は 任意 の コンテンツ 管理 システム と 統合 する こと が でき ます 。
+これらの例は[Nuxt Content](https://content.nuxt.com)を使用していますが、コンポーネントは任意のコンテンツ管理システムと統合できます。
 ::
 
-### レイアウト 内
+### レイアウト内
 
-[PageAside](/docs/components/page-aside)コンポーネント 内 の PageAnchors コンポーネント を 使用 し て 、 ナビゲーション の 上 に リンク の リスト を 表示 し ます 。
+ナビゲーションの上にリンクのリストを表示するには、[ PageAside](/docs/components/page-aside)コンポーネント内のPageAnchorsコンポーネントを使用します。
 
 ```vue [layouts/docs.vue]{35}
 <script setup lang="ts">
@@ -139,16 +139,16 @@ const links: PageAnchor[] = [{
 
 ### Props
 
-component-props
+:component-props
 
 ### スロット
 
-コンポーネント スロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネント テーマ
+:component-theme
 
 ## Changelog
 
-component-changelog
+:component-changelog

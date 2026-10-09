@@ -9,9 +9,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Badge.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Utilisez le markdown dans l'emplacement par défaut du composant `badge` pour afficher un [Badge](/docs/components/badge) dans votre contenu.
+Utilisez la réduction dans l'emplacement par défaut du composant `badge` pour afficher un [Badge](/docs/components/badge) dans votre contenu.
 
 ::code-preview
 
@@ -29,20 +29,20 @@ Utilisez le markdown dans l'emplacement par défaut du composant `badge` pour af
 
 ::
 
-@@ph013@@api
+## api
 
-@@ph014@@props
+### Props
 
-: composant-props {prose}
+:component-props{prose}
 
-@@ph016@@réglages
+### Slots
 
-: composant {prose}
+:component-slots{prose}
 
-@@ph018@thème
+## Thème
 
-: composant-thème {prose}
+:component-theme{prose}
 
-@changelog @changelog
+## Changelog
 
-: composant-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

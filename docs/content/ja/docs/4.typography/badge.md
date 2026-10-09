@@ -11,15 +11,15 @@ links:
 
 ## 使用法
 
-`badge`コンポーネントのデフォルトスロットでmarkdownを使用して、[ Badge ](/docs/components/badge)をコンテンツに表示します。
+`badge`コンポーネントのデフォルトスロットでmarkdownを使用して、[Badge](/docs/components/badge)をコンテンツに表示します。
 
 ::code-preview
 
 :::badge
-** v4.0.0 **
+**v4.0.0**
 :::
 
-#コード
+#code
 
 ```mdc
 ::badge
@@ -29,20 +29,20 @@ links:
 
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props {prose}
+:component-props{prose}
 
 ### スロット
 
-component—slots {prose}
+:component-slots{prose}
 
-## テーマ
+## Theme
 
-component—theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

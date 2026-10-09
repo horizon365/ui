@@ -8,7 +8,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardToolbar.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 El componente DashboardToolbar se utiliza para mostrar una barra de herramientas bajo el componente [DashboardNavbar](/docs/components/dashboard-navbar).
 
@@ -32,15 +32,15 @@ definePageMeta({
 </template>
 ```
 
-Utilice las ranuras `left`,`default` y `right` para personalizar la barra de herramientas.
+Utilice las ranuras `left`, `default` y `right` para personalizar la barra de herramientas.
 
 ::component-example
 ---
-Categoría: true
-Nombre: 'dashboard-toolbar-ejemplo'
-clase: '! px-0! pt-0'
-Props:
-  Categoría: w-full
+prettier: true
+name: 'dashboard-toolbar-example'
+class: '!px-0 !pt-0'
+props:
+  class: 'w-full'
 ---
 ::
 
@@ -48,20 +48,20 @@ Props:
 En este ejemplo, usamos el componente [NavigationMenu](/docs/components/navigation-menu) para representar algunos enlaces.
 ::
 
-@@pH034
+## API (Edición española)
 
-@@35000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Accesorios
 
-Componentes Props
+:component-props
 
-@@36000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots (Edición española)
 
-Componentes de slots
+:component-slots
 
-@37@@tema
+## Temas
 
-Componente Tema
+:component-theme
 
-@@changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

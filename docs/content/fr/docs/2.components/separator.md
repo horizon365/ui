@@ -14,40 +14,40 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Separator.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Utilisez le composant Separator tel quel pour séparer le contenu.
+Utilisez le composant Séparateur tel quel pour séparer le contenu.
 
 ::component-code
 ---
-Catégorie: P-8
+class: 'p-8'
 ---
 ::
 
-@@ph001@@référencement
+### Définition
 
-Utilisez la prop `orientation` pour changer l'orientation du séparateur. Defaults à `horizontal`.
+Utilisez la prop `orientation` pour changer l'orientation du Séparateur. Defaults à `horizontal`.
 
 ::component-code
 ---
-ignorer:
-  @@ph004@classe
-Catégorie: P-8
-Props:
-  Orientation: verticale
-  Catégorie: H-48
+ignore:
+  - class
+class: 'p-8'
+props:
+  orientation: vertical
+  class: 'h-48'
 ---
 ::
 
-@@ph005@étiquette
+### étiquettes
 
-Utilisez la prop `label` pour afficher une étiquette au milieu du séparateur.
+Utilisez le prop `label` pour afficher une étiquette au milieu du Séparateur.
 
 ::component-code
 ---
-Catégorie: P-8
-Props:
-  Étiquette: Hello World
+class: 'p-8'
+props:
+  label: 'Hello World'
 ---
 ::
 
@@ -57,95 +57,95 @@ Utilisez la prop `position` pour changer la position du contenu du séparateur. 
 
 ::component-code
 ---
-ignorer:
-  @@classe 11
-Catégorie: P-8
-Props:
-  Position: départ
-  Étiquette: Hello World
+ignore:
+  - class
+class: 'p-8'
+props:
+  position: start
+  label: 'Hello World'
 ---
 ::
 
-@@ph012 @ Icon
+### Icône
 
-Utilisez la prop `icon` pour afficher une icône au milieu du séparateur.
+Utilisez le prop `icon` pour afficher une icône au milieu du séparateur.
 
 ::component-code
 ---
-Catégorie: P-8
-Props:
+class: 'p-8'
+props:
   icon: 'i-simple-icons-nuxtdotjs'
 ---
 ::
 
-@14@avatar
+### Avatars
 
 Utilisez le prop `avatar` pour afficher un avatar au milieu du Séparateur.
 
 ::component-code
 ---
-Étiquette: true
-Catégorie: P-8
-Ignorer:
-  - avatar.chargement
-Props:
-  Avatar:
+prettier: true
+class: 'p-8'
+ignore:
+  - avatar.loading
+props:
+  avatar:
     src: 'https://github.com/nuxt.png'
-    Étiquette: Lazy
+    loading: lazy
 ---
 ::
 
-### couleur
+### Couleur
 
-Utilisez la prop `color` pour changer la couleur du Séparateur. Par défaut à `neutral`.
+Utilisez la prop `color` pour changer la couleur du Séparateur. Defaults à `neutral`.
 
 ::component-code
 ---
-Catégorie: P-8
-Props:
-  Couleur: Primaire
-  Type: Solide
+class: 'p-8'
+props:
+  color: primary
+  type: solid
 ---
 ::
 
-@@ph020@type
+### type
 
-Utilisez la prop `type` pour changer le type du Séparateur. Defaults à `solid`.
+Utilisez la prop `type` pour changer le type du Separator. Defaults à `solid`.
 
 ::component-code
 ---
-Catégorie: P-8
-Props:
-  Catégorie: Fretted
+class: 'p-8'
+props:
+  type: dashed
 ---
 ::
 
-@@223@@Size
+### Size
 
-Utilisez la prop `size` pour modifier la taille du Séparateur. Defaults à `xs`.
+Utilisez la prop `size` pour changer la taille du Separator. Defaults à `xs`.
 
 ::component-code
 ---
-Catégorie: P-8
-Props:
-  Taille: LG
+class: 'p-8'
+props:
+  size: lg
 ---
 ::
 
-@@226@api
+## API
 
-@27@@Projets
+### Projets
 
-Composants-props
+:component-props
 
-@@28@@séries
+### Slots
 
-Composants slots
+:component-slots
 
-@29@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changelog @changelog
+## Changelog
 
-Composant-changelog
+:component-changelog

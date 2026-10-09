@@ -11,7 +11,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Empty.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
 Verwenden Sie die Komponente Leer, um einen Platzhalterstatus anzuzeigen, wenn kein Inhalt angezeigt werden soll.
 
@@ -19,237 +19,237 @@ Verwenden Sie die Komponente Leer, um einen Platzhalterstatus anzuzeigen, wenn k
 
 :::u-empty
 ---
-Icon: I-Lucide-Datei
-Titel: Kein Projekt gefunden
-description: Es sieht so aus, als hätten Sie keine Projekte hinzugefügt. Erstellen Sie eines, um zu beginnen.
-Aktionen:
-  - icon: i-lucide-plus (auf Englisch)
-    Labels: Neues schaffen
-  - icon: i-lucide-refresh-cw (Deutsche Übersetzung)
-    Bezeichnung: Refresh
-    Farbe: neutral
-    Variante: subtil
+icon: i-lucide-file
+title: No projects found
+description: It looks like you haven't added any projects. Create one to get started.
+actions:
+  - icon: i-lucide-plus
+    label: Create new
+  - icon: i-lucide-refresh-cw
+    label: Refresh
+    color: neutral
+    variant: subtle
 ---
 :::
 
 ::
 
-@@ph003@title
+### Titel
 
-Verwenden Sie `title` prop, um den Titel des leeren Status festzulegen.
+Verwenden Sie die prop `title`, um den Titel des leeren Status festzulegen.
 
 ::component-code
 ---
-Props:
-  Titel: Kein Projekt gefunden
+props:
+  title: No projects found
 ---
 ::
 
-@@ph005@Beschreibung
+### Beschreibung
 
-Verwenden Sie `description` prop, um den leeren Zustand zu beschreiben.
+Verwenden Sie die `description`-prop, um die Beschreibung des leeren Zustands festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@007@title
-Props:
-  Titel: Keine Projekte gefunden
-  description: Es sieht so aus, als hätten Sie keine Projekte hinzugefügt. Erstellen Sie eines, um zu beginnen.
+prettier: true
+ignore:
+  - title
+props:
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
 ---
 ::
 
-@@@@@@@@@@@@@@@@@@ICON
+### Icon (englisch)
 
-Verwenden Sie `icon` prop, um das Symbol für den leeren Zustand festzulegen.
+Verwenden Sie die `icon`-prop, um das Symbol des leeren Zustands festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph010@title
-  @@ph011@description
-Props:
-  Icon: I-Lucide-Datei
-  Titel: Keine Projekte gefunden
-  description: Es sieht so aus, als hätten Sie keine Projekte hinzugefügt. Erstellen Sie eines, um zu beginnen.
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  icon: i-lucide-file
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
 ---
 ::
 
-@@@@@avatar@@@avatar@avatar@@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avatar@avataratar@avatar@avatar@avataratar@avataratar@avatar@avatar@avatar@avataratar@avataratar@avataratar@avatar@avataratar@avataram@avataram@avataram@avataram@avataram@avataramataram@avataramataram@avataramataramataramataramataram@@@@avataramataramataramataramataramataramataramataramataramataram
+### Avatar (englisch)
 
-Verwenden Sie `avatar` prop, um den Avatar des leeren Zustands festzulegen.
+Verwenden Sie die prop `avatar`, um den Avatar des leeren Zustands einzustellen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@@@@@@@@icon.de
-  @@ph015@title
-  @@ph016@@beschreibung
-Props:
-  avatar. src: 'https://github.com/nuxt.png'(englisch)
-  Titel: Keine Projekte gefunden
-  description: Es sieht so aus, als hätten Sie keine Projekte hinzugefügt. Erstellen Sie eines, um zu beginnen.
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+props:
+  avatar.src: 'https://github.com/nuxt.png'
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
 ---
 ::
 
-### Loading: badge{label="4.10+" class="align-text-top"}
+### Loading: badge{label="4.10+" class="align-text-top"} wird geladen
 
-Verwenden Sie `loading` prop, um ein Ladesymbol anstelle des Symbols anzuzeigen. Das Layout bleibt identisch, sodass Sie ohne Layoutverschiebungen zwischen Lade-und Leerzustand wechseln können.
+Verwenden Sie die `loading` prop, um ein Ladesymbol anstelle des Symbols anzuzeigen. Das Layout bleibt identisch, sodass Sie ohne Layoutverschiebungen zwischen Lade-und Leerzustand wechseln können.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph020@@gmail.de
-  @@ph021@title
-  @@ph022@beschreibung
-Props:
-  Icon: I-Lucide-Datei
-  Aufladung: true
-  Titel: Ladeprojekte
-  Beschreibung: Bitte warten Sie, während wir Ihre Projekte abrufen.
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+props:
+  icon: i-lucide-file
+  loading: true
+  title: Loading projects
+  description: Please wait while we fetch your projects.
 ---
 ::
 
-### Loading Icon: badge{label="4.10+" class="align-text-top"}
+### Ladesymbol: badge{label="4.10+" class="align-text-top"}
 
-Verwenden Sie `loading-icon` prop, um das Ladesymbol anzupassen. Standardmäßig auf `i-lucide-loader-circle`.
+Verwenden Sie die `loading-icon`-Prop, um das Ladesymbol anzupassen. Standardmäßig `i-lucide-loader-circle`.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph027@@gmail.de
-  @@ph028@title
-  @@ph029@beschreibung
-  @@ph030@@Aufladen
-Props:
-  Icon: I-Lucide-Datei
-  Aufladung: true
-  loadingIcon: 'i-lucide-loader'(englisch)
-  Titel: Verladung
-  Beschreibung: Bitte warten Sie, während wir Ihre Projekte abrufen.
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - loading
+props:
+  icon: i-lucide-file
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  title: Loading projects
+  description: Please wait while we fetch your projects.
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.loading` key anpassen.
+Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.loading` Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.loading` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter der `ui.icons.loading`-Taste.
 :::
 ::
 
-@@ph035@@Aktionen
+### Actions Bearbeiten
 
-Verwenden Sie die `actions` prop, um einige [Button](/docs/components/button) Aktionen in den leeren Zustand einzufügen.
+Verwenden Sie die `actions`-Prop, um einige [Button](/docs/components/button)-Aktionen in den leeren Zustand einzufügen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph041@@gmail.de
-  @@ph042@title
-  @@ph043@beschreibung
-  @@ph044@Aktion
-Props:
-  Icon: I-Lucide-Datei
-  Titel: Keine Projekte gefunden
-  description: Es sieht so aus, als hätten Sie keine Projekte hinzugefügt. Erstellen Sie eines, um zu beginnen.
-  Aktionen:
-    - icon: i-lucide-plus (auf Englisch)
-      Labels: Neues schaffen
-    - icon: i-lucide-refresh-cw (auf Englisch)
-      Markiert: Refresh
-      Farbe: neutral
-      Variante: subtil
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - actions
+props:
+  icon: i-lucide-file
+  title: No projects found
+  description: It looks like you haven't added any projects. Create one to get started.
+  actions:
+    - icon: i-lucide-plus
+      label: Create new
+    - icon: i-lucide-refresh-cw
+      label: Refresh
+      color: neutral
+      variant: subtle
 ---
 ::
 
-@@ph047@@Variantentabelle
+### Variant Bearbeiten
 
-Verwenden Sie `variant` prop, um die Variante des leeren Zustands zu ändern.
+Verwenden Sie die `variant` prop, um die Variante des leeren Zustands zu ändern.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph049@@gmail.de
-  @@ph050@title
-  @@@ph051@beschreibung
-  @@ph052@Aktion
-Props:
-  Variante: Nackt
-  I-Lucide-Bell Ubersetzungen
-  Titel: Keine Anmeldung
-  description: You're all caught up. New notifications will appear here. Neue Benachrichtigungen werden hier angezeigt.
-  Aktionen:
-    - icon: i-lucide-refresh-cw (auf Englisch)
-      Markiert: Refresh
-      Farbe: neutral
-      Variante: subtil
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - actions
+props:
+  variant: naked
+  icon: i-lucide-bell
+  title: No notifications
+  description: You're all caught up. New notifications will appear here.
+  actions:
+    - icon: i-lucide-refresh-cw
+      label: Refresh
+      color: neutral
+      variant: subtle
 ---
 ::
 
-@@@@@544@@554@54@54@54@54@54@54@54@@54@@54@54@@@54@@54@@@54@@54@@@54@@@54@@54@@54@@54@54@@54@54@54@54@54@54@54@54@54@54@@54@554@@54@@@554@@54@@@54@@54@@@554@@@@@554@@@@@@@5554@@@@@@@@@@@5554@@@@@@@@@@5554@@@@@@@@@@@@@@@@@55554@@@@@@@@@@@@@@@@@@@@@@
+### Size ist
 
-Verwenden Sie `size` prop, um die Größe des leeren Zustands zu ändern.
+Verwenden Sie die `size`-prop, um die Größe des leeren Zustands zu ändern.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph056@@gmail.de
-  @@@@@57@title
-  @@ph058@beschreibung
-  @@ph059@Aktion
-Props:
-  Größe: XL
-  I-Lucide-Bell Ubersetzungen
-  Titel: Keine Anmeldung
-  description: You're all caught up. New notifications will appear here. Neue Benachrichtigungen werden hier angezeigt.
-  Aktionen:
-    - icon: i-lucide-refresh-cw (Deutsche Übersetzung)
-      Markiert: Refresh
-      Farbe: neutral
-      Variante: subtil
+prettier: true
+ignore:
+  - icon
+  - title
+  - description
+  - actions
+props:
+  size: xl
+  icon: i-lucide-bell
+  title: No notifications
+  description: You're all caught up. New notifications will appear here.
+  actions:
+    - icon: i-lucide-refresh-cw
+      label: Refresh
+      color: neutral
+      variant: subtle
 ---
 ::
 
 ## Beispiele
 
-### Mit Slots
+### Mit Steckplätzen
 
 Verwenden Sie die verfügbaren Slots, um einen komplexeren leeren Zustand zu erstellen.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'Empty-Slots-Beispiel'
+collapse: true
+name: 'empty-slots-example'
 ---
 ::
 
-## api
+## API ist
 
-@@@ph064@@Props
+### Props (nicht)
 
-Komponenten Props
+:component-props
 
-### Slots
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-## Thema
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph067@@changelog @@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

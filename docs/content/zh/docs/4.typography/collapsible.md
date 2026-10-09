@@ -9,7 +9,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Collapsible.vue
 ---
 
-## 使用情况
+## 用法
 
 使用`collapsible`组件包装内容，以在内容中显示[Collapsible](/docs/components/collapsible)。
 
@@ -19,13 +19,13 @@ links:
 
 | 道具    |默认   |类型                     |
 |---------|-----------|--------------------------|
-|`name`的|           |`string`{lang="ts-type"}|
-|`size`的|`md`的      |`string`{lang="ts-type"}|
-|`color`的|`neutral`的|`string`{lang="ts-type"}|
+| `name`|           | `string`{lang="ts-type"}|
+| `size`| `md`      | `string`{lang="ts-type"}|
+| `color`| `neutral`| `string`{lang="ts-type"}|
 
 ::
 
-#代码
+#code
 
 ```mdc
 ::collapsible
@@ -45,16 +45,16 @@ links:
 
 ### Props
 
-：组件-道具{prose}
+:component-props{prose}
 
-### Slots
+### 老虎机
 
-：组件插槽{prose}
+:component-slots{prose}
 
-主题
+## Theme
 
-：组件主题{prose}
+:component-theme{prose}
 
 ## Changelog
 
-：component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

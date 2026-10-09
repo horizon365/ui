@@ -11,9 +11,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardSearch.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Die DashboardSearch-Komponente erweitert die Komponente [CommandPalette](/docs/components/command-palette), sodass Sie jede Eigenschaft wie `icon`,`placeholder` usw. übergeben können.
+Die Komponente DashboardSearch erweitert die Komponente [CommandPalette](/docs/components/command-palette), sodass Sie jede Eigenschaft wie `icon`, `placeholder` usw. übergeben können.
 
 Verwenden Sie es innerhalb des Standardsteckplatzes der Komponente [DashboardGroup](/docs/components/dashboard-group):
 
@@ -32,12 +32,12 @@ Verwenden Sie es innerhalb des Standardsteckplatzes der Komponente [DashboardGro
 ```
 
 ::tip
-Sie können die CommandPalette öffnen, indem Sie: kbd{value="meta"}: kbd{value="K" class="ms-px"}, die Komponente [DashboardSearchButton](/docs/components/dashboard-search-button) oder die Direktive `v-model:open`{lang="ts"} verwenden.
+Sie können die CommandPalette öffnen, indem Sie: kbd{value="meta"}: kbd{value="K" class="ms-px"} drücken, die Komponente [DashboardSearchButton](/docs/components/dashboard-search-button) verwenden oder eine `v-model:open`{lang="ts"}-Direktive verwenden.
 ::
 
-@@ph032@shortcut @ Kurzschluss
+### shortcut (englisch)
 
-Verwenden Sie `shortcut` prop, um die Verknüpfung zu ändern, die in [defineShortcuts](/docs/composables/define-shortcuts) verwendet wird, um die ContentSearch-Komponente zu öffnen.
+Verwenden Sie die `shortcut`-Prop, um die Verknüpfung zu ändern, die in [defineShortcuts](/docs/composables/define-shortcuts) verwendet wird, um die ContentSearch-Komponente zu öffnen. Standardmäßig auf `meta_k` (: kbd{value="meta"}: kbd{value="K"}).
 
 ```vue [app.vue]{4}
 <template>
@@ -50,9 +50,9 @@ Verwenden Sie `shortcut` prop, um die Verknüpfung zu ändern, die in [defineSho
 </template>
 ```
 
-### Farbmodus
+### Color Mode (englisch)
 
-Standardmäßig wird der Befehlspalette eine Gruppe von Befehlen hinzugefügt, so dass Sie zwischen Hell-und Dunkelmodus wechseln können. Dies wird nur wirksam, wenn das `colorMode` nicht in einer bestimmten Seite erzwungen wird, was über `definePageMeta` erreicht werden kann:
+Standardmäßig wird der Befehlspalette eine Gruppe von Befehlen hinzugefügt, sodass Sie zwischen dem hellen und dunklen Modus wechseln können. Dies wird nur wirksam, wenn der `colorMode` nicht in einer bestimmten Seite erzwungen wird, was durch `definePageMeta` erreicht werden kann:
 
 ```vue [pages/index.vue]
 <script setup lang="ts">
@@ -62,7 +62,7 @@ definePageMeta({
 </script>
 ```
 
-Sie können dieses Verhalten deaktivieren, indem Sie `color-mode` prop auf `false` setzen:
+Sie können dieses Verhalten deaktivieren, indem Sie die `color-mode`-prop auf `false` setzen:
 
 ```vue [app.vue]{4}
 <template>
@@ -75,32 +75,32 @@ Sie können dieses Verhalten deaktivieren, indem Sie `color-mode` prop auf `fals
 </template>
 ```
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@api
+## API (englisch)
 
-@@@@@@@@@@@ph074@@Props
+### Props (englisch)
 
-Komponenten Props
+:component-props
 
-### Spielautomaten
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@@ph076@@@emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-### Aufdecken
+### Expose (englisch)
 
 Beim Zugriff auf die Komponente über eine Template-Referenz können Sie Folgendes verwenden:
 
-| Vorname| Typen|
+| Vorname| Typ|
 | ---- | ---- |
-| @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
+| `commandPaletteRef`{lang="ts-type"} nicht| `Ref<InstanceType<typeof UCommandPalette> \| null>`{lang="ts-type"} nicht|
 
-@@@@@@@@@@@ph082@@theme
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph083@@changelog @@changelog
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

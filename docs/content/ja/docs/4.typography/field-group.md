@@ -26,7 +26,7 @@ links:
   ::
 
   ::field{name="cache" type="boolean"}
-  デフォルトは`false`です。Nitroの`cachedEventHandler`および`cachedFunction`を使用して、サーバールートの応答または関数をキャッシュするキャッシュストレージを有効にします。
+  デフォルトは`false`です。Nitroの`cachedEventHandler`および`cachedFunction`を使用してサーバールートの応答または関数をキャッシュするキャッシュストレージを有効にします。
   ::
 
   ::field{name="database" type="boolean"}
@@ -35,7 +35,7 @@ links:
 
 ::
 
-#コード
+#code
 
 ```mdc
 ::field-group
@@ -59,20 +59,20 @@ links:
 
 :::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props {prose}
+:component-props{prose}
 
 ### スロット
 
-component—slots {prose}
+:component-slots{prose}
 
-## テーマ
+## Theme
 
-component—theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

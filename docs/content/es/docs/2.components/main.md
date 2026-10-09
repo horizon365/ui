@@ -7,7 +7,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Main.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 El componente principal representa un elemento `<main>` que trabaja junto con el componente [Header](/docs/components/header) para crear un diseño de altura completa que se extiende a la altura disponible de la ventana gráfica.
 
@@ -15,9 +15,9 @@ El componente principal representa un elemento `<main>` que trabaja junto con el
 El componente principal utiliza la variable CSS `--ui-header-height` para posicionarse correctamente debajo del `Header`.
 ::
 
-@008@Ejemplos
+xph008XEjemplos
 
-@@pH009
+### Dentro de `app.vue`
 
 Utilice el componente principal en su `app.vue` o en un diseño:
 
@@ -37,20 +37,20 @@ Utilice el componente principal en su `app.vue` o en un diseño:
 </template>
 ```
 
-@@27000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## API (Edición española)
 
-@@28000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Propciones
 
-Componentes Props
+:component-props
 
-@@29@29000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Slots (Edición española)
 
-Componentes de slots
+:component-slots
 
-@@pH030@@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@changelog @@changelog
+xph01xChangelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

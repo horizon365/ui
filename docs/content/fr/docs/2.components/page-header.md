@@ -8,11 +8,11 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageHeader.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
 Le composant PageHeader affiche un header pour votre page.
 
-Utilisez-le à l'intérieur de l'emplacement par défaut du composant [Page](/docs/components/page), avant le composant [PageBody](/docs/components/page-body):
+Utilisez-le dans l'emplacement par défaut du composant [Page](/docs/components/page), avant le composant [PageBody](xph007):
 
 ```vue {3}
 <template>
@@ -24,96 +24,96 @@ Utilisez-le à l'intérieur de l'emplacement par défaut du composant [Page](/do
 </template>
 ```
 
-@@ph018@titre
+### Titre
 
-Utilisez la prop `title` pour afficher un titre dans l'en-tête.
+Use the `title` prop to display a title in the header.
 
 ::component-code
 ---
-Caché:
-  @@ph020@classe
-Props:
-  Titre: PageHeader
-  Catégorie: w-full
+hide:
+  - class
+props:
+  title: 'PageHeader'
+  class: 'w-full'
 ---
 ::
 
-@@ph021@description
+### Description
 
 Utilisez la prop `description` pour afficher une description dans l'en-tête.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph023@titre
-Caché:
-  @@ph024@classe
-Props:
-  Titre: PageHeader
-  Description: "Un en-tête de page responsive avec titre, description et actions."
-  Catégorie: w-full
+prettier: true
+ignore:
+  - title
+hide:
+  - class
+props:
+  title: 'PageHeader'
+  description: 'A responsive page header with title, description and actions.'
+  class: 'w-full'
 ---
 ::
 
-@@25@@titre
+### Référencement
 
-Utilisez la prop `headline` pour afficher un titre dans l'en-tête.
+Utilisez le prop `headline` pour afficher un titre dans l'en-tête.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@27@titre
-  @@ph028@description
-Caché:
-  @@ph029@classe
-Props:
-  Titre: PageHeader
-  Description: "Un en-tête de page responsive avec titre, description et actions."
-  Titre: "Composants"
-  Catégorie: w-full
+prettier: true
+ignore:
+  - title
+  - description
+hide:
+  - class
+props:
+  title: 'PageHeader'
+  description: 'A responsive page header with title, description and actions.'
+  headline: 'Components'
+  class: 'w-full'
 ---
 ::
 
-@@ph030@liens
+### Liens
 
-Utilisez le prop `links` pour afficher une liste de [Button](/docs/components/button) dans l'en-tête.
+Utilisez la prop `links` pour afficher une liste de [Button](/docs/components/button) dans l'en-tête.
 
 ::component-code
 ---
-Étiquette: true
-Extérieur:
-  @@ph036@liens
-Extérieurs:
-  - ButtonProps [réf. nécessaire]
-ignorer:
-  @@ph038@titre
-  @@ph039@description
-  @@ph040@headline
-  @@ph041@liens
-Caché:
-  @@classe 42
-Props:
-  Titre: PageHeader
-  Description: "Un en-tête de page responsive avec titre, description et actions."
-  Titre: "Composants"
-  à gauche:
-    - label:'GitHub'
+prettier: true
+external:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - headline
+  - links
+hide:
+  - class
+props:
+  title: 'PageHeader'
+  description: 'A responsive page header with title, description and actions.'
+  headline: 'Components'
+  links:
+    - label: 'GitHub'
       icon: i-simple-icons-github
-      https://github.com/nuxt/ui/tree/v4/src/runtime/components/PageHeader.vue
-      cible: _blanc
-  Catégorie: w-full
+      to: 'https://github.com/nuxt/ui/tree/v4/src/runtime/components/PageHeader.vue'
+      target: '_blank'
+  class: 'w-full'
 ---
 ::
 
-@@ph044@exemples
+## Exemples
 
 ::note
 Bien que ces exemples utilisent [Nuxt Content](https://content.nuxt.com), les composants peuvent être intégrés à n'importe quel système de gestion de contenu.
 ::
 
-### Dans une page
+### Au sein d'une page
 
 Utilisez le composant PageHeader dans une page pour afficher l'en-tête de la page:
 
@@ -158,20 +158,20 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 </template>
 ```
 
-@@P090@@écrivain
+## API
 
-@@ph091@@props
+### Props équipements
 
-Composants-props
+:component-props
 
-@@ph092@@Slots
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph093@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement@changement.com
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

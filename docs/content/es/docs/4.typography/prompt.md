@@ -1,5 +1,5 @@
 ---
-title: proseprompt
+title: proselitismo
 description: 'Muestra indicaciones de IA preconstruidas con copia de un solo clic e integración IDE.'
 category: components
 navigation.title: Prompt
@@ -9,101 +9,101 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Prompt.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-Utilice el componente `prompt` para mostrar un prompt de IA preconstruido que los usuarios pueden copiar en su portapapeles o abrir directamente en su IDE. El `description` prop se muestra como la etiqueta visible, mientras que la ranura predeterminada contiene el texto del prompt que se copia.
+Utilice el componente `prompt` para mostrar un indicador de IA preconstruido que los usuarios pueden copiar en su portapapeles o abrir directamente en su IDE. El prop `description` se muestra como la etiqueta visible, mientras que la ranura predeterminada contiene el texto del indicador que se copia.
 
 ::component-code{slug="prompt" prose}
 ---
-Props:
-  Descripción: Crea un diseño de panel con Nuxt UI.
-  clase: 'w-full my-0'
-Escondido:
-  @003@clase
-Los slots:
-  Default:|
-    Eres un experto en interfaz de usuario de Nuxt. Ayúdame a crear un diseño de panel de control con una barra lateral plegable y una barra de navegación superior adhesiva.
+props:
+  description: Build a dashboard layout with Nuxt UI.
+  class: 'w-full my-0'
+hide:
+  - class
+slots:
+  default: |
+    You are a Nuxt UI expert. Help me build a dashboard layout with a collapsible sidebar and a sticky top navbar.
 
-    Requisitos:
-    - Use `UDashboardPanel`,`UDashboardSidebar` y `UDashboardNavbar`
-    - Use símbolos de color semánticos como `bg-elevated` y `text-muted` para la tematización
-    - La barra lateral debe incluir enlaces de navegación con iconos usando `UNavigationMenu`
-    - La barra de navegación debe mostrar una ruta de navegación, un botón de búsqueda y un menú desplegable de usuario
-    - El diseño debe ser totalmente receptivo y colapsar la barra lateral en el móvil
+    Requirements:
+    - Use `UDashboardPanel`, `UDashboardSidebar`, and `UDashboardNavbar`
+    - Use semantic color tokens like `bg-elevated` and `text-muted` for theming
+    - The sidebar should include navigation links with icons using `UNavigationMenu`
+    - The navbar should display a breadcrumb, a search button, and a user dropdown menu
+    - The layout must be fully responsive and collapse the sidebar on mobile
 ---
 ::
 
-@@pH015@Icon
+### Icon
 
 Utilice el prop `icon` para mostrar un icono al lado de la descripción.
 
 ::component-code{slug="prompt" prose}
 ---
-Ignora:
-  @@pH017@descripción
-Escondido:
-  @1800@clase
-Props:
-  Descripción: Crear un formulario con validación.
-  Icono: i-lucide-file-pen-line (en inglés)
-  clase: 'w-full my-0'
-Los slots:
-  Default:|
-    Crear un formulario de registro con Nuxt UI con validación de esquema Zod.
+ignore:
+  - description
+hide:
+  - class
+props:
+  description: Create a form with validation.
+  icon: i-lucide-file-pen-line
+  class: 'w-full my-0'
+slots:
+  default: |
+    Create a registration form using Nuxt UI with Zod schema validation.
 
-    Requisitos:
-    - Use `UForm` con un esquema Zod para la validación
-    - Añadir `UFormField` envolviendo cada entrada: nombre (`UInput`), correo electrónico (`UInput` tipo de correo electrónico), función (`USelect` con opciones Admin, Editor, Viewer)
-    - Incluir un envío `UButton` con estado de carga
-    - Mostrar mensajes de error en línea debajo de cada campo
-    - En caso de envío exitoso, muestre una notificación `UToast`
+    Requirements:
+    - Use `UForm` with a Zod schema for validation
+    - Add `UFormField` wrapping each input: name (`UInput`), email (`UInput` type email), role (`USelect` with options Admin, Editor, Viewer)
+    - Include a submit `UButton` with loading state
+    - Display inline error messages below each field
+    - On successful submit, show a `UToast` notification
 ---
 ::
 
-@@P031@Acciones
+### Acciones
 
-Utilice el prop `actions` para mostrar botones adicionales. El botón `copy` se muestra siempre. Las acciones disponibles son `cursor`,`windsurf` y `claude`.
+Utilice el soporte `actions` para mostrar botones adicionales. El botón `copy` siempre se muestra. Las acciones disponibles son `cursor`, `windsurf` y `claude`.
 
 ::component-code{slug="prompt" prose}
 ---
-Ignora:
-  @@ph037@descripción
-  @@icon 38
-Escondido:
-  @@39@clase
-Props:
-  Descripción: Añadir un modo de color.
-  Icono: i-lucide-sun-moon
-  Acciones:
-    @@F0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    @41@claude
-  clase: 'w-full my-0'
-Los slots:
-  Default:|
-    Agregue un modo de color a mi aplicación Nuxt.
+ignore:
+  - description
+  - icon
+hide:
+  - class
+props:
+  description: Add a color mode toggle.
+  icon: i-lucide-sun-moon
+  actions:
+    - cursor
+    - claude
+  class: 'w-full my-0'
+slots:
+  default: |
+    Add a color mode toggle to my Nuxt app.
 
-    Requisitos:
-    - Use `useColorMode` de `@nuxtjs/color-mode` para administrar el modo actual
-    - Render un `UButton` con `variant="ghost"` que circula entre `light`,`dark` y `system` al hacer clic.
-    - Actualizar el icono del botón dinámicamente:`i-lucide-sun` para la luz,`i-lucide-moon` para la oscuridad,`i-lucide-monitor` para el sistema
-    - Añadir una información sobre herramientas usando `UTooltip` que muestre el modo activo actual
+    Requirements:
+    - Use `useColorMode` from `@nuxtjs/color-mode` to manage the current mode
+    - Render a `UButton` with `variant="ghost"` that cycles between `light`, `dark`, and `system` on click
+    - Update the button icon dynamically: `i-lucide-sun` for light, `i-lucide-moon` for dark, `i-lucide-monitor` for system
+    - Add a tooltip using `UTooltip` that shows the current active mode
 ---
 ::
 
-@5757 @
+## API (Edición española)
 
-@@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props (Edición española)
 
-Artículo siguienteComponentes {prose}
+:component-props{prose}
 
-### Escenarios
+### Slots
 
-Componentes: {prose}
+:component-slots{prose}
 
-@062 @@ Proyecto
+## Temas
 
-Artículo siguiente{prose}
+:component-theme{prose}
 
-@@changelog
+xph05xChangelog (Edición española)
 
-por: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

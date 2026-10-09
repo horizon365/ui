@@ -9,16 +9,16 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Steps.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
 Enveloppez vos en-têtes avec le composant Étapes pour afficher une liste d'étapes.
 
-Utilisez la prop `level` pour définir quel en-tête sera utilisé pour les étapes.
+Utilisez la prop `level` pour définir le titre qui sera utilisé pour les étapes.
 
 :::code-preview{class="[&>div]:*:w-full"}
 ::steps{level="4"}
 
-#### Ajouter le module d'interface utilisateur Nuxt dans votre `nuxt.config.ts`
+#### Ajouter le module Nuxt UI dans votre `nuxt.config.ts`
 
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
@@ -26,13 +26,13 @@ export default defineNuxtConfig({
 })
 ```
 
-#### Import Tailwind CSS dans votre CSS
+#### Import CSS Tailwind dans votre CSS
 
 ```css [app/assets/css/main.css]
 @import "tailwindcss";
 ```
 
-#### Démarrer votre serveur de développement
+#### Démarrez votre serveur de développement
 
 ```bash
 npm run dev
@@ -70,20 +70,20 @@ npm run dev
 
 :::
 
-@@ph037@api
+## api
 
-@@ph038@@props
+### Props
 
-: composant-props {prose}
+:component-props{prose}
 
-@@ph040@@réglages
+### Slots
 
-: composant {prose}
+:component-slots{prose}
 
-@@ph042@thème
+## Thème
 
-: composant-thème {prose}
+:component-theme{prose}
 
-@changelog 44
+## Changelog
 
-: composant-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

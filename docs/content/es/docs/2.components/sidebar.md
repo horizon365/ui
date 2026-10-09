@@ -7,189 +7,189 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Sidebar.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente Sidebar es una barra lateral independiente y fija que empuja el contenido de la página. En el escritorio, se representa en línea y se puede contraer; en el móvil, abre un [Modal](/docs/components/modal),[Slideover](/docs/components/slideover) o [Drawer](/docs/components/drawer).
+En el escritorio, se representa en línea y se puede contraer; en el móvil, se abre un componente [Modal](/docs/components/modal), [Slideover](/docs/components/slideover) o [Drawer](/docs/components/drawer).
 
 ::tip{to="/docs/components/dashboard-sidebar"}
-**Sidebar vs DashboardSidebar**Este componente es una barra lateral simple e independiente que puede colocar en cualquier lugar (panel de chat, configuración, navegación). Si necesita arrastrar para cambiar el tamaño, persistencia de estado e integración con [DashboardGroup](/docs/components/dashboard-group), En su lugar, utilice [DashboardSidebar](/docs/components/dashboard-sidebar).
+**Sidebar vs DashboardSidebar**: Este componente es una barra lateral simple e independiente que puede colocar en cualquier lugar (panel de chat, configuración, navegación). Si necesita arrastrar para cambiar el tamaño, persistencia de estado e integración con [DashboardGroup](/docs/components/dashboard-group), use [DashboardSidebar](ph019) en su lugar.
 ::
 
-Utilice las ranuras `header`,`default` y `footer` para personalizar el contenido de la barra lateral. La directiva `v-model:open` es consciente de la vista del puerto: en el escritorio controla el estado expandido/colapsado, en el móvil controla el menú.
+Utilice las ranuras `header`, `default` y `footer` para personalizar el contenido de la barra lateral. La directiva `v-model:open` es consciente de la vista: en el escritorio controla el estado expandido/colapsado, en el móvil controla el menú.
 
 ::component-example
 ---
-Colapso: Verdad
-Categoría: true
-Nombre: 'sidebar-ejemplo'
-Desconocido: true
-class: '! p-0! justify-start h-[500px] contain-[paint] transform-gpu'
+collapse: true
+prettier: true
+name: 'sidebar-example'
+overflowHidden: true
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 ::
 
-@@27@Variación
+### Variante
 
-Utilice el prop `variant` para cambiar el estilo visual de la barra lateral. Predeterminados a `sidebar`.
+Utilice el prop `variant` para cambiar el estilo visual de la barra lateral.
 
 ::component-example
 ---
-Colapso: Verdad
-Categoría: true
-Nombre: 'sidebar-props-example'
-Desconocido: true
-Opciones:
-  - name:'variante'
-    Categoría:"Variante"
+collapse: true
+prettier: true
+name: 'sidebar-props-example'
+overflowHidden: true
+options:
+  - name: 'variant'
+    label: 'variant'
     items:
-      @311@@Slater
-      - flotación
-      @@3333@Inciso
-    por defecto: 'inset'
-class: '! p-0! justify-start h-[500px] contain-[paint] transform-gpu'
+      - sidebar
+      - floating
+      - inset
+    default: 'inset'
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 ::
 
-@@pH034@@Insumible
+### Collapsible (en inglés)
 
-Utilice el prop `collapsible` para cambiar el comportamiento de colapso de la barra lateral. Predeterminados a `offcanvas`.
+Utilice el prop `collapsible` para cambiar el comportamiento de colapso de la barra lateral.
 
 - `offcanvas`: La barra lateral se desliza fuera de la vista por completo.
-- `icon`: La barra lateral se reduce al ancho de solo icono.
+- `icon`: La barra lateral se reduce a un ancho de solo icono.
 - `none`: La barra lateral no es plegable.
 
 ::component-example
 ---
-Colapso: Verdad
-Categoría: true
-Nombre: 'sidebar-props-example'
-Desconocido: true
-Opciones:
-  - name:'plegable'(en español)
-    Archivo de la etiqueta: 'pliable'
-    Items:
-      @@44@@offcanvas
-      @@icon 45
-      @46@ninguno
-    por defecto: "Icon"
-  - name:'variación'
-    Categoría:"Variante"
-    Items:
-      @@48000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-      @@pH049@flotación
-      @@50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    por defecto: "sidebar"
-class: '! p-0! justify-start h-[500px] contain-[paint] transform-gpu'
+collapse: true
+prettier: true
+name: 'sidebar-props-example'
+overflowHidden: true
+options:
+  - name: 'collapsible'
+    label: 'collapsible'
+    items:
+      - offcanvas
+      - icon
+      - none
+    default: 'icon'
+  - name: 'variant'
+    label: 'variant'
+    items:
+      - sidebar
+      - floating
+      - inset
+    default: 'sidebar'
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 ::
 
 ::tip{to="#slots"}
-Puede acceder al `state` en los accesorios de la ranura para personalizar el contenido de la barra lateral cuando se colapsa.
+Puede acceder al `state` en los accesorios de la ranura para personalizar el contenido de la barra lateral cuando se contrae.
 ::
 
-@@52000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### lado
 
 Utilice el prop `side` para cambiar el lado de la barra lateral. Predeterminados a `left`.
 
 ::component-example
 ---
-Colapso: Verdad
-Categoría: true
-Nombre: 'sidebar-props-example'
-Desconocido: true
-Opciones:
-  - name:'lado'
-    Categoría:"Side"
-    Items:
-      @@56@izquierda
-      @57@@derecha
-    por defecto: "correcto"
-class: '! p-0! justify-start h-[500px] contain-[paint] transform-gpu'
+collapse: true
+prettier: true
+name: 'sidebar-props-example'
+overflowHidden: true
+options:
+  - name: 'side'
+    label: 'side'
+    items:
+      - left
+      - right
+    default: 'right'
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 ::
 
-@@508@Título
+### Nombre
 
 Utilice el prop `title` para establecer el título de la cabecera de la barra lateral.
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @060@clase
-  @@pH061
-Ignora:
-  - ui.container (en inglés)
-Props:
-  Título: Navegación
-  UU.:
-    Contenido: H-full
-Los slots:
-  Default:|
+prettier: true
+hide:
+  - class
+  - ui
+ignore:
+  - ui.container
+props:
+  title: Navigation
+  ui:
+    container: h-full
+slots:
+  default: |
 
-    @@@ 063
-class: '! p-0! justify-start h-[500px] contain-[paint] transform-gpu'
+    <Placeholder class="h-full" />
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 
-por @ph064
+:placeholder{class="h-full"}
 ::
 
-@@pH065@Descripción
+Xph120xDescripción
 
 Utilice el prop `description` para establecer la descripción del encabezado de la barra lateral.
 
 ::component-code
 ---
-Categoría: true
-Escondido:
-  @067 @ clase
-  @068
-Ignora:
-  @@pH069@título
-  - ui.container (en inglés)
-Props:
-  Título: Navegación
-  Descripción: Browse your workspace
-  UU.:
-    Contenido: H-full
-Los slots:
-  Default:|
+prettier: true
+hide:
+  - class
+  - ui
+ignore:
+  - title
+  - ui.container
+props:
+  title: Navigation
+  description: Browse your workspace
+  ui:
+    container: h-full
+slots:
+  default: |
 
-    @@pf071 @
-class: '! p-0! justify-start h-[500px] contain-[paint] transform-gpu'
+    <Placeholder class="h-full" />
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 
-por @ph072
+:placeholder{class="h-full"}
 ::
 
-@@70000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### RAIL (Edición española)
 
-Utilice el prop `rail` para mostrar un borde interactivo delgado en la barra lateral que alterna el estado colapsado al hacer clic. El riel solo se representa cuando `collapsible` no es `none`.
+Utilice el soporte `rail` para mostrar un borde interactivo delgado en la barra lateral que alterna el estado colapsado al hacer clic. El riel solo se representa cuando `collapsible` no es `none`.
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @777@title
-  - ui.container (en inglés)
-Escondido:
-  @079
-  @080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Vía: True
-  Archivo: Icon
-  Título: Navegación
-  Contenedor: H-full
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+  - ui.container
+hide:
+  - ui
+  - class
+props:
+  rail: true
+  collapsible: icon
+  title: Navigation
+  ui.container: h-full
+slots:
+  default: |
 
-    @@@ 081 @
-class: '! p-0! justify-start h-[500px] contain-[paint] transform-gpu'
+    <Placeholder class="h-full" />
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 
-por: @ph082 @
+:placeholder{class="h-full"}
 ::
 
-@083 @ Cerrar
+### Cerrar
 
 Utilice el prop `close` para mostrar un botón de cierre en el encabezado de la barra lateral. El botón de cierre solo se representa cuando `collapsible` no es `none`.
 
@@ -197,108 +197,108 @@ Puede pasar cualquier propiedad del componente [Button](/docs/components/button)
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @091@title (Edición española)
-  @@R2009@R2009
-  - ui.container (en inglés)
-Escondido:
-  @@pH094
-  @095@clase
-Props:
-  Siguiente: True
-  Vía: True
-  Archivo: Icon
-  Título: Navegación
-  UU.:
-    Contenido: H-full
-Items:
-  Cerrado:
-    @@ph096@true
-    @@@@false@false
-Los slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+  - rail
+  - ui.container
+hide:
+  - ui
+  - class
+props:
+  close: true
+  rail: true
+  collapsible: icon
+  title: Navigation
+  ui:
+    container: h-full
+items:
+  close:
+    - true
+    - false
+slots:
+  default: |
 
-    @@ 098 @
-class: '! p-0! justify-start h-[500px] contain-[paint] transform-gpu'
+    <Placeholder class="h-full" />
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 
-por @ph099
+:placeholder{class="h-full"}
 ::
 
-### Cerrar Icono
+### Cerrar icono
 
 Utilice el prop `close-icon` para personalizar el botón de cierre [Icon](/docs/components/icon).
 
 ::component-code
 ---
-Categoría: true
-Ignora:
-  @@707@título
-  @800@RAIL
-  @pH109 @
-  @100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  - ui.container (en inglés)
-Escondido:
-  @112
-  @113@clase
-Props:
-  Siguiente: True
-  Icono: i-lucide-panel-right-close
-  Vía: True
-  Archivo: Icon
-  Vía: Right
-  Título: Navegación
-  UU.:
-    Contenido: H-full
+prettier: true
+ignore:
+  - title
+  - rail
+  - side
+  - close
+  - ui.container
+hide:
+  - ui
+  - class
+props:
+  close: true
+  closeIcon: i-lucide-panel-right-close
+  rail: true
+  collapsible: icon
+  side: right
+  title: Navigation
+  ui:
+    container: h-full
 items:
-  Cerrado:
-    @114@@verdad
-    @115 @ Falso
-Los slots:
-  Default:|
+  close:
+    - true
+    - false
+slots:
+  default: |
 
-    @116 @
-class: '! p-0! justify-start h-[500px] contain-[paint] transform-gpu'
+    <Placeholder class="h-full" />
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 
-por @ph117 @
+:placeholder{class="h-full"}
 ::
 
 ::framework-only
-#nuxidad
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-Puede personalizar este icono de forma global en su `app.config.ts` bajo la tecla `ui.icons.close`.
+Puede personalizar este icono de forma global en su XPH235X bajo la tecla XPH236X.
 :::
 
-#vista
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Puede personalizar este icono de forma global en su `vite.config.ts` bajo la tecla `ui.icons.close`.
+Puede personalizar este icono globalmente en su `vite.config.ts` bajo la tecla `ui.icons.close`.
 :::
 ::
 
-@212@@Modos
+### Modos
 
 Utilice el prop `mode` para cambiar el modo del menú de la barra lateral en el móvil.
 
 ::component-example
 ---
-Colapso: Verdad
+collapse: true
 iframe:
-  Tamaño: 500px
-iframeMobile: Verdad
-Desconocido: true
-Nombre: 'sidebar-mode-example'
-Opciones:
-  - name:'Diseño'
-    Categoría:'Moda'
-    por defecto: "slidover"
+  height: 500px;
+iframeMobile: true
+overflowHidden: true
+name: 'sidebar-mode-example'
+options:
+  - name: 'mode'
+    label: 'mode'
+    default: 'slideover'
     items:
-      @126 @ Modalidad
-      @277@espanol
-      @128@@dealer
-Props:
-  Categoría: w-full
+      - modal
+      - slideover
+      - drawer
+props:
+  class: 'w-full'
 ---
 ::
 
@@ -306,19 +306,19 @@ Props:
 Puedes usar el prop `menu` para personalizar el menú de la barra lateral, se adaptará dependiendo del modo que elijas.
 ::
 
-@@pH130@Ejemplos
+## Ejemplos
 
-### Control estado abierto
+### Control en estado abierto
 
-Puede controlar el estado abierto usando la directiva `open` o la directiva `v-model:open`. En el escritorio controla el estado expandido/colapsado, en el móvil abre/cierra el menú de la hoja.
+Puede controlar el estado abierto utilizando la prop `open` o la directiva `v-model:open`.En el escritorio controla el estado expandido/colapsado, en el móvil abre/cierra el menú de la hoja.
 
 ::component-example
 ---
-Colapso: Verdad
-Categoría: true
-Nombre: 'sidebar-open-example'
-Desconocido: true
-class: '! p-0! justify-start h-[500px] contain-[paint] transform-gpu'
+collapse: true
+prettier: true
+name: 'sidebar-open-example'
+overflowHidden: true
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 ::
 
@@ -326,17 +326,17 @@ class: '! p-0! justify-start h-[500px] contain-[paint] transform-gpu'
 En este ejemplo, aprovechando [`defineShortcuts`](/docs/composables/define-shortcuts), puede alternar el estado abierto de la barra lateral presionando: kbd{value="O"}.
 ::
 
-### Persiste estado abierto
+### Persistent estado abierto
 
-Use [`useLocalStorage`](https://vueuse.org/core/useLocalStorage/) de VueUse o [`useCookie`](https://nuxt.com/docs/4.x/api/composables/use-cookie) en lugar de `ref` para persistir el estado de la barra lateral a través de las recargas de página.
+Utilice [`useLocalStorage`](https://vueuse.org/core/useLocalStorage/) de VueUse o [`useCookie`](xph288) en lugar de `ref` para persistir el estado de la barra lateral a través de las recargas de página.
 
 ::component-example
 ---
-Colapso: Verdad
-Categoría: true
-Nombre: 'sidebar-persistent-example'
-Desconocido: true
-class: '! p-0! justify-start h-[500px] contain-[paint] transform-gpu'
+collapse: true
+prettier: true
+name: 'sidebar-persist-example'
+overflowHidden: true
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 ::
 
@@ -346,31 +346,31 @@ La única diferencia con el ejemplo anterior es la sustitución de `ref(true)` c
 
 ### Con ancho personalizado
 
-El ancho de la barra lateral está controlado por la variable CSS `--sidebar-width`(por defecto a `16rem`). El ancho del icono colapsado está controlado por `--sidebar-width-icon`(por defecto a `4rem`).
+El ancho de la barra lateral está controlado por la variable CSS `--sidebar-width` (por defecto `16rem`). El ancho del icono colapsado está controlado por `--sidebar-width-icon` (por defecto `4rem`).
 
-Anularlos globalmente en su CSS o por instancia con el atributo `style`.
+Anularlos de forma global en su CSS o por instancia con el atributo `style`.
 
 ::component-example
 ---
-Colapso: Verdad
-Categoría: true
-Nombre del archivo: 'sidebar-width-example'
-Desconocido: true
-class: '! p-0! justify-start h-[500px] contain-[paint] transform-gpu'
+collapse: true
+prettier: true
+name: 'sidebar-width-example'
+overflowHidden: true
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 ::
 
-### Con el encabezado
+### Con cabecera
 
-Para colocar la barra lateral debajo de un [Header](/docs/components/header), personalice el `gap` y `container` utilizando el `ui` prop.
+Para colocar la barra lateral debajo de un [Header](/docs/components/header), personalice el `gap` y el `container` con el accesorio `ui`.
 
 ::component-example
 ---
-Colapso: Verdad
-Categoría: true
-Nombre: 'sidebar-header-example'
-Desconocido: true
-class: '! p-0! justify-start h-[500px] contain-[paint] transform-gpu'
+collapse: true
+prettier: true
+name: 'sidebar-header-example'
+overflowHidden: true
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 ::
 
@@ -378,34 +378,34 @@ class: '! p-0! justify-start h-[500px] contain-[paint] transform-gpu'
 La variable `--ui-header-height` por defecto es `4rem` y es utilizada por la cabecera. Ajustarla si su barra de navegación utiliza una altura diferente.
 ::
 
-### Con el chat de AI
+### Con chat de IA
 
-Utilice la barra lateral en el lado derecho con [ChatMessages](/docs/components/chat-messages) y [ChatPrompt](/docs/components/chat-prompt) para crear un panel de chat de IA.
+Utilice la barra lateral en el lado derecho con [ChatMessages](/docs/components/chat-messages) y [ChatPrompt](/docs/components/chat-prompt) para crear un panel de chat AI.
 
 ::component-example
 ---
-Colapso: Verdad
-Categoría: true
-Nombre: 'sidebar-chat-ejemplo'
-Desconocido: true
-class: '! p-0! justify-start h-[500px] contain-[paint] transform-gpu'
+collapse: true
+prettier: true
+name: 'sidebar-chat-example'
+overflowHidden: true
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 ::
 
-@@pH179
+## API (Edición española)
 
-@180000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props en línea
 
-Componentes Props
+:component-props
 
-@@181@181@181
+### Slots en línea
 
-Componentes de slots
+:component-slots
 
-@182@@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@@183@Changelog (Edición española)
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

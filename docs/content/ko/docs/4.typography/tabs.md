@@ -1,5 +1,5 @@
 ---
-title: ProseTabs
+title: Prose탭
 description: '관련 컨텐트를 대화식 탭 인터페이스로 구성합니다.'
 category: components
 navigation.title: Tabs
@@ -9,9 +9,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Tabs.vue
 ---
 
-##  사용
+## Usage
 
-`tabs` 및 `tabs-item` 구성 요소를 사용하여 콘텐츠에 [Tabs](/docs/components/tabs)를 표시합니다.
+`tabs` 및 `tabs-item` 구성 요소를 사용하여 콘텐츠에 [Tabs](xph05xxph06x를 표시합니다.
 
 ::code-preview{class="[&>div]:*:my-0"}
 
@@ -30,14 +30,14 @@ Lorem velit voluptate ex reprehenderit ullamco et culpa.
 :::tabs-item{label="미리보기" icon="i-lucide-eye"}
 
 ::callout
-Lorem velit voluptate ex reprehederit ullamco et culpa. ( 로렘 벨릿 voluptate ex reprehederit ullamco et culpa ). )
+Lorem velit voluptate ex reprehederit ullamco et culpa. ( 로렘 벨릿 voluptate ex reprehederit ullamco et culpa )
 ::
 
 :::
 
 :::
 
-# 코드
+#code
 
 ````mdc
 ::tabs
@@ -46,7 +46,7 @@ Lorem velit voluptate ex reprehederit ullamco et culpa. ( 로렘 벨릿 voluptat
 
 ```mdc
 ::callout
-Lorem velit voluptate ex reprehederit ullamco et culpa. ( 로렘 벨릿 voluptate ex reprehederit ullamco et culpa )
+Lorem velit voluptate ex reprehederit ullamco et culpa. ( 로렘 벨릿 voluptate ex reprehederit ullamco et culpa ). )
 ::
 ```
 
@@ -65,25 +65,25 @@ Lorem velit voluptate ex reprehenderit ullamco et culpa.
 
 ::
 
-##  API
+## API
 
-### Props 이미지
+### Props
 
-: component-props {prose}
+:component-props{prose}
 
-###  슬롯
+### Slots
 
-: component-slots {prose}
+:component-slots{prose}
 
-##  테마
+## Theme 테마
 
 ::component-theme{prose}
 ---
-추가:
-  -  tabsItem
+extra:
+  - tabsItem
 ---
 ::
 
-##  Changelog
+## 변경 로그
 
-: component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

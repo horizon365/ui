@@ -10,16 +10,16 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Editor.vue
 ---
 
-## 使用情况
+## 用法
 
-编辑器组件提供了基于[TipTap](https://tiptap.dev/)构建的强大富文本编辑体验。它支持多种内容格式（JSON、HTML、Markdown）、可自定义的工具栏、拖放块重新排序、斜杠命令、提及、表情符号选取器以及用于添加自定义功能的可扩展体系结构。
+编辑器组件在[TipTap](https://tiptap.dev/)的基础上提供了强大的富文本编辑体验。它支持多种内容格式（JSON，HTML，Markdown），可自定义的编辑器，拖放块重新排序，斜杠命令，提及，表情符号选择器以及用于添加自定义功能的可扩展架构。
 
 ::component-example
 ---
-资料来源：错误
-升高：true
-名称：'编辑器示例'
-类：'相对h-176溢出-y-auto！p-0舍入-b-md'
+source: false
+elevated: true
+name: 'editor-example'
+class: 'relative h-176 overflow-y-auto !p-0 rounded-b-md'
 ---
 ::
 
@@ -28,7 +28,7 @@ links:
 ::
 
 ::warning
-如果在使用Editor组件或其扩展时遇到与prosemirror相关的错误（如`Adding different instances of a keyed plugin`），则可能需要将prosemirror软件包添加到`nuxt.config.ts`文件的`vite.optimizeDeps.include`列表中。这可确保Vite预先捆绑了这些依赖项，以避免加载多个实例。
+如果您在使用Editor组件或其扩展时遇到类似`Adding different instances of a keyed plugin`的prosemirror相关错误，您可能需要将prosemirror包添加到`nuxt.config.ts`文件中的`vite.optimizeDeps.include`列表中。这可以确保Vite预先绑定这些依赖项，以避免加载多个实例。
 
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
@@ -47,87 +47,87 @@ export default defineNuxtConfig({
 ```
 ::
 
-内容
+### 内容
 
-使用`v-model`指示词来控制编辑器的值。
+使用`v-model`指令控制编辑器的值。
 
 ::component-code
 ---
-升高：true
-更漂亮：真的
-收阖：true
-忽略：
-- 模型值类型
-- 模型值.内容
-  班级
-外部：
-  模型值
-类别：'p-8'
-道具：
-  型号值：
-    类型：'doc'
-    主要内容：
-- 类型：'标题'
-        属性：
-          水平：1
-        主要内容：
-- 类型：“文本”
-            文本：“Hello World”
-      - 类型：'段落'
-        主要内容：
-          类型：'文本'
-            文本：“这是一个”
-          类型：'文本'
-            标志：
-              键入：'粗体'
-            文本：“多信息文本”
-          类型：'文本'
-            文本：“编辑器”。
-  类别：'w-完整最小值-h-21'
+elevated: true
+prettier: true
+collapse: true
+ignore:
+  - modelValue.type
+  - modelValue.content
+  - class
+external:
+  - modelValue
+class: 'p-8'
+props:
+  modelValue:
+    type: 'doc'
+    content:
+      - type: 'heading'
+        attrs:
+          level: 1
+        content:
+          - type: 'text'
+            text: 'Hello World'
+      - type: 'paragraph'
+        content:
+          - type: 'text'
+            text: 'This is a '
+          - type: 'text'
+            marks:
+              - type: 'bold'
+            text: 'rich text'
+          - type: 'text'
+            text: ' editor.'
+  class: 'w-full min-h-21'
 ---
 ::
 
 ### 内容类型
 
-编辑器会根据`v-model`类型自动侦测内容格式：字串会视为`html`{lang="ts-type"}，而物件则视为`json`{lang="ts-type"}。
+编辑器会根据`v-model`类型自动检测内容格式：字符串被视为`html`{lang="ts-type"}，对象被视为`json`{lang="ts-type"}。
 
-您可以使用`content-type`属性来明确设定格式：`json`{lang="ts-type"}、`html`{lang="ts-type"}或`markdown`{lang="ts-type"}。
+您可以使用`content-type`属性显式设置格式：`json`{lang="ts-type"}、`html`{lang="ts-type"}或`markdown`{lang="ts-type"}。
 
 ::component-code
 ---
-升高：true
-更漂亮：真的
-忽略：
-- 模型值
-- 内容类型
-  班级
-外部：
-- 模型值
-类别：'p-8'
-道具：
-  型号值：|
-    你好，世界
-    <p>这是一个<strong>RTF编辑器</strong>。</p>
-  内容类型：'html'
-  类别：'w-完整最小值-h-21'
+elevated: true
+prettier: true
+ignore:
+  - modelValue
+  - contentType
+  - class
+external:
+  - modelValue
+class: 'p-8'
+props:
+  modelValue: |
+    <h1>Hello World</h1>
+    <p>This is a <strong>rich text</strong> editor.</p>
+  contentType: 'html'
+  class: 'w-full min-h-21'
 ---
 ::
 
-扩展名
+### 扩展
 
 默认情况下，编辑器包括以下扩展名：
 
-- [**StarterKit**](#starter-kit) -核心编辑功能（粗体、斜体、标题、列表等）
-- [**占位符**](#placeholder) -显示占位符文本（当提供了占位符属性时）
-- **Image** -插入并显示图像
-- **提及** -添加@提及支持
-- **Markdown** -解析并序列化标记（当内容类型为标记时）
+- [**StarterKit**](#starter-kit)-核心编辑功能（粗体、斜体、标题、列表等）
+- [**Placeholder**](#placeholder)-显示占位符文本（当提供占位符道具时）
+- **Image**-插入和显示图像
+- **Mention**-添加@提及支持
+- **Markdown**-解析和序列化markdown（当内容类型为markdown时）
 
 ::note
-每个内置扩展都可以使用其相应的属性（`starter-kit`、`placeholder`、`image`、`mention`、`markdown`）进行配置，以使用TipTap选项自定义其行为。
+每个内置扩展都可以使用其相应的prop（`starter-kit`，`placeholder`，`image`，`mention`，`markdown`）进行配置，以使用TipTap选项自定义其行为。
 ::
 
-您可以使用`extensions`属性添加其他TipTap扩展，以增强编辑器的功能：
+您可以使用`extensions` prop添加额外的TipTap扩展来增强编辑器的功能：
 
 ```vue
 <script setup lang="ts">
@@ -151,34 +151,34 @@ const value = ref('<h1>Hello World</h1>\n')
 ```
 
 ::tip{to="#with-image-upload"}
-查看创建自定义TipTap扩展的图像上传示例。
+查看图像上传示例，以创建自定义TipTap扩展。
 ::
 
-### 预留位置
+### 占位符
 
-使用`placeholder`属性设置在空段落中显示的占位符文本。
+使用`placeholder`属性设置一个显示在空段落中的占位符文本。
 
 ::component-code
 ---
-升高：true
-更漂亮：真的
-忽略：
-- 模型值
-- 内容类型
-- 占位符
-  115班
-外部：
-- 型号值
-类别：'p-8'
-道具：
-  modelValue：“”
-  placeholder：'开始写入...'
-  class：'w-full min-h-7'
+elevated: true
+prettier: true
+ignore:
+  - modelValue
+  - contentType
+  - placeholder
+  - class
+external:
+  - modelValue
+class: 'p-8'
+props:
+  modelValue: ''
+  placeholder: 'Start writing...'
+  class: 'w-full min-h-7'
 ---
 ::
 
 ::note
-`placeholder`prop接受一个字符串或一个具有[PlaceholderOptions](https://tiptap.dev/docs/editor/extensions/functionality/placeholder)和一个附加的`mode`属性的对象：
+`placeholder` prop接受一个字符串或一个带有[PlaceholderOptions](https://tiptap.dev/docs/editor/extensions/functionality/placeholder)和一个附加`mode`属性的对象：
 - `everyLine`：聚焦时在每一个空行上显示占位符（默认）。
 - `firstLine`：编辑器为空时，仅在第一行显示占位符。
 
@@ -190,7 +190,7 @@ const value = ref('<h1>Hello World</h1>\n')
 ::
 
 ::tip
-默认情况下，占位符只出现在顶层空节点上。要在列表项等嵌套元素中显示占位符，请将`includeChildren`设置为`true`：
+默认情况下，占位符只出现在顶层空节点上。要在嵌套元素（如列表项）中显示占位符，请将`includeChildren`设置为`true`：
 
 ```vue
 <template>
@@ -203,9 +203,9 @@ const value = ref('<h1>Hello World</h1>\n')
 在TipTap文档中了解有关占位符扩展的更多信息。
 ::
 
-### Starter Kit
+### 入门套件
 
-使用`starter-kit`prop配置内置的TipTap StarterKit扩展，其中包括常用的编辑器功能，如粗体、斜体、标题、列表、块引号、代码块等。
+使用`starter-kit` prop配置内置的TipTap StarterKit扩展，其中包括常用的编辑器功能，如粗体，斜体，标题，列表，块引号，代码块等。
 
 ```vue
 <script setup lang="ts">
@@ -233,7 +233,7 @@ const value = ref('<h1>Hello World</h1>\n')
 ```
 
 ::tip
-将`starter-kit`设置为`false`以获得纯文本编辑器。它保留基本节点（段落、文本、历史记录），并禁用所有格式设置功能，如粗体、斜体、标题、列表、代码、块引用、链接和水平规则。
+将`starter-kit`设置为`false`以获得纯文本编辑器。它保留基本节点（段落，文本，历史记录）并禁用所有格式功能，如粗体，斜体，标题，列表，代码，块引用，链接和水平规则。
 ::
 
 ::callout{icon="i-custom-tiptap" to="https://tiptap.dev/docs/editor/extensions/functionality/starterkit" target="_blank"}
@@ -242,11 +242,11 @@ const value = ref('<h1>Hello World</h1>\n')
 
 ### Handlers
 
-处理程序包装TipTap的内置命令，为编辑器操作提供统一的界面。当您将`kind`属性添加到[EditorToolbar](/docs/components/editor-toolbar)或[EditorSugestionMenu](/docs/components/editor-suggestion-menu)项时，相应的处理程序将执行TipTap命令并管理其状态（活动、禁用等）。
+处理程序包装TipTap的内置命令，为编辑器操作提供统一的界面。当您将`kind`属性添加到[EditorToolbar](/docs/components/editor-toolbar)或[EditorSuggestionMenu](/docs/components/editor-suggestion-menu)项时，相应的处理程序将执行TipTap命令并管理其状态（活动、禁用等）。
 
-#### Default handlers
+#### 默认处理程序
 
-编辑器组件提供了以下默认处理程序，您可以使用`kind`属性在工具栏或建议菜单项中引用这些处理程序：
+编辑器组件提供了这些默认处理程序，您可以使用`kind`属性在工具栏或建议菜单项中引用它们：
 
 | 处理程序|描述|使用|
 |---------|-------------|-------|
@@ -269,12 +269,12 @@ const value = ref('<h1>Hello World</h1>\n')
 | `delete`{lang="ts-type"}|删除节点|项目中需要`pos`属性|
 | `moveUp`{lang="ts-type"}|向上移动节点|项目中需要`pos`属性|
 | `moveDown`{lang="ts-type"}|向下移动节点|项目中需要`pos`属性|
-| `suggestion`{lang="ts-type"}|触发器建议菜单|`/`字符|
-| `mention`{lang="ts-type"}|触发器提及菜单|`@`字符|
-| 230英尺232英尺|触发表情选择器|插入`:`个字符|
+| `suggestion`{lang="ts-type"}|触发器建议菜单|ph271x字符|
+| `mention`{lang="ts-type"}|触发器提及菜单|ph274x字符|
+| `emoji`{lang="ts-type"}|触发表情符号选择器|ph277x字符|
 
 ::warning
-`taskList`和`textAlign`处理程序仅在安装了各自的扩展后才能工作，因为默认情况下，它们不包括在编辑器中。
+`taskList`和`textAlign`处理程序仅在安装了各自的扩展时才能工作，因为默认情况下它们不包含在编辑器中。
 ::
 
 以下是如何在工具栏或建议菜单项中使用默认处理程序：
@@ -310,7 +310,7 @@ const items: EditorToolbarItem[] = [
 
 使用`handlers`属性扩展或覆盖默认处理程序。自定义处理程序与默认处理程序合并，因此您可以添加新操作或修改现有行为。
 
-每个处理程序都实现`EditorHandler`{lang="ts-type"}接口：
+每个处理程序实现`EditorHandler`{lang="ts-type"}接口：
 
 ```ts
 interface EditorHandler {
@@ -359,119 +359,119 @@ const items = [
 ```
 
 ::tip{to="#with-image-upload"}
-查看图像上传示例，了解使用自定义处理程序的完整实现。
+查看图片上传示例，了解自定义处理程序的完整实现。
 ::
 
-示例
+## 示例
 
 ::callout{icon="i-simple-icons-github" to="https://github.com/nuxt-ui-templates/editor" target="_blank"}
-查看GitHub上的**Editor模板**的源代码，以获取一个真实的示例。
+在GitHub上查看我们的**Editor template**的源代码，以获得真实的示例。
 ::
 
-### 使用工具栏
+### 带工具栏
 
-您可以使用[EditorToolbar](/docs/components/editor-toolbar)元件，将`fixed`、`bubble`或`floating`工具列加入具有一般格式设定动作的编辑器。
+您可以使用[EditorToolbar](/docs/components/editor-toolbar)组件将`fixed`、`bubble`或`floating`工具栏添加到具有常见格式设置操作的编辑器。
 
 ::component-example
 ---
-升高：true
-收阖：true
-更漂亮：真的
-名称：'编辑器工具栏示例'
-类别：'p-8'
+elevated: true
+collapse: true
+prettier: true
+name: 'editor-toolbar-example'
+class: 'p-8'
 ---
 ::
 
-### 使用拖曳控点
+### 带拖动手柄
 
-您可以使用[EditorDragHandle](/docs/components/editor-drag-handle)组件来加入可拖曳的控制代码，以便重新排序区块。
+您可以使用[EditorDragHandle](/docs/components/editor-drag-handle)组件添加可拖动句柄，以便对块进行重新排序。
 
 ::component-example
 ---
-升高：true
-收阖：true
-更漂亮：真的
-名称：'编辑器-拖动-句柄-示例'
-类别：'p-8'
+elevated: true
+collapse: true
+prettier: true
+name: 'editor-drag-handle-example'
+class: 'p-8'
 ---
 ::
 
-### 使用建议菜单
+### 带建议菜单
 
-您可以使用[EditorSugestionMenu](/docs/components/editor-suggestion-menu)组件来新增斜扛命令，以快速格式化和插入。
+您可以使用[EditorSuggestionMenu](/docs/components/editor-suggestion-menu)组件添加斜线命令，以快速设置格式和插入。
 
 ::component-example
 ---
-升高：true
-收阖：true
-更漂亮：真的
-名称：'编辑器-建议-菜单-示例'
-类别：'p-8'
+elevated: true
+collapse: true
+prettier: true
+name: 'editor-suggestion-menu-example'
+class: 'p-8'
 ---
 ::
 
-### 使用提及菜单
+### 带提示菜单
 
-您可以使用[EditorMentionMenu](/docs/components/editor-mention-menu)元件来新增@提及，以便为使用者或实体加上标签。
+您可以使用[EditorMentionMenu](/docs/components/editor-mention-menu)组件添加@mentions以标记用户或实体。
 
 ::component-example
 ---
-升高：true
-收阖：true
-更漂亮：真的
-名称：'编辑器-提及-菜单-示例'
-类别：'p-8'
+elevated: true
+collapse: true
+prettier: true
+name: 'editor-mention-menu-example'
+class: 'p-8'
 ---
 ::
 
-### 使用表情菜单
+### 带表情符号菜单
 
-您可以使用[EditorEmojiMenu](/docs/components/editor-emoji-menu)组件来新增表情选择器支援。
+您可以使用[EditorjiMenu](/docs/components/editor-emoji-menu)组件添加emoji选择器支持。
 
 ::component-example
 ---
-升高：true
-收阖：true
-更漂亮：真的
-名称：'编辑器-表情符号-菜单-示例'
-类别：'p-8'
+elevated: true
+collapse: true
+prettier: true
+name: 'editor-emoji-menu-example'
+class: 'p-8'
 ---
 ::
 
-### 使用图像上载
+### 带图片上传
 
-此示例演示如何使用`extensions`属性注册自定义TipTap节点以及`handlers`属性定义工具栏按钮如何触发上载流来创建图像上载功能。
+此示例演示如何使用`extensions` prop创建图像上传功能，以注册自定义TipTap节点，并使用`handlers` prop定义工具栏按钮如何触发上传流。
 
-1. 创建一个使用[文件上载](/docs/components/file-upload)组件的Vue组件：
+1. 创建一个使用[文件夹ad](/docs/components/file-upload)组件的Vue组件：
 
 ::component-example
 ---
-预览：假
-收阖：true
-名称：'编辑器图像上传节点'
+preview: false
+collapse: true
+name: 'editor-image-upload-node'
 ---
 ::
 
-2. 创建一个自定义TipTap扩展来注册节点：
+2. 创建自定义TipTap扩展来注册节点：
 
 ::component-example
 ---
-预览：假
-收阖：true
-语言：'ts'
-名称：'编辑器-图像-上传-扩展'
+preview: false
+collapse: true
+lang: 'ts'
+name: 'editor-image-upload-extension'
 ---
 ::
 
-3. 在编辑器中使用自定义扩展名：
+3. 在编辑器中使用自定义扩展：
 
 ::component-example
 ---
-升高：true
-收阖：true
-更漂亮：真的
-名称：'编辑器-图像-上传-示例'
-类：“！p-0”
+elevated: true
+collapse: true
+prettier: true
+name: 'editor-image-upload-example'
+class: '!p-0'
 ---
 ::
 
@@ -479,12 +479,12 @@ const items = [
 在TipTap文档中了解有关创建自定义扩展的更多信息。
 ::
 
-### 使用人工智能完成
+### 带AI补全
 
-此示例演示了如何使用[Vercel AI SDK](https://ai-sdk.dev/)（特别是[`useCompletion`](https://ai-sdk.dev/docs/reference/ai-sdk-ui/use-completion)）将AI支持的功能添加到编辑器中，该SDK可用于流式文本完成，与[Vercel AI Gateway](https://vercel.com/ai-gateway)结合使用，可通过一个集中式端点访问AI模型。它包括ghost文本自动完成和文本转换操作（修复语法、扩展、减少、简化、翻译等）。
+此示例演示如何使用[Vercel AI SDK](https://ai-sdk.dev/)将AI驱动的功能添加到编辑器中，特别是可用于流式文本补全的[`useCompletion`](https://ai-sdk.dev/docs/reference/ai-sdk-ui/use-completion)组合，结合[Vercel AI Gateway ](https://vercel.com/ai-gateway)，通过集中式端点访问AI模型。它包括ghost文本自动完成和文本转换操作（修复语法、扩展、减少、简化、翻译等）。
 
 ::note
-要使用此示例，您需要首先安装这些依赖项：
+您需要先安装这些依赖项才能使用此示例：
 
 ::code-group{sync="pm"}
 
@@ -508,30 +508,30 @@ bun add ai @ai-sdk/gateway @ai-sdk/vue
 
 ::
 
-1. 创建一个处理内联重影文本建议的自定义TipTap扩展：
+1. 创建一个自定义TipTap扩展来处理内联ghost文本建议：
 
 ::component-example
 ---
-预览：假
-收阖：true
-名称：'编辑器-补全-扩展'
-语言：'ts'
+preview: false
+collapse: true
+name: 'editor-completion-extension'
+lang: 'ts'
 ---
 ::
 
-2. 创建一个管理AI完成状态和处理程序的可组合对象：
+2. 创建一个管理AI完成状态和处理程序的组合：
 
 ::component-example
 ---
-预览：假
-收阖：true
-名称：'编辑器-使用-完成'
-文件名：'使用编辑器完成'
-语言：'ts'
+preview: false
+collapse: true
+name: 'editor-use-completion'
+filename: 'useEditorCompletion'
+lang: 'ts'
 ---
 ::
 
-3. 使用[创建服务器API终结点来处理完成请求`streamText`](https://ai-sdk.dev/docs/reference/ai-sdk-core/stream-text#streamtext)：
+3. 使用[`streamText`](https://ai-sdk.dev/docs/reference/ai-sdk-core/stream-text#streamtext)创建一个服务器API端点来处理完成请求：
 
 ::code-collapse
 
@@ -601,56 +601,56 @@ CRITICAL RULES:
 
 ::
 
-4. 在编辑器中使用可组合对象：
+4. 在编辑器中使用组合：
 
 ::component-example
 ---
-升高：true
-收阖：true
-更漂亮：真的
-名称：'编辑器完成范例'
-类：“！p-0”
+elevated: true
+collapse: true
+prettier: true
+name: 'editor-completion-example'
+class: '!p-0'
 ---
 ::
 
 ::note
-可以使用`autoTrigger: true`将完成扩展配置为在键入时自动建议完成（默认情况下禁用）。您也可以使用以下命令手动触发它：kbd{value="meta"}：kbd{value="j" class="ms-px"}。
+补全扩展可以通过`autoTrigger: true`配置为在键入时自动建议补全（默认情况下禁用）。您也可以通过kbd{value="meta"}：kbd{value="j" class="ms-px"}手动触发它。
 ::
 
 ::callout{icon="i-simple-icons-vercel" to="https://ai-sdk.dev/" target="_blank"}
-了解有关Vercel AI SDK和可用提供程序的更多信息。
+了解有关Vercel AI SDK和可用提供商的更多信息。
 ::
 
-活性成分
+## API
 
-### 道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-发射率
+### Emits
 
-：组件发射
+:component-emits
 
-曝光
+### 曝光
 
 通过模板引用访问组件时，可以使用以下命令：
 
 | 名称|类型|
 | ---- | ---- |
-| 454小时456小时|457号公路|
+| `editor`{lang="ts-type"}| `Ref<Editor \| undefined>`{lang="ts-type"}|
 
 ::callout{icon="i-custom-tiptap" to="https://tiptap.dev/docs/editor/api/editor" target="_blank"}
-公开的编辑器实例是TipTap编辑器API。请查看TipTap文档以了解所有可用的方法和属性。
+公开的编辑器实例是TipTap Editor API。查看TipTap文档以了解所有可用的方法和属性。
 ::
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

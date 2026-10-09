@@ -1,5 +1,5 @@
 ---
-title: ProseCodeGroup (프로세코드그룹)
+title: ProseCode그룹
 description: '쉽게 비교할 수 있도록 탭 인터페이스에 여러 코드 예제를 그룹화합니다.'
 category: components
 navigation.title: CodeGroup
@@ -9,9 +9,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodeGroup.vue
 ---
 
-##  사용
+## Usage
 
-코드 블록을 `code-group` 구성 요소 주위로 래핑하여 탭으로 함께 그룹화합니다.Wrap your code blocks around a `code-group` component to group them together in tabs.
+`code-group` 구성 요소 주위에 코드 블록을 래핑하여 탭으로 그룹화합니다.
 
 ::code-preview{class="[&>div]:*:my-0 [&>div]:*:w-full"}
 
@@ -35,7 +35,7 @@ bun add @nuxt/ui
 
 :::
 
-# 코드
+#code
 
 ````mdc
 ::code-group
@@ -49,7 +49,7 @@ yarn add@nuxt/ui (yarn add@nuxt/ui) / (으)
 ```
 
 ```bash [npm]
-npm install@nuxt/ui 설치
+npm install@nuxt/ui / 설치
 ```
 
 ```bash [bun]
@@ -65,20 +65,20 @@ bun add@nuxt/ui / bun add @nuxt/ui ( bun add @nuxt/ui ) 를 클릭하십시오 .
 `ProsePre` 구성 요소와 마찬가지로 `CodeGroup`는 파일 이름, 아이콘 및 복사 버튼을 처리합니다.
 ::
 
-##  API
+## API 파일
 
-### Props 이미지
+### Props (### Props)
 
-: component-props {prose}
+:component-props{prose}
 
-###  슬롯
+### Slots
 
-: component-slots {prose}
+:component-slots{prose}
 
-##  테마
+## Theme 테마
 
-: component-theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## 변경 로그
 
-: component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

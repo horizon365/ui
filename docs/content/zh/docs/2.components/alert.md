@@ -10,299 +10,299 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Alert.vue
 ---
 
-## 使用情况
+## 用法
 
-标题：
+### 标题
 
 使用`title`道具设置警报的标题。
 
 ::component-code
 ---
-道具：
-  title：“小心！”
+props:
+  title: 'Heads up!'
 ---
 ::
 
-说明：
+### 说明
 
-使用`description`属性设置警报的说明。
+使用`description`属性设置警报的描述。
 
 ::component-code
 ---
-更漂亮：真的
-道具：
-  title：“小心！”
-  description：'您可以在应用程序配置中更改主颜色。'
+prettier: true
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
 ---
 ::
 
-### 图标
+### Icon
 
-使用“`icon`”道具来显示“[”图标。
+使用`icon`道具显示[Icon](/docs/components/icon)。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-- 标题
-  说明：
-道具：
-  title：“小心！”
-  description：'您可以在应用程序配置中更改主颜色。'
-  图标：“i-lucide-终端”
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  icon: 'i-lucide-terminal'
 ---
 ::
 
-虚拟人偶
+### Avatar
 
-使用“`avatar`”道具来显示“化身”。
+使用`avatar`道具显示[Avatar](/docs/components/avatar)。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  019标题
-  描述：
-道具：
-  title：“小心！”
-  description：'您可以在应用程序配置中更改主颜色。'
-  虚拟化身.src：“https：//github.com/nuxt.png”（网址：http：//github.com/nuxt.png）
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  avatar.src: 'https://github.com/nuxt.png'
 ---
 ::
 
-彩色的
+### Color
 
 使用`color`道具更改警报的颜色。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标题：
-  描述：
-  图标
-道具：
-  颜色：中性
-  title：“小心！”
-  description：'您可以在应用程序配置中更改主颜色。'
-  图标：“i-lucide-终端”
+prettier: true
+ignore:
+  - title
+  - description
+  - icon
+props:
+  color: neutral
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  icon: 'i-lucide-terminal'
 ---
 ::
 
-### 变体
+### Variant
 
-使用`variant`道具更改警报的变体。
+使用`variant` prop更改Alert的变体。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标题
-  描述
-- 图标
-道具：
-  颜色：中性
-  变体：细微
-  title：“小心！”
-  description：'您可以在应用程序配置中更改主颜色。'
-  图标：“i-lucide-终端”
+prettier: true
+ignore:
+  - title
+  - description
+  - icon
+props:
+  color: neutral
+  variant: subtle
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  icon: 'i-lucide-terminal'
 ---
 ::
 
 ### 关闭
 
-使用`close`道具来显示[按钮](/docs/components/button)，以解除警示。
+使用`close`道具显示[按钮](/docs/components/button)以解除警报。
 
 ::tip
-单击关闭按钮时，将发出`update:open`事件。
+当单击关闭按钮时，将发出`update:open`事件。
 ::
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标题
-  描述：
-  关闭
-  颜色
-- 变体
-道具：
-  title：“小心！”
-  description：'您可以在应用程序配置中更改主颜色。'
-  颜色：中性
-  变体：轮廓
-  关闭：true
+prettier: true
+ignore:
+  - title
+  - description
+  - close
+  - color
+  - variant
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  color: neutral
+  variant: outline
+  close: true
 ---
 ::
 
-您可以从[Button](/docs/components/button)组件传递任何属性来自订它。
+您可以从[Button](/docs/components/button)组件传递任何属性来对其进行自定义。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标题
-  描述
-  关闭. color
-- 关闭变量
-  颜色
-- 变体
-道具：
-  title：“注意！”
-  description：'您可以在应用程序配置中更改主颜色。'
-  颜色：中性
-  变体：轮廓
-  结束语：
-    颜色：原色
-    变体：轮廓
-    类别：'四舍五入-完整'
+prettier: true
+ignore:
+  - title
+  - description
+  - close.color
+  - close.variant
+  - color
+  - variant
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  color: neutral
+  variant: outline
+  close:
+    color: primary
+    variant: outline
+    class: 'rounded-full'
 ---
 ::
 
 ### 关闭图标
 
-使用`close-icon`道具来自订关闭按钮[Icon](/docs/components/icon)。预设值为`i-lucide-x`。
+使用`close-icon`属性自定义关闭按钮[Icon](/docs/components/icon)。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标题：
-  描述：
-  关闭
-  颜色
-- 变体
-道具：
-  title：“小心！”
-  description：'您可以在应用程序配置中更改主颜色。'
-  颜色：中性
-  变体：轮廓
-  关闭：true
-  关闭图标：'i-透明箭头-右'
+prettier: true
+ignore:
+  - title
+  - description
+  - close
+  - color
+  - variant
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  color: neutral
+  variant: outline
+  close: true
+  closeIcon: 'i-lucide-arrow-right'
 ---
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-您可以在`ui.icons.close`键下的`app.config.ts`中全局自定义此图标。
+你可以在你的`app.config.ts`下的`ui.icons.close`键全局自定义这个图标。
 :::
 
-版本号
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-您可以在`vite.config.ts`的`ui.icons.close`键下全局自定此图标。
+你可以在你的`vite.config.ts`中的`ui.icons.close`键下全局自定义这个图标。
 :::
 ::
 
-操作
+### Actions
 
-使用`actions`属性将一些[按钮](
+使用`actions` prop向Alert添加一些[Button](/docs/components/button)操作。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标题
-  操作
-  颜色
-- 变体
-道具：
-  title：“小心！”
-  description：'您可以在应用程序配置中更改主颜色。'
-  颜色：中性
-  变体：轮廓
-  动作：
-    标签：操作1
-    标签：操作2
-      颜色：中性
-      变体：细微
+prettier: true
+ignore:
+  - title
+  - actions
+  - color
+  - variant
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  color: neutral
+  variant: outline
+  actions:
+    - label: Action 1
+    - label: Action 2
+      color: neutral
+      variant: subtle
 ---
 ::
 
-方向
+### 方向
 
 使用`orientation`道具更改警报的方向。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标题：
-  操作
-  彩色的
-- 变体
-道具：
-  title：“小心！”
-  description：'您可以在应用程序配置中更改主颜色。'
-  颜色：中性
-  变体：轮廓
-  方向：水平
-  动作：
-    标签：操作1
-    @@标签：操作2
-      颜色：中性
-      变体：细微
+prettier: true
+ignore:
+  - title
+  - actions
+  - color
+  - variant
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  color: neutral
+  variant: outline
+  orientation: horizontal
+  actions:
+    - label: Action 1
+    - label: Action 2
+      color: neutral
+      variant: subtle
 ---
 ::
 
-示例
+## 示例
 
-第1000章道具
+### `class`道具
 
-使用`class`属性覆盖警报的基本样式。
+使用`class`属性覆盖Alert的基本样式。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  标题：
-  描述
-道具：
-  title：“小心！”
-  description：'您可以在应用程序配置中更改主颜色。'
-  类别：'舍入-无'
+prettier: true
+ignore:
+  - title
+  - description
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  class: 'rounded-none'
 ---
 ::
 
-第1096章道具
+### `ui`道具
 
-使用`ui`属性覆盖报警的插槽样式。
+使用`ui`道具覆盖警报的插槽样式。
 
 ::component-code
 ---
-更漂亮：真的
-忽略：
-  我的天
-  标题：
-- 说明
-- 图标
-道具：
-  title：“小心！”
-  description：'您可以在应用程序配置中更改主颜色。'
-  图标：i-lucide-火箭
-  用户界面：
-    图标：“大小-11”
+prettier: true
+ignore:
+  - ui
+  - title
+  - description
+  - icon
+props:
+  title: 'Heads up!'
+  description: 'You can change the primary color in your app config.'
+  icon: i-lucide-rocket
+  ui:
+    icon: 'size-11'
 ---
 ::
 
-## 活性成分
+## API
 
-### 道具
+### Props
 
-：组件-支柱
+:component-props
 
-插槽
+### Slots
 
-：组件插槽
+:component-slots
 
-### 排放量
+### Emits
 
-：组件发射
+:component-emits
 
-主题
+## Theme
 
-：组件主题
+:component-theme
 
-## 变更日志
+## Changelog
 
-：组件更改日志
+:component-changelog

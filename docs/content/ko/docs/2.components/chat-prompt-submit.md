@@ -11,18 +11,18 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatPromptSubmit.vue
 ---
 
-##  사용
+## Usage
 
-ChatPromptSubmit 구성 요소는 [ChatPrompt](/docs/components/chat-prompt) 구성 요소 내에서 사용되며 자동으로 다른 `status` 값을 처리하여 대화를 제어합니다.
+ChatPromptSubmit 구성 요소는 [ChatPrompt](xph04x) 구성 요소 내에서 프롬프트를 제출하는 데 사용됩니다. 대화를 제어하기 위해 다른 `status` 값을 자동으로 처리합니다.
 
-그것은 [Button](/docs/components/button) 구성 요소를 확장, 그래서 당신은 `color`, `variant`, `size` 등과 같은 속성을 전달 할 수 있습니다.
+[Button](/docs/components/button) 구성 요소를 확장하므로 `color`, `variant`, `size` 등과 같은 속성을 전달할 수 있습니다.
 
 ::code-preview
 
-#기본 값
-: u-chat-prompt-제출
+#default
+:u-chat-prompt-submit
 
-# 코드
+#code
 ```vue
 <template>
   <UChatPrompt>
@@ -36,231 +36,231 @@ ChatPromptSubmit 구성 요소는 [ChatPrompt](/docs/components/chat-prompt) 구
 또한 [`ChatPrompt`](/docs/components/chat-prompt) 구성 요소의 `footer` 슬롯 내에서 사용할 수 있습니다.
 ::
 
-###  준비
+### Ready 지원
 
-상태가 `ready`{lang="ts-type"}인 경우 `color`, `variant` 및 `icon`props를 사용하여 Button을 사용자 정의합니다. 기본값은 다음과 같습니다.
+상태가 `ready`{lang="ts-type"}인 경우 `color`, `variant` 및 `icon` props를 사용하여 Button을 사용자 정의합니다. 기본값은 다음과 같습니다.
 
 - `color="primary"`{lang="ts-type"}
 - `variant="solid"`{lang="ts-type"}
--  @ `icon="i-lucide-arrow-up"` @ {lang="ts-type"}
+- `icon="i-lucide-arrow-up"`{lang="ts-type"}의 발음을 - `icon="i-lucide-arrow-up"`{lang="ts-type"}
 
 ::component-code
 ---
-상품명 : True
-항목:
-  색상 :
-    -  primary
-    -  secondary
-    -  성공
-    -  경고
-    -  오류
-    -  neutral
-  변형:
-    -  solid
-    -  outline
-    -  soft
-    - subtle @ 미묘한
-    -  ghost
-소품 :
-  색상 : primary
-  variant: 'solid'에 해당되는 글 1건
-  아이콘: 'i-lucide-arrow-up'
+prettier: true
+items:
+  color:
+    - primary
+    - secondary
+    - success
+    - warning
+    - error
+    - neutral
+  variant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+props:
+  color: 'primary'
+  variant: 'solid'
+  icon: 'i-lucide-arrow-up'
 ---
 ::
 
 ::framework-only
-#nuxt 코드
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.arrowUp` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.arrowUp` 키 아래의 `app.config.ts` 내에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.arrowUp` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.arrowUp` 키 아래의 `vite.config.ts` 내에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-###  제출 됨
+### Submitted 제출
 
-상태가 `submitted`{lang="ts-type"}인 경우 `submitted-color`, `submitted-variant` 및 `submitted-icon`props를 사용하여 Button을 사용자 정의합니다. 기본값은 다음과 같습니다.
+상태가 `submitted`{lang="ts-type"}인 경우 `submitted-color`, `submitted-variant` 및 `submitted-icon` props를 사용하여 Button을 사용자 정의합니다. 기본값은 다음과 같습니다.
 
--  @ `submittedColor="neutral"` @ @ {lang="ts-type"} @
-- `submittedVariant="subtle"`{lang="ts-type"}
--  @ `submittedIcon="i-lucide-square"` @ {lang="ts-type"}
+- `submittedColor="neutral"`{lang="ts-type"} (- `submittedColor="neutral"`{lang="ts-type"})
+- `submittedVariant="subtle"`{lang="ts-type"} (- `submittedVariant="subtle"`{lang="ts-type"})
+- `submittedIcon="i-lucide-square"`{lang="ts-type"}의 발음을 - `submittedIcon="i-lucide-square"`{lang="ts-type"}
 
 ::note
-`stop` 이벤트는 사용자가 Button을 클릭하면 발생합니다.
+`stop` 이벤트는 사용자가 Button을 클릭할 때 발생합니다.
 ::
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  status
-프로젝트:
+prettier: true
+ignore:
+  - status
+items:
   submittedColor:
-    -  기본
-    -  secondary
-    -  성공
-    -  경고
-    -  오류
-    -  neutral
+    - primary
+    - secondary
+    - success
+    - warning
+    - error
+    - neutral
   submittedVariant:
-    -  solid
-    -  개요
-    -  soft
-    - subtle @ 미묘한
-    -  ghost
-소품 :
-  submittedColor: 'neutral' (중립적인 색상)
-  submittedVariant: '미묘한'
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+props:
+  submittedColor: 'neutral'
+  submittedVariant: 'subtle'
   submittedIcon: 'i-lucide-square'
-  상태: 'submitted'
+  status: 'submitted'
 ---
 ::
 
 ::framework-only
-#nuxt 코드
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.stop` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.stop` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.stop` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.stop` 키 아래의 `vite.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-###  스트리밍
+### Streaming 파일
 
-상태가 `streaming`{lang="ts-type"}인 경우 `streaming-color`, `streaming-variant` 및 `streaming-icon`props를 사용하여 Button을 사용자 정의합니다. 기본값은 다음과 같습니다.
+상태가 `streaming`{lang="ts-type"}인 경우 `streaming-color`, `streaming-variant` 및 `streaming-icon` 소품을 사용하여 Button을 사용자 정의합니다. 기본값은 다음과 같습니다.
 
 - `streamingColor="neutral"`{lang="ts-type"}
-- `streamingVariant="subtle"`{lang="ts-type"}
-- `streamingIcon="i-lucide-square"`{lang="ts-type"}
+- `streamingVariant="subtle"`{lang="ts-type"} - xph120{lang="ts-type"}
+- `streamingIcon="i-lucide-square"`{lang="ts-type"} (- `streamingIcon="i-lucide-square"`{lang="ts-type"})
 
 ::note
-`stop` 이벤트는 사용자가 버튼을 클릭할 때 발생합니다.
+`stop` 이벤트는 사용자가 Button을 클릭할 때 발생합니다.
 ::
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  status
-항목:
+prettier: true
+ignore:
+  - status
+items:
   streamingColor:
-    -  기본
-    -  secondary
-    -  성공
-    -  경고
-    -  오류
-    -  neutral
+    - primary
+    - secondary
+    - success
+    - warning
+    - error
+    - neutral
   streamingVariant:
-    -  solid
-    -  outline
-    -  soft
-    - subtle @@ 비밀번호
-    -  ghost
-소품 :
-  streamingColor: 'neutral' 이미지
-  streamingVariant: "미묘한"
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+props:
+  streamingColor: 'neutral'
+  streamingVariant: 'subtle'
   streamingIcon: 'i-lucide-square'
-  상태: "스트리밍"
+  status: 'streaming'
 ---
 ::
 
 ::framework-only
-#nuxt 코드
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.stop` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.stop` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.stop` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.stop` 키 아래의 `vite.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-###  에러
+### Error 오류
 
-`error`{lang="ts-type"} 상태인 경우 `error-color`, `error-variant` 및 `error-icon`props를 사용하여 Button을 사용자 정의합니다. 기본값은 다음과 같습니다.
+상태가 `error`{lang="ts-type"}인 경우 `error-color`, `error-variant` 및 `error-icon` props를 사용하여 Button을 사용자 정의합니다. 기본값은 다음과 같습니다.
 
-- `errorColor="error"`{lang="ts-type"}
-- `errorVariant="soft"`{lang="ts-type"}
+- `errorColor="error"`{lang="ts-type"} (- `errorColor="error"`{lang="ts-type"})
+- `errorVariant="soft"`{lang="ts-type"} - {lang="ts-type"} (- `errorVariant="soft"`{lang="ts-type"}) / - `errorVariant="soft"`{lang="ts-type"}
 - `errorIcon="i-lucide-rotate-ccw"`{lang="ts-type"}
 
 ::note
-`reload` 이벤트는 사용자가 버튼을 클릭할 때 발생합니다.
+`reload` 이벤트는 사용자가 Button을 클릭할 때 발생합니다.
 ::
 
 ::component-code
 ---
-상품명 : True
-무시하기:
-  -  status
-프로젝트:
+prettier: true
+ignore:
+  - status
+items:
   errorColor:
-    -  기본
-    - secondary @ 시월
-    -  성공
-    -  경고
-    -  오류
-    -  neutral
-  errorVariant :
-    -  solid
-    -  개요
-    -  soft
-    - subtle @ 비밀번호
-    @ph147@@ghost @ ghost @ @ @ @ ghost
-소품 :
-  errorColor: '오류'
-  errorVariant: '소프트'
+    - primary
+    - secondary
+    - success
+    - warning
+    - error
+    - neutral
+  errorVariant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+props:
+  errorColor: 'error'
+  errorVariant: 'soft'
   errorIcon: 'i-lucide-rotate-ccw'
-  상태: 'error'
+  status: 'error'
 ---
 ::
 
 ::framework-only
-#nuxt 코드
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.reload` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.reload` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 지정할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.reload` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.reload` 키 아래의 `vite.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-##  예
+## 예제
 
 ::tip{to="/docs/components/chat"}
-**Chat**Overview 페이지에서 설치 지침, 서버 설정 및 사용 예를 확인하십시오.
+**Chat** 개요 페이지에서 설치 지침, 서버 설정 및 사용법 예를 확인하십시오.
 ::
 
-##  API
+## API 파일
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-이 컴포넌트는 또한 모든 네이티브 `<button>`HTML 속성을 지원합니다.
+이 구성 요소는 모든 기본 `<button>` HTML 속성을 지원합니다.
 ::
 
-###  슬롯
+### Slots
 
-:컴포넌트 - 슬롯
+:component-slots
 
-###  에미츠
+### Emits
 
-:구성요소 - 방출
+:component-emits
 
-##  테마
+## 테마
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

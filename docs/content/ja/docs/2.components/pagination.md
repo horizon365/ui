@@ -15,59 +15,59 @@ links:
 
 ## 使用法
 
-現在のページを制御するには、`default-page` propまたは`v-model:page`ディレクティブを使用します。
+現在のページを制御するには、`default-page`プロパティまたは`v-model:page`ディレクティブを使用します。
 
 ::component-code
 ---
-外部
-  - ページ
-モデル
-  - ページ
-無視
-  - ページ
-  - 合計
-小道具
-  ページ数5
-  合計100
+external:
+  - page
+model:
+  - page
+ignore:
+  - page
+  - total
+props:
+  page: 5
+  total: 100
 ---
 ::
 
 ::note
-ページネーションコンポーネントは、ページを表示するために[`Button`](/docs/components/button)を使用します。[`color`](#color)を使用します。[`variant`](#variant)[`size`](#size) propsをスタイリングします。
+ページネーションコンポーネントはページを表示するために[`Button`](/docs/components/button)を使用し、スタイルを設定するために[`color`](#color)、[`variant`](#variant)、[`size`](#size)小道具を使用します。
 ::
 
-### 合計
+### Total
 
-`total`プロパティを使用して、リスト内の項目の合計数を設定します。
+`total`プロパティを使用して、リスト内のアイテムの合計数を設定します。
 
 ::component-code
 ---
-外部
-  - ページ
-モデル
-  - ページ
-小道具
-  ページ数5
-  合計100
+external:
+  - page
+model:
+  - page
+props:
+  page: 5
+  total: 100
 ---
 ::
 
 ### ページごとのアイテム
 
-`items-per-page`プロパティを使用して、ページごとのアイテム数を設定します。デフォルトは`10`です。
+`items-per-page`プロパティを使用して、1ページあたりのアイテム数を設定します。デフォルトは`10`です。
 
 ::component-code
 ---
-無視
-  - ページ
-外部
-  - ページ
-モデル
-  - ページ
-小道具
-  ページ数5
-  アイテム1ページあたり20
-  合計100
+ignore:
+  - page
+external:
+  - page
+model:
+  - page
+props:
+  page: 5
+  itemsPerPage: 20
+  total: 100
 ---
 ::
 
@@ -77,38 +77,38 @@ links:
 
 ::component-code
 ---
-無視
-  - ページ
-  - 合計
-外部
-  - ページ
-モデル
-  - ページ
-小道具
-  ページ数5
-  siblingCount 1
-  合計100
+ignore:
+  - page
+  - total
+external:
+  - page
+model:
+  - page
+props:
+  page: 5
+  siblingCount: 1
+  total: 100
 ---
 ::
 
-###  Showエッジ
+### エッジを表示
 
 `show-edges`プロパティを使用して、省略記号、最初と最後のページを常に表示します。デフォルトは`false`です。
 
 ::component-code
 ---
-無視
-  - ページ
-  - 合計
-外部
-  - ページ
-モデル
-  - ページ
-小道具
-  ページ数5
-  showEdges true
-  siblingCount 1
-  合計100
+ignore:
+  - page
+  - total
+external:
+  - page
+model:
+  - page
+props:
+  page: 5
+  showEdges: true
+  siblingCount: 1
+  total: 100
 ---
 ::
 
@@ -118,47 +118,47 @@ links:
 
 ::component-code
 ---
-無視
-  - ページ
-  - 合計
-外部
-  - ページ
-モデル
-  - ページ
-小道具
-  ページ数5
-  showControls false
-  showEdges true
-  合計100
+ignore:
+  - page
+  - total
+external:
+  - page
+model:
+  - page
+props:
+  page: 5
+  showControls: false
+  showEdges: true
+  total: 100
 ---
 ::
 
-### カラー
+### Color
 
 `color`プロパティを使用して、非アクティブなコントロールの色を設定します。デフォルトは`neutral`です。
 
 ::component-code
 ---
-無視
-  - ページ
-  - 合計
-外部
-  - ページ
-モデル
-  - ページ
-アイテム
-  色
-    - プライマリ
-    - セカンダリ
-    - 成功
-    -  info
-    -  warning
-    - エラー
-    - ニュートラル
-小道具
-  ページ数5
-  色プライマリ
-  合計100
+ignore:
+  - page
+  - total
+external:
+  - page
+model:
+  - page
+items:
+  color:
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
+props:
+  page: 5
+  color: primary
+  total: 100
 ---
 ::
 
@@ -168,127 +168,127 @@ links:
 
 ::component-code
 ---
-無視
-  - ページ
-  - 合計
-外部
-  - ページ
-モデル
-  - ページ
-アイテム
-  色
-    - プライマリ
-    - セカンダリ
-    - 成功
-    -  info
-    -  warning
-    - エラー
-    - ニュートラル
-  バリアント
-    - ソリッド
-    - アウトライン
-    - ソフト
-    - 微妙
-    - ゴースト
-    -  link
-小道具
-  ページ数5
-  色ニュートラル
-  バリアント：微妙
-  合計100
+ignore:
+  - page
+  - total
+external:
+  - page
+model:
+  - page
+items:
+  color:
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
+  variant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+    - link
+props:
+  page: 5
+  color: neutral
+  variant: subtle
+  total: 100
 ---
 ::
 
-### アクティブカラー
+### Active Color
 
 `active-color`プロパティを使用して、アクティブなコントロールの色を設定します。デフォルトは`primary`です。
 
 ::component-code
 ---
-無視
-  - ページ
-  - 合計
-外部
-  - ページ
-モデル
-  - ページ
-アイテム
-  activeColor
-    - プライマリ
-    - セカンダリ
-    - 成功
-    -  info
-    -  warning
-    - エラー
-    - ニュートラル
-小道具
-  ページ数5
-  activeColorニュートラル
-  合計100
+ignore:
+  - page
+  - total
+external:
+  - page
+model:
+  - page
+items:
+  activeColor:
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
+props:
+  page: 5
+  activeColor: neutral
+  total: 100
 ---
 ::
 
-###  Active Variant
+### Activeバリアント
 
-アクティブコントロールのバリアントを設定するには、`active-variant`プロパティを使用します。デフォルトは`solid`です。
+`active-variant`プロパティを使用して、アクティブコントロールのバリアントを設定します。デフォルトは`solid`です。
 
 ::component-code
 ---
-無視
-  - ページ
-  - 合計
-外部
-  - ページ
-モデル
-  - ページ
-アイテム
-  activeColor
-    - プライマリ
-    - セカンダリ
-    - 成功
-    -  info
-    -  warning
-    - エラー
-    - ニュートラル
-  activeVariant
-    - ソリッド
-    - アウトライン
-    - ソフト
-    - 微妙
-    - ゴースト
-    -  link
-小道具
-  ページ数5
-  activeColorプライマリ
-  activeVariant：微妙
-  合計100
+ignore:
+  - page
+  - total
+external:
+  - page
+model:
+  - page
+items:
+  activeColor:
+    - primary
+    - secondary
+    - success
+    - info
+    - warning
+    - error
+    - neutral
+  activeVariant:
+    - solid
+    - outline
+    - soft
+    - subtle
+    - ghost
+    - link
+props:
+  page: 5
+  activeColor: primary
+  activeVariant: subtle
+  total: 100
 ---
 ::
 
 ### サイズ
 
-コントロールのサイズを設定するには`size`プロパティを使用します。デフォルトは`md`です。
+`size`プロパティを使用してコントロールのサイズを設定します。デフォルトは`md`です。
 
 ::component-code
 ---
-無視
-  - ページ
-  - 合計
-外部
-  - ページ
-モデル
-  - ページ
-アイテム
-  サイズ
-    お問い合わせ_P133
-    -  sm
-    -  md
-    -  lg
-    -  xl
-小道具
-  ページ数5
-  サイズXL
-  合計100
+ignore:
+  - page
+  - total
+external:
+  - page
+model:
+  - page
+items:
+  size:
+    - xs
+    - sm
+    - md
+    - lg
+    - xl
+props:
+  page: 5
+  size: xl
+  total: 100
 ---
 ::
 
@@ -298,17 +298,17 @@ links:
 
 ::component-code
 ---
-無視
-  - ページ
-  - 合計
-外部
-  - ページ
-モデル
-  - ページ
-小道具
-  ページ数5
-  合計100
-  無効true
+ignore:
+  - page
+  - total
+external:
+  - page
+model:
+  - page
+props:
+  page: 5
+  total: 100
+  disabled: true
 ---
 ::
 
@@ -316,36 +316,36 @@ links:
 
 ### リンク付き
 
-ボタンをリンクに変換するには、`to` propを使用します。ページ番号を受け取り、ルート先を返す関数を渡します。
+ボタンをリンクに変換するには、`to`プロパティを使用します。ページ番号を受け取り、ルート先を返す関数を渡します。
 
 ::component-example
 ---
-名前'pagination—links—example'
+name: 'pagination-links-example'
 ---
 ::
 
 ::note
-この例では、`#with-links`ハッシュを追加して、ページの先頭に移動しないようにしています。
+この例では、ページの先頭に移動しないように`#with-links`ハッシュを追加しています。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

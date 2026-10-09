@@ -11,137 +11,137 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Card.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
-Verwenden Sie die `header`,`default` und `footer` Slots, um Inhalte auf die Karte hinzuzufügen.
+Verwenden Sie die Steckplätze `header`, `default` und `footer`, um Inhalte zur Karte hinzuzufügen.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@004@Klasse
-Props:
-  Klasse: "W-voll"
-Die Slots:
-  Der Header:|
+prettier: true
+hide:
+  - class
+props:
+  class: 'w-full'
+slots:
+  header: |
 
-    @@@@005
+    <Placeholder class="h-8" />
 
-  Default:|
+  default: |
 
-    @@@@006 @
+    <Placeholder class="h-32" />
 
-  Fußzeile:|
+  footer: |
 
-    @@@@007 @
+    <Placeholder class="h-8" />
 ---
 
-Der Header
-: placeholder{class="h-8"}
+#header
+:placeholder{class="h-8"}
 
-#DefaultBearbeiten
-: placeholder{class="h-32"}
+#default
+:placeholder{class="h-32"}
 
-#Footer hinzufügen
-: placeholder{class="h-8"}
+#footer
+:placeholder{class="h-8"}
 ::
 
-### Titel: badge{label="4.7+" class="align-text-top"}
+### Title: badge{label="4.7+" class="align-text-top"} (englisch)
 
-Verwenden Sie `title` prop, um den Titel des Kartenkopfes festzulegen.
+Verwenden Sie die `title` prop, um den Titel des Kartenkopfes festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@14@Klasse
-Props:
-  Titel: "Karte mit Titel"
-  Klasse: "W-voll"
-Die Slots:
-  Default:|
+prettier: true
+ignore:
+  - class
+props:
+  title: 'Card with title'
+  class: 'w-full'
+slots:
+  default: |
 
-    @@015
+    <Placeholder class="h-32" />
 ---
 
-#DefaultBearbeiten
-: placeholder{class="h-32"}
+#default
+:placeholder{class="h-32"}
 ::
 
 ### Beschreibung: badge{label="4.7+" class="align-text-top"}
 
-Verwenden Sie `description` prop, um die Beschreibung des Kartenkopfes festzulegen.
+Verwenden Sie die `description`-prop, um die Beschreibung des Kartenkopfes festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph020@@title
-  @@ph021@class
-Props:
-  Titel: "Karte mit Beschreibung"
-  Die Inschrift lautet: "Lorem ipsum dolor sit amet, consectetur adipiscing elit".
-  Klasse: "W-voll"
-Slots auf:
-  Default:|
+prettier: true
+ignore:
+  - title
+  - class
+props:
+  title: 'Card with description'
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  class: 'w-full'
+slots:
+  default: |
 
-    @@ph022
+    <Placeholder class="h-32" />
 ---
 
-#DefaultBearbeiten
-: placeholder{class="h-32"}
+#default
+:placeholder{class="h-32"}
 ::
 
-@@ph024@@Variantentyp
+### Variant Bearbeiten
 
-Verwenden Sie `variant` prop, um die Variante der Karte zu ändern.
+Verwenden Sie die `variant` prop, um die Variante der Karte zu ändern.
 
 ::component-code
 ---
-Schöner: wahr
-Hide:
-  @@ph026@@gmail.de
-Props:
-  Variante: subtil
-  Klasse: "W-voll"
-Slots auf:
-  Der Header:|
+prettier: true
+hide:
+  - class
+props:
+  variant: subtle
+  class: 'w-full'
+slots:
+  header: |
 
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@027
+    <Placeholder class="h-8" />
 
-  Default:|
+  default: |
 
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@028
+    <Placeholder class="h-32" />
 
-  Fußzeile:|
+  footer: |
 
-    @@@@@@@@@@@029
+    <Placeholder class="h-8" />
 ---
 
-#Header hinzufügen
-: placeholder{class="h-8"}
+#header
+:placeholder{class="h-8"}
 
-#DefaultBearbeiten
-: placeholder{class="h-32"}
+#default
+:placeholder{class="h-32"}
 
-#Fußzeile
-: placeholder{class="h-8"}
+#footer
+:placeholder{class="h-8"}
 ::
 
-@@333@bpb
+## API (englisch)
 
-@@ph034@@gmail.de
+### Props (englisch)
 
-Komponenten Props
+:component-props
 
-@@ph035@gmail.de
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-@@ph036@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph037@changelog @ changelog
+## Changelog Bearbeiten
 
-Das Component-Changelog
+:component-changelog

@@ -12,14 +12,14 @@ links:
 
 ## 使用法
 
-Editorコンポーネントは、[ TipTap ](https://tiptap.dev/)上に構築された強力なリッチテキスト編集エクスペリエンスを提供します。複数のコンテンツフォーマット（JSON、HTML、Markdown）、カスタマイズ可能なツールバー、ドラッグアンドドロップブロックの並べ替え、スラッシュコマンド、メンション、絵文字ピッカー、カスタム機能を追加するための拡張可能なアーキテクチャをサポートしています。
+Editorコンポーネントは、[TipTap](https://tiptap.dev/)上に構築された強力なリッチテキスト編集エクスペリエンスを提供します。これは、複数のコンテンツフォーマット（JSON、HTML、Markdown）、カスタマイズ可能なツールバー、ドラッグアンドドロップブロック並び替え、スラッシュコマンド、メンション、絵文字ピッカー、カスタム機能を追加するための拡張可能なアーキテクチャをサポートしています。
 
 ::component-example
 ---
-ソース：false
-昇格：true
-name 'editor—example'
-クラス'相対h—176オーバーフロー—y—auto！p—0 rounded—b—md'
+source: false
+elevated: true
+name: 'editor-example'
+class: 'relative h-176 overflow-y-auto !p-0 rounded-b-md'
 ---
 ::
 
@@ -28,7 +28,7 @@ name 'editor—example'
 ::
 
 ::warning
-Editorコンポーネントまたはその拡張機能を使用しているときに`Adding different instances of a keyed plugin`のようなprosemirror関連のエラーが発生した場合は、`nuxt.config.ts`ファイルの`vite.optimizeDeps.include`リストにprosemirrorパッケージを追加する必要があります。これにより、Viteはこれらの依存関係を事前にバンドルし、複数のインスタンスをロードしないようにします。
+Editorコンポーネントまたはその拡張機能を使用しているときに`Adding different instances of a keyed plugin`のようなプロセミラー関連のエラーが発生した場合は、`nuxt.config.ts`ファイルの`vite.optimizeDeps.include`リストにprosemirrorパッケージを追加する必要があります。これにより、Viteはこれらの依存関係を事前にバンドルし、複数のインスタンスをロードしないようにします。
 
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
@@ -53,81 +53,81 @@ export default defineNuxtConfig({
 
 ::component-code
 ---
-昇格：true
-きれい真
-崩壊真
-無視
-  -  modelValue.type
-  -  modelValue.content
-  - クラス
-外部
-  -  modelValue
-クラス'p—8'
-小道具
-  modelValue
-    タイプ'doc'
-    内容：
-      -  type 'heading'
-        attrs
-          レベル1
-        内容：
-          - タイプ'text'
-            text 'Hello World'
-      - タイプ'段落'
-        内容：
-          - タイプ'text'
-            テキスト：「これはA」
-          - タイプ'text'
-            マーク
-              -  type 'bold'
-            text 'リッチテキスト'
-          - タイプ'text'
-            テキスト'編集者'
-  クラス'w—full min—h—21'
+elevated: true
+prettier: true
+collapse: true
+ignore:
+  - modelValue.type
+  - modelValue.content
+  - class
+external:
+  - modelValue
+class: 'p-8'
+props:
+  modelValue:
+    type: 'doc'
+    content:
+      - type: 'heading'
+        attrs:
+          level: 1
+        content:
+          - type: 'text'
+            text: 'Hello World'
+      - type: 'paragraph'
+        content:
+          - type: 'text'
+            text: 'This is a '
+          - type: 'text'
+            marks:
+              - type: 'bold'
+            text: 'rich text'
+          - type: 'text'
+            text: ' editor.'
+  class: 'w-full min-h-21'
 ---
 ::
 
-### コンテンツタイプ
+### Contentタイプ
 
-エディタは、`v-model`タイプに基づいてコンテンツ形式を自動的に検出します。文字列は`html`{lang="ts-type"}、オブジェクトは`json`{lang="ts-type"}として扱われます。
+エディタは`v-model`型に基づいてコンテンツ形式を自動的に検出します。文字列は`html`{lang="ts-type"}、オブジェクトは`json`{lang="ts-type"}です。
 
-`content-type` propを使用してフォーマットを明示的に設定できます：`json`{lang="ts-type"}`html`{lang="ts-type"}`markdown`{lang="ts-type"}。
+`content-type`プロパティを使用して明示的にフォーマットを設定できます：`json`{lang="ts-type"}，`html`{lang="ts-type"}，`markdown`{lang="ts-type"}。
 
 ::component-code
 ---
-昇格：真
-きれい真
-無視
-  -  modelValue
-  -  contentType
-  - クラス
-外部
-  -  modelValue
-クラス'p—8'
-小道具
-  modelValue|
-    <h1> Hello World </h1>
-    <p> This is a <strong> rich text </strong> editor.</p>
-  contentType 'html'
-  クラス'w—full min—h—21'
+elevated: true
+prettier: true
+ignore:
+  - modelValue
+  - contentType
+  - class
+external:
+  - modelValue
+class: 'p-8'
+props:
+  modelValue: |
+    <h1>Hello World</h1>
+    <p>This is a <strong>rich text</strong> editor.</p>
+  contentType: 'html'
+  class: 'w-full min-h-21'
 ---
 ::
 
-### 拡張機能
+### Extensions
 
 エディタにはデフォルトで次の拡張機能があります。
 
-- [** StarterKit **](#starter-kit)—コア編集機能（太字、イタリック体、見出し、リストなど）
-- [** Placeholder **](#placeholder)—プレースホルダのテキストを表示する（プレースホルダプロップが提供されている場合）
-- ** Image**—画像の挿入と表示
-- **メンション**—@メンション追加サポート
-- ** Markdown **—markdownを解析してシリアライズします（コンテンツタイプがmarkdownの場合）
+- [**StarterKit**](#starter-kit)—コア編集機能（太字、イタリック体、見出し、リストなど）
+- [**Placeholder**](#placeholder)—プレースホルダーテキストを表示するプレースホルダープロパティが指定されている場合
+- **Image**—画像の挿入と表示
+- **Mention**—@メンション追加サポート
+- **Markdown**—markdownを解析してシリアル化する（コンテンツタイプがmarkdownの場合）
 
 ::note
-各組み込み拡張機能は、対応するプロパティ`starter-kit``placeholder``image``mention``markdown`を使用して、TipTapオプションを使用して動作をカスタマイズすることができます。
+各組み込み拡張機能は、対応するプロパティ（`starter-kit`、`placeholder`、`image`、`mention`、`markdown`）を使用して設定し、TipTapオプションで動作をカスタマイズできます。
 ::
 
-`extensions` propを使用して、TipTap拡張機能を追加してエディタの機能を強化できます。
+`extensions`プロパティを使用して、エディタの機能を強化するためにTipTap拡張機能を追加できます。
 
 ```vue
 <script setup lang="ts">
@@ -154,33 +154,33 @@ const value = ref('<h1>Hello World</h1>\n')
 カスタムTipTap拡張機能を作成するための画像アップロード例をご覧ください。
 ::
 
-### プレースホルダー
+### Placeholder
 
 `placeholder`プロパティを使用して、空の段落に表示するプレースホルダーテキストを設定します。
 
 ::component-code
 ---
-昇格：真
-きれい真
-無視
-  -  modelValue
-  -  contentType
-  - プレースホルダー
-  - クラス
-外部
-  -  modelValue
-クラス ' p-8 '
-小道具
-  modelValue ' '
-  プレースホルダー ' 書き 始め ます ... '
-  クラス ' w-full min-h-7 '
+elevated: true
+prettier: true
+ignore:
+  - modelValue
+  - contentType
+  - placeholder
+  - class
+external:
+  - modelValue
+class: 'p-8'
+props:
+  modelValue: ''
+  placeholder: 'Start writing...'
+  class: 'w-full min-h-7'
 ---
 ::
 
 ::note
-`placeholder`prop は 、[PlaceholderOptions](https://tiptap.dev/docs/editor/extensions/functionality/placeholder)と 追加 の`mode`プロ パティ を 持つ 文字 列 また は オブジェクト を 受け付け ます 。
-- `everyLine`フォーカス 時 に すべて の 空行 に プレースホルダー を 表示 し ます デフォルト 。
-- `firstLine`エディタ が 空 の 場合 、 最初 の 行 に のみ プレースホルダー を 表示 し ます 。
+`placeholder`プロパティは、[PlaceholderOptions](https://tiptap.dev/docs/editor/extensions/functionality/placeholder)と追加の`mode`プロパティを持つ文字列またはオブジェクトを受け取ります。
+- `everyLine`フォーカスされたときに、すべての空行にプレースホルダを表示しますデフォルト。
+- `firstLine`エディタが空の場合、最初の行にのみプレースホルダーを表示します。
 
 ```vue
 <template>
@@ -190,7 +190,7 @@ const value = ref('<h1>Hello World</h1>\n')
 ::
 
 ::tip
-デフォルト で は 、 プレースホルダ は 最 上位 の 空 ノード に のみ 表示 さ れ ます 。 リストアイテム の よう な ネスト さ れ た 要素 に プレースホルダ を 表示 する に は 、`includeChildren`を`true`に 設定 し ます 。
+デフォルトでは、プレースホルダは最上位の空ノードにのみ表示されます。リストアイテムのようなネストされた要素にプレースホルダを表示するには、`includeChildren`を`true`に設定します。
 
 ```vue
 <template>
@@ -203,9 +203,9 @@ const value = ref('<h1>Hello World</h1>\n')
 プレースホルダー 拡張 機能 の 詳細 について は 、 TipTap ドキュメント を ご覧 ください 。
 ::
 
-### スターター キット
+### Starter キット
 
-`starter-kit`prop を 使用 し て 、 太 字 、 イタリック 体 、 見出し 、 リスト 、 ブロック クォート 、 コードブロック など の 一般 的 な エディタ 機能 を 含む 組み込み の TipTap StarterKit 拡張 機能 を 設定 し ます 。
+`starter-kit` プロ パティ を 使用 し て 、 太 字 、 イタリック 体 、 見出し 、 リスト 、 ブロック クォート 、 コードブロック など の 一般 的 な エディタ 機能 を 含む 組み込み の TipTap StarterKit 拡張 機能 を 設定 し ます 。
 
 ```vue
 <script setup lang="ts">
@@ -233,26 +233,26 @@ const value = ref('<h1>Hello World</h1>\n')
 ```
 
 ::tip
-プレーン テキストエディタ の 場合 、`starter-kit`を`false`に 設定 し ます 。 これ は 重要 な ノード （ 段落 、 テキスト 、 履歴 ） を 保持 し 、 太字 、 イタリック 体 、 見出し 、 リスト 、 コード 、 ブロック クォート 、 リンク 、 水平 ルール など の すべて の 書式 設定 機能 を 無効 に し ます 。
+プレーン テキストエディタ 用 に `starter-kit` を `false` に 設定 し ます 。 これ は 重要 な ノード （ 段落 、 テキスト 、 履歴 ） を 保持 し 、 太字 、 斜体 、 見出し 、 リスト 、 コード 、 ブロック クォート 、 リンク 、 水平 ルール など の すべて の 書式 設定 機能 を 無効 に し ます 。
 ::
 
 ::callout{icon="i-custom-tiptap" to="https://tiptap.dev/docs/editor/extensions/functionality/starterkit" target="_blank"}
 StarterKit 拡張 機能 の 詳細 について は 、 TipTap の ドキュメント を ご覧 ください 。
 ::
 
-### ハンドラー
+### Handlers
 
-ハンドラー は TipTap の 組み込み コマンド を ラップ し て 、 エディタ アクション の 統一 さ れ た インター フェイス を 提供 し ます 。[EditorToolbar](/docs/components/editor-toolbar)また は[EditorSuggestionMenu](/docs/components/editor-suggestion-menu)項目 に`kind`プロ パティ を 追加 する と 、 対応 する ハンドラー は TipTap コマンド を 実行 し 、 その 状態 を 管理 し ます 。（ アクティブ 、 障害 者 など ） 。
+ハンドラ は TipTap の 組み込み コマンド を ラップ し て 、 エディタ アクション の 統一 さ れ た インター フェイス を 提供 し ます 。 [EditorToolbar](/docs/components/editor-toolbar) また は [EditorSuggestionMenu](/docs/components/editor-suggestion-menuxph22x アイテム に `kind` プロ パティ を 追加 する と 、 対応 する ハンドラ は TipTap コマンド を 実行 し 、 その 状態 （ アクティブ 、 無効 など ） を 管理 し ます 。
 
-#### デフォルトハンドラ
+####  デフォルトハンドラ
 
-Editor コンポーネント は 以下 の デフォルトハンドラ を 提供 し ます 。 ツールバー や 提案 メニュー アイテム で`kind`プロ パティ を 使用 し て 参照 でき ます 。
+Editor コンポーネント は 以下 の デフォルトハンドラ を 提供 し 、 `kind` プロ パティ を 使用 し て ツールバー や 提案 メニュー アイテム で 参照 でき ます 。
 
 | ハンドリング|説明|使い方|
 |---------|-------------|-------|
-| `mark`{lang="ts-type"}|テキスト マーク （ 太 字 、 斜体 、 ストライク 、 コード 、 下 線 ） を 切り替え ます 。|アイテム に`mark`プロ パティ が 必要 です 。|
-| `textAlign`{lang="ts-type"}|テキスト の 配置 を 設定 する （ 左 、 中央 、 右 、 justify ）|アイテム に`align`プロ パティ が 必要 です 。|
-| `heading`{lang="ts-type"}|見出し レベル を 切り替え ます 1 - 6|アイテム に`level`プロ パティ が 必要 です 。|
+| `mark`{lang="ts-type"}|テキスト マーク （ 太 字 、 斜体 、 ストライク 、 コード 、 下 線 ） を 切り替え ます 。|アイテム に `mark` プロ パティ が 必要 です|
+| `textAlign`{lang="ts-type"}|テキスト の 配置 を 設定 する （ 左 、 中央 、 右 、 justify ）|アイテム に `align` プロ パティ が 必要 です|
+| `heading`{lang="ts-type"}|見出し レベル を 切り替え ます 1 - 6|アイテム に `level` プロ パティ が 必要 です|
 | `link`{lang="ts-type"}|リンク の 追加 、 編集 、 削除|提供 さ れ て い ない URL の プロンプト|
 | `image`{lang="ts-type"}|画像 を 挿入|提供 さ れ て い ない URL の プロンプト|
 | `blockquote`{lang="ts-type"}|ブロック クォート を 切り替え||
@@ -265,16 +265,16 @@ Editor コンポーネント は 以下 の デフォルトハンドラ を 提�
 | `undo`{lang="ts-type"}|最後 の 変更 を 取り消す||
 | `redo`{lang="ts-type"}|最後 に 取り消し た 変更 を やり直す||
 | `clearFormatting`{lang="ts-type"}|すべて の 書式 を 削除|選択 また は 位置 で 動作|
-| `duplicate`{lang="ts-type"}|ノード を 複製 する|アイテム に`pos`プロ パティ が 必要 です 。|
-| `delete`{lang="ts-type"}|ノード を 削除|アイテム に`pos`プロ パティ が 必要 です 。|
-| `moveUp`{lang="ts-type"}|ノード を 上 に 移動|アイテム に`pos`プロ パティ が 必要 です 。|
-| `moveDown`{lang="ts-type"}|ノード を 下 に 移動|アイテム に`pos`プロ パティ が 必要 です 。|
-| `suggestion`{lang="ts-type"}|トリガー 提案 メニュー| `/`文字 を 挿入|
-| `mention`{lang="ts-type"}|トリガー 言及 メニュー| `@`文字 を 挿入|
+| `duplicate`{lang="ts-type"}|ノードを複製する|アイテムに`pos`プロパティが必要です|
+| `delete`{lang="ts-type"}|ノードを削除|アイテムに`pos`プロパティが必要です|
+| `moveUp`{lang="ts-type"}|ノードを上に移動|アイテムに`pos`プロパティが必要です|
+| `moveDown`{lang="ts-type"}|ノードを下に移動|アイテムに`pos`プロパティが必要です|
+| `suggestion`{lang="ts-type"}|トリガー提案メニュー| `/`文字を挿入|
+| `mention`{lang="ts-type"}|トリガー言及メニュー| `@`文字を挿入|
 | `emoji`{lang="ts-type"}|絵文字ピッカーをトリガー| `:`文字を挿入|
 
 ::warning
-`taskList`と`textAlign`ハンドラは、デフォルトではエディタに含まれていないため、それぞれの拡張機能がインストールされている場合にのみ機能します。
+`taskList`と`textAlign`ハンドラは、デフォルトではエディタに含まれていないため、それぞれの拡張機能がインストールされている場合にのみ動作します。
 ::
 
 ツールバーまたは提案メニュー項目でデフォルトハンドラを使用する方法は次のとおりです。
@@ -308,9 +308,9 @@ const items: EditorToolbarItem[] = [
 
 #### カスタムハンドラー
 
-`handlers`プロパティを使用して、デフォルトハンドラーを拡張またはオーバーライドします。カスタムハンドラーはデフォルトハンドラーとマージされるため、新しいアクションを追加したり、既存の動作を変更したりできます。
+`handlers`プロパティを使用してデフォルトハンドラを拡張またはオーバーライドします。カスタムハンドラはデフォルトハンドラとマージされるので、新しいアクションを追加したり、既存の振る舞いを変更したりできます。
 
-各ハンドラは`EditorHandler`{lang="ts-type"}インターフェイスを実装しています。
+各ハンドラは`EditorHandler`{lang="ts-type"}インターフェイスを実装します。
 
 ```ts
 interface EditorHandler {
@@ -365,101 +365,101 @@ const items = [
 ## 例
 
 ::callout{icon="i-simple-icons-github" to="https://github.com/nuxt-ui-templates/editor" target="_blank"}
-GitHubの** Editor template **のソースコードを確認してください。
+実際の例については、GitHubの**Editor template**のソースコードをご覧ください。
 ::
 
 ### ツールバー付き
 
-[ EditorToolbar ](/docs/components/editor-toolbar)コンポーネントを使用して、共通の書式設定操作を使用してエディタに`fixed`、`bubble`、または`floating`ツールバーを追加できます。
+[EditorToolbar](/docs/components/editor-toolbar)コンポーネントを使用して、`fixed`、`bubble`、または`floating`ツールバーを共通の書式設定操作でエディタに追加できます。
 
 ::component-example
 ---
-昇格：true
-崩壊真
-きれい真
-名前'editor—tool—example'
-クラス'p—8'
+elevated: true
+collapse: true
+prettier: true
+name: 'editor-toolbar-example'
+class: 'p-8'
 ---
 ::
 
 ### ドラッグハンドル付き
 
-[ EditorDragHandle ](/docs/components/editor-drag-handle)コンポーネントを使用して、ブロックの並べ替え用にドラッグ可能なハンドルを追加できます。
+[EditorDragHandle](/docs/components/editor-drag-handle)コンポーネントを使用して、ブロックの並べ替え用のドラッグ可能なハンドルを追加できます。
 
 ::component-example
 ---
-昇格：true
-崩壊真
-きれい真
-名前'editor—drag—handle—example'
-クラス'p—8'
+elevated: true
+collapse: true
+prettier: true
+name: 'editor-drag-handle-example'
+class: 'p-8'
 ---
 ::
 
 ### 提案メニュー付き
 
-[ EditorSuggestionMenu ](/docs/components/editor-suggestion-menu)コンポーネントを使用して、すばやく書式設定と挿入を行うスラッシュコマンドを追加できます。
+[EditorSuggestionMenu](/docs/components/editor-suggestion-menu)コンポーネントを使用して、スラッシュコマンドを追加してすばやく書式設定と挿入できます。
 
 ::component-example
 ---
-昇格：真
-崩壊真
-きれい真
-名前'editor—suggestion—menu—example'
-クラス'p—8'
+elevated: true
+collapse: true
+prettier: true
+name: 'editor-suggestion-menu-example'
+class: 'p-8'
 ---
 ::
 
 ### 言及メニュー付き
 
-[ EditorMentionMenu ](/docs/components/editor-mention-menu)コンポーネントを使用して、ユーザーまたはエンティティをタグ付けするための@メンションを追加できます。
+[EditorMentionMenu](/docs/components/editor-mention-menu)コンポーネントを使用して、ユーザーまたはエンティティをタグ付けるための@メンションを追加できます。
 
 ::component-example
 ---
-昇格：真
-崩壊真
-きれい真
-名前'editor—mention—menu—example'
-クラス'p—8'
+elevated: true
+collapse: true
+prettier: true
+name: 'editor-mention-menu-example'
+class: 'p-8'
 ---
 ::
 
 ### 絵文字メニュー付き
 
-[ EditorEmojiMenu ](/docs/components/editor-emoji-menu)コンポーネントを使用して、絵文字ピッカーのサポートを追加できます。
+[EditorEmojiMenu](/docs/components/editor-emoji-menu)コンポーネントを使用して絵文字ピッカーのサポートを追加できます。
 
 ::component-example
 ---
-昇格：真
-崩壊真
-きれい真
-名前'editor—emoji—menu—example'
-クラス'p—8'
+elevated: true
+collapse: true
+prettier: true
+name: 'editor-emoji-menu-example'
+class: 'p-8'
 ---
 ::
 
-### 画像アップロードあり
+### With画像アップロード
 
 この例では、`extensions`プロパティを使用してカスタムTipTapノードを登録し、`handlers`プロパティを使用してツールバーボタンがアップロードフローをトリガーする方法を定義して画像アップロード機能を作成する方法を示します。
 
-1. [ FileUpload ](/docs/components/file-upload)コンポーネントを使用するVueコンポーネントを作成します。
+1.  [FileUpload](/docs/components/file-upload)コンポーネントを使用するVueコンポーネントを作成します。
 
 ::component-example
 ---
-プレビュー false
-崩壊真
-名前'編集者画像アップロードノード'
+preview: false
+collapse: true
+name: 'editor-image-upload-node'
 ---
 ::
 
-2. ノードを登録するカスタムTipTap拡張を作成します。
+2. カスタムTipTap拡張を作成してノードを登録します。
 
 ::component-example
 ---
-プレビュー false
-崩壊真
-lang 'ts'
-名前'editor—image—upload—extension'
+preview: false
+collapse: true
+lang: 'ts'
+name: 'editor-image-upload-extension'
 ---
 ::
 
@@ -467,11 +467,11 @@ lang 'ts'
 
 ::component-example
 ---
-昇格：真
-崩壊真
-きれい真
-名前'editor—image upload—example'
-クラス'！p—0'
+elevated: true
+collapse: true
+prettier: true
+name: 'editor-image-upload-example'
+class: '!p-0'
 ---
 ::
 
@@ -479,9 +479,9 @@ lang 'ts'
 カスタム拡張機能の作成については、TipTapのドキュメントをご覧ください。
 ::
 
-###  AI完了
+###  AI補完付き
 
-この例では、[ Vercel AI SDK ](https://ai-sdk.dev/)`useCompletion`](https://ai-sdk.dev/docs/reference/ai-sdk-ui/use-completion)を使用して、AIを活用した機能をエディタに追加する方法を示します。[ Vercel AIゲートウェイ](https://vercel.com/ai-gateway)と組み合わせて、集中エンドポイントを介してAIモデルにアクセスします。ゴーストテキストの自動補完とテキスト変換アクション（文法修正、拡張、縮小、簡略化、翻訳など）が含まれます。
+この例では、[Vercel AI SDK](https://ai-sdk.dev/)を使用してAI搭載の機能をエディタに追加する方法を示します。[Vercel AI Gateway](https://vercel.com/ai-gateway)と組み合わせることで、集中型エンドポイントを介してAIモデルにアクセスできます。ゴーストテキストの自動補完とテキスト変換が含まれていますアクション（文法の修正、拡張、縮小、簡略化、翻訳など）。
 
 ::note
 この例を使用するには、まず依存関係をインストールする必要があります。
@@ -508,14 +508,14 @@ bun add ai @ai-sdk/gateway @ai-sdk/vue
 
 ::
 
-1. インラインゴーストテキストの提案を処理するカスタムTipTap拡張を作成します。
+1. インラインのゴーストテキストの提案を処理するカスタムTipTap拡張を作成します。
 
 ::component-example
 ---
-プレビュー false
-崩壊真
-名前'editor—completion—extension'
-lang 'ts'
+preview: false
+collapse: true
+name: 'editor-completion-extension'
+lang: 'ts'
 ---
 ::
 
@@ -523,15 +523,15 @@ lang 'ts'
 
 ::component-example
 ---
-プレビュー false
-崩壊真
-名前'editor—use—completion'
-ファイル名'useEditorCompletion'
-lang 'ts'
+preview: false
+collapse: true
+name: 'editor-use-completion'
+filename: 'useEditorCompletion'
+lang: 'ts'
 ---
 ::
 
-3. [`streamText`](https://ai-sdk.dev/docs/reference/ai-sdk-core/stream-text#streamtext)を使用して完了要求を処理するサーバー APIエンドポイントを作成します。
+3.  [`streamText`](https://ai-sdk.dev/docs/reference/ai-sdk-core/stream-text#streamtext)を使用して完了要求を処理するサーバー APIエンドポイントを作成します。
 
 ::code-collapse
 
@@ -601,41 +601,41 @@ CRITICAL RULES:
 
 ::
 
-4. エディタでコンポーザブルを使用します。
+4. エディタでコンポーザブルを使用します：
 
 ::component-example
 ---
-昇格：真
-崩壊真
-きれい真
-名前'editor—completion—example'
-クラス'！p—0'
+elevated: true
+collapse: true
+prettier: true
+name: 'editor-completion-example'
+class: '!p-0'
 ---
 ::
 
 ::note
-補完拡張機能は`autoTrigger: true`で構成して、入力中に自動的に補完を提案することができます（デフォルトでは無効）。kbd {value="meta"} kbd {value="j" class="ms-px"}で手動でトリガーすることもできます。
+補完拡張機能は`autoTrigger: true`で設定して、入力中に自動的に補完を提案することができます（デフォルトでは無効）。kbd{value="meta"} kbd{value="j" class="ms-px"}で手動でトリガーすることもできます。
 ::
 
 ::callout{icon="i-simple-icons-vercel" to="https://ai-sdk.dev/" target="_blank"}
 Vercel AI SDKと利用可能なプロバイダの詳細をご覧ください。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-### エクスポーズ
+### Expose
 
 テンプレート参照を介してコンポーネントにアクセスする場合、以下を使用できます：
 
@@ -647,10 +647,10 @@ component—emits
 公開されているエディタインスタンスはTipTap Editor APIです。使用可能なすべてのメソッドとプロパティについては、TipTapドキュメントを参照してください。
 ::
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

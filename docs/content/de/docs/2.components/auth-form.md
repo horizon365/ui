@@ -11,377 +11,377 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/AuthForm.vue
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Die `AuthForm` Komponente basiert auf der Komponente [Form](/docs/components/form) Komponente, die in Ihren Seiten verwendet oder in eine [PageCard](/docs/components/page-card) eingewickelt wird.
+Aufbauend auf der [Form](/docs/components/form)-Komponente, kann die `AuthForm`-Komponente in Ihren Seiten verwendet oder in eine [PageCard](/docs/components/page-card) eingewickelt werden.
 
 ::component-example
 ---
-Name: 'Auth-Form-Beispiel'
-Einsturz: wahr
+name: 'auth-form-example'
+collapse: true
 ---
 ::
 
-@@ph010@@fields@@fields.de
+### Fields Bearbeiten
 
-Das Formular wird sich selbst auf der Grundlage des `fields` prop konstruieren und der Zustand wird intern behandelt.
+Das Formular wird sich selbst auf Basis der `fields`-Prop konstruieren und der Zustand wird intern behandelt.
 
-Verwenden Sie `fields` prop als Array von Objekten mit den folgenden Eigenschaften:
+Verwenden Sie die `fields`-prop als Array von Objekten mit den folgenden Eigenschaften:
 
-`name: string``name: string``name: string`{lang="ts-type"}`name: string`{lang="ts-type"}
-`type: 'checkbox' | 'select' | 'otp' | 'InputHTMLAttributes['type']'``type: 'checkbox' | 'select' | 'otp' | 'InputHTMLAttributes['type']'`{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}PH018018@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+- `name: string`{lang="ts-type"} (nicht vorhanden)
+- `type: 'checkbox' | 'select' | 'otp' | 'InputHTMLAttributes['type']'`xph0222x (nicht vorhanden)
 
-Jedes Feld muss eine `type`-Eigenschaft enthalten, die die Eingabekomponente und alle zusätzlichen angewendeten Requisiten bestimmt:`checkbox` Felder verwenden [Checkbox](/docs/components/checkbox#props) props,`select` Felder verwenden [SelectMenu](/docs/components/select-menu#props) props,`otp` Felder verwenden [PinInput](/docs/components/pin-input#props) props, und alle anderen Typen verwenden [Input](/docs/components/input#props) props.
+Jedes Feld muss eine `type`-Eigenschaft enthalten, die die Eingabekomponente und alle zusätzlichen angewendeten Props bestimmt: `checkbox`-Felder verwenden [Checkbox](/docs/components/checkbox#props) props, `select`-Felder verwenden [SelectMenu](/docs/components/select-menu#props) props, `otp`-Felder verwenden [PinInput](/docs/components/pin-input#props) props, `otp` Felder verwenden [PinInputxph036) props, und alle anderen Typen verwenden [Input](/docs/components/input#props)-Props.
 
-Sie können auch jede Eigenschaft aus der [FormField](/docs/components/form-field#props) Komponente an jedes Feld übergeben.
+Sie können auch jede Eigenschaft der Komponente [FormField](/docs/components/form-field#props) an jedes Feld übergeben.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph043@fields @@fields@@fields@@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields.@fields.@@fields.@@fields.@fields.@@@@@fields.@fields.@@@@@@fields.@@@fields.@@@@fields.@fields.@@@@fields.@@@@@fields.@@@@@fields.@@@fields.@@@@@@fields.@@@@@@@fields.@@@@@@@fields.@@@@@@@fields.@
-  @@@@@444@Klasse
-Außen:
-  @@ph045@fields @@fields@@fields@@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@@fields.@@fields.@@@@fields.@@@@fields.@@@@@@@@fields.@@@@@@@@fields045@@@@@fields.@fields.@@@@@fields.@@@@@fields.@@@@@fields.@@@@@fields.@@@@@@@fields.@@@@@@@fields.@@@@@@fields.@@@@@@@@fiel
-Externe Personen:
-  - AuthFormField [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Felder:
-    @@@ph047@name:'E-Mail'
-      Typ: „ E-Mail "
-      Bezeichnung: "E-Mail"
-      Platzhalter: "Geben Sie Ihre E-Mail ein"
-      Erforderlich: true
-    - name:'Passwort'
-      Typ: "Passwort"
-      Bezeichnung: "Passwort"
-      Platzhalter: "Geben Sie Ihr Passwort ein"
-      erforderlich: true
-    - name:'Land'
-      Typ: 'Auswählen'
-      Label: „ Land "
-      Platzhalter: "Land auswählen"
-      Items:
-        - label:'Vereinigte Staaten'
-          Wert: „ uns "
-        - label:'Frankreich'
-          Wert: 'fr'
-        - label:'Vereinigtes Königreich'
-          Wert: "Großbritannien"
-        - label:'Australien'
-          Wert: "au"
-    @@@ph054@name:'otp'
-      Typ: 'Op'
-      Bezeichnung: OTP
-      Länge: 6
-      Beispiel: "Platzhalter"
-    @@@ph055@name:'erinnern'
-      Typ: "Checkbox"(Kontrollkästchen)
-      Titel: „ Remember Me "
-      Beschreibung: 'Sie werden für 30 Tage eingeloggt sein.'
-  Klasse: 'max-w-sm'(nicht)
+prettier: true
+ignore:
+  - fields
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
+  fields:
+    - name: 'email'
+      type: 'email'
+      label: 'Email'
+      placeholder: 'Enter your email'
+      required: true
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+      placeholder: 'Enter your password'
+      required: true
+    - name: 'country'
+      type: 'select'
+      label: 'Country'
+      placeholder: 'Select country'
+      items:
+        - label: 'United States'
+          value: 'us'
+        - label: 'France'
+          value: 'fr'
+        - label: 'United Kingdom'
+          value: 'uk'
+        - label: 'Australia'
+          value: 'au'
+    - name: 'otp'
+      type: 'otp'
+      label: 'OTP'
+      length: 6
+      placeholder: '○'
+    - name: 'remember'
+      type: 'checkbox'
+      label: 'Remember me'
+      description: 'You will be logged in for 30 days.'
+  class: 'max-w-sm'
 ---
 ::
 
-@@@@@@@@@@56@@Titel
+### title Übersetzung
 
-Verwenden Sie `title` prop, um den Titel des Formulars festzulegen.
+Verwenden Sie die `title`-prop, um den Titel des Formulars festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph058@fields @@fields@@fields@@fields@fields@fields@@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@@fields@@fields.@@fields.@@@@@@fields.@@@@@@@fields.@@@@@@@@@@@fields.@@@@@@@@@fields.@@@@@@@@@@fields.@@@@@@@@@@fields.@@@@@@@@@@@@@fields.@@@@@@fields.@@@@@@@@@@@fields.@@@@@@@
-  @@599@Klasse
-Außen:
-  @@ph060@fields @@fields@@fields@@fields@fields@@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@ph060@@fields@fields@fields@fields@fields@fields@@fields.@@fields.@@@@fields.@@@@@@fields.@@@@@@@@@fields060600@@@@@@@@fields.@@@@@@@@@@@@fields.fields.@@@@@@@@@@@@@@@@fields.fields.@@@@@@@@@@@@@@@@@@fields.fields@@@@
-Externe Personen:
-  - AuthFormField [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Überschrift:"Login"
-  Feldern:
-    @@ph062@@name:'E-Mail'(E-Mail-Adresse)
-      Typ: Der Text
-      Bezeichnung: "E-Mail"
-    - name:'Passwort'
-      Typ: „ Passwort "
-      Stichwort: "Passwort"
-  Klasse: 'max-w-md'
+prettier: true
+ignore:
+  - fields
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
+  title: 'Login'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
 ::
 
-### Beschreibung
+xph14xBeschreibung
 
-Verwenden Sie `description` prop, um die Beschreibung des Formulars festzulegen.
+Verwenden Sie die `description`-prop, um die Beschreibung des Formulars festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph066@@fields@@fields@@fields@@fields@fields@@fields@fields@fields@@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@@fields.@fields.@@@@fields.@@@@@@fields.@@@@@fields.@@@@@@@@@fields.@@@@@@@@@@fields.@@@@@@fields.@@@@@@fields.@@@@@@@@@fields.@@@@@@@@@@fields.@@@@@@@@@@@@@@@fields.@@@@@@@@@@@@@@@@@
-  @@@@@@@title
-  @@@@@@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@classclass@class@class@class@class@classclass@class@classclass@classc
-Außen:
-  @@ph069@fields @@fields@@fields@@fields@@fields@fields@fields@@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@@fields.@@fields.@@fields.@@@@fields.@@@@@fields.@@@@@@@@@@@fields069@@@fields.@@@@@@@fields.@@@fields.@@@@@@fields.@@@@@@@@fields.@@@@@@@fields.@@@@@@@@fields.@@@@@@@@@@@fields.@@@@@@@@@@@@@@@@@
-Externe Typen:
-  - AuthFormField [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Überschrift:"Login"
-  Beschreibung: "Geben Sie Ihre Anmeldeinformationen ein, um auf Ihr Konto zuzugreifen."
-  Feldern:
-    @@ph071@name:'E-Mail'
-      Typ: Der Text
-      Bezeichnung: "E-Mail"
-    - name:'Passwort'
-      Typ: "Passwort"
-      Bezeichnung: "Passwort"
-  Klasse: 'max-w-md'
+prettier: true
+ignore:
+  - fields
+  - title
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
 ::
 
-@@@ph073@@Icon-Seite
+### Icon (nicht)
 
-Verwenden Sie `icon` prop, um das Symbol des Formulars festzulegen.
+Verwenden Sie die `icon` prop, um das Symbol des Formulars festzulegen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@@ph075@@fields @@fields@@fields@@fields@@fields@@fields@@fields@fields@@fields@fields@@fields@fields@fields@@fields@fields@fields@@fields@fields@fields@@fields@@fields@@@fields@@@fields.@@@fields.@@@@@@@@@@@@@fields075@@@@fields
-  @@ph076@@title
-  @@ph077@beschreibung
-  @@@@@@@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@classclass@class@class@classclass@classclassclassclass@class@class@c
-Außen:
-  @@@ph079@@@fields
-Externe Personen:
-  - AuthFormField [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Überschrift: „ Login "
-  Beschreibung: "Geben Sie Ihre Anmeldeinformationen ein, um auf Ihr Konto zuzugreifen."
-  Icon: 'i-lucide-user'(Benutzer)
-  Felder:
-    @@@@ph081@name:'E-Mail'(E-Mail-Adresse)
-      Typ: Der Text
-      Markiert: "E-Mail"
-    @@ph082@name:'Passwort'
-      Typ: "Passwort"
-      Bezeichnung: "Passwort"
-  Klasse: 'max-w-md'
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  icon: 'i-lucide-user'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
 ::
 
-### Anbieter
+### Provider für
 
-Verwenden Sie `providers` prop, um dem Formular Anbieter hinzuzufügen.
+Verwenden Sie die `providers` prop, um Anbieter zum Formular hinzuzufügen.
 
-Sie können jede Eigenschaft von der [Button](/docs/components/button) Komponente wie `variant`,`color`,`to`, etc. übergeben.
+Sie können jede Eigenschaft der Komponente [Button](/docs/components/button) übergeben, z. B. `variant`, `color`, `to` usw.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph092@@@fields @@fields@@fields@@fields@fields@@fields@fields@fields@@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@ph092@@fields@@fields@@fields@@@fields@@@@@fields
-  @@ph093@title
-  @@ph094@beschreibung
-  @@ph095@@gmail.de
-  @@ph096@anbieter@anbieter.de
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
   - headerAlign
-  @@@@@@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@class@classclass@class@classclass@classclassclassclassclass@classclassclassclassclassclass@classclassclassclass@class@class@class@class@class@class
-Außen:
-  @@ph099@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@
-  @@ph100@@fields (nicht)
-Externe Typen:
-  @@ph101@buttonprops [Bearbeiten | Quelltext bearbeiten]
-  - AuthFormField [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Überschrift: „ Login "
-  Beschreibung: "Geben Sie Ihre Anmeldeinformationen ein, um auf Ihr Konto zuzugreifen."
-  Icon: 'i-lucide-user'(Benutzer)
-  Anbieter:
-    @@@ph103@label:'Google'(auf Englisch)
-      Icon: 'i-simple-icons-google', auf Englisch
-      Farbe: „ neutral "
-      Variante: "Unterwürfig"
-    - label:'GitHub'(auf Englisch)
-      Icon: 'i-simple-icons-github'(I-Einfach-Ikonen-GitHub)
-      Farbe: „ neutral "
-      Variante: „ subtil "
-  Feldern:
-    @@@ph105@name:'E-Mail'
-      Typ: Der Text
-      Markiert: "E-Mail"
-    - name:'Passwort'
-      Typ: „ Passwort "
-      Stichwort: "Passwort"
-  Klasse: 'max-w-md'
+  - class
+external:
+  - providers
+  - fields
+externalTypes:
+  - ButtonProps[]
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  icon: 'i-lucide-user'
+  providers:
+    - label: 'Google'
+      icon: 'i-simple-icons-google'
+      color: 'neutral'
+      variant: 'subtle'
+    - label: 'GitHub'
+      icon: 'i-simple-icons-github'
+      color: 'neutral'
+      variant: 'subtle'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
 ::
 
-@@@@@@@107@@Trennungszeichen
+Der XPH211xSeparator
 
-Verwenden Sie die `separator` prop, um die [Separator](/docs/components/separator) zwischen den Anbietern und den Feldern anzupassen.
+Verwenden Sie die `separator`-Prop, um den [Separator](/docs/components/separator) zwischen den Providern und den Feldern anzupassen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  - Felder
-  @@115@title
-  - Beschreibung
-  @@@@@@@@@icon_117@@@icon_117@@@@icon_117@@@@icon_117@@@@icon_117@@@@@icon_17@@@icon_17@@@@icon_17@@@@icon_17@@@@@@icon_17@@@@@@@@icon_117@@@@@@@@@@@@@icon_117@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@iconicon@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-  @@118@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@an
-  @@119@class
-Außen:
-  - Anbieter
-  - Felder
-Externe Personen:
-  @@ph122@buttonprops [Bearbeiten | Quelltext bearbeiten]
-  - AuthFormField [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Überschrift:"Login"
-  Beschreibung: "Geben Sie Ihre Anmeldeinformationen ein, um auf Ihr Konto zuzugreifen."
-  Icon: 'i-lucide-user'(Benutzer)
-  Anbieter:
-    - label:'Google'(auf Englisch)
-      Icon: 'i-simple-icons-google', auf Englisch
-      Farbe: „ neutral "
-      Variante: "Unterwürfig"
-    - label:'GitHub'(auf Englisch)
-      Icon: 'i-simple-icons-github'(I-Einfach-Ikonen-GitHub)
-      Farbe: "neutral"
-      Variante: „ subtil "
-  Feldern:
-    - name:'E-Mail'
-      Typ: Der Text
-      Bezeichnung: "E-Mail"
-    - name:'Passwort'
-      Typ: "Passwort"
-      Bezeichnung: "Passwort"
-  separator: 'Anbieter'
-  Klasse: 'max-w-md'
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
+  - class
+external:
+  - providers
+  - fields
+externalTypes:
+  - ButtonProps[]
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  icon: 'i-lucide-user'
+  providers:
+    - label: 'Google'
+      icon: 'i-simple-icons-google'
+      color: 'neutral'
+      variant: 'subtle'
+    - label: 'GitHub'
+      icon: 'i-simple-icons-github'
+      color: 'neutral'
+      variant: 'subtle'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  separator: 'Providers'
+  class: 'max-w-md'
 ---
 ::
 
-Sie können jede Eigenschaft von der Komponente [Separator](/docs/components/separator#props) übergeben, um sie anzupassen.
+Sie können jede Eigenschaft aus der Komponente [Separator](/docs/components/separator#props) übergeben, um sie anzupassen.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph132@fields @@fields@@fields@@fields@@fields@fields@@fields@fields@fields@fields@@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@ph132@@fields@@fields@fields@@fields@@@fields@@@@fields.@@@@fields.@@@@@@@@@@fields.@@@@@@@@@@@@@@@fields.@@@@@@@@@@@@fields@@@@@@fields@@@@@@@fields@@@@@@@@@@@fields@@@@@@@@@@@@@@@fields@@@@@@@@@@@@
-  @@133@Titel
-  @@ph134@beschreibung
-  @@ph135@@gmail.de
-  - Anbieter
-  @@137@Klasse
-Außen:
-  @@138@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@an
-  @@ph139@fields @@fields@@fields@@fields@fields@@fields@fields@fields@@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@fields@ph139@@fields@fields@@fields@@fields@@@@fields.@@@@fields.@@@@@@@fields.@@@@@@@@@@@@@@fields.@@@@@@@@@@@@fields.@@@@@@@@@@@@@fields.@@@@@@@@@@@@@@@@@fields@@@@@@@@@@@@fields@@@@@@@@@@@@@fields.
-Externe Typen:
-  @@ph140@buttonprops [Bearbeiten | Quelltext bearbeiten]
-  - AuthFormField [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Überschrift: „ Login "
-  Beschreibung: "Geben Sie Ihre Anmeldeinformationen ein, um auf Ihr Konto zuzugreifen."
-  Icon: 'i-lucide-user'(Benutzer)
-  Anbieter:
-    - label:'Google'(auf Englisch)
-      Icon: 'i-simple-icons-google', auf Englisch
-      Farbe: „ neutral "
-      Variante: "Unterwürfig"
-    - label:'GitHub'(auf Englisch)
-      Icon: 'i-simple-icons-github'(I-Einfach-Ikonen-GitHub)
-      Farbe: "neutral"
-      Variante: "Unterwürfig"
-  Feldern:
-    - name:'E-Mail'
-      Typ: Der Text
-      Markiert: "E-Mail"
-    - name:'Passwort'
-      Typ: "Passwort"
-      Bezeichnung: "Passwort"
-  Trennung:
-    Icon: 'i-lucide-user'(Benutzer)
-  Klasse: 'max-w-md'
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
+  - class
+external:
+  - providers
+  - fields
+externalTypes:
+  - ButtonProps[]
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  icon: 'i-lucide-user'
+  providers:
+    - label: 'Google'
+      icon: 'i-simple-icons-google'
+      color: 'neutral'
+      variant: 'subtle'
+    - label: 'GitHub'
+      icon: 'i-simple-icons-github'
+      color: 'neutral'
+      variant: 'subtle'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  separator:
+    icon: 'i-lucide-user'
+  class: 'max-w-md'
 ---
 ::
 
-@146@Einfügen
+### submit
 
-Verwenden Sie `submit` prop, um den Absenden-Button des Formulars zu ändern.
+Verwenden Sie die `submit`-prop, um die Schaltfläche zum Absenden des Formulars zu ändern.
 
-Sie können jede Eigenschaft von der [Button](/docs/components/button) Komponente wie `variant`,`color`,`to`, etc. übergeben.
+Sie können jede Eigenschaft der Komponente [Button](/docs/components/button) übergeben, z. B. `variant`, `color`, `to` usw.
 
 ::component-code
 ---
-Schöner: wahr
-Ignoriert:
-  @@ph155@fields (nicht)
-  @@156 @ Überschrift
-  - Beschreibung
-  @@ph158@@gmail.de
-  @@ph159@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@anbieter@
+prettier: true
+ignore:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
   - submit.label
   - submit.color
-  - submit.variant (nicht verfügbar)
-  @@163@Klasse
-Außen:
-  - Felder
-Externe Typen:
-  - AuthFormField [Bearbeiten | Quelltext bearbeiten]
-Props:
-  Überschrift:"Login"
-  Beschreibung: "Geben Sie Ihre Anmeldeinformationen ein, um auf Ihr Konto zuzugreifen."
-  Icon: 'i-lucide-user'(Benutzer)
-  Feldern:
-    - name:'E-Mail'
-      Typ: Der Text
-      Markiert: "E-Mail"
-    - name:'Passwort'
-      Typ: „ Passwort "
-      Bezeichnung: "Passwort"
-  Unterordnung:
-    Label: 'Unterordnung'
-    Farbe: "Fehler"
-    Variante: "Unterwürfig"
-  Klasse: 'max-w-md'
+  - submit.variant
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
+  title: 'Login'
+  description: 'Enter your credentials to access your account.'
+  icon: 'i-lucide-user'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  submit:
+    label: 'Submit'
+    color: 'error'
+    variant: 'subtle'
+  class: 'max-w-md'
 ---
 ::
 
-## Beispiele
+## Examples (Beispiele)
 
 ### Innerhalb einer Seite
 
-Sie können die Komponente `AuthForm` mit der Komponente [PageCard](/docs/components/page-card) umschließen, um sie beispielsweise in einer Seite `login.vue` anzuzeigen.
+Sie können die `AuthForm`-Komponente mit der [PageCard](/docs/components/page-card)-Komponente umschließen, um sie beispielsweise auf einer `login.vue`-Seite anzuzeigen.
 
 ::component-example
 ---
-name: 'auth-form-page-example'(Beispiel für eine auth-form-page)
-Einsturz: wahr
+name: 'auth-form-page-example'
+collapse: true
 ---
 ::
 
-@@176@btw
+## API
 
-@@@@@@@@@@@@@@ph177@@props
+### Props (nicht)
 
-Komponenten-Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attributes" target="_blank"}
-Diese Komponente unterstützt auch alle nativen `<form>` HTML-Attribute.
+Diese Komponente unterstützt auch alle nativen `<form>`-HTML-Attribute.
 ::
 
-### Spielautomaten
+### Slots (englisch)
 
-Die Komponenten-Slots
+:component-slots
 
-### Emits
+### Emits Bearbeiten
 
-Komponenten emittieren
+:component-emits
 
-@@181@181@181@181@181@181@181@181@181@181@181@181@181@181@@181@18@181@181@@181@@181@@181@@181@@181@181@181@181@181@181@@181@181@1@181@181@@181@@181@@@181@@@18181@@@@@18100000000001@@@@@@@@@@@@111111181000000000000000000000000000000000
+### Expose (englisch)
 
-Sie können auf die typisierte Komponenteninstanz zugreifen (formRef und Zustand offen legen), indem Sie [`useTemplateRef`](). Zum Beispiel können Sie in einer separaten Form (z. B. ein "Reset"-Formular) Folgendes tun:
+Sie können auf die typisierte Komponenteninstanz zugreifen (formRef und Status anzeigen), indem Sie [`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref) verwenden. Zum Beispiel können Sie in einer separaten Form (z. B. einem "Reset"-Formular) Folgendes tun:
 
 ```vue
 <script setup lang="ts">
@@ -395,15 +395,15 @@ const authForm = useTemplateRef('authForm')
 
 Dies gibt Ihnen Zugriff auf die folgenden (exponierten) Eigenschaften:
 
-| Vorname| Typ|
+| Vorname| Typen|
 | ---- | ---- |
-| @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|{lang="ts-type"}|
-| @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@###################################################################################################################################|{lang="ts-type"}|
+| `formRef`{lang="ts-type"} nicht| `Ref<HTMLFormElement \| null>`{lang="ts-type"} Übersetzung|
+| `state`{lang="ts-type"} nicht| `Reactive<FormStateType>`{lang="ts-type"} Bearbeiten|
 
-@@ph204@@gmail.de
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph205@@changelog (auf Englisch)
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

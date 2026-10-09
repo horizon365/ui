@@ -14,7 +14,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Drawer.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
 Utilisez un [Button](/docs/components/button) ou tout autre composant dans l'emplacement par défaut du tiroir.
 
@@ -22,216 +22,216 @@ Ensuite, utilisez l'emplacement `#content` pour ajouter le contenu affiché lors
 
 ::component-code
 ---
-Étiquette: true
-Slots:
-  Défaut:|
+prettier: true
+slots:
+  default: |
 
-    @@@ 006 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  contenu:|
+  content: |
 
-    @@@ 007 @
+    <Placeholder class="h-48 m-4" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="ouvert" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#contenu
-par placeholder{class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-Vous pouvez également utiliser les emplacements `#header`{lang="ts-type"},`#body`{lang="ts-type"} et `#footer`{lang="ts-type"} pour personnaliser le contenu du tiroir.
+Vous pouvez également utiliser les fentes `#header`{lang="ts-type"}, `#body`{lang="ts-type"} et `#footer`{lang="ts-type"} pour personnaliser le contenu du tiroir.
 
-@@ph016@titre
+### Titre
 
 Utilisez la prop `title` pour définir le titre de l'en-tête du tiroir.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Titre: "Titre avec titre"
-Slots:
-  Défaut:|
+prettier: true
+props:
+  title: 'Drawer with title'
+slots:
+  default: |
 
-    @@@@ 018 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Corps:|
+  body: |
 
-    @@@@ 019 @
+    <Placeholder class="h-48" />
 ---
 
-Le bouton {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="ouvert" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#corps
-par placeholder{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
-@@22@Description
+### Définition
 
-Utilisez la prop `description` pour définir la description de l'en-tête du tiroir.
+Utilisez le prop `description` pour définir la description de l'en-tête du tiroir.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@24@titre
-Props:
-  Titre: "Dessin avec description"
-  « Lorem ipsum dolor sit amet, consectetur adipiscing elit ».
-Slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Drawer with description'
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+slots:
+  default: |
 
-    @@@ 25 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Corps:|
+  body: |
 
-    @@@ 26 @
+    <Placeholder class="h-48" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="ouvert" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#corps
-par placeholder{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
-### Close: badge{label="4.10+" class="align-text-top"}
+### Fermer: badge{label="4.10+" class="align-text-top"}
 
-Utilisez le prop `close` pour afficher un bouton de fermeture dans le tiroir. Par défaut à `false`.
+Utilisez le prop `close` pour afficher un bouton de fermeture dans le tiroir. Par défaut `false`.
 
 Vous pouvez passer n'importe quelle propriété du composant [Button](/docs/components/button) pour le personnaliser.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph037@titre
+prettier: true
+ignore:
+  - title
   - close.color
   - close.variant
-Props:
-  Titre: Tiroir avec bouton de fermeture
-  proche:
-    Couleur: Primaire
-    Étiquette: Outline
-    Catégorie:"round-full"
-Slots:
-  Default:|
+props:
+  title: 'Drawer with close button'
+  close:
+    color: primary
+    variant: outline
+    class: 'rounded-full'
+slots:
+  default: |
 
-    @@@ 040 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Corps:|
+  body: |
 
-    @@@ 041 @
+    <Placeholder class="h-48" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="ouvert" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#corps
-@ph043
+#body
+:placeholder{class="h-48"}
 ::
 
-### Fermer Icône: badge{label="4.10+" class="align-text-top"}
+### Close Icône: badge{label="4.10+" class="align-text-top"}
 
-Utilisez le prop `close-icon` pour personnaliser le bouton de fermeture [Icon](/docs/components/icon).
+Utilisez la prop `close-icon` pour personnaliser le bouton de fermeture [Icon](/docs/components/icon).
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph052@titre
-Props:
-  Titre: Tiroir avec bouton de fermeture
-  Clôture: vrai
-  closeIcône:'i-lucide-arrow-right'
-Slots:
-  Default:|
+prettier: true
+ignore:
+  - title
+props:
+  title: 'Drawer with close button'
+  close: true
+  closeIcon: 'i-lucide-arrow-right'
+slots:
+  default: |
 
-    @@@ 53 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  Corps:|
+  body: |
 
-    @@@ 54 @
+    <Placeholder class="h-48" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="ouvert" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#corps
-par: placeholder{class="h-48"}
+#body
+:placeholder{class="h-48"}
 ::
 
-@@P057@@Direction générale
+### Direction
 
-Utilisez le prop `direction` pour contrôler la direction du tiroir. Par défaut à `bottom`.
+Utilisez la prop `direction` pour contrôler la direction du tiroir. Par défaut, `bottom`.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Référence:"Right"
-Slots:
-  Default:|
+prettier: true
+props:
+  direction: 'right'
+slots:
+  default: |
 
-    @@@ 060 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  contenu:|
+  content: |
 
-    @@@ 061 @
+    <Placeholder class="min-w-96 min-h-96 size-full m-4" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="ouvert" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#contenu
-@@ph063
+#content
+:placeholder{class="min-w-96 min-h-96 size-full m-4"}
 ::
 
-### référencement
+### Inset électronique
 
 Utilisez le prop `inset` pour insérer le tiroir par les bords.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Référence:"Right"
-  Inset: vrai
-Slots:
-  Default:|
+prettier: true
+props:
+  direction: 'right'
+  inset: true
+slots:
+  default: |
 
-    @@@@ 66 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  contenu:|
+  content: |
 
-    @@@ 067 @
+    <Placeholder class="min-w-96 min-h-96 size-full m-4" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="ouvert" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#contenu
-par: placeholder{class="min-w-96 min-h-96 size-full m-4"}
+#content
+:placeholder{class="min-w-96 min-h-96 size-full m-4"}
 ::
 
-@070@handle
+### Handle
 
-Utilisez la prop `handle` pour contrôler si le tiroir a une poignée ou non. Par défaut à `true`.
+Utilisez la prop `handle` pour contrôler si le tiroir a une poignée ou non. Par défaut, `true`.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Présentation: Faux
-Slots:
-  Défaut:|
+prettier: true
+props:
+  handle: false
+slots:
+  default: |
 
-    @@@ 073 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  contenu:|
+  content: |
 
-    @@@ 74 @
+    <Placeholder class="h-48 m-4" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="ouvert" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#contenu
-par: placeholder{class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
 ### Handle uniquement
@@ -240,53 +240,53 @@ Utilisez le prop `handle-only` pour ne permettre que le tiroir d'être traîné 
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Référence: true
-Slots:
-  Défaut:|
+prettier: true
+props:
+  handleOnly: true
+slots:
+  default: |
 
-    @@@ 079 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  contenu:|
+  content: |
 
-    @@@ 80 @
+    <Placeholder class="h-48 m-4" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="ouvert" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#contenu
-par: placeholder{class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-@083@@récupération
+### Overlay écrit
 
-Utilisez la prop `overlay` pour contrôler si le tiroir a une superposition ou non. Par défaut à `true`.
+Utilisez la prop `overlay` pour contrôler si le tiroir a une superposition ou non. Par défaut, `true`.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Définition: Faux
-Slots:
-  Défaut:|
+prettier: true
+props:
+  overlay: false
+slots:
+  default: |
 
-    @@@ 086 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  contenu:|
+  content: |
 
-    @@@ 087 @
+    <Placeholder class="h-48 m-4" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="ouvert" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#contenu
-par: placeholder{class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-@090@mode
+### Modale
 
-Utilisez la prop `modal` pour contrôler si le tiroir bloque l'interaction avec le contenu extérieur. Par défaut à `true`.
+Utilisez la prop `modal` pour contrôler si le tiroir bloque l'interaction avec le contenu extérieur.
 
 ::note
 Lorsque `modal` est défini sur `false`, la superposition est automatiquement désactivée et le contenu extérieur devient interactif.
@@ -294,28 +294,28 @@ Lorsque `modal` est défini sur `false`, la superposition est automatiquement d�
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Modalité: Faux
-Slots:
-  Default:|
+prettier: true
+props:
+  modal: false
+slots:
+  default: |
 
-    @@@ 095 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  contenu:|
+  content: |
 
-    @@@ 096 @
+    <Placeholder class="h-48 m-4" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="ouvert" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#contenu
-par: placeholder{class="h-48 m-4"}
+#content
+:placeholder{class="h-48 m-4"}
 ::
 
-@099@@récupération
+### Dismissible
 
-Utilisez la prop `dismissible` pour contrôler si le tiroir est éliminable lorsque vous cliquez à l'extérieur ou appuyez sur escape. Par défaut à `true`.
+Utilisez la prop `dismissible` pour contrôler si le tiroir est éliminable lorsque vous cliquez à l'extérieur ou appuyez sur escape. Par défaut, `true`.
 
 ::note
 Un événement `close:prevent` sera émis lorsque l'utilisateur essaiera de le fermer.
@@ -327,35 +327,35 @@ Vous pouvez combiner `modal: false` avec `dismissible: false` pour rendre l'arri
 
 ::component-example
 ---
-Étiquette: true
-nom: 'dessinateur-dismissible-exemple'
+prettier: true
+name: 'drawer-dismissible-example'
 ---
 ::
 
-### Échelle de fond
+### Scale arrière-plan
 
-Utilisez l'accessoire `should-scale-background` pour redimensionner l'arrière-plan lorsque le tiroir est ouvert, créant ainsi un effet de profondeur visuelle. Vous pouvez définir l'accessoire `set-background-color-on-scale` sur `false` pour éviter de modifier la couleur de l'arrière-plan.
+Utilisez la prop `should-scale-background` pour redimensionner l'arrière-plan lorsque le tiroir est ouvert, créant ainsi un effet de profondeur visuelle. Vous pouvez définir la prop `set-background-color-on-scale` sur `false` pour éviter de modifier la couleur de l'arrière-plan.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  shouldScaleBackground: vrai
-  setBackgroundColorOnScale: vrai
-Slots:
-  Default:|
+prettier: true
+props:
+  shouldScaleBackground: true
+  setBackgroundColorOnScale: true
+slots:
+  default: |
 
-    @@@ 109 @
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-  contenu:|
+  content: |
 
-    @@@ 110 @
+    <Placeholder class="h-48 m-4" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="ouvert" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
-#contenu
-par placeholder{class="h-screen m-4"}
+#content
+:placeholder{class="h-screen m-4"}
 ::
 
 ::warning
@@ -386,7 +386,7 @@ export default defineNuxtConfig({
 
 ::
 
-@@ph135@exemples
+## Exemples
 
 ### Control état ouvert
 
@@ -394,8 +394,8 @@ Vous pouvez contrôler l'état ouvert en utilisant la prop `default-open` ou la 
 
 ::component-example
 ---
-Étiquette: true
-nom: 'drawer-open-example'
+prettier: true
+name: 'drawer-open-example'
 ---
 ::
 
@@ -407,73 +407,73 @@ Dans cet exemple, en utilisant [`defineShortcuts`](/docs/composables/define-shor
 Cela vous permet de déplacer la gâchette à l'extérieur du tiroir ou de la retirer complètement.
 ::
 
-### Drapeau réactif
+### Tireur réactif
 
-Vous pouvez rendre un composant [Modal](/docs/components/modal) sur un bureau et un tiroir sur un mobile par exemple.
+Vous pouvez rendre un composant [Modal](/docs/components/modal) sur le bureau et un tiroir sur mobile par exemple.
 
 ::component-example
 ---
-Étiquette: true
-nom: 'drawer-responsive-example'
+prettier: true
+name: 'drawer-responsive-example'
 ---
 ::
 
-### Les tiroirs imbriqués
+### Tireurs imbriqués
 
 Vous pouvez imbriquer des tiroirs les uns dans les autres en utilisant le prop `nested`.
 
 ::component-example
 ---
-Étiquette: true
-nom: 'drawer-nested-example'
+prettier: true
+name: 'drawer-nested-example'
 ---
 ::
 
-### Avec fente de pied de page
+### With slot de pied de page
 
-Utilisez l'emplacement `#footer` pour ajouter du contenu après le corps du tiroir.
+Utilisez le slot `#footer` pour ajouter du contenu après le corps du tiroir.
 
 ::component-example
 ---
-Étiquette: true
-Collapse: vrai
-nom: 'drawer-footer-slot-example'
+prettier: true
+collapse: true
+name: 'drawer-footer-slot-example'
 ---
 ::
 
-### Avec palette de commandes
+### With palette de commandes
 
 Vous pouvez utiliser un composant [CommandPalette](/docs/components/command-palette) à l'intérieur du contenu du tiroir.
 
 ::component-example
 ---
-Collapse: vrai
-nom: 'drawer-command-palette-exemple'
+collapse: true
+name: 'drawer-command-palette-example'
 ---
 ::
 
 ::note
-Cet exemple utilise `useLazyFetch` avec `immediate: false` pour récupérer des données uniquement lorsque le tiroir s'ouvre.
+Cet exemple utilise `useLazyFetch` avec `immediate: false` pour récupérer les données uniquement lorsque le tiroir s'ouvre.
 ::
 
-@@ph161@@api
+## API
 
-@@ph162@@props
+### Props
 
-Composants-props
+:component-props
 
-@@ph163@@réglages
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph164@@émissions
+### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph165@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@change166 @ changement
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

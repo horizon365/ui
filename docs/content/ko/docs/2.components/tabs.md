@@ -14,245 +14,245 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Tabs.vue
 ---
 
-##  사용
+## Usage
 
 탭 구성 요소를 사용하여 탭에 항목 목록을 표시합니다.
 
 ::component-example
 ---
-축소: true
-상품명 : True
-이름: 'tabs-example'
-소품 :
-  클래스 : 'w-full'
+collapse: true
+prettier: true
+name: 'tabs-example'
+props:
+  class: 'w-full'
 ---
 ::
 
-###  프로젝트
+### Items 이미지
 
-`items`prop을 다음과 같은 속성을 가진 객체의 배열로 사용합니다.
+`items` prop을 다음 속성을 가진 오브젝트 배열로 사용합니다.
 
-- `label?: string`{lang="ts-type"}
-- `icon?: string`{lang="ts-type"}
-- `avatar?: AvatarProps` {lang="ts-type"}
-- `badge?: string | number | BadgeProps`{lang="ts-type"}
--  @ `content?: string` @ @ {lang="ts-type"}
-- `value?: string | number`{lang="ts-type"} @
--  @ `disabled?: boolean` @ @ {lang="ts-type"} @
--  @ [ @ @ `slot?: string` @ {lang="ts-type"} @ ]( @ #with-custom-slot @ ) @
+- `label?: string`{lang="ts-type"} (- `label?: string`{lang="ts-type"})
+- `icon?: string`{lang="ts-type"} - `icon?: string`{lang="ts-type"}
+- `avatar?: AvatarProps`{lang="ts-type"}
+- `badge?: string | number | BadgeProps`{lang="ts-type"} (- `badge?: string | number | BadgeProps`{lang="ts-type"})
+- `content?: string`{lang="ts-type"}
+- `value?: string | number`{lang="ts-type"} - {lang="ts-type"}
+- `disabled?: boolean`{lang="ts-type"}
+- [`slot?: string`{lang="ts-type"}](#with-custom-slot)
 - `class?: any`{lang="ts-type"}
-- `ui?: { trigger?: ClassNameValue, leadingIcon?: ClassNameValue, leadingAvatar?: ClassNameValue, leadingAvatarSize?: ClassNameValue, label?: ClassNameValue, trailingBadge?: ClassNameValue, trailingBadgeSize?: ClassNameValue, content?: ClassNameValue }`{lang="ts-type"}
+- `ui?: { trigger?: ClassNameValue, leadingIcon?: ClassNameValue, leadingAvatar?: ClassNameValue, leadingAvatarSize?: ClassNameValue, label?: ClassNameValue, trailingBadge?: ClassNameValue, trailingBadgeSize?: ClassNameValue, content?: ClassNameValue }`{lang="ts-type"} (- `ui?: { trigger?: ClassNameValue, leadingIcon?: ClassNameValue, leadingAvatar?: ClassNameValue, leadingAvatarSize?: ClassNameValue, label?: ClassNameValue, trailingBadge?: ClassNameValue, trailingBadgeSize?: ClassNameValue, content?: ClassNameValue }`{lang="ts-type"})
 
 ::component-code
 ---
-무시하기:
-  -  items
-  -  클래스
-외부:
-  -  items
+ignore:
+  - items
+  - class
+external:
+  - items
 externalTypes:
-  -  TabsItem []
-소품 :
-  프로젝트:
-    - label: 계정
-      아이콘: i-lucide-user
-      내용: "이것은 계정 내용입니다."
-    - label: 비밀번호
-      아이콘: i-lucide-lock
-      내용: "이것은 암호 내용입니다."
-  클래스 : 'w-full'
+  - TabsItem[]
+props:
+  items:
+    - label: Account
+      icon: 'i-lucide-user'
+      content: 'This is the account content.'
+    - label: Password
+      icon: 'i-lucide-lock'
+      content: 'This is the password content.'
+  class: 'w-full'
 ---
 ::
 
-###  컨텐츠
+### Content
 
-`content`prop을 `false`로 설정하면 패널 없이 트리거를 렌더링할 수 있습니다. 기본값은 `true`입니다.
+패널 없이 트리거를 렌더링하려면 `content` 소품을 `false`로 설정합니다. 기본값은 `true`입니다.
 
 ::component-code
 ---
-무시하기:
-  -  content
-  -  items
-  -  클래스
-외부:
-  - items 프로젝트
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
 externalTypes:
-  -  TabsItem []
-소품 :
-  내용: false
-  프로젝트:
-    - label: 계정
-      아이콘: i-lucide-user
-      내용: "이것은 계정 내용입니다."
-    - label: 비밀번호
-      아이콘: i-lucide-lock
-      내용: "이것은 암호 내용입니다."
-  클래스: 'w-full'
+  - TabsItem[]
+props:
+  content: false
+  items:
+    - label: Account
+      icon: 'i-lucide-user'
+      content: 'This is the account content.'
+    - label: Password
+      icon: 'i-lucide-lock'
+      content: 'This is the password content.'
+  class: 'w-full'
 ---
 ::
 
-### 마운트 해제
+### Unmount 마운트 해제
 
-탭이 축소될 때 컨텐츠가 마운트 해제되지 않도록 하려면 `unmount-on-hide`prop을 사용합니다. 기본값은 `true`입니다.
+탭이 축소될 때 내용이 마운트 해제되지 않도록 `unmount-on-hide` 소품을 사용합니다. 기본값은 `true`입니다.
 
 ::component-code
 ---
-무시하기:
-  -  content
-  -  items
-  -  클래스
-외부:
-  -  items
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
 externalTypes:
-  -  TabsItem []
-소품 :
-  unmountOnHide : false
-  항목:
-    - label: 계정
-      아이콘: i-lucide-user
-      내용: "이것은 계정 내용입니다."
-    - label: 비밀번호
-      아이콘: i-lucide-lock
-      내용: "이것은 암호 내용입니다."
-  클래스: 'w-full'
+  - TabsItem[]
+props:
+  unmountOnHide: false
+  items:
+    - label: Account
+      icon: 'i-lucide-user'
+      content: 'This is the account content.'
+    - label: Password
+      icon: 'i-lucide-lock'
+      content: 'This is the password content.'
+  class: 'w-full'
 ---
 ::
 
 ::note
-DOM을 검사하여 각 항목의 콘텐츠가 렌더링되고 있는지 확인할 수 있습니다.
+DOM을 검사하여 각 항목의 콘텐츠가 렌더링되는 것을 볼 수 있습니다.
 ::
 
-###  색상
+### color
 
-`color`prop을 사용하여 탭의 색상을 변경합니다.
+`color` prop을 사용하여 탭의 색상을 변경합니다.
 
 ::component-code
 ---
-무시하기:
-  -  content
-  -  items
-  -  클래스
-외부:
-  -  items
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
 externalTypes:
-  -  TabsItem []
-소품 :
-  색상: 중립
-  내용: false
-  프로젝트:
-    - label: 계정
-    - label: 비밀번호
-  클래스: 'w-full'
+  - TabsItem[]
+props:
+  color: neutral
+  content: false
+  items:
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
-###  변형
+### Variant (### Variant)
 
-`variant`prop 을 사용하여 탭의 변형을 변경합니다.
+`variant` prop을 사용하여 탭의 변형을 변경합니다.
 
 ::component-code
 ---
-무시하기:
-  -  content
-  -  items
-  -  클래스
-외부:
-  -  items
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
 externalTypes:
-  -  TabsItem []
-소품 :
-  색상: 중립
-  변형: 링크
-  내용: false
-  프로젝트:
-    - label: 계정
-    - label: 비밀번호
-  클래스 : 'w-full'
+  - TabsItem[]
+props:
+  color: neutral
+  variant: link
+  content: false
+  items:
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
-###  크기
+### Size 크기
 
-`size`prop을 사용하여 탭의 크기를 변경합니다.
+`size` prop를 사용하여 탭의 크기를 변경합니다.
 
 ::component-code
 ---
-무시하기:
-  -  content
-  -  items
-  -  클래스
-외부:
-  -  items
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
 externalTypes:
-  -  TabsItem []
-소품 :
-  크기: MD
-  변형: 알약
-  내용: false
-  항목:
-    - label: 계정
-    - label: 비밀번호
-  클래스 : 'w-full'
+  - TabsItem[]
+props:
+  size: md
+  variant: pill
+  content: false
+  items:
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
-###  방향
+### 방향 성
 
-`orientation`prop을 사용하여 탭의 방향을 변경합니다. 기본값은 `horizontal`로 설정됩니다.
+`orientation` prop을 사용하여 탭의 방향을 변경합니다. 기본값은 `horizontal`입니다.
 
 ::component-code
 ---
-무시하기:
-  -  content
-  -  items
-  -  클래스
-외부:
-  -  items
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
 externalTypes:
-  -  TabsItem []
-소품 :
-  방향: 세로
-  변형: 알약
-  내용: 거짓
-  프로젝트:
-    - label: 계정
-    - label: 비밀번호
-  클래스: 'w-full'
+  - TabsItem[]
+props:
+  orientation: vertical
+  variant: pill
+  content: false
+  items:
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
-##  예제
+## examples 예제
 
-###  활성 항목 제어
+### Control 활성화된 항목
 
-활성 항목은 `default-value`prop 또는 `value`와 함께 `v-model` 지시문을 사용하여 제어할 수 있습니다. `value`가 제공되지 않은 경우 기본적으로 인덱스 **가 문자열 **로 지정됩니다.
+`default-value` prop 또는 `v-model` 지시어를 항목의 `value`와 함께 사용하여 활성 항목을 제어할 수 있습니다. `value`가 제공되지 않으면 기본적으로 **x** 인덱스가 string**로 지정됩니다.
 
-:component-example {name="tabs-model-value-example"}
+:component-example{name="tabs-model-value-example"}
 
 ::tip
-`value-key`prop을 사용하여 `v-model` 또는 `default-value` 가 제공될 때 항목을 일치시키는 키를 변경합니다.
+`value-key` Prop을 사용하여 `v-model` 또는 `default-value`가 제공될 때 항목을 일치시키는 키를 변경합니다.
 ::
 
-###  경로 조회
+### route query 경로 쿼리
 
-URL 쿼리 매개 변수로 활성 항목을 제어할 수 있습니다. `route.query.tab`를 항목의 `value`로 사용합니다.
+`route.query.tab`를 항목의 `value`로 사용하여 URL 쿼리 매개 변수를 사용하여 활성 항목을 제어할 수 있습니다.
 
-:component-example {name="tabs-route-query-example"}
+:component-example{name="tabs-route-query-example"}
 
-###  콘텐츠 슬롯 포함
+### With 컨텐츠 슬롯
 
-`#content`슬롯을 사용하여 각 항목의 콘텐츠를 사용자 정의합니다.
+`#content` 슬롯을 사용하여 각 항목의 컨텐츠를 사용자 정의합니다.
 
-:component-example {name="tabs-content-slot-example"}
+:component-example{name="tabs-content-slot-example"}
 
-###  하단 탭 표시줄 포함
+### 아래쪽 탭 모음 포함
 
-`ui`prop을 사용하여 탭을 YouTube 또는 Instagram과 유사한 아이콘과 작은 레이블이있는 모바일 스타일의 하단 탭 표시줄로 변환합니다.
+`ui` prop을 사용하여 탭을 YouTube 또는 Instagram과 유사한 아이콘과 작은 레이블이있는 모바일 스타일의 하단 탭 막대로 변환합니다.
 
 ::component-example
 ---
-축소: true
-이름: 'tabs-bottom-tab-bar-example'
+collapse: true
+name: 'tabs-bottom-tab-bar-example'
 ---
 ::
 
@@ -262,41 +262,41 @@ URL 쿼리 매개 변수로 활성 항목을 제어할 수 있습니다. `route.
 
 다음과 같은 슬롯에 액세스할 수 있습니다.
 
--  @ `#{{ item.slot }}` @ @ {lang="ts-type"} @
+- `#{{ item.slot }}`{lang="ts-type"}
 
 ::component-example
 ---
-축소: true
-이름: 'tabs-custom-slot-example'
+collapse: true
+name: 'tabs-custom-slot-example'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### Slots
 
-:구성요소 - 슬롯
+:component-slots
 
-###  에미츠
+### Emits
 
-:구성요소 - 방사
+:component-emits
 
-###  노출
+### exposes 소개
 
 템플릿 참조를 통해 컴포넌트에 액세스하는 경우 다음을 사용할 수 있습니다.
 
-| 이름 (Name)| 유형 (Type)|
+| 이름 Name| 유형 (Type)|
 | ---- | ---- |
-| `triggersRef`{lang="ts-type"}| `Ref<ComponentPublicInstance[]>`{lang="ts-type"}|
+| `triggersRef`{lang="ts-type"}| `Ref<ComponentPublicInstance[]>`{lang="ts-type"} 파일|
 
-##  테마
+## Theme 테마
 
-:구성요소 - 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

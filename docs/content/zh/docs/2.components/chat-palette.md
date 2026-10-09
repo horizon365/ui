@@ -1,15 +1,16 @@
 ---
-title: ChatPalette
-description: '一个聊天面板，用于在遮罩层中创建聊天机器人界面。'
+title: 沙托
+description: '一个聊天面板，用于在覆盖层内创建聊天机器人界面。'
 category: chat
 links:
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatPalette.vue
 ---
+
 ## 用法
 
-ChatPalette 组件是一个结构化布局包装器，用于将 [ChatMessages](/docs/components/chat-messages) 组织在可滚动内容区域，并将 [ChatPrompt](/docs/components/chat-prompt) 固定在底部区域，从而为模态框、滑出面板或抽屉创建协调一致的聊天机器人界面。
+聊天机器人组件是一个结构化的布局包装器，它将[ChatMessages](/docs/components/chat-messages)组织在一个可滚动的内容区域中，将[ChatMessages](/docs/components/chat-prompt)组织在一个固定的底部区域中，为模态、幻灯片或抽屉创建内聚的聊天机器人界面。
 
 ```vue{2,8}
 <template>
@@ -26,12 +27,12 @@ ChatPalette 组件是一个结构化布局包装器，用于将 [ChatMessages](/
 ## 示例
 
 ::tip{to="/docs/components/chat"}
-查看 **Chat** 概览页面以获取安装说明、服务器设置和使用示例。
+查看**Chat**概述页面，了解安装说明、服务器设置和使用示例。
 ::
 
-### 在模态框内
+### Within a Modal
 
-你可以在 [Modal](/docs/components/modal) 的内容中使用 ChatPalette 组件。
+您可以在[Modal](/docs/components/modal)的内容中使用Chatterfly组件。
 
 ::component-example
 ---
@@ -44,9 +45,9 @@ name: 'chat-palette-modal-example'
 ---
 ::
 
-### 在 ContentSearch 内
+### Within ContentSearch
 
-你可以在 [ContentSearch](/docs/components/content-search) 的内容中条件性地使用 ChatPalette 组件，以便在用户选择某一项时显示聊天机器人界面。
+您可以在[ContentSearch](/docs/components/content-search)的内容中有条件地使用Chatbot组件，以便在用户选择项目时显示聊天机器人界面。
 
 ::component-example
 ---
@@ -66,14 +67,14 @@ name: 'chat-palette-content-search-example'
 
 :component-props
 
-### Slots
+### 老虎机
 
 :component-slots
 
-## 主题
+## Theme
 
 :component-theme
 
-## 更新日志
+## Changelog
 
 :component-changelog

@@ -3,35 +3,35 @@ title: NutzenOverlay
 description: 'Ein Composable, um Overlays programmgesteuert zu steuern.'
 ---
 
-@@@ph000@@Verwendung
+## Bearbeiten
 
-Verwenden Sie das automatisch importierte `useOverlay` composable, um die Komponenten [Modal](/docs/components/modal) und [Slideover](/docs/components/slideover) programmgesteuert zu steuern.
+Verwenden Sie das automatisch importierte `useOverlay` Composable, um [Modal](/docs/components/modal) und [Slideover](/docs/components/slideoverxph09x Komponenten programmgesteuert zu steuern.
 
 ::component-example
 ---
-Name: 'use-overlay-example'(Überlagerungsbeispiel)
+name: 'use-overlay-example'
 ---
 ::
 
-- Das `useOverlay` composable wird mit `createSharedComposable` erstellt, um sicherzustellen, dass der gleiche Overlay-Zustand in Ihrer gesamten Anwendung gemeinsam genutzt wird.
+- Das `useOverlay` composable wird mit `createSharedComposable` erstellt, um sicherzustellen, dass der gleiche Overlay-Status in Ihrer gesamten Anwendung gemeinsam genutzt wird.
 
 ::note
-Dies funktioniert nur, wenn die Komponente **overlay ein `close` event** aussendet.
+Warten Sie auf `overlay.open()`, um einen Wert aus dem Overlay zu erhalten. Dies funktioniert nur, wenn die **overlay-Komponente ein `close`-Event** ausgibt.
 ::
 
-@@@@@b17@b17.de
+## API Bearbeiten
 
-{lang="ts-type"}
+`useOverlay()`{lang="ts-type"} nicht
 
 `useOverlay` composable bietet Methoden zum globalen Verwalten von Overlays. Jedes erstellte Overlay gibt eine Instanz mit eigenen Methoden zurück.
 
-### create () Bearbeiten
+### create ()(nicht verfügbar)
 
-{lang="ts-type"}
+`create(component: T, options?: OverlayOptions<ComponentProps<T>>): OverlayInstance<T>`{lang="ts-type"} nicht
 
-Erstellen Sie ein Overlay, und geben Sie eine Factory-Instanz zurück.
+Erstellen Sie ein Overlay und geben Sie eine Factory-Instanz zurück.
 
-#### Parameter Bearbeiten
+#### Parameters (englisch)
 
 ::field-group
 
@@ -46,7 +46,7 @@ Erstellen Sie ein Overlay, und geben Sie eine Factory-Instanz zurück.
 
       ::field-group
         ::field{name="defaultOpen" type="boolean"}
-        Öffnen Sie das Overlay sofort nach der Erstellung. Standardmäßig auf `false`.
+        Öffnen Sie das Overlay sofort nach der Erstellung. Standardmäßig `false`.
         ::
 
         ::field{name="props" type="ComponentProps"}
@@ -54,24 +54,24 @@ Erstellen Sie ein Overlay, und geben Sie eine Factory-Instanz zurück.
         ::
 
         ::field{name="destroyOnClose" type="boolean"}
-        Entfernt das Overlay aus dem Speicher, wenn es geschlossen ist. Standardmäßig `false`.
+        Entfernt das Overlay aus dem Speicher, wenn es geschlossen ist. Standardmäßig ist `false`.
         ::
       ::
     ::
   ::
 ::
 
-### open () Bearbeiten
+### open ()(nicht verfügbar)
 
-{lang="ts-type"}
+`open(id: symbol, props?: ComponentProps<T>): OpenedOverlay<T>`{lang="ts-type"} nicht
 
-Öffnen Sie ein Overlay mit seinem `id`.
+Öffnen Sie ein Overlay mit seiner `id`.
 
-#### Parameter Bearbeiten
+#### Parameters (englisch)
 
 ::field-group
   ::field{name="id" type="symbol" required}
-  Die Identität des Overlays.
+  Die Identifikation des Overlays.
   ::
 
   ::field{name="props" type="ComponentProps<T>"}
@@ -79,17 +79,17 @@ Erstellen Sie ein Overlay, und geben Sie eine Factory-Instanz zurück.
   ::
 ::
 
-### close ()
+### close () Bearbeiten
 
-{lang="ts-type"}
+`close(id: symbol, value?: any): void`{lang="ts-type"} nicht
 
 Schließen Sie ein Overlay mit seinem `id`.
 
-#### Parameter Bearbeiten
+#### Parameters (englisch)
 
 ::field-group
   ::field{name="id" type="symbol" required}
-  Die Identifikation des Overlays.
+  Die Identität des Overlays.
   ::
 
   ::field{name="value" type="any"}
@@ -97,19 +97,19 @@ Schließen Sie ein Overlay mit seinem `id`.
   ::
 ::
 
-### closeAll ()
+### closeAll ()(nicht verfügbar)
 
-{lang="ts-type"}
+`closeAll(): void`{lang="ts-type"} nicht
 
 Schließen Sie alle offenen Überlagerungen.
 
-@@ph040@patch ()
+### patch ()(Deutsche Ausgabe)
 
-{lang="ts-type"}
+`patch(id: symbol, props: Partial<ComponentProps<T>>): void`{lang="ts-type"} nicht
 
-Aktualisieren Sie ein Overlay durch seine `id`.
+Aktualisieren Sie ein Overlay mit seinem `id`.
 
-#### Parameter Bearbeiten
+#### Parameters (englisch)
 
 ::field-group
   ::field{name="id" type="symbol" required}
@@ -121,13 +121,13 @@ Aktualisieren Sie ein Overlay durch seine `id`.
   ::
 ::
 
-### unmount ()
+### unmount ()(nicht verfügbar)
 
-{lang="ts-type"}
+`unmount(id: symbol): void`{lang="ts-type"} nicht
 
 Entfernen Sie ein Overlay aus dem DOM durch seine `id`.
 
-#### Parameter Bearbeiten
+#### Parameters (englisch)
 
 ::field-group
   ::field{name="id" type="symbol" required}
@@ -135,13 +135,13 @@ Entfernen Sie ein Overlay aus dem DOM durch seine `id`.
   ::
 ::
 
-### isOpen ()
+### isOpen () Bearbeiten
 
-{lang="ts-type"}
+`isOpen(id: symbol): boolean`{lang="ts-type"} nicht
 
-Überprüfen Sie, ob ein Overlay geöffnet ist, indem Sie seine `id`.
+Prüfen Sie, ob ein Overlay mit seinem `id` geöffnet ist.
 
-#### Parameter
+#### Parameters (englisch)
 
 ::field-group
   ::field{name="id" type="symbol" required}
@@ -149,27 +149,27 @@ Entfernen Sie ein Overlay aus dem DOM durch seine `id`.
   ::
 ::
 
-@@555@Überschneidungen
+### overlays (englisch)
 
-{lang="ts-type"}
+`overlays: Overlay[]`{lang="ts-type"} nicht
 
 In-Memory-Liste aller Overlays, die erstellt wurden.
 
 ## Instanz-API
 
-Dies sind die Methoden, die für die von `create()` zurückgegebene Instanz verfügbar sind.
+Dies sind die Methoden, die auf der von `create()` zurückgegebenen Instanz verfügbar sind.
 
-### open () Bearbeiten
+### open ()(Deutsche Ausgabe)
 
-{lang="ts-type"}
+`open(props?: ComponentProps<T>): OpenedOverlay<T>`{lang="ts-type"} nicht
 
 Öffnet das Overlay. Gibt ein `OpenedOverlay` zurück, ein Versprechen, das mit dem vom `close`-Ereignis ausgegebenen Wert aufgelöst wird. Das gleiche Versprechen wird auch als `result` angezeigt, so dass `const { result } = modal.open()` auch funktioniert.
 
-#### Parameter Bearbeiten
+#### Parameters (englisch)
 
 ::field-group
   ::field{name="props" type="ComponentProps<T>"}
-  Ein optionales Objekt von Requisiten, das an die gerenderte Komponente übergeben werden soll.
+  Ein optionales Objekt von Requisiten, das an die gerenderte Komponente übergeben wird.
   ::
 ::
 
@@ -189,13 +189,13 @@ function openModal() {
 </script>
 ```
 
-@@ph083@close () Bearbeiten
+### close () Bearbeiten
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+`close(value?: any): void`{lang="ts-type"} (nicht)
 
-Schließen Sie den Overlay.
+Schließen Sie das Overlay.
 
-#### Parameter
+#### Parameters (englisch)
 
 ::field-group
   ::field{name="value" type="any"}
@@ -203,13 +203,13 @@ Schließen Sie den Overlay.
   ::
 ::
 
-@@ph087@patch ()
+### patch ()(Deutsche Ausgabe)
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+`patch(props: Partial<ComponentProps<T>>): void`{lang="ts-type"} nicht
 
 Aktualisieren Sie die Requisiten des Overlays.
 
-@@ph090@@Parameter
+#### Parameters (englisch)
 
 ::field-group
   ::field{name="props" type="Partial<ComponentProps<T>>" required}
@@ -239,7 +239,7 @@ function updateModalTitle() {
 
 ## Beispiele
 
-@@@PH11@@Mit mehreren Overlays
+### With multiple overlays (mit mehreren Überlagerungen)
 
 Dieses Beispiel zeigt, wie Sie mehrere Overlays verwalten und Daten zwischen ihnen übergeben:
 
@@ -273,11 +273,11 @@ const openModalB = async () => {
 </template>
 ```
 
-### Bestätigen Dialog
+### Bestätigen
 
-Dieses Beispiel zeigt, wie man ein wiederverwendbares Bestätigungsdialogmuster mit einem benutzerdefinierten `useConfirmDialog` composable erstellt, das `useOverlay` umschließt.
+Dieses Beispiel zeigt, wie Sie ein wiederverwendbares Bestätigungsdialogmuster mit einem benutzerdefinierten `useConfirmDialog` Composable erstellen, das `useOverlay` umschließt.
 
-1. Erstellen Sie eine `ConfirmDialog`-Komponente, die beim Schließen einen booleschen Wert ausgibt:
+1. Erstellen Sie eine `ConfirmDialog`-Komponente, die einen booleschen Wert ausgibt, wenn sie geschlossen wird:
 
 ```vue [components/ConfirmDialog.vue]
 <script lang="ts" setup>
@@ -308,7 +308,7 @@ const emits = defineEmits<{
 </template>
 ```
 
-2. Erstelle ein `useConfirmDialog` composable, das ein Versprechen zurückgibt:
+2. Erstellen Sie ein `useConfirmDialog` composable, das ein Versprechen zurückgibt:
 
 ```ts [composables/useConfirmDialog.ts]
 import { ConfirmDialog } from '#components'
@@ -355,11 +355,11 @@ const handleDelete = async () => {
 </template>
 ```
 
-@@@@@@@@@@@@@@ph218@@@Caveats
+## Caveats (englisch)
 
-### Bereitstellung/Injektion
+### Provide/Inject (Bereitstellen/Einführen)
 
-Beim programmgesteuerten Öffnen von Overlays (Modals, Slideovers usw.) kann die Overlay-Komponente nur auf eingespeiste Werte von der Komponente zugreifen, die `UApp` enthält (normalerweise `app.vue` oder Layout-Komponenten).
+Beim programmgesteuerten Öffnen von Overlays (Modals, Slideovers usw.) kann die Overlay-Komponente nur auf eingespeiste Werte von der Komponente zugreifen, die `UApp` enthält (normalerweise `app.vue` oder Layoutkomponenten).
 
 Daher wird die Verwendung von `provide()` in Seiten oder übergeordneten Komponenten nicht direkt unterstützt. Um bereitgestellte Werte an Overlays zu übergeben, wird empfohlen, stattdessen Props zu verwenden:
 

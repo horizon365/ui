@@ -8,9 +8,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardGroup.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Le composant DashboardGroup est la disposition principale qui enveloppe les composants [DashboardSidebar](/docs/components/dashboard-sidebar) et [DashboardPanel](/docs/components/dashboard-panel) pour créer une interface de tableau de bord réactive.
+Le composant DashboardGroup est la mise en page principale qui enveloppe les composants [DashboardSidebar](/docs/components/dashboard-sidebar) et [DashboardPanelxph006/docs/components/dashboard-panel) pour créer une interface de tableau de bord réactive.
 
 Utilisez-le dans une mise en page ou dans votre `app.vue`:
 
@@ -24,20 +24,20 @@ Utilisez-le dans une mise en page ou dans votre `app.vue`:
 </template>
 ```
 
-@@ph019 @ réponse
+## api
 
-@200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Props équipement
 
-Composants-props
+:component-props
 
-@@2011@@Slots
+### Slots
 
-Composants slots
+:component-slots
 
-@222@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changelog @changelog
+## changelog
 
-Composant-changelog
+:component-changelog

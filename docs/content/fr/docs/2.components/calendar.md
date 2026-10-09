@@ -14,20 +14,20 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Calendar.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
-Utilisez la directive `v-model` pour contrôler la date sélectionnée.
+Utilisez la directive `v-model` pour contrôler la date choisie.
 
 ::component-code
 ---
-Cast:
-  Étiquette: DateValue
-ignorer:
-  - modèleValeur
-Extérieur:
-  - modèleValeur
-Props:
-  Modèle:[2022, 2, 3]
+cast:
+  modelValue: DateValue
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: [2022, 2, 3]
 ---
 ::
 
@@ -35,26 +35,26 @@ Utilisez la prop `default-value` pour définir la valeur initiale lorsque vous n
 
 ::component-code
 ---
-Cast:
-  valeur: DateValue
-ignorer:
-  @@@ph005@@defaultValue
-Extérieure:
-  @@ph006@@valeur défaillante
-Props:
-  valeur par défaut:[2022, 2, 6]
+cast:
+  defaultValue: DateValue
+ignore:
+  - defaultValue
+external:
+  - defaultValue
+props:
+  defaultValue: [2022, 2, 6]
 ---
 ::
 
 ::framework-only
-#numérique
+#nuxt
 :::note{to="/docs/getting-started/integrations/i18n/nuxt#locale"}
-Ce composant utilise le paquet `@internationalized/date` pour la mise en forme locale. Le format de date est déterminé par la prop `locale` du composant App.
+Ce composant utilise le package `@internationalized/date` pour le formatage local. Le format de date est déterminé par la prop `locale` du composant App.
 :::
 
 #vue
 :::note{to="/docs/getting-started/integrations/i18n/vue#locale"}
-Ce composant utilise le paquet `@internationalized/date` pour la mise en forme locale. Le format de date est déterminé par la prop `locale` du composant App.
+Ce composant utilise le package `@internationalized/date` pour le formatage local. Le format de date est déterminé par la prop `locale` du composant App.
 :::
 ::
 
@@ -62,80 +62,80 @@ Ce composant utilise le paquet `@internationalized/date` pour la mise en forme l
 
 Utilisez la prop `type` pour modifier ce que le calendrier sélectionne. Par défaut à `date`.
 
-Lorsque vous utilisez `date`, cliquez sur l'en-tête pour passer de la vue du jour à une vue du mois puis de l'année pour une navigation rapide, puis redescendez pour choisir une date.
+Lorsque vous utilisez `date`, cliquez sur l'en-tête pour passer de la vue jour à une vue mois puis année pour une navigation rapide, puis redescendez pour choisir une date.
 
 ::component-code
 ---
-Cast:
-  Étiquette: DateValue
-Ignorer:
-  @@ph016@type
-  - modèleValeur
-Extérieure:
-  - modelValeur
-Props:
-  Type: Mois
-  Modèle:[2022, 2, 1]
+cast:
+  modelValue: DateValue
+ignore:
+  - type
+  - modelValue
+external:
+  - modelValue
+props:
+  type: month
+  modelValue: [2022, 2, 1]
 ---
 ::
 
-Utilisez `type="year"` pour rendre un sélecteur d'année autonome.
+Utilisez `type="year"` pour afficher un sélecteur d'année autonome.
 
 ::component-code
 ---
-Cast:
-  Étiquette: DateValue
-Ignorer:
-  @@ph020@type
-  - modèleValeur
-Extérieur:
-  - modèleValeur
-Props:
-  Type: Année
-  Modèle:[2022, 1, 1]
+cast:
+  modelValue: DateValue
+ignore:
+  - type
+  - modelValue
+external:
+  - modelValue
+props:
+  type: year
+  modelValue: [2022, 1, 1]
 ---
 ::
 
-@@223@multiple
+### multiple
 
-Utilisez la prop `multiple` pour permettre plusieurs sélections.
+Utilisez le prop `multiple` pour permettre plusieurs sélections.
 
 ::component-code
 ---
-Étiquette: true
-Cast:
-  valeur: DateValue []
-ignorer:
-  @@25@multiple
-  - modelValeur
-Extérieur:
-  - modelValeur
-Props:
-  Multiple: vrai
-  Modèle:[[2022, 2, 4],[2022, 2, 6],[2022, 2, 8]]
+prettier: true
+cast:
+  modelValue: DateValue[]
+ignore:
+  - multiple
+  - modelValue
+external:
+  - modelValue
+props:
+  multiple: true
+  modelValue: [[2022, 2, 4], [2022, 2, 6], [2022, 2, 8]]
 ---
 ::
 
-@@28@@Rangement
+### Rangée
 
-Utilisez la prop `range` pour sélectionner une plage de dates.
+Utilisez le prop `range` pour sélectionner une plage de dates.
 
 ::component-code
 ---
-Étiquette: true
-Cast:
-  Étiquette: DateRange
-Ignorer:
-  @@ph030@rangée
+prettier: true
+cast:
+  modelValue: DateRange
+ignore:
+  - range
   - modelValue.start
   - modelValue.end
-Extérieure:
-  - modelValeur
-Props:
-  Rang: vrai
-  Modèle:
-    début:[2022, 2, 3]
-    fin: [2022, 2, 19]
+external:
+  - modelValue
+props:
+  range: true
+  modelValue:
+    start: [2022, 2, 3]
+    end: [2022, 2, 20]
 ---
 ::
 
@@ -143,75 +143,75 @@ Le prop `range` fonctionne également avec `type="month"` et `type="year"`, vous
 
 ::component-code
 ---
-Étiquette: true
-Cast:
-  Étiquette: DateRange
-Ignorer:
-  @@ph037@type
-  @@ph038@rangée
+prettier: true
+cast:
+  modelValue: DateRange
+ignore:
+  - type
+  - range
   - modelValue.start
   - modelValue.end
-Extérieure:
-  - modèleValeur
-Props:
-  Type: Mois
-  Rang: vrai
-  Modélisation:
-    début:[2022, 2, 1]
-    fin: [2022, 6, 1]
+external:
+  - modelValue
+props:
+  type: month
+  range: true
+  modelValue:
+    start: [2022, 2, 1]
+    end: [2022, 6, 1]
 ---
 ::
 
 ### Nombre de mois
 
-Utilisez la prop `numberOfMonths` pour modifier le nombre de mois dans le calendrier.
+Utilisez le prop `numberOfMonths` pour modifier le nombre de mois dans le calendrier.
 
 ::component-code
 ---
-Props:
-  Numéro: 3
+props:
+  numberOfMonths: 3
 ---
 ::
 
-### Mois Contrôles
+Contrôles XPH117XMonth
 
-Utilisez la prop `month-controls` pour afficher les contrôles de mois. Par défaut à `true`.
+Utilisez la prop `month-controls` pour afficher les contrôles de mois. Par défaut, `true`.
 
 ::component-code
 ---
-Props:
-  Contrôles: False
+props:
+  monthControls: false
 ---
 ::
 
-Utilisez les accessoires `prev-month` et `next-month` pour remplacer les boutons du mois.
+Utilisez les accessoires `prev-month` et `next-month` pour remplacer les boutons de mois.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
+prettier: true
+ignore:
   - prevMonth.color
   - prevMonth.variant
   - nextMonth.color
   - nextMonth.variant
-Props:
-  prévaut:
-    Couleur: Primaire
-    Variété: Soft
-  NextMois:
-    Couleur: Primaire
-    Variété: Soft
+props:
+  prevMonth:
+    color: primary
+    variant: soft
+  nextMonth:
+    color: primary
+    variant: soft
 ---
 ::
 
-### Année Contrôles
+Contrôles XPH141XYear
 
-Utilisez la prop `year-controls` pour afficher les contrôles année. Par défaut à `true`.
+Utilisez la prop `year-controls` pour afficher les contrôles année. Par défaut `true`.
 
 ::component-code
 ---
-Props:
-  annéesContrôles: faux
+props:
+  yearControls: false
 ---
 ::
 
@@ -219,180 +219,180 @@ Utilisez les accessoires `prev-year` et `next-year` pour remplacer les boutons a
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  - prévYear.color
+prettier: true
+ignore:
+  - prevYear.color
   - prevYear.variant
   - nextYear.color
   - nextYear.variant
-Props:
-  prévaut:
-    Couleur: Primaire
-    Variété: Soft
-  NextAnnée:
-    Couleur: Primaire
-    Variété: Soft
+props:
+  prevYear:
+    color: primary
+    variant: soft
+  nextYear:
+    color: primary
+    variant: soft
 ---
 ::
 
-### View Control: badge{label="4.9+" class="align-text-top"}
+Contrôle de vue ### View: badge{label="4.9+" class="align-text-top"}
 
-Utilisez la prop `view-control` pour faire de l'en-tête un bouton qui bascule entre les vues de jour, mois et année. Par défaut à `true`.
+Utilisez la prop `view-control` pour faire de l'en-tête un bouton qui bascule entre les vues jour, mois et année.
 
 ::component-code
 ---
 items:
-  ViewControl:
-    @@ph066@vrai
-    @@@faux67
-Props:
-  ViewControl: faux
+  viewControl:
+    - true
+    - false
+props:
+  viewControl: false
 ---
 ::
 
-Définissez la prop `view-control` sur un objet pour remplacer le bouton de titre.
+Réglez le prop `view-control` sur un objet pour remplacer le bouton de titre.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
+prettier: true
+ignore:
   - viewControl.color
   - viewControl.variant
-Props:
-  ViewControl:
-    Couleur: Primaire
-    Variété: Soft
+props:
+  viewControl:
+    color: primary
+    variant: soft
 ---
 ::
 
 ### Semaines fixes
 
-Utilisez la prop `fixed-weeks` pour afficher le calendrier avec des semaines fixes.
+Utilisez le prop `fixed-weeks` pour afficher le calendrier avec des semaines fixes.
 
 ::component-code
 ---
-Props:
-  Définition: False
+props:
+  fixedWeeks: false
 ---
 ::
 
-### Numéros de la semaine: badge{label="4.4+" class="align-text-top"}
+Numéros de la semaine ### : badge{label="4.4+" class="align-text-top"}
 
-Utilisez la prop `week-numbers` pour afficher les numéros de semaine dans le calendrier.
+Utilisez le prop `week-numbers` pour afficher les numéros de semaine dans le calendrier.
 
 ::component-code
 ---
-Props:
-  Semaine: vrai
-  FixedWeeks: vrai
+props:
+  weekNumbers: true
+  fixedWeeks: true
 ---
 ::
 
-@@76@couleur
+### Couleur
 
-Utilisez la prop `color` pour changer la couleur du calendrier.
+Utilisez le prop `color` pour changer la couleur du calendrier.
 
 ::component-code
 ---
-Cast:
-  valeur: DateRange
-Caché:
-  @@ph078@rangée
+cast:
+  defaultValue: DateRange
+hide:
+  - range
   - defaultValue
   - defaultValue.start
   - defaultValue.end
-Props:
-  Couleur: Neutre
-  Rang: vrai
-  Valeur défaillante:
-    début:[2022, 2, 3]
-    fin: [2022, 2, 20]
+props:
+  color: neutral
+  range: true
+  defaultValue:
+    start: [2022, 2, 3]
+    end: [2022, 2, 20]
 ---
 ::
 
-@@ph082@@Variant
+### Variant équivalent
 
-Utilisez la prop `variant` pour modifier la variante du calendrier.
+Utilisez le prop `variant` pour changer la variante du calendrier.
 
 ::component-code
 ---
-Cast:
-  valeur: DateRange
-Caché:
-  @@ph084@rangée
-  - valeur défaillante
+cast:
+  defaultValue: DateRange
+hide:
+  - range
+  - defaultValue
   - defaultValue.start
   - defaultValue.end
-Props:
-  Variante: subtile
-  Rang: vrai
-  Valeur défaillante:
-    début:[2022, 2, 3]
-    fin: [2022, 2, 19]
+props:
+  variant: subtle
+  range: true
+  defaultValue:
+    start: [2022, 2, 3]
+    end: [2022, 2, 20]
 ---
 ::
 
-@@888@série
+### Size
 
-Utilisez la prop `size` pour modifier la taille du calendrier.
+Utilisez le prop `size` pour modifier la taille du calendrier.
 
 ::component-code
 ---
-Props:
-  Taille: XL
+props:
+  size: xl
 ---
 ::
 
-### désactivé
+### Désactivé
 
 Utilisez la prop `disabled` pour désactiver le calendrier.
 
 ::component-code
 ---
-Props:
-  handicapés: vrai
+props:
+  disabled: true
 ---
 ::
 
-@@ph092@exemples
+## exemples
 
-### Avec les événements de puce
+### With Événements de puce
 
 Utilisez le composant [Chip](/docs/components/chip) pour ajouter des événements à des jours spécifiques.
 
 ::component-example
 ---
-nom: 'calendrier-événements-exemple'
+name: 'calendar-events-example'
 ---
 ::
 
-### Avec date désactivée
+### With dates désactivées
 
-Utilisez la prop `is-date-disabled` avec une fonction pour marquer des dates spécifiques comme désactivées. Lorsque vous utilisez `type="month"` ou `type="year"`, utilisez plutôt la prop `is-month-disabled` ou `is-year-disabled`.
+Utilisez la prop `is-date-disabled` avec une fonction pour marquer des dates spécifiques comme désactivées. Lorsque vous utilisez `type="month"` ou `type="year"`, utilisez la prop `is-month-disabled` ou `is-year-disabled` à la place.
 
 ::component-example
 ---
-nom: 'calendrier-disabled-date-exemple'
+name: 'calendar-disabled-dates-example'
 ---
 ::
 
 ### Avec des dates non disponibles
 
-Utilisez le `is-date-unavailable` prop avec une fonction pour marquer des dates spécifiques comme indisponibles. Lorsque vous utilisez `type="month"` ou `type="year"`, utilisez le `is-month-unavailable` ou `is-year-unavailable` prop à la place.
+Utilisez la prop `is-date-unavailable` avec une fonction pour marquer des dates spécifiques comme indisponibles. Lorsque vous utilisez `type="month"` ou `type="year"`, utilisez la prop `is-month-unavailable` ou `is-year-unavailable` à la place.
 
 ::component-example
 ---
-nom: 'calendrier-indisponible-date-exemple'
+name: 'calendar-unavailable-dates-example'
 ---
 ::
 
 ### Avec les dates min/max
 
-Utilisez les accessoires `min-value` et `max-value` pour limiter les dates.
+Utilisez les props `min-value` et `max-value` pour limiter les dates.
 
 ::component-example
 ---
-nom: 'calendrier-min-max-dates-exemple'
+name: 'calendar-min-max-dates-example'
 ---
 ::
 
@@ -402,7 +402,7 @@ Vous pouvez utiliser d'autres calendriers de `@internationalized/date` pour impl
 
 ::component-example
 ---
-nom: 'calendrier-autre-système-exemple'
+name: 'calendar-other-system-example'
 ---
 ::
 
@@ -412,35 +412,35 @@ Vous pouvez consulter tous les calendriers disponibles sur `@internationalized/d
 
 ### Avec contrôles externes
 
-Vous pouvez contrôler le calendrier avec des contrôles externes en manipulant la date passée dans le `v-model`.
+Vous pouvez contrôler le calendrier avec des commandes externes en manipulant la date passée dans le `v-model`.
 
 ::component-example
 ---
-nom: 'exemple de contrôle-exemple'
+name: 'calendar-external-controls-example'
 ---
 ::
 
-### Avec la date d'aujourd 'hui
+### Avec la date du jour
 
 Utilisez la fonction `today` de `@internationalized/date` avec `getLocalTimeZone` pour définir la valeur à la date actuelle.
 
 ::component-example
 ---
-nom: 'calendrier-aujourd' hui-exemple '
+name: 'calendar-today-example'
 ---
 ::
 
-### Comme sélecteur de date
+### As sélecteur de date
 
 Utilisez un composant [Button](/docs/components/button) et un composant [Popover](/docs/components/popover) pour créer un sélecteur de date.
 
 ::component-example
 ---
-nommé:'calendar-date-picker-exemple'
+name: 'calendar-date-picker-example'
 ---
 ::
 
-### En tant que sélecteur de plage de dates
+### As un sélecteur de plage de dates
 
 Utilisez un composant [Button](/docs/components/button) et un composant [Popover](/docs/components/popover) pour créer un sélecteur de plage de dates avec des plages prédéfinies.
 
@@ -450,24 +450,24 @@ name: 'calendar-date-range-picker-example'
 ---
 ::
 
-@@ph140@api
+## API
 
-@141@141@141
+### Props équipements
 
-Composants-props
+:component-props
 
-@@ph142@@réglages
+### Slots
 
-Composants slots
+:component-slots
 
-### émissions
+### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph144@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement.com
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

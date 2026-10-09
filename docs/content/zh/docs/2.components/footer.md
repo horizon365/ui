@@ -7,20 +7,20 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Footer.vue
 ---
 
-## 使用情况
+## 用法
 
-页脚组件呈现`<footer>`元素。
+Footer组件会呈现`<footer>`元素。
 
-使用`left`、`default`和`right`插槽来自定义页脚。
+使用`left`、`default`和`right`插槽自定义页脚。
 
 ::component-example
 ---
-更漂亮：真的
-收阖：true
-名称：'页脚示例'
-类：“！p-0”
-道具：
-  类别：'w-完整'
+prettier: true
+collapse: true
+name: 'footer-example'
+class: '!p-0'
+props:
+  class: 'w-full'
 ---
 ::
 
@@ -29,14 +29,14 @@ links:
 ::
 
 ::tip{to="/docs/components/footer-columns"}
-您可以使用`FooterColumns`组件来显示`top`插槽内的链接列表。
+您可以使用`FooterColumns`组件显示`top`插槽内的链接列表。
 ::
 
-示例：
+示例
 
 ### 在`app.vue`内
 
-在`app.vue`或版面中使用页脚组件：
+在`app.vue`或布局中使用Footer组件：
 
 ```vue [app.vue]{32-67}
 <script setup lang="ts">
@@ -110,23 +110,23 @@ const items: NavigationMenuItem[] = [{
 ```
 
 ::note
-在这个范例中，我们会使用[Separator](/docs/components/separator)组件，在页尾上方加入框缐。
+在这个范例中，我们会使用[Separator](/docs/components/separator)组件在页尾上方加入框缐。
 ::
 
-美国石油学会
+应用程序接口
 
-道具
+### 道具
 
-：组件-支柱
+:component-props
 
-插槽
+x插槽
 
-：组件插槽
+:component-slots
 
-主题
+## 主题
 
-：组件主题
+:component-theme
 
-## 变更日志
+## 更改日志
 
-：组件更改日志
+:component-changelog

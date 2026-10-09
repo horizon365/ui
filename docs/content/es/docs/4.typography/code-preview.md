@@ -9,16 +9,16 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodePreview.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Envuelva cualquier contenido con el componente `code-preview` para mostrar una vista previa en vivo junto con su código fuente utilizando la ranura `code`.
 
 ::code-preview{class="[&>div]:*:my-0 [&>div]:*:w-full" label="Preview"}
 
 ::code-preview{class="[&>div]:*:my-0"}
-@@ 004 @
+xf004x (Edición)
 
-#Código
+#code
 
 ```mdc
 `inline code`
@@ -26,7 +26,7 @@ Envuelva cualquier contenido con el componente `code-preview` para mostrar una v
 
 ::
 
-#Código
+#code
 
 ````mdc
 ::code-preview
@@ -34,27 +34,27 @@ Envuelva cualquier contenido con el componente `code-preview` para mostrar una v
 
 #code
 ```mdc
-@@@ 14 @
+`inline code` (Edición española)
 ```
 ::
 ````
 
 ::
 
-@180000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## API (Edición española)
 
-@1919@1919
+### Props (Edición española)
 
-Artículo siguienteComponentes {prose}
+:component-props{prose}
 
-@@21@2000 puntos
+### Slots
 
-Componentes: {prose}
+:component-slots{prose}
 
-@@23000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Temas
 
-: Componente {prose}
+:component-theme{prose}
 
-@25@Changelog
+## Changelog (Edición española)
 
-por: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

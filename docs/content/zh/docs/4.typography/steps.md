@@ -9,11 +9,11 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Steps.vue
 ---
 
-## 使用情况
+## 用法
 
 使用步骤组件将标题括起来以显示步骤列表。
 
-使用`level`prop定义将用于步骤的标题。
+使用`level`属性来定义将用于步骤的标题。
 
 :::code-preview{class="[&>div]:*:w-full"}
 ::steps{level="4"}
@@ -26,13 +26,13 @@ export default defineNuxtConfig({
 })
 ```
 
-#### Import Tailwind CSS in your CSS
+#### 在CSS中导入Tailwind CSS
 
 ```css [app/assets/css/main.css]
 @import "tailwindcss";
 ```
 
-#### Start your development server
+#### 启动开发服务器
 
 ```bash
 npm run dev
@@ -40,7 +40,7 @@ npm run dev
 
 ::
 
-#代码
+#code
 
 ````mdc
 ::steps{level="4"}
@@ -72,18 +72,18 @@ npm run dev
 
 ## API
 
-道具
+### Props
 
-：组件-道具{prose}
+:component-props{prose}
 
-插槽
+### 老虎机
 
-：组件插槽{prose}
+:component-slots{prose}
 
 ## Theme
 
-：组件主题{prose}
+:component-theme{prose}
 
 ## Changelog
 
-：component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

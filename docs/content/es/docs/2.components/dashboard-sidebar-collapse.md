@@ -3,7 +3,7 @@ title: DashboardsidebarColapso
 description: 'Un botón para colapsar la barra lateral en el escritorio.'
 category: dashboard
 links:
-  - label: Botón
+  - label: botón
     to: /docs/components/button
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub también
@@ -11,20 +11,20 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardSidebarCollapse.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente DashboardSidebarCollapse se utiliza para contraer/expandir el [DashboardSidebar](/docs/components/dashboard-sidebar) componente **cuando su `collapsible` prop está configurado **.
+El componente DashboardSidebarCollapse se utiliza para contraer/expandir el componente [DashboardSidebar](/docs/components/dashboard-sidebar) ** cuando su prop `collapsible` es set**.
 
-Componentes de código
+:component-code
 
-Se extiende el [Button](/docs/components/button) componente, por lo que puede pasar cualquier propiedad, como `color`,`variant`,`size`, etc
+Extiende el componente [Button](/docs/components/button), por lo que puede pasar cualquier propiedad como `color`, `variant`, `size`, etc.
 
 ::component-code
 ---
-Ignora:
-  @@P015@Variación
-Props:
-  Variación:"Sutil"
+ignore:
+  - variant
+props:
+  variant: 'subtle'
 ---
 ::
 
@@ -32,9 +32,9 @@ Props:
 El botón por defecto es `color="neutral"` y `variant="ghost"`.
 ::
 
-@18@Ejemplos
+## Ejemplos
 
-### Dentro de `header`
+### Dentro de la ranura `header`
 
 Puede colocar este componente en la ranura `header` del componente [DashboardSidebar](/docs/components/dashboard-sidebar) y usar el prop `collapsed` para ocultar la parte izquierda de la cabecera, por ejemplo:
 
@@ -54,7 +54,7 @@ Puede colocar este componente en la ranura `header` del componente [DashboardSid
 </template>
 ```
 
-### Dentro de `leading`
+### Dentro de la ranura `leading`
 
 Puede colocar este componente en la ranura `leading` del componente [DashboardNavbar](/docs/components/dashboard-navbar) para mostrarlo antes del título, por ejemplo:
 
@@ -78,20 +78,20 @@ definePageMeta({
 </template>
 ```
 
-@@pH068
+## API (Edición española)
 
-@@pH069@@Propuestas
+### Accesorios
 
-Componentes Props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-Este componente también soporta todos los atributos HTML nativos `<button>`.
+Este componente también admite todos los atributos HTML nativos de `<button>`.
 ::
 
-@71@@tema
+## Temas
 
-Componente Tema
+:component-theme
 
-@2017@Changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

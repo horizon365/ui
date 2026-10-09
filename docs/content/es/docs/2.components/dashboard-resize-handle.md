@@ -8,17 +8,17 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardResizeHandle.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente DashboardResizeHandle es utilizado por los componentes [DashboardSidebar](/docs/components/dashboard-sidebar) y [DashboardPanel](/docs/components/dashboard-panel).
+El componente DashboardResizeHandle se utiliza en los componentes [DashboardSidebar](/docs/components/dashboard-sidebar) y [DashboardPanel](/docs/components/dashboard-panel).
 
-Se muestra automáticamente cuando el `resizable` prop está configurado,**no tiene que agregarlo manualmente **.
+Se muestra automáticamente cuando se establece el prop `resizable`, ** no tiene que agregarlo manualmente **
 
-@@pH012@Ejemplos
+## Ejemplos
 
-### Dentro de `resize-handle`
+XPH013x Dentro de la ranura XPH014x
 
-A pesar de que este componente se muestra automáticamente cuando se establece el prop `resizable`, puede utilizar la ranura `resize-handle` de los componentes [DashboardSidebar](/docs/components/dashboard-sidebar) y [DashboardPanel](/docs/components/dashboard-panel) para personalizar el mango.
+A pesar de que este componente se muestra automáticamente cuando se establece el soporte `resizable`, puede utilizar la ranura `resize-handle` de los componentes [DashboardSidebar](/docs/components/dashboard-sidebar) y [DashboardPanelxph0222xxph023) para personalizar el mango.
 
 ::code-group
 
@@ -65,23 +65,23 @@ definePageMeta({
 ::
 
 ::note
-En este ejemplo, agregamos un pseudo-elemento `after` para mostrar una línea vertical en el hover.
+En este ejemplo, agregamos un pseudoelemento `after` para mostrar una línea vertical al flotar.
 ::
 
-@@pH064
+## API (Edición española)
 
-@@pH065@@Propuestas
+### Accesorios
 
-Componentes Props
+:component-props
 
-@@666@@espanol
+### Slots (Edición española)
 
-Componentes de slots
+:component-slots
 
-@067@@Proyecto
+## Temas
 
-Componente Tema
+:component-theme
 
-@@changelog
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

@@ -15,16 +15,16 @@ links:
 
 ## 使用法
 
-`v-model`ディレクティブを使用して、スイッチのチェック状態を制御します。
+`v-model`ディレクティブを使用して、Switchのチェック状態を制御します。
 
 ::component-code
 ---
-無視
-  -  modelValue
-外部
-  -  modelValue
-小道具
-  modelValue true
+ignore:
+  - modelValue
+external:
+  - modelValue
+props:
+  modelValue: true
 ---
 ::
 
@@ -32,181 +32,181 @@ links:
 
 ::component-code
 ---
-無視
-  -  defaultValue
-小道具
-  defaultValue true
+ignore:
+  - defaultValue
+props:
+  defaultValue: true
 ---
 ::
 
-### ラベル
+### Label
 
-`label` propを使用して、Switchのラベルを設定します。
+`label`プロパティを使用して、Switchのラベルを設定します。
 
 ::component-code
 ---
-小道具
-  label Check me
+props:
+  label: Check me
 ---
 ::
 
-`required` propを使用する場合、ラベルの横にアスタリスクが追加されます。
+`required`プロパティを使用する場合、ラベルの横にアスタリスクが追加されます。
 
 ::component-code
 ---
-無視
-  -  label
-小道具
-  必須true
-  label Check me
+ignore:
+  - label
+props:
+  required: true
+  label: Check me
 ---
 ::
 
-### 説明
+### Description
 
 `description`プロパティを使用して、Switchの説明を設定します。
 
 ::component-code
 ---
-無視
-  -  label
-小道具
-  label Check me
-  説明：'これはチェックボックスです。
+ignore:
+  - label
+props:
+  label: Check me
+  description: 'This is a checkbox.'
 ---
 ::
 
-### アイコン
+### Icon
 
-`checked-icon`および`unchecked-icon` propsを使用して、スイッチのアイコンをチェックしたときとチェックしないときに設定します。
+`checked-icon`と`unchecked-icon`のプロップを使用して、スイッチのアイコンをチェックしたりオフにしたりします。
 
 ::component-code
 ---
-きれい真
-無視
-  -  label
-  -  defaultValue
-小道具
-  uncheckedIcon 'i—lucide—x'
-  checkedIcon 'i—lucide—check'
-  defaultValue true
-  label Check me
+prettier: true
+ignore:
+  - label
+  - defaultValue
+props:
+  uncheckedIcon: 'i-lucide-x'
+  checkedIcon: 'i-lucide-check'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-### ローディング
+### 読み込み中
 
-`loading`プロップを使用して、Switchに読み込み中のアイコンを表示します。
+`loading`プロパティを使用して、Switchにロードアイコンを表示します。
 
 ::component-code
 ---
-無視
-  -  label
-  -  defaultValue
-小道具
-  読み込み真
-  defaultValue true
-  label Check me
+ignore:
+  - label
+  - defaultValue
+props:
+  loading: true
+  defaultValue: true
+  label: Check me
 ---
 ::
 
-###  Loadingアイコン
+### Loadingアイコン
 
-読み込みアイコンをカスタマイズするには、`loading-icon`プロパティを使用します。デフォルトは`i-lucide-loader-circle`です。
+`loading-icon`プロパティを使用して、ロードアイコンをカスタマイズします。デフォルトは`i-lucide-loader-circle`です。
 
 ::component-code
 ---
-無視
-  -  label
-  -  defaultValue
-小道具
-  読み込み真
-  loadingIcon 'i—lucide—loader'
-  defaultValue true
-  label Check me
+ignore:
+  - label
+  - defaultValue
+props:
+  loading: true
+  loadingIcon: 'i-lucide-loader'
+  defaultValue: true
+  label: Check me
 ---
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-このアイコンは、`ui.icons.loading`キーの`app.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`app.config.ts`の`ui.icons.loading`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-このアイコンは、`ui.icons.loading`キーの下の`vite.config.ts`でグローバルにカスタマイズできます。
+このアイコンは`vite.config.ts`の`ui.icons.loading`キーでグローバルにカスタマイズできます。
 :::
 ::
 
-### カラー
+### Color
 
-`color`プロパティを使用して、Switchの色を変更します。
+`color`プロパティを使用してSwitchの色を変更します。
 
 ::component-code
 ---
-無視
-  - ラベル
-  -  defaultValue
-小道具
-  色ニュートラル
-  defaultValue true
-  label Check me
+ignore:
+  - label
+  - defaultValue
+props:
+  color: neutral
+  defaultValue: true
+  label: Check me
 ---
 ::
 
 ### サイズ
 
-`size`プロパティを使用して、Switchのサイズを変更します。
+`size`プロパティを使用してSwitchのサイズを変更します。
 
 ::component-code
 ---
-無視
-  - ラベル
-  -  defaultValue
-小道具
-  サイズXL
-  defaultValue true
-  label Check me
+ignore:
+  - label
+  - defaultValue
+props:
+  size: xl
+  defaultValue: true
+  label: Check me
 ---
 ::
 
 ### 無効
 
-スイッチを無効にするには、`disabled`プロパティを使用します。
+`disabled`プロパティを使用してSwitchを無効にします。
 
 ::component-code
 ---
-無視
-  -  label
-小道具
-  無効true
-  label Check me
+ignore:
+  - label
+props:
+  disabled: true
+  label: Check me
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
-このコンポーネントは、すべてのネイティブ`<button>` HTML属性もサポートします。
+このコンポーネントはすべてのネイティブ`<button>` HTML属性もサポートします。
 ::
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-### エミッツ
+### Emits
 
-component—emits
+:component-emits
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

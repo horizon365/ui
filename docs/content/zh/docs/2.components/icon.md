@@ -15,42 +15,42 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Icon.vue
 ---
 
-## 使用情况
+## 用法
 
 使用`name`道具显示图标。
 
 ::component-code
 ---
-道具：
-  名称：'i-lucide-lightbulb'
-  class：'size-5'
+props:
+  name: 'i-lucide-lightbulb'
+  class: 'size-5'
 ---
 ::
 
 ::note
-您可以使用<https://iconify.design>集合中的任何名称。在<https://icones.js.org>上轻松浏览它们，或使用[`search-icons`](/docs/getting-started/ai/mcp#available-tools)MCP工具直接从AI助手搜索。
+您可以使用<https://iconify.design>集合中的任何名称。在<https://icones.js.org>上轻松浏览它们，或使用[`search-icons`](/docs/getting-started/ai/mcp#available-tools) MCP工具直接从AI助手搜索。
 ::
 
 ::framework-only
-#nuxt（无文本）
+#nuxt
 :::caution{to="/docs/getting-started/integrations/icons/nuxt#collections"}
 强烈建议您安装所需的图标集，阅读更多有关此的信息。
 :::
 ::
 
-## Examples
+## 示例
 
 ### SVG
 
-您也可以将Vue组件传入`name`prop：
+你也可以将一个Vue组件传入`name` prop：
 
 ::component-example
 ---
-名称：'icon-svg-example'
+name: 'icon-svg-example'
 ---
 ::
 
-您可以自己定义图标组件，也可以使用[`unplugin-icons`](https://github.com/unplugin/unplugin-icons)直接从SVG文件导入：
+您可以自己定义图标组件，或使用[`unplugin-icons`](https://github.com/unplugin/unplugin-icons)直接从SVG文件导入它们：
 
 ```vue
 <script setup lang="ts">
@@ -66,8 +66,8 @@ import IconLightbulb from '~icons/lucide/lightbulb'
 
 ### Props
 
-：组件-支柱
+:component-props
 
 ## Changelog
 
-：组件更改日志
+:component-changelog

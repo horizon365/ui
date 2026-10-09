@@ -11,21 +11,21 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/color-mode/ColorModeSelect.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
-El componente ColorModeSelect extiende el componente [SelectMenu](/docs/components/select-menu), por lo que puede pasar cualquier propiedad, como `color`,`variant`,`size`, etc.
+El componente ColorModeSelect extiende el componente [SelectMenu](/docs/components/select-menu), de modo que puede pasar cualquier propiedad como `color`, `variant`, `size`, etc.
 
-: código de componentes {prefix="color-mode"}
+:component-code{prefix="color-mode"}
 
-@@pH009@Ejemplos
+xph008XEjemplos
 
 ### Con iconos personalizados
 
 ::framework-only
-#nuxidad
+#nuxt
 ::div
 
-Utilice el `app.config.ts` para personalizar el icono con la propiedad `ui.icons`:
+Utilice el icono `app.config.ts` para personalizar el icono con la propiedad `ui.icons`:
 
 ```ts [app/app.config.ts]
 export default defineAppConfig({
@@ -41,7 +41,7 @@ export default defineAppConfig({
 
 ::
 
-#vista
+#vue
 ::div
 Utilice el `vite.config.ts` para personalizar el icono con la propiedad `ui.icons`:
 
@@ -69,12 +69,12 @@ export default defineConfig({
 
 ::
 
-@@pH045
+## API (Edición española)
 
-@@46000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Accesorios
 
-Componentes Props
+:component-props
 
-@@40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Changelog (Edición española)
 
-por: component-changelog {prefix="color-mode"}
+:component-changelog{prefix="color-mode"}

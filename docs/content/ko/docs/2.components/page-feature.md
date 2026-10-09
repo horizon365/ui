@@ -1,5 +1,5 @@
 ---
-title: PageFeature 페이지기능
+title: PageFeature 페이지 기능
 description: '응용 프로그램의 주요 기능을 보여주는 구성 요소입니다.'
 category: page
 links:
@@ -8,122 +8,122 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageFeature.vue
 ---
 
-##  사용
+## Usage
 
-PageFeature 구성 요소는 [PageSection](/docs/components/page-section) 구성 요소에서 사용되어 [features](/docs/components/page-section#features)를 표시합니다.
+PageFeature 구성 요소는 [PageSection](/docs/components/page-section) 구성 요소에서 [feature](xph07x)를 표시하는 데 사용됩니다.
 
-###  제목
+### Title 파일
 
-`title`prop을 사용하여 기능 제목을 설정합니다.
-
-::component-code
----
-숨기기 (Hide):
-  - class 클래스
-소품 :
-  제목: Theme
-  클래스: 'w-96'
----
-::
-
-###  설명
-
-`description`prop을 사용하여 기능에 대한 설명을 설정합니다.
+`title` prop 을 사용하여 기능의 제목을 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-숨기기 (Hide):
-  -  클래스
-무시하기:
-  -  title
-소품 :
-  제목: Theme
-  설명: "사용자 고유의 색상, 글꼴 등으로 Nuxt UI 사용자 정의"
-  클래스: 'w-96'
+hide:
+  - class
+props:
+  title: 'Theme'
+  class: 'w-96'
 ---
 ::
 
-###  아이콘
+### Description
 
-`icon`prop을 사용하여 기능 아이콘을 설정합니다.
+`description` prop 을 사용하여 기능에 대한 설명을 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-숨기기 (Hide):
-  -  클래스
-무시하기:
-  -  제목
-  -  설명
-소품 :
-  제목: Theme
-  설명: "사용자 고유의 색상, 글꼴 등으로 Nuxt UI 사용자 정의"
-  아이콘 : i-lucide-swatch-book
-  클래스: 'w-96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+props:
+  title: 'Theme'
+  description: 'Customize Nuxt UI with your own colors, fonts, and more.'
+  class: 'w-96'
 ---
 ::
 
-###  링크
+### Icon
 
-당신은 [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) 구성 요소에서 모든 속성을 전달 할 수 있습니다 `to`, `target`, `rel`, etc.
+`icon` 소품을 사용하여 기능의 아이콘을 설정합니다.
 
 ::component-code
 ---
-상품명 : True
-숨기기 (Hide):
-  -  클래스
-무시하기:
-  -  title
-  -  설명
-  -  icon
-  -  target
-소품 :
-  제목: Theme
-  설명: "사용자 고유의 색상, 글꼴 등으로 Nuxt UI 사용자 정의"
-  아이콘 : i-lucide-swatch-book
-  to: '/docs/getting-started/theme/design-system' /docs/getting-started/theme/design-system' 에 대한 정보
-  target: _blank 대상
-  클래스: 'W-96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+props:
+  title: 'Theme'
+  description: 'Customize Nuxt UI with your own colors, fonts, and more.'
+  icon: 'i-lucide-swatch-book'
+  class: 'w-96'
 ---
 ::
 
-###  방향
+### 링크
 
-`orientation`prop을 사용하여 피쳐 방향을 변경합니다. 기본값은 `horizontal`입니다.
+[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) 구성 요소(예: `to`, `target`, `rel` 등)에서 모든 속성을 전달할 수 있습니다.
 
 ::component-code
 ---
-상품명 : True
-숨기기 (Hide):
-  -  클래스
-무시하기:
-  -  title
-  -  설명
-  -  icon
-소품 :
-  방향: 수직
-  제목: Theme
-  설명: "사용자 고유의 색상, 글꼴 등으로 Nuxt UI 사용자 정의"
-  아이콘 : i-lucide-swatch-book
-  클래스: 'w-96'
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - target
+props:
+  title: 'Theme'
+  description: 'Customize Nuxt UI with your own colors, fonts, and more.'
+  icon: 'i-lucide-swatch-book'
+  to: '/docs/getting-started/theme/design-system'
+  target: _blank
+  class: 'w-96'
 ---
 ::
 
-##  API
+### 방향 지정
 
-###  Props
+`orientation` 소품을 사용하여 피쳐 방향을 변경합니다. 기본값은 `horizontal`입니다.
 
-:컴포넌트 - 소품
+::component-code
+---
+prettier: true
+hide:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+props:
+  orientation: 'vertical'
+  title: 'Theme'
+  description: 'Customize Nuxt UI with your own colors, fonts, and more.'
+  icon: 'i-lucide-swatch-book'
+  class: 'w-96'
+---
+::
 
-###  슬롯
+## API
 
-:컴포넌트 - 슬롯
+### Props
 
-##  테마
+:component-props
 
-:구성요소 - 주제
+### Slots
 
-##  Changelog
+:component-slots
 
-:component-changelog 구성요소 변경 로그
+## Theme 테마
+
+:component-theme
+
+## 변경 로그
+
+:component-changelog

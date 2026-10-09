@@ -12,108 +12,108 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Tooltip.vue
 ---
 
-@@ph000@@utilisation
+## Utilisation
 
 Utilisez un [Button](/docs/components/button) ou tout autre composant dans l'emplacement par défaut de l'info-bulle.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph005@texte
-Props:
-  text: 'Ouvert sur GitHub'
-Slots:
-  Défaut:|
+prettier: true
+ignore:
+  - text
+props:
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-    @@@ 006 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="ouvert" color="neutral" variant="subtle"}
 ::
 
 ::warning
-Assurez-vous d'envelopper votre application avec le composant [`App`]() qui utilise le composant [`TooltipProvider`](https://reka-ui.com/docs/components/tooltip#provider) de Reka UI.
+Assurez-vous d'envelopper votre application avec le composant [`App`](/docs/components/app) qui utilise le composant [`TooltipProvider`](https://reka-ui.com/docs/components/tooltip#provider) de Reka UI.
 ::
 
 ::tip{to="/docs/components/app#props"}
-Vous pouvez consulter le composant `App``tooltip` prop pour voir comment configurer l'info-bulle globalement.
+Vous pouvez consulter le composant `App` prop `tooltip` pour voir comment configurer l'info-bulle globalement.
 ::
 
-@@ph20@texte
+### Texte écrit
 
-Utilisez la prop `text` pour définir le contenu de l'info-bulle.
+Utilisez le prop `text` pour définir le contenu de l'info-bulle.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  text: 'Ouvert sur GitHub'
-Slots:
-  Défaut:|
+prettier: true
+props:
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-    @@@ 22 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="ouvert" color="neutral" variant="subtle"}
 ::
 
-@@24@24000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Kbds
 
-Use the `kbds` prop to render [Kbd](/docs/components/kbd) components in the Tooltip.
+Utilisez la prop `kbds` pour rendre les composants [Kbd](/docs/components/kbd) dans l'info-bulle.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph030@texte
-  @@ph031@kbds
-Props:
-  text: 'Ouvert sur GitHub'
+prettier: true
+ignore:
+  - text
+  - kbds
+props:
+  text: 'Open on GitHub'
   kbds:
-    @@ph032@méta
-    @@ph033@@G
-Slots:
-  Défaut:|
+    - meta
+    - G
+slots:
+  default: |
 
-    @@@ 034 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="ouvert" color="neutral" variant="subtle"}
 ::
 
 ::tip
-Vous pouvez utiliser des clés spéciales comme `meta` qui s'affiche sous `⌘` sur macOS et `Ctrl` sur d'autres plateformes.
+Vous pouvez utiliser des touches spéciales comme `meta` qui s'affiche sous `⌘` sur macOS et `Ctrl` sur d'autres plates-formes.
 ::
 
-@@pH039@@délai
+### délai
 
-Utilisez la prop `delay-duration` pour modifier le délai avant que l'info-bulle apparaisse. Par exemple, vous pouvez la faire apparaître instantanément en la définissant sur `0`.
+Utilisez la prop `delay-duration` pour modifier le délai avant que l'info-bulle n'apparaisse. Par exemple, vous pouvez la faire apparaître instantanément en la définissant sur `0`.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph042@texte
-Props:
-  Durée: 0
-  text: 'Ouvert sur GitHub'
-Slots:
-  Default:|
+prettier: true
+ignore:
+  - text
+props:
+  delayDuration: 0
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-    @@@ 043 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="ouvert" color="neutral" variant="subtle"}
 ::
 
 ::tip
 Ceci peut être configuré globalement via l'option `tooltip.delayDuration` dans le composant [`App`](/docs/components/app).
 ::
 
-@@ph051@@contenu
+### Contenu
 
-Utilisez la prop `content` pour contrôler le rendu du contenu de l'info-bulle, comme son `align` ou `side` par exemple.
+Utilisez la prop `content` pour contrôler le rendu du contenu de l'infobulle, comme son `align` ou `side` par exemple.
 
 ::tip
 Ceci peut être configuré globalement via l'option `tooltip.content` dans le composant [`App`](/docs/components/app).
@@ -121,86 +121,86 @@ Ceci peut être configuré globalement via l'option `tooltip.content` dans le co
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph061@texte
+prettier: true
+ignore:
+  - text
 items:
   content.align:
-    @@ph062@départ
-    @@pH063@centre
-    @@ph064@fin
+    - start
+    - center
+    - end
   content.side:
-    @@pH065@@droite
-    @@ph066@left
-    @@ph067@top
-    @@ph068@résultat
-Props:
-  contenu:
-    Alignement: Centre
-    Étiquette: bottom
-    Décalage: 8
-  text: 'Ouvert sur GitHub'
-Slots:
-  Default:|
+    - right
+    - left
+    - top
+    - bottom
+props:
+  content:
+    align: center
+    side: bottom
+    sideOffset: 8
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-    @@@ 069 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="ouvert" color="neutral" variant="subtle"}
 ::
 
-@@771@@Arceau
+### flèche
 
 Utilisez la prop `arrow` pour afficher une flèche dans l'info-bulle.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph073@texte
-  @@774@araignée
-Props:
-  Arrow: vrai
-  text: 'Ouvert sur GitHub'
-Slots:
-  Default:|
+prettier: true
+ignore:
+  - text
+  - arrow
+props:
+  arrow: true
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-    @@@ 75 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="ouvert" color="neutral" variant="subtle"}
 ::
 
-### désactivé
+### Désactivé
 
 Utilisez la prop `disabled` pour désactiver l'info-bulle.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph079@texte
-Props:
-  handicapés: vrai
-  text: 'Ouvert sur GitHub'
-Slots:
-  Défaut:|
+prettier: true
+ignore:
+  - text
+props:
+  disabled: true
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-    @@@ 80 @
+    <UButton label="Open" color="neutral" variant="subtle" />
 ---
 
-Référence: u-button {label="Open" color="neutral" variant="subtle"}
+:u-button{label="ouvert" color="neutral" variant="subtle"}
 ::
 
-@@ph082@Exemples
+## Exemples
 
-### Contrôle état ouvert
+### Control état ouvert
 
 Vous pouvez contrôler l'état ouvert en utilisant la prop `default-open` ou la directive `v-model:open`.
 
 ::component-example
 ---
-nom: 'tooltip-open-example'
+name: 'tooltip-open-example'
 ---
 ::
 
@@ -208,34 +208,34 @@ nom: 'tooltip-open-example'
 Dans cet exemple, en utilisant [`defineShortcuts`](/docs/composables/define-shortcuts), vous pouvez basculer l'info-bulle en appuyant sur: kbd{value="O"}.
 ::
 
-### Avec curseur suivant
+### Avec le curseur suivant
 
-Vous pouvez faire en sorte que l'info-bulle suive le curseur lorsque vous survolez un élément en utilisant le prop [`reference`](https://reka-ui.com/docs/components/tooltip#trigger):
+Vous pouvez faire en sorte que l'info-bulle suive le curseur lorsque vous survolez un élément en utilisant la prop [`reference`](https://reka-ui.com/docs/components/tooltip#trigger):
 
 ::component-example
 ---
-nom: 'tooltip-cursor-exemple'
+name: 'tooltip-cursor-example'
 ---
 ::
 
-@@ph098@@api
+## API
 
-@099@@propriété
+### Props
 
-Composants-props
+:component-props
 
-@@ph100@@réseaux sociaux
+### Slots
 
-Composants slots
+:component-slots
 
-@101@101@101@101
+### Emits
 
-Composants émetteurs
+:component-emits
 
-@@ph102@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@changement@changement@changement.com
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

@@ -20,17 +20,17 @@ links:
 
 ::component-example
 ---
-崩壊真
-きれい真
-名前'tabs—example'
-小道具
-  クラス'w—full'
+collapse: true
+prettier: true
+name: 'tabs-example'
+props:
+  class: 'w-full'
 ---
 ::
 
 ### アイテム
 
-`items` propを、次のプロパティを持つオブジェクトの配列として使用します。
+`items`プロパティを次のプロパティを持つオブジェクトの配列として使用します。
 
 - `label?: string`{lang="ts-type"}
 - `icon?: string`{lang="ts-type"}
@@ -45,76 +45,76 @@ links:
 
 ::component-code
 ---
-無視
-  - アイテム
-  - クラス
-外部
-  - アイテム
-externalTypes
-  -  TabsItem []
-小道具
-  アイテム
-    -  labelアカウント
-      アイコン'i—lucide—user'
-      内容：「これがアカウントの内容です。
-    -  labelパスワード
-      アイコン'i—lucide—lock'
-      content：'これはパスワードの内容です。
-  クラス'w—full'
+ignore:
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  items:
+    - label: Account
+      icon: 'i-lucide-user'
+      content: 'This is the account content.'
+    - label: Password
+      icon: 'i-lucide-lock'
+      content: 'This is the password content.'
+  class: 'w-full'
 ---
 ::
 
 ### コンテンツ
 
-パネルなしでトリガーをレンダリングするには、`content` propを`false`に設定します。デフォルトは`true`です。
+パネルなしでトリガーをレンダリングするには、`content`プロパティを`false`に設定します。デフォルトは`true`です。
 
 ::component-code
 ---
-無視
-  - コンテンツ
-  - アイテム
-  - クラス
-外部
-  - アイテム
-externalTypes
-  -  TabsItem []
-小道具
-  コンテンツfalse
-  アイテム
-    -  labelアカウント
-      アイコン'i—lucide—user'
-      内容：「これがアカウントの内容です。
-    -  labelパスワード
-      アイコン'i—lucide—lock'
-      content：'これはパスワードの内容です。
-  クラス'w—full'
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  content: false
+  items:
+    - label: Account
+      icon: 'i-lucide-user'
+      content: 'This is the account content.'
+    - label: Password
+      icon: 'i-lucide-lock'
+      content: 'This is the password content.'
+  class: 'w-full'
 ---
 ::
 
 ### アンマウント
 
-タブが折りたたまれたときにコンテンツがアンマウントされないようにするには、`unmount-on-hide`プロパティを使用します。デフォルトは`true`です。
+`unmount-on-hide`プロパティを使用して、タブが折りたたまれたときにコンテンツがアンマウントされないようにします。デフォルトは`true`です。
 
 ::component-code
 ---
-無視
-  - コンテンツ
-  - アイテム
-  - クラス
-外部
-  - アイテム
-externalTypes
-  -  TabsItem []
-小道具
-  unmountOnHide false
-  アイテム
-    -  labelアカウント
-      アイコン'i—lucide—user'
-      内容：「これがアカウントの内容です。
-    -  labelパスワード
-      アイコン'i—lucide—lock'
-      content：'これはパスワードの内容です。
-  クラス'w—full'
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  unmountOnHide: false
+  items:
+    - label: Account
+      icon: 'i-lucide-user'
+      content: 'This is the account content.'
+    - label: Password
+      icon: 'i-lucide-lock'
+      content: 'This is the password content.'
+  class: 'w-full'
 ---
 ::
 
@@ -122,102 +122,102 @@ externalTypes
 DOMを検査して、各項目のコンテンツがレンダリングされていることを確認できます。
 ::
 
-### カラー
+### Color
 
-タブの色を変更するには、`color`プロパティを使用します。
+`color`プロパティを使用してタブの色を変更します。
 
 ::component-code
 ---
-無視
-  - コンテンツ
-  - アイテム
-  - クラス
-外部
-  - アイテム
-externalTypes
-  -  TabsItem []
-小道具
-  色ニュートラル
-  コンテンツfalse
-  アイテム
-    -  labelアカウント
-    -  labelパスワード
-  クラス'w—full'
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  color: neutral
+  content: false
+  items:
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
-### バリアント
+### Variant
 
-タブのバリアントを変更するには、`variant`プロパティを使用します。
+`variant`プロパティを使用してタブのバリアントを変更します。
 
 ::component-code
 ---
-無視
-  - コンテンツ
-  - アイテム
-  - クラス
-外部
-  - アイテム
-externalTypes
-  -  TabsItem []
-小道具
-  色ニュートラル
-  バリアントリンク
-  コンテンツfalse
-  アイテム
-    -  labelアカウント
-    -  labelパスワード
-  クラス'w—full'
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  color: neutral
+  variant: link
+  content: false
+  items:
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
 ### サイズ
 
-タブのサイズを変更するには、`size`プロパティを使用します。
+`size`プロパティを使用してタブのサイズを変更します。
 
 ::component-code
 ---
-無視
-  - コンテンツ
-  - アイテム
-  - クラス
-外部
-  - アイテム
-externalTypes
-  -  TabsItem []
-小道具
-  サイズMD
-  バリアントピル
-  コンテンツfalse
-  アイテム
-    -  labelアカウント
-    -  labelパスワード
-  クラス'w—full'
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  size: md
+  variant: pill
+  content: false
+  items:
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
-### オリエンテーション
+### Orientation
 
-タブの向きを変更するには、`orientation`プロパティを使用します。デフォルトは`horizontal`です。
+`orientation`プロパティを使用してタブの向きを変更します。デフォルトは`horizontal`です。
 
 ::component-code
 ---
-無視
-  - コンテンツ
-  - アイテム
-  - クラス
-外部
-  - アイテム
-externalTypes
-  -  TabsItem []
-小道具
-  オリエンテーション垂直
-  バリアントピル
-  コンテンツfalse
-  アイテム
-    -  labelアカウント
-    -  labelパスワード
-  クラス'w—full'
+ignore:
+  - content
+  - items
+  - class
+external:
+  - items
+externalTypes:
+  - TabsItem[]
+props:
+  orientation: vertical
+  variant: pill
+  content: false
+  items:
+    - label: Account
+    - label: Password
+  class: 'w-full'
 ---
 ::
 
@@ -225,40 +225,40 @@ externalTypes
 
 ###  Controlアクティブ項目
 
-`default-value` propまたは`v-model`ディレクティブを使用して、アクティブなアイテムを制御できます。`value`が指定されていない場合、デフォルトでは**としてインデックス**になります。
+`default-value`プロパティを使用するか、`v-model`ディレクティブを使用してアイテムの`value`を指定してアクティブなアイテムを制御できます。`value`が指定されていない場合、デフォルトではインデックス**が文字列**として指定されます。
 
-：component—example {name="tabs-model-value-example"}
+:component-example{name="tabs-model-value-example"}
 
 ::tip
-`v-model`または`default-value`が指定された場合に、アイテムにマッチするために使用されるキーを変更するには、`value-key`プロパティを使用します。
+`v-model`または`default-value`が指定されたときにアイテムにマッチするキーを変更するには、`value-key`プロパティを使用します。
 ::
 
-### ルートクエリ付き
+### Withルートクエリ
 
 項目の`value`として`route.query.tab`を使用して、URLクエリパラメータでアクティブな項目を制御できます。
 
-component—example {name="tabs-route-query-example"}
+:component-example{name="tabs-route-query-example"}
 
 ### コンテンツスロット付き
 
-`#content`スロットを使用して、各項目の内容をカスタマイズします。
+`#content`スロットを使用して、各アイテムのコンテンツをカスタマイズします。
 
-component—example {name="tabs-content-slot-example"}
+:component-example{name="tabs-content-slot-example"}
 
 ### 下部タブバー付き
 
-`ui` propを使用して、タブをYouTubeやInstagramのようなアイコンと小さなラベル付きのモバイルスタイルの下部タブバーに変換します。
+`ui`プロパティを使用して、タブをYouTubeやInstagramのように、アイコンと小さなラベル付きのモバイルスタイルの下部タブバーに変換します。
 
 ::component-example
 ---
-崩壊真
-名前'tabs—bottom—tab—bar'
+collapse: true
+name: 'tabs-bottom-tab-bar-example'
 ---
 ::
 
 ### カスタムスロット付き
 
-特定の項目をカスタマイズするには、`slot`プロパティを使用します。
+`slot`プロパティを使用して、特定の項目をカスタマイズします。
 
 以下のスロットにアクセスできます：
 
@@ -266,26 +266,26 @@ component—example {name="tabs-content-slot-example"}
 
 ::component-example
 ---
-崩壊真
-名前'tabs—custom—slot—example'
+collapse: true
+name: 'tabs-custom-slot-example'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-###  Emits
+### Emits
 
-component—emits
+:component-emits
 
-###  Expose
+### Expose
 
 テンプレート参照を介してコンポーネントにアクセスする場合、以下を使用できます：
 
@@ -293,10 +293,10 @@ component—emits
 | ---- | ---- |
 | `triggersRef`{lang="ts-type"}| `Ref<ComponentPublicInstance[]>`{lang="ts-type"}|
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

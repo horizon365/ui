@@ -9,9 +9,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodeTree.vue
 ---
 
-##  사용
+## Usage
 
-코드 블록을 `code-tree` 구성 요소로 특정 순서로 래핑하여 파일의 트리 뷰를 표시합니다.Wrap your code blocks with a `code-tree` component in any particular order to display a tree view of your files.
+코드 블록을 특정 순서로 `code-tree` 구성 요소로 래핑하여 파일의 트리 뷰를 표시합니다.Wrap your code blocks with a `code-tree` component in any particular order to display a tree view of your files.
 
 ::code-preview{class="[&>div]:*:my-0 [&>div]:*:w-full"}
 
@@ -91,16 +91,16 @@ Look at the [Nuxt 4 documentation](https://nuxt.com/docs/getting-started/introdu
 Make sure to install the dependencies:
 
 ```bash
-#  npm
+# npm의 발음을 # npm
 npm install 설치
 
-#  pnpm
-pnpm 설치
+# pnpm의 발음을 # pnpm
+Pnpm 설치
 
-#  yarn
+# yarn
 YARN 설치
 
-#  bun
+# bun
 bun install 설치
 ```
 
@@ -109,16 +109,16 @@ bun install 설치
 Start the development server on `http://localhost:3000`:
 
 ```bash
-#  npm
+# npm의 발음을 # npm
 npm 실행 dev
 
-#  pnpm
+# pnpm의 발음을 # pnpm
 pnpm run dev 실행
 
-#  yarn
-Yarn 개발
+# yarn 코드
+YARN 개발
 
-#  bun
+# bun
 Bun Run 개발
 ```
 
@@ -127,32 +127,32 @@ Bun Run 개발
 Build the application for production:
 
 ```bash
-#  npm
+# npm의 발음을 # npm
 npm 실행 빌드
 
-#  pnpm
+# pnpm의 발음을 # pnpm
 Pnpm 실행 빌드
 
-#  yarn
+# yarn
 실 제작.
 
-#  bun
+# bun
 Bun Run 빌드
 ```
 
 Locally preview production build:
 
 ```bash
-#  npm
-npm 실행 미리보기
+# npm의 발음을 # npm
+npm 실행 미리 보기
 
-#  pnpm
+# pnpm의 발음을 # pnpm
 pnpm 실행 미리 보기
 
-#  yarn
+# yarn (# yarn)
 원사 미리보기
 
-#  bun
+# bun 의
 bun run 미리보기
 ```
 
@@ -161,7 +161,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 ::
 
-# 코드
+#code
 
 ::code-collapse{class="[&>div>pre]:rounded-t-none [&>div]:my-0"}
 
@@ -169,10 +169,10 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 ::code-tree{defaultValue="app/app.config.ts"}
 
 ```ts [nuxt.config.ts]
-export default defineNuxtConfig({
+export default defineNuxtConfig({ )
   modules: ['@nuxt/ui'],
 
-  css: ['~/assets/css/main.css']
+  CSS: ['~/assets/css/main.css']
 })
 
 ```
@@ -183,8 +183,8 @@ export default defineNuxtConfig({
 ```
 
 ```ts [app/app.config.ts]
-export default defineAppConfig({
-  ui: {
+export default defineAppConfig({ )
+  UI: {
     색상 : {
       사진: "sky"
       색상 : slate
@@ -194,7 +194,7 @@ export default defineAppConfig({
 ```
 
 ```vue [app/app.vue]
-<template>
+<template> 공식
   <UApp>
     <NuxtPage />
   </UApp>
@@ -206,7 +206,7 @@ export default defineAppConfig({
   이름 : nuxt-app
   "개인": 사실,
   "type": "module", "module",
-  "scripts": {
+  "스크립트": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate", "nuxt generate",
@@ -219,7 +219,7 @@ export default defineAppConfig({
     "@nuxt/ui": "^4.0.0",
     "nuxt": ^4.0.0"
   },
-  "devDependencies" : {
+  "devDependencies": {
     "typescript": "^6.0.0",
     "vue-tsc": ^3.2.0"
   }
@@ -237,7 +237,7 @@ export default defineAppConfig({
 
 자세한 내용은 [Nuxt 4 documentation](https://nuxt.com/docs/getting-started/introduction)를 참조하십시오.
 
-##  설정
+## Setup 프로그램
 
 종속성을 설치하려면 다음과 같이 하십시오.Make sure to install dependencies:
 
@@ -255,9 +255,9 @@ yarn install
 bun install
 ```
 
-## 개발 서버
+## Development 서버
 
-`http://localhost:3000`에서 개발 서버 시작:
+`http://localhost:3000`에서 개발 서버를 시작합니다.
 
 ```bash
 # npm
@@ -273,7 +273,7 @@ yarn dev
 bun run dev
 ```
 
-##  프로덕션
+## Production 제품
 
 프로덕션용 응용 프로그램을 빌드하려면 다음과 같이 하십시오.
 
@@ -318,23 +318,23 @@ bun run preview
 ::
 
 ::note{to="/docs/typography/code#code-blocks"}
-`ProsePre` 구성 요소와 마찬가지로 `CodeTree`는 파일 이름, 아이콘 및 복사 버튼을 처리합니다.
+`ProsePre` 컴포넌트와 마찬가지로 `CodeTree`는 파일 이름, 아이콘 및 복사 버튼을 처리합니다.
 ::
 
-##  API
+## API 파일
 
-### Props 이미지
+### Props (### Props)
 
-: component-props {prose}
+:component-props{prose}
 
-###  슬롯
+### 슬롯
 
-:component-slots {prose}
+:component-slots{prose}
 
-##  테마
+## Theme 테마
 
-:component-theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## 변경 로그
 
-: component-changelog{prefix="prose"}
+:component-changelog{prefix="prose"}

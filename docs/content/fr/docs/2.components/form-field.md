@@ -11,49 +11,49 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/FormField.vue
 ---
 
-@@ph000@utilisation
+## Utilisation
 
-Utilisé dans un [Form](/docs/components/form), il assure la validation et la gestion des erreurs.
+Utilisé dans un [Form](xph003), il assure la validation et la gestion des erreurs.
 
-@@ph005@étiquette
+### étiquette
 
 Utilisez la prop `label` pour définir l'étiquette du contrôle de formulaire.
 
 ::component-code
 ---
-Étiquette: true
-Props:
-  Étiquette: Email
-Slots:
-  Défaut:|
+prettier: true
+props:
+  label: Email
+slots:
+  default: |
 
-    @@@ 007 @
+    <UInput placeholder="Enter your email" />
 ---
 
-par: u-input {placeholder="Enter your email"}
+:u-input{placeholder="Enter your email"}
 ::
 
 ::note
-L'attribut `for` et le contrôle de formulaire sont associés à un `id` unique s'ils ne sont pas fournis.
+L'attribut label `for` et le contrôle de formulaire sont associés à un `id` unique s'ils ne sont pas fournis.
 ::
 
 Lorsque vous utilisez le prop `required`, un astérisque est ajouté à côté de l'étiquette.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph012@étiquette
-Props:
-  Étiquette: Email
-  Requis: Vrai
-Slots:
-  Défaut:|
+prettier: true
+ignore:
+  - label
+props:
+  label: Email
+  required: true
+slots:
+  default: |
 
-    @@
+    <UInput placeholder="Enter your email" />
 ---
 
-par: u-input {placeholder="Enter your email"}
+:u-input{placeholder="Enter your email"}
 ::
 
 ### Description
@@ -62,123 +62,123 @@ Utilisez le prop `description` pour fournir des informations supplémentaires so
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph017@label
-Props:
-  Étiquette: Email
-  Description: Nous ne partagerons jamais votre adresse e-mail avec quiconque.
-Slots:
-  Défaut:|
+prettier: true
+ignore:
+  - label
+props:
+  label: Email
+  description: We'll never share your email with anyone else.
+slots:
+  default: |
 
-    @@@@ 018 @
+    <UInput placeholder="Enter your email" class="w-full" />
 ---
 
-par: u-input {placeholder="Enter your email" class="w-full"}
+:u-input{placeholder="Enter your email" class="w-full"}
 ::
 
-@@20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### référence
 
-Utilisez la prop `hint` pour afficher un message d'allusion à côté de l'étiquette.
+Utilisez le prop `hint` pour afficher un message d'allusion à côté de l'étiquette.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@22@label
-Props:
-  Étiquette: Email
-  Indice: optionnel
-Slots:
-  Default:|
+prettier: true
+ignore:
+  - label
+props:
+  label: Email
+  hint: Optional
+slots:
+  default: |
 
-    @@@ 23 @
+    <UInput placeholder="Enter your email" />
 ---
 
-: u-input {placeholder="Enter your email"}
+:u-input{placeholder="Enter your email"}
 ::
 
-@@25@Aidez-moi
+### Aide
 
 Utilisez la prop `help` pour afficher un message d'aide sous le contrôle de formulaire. Lorsqu 'elle est utilisée avec la prop `error`, la prop `error` a priorité.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @29@label
-Props:
-  Étiquette: Email
-  Aide: Veuillez entrer une adresse email valide.
-Slots:
-  Default:|
+prettier: true
+ignore:
+  - label
+props:
+  label: Email
+  help: Please enter a valid email address.
+slots:
+  default: |
 
-    @@@ 030 @
+    <UInput placeholder="Enter your email" class="w-full" />
 ---
 
-par: u-input {placeholder="Enter your email" class="w-full"}
+:u-input{placeholder="Enter your email" class="w-full"}
 ::
 
-@@ph032@erreur
+### Erreur
 
-Utilisez la prop `error` pour afficher un message d'erreur sous le contrôle de formulaire. Lorsqu 'elle est utilisée avec la prop `help`, la prop `error` a priorité.
+Utilisez la prop `error` pour afficher un message d'erreur sous le contrôle de formulaire. Lorsqu 'il est utilisé avec la prop `help`, la prop `error` a la priorité.
 
-Lorsqu 'il est utilisé à l'intérieur d'un [Form](/docs/components/form), ceci est automatiquement défini lorsqu' une erreur de validation se produit.
+Lorsqu 'il est utilisé à l'intérieur d'un [Form](/docs/components/form), il est automatiquement défini lorsqu' une erreur de validation se produit.
 
 ::component-code
 ---
-Étiquette: true
-Ignorer:
-  @@ph040@label
-Props:
-  Étiquette: Email
-  error: Veuillez entrer une adresse e-mail valide.
-Slots:
-  Défaut:|
+prettier: true
+ignore:
+  - label
+props:
+  label: Email
+  error: Please enter a valid email address.
+slots:
+  default: |
 
-    @@@ 041 @
+    <UInput placeholder="Enter your email" class="w-full" />
 ---
 
-par: u-input {placeholder="Enter your email" class="w-full"}
+:u-input{placeholder="Enter your email" class="w-full"}
 ::
 
 ::tip{to="/docs/getting-started/theme/design-system#color-system"}
 Cela définit le `color` à `error` sur le contrôle de formulaire. Vous pouvez le modifier globalement dans votre `app.config.ts`.
 ::
 
-### Pattern d'erreur
+### Erreur de référence
 
-Ceci est particulièrement pertinent pour les composants avec des valeurs de tableau telles que [InputTags](/docs/components/input-tags), où les erreurs incluent des indices de tableau dans leur nom (par exemple,`tags.0`).
+Ceci est particulièrement pertinent pour les composants avec des valeurs de tableau telles que [InputTags](/docs/components/input-tags), où les erreurs incluent des indices de tableau dans leur nom (par exemple, `tags.0`).
 
 ::tip{to="/docs/components/form#error-reporting"}
 Voir un exemple d'utilisation de `error-pattern` dans un formulaire.
 ::
 
-@@500@Size
+### Size
 
 Utilisez la prop `size` pour modifier la taille du FormField, le `size` est proxié au contrôle de formulaire.
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph057@label
-  @@ph058@description
-  @@59@heure
-  @@pH060@aide
-Props:
-  Étiquette: Email
-  Description: Nous ne partagerons jamais votre adresse e-mail avec quiconque.
-  Indice: optionnel
-  Aide: Veuillez entrer une adresse email valide.
-  Taille: XL
-Slots:
-  Défaut:|
+prettier: true
+ignore:
+  - label
+  - description
+  - hint
+  - help
+props:
+  label: Email
+  description: We'll never share your email with anyone else.
+  hint: Optional
+  help: Please enter a valid email address.
+  size: xl
+slots:
+  default: |
 
-    @@@ 061 @
+    <UInput placeholder="Enter your email" class="w-full" />
 ---
 
-: u-input {placeholder="Enter your email" class="w-full"}
+:u-input{placeholder="Enter your email" class="w-full"}
 ::
 
 ### Orientation: badge{label="4.3+" class="align-text-top"}
@@ -187,38 +187,38 @@ Utilisez la prop `orientation` pour modifier la disposition du FormField. Defaul
 
 ::component-code
 ---
-Étiquette: true
-ignorer:
-  @@ph067@étiquette
-  @@ph068@classe
-Props:
-  Orientation: horizontale
-  Étiquette: Email
-  Aide: Veuillez entrer une adresse email valide.
-  Catégorie: W-72
-Slots:
-  Default:|
+prettier: true
+ignore:
+  - label
+  - class
+props:
+  orientation: horizontal
+  label: Email
+  help: Please enter a valid email address.
+  class: w-72
+slots:
+  default: |
 
-    @@@ 069 @
+    <UInput placeholder="Enter your email" class="w-full" />
 ---
 
-: u-input {placeholder="Enter your email" class="w-full"}
+:u-input{placeholder="Enter your email" class="w-full"}
 ::
 
-@@ph071@api
+## API
 
-@@ph072@@props
+### Props équipements
 
-Composants-props
+:component-props
 
-@@773@@réseau
+### Slots
 
-Composants slots
+:component-slots
 
-@@ph074@thème
+## Thème
 
-Composant-thème
+:component-theme
 
-@@changement@changement@changement.com
+## Changelog écrit
 
-Composant-changelog
+:component-changelog

@@ -1,6 +1,6 @@
 ---
-title: ChangelogVersions 버전
-description: '타임라인에 변경 로그 버전 목록을 표시합니다.'
+title: ChangelogVersions 변경하기
+description: '일정에 변경 로그 버전 목록을 표시합니다.'
 category: page
 links:
   - label: Github (GitHub)
@@ -8,9 +8,9 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChangelogVersions.vue
 ---
 
-## 사용
+## Usage
 
-ChangelogVersions   구성 요소 는   유연 한   레이아웃 을   제공 하 여   기본   슬롯 이나  `versions`prop 을   사용 하 여  [ChangelogVersion](/docs/components/changelog-version)  구성 요소   목록 을   표시 합니다 .
+ChangelogVersion](/docs/components/changelog-version) 구성 요소 목록을 기본 슬롯이나 `versions` prop을 사용하여 표시할 수 있는 유연한 레이아웃을 제공합니다.
 
 ```vue {2,8}
 <template>
@@ -26,145 +26,145 @@ ChangelogVersions   구성 요소 는   유연 한   레이아웃 을   제공 �
 
 ### 버전
 
-`versions`prop 을  [ChangelogVersion](/docs/components/changelog-version#props)  구성   요소 의   속성 을   가진   객체   배열 로   사용 합니다 .
+`versions` prop을 [ChangelogVersion](/docs/components/changelog-version#props) 구성 요소의 속성이 있는 오브젝트 배열로 사용합니다.
 
 ::component-code
 ---
-축소 :   true
-무시 하 기 :
-  - 버전
-외부 :
+collapse: true
+ignore:
   - versions
-externalTypes :
-  - ChangelogVersionProps   [ ]
-숨기 기 (Hide) :
-  - 클래스
-소품   :
-  버전   :
-    - title :   Nuxt   3 . 17   공식   페이지
-      설명   : Nuxt   3 . 17 은   비동기   데이터   계층 의   주요   재 작업 ,   새로운   기본   제공   구성   요소 ,   더   나 은   경고   및   성능   향상 을   제공 합니다 !
-      이미지 :https://nuxt.com/assets/blog/v3.17.png
-      날짜   :   2025 - 04 - 27
-      다음   주소 :   ' https ://nuxt . com/blog/v 3 - 17 '
-      대상 :   '_ blank '
-      ui . container :   ' max - w - lg '
-    - title :   Nuxt   3 . 16
-      설명 :   ' Nuxt   3 . 16 은   기능   및   성능   향상 으로   가득   차   있 습니다 ! '
-      그림 :https://nuxt.com/assets/blog/v3.16.png
-      날짜   :   2025 - 03 - 07
-      다음   주소 :   ' https ://nuxt . com/blog/v 3 - 16 '
-      대상 :   '_ blank '
-      ui . container :   ' max - w - lg '
-    - title :   Nuxt   3 . 15
-      설명 :   ' Nuxt   3 . 15   출시   -   Vite   6 ,   더   나 은   HMR   및   더   빠른   성능 ! '
-      그림 :https://nuxt.com/assets/blog/v3.15.png
-      날짜   :   2024 - 12 - 24
-      다음   주소 :   ' https ://nuxt . com/blog/v 3 - 15 '
-      대상 :   '_ blank '
-      ui . container :   ' max - w - lg '
-  클래스 :   ' w - full '
+external:
+  - versions
+externalTypes:
+  - ChangelogVersionProps[]
+hide:
+  - class
+props:
+  versions:
+    - title: Nuxt 3.17
+      description: 'Nuxt 3.17 is out - bringing a major reworking of the async data layer, a new built-in component, better warnings, and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.17.png
+      date: 2025-04-27
+      to: 'https://nuxt.com/blog/v3-17'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.16
+      description: 'Nuxt 3.16 is out - packed with features and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.16.png
+      date: 2025-03-07
+      to: 'https://nuxt.com/blog/v3-16'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.15
+      description: 'Nuxt 3.15 is out - with Vite 6, better HMR and faster performance!'
+      image: https://nuxt.com/assets/blog/v3.15.png
+      date: 2024-12-24
+      to: 'https://nuxt.com/blog/v3-15'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+  class: 'w-full'
 ---
 ::
 
-###   지표
+### Indicator (### 표시기)
 
-`indicator`prop 을   사용 하 여   왼쪽 의   표시기   막대 를   숨 깁니다 .   기본 값 은  `true`입니다 .
+`indicator` 소품을 사용하여 왼쪽의 지시자 막대를 숨깁니다. 기본값은 `true`입니다.
 
 ::component-code
 ---
-축소 :   true
-무시 하 기 :
-  - 버전
-외부 :
-  - 버전
-externalTypes :
-  - ChangelogVersionProps [ ]
-숨기 기 (Hide) :
-  - 클래스
-소품   :
-  지시 자 :   false
-  버전   :
-    - title :   Nuxt   3 . 17
-      설명   : Nuxt   3 . 17 은   비동기   데이터   계층 의   주요   재 작업 ,   새로운   기본   제공   구성   요소 ,   더   나 은   경고   및   성능   향상 을   제공 합니다 !
-      그림 :https://nuxt.com/assets/blog/v3.17.png
-      날짜   :   2025 - 04 - 27
-      다음   주소 :   ' https ://nuxt . com/blog/v 3 - 17 '
-      대상 :   '_ blank '
-      ui . container :   ' max - w - lg '
-    - title :   Nuxt   3 . 16
-      설명 :   ' Nuxt   3 . 16 은   기능   및   성능   향상 으로   가득   차   있 습니다 ! '
-      그림 :https://nuxt.com/assets/blog/v3.16.png
-      날짜   :   2025 - 03 - 07
-      다음   주소 :   ' https ://nuxt . com/blog/v 3 - 16 '
-      대상 :   '_ blank '
-      ui . container :   ' max - w - lg '
-    - title :   Nuxt   3 . 15
-      설명 :   ' Nuxt   3 . 15   출시   -   Vite   6 ,   더   나 은   HMR   및   더   빠른   성능 ! '
-      이미지 :https://nuxt.com/assets/blog/v3.15.png
-      날짜   :   2024 - 12 - 24
-      다음   주소 :   ' https ://nuxt . com/blog/v 3 - 15 '
-      대상 :   '_ blank '
-      ui . container :   ' max - w - lg '
-  클래스 :   ' w - full '
+collapse: true
+ignore:
+  - versions
+external:
+  - versions
+externalTypes:
+  - ChangelogVersionProps[]
+hide:
+  - class
+props:
+  indicator: false
+  versions:
+    - title: Nuxt 3.17
+      description: 'Nuxt 3.17 is out - bringing a major reworking of the async data layer, a new built-in component, better warnings, and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.17.png
+      date: 2025-04-27
+      to: 'https://nuxt.com/blog/v3-17'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.16
+      description: 'Nuxt 3.16 is out - packed with features and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.16.png
+      date: 2025-03-07
+      to: 'https://nuxt.com/blog/v3-16'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.15
+      description: 'Nuxt 3.15 is out - with Vite 6, better HMR and faster performance!'
+      image: https://nuxt.com/assets/blog/v3.15.png
+      date: 2024-12-24
+      to: 'https://nuxt.com/blog/v3-15'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+  class: 'w-full'
 ---
 ::
 
-###   지시   동작
+### 표시기 동작
 
-`indicator-motion`prop 을   사용 하 여   표시기   표시줄 의   모션   효과 를   사용자   정의 하 거나   숨길   수   있 습니다 .   기본 값 은  `true`와   함께  `{ damping: 30, restDelta: 0.001 }`spring   transition   options](https://motion.dev/docs/vue-transitions#spring)  입니다 .
+`indicator-motion` 소품을 사용하여 표시기 막대의 모션 효과를 사용자 정의하거나 숨길 수 있습니다. 기본적으로 `{ damping: 30, restDelta: 0.001 }` [spring transition options](https://motion.dev/docs/vue-transitions#spring)가 있는 `true`입니다.
 
 ::component-code
 ---
-축소 :   true
-무시 하 기 :
-  - 버전
-외부 :
-  - 버전
-externalTypes :
-  - ChangelogVersionProps   [ ]
-숨기 기 (Hide) :
-  - class   클래스
-항목 :
-  indicatorMotion :
+collapse: true
+ignore:
+  - versions
+external:
+  - versions
+externalTypes:
+  - ChangelogVersionProps[]
+hide:
+  - class
+items:
+  indicatorMotion:
     - true
     - false
-소품   :
-  indicatorMotion   :   true
-  버전   :
-    - title :   Nuxt   3 . 17
-      설명   : Nuxt   3 . 17 은   비동기   데이터   계층 의   주요   재 작업 ,   새로운   기본   제공   구성   요소 ,   더   나 은   경고   및   성능   향상 을   제공 합니다 !
-      그림 :https://nuxt.com/assets/blog/v3.17.png
-      날짜   :   2025 - 04 - 27
-      다음   주소 :   ' https ://nuxt . com/blog/v 3 - 17 '
-      대상 :   '_ blank '
-      ui . container :   ' max - w - lg '
-    - title :   Nuxt   3 . 16
-      설명 :   ' Nuxt   3 . 16 은   기능   및   성능   향상 으로   가득   차   있 습니다 ! '
-      그림 :https://nuxt.com/assets/blog/v3.16.png
-      날짜   :   2025 - 03 - 07
-      다음   주소 :   ' https ://nuxt . com/blog/v 3 - 16 '
-      대상 :   '_ blank '
-      ui . container :   ' max - w - lg '
-    - title :   Nuxt   3 . 15
-      설명 :   ' Nuxt   3 . 15   출시   -   Vite   6 ,   더   나 은   HMR   및   더   빠른   성능 ! '
-      그림 :https://nuxt.com/assets/blog/v3.15.png
-      날짜   :   2024 - 12 - 24
-      다음   주소 :   ' https ://nuxt . com/blog/v 3 - 15 '
-      대상 :   '_ blank '
-      ui . container :   ' max - w - lg '
-  클래스 :   ' w - full '
+props:
+  indicatorMotion: true
+  versions:
+    - title: Nuxt 3.17
+      description: 'Nuxt 3.17 is out - bringing a major reworking of the async data layer, a new built-in component, better warnings, and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.17.png
+      date: 2025-04-27
+      to: 'https://nuxt.com/blog/v3-17'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.16
+      description: 'Nuxt 3.16 is out - packed with features and performance improvements!'
+      image: https://nuxt.com/assets/blog/v3.16.png
+      date: 2025-03-07
+      to: 'https://nuxt.com/blog/v3-16'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+    - title: Nuxt 3.15
+      description: 'Nuxt 3.15 is out - with Vite 6, better HMR and faster performance!'
+      image: https://nuxt.com/assets/blog/v3.15.png
+      date: 2024-12-24
+      to: 'https://nuxt.com/blog/v3-15'
+      target: '_blank'
+      ui.container: 'max-w-lg'
+  class: 'w-full'
 ---
 ::
 
-##   예
+## examples 예제
 
 ::note
-이러 한   예 에서 는  [Nuxt   Content](https://content.nuxt.com)를   사용 하 지만   모든   컨텐츠   관리   시스템 과   통합 할   수   있 습니다 .
+이러한 예제에서는 [Nuxt Content](https://content.nuxt.com)를 사용하지만 구성 요소는 모든 콘텐츠 관리 시스템과 통합 할 수 있습니다.
 ::
 
-###   한   페이지   내 에서
+### 페이지 안에
 
-페이지 의   ChangelogVersions   구성   요소 를   사용 하 여   변경   로그   페이지 를   생성 합니다 .
+페이지에서 ChangelogVersions 구성 요소를 사용하여 변경 로그 페이지를 생성합니다.
 
 ```vue [pages/changelog.vue]{10-17}
 <script setup lang="ts">
@@ -190,31 +190,31 @@ const { data: versions } = await useAsyncData('versions', () => queryCollection(
 ```
 
 ::note
-이   예제 에서 는  `versions`  모듈 에서  `queryCollection`  를   사용 하 여  `@nuxt/content`  를   가져옵니다 .
+이 예제에서는 `versions`가 `@nuxt/content` 모듈에서 `queryCollection`를 사용하여 인출됩니다.
 ::
 
 ::tip
-`to`prop 은  `@nuxt/content`  속성 을   사용 하 기   때문 에   여기 서   재정 의 됩니다 .
+`@nuxt/content`가 `path` 속성을 사용하기 때문에 `to` prop은 여기서 재정의됩니다.
 ::
 
-###   고정   표시기   포함
+### Sticky 표시기
 
-`ui`prop 및 다른 슬롯을 사용하여 표시기를 고정 상태로 만듭니다.
+`ui` prop과 다른 슬롯을 사용하여 표시기를 고정시킬 수 있습니다.
 
 ::component-example
 ---
-상품명 : True
-축소: true
-이름: 'changelog-versions-sticky-example'
-분류: P-8
-소품 :
-  클래스 : 'w-full'
+prettier: true
+collapse: true
+name: 'changelog-versions-sticky-example'
+class: 'p-8'
+props:
+  class: 'w-full'
 ---
 ::
 
-### 스크롤 컨테이너와 함께 : badge{label="4.4+" class="align-text-top"}
+### 스크롤 컨테이너와 함께: badge{label="4.4+" class="align-text-top"}
 
-객체를 `indicator`prop에 전달하여 스크롤 컨테이너를 구성합니다. 기본적으로 표시기는 창/페이지 스크롤을 추적합니다(https://motion.dev/docs/vue-use-scroll#page-scroll).
+객체를 `indicator` Prop에 전달하여 스크롤 컨테이너를 구성합니다. 기본적으로 표시기는 창/페이지 스크롤(https://motion.dev/docs/vue-use-scroll#page-scroll)을 추적합니다.
 
 ```vue
 <script setup lang="ts">
@@ -229,21 +229,21 @@ const scrollContainer = ref<HTMLElement>()
 ```
 
 ::warning
-사용자 지정 `container`를 사용할 때는 컨테이너 요소가 `UChangelogVersions` 앞에 마운트되어 있는지 확인합니다.
+사용자 정의 `container`를 사용할 때는 컨테이너 요소가 `UChangelogVersions` 이전에 마운트되어 있는지 확인합니다.
 ::
 
-##  API
+## API
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### 슬롯
 
-:구성요소 - 슬롯
+:component-slots
 
 ::tip
-ChangelogVersions 내부의 [`ChangelogVersion`](/docs/components/changelog-version#slots) 구성 요소의 모든 슬롯을 사용할 수 있으며 자동으로 전달되므로 `versions`prop을 사용할 때 개별 버전을 사용자 정의 할 수 있습니다.
+ChangelogVersions 내에서 [`ChangelogVersion`](/docs/components/changelog-version#slots) 구성 요소의 모든 슬롯을 사용할 수 있으며, `versions` prop을 사용할 때 개별 버전을 사용자 정의 할 수 있도록 자동으로 전달됩니다.
 
 ```vue{3-5}
 <template>
@@ -256,10 +256,10 @@ ChangelogVersions 내부의 [`ChangelogVersion`](/docs/components/changelog-vers
 ```
 ::
 
-##  테마
+## Theme 테마
 
-:구성요소 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

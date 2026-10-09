@@ -13,135 +13,135 @@ links:
 
 ## 使用法
 
-`header`、`default`、および`footer`スロットを使用して、カードにコンテンツを追加します。
+`header`、`default`、`footer`スロットを使用して、カードにコンテンツを追加します。
 
 ::component-code
 ---
-きれい真
-隠す
-  - クラス
-小道具
-  クラス'w—full'
-スロット
-  ヘッダー|
+prettier: true
+hide:
+  - class
+props:
+  class: 'w-full'
+slots:
+  header: |
 
     <Placeholder class="h-8" />
 
-  デフォルト|
+  default: |
 
     <Placeholder class="h-32" />
 
-  フッター|
-
-    <Placeholder class="h-8" />
----
-
-#header
-placeholder {class="h-8"}
-
-#デフォルト
-placeholder {class="h-32"}
-
-#フッター
-placeholder {class="h-8"}
-::
-
-### タイトルbadge {label="4.7+" class="align-text-top"}
-
-`title`プロップを使用して、カードのヘッダーのタイトルを設定します。
-
-::component-code
----
-きれい真
-無視
-  - クラス
-小道具
-  タイトルCard with title
-  クラス'w—full'
-スロット
-  デフォルト|
-
-    <Placeholder class="h-32" />
----
-
-#デフォルト
-placeholder {class="h-32"}
-::
-
-### 説明badge {label="4.7+" class="align-text-top"}
-
-`description`プロパティを使用して、カードのヘッダーの説明を設定します。
-
-::component-code
----
-きれい真
-無視
-  -  title
-  - クラス
-小道具
-  タイトル：「説明付きカード」
-  「Lorem ipsum dolor sit amet consectetur adipiscing elit」
-  クラス'w—full'
-スロット
-  デフォルト|
-
-    <Placeholder class="h-32" />
----
-
-#デフォルト
-placeholder {class="h-32"}
-::
-
-### バリアント
-
-`variant`プロパティを使用して、カードのバリアントを変更します。
-
-::component-code
----
-きれい真
-隠す
-  - クラス
-小道具
-  バリアント：微妙
-  クラス'w—full'
-スロット
-  ヘッダー|
-
-    <Placeholder class="h-8" />
-
-  デフォルト|
-
-    <Placeholder class="h-32" />
-
-  フッター|
+  footer: |
 
     <Placeholder class="h-8" />
 ---
 
 #header
-placeholder {class="h-8"}
+:placeholder{class="h-8"}
 
-#デフォルト
-placeholder {class="h-32"}
+#default
+:placeholder{class="h-32"}
 
-#フッター
-placeholder {class="h-8"}
+#footer
+:placeholder{class="h-8"}
 ::
 
-##  API
+### タイトルbadge{label="4.7+" class="align-text-top"}
 
-###  Props
+`title`プロパティを使用して、カードのヘッダーのタイトルを設定します。
 
-component—props
+::component-code
+---
+prettier: true
+ignore:
+  - class
+props:
+  title: 'Card with title'
+  class: 'w-full'
+slots:
+  default: |
+
+    <Placeholder class="h-32" />
+---
+
+#default
+:placeholder{class="h-32"}
+::
+
+### 説明badge{label="4.7+" class="align-text-top"}
+
+`description`プロパティを使用して、Cardのヘッダーの説明を設定します。
+
+::component-code
+---
+prettier: true
+ignore:
+  - title
+  - class
+props:
+  title: 'Card with description'
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  class: 'w-full'
+slots:
+  default: |
+
+    <Placeholder class="h-32" />
+---
+
+#default
+:placeholder{class="h-32"}
+::
+
+### Variant
+
+`variant`プロパティを使用して、Cardのバリアントを変更します。
+
+::component-code
+---
+prettier: true
+hide:
+  - class
+props:
+  variant: subtle
+  class: 'w-full'
+slots:
+  header: |
+
+    <Placeholder class="h-8" />
+
+  default: |
+
+    <Placeholder class="h-32" />
+
+  footer: |
+
+    <Placeholder class="h-8" />
+---
+
+#header
+:placeholder{class="h-8"}
+
+#default
+:placeholder{class="h-32"}
+
+#footer
+:placeholder{class="h-8"}
+::
+
+## API
+
+### Props
+
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

@@ -21,10 +21,10 @@ links:
 
 ::component-example
 ---
-崩壊真
-overflowHidden true
-名前'carousel—example'
-クラス'！p—0'
+collapse: true
+overflowHidden: true
+name: 'carousel-example'
+class: '!p-0'
 ---
 ::
 
@@ -38,8 +38,8 @@ overflowHidden true
 
 ::component-example
 ---
-名前'carousel—items—example'
-クラス'p—8'
+name: 'carousel-items-example'
+class: 'p-8'
 ---
 ::
 
@@ -48,18 +48,18 @@ overflowHidden true
 - `class?: any`{lang="ts-type"}
 - `ui?: { item?: ClassNameValue }`{lang="ts-type"}
 
-表示される項目の数を制御するには、[`basis`](https://tailwindcss.com/docs/flex-basis)/[`width`](https://tailwindcss.com/docs/width)`item`のユーティリティクラスを使用します。
+表示する項目の数を制御するには、[`basis`](https://tailwindcss.com/docs/flex-basis)/[`width`](https://tailwindcss.com/docs/width)ユーティリティクラスを使用します。
 
 ::component-example
 ---
-名前'carousel—items—multiple—example'
-クラス'p—8 px—16'
+name: 'carousel-items-multiple-example'
+class: 'p-8 px-16'
 ---
 ::
 
-### オリエンテーション
+### Orientation
 
-プログレスの向きを変更するには、`orientation`プロパティを使用します。デフォルトは`horizontal`です。
+`orientation`プロパティを使用してプログレスの向きを変更します。デフォルトは`horizontal`です。
 
 ::note
 マウスを使用して、デスクトップ上でカルーセルを垂直にドラッグします。
@@ -67,75 +67,75 @@ overflowHidden true
 
 ::component-example
 ---
-名前'carousel—oriation—example'
-クラス'p—8'
+name: 'carousel-orientation-example'
+class: 'p-8'
 ---
 ::
 
 ::caution
-コンテナには`height`を縦向きに指定する必要があります。
+コンテナ上に縦方向に`height`を指定する必要があります。
 ::
 
-###  Arrows
+### 矢印
 
-`arrows` propを使用してprevとnextボタンを表示します。
+`arrows`プロパティを使用してprevとnextボタンを表示します。
 
 ::component-example
 ---
-名前'carousel—arrows—example'
-クラス'p—8'
+name: 'carousel-arrows-example'
+class: 'p-8'
 ---
 ::
 
 ### 前/次へ
 
-`prev`および`next` propsを使用して、[ Button ](/docs/components/button) propsで前ボタンと次ボタンをカスタマイズします。
+`prev`と`next`のプロップを使用して、[Button](/docs/components/button)のプロップで前ボタンと次ボタンをカスタマイズします。
 
 ::component-example
 ---
-名前'carousel—prev—next example'
-クラス'p—8'
+name: 'carousel-prev-next-example'
+class: 'p-8'
 ---
 ::
 
-### 前/次アイコン
+### Prev/Nextアイコン
 
-`prev-icon`および`next-icon` propsを使用して、[ Icon ](/docs/components/icon)ボタンをカスタマイズします。デフォルトは`i-lucide-arrow-left`/`i-lucide-arrow-right`です。
+`prev-icon`と`next-icon`プロップを使用して、ボタン[Icon](/docs/components/icon)をカスタマイズします。デフォルトは`i-lucide-arrow-left`/`i-lucide-arrow-right`です。
 
 ::component-example
 ---
-名前'carousel—prev—next—icon—example'
-クラス'p—8'
-オプション
-  -  name 'prevIcon'
-    ラベル'prevIcon'
-    デフォルト'i—lucide—chevron—left'
-  -  name 'nextIcon'
-    ラベル'nextIcon'
-    デフォルト'i—lucide—chevron—right'
+name: 'carousel-prev-next-icon-example'
+class: 'p-8'
+options:
+  - name: 'prevIcon'
+    label: 'prevIcon'
+    default: 'i-lucide-chevron-left'
+  - name: 'nextIcon'
+    label: 'nextIcon'
+    default: 'i-lucide-chevron-right'
 ---
 ::
 
 ::framework-only
 #nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-これらのアイコンは、`ui.icons.arrowLeft`/`ui.icons.arrowRight`キーの`app.config.ts`でグローバルにカスタマイズできます。
+これらのアイコンは`app.config.ts`の`ui.icons.arrowLeft`/`ui.icons.arrowRight`キーでグローバルにカスタマイズできます。
 :::
 
 #vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-これらのアイコンは、`ui.icons.arrowLeft`/`ui.icons.arrowRight`キーの`vite.config.ts`でグローバルにカスタマイズできます。
+これらのアイコンは`vite.config.ts`の`ui.icons.arrowLeft`/`ui.icons.arrowRight`キーでグローバルにカスタマイズできます。
 :::
 ::
 
-### ドット
+### Dots
 
-`dots`プロパティを使用して、特定のスライドにスクロールするドットのリストを表示します。
+`dots`プロパティを使用して、特定のスライドまでスクロールするドットのリストを表示します。
 
 ::component-example
 ---
-名前'carousel—dots—example'
-クラス'p—8 pb—12'
+name: 'carousel-dots-example'
+class: 'p-8 pb-12'
 ---
 ::
 
@@ -143,101 +143,101 @@ overflowHidden true
 
 ::component-example
 ---
-名前'carousel—dots—multiple—example'
-クラス'P—8 PX—16 PB—12'
+name: 'carousel-dots-multiple-example'
+class: 'p-8 px-16 pb-12'
 ---
 ::
 
 ## プラグイン
 
-Carouselコンポーネントは、公式の[ Embla Carouselプラグイン](https://www.embla-carousel.com/docs/v8/plugins)を実装しています。
+カルーセルコンポーネントは公式の[Emblaカルーセルプラグイン](https://www.embla-carousel.com/docs/v8/plugins)を実装しています。
 
-### オートプレイ
+### 自動再生
 
-このプラグインはEmbla Carouselを** autoplay **機能で拡張するために使用します。
+このプラグインは、エンブラカルーセルを**autoplay**機能で拡張するために使用します。
 
-`autoplay` propをブール値またはオブジェクトとして使用して、[ Autoplayプラグイン](https://www.embla-carousel.com/docs/v8/plugins/autoplay)を設定します。
+`autoplay`プロパティをブール値またはオブジェクトとして使用して、[Autoplayプラグイン](https://www.embla-carousel.com/docs/v8/plugins/autoplay)を設定します。
 
 ::component-example
 ---
-名前'carousel—autoplay—example'
-クラス'P—8 PX—16 PB—12'
+name: 'carousel-autoplay-example'
+class: 'p-8 px-16 pb-12'
 ---
 ::
 
 ::note
-この例では、無限カルーセルのために`loop`プロパティを使用しています。
+この例では、無限カルーセルに`loop`プロパティを使用しています。
 ::
 
-### 自動スクロール
+### Autoスクロール
 
-このプラグインはEmbla Carouselを** auto scroll **機能で拡張するために使用します。
+このプラグインはEmbla Carouselを**auto scroll**機能で拡張するために使用します。
 
-`auto-scroll` propをブール値またはオブジェクトとして使用して、[ Auto Scrollプラグイン](https://www.embla-carousel.com/docs/v8/plugins/auto-scroll)を設定します。
+`auto-scroll`プロパティをブール値またはオブジェクトとして使用して、[Auto Scrollプラグイン](https://www.embla-carousel.com/docs/v8/plugins/auto-scroll)を設定します。
 
 ::component-example
 ---
-名前'carousel—auto—scroll—example'
-クラス'P—8 PX—16 PB—12'
+name: 'carousel-auto-scroll-example'
+class: 'p-8 px-16 pb-12'
 ---
 ::
 
 ::note
-この例では、無限カルーセルのために`loop`プロパティを使用しています。
+この例では、無限カルーセルに`loop`プロパティを使用しています。
 ::
 
-### 自動高さ
+### Auto高さ
 
-このプラグインは、Embla Carouselを** auto height **機能で拡張するために使用されます。このプラグインは、ビュー内の最も高いスライドの高さに合わせてカルーセルコンテナの高さを変更します。
+このプラグインは、エンブラカルーセルを**auto height**機能で拡張するために使用します。ビュー内の最も高いスライドの高さに合わせてカルーセルコンテナの高さを変更します。
 
-`auto-height` propをブール値またはオブジェクトとして使用して、[ Auto Heightプラグイン](https://www.embla-carousel.com/docs/v8/plugins/auto-height)を設定します。
+`auto-height`プロパティをブール値またはオブジェクトとして使用して、[Auto Heightプラグイン](https://www.embla-carousel.com/docs/v8/plugins/auto-height)を設定します。
 
 ::component-example
 ---
-名前'carousel—auto—height—example'
-クラス'p—8 pt—16'
+name: 'carousel-auto-height-example'
+class: 'p-8 pt-16'
 ---
 ::
 
 ::note
-この例では、コンテナに`transition-[height]`クラスを追加して、高さの変更をアニメーション化しています。
+この例では、コンテナに`transition-[height]`クラスを追加して高さの変更をアニメーション化しています。
 ::
 
 ### クラス名
 
-クラス名は** class name toggle ** Emblaカルーセル用ユーティリティプラグインで、カルーセル上のクラス名の切り替えを自動化できます。
+Class Namesは、Embla Carousel用の** class name toggle**ユーティリティプラグインで、カルーセル上のクラス名の切り替えを自動化できます。
 
-`class-names` propをブール値またはオブジェクトとして使用して、[クラス名プラグイン](https://www.embla-carousel.com/docs/v8/plugins/class-names)を設定します。
+`class-names`プロパティをブール値またはオブジェクトとして使用して、[クラス名plugin](https://www.embla-carousel.com/docs/v8/plugins/class-names)を設定します。
 
 ::component-example
 ---
-名前'carousel—class—name'
-クラス'p—8'
+name: 'carousel-class-names-example'
+class: 'p-8'
 ---
 ::
 
 ::note
-この例では、`item`に`transition-opacity [&:not(.is-snapped)]:opacity-10`クラスを追加して、不透明度の変更をアニメーション化しています。
+この例では、不透明度の変更をアニメーション化するために`item`に`transition-opacity [&:not(.is-snapped)]:opacity-10`クラスを追加しています。
 ::
 
-###  Fade
+### フェード
 
-このプラグインは、Emblaのカルーセルスクロール機能を** fade transitions **に置き換えるために使用されます。
+このプラグインは、Emblaのカルーセルスクロール機能を**fade transitions**に置き換えるために使用されます。
 
-`fade` propをブール値またはオブジェクトとして使用して、[ Fadeプラグイン](https://www.embla-carousel.com/docs/v8/plugins/fade)を設定します。
+`fade`プロパティをブール値またはオブジェクトとして使用して、[Fadeプラグイン](https://www.embla-carousel.com/docs/v8/plugins/fade)を設定します。
 
 ::component-example
 ---
-名前'carousel—fade'
-クラス'p—8 pb—12'
+name: 'carousel-fade-example'
+class: 'p-8 pb-12'
 ---
 ::
 
-### ホイールジェスチャー
+### Wheelジェスチャー
 
-このプラグインはEmblaカルーセルを拡張し、**マウス/トラックパッドホイール**を使用してカルーセルをナビゲートできるようにします。
+このプラグインはEmblaカルーセルを拡張し、マウス/トラックパッドホイール**を使用してカルーセルをナビゲートする機能を追加します。
 
-`wheel-gestures` propをブール値またはオブジェクトとして使用して、[ Wheel Gesturesプラグイン](https://www.embla-carousel.com/docs/v8/plugins/wheel-gestures)を設定します。
+`wheel-gestures`プロパティをブール値またはオブジェクトとして使用して、[Wheel Gesturesプラグイン](https://www.embla-carousel.com/docs/v8/plugins/wheel-gestures)を設定します。
 
 ::note
 マウスホイールを使用してカルーセルをスクロールします。
@@ -245,8 +245,8 @@ Carouselコンポーネントは、公式の[ Embla Carouselプラグイン](htt
 
 ::component-example
 ---
-名前'carousel—wheel—gestures—example'
-クラス'p—8 px—16'
+name: 'carousel-wheel-gestures-example'
+class: 'p-8 px-16'
 ---
 ::
 
@@ -254,32 +254,32 @@ Carouselコンポーネントは、公式の[ Embla Carouselプラグイン](htt
 
 ### サムネイル付き
 
-[`scrollTo`](https://www.embla-carousel.com/docs/v8/api/methods#scrollto)[`emblaApi`](#expose)で[[を使用して、特定のスライドに移動するカルーセルの下にサムネイルを表示できます。
+[`emblaApi`](#expose)の[`scrollTo`](https://www.embla-carousel.com/docs/v8/api/methods#scrollto)メソッドを使用して、特定のスライドに移動するカルーセルの下にサムネイルを表示できます。
 
 ::component-example
 ---
-名前'carousel—thumnes—example'
-クラス'p—8 px—16'
+name: 'carousel-thumbnails-example'
+class: 'p-8 px-16'
 ---
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props
+:component-props
 
 ### スロット
 
-コンポーネントスロット
+:component-slots
 
-###  Emits
+### Emits
 
-component—emits
+:component-emits
 
-###  Expose
+### Expose
 
-型付きコンポーネントインスタンスには、[`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref)を使用してアクセスできます。
+[`useTemplateRef`](https://vuejs.org/api/composition-api-helpers.html#usetemplateref)を使用して型付きコンポーネントインスタンスにアクセスできます。
 
 ```vue
 <script setup lang="ts">
@@ -295,13 +295,13 @@ const carousel = useTemplateRef('carousel')
 
 | 名前|タイプ|
 | ---- | ---- |
-| `emblaRef`{lang="ts-type"}|`Ref<HTMLElement \| null>`{lang="ts-type"}|
+| `emblaRef`{lang="ts-type"}| `Ref<HTMLElement \| null>`{lang="ts-type"}|
 | `emblaApi`{lang="ts-type"}| [`Ref<EmblaCarouselType \| null>`{lang="ts-type"}](https://www.embla-carousel.com/docs/v8/api/methods#typescript)|
 
-## テーマ
+## Theme
 
-コンポーネントテーマ
+:component-theme
 
-##  Changelog
+## Changelog
 
-component—changelog
+:component-changelog

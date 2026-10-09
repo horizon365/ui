@@ -13,292 +13,292 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ContextMenu.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice cualquier cosa que desee en la ranura predeterminada del menú contextual, y haga clic derecho en él para mostrar el menú.
 
 ::component-code
 ---
-Categoría: true
-Colapso: Verdad
-Ignora:
-  @0001@artículos
-  @@pH002@ui.contenido
-Externo:
-  @@pH000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Externalidades:
-  @@@P2004@@ContextMenuItem [][]
-Props:
-  Items:
-    - -etiqueta: Apariencia
-        niños:
-          - label: Proyecto
-            Icono: i-lucide-monitor
-          - label: Diseño
-            i-lucide-sun
-          - label: Oscuridad
-            i-lucide-moon
-    - -etiqueta: Mostrar barra lateral
-        kbd:
-          @1000@meta
-          @111@s
-      - label: Mostrar barra de herramientas
-        kbd:
-          @13@shift (Edición española)
-          @14@meta
-          @@pH015
-      - label: Colapso Pinned Tabs (en inglés)
-        Discapacitados: Verdadero
-    - -label: Actualizar la página
-      - label: borrar cookies y actualizar
-      - label: borrar caché y actualizar
-      - type: separador
-      - label: Desarrollador
-        niños:
-          - -label: Ver fuente
-              kbd:
-                @23@meta
-                @@24@shift (Edición española)
-                @250@@U
-            - label: Herramientas para desarrolladores
-              kbd:
-                @@27@opción
-                @28@meta
-                @29@@29 años
-            - label: Inspeccionar los elementos
-              kbd:
-                @@301@opción
-                @32@meta
-                @@333@@c
-          - -etiqueta: Consola de JavaScript
-              kbd:
-                @@35@opción
-                @36@meta
-                @@jjjjjjjjjjjjjjjjjjjjjjjjajajajajajajajajajajajajajajajaja
-Los slots:
-  Default:|
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[][]
+props:
+  items:
+    - - label: Appearance
+        children:
+          - label: System
+            icon: i-lucide-monitor
+          - label: Light
+            icon: i-lucide-sun
+          - label: Dark
+            icon: i-lucide-moon
+    - - label: Show Sidebar
+        kbds:
+          - meta
+          - s
+      - label: Show Toolbar
+        kbds:
+          - shift
+          - meta
+          - d
+      - label: Collapse Pinned Tabs
+        disabled: true
+    - - label: Refresh the Page
+      - label: Clear Cookies and Refresh
+      - label: Clear Cache and Refresh
+      - type: separator
+      - label: Developer
+        children:
+          - - label: View Source
+              kbds:
+                - meta
+                - shift
+                - u
+            - label: Developer Tools
+              kbds:
+                - option
+                - meta
+                - i
+            - label: Inspect Elements
+              kbds:
+                - option
+                - meta
+                - c
+          - - label: JavaScript Console
+              kbds:
+                - option
+                - meta
+                - j
+slots:
+  default: |
 
-    @@@ 38 @
-      clic derecho aquí
-    @@@ 39 @
+    <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
+      Right click here
+    </div>
 ---
 
-: div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[clic derecho aquí]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
-@@401@Artículos
+### Artículos
 
 Utilice el prop `items` como una matriz de objetos con las siguientes propiedades:
 
-@@
-@@
-@@
-@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-[`color?: "error" | "primary" | "secondary" | "success" | "info" | "warning" | "neutral"`{lang="ts-type"}](PH0667
-[`checked?: boolean`{lang="ts-type"}](#with-checkbox-items)
-@@ph076 @@@@ph077
-[`slot?: string`{lang="ts-type"}](#with-custom-slot)
-@@ph086@@@ph087@@@ph088 @
-[`onUpdateChecked?: (checked: boolean) => void`{lang="ts-type"}](#with-checkbox-items)
-@@
-@@@@ph100@@@ph101
-@@@ph102@@@ph103
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xx`icon?: string`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- x`disabled?: boolean`x{lang="ts-type"}
+- x[x`slot?: string`x{lang="ts-type"}x](x#with-custom-slotx)
+- x`onSelect?: (e: Event) => void`x{lang="ts-type"}
+xxx[x`onUpdateChecked?: (checked: boolean) => void`x{lang="ts-type"}x](x#with-checkbox-itemsx)
+- x`children?: ContextMenuItem[] | ContextMenuItem[][]`x{lang="ts-type"}
+- x`class?: any`x{lang="ts-type"}
+- x`ui?: { item?: ClassNameValue, label?: ClassNameValue, separator?: ClassNameValue, itemLeadingIcon?: ClassNameValue, itemLeadingAvatarSize?: ClassNameValue, itemLeadingAvatar?: ClassNameValue, itemLabel?: ClassNameValue, itemLabelExternalIcon?: ClassNameValue, itemTrailing?: ClassNameValue, itemTrailingIcon?: ClassNameValue, itemTrailingKbds?: ClassNameValue, itemTrailingKbdsSize?: ClassNameValue }`x{lang="ts-type"}
 
-Puede pasar cualquier propiedad del componente [Link](/docs/components/link#props) como `to`,`target`, etc.
+Puede pasar cualquier propiedad del componente [Link](xph133) como `to`, `target`, etc.
 
 ::component-code
 ---
-Categoría: true
-Colapso: Verdad
-Ignora:
-  @@111@artículos
-  - ui.contenido
-Externo:
-  @@113@artículos
-Externalidades:
-  @@114@@ContextMenuItem [][]
-Props:
-  Items:
-    - -etiqueta: Apariencia
-        niños:
-          - label: El sistema
-            Icono: i-lucide-monitor
-          - label: Luz
-            i-lucide-sun
-          - label: Oscuridad
-            i-lucide-moon
-    - -label: Mostrar barra lateral
-        kbd:
-          @120 @ meta
-          @121
-      - label: Mostrar barra de herramientas
-        kbd:
-          @123 @@ cambio
-          @124 @ meta
-          @125
-      - label: Colapso Pinned Tabs (en inglés)
-        Discapacitados: Verdadero
-    - -label: Actualizar la página
-      - label: borrar cookies y actualizar
-      - label: borrar caché y actualizar
-      - type: separador
-      - label: Desarrollador
-        niños:
-          - -label: Voir la source
-              kbd:
-                @333@meta
-                @134 @@ cambio
-                @@pH135 @
-            - label: Herramientas para desarrolladores
-              kbd:
-                @137 @ opción
-                @138 @ meta
-                @139 @
-            - label: Inspeccionar los elementos
-              kbd:
-                @@141@opción
-                @242 @ meta
-                @@143@cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-          - -etiqueta: Consola de JavaScript
-              kbd:
-                @@5000@opción
-                @146 @ meta
-                @147
-  UU.:
-    Contenido: 'W-48'
-Los slots:
-  Default:|
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[][]
+props:
+  items:
+    - - label: Appearance
+        children:
+          - label: System
+            icon: i-lucide-monitor
+          - label: Light
+            icon: i-lucide-sun
+          - label: Dark
+            icon: i-lucide-moon
+    - - label: Show Sidebar
+        kbds:
+          - meta
+          - s
+      - label: Show Toolbar
+        kbds:
+          - shift
+          - meta
+          - d
+      - label: Collapse Pinned Tabs
+        disabled: true
+    - - label: Refresh the Page
+      - label: Clear Cookies and Refresh
+      - label: Clear Cache and Refresh
+      - type: separator
+      - label: Developer
+        children:
+          - - label: View Source
+              kbds:
+                - meta
+                - shift
+                - u
+            - label: Developer Tools
+              kbds:
+                - option
+                - meta
+                - i
+            - label: Inspect Elements
+              kbds:
+                - option
+                - meta
+                - c
+          - - label: JavaScript Console
+              kbds:
+                - option
+                - meta
+                - j
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@pH148 @
-      clic derecho aquí
-    @@pH149 @
+    <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
+      Right click here
+    </div>
 ---
 
-: div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Haga clic derecho aquí]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
 ::note
-También puede pasar un array de arrays al prop `items` para crear grupos separados de elementos.
+También puede pasar una matriz de matrices a la hélice `items` para crear grupos separados de elementos.
 ::
 
 ::tip
-Cada elemento puede tomar un array `children` de objetos con las mismas propiedades que el prop `items` para crear un menú anidado que se puede controlar utilizando las propiedades `open`,`defaultOpen` y `content`.
+Cada elemento puede tomar una matriz `children` de objetos con las mismas propiedades que el prop `items` para crear un menú anidado que se puede controlar utilizando las propiedades `open`, `defaultOpen` y `content`.
 ::
 
-@157 @@ Tamaño
+### Tamaño
 
-Utilice la prop `size` para cambiar el tamaño del menú contextual.
+Utilice el prop `size` para cambiar el tamaño del menú contextual.
 
 ::component-code
 ---
-Categoría: true
-Colapso: Verdad
-Ignora:
-  @159 @ artículos
-  - ui.contenido
-Externo:
-  @161@artículos
-Externalidades:
-  @@P162@@ContextMenuItem (en inglés)
-Props:
-  Tamaño: xl
-  Items:
-    - label: Proyecto
-      Icono: i-lucide-monitor
-    - label: Diseño
-      i-lucide-sun
-    - label: Oscuridad
-      i-lucide-moon
-  UU.:
-    Contenido: 'W-48'
-Los slots:
-  Default:|
-
-    @@166 @
-      Clic derecho aquí
-    @167 @
----
-
-: div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[clic derecho aquí]
-::
-
-@169@1699
-
-Utilice el prop `modal` para controlar si el ContextMenu bloquea la interacción con contenido externo.
-
-::component-code
----
-Categoría: true
-Colapso: Verdad
-Ignora:
-  @@2017@artículos
-  - ui.contenido
-Externo:
-  @@174@artículos
-Externalidades:
-  @@@P175@@ContextMenuItem (en inglés)
-Props:
-  Modalidad: Falso
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[]
+props:
+  size: xl
   items:
-    - label: Proyecto
-      Icono: i-lucide-monitor
-    - label: Luz
-      i-lucide-sun
-    - label: Oscuridad
-      i-lucide-moon
-  UU.:
-    Contenido: 'W-48'
-Los slots:
-  Default:|
+    - label: System
+      icon: i-lucide-monitor
+    - label: Light
+      icon: i-lucide-sun
+    - label: Dark
+      icon: i-lucide-moon
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @179 @
-      clic derecho aquí
-    @180 @
+    <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
+      Right click here
+    </div>
 ---
 
-: div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[clic derecho aquí]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
+::
+
+### Modalidad
+
+Utilice el prop `modal` para controlar si el menú contextual bloquea la interacción con el contenido externo.
+
+::component-code
+---
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[]
+props:
+  modal: false
+  items:
+    - label: System
+      icon: i-lucide-monitor
+    - label: Light
+      icon: i-lucide-sun
+    - label: Dark
+      icon: i-lucide-moon
+  ui:
+    content: 'w-48'
+slots:
+  default: |
+
+    <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
+      Right click here
+    </div>
+---
+
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
 
 ### Desactivado
 
-Utilice la prop `disabled` para desactivar el menú contextual.
+Utilice el prop `disabled` para desactivar el menú contextual.
 
 ::component-code
 ---
-Categoría: true
-Colapso: Verdad
-Ignora:
-  @184@artículos
-  - ui.contenido
-Externo:
-  @186@artículos
-Externalidades:
-  - ContextMenuItem (en inglés)
-Props:
-  Discapacidad: Verdadero
+prettier: true
+collapse: true
+ignore:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[]
+props:
+  disabled: true
   items:
-    - label: Proyecto
-      Icono: i-lucide-monitor
-    - label: Luz
-      i-lucide-sun
-    - label: Oscuridad
-      i-lucide-moon
-  UU.:
-    Contenido: 'W-48'
-Los slots:
-  Default:|
+    - label: System
+      icon: i-lucide-monitor
+    - label: Light
+      icon: i-lucide-sun
+    - label: Dark
+      icon: i-lucide-moon
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-    @@@ 191 @
-      clic derecho aquí
-    @@2019
+    <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
+      Right click here
+    </div>
 ---
 
-: div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[clic derecho aquí]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
-@@ph194@Ejemplos
+## Ejemplos
 
 ### Con elementos de casilla
 
@@ -306,13 +306,13 @@ Puede utilizar la propiedad `type` con `checkbox` y utilizar las propiedades `ch
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'context-menu-checkbox-items-example'
+collapse: true
+name: 'context-menu-checkbox-items-example'
 ---
 ::
 
 ::note
-Para garantizar la reactividad para el estado de los elementos `checked`, se recomienda envolver su array `items` dentro de un `computed`.
+Para garantizar la reactividad para el estado de los elementos `checked`, se recomienda envolver su matriz `items` dentro de un `computed`.
 ::
 
 ### Con elementos de color
@@ -321,36 +321,36 @@ Puede utilizar la propiedad `color` para resaltar ciertos elementos con un color
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'context-menu-color-items-example'
+collapse: true
+name: 'context-menu-color-items-example'
 ---
 ::
 
-### Con slot personalizado
+### Con ranura personalizada
 
 Utilice la propiedad `slot` para personalizar un elemento específico.
 
-Tendrás acceso a las siguientes slots:
+Tendrás acceso a los siguientes slots:
 
-@2007@@2008@2009
-@@210@@@211@@212 @
-@@213@@@214@@215 @
-@@216@@@217@@218 @
+- x`#{{ item.slot }}`x{lang="ts-type"}
+- x`#{{ item.slot }}-leading`xx{lang="ts-type"}
+- x`#{{ item.slot }}-label`x{lang="ts-type"}
+- x`#{{ item.slot }}-trailing`x{lang="ts-type"}
 
 ::component-example
 ---
-Colapso: Verdad
-Nombre: 'context-menu-custom-slot-example'
+collapse: true
+name: 'context-menu-custom-slot-example'
 ---
 ::
 
 ::tip{to="#slots"}
-También puede utilizar las ranuras `#item`,`#item-leading`,`#item-label` y `#item-trailing` para personalizar todos los artículos.
+También puede usar las ranuras `#item`, `#item-leading`, `#item-label` y `#item-trailing` para personalizar todos los artículos.
 ::
 
-### Extracto de accesos directos
+### Extract atajos
 
-Utilice la utilidad [extractShortcuts](/docs/composables/extract-shortcuts) para definir automáticamente accesos directos desde elementos de menú con una propiedad `kbds`. Extrae recursivamente accesos directos y devuelve un objeto compatible con [defineShortcuts](/docs/composables/define-shortcuts).
+Utilice la utilidad [extractShortcuts](/docs/composables/extract-shortcuts) para definir automáticamente los accesos directos de los elementos de menú con una propiedad `kbds`xxxxx)xxxxxxx).
 
 ```vue
 <script setup lang="ts">
@@ -413,27 +413,27 @@ defineShortcuts(extractShortcuts(items))
 ```
 
 ::note
-En este ejemplo,: kbd{value="meta"}: kbd{value="S" class="ms-px"},: kbd{value="shift"}: kbd{value="meta" class="ms-px"}: kbd{value="D" class="ms-px"},:[email protected]:[email protected]:[email protected] kbd{value="I" class="ms-px"},: kbd{value="option"}: kbd{value="meta" class="ms-px"}: kbd{value="C" class="ms-px"} y: kbd{value="option"}: kbd{value="meta" class="ms-px"}: kbd{value="J" class="ms-px"} activaría la función `select` del elemento correspondiente.
+En este ejemplo,: kbd{value="meta"}: kbd{value="S" class="ms-px"},: kbd{value="shift"}: kbd{value="meta" class="ms-px"}: kbd{value="D" class="ms-px"},: kbd{value="option"}: kbd{value="meta" class="ms-px"}: kbd{value="U" class="ms-px"},: kbd{value="option"}: kbd{value="meta" class="ms-px"}: kbd{value="I" class="ms-px"},: kbd{value="option"}: kbd{value="meta" class="ms-px"}: kbd{value="C" class="ms-px"} y: kbd{value="option"}: kbd{value="meta" class="ms-px"}: kbd{value="J" class="ms-px"} activaría la función x408x del elemento correspondiente.
 ::
 
-@pH310
+## API (Edición española)
 
-@311@311@311
+### Props (accesorios)
 
-Componentes Props
+:component-props
 
-@312@312@312
+### Slots en línea
 
-Componentes de slots
+:component-slots
 
-@313@@Emisiones
+### Emisiones
 
-Componentes Emisiones
+:component-emits
 
-@314
+## Theme
 
-Componente Tema
+:component-theme
 
-@@15000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Changelog (Edición española)
 
-Categoría: component-changelog
+:component-changelog

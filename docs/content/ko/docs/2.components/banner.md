@@ -1,5 +1,5 @@
 ---
-description: '웹 사이트 상단에 배너를 표시하여 중요한 정보를 사용자에게 알릴 수 있습니다.'
+description: '웹 사이트 상단에 배너를 표시하여 사용자에게 중요한 정보를 알려줍니다.'
 category: element
 keywords:
   - announcement bar
@@ -10,58 +10,58 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Banner.vue
 ---
 
-##  사용
+## Usage
 
-###  제목
+### Title 파일
 
-`title`prop 을 사용하여 배너에 제목을 표시합니다.
-
-::component-code
----
-상품명 : True
-클래스: "!p-0"
-소품 :
-  제목은 '이것은 중요한 메시지가 있는 깃발이다.'
----
-::
-
-###  아이콘
-
-`icon`prop 을 사용하여 배너에 아이콘을 표시합니다.
+`title` prop을 사용하여 배너에 제목을 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-클래스: "!p-0"
-무시하기:
-  -  title
-소품 :
-  아이콘: i-lucide-info
-  제목: "이것은 아이콘이 있는 배너입니다."
+prettier: true
+class: '!p-0'
+props:
+  title: 'This is a banner with an important message.'
 ---
 ::
 
-###  색상
+### Icon
 
-`color`prop을 사용하여 배너 색상을 변경합니다.
+`icon` prop을 사용하여 배너에 아이콘을 표시합니다.
 
 ::component-code
 ---
-상품명 : True
-클래스: "!p-0"
-무시하기:
-  -  icon
-  -  title
-소품 :
-  색상: Neutral
-  아이콘: i-lucide-info
-  제목: "이것은 아이콘이 있는 배너입니다."
+prettier: true
+class: '!p-0'
+ignore:
+  - title
+props:
+  icon: i-lucide-info
+  title: 'This is a banner with an icon.'
 ---
 ::
 
-###  닫기
+### Color
 
-`close`prop을 사용하여 [Button](/docs/components/button)를 표시하여 배너를 무시합니다. 기본값은 `false`입니다.
+`color` Prop을 사용하여 배너의 색상을 변경합니다.
+
+::component-code
+---
+prettier: true
+class: '!p-0'
+ignore:
+  - icon
+  - title
+props:
+  color: 'neutral'
+  icon: i-lucide-info
+  title: 'This is a banner with an icon.'
+---
+::
+
+### 닫기
+
+`close` 소품을 사용하여 [Button](/docs/components/button) 를 표시하여 Banner를 해제합니다. 기본값은 `false`입니다.
 
 ::tip
 닫기 단추를 클릭하면 `close` 이벤트가 발생합니다.
@@ -69,12 +69,12 @@ links:
 
 ::component-example
 ---
-iframe :
-  스타일: 'height: 48px;'
+iframe:
+  style: 'height: 48px;'
 overflowHidden: true
-이름: "banner-example"
+name: 'banner-example'
 ---
-# 코드
+#code
 
 ```vue
 <template>
@@ -85,28 +85,28 @@ overflowHidden: true
 ::
 
 ::note
-닫으면 `banner-${id}`가 로컬 저장소에 저장되어 다시 표시되지 않습니다. :br 위의 예에서 `banner-example`가 로컬 저장소에 저장됩니다.
+닫으면 `banner-${id}`가 로컬 스토리지에 저장되어 다시 표시되지 않습니다. :br 위의 예에서 `banner-example`는 로컬 스토리지에 저장됩니다.
 ::
 
 ::caution
-페이지가 다시 로드되는 동안 무시된 상태를 유지하려면 `id`prop을 지정해야 합니다. 명시적인 `id`가 없으면 배너는 현재 세션에서만 숨겨지고 페이지를 다시 로드할 때 다시 나타납니다.
+페이지를 다시 로드할 때 해제된 상태를 유지하려면 `id` prop를 지정해야 합니다. 명시적 `id`가 없으면 배너는 현재 세션에서만 숨겨지고 페이지 다시 로드 시 다시 나타납니다.
 ::
 
-### 아이콘 닫기
+### 닫기 아이콘
 
-`close-icon`prop을 사용하여 닫기 버튼 [Icon](/docs/components/icon)를 사용자 정의합니다. 기본값은 `i-lucide-x`입니다.
+`close-icon` 소품을 사용하여 닫기 버튼 [Icon](/docs/components/icon)를 사용자 정의합니다. 기본값은 `i-lucide-x`입니다.
 
 ::component-example
 ---
-iframe :
-  스타일: 'height: 48px;'
+iframe:
+  style: 'height: 48px;'
 overflowHidden: true
-이름: "banner-example"
-소품 :
-  제목: "사용자 정의 닫기 아이콘이 있는 닫을 수 있는 배너입니다."
+name: 'banner-example'
+props:
+  title: 'This is a closable banner with a custom close icon.'
   closeIcon: 'i-lucide-x-circle'
 ---
-# 코드
+#code
 
 ```vue
 <template>
@@ -121,39 +121,39 @@ overflowHidden: true
 ::
 
 ::framework-only
-#nuxt 코드
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
-이 아이콘은 `app.config.ts` 아래 `ui.icons.close` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.close` 키 아래의 `app.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 
-#vue #vue
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-이 아이콘은 `vite.config.ts` 아래 `ui.icons.close` 키에서 전역적으로 사용자 지정할 수 있습니다.
+`ui.icons.close` 키 아래의 `vite.config.ts`에서 이 아이콘을 전역적으로 사용자 정의할 수 있습니다.
 :::
 ::
 
-###  작업
+### Actions 작업
 
-`actions`prop을 사용하여 배너에 [Button](/docs/components/button)액션을 추가합니다.
+`actions` 소품을 사용하여 배너에 [Button](/docs/components/button) 액션을 추가합니다.
 
 ::component-code
 ---
-상품명 : True
-클래스: "!p-0"
-무시하기:
-  -  title
-  -  actions
-  - variant @ 변수
-외부:
-  - actions 작업
+prettier: true
+class: '!p-0'
+ignore:
+  - title
+  - actions
+  - variant
+external:
+  - actions
 externalTypes:
-  -  ButtonProps []
-소품 :
-  제목은 '이것은 행동이 있는 깃발이다.'
-  동작:
-    - label: 행동 1
-      변형: 윤곽선
-    - label: 액션 2
+  - ButtonProps[]
+props:
+  title: 'This is a banner with actions.'
+  actions:
+    - label: Action 1
+      variant: outline
+    - label: Action 2
       trailingIcon: i-lucide-arrow-right
 ---
 ::
@@ -162,23 +162,23 @@ externalTypes:
 작업 단추의 기본값은 `color="neutral"` 및 `size="xs"`입니다. 각 작업 단추에 직접 전달하여 이러한 값을 사용자 정의할 수 있습니다.
 ::
 
-###  링크
+### Link 링크
 
-당신은 [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) 구성 요소에서 모든 속성을 전달 할 수 있습니다 `to`, `target`, `rel`, etc.
+[`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) 구성 요소에서 `to`, `target`, `rel` 등의 속성을 전달할 수 있습니다.
 
 ::component-code
 ---
-상품명 : True
-클래스: "!p-0"
+prettier: true
+class: '!p-0'
 overflowHidden: true
-무시하기:
-  -  title
-  -  target
-소품 :
-  주소: 'https://nuxtlabs.com/'
-  대상: '_blank'
-  제목: 'NuxtLabs is joining Vercel!'
-  색상 : primary
+ignore:
+  - title
+  - target
+props:
+  to: 'https://nuxtlabs.com/'
+  target: '_blank'
+  title: 'NuxtLabs is joining Vercel!'
+  color: 'primary'
 ---
 ::
 
@@ -186,9 +186,9 @@ overflowHidden: true
 `NuxtLink` 구성 요소는 `User` 구성 요소에 전달된 다른 모든 속성을 상속합니다.
 ::
 
-##  예
+## 예제
 
-###  내부 `app.vue`
+### x`app.vue` 내부
 
 `app.vue` 또는 레이아웃에서 Banner 구성 요소를 사용합니다.
 
@@ -210,24 +210,24 @@ overflowHidden: true
 </template>
 ```
 
-##  API
+## API 파일
 
-###  Props
+### Props (### Props)
 
-:컴포넌트 - 소품
+:component-props
 
-###  슬롯
+### Slots
 
-:컴포넌트 - 슬롯
+:component-slots
 
-###  Emits
+### Emits
 
-:구성요소 - 방출
+:component-emits
 
-##  테마
+## Theme (## 테마)
 
-:구성요소 주제
+:component-theme
 
-##  Changelog
+## 변경 로그
 
-:component-changelog 구성요소 변경 로그
+:component-changelog

@@ -7,7 +7,7 @@ keywords:
   - faq
   - expansion panel
 links:
-  - label: Akkordeon ist
+  - label: Akkordeon
     icon: i-custom-reka-ui
     to: https://reka-ui.com/docs/components/accordion
   - label: GitHub
@@ -15,167 +15,167 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Accordion.vue
 ---
 
-@@@ph000@Verwendung
+## Bearbeiten
 
 Verwenden Sie die Akkordeon-Komponente, um eine Liste zusammenklappbarer Elemente anzuzeigen.
 
 ::component-code
 ---
-Einsturz: wahr
-Ignoriert:
-  @@ph001@@gmail.de
+collapse: true
+ignore:
+  - items
   - ui.content
-Außen:
-  @@ph003@gmail.de
-Externe Typen:
-  @@ph004@@accordionItem [Bearbeiten | Quelltext bearbeiten]
-Hide:
-  @@005@Klasse
-  @@006@0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+  - ui
   - defaultValue
-Props:
-  DefaultWert: '0'
-  Klasse: 'px-4 max-w-lg'
-  ui: ist
-    Inhalt: 'Text-mutiert'
-  Items:
-    - label:'Ist Nuxt UI kostenlos zu verwenden?'
-      Nuxt UI ist komplett kostenlos und Open Source unter der MIT-Lizenz. Alle 125 + Komponenten sind für jedermann verfügbar.
-    - label:"Kann ich Nuxt UI mit Vue ohne Nuxt verwenden?"
-      Inhalte: „ Ja! Während für Nuxt optimiert, funktioniert Nuxt UI perfekt mit eigenständigen Vue-Projekten über unser Vite Plugin. You can follow the [installation guide](/docs/getting-started/installation/vue) um loszulegen.
-    - label:"Ist Nuxt UI produktionsbereit?"
-      Nuxt UI wird in der Produktion von Tausenden von Anwendungen mit umfangreichen Tests, regelmäßigen Updates und aktiver Wartung verwendet.
+props:
+  defaultValue: '0'
+  class: 'px-4 max-w-lg'
+  ui:
+    content: 'text-muted'
+  items:
+    - label: 'Is Nuxt UI free to use?'
+      content: 'Yes! Nuxt UI is completely free and open source under the MIT license. All 125+ components are available to everyone.'
+    - label: 'Can I use Nuxt UI with Vue without Nuxt?'
+      content: 'Yes! While optimized for Nuxt, Nuxt UI works perfectly with standalone Vue projects via our Vite plugin. You can follow the [installation guide](/docs/getting-started/installation/vue) to get started.'
+    - label: 'Is Nuxt UI production-ready?'
+      content: 'Yes! Nuxt UI is used in production by thousands of applications with extensive tests, regular updates, and active maintenance.'
 ---
 ::
 
-@@ph015@gmail.de
+### Items Bearbeiten
 
-Verwenden Sie `items` prop als Array von Objekten mit folgenden Eigenschaften:
+Verwenden Sie die `items`-prop als Array von Objekten mit den folgenden Eigenschaften:
 
-`label?: string``label?: string``label?: string`{lang="ts-type"}
-`icon?: string`PH0221@@@@@@@PH0222 @
-`trailingIcon?: string``trailingIcon?: string``trailingIcon?: string`{lang="ts-type"}
-`content?: string`{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}{lang="ts-type"}PH028027@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-`value?: string``value?: string`PH03030{lang="ts-type"}{lang="ts-type"}
-@@@@@@@@@@@@@@@@@@@@@@PH0333@@@@@@@@@@@@@@PH03333@@@@@@@@@@@@@@@PH0334{lang="ts-type"}{lang="ts-type"}PH03334@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-- [`slot?: string`{lang="ts-type"}]()
-`class?: any`PH0444
-`ui?: { item?: ClassNameValue, header?: ClassNameValue, trigger?: ClassNameValue, leadingIcon?: ClassNameValue, label?: ClassNameValue, trailingIcon?: ClassNameValue, content?: ClassNameValue, body?: ClassNameValue }``ui?: { item?: ClassNameValue, header?: ClassNameValue, trigger?: ClassNameValue, leadingIcon?: ClassNameValue, label?: ClassNameValue, trailingIcon?: ClassNameValue, content?: ClassNameValue, body?: ClassNameValue }``ui?: { item?: ClassNameValue, header?: ClassNameValue, trigger?: ClassNameValue, leadingIcon?: ClassNameValue, label?: ClassNameValue, trailingIcon?: ClassNameValue, content?: ClassNameValue, body?: ClassNameValue }``ui?: { item?: ClassNameValue, header?: ClassNameValue, trigger?: ClassNameValue, leadingIcon?: ClassNameValue, label?: ClassNameValue, trailingIcon?: ClassNameValue, content?: ClassNameValue, body?: ClassNameValue }`{lang="ts-type"}
+- `label?: string`{lang="ts-type"} (nicht vorhanden)
+- `icon?: string`{lang="ts-type"} (nicht vorhanden)
+- `trailingIcon?: string`{lang="ts-type"} (nicht vorhanden)
+- `content?: string`{lang="ts-type"} (nicht vorhanden)
+- `value?: string`{lang="ts-type"} (englisch)
+- `disabled?: boolean`{lang="ts-type"} (englisch)
+- [`slot?: string`{lang="ts-type"}](#with-custom-slot) )
+- `class?: any`{lang="ts-type"} (nicht vorhanden)
+- `ui?: { item?: ClassNameValue, header?: ClassNameValue, trigger?: ClassNameValue, leadingIcon?: ClassNameValue, label?: ClassNameValue, trailingIcon?: ClassNameValue, content?: ClassNameValue, body?: ClassNameValue }`{lang="ts-type"} (nicht vorhanden)
 
 ::component-code
 ---
-Ignoriert:
-  @@ph048@gmail.de
-Außen:
-  @@ph049@gmail.de
-Externe Personen:
-  @@ph050@@accordionItem [Bearbeiten | Quelltext bearbeiten]
-Hide:
-  @@@@@@51@000@051@051@051@051@000@0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Props:
-  Klasse: px-4
-  Items:
-    - label:'Icons'(auf Englisch)
-      I-Lucide-Smile (englisch)
-      Sie haben nichts zu tun,@ nuxt/icon wird das automatisch erledigen.
-    - label:'Farben'
-      I-Lucide-Swatch-Book (englisch)
-      content: 'Wählen Sie eine primäre und eine neutrale Farbe aus Ihrem Tailwind CSS-Thema.'
-    - label:'Komponenten'
-      Icon: 'i-lucide-box'(auf Englisch)
-      Sie können Komponenten anpassen, indem Sie die `class`/`ui` props oder in Ihrer app.config.ts verwenden.
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  items:
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    - label: 'Colors'
+      icon: 'i-lucide-swatch-book'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
-### 
+### Mehrfach
 
-Setzen Sie `type` prop auf `multiple`, damit mehrere Elemente gleichzeitig aktiv sein können.
+Setzen Sie die `type`-Prop auf `multiple`, damit mehrere Elemente gleichzeitig aktiv sein können.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph061@@gmail.de
-  - Artikel
-Außen:
-  @@ph063@gmail.de
-Externe Personen:
-  - accordionItem [Bearbeiten | Quelltext bearbeiten]
-Hide:
-  @@@@@@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class
-Props:
-  Klasse: px-4
-  Typ: "Vielfach"
-  Items:
-    - label:'Icons'(auf Englisch)
-      I-Lucide-Smile (englisch)
-      Sie haben nichts zu tun,@ nuxt/icon wird das automatisch erledigen.
-    - label:'Farben'
-      I-Lucide-Swatch-Book (englisch)
-      content: 'Wählen Sie eine primäre und eine neutrale Farbe aus Ihrem Tailwind CSS-Thema.'
-    - label:'Bestandteile'
-      Icon: 'i-lucide-box'(I-lucide-Box) auf Englisch
-      Sie können Komponenten anpassen, indem Sie die `class`/`ui` props oder in Ihrer app.config.ts verwenden.
+ignore:
+  - type
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  type: 'multiple'
+  items:
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    - label: 'Colors'
+      icon: 'i-lucide-swatch-book'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
-### zusammenklappbar
+### Collapsible ist ein
 
-Wenn `type` ist, können Sie `collapsible` prop auf `false` setzen, um zu verhindern, dass das aktive Element zusammenbricht.
+Wenn `type` `single` ist, können Sie die `collapsible`-Prop auf `false` setzen, um zu verhindern, dass das aktive Element kollabiert.
 
 ::component-code
 ---
-Ignoriert:
-  - zusammenklappbar
-  @@@ph077@gmail.de
-Außen:
-  @@@ph078@@gmail.de
-Externe Typen:
-  - accordionItem [Bearbeiten | Quelltext bearbeiten]
-Hide:
-  @@80@Klasse
-Props:
-  Klasse: 'px-4'
-  False: False
-  Items:
-    - label:'Icons'(auf Englisch)
-      I-Lucide-Smile (englisch)
-      Sie haben nichts zu tun,@ nuxt/icon wird das automatisch erledigen.
-    - label:'Farben'
-      I-Lucide-Swatch-Book (englisch)
-      content: 'Wählen Sie eine primäre und eine neutrale Farbe aus Ihrem Tailwind CSS-Thema.'
-    - label:'Komponenten'
-      Icon: 'i-lucide-box'(I-lucide-Box) auf Englisch
-      Sie können Komponenten anpassen, indem Sie die `class`/`ui` props oder in Ihrer app.config.ts verwenden.
+ignore:
+  - collapsible
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  collapsible: false
+  items:
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    - label: 'Colors'
+      icon: 'i-lucide-swatch-book'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
-@@@@@@@@@@@ph086@@unmount
+### Unmount ist ein
 
-Verwenden Sie die `unmount-on-hide` prop, um zu verhindern, dass der Inhalt beim Zusammenklappen des Akkordeons abgehängt wird.
+Verwenden Sie die `unmount-on-hide`-Stütze, um zu verhindern, dass der Inhalt beim Zusammenklappen des Akkordeons abgehängt wird. Standardmäßig ist `true`.
 
 ::component-code
 ---
-Ignoriert:
-  @@ph089@@gmail.de
-Außen:
-  @@ph090@gmail.de
-Externe Personen:
-  @@ph091@@accordionItem [Bearbeiten | Quelltext bearbeiten]
-Hide:
-  @@@@@@@@@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@class@classclass@classclass@class@class@class@classclass@class@class@class@class@c
-Props:
-  Klasse: 'px-4'
-  unmountOnHide: falsch
-  Items:
-    - label:'Icons'(auf Englisch)
-      I-Lucide-Smile (englisch)
-      Sie haben nichts zu tun,@ nuxt/icon wird das automatisch erledigen.
-    - label:'Farben'
-      I-Lucide-Swatch-Book (englisch)
-      content: 'Wählen Sie eine primäre und eine neutrale Farbe aus Ihrem Tailwind CSS-Thema.'
-    - label:'Komponenten'
-      Icon: 'i-lucide-box'(I-lucide-Box) auf Englisch
-      Sie können Komponenten anpassen, indem Sie die `class`/`ui` props oder in Ihrer app.config.ts verwenden.
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  unmountOnHide: false
+  items:
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    - label: 'Colors'
+      icon: 'i-lucide-swatch-book'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
@@ -183,42 +183,42 @@ Props:
 Sie können das DOM inspizieren, um zu sehen, wie der Inhalt jedes Elements gerendert wird.
 ::
 
-### disabled
+### Disabled (nicht verfügbar)
 
 Verwenden Sie die `disabled`-Eigenschaft, um das Akkordeon zu deaktivieren.
 
-Sie können auch ein bestimmtes Element deaktivieren, indem Sie die `disabled`-Eigenschaft im item-Objekt verwenden.
+Sie können auch ein bestimmtes Element deaktivieren, indem Sie die Eigenschaft `disabled` im Objekt item verwenden.
 
 ::component-code
 ---
-Ignoriert:
-  - Artikel
-Außen:
-  - Artikel
-Externe Typen:
-  - AccordionItem [Bearbeiten | Quelltext bearbeiten]
-Hide:
-  @@104@Klasse
-Props:
-  Klasse: px-4
-  Behinderung: true
-  Items:
-    - label:'Icons'(auf Englisch)
-      I-Lucide-Smile (englisch)
-      Sie haben nichts zu tun,@ nuxt/icon wird das automatisch erledigen.
-    - label:'Farben'
-      I-Lucide-Swatch-Book (englisch)
-      content: 'Wählen Sie eine primäre und eine neutrale Farbe aus Ihrem Tailwind CSS-Thema.'
-      Behindert: Wahr
-    - label:'Komponenten'
-      Icon: 'i-lucide-box'(I-lucide-Box) auf Englisch
-      Sie können Komponenten anpassen, indem Sie die `class`/`ui` props oder in Ihrer app.config.ts verwenden.
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  disabled: true
+  items:
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    - label: 'Colors'
+      icon: 'i-lucide-swatch-book'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+      disabled: true
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
-@@ph110@trailing-icon (auf Englisch)
+### Trailing-Symbol
 
-Verwenden Sie die `trailing-icon` prop, um die nachlaufende [Icon](/docs/components/icon) jedes Elements anzupassen.
+Verwenden Sie die `trailing-icon`-Prop, um die nachlaufende [Icon](/docs/components/icon) jedes Elements anzupassen.
 
 ::tip
 Sie können auch ein Symbol für ein bestimmtes Element festlegen, indem Sie die `trailingIcon`-Eigenschaft im item-Objekt verwenden.
@@ -226,150 +226,150 @@ Sie können auch ein Symbol für ein bestimmtes Element festlegen, indem Sie die
 
 ::component-code
 ---
-Ignoriert:
-  @@118@gmail.de
-Außen:
-  - Artikel
-Externe Personen:
-  - AccordionItem [Bearbeiten | Quelltext bearbeiten]
-Hide:
-  @@121@Klasse
-Props:
-  Klasse: 'px-4'
-  trailingIcon: 'i-lucide-arrow-down'(deutsch: 'i-lucide-arrow-down')
-  Items:
-    - label:'Icons'(auf Englisch)
-      I-Lucide-Smile (englisch)
-      Sie haben nichts zu tun,@ nuxt/icon wird das automatisch erledigen.
-      trailingIcon: 'i-lucide-plus'(auf Englisch)
-    - label:'Farben'
-      I-Lucide-Swatch-Book (englisch)
-      content: 'Wählen Sie eine primäre und eine neutrale Farbe aus Ihrem Tailwind CSS-Thema.'
-    - label:'Komponenten'
-      Icon: 'i-lucide-box'(I-lucide-Box) auf Englisch
-      Sie können Komponenten anpassen, indem Sie die `class`/`ui` props oder in Ihrer app.config.ts verwenden.
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - AccordionItem[]
+hide:
+  - class
+props:
+  class: 'px-4'
+  trailingIcon: 'i-lucide-arrow-down'
+  items:
+    - label: 'Icons'
+      icon: 'i-lucide-smile'
+      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+      trailingIcon: 'i-lucide-plus'
+    - label: 'Colors'
+      icon: 'i-lucide-swatch-book'
+      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+    - label: 'Components'
+      icon: 'i-lucide-box'
+      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
 ---
 ::
 
 ::framework-only
-#nuxt sein
+#nuxt
 :::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
 Sie können dieses Symbol global in Ihrem `app.config.ts` unter `ui.icons.chevronDown` Schlüssel anpassen.
 :::
 
-#Ansehen
+#vue
 :::tip{to="/docs/getting-started/integrations/icons/vue#theme"}
-Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.chevronDown` key anpassen.
+Sie können dieses Symbol global in Ihrem `vite.config.ts` unter `ui.icons.chevronDown` Schlüssel anpassen.
 :::
 ::
 
-@@131@@@Beispiele
+## Examples (Beispiele)
 
-### Control aktive (n) Artikel
+### Control aktive (n) Element (e)
 
-Sie können das aktive Element steuern, indem Sie die `default-value` prop oder die `v-model` Direktive mit der `value` des Elements verwenden. Wenn kein `value` angegeben ist, wird standardmäßig der Index **als Zeichenfolge ** verwendet.
+Sie können das aktive Element steuern, indem Sie die `default-value`-prop oder die `v-model`-Direktive mit dem `value` des Elements verwenden. Wenn kein `value` angegeben ist, wird standardmäßig der Index **as ein string** verwendet.
 
 ::component-example
 ---
-Bezeichnung: 'accordion-model-value-example'
-Props:
-  Klasse: px-4
+name: 'accordion-model-value-example'
+props:
+  class: 'px-4'
 ---
 ::
 
 ::tip
-Verwenden Sie `value-key` prop, um den Schlüssel zu ändern, der für die Übereinstimmung mit Elementen verwendet wird, wenn ein `v-model` oder `default-value` bereitgestellt wird.
+Verwenden Sie die `value-key`-Prop, um den Schlüssel zu ändern, der für die Übereinstimmung mit Elementen verwendet wird, wenn ein `v-model` oder `default-value` bereitgestellt wird.
 ::
 
 ::caution
-Wenn `type="multiple"`, stellen Sie sicher, dass Sie ein Array an die `default-value` prop oder die `v-model`-Direktive übergeben.
+Wenn `type="multiple"`, stellen Sie sicher, dass ein Array an die `default-value` prop oder die `v-model` Direktive übergeben wird.
 ::
 
 ### Mit Drag & Drop
 
-Verwenden Sie die [`useSortable`]() composable from [`@vueuse/integrations`https://vueuse.org/integrations/README.html) um Drag & Drop-Funktionalität auf dem Akkordeon zu aktivieren. Für ein reibungsloses Drag & Drop Erlebnis.
+Verwenden Sie das aus [`useSortable`](https://vueuse.org/integrations/useSortable/) zusammensetzbare [`@vueuse/integrations`](xph25xhttps://vueuse.org/integrations/README.html), um die Drag-and-Drop-Funktionalität auf dem Accordion zu aktivieren. Diese Integration umschließt [Sortable.js](https://sortablejs.github.io/Sortable/), um ein nahtloses Drag-and-Drop-Erlebnis zu bieten.
 
 ::component-example
 ---
-Name: 'Akkordeon-Drag-and-Drop-Beispiel'
+name: 'accordion-drag-and-drop-example'
 ---
 ::
 
-### Mit Körperschlitz
+### Mit Body Slot
 
-Verwenden Sie den `#body` slot, um den Körper jedes Elements anzupassen.
+Verwenden Sie den `#body`-Steckplatz, um den Körper jedes Elements anzupassen.
 
 ::component-example
 ---
-Name: 'Akkordeon-Körper-Slot-Beispiel'
-Props:
-  Klasse: px-4
+name: 'accordion-body-slot-example'
+props:
+  class: 'px-4'
 ---
 ::
 
 ::tip
-Der `#body` slot enthält einige vordefinierte Stile, verwenden Sie die [`#content` slot](#with-content-slot) wenn Sie von vorne anfangen möchten.
+Der `#body`-slot enthält einige vordefinierte stile, verwenden sie den [`#content` slot](#with-content-slot), wenn sie von grund auf neu beginnen möchten.
 ::
 
-### Mit Inhaltssteckplatz
+### With Inhalts-Slot
 
-Verwenden Sie den `#content`-Slot, um den Inhalt jedes Elements anzupassen.
+Verwenden Sie den `#content`-Steckplatz, um den Inhalt jedes Elements anzupassen.
 
 ::component-example
 ---
-Name: 'accordion-content-slot-beispiel'
-Props:
-  Klasse: 'px-4'
+name: 'accordion-content-slot-example'
+props:
+  class: 'px-4'
 ---
 ::
 
-### Mit benutzerdefinierten Steckplatz
+### Mit benutzerdefiniertem Slot
 
 Verwenden Sie die `slot`-Eigenschaft, um ein bestimmtes Element anzupassen.
 
 Sie haben Zugriff auf folgende Slots:
 
-`#{{ item.slot }}``#{{ item.slot }}``#{{ item.slot }}`{lang="ts-type"}
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#####################################################################################################
+- `#{{ item.slot }}`{lang="ts-type"} (englisch)
+- `#{{ item.slot }}-body`{lang="ts-type"} (englisch)
 
 ::component-example
 ---
-Name: 'accordion-custom-slot-beispiel'
-Props:
-  Klasse: 'px-4'
+name: 'accordion-custom-slot-example'
+props:
+  class: 'px-4'
 ---
 ::
 
-### Mit Markdown-Inhalt
+### With markdown content (mit Markdown-Inhalt)
 
-Sie können die [Markdown](https://comark.dev/rendering/vue) Komponente von `@comark/vue` verwenden, um Markdown in den Akkordeon-Artikeln zu rendern.
+Sie können die [Markdown](https://comark.dev/rendering/vue)-Komponente von `@comark/vue` verwenden, um Markdown in den Akkordeonelementen darzustellen.
 
 ::component-example
 ---
-Einsturz: wahr
-Name: 'Akkordeon-Markdown-Beispiel'
-Klasse: px-8
+collapse: true
+name: 'accordion-markdown-example'
+class: 'px-8'
 ---
 ::
 
-@@184@bmg18
+## API (Englisch)
 
-@@@@@@@@185@@props
+### Props (nicht)
 
-Komponenten-Props
+:component-props
 
-### Slots
+### Slots Bearbeiten
 
-Die Komponenten-Slots
+:component-slots
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Emits
+### Emits (englisch)
 
-Komponenten emittieren
+:component-emits
 
-@@@@@@@188@188@@188@@188@18@188@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@18@@1818@@181818@18@1818@@@1818
+## Theme Bearbeiten
 
-Das Komponenten-Theme
+:component-theme
 
-@@ph189@@changelog (auf Englisch)
+## Changelog (englisch)
 
-Das Component-Changelog
+:component-changelog

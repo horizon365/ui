@@ -35,7 +35,7 @@ bun add @nuxt/ui
 
 :::
 
-#コード
+#code
 
 ````mdc
 ::code-group
@@ -65,20 +65,20 @@ bun add @ nuxt/ui
 `ProsePre`コンポーネントと同様に、`CodeGroup`はファイル名、アイコン、コピーボタンを処理します。
 ::
 
-##  API
+## API
 
-###  Props
+### Props
 
-component—props {prose}
+:component-props{prose}
 
 ### スロット
 
-component—slots {prose}
+:component-slots{prose}
 
-## テーマ
+## Theme
 
-component—theme {prose}
+:component-theme{prose}
 
-##  Changelog
+## Changelog
 
-component—changelog {prefix="prose"}
+:component-changelog{prefix="prose"}

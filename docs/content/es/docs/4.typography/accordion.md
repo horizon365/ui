@@ -9,7 +9,7 @@ links:
     to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Accordion.vue
 ---
 
-@@pH000@@Uso del producto
+xph0000xUso
 
 Utilice los componentes `accordion` y `accordion-item` para mostrar un [Accordion](/docs/components/accordion) en su contenido.
 
@@ -17,12 +17,12 @@ Utilice los componentes `accordion` y `accordion-item` para mostrar un [Accordio
 
 :::accordion
 ---
-Valoración Default:
-  @@pH007 @@"1"
+defaultValue:
+  - '1'
 ---
 
 ::accordion-item{label="¿ Nuxt UI es gratis de usar?" icon="i-lucide-circle-help"}
-Nuxt UI es completamente gratuito y de código abierto bajo la licencia MIT. Todos los 125 + componentes están disponibles para todos.
+Nuxt UI es completamente gratuito y de código abierto bajo la licencia MIT. Todos los 125 componentes están disponibles para todos.
 ::
 
 ::accordion-item{label="¿ Puedo usar Nuxt UI con Vue sin Nuxt?" icon="i-lucide-circle-help"}
@@ -35,7 +35,7 @@ La interfaz de usuario de Nuxt se utiliza en producción en miles de aplicacione
 
 :::
 
-#Código
+#code
 
 ```mdc
 ::accordion
@@ -61,25 +61,25 @@ Yes! Nuxt UI is used in production by thousands of applications with extensive t
 
 ::
 
-@@pH036@@pH036
+## API (Edición española)
 
-@@@3700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+### Propciones
 
-Artículo siguienteCOMPONENTES {prose}
+:component-props{prose}
 
-@@39@39@39
+### Slots (Edición española)
 
-Componentes: {prose}
+:component-slots{prose}
 
-@410000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+## Temas
 
 ::component-theme{prose}
 ---
-Extras:
-  @@42000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+extra:
+  - accordionItem
 ---
 ::
 
-@@changelog
+## Changelog (Edición española)
 
-por: component-changelog {prefix="prose"}
+:component-changelog{prefix="prose"}
