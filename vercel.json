@@ -1,5 +1,5 @@
 {
-  "buildCommand": "test -f docs/nuxt.config.ts || cd ..; nuxt prepare docs && nuxt build docs",
+  "buildCommand": "test -f nuxt.config.ts || cd docs; nuxt prepare && nuxt build",
   "outputDirectory": "docs/.vercel/output",
   "installCommand": "pnpm install --frozen-lockfile"
 }
