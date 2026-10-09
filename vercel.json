@@ -1,0 +1,6 @@
+{
+  "buildCommand": "nuxt prepare docs && pnpm run docs:build",
+  "outputDirectory": "docs/.output/public",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "framework": "nuxtjs"
+}
