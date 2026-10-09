@@ -1,4 +1,5 @@
 {
   "buildCommand": "nuxt prepare docs && nuxt build docs",
+  "outputDirectory": "docs/.vercel/output",
   "installCommand": "pnpm install --frozen-lockfile"
 }
