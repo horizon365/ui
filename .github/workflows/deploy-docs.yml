@@ -90,8 +90,7 @@ jobs:
         env:
           VERCEL: '1'
           NITRO_PRESET: vercel
-          SKIP_PRERENDER: '1'
-          NODE_OPTIONS: --max-old-space-size=12288
+          NODE_OPTIONS: --max-old-space-size=6144
         run: |
           (cd .. && pnpm exec nuxt-module-build build --stub)
           pnpm exec nuxt prepare
