@@ -1,0 +1,141 @@
+name: Deploy Docs
+
+# Build the Nuxt UI documentation site on a Linux runner and deploy to Vercel
+# via the Vercel CLI. Building on Linux ensures native modules (sharp, etc.)
+# ship the correct linux-x64 binary — avoiding the darwin-arm64 crash that
+# occurs when the output is built on macOS and run on Vercel's Linux runtime.
+#
+# Prerequisites:
+#   - GitHub Secret VERCEL_TOKEN  (create at vercel.com/account/tokens)
+#   - VERCEL_ORG_ID / VERCEL_PROJECT_ID are set below (from .vercel/project.json)
+#
+# The deploy uses preview + alias (not --prod) because Vercel Hobby tier
+# rejects prod deployments that exceed the 12-serverless-function limit.
+# Nitro's vercel preset generates 264 functions (1 real + 263 symlinks),
+# so we collapse them to a single /__fallback function before deploying.
+
+on:
+  push:
+    branches: [v4]
+    paths:
+      - 'docs/**'
+      - 'src/**'
+      - 'vercel.json'
+      - '.github/workflows/deploy-docs.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-docs
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: team_eHTWeUVDF2W0o5TQBTfoshCU
+      VERCEL_PROJECT_ID: prj_NpCOJ1mN8ZgsDcUdqrKkL5btsrAd
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel@latest
+
+      - name: Pull project settings
+        run: vercel pull --yes --environment=production
+
+      - name: Override rootDirectory (build from repo root)
+        run: |
+          jq '.rootDirectory = null' .vercel/project.json > /tmp/p.json && mv /tmp/p.json .vercel/project.json
+          cat .vercel/project.json
+
+      - name: Build
+        run: vercel build --prod --yes
+
+      - name: Collapse symlinked functions
+        run: |
+          node << 'SCRIPT'
+          const fs = require('fs')
+          const path = require('path')
+
+          const outputDir = 'docs/.vercel/output'
+          const functionsDir = path.join(outputDir, 'functions')
+
+          // 1. Delete all symlinks under functions/ (Nitro creates 263 symlinks
+          //    pointing to __fallback.func; keeping them exceeds Vercel Hobby's
+          //    12-function limit and breaks prod deployment).
+          function deleteSymlinks(dir) {
+            for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+              const full = path.join(dir, entry.name)
+              if (entry.isSymbolicLink()) {
+                fs.unlinkSync(full)
+              } else if (entry.isDirectory()) {
+                deleteSymlinks(full)
+              }
+            }
+          }
+          if (fs.existsSync(functionsDir)) {
+            deleteSymlinks(functionsDir)
+            // prune empty directories left behind
+            const prune = (dir) => {
+              for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+                if (entry.isDirectory()) {
+                  const full = path.join(dir, entry.name)
+                  prune(full)
+                  if (fs.readdirSync(full).length === 0) fs.rmdirSync(full)
+                }
+              }
+            }
+            prune(functionsDir)
+          }
+
+          // 2. Rewrite every non-__fallback dest to /__fallback.
+          //    All deleted symlinks pointed to __fallback anyway, so this is
+          //    routing-equivalent — the single function handles SSR + static.
+          const configPath = path.join(outputDir, 'config.json')
+          const config = JSON.parse(fs.readFileSync(configPath, 'utf8'))
+          let count = 0
+          for (const route of (config.routes || [])) {
+            if (route.dest && route.dest !== '/__fallback') {
+              route.dest = '/__fallback'
+              count++
+            }
+          }
+          fs.writeFileSync(configPath, JSON.stringify(config, null, 2))
+          console.log(`Collapsed ${count} route dests to /__fallback`)
+          SCRIPT
+
+      - name: Deploy (preview)
+        id: deploy
+        run: |
+          url=$(vercel deploy --prebuilt --yes docs/.vercel/output)
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+
+      - name: Alias to production domain
+        run: vercel alias set ${{ steps.deploy.outputs.url }} ui-zeta-drab.vercel.app
+
+      - name: Summary
+        run: |
+          echo "### Deployment" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- Preview: ${{ steps.deploy.outputs.url }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Production alias: https://ui-zeta-drab.vercel.app" >> $GITHUB_STEP_SUMMARY

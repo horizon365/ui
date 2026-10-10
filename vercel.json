@@ -1,5 +1,5 @@
 {
-  "buildCommand": "export NODE_OPTIONS=--max-old-space-size=6144 SKIP_PRERENDER=1; test -f nuxt.config.ts || cd docs; (cd .. && nuxt-module-build build --stub) && nuxt prepare && mkdir -p ../.nuxt && echo '{\"compilerOptions\":{}}' > ../.nuxt/tsconfig.json && nuxt build",
+  "buildCommand": "export NODE_OPTIONS=--max-old-space-size=12288 SKIP_PRERENDER=1; test -f nuxt.config.ts || cd docs; (cd .. && nuxt-module-build build --stub) && nuxt prepare && mkdir -p ../.nuxt && echo '{\"compilerOptions\":{}}' > ../.nuxt/tsconfig.json && nuxt build",
   "outputDirectory": "docs/.vercel/output",
   "installCommand": "pnpm install --frozen-lockfile"
 }

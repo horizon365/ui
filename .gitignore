@@ -41,3 +41,5 @@ playgrounds/repl/dist/
 
 # VSC
 .history
+.vercel
+.env*
