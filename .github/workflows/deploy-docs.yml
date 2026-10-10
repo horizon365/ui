@@ -63,9 +63,17 @@ jobs:
       - name: Pull project settings
         run: vercel pull --yes --environment=production
 
-      - name: Override rootDirectory (build from repo root)
+      # `vercel pull` copies the server project settings into project.json,
+      # including `settings.rootDirectory: "docs"`. That would make
+      # `vercel build` cd into docs/, ignore the repo-root vercel.json
+      # (buildCommand that generates ../.nuxt/tsconfig.json) and run the
+      # framework default `pnpm run build` instead — which dies with
+      # "Tsconfig not found .nuxt/tsconfig.json". Overwrite with the flat
+      # linkage file (the exact state the local build was verified with) so
+      # the build runs from the repo root against our vercel.json.
+      - name: Override project settings (build from repo root)
         run: |
-          jq '.rootDirectory = null' .vercel/project.json > /tmp/p.json && mv /tmp/p.json .vercel/project.json
+          echo '{"projectId":"prj_NpCOJ1mN8ZgsDcUdqrKkL5btsrAd","orgId":"team_eHTWeUVDF2W0o5TQBTfoshCU","projectName":"ui"}' > .vercel/project.json
           cat .vercel/project.json
 
       - name: Build
