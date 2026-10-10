@@ -162,6 +162,100 @@ jobs:
           rm -rf .vercel/output
           mv docs/.vercel/output .vercel/output
 
+      # Nitro externalizes some packages (copies them into the function's
+      # node_modules) but misses their transitive dependencies. pnpm's
+      # symlink layout makes this worse — @modelcontextprotocol/sdk was
+      # present but its dep 'content-type' was missing, causing
+      # ERR_MODULE_NOT_FOUND at runtime. This step recursively resolves
+      # and copies all missing transitive deps from the project node_modules.
+      - name: Repair missing transitive deps in function node_modules
+        run: |
+          node << 'SCRIPT'
+          const fs = require('fs')
+          const path = require('path')
+
+          const projectNM = path.resolve('node_modules')
+          const funcDir = path.resolve('.vercel/output/functions/__fallback.func')
+          const funcNM = path.join(funcDir, 'node_modules')
+
+          if (!fs.existsSync(funcNM)) {
+            console.log('No node_modules in function dir, skipping')
+            process.exit(0)
+          }
+
+          const copied = new Set()
+
+          function getDeps(pkgDir) {
+            const pj = path.join(pkgDir, 'package.json')
+            if (!fs.existsSync(pj)) return []
+            try {
+              const j = JSON.parse(fs.readFileSync(pj, 'utf8'))
+              return Object.keys({ ...j.dependencies, ...j.peerDependencies, ...j.optionalDependencies })
+            } catch { return [] }
+          }
+
+          function resolvePackage(name) {
+            // Check scoped package path
+            const direct = path.join(projectNM, name)
+            if (fs.existsSync(path.join(direct, 'package.json'))) return direct
+            return null
+          }
+
+          function copyPackage(name) {
+            if (copied.has(name)) return
+            const src = resolvePackage(name)
+            if (!src) {
+              console.log(`  WARN: ${name} not found in project node_modules`)
+              return
+            }
+            const dest = path.join(funcNM, name)
+            fs.mkdirSync(path.dirname(dest), { recursive: true })
+            if (!fs.existsSync(dest)) {
+              fs.cpSync(src, dest, { recursive: true, dereference: true })
+              copied.add(name)
+              console.log(`  copied: ${name}`)
+            }
+            // Recursively copy its deps
+            for (const dep of getDeps(src)) {
+              const depDest = path.join(funcNM, dep)
+              if (!fs.existsSync(depDest)) {
+                copyPackage(dep)
+              }
+            }
+          }
+
+          // Scan existing packages in function node_modules and fill gaps
+          function scanDir(dir, prefix = '') {
+            if (!fs.existsSync(dir)) return
+            for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+              if (entry.name.startsWith('.')) continue
+              if (entry.isDirectory()) {
+                if (entry.name.startsWith('@')) {
+                  // scoped: check next level
+                  scanDir(path.join(dir, entry.name), entry.name + '/')
+                } else {
+                  const pkgDir = path.join(dir, entry.name)
+                  const deps = getDeps(pkgDir)
+                  for (const dep of deps) {
+                    const depDest = path.join(funcNM, dep)
+                    if (!fs.existsSync(depDest)) {
+                      copyPackage(dep)
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          console.log('Scanning function node_modules for missing transitive deps...')
+          scanDir(funcNM)
+          console.log(`Done. Copied ${copied.size} packages.`)
+
+          // Verify the known-missing package
+          const ct = path.join(funcNM, 'content-type', 'package.json')
+          console.log(`content-type present: ${fs.existsSync(ct)}`)
+          SCRIPT
+
       # Verify native modules made it into the function directory.
       - name: Verify function bundle
         run: |
