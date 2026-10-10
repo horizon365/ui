@@ -163,11 +163,11 @@ jobs:
           echo "url=$url" >> "$GITHUB_OUTPUT"
 
       - name: Alias to production domain
-        run: vercel alias set ${{ steps.deploy.outputs.url }} nuxt-ui.js.cn --token "${VERCEL_TOKEN}"
+        run: vercel alias set ${{ steps.deploy.outputs.url }} nuxt-ui.vite.js.cn --token "${VERCEL_TOKEN}"
 
       - name: Summary
         run: |
           echo "### Deployment" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "- Preview: ${{ steps.deploy.outputs.url }}" >> $GITHUB_STEP_SUMMARY
-          echo "- Production alias: https://nuxt-ui.js.cn" >> $GITHUB_STEP_SUMMARY
+          echo "- Production alias: https://nuxt-ui.vite.js.cn" >> $GITHUB_STEP_SUMMARY

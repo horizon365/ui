@@ -39,7 +39,7 @@ export default defineNuxtConfig({
     // e.g. for local previews of the production bundle (`npx serve .output/public`).
     // Falls back to the production domain when the env var is unset (Vercel deploys).
     site: {
-      url: process.env.NUXT_PUBLIC_SITE_URL || 'https://nuxt-ui.js.cn'
+      url: process.env.NUXT_PUBLIC_SITE_URL || 'https://nuxt-ui.vite.js.cn'
     }
   },
 
