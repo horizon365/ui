@@ -223,6 +223,11 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2026-01-14',
 
+  // Sourcemaps cost a lot of memory when Nitro bundles 1574 content files —
+  // disable them for production builds. The CI runs on GitHub's 16GB public
+  // runner, but the heap budget still benefits.
+  sourcemap: { server: false, client: false },
+
   nitro: {
     experimental: {
       asyncContext: true
