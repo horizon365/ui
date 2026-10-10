@@ -147,10 +147,19 @@ jobs:
           console.log(`Collapsed ${count} route dests to /__fallback`)
           SCRIPT
 
+      # The .vercel/project.json lives at the repo root, so the Vercel CLI
+      # resolves the project root to the repo root and looks for
+      # .vercel/output there — not at docs/.vercel/output where Nitro wrote it.
+      # Move the output into place (same filesystem, so this is instant).
+      - name: Move output to project root
+        run: |
+          rm -rf .vercel/output
+          mv docs/.vercel/output .vercel/output
+
       - name: Deploy (preview)
         id: deploy
         run: |
-          url=$(vercel deploy --prebuilt --yes docs/.vercel/output)
+          url=$(vercel deploy --prebuilt --yes)
           echo "url=$url" >> "$GITHUB_OUTPUT"
 
       - name: Alias to production domain
