@@ -83,19 +83,90 @@ jobs:
           echo '{"projectId":"prj_NpCOJ1mN8ZgsDcUdqrKkL5btsrAd","orgId":"team_eHTWeUVDF2W0o5TQBTfoshCU","projectName":"ui"}' > .vercel/project.json
           cat .vercel/project.json
 
-      # Mirrors the vercel.json buildCommand (which `vercel build` would run
-      # from the repo root) but invoked directly with the Nitro Vercel preset.
-      - name: Build docs (Nitro Vercel preset)
+      # Build the UI module stub once (needed before any nuxt build).
+      - name: Build UI module stub
+        run: pnpm exec nuxt-module-build build --stub
+
+      # Prepare the root .nuxt/tsconfig.json (vite-transform checks for it) and
+      # nuxt type stubs once.
+      - name: Prepare Nuxt
+        working-directory: docs
+        run: |
+          pnpm exec nuxt prepare
+          mkdir -p ../.nuxt && echo '{"compilerOptions":{}}' > ../.nuxt/tsconfig.json
+
+      # --------------------------------------------------------------------------
+      # Prerender is split by locale to avoid OOM. Each `nuxt build` regenerates
+      # docs/.vercel/output (function + static assets + prerendered HTML for that
+      # locale batch). We keep the first batch's output as the base and merge only
+      # the *.html files from subsequent batches into it.
+      #
+      # concurrency=1 in nuxt.config keeps prerender memory low (one page at a
+      # time). max-old-space-size=6400 leaves headroom under the runner's 7GB.
+      # --------------------------------------------------------------------------
+      - name: Build batch 1/3 — English (default)
         working-directory: docs
         env:
           VERCEL: '1'
           NITRO_PRESET: vercel
-          NODE_OPTIONS: --max-old-space-size=6144
+          PRERENDER_LOCALES: default
+          NODE_OPTIONS: --max-old-space-size=6400
+        run: pnpm exec nuxt build
+
+      - name: Save base output
         run: |
-          (cd .. && pnpm exec nuxt-module-build build --stub)
-          pnpm exec nuxt prepare
-          mkdir -p ../.nuxt && echo '{"compilerOptions":{}}' > ../.nuxt/tsconfig.json
-          pnpm exec nuxt build
+          rm -rf /tmp/base-output
+          mv docs/.vercel/output /tmp/base-output
+          echo "Base output saved: $(find /tmp/base-output/static -name '*.html' | wc -l) HTML files"
+
+      - name: Build batch 2/3 — CJK (zh, ja, ko)
+        working-directory: docs
+        env:
+          VERCEL: '1'
+          NITRO_PRESET: vercel
+          PRERENDER_LOCALES: 'zh,ja,ko'
+          NODE_OPTIONS: --max-old-space-size=6400
+        run: pnpm exec nuxt build
+
+      - name: Merge CJK HTML into base
+        run: |
+          cd docs/.vercel/output/static
+          count=0
+          while IFS= read -r -d '' f; do
+            dest="/tmp/base-output/static/$f"
+            mkdir -p "$(dirname "$dest")"
+            cp "$f" "$dest"
+            count=$((count+1))
+          done < <(find . -name '*.html' -print0)
+          echo "Merged $count HTML files from CJK batch"
+
+      - name: Build batch 3/3 — European (fr, de, nl, es)
+        working-directory: docs
+        env:
+          VERCEL: '1'
+          NITRO_PRESET: vercel
+          PRERENDER_LOCALES: 'fr,de,nl,es'
+          NODE_OPTIONS: --max-old-space-size=6400
+        run: pnpm exec nuxt build
+
+      - name: Merge European HTML into base
+        run: |
+          cd docs/.vercel/output/static
+          count=0
+          while IFS= read -r -d '' f; do
+            dest="/tmp/base-output/static/$f"
+            mkdir -p "$(dirname "$dest")"
+            cp "$f" "$dest"
+            count=$((count+1))
+          done < <(find . -name '*.html' -print0)
+          echo "Merged $count HTML files from European batch"
+
+      - name: Restore merged output
+        run: |
+          rm -rf docs/.vercel/output
+          mv /tmp/base-output docs/.vercel/output
+          echo "Total prerendered HTML: $(find docs/.vercel/output/static -name '*.html' | wc -l)"
+          echo "index.html exists: $(test -f docs/.vercel/output/static/index.html && echo yes || echo no)"
 
       - name: Collapse symlinked functions
         run: |
@@ -135,10 +206,10 @@ jobs:
           }
 
           // 2. Rewrite every non-__fallback dest to /__fallback.
-          //    The deleted symlinks pointed to __fallback anyway, and with
-          //    SKIP_PRERENDER=1 the prerendered /raw/*.md static files don't
-          //    exist either — the single fallback function handles both SSR
-          //    and raw markdown at request time. Routing-equivalent.
+          //    The deleted symlinks pointed to __fallback anyway. Static
+          //    prerendered pages are served directly by Vercel's filesystem
+          //    handler (routes without a dest), so only the function refs
+          //    need collapsing. Routing-equivalent.
           const configPath = path.join(outputDir, 'config.json')
           const config = JSON.parse(fs.readFileSync(configPath, 'utf8'))
           let count = 0

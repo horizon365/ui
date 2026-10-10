@@ -227,15 +227,20 @@ export default defineNuxtConfig({
     experimental: {
       asyncContext: true
     },
-    // SKIP_PRERENDER=1 disables route prerendering entirely — pages render
-    // on-demand via the serverless function (Vercel) instead. Needed when the
-    // build OOMs: content (1574 files) + component-meta parsing + CSS transform
-    // already saturate the heap before prerender even starts. Env unset = original
-    // behavior (crawl English routes, SSR locale-prefixed ones).
+    // Prerendering is split by locale to avoid OOM: the build alone (1574
+    // content files + component-meta parsing + CSS transform) already
+    // saturates the heap, so prerendering every locale in one pass crashes.
+    //
+    // The CI runs `nuxt build` multiple times, each with PRERENDER_LOCALES
+    // set to a comma-separated subset (e.g. "default", "zh,ja,ko",
+    // "fr,de,nl,es"). "default" means the English (no-prefix) routes.
+    // Unset = original behavior (prerender English, ignore all locales).
+    // SKIP_PRERENDER=1 disables prerendering entirely.
     prerender: process.env.SKIP_PRERENDER
       ? false
-      : {
-          routes: [
+      : (() => {
+          const ALL_LOCALES = ['zh', 'ja', 'ko', 'fr', 'de', 'nl', 'es']
+          const BASE_ROUTES = [
             '/',
             '/docs/getting-started',
             '/openapi.json',
@@ -243,16 +248,52 @@ export default defineNuxtConfig({
             '/api/phone-codes.json',
             '/api/locales.json',
             '/api/module.json'
-          ],
-          crawlLinks: true,
-          // Locale-prefixed pages (`/zh/...`, `/ja/...`, ...) render at request
-          // time (SSR) instead of being prerendered: crawling them would multiply
-          // the prerender work by the number of locales and exhaust the build
-          // heap (OOM). SSR output is unaffected.
-          ignore: [
-            /^\/(zh|ja|ko|fr|de|nl|es)(\/|$)/
           ]
-        }
+
+          const requested = process.env.PRERENDER_LOCALES
+            ? process.env.PRERENDER_LOCALES.split(',').map(s => s.trim())
+            : null
+
+          // Default (unset): prerender English, ignore all locales.
+          if (!requested) {
+            return {
+              routes: BASE_ROUTES,
+              crawlLinks: true,
+              concurrency: 1,
+              interval: 0,
+              ignore: ALL_LOCALES.map(l => new RegExp(`^/${l}(/|$)`))
+            }
+          }
+
+          const includeDefault = requested.includes('default')
+          const locales = ALL_LOCALES.filter(l => requested.includes(l))
+
+          // English + some locales: ignore the remaining locales.
+          if (includeDefault) {
+            const ignored = ALL_LOCALES.filter(l => !locales.includes(l))
+            return {
+              routes: [
+                ...BASE_ROUTES,
+                ...locales.flatMap(l => [`/${l}/`, `/${l}/docs/getting-started`])
+              ],
+              crawlLinks: true,
+              concurrency: 1,
+              interval: 0,
+              ignore: ignored.map(l => new RegExp(`^/${l}(/|$)`))
+            }
+          }
+
+          // Locale-only batch: ignore everything that doesn't start with one
+          // of the target locale prefixes (including English root routes).
+          const target = locales.join('|')
+          return {
+            routes: locales.flatMap(l => [`/${l}/`, `/${l}/docs/getting-started`]),
+            crawlLinks: true,
+            concurrency: 2,
+            interval: 16,
+            ignore: [new RegExp(`^/(?!${target})`)]
+          }
+        })()
   },
 
   vite: {
