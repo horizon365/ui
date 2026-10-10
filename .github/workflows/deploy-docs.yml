@@ -58,8 +58,14 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 22
           cache: pnpm
+
+      # Hoisted node_modules so Nitro can copy native modules (better-sqlite3,
+      # sharp) into the __fallback function dir. pnpm's default symlink layout
+      # leaves the function with dangling symlinks that crash at runtime.
+      - name: Configure pnpm node-linker
+        run: echo 'node-linker=hoisted' > .npmrc
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -155,6 +161,19 @@ jobs:
         run: |
           rm -rf .vercel/output
           mv docs/.vercel/output .vercel/output
+
+      # Verify native modules made it into the function directory.
+      - name: Verify function bundle
+        run: |
+          echo "=== .vc-config.json ==="
+          cat .vercel/output/functions/__fallback.func/.vc-config.json
+          echo ""
+          echo "=== native modules in function node_modules ==="
+          ls -la .vercel/output/functions/__fallback.func/node_modules/better-sqlite3/build/Release/*.node 2>/dev/null || echo "better-sqlite3 .node NOT FOUND"
+          ls -la .vercel/output/functions/__fallback.func/node_modules/@img/sharp-linux-x64/build/Release/*.node 2>/dev/null || echo "sharp .node NOT FOUND"
+          echo ""
+          echo "=== function dir size ==="
+          du -sh .vercel/output/functions/__fallback.func/
 
       - name: Deploy (production)
         id: deploy
