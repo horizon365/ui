@@ -261,6 +261,7 @@ export default defineNuxtConfig({
               crawlLinks: true,
               concurrency: 1,
               interval: 0,
+              failOnError: false,
               ignore: ALL_LOCALES.map(l => new RegExp(`^/${l}(/|$)`))
             }
           }
@@ -279,6 +280,7 @@ export default defineNuxtConfig({
               crawlLinks: true,
               concurrency: 1,
               interval: 0,
+              failOnError: false,
               ignore: ignored.map(l => new RegExp(`^/${l}(/|$)`))
             }
           }
@@ -289,8 +291,9 @@ export default defineNuxtConfig({
           return {
             routes: locales.flatMap(l => [`/${l}/`, `/${l}/docs/getting-started`]),
             crawlLinks: true,
-            concurrency: 2,
-            interval: 16,
+            concurrency: 1,
+            interval: 0,
+            failOnError: false,
             ignore: [new RegExp(`^/(?!${target})`)]
           }
         })()
