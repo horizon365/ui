@@ -7,12 +7,19 @@ name: Deploy Docs
 #
 # Prerequisites:
 #   - GitHub Secret VERCEL_TOKEN  (create at vercel.com/account/tokens)
-#   - VERCEL_ORG_ID / VERCEL_PROJECT_ID are set below (from .vercel/project.json)
+#
+# The build bypasses `vercel build` entirely: it resolves project settings
+# from the Vercel API (rootDirectory=docs, framework default `pnpm run build`)
+# which bypasses the repo-root vercel.json and dies on the missing root
+# .nuxt/tsconfig.json. Instead we run the same commands as the vercel.json
+# buildCommand with the Nitro Vercel preset directly (locally verified to
+# produce a byte-identical config.json after post-processing).
 #
 # The deploy uses preview + alias (not --prod) because Vercel Hobby tier
 # rejects prod deployments that exceed the 12-serverless-function limit.
-# Nitro's vercel preset generates 264 functions (1 real + 263 symlinks),
-# so we collapse them to a single /__fallback function before deploying.
+# Nitro's vercel preset generates ~300 symlinked functions, so we collapse
+# them to a single /__fallback function before deploying (routing-equivalent:
+# every symlink pointed to __fallback anyway).
 
 on:
   push:
@@ -58,26 +65,32 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Install Vercel CLI
-        run: npm install -g vercel@latest
+        run: npm install -g vercel@63.1.0
 
-      - name: Pull project settings
-        run: vercel pull --yes --environment=production
-
-      # `vercel pull` copies the server project settings into project.json,
-      # including `settings.rootDirectory: "docs"`. That would make
-      # `vercel build` cd into docs/, ignore the repo-root vercel.json
-      # (buildCommand that generates ../.nuxt/tsconfig.json) and run the
-      # framework default `pnpm run build` instead — which dies with
-      # "Tsconfig not found .nuxt/tsconfig.json". Overwrite with the flat
-      # linkage file (the exact state the local build was verified with) so
-      # the build runs from the repo root against our vercel.json.
-      - name: Override project settings (build from repo root)
+      # Project linkage for `vercel deploy --prebuilt` / `vercel alias set`.
+      # Deliberately NOT running `vercel pull`: it copies the server project
+      # settings (rootDirectory=docs) and makes any later vercel command
+      # resolve paths from docs/ instead of the repo root.
+      - name: Write project linkage
         run: |
+          mkdir -p .vercel
           echo '{"projectId":"prj_NpCOJ1mN8ZgsDcUdqrKkL5btsrAd","orgId":"team_eHTWeUVDF2W0o5TQBTfoshCU","projectName":"ui"}' > .vercel/project.json
           cat .vercel/project.json
 
-      - name: Build
-        run: vercel build --prod --yes
+      # Mirrors the vercel.json buildCommand (which `vercel build` would run
+      # from the repo root) but invoked directly with the Nitro Vercel preset.
+      - name: Build docs (Nitro Vercel preset)
+        working-directory: docs
+        env:
+          VERCEL: '1'
+          NITRO_PRESET: vercel
+          SKIP_PRERENDER: '1'
+          NODE_OPTIONS: --max-old-space-size=12288
+        run: |
+          (cd .. && pnpm exec nuxt-module-build build --stub)
+          pnpm exec nuxt prepare
+          mkdir -p ../.nuxt && echo '{"compilerOptions":{}}' > ../.nuxt/tsconfig.json
+          pnpm exec nuxt build
 
       - name: Collapse symlinked functions
         run: |
@@ -88,9 +101,9 @@ jobs:
           const outputDir = 'docs/.vercel/output'
           const functionsDir = path.join(outputDir, 'functions')
 
-          // 1. Delete all symlinks under functions/ (Nitro creates 263 symlinks
-          //    pointing to __fallback.func; keeping them exceeds Vercel Hobby's
-          //    12-function limit and breaks prod deployment).
+          // 1. Delete all symlinks under functions/ (Nitro creates ~300
+          //    symlinks pointing to __fallback.func; keeping them exceeds
+          //    Vercel Hobby's 12-function limit and breaks prod deployment).
           function deleteSymlinks(dir) {
             for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
               const full = path.join(dir, entry.name)
@@ -117,8 +130,10 @@ jobs:
           }
 
           // 2. Rewrite every non-__fallback dest to /__fallback.
-          //    All deleted symlinks pointed to __fallback anyway, so this is
-          //    routing-equivalent — the single function handles SSR + static.
+          //    The deleted symlinks pointed to __fallback anyway, and with
+          //    SKIP_PRERENDER=1 the prerendered /raw/*.md static files don't
+          //    exist either — the single fallback function handles both SSR
+          //    and raw markdown at request time. Routing-equivalent.
           const configPath = path.join(outputDir, 'config.json')
           const config = JSON.parse(fs.readFileSync(configPath, 'utf8'))
           let count = 0
