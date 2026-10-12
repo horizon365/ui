@@ -253,6 +253,7 @@ export default defineNuxtConfig({
             '/api/phone-codes.json',
             '/api/locales.json',
             '/api/module.json',
+            '/robots.txt',
             '/sitemap.xml',
             '/sitemap_index.xml',
             '/__sitemap__/style.xsl',
