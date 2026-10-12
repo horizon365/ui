@@ -340,10 +340,14 @@ jobs:
           echo "=== function dir size ==="
           du -sh .vercel/output/functions/__fallback.func/
 
+      # --archive=tgz: packs the output into a single tarball before upload.
+      # Without it the CLI uploads ~5000+ files individually (1693 static
+      # assets + the function's hoisted node_modules), which trips Vercel
+      # Free tier's 24h upload limit (code: api-upload-free).
       - name: Deploy (production)
         id: deploy
         run: |
-          url=$(vercel deploy --prebuilt --prod --yes --token "${VERCEL_TOKEN}")
+          url=$(vercel deploy --prebuilt --prod --yes --archive=tgz --token "${VERCEL_TOKEN}")
           echo "url=$url" >> "$GITHUB_OUTPUT"
 
       - name: Summary
