@@ -53,25 +53,48 @@ const Page = z.object({
   sitemap
 })
 
-// Schema for the docs collection (components + getting-started). Shared by all
-// language collections so query results have the same shape across locales.
-const DocsSchema = z.object({
-  category: z.enum(['layout', 'form', 'element', 'navigation', 'data', 'overlay', 'dashboard', 'page', 'chat', 'content', 'editor', 'color-mode', 'i18n']).optional(),
-  keywords: z.array(z.string()).optional(),
-  index: z.boolean().optional(),
-  framework: z.enum(['nuxt', 'vue']).optional(),
-  navigation: z.object({
-    title: z.string().optional(),
-    badge: z.string().optional()
-  }),
-  links: z.array(Button),
-  // External navigation entries (e.g. the Figma page): the sidebar link
-  // points at `to` instead of the page's own path.
-  to: z.string().optional(),
-  target: z.string().optional(),
-  // an entry that links out is not a page to index
-  sitemap: defineSitemapSchema({ z, name: 'docs', filter: entry => !entry.to })
-})
+// Schema for the docs collection (components + getting-started). Same shape
+// for every language collection so query results are identical across locales.
+function docsSchema(locale: string) {
+  return z.object({
+    category: z.enum(['layout', 'form', 'element', 'navigation', 'data', 'overlay', 'dashboard', 'page', 'chat', 'content', 'editor', 'color-mode', 'i18n']).optional(),
+    keywords: z.array(z.string()).optional(),
+    index: z.boolean().optional(),
+    framework: z.enum(['nuxt', 'vue']).optional(),
+    navigation: z.object({
+      title: z.string().optional(),
+      badge: z.string().optional()
+    }),
+    links: z.array(Button),
+    // External navigation entries (e.g. the Figma page): the sidebar link
+    // points at `to` instead of the page's own path.
+    to: z.string().optional(),
+    target: z.string().optional(),
+    // Sitemap hooks are keyed by the exact collection name, so they must be
+    // registered per locale (`docs_en`, `docs_zh`, ...) — a shared `docs` key
+    // never matches.
+    sitemap: defineSitemapSchema({
+      z,
+      name: `docs_${locale}`,
+      // an entry that links out is not a page to index
+      filter: entry => !entry.to,
+      // All locales share one content stem (`/docs/...`) so the sitemap module
+      // cannot tell a zh entry from an en one and non-English docs end up in
+      // the English sitemap (or get deduped away). Re-add the URL prefix for
+      // non-default locales — that is the URL the site actually serves
+      // (i18n `prefix_except_default`). Sitemap output only: page queries
+      // keep using the prefix-free stem.
+      // The hook is serialized via `fn.toString()` into a nitro virtual
+      // module, so it must not close over `locale` — derive it from the
+      // collection name (`docs_zh` → `zh`) instead.
+      onUrl: locale === 'en'
+        ? undefined
+        : (url, _entry, collection) => {
+            url.loc = `/${collection.replace(/^docs_/, '')}${url.loc}`
+          }
+    })
+  })
+}
 
 // Locales supported by the docs site. `en` is the default and has no URL prefix;
 // every other locale is served under `/{code}/...` by `@nuxtjs/i18n`
@@ -88,7 +111,7 @@ function docsCollection(locale: string) {
       include: `${locale}/docs/**/*`,
       prefix: '/docs'
     },
-    schema: DocsSchema
+    schema: docsSchema(locale)
   })
 }
 
