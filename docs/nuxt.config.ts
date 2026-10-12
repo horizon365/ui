@@ -252,7 +252,10 @@ export default defineNuxtConfig({
             '/api/countries.json',
             '/api/phone-codes.json',
             '/api/locales.json',
-            '/api/module.json'
+            '/api/module.json',
+            '/sitemap.xml',
+            '/sitemap_index.xml',
+            '/__sitemap__/style.xsl'
           ]
 
           const requested = process.env.PRERENDER_LOCALES
