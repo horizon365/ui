@@ -255,7 +255,9 @@ export default defineNuxtConfig({
             '/api/module.json',
             '/sitemap.xml',
             '/sitemap_index.xml',
-            '/__sitemap__/style.xsl'
+            '/__sitemap__/style.xsl',
+            ...['en-US', 'zh-Hans', 'ja-JP', 'ko-KR', 'fr-FR', 'de-DE', 'nl-NL', 'es-ES']
+              .map(l => `/__sitemap__/${l}.xml`)
           ]
 
           const requested = process.env.PRERENDER_LOCALES
@@ -483,7 +485,9 @@ export default defineNuxtConfig({
   i18n: {
     strategy: 'prefix_except_default',
     defaultLocale: 'en',
-    baseUrl: 'https://ui.nuxt.com',
+    // Same source as site.url ($production) — @nuxtjs/sitemap builds the
+    // child sitemap URLs and hreflang alternates from i18n.baseUrl.
+    baseUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://nuxt-ui.vite.js.cn',
     detectBrowserLanguage: false,
     locales: [
       { code: 'en', name: 'English', language: 'en-US', dir: 'ltr' },
