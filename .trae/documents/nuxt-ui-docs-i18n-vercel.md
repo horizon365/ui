@@ -1,10 +1,12 @@
 # Nuxt UI 文档站多语言国际化 + Vercel 部署方案
 
+> 状态：已实现（2026-10）。本文档是最初的实施计划，步骤 7、10 已按落地结果改写。运行时的事实来源为 [docs/nuxt.config.ts](file:///Users/yiqun/WebstormProjects/ui/docs/nuxt.config.ts)、[docs/content.config.ts](file:///Users/yiqun/WebstormProjects/ui/docs/content.config.ts)、[deploy-docs.yml](file:///Users/yiqun/WebstormProjects/ui/.github/workflows/deploy-docs.yml) 和 [project_memory.md](file:///Users/yiqun/WebstormProjects/ui/.trae/memory/project_memory.md)。
+
 ## Context
 
-Nuxt UI 文档站（[docs/](file:///Users/yiqun/WebStromProjects/ui/docs)）目前是纯英文单语言站点，所有 130+ 个 Markdown 文档直接放在 [docs/content/docs/](file:///Users/yiqun/WebStromProjects/ui/docs/content/docs) 下，由单个 `docs` collection 扫描（[content.config.ts:62-84](file:///Users/yiqun/WebStromProjects/ui/docs/content.config.ts#L62-L84)）。页面 [pages/docs/[...slug].vue](file:///Users/yiqun/WebStromProjects/ui/docs/app/pages/docs/[...slug].vue#L14) 直接用 `route.path` 查询 content，[useNavigation.ts](file:///Users/yiqun/WebStromProjects/ui/docs/app/composables/useNavigation.ts) 把 `/docs/${slug}` 硬编码进路径解析。站内无任何 `@nuxtjs/i18n` 模块、无 locale 切换 UI、无 Vercel 配置。
+最初的站点是纯英文单语言：130+ 个 Markdown 文档直接放在 `docs/content/docs/` 下，由单个 `docs` collection 扫描（[content.config.ts](file:///Users/yiqun/WebstormProjects/ui/docs/content.config.ts)），页面 [pages/docs/[...slug].vue](file:///Users/yiqun/WebstormProjects/ui/docs/app/pages/docs/[...slug].vue#L14) 直接用 `route.path` 查询 content，[useNavigation.ts](file:///Users/yiqun/WebstormProjects/ui/docs/app/composables/useNavigation.ts) 把 `/docs/${slug}` 硬编码进路径解析；站内没有 `@nuxtjs/i18n`、语言切换 UI 和 Vercel 配置。
 
-目标：把站点翻译成 7 种语言（中文 zh、日语 ja、韩语 ko、法语 fr、德语 de、荷兰语 nl、西班牙语 es），英文 en 为默认；URL 采用子路径（`/zh/docs/...`、`/ja/docs/...`，英文无前缀）；AI 翻译 + 人工校对；最终部署到 Vercel。
+目标：把站点翻译成 7 种语言（中文 zh、日语 ja、韩语 ko、法语 fr、德语 de、荷兰语 nl、西班牙语 es），英文 en 为默认；URL 采用子路径（`/zh/docs/...`、`/ja/docs/...`，英文无前缀）；AI 翻译 + 人工校对；部署到 Vercel。当前 7 种语言各 196 个文件已全部翻译完成，结构/查询实现见步骤 2、3。
 
 ## 技术方案概览
 
@@ -24,7 +26,7 @@ Nuxt UI 文档站（[docs/](file:///Users/yiqun/WebStromProjects/ui/docs)）目�
 
 ### 步骤 1：安装依赖
 
-在仓库根 [package.json](file:///Users/yiqun/WebStromProjects/ui/package.json) 的 `devDependencies` 加入 `@nuxtjs/i18n`（用 catalog 方式），并更新 [pnpm-workspace.yaml](file:///Users/yiqun/WebStromProjects/ui/pnpm-workspace.yaml) 的 catalog 字段固定版本（参考最新稳定版 `@nuxtjs/i18n@^10`）。
+在仓库根 [package.json](file:///Users/yiqun/WebstormProjects/ui/package.json) 的 `devDependencies` 加入 `@nuxtjs/i18n`（用 catalog 方式），并更新 [pnpm-workspace.yaml](file:///Users/yiqun/WebstormProjects/ui/pnpm-workspace.yaml) 的 catalog 字段固定版本（参考最新稳定版 `@nuxtjs/i18n@^10`）。
 
 ```bash
 pnpm install
@@ -32,7 +34,7 @@ pnpm install
 
 ### 步骤 2：内容文件目录重组
 
-把 [docs/content/](file:///Users/yiqun/WebStromProjects/ui/docs/content) 下现有内容搬到 `en/` 子目录，保留相同相对结构。**范围限定在**：首页 `index.yml`、`docs/` 子目录（组件文档 + Getting Started）。
+把 [docs/content/](file:///Users/yiqun/WebstormProjects/ui/docs/content) 下现有内容搬到 `en/` 子目录，保留相同相对结构。**范围限定在**：首页 `index.yml`、`docs/` 子目录（组件文档 + Getting Started）。
 
 最终结构（示例）：
 
@@ -58,7 +60,7 @@ docs/content/
 
 ### 步骤 3：改造 content.config.ts
 
-[docs/content.config.ts](file:///Users/yiqun/WebStromProjects/ui/docs/content.config.ts) 把 `docs` 和 `index` 集合拆为 8 个语言版本，共享 schema。用工厂函数减少重复：
+[docs/content.config.ts](file:///Users/yiqun/WebstormProjects/ui/docs/content.config.ts) 把 `docs` 和 `index` 集合拆为 8 个语言版本，共享 schema。用工厂函数减少重复：
 
 ```ts
 const locales = ['en', 'zh', 'ja', 'ko', 'fr', 'de', 'nl', 'es'] as const
@@ -92,7 +94,7 @@ export const collections = Object.fromEntries(
 
 ### 步骤 4：i18n 模块配置
 
-[docs/nuxt.config.ts](file:///Users/yiqun/WebStromProjects/ui/docs/nuxt.config.ts) 修改：
+[docs/nuxt.config.ts](file:///Users/yiqun/WebstormProjects/ui/docs/nuxt.config.ts) 修改：
 
 1. `modules` 数组在 `@nuxt/content` **之后**加入 `'@nuxtjs/i18n'`（顺序参考官方集成文档）
 2. 新增顶层 `i18n` 配置块：
@@ -116,11 +118,11 @@ i18n: {
 }
 ```
 
-3. 评估 [routeRules](file:///Users/yiqun/WebStromProjects/ui/docs/nuxt.config.ts#L83-L100)：`prefix_except_default` 下 i18n 自动为非默认 locale 路由加前缀，但**英文版重定向规则**（如 `/getting-started/** → /docs/getting-started/**`）仍生效，无需改动。`/zh/getting-started/**` 等会被 i18n 视为不存在 → 触发 404 + fallback 到 en，可接受。
+3. 评估 [routeRules](file:///Users/yiqun/WebstormProjects/ui/docs/nuxt.config.ts#L83-L100)：`prefix_except_default` 下 i18n 自动为非默认 locale 路由加前缀，但**英文版重定向规则**（如 `/getting-started/** → /docs/getting-started/**`）仍生效，无需改动。`/zh/getting-started/**` 等会被 i18n 视为不存在 → 触发 404 + fallback 到 en，可接受。
 
 ### 步骤 5：页面查询适配
 
-#### [docs/app/pages/docs/[...slug].vue](file:///Users/yiqun/WebStromProjects/ui/docs/app/pages/docs/[...slug].vue#L14)
+#### [docs/app/pages/docs/[...slug].vue](file:///Users/yiqun/WebstormProjects/ui/docs/app/pages/docs/[...slug].vue#L14)
 
 ```ts
 const { locale } = useI18n()
@@ -147,9 +149,9 @@ const { data: page } = await useAsyncData(
 )
 ```
 
-注意 [line 85](file:///Users/yiqun/WebStromProjects/ui/docs/app/pages/docs/[...slug].vue#L85) 的 `useCanonical` 也要按 locale 调整。
+注意 [line 85](file:///Users/yiqun/WebstormProjects/ui/docs/app/pages/docs/[...slug].vue#L85) 的 `useCanonical` 也要按 locale 调整。
 
-#### [docs/app/pages/index.vue](file:///Users/yiqun/WebStromProjects/ui/docs/app/pages/index.vue#L2)
+#### [docs/app/pages/index.vue](file:///Users/yiqun/WebstormProjects/ui/docs/app/pages/index.vue#L2)
 
 ```ts
 const { locale } = useI18n()
@@ -163,75 +165,54 @@ const { data: page } = await useAsyncData(`index-${locale.value}`, async () => {
 }, { watch: [locale] })
 ```
 
-#### [docs/app/components/content/ComponentCode.vue](file:///Users/yiqun/WebStromProjects/ui/docs/app/components/content/ComponentCode.vue) 等
+#### [docs/app/components/content/ComponentCode.vue](file:///Users/yiqun/WebstormProjects/ui/docs/app/components/content/ComponentCode.vue) 等
 
 任何用 `queryCollection('docs')` 的地方都要按 locale 切换。搜 `queryCollection\('docs'\)` 全仓库定位（预计 5-10 处）。
 
 ### 步骤 6：导航适配
 
-[docs/app/composables/useNavigation.ts](file:///Users/yiqun/WebStromProjects/ui/docs/app/composables/useNavigation.ts) 当前：
+[docs/app/composables/useNavigation.ts](file:///Users/yiqun/WebstormProjects/ui/docs/app/composables/useNavigation.ts) 当前：
 
-- [line 82](file:///Users/yiqun/WebStromProjects/ui/docs/app/composables/useNavigation.ts#L82) `/docs/${slug}` 写死 → 改为按 locale 查询对应 collection 的 navigation
-- [line 174](file:///Users/yiqun/WebStromProjects/ui/docs/app/composables/useNavigation.ts#L174) `route.path.split('/')[2]` → 在 `/zh/docs/...` 下偏移要 +1
+- [line 82](file:///Users/yiqun/WebstormProjects/ui/docs/app/composables/useNavigation.ts#L82) `/docs/${slug}` 写死 → 改为按 locale 查询对应 collection 的 navigation
+- [line 174](file:///Users/yiqun/WebstormProjects/ui/docs/app/composables/useNavigation.ts#L174) `route.path.split('/')[2]` → 在 `/zh/docs/...` 下偏移要 +1
 
-调用 navigation 的源头（[app.vue](file:///Users/yiqun/WebStromProjects/ui/docs/app/app.vue) 或 layout）也要传 locale-aware 的 collection。组别标题（Overview、Layout、Element 等）用 i18n vue-i18n 字典翻译。
+调用 navigation 的源头（[app.vue](file:///Users/yiqun/WebstormProjects/ui/docs/app/app.vue) 或 layout）也要传 locale-aware 的 collection。组别标题（Overview、Layout、Element 等）当前仍为英文。
 
-新增 [docs/i18n/locales/en.json](file:///Users/yiqun/WebStromProjects/ui/docs/i18n) 等 8 个语言字典，存放 UI 字符串（"Edit this page"、"Ask AI"、"Search" 等），配合 [pages/docs/[...slug].vue#L121-L131](file:///Users/yiqun/WebStromProjects/ui/docs/app/pages/docs/[...slug].vue#L121-L131) 等 hardcoded 英文文案。
+当前**没有** `docs/i18n/locales/*.json` 字典：站点 UI 文案（"Edit this page"、"Ask AI"、"Search" 等）仍为英文，只有内容页按 locale 渲染。这与最初计划不同，属于已知的未实现项；如需本地化 UI 文案再新增 8 个语言字典。
 
-### 步骤 7：AI 翻译脚本
+### 步骤 7：翻译脚本（已落地）
 
-新建 [docs/scripts/translate-content.mjs](file:///Users/yiqun/WebStromProjects/ui/docs/scripts/translate-content.mjs)：
+实际脚本是 [docs/scripts/translate-content.mjs](file:///Users/yiqun/WebstormProjects/ui/docs/scripts/translate-content.mjs)，默认走免密钥的 free 引擎，而不是单一 AI Gateway：
 
-```js
-// 伪代码
-import { readdir, readFile, writeFile, mkdir } from 'node:fs/promises'
-import { join } from 'node:path'
+- `free`（默认）：zh/ja/ko/fr/de/es 走腾讯 Transmart，nl 走 Volcengine crx（Transmart 无荷兰语）。Volcengine 单请求约 5000 字符上限，脚本按 4500 字符预算贪心分块；返回行数漂移时逐条重翻。
+- `llm`：Vercel AI Gateway，需 `AI_GATEWAY_API_KEY`，默认模型 `gpt-4o-mini`。
+- 参数：默认增量（目标文件存在即跳过）、`--force` 全量、`--locale=xx` 单语言、`--dry-run` 只打印计划。
+- 环境变量：`TRANSLATION_ENGINE`、`TRANSLATION_MODEL`、`TRANSLATION_CONCURRENCY`、`VOLC_MAX_CHUNK`。
 
-const LOCALES = ['zh', 'ja', 'ko', 'fr', 'de', 'nl', 'es']
-const SOURCE = 'content/en'
-const FORCE = process.argv.includes('--force')
+保护规则（改脚本时必须保留）：
 
-// 遍历 SOURCE 下所有 .md 和 .yml
-// 对每个文件：
-//   1. 解析 frontmatter（gray-matter）
-//   2. 翻译正文（保留 MDC 语法 ::component、:props、代码块 ```、HTML 标签）
-//   3. frontmatter 中的 title / description / hero / navigation.title 翻译
-//   4. 路径中的 to / 链接不翻译
-//   5. 写入 content/{locale}/对应路径
-//   6. 已存在目标文件且非 --force 时跳过
-
-async function translate(text, targetLang) {
-  const res = await fetch('https://api.vercel-ai-gateway.com/v1/chat/completions', {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${process.env.AI_GATEWAY_API_KEY}`,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      model: 'gpt-4o-mini',
-      messages: [
-        { role: 'system', content: `You are a professional translator for Vue/Nuxt UI documentation. Translate to ${targetLang}. Preserve all MDC syntax, code blocks, frontmatter YAML keys, and component paths. Only translate natural language text.` },
-        { role: 'user', content: text }
-      ]
-    })
-  })
-  const data = await res.json()
-  return data.choices[0].message.content
-}
-```
-
-环境变量：复用 [docs/.env.example](file:///Users/yiqun/WebStromProjects/ui/docs/.env.example) 的 `AI_GATEWAY_API_KEY`；新增 `TRANSLATION_MODEL` 可选覆盖。
+1. 代码围栏 ``` 内逐行跳过，围栏标记本身不动。
+2. MDC 容器（`::`/`:::` 按冒号数入栈）内的 `---` YAML 配置块整体跳过——翻译键会破坏 `::component-code` 在线示例。
+3. 容器内 `#slot` 标记行保留结构，只翻译 `title`/`label`/`description` 属性值。
+4. 行首单冒号组件（`:badge{...}`、`:components-list{...}`）按 tag 行处理，避免被引擎吞掉或改坏。
+5. frontmatter 仅翻译白名单字段 `title`/`description`/`lead`/`accent`/`label`；`to`/`icon`/路径/颜色等原样保留。
+6. 占位符用 `xphNNNx`（腾讯/Volcengine 都能原样透传），不要改回 `@@PH@@`。
 
 运行：
 
 ```bash
-cd docs && node scripts/translate-content.mjs          # 增量
-cd docs && node scripts/translate-content.mjs --force # 全量重译
+cd docs
+node scripts/translate-content.mjs              # 增量，free 引擎
+node scripts/translate-content.mjs --force      # 全量重译
+node scripts/translate-content.mjs --locale=zh  # 单语言
+node scripts/translate-content.mjs --dry-run    # 只打印计划
 ```
 
-### 步骤 8：UI 语言切换器
+启动批量翻译前先 `ps aux | grep translate-content` 清理遗留进程，避免旧进程用旧脚本覆盖新译文。
 
-修改 [docs/app/components/header/Header.vue](file:///Users/yiqun/WebStromProjects/ui/docs/app/components/header/Header.vue#L41) 的 `#right` template，在 Ask AI 之前插入：
+### 步骤 8：UI 语言切换器（已落地）
+
+已在 [Header.vue](file:///Users/yiqun/WebstormProjects/ui/docs/app/components/header/Header.vue#L73-L86) 实现，`useSwitchLocalePath()` 会保留当前页面的 slug。实现形态（计划示意）：
 
 ```vue
 <UDropdownMenu
@@ -245,26 +226,36 @@ cd docs && node scripts/translate-content.mjs --force # 全量重译
 
 ### 步骤 9：sitemap 与 hreflang
 
-[docs/nuxt.config.ts](file:///Users/yiqun/WebStromProjects/ui/docs/nuxt.config.ts) 的 `@nuxtjs/sitemap` 在装了 `@nuxtjs/i18n` 后会自动扫描多 collection 并生成 hreflang。确认 [sitemap 配置](file:///Users/yiqun/WebStromProjects/ui/docs/content.config.ts#L47) 的 `defineSitemapSchema` 在每个语言 collection 都启用。
+`@nuxtjs/sitemap` 在 `@nuxtjs/i18n` 下会生成子 sitemap 与 hreflang。落地时的关键点（详见 [content.config.ts](file:///Users/yiqun/WebstormProjects/ui/docs/content.config.ts) 的 `docsSchema`）：
 
-[nitro.prerender.routes](file:///Users/yiqun/WebStromProjects/ui/docs/nuxt.config.ts) 加上各语言首页：`/zh`、`/ja`、`/ko`、`/fr`、`/de`、`/nl`、`/es` 等。
+- 每个语言 collection 用 `defineSitemapSchema({ z, name: 'docs_<locale>' })` 注册，hook 按精确集合名匹配；共用 `docs` 名字会让非英文 URL 漏进英文 sitemap（zh-Hans 曾只剩 7 条）。
+- hook 会被 `fn.toString()` 序列化进 Nitro 虚拟模块，不能闭包引用 `locale`，要从集合名解析。
+- 非英文条目的 `loc` 需要补 `/{locale}` 前缀（查询用的 content stem 本身不带前缀）。
+- `i18n.baseUrl` 必须与部署域名同源（取 `NUXT_PUBLIC_SITE_URL`），否则子 sitemap 指向 `ui.nuxt.com` 导致 404。
+- `/robots.txt`、`/sitemap.xml`、`/sitemap_index.xml`、`/__sitemap__/style.xsl` 以及 8 个 `/__sitemap__/*.xml` 必须加入 [nitro.prerender.routes](file:///Users/yiqun/WebstormProjects/ui/docs/nuxt.config.ts)，否则会落到 `__fallback` 函数返回 500，阻塞 Search Console 收录。
 
-### 步骤 10：Vercel 部署
+### 步骤 10：Vercel 部署（最终方案）
 
-Vercel Dashboard 配置（**无需在仓库加 vercel.json**，避免和现有 Nuxt 自动检测冲突）：
+最终没有采用 Vercel Dashboard 直连 Git 自动构建，而是 **GitHub Actions 预构建 + Vercel CLI 部署**，见 [deploy-docs.yml](file:///Users/yiqun/WebstormProjects/ui/.github/workflows/deploy-docs.yml)：
 
-| 配置项 | 值 |
-|--------|-----|
-| Framework Preset | Nuxt |
-| Root Directory | `docs` |
-| Build Command | `pnpm install --frozen-lockfile && pnpm run dev:prepare && pnpm run docs:build` |
-| Output Directory | （留空，Nuxt 自动） |
-| Install Command | `pnpm install` |
-| Environment Variables | `NUXT_PUBLIC_SITE_URL=https://your-domain.com`、`NUXT_GITHUB_TOKEN=...`、`AI_GATEWAY_API_KEY=...` |
+| 关注点 | 实际配置 |
+|--------|----------|
+| 触发 | push 到 `v4`（`docs/**`、`src/**`、`vercel.json`、workflow 变更）或 `workflow_dispatch` |
+| 运行环境 | `ubuntu-latest` + Node 22 + pnpm `node-linker=hoisted` |
+| 构建 | 跳过 `vercel pull` / `vercel build`；在 `docs/` 直接 `VERCEL=1 NITRO_PRESET=vercel pnpm exec nuxt build`，按 `default` / `zh,ja,ko` / `fr,de,nl,es` 三批预渲染并合并 HTML |
+| 内存 | `NODE_OPTIONS=--max-old-space-size=12288`；`nitro.prerender.concurrency=1`、`failOnError=false` |
+| 函数数 | 删除 `functions/` 下约 300 个指向 `__fallback` 的软链，把 `config.json` 的 `dest` 全部重写为 `/__fallback`（Hobby 档 12 函数上限） |
+| 依赖 | 构建后递归补齐 `__fallback.func/node_modules` 缺失的传递依赖 |
+| 上传 | `vercel deploy --prebuilt --prod --yes --archive=tgz`（超过 5000 文件会触发免费档 24h 上传配额） |
+| 域名 | `https://nuxt-ui.vite.js.cn`；`NUXT_PUBLIC_SITE_URL` 同时喂给 `site.url`、`i18n.baseUrl` 和 sitemap |
+| 密钥 | GitHub Secret `VERCEL_TOKEN` |
 
-`pnpm run dev:prepare` 会跑 `nuxt-module-build build --stub && ... && nuxt prepare docs`，确保 Nuxt UI 源码 stub 已构建（Vercel 上没有 dist）。`docs:build` 即 `nuxt build docs`。
+维护要点：
 
-注意：Vercel 默认 Node 版本可能太旧，设置 Node Version = 22.x。
+- 不要恢复 `vercel pull` / `vercel build`：服务端 `rootDirectory=docs` 会覆盖仓库 `vercel.json`，导致 Tsconfig not found 并绕过定义的构建命令。
+- 不要用 `SKIP_PRERENDER=1` 代替分批预渲染：静态 HTML 比全站走 SSR 函数可靠得多。
+- 不用 preview + alias（`vercel alias set` 鉴权路径异常，报 User not found），直接 `--prod`。
+- [vercel.json](file:///Users/yiqun/WebstormProjects/ui/vercel.json) 的 `buildCommand` 仅用于本地复现，CI 不依赖 Vercel 构建容器。
 
 ## 关键文件清单
 
@@ -272,18 +263,18 @@ Vercel Dashboard 配置（**无需在仓库加 vercel.json**，避免和现有 N
 
 | 文件 | 动作 |
 |------|------|
-| [package.json](file:///Users/yiqun/WebStromProjects/ui/package.json) | 加 `@nuxtjs/i18n` devDep |
-| [pnpm-workspace.yaml](file:///Users/yiqun/WebStromProjects/ui/pnpm-workspace.yaml) | catalog 加 i18n 版本 |
-| [docs/content.config.ts](file:///Users/yiqun/WebStromProjects/ui/docs/content.config.ts) | 拆 8 个语言 collection |
-| [docs/nuxt.config.ts](file:///Users/yiqun/WebStromProjects/ui/docs/nuxt.config.ts) | 加 i18n 模块、prerender routes |
-| [docs/app/pages/docs/[...slug].vue](file:///Users/yiqun/WebStromProjects/ui/docs/app/pages/docs/[...slug].vue) | locale-aware 查询 |
-| [docs/app/pages/index.vue](file:///Users/yiqun/WebStromProjects/ui/docs/app/pages/index.vue) | locale-aware 查询 |
-| [docs/app/composables/useNavigation.ts](file:///Users/yiqun/WebStromProjects/ui/docs/app/composables/useNavigation.ts) | 按 locale 选 collection 与路径前缀 |
-| [docs/app/components/header/Header.vue](file:///Users/yiqun/WebStromProjects/ui/docs/app/components/header/Header.vue) | 加语言切换 dropdown |
-| [docs/app/app.vue](file:///Users/yiqun/WebStromProjects/ui/docs/app/app.vue) 或 layout | 注入 navigation 时按 locale |
-| [docs/i18n/locales/{en,zh,ja,ko,fr,de,nl,es}.json](file:///Users/yiqun/WebStromProjects/ui/docs/i18n) | 新建，UI 字符串字典 |
-| [docs/scripts/translate-content.mjs](file:///Users/yiqun/WebStromProjects/ui/docs/scripts/translate-content.mjs) | 新建，翻译脚本 |
-| [docs/content/{en,zh,ja,ko,fr,de,nl,es}/](file:///Users/yiqun/WebStromProjects/ui/docs/content) | 新建语言目录，en/ 内放原 content |
+| [package.json](file:///Users/yiqun/WebstormProjects/ui/package.json) | 加 `@nuxtjs/i18n` devDep |
+| [pnpm-workspace.yaml](file:///Users/yiqun/WebstormProjects/ui/pnpm-workspace.yaml) | catalog 加 i18n 版本 |
+| [docs/content.config.ts](file:///Users/yiqun/WebstormProjects/ui/docs/content.config.ts) | 拆 8 个语言 collection |
+| [docs/nuxt.config.ts](file:///Users/yiqun/WebstormProjects/ui/docs/nuxt.config.ts) | 加 i18n 模块、prerender routes |
+| [docs/app/pages/docs/[...slug].vue](file:///Users/yiqun/WebstormProjects/ui/docs/app/pages/docs/[...slug].vue) | locale-aware 查询 |
+| [docs/app/pages/index.vue](file:///Users/yiqun/WebstormProjects/ui/docs/app/pages/index.vue) | locale-aware 查询 |
+| [docs/app/composables/useNavigation.ts](file:///Users/yiqun/WebstormProjects/ui/docs/app/composables/useNavigation.ts) | 按 locale 选 collection 与路径前缀 |
+| [docs/app/components/header/Header.vue](file:///Users/yiqun/WebstormProjects/ui/docs/app/components/header/Header.vue) | 加语言切换 dropdown |
+| [docs/app/app.vue](file:///Users/yiqun/WebstormProjects/ui/docs/app/app.vue) 或 layout | 注入 navigation 时按 locale |
+| `docs/i18n/locales/{en,zh,ja,ko,fr,de,nl,es}.json` | **未实现**，UI 字符串仍为英文 |
+| [docs/scripts/translate-content.mjs](file:///Users/yiqun/WebstormProjects/ui/docs/scripts/translate-content.mjs) | 新建，翻译脚本 |
+| [docs/content/{en,zh,ja,ko,fr,de,nl,es}/](file:///Users/yiqun/WebstormProjects/ui/docs/content) | 新建语言目录，en/ 内放原 content |
 
 ## 验证方式
 
