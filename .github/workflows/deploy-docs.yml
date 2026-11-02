@@ -15,11 +15,13 @@ name: Deploy Docs
 # buildCommand with the Nitro Vercel preset directly (locally verified to
 # produce a byte-identical config.json after post-processing).
 #
-# The deploy uses preview + alias (not --prod) because Vercel Hobby tier
-# rejects prod deployments that exceed the 12-serverless-function limit.
-# Nitro's vercel preset generates ~300 symlinked functions, so we collapse
-# them to a single /__fallback function before deploying (routing-equivalent:
-# every symlink pointed to __fallback anyway).
+# The deploy targets production directly (`vercel deploy --prod`), not
+# preview + `vercel alias set` — the alias command resolves auth differently
+# and fails with "User not found". Nitro's vercel preset generates ~300
+# symlinked functions, so we collapse them to a single /__fallback function
+# first; that keeps the output within Vercel Hobby's 12-serverless-function
+# limit for a prod deployment (routing-equivalent: every symlink pointed to
+# __fallback anyway).
 
 on:
   push:
@@ -73,7 +75,7 @@ jobs:
       - name: Install Vercel CLI
         run: npm install -g vercel@63.1.0
 
-      # Project linkage for `vercel deploy --prebuilt` / `vercel alias set`.
+      # Project linkage for `vercel deploy --prebuilt --prod`.
       # Deliberately NOT running `vercel pull`: it copies the server project
       # settings (rootDirectory=docs) and makes any later vercel command
       # resolve paths from docs/ instead of the repo root.
