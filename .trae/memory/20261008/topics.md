@@ -1,0 +1,1 @@
+[session_id: 6ab4e30c88a1e1d56671978d | topic_summary_time: 2026-10-08 11:52:04]用户在将文档翻译成多种语言并部署到Vercel的过程中遇到语言切换不生效的问题。经排查，根因是Nuxt Content v3在构建时将内容编译进数据库，而用户生成的中文翻译文件未被包含在之前的构建中。修复方法是使用dev模式（pnpm run docs）让服务器自动重新解析文件，或在验证生产构建前重新运行docs:build以更新.output中的数据库。后续工作流建议在翻译迭代阶段使用dev模式，推送Vercel前执行完整build。
