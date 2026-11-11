@@ -243,7 +243,7 @@ node scripts/translate-content.mjs --dry-run    # 只打印计划
 | 触发 | push 到 `v4`（`docs/**`、`src/**`、`vercel.json`、workflow 变更）或 `workflow_dispatch` |
 | 运行环境 | `ubuntu-latest` + Node 22 + pnpm `node-linker=hoisted` |
 | 构建 | 跳过 `vercel pull` / `vercel build`；在 `docs/` 直接 `VERCEL=1 NITRO_PRESET=vercel pnpm exec nuxt build`，按 `default` / `zh,ja,ko` / `fr,de,nl,es` 三批预渲染并合并 HTML |
-| 内存 | `NODE_OPTIONS=--max-old-space-size=12288`；`nitro.prerender.concurrency=1`、`failOnError=false` |
+| 内存 | `NODE_OPTIONS=--max-old-space-size=12288`；`nitro.prerender.concurrency=1`、`failOnError=false`。**根因：本地 macOS 即便堆调到 12GB 仍 OOM**——7 语言 × 196 文件 + component-meta 解析 + 全量预渲染，在 darwin-arm64 上峰值超过 16GB。CI 的 Linux runner 16GB + hoisted pnpm 布局才能扛住 |
 | 函数数 | 删除 `functions/` 下约 300 个指向 `__fallback` 的软链，把 `config.json` 的 `dest` 全部重写为 `/__fallback`（Hobby 档 12 函数上限） |
 | 依赖 | 构建后递归补齐 `__fallback.func/node_modules` 缺失的传递依赖 |
 | 上传 | `vercel deploy --prebuilt --prod --yes --archive=tgz`（超过 5000 文件会触发免费档 24h 上传配额） |
@@ -252,6 +252,7 @@ node scripts/translate-content.mjs --dry-run    # 只打印计划
 
 维护要点：
 
+- **本地完整预渲染构建不可行**：即使把 `NODE_OPTIONS=--max-old-space-size=12288`，macOS 上跑全量 7 语言 + 预渲染仍会 OOM。本地改完只跑过 dev server 或 `SKIP_PRERENDER=1 nuxt build docs` 验证 SSR 模式；完整预渲染 + 函数归并 + 依赖修复 **必须** 让 GitHub Actions 跑完。
 - 不要恢复 `vercel pull` / `vercel build`：服务端 `rootDirectory=docs` 会覆盖仓库 `vercel.json`，导致 Tsconfig not found 并绕过定义的构建命令。
 - 不要用 `SKIP_PRERENDER=1` 代替分批预渲染：静态 HTML 比全站走 SSR 函数可靠得多。
 - 不用 preview + alias（`vercel alias set` 鉴权路径异常，报 User not found），直接 `--prod`。
@@ -315,11 +316,12 @@ node scripts/translate-content.mjs --dry-run    # 只打印计划
 
 ## 风险与降级
 
-1. **i18n 模块与 nuxt-og-image / nuxt-agent-discovery 等模块兼容性**：装好后跑 `pnpm run docs` 若有模块冲突，可暂时在 i18n 配置里 `bundle: { optimizeTranslationDirective: false }` 等。先 dev 模式跑起来看。
-2. **MDC 语法被 LLM 破坏**：脚本里用强 prompt + 代码块白名单（`::alert`、`:icon` 等保留），跑完后跑 `pnpm run lint` 对 content 做 markdown 校验。
-3. **翻译体量大**：约 130 文件 × 7 语言 ≈ 910 次翻译调用，AI gateway 速率限制可能触发，脚本加 `concurrency: 3` + 重试。
-4. **routeRules 冲突**：现有 `/docs/components/button-group → /docs/components/field-group` 等大量重定向，i18n 加前缀后英文版规则仍生效，非默认语言版会进入 404 fallback，可接受但需要用 lint 验证没有死链。
-5. **`dev:prepare` 在 Vercel 上较慢**：因为要构建 Nuxt UI 源码 stub + vue playground build，可能超过 Vercel 免费档 45 分钟构建上限。可考虑 pre-built dist 走 npm 包，或在 CI 里 cache。
+1. **本地完整构建 OOM（已验证必须走 CI）**：7 语言 × 196 文件的 content SQLite 写入 + component-meta 全量解析 + 预渲染并发，在 macOS (darwin-arm64) 上峰值内存超 16GB，即使堆调到 `--max-old-space-size=12288` 也会在第二或第三批预渲染时崩掉。**没有可行的本地完整构建路径**，任何本地验证只跑 dev 或 `SKIP_PRERENDER=1 nuxt build` / `PRERENDER_LOCALES=default nuxt build`。完整预渲染 + 函数归并 + 依赖修复全部依赖 GitHub Actions 的 Linux 16GB runner。
+2. **i18n 模块与 nuxt-og-image / nuxt-agent-discovery 等模块兼容性**：装好后跑 `pnpm run docs` 若有模块冲突，可暂时在 i18n 配置里 `bundle: { optimizeTranslationDirective: false }` 等。先 dev 模式跑起来看。
+3. **MDC 语法被 LLM 破坏**：脚本里用强 prompt + 代码块白名单（`::alert`、`:icon` 等保留），跑完后跑 `pnpm run lint` 对 content 做 markdown 校验。
+4. **翻译体量大**：约 130 文件 × 7 语言 ≈ 910 次翻译调用，AI gateway 速率限制可能触发，脚本加 `concurrency: 3` + 重试。
+5. **routeRules 冲突**：现有 `/docs/components/button-group → /docs/components/field-group` 等大量重定向，i18n 加前缀后英文版规则仍生效，非默认语言版会进入 404 fallback，可接受但需要用 lint 验证没有死链。
+6. **`dev:prepare` 在 Vercel 上较慢**：因为要构建 Nuxt UI 源码 stub + vue playground build，可能超过 Vercel 免费档 45 分钟构建上限。已通过 GitHub Actions 接管构建规避。
 
 ## 后续可选优化
 

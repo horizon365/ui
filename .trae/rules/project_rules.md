@@ -20,6 +20,7 @@
 
 ## 构建与部署
 
+- **本地完整预渲染构建不可行**：7 语言 × 196 个内容文件 + component-meta 解析 + 批量预渲染，即使把 `NODE_OPTIONS` 调到 `--max-old-space-size=12288`，在 macOS (darwin-arm64) 上仍经常 OOM；完整预渲染和函数后处理 **必须走 GitHub Actions**。本地验证可临时 `SKIP_PRERENDER=1 nuxt build docs` 只跑 SSR 模式，或 `PRERENDER_LOCALES=default nuxt build docs` 只预渲染英文一批。
 - 部署走 [deploy-docs.yml](file:///Users/yiqun/WebstormProjects/ui/.github/workflows/deploy-docs.yml)（`v4` 分支，ubuntu-latest，Node 22，pnpm `node-linker=hoisted`）；不要依赖 Vercel Dashboard 的 Git 自动构建。
 - 禁止恢复 `vercel pull` / `vercel build`：服务端 `rootDirectory=docs` 会覆盖仓库 `vercel.json`，导致 Tsconfig not found 并绕过构建命令。
 - 预渲染必须按语言分批（`default` / `zh,ja,ko` / `fr,de,nl,es`），保持 `concurrency: 1` 与 `failOnError: false`；不要用 `SKIP_PRERENDER=1` 替代分批。
