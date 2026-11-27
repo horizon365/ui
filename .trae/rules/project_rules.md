@@ -1,6 +1,6 @@
 # Nuxt UI 项目规则（文档站 i18n fork）
 
-适用于本仓库的所有会话。上游组件库的通用约定仍以 [AGENTS.md](file:///Users/yiqun/WebstormProjects/ui/AGENTS.md) 为准，本文件只补充本 fork 的硬约束。背景与踩坑记录见 [project_memory.md](file:///Users/yiqun/WebstormProjects/ui/.trae/memory/project_memory.md) 和 [nuxt-ui-docs-i18n-vercel.md](file:///Users/yiqun/WebstormProjects/ui/.trae/documents/nuxt-ui-docs-i18n-vercel.md)。
+适用于本仓库的所有会话。上游组件库的通用约定仍以 [AGENTS.md](file:///Users/yiqun/WebstormProjects/ui/AGENTS.md) 为准，本文件只补充本 fork 的硬约束。背景与踩坑记录见 [project_memory.md](file:///Users/yiqun/WebstormProjects/ui/.trae/memory/project_memory.md) 和 [nuxt-ui-docs-i18n-cloudflare.md](file:///Users/yiqun/WebstormProjects/ui/.trae/documents/nuxt-ui-docs-i18n-cloudflare.md)。
 
 ## 文档站与 i18n
 
@@ -20,12 +20,13 @@
 
 ## 构建与部署
 
-- **本地完整预渲染构建不可行**：7 语言 × 196 个内容文件 + component-meta 解析 + 批量预渲染，即使把 `NODE_OPTIONS` 调到 `--max-old-space-size=12288`，在 macOS (darwin-arm64) 上仍经常 OOM；完整预渲染和函数后处理 **必须走 GitHub Actions**。本地验证可临时 `SKIP_PRERENDER=1 nuxt build docs` 只跑 SSR 模式，或 `PRERENDER_LOCALES=default nuxt build docs` 只预渲染英文一批。
-- 部署走 [deploy-docs.yml](file:///Users/yiqun/WebstormProjects/ui/.github/workflows/deploy-docs.yml)（`v4` 分支，ubuntu-latest，Node 22，pnpm `node-linker=hoisted`）；不要依赖 Vercel Dashboard 的 Git 自动构建。
-- 禁止恢复 `vercel pull` / `vercel build`：服务端 `rootDirectory=docs` 会覆盖仓库 `vercel.json`，导致 Tsconfig not found 并绕过构建命令。
-- 预渲染必须按语言分批（`default` / `zh,ja,ko` / `fr,de,nl,es`），保持 `concurrency: 1` 与 `failOnError: false`；不要用 `SKIP_PRERENDER=1` 替代分批。
-- 部署命令固定为 `vercel deploy --prebuilt --prod --yes --archive=tgz`；不要用 preview + alias（`vercel alias set` 鉴权路径会报 User not found）。
-- 构建后必须删除 `functions/` 下指向 `__fallback` 的软链、把 `config.json` 的 `dest` 归并到 `/__fallback`（Hobby 档 12 函数上限），并补齐函数目录缺失的传递依赖。
+- **本地完整预渲染构建不可行**：7 语言 × 196 个内容文件 + component-meta 解析 + 批量预渲染，即使把 `NODE_OPTIONS` 调到 `--max-old-space-size=12288`，在 macOS (darwin-arm64) 上仍经常 OOM；完整 `nuxt generate` **必须走 GitHub Actions**。本地验证可 `SKIP_PRERENDER=1 nuxt build docs`（只验打包）或 `PRERENDER_LOCALES=default nuxt generate`（只预渲染英文）。
+- **部署是纯静态**：`nuxt generate` → `wrangler pages deploy .output/public`（Cloudflare Pages 直传）。不要引入 Worker/`cloudflare_module`：Worker Free 档 3 MiB gzip，而本站 Nitro 服务端约 5.5 MiB；Pages 免费档为无限请求、20,000 文件、单文件 25 MiB。
+- 因为静态化，`/api/ai`、`/api/chat`、`/api/completion`、`/mcp` 不存在：`runtimeConfig.public.aiEnabled`（`NUXT_PUBLIC_AI_ENABLED`）在 production 默认 false，所有 Ask AI 入口按此隐藏。要恢复需改用付费 Worker 或外部 API。
+- 依赖服务端的动态数据改为构建时快照：`/api/github/releases.json`、`/api/fonts.json` 走 `routeRules.prerender`；组件页 Changelog 只渲染最近发布列表。
+- 重定向由 [generate-redirects.mjs](file:///Users/yiqun/WebstormProjects/ui/docs/scripts/generate-redirects.mjs) 从 `nuxt.config.ts` 的 `routeRules` 生成 `_redirects`；改重定向规则后必须确认脚本仍能解析（少于 100 条会直接报错）。
+- 部署命令固定为 `wrangler pages deploy .output/public --project-name=nuxt-ui-docs --branch=v4`（在 `docs/` 下执行）；Pages 项目的生产分支必须是 `v4`，令牌需要 Cloudflare Pages:Edit。
+- 构建时用 GitHub secret `NUXT_GITHUB_TOKEN` 预渲染 releases/contributors；`CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` 用于上传。
 
 ## 通用
 

@@ -5,7 +5,7 @@ import { snapshotStoredTheme, writeStoredTheme } from '../utils/theme/storage'
 
 const { track } = useAnalytics()
 
-const { open: chatOpen } = useChat()
+const { open: chatOpen, aiEnabled } = useChat()
 
 function toggleChat() {
   if (!chatOpen.value) {
@@ -117,7 +117,7 @@ const shareOpen = ref(false)
       <ThemeStudioViewSwitcher />
 
       <template #right>
-        <UTooltip text="Ask AI" :kbds="['meta', 'I']" ignore-non-keyboard-focus>
+        <UTooltip v-if="aiEnabled" text="Ask AI" :kbds="['meta', 'I']" ignore-non-keyboard-focus>
           <UButton
             color="neutral"
             variant="outline"

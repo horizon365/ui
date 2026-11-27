@@ -139,7 +139,7 @@ if (import.meta.server) {
   ])
 }
 
-const { open, ask } = useChat()
+const { open, ask, aiEnabled } = useChat()
 const studioIcons = useStudioIcons()
 
 const links = computed(() => [{
@@ -147,12 +147,14 @@ const links = computed(() => [{
   label: 'Edit this page',
   to: `https://github.com/nuxt/ui/edit/v4/docs/content/${page?.value?.stem}.md`,
   target: '_blank'
-}, {
-  // Nuxi, the same mark every Ask AI trigger wears, so it doesn't skin with the pack
-  icon: 'i-custom-nuxi',
-  label: 'Explain with AI',
-  onClick: () => ask('Read this documentation page and summarize it. I want to ask questions about it.')
-}])
+}, ...(aiEnabled.value
+  ? [{
+      // Nuxi, the same mark every Ask AI trigger wears, so it doesn't skin with the pack
+      icon: 'i-custom-nuxi',
+      label: 'Explain with AI',
+      onClick: () => ask('Read this documentation page and summarize it. I want to ask questions about it.')
+    }]
+  : [])])
 </script>
 
 <template>

@@ -10,7 +10,7 @@ const { style, link, color } = useTheme()
 
 // same lazy mount as app.vue: a static mount here would defeat the
 // dynamic import and pull the studio engine back into the entry chunk
-const { open: chatOpen } = useChat()
+const { open: chatOpen, aiEnabled } = useChat()
 const chatSeen = ref(false)
 watch(chatOpen, (value) => {
   if (value) chatSeen.value = true
@@ -24,6 +24,7 @@ const { open: searchOpen } = useContentSearch()
 defineShortcuts({
   meta_i: {
     handler: () => {
+      if (!aiEnabled.value) return
       if (searchOpen.value) {
         searchOpen.value = false
         chatOpen.value = true
@@ -81,7 +82,7 @@ provide('navigation', rootNavigation)
       </div>
 
       <ClientOnly>
-        <LazyChat v-if="chatSeen" />
+        <LazyChat v-if="chatSeen && aiEnabled" />
 
         <Search :navigation="navigationByFramework" />
       </ClientOnly>

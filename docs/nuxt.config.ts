@@ -23,23 +23,42 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     'nuxt-og-image',
     'nuxt-schema-org',
-    'motion-v/nuxt',
-    '@vercel/analytics',
-    '@vercel/speed-insights'
+    'motion-v/nuxt'
   ],
+
+  runtimeConfig: {
+    public: {
+      // Hidden by default: production is a static export with no /api/ai.
+      aiEnabled: false
+    }
+  },
 
   $development: {
     site: {
       url: 'http://localhost:3000'
+    },
+    // Local dev keeps the AI assistant; the production static build ships
+    // without a server, so its entry points are hidden there.
+    runtimeConfig: {
+      public: {
+        aiEnabled: true
+      }
     }
   },
 
   $production: {
     // Allow the build-time site URL to be overridden via `NUXT_PUBLIC_SITE_URL`,
-    // e.g. for local previews of the production bundle (`npx serve .output/public`).
-    // Falls back to the production domain when the env var is unset (Vercel deploys).
+    // e.g. for local previews of the production bundle.
+    // Falls back to the production domain when the env var is unset.
     site: {
       url: process.env.NUXT_PUBLIC_SITE_URL || 'https://nuxt-ui.vite.js.cn'
+    },
+    // The site deploys as a pure static export (Cloudflare Pages), so there is
+    // no Nitro server for /api/ai, /api/chat, /api/completion or /mcp.
+    runtimeConfig: {
+      public: {
+        aiEnabled: process.env.NUXT_PUBLIC_AI_ENABLED === 'true'
+      }
     }
   },
 
@@ -86,13 +105,10 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/api/navigation.json': { prerender: true },
-    // rendered per request: a shared theme rides ?doc=, which a prerendered
-    // page would never see (pages/theme.vue)
-    '/theme': { prerender: false },
-    // rendered per request from the GitHub data the API routes cache for an
-    // hour, a prerender would freeze the latest release at deploy time
-    '/docs/releases': { prerender: false },
-    '/docs/releases/**': { prerender: false },
+    // Snapshots consumed by client-side code (component changelog, releases
+    // middleware) — there is no server in the static export.
+    '/api/github/releases.json': { prerender: true },
+    '/api/fonts.json': { prerender: true },
     // v4 redirects - moved to `docs/`
     '/getting-started/**': { redirect: { to: '/docs/getting-started/**', statusCode: 301 }, prerender: false },
     '/components/**': { redirect: { to: '/docs/components/**', statusCode: 301 }, prerender: false },
@@ -221,7 +237,8 @@ export default defineNuxtConfig({
     }
   },
 
-  compatibilityDate: '2026-01-14',
+  // 2026-08-04+ enables Node.js compatibility by default on Workers.
+  compatibilityDate: '2026-11-11',
 
   // Sourcemaps cost a lot of memory when Nitro bundles 1574 content files —
   // disable them for production builds. The CI runs on GitHub's 16GB public
@@ -541,7 +558,9 @@ export default defineNuxtConfig({
 
   image: {
     format: ['webp', 'jpeg', 'jpg', 'png', 'svg'],
-    provider: 'ipx'
+    // `ipx` would serve /_ipx/** from the Worker and needs sharp at runtime,
+    // which Workers does not support. Pre-generate the variants at build time.
+    provider: 'ipxStatic'
   },
 
   llms: {

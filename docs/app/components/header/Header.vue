@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const route = useRoute()
 const { desktopLinks } = useHeader()
-const { open } = useChat()
+const { open, aiEnabled } = useChat()
 const { track } = useAnalytics()
 const { locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
@@ -97,35 +97,37 @@ const currentLocaleName = computed(() => {
         />
       </UTooltip>
 
-      <USeparator orientation="vertical" class="hidden lg:flex h-auto self-stretch py-1.5 mx-1.5 lg:me-3" />
+      <template v-if="aiEnabled">
+        <USeparator orientation="vertical" class="hidden lg:flex h-auto self-stretch py-1.5 mx-1.5 lg:me-3" />
 
-      <!-- ghost among the ghost controls it sits with below `lg`, framed on its
-           own beyond the separator above it; no tooltip where there is no hover -->
-      <UButton
-        color="neutral"
-        variant="ghost"
-        aria-label="Ask AI"
-        class="lg:hidden -order-1"
-        @click="toggleChat"
-      >
-        <template #leading>
-          <NuxiIcon class="size-5 shrink-0" />
-        </template>
-      </UButton>
-
-      <UTooltip text="Ask AI" :kbds="['meta', 'I']" class="hidden lg:flex" ignore-non-keyboard-focus>
+        <!-- ghost among the ghost controls it sits with below `lg`, framed on its
+             own beyond the separator above it; no tooltip where there is no hover -->
         <UButton
           color="neutral"
-          variant="outline"
-          label="Ask AI"
+          variant="ghost"
           aria-label="Ask AI"
+          class="lg:hidden -order-1"
           @click="toggleChat"
         >
           <template #leading>
             <NuxiIcon class="size-5 shrink-0" />
           </template>
         </UButton>
-      </UTooltip>
+
+        <UTooltip text="Ask AI" :kbds="['meta', 'I']" class="hidden lg:flex" ignore-non-keyboard-focus>
+          <UButton
+            color="neutral"
+            variant="outline"
+            label="Ask AI"
+            aria-label="Ask AI"
+            @click="toggleChat"
+          >
+            <template #leading>
+              <NuxiIcon class="size-5 shrink-0" />
+            </template>
+          </UButton>
+        </UTooltip>
+      </template>
     </template>
 
     <template #toggle="{ open, toggle, ui }">

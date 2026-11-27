@@ -496,7 +496,18 @@ export default defineEventHandler(async (event) => {
   })
 
   const abortController = new AbortController()
-  event.node.req.on('close', () => abortController.abort())
+  // Workers expose the client connection on the platform request; Node only
+  // has event.node. Keep both so streaming aborts locally and on Cloudflare.
+  const platformRequest = (event.context.cloudflare as { request?: Request } | undefined)?.request
+  if (platformRequest) {
+    if (platformRequest.signal.aborted) {
+      abortController.abort()
+    } else {
+      platformRequest.signal.addEventListener('abort', () => abortController.abort(), { once: true })
+    }
+  } else {
+    event.node.req.on('close', () => abortController.abort())
+  }
 
   const agent = new ToolLoopAgent({
     model: 'anthropic/claude-sonnet-5',

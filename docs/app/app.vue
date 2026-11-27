@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const { open: chatOpen } = useChat()
+const { open: chatOpen, aiEnabled } = useChat()
 const chatSeen = ref(false)
 watch(chatOpen, (value) => {
   if (value) chatSeen.value = true
@@ -15,6 +15,7 @@ const { open: searchOpen } = useContentSearch()
 defineShortcuts({
   meta_i: {
     handler: () => {
+      if (!aiEnabled.value) return
       if (searchOpen.value) {
         searchOpen.value = false
         chatOpen.value = true
@@ -105,7 +106,7 @@ const showLayout = computed(() => !route.path.startsWith('/examples') && !route.
           <!-- mounted on first open (state persists, so a kept-open chat
                remounts on load): the AI SDK and the chat UI stay out of the
                entry chunk, which every plain docs visit can skip downloading -->
-          <LazyChat v-if="chatSeen" />
+          <LazyChat v-if="chatSeen && aiEnabled" />
 
           <Search :navigation="navigationByFramework" />
         </ClientOnly>

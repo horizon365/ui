@@ -6,6 +6,8 @@
     "dev": "nuxt dev",
     "build": "nuxt build",
     "generate": "nuxt generate",
+    "preview": "wrangler pages dev .output/public",
+    "deploy": "wrangler pages deploy .output/public",
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
@@ -17,6 +19,8 @@
     "@iconify-json/lucide": "catalog:",
     "@iconify-json/simple-icons": "catalog:",
     "@iconify-json/vscode-icons": "catalog:",
+    "@modelcontextprotocol/client": "catalog:",
+    "@modelcontextprotocol/server": "catalog:",
     "@nuxt/content": "catalog:",
     "@nuxt/image": "catalog:",
     "@nuxt/ui": "catalog:",
@@ -32,9 +36,9 @@
     "@tiptap/extension-emoji": "catalog:",
     "@tiptap/extension-text-align": "catalog:",
     "@vercel/analytics": "catalog:",
-    "@vercel/speed-insights": "catalog:",
     "@vueuse/integrations": "catalog:",
     "@vueuse/nuxt": "catalog:",
+    "agents": "catalog:",
     "ai": "catalog:",
     "capture-website": "catalog:",
     "fflate": "catalog:",
@@ -67,6 +71,7 @@
   },
   "devDependencies": {
     "@shikijs/types": "catalog:",
-    "@types/sortablejs": "catalog:"
+    "@types/sortablejs": "catalog:",
+    "wrangler": "catalog:"
   }
 }

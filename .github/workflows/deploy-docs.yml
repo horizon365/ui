@@ -1,27 +1,28 @@
 name: Deploy Docs
 
-# Build the Nuxt UI documentation site on a Linux runner and deploy to Vercel
-# via the Vercel CLI. Building on Linux ensures native modules (sharp, etc.)
-# ship the correct linux-x64 binary — avoiding the darwin-arm64 crash that
-# occurs when the output is built on macOS and run on Vercel's Linux runtime.
+# Build the Nuxt UI documentation site as a **pure static export** and publish
+# it to Cloudflare Pages (direct upload with Wrangler).
 #
-# Prerequisites:
-#   - GitHub Secret VERCEL_TOKEN  (create at vercel.com/account/tokens)
+# Why static: Cloudflare's free Worker tier caps the script at 3 MiB gzipped
+# and 10 ms CPU per request. The Nitro server bundle for this docs app measures
+# ~5.5 MiB gzipped, so a server on Cloudflare needs the paid plan. A static
+# export sidesteps both limits (Pages free: unlimited requests, 20,000 files,
+# 25 MiB per file) at the cost of the server-only features: /api/ai, /api/chat,
+# /api/completion and /mcp. Those entry points are hidden when
+# `NUXT_PUBLIC_AI_ENABLED` is not `true`.
 #
-# The build bypasses `vercel build` entirely: it resolves project settings
-# from the Vercel API (rootDirectory=docs, framework default `pnpm run build`)
-# which bypasses the repo-root vercel.json and dies on the missing root
-# .nuxt/tsconfig.json. Instead we run the same commands as the vercel.json
-# buildCommand with the Nitro Vercel preset directly (locally verified to
-# produce a byte-identical config.json after post-processing).
+# The build stays on GitHub Actions because a full 7-locale prerender exceeds
+# what a local macOS machine can hold in memory.
 #
-# The deploy targets production directly (`vercel deploy --prod`), not
-# preview + `vercel alias set` — the alias command resolves auth differently
-# and fails with "User not found". Nitro's vercel preset generates ~300
-# symlinked functions, so we collapse them to a single /__fallback function
-# first; that keeps the output within Vercel Hobby's 12-serverless-function
-# limit for a prod deployment (routing-equivalent: every symlink pointed to
-# __fallback anyway).
+# Prerequisites (one-time):
+#   - Cloudflare Pages project `nuxt-ui-docs` (Direct Upload) whose production
+#     branch is `v4`; bind nuxt-ui.vite.js.cn to it in the dashboard.
+#   - GitHub secrets: CLOUDFLARE_API_TOKEN (Cloudflare Pages:Edit) and
+#     CLOUDFLARE_ACCOUNT_ID.
+#   - GitHub secret NUXT_GITHUB_TOKEN (used at build time to prerender the
+#     releases/contributors pages; optional but without it GitHub rate-limits).
+#   - Optional repository variable NUXT_PUBLIC_SITE_URL to override the
+#     production domain baked into canonical/sitemap/hreflang URLs.
 
 on:
   push:
@@ -29,7 +30,6 @@ on:
     paths:
       - 'docs/**'
       - 'src/**'
-      - 'vercel.json'
       - '.github/workflows/deploy-docs.yml'
   workflow_dispatch:
 
@@ -44,9 +44,8 @@ jobs:
       contents: read
 
     env:
-      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-      VERCEL_ORG_ID: team_eHTWeUVDF2W0o5TQBTfoshCU
-      VERCEL_PROJECT_ID: prj_NpCOJ1mN8ZgsDcUdqrKkL5btsrAd
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
     steps:
       - name: Checkout
@@ -63,27 +62,13 @@ jobs:
           node-version: 22
           cache: pnpm
 
-      # Hoisted node_modules so Nitro can copy native modules (better-sqlite3,
-      # sharp) into the __fallback function dir. pnpm's default symlink layout
-      # leaves the function with dangling symlinks that crash at runtime.
+      # Hoisted node_modules: Nuxt Content's build-time SQLite connector and
+      # sharp expect real files, not pnpm's symlink farm.
       - name: Configure pnpm node-linker
         run: echo 'node-linker=hoisted' > .npmrc
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-
-      - name: Install Vercel CLI
-        run: npm install -g vercel@63.1.0
-
-      # Project linkage for `vercel deploy --prebuilt --prod`.
-      # Deliberately NOT running `vercel pull`: it copies the server project
-      # settings (rootDirectory=docs) and makes any later vercel command
-      # resolve paths from docs/ instead of the repo root.
-      - name: Write project linkage
-        run: |
-          mkdir -p .vercel
-          echo '{"projectId":"prj_NpCOJ1mN8ZgsDcUdqrKkL5btsrAd","orgId":"team_eHTWeUVDF2W0o5TQBTfoshCU","projectName":"ui"}' > .vercel/project.json
-          cat .vercel/project.json
 
       # Build the UI module stub once (needed before any nuxt build).
       - name: Build UI module stub
@@ -98,263 +83,103 @@ jobs:
           mkdir -p ../.nuxt && echo '{"compilerOptions":{}}' > ../.nuxt/tsconfig.json
 
       # --------------------------------------------------------------------------
-      # Prerender is split by locale to avoid OOM. Each `nuxt build` regenerates
-      # docs/.vercel/output (function + static assets + prerendered HTML for that
-      # locale batch). We keep the first batch's output as the base and merge only
-      # the *.html files from subsequent batches into it.
+      # Prerender is split by locale to avoid OOM. `nuxt generate` writes a
+      # static site to docs/.output/public; each batch regenerates it, so the
+      # first batch is saved and the later ones are merged into it.
       #
-      # concurrency=1 in nuxt.config keeps prerender memory low (one page at a
-      # time). max-old-space-size=12288 fits GitHub's 16GB public-repo runner
-      # with ~3.5GB headroom for native modules (sharp, better-sqlite3).
+      # concurrency=1 keeps prerender memory low (one page at a time).
+      # max-old-space-size=12288 fits GitHub's 16GB public-repo runner with
+      # ~3.5GB headroom for native modules (sharp, better-sqlite3).
       # --------------------------------------------------------------------------
-      - name: Build batch 1/3 — English (default)
+      - name: Generate batch 1/3 — English (default)
         working-directory: docs
         env:
-          VERCEL: '1'
-          NITRO_PRESET: vercel
           PRERENDER_LOCALES: default
+          NUXT_PUBLIC_SITE_URL: ${{ vars.NUXT_PUBLIC_SITE_URL }}
+          NUXT_GITHUB_TOKEN: ${{ secrets.NUXT_GITHUB_TOKEN }}
           NODE_OPTIONS: --max-old-space-size=12288
-        run: pnpm exec nuxt build
+        run: pnpm exec nuxt generate
 
       - name: Save base output
         run: |
-          rm -rf /tmp/base-output
-          mv docs/.vercel/output /tmp/base-output
-          echo "Base output saved: $(find /tmp/base-output/static -name '*.html' | wc -l) HTML files"
+          rm -rf /tmp/base-public
+          mv docs/.output/public /tmp/base-public
+          echo "Base output saved: $(find /tmp/base-public -name '*.html' | wc -l) HTML files"
 
-      - name: Build batch 2/3 — CJK (zh, ja, ko)
+      - name: Generate batch 2/3 — CJK (zh, ja, ko)
         working-directory: docs
         env:
-          VERCEL: '1'
-          NITRO_PRESET: vercel
           PRERENDER_LOCALES: 'zh,ja,ko'
+          NUXT_PUBLIC_SITE_URL: ${{ vars.NUXT_PUBLIC_SITE_URL }}
+          NUXT_GITHUB_TOKEN: ${{ secrets.NUXT_GITHUB_TOKEN }}
           NODE_OPTIONS: --max-old-space-size=12288
-        run: pnpm exec nuxt build
+        run: pnpm exec nuxt generate
 
-      - name: Merge CJK HTML into base
+      - name: Merge CJK output into base
         run: |
-          cd docs/.vercel/output/static
           count=0
           while IFS= read -r -d '' f; do
-            dest="/tmp/base-output/static/$f"
+            rel="${f#docs/.output/public/}"
+            dest="/tmp/base-public/$rel"
             mkdir -p "$(dirname "$dest")"
             cp "$f" "$dest"
             count=$((count+1))
-          done < <(find . -name '*.html' -print0)
-          echo "Merged $count HTML files from CJK batch"
+          done < <(find docs/.output/public -type f -print0)
+          echo "Merged $count files from CJK batch"
 
-      - name: Build batch 3/3 — European (fr, de, nl, es)
+      - name: Generate batch 3/3 — European (fr, de, nl, es)
         working-directory: docs
         env:
-          VERCEL: '1'
-          NITRO_PRESET: vercel
           PRERENDER_LOCALES: 'fr,de,nl,es'
+          NUXT_PUBLIC_SITE_URL: ${{ vars.NUXT_PUBLIC_SITE_URL }}
+          NUXT_GITHUB_TOKEN: ${{ secrets.NUXT_GITHUB_TOKEN }}
           NODE_OPTIONS: --max-old-space-size=12288
-        run: pnpm exec nuxt build
+        run: pnpm exec nuxt generate
 
-      - name: Merge European HTML into base
+      - name: Merge European output into base
         run: |
-          cd docs/.vercel/output/static
           count=0
           while IFS= read -r -d '' f; do
-            dest="/tmp/base-output/static/$f"
+            rel="${f#docs/.output/public/}"
+            dest="/tmp/base-public/$rel"
             mkdir -p "$(dirname "$dest")"
             cp "$f" "$dest"
             count=$((count+1))
-          done < <(find . -name '*.html' -print0)
-          echo "Merged $count HTML files from European batch"
+          done < <(find docs/.output/public -type f -print0)
+          echo "Merged $count files from European batch"
 
       - name: Restore merged output
         run: |
-          rm -rf docs/.vercel/output
-          mv /tmp/base-output docs/.vercel/output
-          echo "Total prerendered HTML: $(find docs/.vercel/output/static -name '*.html' | wc -l)"
-          echo "index.html exists: $(test -f docs/.vercel/output/static/index.html && echo yes || echo no)"
+          rm -rf docs/.output
+          mkdir -p docs/.output
+          mv /tmp/base-public docs/.output/public
+          echo "Total prerendered HTML: $(find docs/.output/public -name '*.html' | wc -l)"
+          echo "index.html exists: $(test -f docs/.output/public/index.html && echo yes || echo no)"
 
-      - name: Collapse symlinked functions
+      # Pages has no server, so the routeRules redirects become `_redirects`.
+      - name: Generate Pages redirects
+        run: node docs/scripts/generate-redirects.mjs
+
+      - name: Verify static output
         run: |
-          node << 'SCRIPT'
-          const fs = require('fs')
-          const path = require('path')
+          test -f docs/.output/public/index.html
+          test -f docs/.output/public/_redirects
+          test -f docs/.output/public/zh/index.html
+          test ! -e docs/.output/public/api/ai
+          test -f docs/.output/public/404.html || echo "WARN: 404.html not generated (Pages falls back to its default 404)"
+          echo "Redirects: $(grep -c '' docs/.output/public/_redirects)"
+          echo "Files: $(find docs/.output/public -type f | wc -l)"
+          du -sh docs/.output/public
 
-          const outputDir = 'docs/.vercel/output'
-          const functionsDir = path.join(outputDir, 'functions')
-
-          // 1. Delete all symlinks under functions/ (Nitro creates ~300
-          //    symlinks pointing to __fallback.func; keeping them exceeds
-          //    Vercel Hobby's 12-function limit and breaks prod deployment).
-          function deleteSymlinks(dir) {
-            for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-              const full = path.join(dir, entry.name)
-              if (entry.isSymbolicLink()) {
-                fs.unlinkSync(full)
-              } else if (entry.isDirectory()) {
-                deleteSymlinks(full)
-              }
-            }
-          }
-          if (fs.existsSync(functionsDir)) {
-            deleteSymlinks(functionsDir)
-            // prune empty directories left behind
-            const prune = (dir) => {
-              for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-                if (entry.isDirectory()) {
-                  const full = path.join(dir, entry.name)
-                  prune(full)
-                  if (fs.readdirSync(full).length === 0) fs.rmdirSync(full)
-                }
-              }
-            }
-            prune(functionsDir)
-          }
-
-          // 2. Rewrite every non-__fallback dest to /__fallback.
-          //    The deleted symlinks pointed to __fallback anyway. Static
-          //    prerendered pages are served directly by Vercel's filesystem
-          //    handler (routes without a dest), so only the function refs
-          //    need collapsing. Routing-equivalent.
-          const configPath = path.join(outputDir, 'config.json')
-          const config = JSON.parse(fs.readFileSync(configPath, 'utf8'))
-          let count = 0
-          for (const route of (config.routes || [])) {
-            if (route.dest && route.dest !== '/__fallback') {
-              route.dest = '/__fallback'
-              count++
-            }
-          }
-          fs.writeFileSync(configPath, JSON.stringify(config, null, 2))
-          console.log(`Collapsed ${count} route dests to /__fallback`)
-          SCRIPT
-
-      # The .vercel/project.json lives at the repo root, so the Vercel CLI
-      # resolves the project root to the repo root and looks for
-      # .vercel/output there — not at docs/.vercel/output where Nitro wrote it.
-      # Move the output into place (same filesystem, so this is instant).
-      - name: Move output to project root
-        run: |
-          rm -rf .vercel/output
-          mv docs/.vercel/output .vercel/output
-
-      # Nitro externalizes some packages (copies them into the function's
-      # node_modules) but misses their transitive dependencies. pnpm's
-      # symlink layout makes this worse — @modelcontextprotocol/sdk was
-      # present but its dep 'content-type' was missing, causing
-      # ERR_MODULE_NOT_FOUND at runtime. This step recursively resolves
-      # and copies all missing transitive deps from the project node_modules.
-      - name: Repair missing transitive deps in function node_modules
-        run: |
-          node << 'SCRIPT'
-          const fs = require('fs')
-          const path = require('path')
-
-          const projectNM = path.resolve('node_modules')
-          const funcDir = path.resolve('.vercel/output/functions/__fallback.func')
-          const funcNM = path.join(funcDir, 'node_modules')
-
-          if (!fs.existsSync(funcNM)) {
-            console.log('No node_modules in function dir, skipping')
-            process.exit(0)
-          }
-
-          const copied = new Set()
-
-          function getDeps(pkgDir) {
-            const pj = path.join(pkgDir, 'package.json')
-            if (!fs.existsSync(pj)) return []
-            try {
-              const j = JSON.parse(fs.readFileSync(pj, 'utf8'))
-              return Object.keys({ ...j.dependencies, ...j.peerDependencies, ...j.optionalDependencies })
-            } catch { return [] }
-          }
-
-          function resolvePackage(name) {
-            // Check scoped package path
-            const direct = path.join(projectNM, name)
-            if (fs.existsSync(path.join(direct, 'package.json'))) return direct
-            return null
-          }
-
-          function copyPackage(name) {
-            if (copied.has(name)) return
-            const src = resolvePackage(name)
-            if (!src) {
-              console.log(`  WARN: ${name} not found in project node_modules`)
-              return
-            }
-            const dest = path.join(funcNM, name)
-            fs.mkdirSync(path.dirname(dest), { recursive: true })
-            if (!fs.existsSync(dest)) {
-              fs.cpSync(src, dest, { recursive: true, dereference: true })
-              copied.add(name)
-              console.log(`  copied: ${name}`)
-            }
-            // Recursively copy its deps
-            for (const dep of getDeps(src)) {
-              const depDest = path.join(funcNM, dep)
-              if (!fs.existsSync(depDest)) {
-                copyPackage(dep)
-              }
-            }
-          }
-
-          // Scan existing packages in function node_modules and fill gaps
-          function scanDir(dir, prefix = '') {
-            if (!fs.existsSync(dir)) return
-            for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-              if (entry.name.startsWith('.')) continue
-              if (entry.isDirectory()) {
-                if (entry.name.startsWith('@')) {
-                  // scoped: check next level
-                  scanDir(path.join(dir, entry.name), entry.name + '/')
-                } else {
-                  const pkgDir = path.join(dir, entry.name)
-                  const deps = getDeps(pkgDir)
-                  for (const dep of deps) {
-                    const depDest = path.join(funcNM, dep)
-                    if (!fs.existsSync(depDest)) {
-                      copyPackage(dep)
-                    }
-                  }
-                }
-              }
-            }
-          }
-
-          console.log('Scanning function node_modules for missing transitive deps...')
-          scanDir(funcNM)
-          console.log(`Done. Copied ${copied.size} packages.`)
-
-          // Verify the known-missing package
-          const ct = path.join(funcNM, 'content-type', 'package.json')
-          console.log(`content-type present: ${fs.existsSync(ct)}`)
-          SCRIPT
-
-      # Verify native modules made it into the function directory.
-      - name: Verify function bundle
-        run: |
-          echo "=== .vc-config.json ==="
-          cat .vercel/output/functions/__fallback.func/.vc-config.json
-          echo ""
-          echo "=== native modules in function node_modules ==="
-          ls -la .vercel/output/functions/__fallback.func/node_modules/better-sqlite3/build/Release/*.node 2>/dev/null || echo "better-sqlite3 .node NOT FOUND"
-          ls -la .vercel/output/functions/__fallback.func/node_modules/@img/sharp-linux-x64/build/Release/*.node 2>/dev/null || echo "sharp .node NOT FOUND"
-          echo ""
-          echo "=== function dir size ==="
-          du -sh .vercel/output/functions/__fallback.func/
-
-      # --archive=tgz: packs the output into a single tarball before upload.
-      # Without it the CLI uploads ~5000+ files individually (1693 static
-      # assets + the function's hoisted node_modules), which trips Vercel
-      # Free tier's 24h upload limit (code: api-upload-free).
-      - name: Deploy (production)
-        id: deploy
-        run: |
-          url=$(vercel deploy --prebuilt --prod --yes --archive=tgz --token "${VERCEL_TOKEN}")
-          echo "url=$url" >> "$GITHUB_OUTPUT"
+      - name: Deploy to Cloudflare Pages
+        working-directory: docs
+        run: pnpm exec wrangler pages deploy .output/public --project-name=nuxt-ui-docs --branch=v4
 
       - name: Summary
         run: |
           echo "### Deployment" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "- Production URL: ${{ steps.deploy.outputs.url }}" >> $GITHUB_STEP_SUMMARY
-          echo "- Custom domain: https://nuxt-ui.vite.js.cn" >> $GITHUB_STEP_SUMMARY
+          echo "- Target: Cloudflare Pages (static export)" >> $GITHUB_STEP_SUMMARY
+          echo "- Custom domain: ${{ vars.NUXT_PUBLIC_SITE_URL || 'https://nuxt-ui.vite.js.cn' }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Prerendered HTML: $(find docs/.output/public -name '*.html' | wc -l)" >> $GITHUB_STEP_SUMMARY
+          echo "- Server-only features disabled: AI chat, completion, MCP" >> $GITHUB_STEP_SUMMARY

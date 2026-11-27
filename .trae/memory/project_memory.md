@@ -1,14 +1,13 @@
 ## Hard Constraints
-- Vercel build command must be configured to generate necessary type files before building — to avoid 'Tsconfig not found' errors
-- Use Nitro's Vercel preset for deployment — ensures compatibility with Vercel's Build Output API
-- Vercel build command must handle both Root Directory=docs and Root Directory=root configurations — to correctly locate nuxt.config.ts and generate type files
-- Vercel Hobby tier has a hard limit of 12 serverless functions per deployment — all generated route functions must be replaced with a single __fallback function to avoid deployment rejection
-- Must use Linux (ubuntu-latest) CI runner for builds — to avoid native module (e.g. sharp) architecture mismatch between macOS and Vercel's Linux runtime
+- Docs deploy is a **pure static export**: GitHub Actions runs `nuxt generate` (3 locale batches) and uploads `.output/public` to Cloudflare Pages with `wrangler pages deploy`. No Worker, no D1, no `cloudflare_module` preset.
+- Cloudflare Workers Free cannot host the server: the Nitro bundle measured 27.8 MB raw / ~5.5 MB gzip vs the 3 MiB free cap (10 MiB paid). Static Pages free tier: unlimited requests, 20,000 files, 25 MiB per file.
+- Server-only features are removed in production: `/api/ai`, `/api/chat`, `/api/completion`, `/mcp`. `runtimeConfig.public.aiEnabled` (env `NUXT_PUBLIC_AI_ENABLED`) is false in production and every Ask AI entry point is hidden by it.
+- `@nuxt/image` must use `provider: 'ipxStatic'` — the `ipx` provider needs sharp at runtime.
+- Must use Linux (ubuntu-latest) CI runner for builds — local full prerender OOMs and native modules (sharp, better-sqlite3) must match the Linux target
 
 ## Engineering Conventions
 - Store build environment variables in `build.env` — for consistent environment configuration
 - Create empty tsconfig.json in root .nuxt directory during build — to satisfy vite-transform's file existence check
-- After local or CI build, post-process the output to delete all route function symlinks and rewrite all config.json dest entries to point to /__fallback — preserves routing behavior while complying with function count limits
 - Sitemap locale grouping must be based on exact collection names (e.g. docs_en, docs_zh) instead of generic 'docs' to avoid cross-locale URL leakage into incorrect sitemap files
 - Sitemap onUrl hooks must not rely on closure variables (use collection name parsing instead) to avoid serialization failures when passed to Nitro's virtual modules
 - `/robots.txt` must be explicitly added to the prerender route list to generate a static file, preventing SSR fallback 500 errors that block Google Search Console sitemap ingestion
@@ -38,7 +37,7 @@
 - Sitemap baseUrl must be set to match the deployment domain to avoid generating cross-domain sub-sitemap links that return 404 errors
 - Sitemap sub-sitemap paths (e.g. /__sitemap__/zh-Hans.xml) must be added to the prerender route list to generate static XML files instead of relying on fragile SSR function execution
 
-## Docs Site (i18n + Vercel)
+## Docs Site (i18n + Cloudflare)
 
 ### Content and local development
 - Docs content lives under `docs/content/{en,zh,ja,ko,fr,de,nl,es}/` with 196 files per locale (184 .md + 12 .yml). Collections are per locale (`docs_<locale>`, `index_<locale>`); page queries strip the locale prefix and fall back to `docs_en`.
@@ -52,8 +51,11 @@
 - Before a batch run, check for leftover `translate-content` processes with `ps aux` and kill them; an old process running the previous script overwrites new translations.
 - Acceptance: 7 locales × 196 files, identical paths, frontmatter YAML byte-identical to English, fenced code identical, MDC container/component skeleton sequence matching, no placeholder residue.
 
-### Deployment (current)
-- The deploy path is `.github/workflows/deploy-docs.yml` on the `v4` branch (ubuntu-latest, Node 22, pnpm `node-linker=hoisted`), not Vercel's Git auto-build. Never reintroduce `vercel pull` / `vercel build`.
-- Final deploy command is `vercel deploy --prebuilt --prod --yes --archive=tgz`. `vercel alias set` fails with "User not found", so the older preview+alias advice is superseded.
+### Deployment (current: Cloudflare Pages, static)
+- Deploy path is `.github/workflows/deploy-docs.yml` on `v4` (ubuntu-latest, Node 22, pnpm `node-linker=hoisted`): three batched `nuxt generate` runs (`PRERENDER_LOCALES` = `default` / `zh,ja,ko` / `fr,de,nl,es`), merge `.output/public`, generate `_redirects`, then `wrangler pages deploy .output/public --project-name=nuxt-ui-docs --branch=v4` from `docs/`.
+- `docs/wrangler.jsonc` only holds `name` + `pages_build_output_dir`; the Pages project's production branch must be `v4`.
+- One-time Cloudflare setup: create the Pages project (Direct Upload), bind `nuxt-ui.vite.js.cn`; GitHub secrets `CLOUDFLARE_API_TOKEN` (Pages:Edit) + `CLOUDFLARE_ACCOUNT_ID`, plus `NUXT_GITHUB_TOKEN` for build-time GitHub data.
+- `docs/scripts/generate-redirects.mjs` parses the `routeRules` redirects in `nuxt.config.ts` into Pages `_redirects`; it throws when it parses fewer than 100 rules.
+- Dynamic data is frozen at build: `/api/github/releases.json` and `/api/fonts.json` are prerendered; the component changelog shows the latest 10 releases (no per-component commits). `/theme` and `/docs/releases` are prerendered too.
 - `NUXT_PUBLIC_SITE_URL` feeds `site.url`, `i18n.baseUrl`, sitemap and canonical URLs; production defaults to `https://nuxt-ui.vite.js.cn`.
-- The full i18n + deployment record (including sitemap/prerender pitfalls) lives in `.trae/documents/nuxt-ui-docs-i18n-vercel.md`.
+- The full i18n + deployment record (including the Vercel and Workers history) lives in `.trae/documents/nuxt-ui-docs-i18n-cloudflare.md`.

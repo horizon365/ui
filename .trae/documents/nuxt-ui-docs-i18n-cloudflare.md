@@ -1,12 +1,12 @@
-# Nuxt UI 文档站多语言国际化 + Vercel 部署方案
+# Nuxt UI 文档站多语言国际化 + Cloudflare 部署方案
 
-> 状态：已实现（2026-10）。本文档是最初的实施计划，步骤 7、10 已按落地结果改写。运行时的事实来源为 [docs/nuxt.config.ts](file:///Users/yiqun/WebstormProjects/ui/docs/nuxt.config.ts)、[docs/content.config.ts](file:///Users/yiqun/WebstormProjects/ui/docs/content.config.ts)、[deploy-docs.yml](file:///Users/yiqun/WebstormProjects/ui/.github/workflows/deploy-docs.yml) 和 [project_memory.md](file:///Users/yiqun/WebstormProjects/ui/.trae/memory/project_memory.md)。
+> 状态：已实现（2026-10 上线，2026-11 由 Vercel 迁移到 Cloudflare Workers）。本文档是最初的实施计划，步骤 7、10 已按落地结果改写。运行时的事实来源为 [docs/nuxt.config.ts](file:///Users/yiqun/WebstormProjects/ui/docs/nuxt.config.ts)、[docs/content.config.ts](file:///Users/yiqun/WebstormProjects/ui/docs/content.config.ts)、[docs/wrangler.jsonc](file:///Users/yiqun/WebstormProjects/ui/docs/wrangler.jsonc)、[deploy-docs.yml](file:///Users/yiqun/WebstormProjects/ui/.github/workflows/deploy-docs.yml) 和 [project_memory.md](file:///Users/yiqun/WebstormProjects/ui/.trae/memory/project_memory.md)。
 
 ## Context
 
 最初的站点是纯英文单语言：130+ 个 Markdown 文档直接放在 `docs/content/docs/` 下，由单个 `docs` collection 扫描（[content.config.ts](file:///Users/yiqun/WebstormProjects/ui/docs/content.config.ts)），页面 [pages/docs/[...slug].vue](file:///Users/yiqun/WebstormProjects/ui/docs/app/pages/docs/[...slug].vue#L14) 直接用 `route.path` 查询 content，[useNavigation.ts](file:///Users/yiqun/WebstormProjects/ui/docs/app/composables/useNavigation.ts) 把 `/docs/${slug}` 硬编码进路径解析；站内没有 `@nuxtjs/i18n`、语言切换 UI 和 Vercel 配置。
 
-目标：把站点翻译成 7 种语言（中文 zh、日语 ja、韩语 ko、法语 fr、德语 de、荷兰语 nl、西班牙语 es），英文 en 为默认；URL 采用子路径（`/zh/docs/...`、`/ja/docs/...`，英文无前缀）；AI 翻译 + 人工校对；部署到 Vercel。当前 7 种语言各 196 个文件已全部翻译完成，结构/查询实现见步骤 2、3。
+目标：把站点翻译成 7 种语言（中文 zh、日语 ja、韩语 ko、法语 fr、德语 de、荷兰语 nl、西班牙语 es），英文 en 为默认；URL 采用子路径（`/zh/docs/...`、`/ja/docs/...`，英文无前缀）；AI 翻译 + 人工校对；部署到 Cloudflare Workers（2026-11 前为 Vercel）。当前 7 种语言各 196 个文件已全部翻译完成，结构/查询实现见步骤 2、3。
 
 ## 技术方案概览
 
@@ -20,7 +20,7 @@
 | Collection | 每种语言一个：`docs_en`、`docs_zh`、`docs_ja`、`docs_ko`、`docs_fr`、`docs_de`、`docs_nl`、`docs_es`（共享 schema） |
 | 页面查询 | `queryCollection('docs_' + locale.value).path(slug).first()` + fallback 到 `docs_en` |
 | sitemap hreflang | `@nuxtjs/sitemap` 与 `@nuxtjs/i18n` 集成后自动生成 |
-| Vercel 部署 | Root Directory = `docs/`，Build = `pnpm run dev:prepare && pnpm run docs:build`，Output = Nuxt 默认 `.output/public`，无需 vercel.json |
+| 部署 | GitHub Actions 预构建 + `wrangler deploy`，目标 Cloudflare Workers Static Assets（Nitro preset `cloudflare_module`） |
 
 ## 详细实施步骤
 
@@ -234,29 +234,33 @@ node scripts/translate-content.mjs --dry-run    # 只打印计划
 - `i18n.baseUrl` 必须与部署域名同源（取 `NUXT_PUBLIC_SITE_URL`），否则子 sitemap 指向 `ui.nuxt.com` 导致 404。
 - `/robots.txt`、`/sitemap.xml`、`/sitemap_index.xml`、`/__sitemap__/style.xsl` 以及 8 个 `/__sitemap__/*.xml` 必须加入 [nitro.prerender.routes](file:///Users/yiqun/WebstormProjects/ui/docs/nuxt.config.ts)，否则会落到 `__fallback` 函数返回 500，阻塞 Search Console 收录。
 
-### 步骤 10：Vercel 部署（最终方案）
+### 步骤 10：Cloudflare 部署（最终方案）
 
-最终没有采用 Vercel Dashboard 直连 Git 自动构建，而是 **GitHub Actions 预构建 + Vercel CLI 部署**，见 [deploy-docs.yml](file:///Users/yiqun/WebstormProjects/ui/.github/workflows/deploy-docs.yml)：
+**GitHub Actions 预构建 + Cloudflare Pages 静态部署**，见 [deploy-docs.yml](file:///Users/yiqun/WebstormProjects/ui/.github/workflows/deploy-docs.yml)。站点没有 Worker：`nuxt generate` 产出 8 语言完整静态站，Pages 只回源静态文件。Workers 方案已放弃——Nitro 服务端实测 27.8 MB raw / 约 5.5 MB gzip，超过 Free 档 3 MiB 上限（付费 10 MiB），且 D1 首次导入会撞 10ms CPU 上限；GitHub 预构建只解决本机内存，改变不了运行时配额。
 
 | 关注点 | 实际配置 |
 |--------|----------|
-| 触发 | push 到 `v4`（`docs/**`、`src/**`、`vercel.json`、workflow 变更）或 `workflow_dispatch` |
+| 触发 | push 到 `v4`（`docs/**`、`src/**`、workflow 变更）或 `workflow_dispatch` |
 | 运行环境 | `ubuntu-latest` + Node 22 + pnpm `node-linker=hoisted` |
-| 构建 | 跳过 `vercel pull` / `vercel build`；在 `docs/` 直接 `VERCEL=1 NITRO_PRESET=vercel pnpm exec nuxt build`，按 `default` / `zh,ja,ko` / `fr,de,nl,es` 三批预渲染并合并 HTML |
+| 构建 | `docs/` 下 `pnpm exec nuxt generate`，按 `default` / `zh,ja,ko` / `fr,de,nl,es` 三批预渲染；第一批 `.output/public` 作基底，后两批合并进去 |
+| 静态化取舍 | `/api/ai`、`/api/chat`、`/api/completion`、`/mcp` 不存在；`runtimeConfig.public.aiEnabled`（`NUXT_PUBLIC_AI_ENABLED`）在 production 默认 false，Ask AI 入口全部隐藏。`/theme`、`/docs/releases` 改为预渲染；`/api/github/releases.json`、`/api/fonts.json` 预渲染为构建时快照；组件页 Changelog 只显示最近 10 个发布 |
 | 内存 | `NODE_OPTIONS=--max-old-space-size=12288`；`nitro.prerender.concurrency=1`、`failOnError=false`。**根因：本地 macOS 即便堆调到 12GB 仍 OOM**——7 语言 × 196 文件 + component-meta 解析 + 全量预渲染，在 darwin-arm64 上峰值超过 16GB。CI 的 Linux runner 16GB + hoisted pnpm 布局才能扛住 |
-| 函数数 | 删除 `functions/` 下约 300 个指向 `__fallback` 的软链，把 `config.json` 的 `dest` 全部重写为 `/__fallback`（Hobby 档 12 函数上限） |
-| 依赖 | 构建后递归补齐 `__fallback.func/node_modules` 缺失的传递依赖 |
-| 上传 | `vercel deploy --prebuilt --prod --yes --archive=tgz`（超过 5000 文件会触发免费档 24h 上传配额） |
-| 域名 | `https://nuxt-ui.vite.js.cn`；`NUXT_PUBLIC_SITE_URL` 同时喂给 `site.url`、`i18n.baseUrl` 和 sitemap |
-| 密钥 | GitHub Secret `VERCEL_TOKEN` |
+| 重定向 | [generate-redirects.mjs](file:///Users/yiqun/WebstormProjects/ui/docs/scripts/generate-redirects.mjs) 从 `nuxt.config.ts` 的 `routeRules` 生成 `_redirects`（解析少于 100 条会报错），Pages 原生支持 |
+| 图片 | `@nuxt/image` 必须 `provider: 'ipxStatic'`：`ipx` 要在 Worker 里跑 sharp，Workers 不支持；静态模式在构建期生成变体 |
+| 部署 | `docs/` 下 `wrangler pages deploy .output/public --project-name=nuxt-ui-docs --branch=v4`（[docs/wrangler.jsonc](file:///Users/yiqun/WebstormProjects/ui/docs/wrangler.jsonc) 只保留 `name` + `pages_build_output_dir`） |
+| 域名 | `https://nuxt-ui.vite.js.cn`（Cloudflare Dashboard 绑定）；`NUXT_PUBLIC_SITE_URL` 同时喂给 `site.url`、`i18n.baseUrl` 和 sitemap |
+| 密钥 | GitHub secrets `CLOUDFLARE_API_TOKEN`（Pages:Edit）/ `CLOUDFLARE_ACCOUNT_ID`，以及构建期用的 `NUXT_GITHUB_TOKEN` |
 
 维护要点：
 
-- **本地完整预渲染构建不可行**：即使把 `NODE_OPTIONS=--max-old-space-size=12288`，macOS 上跑全量 7 语言 + 预渲染仍会 OOM。本地改完只跑过 dev server 或 `SKIP_PRERENDER=1 nuxt build docs` 验证 SSR 模式；完整预渲染 + 函数归并 + 依赖修复 **必须** 让 GitHub Actions 跑完。
-- 不要恢复 `vercel pull` / `vercel build`：服务端 `rootDirectory=docs` 会覆盖仓库 `vercel.json`，导致 Tsconfig not found 并绕过定义的构建命令。
-- 不要用 `SKIP_PRERENDER=1` 代替分批预渲染：静态 HTML 比全站走 SSR 函数可靠得多。
-- 不用 preview + alias（`vercel alias set` 鉴权路径异常，报 User not found），直接 `--prod`。
-- [vercel.json](file:///Users/yiqun/WebstormProjects/ui/vercel.json) 的 `buildCommand` 仅用于本地复现，CI 不依赖 Vercel 构建容器。
+- **本地完整预渲染构建不可行**：即使把 `NODE_OPTIONS=--max-old-space-size=12288`，macOS 上跑全量 7 语言仍会 OOM。本地改完只跑 `nuxt dev docs`，或 `SKIP_PRERENDER=1 nuxt build docs` 验证能打包；完整 `nuxt generate` **必须** 让 GitHub Actions 跑完。
+- Pages 项目的**生产分支必须是 `v4`**，否则 `--branch=v4` 会被当成预览部署。
+- 不要恢复 `vercel pull` / `vercel build` / Vercel CLI：Vercel 项目及 `vercel.json` 已移除。
+- 不要恢复 Worker / `cloudflare_module`：那需要 Workers Paid，并重新引入 D1 与首次导入。
+- 改 `routeRules` 的 redirect 后，确认 `generate-redirects.mjs` 输出的条数没有骤降（脚本带 100 条下限保护）。
+- Pages Free 额度：无限请求、20,000 个文件、单文件 25 MiB；workflow 的 Verify 步骤会打印文件数与体积。
+
+历史（已废弃）：更早用 GitHub Actions 预构建 + `vercel deploy --prebuilt --prod --yes --archive=tgz`（Hobby 档 12 函数上限，把约 300 个 `__fallback` 软链归并成单函数）；中间尝试过 Workers Static Assets + D1，因 3 MiB / 10ms CPU 上限放弃。
 
 ## 关键文件清单
 
@@ -267,7 +271,10 @@ node scripts/translate-content.mjs --dry-run    # 只打印计划
 | [package.json](file:///Users/yiqun/WebstormProjects/ui/package.json) | 加 `@nuxtjs/i18n` devDep |
 | [pnpm-workspace.yaml](file:///Users/yiqun/WebstormProjects/ui/pnpm-workspace.yaml) | catalog 加 i18n 版本 |
 | [docs/content.config.ts](file:///Users/yiqun/WebstormProjects/ui/docs/content.config.ts) | 拆 8 个语言 collection |
-| [docs/nuxt.config.ts](file:///Users/yiqun/WebstormProjects/ui/docs/nuxt.config.ts) | 加 i18n 模块、prerender routes |
+| [docs/nuxt.config.ts](file:///Users/yiqun/WebstormProjects/ui/docs/nuxt.config.ts) | 加 i18n 模块、prerender routes；`$production.nitro` 切 `cloudflare_module`；`@nuxt/image` 用 `ipxStatic` |
+| [docs/wrangler.jsonc](file:///Users/yiqun/WebstormProjects/ui/docs/wrangler.jsonc) | Cloudflare Pages 项目配置（`name` + `pages_build_output_dir`） |
+| [docs/scripts/generate-redirects.mjs](file:///Users/yiqun/WebstormProjects/ui/docs/scripts/generate-redirects.mjs) | 把 `routeRules` 重定向生成 Pages `_redirects` |
+| [.github/workflows/deploy-docs.yml](file:///Users/yiqun/WebstormProjects/ui/.github/workflows/deploy-docs.yml) | 分批预渲染 + `wrangler deploy` |
 | [docs/app/pages/docs/[...slug].vue](file:///Users/yiqun/WebstormProjects/ui/docs/app/pages/docs/[...slug].vue) | locale-aware 查询 |
 | [docs/app/pages/index.vue](file:///Users/yiqun/WebstormProjects/ui/docs/app/pages/index.vue) | locale-aware 查询 |
 | [docs/app/composables/useNavigation.ts](file:///Users/yiqun/WebstormProjects/ui/docs/app/composables/useNavigation.ts) | 按 locale 选 collection 与路径前缀 |
@@ -292,13 +299,13 @@ node scripts/translate-content.mjs --dry-run    # 只打印计划
    - `http://localhost:3000/docs/components/button` → 英文（默认无前缀）
    - Header 右上角语言切换器点击切换 → URL 与内容都跟着变
 
-2. **构建预演**：
+2. **构建预演（本地只做打包验证）**：
 
    ```bash
-   pnpm run docs:build
+   cd docs && SKIP_PRERENDER=1 pnpm exec nuxt build
    ```
 
-   确认 `.output/public/zh/docs/components/button/index.html` 等静态产物生成（或 SSR 模式下 `nitro` server 正常）。
+   `nuxt generate` 的完整输出（含 8 语言 HTML、`_redirects`、404）只能由 CI 产出；本地不要指望能跑完。
 
 3. **类型与代码质量**：
 
@@ -307,21 +314,24 @@ node scripts/translate-content.mjs --dry-run    # 只打印计划
    pnpm run lint
    ```
 
-4. **Vercel 预览部署**：在 Vercel 项目配置好后 push 任意分支，触发 Preview Deployment，在预览域名验证：
+4. **Cloudflare 上线验证**：push 到 `v4` 触发 workflow（`nuxt generate` + `wrangler pages deploy`），然后验证：
    - `/zh`、`/ja`、`/ko`、`/fr`、`/de`、`/nl`、`/es` 都返回 200
-   - sitemap.xml 含 hreflang 链接
-   - OG 图、canonical URL 正确
+   - 旧 URL（如 `/docs/components/button-group`）按 `_redirects` 301 到新地址
+   - sitemap.xml 含 hreflang 链接；`/raw/**`、`/llms.txt` 等静态文件可访问
+   - OG 图、canonical URL 正确；Ask AI / MCP 入口不再出现
 
 5. **fallback 测试**：手动删除某中文页面（如 `content/zh/docs/components/accordion.md`），访问 `/zh/docs/components/accordion`，应自动回退到英文版本而非 404。
 
 ## 风险与降级
 
-1. **本地完整构建 OOM（已验证必须走 CI）**：7 语言 × 196 文件的 content SQLite 写入 + component-meta 全量解析 + 预渲染并发，在 macOS (darwin-arm64) 上峰值内存超 16GB，即使堆调到 `--max-old-space-size=12288` 也会在第二或第三批预渲染时崩掉。**没有可行的本地完整构建路径**，任何本地验证只跑 dev 或 `SKIP_PRERENDER=1 nuxt build` / `PRERENDER_LOCALES=default nuxt build`。完整预渲染 + 函数归并 + 依赖修复全部依赖 GitHub Actions 的 Linux 16GB runner。
-2. **i18n 模块与 nuxt-og-image / nuxt-agent-discovery 等模块兼容性**：装好后跑 `pnpm run docs` 若有模块冲突，可暂时在 i18n 配置里 `bundle: { optimizeTranslationDirective: false }` 等。先 dev 模式跑起来看。
-3. **MDC 语法被 LLM 破坏**：脚本里用强 prompt + 代码块白名单（`::alert`、`:icon` 等保留），跑完后跑 `pnpm run lint` 对 content 做 markdown 校验。
-4. **翻译体量大**：约 130 文件 × 7 语言 ≈ 910 次翻译调用，AI gateway 速率限制可能触发，脚本加 `concurrency: 3` + 重试。
-5. **routeRules 冲突**：现有 `/docs/components/button-group → /docs/components/field-group` 等大量重定向，i18n 加前缀后英文版规则仍生效，非默认语言版会进入 404 fallback，可接受但需要用 lint 验证没有死链。
-6. **`dev:prepare` 在 Vercel 上较慢**：因为要构建 Nuxt UI 源码 stub + vue playground build，可能超过 Vercel 免费档 45 分钟构建上限。已通过 GitHub Actions 接管构建规避。
+1. **本地完整构建 OOM（已验证必须走 CI）**：7 语言 × 196 文件的 content SQLite 写入 + component-meta 全量解析 + 预渲染并发，在 macOS (darwin-arm64) 上峰值内存超 16GB，即使堆调到 `--max-old-space-size=12288` 也会在第二或第三批预渲染时崩掉。**没有可行的本地完整构建路径**，任何本地验证只跑 dev 或 `SKIP_PRERENDER=1 nuxt build` / `PRERENDER_LOCALES=default nuxt build`。完整预渲染必须依赖 GitHub Actions 的 Linux 16GB runner。
+2. **为什么不用 Workers**：2026-11 实测 Nitro 服务端 27.8 MB raw / 约 5.5 MB gzip，超过 Workers Free 3 MiB（付费 10 MiB），且 D1 首次导入会撞 Free 档 10ms CPU。GitHub 预构建解决的是本机内存，解决不了运行时配额——所以改为纯静态 Pages。
+3. **静态化的功能降级**：`/api/ai`、`/api/chat`、`/api/completion`、`/mcp` 不存在，Ask AI 入口由 `runtimeConfig.public.aiEnabled` 隐藏；组件页 Changelog 只剩最近 10 个发布快照（无逐组件 commit）；`/theme` 的 `?doc=` 主题在 hydration 后才应用；`/docs/releases` 详情页的按需拉取在静态下不可用。
+4. **i18n 模块与 nuxt-og-image / nuxt-agent-discovery 等模块兼容性**：装好后跑 `pnpm run docs` 若有模块冲突，可暂时在 i18n 配置里 `bundle: { optimizeTranslationDirective: false }` 等。先 dev 模式跑起来看。
+5. **MDC 语法被 LLM 破坏**：脚本里用强 prompt + 代码块白名单（`::alert`、`:icon` 等保留），跑完后跑 `pnpm run lint` 对 content 做 markdown 校验。
+6. **翻译体量大**：约 130 文件 × 7 语言 ≈ 910 次翻译调用，AI gateway 速率限制可能触发，脚本加 `concurrency: 3` + 重试。
+7. **routeRules 冲突**：现有 `/docs/components/button-group → /docs/components/field-group` 等大量重定向，i18n 加前缀后英文版规则仍生效，非默认语言版会进入 404 fallback，可接受但需要用 lint 验证没有死链。
+8. **`dev:prepare` 较慢**：要构建 Nuxt UI 源码 stub + vue playground build。已改由 GitHub Actions 构建，本机不需要跑 `pnpm run dev:prepare` 全量。
 
 ## 后续可选优化
 

@@ -42,4 +42,6 @@ playgrounds/repl/dist/
 # VSC
 .history
 .vercel
+.wrangler
+.dev.vars*
 .env*

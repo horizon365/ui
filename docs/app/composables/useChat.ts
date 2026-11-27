@@ -2,6 +2,10 @@ import { createSharedComposable, useLocalStorage } from '@vueuse/core'
 import type { DocsChatMessage } from '~~/server/api/ai.post'
 
 export const useChat = createSharedComposable(() => {
+  // The static production export has no /api/ai, so every entry point is
+  // hidden behind this flag (runtimeConfig.public.aiEnabled).
+  const aiEnabled = computed(() => useRuntimeConfig().public.aiEnabled !== false)
+
   const storageOpen = useLocalStorage('chat-open', false)
   const messages = useLocalStorage<DocsChatMessage[]>('chat-messages', [])
 
@@ -12,12 +16,14 @@ export const useChat = createSharedComposable(() => {
   const currentPage = computed(() => route.path)
 
   onNuxtReady(() => {
+    if (!aiEnabled.value) return
     nextTick(() => {
       open.value = storageOpen.value
     })
   })
 
   watch(open, (value) => {
+    if (!aiEnabled.value) return
     storageOpen.value = value
   })
 
@@ -27,6 +33,7 @@ export const useChat = createSharedComposable(() => {
   const pending = ref(false)
 
   function ask(text: string) {
+    if (!aiEnabled.value) return
     messages.value = [...messages.value, {
       id: String(Date.now()),
       role: 'user',
@@ -38,6 +45,7 @@ export const useChat = createSharedComposable(() => {
   }
 
   return {
+    aiEnabled,
     open,
     messages,
     pending,

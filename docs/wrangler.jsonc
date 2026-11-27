@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "nuxt-ui-docs",
+  // The docs site is a pure static export: `nuxt generate` writes HTML for all
+  // 8 locales and `wrangler pages deploy` uploads `.output/public`. There is no
+  // Worker and no D1 — see .trae/documents/nuxt-ui-docs-i18n-cloudflare.md.
+  "pages_build_output_dir": "./.output/public"
+}
